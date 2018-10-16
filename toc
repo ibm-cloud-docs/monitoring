@@ -1,0 +1,25 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Sysdig" audience="service" href="/docs/services/Monitoring-with-Sysdig/index.html"}
+Monitoring with Sysdig
+
+    {: .navgroup id="learn"}
+    index.md
+    overview.md
+
+    {: .navgroup-end}
+
+    {: .navgroup id="how"}
+    provision.md
+    ingestion_key.md
+    config_agent.md
+    launch_webui.md
+    iam.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
+    [Sysdig Monitor Documentation](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview)
+    [Sysdig Blog](https://sysdig.com/blog/)
+    {: .navgroup-end}
