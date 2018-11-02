@@ -16,7 +16,7 @@ lastupdated: "2018-11-05"
 {:download: .download}
 
  
-# Managing user access with IAM
+# Working with IAM policies and access groups
 {: #iam_work}
 
 {{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.Bluemix_notm}}. 
@@ -201,7 +201,7 @@ As a **user**, **auditor**, or **developer**, you might need permissions to run 
 Therefore, you need the following policies:
 
 * An IAM policy for the IBM Cloud Monitoring with Sysdig service with the platform role **Viewer**. This policy allows you to view the service instance details through the command line and in the {{site.data.keyword.Bluemix_notm}} dashboard.
-* An IAM policy for the IBM Cloud Monitoring with Sysdig service with the service role **Reader**. This policy allows you to view, filter and search metrics through the Sysdig web UI.
+* An IAM policy for the IBM Cloud Monitoring with Sysdig service with the service role **Writer**. This policy allows you to view, filter and search metrics through the Sysdig web UI.
 
 **Note:** As an administrator of the service, when you grant a user these policies, consider doing it within the context of a resource group. An IBM Cloud Monitoring with Sysdig instance is provisioned within the context of a resource group. Therefore, you should grant access permissions within the context of the resource group.
 
@@ -219,6 +219,6 @@ Complete the following steps to assign a user both policies for the IBM Cloud Mo
 
 6. Select **IBM Cloud Monitoring with Sysdig**.
 7. Select the platform role **Viewer**.
-8. Select the service role **Reader**.
+8. Select the service role **Writer**.
 8. Click **Assign**.
 

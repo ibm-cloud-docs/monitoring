@@ -16,10 +16,11 @@ Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    config_agent.md
+    remove.md
     provision.md
     ingestion_key.md
-    config_agent.md
-    launch_webui.md
+    view_metrics.md
     iam_work.md
     {: .navgroup-end}
 

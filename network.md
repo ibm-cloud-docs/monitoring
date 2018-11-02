@@ -26,12 +26,19 @@ When you have an additional firewall set up, or you have customized the firewall
 ## Network traffic for custom firewall configurations in the {{site.data.keyword.Bluemix_notm}}
 {: #ips}
 
-You must allow outgoing traffic on TCP port 443 and TCP port 80 in your firewall. For example, you must open TCP port 443 and TCP port 80 from each worker to the IBM Cloud Monitoring with Sysdig service.
+You must allow outgoing traffic on TCP port 443 and TCP port 6443 in your firewall. 
 
-The following tables list the IP addresses per region that you must configure in your firewall to allow outgoing traffic:
+The following table lists the IP addresses and ports per region that you must configure in your firewall to allow outgoing traffic:
 
-| Region      | Ingestion endpoint                                | Public IP addresses               | Ports   |
+| Region      | Ingestion endpoint                                | Public IP addresses               | Ports    |
+|-------------|---------------------------------------------------|-----------------------------------|----------|
+| US South    | ingest.us-south.monitoring.cloud.ibm.com          | 169.48.237.108                    | TCP 6443 | 
+{: caption="Table 1. IP addresses to send metrics" caption-side="top"}
+
+The following table lists the IP addresses and ports per region that you must configure in your firewall to allow access to the IBM Cloud Monitoring with Sysdig Web UI:
+
+| Region      | Web UI endpoint                                   | Public IP addresses               | Ports   |
 |-------------|---------------------------------------------------|-----------------------------------|---------|
-| US South    | metrics.us-south.monitoring.cloud.ibm.com         | 169.48.237.108                    | TCP 443 </br>TCP 80 | 
-{: caption="Table 1. IP addresses to send logs" caption-side="top"}
+| US South    | us-south.monitoring.cloud.ibm.com                 | 169.48.237.108                    | TCP 443 | 
+{: caption="Table 2. IP addresses to access the IBM Cloud Monitoring with Sysdig Web UI" caption-side="top"}
 

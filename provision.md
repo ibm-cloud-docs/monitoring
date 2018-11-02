@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-21"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -40,17 +40,17 @@ To provision an instance of Sysdig from the {{site.data.keyword.Bluemix_notm}} c
 
 3. To filter the list of services that is displayed, select the **Developer Tools** category.
 
-4. Click the **Sysdig Monitoring** tile.
+4. Click the **IBM Cloud Monitoring with Sysdig** tile.
 
-5. Select a service plan. By default, the **Lite** plan is set.
+5. Select a service plan. By default, the **Trial** plan is set.
 
-    For more information about the service plans, see [Service plans](/docs/services/.....).
+    For more information about the service plans, see [Service plans](/docs/services/Monitoring-with-Sysdig/overview.html#pricing_plans).
 
-6. Select a resource group. By default, the **default** one is set.
+6. Select a resource group. By default, the **Default** resource group is set.
 
 7. Click **Create**.
 
-The service's UI opens.
+The **Observability** page opens where you can see the instance that you just created.
 
 
 
@@ -81,11 +81,11 @@ To provision an instance of Sysdig through the command line, complete the follow
     where
 
     * NAME is the name of the Sysdig instance
-    * *sysdig-monitor* is the name of the Sysdig service name in the {{site.data.keyword.Bluemix_notm}}
+    * *sysdig-monitor* is the name of the IBM Cloud Monitoring with Sysdig service name in the {{site.data.keyword.Bluemix_notm}}
     * SERVICE_PLAN_NAME is the type of plan. Valid values are: `lite`, `graduated-tier`
-    * LOCATION is the region where the Sysdig instance is created
+    * LOCATION is the region where the instance is created
 
-    For example, to provision a Sysdig instance with the paid plan, run the following command:
+    For example, to provision an instance with the paid plan, run the following command:
 
     ```
     ibmcloud resource service-instance-create sysdig-instance-01 sysdig-monitor graduated-tier us-south

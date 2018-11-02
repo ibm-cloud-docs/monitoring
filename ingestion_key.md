@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-21"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -15,8 +15,8 @@ lastupdated: "2018-09-21"
 {:tip: .tip}
 {:download: .download}
 
-# Working with the Sysdig instance ingestion key
-{: #sysdig_ingestion_key}
+# Working with the ingestion key
+{: #ingestion_key}
 
 The ingestion key is a security key that you must use to configure Sysdig agents and successfully forward data to your Sysdig instance in {{site.data.keyword.Bluemix}}. To obtain the ingestion key, you must create a service ID for the Sysdig instance. 
 {:shortdesc}
