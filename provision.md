@@ -25,10 +25,10 @@ To provision a Sysdig instance in a Public Cloud region, you must select the ser
 
 
 
-## Provisioning a Sysdig instance through the {{site.data.keyword.Bluemix_notm}} UI
+## Provisioning a Sysdig instance from the catalog
 {: #provision_ui}
 
-To provision an instance of Sysdig by using the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
+To provision an instance of Sysdig from the {{site.data.keyword.Bluemix_notm}} catalog, complete the following steps:
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
 

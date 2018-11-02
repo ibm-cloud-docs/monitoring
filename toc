@@ -1,25 +1,35 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Sysdig" audience="service" href="/docs/services/Monitoring-with-Sysdig/index.html"}
+{: .toc subcollection="Sysdig" audience="service" href="/docs/services/Monitoring-with-Sysdig/index.html" path="services/Monitoring-with-Sysdig"}
 Monitoring with Sysdig
 
     {: .navgroup id="learn"}
     index.md
     overview.md
+    network.md
+    iam.md
 
+    {: .topicgroup}
+    Tutorials
+        tutorials/kube.md
     {: .navgroup-end}
 
-    {: .navgroup id="how"}
+    {: .navgroup id="howto"}
     provision.md
     ingestion_key.md
     config_agent.md
     launch_webui.md
-    iam.md
+    iam_work.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview)
     [Sysdig Blog](https://sysdig.com/blog/)
+    {: .navgroup-end}
+
+
+    {: .navgroup id="help"}
+    gettinghelp.md
     {: .navgroup-end}

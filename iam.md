@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018
-lastupdated: "2018-09-21"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -16,59 +16,55 @@ lastupdated: "2018-09-21"
 {:download: .download}
 
  
-# Managing user access with Identity and Access Management
+# Managing user access with IAM
 {: #sysdig_iam}
 
 {{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.Bluemix_notm}}. 
 {:shortdesc}
 
-Every user that accesses the Sysdig service in your account must be assigned an access policy with an IAM user role defined. That policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined by the {{site.data.keyword.Bluemix_notm}} service as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles.
+**Every user that accesses the IBM Cloud Monitoring with Sysdig service in your account must be assigned an access policy with an IAM user role defined.** The policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles.
 
-Policies enable access to be granted at different levels. Some of the options include the following: 
+*Policies* enable access to be granted at different levels. Some of the options include the following: 
 
-* Access across all instances of the service in your account
-* Access to an individual service instance in your account
-* Access to a specific resource within an instance
 * Access to all IAM-enabled services in your account
+* Access across all instances of the service in a single region in your account
+* Access to an individual service instance in your account
+* Access to all instances of the service within the context of a resource group
+* Access to all instances of the service in a single region within the context of a resource group
+* Access to all IAM-enabled services within the context of a resource group
 
-After you define the scope of the access policy, you assign a role. 
+*Roles* define the actions that a user or serviceID can run. There are different types of roles in the {{site.data.keyword.Bluemix_notm}}:
 
-* You can assign platform roles to manage Sysdig instances in the {{site.data.keyword.Bluemix_notm}}, and to manage and monitor data through the Sysdig web UI.
-* You can assign service roles to manage and monitor data through the Sysdig web UI.
+* *Platform management roles* enable users to perform tasks on service resources at the platform level, for example assign user access for the service, create or delete service IDs, create instances, assign policies for your service to other users, and bind instances to applications.
+* *Service access roles* enable users to be assigned varying levels of permission for calling the service's API.
+
+**To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use *access groups*.** You can assign a single policy to the group instead of assigning the same access multiple times per individual user or service ID.
+{: tip}
 
 
 
-## Configuring Sysdig admin priviledges for a user
-{: #admin}
-
-To grant Sysdig admin priviledges to a user, you can assign the user any of the following roles:
-
-* `Administrator` platform role: Grant this role if the user is also an administrator for the Sysdig service in the {{site.data.keyword.Bluemix_notm}}.
-* `Editor` platform role: Grant this role if the user must be able to provision or remove Sysdig instances in the {{site.data.keyword.Bluemix_notm}}.
-* `Manager` service role:  Grant this role if the user should not be able to manage the Sysdig service in the {{site.data.keyword.Bluemix_notm}}.
+## Managing access by assigning policies directly to users
+{: #users}
 
 To manage access or assign new access for users by using IAM policies, you must be the account owner, administrator on all services in the account, or an administrator for the particular service or service instance. 
 
-Choose any of the following actions to manage a user's Sysdig admin priviledges:
+Choose any of the following actions to manage IAM policies in the {{site.data.keyword.Bluemix_notm}}:
 
-* To edit modify the permissions of a user, see [Editing existing access](/docs/iam/mngiam.html#editing-existing-access).
+* To modify the permissions of a user, see [Editing existing access](/docs/iam/mngiam.html#editing-existing-access).
 * To grant permissions to a user, see [Assign new access](/docs/iam/mngiam.html#assignaccess).
 * To revoke permissions, see [Removing access](/docs/iam/mngiam.html#removing-access).
 * To review a user's permissions, see [Reviewing your assigned access](/docs/iam/mngiam.html#reviewing-your-assigned-access).
 
 
-## Configuring Sysdig user priviledges for a user
-{: #user}
+## Managing access by using access groups
+{: #groups}
 
-To grant Sysdig user priviledges to a user, you can assign a user the `Writer` service role.
+To manage access or assign new access for users by using access groups, you must be the account owner, administrator or editor on all Identity and Access enabled services in the account, or the assigned administrator or editor for the IAM Access Groups Service. 
 
-Choose any of the following actions to manage a user's Sysdig user priviledges:
+Choose any of the following actions to manage access groups in the {{site.data.keyword.Bluemix_notm}}:
 
-* To edit modify the permissions of a user, see [Editing existing access](/docs/iam/mngiam.html#editing-existing-access).
-* To grant permissions to a user, see [Assign new access](/docs/iam/mngiam.html#assignaccess).
-* To revoke permissions, see [Removing access](/docs/iam/mngiam.html#removing-access).
-* To review a user's permissions, see [Reviewing your assigned access](/docs/iam/mngiam.html#reviewing-your-assigned-access).
- 
+* [Creating an access group](/docs/iam/groups.html#creating-an-access-group).
+* [Assigning access to a group](/docs/iam/groups.html#assigning-access-to-a-group).
 
 
 ## Platform roles
