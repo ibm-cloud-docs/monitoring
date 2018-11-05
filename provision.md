@@ -15,7 +15,7 @@ lastupdated: "2018-11-05"
 {:tip: .tip}
 {:download: .download}
 
-# Provisioning a Sysdig instance
+# Provisioning an instance
 {: #sysdig_provision}
 
 Before you can monitor and manage metrics with Sysdig, you must first provision an instance of the service in {{site.data.keyword.Bluemix}}.
@@ -82,7 +82,7 @@ To provision an instance of Sysdig through the command line, complete the follow
 
     * NAME is the name of the Sysdig instance
     * *sysdig-monitor* is the name of the IBM Cloud Monitoring with Sysdig service name in the {{site.data.keyword.Bluemix_notm}}
-    * SERVICE_PLAN_NAME is the type of plan. Valid values are: `lite`, `graduated-tier`
+    * SERVICE_PLAN_NAME is the type of plan. Valid values are: *lite*, *graduated-tier*
     * LOCATION is the region where the instance is created
 
     For example, to provision an instance with the paid plan, run the following command:
