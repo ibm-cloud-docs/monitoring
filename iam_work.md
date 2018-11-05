@@ -32,11 +32,7 @@ To grant Sysdig user priviledges to a user, you can assign a user the `Writer` s
 
 **Note:** To manage access or assign new access for users by using IAM policies, you must be the account owner, administrator on all services in the account, or an administrator for the particular service or service instance. 
 
-
-## Granting permissions to a user to become an administrator of the service in the {{site.data.keyword.Bluemix_notm}} account
-{: #admin_account}
-
-As the **account owner** or as an **IBM Cloud Monitoring with Sysdig service administrator**, you must have permissions to run the following actions: 
+As the **account owner** or as an **IBM Cloud Monitoring with Sysdig service administrator**, you must have permissions to run the following platform actions: 
 
 * Grant other account members access to work with the service
 * Provision a service instance
@@ -44,7 +40,18 @@ As the **account owner** or as an **IBM Cloud Monitoring with Sysdig service adm
 * View details of a service instance
 * Create a service ID
 
-Therefore, to grant a user administrator role to manage the service in the account, the user must have an IAM policy for the IBM Cloud Monitoring with Sysdig service with the platform role **Administrator**. You must assign this user access to an individual resource in the account. 
+As a **Devops user**, you must have permissions to run the following platform actions: 
+
+* Provision a service instance
+* Delete a service instance
+* View details of a service instance
+* Create a service ID
+
+
+## Granting permissions to a user to become an administrator of the service in the {{site.data.keyword.Bluemix_notm}} account
+{: #admin_account}
+
+To grant a user administrator role to manage the service in the account, the user must have an IAM policy for the IBM Cloud Monitoring with Sysdig service with the platform role **Administrator**. You must assign this user access to an individual resource in the account. 
 
 Complete the following steps to assign a user administrator role to the IBM Cloud Monitoring with Sysdig service in the account: 
 
@@ -61,15 +68,7 @@ Complete the following steps to assign a user administrator role to the IBM Clou
 ## Granting permissions to a user to become an administrator of the service within a resource group
 {: #admin_rg}
 
-As an **IBM Cloud Monitoring with Sysdig service administrator**, you must have permissions to run the following actions: 
-
-* Grant other account members access to work with the service
-* Provision a service instance
-* Delete a service instance
-* View details of a service instance
-* Create a service ID
-
-Therefore, to grant a user administrator role to manage instances within a resource group in the account, the user must have an IAM policy for the IBM Cloud Monitoring with Sysdig service with the platform role **Administrator** within the context of the resource group. 
+To grant a user administrator role to manage instances within a resource group in the account, the user must have an IAM policy for the IBM Cloud Monitoring with Sysdig service with the platform role **Administrator** within the context of the resource group. 
 
 Complete the following steps to assign a user administrator role to the IBM Cloud Monitoring with Sysdig service within the context of a resource group: 
 
@@ -91,14 +90,7 @@ Complete the following steps to assign a user administrator role to the IBM Clou
 ## Granting permissions to a Devops user to manage the service in the {{site.data.keyword.Bluemix_notm}} account
 {: #devops_account}
 
-As a **Devops user**, you must have permissions to run the following actions: 
-
-* Provision a service instance
-* Delete a service instance
-* View details of a service instance
-* Create a service ID
-
-Therefore, you need to have an IAM policy for the IBM Cloud Monitoring with Sysdig service with the platform role **Editor**.
+You need to have an IAM policy for the IBM Cloud Monitoring with Sysdig service with the platform role **Editor**.
 
 Complete the following steps to assign a user editor role to the IBM Cloud Monitoring with Sysdig service in the account: 
 
@@ -128,14 +120,7 @@ Complete the following steps to assign a user editor role on one instance of the
 ## Granting permissions to a Devops user to manage the service within a resource group
 {: #devops_rg}
 
-As a **Devops user**, you must have permissions to run the following actions: 
-
-* Provision a service instance
-* Delete a service instance
-* View details of a service instance
-* Create a service ID
-
-Therefore, you need an IAM policy for the IBM Cloud Monitoring with Sysdig service with the platform role **Editor**.
+You need an IAM policy for the IBM Cloud Monitoring with Sysdig service with the platform role **Editor**.
 
 Complete the following steps to assign a user editor role to the IBM Cloud Monitoring with Sysdig service within the context of a resource group: 
 

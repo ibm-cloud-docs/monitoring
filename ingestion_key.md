@@ -21,46 +21,25 @@ lastupdated: "2018-11-05"
 The ingestion key is a token that you must use to configure Sysdig agents to successfully forward data to your IBM Cloud Monitoring with Sysdig instance in {{site.data.keyword.Bluemix}}. To obtain the ingestion key, you must create a service ID for the Sysdig instance. 
 {:shortdesc}
 
-## Creating a service ID through the {{site.data.keyword.Bluemix_notm}} UI
-{: #create_serviceid}
-
-To create a service ID, complete the following steps:
-
-1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
-
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://bluemix.net ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://bluemix.net){:new_window}.
-
-	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} UI opens.
-
-2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg).
-
-3. Identify the Sysdig instance, and click on it to open its UI.
-
-4. Select **Service credentials** and click **New credential**.
-
-5. Enter a name in the **Name** field, and select the **Manager** role. Then, click **Add**.
-
-A key name entry is added.
-
 
 ## Getting the ingestion key through the {{site.data.keyword.Bluemix_notm}} UI
-{: #ui}
+{: #ibm_cloud_ui}
 
-To get the ingestion key for a Sysdig instance by using the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
+To get the ingestion key for an IBM Cloud Monitoring with Sysdig instance through the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://bluemix.net ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://bluemix.net){:new_window}.
+    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://bluemix.net){:new_window}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} UI opens.
 
-2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg).
+2. In the navigation menu, select **Observability**. 
 
-3. Identify the Sysdig instance for which you want to get the ingestion key, and click on it to open its UI.
+3. Select **Monitoring**. The IBM Cloud Monitoring with Sysdig dashboard opens. You can see the list of monitoirng instances that are available on {{site.data.keyword.Bluemix_notm}}.
 
-4. Select **Service credentials**.
+3. Identify the instance for which you want to get the ingestion key, and click **View ingestion key**.
 
-5. Select a key name. Then, click **View credentials** to see the ingestion key. The value of the parameter **Sysdig Access Key** contains the ingestion key.
+4. A pop up window opens where you can click **Show** to view the ingestion key.
 
 
 
@@ -106,7 +85,7 @@ To get the ingestion key for a Sysdig instance through the command line, complet
 
     where APIKEY_NAME is the name of the API key.
  
-    The output from this command includes the field **Sysdig Access Key** that contains the ingestion key for the Sysdig instance.
+    The output from this command includes the field **ingestion_key** that contains the ingestion key for the instance.
 
 
 ## Changing the ingestion key
@@ -114,9 +93,27 @@ To get the ingestion key for a Sysdig instance through the command line, complet
 
 If the ingestion key is compromissed, you can open a support ticket to reset the password.
 
-After you reset the value, you must create a new serviceID for the Sysdig instance in the {{site.data.keyword.Bluemix_notm}}, and update your Sysdig sources with the new ingestion key.
 
-*****Check with Sysdig link to their docs where they document the process to reset the ingestion key.********
 
-Anything else that we should add?????
+## Reset the ingestion key 
+{: #reset}
 
+If the ingestion key is compromissed or you have a policy to renew it after a number of days, you can generate a new key and delete the old one.
+
+To renew the ingestion key for an IBM Cloud Monitoring with Sysdig instance, complete the following steps:
+
+1. Launch the IBM Log Analysis with LogDNA web UI. For more information, see [Launching the IBM Log Analysis with LogDNA Web UI](/docs/services/Log-Analysis-with-LogDNA/view_logs.html#step2).
+
+2. Select the **Configuration** icon. Then select **Organization**. 
+
+3. Select **API keys**.
+
+    You can see the ingestion keys that have been created. 
+
+4. Select **Generate Ingestion Key**.
+
+    A new key is added to the list.
+
+5. Delete the old ingestion key. Click **delete**.
+
+**Note:** After you reset the ingestion key, you must update the ingestion key for any log sources that you have configured to forward logs to this IBM Log Analysis with LogDNA instance.
