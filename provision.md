@@ -76,7 +76,7 @@ To provision an instance of Sysdig through the command line, complete the follow
     ```
     ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION
     ```
-    {: pre}
+    {: codeblock}
 
     where
 
@@ -90,5 +90,5 @@ To provision an instance of Sysdig through the command line, complete the follow
     ```
     ibmcloud resource service-instance-create sysdig-instance-01 sysdig-monitor graduated-tier us-south
     ```
-    {: pre}
+    {: screen}
 

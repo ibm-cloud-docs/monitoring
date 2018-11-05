@@ -103,5 +103,5 @@ The following table details actions that are mapped to service access roles. Ser
 {: caption="Table 3. IAM service access roles and actions" caption-side="top"}
 
 
-
+For more information about Sysdig users, see [Understanding Sysdig Users [External link icon](../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/206307381/User+and+Team+Administration){:new_window}.
 
