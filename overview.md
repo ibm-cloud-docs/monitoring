@@ -24,7 +24,7 @@ IBM Cloud Monitoring with Sysdig is a third-party cloud-native, and container-in
 
 IBM Cloud Monitoring with Sysdig offers administrators, DevOps teams, and developers advanced monitoring features to monitor and troubleshoot, including alerting and customizable dashboards. 
 
-For more information about Sysdig, see [Sysdig Monitor ![External link icon](../icons/launch-glyph.svg "External link icon")](https://sysdig.com/products/monitor/){: new_window}.
+For more information about Sysdig, see [Sysdig Monitor ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdig.com/products/monitor/){: new_window}.
 
 
 ## Overview

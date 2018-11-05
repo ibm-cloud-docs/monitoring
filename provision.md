@@ -40,17 +40,24 @@ To provision an instance of Sysdig from the {{site.data.keyword.Bluemix_notm}} c
 
 3. To filter the list of services that is displayed, select the **Developer Tools** category.
 
-4. Click the **IBM Cloud Monitoring with Sysdig** tile.
+4. Click the **IBM Cloud Monitoring with Sysdig** tile. The *Observability* dashboard opens.
 
-5. Select a service plan. By default, the **Trial** plan is set.
+5. Select **Create instance**. 
+
+6. Select a service plan. By default, the **Trial** plan is set.
 
     For more information about the service plans, see [Service plans](/docs/services/Monitoring-with-Sysdig/overview.html#pricing_plans).
 
-6. Select a resource group. By default, the **Default** resource group is set.
+7. Select a resource group. By default, the **Default** resource group is set.
 
-7. Click **Create**.
+8. Click **Create**.
 
-The **Observability** page opens where you can see the instance that you just created.
+After you provision an instance, 
+
+* The *Observability* dashboard opens. 
+* A service ID is automatically created. You can use this service ID to get the Sysdig access key for your instance.
+
+Next, configure a metric source by adding a Sysdig agent. This agent is responsible for collecting and forwarding metrics to Sysdig. 
 
 
 

@@ -1,0 +1,17 @@
+Customer number
+
+
+SaaS customers of Sysdig can be identified by a unique customer number, provided by email when the Sysdig environment is first provisioned. While it is generally unnecessary to know the customer number, and is not prominently displayed in the user interface, some configuration settings may require it. To retrieve the number:
+
+    Log into the Sysdig interface.
+    Navigate to the URL endpoint /api/user/me?_product=SDC.
+    Find the customer:id portion of the JSON to determine the customer number:
+
+
+Archiving data
+
+    On the Sysdig Monitor Side 
+
+    Log in as Administrator to Sysdig Monitor.
+
+    From the Selector button in the lower left navigation, select Settings >Sysdig Storage. 

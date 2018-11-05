@@ -15,10 +15,10 @@ lastupdated: "2018-11-05"
 {:tip: .tip}
 {:download: .download}
 
-# Working with the ingestion key
+# Working with the ingestion key (Sysdig Access Key)
 {: #ingestion_key}
 
-The ingestion key is a token that you must use to configure Sysdig agents to successfully forward data to your IBM Cloud Monitoring with Sysdig instance in {{site.data.keyword.Bluemix}}. To obtain the ingestion key, you must create a service ID for the Sysdig instance. 
+The ingestion key (also known as the **Sysdig Access Key** in Sysdig) is a token that you must use to configure Sysdig agents to successfully forward data to your IBM Cloud Monitoring with Sysdig instance in {{site.data.keyword.Bluemix}}.   
 {:shortdesc}
 
 
@@ -85,17 +85,40 @@ To get the ingestion key for a Sysdig instance through the command line, complet
 
     where APIKEY_NAME is the name of the API key.
  
-    The output from this command includes the field **ingestion_key** that contains the ingestion key for the instance.
+    The output from this command includes the field **Sysdig Access Key** which contains the ingestion key for the instance.
 
 
-## Changing the ingestion key
-{: #change_key}
+For example, the following command shows the output of a sample service ID:
 
-If the ingestion key is compromissed, you can open a support ticket to reset the password.
+```
+$ ic resource service-key "IBM Cloud Monitoring with Sysdig-shg-key-admin"
+Retrieving service key IBM Cloud Monitoring with Sysdig-shg-key-admin in resource group Default under account Sample's Account as sample@ibm.com...
+OK
+                  
+Name:          IBM Cloud Monitoring with Sysdig-shg-key-admin   
+ID:            crn:v1:staging:public:sysdig-monitor:us-south:a/1234567891234567891212346461b066:6e2637ff-4548-47a6-bf30-063fbe49760e:resource-key:bb18c701-0dba-4c4e-bda5-74380e41c4bf   
+Created At:    Fri Nov  2 13:40:39 UTC 2018   
+State:         active   
+Credentials:                                      
+               iam_role_crn:                crn:v1:bluemix:public:iam::::role:Administrator      
+               iam_serviceid_crn:           crn:v1:staging:public:iam-identity::a/1234567891234567891212346461b066::serviceid:ServiceId-88888888-4444-4444-4444-77777777777      
+               Sysdig Access Key:           xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx      
+               Sysdig Customer Id:          111      
+               iam_apikey_description:      Auto generated apikey during resource-key operation for Instance - crn:v1:staging:public:sysdig-monitor:us-south:a/1234567891234567891212346461b066:6e2637ff-4548-47a6-bf30-063fbe49760e::      
+               iam_apikey_name:             auto-generated-apikey-bb18c701-0dba-4c4e-bda5-74380e41c4bf      
+               Sysdig Collector Endpoint:   ingest.us-south.monitoring.test.cloud.ibm.com      
+               Sysdig Endpoint:             https://us-south.monitoring.test.cloud.ibm.com      
+               apikey:                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     
+                  
+Parameters:                      
+               role_crn:   crn:v1:bluemix:public:iam::::role:Administrator      
+```
+{: screen}
 
 
 
-## Reset the ingestion key 
+
+## Reseting the ingestion key 
 {: #reset}
 
 If the ingestion key is compromissed or you have a policy to renew it after a number of days, you can generate a new key and delete the old one.
