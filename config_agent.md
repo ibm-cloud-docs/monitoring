@@ -22,96 +22,116 @@ After you provision an instance of the Sysdig service in the {{site.data.keyword
 {:shortdesc}
 
 
-## Installing a Sysdig agent
-{: #install_agent}
-
-To configure a Sysdig agent, 
-
-1. Install the agent
-2. Configure metrics file
-
-
-You can install a Sysdig agent on any of the following 
-
-Sysdig agents are available as a container or as a service.
-
-You can deploy the agent with an orchestrator such as Kubernetes or Mesos, or without it.
-The Sysdig agent in an orchestrated infrastructure such as Kubernetes, Mesos/Marathon, use the respective Installation Guides: 
-
-    Agent Install: Kubernetes | GKE | OpenShift
-    Agent Install: Mesos | Marathon | DCOS
-
-install the Sysdig agent directly on a Linux host, without using an orchestrator such as Kubernetes or Mesos.
-
-The agent can be installed two ways: 
-
-    As a standard Docker container 
-    As a non-containerized service  
-
-## Configuring a Sysdig agent
-{: #config_agent}
-
 ## Configuring a Sysdig agent on Linux
-{: #config_agent_linux}
+{: #linux}
+
+Complete the following steps to configure a Sysdig agent on Linux to collect and forward metrics to an instance of the IBM Cloud Monitoring with Sysdig service:
+
+1. Obtain the ingestion key (also known as the Sysdig access key). For more information, see [Getting the ingestion key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/ingestion_key.html#ibm_cloud_ui).
+
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+
+3. Deploy the Sysdig agent. Run the following command from a terminal.
+
+    ```
+    curl -s https://s3.amazonaws.com/download.draios.com/stable/install-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure false --check_certificate false --tags TAG_DATA
+    ```
+    {: codeblock}
+
+    where
+
+    * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
+
+    * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
+
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
 
- Run this single command to install the agent automatically:
+## Configuring a Sysdig agent on a Docker container
+{: #docker}
 
-curl -s https://us-south.monitoring.test.cloud.ibm.com/stable/install-agent | sudo bash -s -- --access_key d9512a44-6451-41b3-a5e8-b630bb6cf830 --collector 172.31.19.232 --collector_port 6666 -e SECURE=false --check_certificate false --tags example_tag:example_value
+Complete the following steps to configure a Sysdig agent on a Docker container to collect and forward metrics to an instance of the IBM Cloud Monitoring with Sysdig service:
 
-curl -s https://us-south.monitoring.test.cloud.ibm.com/install-agent | sudo bash -s --access_key d9512a44-6451-41b3-a5e8-b630bb6cf830 --collector 172.31.19.232 --collector_port 6666 -e SECURE=false --check_certificate false
+1. Obtain the ingestion key (also known as the Sysdig access key). For more information, see [Getting the ingestion key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/ingestion_key.html#ibm_cloud_ui).
 
-Tagging your machines is highly recommended!
-Replace example_tag:example_value in the commands with a comma-separated list of tags (eg. role:webserver,location:europe). 
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+
+3. Deploy the Sysdig agent. Run the following command:
+
+    ```
+    docker run -d --name sysdig-agent --restart always --privileged --net host --pid host -e ACCESS_KEY=SYSDIG_ACCESS_KEY -e COLLECTOR=COLLECTOR_ENDPOINT -e COLLECTOR_PORT=6443 -e SECURE=true -e CHECK_CERTIFICATE=false -e TAGS=TAG_DATA -v /var/run/docker.sock:/host/var/run/docker.sock -v /dev:/host/dev -v /proc:/host/proc:ro -v /boot:/host/boot:ro -v /lib/modules:/host/lib/modules:ro -v /usr:/host/usr:ro --shm-size=350m sysdig/agent
+    ```
+    {: codeblock}
+
+    where
+
+    * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
+
+    * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
+
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
+
+    **Note:**  The container runs in detached mode. To see the container’s output, remove *-d*.
 
 
-## Uninstalling a Sysdig agent
-{: #uninstall_agent}
+If the Sysdig agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the Sysdig agent.
 
-Sysdig agent when it was installed as a service. If the agent was installed as a container, remove it using standard Docker commands.
+* **For Debian-syle distributions**, run the following command:
 
-
-## Installing Sysdig agent on Kubernetes
-{: #kube}
-
-
- install a Sysdig agent container in a Kubernetes environment. This document assumes you will run the agent container as a Kubernetes pod, which then enables the Sysdig agent automatically to detect and monitor your Kubernetes environment. 
-
-
-
-Create the first agent using the Sysdig Wizard
-
-1. Watch the video
-2. Choose an installatiomn method:
- -non-orchestrated: Docker
- - non-orchestrated: Native linux
- - Kubernetes |iks| Openshift
- - <esos | Marathin | DCOS
-
- 3. Setup the environment
-
-  Waiting for first node to connect... Go ahead and follow the instructions below!
-
-The Sysdig Monitor agent is available to run inside a single Docker container to report on the entire host.
-
-    First, install kernel headers on the host:
-    Debian-like distributions:
-
+    ```
     apt-get -y install linux-headers-$(uname -r)
+    ```
+    {: codeblock}
 
-RHEL-like distributions:
+* **For RHEL-style distributions**, run the following command:
 
-yum -y install kernel-devel-$(uname -r)
+    ```
+    yum -y install kernel-devel-$(uname -r)
+    ```
+    {: codeblock}
 
-Now install the Sysdig Monitor container on the host:
 
-    docker run -d --name sysdig-agent --restart always --privileged --net host --pid host -e ACCESS_KEY=eccbc556-63cc-48ef-b404-feb0e93f0219 -e COLLECTOR=172.31.19.232 -e COLLECTOR_PORT=6443 -e CHECK_CERTIFICATE=false -e TAGS=example_tag:example_value -v /var/run/docker.sock:/host/var/run/docker.sock -v /dev:/host/dev -v /proc:/host/proc:ro -v /boot:/host/boot:ro -v /lib/modules:/host/lib/modules:ro -v /usr:/host/usr:ro --shm-size=350m sysdig/agent
 
-    Note, this will run the container in detached mode. To see the container's output, remove the "-d".
+## Configuring a Sysdig agent on a Kubernetes cluster by using a script
+{: #kube_script}
 
-Tagging your machines is highly recommended!
-Replace example_tag:example_value in the commands with a comma-separated list of tags (eg. role:webserver,location:europe).
-Note: tags will also be created automatically from your infrastructure's metadata, including AWS, Docker, Mesos, Kubernetes, etc
+Complete the following steps to configure a Sysdig agent on a Kubernetes cluster that runs in the {{site.data.keyword.containerlong_notm}}:
 
-If you have any issues, please refer to the full installation instructions.
-And do not hesitate to contact us at support@sysdig.com!
+1. Obtain the ingestion key (also known as the Sysdig access key). For more information, see [Getting the ingestion key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/ingestion_key.html#ibm_cloud_ui).
+
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+
+3. Set up the cluster environment. Run the following commands:
+
+    First, get the command to set the environment variable and download the Kubernetes configuration files.
+
+    ```
+    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ```
+    {: codeblock}
+
+    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
+
+    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
+
+    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.Bluemix_notm}}.
+
+4. Deploy the Sysdig agent. Run the following command:
+
+    ```
+    curl -sL https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/IBMCloud-Kubernetes-Service/install-agent-k8s.sh | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA
+
+    ```
+    {: codeblock}
+
+    where
+
+    * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
+
+    * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
+
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
+
+
+
+

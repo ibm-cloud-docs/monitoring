@@ -40,7 +40,7 @@ Before you provision an instance, consider the following information:
 
 You provision an instance within the context of a resource group. A resource group lets you organize your services for access control and billing purposes. You can provision the IBM Cloud Monitoring with Sysdig instance in the *default* resource group or in a custom resource group.
 
-When you provision an instance, you automatically get an ingestion key. 
+When you provision an instance, you automatically get an ingestion key, also known as a *Sysdig access key*.
 
 After you provision an instance, you must configure a Sysdig agent for each metric source. A metric source is a cloud resource that you want to monitor and control its performance and health. You must configure a Sysdig agent in each environment that you want to monitor. For example, a metric source can be a Kubernetes cluster. You use the ingestion key to configure the Sysdig agent that is responsible for collecting and forwarding metric data to your instance.
 
@@ -51,6 +51,20 @@ You can view, monitor, and manage the data through the IBM Cloud Monitoring with
 The following figure shows the components overview for the IBM Cloud Monitoring with Sysdig service that is running on {{site.data.keyword.Bluemix_notm}}:
 
 ![Sysdig component overview on the {{site.data.keyword.Bluemix_notm}}](images/components.png "Sysdig component overview on the {{site.data.keyword.Bluemix_notm}}")
+
+
+
+## Sysdig agents
+{: #sysdig_agent}
+
+The Sysdig agent automatically collects and reports on pre-defined metrics. 
+
+The following list outlines Sysdig agents that are available:
+
+* Sysdig agent for Kubernetes, GKE, and OpenShift.
+* Sysdig agent for Docker containers or for non-containerized services.
+* Sysdig agent for Mesos, Marathon, and DCOS.
+* Sysdig agent for manual Linux installations.
 
 
 ## Metrics data

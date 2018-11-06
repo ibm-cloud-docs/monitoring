@@ -33,7 +33,7 @@ He can grant other user admin permissions on teh service, he can add other users
 
 You must have a user ID that is a member or an owner of an {{site.data.keyword.Bluemix_notm}} account. To get an {{site.data.keyword.Bluemix_notm}} user ID, go to: [Registration ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/registration/){:new_window}.
 
-Read about Sysdig Monitor. For more information, see [Sysdig Monitor Documentation](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview).
+Read about Sysdig Monitor. For more information, see [Sysdig Monitor Documentation ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview){:new_window}.
 
 Work in the US-South region.
 

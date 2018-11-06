@@ -12,7 +12,7 @@ Monitoring with Sysdig
 
     {: .topicgroup}
     Tutorials
-        tutorials/kube.md
+        tutorials/kubernetes_cluster.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -25,6 +25,7 @@ Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    endpoints.md
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview)
     [Sysdig Blog](https://sysdig.com/blog/)

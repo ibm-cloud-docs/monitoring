@@ -97,7 +97,7 @@ To provision an instance of IBM Cloud Monitoing with Sysdig through the {{site.d
 
 9. To provision the IBM Cloud Monitoing with Sysdig service in the {{site.data.keyword.Bluemix_notm}} resource group where you are logged in, click **Create**.
 
-After you provision an instance, the Observability dashboard opens. 
+After you provision an instance, the *Observability* dashboard opens. 
 
 
 **Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/Monitoring-with-Sysdig/provision.html#provision_cli).

@@ -116,7 +116,7 @@ Use the following table to identify the service roles that you can grant a user 
 
 Use the following table to see how to map service roles to Sysdig roles:
 
-| Type of role        |Service access role | Sysdig poriviledges by role                 | 
+| Type of role        |Service access role | Sysdig priviledges by role                 | 
 |---------------------|--------------------|---------------------------------------------|
 | Service role        | Reader             | No permissions are granted.                 | 
 | Service role        | Writer             | Grants the user Sysdig user priviledges.    |
