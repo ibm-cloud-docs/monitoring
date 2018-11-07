@@ -16,12 +16,14 @@ Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    config_agent.md
-    remove.md
     provision.md
-    ingestion_key.md
+    remove.md
+    config_agent.md
+    remove_agent.md
     view_metrics.md
+    dashboards.md
     iam_work.md
+    access_key.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

@@ -16,9 +16,9 @@ lastupdated: "2018-11-05"
 {:download: .download}
 
 
-# Analyze logs in Kibana for an app that is deployed in a Kubernetes cluster
+# Analyze metrics for an app that is deployed in a Kubernetes cluster
 {: #kubernetes_cluster}
-Use this tutoral to learn how to configure a cluster to forward metrics to the {{site.data.keyword.loganalysisshort}} service in the {{site.data.keyword.Bluemix_notm}}.
+Use this tutoral to learn how to configure a cluster to forward metrics to the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
 

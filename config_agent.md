@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-21"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -215,7 +215,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
      metadata:
        name: sysdig-agent
      data:
-       dragent.yaml: |
+       dragent.yaml: 
        tags: linux:ubuntu,dept:dev,local:nyc
        collector: us-south.monitoring.cloud.ibm.com
        ssl: true
