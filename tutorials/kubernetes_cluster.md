@@ -18,24 +18,16 @@ lastupdated: "2018-11-05"
 
 # Analyze metrics for an app that is deployed in a Kubernetes cluster
 {: #kubernetes_cluster}
-Use this tutoral to learn how to configure a cluster to forward metrics to the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix_notm}}.
+Use this tutorial to learn how to configure a cluster to forward metrics to the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
+You can use the IBM Cloud Monitoring with Sysdig service to monitor Kubernetes clusters.
 
-Sysdig works by installing an agent onto each worker node in your Kubernetes cluster using a DaemonSet. The agent acts as a data collector. It automatically pulls in various metrics, such as:
+To configure a cluster to forward metrics, you must install an agent onto each worker node in your Kubernetes cluster using a DaemonSet. The Sysdig agent uses an access key (token) to authenticate with the IBM Cloud Monitoring with Sysdig instance. The Sysdig agent acts as a data collector. It automatically collects metrics such as *worker CPU* and worker memory*, *HTTP traffic into and out of your containers*, and several pieces of common infrastructure software. In addition, the agent can collect custom application metrics using either a Prometheus-compatible scraper or a statsd facade. 
 
-    Worker CPU and memory.
-    HTTP traffic into and out of your containers.
-    Several pieces of common infrastructure software.
+You view metrics via Sysdig's web-based user interface.
 
-In addition, the agent can collect custom application metrics using either a Prometheus-compatible scraper or a statsd facade. This document briefly describes how to configure these.
-
-To connect to Sysdig, the agent requires an access token. The access token is provided in the Sysdig for IBM Cloud user interface on first opening the Sysdig interface, during Sysdig's first run wizard. Alternatively, it can be found by generating a set of Service Credentials via the IBM Cloud UI.
-
-If you run an existing metrics infrastructure, the agent fills the space usually occupied by a daemon like collectd.
-
-The agent outputs metrics to Sysdig's ingest backend, which then collates and enables visualisation of metrics via Sysdig's web-based user interface.
-
+![Components overview on the {{site.data.keyword.Bluemix_notm}}](../images/kube.png "Components overview on the {{site.data.keyword.Bluemix_notm}}")
 
 
 
@@ -53,7 +45,7 @@ Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each o
 | Resource                             | Scope of the access policy | Role    | Region    | Information                  |
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
 | Resource group **Default**           |  Resource group            | Viewer  | us-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
-| IBM Cloud Monitoing with Sysdig service |  Resource group            | Editor  | us-south  | This policy is required to allow the user to provision and administer the IBM Cloud Monitoing with Sysdig service in the Default resource group.   |
+| IBM Cloud Monitoring with Sysdig service |  Resource group            | Editor  | us-south  | This policy is required to allow the user to provision and administer the IBM Cloud Monitoring with Sysdig service in the Default resource group.   |
 | Kubernetes cluster instance          |  Resource                 | Editor  | us-south  | This policy is required to configure the secret and the Sysdig agent in the Kubernetes cluster. |
 {: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"} 
 
@@ -64,10 +56,10 @@ Install the {{site.data.keyword.Bluemix_notm}} CLI. For more information, see [I
 Install the Kubernetes CLI plugin. For more information, see [Installing the CLI](/docs/containers/cs_cli_install.html#cs_cli_install).
 
 
-## Step1: Provision an IBM Cloud Monitoing with Sysdig instance
+## Step1: Provision an IBM Cloud Monitoring with Sysdig instance
 {: #step1}
 
-To provision an instance of IBM Cloud Monitoing with Sysdig through the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
+To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
 
@@ -79,7 +71,7 @@ To provision an instance of IBM Cloud Monitoing with Sysdig through the {{site.d
 
 3. To filter the list of services that is displayed, select the **Developer Tools** category.
 
-4. Click the **IBM Cloud Monitoing with Sysdig** tile. The *Observability* dashboard opens.
+4. Click the **IBM Cloud Monitoring with Sysdig** tile. The *Observability* dashboard opens.
 
 5. Select **Create instance**. 
 
@@ -95,7 +87,7 @@ To provision an instance of IBM Cloud Monitoing with Sysdig through the {{site.d
 
     For more information about other service plans, see [Pricing plans](/docs/services/Monitoring-with-Sysdig/overview.html#pricing_plans).
 
-9. To provision the IBM Cloud Monitoing with Sysdig service in the {{site.data.keyword.Bluemix_notm}} resource group where you are logged in, click **Create**.
+9. To provision the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix_notm}} resource group where you are logged in, click **Create**.
 
 After you provision an instance, the *Observability* dashboard opens. 
 
@@ -136,34 +128,50 @@ To configure your Kubernetes cluster to forward metrics to your IBM Cloud Monito
 
     **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.Bluemix_notm}}.
 
-3. Add a secret to your Kubernetes cluster. Run the following command:
+3. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/access_key.html#ibm_cloud_ui).
+
+4. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+
+5. Deploy the Sysdig agent. Run the following command:
 
     ```
-    kubectl create secret generic sysdig-agent --from-literal=access-key=SYSDIG_INGESTION_KEY_FOR_YOUR_INSTANCE
-    ```
-    {: codeblock}
+    curl -sL https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/IBMCloud-Kubernetes-Service/install-agent-k8s.sh | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA
 
-    The SYSDIG_INGESTION_KEY_FOR_YOUR_INSTANCE must match the Sysdig access key for your instance.
-
-    The Kubernetes secret contains the ingestion key which is used to authenticate the Sysdig agent with the IBM Cloud Monitoring with Sysdig service. It is used to open a secure web socket to the ingestion server on the monitoring back-end system.
-
-4. Configure the Sysdig agent on every worker(node) of your Kubernetes cluster. Run the following command:
-
-    ```
-    kubectl create -f https://repo.logdna.com/ibm/prod/logdna-agent-ds-us-south.yaml
     ```
     {: codeblock}
 
-    The Sysdig agent is responsible for collecting and forwarding your metrics.
+    where
 
-    The agent collects automatically worker node metrics and Kubernetes metrics.
+    * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
-5. Verify that the Sysdig agent is created successfully and its status. Run the following command:
+    * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
+
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
+
+6. Verify that the Sysdig agent is created successfully and its status. Run the following command:
 
     ```
     kubectl get pods
     ```
     {: codeblock}
+
+
+
+## Step3: Launch the Sysdig Web UI
+{: #step3}
+
+
+## Step 4: View your metrics
+{: step4}
+
+
+
+## Next steps
+{: #next_steps}
+
+
+
+
 
 
 

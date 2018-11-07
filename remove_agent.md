@@ -18,9 +18,8 @@ lastupdated: "2018-11-05"
 # Removing a Sysdig agent
 {: #sysdig_remove_agent}
 
-After you provision an instance of the Sysdig service in the {{site.data.keyword.Bluemix}}, you must configure a Sysdig agent in each environment that you want to monitor. The Sysdig agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in each environment.
+When you delete an IBM Cloud Monitoring with Sysdig instance, or if you want to stop collecting metrics from a source, you must uninstall the Sysdig agent.
 {:shortdesc}
-
 
 
 ## Removing a Sysdig agent from a Kubernetes cluster
@@ -73,4 +72,34 @@ Complete the following steps to remove a Sysdig agent from a Kubernetes cluster:
 
 
 
+
+## Removing a Sysdig agent on Linux
+{: #linux}
+
+Complete the following steps to remove a Sysdig agent on Linux:
+
+* To uninstall the agent from **Debian and Ubuntu Linux distributions**, run the following command as the **sudo** user from a terminal:
+
+    ```
+    sudo apt-get remove draios-agent
+    ```
+    {: codeblock}
+
+* To uninstall the agent from **RHEL, CentOS, and Fedora Linux distributions**, run the following command as the **sudo** user from a terminal:
+
+    ```
+    sudo yum erase draios-agent
+    ```
+    {: codeblock}
+
+
+
+
+## Removing a Sysdig agent on a Docker container
+{: #docker}
+
+Complete the following steps to remove a Sysdig agent on a Docker container:
+
+
+remove it using standard Docker commands.
 
