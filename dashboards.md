@@ -34,6 +34,31 @@ In the **EXPLORE** section of the Web UI, dashboards are organized into two grou
 * *Default dashboards*: These are the pre-defined dashboards.
 * *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
 
+You can copy and share dashboards through the Web UI. 
+
+You can run scripts to complete any of the following actions:
+* Save existing dashboards to a local file.
+* Create new dashboards that are identical to the dashboards that you save.
+* Restore dashboards.
+
+
+## Pre-defined dashboards
+{: #predefined}
+
+Pre-defined dashboards are designed around various supported applications, network topologies, infrastructure layouts, and services. 
+
+Pre-defined dashboards include a series of panels that are already configured.
+
+The following table lists the different types of pre-defined dashboards:
+
+| Type | Description | More information | 
+|------|-------------|------------------|
+| Applications | Dashboards that you can use to monitor your applications and infrastructure components.  | [Application dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#applications) |
+| Host and containers | Dashboards that you can use to monitor resource utilization and system activity on your hosts and in your containers. | [Host and container dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#host_container) |
+| Network | Dashboards that you can use to monitor your network connections and activity. | [Network dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#network) |
+| Service | Dashboards that you can use to monitor the performance of your services, even if those services are deployed in orchestrated containers. | [Service dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#service) |
+| Topology | Dashboards that you can use to monitor the logical dependencies of your application tiers and overlay metrics. | [Topology dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#topology) |
+{: caption="Table 1. List of pre-defined dashboards" caption-side="top"} 
 
 
 
@@ -80,57 +105,6 @@ Complete the following steps to create a custom dashboard:
 
     8. Click **Save**.
 
- 
-
-## Pre-defined dashboards
-{: #predefined}
-
-Pre-defined dashboards are designed around various supported applications, network topologies, infrastructure layouts, and services. 
-
-Pre-defined dashboards include a series of panels that are already configured.
-
-The following table lists the different types of pre-defined dashboards:
-
-| Type | Description | More information | 
-|------|-------------|------------------|
-| Applications | Dashboards that you can use to monitor your applications and infrastructure components.  | [Application dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#applications) |
-| Host and containers | Dashboards that you can use to monitor resource utilization and system activity on your hosts and in your containers. | [Host and container dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#host_container) |
-| Network | Dashboards that you can use to monitor your network connections and activity. | [Network dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#network) |
-| Service | Dashboards that you can use to monitor the performance of your services, even if those services are deployed in orchestrated containers. | [Service dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#service) |
-| Topology | Dashboards that you can use to monitor the logical dependencies of your application tiers and overlay metrics. | [Topology dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#topology) |
-{: caption="Table 1. List of pre-defined dashboards" caption-side="top"} 
-
-
-## Sharing a dashboard
-{: #share}
-
-You can share dashboards between users in a team, and externally, by configuring a public URL for the dashboard.  
-
-The following table outlines the different actions and user permissions that are required for users to share or work with a shared dashboard:
-
-| Action                  |	Who can share             |	Dashboard instance	            | Who can view the dashboard             | Who can edit the dashboard  |
-|-------------------------|---------------------------|---------------------------------|----------------------------------------|-----------------------------|
-| Share with current Team |	Dashboard creator         |	Share same dashboard instance   | Team members with viewing permissions  | Team members with editing permissions   |
-| Share publicly as URL	  | Any Edit User of the team |	Share same dashboard instance   | Anyone                                 | No one                      |
-{: caption="Table 1. Information about users and dashboards related to sharing dashboards" caption-side="top"} 
-
-
-Complete the following steps to share a dashboard:
-
-1. Navigate to the *DASHBOARDS* section in the Web UI.
-2. Select the dashboard from the left hand panel.
-3. Click **Settings** (three dots icon), and select **Share**.
-4. Choose how you want to share the dashboard:
-
-    * Toggle the **Share with Team** slider to share the dashboard with the current team. The team where the dashboard is shared is displayed.
-
-    * Toggle the **Share Public URL** slider to reveal the custom public URL.
-
-5. Click **Close**.
-
-Share a dashboard externally, to allow external users to review the dashboard metrics, while restricting access to changing panels and configurations.
-{: tip}
-
 
 
 ## Copying a dashboard
@@ -163,50 +137,57 @@ Complete the following steps to copy a dashboard:
     
     5. Check that the scope of the dashboard in the new team is updated based on the permissions of the destination team.
 
+## Deleting a dashboard
+{: #delete}
+
+Complete the following steps to delete a dashboard:
+
+1. Navigate to the *DASHBOARDS* section in the Web UI.
+2. Select the dashboard from the left hand panel.
+3. Click **Settings** (three dots icon), and select **Delete dashboard**. 
+4. Confirm deletion by clicking **Yes, delete dashboard**.
 
 
+## Sharing a dashboard
+{: #share}
 
-## Saving and restoring dashboards programmatically
-{: #programmatically}
+You can share dashboards between users in a team, and externally, by configuring a public URL for the dashboard.  
 
-Save and Restore Dashboards with Scripts
+The following table outlines the different actions and user permissions that are required for users to share or work with a shared dashboard:
 
-Sysdig Monitor provides users the ability to save existing dashboards to a locally controlled file, and create new dashboards identical to the ones previously saved. This can be done via Sysdig's Python client library example scripts. The save script stores all current dashboards for the active account in a .zip archive, while the restore script adds all dashboards in the archive to the list of dashboards.
+| Action                  |	Who can share             |	Dashboard instance	            | Who can view the dashboard             | Who can edit the dashboard  |
+|-------------------------|---------------------------|---------------------------------|----------------------------------------|-----------------------------|
+| Share with current Team |	Dashboard creator         |	Share same dashboard instance   | Team members with viewing permissions  | Team members with editing permissions   |
+| Share publicly as URL	  | Any Edit User of the team |	Share same dashboard instance   | Anyone                                 | No one                      |
+{: caption="Table 1. Information about users and dashboards related to sharing dashboards" caption-side="top"} 
 
-Restoring dashboards will not override the user's existing dashboards. Instead, new dashboards will be added to the list.
 
-If this script is used in a strictly backup/restore capacity, dashboards will need to be deleted manually from the account, either before or after the restore action is completed.
+Complete the following steps to share a dashboard:
 
-The restore script does not have to target the same account as the save script. This allows dashboards to be saved from one user, and restored to multiple users.
+1. Navigate to the *DASHBOARDS* section in the Web UI.
+2. Select the dashboard from the left hand panel.
+3. Click **Settings** (three dots icon), and select **Share**.
+4. Choose how you want to share the dashboard:
 
-Saving and restoring the scripts has the following prerequisites:
+    * Toggle the **Share with Team** slider to share the dashboard with the current team. The team where the dashboard is shared is displayed.
 
-    Python 2.x (2.7.x)
+    * Toggle the **Share Public URL** slider to reveal the custom public URL.
 
-    pip version 1.3 or later.
+5. Click **Close**.
 
-    pip is installed as part of the Python package for versions 2.7 and later.
-    virtualenv (recommended)
+Share a dashboard externally to allow external users to view the dashboard metrics, while restricting access to changing panels and configurations.
+{: tip}
+
+
+## Saving dashboards programmatically by using a Python Script
+{: #save}
+
+Complete the following steps to save dashboards locally:
+
 
 The library and example scripts are available in the Sysdig GitHub repository: https://github.com/draios/python-sdc-client.
 Download the Scripts
 
-To configure the local environment for the scripts:
-
-    Either download a .zip archive of the python client from the repository and unpack it, or clone the repository:
-    sysdig@user:~$ git clone https://github.com/draios/python-sdc-client.git
-    In a terminal, navigate to the directory.
-
-    Configure the Python environment as necessary.
-
-    If you are unfamiliar with Python, Sysdig recommends setting up via pip & virtualenv:
-    sysdig@user:~$ mkdir -p ~/workingdir/venv # declare where you want all python tools installed
-    sysdig@user:~$ sudo virtualenv ~/workingdir/venv  # prepare the workspace -- this may download several things
-    sysdig@user:~$ source ~/workingdir/venv/bin/activate  # cause all python tools to use this workspace from now on
-    (venv) $  # at this point the prompt reminds us we're in the virtual environment
-    (venv) $  pip install .    # install the sdcclient library into the venv
-
-The sdcclient module is now available to Python.
 Save All Dashboards with a Python Script
 
 To save the dashboards:
@@ -220,7 +201,16 @@ To save the dashboards:
     Dashboard name: JVM, # Charts: 5
     Finished writing dashboard data in zip format to SAVED_DASHBOARDS.ZIP
 
-Restore Dashboards with a Python Script
+
+## Restoring dashboards programmatically by using a Python Script
+{: #restore}
+
+You can restore a *.zip* file 
+
+Restoring dashboards will not override the user's existing dashboards. Instead, new dashboards will be added to the list.
+
+
+The restore script does not have to target the same account as the save script. This allows dashboards to be saved from one user, and restored to multiple users.
 
 To restore dashboards from a .zip archive
 
@@ -230,4 +220,48 @@ To restore dashboards from a .zip archive
     (venv) $ sudo python examples/restore_dashboards.py API_TOKEN SAVED_DASHBOARDS.ZIP
     Dashboards pushed.
     (venv) user@server:~/python-sdc-client$
+
+
+## Appendix: Configuring the local environment to run scripts
+{: #appendix1}
+
+Complete the following steps to configure your local environment to run programmatic dashboard tasks:
+
+1. Install the following software:
+
+    * Python 2.x (2.7.x)
+
+    * pip version 1.3 or later. (Note: pip is installed as part of the Python package for version 2.7 and later versions.)
+
+    * Optional: [virtualenv](https://virtualenv.pypa.io/en/stable/installation/)
+
+2. Install the Sysdig Python client. Choose one of the following methods:
+
+    * Install using **pip**. Run the following command: 
+    
+        ```
+        pip install sdcclient
+        ```
+        {: codeblock}
+
+    * Download [Sysdig Monitor/Secure Python client library [External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client){:new_window}. Then, unpack the *.zip* file.
+
+    * Clone the repository. Run the following command:
+
+        ```
+        git clone https://github.com/draios/python-sdc-client.git
+        ```
+        {: codeblock}
+
+2. Configure the Python environment.
+
+    If you are unfamiliar with Python, Sysdig recommends setting up via pip & virtualenv:
+    sysdig@user:~$ mkdir -p ~/workingdir/venv # declare where you want all python tools installed
+    sysdig@user:~$ sudo virtualenv ~/workingdir/venv  # prepare the workspace -- this may download several things
+    sysdig@user:~$ source ~/workingdir/venv/bin/activate  # cause all python tools to use this workspace from now on
+    (venv) $  # at this point the prompt reminds us we're in the virtual environment
+    (venv) $  pip install .    # install the sdcclient library into the venv
+
+The sdcclient module is now available to Python.
+
 

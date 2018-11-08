@@ -28,8 +28,9 @@ Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    default_dashboards.md
     endpoints.md
+    default_dashboards.md
+    sysdig_python_lib
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview)
     [Sysdig Blog](https://sysdig.com/blog/)
