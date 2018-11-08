@@ -18,19 +18,31 @@ lastupdated: "2018-11-05"
 
 # Working with dashboards
 {: #dashboards}
-You can use any of the pre-defined dashboards to monitor your infrastructure. You can also create custom dashboards.
+Use dashboards to monitor your infrastructure, applications, and services. You can use pre-defined dashboards. You can also create custom dashboards through the Web UI or programmatically.
 {:shortdesc}
 
-Once the agent has started sending metrics to Sysdig for your environment, you can use the Sysdig Monitor UI to view and analyze that data. This doc will help you understand the UI and various scenarios compared to Grafana.
+A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers.
 
+In the **DASHBOARDS** section of the Web UI, dashboards are organized into three main groups:
 
+* *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
+* *My Shared Dashboards*: These are the dashboards that are created by the user who is currently logged in, and that are shared with other users.
+* *Dashboards Shared With Me*: These are the dashboards that are created by other users, and shared with the current user.
+
+In the **EXPLORE** section of the Web UI, dashboards are organized into two groups:
+* *Default dashboards*: These are the pre-defined dashboards.
+* *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
+
+ 
 
 ## Pre-defined dashboards
 {: #predefined}
 
-Sysdig provides a number of pre-built dashboards, designed around various supported applications, network topologies, infrastructure layouts, and services. These can be used to jumpstart the dashboard building process, as templates for further configuration.
+Pre-defined dashboards are designed around various supported applications, network topologies, infrastructure layouts, and services. 
 
-Pre-built dashboards come with a series of panels already configured, based on the information most relevant users.
+Pre-defined dashboards include a series of panels that are already configured.
+
+The following table lists the different types of pre-defined dashboards:
 
 | Type | Description | More information | 
 |------|-------------|------------------|
@@ -42,13 +54,60 @@ Pre-built dashboards come with a series of panels already configured, based on t
 {: caption="Table 1. List of pre-defined dashboards" caption-side="top"} 
 
 
-## Custom dashboards
-{: #custom}
+## Creating custom dashboards through the Web UI
+{: #custom_ui}
 
 create customized dashboards to display the most useful/relevant views and metrics for the infrastructure in a single location. Each dashboard is comprised of a series of panels configured to display specific data in a number of different formats:
 
+**Scope** defines what data is used for aggregation. You can set the scope at a dashboard level, or override for individual panels. The data that is aggregated is displayed within the dashboard.
 
-## Programmatic dashboard operations
-{: #programmatic}
+Complete the following steps to create a custom dashboard:
+
+1. From the *DASHBOARD** section in the Web UI, select **Add Dashboard**. The *Create a New Dashboard* page opens.
+
+    * Select a pre-defined dashboard or choose the *Blank Dashboard*. 
+
+    * Enter a name for your dashboard.
+
+    * Click **Create Dashboard**.
+
+2. Set the dashboard scope. Click **Edit Scope** to change the default scope. By default, **Everywhere** is selected.
+    
+    * Select the scope. 
+
+    * Optionally, click **Override the custom panel scopes** to override the scope for all panels which currently have a custom scope defined. **Note: This action cannot be undone.** 
+
+    **Note:** To reset the dashboard scope to the entire infrastructure, or to update an existing dashboard's scope to the entire infrastructure, select **Everywhere**.
+
+    * Click **Save**.
+
+3. Configure panels. Repeat this step for any of the panels in the dashboard that you want to modify.
+
+    1. Identify the panel that you want to modify.
+
+    2. Select **Edit Panel**. This is the pencil icon.
+    
+    3. Change the a chart type.
+
+    4. Change the metric, and rate. Rate defines the type of aggregation that is done to the data.
+
+    5. Change the scope of the panel. Click **Override Dashboard Scope**. Then, change the scope. If you need to restore the dashboard scope to the panel, select **Default to Dashboard Scope**.
+
+    6. In the *Compare to* field, click **Configure**. Set the time range for the comparison.
+
+    7. Set the panel background color based on metric thresholds. Click **Override Color Coding**, then, **Enable**. Set values for the different thresholds.
+
+    8. Click **Save**.
+
+4. Display dashboard specific events. 
+
+Sysdig Monitor allows users to configure dashboards to display infrastructure events relevant to a dashboard's panels within the panels themselves. This allows users an even more in-depth view of the status of their environment. To configure how events are displayed:
+
+
+
+
+## Working with dashboards programmatically
+{: #programmatically}
+
 
 

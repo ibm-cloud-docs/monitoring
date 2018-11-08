@@ -66,6 +66,29 @@ The following list outlines Sysdig agents that are available:
 * Sysdig agent for Mesos, Marathon, and DCOS.
 * Sysdig agent for manual Linux installations.
 
+## Dashboards
+{: #dashboards}
+
+After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, you must configure a Sysdig agent in each environment that you want to monitor. The Sysdig agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in each environment.
+
+You can monitor the health, performance, and state of your infrastructure, applications and services through the Web UI or programmatically. You can monitor a single host or a group of hosts. You can view data for a single metric or you can use dashboards to view data across groups of related metrics into a single view.
+
+A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers.
+
+In the **DASHBOARDS** section of the Web UI, dashboards are organized into three main groups:
+
+* **My Dashboards**: These are the dashboards that are created by the user who is currently logged in.
+* **My Shared Dashboards**: These are the dashboards that are created by the user who is currently logged in, and that are shared with other users.
+* **Dashboards Shared With Me**: These are the dashboards that are created by other users, and shared with the current user.
+
+In the **EXPLORE** section of the Web UI, dashboards are organized into two groups:
+* **Default dashboards**: These are the pre-defined dashboards.
+* **My Dashboards**: These are the dashboards that are created by the user who is currently logged in.
+
+
+A default dashboard can be configured by setting the default entry point for a team, unifying a team's Sysdig Monitor experience, and allowing users to focus their immediate attention on the most relevant information for them. For more information on configuring a default entry point, refer to the Configure an Entry Page or Dashboard for a Team section of the Sysdig Platform documentation.
+
+
 
 ## Metrics data
 {: #data}
