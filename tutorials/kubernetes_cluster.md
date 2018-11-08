@@ -160,9 +160,34 @@ To configure your Kubernetes cluster to forward metrics to your IBM Cloud Monito
 ## Step3: Launch the Sysdig Web UI
 {: #step3}
 
+Complete the following steps to launch the web UI:
 
-## Step 4: View your metrics
+1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
+
+    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://bluemix.net){:new_window}.
+
+	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} Dashboard opens.
+
+2. In the navigation menu, select **Observability**. 
+
+3. Select **Monitoring**. 
+
+    The list of instances that are available on {{site.data.keyword.Bluemix_notm}} is displayed.
+
+4. Select your instance. Then, click **View Sysdig**.
+
+If the Sysdig agent is configured successfully, the *EXPLORE* view opens.
+
+However, if the Sysdig agent is not installed successfully, points to the wrong ingestion endpoint, or the access key is incorrect, the page that opens informs you about what to do next.
+
+**Note:** You can only have one Web UI session open per browser.
+{: tip}
+
+
+## Step 4: Monitor your cluster
 {: step4}
+
+In the **EXPLORE** view of the Web UI, you can see the *Host and containers* that are forwarding metrics to the instance. This view is the starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI for users.
 
 
 
