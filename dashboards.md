@@ -18,6 +18,7 @@ lastupdated: "2018-11-05"
 
 # Working with dashboards
 {: #dashboards}
+
 Use dashboards to monitor your infrastructure, applications, and services. You can use pre-defined dashboards. You can also create custom dashboards through the Web UI or programmatically.
 {:shortdesc}
 
@@ -57,9 +58,7 @@ The following table lists the different types of pre-defined dashboards:
 ## Creating custom dashboards through the Web UI
 {: #custom_ui}
 
-create customized dashboards to display the most useful/relevant views and metrics for the infrastructure in a single location. Each dashboard is comprised of a series of panels configured to display specific data in a number of different formats:
-
-**Scope** defines what data is used for aggregation. You can set the scope at a dashboard level, or override for individual panels. The data that is aggregated is displayed within the dashboard.
+When you create a custom dashboard, you can start from a template such as a pre-defined dashboard, or choose a blank dashboard. A dashboard includes panels that are configured to display specific data in a number of different formats. You also set how data is aggregated. The **scope** defines what data is used for aggregation and displayed. You can set the scope at a dashboard level, or override for individual panels. 
 
 Complete the following steps to create a custom dashboard:
 
@@ -98,11 +97,6 @@ Complete the following steps to create a custom dashboard:
     7. Set the panel background color based on metric thresholds. Click **Override Color Coding**, then, **Enable**. Set values for the different thresholds.
 
     8. Click **Save**.
-
-4. Display dashboard specific events. 
-
-Sysdig Monitor allows users to configure dashboards to display infrastructure events relevant to a dashboard's panels within the panels themselves. This allows users an even more in-depth view of the status of their environment. To configure how events are displayed:
-
 
 
 

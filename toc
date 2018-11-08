@@ -22,6 +22,7 @@ Monitoring with Sysdig
     remove_agent.md
     view_metrics.md
     dashboards.md
+    events.md
     iam_work.md
     access_key.md
     {: .navgroup-end}
