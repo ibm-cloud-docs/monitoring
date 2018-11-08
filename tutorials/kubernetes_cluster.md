@@ -180,7 +180,7 @@ If the Sysdig agent is configured successfully, the *EXPLORE* view opens.
 
 However, if the Sysdig agent is not installed successfully, points to the wrong ingestion endpoint, or the access key is incorrect, the page that opens informs you about what to do next.
 
-**Note:** You can only have one Web UI session open per browser.
+You can only have one Web UI session open per browser.
 {: tip}
 
 

@@ -18,17 +18,19 @@ lastupdated: "2018-11-05"
 
 # Working with dashboards
 {: #dashboards}
-xxxxxxx
+You can use any of the pre-defined dashboards to monitor your infrastructure. You can also create custom dashboards.
 {:shortdesc}
 
 Once the agent has started sending metrics to Sysdig for your environment, you can use the Sysdig Monitor UI to view and analyze that data. This doc will help you understand the UI and various scenarios compared to Grafana.
 
 
-## Custom dashboards
-
 
 ## Pre-defined dashboards
+{: #predefined}
 
+Sysdig provides a number of pre-built dashboards, designed around various supported applications, network topologies, infrastructure layouts, and services. These can be used to jumpstart the dashboard building process, as templates for further configuration.
+
+Pre-built dashboards come with a series of panels already configured, based on the information most relevant users.
 
 | Type | Description | More information | 
 |------|-------------|------------------|
@@ -40,5 +42,13 @@ Once the agent has started sending metrics to Sysdig for your environment, you c
 {: caption="Table 1. List of pre-defined dashboards" caption-side="top"} 
 
 
+## Custom dashboards
+{: #custom}
+
+create customized dashboards to display the most useful/relevant views and metrics for the infrastructure in a single location. Each dashboard is comprised of a series of panels configured to display specific data in a number of different formats:
+
+
+## Programmatic dashboard operations
+{: #programmatic}
 
 
