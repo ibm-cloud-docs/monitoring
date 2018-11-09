@@ -7,6 +7,8 @@ Monitoring with Sysdig
     {: .navgroup id="learn"}
     index.md
     overview.md
+    manage.md
+    monitoring.md
     network.md
     iam.md
 
@@ -21,7 +23,7 @@ Monitoring with Sysdig
     config_agent.md
     remove_agent.md
     launch.md
-    monitoring.md
+    groups.md
     access_key.md
     dashboards.md
     events.md

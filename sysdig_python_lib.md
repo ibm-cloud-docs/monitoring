@@ -63,7 +63,7 @@ Complete the following steps to configure your local environment to run programm
 
 
 
-The library exports the *SdcClient* library. To instantiate them, you can use the following code:
+The library exports the *SdcClient* library. To instantiate its functions, you can use the following code:
 
 ```
 #! /usr/bin/python
@@ -259,9 +259,8 @@ For example, to create a dashboard, a sample json file looks as follows:
 
 
 
-## Saving dashboards by using the API
+## Saving the dashboards of a team by using the API
 {: #save_api}
-
 
 Complete the following steps to download the dashboards that are available for a team:
 
