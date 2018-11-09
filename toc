@@ -20,18 +20,20 @@ Monitoring with Sysdig
     remove.md
     config_agent.md
     remove_agent.md
-    view_metrics.md
+    launch.md
+    monitoring.md
+    access_key.md
     dashboards.md
     events.md
+    metrics.md
     iam_work.md
-    access_key.md
     sysdig_python_lib.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     endpoints.md
     default_dashboards.md
-    [Sysdig REST API](https://support.sysdig.com/hc/en-us/articles/205233166-Sysdig-REST-API)
+    pricing.md
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview)
     [Sysdig Blog](https://sysdig.com/blog/)

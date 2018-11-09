@@ -125,18 +125,10 @@ If the access key is compromissed or you have a policy to renew it after a numbe
 
 To renew the access key for an IBM Cloud Monitoring with Sysdig instance, complete the following steps:
 
-1. Launch the IBM Log Analysis with LogDNA web UI. For more information, see [Launching the IBM Log Analysis with LogDNA Web UI](/docs/services/Log-Analysis-with-LogDNA/view_logs.html#step2).
+1. Launch the IBM Cloud Monitoring with Sysdig Web UI. For more information, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
 
-2. Select the **Configuration** icon. Then select **Organization**. 
+2. From the *Selector* button in the navigation bar, choose **Settings**.
 
-3. Select **API keys**.
+2. In the *Password management* section, click **Reset your password**.
 
-    You can see the access keys that have been created. 
-
-4. Select **Generate access key**.
-
-    A new key is added to the list.
-
-5. Delete the old access key. Click **delete**.
-
-**Note:** After you reset the access key, you must update the access key for any log sources that you have configured to forward logs to this IBM Log Analysis with LogDNA instance.
+**Note:** After you reset the Sysdig access key, you must update the access key for any log sources that you have configured to forward metrics to this IBM Cloud Monitoring with Sysdig instance.

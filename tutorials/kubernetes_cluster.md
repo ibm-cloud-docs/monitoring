@@ -187,14 +187,29 @@ You can only have one Web UI session open per browser.
 ## Step 4: Monitor your cluster
 {: step4}
 
-In the **EXPLORE** view of the Web UI, you can see the *Host and containers* that are forwarding metrics to the instance. This view is the starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI for users.
+You can monitor your cluster in the **EXPLORE** view that is available through the Web UI. This view is the starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI for users.
 
+In the section *Host and containers*, you can see the list of workers in your cluster that are forwarding metrics to the monitoring instance. Each worker entry represents a group of related infrastructure objects for that worker.
+
+Click **Host and containers** ![Host and containers](images/switch_hosts.png) to switch data sources. Then, select a worker. The data that is displayed corresponds to the worker that you have selected.
+
+If you click ** Back to Explore Table**, the *Explore table* is displayed. Each column shows a different metric. You can configure each metric individually. You can change the order of the columns. Notice that when you make changes to the order of existing columns, the change is persistent across different groupings while you are logged in. If you add or remove a column the change is persistent. You can also configure colors to highlight values and improve readibility.
+
+For example, to configure color-coding for a column, complete the following steps:
+
+1. Select a column. Hover the mouse over the column title. Then, select the pencil icon.
+2. Toggle the bar to enable color-coding.
+3. Set values for the different thresholds.
+
+If you select a worker, a default dashboard is displayed. Click on the ![switch dashboard](images/switch_dashboards_1.png) and explore the different default dashboards and metrics. Notice that you can only select metrics and dashboards that are relevant to the selected worker.
 
 
 ## Next steps
 {: #next_steps}
 
+Create a custom dashboard. For more information, see [Working with dashboards](/docs/services/Monitoring-with-Sysdig/dashboards.html#dashboards).
 
+You can also learn about alerts. For more information, see [Working with alerts](/docs/services/Monitoring-with-Sysdig/alerts.html#alerts). 
 
 
 

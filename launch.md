@@ -15,21 +15,19 @@ lastupdated: "2018-11-05"
 {:tip: .tip}
 {:download: .download}
 
-# Viewing metrics
-{: #view_metrics}
+# Navigating to the Web UI
+{: #launch}
 
 After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for a metrics source, you can view, monitor, and manage metrics through the IBM Cloud Monitoring with Sysdig Web UI.
 {:shortdesc}
 
-Complete the following steps to view metrics:
 
-
-## Step 1: Grant IAM policies to a user to view metrics
+## Step 1: Grant IAM policies to a user to view data 
 {: #step1}
 
 **Note:** You must be an adminsitrator of the IBM Cloud Monitoring with Sysdig service, an administrator of the IBM Cloud Monitoring with Sysdig instance, or have account IAM permissions to grant other users policies.
 
-The following table lists the minimum policies that a user must have to be able to launch the IBM Cloud Monitoring with Sysdig Web UI, and view metrics:
+The following table lists the minimum policies that a user must have to be able to launch the IBM Cloud Monitoring with Sysdig Web UI, and view data:
 
 | Service                        | Role                      | Permission granted                                                                            |
 |--------------------------------|---------------------------|-----------------------------------------------------------------------------------------------|
@@ -62,5 +60,3 @@ Complete the following steps to launch the web UI:
 4. Select one instance. Then, click **View Sysdig**.
 
 The Web UI opens.
-
-

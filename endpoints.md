@@ -16,11 +16,16 @@ lastupdated: "2018-11-05"
 {:download: .download}
 
 
-# Endpoints
+# Regions and endpoints
 {: #endpoints}
 
-List of endpoints for the IBM Cloud Monitoring with Sysdig service:
+List of supported regions and endpoints for the IBM Cloud Monitoring with Sysdig service:
 {:shortdesc}
+
+## Regions
+{: #regions}
+
+The IBM Cloud Monitoring with Sysdig service is available in the **US South** region only.
 
 
 ## Sysdig Collector endpoints

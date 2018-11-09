@@ -102,7 +102,7 @@ Complete the following steps to get the token:
 
 Complete the following steps to get the token:
 
-1. From the *Selector* button in the navigation bar, choose **Settings**
+1. From the *Selector* button in the navigation bar, choose **Settings**.
 2. In the *Sysdig Monitor API* section, click **Reset Token** to reset the API token.
 
 
