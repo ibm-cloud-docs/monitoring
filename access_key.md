@@ -15,7 +15,7 @@ lastupdated: "2018-11-05"
 {:tip: .tip}
 {:download: .download}
 
-# Working with the Access Key
+# Working with access keys
 {: #access_key}
 
 The **Access Key** is a token that you must use to configure Sysdig agents to successfully forward data to your IBM Cloud Monitoring with Sysdig instance in {{site.data.keyword.Bluemix}}.   

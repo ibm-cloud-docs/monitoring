@@ -34,6 +34,9 @@ Labels are classified as infrastructure labels and metric descriptor labels. Eac
 * Time aggregation is always performed before group aggregation.
 * To create multi-series comparisons and multiple alerts, you can also split aggregated data into smaller sections called **segments** by using labels. 
 
+Sysdig aggregates data over time. Then, takes those data points, and groups them to display the data in metrics, dashboards, or calculate alert's thresholds. 
+{: tip}
+
 **Scope** is a collection of labels that define the conditions to filter out data points when you create dashboards and panels, configure alerts, and customize teams. 
 
 
@@ -48,6 +51,7 @@ There are two forms of aggregation used for metrics:
 * Group aggregation
 
 **Time aggregation is always performed before group aggregation.**
+
 
 
 
@@ -109,11 +113,11 @@ In the *Explore* view of the Web UI, you can run any of the following actions:
 
 | Task                                                                                        | Description     |
 |---------------------------------------------------------------------------------------------|-----------------|
-| [Copy a group](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#copy_group)     | Copy a group to other teams. |
-| [Create a group](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#create_group) | Create a new group. |
-| [Delete a group](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#delete_group) | Delete a group. |
-| [Rename a group](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#rename_group) | Rename a group. |
-| [Share a group](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#share_group)   | Share a group with other members in the team. |
+| [Copy a group](/docs/services/Monitoring-with-Sysdig/groups.html#copy_group)     | Copy a group to other teams. |
+| [Create a group](/docs/services/Monitoring-with-Sysdig/groups.html#create_group) | Create a new group. |
+| [Delete a group](/docs/services/Monitoring-with-Sysdig/groups.html#delete_group) | Delete a group. |
+| [Rename a group](/docs/services/Monitoring-with-Sysdig/groups.html#rename_group) | Rename a group. |
+| [Share a group](/docs/services/Monitoring-with-Sysdig/groups.html#share_group)   | Share a group with other members in the team. |
 {: caption="Table 3. Tasks grouping labels" caption-side="top"} 
 
 
@@ -127,9 +131,9 @@ The following table lists the tasks that you can run to change the scope in the 
 
 | Task                                                                                        | Description     |
 |---------------------------------------------------------------------------------------------|-----------------|
-| [Changing the scope of a dashboard](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#copy_group)     | Filters out data points for all metrics displayed through panels on the dashboard≥ |
-| [Changing the scope of a panel]() | Filters out data for a specific metric within a dashboard. |
-| [Changing the scope of an alert]() |  |
+| [Changing the scope of a dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#scope)     | Filters out data points for all metrics displayed through panels on the dashboards |
+| [Changing the scope of a panel](/docs/services/Monitoring-with-Sysdig/panel.html#scope) | Filters out data for a specific metric within a dashboard. |
+| [Changing the scope of an alert](/docs/services/Monitoring-with-Sysdig/) |  |
 | [Changing the scope of a team]() |  |
 {: caption="Table 4. Tasks to change the scope" caption-side="top"} 
 

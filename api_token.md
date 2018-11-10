@@ -16,7 +16,7 @@ lastupdated: "2018-11-05"
 {:download: .download}
 
 
-# Working with the Sysdig API token
+# Working with API tokens
 {: #api_token}
 
 Use the API token to authenticate with the IBM Cloud Monitoring with Sysdig service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 

@@ -107,8 +107,8 @@ Complete the following steps to create a custom dashboard:
     8. Click **Save**.
 
 
-## Changing the scope of a dashboard
-{: #scope_dashboard}
+## Changing the scope
+{: #scope}
 
 Instead of changing the scope of a pre-defined dashboard, copy the dashboard and change the scope in the copied dashboard.
 {: tip}
@@ -171,7 +171,7 @@ Complete the following steps to delete a dashboard in the Web UI:
 
 1. Navigate to the *DASHBOARDS* section in the Web UI.
 2. Select the dashboard from the left hand panel.
-3. Click **Settings** (three dots icon), and select **Delete dashboard**. 
+3. Click **Settings** ![three dots icon](images/actions.png), and select **Delete dashboard**. 
 4. Confirm deletion by clicking **Yes, delete dashboard**.
 
 
@@ -193,7 +193,7 @@ Complete the following steps to share a dashboard in the Web UI:
 
 1. Navigate to the *DASHBOARDS* section in the Web UI.
 2. Select the dashboard from the left hand panel.
-3. Click **Settings** (three dots icon), and select **Share**.
+3. Click **Settings** ![three dots icon](images/actions.png), and select **Share**.
 4. Choose how you want to share the dashboard:
 
     * Toggle the **Share with Team** slider to share the dashboard with the current team. The team where the dashboard is shared is displayed.
@@ -209,11 +209,19 @@ Share a dashboard externally to allow external users to view the dashboard metri
 ## Managing dashboards programmatically
 {: #programmatically}
 
+Use the Sysdig REST API to automate routine tasks and monitor notifications. You can also use the Sysdig Python library. 
+
+**Note:** The Python library exposes part of the Sysdig REST API functionality. 
+
+
+When you use the API from your custom scripts or programs, you must use a Sysdig token to authenticate with the IBM Cloud Monitoring with Sysdig instance. For more information, see [Working with the Sysdig API token](/docs/services/Monitoring-with-Sysdig/api_token.html#api_token).
 
 
 | Task                    |	Using Python script             | Using REST API                |
 |-------------------------|---------------------------------|-------------------------------|
-|  
+| Create a dashboard      | [Creating custom dashboards](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#create_python) | [Creating a dashboard by using the API](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#create_api) |
+| Delete a dashboard      | [Deleting a dashboard](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#delete_python) | [Deleting a dashboard by using the API](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#delete_api) |
+| Saving dashboards       | [Saving dashboards for a team by using a python script](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_python) | [Saving the dashboards of a team by using the API](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_api) |
 {: caption="Table 4. Tasks to manage dashboards programmatically" caption-side="top"} 
 
 

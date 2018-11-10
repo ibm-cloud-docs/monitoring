@@ -46,6 +46,8 @@ You can also enable events and define alerts.
 ## As a user you can:
 
 
+
+
 ## Dashboards
 {: #dashboards}
 
@@ -74,7 +76,8 @@ You can run scripts to complete any of the following actions programmatically:
 * Create new dashboards that are identical to the dashboards that you save.
 * Restore dashboards.
 
-
+## Metrics
+{: #metrics}
 
 
 
