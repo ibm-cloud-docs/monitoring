@@ -106,6 +106,32 @@ Complete the following steps to create a custom dashboard:
     8. Click **Save**.
 
 
+## Changing the scope of a dashboard
+{: #scope}
+
+Instead of changing the scope of a pre-defined dashboard, copy the dashboard and change the scope in the copied dashboard.
+{: tip}
+
+Complete the following steps to change the scope of a dashboard:
+
+1. Navigate to the *DASHBOARD** section in the Web UI, and select a dashboard.
+
+2. Click **Edit Scope** to change the default scope. 
+
+    By default, **Everywhere** is selected.
+    
+3. Select the scope. 
+
+4. Optionally, click **Override the custom panel scopes** to override the scope for all panels which currently have a custom scope defined. 
+
+    **Note: This action cannot be undone.** 
+
+    To reset the dashboard scope to the entire infrastructure, or to update an existing dashboard's scope to the entire infrastructure, select **Everywhere**.
+    {: tip}
+
+5. Click **Save**.
+
+
 
 ## Copying a dashboard
 {: #copy}

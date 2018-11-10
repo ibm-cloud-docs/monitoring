@@ -38,8 +38,6 @@ Labels are classified as infrastructure labels and metric descriptor labels. Eac
 
 
 
-
-
 ## Aggregating data in graphs and alerts
 {: #aggregate}
 
@@ -54,7 +52,7 @@ There are two forms of aggregation used for metrics:
 
 
 ## Time aggregation
-{: #time}
+{: #time_aggregation}
 
 **By default, a Sysdig agent collects and reports metrics at a 10 second resolution.**
 
@@ -84,7 +82,7 @@ Rate and average are very similar aggregation types. They often provide the same
 
 
 ## Group aggregation
-{: #group}
+{: #group_aggregation}
 
 **By default, metrics that are applied to a group of resources, such as several containers, hosts, or nodes, are averaged between the members of the group.**
 
