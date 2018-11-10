@@ -25,7 +25,9 @@ Monitoring with Sysdig
     launch.md
     groups.md
     access_key.md
+    api_token.md
     dashboards.md
+    panels.md
     events.md
     metrics.md
     iam_work.md

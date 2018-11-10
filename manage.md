@@ -121,6 +121,16 @@ In the *Explore* view of the Web UI, you can run any of the following actions:
 ## Setting the scope
 {: #scope}
 
+**Scope** is a collection of labels that define the conditions to filter out data points when you create dashboards and panels, configure alerts, and customize teams. 
 
+The following table lists the tasks that you can run to change the scope in the monitoring service:
+
+| Task                                                                                        | Description     |
+|---------------------------------------------------------------------------------------------|-----------------|
+| [Changing the scope of a dashboard](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#copy_group)     | Filters out data points for all metrics displayed through panels on the dashboard≥ |
+| [Changing the scope of a panel]() | Filters out data for a specific metric within a dashboard. |
+| [Changing the scope of an alert]() |  |
+| [Changing the scope of a team]() |  |
+{: caption="Table 4. Tasks to change the scope" caption-side="top"} 
 
 

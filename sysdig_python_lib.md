@@ -82,29 +82,6 @@ sdclient = SdcClient(sdc_token)
 
 
 
-## Getting the Sysdig API token
-{: #token}
-
-When you use the API from your custom scripts or programs, you must use a Sysdig token to authenticate with the IBM Cloud Monitoring with Sysdig instance.
-
-Consider the following information:
-
-* There is an API token per team.
-* If the token is compromissed or your organization's security policies require reseting the token after certain conditions, a user with administration permissions can reset the API token.
-
-Complete the following steps to get the token:
-
-1. From the *Selector* button in the navigation bar, choose **Settings**
-2. From the *Sysdig Monitor API* section, copy the **Sysdig Monitor API Token**.
-
-## Reseting the Sysdig API token
-{: #reset}
-
-Complete the following steps to get the token:
-
-1. From the *Selector* button in the navigation bar, choose **Settings**.
-2. In the *Sysdig Monitor API* section, click **Reset Token** to reset the API token.
-
 
 
 ## Creating a dashboard by using a python script

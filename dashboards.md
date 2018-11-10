@@ -42,6 +42,7 @@ You can run scripts to complete any of the following actions programmatically:
 * Restore dashboards.
 
 
+
 ## Pre-defined dashboards
 {: #predefined}
 
@@ -62,7 +63,7 @@ The following table lists the different types of pre-defined dashboards:
 
 
 
-## Creating custom dashboards through the Web UI
+## Creating custom dashboards in the Web UI
 {: #custom_ui}
 
 When you create a custom dashboard, you can start from a template such as a pre-defined dashboard, or choose a blank dashboard. A dashboard includes panels that are configured to display specific data in a number of different formats. You also set how data is aggregated. The **scope** defines what data is used for aggregation and displayed. You can set the scope at a dashboard level, or override for individual panels. 
@@ -107,7 +108,7 @@ Complete the following steps to create a custom dashboard:
 
 
 ## Changing the scope of a dashboard
-{: #scope}
+{: #scope_dashboard}
 
 Instead of changing the scope of a pre-defined dashboard, copy the dashboard and change the scope in the copied dashboard.
 {: tip}
@@ -146,7 +147,7 @@ The following table outlines the different actions and user permissions that are
 | Copy to another Team    | Users in the team with editor permissions in both teams | New dashboard instance  | If the original dashboard is not shared, only the user who copies the dashboard has access. </br>If the original dashboard is shared, all team members of the team has access. | If the original dashboard is not shared, only the user who copies the dashboard. </br>If the original dashboard is shared, all team members of the team with editor permissions. |
 {: caption="Table 2. Information about users and dashboards related to copying dashboards" caption-side="top"} 
 
-Complete the following steps to copy a dashboard:
+Complete the following steps to copy a dashboard in the Web UI:
 
 1. Navigate to the *DASHBOARDS* section in the Web UI.
 2. Select the dashboard from the left hand panel.
@@ -166,7 +167,7 @@ Complete the following steps to copy a dashboard:
 ## Deleting a dashboard
 {: #delete}
 
-Complete the following steps to delete a dashboard:
+Complete the following steps to delete a dashboard in the Web UI:
 
 1. Navigate to the *DASHBOARDS* section in the Web UI.
 2. Select the dashboard from the left hand panel.
@@ -185,10 +186,10 @@ The following table outlines the different actions and user permissions that are
 |-------------------------|---------------------------|---------------------------------|----------------------------------------|-----------------------------|
 | Share with current Team |	Dashboard creator         |	Share same dashboard instance   | Team members with viewing permissions  | Team members with editing permissions   |
 | Share publicly as URL	  | Any Edit User of the team |	Share same dashboard instance   | Anyone                                 | No one                      |
-{: caption="Table 1. Information about users and dashboards related to sharing dashboards" caption-side="top"} 
+{: caption="Table 3. Information about users and dashboards related to sharing dashboards" caption-side="top"} 
 
 
-Complete the following steps to share a dashboard:
+Complete the following steps to share a dashboard in the Web UI:
 
 1. Navigate to the *DASHBOARDS* section in the Web UI.
 2. Select the dashboard from the left hand panel.
@@ -205,46 +206,14 @@ Share a dashboard externally to allow external users to view the dashboard metri
 {: tip}
 
 
-## Saving dashboards programmatically by using a Python Script
-{: #save}
-
-Complete the following steps to save dashboards locally:
+## Managing dashboards programmatically
+{: #programmatically}
 
 
-The library and example scripts are available in the Sysdig GitHub repository: https://github.com/draios/python-sdc-client.
-Download the Scripts
 
-Save All Dashboards with a Python Script
-
-To save the dashboards:
-
-    In a terminal, access the virtual environment set up in Download the Scripts.
-
-    Run the script, replacing API_TOKEN with the API token for the relevant user, and SAVED_DASHBOARDS.ZIP with the desired name of the zip file:
-
-    The user API token can be found in the User Profile tab of the UI Settings page.
-    (venv) $ sudo python examples/download_dashboards.py API_TOKEN SAVED_DASHBOARDS.ZIP
-    Dashboard name: JVM, # Charts: 5
-    Finished writing dashboard data in zip format to SAVED_DASHBOARDS.ZIP
-
-
-## Restoring dashboards programmatically by using a Python Script
-{: #restore}
-
-You can restore a *.zip* file 
-
-Restoring dashboards will not override the user's existing dashboards. Instead, new dashboards will be added to the list.
-
-
-The restore script does not have to target the same account as the save script. This allows dashboards to be saved from one user, and restored to multiple users.
-
-To restore dashboards from a .zip archive
-
-    In a terminal, access the virtual environment set up in Download the Scripts.
-
-    Run the script, replacing API_TOKEN with the API token for the relevant user, and SAVED_DASHBOARDS.ZIP with the correct zip file:
-    (venv) $ sudo python examples/restore_dashboards.py API_TOKEN SAVED_DASHBOARDS.ZIP
-    Dashboards pushed.
-    (venv) user@server:~/python-sdc-client$
+| Task                    |	Using Python script             | Using REST API                |
+|-------------------------|---------------------------------|-------------------------------|
+|  
+{: caption="Table 4. Tasks to manage dashboards programmatically" caption-side="top"} 
 
 
