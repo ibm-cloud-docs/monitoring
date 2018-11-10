@@ -36,7 +36,7 @@ In the **EXPLORE** section of the Web UI, dashboards are organized into two grou
 
 You can copy and share dashboards through the Web UI. 
 
-You can run scripts to complete any of the following actions:
+You can run scripts to complete any of the following actions programmatically:
 * Save existing dashboards to a local file.
 * Create new dashboards that are identical to the dashboards that you save.
 * Restore dashboards.

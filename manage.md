@@ -18,11 +18,8 @@ lastupdated: "2018-11-05"
 # Managing data
 {: #manage}
 
-You can use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. You can customize how data is aggregated when you configure a graph or create an alert for a metric. You can set the scope of a dashboard, a panel, or an alert to filter out data points
+You can use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. You can customize how data is aggregated when you configure a graph or create an alert for a metric. You can set the scope of a dashboard, a panel, or an alert to filter out data points.
 {:shortdesc}
-
-## Concepts
-{: #concepts}
 
 **Labels** define the characteristics of a metric. You can use labels to identify and differentiate characteristics of a metric. 
 
@@ -33,16 +30,13 @@ Labels are classified as infrastructure labels and metric descriptor labels. Eac
 
 **Groups** group infrastructure objects into logical hierarchies. Use groups to structure how to monitor your environment.
 
-In the Explore view of the Web UI, you can use labels to define new groups. 
-
-
 **Aggregation** of data occurs automatically when you configure a graph or create an alert for a metric. There are two types of aggregation: time aggregation and group aggregation. 
 * Time aggregation is always performed before group aggregation.
 * To create multi-series comparisons and multiple alerts, you can also split aggregated data into smaller sections called **segments** by using labels. 
 
-**Scope** is a collection of labels that are used to filter out or define the boundaries of a group of data points when creating dashboards, dashboard panels, alerts, and teams. 
+**Scope** is a collection of labels that define the conditions to filter out data points when you create dashboards and panels, configure alerts, and customize teams. 
 
-You can define the scope at the dashboard level or at a panel level.
+
 
 
 
@@ -55,15 +49,14 @@ There are two forms of aggregation used for metrics:
 * Time aggregation
 * Group aggregation
 
-Time aggregation is always performed before group aggregation.
-{: tip}
+**Time aggregation is always performed before group aggregation.**
 
 
-### Time aggregation
+
+## Time aggregation
 {: #time}
 
-By default, a Sysdig agent collects and reports metrics at a 10 second resolution.
-{: tip}
+**By default, a Sysdig agent collects and reports metrics at a 10 second resolution.**
 
 In Time series charts that include data for five minutes or less, 
 * Data points are drawn at 10 second resolution
@@ -85,17 +78,15 @@ The following table lists different aggregation types for time series charts:
 | sum              | Combined sum of the metric across the time period evaluated.             |
 {: caption="Table 1. Aggregation types for time series charts" caption-side="top"} 
 
-By default, average is used to display data points for a time interval.
-{:tip}
+**Note:** By default, average is used to display data points for a time interval.
 
 Rate and average are very similar aggregation types. They often provide the same result. However, the calculation of each is different. If time aggregation is set to one minute, the Sysdig agent is set to retrieve six samples, one every 10 seconds. Notice that in some cases, samples may not be there due to disconnections or other circumstances.
 
 
-### Group aggregation
+## Group aggregation
 {: #group}
 
-By default, metrics that are applied to a group of resources, such as several containers, hosts, or nodes, are averaged between the members of the group.
-{: tip}
+**By default, metrics that are applied to a group of resources, such as several containers, hosts, or nodes, are averaged between the members of the group.**
 
 For example, if three hosts report different CPU usage for one sample interval, the three values are averaged, and reported on the chart as a single data point for that metric.
 
@@ -111,3 +102,27 @@ The following table lists different types of group aggregation types:
 
 
 **Group aggregation is dependent on segmentation.** For a view that shows metrics for a group of items, if the *Segment By* selection is changed to break out the individual items, group aggregation does not occur.
+
+
+## Working with groups
+{: #groups}
+
+In the *Explore* view of the Web UI, you can run any of the following actions:
+
+| Task                                                                                        | Description     |
+|---------------------------------------------------------------------------------------------|-----------------|
+| [Copy a group](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#copy_group)     | Copy a group to other teams. |
+| [Create a group](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#create_group) | Create a new group. |
+| [Delete a group](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#delete_group) | Delete a group. |
+| [Rename a group](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#rename_group) | Rename a group. |
+| [Share a group](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#share_group)   | Share a group with other members in the team. |
+{: caption="Table 3. Tasks grouping labels" caption-side="top"} 
+
+
+
+## Setting the scope
+{: #scope}
+
+
+
+
