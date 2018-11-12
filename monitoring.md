@@ -18,32 +18,21 @@ lastupdated: "2018-11-05"
 # Monitoring your environment
 {: #monitoring}
 
-After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for a metrics source, you can view, monitor, and manage metrics through the IBM Cloud Monitoring with Sysdig Web UI.
+You can monitor your infrastructure, and the applications running on it with the IBM Cloud Monitoring with Sysdig service. You can analyze the data that is collected for metrics. You can monitor this data through panels and dashboards in the Web UI. You can aggregate and filter out data  that is displayed through metrics or by getting a specialized insight into network data, application data, topology, services, hosts, and containers trhough dashboards.
 {:shortdesc}
 
+After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for a metrics source, you can view, monitor, and manage metrics through the IBM Cloud Monitoring with Sysdig Web UI.
 
-After you configure your agents, data is automatically collected. YOu can use the Explore tab to monitor your data by using default metrics and default dasshboards. Explain Expore tab.
+After you configure a Sysdig agent, data is automatically collected. Default metrics are automatically collected. You can add custom metrics and labels to custom metrics to describe characteristics of a metric. 
 
+You can use the *Explore* tab to monitor your data by using default metrics and default dasshboards. You can use labels to define new infrastructure groups that you can use to aggregate data differently.
 
-Default metrics are automatically collected.
-You can add custom metrics and labels
+You can also apply a *Time filter* to aggregate data differently.
 
-then you can:
-1. Add custom metrics
-2. Add custom labels
-3. Group data by using the metrics labels
-4. Aggregate data
-5. Filter data.
-
-which you can see through the Explore tab.
 
 You can also create new Dashboards where you can leverage  the  new groups, segments, and metrics.
 
 You can also enable events and define alerts.
-
-## As an administrator you can:
-
-## As a user you can:
 
 
 
@@ -51,7 +40,9 @@ You can also enable events and define alerts.
 ## Dashboards
 {: #dashboards}
 
-Use dashboards to monitor your infrastructure, applications, and services. A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers.
+A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers.
+
+Use dashboards to monitor your infrastructure, applications, and services. 
 {: tip}
 
 In the **DASHBOARDS** section of the Web UI, dashboards are organized into three main groups:
@@ -64,23 +55,16 @@ In the **EXPLORE** section of the Web UI, dashboards are organized into two grou
 * *Default dashboards*: These are the pre-defined dashboards.
 * *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
 
+You can use pre-defined dashboards. You can also create custom dashboards through the Web UI or programmatically. You can backup and restore dashboards by using Python scripts or the Sysdig REST API.
 
-You can use pre-defined dashboards. You can also create custom dashboards through the Web UI or programmatically. You can backup and restore dashboards by using Python scripts.
+You can also copy and share dashboards through the Web UI. 
 
-You can copy and share dashboards through the Web UI. 
-
-You can run scripts to complete any of the following actions programmatically:
-* Save existing dashboards to a local file.
-* Create new dashboards that are identical to the dashboards that you save.
-* Restore dashboards.
 
 ## Metrics
 {: #metrics}
 
 Use metrics to analyze statistically data that has numerical values. A metric is a quantitaive measure that has one or more labels to define its characteristics.
 {: tip}
-
-After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for a metrics source, you can view, monitor, and manage metrics through the IBM Cloud Monitoring with Sysdig Web UI.
 
 A metric is represented by time series. A time series is a set of numeric data points over a period of time. 
 
@@ -96,5 +80,14 @@ You can use labels to identify and differentiate characteristics of a metric, fo
 * You can filter out data. 
 * You can split aggregated data into segments. 
 
+For more information, see [Working with metrics]().
+
+## Panels
+{: panels}
+
+
+## As an administrator you can:
+
+## As a user you can:
 
 

@@ -191,7 +191,7 @@ You can monitor your cluster in the **EXPLORE** view that is available through t
 
 In the section *Host and containers*, you can see the list of workers in your cluster that are forwarding metrics to the monitoring instance. Each worker entry represents a group of related infrastructure objects for that worker.
 
-Click **Host and containers** ![Host and containers](images/switch_hosts.png) to switch data sources. Then, select a worker. The data that is displayed corresponds to the worker that you have selected.
+Click **Host and containers** ![Host and containers](../images/switch_hosts.png) to switch data sources. Then, select a worker. The data that is displayed corresponds to the worker that you have selected.
 
 If you click ** Back to Explore Table**, the *Explore table* is displayed. Each column shows a different metric. You can configure each metric individually. You can change the order of the columns. Notice that when you make changes to the order of existing columns, the change is persistent across different groupings while you are logged in. If you add or remove a column the change is persistent. You can also configure colors to highlight values and improve readibility.
 

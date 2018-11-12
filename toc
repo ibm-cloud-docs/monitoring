@@ -28,7 +28,6 @@ Monitoring with Sysdig
     api_token.md
     dashboards.md
     panels.md
-    events.md
     metrics.md
     iam_work.md
     sysdig_python_lib.md

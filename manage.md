@@ -28,7 +28,7 @@ Labels are classified as infrastructure labels and metric descriptor labels. Eac
 * You can use **infrastructure labels** to identify objects within the infrastructure. These labels are obtained from the infrastructure. For example, a label can be *kubernetes.pod.name*.
 * You can use **metric descriptor labels**. These labels are key-value pairs that are applied directly to metrics, and obtained from integrations like StatsD, Prometheus, and JMX. 
 
-**Groups** group infrastructure objects into logical hierarchies. Use groups to structure how to monitor your environment.
+**Groups** group infrastructure objects into logical hierarchies. Use groups to structure your infrastructure and ease how you monitor your environment.
 
 **Aggregation** of data occurs automatically when you configure a graph or create an alert for a metric. There are two types of aggregation: time aggregation and group aggregation. 
 * Time aggregation is always performed before group aggregation.
@@ -133,7 +133,7 @@ The following table lists the tasks that you can run to change the scope in the 
 |---------------------------------------------------------------------------------------------|-----------------|
 | [Changing the scope of a dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#scope)     | Filters out data points for all metrics displayed through panels on the dashboards |
 | [Changing the scope of a panel](/docs/services/Monitoring-with-Sysdig/panel.html#scope) | Filters out data for a specific metric within a dashboard. |
-| [Changing the scope of an alert](/docs/services/Monitoring-with-Sysdig/) |  |
+| [Changing the scope of an alert]() |  |
 | [Changing the scope of a team]() |  |
 {: caption="Table 4. Tasks to change the scope" caption-side="top"} 
 
