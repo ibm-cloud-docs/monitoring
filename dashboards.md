@@ -64,7 +64,7 @@ The following table lists the different types of pre-defined dashboards:
 
 
 ## Creating custom dashboards in the Web UI
-{: #custom_ui}
+{: #create}
 
 When you create a custom dashboard, you can start from a template such as a pre-defined dashboard, or choose a blank dashboard. A dashboard includes panels that are configured to display specific data in a number of different formats. You also set how data is aggregated. The **scope** defines what data is used for aggregation and displayed. You can set the scope at a dashboard level, or override for individual panels. 
 
@@ -141,8 +141,8 @@ When you copy a dashboard, you create a duplicate.
 
 The following table outlines the different actions and user permissions that are required for users to copy a dashboard:
 
-| Action                  |	Who can copy                              |	Dashboard instance	    | Who can view the dashboard              | Who can edit the dashboard  |
-|-------------------------|-------------------------------------------|-------------------------|----------------------------------------|-----------------------------|
+| Action     |	Who can copy     |	Dashboard instance	   | Who can view the dashboard     | Who can edit the dashboard  |
+|------------|-------------------|-------------------------|--------------------------------|-----------------------------|
 | Copy to current Team    |	Users in the team with editor permissions | New dashboard instance  | Team members with viewing permissions	 | Users in the team with editor permissions |
 | Copy to another Team    | Users in the team with editor permissions in both teams | New dashboard instance  | If the original dashboard is not shared, only the user who copies the dashboard has access. </br>If the original dashboard is shared, all team members of the team has access. | If the original dashboard is not shared, only the user who copies the dashboard. </br>If the original dashboard is shared, all team members of the team with editor permissions. |
 {: caption="Table 2. Information about users and dashboards related to copying dashboards" caption-side="top"} 

@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="Sysdig" audience="service" href="/docs/services/Monitoring-with-Sysdig/index.html" path="services/Monitoring-with-Sysdig"}
-Monitoring with Sysdig
+IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="learn"}
     index.md

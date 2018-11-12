@@ -53,7 +53,7 @@ Complete the following steps to copy a panel:
 
 
 
-## Changing the scope of a panel
+## Change the scope of a panel
 {: #scope}
 
 Complete the following steps to change the scope of a panel:
@@ -103,7 +103,7 @@ Complete the following steps to delete a panel in the current dashboard:
 ## Export data from a panel
 {: #export}
 
-Consoder the following information when you export data:
+Consider the following information when you export data:
 
 * You can export data to a **json file** from a line chart.
 * You can export data to a **csv file** from a table chart or from a line chart.

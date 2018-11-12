@@ -79,12 +79,3 @@ Consider the following information about how the monitoring service manages the 
 
 
 
-
-## Graphing a metric
-{: #graph}
-
-
-
-## Defining an alert on a metric
-{: #alert}
-
