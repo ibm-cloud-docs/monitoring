@@ -41,7 +41,7 @@ Metrics are classified into two groups:
 
 Labels are classified as infrastructure labels and metric descriptor lables. Each metric has a set of pre-defined labels. For custom metrics, you can configure more labels. 
 
-You can use labels to identify and differentiate characteristics of a metric:
+You can use labels to identify and differentiate characteristics of a metric, for example,
 * You can group infrastructure objects into logical hierarchies. 
 * You can filter out data. 
 * You can split aggregated data into segments. 

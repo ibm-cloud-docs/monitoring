@@ -51,10 +51,8 @@ You can also enable events and define alerts.
 ## Dashboards
 {: #dashboards}
 
-Use dashboards to monitor your infrastructure, applications, and services. 
+Use dashboards to monitor your infrastructure, applications, and services. A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers.
 {: tip}
-
-A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers.
 
 In the **DASHBOARDS** section of the Web UI, dashboards are organized into three main groups:
 
@@ -79,7 +77,24 @@ You can run scripts to complete any of the following actions programmatically:
 ## Metrics
 {: #metrics}
 
+Use metrics to analyze statistically data that has numerical values. A metric is a quantitaive measure that has one or more labels to define its characteristics.
+{: tip}
 
+After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for a metrics source, you can view, monitor, and manage metrics through the IBM Cloud Monitoring with Sysdig Web UI.
+
+A metric is represented by time series. A time series is a set of numeric data points over a period of time. 
+
+Metrics are classified into two groups: 
+
+* Default metrics 
+* Custom metrics
+
+Labels are classified as infrastructure labels and metric descriptor lables. Each metric has a set of pre-defined labels. For custom metrics, you can configure more labels. 
+
+You can use labels to identify and differentiate characteristics of a metric, for example,
+* You can group infrastructure objects into logical hierarchies. 
+* You can filter out data. 
+* You can split aggregated data into segments. 
 
 
 

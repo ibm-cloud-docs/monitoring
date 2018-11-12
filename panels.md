@@ -19,8 +19,22 @@ lastupdated: "2018-11-05"
 # Working with panels
 {: #panels}
 
-Use dashboards to monitor your infrastructure, applications, and services. You can use pre-defined dashboards. You can also create custom dashboards through the Web UI or programmatically. You can backup and restore dashboards by using Python scripts.
+Use a panel to display a metric or group of metrics in a dashboard. You can copy, change the scope, duplicate, delete, export, and explore panels.
 {:shortdesc}
+
+You can use any of the following panel types:
+
+| Type | Description |
+|------|-------------|
+| Line | Use this panel to view trends over time for one or more metrics.  |
+| Area | Use this panel to view trends over time for one or more metrics.  |
+| Top list | Use this panel to compare a metric across groups of entities. The bar chart is sorted in descending order.  |
+| Histogram | Use this panel to view the frequency distribution of a metric in buckets.  |
+| Topology | Use this panel to visualize the infrastructure as a topology map, and the relations between entities in the map.  |
+| Number | Use this panel to view a single number that represents the value of an aggregated metric over time for one or more entities.  |
+| Table | Use this panel to display numerical data for your infrastructure based on metrics and segments.  |
+| Text | Use this panel to add text. Use markdown to add your text.  |
+{: caption="Table 1. Panel types" caption-side="top"} 
 
 
 
@@ -85,11 +99,47 @@ Complete the following steps to delete a panel in the current dashboard:
 3. Click **Yes, delete panel** to confirm the deletion of the panel.
 
 
-## Explore a panel
-{: #explore}
 
-You can explore a panel in the context of your infrastructure. To view the 
+## Export data from a panel
+{: #export}
+
+Consoder the following information when you export data:
+
+* You can export data to a **json file** from a line chart.
+* You can export data to a **csv file** from a table chart or from a line chart.
+
+Complete the following steps to export data from a panel:
+
+1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that display the metric that you want to copy.
+
+2. Select the *More options* icon ![three dots icon](imanges/actions.png).
+
+3. Choose one of the following options:
+
+    * Select **Export JSON** to export data to a json formatted file.
+
+    * Select **Export CSV** to export data to a csv formatted file.
+
+4. Click **Save the file**.
+
+
+
 
 ## Create Alert
 {: #alert}
+
+You can create alerts directly from a panel.
+
+Complete the following steps to create an alert:
+
+1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that display the metric that you want to copy.
+
+2. Select the *More options* icon ![three dots icon](imanges/actions.png).
+
+3. Select **Create Alert**.
+
+4. Configure the alert.
+
+5. Click **Create**.
+
 
