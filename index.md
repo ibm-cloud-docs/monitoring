@@ -22,32 +22,13 @@ lastupdated: "2018-11-05"
 IBM Cloud Monitoring with Sysdig is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.Bluemix}} architecture. Use it to get visibility into the performance and health of your applications, services, and platform. IBM Cloud Monitoring with Sysdig is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
 {:shortdesc}
 
-IBM Cloud Monitoring with Sysdig offers administrators, DevOps teams, and developers advanced monitoring features to monitor and troubleshoot, including alerting and customizable dashboards. 
-
 The following figure shows the components overview for the IBM Cloud Monitoring with Sysdig service that is running on {{site.data.keyword.Bluemix_notm}}:
 
 ![IBM Cloud Monitoring with Sysdig component overview on the {{site.data.keyword.Bluemix_notm}}](images/components.png "IBM Cloud Monitoring with Sysdig component overview on the {{site.data.keyword.Bluemix_notm}}")
 
+IBM Cloud Monitoring with Sysdig offers administrators, DevOps teams, and developers advanced monitoring features to monitor and troubleshoot, including alerting and customizable dashboards. 
 
-
-
-## Metrics data
-{: #data}
-
-IBM Cloud Monitoring with Sysdig collects and aggregates metrics. 
-
-* Metric data is hosted on the {{site.data.keyword.Bluemix_notm}}.
-* Each multi-zone region (MZR) location collects and aggregates metrics for each instance of the IBM Cloud Monitoring with Sysdig that runs in that location.
-* Data is colocated in the region where the IBM Cloud Monitoring with Sysdig instance is provisioned. For example, metric data for an instance provisioned in US South is hosted in the US South region.
-
-The service plan that you choose for a IBM Cloud Monitoring with Sysdig instance defines the frequency at which data is collected, the maximum number of custom metrics that is collected, and the number of days that data is stored and retained in IBM Cloud Monitoring with Sysdig.
-
-there is only one paid plan and it automatically adjusts the rate that you pay for an instance based upon the container density and the number of custom metrics
-
-When you delete an instance of IBM Cloud Monitoring with Sysdig from the {{site.data.keyword.Bluemix_notm}}, all the data is deleted.
-
-
-## Features
+### Features
 {: #features}
 
 **Accelerate the diagnosis and resolution of performance incidents.**
@@ -66,20 +47,13 @@ Define alerts to reduce the impact on your day to day operations and accelerate 
 
 Control the cost of your monitoring infrastructure in the {{site.data.keyword.Bluemix_notm}} by configuring the metric sources for which you want to monitor their performance. 
 
-## IAM
-
-IBM Cloud account owner grants IAM policy with platform admin role to a user. This user becomes and administrator of Sysdig in that region. He can provision Sysdig instances and can create a serviceID to obtain the ingestion key..
-When the Sysdig instance is configured, the IBMid of this  user  gets the Sysdig admin priviledges automatically in Sysdig.
-He can grant other user admin permissions on teh service, he can add other users to be able to see data in Sysdig WebUI.
 
 ## Before you begin
 {: #prereqs}
 
 You must have a user ID that is a member or an owner of an {{site.data.keyword.Bluemix_notm}} account. To get an {{site.data.keyword.Bluemix_notm}} user ID, go to: [Registration ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/registration/){:new_window}.
 
-Read about Sysdig Monitor. For more information, see [Sysdig Monitor Documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview){:new_window}.
-
-Work in the US-South region.
+The service is currently available in US South. Complete any getting started steps in the US-South region.
 
 ## Step1: Provision an instance of the IBM Cloud Monitoring with Sysdig service
 {: #step1}
@@ -139,7 +113,7 @@ You can configure a Sysdig agent for any of the following environments:
 
 For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The Sysdig agent reads log files from the pod where it is installed, and forwards the log data to your Sysdig instance.
 
-Complete a tutorial to learn how to deploy a Sysdig agent:
+Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 
 | Resource                |	Tutorial                        | Environment                | Scenario   |
 |-------------------------|---------------------------------|----------------------------|------------|
@@ -149,17 +123,12 @@ Complete a tutorial to learn how to deploy a Sysdig agent:
 
 For more information, see [Configuring a Sysdig agent](/docs/services/Monitoring-with-Sysdig/config_agent.html#config_agent) and [Removing a Sysdig agent](/docs/services/Monitoring-with-Sysdig/remove_agent.html#remove_agent).
 
+After the Sysdig agent is deployed, collection and forwarding of metrics to the instance is automatic. The Sysdig agent automatically collects and reports on pre-defined metrics. You can also configure which metrics to monitor in an environment.
 
-## Step 3: Launch the Sysdig Web UI
+## Step 3: Launch the web UI
 {: #step3}
 
-After the IBM Cloud Monitoring with Sysdig agent is deployed in a metric source, collection and forwarding of metrics to the instance is automatic. The IBM Cloud Monitoring with Sysdig agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in an environment.
-
-You can [monitor](/docs/services/Monitoring-with-Sysdig/monitoring.html#monitoring), and [manage](/docs/services/Monitoring-with-Sysdig/manage.html#manage)  data through the IBM Cloud Monitoring with Sysdig Web UI.  
-
-
-
-You launch the Sysdig web UI within the context of the Sysdig instance, from the {{site.data.keyword.Bluemix_notm}} UI. 
+You launch the web UI within the context of the Sysdig instance, from the {{site.data.keyword.Bluemix_notm}} UI. 
 
 Complete the following steps to launch the Sysdig web UI:
 
@@ -169,14 +138,36 @@ Complete the following steps to launch the Sysdig web UI:
 
 	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} Dashboard opens.
 
-2. In the **Services** section, select the Sysdig instance.
+2. In the navigation menu, select **Observability**. 
 
-3. In the **Manage** tab, click **Launch**.
+3. Select **Monitoring**. 
 
-The Sysdig Web UI opens. 
+    The list of monitoring instances that are available on {{site.data.keyword.Bluemix_notm}} is displayed.
+
+4. Select one instance. Then, click **View Sysdig**.
+
+The IBM Cloud Monitoring with Sysdig Web UI opens. By default, the *Explore* tab is displayed.
 
 
-## Next steps
-{: #next_steps}
+## Step 4: Monitor your environment
+{: #step4}
 
-Learn how to [monitor your infrastructure. [External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/215744574/Explore){:new_window}!
+In the *Explore* tab, you can monitor data by using default metrics and default dashboards. You can use labels to define new infrastructure groups that you can then use to aggregate data differently and monitor your environment. You can also use custom dashboards that you define through the *Dashboard* tab. In the *Dashboards* tab, you can monitor data by using any of the default dashboards or by creating new ones. 
+
+For more information, see [Monitoring your environment](/docs/services/Monitoring-with-Sysdig/monitoring.html#monitoring)
+
+## Step 5: Manage data
+{: #step5}
+
+You can use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. You can customize how data is aggregated when you configure a graph or create an alert for a metric. You can set the scope of a dashboard, a panel, or an alert to filter out data points. 
+
+For more information, see [Managing data](/docs/services/Monitoring-with-Sysdig/manage.html#manage).
+
+## Step 6: Manage user access
+{: #step6}
+
+Every user that accesses the IBM Cloud Monitoring with Sysdig service in your account must be assigned an access policy with an IAM user role defined. The policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.Bluemix_notm}}](/docs/services/Monitoring-with-Sysdig/iam.html#iam).
+
+
+
+

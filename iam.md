@@ -16,8 +16,8 @@ lastupdated: "2018-11-05"
 {:download: .download}
 
  
-# Managing user access with IAM
-{: #sysdig_iam}
+# Managing user access in the {{site.data.keyword.Bluemix_notm}}
+{: #iam}
 
 {{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.Bluemix_notm}}. 
 {:shortdesc}

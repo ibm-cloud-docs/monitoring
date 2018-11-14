@@ -21,11 +21,11 @@ lastupdated: "2018-11-05"
 You can monitor your infrastructure, and the applications running on it with the IBM Cloud Monitoring with Sysdig service. 
 {:shortdesc}
 
-After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for a metrics source, you can view, monitor, and manage data through the IBM Cloud Monitoring with Sysdig Web UI for that source.
+After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, and configure Sysdig agents for your metrics sources, you can view, monitor, and manage data through the service's web UI.
 
 Data for default metrics is automatically collected. You can configure custom metrics and add labels to those metrics to describe their characteristics. Data for these custom metrics is also automatically collected.
 
-You can analyze data in the *Explore* tab and in the *Dashboard* tab of the Web UI. You monitor the data through metric views and dashboards. 
+You can analyze data in the *Explore* tab and in the *Dashboard* tab of the web UI. You monitor the data through metric views and dashboards. 
 
 * Use a metric view to monitor an individual metric.
 * Use dashboards to get a specialized insight into network data, application data, topology, services, hosts, and containers by monitoring data through panels. A panel displays a metric or group of metrics in a dashboard.
@@ -43,35 +43,33 @@ You can configure a default dashboard as the the default entry point for a team,
 ## Dashboards
 {: #dashboards}
 
-A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers.
+A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers. Use dashboards to monitor your infrastructure, applications, and services.
 
-Use dashboards to monitor your infrastructure, applications, and services. 
-{: tip}
 
-In the **DASHBOARDS** section of the Web UI, dashboards are organized into three main groups:
+In the **DASHBOARDS** section of the web UI, dashboards are organized into three main groups:
 
 * *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
 * *My Shared Dashboards*: These are the dashboards that are created by the user who is currently logged in, and that are shared with other users.
 * *Dashboards Shared With Me*: These are the dashboards that are created by other users, and shared with the current user.
 
-In the **EXPLORE** section of the Web UI, dashboards are organized into two groups:
+In the **EXPLORE** section of the web UI, dashboards are organized into two groups:
 * *Default dashboards*: These are the pre-defined dashboards.
 * *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
 
-You can use pre-defined dashboards. You can also create custom dashboards through the Web UI or programmatically. You can backup and restore dashboards by using Python scripts or the Sysdig REST API.
+You can use pre-defined dashboards. You can also create custom dashboards through the web UI or programmatically. You can backup and restore dashboards by using Python scripts or the Sysdig REST API.
 
-You can also copy and share dashboards through the Web UI. 
+You can also copy and share dashboards through the web UI. 
 
 The following table outlines tasks that you can run to work with dashboards from the UI:
 
 | Task | Description |
 |------|-------------|
-| [Create dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#create) | Create a custom dashboard in the Web UI. |
+| [Create dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#create) | Create a custom dashboard in the web UI. |
 | [Copy a dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#copy) | Make a copy of a dashboard in the current team where the dashboard is available, or copy a dashboard to another team. |
 | [Changing the scope](/docs/services/Monitoring-with-Sysdig/dashboards.html#scope) | Chang the scope of a dashboard.       |
 | [Delete dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#delete) |  Delete a dashboard. |
 | [Share a dashboard]() | Share dashboards between users in a team, and externally, by configuring a public URL for the dashboard. |
-{: caption="Table 1. Dashboard tasks that you can run in the Web UI" caption-side="top"} 
+{: caption="Table 1. Dashboard tasks that you can run in the web UI" caption-side="top"} 
 
 The following table outlines tasks that you can run programmatically to work with dashboards:
 
@@ -87,8 +85,7 @@ The following table outlines tasks that you can run programmatically to work wit
 ## Metrics
 {: #metrics}
 
-Use metrics to analyze statistically data that has numerical values. A metric is a quantitaive measure that has one or more labels to define its characteristics.
-{: tip}
+A metric is a quantitaive measure that has one or more labels to define its characteristics. Use metrics to analyze statistically data that has numerical values. 
 
 A metric is represented by time series. A time series is a set of numeric data points over a period of time. 
 
