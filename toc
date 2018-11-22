@@ -7,13 +7,12 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="learn"}
     index.md
     overview.md
+    endpoints.md
+    pricing.md
     manage.md
     monitoring.md
     network.md
     iam.md
-    endpoints.md
-    default_dashboards.md
-    pricing.md
 
     {: .topicgroup}
     Tutorials
@@ -38,6 +37,7 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    default_dashboards.md
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview)
     [Sysdig Blog](https://sysdig.com/blog/)
