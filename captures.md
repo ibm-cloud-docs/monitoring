@@ -37,7 +37,7 @@ You create a capture in the *Explore* view.
 
 Complete the following steps to create a capture file:
 
-1. Navigate to the *EXPLORE* section in the web UI. For more information on how to launch the Web UI, see[Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
+1. Navigate to the *EXPLORE* section in the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
 
 2. Click the switch host icon ![switch host icon](images/switch_hosts.png).
 
@@ -73,7 +73,7 @@ The status of a capture file can be any of the following values:
 
 Complete the following steps to delete a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. For more information on how to launch the Web UI, see[Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
+1. Navigate to the *CAPTURES* section in the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
 2. Identify and select the capture file that you want to delete.
 3. Click **Delete**.
 
@@ -84,7 +84,7 @@ Complete the following steps to delete a capture file:
 
 Complete the following steps to explore a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. For more information on how to launch the Web UI, see[Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
+1. Navigate to the *CAPTURES* section in the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
 2. Identify and select the capture file that contains the data for the host that you want to analyze.
 3. Click **EXPLORE**.
 
@@ -95,7 +95,7 @@ Complete the following steps to explore a capture file:
 
 Complete the following steps to download a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. For more information on how to launch the Web UI, see[Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
+1. Navigate to the *CAPTURES* section in the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
 2. Identify and select the capture file that contains the data that you want to download.
 3. Click **DOWNLOAD**.
 
@@ -105,7 +105,7 @@ Complete the following steps to download a capture file:
 
 A Sysdig chisel is a script that is written in Lua, a scripting language. You can use it to analyze data in a capture file. 
 
-For more information on how to use a chisel, see this user guide: [Chisels User Guide [External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}
+For more information on how to use a chisel, see this user guide: [Chisels User Guide [External link icon](/icons/launch-glyph.svg "External link icon")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}
 
 
 
@@ -115,7 +115,7 @@ For more information on how to use a chisel, see this user guide: [Chisels User 
 Csysdig is an open source tool for Linux that is designed for monitoring and debugging. You can use it to analyze capture files. 
 
 For more information, see the following resources:
-* [Csysdig blog [External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdig.com/blog/csysdig-explained-visually/){:new_window}
-* [Csysdig video [External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.youtube.com/watch?v=UJ4wVrbP-Q8){:new_window}
+* [Csysdig blog [External link icon](/icons/launch-glyph.svg "External link icon")](https://sysdig.com/blog/csysdig-explained-visually/){:new_window}
+* [Csysdig video [External link icon](/icons/launch-glyph.svg "External link icon")](https://www.youtube.com/watch?v=UJ4wVrbP-Q8){:new_window}
 
 
