@@ -34,7 +34,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 3. Deploy the Sysdig agent. Run the following command from a terminal.
 
     ```
-    curl -s https://s3.amazonaws.com/download.draios.com/stable/install-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure false --check_certificate false --tags TAG_DATA
+    curl -s https://s3.amazonaws.com/download.draios.com/stable/install-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure false --check_certificate false --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
     ```
     {: codeblock}
 
@@ -46,6 +46,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
+    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
 
 If the Sysdig agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the Sysdig agent.
 
@@ -76,7 +77,7 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
 3. Deploy the Sysdig agent. Run the following command:
 
     ```
-    docker run -d --name sysdig-agent --restart always --privileged --net host --pid host -e ACCESS_KEY=SYSDIG_ACCESS_KEY -e COLLECTOR=COLLECTOR_ENDPOINT -e COLLECTOR_PORT=6443 -e SECURE=true -e CHECK_CERTIFICATE=false -e TAGS=TAG_DATA -v /var/run/docker.sock:/host/var/run/docker.sock -v /dev:/host/dev -v /proc:/host/proc:ro -v /boot:/host/boot:ro -v /lib/modules:/host/lib/modules:ro -v /usr:/host/usr:ro --shm-size=350m sysdig/agent
+    docker run -d --name sysdig-agent --restart always --privileged --net host --pid host -e ACCESS_KEY=SYSDIG_ACCESS_KEY -e COLLECTOR=COLLECTOR_ENDPOINT -e COLLECTOR_PORT=6443 -e SECURE=true -e CHECK_CERTIFICATE=false -e TAGS=TAG_DATA -e ADDITIONAL_CONF="sysdig_capture_enabled: false" -v /var/run/docker.sock:/host/var/run/docker.sock -v /dev:/host/dev -v /proc:/host/proc:ro -v /boot:/host/boot:ro -v /lib/modules:/host/lib/modules:ro -v /usr:/host/usr:ro --shm-size=350m sysdig/agent
     ```
     {: codeblock}
 
@@ -87,6 +88,8 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
     * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
+
+    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
 
     **Note:**  The container runs in detached mode. To see the container’s output, remove *-d*.
 
@@ -120,8 +123,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 4. Deploy the Sysdig agent. Run the following command:
 
     ```
-    curl -sL https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/IBMCloud-Kubernetes-Service/install-agent-k8s.sh | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA
-
+    curl -sL https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/IBMCloud-Kubernetes-Service/install-agent-k8s.sh | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false'
     ```
     {: codeblock}
 
@@ -132,6 +134,9 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
+
+    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
+
 
 
 ## Configuring a Sysdig agent on a Kubernetes cluster manually
@@ -222,6 +227,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
        ssl: true
        ssl_verify_certificate: false
        new_k8s: true
+       sysdig_capture_enabled: false
     ```
     {: screen}
 

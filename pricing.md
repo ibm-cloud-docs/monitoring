@@ -35,7 +35,7 @@ Different pricing plans are available for an IBM Cloud Monitoring with Sysdig in
 * You can request a **custom price quote** for anything beyond the upper bound of the *Advanced graduated tier paid pricing plan* by opening a ticket with [IBM Cloud Support [External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/unifiedsupport/supportcenter){:new_window}.
 * Data is collected and retained per the standard guidelines across all plans. For more information see [data collection and retention](/docs/services/Monitoring-with-Sysdig/overview.html#data).
 
-Cost guidance: The average cost that has been estimated for using the IBM Cloud Monitoring with Sysdig service is between 5% and 10% of your overall compute cost. This estimation may be different depending on your architecture and usage of the IBM Cloud Monitoring with Sysdig service.
+The average cost that has been estimated for using the IBM Cloud Monitoring with Sysdig service is between 5% and 10% of your overall compute cost. This estimation may be different depending on your architecture and usage of the IBM Cloud Monitoring with Sysdig service.
 
 
 
