@@ -16,10 +16,10 @@ lastupdated: "2018-11-22"
 {:download: .download}
 
 
-# Working with events
+# Notifications
 {: #events}
 
-The Events module displays a complete list of events that have occurred within the environment, allowing users to review, track, and resolve issu
+Use dashboards to monitor your infrastructure, applications, and services. You can use pre-defined dashboards. You can also create custom dashboards through the Web UI or programmatically.
 {:shortdesc}
 
 
@@ -31,7 +31,6 @@ There are two primary types of events displayed in the Events module: alert even
 {: #alert}
 
 Alert events are events triggered by user-configured alerts. For more information on configuring alerts, refer to the Alerts documentation.
-
 
 
 
