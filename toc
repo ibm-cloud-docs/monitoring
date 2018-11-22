@@ -46,4 +46,9 @@ IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="help"}
     gettinghelp.md
+    troubleshoot.md
     {: .navgroup-end}
+
+
+
+
