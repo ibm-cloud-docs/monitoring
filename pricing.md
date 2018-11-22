@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -25,21 +25,41 @@ Different pricing plans are available for an IBM Cloud Monitoring with Sysdig in
 
 | Plan             | Description  |
 |------------------|--------------|
-| `Lite`           | Data is collected for up to 20 containers, and for a maximum of 200 custom metrics per node every 10secs. </br>The plan is free for 21 days only. </br>Lite plan services are deleted after 30 days of inactivity. |
-| `Graduated tier` (*) | There are different tiers: </br>`Basic`: Data is collected for up to 20 containers per host, for a maximum of 200 custom metrics per node every 10secs. This plan is suitable for one core compute. </br>`Pro`: Data is collected for up to 50 containers or 500 custom metrics per node every 10 secs. This plan is suitable for 8-16 core computes. </br>`Advanced`: Data is collected for 50+ containers or up to 1000 custom metrics per node every 10 secs. This plan is suitable for more than 16 core computes. |
+| `Trial`          | Data is collected for a maximum of 20 containers per node or for 200 custom metrics per node for 30 days only. |
+| `Graduated tier` | There are different tiers: </br>**Basic:** Data is collected for a maximum of 20 containers per node or for 200 custom metrics per node.   </br>**Pro:** Data is collected for a maximum of 50 containers per node or for 500 custom metrics per node. </br>**Advanced:** Data is collected for a maximum of 110 containers per node or for 1000 custom metrics per node. |
 {: caption="Table 1. List of service plans" caption-side="top"} 
 
 
-(*) **Note:** Based on your usage of average number of containers or number of custom metrics emitted by each node every 10 seconds, {{site.data.keyword.IBM_notm} will auto-compute the tier in which the mode fits. Ay any point in time, you could have some nodes in one tier and some in another. Alerts will be provided to inform you when you are switching from one tier to another based on your consumption.
+**Note:** 
+
+* You can request a **custom price quote** for anything beyond the upper bound of the *Advanced graduated tier paid pricing plan* by opening a ticket with [IBM Cloud Support [External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/unifiedsupport/supportcenter){:new_window}.
+* Data is collected and retained per the standard guidelines across all plans. For more information see [data collection and retention](/docs/services/Monitoring-with-Sysdig/overview.html#data).
+
+Cost guidance: The average cost that has been estimated for using the IBM Cloud Monitoring with Sysdig service is between 5% and 10% of your overall compute cost. This estimation may be different depending on your architecture and usage of the IBM Cloud Monitoring with Sysdig service.
 
 
-**Note: ** For very high container density or metric volumes contact sales.  
+
+## How is the graduated tier calculated
+{: #how}
+
+When the number of containers per node or the number of metrics goes above the plan's threshold limit over a period of time, automatic tier detection is applied and an alert notification is triggered following your billing usage notification configuration.
+
+If you have enabled the alert **[{{site.data.keyword.IBM_notm}}]: Usage Tier Change**, an alert notification is triggered to inform you when you are switching from one tier to another based on your consumption.
 
 
-Basic: 0-20 containers per host, 200 auto-detected app metrics, 200 custom metrics
-Pro:  21-50 containers per host, 500 auto-detected app metrics, 500 custom metrics
-Advanced: >50 containers per host, 1000 auto-detected app metrics, 1000 custom metrics, 
-Note:
-- For each plan, you get 10s granularity, and 15 months data retention.
-- When the number of containers per host or the number of metrics goes above the plan's threshold over a period of time, automatic tier detection is applied and an alert notification is triggered following your billing usage notification configuration. 
-- For very high container density or metric volumes, contact sales. (Can we add a link)
+## How to check usage
+{: #usage}
+
+To monitor how the IBM Cloud Monitoring with Sysdig service is used and the costs associated to its usage, see [Viewing your usage](/docs/billing-usage/viewing_usage.html#viewingusage).
+
+
+## Enable a tier change aleert
+{: #alert}
+
+
+Complete the following steps to enable an alert:
+
+1) Create a notification channel https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/206503956/Notifications+Management
+2) View alerts and search for “[IBM]: Usage Tier Change” alert
+3) Edit the alert to use the notification channel from 1)
+4) Save the alert and enable it (edited)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -52,6 +52,40 @@ The following figure shows the components overview for the IBM Cloud Monitoring 
 
 
 
+## Data collection and retention
+{: #data}
+
+Data is collected and retained as follows for all service plans:
+
+
+| Collection frequency | Data is retained as this frequency for |
+|----------------------|----------------------------------------|
+| 10 seconds           | 4 hours                                |
+| 1 minute             | 2 days                                 |
+| 10 minutes           | 2 weeks                                |
+| 1 hour               | 2 months                               |
+| 1 day                | 15 months                              |
+{: caption="Table 1. Collection and retention values per the standard guidelines" caption-side="top"} 
+
+
+
+## Data deletion
+{: #data_deletion}
+
+When you delete an instance of IBM Cloud Monitoring with Sysdig from the {{site.data.keyword.Bluemix_notm}}, all the data is deleted.
+
+
+## Data location
+{: #data_location}
+
+IBM Cloud Monitoring with Sysdig collects and aggregates metrics. 
+
+* Metric data is hosted on the {{site.data.keyword.Bluemix_notm}}.
+* Each multi-zone region (MZR) location collects and aggregates metrics for each instance of the IBM Cloud Monitoring with Sysdig that runs in that location.
+* Data is colocated in the region where the IBM Cloud Monitoring with Sysdig instance is provisioned. For example, metric data for an instance provisioned in US South is hosted in the US South region.
+
+
+
 ## IBM Cloud Monitoring with Sysdig agents
 {: #sysdig_agent}
 
@@ -65,22 +99,6 @@ The following list outlines IBM Cloud Monitoring with Sysdig agents that are ava
 * IBM Cloud Monitoring with Sysdig agent for manual Linux installations.
 
 For more information, see [Configuring a Sysdig agent](/docs/services/Monitoring-with-Sysdig/config_agent.html#config_agent) and [Removing a Sysdig agent](/docs/services/Monitoring-with-Sysdig/remove_agent.html#remove_agent).
-
-
-## Metrics data
-{: #data}
-
-IBM Cloud Monitoring with Sysdig collects and aggregates metrics. 
-
-* Metric data is hosted on the {{site.data.keyword.Bluemix_notm}}.
-* Each multi-zone region (MZR) location collects and aggregates metrics for each instance of the IBM Cloud Monitoring with Sysdig that runs in that location.
-* Data is colocated in the region where the IBM Cloud Monitoring with Sysdig instance is provisioned. For example, metric data for an instance provisioned in US South is hosted in the US South region.
-
-The service plan that you choose for a IBM Cloud Monitoring with Sysdig instance defines the frequency at which data is collected, the maximum number of custom metrics that is collected, and the number of days that data is stored and retained in IBM Cloud Monitoring with Sysdig.
-
-there is only one paid plan and it automatically adjusts the rate that you pay for an instance based upon the container density and the number of custom metrics
-
-When you delete an instance of IBM Cloud Monitoring with Sysdig from the {{site.data.keyword.Bluemix_notm}}, all the data is deleted.
 
 
 ## Features
@@ -104,7 +122,16 @@ Control the cost of your monitoring infrastructure in the {{site.data.keyword.Bl
 
 
 
+## Monitor usage
+{: #usage}
 
+To monitor the usage and costs of your service, see [Viewing your usage](/docs/billing-usage/viewing_usage.html#viewingusage).
+
+
+## Service plans
+{: #plans}
+
+Different pricing plans are available for an IBM Cloud Monitoring with Sysdig instance. For more information, see [Pricing](/docs/services/Monitoring-with-Sysdig/pricing.html#pricing_plans).
 
 
 
