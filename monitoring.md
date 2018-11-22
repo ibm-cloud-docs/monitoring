@@ -39,6 +39,11 @@ In the *Dashboards* tab, you can monitor data by using any of the default dashbo
 You can configure a default dashboard as the the default entry point for a team, unifying a team's experience, and allowing users to focus their immediate attention on the most relevant information for them. 
 {: tip}
 
+You can use alerts to notify users of problems that require attention through one or more notification channels.
+* The *Alerts* section in the web UI shows the list of pre-defined alerts. From this view, you can enable and disable pre-defined alerts; you can modify existing alerts; and you can create new alerts.
+* The *Settings* section in the web UI is where you configure notification channels.
+ 
+
 
 ## Dashboards
 {: #dashboards}
@@ -141,6 +146,47 @@ The following table lists the tasks that you can run with panels:
 | [Export data](/docs/services/Monitoring-with-Sysdig/panel.html#export) | Export data from a panel into a csv file or a json file.  |
 | [Create alert](/docs/services/Monitoring-with-Sysdig/panel.html#alert) | Define an alert on a metric. |
 {: caption="Table 4. Panel tasks" caption-side="top"} 
+
+## Alerts
+{: #alerts}
+
+An alert is a notification event that you can use to warn about situations that require attention. Each alert has a severity status. This status informs you about the criticality of the information it reports on. 
+
+When you define an alert, you must define the condition that triggers the notification, one or more notification channels through which you want to be notified, the severity of the alert, and the type of alert. 
+
+You can define alerts for any of the following alert types:
+
+| Type              | Description |
+|-------------------|-------------|
+| Anomaly Detection | Use to monitor hosts based on their historical behaviors, and alert when they deviate. |
+| Downtime          | Use to monitor any type of entity, for example, host, container, process, or service, and alert when the entity goes down. |
+| Event             | Use to monitor occurrences of specific events, and alert if the total number of occurrences violates a threshold. For example, you can use it to alert on restarts and deployments of containers, orchestrations, and service events.|
+| Group Outlier     | Use to monitor a group of hosts and be notified when one acts differently from the rest. |
+| Metric            | Use to monitor time series metrics, and alert if they violate user-defined thresholds. |
+{: caption="Table 5. Alert types" caption-side="top"} 
+
+By default, severity is set to *warning*. You can set the severity of an alert to any of the following values: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *informational*, debug* 
+
+You can define one or more notification channels:
+
+
+You can enable predefined alerts, modify alerts, and create custom alerts in the web UI and by using the Sysdig API.
+
+
+
+You manage alerts in the *Alerts* view of the web UI. You can configure the table columns that are displayed in the *Alerts* view. Valid column options are: *Name*, *Scope*, *Alert When*, *Segment By*, *Notifications*, *Enabled*, *Modified*, *Captures*, *Channels*, *Created*, *Description*, *Email recipients*, *For at least*, *OpsGenie*, *PagerDuty*, *Severity*, *Slack*, *WebHook*, *SNS topics*, *Type*, *VictorOps*
+
+The following list outlines the tasks that you can run with alerts:
+* [Configure an alert ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-ConfigureanAlert){:new_window}
+* [Enable or disable an alert ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-Enable/DisableAlerts){:new_window} 
+* [Search for an alert ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-SearchforanAlert){:new_window}
+* [Modify an alert ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-EditanExistingAlert){:new_window}
+* [Copy an Alert to the same team ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-CopyanAlerttothesameteam){:new_window}
+* [Copy an Alert to a Different Team ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-CopyanAlerttoaDifferentTeam){:new_window}
+* [Export an alert ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-ExportAlertJSON){:new_window}
+* [Delete an alert ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-DeleteAlerts){:new_window}
+* [define alert thresholds as custom boolean expressions ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-AdvancedAlertThresholds){:new_window}
+
 
 
 

@@ -28,6 +28,7 @@ IBM Cloud Monitoring with Sysdig
     groups.md
     access_key.md
     api_token.md
+    [Working with alerts](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-ConfigureanAlert)
     dashboards.md
     panels.md
     metrics.md
