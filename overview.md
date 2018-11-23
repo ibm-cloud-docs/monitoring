@@ -52,22 +52,38 @@ The following figure shows the components overview for the IBM Cloud Monitoring 
 
 
 
-## Data collection and retention
-{: #data}
+## Data collection
+{: #collection}
 
-Data is collected and retained as follows for all service plans:
+When you configure a Sysdig agent to collect and forward data to an IBM Cloud Monitoring with Sysdig instance, data is automatically collected and available for analysis through the web UI.
+
+Data is collected at 10 seconds frequency. 
+
+## Data availability
+{: #availability}
+
+Data is available for a maximum of 15 months.
+
+After you remove a Sysdig agent from a host or container, historical data is not deleted. Data is available for analysis through the web UI for the time period that the agent was installed and reporting.
+
+After you delete an instance of the IBM Cloud Monitoring with Sysdig service, data is not available for search and analysis.
 
 
-| Collection frequency | Data is retained as this frequency for |
-|----------------------|----------------------------------------|
-| 10 seconds           | 4 hours                                |
-| 1 minute             | 2 days                                 |
-| 10 minutes           | 2 weeks                                |
-| 1 hour               | 2 months                               |
-| 1 day                | 15 months                              |
-{: caption="Table 1. Collection and retention values per the standard guidelines" caption-side="top"} 
 
+## Data retention
+{: #retention}
 
+Data is retained for each instance based on a *roll-up* policy.
+
+As time progresses, the data is rolled up from a fine granularity to a coarser one by the end 3 months.
+
+The roll-up policy describes the granularity of the data over time:
+
+* Data is retained at 10 second resolution for the first 6 hours.
+* Data is retained at 1 minute resolution for 2 days.
+* Data is retained at 10 minute resolution for 2 weeks.
+* Data is retained at 1 hour resolution for 3 months.
+* Data is retained at 1 day resolution for one year.
 
 ## Data deletion
 {: #data_deletion}

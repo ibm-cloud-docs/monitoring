@@ -172,8 +172,6 @@ You can define one or more notification channels:
 
 You can enable predefined alerts, modify alerts, and create custom alerts in the web UI and by using the Sysdig API.
 
-
-
 You manage alerts in the *Alerts* view of the web UI. You can configure the table columns that are displayed in the *Alerts* view. Valid column options are: *Name*, *Scope*, *Alert When*, *Segment By*, *Notifications*, *Enabled*, *Modified*, *Captures*, *Channels*, *Created*, *Description*, *Email recipients*, *For at least*, *OpsGenie*, *PagerDuty*, *Severity*, *Slack*, *WebHook*, *SNS topics*, *Type*, *VictorOps*
 
 The following list outlines the tasks that you can run with alerts:
