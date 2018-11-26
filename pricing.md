@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-21"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -56,10 +56,12 @@ To be notified when there is a tier change, you must enable the following alert:
 
 Complete the following steps to enable an alert:
 
-1. Create a notification channel https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/206503956/Notifications+Management
-2. View alerts and search for “[IBM]: Usage Tier Change” alert
-3. Edit the alert to use the notification channel from 1)
-4. Save the alert and enable it (edited)
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
+2. Create a notification channel. For more information, see [Configuring a notification channel](/docs/services/Monitoring-with-Sysdig/notifications.html#create). 
+3. Click **ALERTS** to navigate to the *Alerts* section.
+2. Search for **[IBM]: Usage Tier Change**.
+3. Edit the alert to add the notification channel.
+4. Click **Save**.
 
 
 

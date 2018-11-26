@@ -23,7 +23,7 @@ Configure notification channels to be notified when an alert is triggered. You m
 {:shortdesc}
  
 
-## Adding a notification channel
+## Configuring a notification channel
 {: #create}
 
 Complete the following steps to add a notification channel:

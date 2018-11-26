@@ -41,6 +41,7 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    [metrics dictionary](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/208830488/Metrics+Dictionary)
     default_dashboards.md
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview)

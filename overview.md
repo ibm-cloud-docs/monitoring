@@ -138,7 +138,7 @@ Control the cost of your monitoring infrastructure in the {{site.data.keyword.Bl
 
 
 
-## Monitor usage
+## Viewing usage
 {: #usage}
 
 To monitor the usage and costs of your service, see [Viewing your usage](/docs/billing-usage/viewing_usage.html#viewingusage).
