@@ -50,11 +50,11 @@ Complete the following steps to add a notification channel:
 
     * For a **slack** notification channel, add the name of the *Slack channel*.
 
-    * For a **Webhook** notification channel, add the *Webhook URL*. **Note:** When an alert is triggered, the notification is sent as a POST in JSON format to your webhook endpoint. For more information, see [Configuring a Webhook channel ![External link icon](../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/242843679/Configure+a+Webhook+Channel){:new_window}.
+    * For a **Webhook** notification channel, add the *Webhook URL*. **Note:** When an alert is triggered, the notification is sent as a POST in JSON format to your webhook endpoint. For more information, see [Configuring a Webhook channel ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/242843679/Configure+a+Webhook+Channel){:new_window}. For example, Sysdig can be integrated with ServiceNow using a custom webhook. To learn about configuring Sysdig with ServiceNow, see [Configure ServiceNow ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/242942035/Configure+ServiceNow){:new_window}.
 
     * For a **VictorOps** notification channel, add the *API key* and the *Routing key*.
 
-    * For an **OpsGenie** notification channel, add the *OpsGenie API key*. Notice that you must configure in OpsGenie the integration with Sysdig. For more information, see [Add Sysdig Cloud Integration in Opsgenie ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.opsgenie.com/v1.0/docs/sysdig-cloud-integration){:new_window}.
+    * For an **OpsGenie** notification channel, add the *OpsGenie API key*. Notice that you must configure in OpsGenie the integration with Sysdig. For more information, see [Add Sysdig Cloud Integration in Opsgenie ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.opsgenie.com/v1.0/docs/sysdig-cloud-integration){:new_window}.
 
     * For a **PagerDuty** notification channel, first you must authorize Sysdig to integrate with your account. When you select PagerDuty, a wizard to configure the integration with Sysdig opens. Click either **Authorize Integration** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for Sysdig notifications, then click **Finish Integration**. Select the escalation policy to use for Sysdig incidents. Then, on the *Notifications* tab, confirm your PagerDuty account, your service name, and the service key. 
 

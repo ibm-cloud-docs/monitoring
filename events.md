@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-22"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-11-22"
 # Working with events
 {: #events}
 
-The Events module displays a complete list of events that have occurred within the environment, allowing users to review, track, and resolve issu
+The Events module displays a complete list of events that have occurred within the environment, allowing users to review, track, and resolve issues.
 {:shortdesc}
 
 

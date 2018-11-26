@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -125,7 +125,7 @@ If the access key is compromissed or you have a policy to renew it after a numbe
 
 To renew the access key for an IBM Cloud Monitoring with Sysdig instance, complete the following steps:
 
-1. Launch the IBM Cloud Monitoring with Sysdig Web UI. For more information, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
+1. Launch the IBM Cloud Monitoring with Sysdig web UI. For more information, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
 
 2. From the *Selector* button in the navigation bar, choose **Settings**.
 
