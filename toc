@@ -30,6 +30,7 @@ IBM Cloud Monitoring with Sysdig
     access_key.md
     api_token.md
     [Working with alerts](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts)
+    [Working with custom events](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events)
     dashboards.md
     panels.md
     metrics.md

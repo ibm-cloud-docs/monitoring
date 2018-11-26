@@ -45,48 +45,6 @@ You can use alerts to notify users of problems that require attention through on
  
 
 
-## Dashboards
-{: #dashboards}
-
-A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers. Use dashboards to monitor your infrastructure, applications, and services.
-
-
-In the **DASHBOARDS** section of the web UI, dashboards are organized into three main groups:
-
-* *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
-* *My Shared Dashboards*: These are the dashboards that are created by the user who is currently logged in, and that are shared with other users.
-* *Dashboards Shared With Me*: These are the dashboards that are created by other users, and shared with the current user.
-
-In the **EXPLORE** section of the web UI, dashboards are organized into two groups:
-* *Default dashboards*: These are the pre-defined dashboards.
-* *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
-
-You can use pre-defined dashboards. You can also create custom dashboards through the web UI or programmatically. You can backup and restore dashboards by using Python scripts or the Sysdig REST API.
-
-You can also copy and share dashboards through the web UI. 
-
-The following table outlines tasks that you can run to work with dashboards from the UI:
-
-| Task | Description |
-|------|-------------|
-| [Create dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#create) | Create a custom dashboard in the web UI. |
-| [Copy a dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#copy) | Make a copy of a dashboard in the current team where the dashboard is available, or copy a dashboard to another team. |
-| [Changing the scope](/docs/services/Monitoring-with-Sysdig/dashboards.html#scope) | Chang the scope of a dashboard.       |
-| [Delete dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#delete) |  Delete a dashboard. |
-| [Share a dashboard]() | Share dashboards between users in a team, and externally, by configuring a public URL for the dashboard. |
-{: caption="Table 1. Dashboard tasks that you can run in the web UI" caption-side="top"} 
-
-The following table outlines tasks that you can run programmatically to work with dashboards:
-
-| Task                    |	Using Python script             | Using REST API                |
-|-------------------------|---------------------------------|-------------------------------|
-| Create a dashboard      | [Creating custom dashboards](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#create_python) | [Creating a dashboard by using the API](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#create_api) |
-| Delete a dashboard      | [Deleting a dashboard](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#delete_python) | [Deleting a dashboard by using the API](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#delete_api) |
-| Saving dashboards       | [Saving dashboards for a team by using a python script](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_python) | [Saving the dashboards of a team by using the API](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_api) |
-{: caption="Table 2. Tasks to manage dashboards programmatically" caption-side="top"} 
-
-
-
 ## Metrics
 {: #metrics}
 
@@ -146,6 +104,74 @@ The following table lists the tasks that you can run with panels:
 | [Export data](/docs/services/Monitoring-with-Sysdig/panel.html#export) | Export data from a panel into a csv file or a json file.  |
 | [Create alert](/docs/services/Monitoring-with-Sysdig/panel.html#alert) | Define an alert on a metric. |
 {: caption="Table 4. Panel tasks" caption-side="top"} 
+
+
+## Dashboards
+{: #dashboards}
+
+A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers. Use dashboards to monitor your infrastructure, applications, and services.
+
+
+In the **DASHBOARDS** section of the web UI, dashboards are organized into three main groups:
+
+* *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
+* *My Shared Dashboards*: These are the dashboards that are created by the user who is currently logged in, and that are shared with other users.
+* *Dashboards Shared With Me*: These are the dashboards that are created by other users, and shared with the current user.
+
+In the **EXPLORE** section of the web UI, dashboards are organized into two groups:
+* *Default dashboards*: These are the pre-defined dashboards.
+* *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
+
+You can use pre-defined dashboards. You can also create custom dashboards through the web UI or programmatically. You can backup and restore dashboards by using Python scripts or the Sysdig REST API.
+
+You can also copy and share dashboards through the web UI. 
+
+The following table outlines tasks that you can run to work with dashboards from the UI:
+
+| Task | Description |
+|------|-------------|
+| [Create dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#create) | Create a custom dashboard in the web UI. |
+| [Copy a dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#copy) | Make a copy of a dashboard in the current team where the dashboard is available, or copy a dashboard to another team. |
+| [Changing the scope](/docs/services/Monitoring-with-Sysdig/dashboards.html#scope) | Chang the scope of a dashboard.       |
+| [Delete dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#delete) |  Delete a dashboard. |
+| [Share a dashboard]() | Share dashboards between users in a team, and externally, by configuring a public URL for the dashboard. |
+{: caption="Table 1. Dashboard tasks that you can run in the web UI" caption-side="top"} 
+
+The following table outlines tasks that you can run programmatically to work with dashboards:
+
+| Task                    |	Using Python script             | Using REST API                |
+|-------------------------|---------------------------------|-------------------------------|
+| Create a dashboard      | [Creating custom dashboards](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#create_python) | [Creating a dashboard by using the API](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#create_api) |
+| Delete a dashboard      | [Deleting a dashboard](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#delete_python) | [Deleting a dashboard by using the API](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#delete_api) |
+| Saving dashboards       | [Saving dashboards for a team by using a python script](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_python) | [Saving the dashboards of a team by using the API](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_api) |
+{: caption="Table 2. Tasks to manage dashboards programmatically" caption-side="top"} 
+
+
+
+## Events
+{: #events}
+
+An event is a notification that informs about something that has occurred in any of the nodes that forward data to your IBM Cloud Monitoring with Sysdig instance. Use events to review, track, and resolve issues. 
+
+There are different types of events: 
+
+* *Alert events* are events that are triggered by user-configured alerts. For more information, see [Working with alerts](/docs/services/Monitoring-with-Sysdig/monitoring.html#alerts).
+* *Infrastructure-based events* are events that are collected from Docker and Kubernetes nodes. By default, the Sysdig agent automatically discovers and collects data from a select group of events. You can edit the agent configuration file to enable more events.
+* *Custom events* that you configure through any of the following integrations: Slackbot, pre-built Python scripts, custom user-created Python scripts, or cURL requests.
+
+By default, an event has a state: 
+* *Active*: This state indicates that the circumstances that triggered the event remain in place, for example, a node continues to be down.
+* *OK*: This state indicates that the situation is back to normal, for example, a node is up and running.
+
+You manage events in the *Events* section of the web UI. 
+* You can view alert events through the *Alert Events* tab.
+* You can view infrastructure-based events through the *Custom events* tab.
+* You can view custom events through the *Custom events* tab.
+* You can send custom events to any of your teams by using the [API token for that team](/docs/services/Monitoring-with-Sysdig/api_token.html#api_token). For more information, see [Custom events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events){:new_window}.
+
+You can resolve the situation that triggered an event. While you wait for the condition that triggered the event to run again and set its status to *OK*, you can set the event as **Resolved** to display graphically that the issue has been addressed. 
+{: #tip}
+
 
 
 ## Alerts
