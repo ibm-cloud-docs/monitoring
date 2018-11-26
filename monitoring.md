@@ -147,6 +147,7 @@ The following table lists the tasks that you can run with panels:
 | [Create alert](/docs/services/Monitoring-with-Sysdig/panel.html#alert) | Define an alert on a metric. |
 {: caption="Table 4. Panel tasks" caption-side="top"} 
 
+
 ## Alerts
 {: #alerts}
 
@@ -167,7 +168,15 @@ You can define alerts for any of the following alert types:
 
 By default, severity is set to *warning*. You can set the severity of an alert to any of the following values: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *informational*, debug* 
 
-You can define one or more notification channels:
+You can define one or more notification channels for any of the following notification integrations:
+* Email Notifications
+* PagerDuty Notifications
+* Slack Notifications
+* VictorOps Notifications
+* OpsGenie Notifications
+* Configure a Webhook Channel
+
+For more information, see [Configuring a notification channel](/docs/services/Monitoring-with-Sysdig/notifications.html#create).
 
 
 You can enable predefined alerts, modify alerts, and create custom alerts in the web UI and by using the Sysdig API.

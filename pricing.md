@@ -63,7 +63,7 @@ Complete the following steps to enable an alert:
 
 
 
-## How is the service plan tier change alert generated
+## How is the service plan alert generated?
 {: #how}
 
 To be notified when there is a tier change, you must enable the following alert: **[{{site.data.keyword.IBM_notm}}]: Usage Tier Change**
@@ -74,11 +74,12 @@ The usage is calculated as the average of the number of nodes and metrics sample
 
 The alert notification is generated as follows:
 1. Every hour, if the number of containers per node in a tier changes, a custom event is generated.
-2. The alert condition checks for any custom events that inform about changes in the number of containers. If it finds an event where the number of containers in a tier increases or decreases from the last time the usage was calculated, it sends a notification.
+2. The alert condition checks for any custom events that inform about changes in the number of containers per node. If it finds an event where the number of containers in a tier increases from the last time the usage was calculated, it sends a notification.
 
 The frequency of the alert is once every hour. For a fluctuating node, the frequency of the alert is at most every two hours.
 
-Notice that the alert is only generated if a node moves between *Basic* tier, *Pro* tier, and *Advanced* tier. 
+Notice that the alert is only generated if a node moves from *Basic* tier to *Pro* tier or to *Advanced* tier. 
+
 
 
 ### Examples
