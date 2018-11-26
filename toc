@@ -17,6 +17,7 @@ IBM Cloud Monitoring with Sysdig
     {: .topicgroup}
     Tutorials
         tutorials/kubernetes_cluster.md
+        tutorials/ubuntu.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
