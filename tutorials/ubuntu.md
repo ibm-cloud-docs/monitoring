@@ -171,7 +171,7 @@ You can only have one Web UI session open per browser.
 {: tip}
 
 
-## Step 4: Monitor your cluster
+## Step 4: Monitor your Ubuntu server
 {: step4}
 
 You can monitor your Ubuntu server in the **EXPLORE** view that is available through the Web UI. This view is the starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI for users.
