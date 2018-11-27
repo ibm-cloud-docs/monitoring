@@ -16,7 +16,7 @@ lastupdated: "2018-12-03"
 {:download: .download}
 
 
-# Pricing plans
+# Pricing
 {: #pricing_plans}
 
 Different pricing plans are available for an IBM Cloud Monitoring with Sysdig instance.
