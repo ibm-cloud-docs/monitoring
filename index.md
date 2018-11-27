@@ -164,6 +164,9 @@ Every user that accesses the IBM Cloud Monitoring with Sysdig service in your ac
 When a user is granted permissions in the {{site.data.keyword.Bluemix_notm}} to work with the IBM Cloud Monitoring with Sysdig service, the user is automatically granted a Sysdig role. This role determines the actions that a user has permissions to run. Valid roles are *Sysdig admin* and *Sysdig user*. For more information, see [Mapping of Sysdig roles to {{site.data.keyword.Bluemix_notm}} roles](/docs/services/Monitoring-with-Sysdig/iam.html#sysdig).
 
 
+## Next steps
+{: #next}
 
+Define alerts and custom events. For more information, see [Working with alerts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts){:new_window} and [Working with custom events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events){:new_window}.
 
 
