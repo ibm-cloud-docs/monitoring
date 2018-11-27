@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -34,13 +34,22 @@ lastupdated: "2018-11-05"
 * Access to all IAM-enabled services within the context of a resource group
 
 *Roles* define the actions that a user or serviceID can run. There are different types of roles in the {{site.data.keyword.Bluemix_notm}}:
-
 * *Platform management roles* enable users to perform tasks on service resources at the platform level, for example assign user access for the service, create or delete service IDs, create instances, assign policies for your service to other users, and bind instances to applications.
 * *Service access roles* enable users to be assigned varying levels of permission for calling the service's API.
 
 **To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use *access groups*.** You can assign a single policy to the group instead of assigning the same access multiple times per individual user or service ID.
 {: tip}
 
+
+## Managing access by using access groups
+{: #groups}
+
+To manage access or assign new access for users by using access groups, you must be the account owner, administrator or editor on all Identity and Access enabled services in the account, or the assigned administrator or editor for the IAM Access Groups Service. 
+
+Choose any of the following actions to manage access groups in the {{site.data.keyword.Bluemix_notm}}:
+
+* [Creating an access group](/docs/iam/groups.html#creating-an-access-group).
+* [Assigning access to a group](/docs/iam/groups.html#assigning-access-to-a-group).
 
 
 ## Managing access by assigning policies directly to users
@@ -55,16 +64,6 @@ Choose any of the following actions to manage IAM policies in the {{site.data.ke
 * To revoke permissions, see [Removing access](/docs/iam/mngiam.html#removing-access).
 * To review a user's permissions, see [Reviewing your assigned access](/docs/iam/mngiam.html#reviewing-your-assigned-access).
 
-
-## Managing access by using access groups
-{: #groups}
-
-To manage access or assign new access for users by using access groups, you must be the account owner, administrator or editor on all Identity and Access enabled services in the account, or the assigned administrator or editor for the IAM Access Groups Service. 
-
-Choose any of the following actions to manage access groups in the {{site.data.keyword.Bluemix_notm}}:
-
-* [Creating an access group](/docs/iam/groups.html#creating-an-access-group).
-* [Assigning access to a group](/docs/iam/groups.html#assigning-access-to-a-group).
 
 
 ## {{site.data.keyword.Bluemix_notm}} platform roles

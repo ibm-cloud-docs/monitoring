@@ -213,6 +213,8 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     
     * **new_k8s**: This parameter must be set to *true* to capture kube state metrics.
 
+    * **sysdig_capture_enabled**: This parameter is used to enable or disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
+
     An example yaml file looks like this:
 
      ```
