@@ -18,7 +18,7 @@ lastupdated: "2018-12-03"
 # Managing data
 {: #manage}
 
-Use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. Customize how data is aggregated when you configure a graph or create an alert for a metric. Set the scope of a dashboard, a panel, or an alert to filter out data points. Restrict access to data by managing users data access through teams. 
+Use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. Customize how data is aggregated when you configure a graph or create an alert for a metric. Set the scope of a dashboard, a panel, or an alert to filter out data points. Restrict access to data by managing users' data access through teams. 
 {:shortdesc}
 
 
@@ -153,10 +153,10 @@ By default, there is a **Monitor Operations** team that is predefined for each I
 * Users are automatically added as members of this team and granted full visibility on all the resources that are available in the instance. 
 
 **Note:** 
-* A Sysdig administrator must switch to the *Monitor Operations* team before he can create teams or change the settings for others teams.
-* After a user logs in to the {{site.data.keyword.Bluemix_notm}} and launches the Sysdig web UI, a Sysdig administrator can manage that user in the Sysdig web UI. The user is created in the Sysdig database when the user logs in to the Sysdig web UI for the first time. 
+* An administrator must switch to the *Monitor Operations* team before he can create teams or change the settings for others teams.
+* After a user logs in to the {{site.data.keyword.Bluemix_notm}} and launches the Sysdig web UI, an administrator can manage that user in the Sysdig web UI. The user is created in the Sysdig database when the user logs in to the Sysdig web UI for the first time. 
 
-To restrict users viewing permissions, a Sysdig administrator can do any of the following actions:
+To restrict users viewing permissions, an administrator can do any of the following actions:
 * Change the user's role in the default *Monitor Operations* team to *Read* User. 
 * Create a default team with limited scope and visibility. Then, manually assign users to other teams. 
 

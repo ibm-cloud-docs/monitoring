@@ -28,25 +28,6 @@ The following figure shows the components overview for the IBM Cloud Monitoring 
 
 IBM Cloud Monitoring with Sysdig offers administrators, DevOps teams, and developers advanced monitoring features to monitor and troubleshoot, including alerting and customizable dashboards. 
 
-### Features
-{: #features}
-
-**Accelerate the diagnosis and resolution of performance incidents.**
-
-By using IBM Cloud Monitoring with Sysdig, Developers and DevOps teams monitor and troubleshoot performance issues in real-time, identify the source of errors, and eliminate problems. IBM Cloud Monitoring with Sysdig offers deep visibility into your system, applications and services, service-oriented views for each one, and pre-defined metrics that you can use to determine potential threats or problems.
-
-**Get critical insight from dynamic service–level monitoring and automatic correlation of data.**
- 
-IBM Cloud Monitoring with Sysdig collects metrics from multiple sources into a centralize location. Per source (host), you can deploy an agent that dynamically discovers the different resources in your environment and collects their pre-defined and custom metrics. Customize dashboards to visualize your environment.
-
-**Mitigate the impact of abnormal situations with proactive notifications.**
-
-Define alerts to reduce the impact on your day to day operations and accelerate your reaction and response time to anomalies, downtime, and performance degradation. 
-
-**Control costs by customizing what cloud sources to manage through IBM Cloud Monitoring with Sysdig.**
-
-Control the cost of your monitoring infrastructure in the {{site.data.keyword.Bluemix_notm}} by configuring the metric sources for which you want to monitor their performance. 
-
 
 ## Before you begin
 {: #prereqs}
@@ -64,6 +45,7 @@ Before you provision an instance, consider the following information:
 
 * Your data is sent to a third party.
 * The account owner can create, view, and delete an instance of a service in the {{site.data.keyword.Bluemix_notm}}, and can grant permissions to other users to work with the IBM Cloud Monitoring with Sysdig service.
+* You must have permissions to create resources in the *Default* resource group.
 * Other {{site.data.keyword.Bluemix_notm}} users with `administrator` or `editor` permissions can manage the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix_notm}}. These users must also have platform permissions to create resources within the context of the resource group where they plan to provision the instance.
 
 You provision an instance within the context of a resource group. A resource group lets you organize your services for access control and billing purposes. You can provision the IBM Cloud Monitoring with Sysdig instance in the *default* resource group or in a custom resource group.
@@ -84,9 +66,9 @@ To provision an instance of through the {{site.data.keyword.Bluemix_notm}} UI, c
 
 4. Click the **IBM Cloud Monitoring with Sysdig** tile.
 
-5. Select a service plan. By default, the **Lite** plan is set.
+5. Select a service plan. By default, the **Trial** plan is set.
 
-    For more information about the service plans, see [Service plans](/docs/services/Monitoring-with-Sysdig/pricing.html#pricing_plans).
+    For more information about the service plans, see [Pricing](/docs/services/Monitoring-with-Sysdig/pricing.html#pricing_plans).
 
 6. Select a resource group. By default, the **default** one is set.
 
@@ -152,21 +134,35 @@ The IBM Cloud Monitoring with Sysdig Web UI opens. By default, the *Explore* tab
 ## Step 4: Monitor your environment
 {: #step4}
 
-In the *Explore* tab, you can monitor data by using default metrics and default dashboards. You can use labels to define new infrastructure groups that you can then use to aggregate data differently and monitor your environment. You can also use custom dashboards that you define through the *Dashboard* tab. In the *Dashboards* tab, you can monitor data by using any of the default dashboards or by creating new ones. 
+In the *Explore* tab, you can monitor data by using default metrics and default dashboards. You can use labels to define new infrastructure groups that you can then use to aggregate data differently and monitor your environment. You can also use custom dashboards that you define through the *Dashboard* tab. 
+
+In the *Dashboards* tab, you can monitor data by using any of the default dashboards or by creating new ones. 
 
 For more information, see [Monitoring your environment](/docs/services/Monitoring-with-Sysdig/monitoring.html#monitoring)
+
+
 
 ## Step 5: Manage data
 {: #step5}
 
-You can use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. You can customize how data is aggregated when you configure a graph or create an alert for a metric. You can set the scope of a dashboard, a panel, or an alert to filter out data points. 
+By default, users are automatically added as members of the **Monitor Operations** team that is predefined for each IBM Cloud Monitoring with Sysdig instance. Users have full permissions to see all the data. An administrator can restrict access to data by managing users in teams and controlling what data is visible. For example, to restrict users viewing permissions, an administrator can create a default team with limited scope and visibility. Then, manually assign users to other teams. 
+
+You can use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. 
+
+You can customize how data is aggregated when you configure a graph or create an alert for a metric. 
+
+You can set the scope of a dashboard, a panel, or an alert to filter out data points. 
 
 For more information, see [Managing data](/docs/services/Monitoring-with-Sysdig/manage.html#manage).
+
 
 ## Step 6: Manage user access
 {: #step6}
 
 Every user that accesses the IBM Cloud Monitoring with Sysdig service in your account must be assigned an access policy with an IAM user role defined. The policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.Bluemix_notm}}](/docs/services/Monitoring-with-Sysdig/iam.html#iam).
+
+When a user is granted permissions in the {{site.data.keyword.Bluemix_notm}} to work with the IBM Cloud Monitoring with Sysdig service, the user is automatically granted a Sysdig role. This role determines the actions that a user has permissions to run. Valid roles are *Sysdig admin* and *Sysdig user*. For more information, see [Mapping of Sysdig roles to {{site.data.keyword.Bluemix_notm}} roles](/docs/services/Monitoring-with-Sysdig/iam.html#sysdig).
+
 
 
 
