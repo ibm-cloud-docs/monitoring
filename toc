@@ -35,6 +35,7 @@ IBM Cloud Monitoring with Sysdig
     panels.md
     metrics.md
     notifications.md
+    teams.md
     iam_work.md
     captures.md
     sysdig_python_lib.md

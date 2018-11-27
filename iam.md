@@ -67,7 +67,7 @@ Choose any of the following actions to manage access groups in the {{site.data.k
 * [Assigning access to a group](/docs/iam/groups.html#assigning-access-to-a-group).
 
 
-## Platform roles
+## {{site.data.keyword.Bluemix_notm}} platform roles
 {: #platform}
 
 Use the following table to identify the platform role that you can grant a user in the {{site.data.keyword.Bluemix_notm}} to run any of the following platform actions:
@@ -82,49 +82,38 @@ Use the following table to identify the platform role that you can grant a user 
 | `View service instances in the Observability Monitoring dashboard`      | Administrator </br>Editor </br>Operator </br>Viewer  | 
 {: caption="Table 1. IAM user roles and actions" caption-side="top"}
 
-Use the following table to identify the platform role that you can grant a user in the {{site.data.keyword.Bluemix_notm}} to run any of the following service actions:
 
-| Actions                                                                    | {{site.data.keyword.Bluemix_notm}} Platform Roles     | 
+
+## Sysdig roles
+{: #sysdig_roles}
+
+The following table outlines the Sysdig roles and actions per role:
+
+| Actions                                                                    | Sysdig role                                          | 
 |----------------------------------------------------------------------------|------------------------------------------------------|
-| `Add and remove Sysdig metric sources`                                     | Administrator                                        |
-| `Create and delete alerts`                                                 | Administrator                                        | 
-| `Create and delete notifications channels`                                 | Administrator                                        | 
-| `Manage metrics data`                                                      | Administrator                                        |
-| `Manage the Sysdig Web UI`                                                 | Administrator                                        |
-| `View metrics through the Sysdig Web UI`                                   | Administrator                                        | 
-{: caption="Table 2. IAM user roles and actions" caption-side="top"}
-
-
-## Service roles
-{: #service}
-
-Use the following table to identify the service roles that you can grant a user to run any of the following service actions:
-
-| Actions                                                                    | {{site.data.keyword.Bluemix_notm}} service Roles     | 
-|----------------------------------------------------------------------------|------------------------------------------------------|
-| `Add and remove Sysdig metric sources`                                     | Manager                                              |
-| `Create and delete alerts`                                                 | Manager                                              | 
-| `Create and delete notifications channels`                                 | Manager                                              | 
-| `Manage metrics data`                                                      | Manager                                              |
-| `Manage the Sysdig Web UI`                                                 | Manager </br>Writer                                  |
-| `View metrics through the Sysdig Web UI`                                   | Manager </br>Writer                                  | 
-{: caption="Table 3. IAM user roles and actions" caption-side="top"}
+| `Reset the Sysdig access key`                                              | Admin                                                |
+| `Manage users`                                                             | Admin                                                |
+| `Create, configure, and delete teams`                                      | Admin                                                |
+| `Configure and remove notifications channels`                              | Admin                                                | 
+| `Configure and remove Sysdig agents`                                       | Admin                                                |
+| `Create, delete, and edit content in the Sysdig web UI`                    | Admin </br>User                                      |  
+| `View metrics through the Sysdig Web UI`                                   | Admin </br>User                                      |  
+| `Create and delete alerts`                                                 | Admin </br>User                                      | 
+| `Create and delete captures`                                               | Admin </br>User                                      |   
+{: caption="Table 2. Sysdig roles and actions" caption-side="top"}
 
 
 ## Mapping of Sysdig roles to {{site.data.keyword.Bluemix_notm}} roles
 {: #sysdig}
 
-Use the following table to see how to map service roles to Sysdig roles:
+Use the following table to see how an {{site.data.keyword.Bluemix_notm}} role maps to a Sysdig role:
 
-| Type of role        |Service access role | Sysdig priviledges by role                 | 
-|---------------------|--------------------|---------------------------------------------|
-| Service role        | Reader             | No permissions are granted.                 | 
-| Service role        | Writer             | Grants the user Sysdig user priviledges.    |
-| Service role        | Manager            | Grants the user Sysdig admin priviledges.   | 
-| Platform role       | Administrator      | Grants the user Sysdig admin priviledges.   | 
-{: caption="Table 4. Sysdig roles" caption-side="top"}
-
-For more information about Sysdig users, see [Understanding Sysdig Users [External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/206307381/User+and+Team+Administration){:new_window}.
-
+| Type of role        | Role               | Sysdig role                | Description                                 |
+|---------------------|--------------------|----------------------------|---------------------------------------------|
+| Platform role       | Administrator      | Admin                      | Grants the user Sysdig admin priviledges.   | 
+| Service role        | Manager            | Admin                      | Grants the user Sysdig admin priviledges.   | 
+| Service role        | Writer             | User                       | Grants the user Sysdig user priviledges.    |
+| Service role        | Reader             |                            | No permissions are granted.                 |
+{: caption="Table 3. Sysdig roles" caption-side="top"}
 
 

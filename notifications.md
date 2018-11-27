@@ -34,7 +34,7 @@ Complete the following steps to add a notification channel:
 
 3. Select **Notification Channels**.
 
-4. Click **MY CHANNELS** ![add icon](../icons/add.png). Then, select a channel.
+4. Click **MY CHANNELS** ![add icon](../images/add.png). Then, select a channel.
 
     **Note:** The first time you configure a notification channel, click on any of the channels.
 
