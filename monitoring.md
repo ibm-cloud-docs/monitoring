@@ -18,7 +18,7 @@ lastupdated: "2018-12-03"
 # Monitoring your environment
 {: #monitoring}
 
-You can monitor your infrastructure, and the applications running on it with the IBM Cloud Monitoring with Sysdig service. 
+You can monitor your infrastructure, and the applications running on it with the IBM Cloud Monitoring with Sysdig service. You can request a capture to analyze what happens in a node during a time frame.
 {:shortdesc}
 
 After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, and configure Sysdig agents for your metrics sources, you can view, monitor, and manage data through the service's web UI.
@@ -43,7 +43,7 @@ You can use alerts to notify users of problems that require attention through on
 * The *Alerts* section in the web UI shows the list of pre-defined alerts. From this view, you can enable and disable pre-defined alerts; you can modify existing alerts; and you can create new alerts.
 * The *Settings* section in the web UI is where you configure notification channels.
  
-
+You can request a capture on a node to analyze what happens in that node during a time frame. For example, you can use it to analyze bottlenecks, or component interactions.
 
 ## Metrics
 {: #metrics}
@@ -209,7 +209,7 @@ You can enable predefined alerts, modify alerts, and create custom alerts in the
 
 You manage alerts in the *Alerts* view of the web UI. You can configure the table columns that are displayed in the *Alerts* view. Valid column options are: *Name*, *Scope*, *Alert When*, *Segment By*, *Notifications*, *Enabled*, *Modified*, *Captures*, *Channels*, *Created*, *Description*, *Email recipients*, *For at least*, *OpsGenie*, *PagerDuty*, *Severity*, *Slack*, *WebHook*, *SNS topics*, *Type*, *VictorOps*
 
-The following list outlines the tasks that you can run with alerts:
+The following list outlines the main tasks when you work with alerts:
 * [Configure an alert ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-ConfigureanAlert){:new_window}
 * [Enable or disable an alert ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-Enable/DisableAlerts){:new_window} 
 * [Search for an alert ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-SearchforanAlert){:new_window}
@@ -221,5 +221,31 @@ The following list outlines the tasks that you can run with alerts:
 * [Define alert thresholds as custom boolean expressions ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-AdvancedAlertThresholds){:new_window}
 
 
+## Captures
+{: #captures}
+
+A capture is a trace file that you can generate to analyze what happens in a node during a time frame. The capture file size limit is 100MB. For example, you can use it to analyze bottlenecks, or component interactions. 
+
+Captures contain system calls, and other OS events such as system-level latencies, batch jobs duration, deployments interruption times, autoscaling latencies, container startup times, or application transaction time. Captures include detailed information from every container on a node. 
+
+By default, captures are enabled when you configure a Sysdig agent in a node. Due to the data that a capture collects, disable captures when you configure a Sysdig agent. 
+{: tip}
+
+You can create, explore, download, and delete *captures* for individual nodes. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent. 
+
+* In the web UI, you create captures in the *Explore* section and manage capture files through the *Captures* section.
+* You can visualize data from a capture by using *Csysdig* (the curses-based command line UI for sysdig) or the open source Sysdig utilities to analyze the data in a capture.
+* You can search data in a capture by using filters.
+* You can manipulate data in a capture by using chisels (scripts). 
+
+When you enable the capture feature for a team, capture files are only be visible to members of that team.
+
+The following list outlines the main tasks when you work with captures:
+* [Creating a capture](/docs/services/Monitoring-with-Sysdig/captures.html#create)
+* [Deleting a capture](/docs/services/Monitoring-with-Sysdig/captures.html#delete)
+* [Explore a capture](/docs/services/Monitoring-with-Sysdig/captures.html#explore)
+* [Download a capture](/docs/services/Monitoring-with-Sysdig/captures.html#download)
+
+For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
 
 

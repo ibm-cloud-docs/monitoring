@@ -37,7 +37,7 @@ lastupdated: "2018-12-03"
 * *Platform management roles* enable users to perform tasks on service resources at the platform level, for example assign user access for the service, create or delete service IDs, create instances, assign policies for your service to other users, and bind instances to applications.
 * *Service access roles* enable users to be assigned varying levels of permission for calling the service's API.
 
-**To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use *access groups*.** You can assign a single policy to the group instead of assigning the same access multiple times per individual user or service ID.
+**To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use **access groups*.** You can assign a single policy to the group instead of assigning the same access multiple times per individual user or service ID.
 {: tip}
 
 

@@ -18,19 +18,13 @@ lastupdated: "2018-11-21"
 # Working with captures
 {: #captures}
 
-A capture is a trace file that you can generate to analyze what happens in a host during a time frame. For example, you can use it to analyze bottlenecks, or component interactions. In the IBM Cloud Monitoring with Sysdig service, you can create, explore, download, and delete *captures* for individual hosts. 
+A capture is a trace file that you can generate to analyze what happens in a host during a time frame. For example, you can use it to analyze bottlenecks, or component interactions. In the IBM Cloud Monitoring with Sysdig service, you can create, explore, download, and delete *captures* for individual nodes. 
 {:shortdesc}
 
-* Sysdig capture files contain system calls, and other OS events such as system-level latencies, batch jobs duration, deployments interruption times, autoscaling latencies, container startup times, or application transaction time.  
-* In the web UI, you create captures in the *Explore* section and manage captures through the *Captures* section.
-* You can visualize data from a capture by using *Csysdig* (the curses-based command line UI for sysdig) or the open source sysdig utilities to analyze the data in a capture.
-* You can search data in a capture by using filters.
-* You can manipulate data in a capture by using chisels (scripts). 
-* The capture file size limit is 100MB.
+For more information, see [Captures](/docs/services/Monitoring-with-Sysdig/monitoring.html#captures).
 
 
-
-## Create a capture
+## Creating a capture
 {: #create}
 
 You create a capture in the *Explore* view.
@@ -68,7 +62,7 @@ The status of a capture file can be any of the following values:
 
 
 
-## Delete a capture
+## Deleting a capture
 {: #delete}
 
 Complete the following steps to delete a capture file:
@@ -79,7 +73,7 @@ Complete the following steps to delete a capture file:
 
 
 
-## Explore a capture
+## Exploring a capture
 {: #explore}
 
 Complete the following steps to explore a capture file:
@@ -90,7 +84,7 @@ Complete the following steps to explore a capture file:
 
 
 
-## Download a capture
+## Downloading a capture
 {: #download}
 
 Complete the following steps to download a capture file:

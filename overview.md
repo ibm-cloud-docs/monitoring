@@ -19,14 +19,9 @@ lastupdated: "2018-12-03"
 # About
 {: #about}
 
-IBM Cloud Monitoring with Sysdig is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.Bluemix}} architecture. Use it to get visibility into the performance and health of your applications, services, and platform. IBM Cloud Monitoring with Sysdig is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
+IBM Cloud Monitoring with Sysdig is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.Bluemix}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. IBM Cloud Monitoring with Sysdig is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
 {:shortdesc}
 
-IBM Cloud Monitoring with Sysdig offers administrators, DevOps teams, and developers advanced monitoring features to monitor and troubleshoot, including alerting and customizable dashboards. 
-
-
-## Overview
-{: #ov}
 
 To add monitoring features with IBM Cloud Monitoring with Sysdig in the {{site.data.keyword.Bluemix_notm}}, you must provision an instance of the IBM Cloud Monitoring with Sysdig service.
 
@@ -117,27 +112,6 @@ The following list outlines IBM Cloud Monitoring with Sysdig agents that are ava
 For more information, see [Configuring a Sysdig agent](/docs/services/Monitoring-with-Sysdig/config_agent.html#config_agent) and [Removing a Sysdig agent](/docs/services/Monitoring-with-Sysdig/remove_agent.html#remove_agent).
 
 
-## Features
-{: #features}
-
-**Accelerate the diagnosis and resolution of performance incidents.**
-
-By using IBM Cloud Monitoring with Sysdig, Developers and DevOps teams monitor and troubleshoot performance issues in real-time, identify the source of errors, and eliminate problems. IBM Cloud Monitoring with Sysdig offers deep visibility into your system, applications and services, service-oriented views for each one, and pre-defined metrics that you can use to determine potential threats or problems.
-
-**Get critical insight from dynamic service–level monitoring and automatic correlation of data.**
- 
-IBM Cloud Monitoring with Sysdig collects metrics from multiple sources into a centralize location. Per source (host), you can deploy an agent that dynamically discovers the different resources in your environment and collects their pre-defined and custom metrics. Customize dashboards to visualize your environment.
-
-**Mitigate the impact of abnormal situations with proactive notifications.**
-
-Define alerts to reduce the impact on your day to day operations and accelerate your reaction and response time to anomalies, downtime, and performance degradation. 
-
-**Control costs by customizing what cloud sources to manage through IBM Cloud Monitoring with Sysdig.**
-
-Control the cost of your monitoring infrastructure in the {{site.data.keyword.Bluemix_notm}} by configuring the metric sources for which you want to monitor their performance. 
-
-
-
 ## Viewing usage
 {: #usage}
 
@@ -148,6 +122,20 @@ To monitor the usage and costs of your service, see [Viewing your usage](/docs/b
 {: #plans}
 
 Different pricing plans are available for an IBM Cloud Monitoring with Sysdig instance. For more information, see [Pricing](/docs/services/Monitoring-with-Sysdig/pricing.html#pricing_plans).
+
+
+## Security considerations
+{: #security}
+
+**Captures**
+
+A capture is a trace file that you can generate to analyze what happens in a host during a time frame. Captures contain system calls, and other OS events. You can enable or disable this feature per node when you configure the Sysdig agent that collects metrics from that node. By default, *Captures* are enabled when you configure a Sysdig agent. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent.
+
+**IMPORTANT** When Captures are enabled, notice that Sysdig will have deep visibility into your operations. To avoid a security incident and potentially exposing data outside of your organization, check your organization's security policies before you enable captures on a node. Consider disabling the *Capture* feature for all your Sysdig agents.
+{: tip}
+
+
+
 
 
 
