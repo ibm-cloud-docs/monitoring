@@ -83,7 +83,12 @@ The roll-up policy describes the granularity of the data over time:
 ## Data deletion
 {: #data_deletion}
 
-When you delete an instance of IBM Cloud Monitoring with Sysdig from the {{site.data.keyword.Bluemix_notm}}, all the data is deleted.
+When you delete an instance of {{site.data.keyword.mon_full_notm}} from the {{site.data.keyword.Bluemix_notm}}, you must open a case through support to request the data to be  deleted. For details, see [contacting support](/docs/get-support/howtogetsupport.html#getting-customer-support).
+
+When you delete a capture, the data file for that capture is automatically deleted.
+
+**NOTE: Deletion of data that is collected from one single Sysdig agent in a {{site.data.keyword.mon_short}} instance is not supported.**
+
 
 
 ## Data location
