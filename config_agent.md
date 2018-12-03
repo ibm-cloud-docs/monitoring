@@ -16,7 +16,7 @@ lastupdated: "2018-12-03"
 {:download: .download}
 
 # Configuring a Sysdig agent
-{: #sysdig_config_agent}
+{: #config_agent}
 
 After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, you must configure a Sysdig agent in each environment that you want to monitor. The Sysdig agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in each environment.
 {:shortdesc}
@@ -49,6 +49,8 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. 
 
     * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
+
+    * Set **secure** to *true* to use SSL with the communication.
 
 If the Sysdig agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the Sysdig agent.
 
@@ -92,6 +94,8 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. 
 
     * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
+
+    * Set **SECURE** to *true* to use SSL with the communication.
 
     **Note:**  The container runs in detached mode. To see the container’s output, remove *-d*.
 
@@ -205,9 +209,13 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     Download the [**sysdig-agent-configmap.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-configmap.yaml).
 
-    Use an editor to open the sysdig-agent-configmap.yaml file. Then, add the following params:
+    Use an editor to open the sysdig-agent-configmap.yaml file. Then, add the following parameters:
 
-    * **collector**: This parameter is used to specify the ingestion URL for the region where the monitoring instance is available. 
+    * **k8s_cluster_name**: This parameter specifies the cluster name as a metric label. You can use the label *kubernetes.cluster.name* to navigate the Kubernetes dashboards by cluster name and filter out metrics associated with the cluster.
+
+    * **collector**: This parameter specifies the ingestion URL for the region where the monitoring instance is available. 
+
+    * **collector_port**: This parameter indicates the port on which the collector is listening on. It's value must be *6443*.
     
     * **ssl**: This parameter must be set to *true*.
     
@@ -215,7 +223,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     
     * **new_k8s**: This parameter must be set to *true* to capture kube state metrics.
 
-    * **sysdig_capture_enabled**: This parameter is used to enable or disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
+    * **sysdig_capture_enabled**: This parameter enables or disables the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
 
     An example yaml file looks like this:
 
@@ -228,9 +236,10 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
        dragent.yaml: 
        tags: linux:ubuntu,dept:dev,local:nyc
        collector: us-south.monitoring.cloud.ibm.com
+       collector_port: 6443
        ssl: true
-       ssl_verify_certificate: false
        new_k8s: true
+       k8s_cluster_name: my_cluster_name
        sysdig_capture_enabled: false
     ```
     {: screen}

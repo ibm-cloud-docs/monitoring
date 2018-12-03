@@ -74,8 +74,25 @@ To be notified when there is a tier change, you must enable the following alert:
 
 The usage is calculated as the average of the number of nodes and metrics sampled every 10 seconds over the previous hour. Small, short-lived fluctuations are not included. The difference between the previous and the current usage happens once an hour.
 
+The thresholds defined are set in the following way:
+
+``` 
+usageTiers {
+  containerDensity {
+    Basic = [0, 20]
+    Pro = [21, 50]
+    Advanced = [51, 100]
+  }
+  metricDensity {
+    Basic = [0, 200]
+    Pro = [201, 500]
+    Advanced = [501, 1000]
+}
+```
+{: screen}
+
 The alert notification is generated as follows:
-1. Every hour, if the number of containers per node in a tier changes, a custom event is generated.
+1. Every hour, if the number of containers per node in a tier increases, a custom event is generated.
 2. The alert condition checks for any custom events that inform about changes in the number of containers per node. If it finds an event where the number of containers in a tier increases from the last time the usage was calculated, it sends a notification.
 
 The frequency of the alert is once every hour. For a fluctuating node, the frequency of the alert is at most every two hours.
@@ -85,7 +102,7 @@ Notice that the alert is only generated if a node moves from *Basic* tier to *Pr
 
 
 ### Examples
-{: #exaples}
+{: #examples}
 
 **Sample 1** 
 
@@ -95,11 +112,10 @@ If the average container count is the following:
 |----------|----------------------|-------------------------------------------------------------------------------|------------------------|
 | 10:00    | 18                   | Tier is set to **Basic**.                                                     | No                     |
 | 11:00    | 21                   | Number of containers is above *Basic* tier. Tier moves to **Pro**.            | Yes                    |
-| 12:00    | 19                   | Number of containers is below *Basic* tier. Tier moves back to **Basic**.     | Yes                    |
-| 13:00    | 20                   | No tier change. Tier is set to **Basic**.                                     | No                    |
+| 12:00    | 19                   | Number of containers is below *Basic* tier. Tier moves back to **Basic**.     | No                    |
+| 13:00    | 20                   | No tier change. Tier is set to **Basic**.                                     | No                     |
 {: caption="Table 2. Sample 1" caption-side="top"} 
 
-If the average container count for hour 1 is 21, and for hour 2 is 19, and for hour 3 is 20; you can expect to see an alert for hour 1 and hour 3, but not for hour 2.
 
 **Sample2**
 
@@ -108,12 +124,11 @@ If the average container count is the following:
 | Hour     | Number of containers | Description                                                                   | Is an alert generated? |
 |----------|----------------------|-------------------------------------------------------------------------------|------------------------|
 | 10:00    | 15                   | Tier is set to **Basic**.                                                     | No                     |
-| 11:00    | 19                   | Tier is set to **Basic**.                                                     | Yes                    |
-| 12:00    | 20                   | Tier is set to **Basic**.                                                     | Yes                    |
-| 13:00    | 21                   | Number of containers is above *Basic* tier. Tier moves to **Pro**.            | No                     |
+| 11:00    | 19                   | Tier is set to **Basic**.                                                     | No                     |
+| 12:00    | 20                   | Tier is set to **Basic**.                                                     | No                    |
+| 13:00    | 21                   | Number of containers is above *Basic* tier. Tier moves to **Pro**.            | Yes                     |
 {: caption="Table 3. Sample 2" caption-side="top"}
 
-If the average container count for hour 1 is 19, for hour 2 is 20, and for hour 3 is 21; you can expect to see an alert for hour 1, and hour 2, but not for hour 3.
 
 **Sample3**
 
@@ -122,12 +137,10 @@ If the average container count is the following:
 | Hour     | Number of containers | Description                                                                   | Is an alert generated? |
 |----------|----------------------|-------------------------------------------------------------------------------|------------------------|
 | 10:00    | 15                   | Tier is set to **Basic**.                                                     | No                     |
-| 11:00    | 20                   | Tier is set to **Basic**.                                                     | Yes                    |
+| 11:00    | 20                   | Tier is set to **Basic**.                                                     | No                    |
 | 12:00    | 21                   | Tier is set to **Basic**.                                                     | Yes                    |
-| 13:00    | 20                   | Number of containers is above *Basic* tier. Tier moves to **Pro**.            | No                     |
+| 13:00    | 20                   | Number of containers is back to *Basic* tier. Tier moves to **Pro**.          | No                     |
 {: caption="Table 3. Sample 3" caption-side="top"}
 
-
-If the average container count for hour 1 is 20, for hour 2 is 21, and for hour 3 is 20; you can expect to see an alert for hour 1, but not hour 2 or hour 3.
 
 
