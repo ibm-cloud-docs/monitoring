@@ -25,6 +25,8 @@ IBM Cloud Monitoring with Sysdig
     remove.md
     config_agent.md
     remove_agent.md
+    change_agent.md
+    change_kube_agent.md
     launch.md
     groups.md
     access_key.md
