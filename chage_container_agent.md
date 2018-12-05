@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-03"
+lastupdated: "2018-12-06"
 
 ---
 
@@ -18,8 +18,14 @@ lastupdated: "2018-12-03"
 # Customizing container Sysdig agents
 {: #change_agent}
 
-By default, the Sysdig agent collects data from a range of platforms and applications. You can edit the agent config file to change its default behavior, and include or exclude data. You can customize the Sysdig agent configuration file to include custom metrics such as JMX, StatsD, and Prometheus. You also can filter out metrics and containers.
+In {{site.data.keyword.mon_full_notm}}, you can customize the Sysdig agent configuration to set a log level, block ports, include or exclude metric data, add or remove events, and filter out containers. 
 {:shortdesc}
+
+
+{{site.data.keyword.mon_full_notm}} supports event integration with Docker. Sysdig agents automatically discover Docker sources and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
+
+By default, only a limited set of events is collected. The default settings configuration file */opt/draios/etc/dragent.default.yaml* includes the events that are collected. For more information about the events that are collceted by default, see [Docker events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/234356795/Enable+Disable+Event+Data#Enable/DisableEventData-DockerEvents){:new_window}.
+
 
 
 ## Editing the dragent yaml file
@@ -30,13 +36,14 @@ The yaml file is loacated in */opt/draios/etc/*.
 Complete the following steps to edit the file and apply the changes:
 
 1. Access the *dragent.yaml* directly at `/opt/draios/etc/dragent.yaml`.
-2. Edit the file. Use YAML systax.
+2. Edit the file. Use valid YAML syntax.
 3. Restart the agent. Run the following command:
 
     ```
     docker restart sysdig-agent
     ```
     {: codeblock}
+
 
 
 ## Blocking ports
@@ -59,6 +66,9 @@ blacklisted_ports:
 
 ## Collecting a set of Docker events
 {: #docker}
+
+To add or remove events, you must customize the *dragent.yaml* file and specify what events to include and which ones to filter out. **Note:** An entry in a section in *dragent.yaml* overrides the entire section in the default configuration.
+{: tip}
 
 For example, to filter out Docker image events and collect only events for attach, commit, and copy actions, you must set the *docker* section as follows:
 
@@ -89,7 +99,7 @@ For example, to filter out Docker image events and collect only events for attac
 ## Disabling collection of events
 {: #disable}
 
-To disable a Sysdig agent from collecting events specified in a section of the *dragent.default.yaml*, set the event section to none in the *dragent.yaml* file.
+To disable a Sysdig agent from collecting events, modify the *dragent.default.yaml* file. Set the **events** section to *none* in the *dragent.yaml* file.
 
 For example, to filter out Docker events, you must set the *events* section in the *dragent.yaml* file as follows:
 
@@ -154,27 +164,6 @@ metrics_filter:
 * You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*. 
 * The entry `exclude: metricA.*` is ignored.
 
-To verify what metrics are enabled and disabled, see []().
-
-
-
-
-## Filtering designated containers
-{: #containers}
-
-By default, a Sysdig agent will collect metrics from all containers it detects in an environment. However, as of agent version 0.86, it is possible to exclude designed containers from metrics collection. This can help reduce agent and backend load by not monitoring unnecessary containers, or-- if encountering backend limits for containers-- you can filter to ensure that the important containers are always reported on.
-
-This feature affects the monitoring of all the processes/metrics within a container, including Prometheus, StatsD, JMX, app-checks, and built-in metrics.
-
-
-
-
-## Agent auto-config
-{: #auto_config}
-
-Agent Auto-Config: Describes how to use the Sysdig REST APIs and Python client wrappers to auto-orchestrate changes to all agents in an environment, in the (rare) situation in which a standard orchestration tool such as Kubernetes, Chef, or Ansible is not being used. 
-
-
 
 ## Changing the log level
 {: #log_level}
@@ -196,25 +185,4 @@ The Sysdig agent generates log entries in */opt/draios/logs/draios.log*.
 | Verify what metrics are included or excluded  | `metrics_excess_log: true`  |
 {: caption="Table 2. Log section entries" caption-side="top"} 
 
-
-Note that troubleshooting a host with less than the default 'info' level will be more difficult or not possible. You should revert to 'info' when you are done troubleshooting the agent.  
-
-A level of 'error' will generate the fewest log entries, a level of 'trace' will give the most, 'info' is the default if no entry exists.
-Example in dragent.yaml 
-customerid: 831f3-Your-Access-Key-9401
-tags: local:sf,acct:eng,svc:websvr
-log:
- file_priority: warning
- console_priority: info
-
-
-OR 
-customerid: 831f3-Your-Access-Key-9401
-tags: local:sf,acct:eng,svc:websvr
-log: { file_priority: debug, console_priority: debug }
-Docker run command
-
-If you are using the "ADDITIONAL_CONF" parameter to start a Docker containerized agent, you would specify this entry in the Docker run command:  
--e ADDITIONAL_CONF=“log:  { file_priority: error, console_priority: none }”
--e ADDITIONAL_CONF="log:\n  file_priority: error\n  console_priority: none"
 

@@ -22,7 +22,10 @@ By default, the Sysdig agent collects data from a range of platforms and applica
 {:shortdesc}
 
 
-The Sysdig agent uses two configuration files that specify what data to collect automatically:
+## Linux Sysdig agent
+{: #linux}
+
+The Linux Sysdig agent and the containers Sysdig agent use two configuration files that specify what data to collect automatically:
 
 | File                   | Description                                                     | Location                                |
 |------------------------|-----------------------------------------------------------------|-----------------------------------------|
@@ -146,26 +149,4 @@ The Sysdig agent generates log entries in */opt/draios/logs/draios.log*.
 | Filtering events by severity                  | `event_priority: warning`   |
 | Verify what metrics are included or excluded  | `metrics_excess_log: true`  |
 {: caption="Table 2. Log section entries" caption-side="top"} 
-
-
-Note that troubleshooting a host with less than the default 'info' level will be more difficult or not possible. You should revert to 'info' when you are done troubleshooting the agent.  
-
-A level of 'error' will generate the fewest log entries, a level of 'trace' will give the most, 'info' is the default if no entry exists.
-Example in dragent.yaml 
-customerid: 831f3-Your-Access-Key-9401
-tags: local:sf,acct:eng,svc:websvr
-log:
- file_priority: warning
- console_priority: info
-
-
-OR 
-customerid: 831f3-Your-Access-Key-9401
-tags: local:sf,acct:eng,svc:websvr
-log: { file_priority: debug, console_priority: debug }
-Docker run command
-
-If you are using the "ADDITIONAL_CONF" parameter to start a Docker containerized agent, you would specify this entry in the Docker run command:  
--e ADDITIONAL_CONF=“log:  { file_priority: error, console_priority: none }”
--e ADDITIONAL_CONF="log:\n  file_priority: error\n  console_priority: none"
 

@@ -28,7 +28,7 @@ IBM Cloud Monitoring with Sysdig
     remove_agent.md
 
     {: .topicgroup}
-    Customize the agent
+    Customizing the agent
         change_kube_agent.md
         change_agent.md
         chage_container_agent.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-03"
+lastupdated: "2018-12-06"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-12-03"
 {:tip: .tip}
 {:download: .download}
 
-# Customizing the Linux and container Sysdig agents
+# Customizing Linux Sysdig agents
 {: #change_agent}
 
 By default, the Sysdig agent collects data from a range of platforms and applications. You can edit the agent config file to change its default behavior, and include or exclude data. You can customize the Sysdig agent configuration file to include custom metrics such as JMX, StatsD, and Prometheus. You also can filter out metrics and containers.
@@ -51,21 +51,12 @@ The yaml file is loacated in */opt/draios/etc/*.
 
 Complete the following steps to edit the file and apply the changes:
 
-1. Access the *dragent.yaml* directly at `/opt/draios/etc/dragent.yaml`.
-2. Edit the file. Use YAML systax.
-3. Restart the agent. 
-
-    Run the following command for a Linux agent:
+1. Access the *dragent.yaml* directly. The file is located in `/opt/draios/etc/dragent.yaml`.
+2. Edit the file. Use valid YAML syntax.
+3. Restart the agent. Run the following command:
 
     ```
     service dragent restart
-    ```
-    {: codeblock}
-
-    Run the following command for a container agent:
-
-    ```
-    docker restart sysdig-agent
     ```
     {: codeblock}
 
@@ -86,26 +77,4 @@ blacklisted_ports:
 ```
 {: screen}
 
-
-
-
-
-
-
-
-
-## Filtering designated containers
-{: #containers}
-
-By default, a Sysdig agent will collect metrics from all containers it detects in an environment. However, as of agent version 0.86, it is possible to exclude designed containers from metrics collection. This can help reduce agent and backend load by not monitoring unnecessary containers, or-- if encountering backend limits for containers-- you can filter to ensure that the important containers are always reported on.
-
-This feature affects the monitoring of all the processes/metrics within a container, including Prometheus, StatsD, JMX, app-checks, and built-in metrics.
-
-
-
-
-## Agent auto-config
-{: #auto_config}
-
-Agent Auto-Config: Describes how to use the Sysdig REST APIs and Python client wrappers to auto-orchestrate changes to all agents in an environment, in the (rare) situation in which a standard orchestration tool such as Kubernetes, Chef, or Ansible is not being used. 
 

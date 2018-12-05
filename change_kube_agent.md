@@ -16,7 +16,7 @@ lastupdated: "2018-12-06"
 {:important: .important}
 {:download: .download}
 
-# Customizing the Kubernetes Sysdig agent
+# Customizing Kubernetes Sysdig agents
 {: #change_kube_agent}
 
 In {{site.data.keyword.mon_full_notm}}, you can customize the Sysdig agent configuration to set a log level, block ports, include or exclude metric data, add or remove events, and filter out containers. 
@@ -313,7 +313,7 @@ Changes are applied automatically.
 
 To filter custom metrics, you must customize the **metrics_filter** section in the *sysdig-agent-configmap.yaml* file. You can specify which metrics to include and which ones to filter out by configuring the **include** and **exclude** filtering parameters.
 
-<p class="important">The filtering rule order is set as follows: the first rule that matches a metric is applied.</p>
+<p class="important">The filtering rule order is set as follows: the first rule that matches a metric is applied. Follow up rules for that metric are ignored.</p>
 
 Complete the following steps:
 
@@ -392,7 +392,7 @@ The following table outlines the parameters that you can define to set the filte
 | `container.label.*`                | Container label                                |
 | `kubernetes.<object>.*`            | Kubernetes object. An object can be a pod, a namespace, etc.   |
 | `kubernetes.<object>.annotation.*` | Kubernetes object annotation                   |
-| `kubernetes.<object>.label.*`      | Kubernetes object lable                        |
+| `kubernetes.<object>.label.*`      | Kubernetes object label                        |
 | `all`                              | Default rule to specify all objects            |
 {: caption="Table 2. Parameters to define conditions on containers" caption-side="top"} 
 
