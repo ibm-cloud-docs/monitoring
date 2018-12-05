@@ -22,7 +22,6 @@ By default, the Sysdig agent collects data from a range of platforms and applica
 {:shortdesc}
 
 
-
 ## Editing the dragent yaml file
 {: #edit_agent}
 
@@ -32,9 +31,7 @@ Complete the following steps to edit the file and apply the changes:
 
 1. Access the *dragent.yaml* directly at `/opt/draios/etc/dragent.yaml`.
 2. Edit the file. Use YAML systax.
-3. Restart the agent. s
-
-    Run the following command for a container agent:
+3. Restart the agent. Run the following command:
 
     ```
     docker restart sysdig-agent
