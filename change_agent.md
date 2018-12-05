@@ -77,4 +77,47 @@ blacklisted_ports:
 ```
 {: screen}
 
+## Including and excluding metrics
+{: #params}
 
+To filter custom metrics, you must customize the **metrics_filter** section in the *dragent.yaml* file. You can specify which metrics to include and which ones to filter out by configuring the **include** and **exclude** filtering parameters.
+
+**Note:** The filtering rule order is set as follows: the first rule that matches a metric is applied.
+
+For example, if the *metrics_filter* section of a Sysdig agent looks as follows:
+
+```
+metrics_filter:
+  - include: metricA.*
+  - exclude: metricA.*
+  - include: metricB.*
+  - include: haproxy.backend.*
+  - exclude: haproxy.*
+  - exclude: metricC.*
+```
+{: screen}
+
+* You are configuring the Sysdig agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*. 
+* You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*. 
+* The entry `exclude: metricA.*` is ignored.
+
+
+## Changing the log level
+{: #log_level}
+
+To configure the log level, you must customize the **log** section in the *dragent.yaml* file. 
+
+The Sysdig agent generates log entries in */opt/draios/logs/draios.log*. 
+* The log file rotates when it reaches 10MB in size.
+* The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
+* Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*
+* The default log level is *info*, where an entry is created for each aggregated metrics transmission to the backend servers, once per second, in addition to entries for any warnings and errors.
+* You can customize the type of log and the entries that are collected by configuring the Sysdig agent configuration file **/opt/draios/etc/dragent.yaml**. After you edit the file, you must restart the agent at the shell with `service dragent restart` to activate the changes.
+
+| Use cases                                     | Log section entry           |
+|-----------------------------------------------|-----------------------------|
+| Troubleshoot agent behavior                   | `file_priority: debug`      |
+| Reduce container console output               | `console_priority: warning` |
+| Filtering events by severity                  | `event_priority: warning`   |
+| Verify what metrics are included or excluded  | `metrics_excess_log: true`  |
+{: caption="Table 2. Log section entries" caption-side="top"} 

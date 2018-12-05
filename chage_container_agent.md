@@ -22,10 +22,6 @@ In {{site.data.keyword.mon_full_notm}}, you can customize the Sysdig agent confi
 {:shortdesc}
 
 
-{{site.data.keyword.mon_full_notm}} supports event integration with Docker. Sysdig agents automatically discover Docker sources and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
-
-By default, only a limited set of events is collected. The default settings configuration file */opt/draios/etc/dragent.default.yaml* includes the events that are collected. For more information about the events that are collceted by default, see [Docker events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/234356795/Enable+Disable+Event+Data#Enable/DisableEventData-DockerEvents){:new_window}.
-
 
 
 ## Editing the dragent yaml file
@@ -66,6 +62,10 @@ blacklisted_ports:
 
 ## Collecting a set of Docker events
 {: #docker}
+
+{{site.data.keyword.mon_full_notm}} supports event integration with Docker. Sysdig agents automatically discover Docker sources and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
+
+By default, only a limited set of events is collected. The default settings configuration file */opt/draios/etc/dragent.default.yaml* includes the events that are collected. For more information about the events that are collceted by default, see [Docker events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/234356795/Enable+Disable+Event+Data#Enable/DisableEventData-DockerEvents){:new_window}.
 
 To add or remove events, you must customize the *dragent.yaml* file and specify what events to include and which ones to filter out. **Note:** An entry in a section in *dragent.yaml* overrides the entire section in the default configuration.
 {: tip}
@@ -175,7 +175,7 @@ The Sysdig agent generates log entries in */opt/draios/logs/draios.log*.
 * The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
 * Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*
 * The default log level is *info*, where an entry is created for each aggregated metrics transmission to the backend servers, once per second, in addition to entries for any warnings and errors.
-* You can customize the type of log and the entries that are collected by configuring the Sysdig agent configuration file **/opt/draios/etc/dragent.yaml**. After you edit the file, you must restart the agent at the shell with `service dragent restart` to activate the changes.
+* You can customize the type of log and the entries that are collected by configuring the Sysdig agent configuration file **/opt/draios/etc/dragent.yaml**. After you edit the file, you must restart the agent at the shell with `docker restart sysdig-agent` to activate the changes.
 
 | Use cases                                     | Log section entry           |
 |-----------------------------------------------|-----------------------------|
