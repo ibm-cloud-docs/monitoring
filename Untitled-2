@@ -1,0 +1,34 @@
+---
+
+copyright:
+  years: 2018
+lastupdated: "2018-12-03"
+
+---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
+
+# Customizing the Sysdig agent to control data
+{: #customize}
+
+Use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. Customize how data is aggregated when you configure a graph or create an alert for a metric. Set the scope of a dashboard, a panel, or an alert to filter out data points. Restrict access to data by managing users' data access through teams. 
+{:shortdesc}
+
+
+
+
+
+
+
+{{site.data.keyword.mon_full_notm}} supports event integrations with Docker and Kubernetes. Sysdig agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
+
+By default, only a limited set of events is collected. The default settings configuration file */opt/draios/etc/dragent.default.yaml* includes the events that are collected. For more information about the events that are collceted by default, see the following topics:
+* [Docker events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/234356795/Enable+Disable+Event+Data#Enable/DisableEventData-DockerEvents){:new_window}
+* [Kubernetes events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/234356795/Enable+Disable+Event+Data#Enable/DisableEventData-KubernetesEvents){:new_window}

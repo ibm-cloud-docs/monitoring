@@ -42,20 +42,32 @@ files:
 ```
 {: screen}
 
-Note that dragent.yaml code can be written in both YAML and JSON.
-Restart the agent (if editing dragent.yaml file directly). 
 
 
-## Editing the dragent yaml file for a Linux agent or a container agent
-{: #edit_linux}
+## Editing the dragent yaml file
+{: #edit_agent}
 
-For a Linux agent, edit the local file */opt/draios/etc/dragent.yaml*.
-For a container agent, edit the file that is located in */opt/draios/etc/dragent.yaml* in the container.
+The yaml file is loacated in */opt/draios/etc/*.
 
+Complete the following steps to edit the file and apply the changes:
 
+1. Access the *dragent.yaml* directly at `/opt/draios/etc/dragent.yaml`.
+2. Edit the file. Use YAML systax.
+3. Restart the agent. 
 
-Note that there actually two possible locations for the dragent.yaml file depending on how the agent was deployed. Only the ./etc/dragent.yaml version is user-editable since the Kubernetes version is controlled by the agent daemonset (V2) that roles out the agent in Kubernetes environments using config maps.
+    Run the following command for a Linux agent:
 
+    ```
+    service dragent restart
+    ```
+    {: codeblock}
+
+    Run the following command for a container agent:
+
+    ```
+    docker restart sysdig-agent
+    ```
+    {: codeblock}
 
 
 ## Blocking ports
@@ -65,7 +77,7 @@ To block network traffic and metrics from network ports, you must customize the 
 
 **Note:** Port 53 (DNS) is always blacklisted. 
 
-For example, to exclude data coming from ports 6666 and 6379, the *blacklisted_ports* section of a Sysdig agent looks as follows:
+For example, the following sample shows how to set the *blacklisted_ports* section of a Sysdig agent to exclude data coming from ports 6666 and 6379:
 
 ```
 blacklisted_ports:
@@ -76,197 +88,8 @@ blacklisted_ports:
 
 
 
-## Adding or removing custom event data
-{: #event_data}
-
-{{site.data.keyword.mon_full_notm}} supports event integrations with Docker and Kubernetes. Sysdig agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
-
-By default, only a limited set of events is collected. The default settings configuration file */opt/draios/etc/dragent.default.yaml* includes the events that are collected. For more information about the events that are collceted by default, see the following topics:
-* [Docker events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/234356795/Enable+Disable+Event+Data#Enable/DisableEventData-DockerEvents){:new_window}
-* [Kubernetes events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/234356795/Enable+Disable+Event+Data#Enable/DisableEventData-KubernetesEvents){:new_window}
 
 
-To add or remove events, you must customize the *dragent.yaml* file and specify what events to include and which ones to filter out. **Note:** An entry in a section in *dragent.yaml* overrides the entire section in the default configuration.
-{: tip}
-
-Choose any of the following actions:
-* [Collecting a set of Kubernetes events](#kube)
-* [Collecting a set of Docker events](#docker)
-* [Disabling collection of events](#disable)
-* [Filtering events by severity](#severity)
-
-
-### Collecting a set of Kubernetes events
-{: #kube}
-
-For example, you might want to collect Kubernetes pod pulling events and filter out other pod events that are specified in *dragent.default.yaml*. 
-
-To collect pulling events from Kubernetes pods, you can add the following entry to the *dragent.yaml* file:
-
-```
-events:
-  kubernetes:
-    pod:
-      - Pulling
-```
-{: codeblock}
-
-You still collect default Kubernetes events for nodes and replicationControllers as specified in *dragent.default.yaml*.
-
-You might want to collect a subset of Kubernetes events. For example, you only want to monitor pulling, pulled, and failed events for pods.
-
-* Option 1: Define the sequence on entries as a bulleted list:
-
-    ```
-    events:
-      kubernetes:
-        pod: 
-          - Pulling
-          - Pulled
-          - Failed
-    ```
-    {: codeblock}
-
-* Option 2: Define the sequence on entries in a bracketed single line:
-
-    ```
-    events:
-      kubernetes:
-        pod: [Pulling, Pulled, Failed]
-    ```
-    {: codeblock}
-
-
-
-### Collecting a set of Docker events
-{: #docker}
-
-For example, to filter out Docker image events and collect only events for attach, commit, and copy actions, you must set the *docker* section as follows:
-
-* Option 1: Define the sequence on entries as a bulleted list:
-
-    ```
-    events:
-      docker:
-        image: none
-        container:
-          - attach
-          - commit
-          - copy
-    ```
-    {: codeblock}
-
-* Option 2: Define the sequence on entries in a bracketed single line:
-
-    ```
-    events:
-      docker:
-        pod: [attach, commit, copy]
-    ```
-    {: codeblock}
-
-
-### Disabling collection of events
-{: #disable}
-
-To disable a Sysdig agent from collecting events specified in a section of the *dragent.default.yaml*, set the event section to none in the *dragent.yaml* file.
-
-For example, to filter out Kubernetes and Docker events, you must set the *kubernetes* and the *docker* sections in the *dragent.yaml* file as follows:
-
-```
-events:
-  kubernetes: none
-  docker: none
-```
-{: codeblock}
-
-
-
-### Filtering events by severity
-{: #severity}
-
-To filter events by severity, you can also change the log entry type for events in the *dragent.yaml* file. 
-
-The default log level is **information**. This means that only warning and higher severity events are transmitted.
-
-Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *information*, *debug* and *none*. **Note**: The values are listed from high priority to low priority.
-
-For example, to filter out low severity events (*notice*, *information*, *debug*), you must set the log section **event_priority** to *warning*:
-
-```
-log:
-  event_priority: warning
-```
-{: codeblock}
-
-
-To block collection of events, you must set the log section **event_priority** to *none*:
-
-```
-log:
-  event_priority: none
-```
-{: codeblock}
-
-
-
-
-## Including and excluding metrics
-{: #params}
-
-To filter custom metrics, you must customize the **metrics_filter** section in the *dragent.yaml* file. You can specify which metrics to include and which ones to filter out by configuring the **include** and **exclude** filtering parameters.
-
-**Note:** The filtering rule order is set as follows: the first rule that matches a metric is applied.
-
-For example, if the *metrics_filter* section of a Sysdig agent looks as follows:
-
-```
-metrics_filter:
-  - include: metricA.*
-  - exclude: metricA.*
-  - include: metricB.*
-  - include: haproxy.backend.*
-  - exclude: haproxy.*
-  - exclude: metricC.*
-```
-{: screen}
-
-* You are configuring the Sysdig agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*. 
-* You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*. 
-* The entry `exclude: metricA.*` is ignored.
-
-
-### Verifying what metrics are included or excluded
-{:#log_metrics
-
-In the log section, you can set the entry **metrics_excess_log** to **true** to log into a file which custom metrics are included and which ones are excluded. 
-* Logging is disabled by default. 
-* Logging occurs at INFO-level every 30 seconds and lasts for 10 seconds. 
-* The log file is available in */opt/draios/logs/draios.log*.
-* Logging data is formatted as follows:
-
-    ```
-    +/-[type] [metric included/excluded]: metric.name (filter: +/-[metric.filter])
-    ```
-    {: screen}
-
-    * *+/-* is a symbol that indicates if the metric is included or excluded. Plus (*+*) indicates that a metric is included. Minus (*-*) indicates that a metric is excluded. 
-
-    * *[type]* specifies the metric type, for example, *statsd*.
-    
-    * *[metric included/excluded]* indicates in a human readable way whether the metric is included or excluded.
-
-    *  *metric.name* indicates the metric name.
-
-    * *(filter: +/-[metric.filter])* provides information about any filters that are defined in the **metrics_filter** section in the *dragent.yaml* file.
-
-A sample entry looks as follows:
-
-```
--[statsd] metric excluded: mongo.statsd.vsize (filter: -[mongo.statsd.*])
-+[statsd] metric included: mongo.statsd.netIn (filter: +[mongo.statsd.net*])
-```
-{: screen}
 
 
 
@@ -285,48 +108,4 @@ This feature affects the monitoring of all the processes/metrics within a contai
 {: #auto_config}
 
 Agent Auto-Config: Describes how to use the Sysdig REST APIs and Python client wrappers to auto-orchestrate changes to all agents in an environment, in the (rare) situation in which a standard orchestration tool such as Kubernetes, Chef, or Ansible is not being used. 
-
-
-
-## Changing the log level
-{: #log_level}
-
-To configure the log level, you must customize the **log** section in the *dragent.yaml* file. 
-
-The Sysdig agent generates log entries in */opt/draios/logs/draios.log*. 
-* The log file rotates when it reaches 10MB in size.
-* The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
-* Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*
-* The default log level is *info*, where an entry is created for each aggregated metrics transmission to the backend servers, once per second, in addition to entries for any warnings and errors.
-* You can customize the type of log and the entries that are collected by configuring the Sysdig agent configuration file **/opt/draios/etc/dragent.yaml**. After you edit the file, you must restart the agent at the shell with `service dragent restart` to activate the changes.
-
-| Use cases                                     | Log section entry           |
-|-----------------------------------------------|-----------------------------|
-| Troubleshoot agent behavior                   | `file_priority: debug`      |
-| Reduce container console output               | `console_priority: warning` |
-| Filtering events by severity                  | `event_priority: warning`   |
-| Verify what metrics are included or excluded  | `metrics_excess_log: true`  |
-{: caption="Table 2. Log section entries" caption-side="top"} 
-
-
-Note that troubleshooting a host with less than the default 'info' level will be more difficult or not possible. You should revert to 'info' when you are done troubleshooting the agent.  
-
-A level of 'error' will generate the fewest log entries, a level of 'trace' will give the most, 'info' is the default if no entry exists.
-Example in dragent.yaml 
-customerid: 831f3-Your-Access-Key-9401
-tags: local:sf,acct:eng,svc:websvr
-log:
- file_priority: warning
- console_priority: info
-
-
-OR 
-customerid: 831f3-Your-Access-Key-9401
-tags: local:sf,acct:eng,svc:websvr
-log: { file_priority: debug, console_priority: debug }
-Docker run command
-
-If you are using the "ADDITIONAL_CONF" parameter to start a Docker containerized agent, you would specify this entry in the Docker run command:  
--e ADDITIONAL_CONF=“log:  { file_priority: error, console_priority: none }”
--e ADDITIONAL_CONF="log:\n  file_priority: error\n  console_priority: none"
 

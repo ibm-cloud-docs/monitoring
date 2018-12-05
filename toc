@@ -11,6 +11,7 @@ IBM Cloud Monitoring with Sysdig
     pricing.md
     manage.md
     monitoring.md
+    customize_agent.md
     network.md
     iam.md
 
@@ -25,8 +26,13 @@ IBM Cloud Monitoring with Sysdig
     remove.md
     config_agent.md
     remove_agent.md
-    change_agent.md
-    change_kube_agent.md
+
+    {: .topicgroup}
+    Customize the agent
+        change_kube_agent.md
+        change_agent.md
+        chage_container_agent.md
+
     launch.md
     groups.md
     access_key.md
