@@ -139,11 +139,3 @@ A capture is a trace file that you can generate to analyze what happens in a hos
 **IMPORTANT** When Captures are enabled, notice that Sysdig will have deep visibility into your operations. To avoid a security incident and potentially exposing data outside of your organization, check your organization's security policies before you enable captures on a node. Consider disabling the *Capture* feature for all your Sysdig agents.
 {: tip}
 
-
-## Limitations
-{: #limitations}
-
-* Kubernetes version 1.11 and version 1.12 are not currently supported. The Sysdig agent does not support containerd.
-
-
-
