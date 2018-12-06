@@ -140,7 +140,10 @@ A capture is a trace file that you can generate to analyze what happens in a hos
 {: tip}
 
 
+## Limitations
+{: #limitations}
 
+* Kubernetes version 1.11 and version 1.12 are not currently supported. The Sysdig agent does not support containerd.
 
 
 
