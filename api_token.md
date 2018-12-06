@@ -25,7 +25,7 @@ Use the API token to authenticate with the IBM Cloud Monitoring with Sysdig serv
 Consider the following information for each instance of the IBM Cloud Monitoring with Sysdig service:
 
 * There is an API token per team.
-* If the token is compromissed or your organization's security policies require reseting the token after certain conditions, a user with administration permissions can reset the API token.
+* If the token is compromised or your organization's security policies require resetting the token after certain conditions, a user with administration permissions can reset the API token.
 
 
 ## Getting the Sysdig API token
@@ -37,7 +37,7 @@ Complete the following steps to get the token:
 1. From the *Selector* button in the navigation bar, choose **Settings**
 2. From the *Sysdig Monitor API* section, copy the **Sysdig Monitor API Token**.
 
-## Reseting the Sysdig API token
+## Resetting the Sysdig API token
 {: #reset}
 
 Complete the following steps to get the token:

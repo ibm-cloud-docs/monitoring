@@ -22,12 +22,10 @@ In {{site.data.keyword.mon_full_notm}}, you can customize the Sysdig agent confi
 {:shortdesc}
 
 
-
-
 ## Editing the dragent yaml file
 {: #edit_agent}
 
-The yaml file is loacated in */opt/draios/etc/*.
+The yaml file is located in */opt/draios/etc/*.
 
 Complete the following steps to edit the file and apply the changes:
 
@@ -65,7 +63,7 @@ blacklisted_ports:
 
 {{site.data.keyword.mon_full_notm}} supports event integration with Docker. Sysdig agents automatically discover Docker sources and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
 
-By default, only a limited set of events is collected. The default settings configuration file */opt/draios/etc/dragent.default.yaml* includes the events that are collected. For more information about the events that are collceted by default, see [Docker events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/234356795/Enable+Disable+Event+Data#Enable/DisableEventData-DockerEvents){:new_window}.
+By default, only a limited set of events is collected. The default settings configuration file */opt/draios/etc/dragent.default.yaml* includes the events that are collected. For more information about the events that are collected by default, see [Docker events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/234356795/Enable+Disable+Event+Data#Enable/DisableEventData-DockerEvents){:new_window}.
 
 To add or remove events, you must customize the *dragent.yaml* file and specify what events to include and which ones to filter out. **Note:** An entry in a section in *dragent.yaml* overrides the entire section in the default configuration.
 {: tip}

@@ -35,7 +35,7 @@ To edit a Kubernetes Sysdig agent, you might need to edit the *sysdig-agent-conf
 
 There are two methods that you can use to modify a configuration file:
 * Method 1: Modify the file directly on the cluster where the agent is running.
-* Method 2: Modify the file locally and apply the chages to the cluster.
+* Method 2: Modify the file locally and apply the changes to the cluster.
 
 ## Editing the Kubernetes Sysdig agent configuration by using kubectl edit
 {: #edit_kube_agent_method1}
@@ -184,7 +184,7 @@ For the sample provided, you would get the tags **agent.tag.cluster_version** an
 
 {{site.data.keyword.mon_full_notm}} supports event integrations with Kubernetes. Sysdig agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
 
-By default, only a limited set of events is collected. For more information about the events that are collceted by default, see [Kubernetes events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/234356795/Enable+Disable+Event+Data#Enable/DisableEventData-KubernetesEvents){:new_window}.
+By default, only a limited set of events is collected. For more information about the events that are collected by default, see [Kubernetes events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/234356795/Enable+Disable+Event+Data#Enable/DisableEventData-KubernetesEvents){:new_window}.
 
 To add or remove events, you must customize the *sysdig-agent-configmap.yaml* file and specify what events to include and which ones to filter out. **Note:** An entry in a section in *sysdig-agent-configmap.yaml* overrides the entire section in the default configuration.
 {: tip}
@@ -257,7 +257,7 @@ Another example where you can see how to collect a subset of Kubernetes events: 
     ```
     {: codeblock}
 
-Fior more information on how to work with custom events, see [Working with custom events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events){:new_window}.
+For more information on how to work with custom events, see [Working with custom events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events){:new_window}.
 
 
 ## Disabling collection of events

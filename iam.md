@@ -109,9 +109,9 @@ Use the following table to see how an {{site.data.keyword.Bluemix_notm}} role ma
 
 | Type of role        | Role               | Sysdig role                | Description                                 |
 |---------------------|--------------------|----------------------------|---------------------------------------------|
-| Platform role       | Administrator      | Admin                      | Grants the user Sysdig admin priviledges.   | 
-| Service role        | Manager            | Admin                      | Grants the user Sysdig admin priviledges.   | 
-| Service role        | Writer             | User                       | Grants the user Sysdig user priviledges.    |
+| Platform role       | Administrator      | Admin                      | Grants the user Sysdig admin privileges.   | 
+| Service role        | Manager            | Admin                      | Grants the user Sysdig admin privileges.   | 
+| Service role        | Writer             | User                       | Grants the user Sysdig user privileges.    |
 | Service role        | Reader             |                            | No permissions are granted.                 |
 {: caption="Table 3. Sysdig roles" caption-side="top"}
 

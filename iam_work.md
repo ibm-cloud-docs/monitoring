@@ -22,13 +22,13 @@ lastupdated: "2018-12-03"
 {{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.Bluemix_notm}}. 
 {:shortdesc}
 
-To grant Sysdig admin priviledges to a user, you can assign the user any of the following roles:
+To grant Sysdig admin privileges to a user, you can assign the user any of the following roles:
 
 * `Administrator` platform role: Grant this role if the user is also an administrator for the Sysdig service in the {{site.data.keyword.Bluemix_notm}}.
 * `Editor` platform role: Grant this role if the user must be able to provision or remove Sysdig instances in the {{site.data.keyword.Bluemix_notm}}.
 * `Manager` service role:  Grant this role if the user should not be able to manage the Sysdig service in the {{site.data.keyword.Bluemix_notm}}.
 
-To grant Sysdig user priviledges to a user, you can assign a user the `Writer` service role.
+To grant Sysdig user privileges to a user, you can assign a user the `Writer` service role.
 
 **Note:** To manage access or assign new access for users by using IAM policies, you must be the account owner, administrator on all services in the account, or an administrator for the particular service or service instance. 
 

@@ -25,7 +25,7 @@ After you provision an instance of the {{site.data.keyword.mon_full_notm}} servi
 ## Grant IAM policies to a user to view data 
 {: #step1}
 
-**Note:** You must be an adminsitrator of the {{site.data.keyword.mon_full_notm}} service, an administrator of the {{site.data.keyword.mon_full_notm}} instance, or have account IAM permissions to grant other users policies.
+**Note:** You must be an administrator of the {{site.data.keyword.mon_full_notm}} service, an administrator of the {{site.data.keyword.mon_full_notm}} instance, or have account IAM permissions to grant other users policies.
 
 The following table lists the minimum policies that a user must have to be able to launch the {{site.data.keyword.mon_full_notm}} web UI, and view data:
 
@@ -47,7 +47,7 @@ Complete the following steps to launch the web UI:
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://bluemix.net){:new_window}.
+    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com  ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com ){:new_window}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} Dashboard opens.
 
