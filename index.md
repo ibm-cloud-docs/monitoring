@@ -148,8 +148,8 @@ Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 
 | Resource                |	Tutorial                        | Environment                | Scenario   |
 |-------------------------|---------------------------------|----------------------------|------------|
-| Containers running on the {{site.data.keyword.containershort}} |[Analyze metrics for an app that is deployed in a Kubernetes cluster](docs/services/Monitoring-with-Sysdig/tutorials/kubernetes_cluster.html#kubernetes_cluster) | {{site.data.keyword.Bluemix_notm}} Public | ![{{site.data.keyword.containershort}} and IBM Cloud Monitoring with Sysdig](images/kube.png "{{site.data.keyword.containershort}} and IBM Cloud Monitoring with Sysdig") |
-|Linux Ubuntu/Debian | [Analyze metrics for an Ubuntu server]() | On-premises | ![Ubuntu and IBM Cloud Monitoring with Sysdig](images/kube.png "Ubuntu and IBM Cloud Monitoring with Sysdig") |
+| Containers running on the {{site.data.keyword.containershort}} |[Analyze metrics for an app that is deployed in a Kubernetes cluster](/docs/services/Monitoring-with-Sysdig/tutorials/kubernetes_cluster.html#kubernetes_cluster) | {{site.data.keyword.Bluemix_notm}} Public | ![{{site.data.keyword.containershort}} and IBM Cloud Monitoring with Sysdig](images/kube.png "{{site.data.keyword.containershort}} and IBM Cloud Monitoring with Sysdig") |
+|Linux Ubuntu/Debian | [Analyze metrics for an Ubuntu server](/docs/services/Monitoring-with-Sysdig/tutorials/ubuntu.html#ubuntu) | On-premises | ![Ubuntu and IBM Cloud Monitoring with Sysdig](images/kube.png "Ubuntu and IBM Cloud Monitoring with Sysdig") |
 {: caption="Table 1. Tutorials to get started working with IBM Cloud Monitoring with Sysdig" caption-side="top"} 
 
 For more information, see [Configuring a Sysdig agent](/docs/services/Monitoring-with-Sysdig/config_agent.html#config_agent) and [Removing a Sysdig agent](/docs/services/Monitoring-with-Sysdig/remove_agent.html#remove_agent).
