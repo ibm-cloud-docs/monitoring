@@ -131,7 +131,7 @@ The following table lists the tasks that you can run to change the scope in the 
 
 | Task                                                                                        | Description     |
 |---------------------------------------------------------------------------------------------|-----------------|
-| [Changing the scope of a dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#scope) | Change the scope of a dahboard to filter out data points for all metrics displayed through panels on the dashboard. |
+| [Changing the scope of a dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#scope) | Change the scope of a dashboard to filter out data points for all metrics displayed through panels on the dashboard. |
 | [Changing the scope of a panel](/docs/services/Monitoring-with-Sysdig/panel.html#scope) | Change the scope of a panel to filter out data for a specific metric that is displayed through the panel. |
 | [Changing the scope of a team](/docs/services/Monitoring-with-Sysdig/teams.html#scope) | Change the scope of the data that is visible to users that are members of a team. |
 {: caption="Table 4. Tasks to change the scope" caption-side="top"} 
@@ -146,7 +146,7 @@ A Sysdig administrator can define any number of teams. For each team, he can con
 * The *default team*: You can set this team to be the team that any user that logs in to the web UI for the first time gets assigned by default.
 * The *default entrypoint*: You can specify the view in the web UI that opens every time a user logs in. Valid entrypoints are: *Explore* view, *Dashboards* view, *Events* view, *Alerts* view, and *Settings* view.
 * The scope: You can limit what data users can see. You can choose *Host* or *Container* to define the level of data that is visible. Then, you can add one or more conditions. If the scope is set to *Host*, users can see all host-level and container-level information. If the scope is set to *Container*, users can see only container-level information.
-* Permissions: You can enable or disable the following features: *Sysdig captures*, and *infrastructure events*. Capture files will only be visible to members of the team. **Note:** Captures include detailed information from every container on a host, regardless of the team’s scope. When infrastructure events is enabled, usres can view all custom infrastructure events from every user and Sysdig agent in the instance.
+* Permissions: You can enable or disable the following features: *Sysdig captures*, and *infrastructure events*. Capture files will only be visible to members of the team. **Note:** Captures include detailed information from every container on a host, regardless of the team’s scope. When infrastructure events is enabled, users can view all custom infrastructure events from every user and Sysdig agent in the instance.
 
 By default, there is a **Monitor Operations** team that is predefined for each IBM Cloud Monitoring with Sysdig instance.
 * This team cannot be deleted.

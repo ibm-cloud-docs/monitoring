@@ -103,7 +103,7 @@ Complete the following steps to create a dashboard:
 
     * *isShared*: Set to true to share the dashboard with other team members.
 
-    * *isPublic*: Set to true if you want the dashboard to be avalilable publicly.
+    * *isPublic*: Set to true if you want the dashboard to be available publicly.
 
     * Configure filters to define the dashboard scope.
     

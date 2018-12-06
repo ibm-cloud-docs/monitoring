@@ -29,13 +29,13 @@ To get the access key for an IBM Cloud Monitoring with Sysdig instance through t
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://bluemix.net){:new_window}.
+    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com  ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com ){:new_window}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} UI opens.
 
 2. In the navigation menu, select **Observability**. 
 
-3. Select **Monitoring**. The IBM Cloud Monitoring with Sysdig dashboard opens. You can see the list of monitoirng instances that are available on {{site.data.keyword.Bluemix_notm}}.
+3. Select **Monitoring**. The IBM Cloud Monitoring with Sysdig dashboard opens. You can see the list of monitoring instances that are available on {{site.data.keyword.Bluemix_notm}}.
 
 3. Identify the instance for which you want to get the access key, and click **View access key**.
 
@@ -118,10 +118,10 @@ Parameters:
 
 
 
-## Reseting the access key 
+## Resetting the access key 
 {: #reset}
 
-If the access key is compromissed or you have a policy to renew it after a number of days, you can generate a new key and delete the old one.
+If the access key is compromised or you have a policy to renew it after a number of days, you can generate a new key and delete the old one.
 
 To renew the access key for an IBM Cloud Monitoring with Sysdig instance, complete the following steps:
 

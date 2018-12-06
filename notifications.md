@@ -58,7 +58,7 @@ Complete the following steps to add a notification channel:
 
     * For a **PagerDuty** notification channel, first you must authorize Sysdig to integrate with your account. When you select PagerDuty, a wizard to configure the integration with Sysdig opens. Click either **Authorize Integration** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for Sysdig notifications, then click **Finish Integration**. Select the escalation policy to use for Sysdig incidents. Then, on the *Notifications* tab, confirm your PagerDuty account, your service name, and the service key. 
 
-    * Optionaly, and for integartions that allow a test, enable the *Test notification* condition to receive a test notification. If you do not receive a test notification in 10 minutes, review your channel configuration. 
+    * Optionally, and for integrations that allow a test, enable the *Test notification* condition to receive a test notification. If you do not receive a test notification in 10 minutes, review your channel configuration. 
 
 6. Click **CREATE CHANNEL**. 
 

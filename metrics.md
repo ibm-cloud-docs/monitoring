@@ -22,7 +22,7 @@ After you provision an instance of the IBM Cloud Monitoring with Sysdig service 
 {:shortdesc}
 
 
-**A metric is a quantitaive measure that has one or more labels to define its characteristics.**
+**A metric is a quantitative measure that has one or more labels to define its characteristics.**
 
 A metric is represented by time series. 
 
@@ -39,7 +39,7 @@ Metrics are classified into two groups:
 
 **Labels define the characteristics of a metric.**
 
-Labels are classified as infrastructure labels and metric descriptor lables. Each metric has a set of pre-defined labels. For custom metrics, you can configure more labels. 
+Labels are classified as infrastructure labels and metric descriptor labels. Each metric has a set of pre-defined labels. For custom metrics, you can configure more labels. 
 
 You can use labels to identify and differentiate characteristics of a metric, for example,
 * You can group infrastructure objects into logical hierarchies. 

@@ -35,7 +35,7 @@ You view metrics via Sysdig's web-based user interface.
 ## Before you begin
 {: #prereqs}
 
-Work in the US-South region. Both resources, the IBM Cloud Monitoring with Sysdig instance and the Kubernetes cluster must run in the same account.
+To complete the steps in this getting tutorial, instructions are  provided to provision an instance of the IBM Cloud Monitoring with Sysdig in the US-South region. You can use an exiting cluster or a new cluster. The cluster can be available in a different region.  
 
 Read about IBM Cloud Monitoring with Sysdig. For more information, see [About](/docs/services/Monitoring-with-Sysdig/overview.html#about).
 
@@ -64,7 +64,7 @@ To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://bluemix.net ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://bluemix.net){:new_window}.
+    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com  ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com ){:new_window}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} UI opens.
 
@@ -166,7 +166,7 @@ Complete the following steps to launch the web UI:
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://bluemix.net){:new_window}.
+    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com  ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com ){:new_window}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} Dashboard opens.
 
@@ -195,7 +195,7 @@ In the section *Host and containers*, you can see the list of workers in your cl
 
 Click **Host and containers** ![Host and containers](../images/switch_hosts.png) to switch data sources. Then, select a worker. The data that is displayed corresponds to the worker that you have selected.
 
-If you click ** Back to Explore Table**, the *Explore table* is displayed. Each column shows a different metric. You can configure each metric individually. You can change the order of the columns. Notice that when you make changes to the order of existing columns, the change is persistent across different groupings while you are logged in. If you add or remove a column the change is persistent. You can also configure colors to highlight values and improve readibility.
+If you click ** Back to Explore Table**, the *Explore table* is displayed. Each column shows a different metric. You can configure each metric individually. You can change the order of the columns. Notice that when you make changes to the order of existing columns, the change is persistent across different groupings while you are logged in. If you add or remove a column the change is persistent. You can also configure colors to highlight values and improve readability.
 
 For example, to configure color-coding for a column, complete the following steps:
 

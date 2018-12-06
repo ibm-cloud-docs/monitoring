@@ -97,7 +97,7 @@ Complete the following steps to copy a group to other teams:
 ## Share a group
 {: #share_group}
 
-Complete the following steps to share a group wirth other members of the team:
+Complete the following steps to share a group with other members of the team:
 
 1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
 

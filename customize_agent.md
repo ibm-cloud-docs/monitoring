@@ -36,7 +36,7 @@ To edit a Kubernetes Sysdig agent, you might need to edit the *sysdig-agent-conf
 
 There are two methods that you can use to modify a configuration file:
 * Method 1: Modify the file directly on the cluster where the agent is running. For more information, see [Editing the Kubernetes Sysdig agent configuration by using kubectl edit](/docs/services/Monitoring-with-Sysdig/change_kube_agent.html#edit_kube_agent_method1).
-* Method 2: Modify the file locally and apply the chages to the cluster. For more information, see [Editing the Kubernetes Sysdig agent configuration by using kubectl apply](/docs/services/Monitoring-with-Sysdig/change_kube_agent.html#edit_kube_agent_method2).
+* Method 2: Modify the file locally and apply the changes to the cluster. For more information, see [Editing the Kubernetes Sysdig agent configuration by using kubectl apply](/docs/services/Monitoring-with-Sysdig/change_kube_agent.html#edit_kube_agent_method2).
 
 You can add tags to the data that is collected by the agent. 
 * Use these tags to help you manage the data that you monitor. 
