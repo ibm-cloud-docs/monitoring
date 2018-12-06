@@ -35,7 +35,7 @@ You view metrics via Sysdig's web-based user interface.
 ## Before you begin
 {: #prereqs}
 
-To complete the steps in this getting tutorial, instructions are  provided to provision an instance of the IBM Cloud Monitoring with Sysdig in the US-South region. You can use an exiting cluster or a new cluster. The cluster can be available in a different region.  
+To complete the steps in this getting tutorial, instructions are  provided to provision an instance of the IBM Cloud Monitoring with Sysdig in the US-South region. You can use an exiting cluster or a new **cluster version 1.10**. The cluster can be available in a different region. 
 
 Read about IBM Cloud Monitoring with Sysdig. For more information, see [About](/docs/services/Monitoring-with-Sysdig/overview.html#about).
 
