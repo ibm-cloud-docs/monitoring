@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-03"
+lastupdated: "2018-12-17"
 
 ---
 
@@ -228,7 +228,7 @@ A capture is a trace file that you can generate to analyze what happens in a nod
 
 Captures contain system calls, and other OS events such as system-level latencies, batch jobs duration, deployments interruption times, autoscaling latencies, container startup times, or application transaction time. Captures include detailed information from every container on a node. 
 
-By default, captures are enabled when you configure a Sysdig agent in a node. Due to the data that a capture collects, disable captures when you configure a Sysdig agent. 
+Depending on your organization’s guidelines, consider disabling captures. By default, captures are enabled when you configure a Sysdig agent in a node.
 {: tip}
 
 You can create, explore, download, and delete *captures* for individual nodes. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent. 
