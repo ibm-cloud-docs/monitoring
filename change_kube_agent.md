@@ -362,7 +362,7 @@ Complete the following steps:
 
     * The entry `exclude: metricA.*` is ignored.
 
-6. Save the changes. 
+4. Save the changes. 
 
 Changes are applied automatically. 
 
