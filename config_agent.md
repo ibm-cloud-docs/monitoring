@@ -31,7 +31,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/access_key.html#ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#ingestion).
 
 3. Deploy the Sysdig agent. Run the following command from a terminal.
 
@@ -76,7 +76,7 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/access_key.html#ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#ingestion).
 
 3. Deploy the Sysdig agent. Run the following command:
 
@@ -109,7 +109,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/access_key.html#ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#ingestion).
 
 3. Set up the cluster environment. Run the following commands:
 
@@ -152,7 +152,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/access_key.html#ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#ingestion).
 
 3. Set up the cluster environment. Run the following commands:
 
