@@ -30,7 +30,7 @@ To send metric data to the IBM Cloud Monitoring with Sysdig service, you must de
 
 | Region      | Ingestion endpoint                                | Public IP addresses               | Ports    |
 |-------------|---------------------------------------------------|-----------------------------------|----------|
-| US South    | ingest.us-south.monitoring.cloud.ibm.com          | 169.48.237.108                    | TCP 6443 | 
+| US South    | ingest.us-south.monitoring.cloud.ibm.com          | 169.60.151.174 </br>169.46.0.70 </br>169.48.214.70   | TCP 6443 | 
 {: caption="Table 1. IP addresses to send metrics" caption-side="top"}
 
 
@@ -41,6 +41,6 @@ To access the IBM Cloud Monitoring with Sysdig web UI, you must define the follo
 
 | Region      | Web UI endpoint                                   | Public IP addresses               | Ports   |
 |-------------|---------------------------------------------------|-----------------------------------|---------|
-| US South    | us-south.monitoring.cloud.ibm.com                 | 169.48.237.108                    | TCP 443 | 
+| US South    | us-south.monitoring.cloud.ibm.com                 | 169.60.151.174 </br>169.46.0.70 </br>169.48.214.70   | TCP 443 | 
 {: caption="Table 2. IP addresses to access the IBM Cloud Monitoring with Sysdig web UI" caption-side="top"}
 
