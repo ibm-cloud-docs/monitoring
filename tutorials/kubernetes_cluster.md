@@ -82,11 +82,11 @@ To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.
 
     By default, the **Default** resource group is set.
 
-8. Select the **Lite** service plan. 
+8. Select the **Trial** service plan. 
 
-    By default, the **Lite** plan is set.
+    By default, the **Trial** plan is set.
 
-    For more information about other service plans, see [Pricing plans](/docs/services/Monitoring-with-Sysdig/overview.html#pricing_plans).
+    For more information about other service plans, see [Pricing plans](/docs/services/Monitoring-with-Sysdig/pricing.html#pricing_plans).
 
 9. To provision the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix_notm}} resource group where you are logged in, click **Create**.
 
