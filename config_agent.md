@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-03"
+lastupdated: "2019-01-09"
 
 ---
 
@@ -227,13 +227,13 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     An example yaml file looks like this:
 
-     ```
+    ```
      apiVersion: v1
      kind: ConfigMap
      metadata:
        name: sysdig-agent
      data:
-       dragent.yaml: 
+       dragent.yaml: |
        tags: linux:ubuntu,dept:dev,local:nyc
        collector: us-south.monitoring.cloud.ibm.com
        collector_port: 6443

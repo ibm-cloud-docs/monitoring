@@ -26,7 +26,7 @@ If you have problems or questions when using the IBM Cloud Monitoring with Sysdi
 
 * You can review the forums to see whether other users ran into the same problem. When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
-  * If you have technical questions about the IBM Cloud Monitoring with Sysdig service, post your question on [Stack Overflow](http://stackoverflow.com/search?q=momitoring-with-sysdig+ibm-cloud){:new_window} and tag your question with "ibm-cloud" and "monitoring-with-sysdig".
+  * If you have technical questions about the IBM Cloud Monitoring with Sysdig service, post your question on [Stack Overflow](http://stackoverflow.com/search?q=ibm-cloud+sysdig){:new_window} and tag your question with "ibm-cloud" and "sysdig".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
   * For questions about the service and getting started instructions, use the [{{site.data.keyword.IBM_notm}} developerWorks dW Answers](https://developer.ibm.com/answers/topics/monitoring-with-sysdig/?smartspace=ibm-cloud){:new_window} forum.
 
