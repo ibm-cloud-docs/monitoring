@@ -115,7 +115,7 @@ Instead of changing the scope of a pre-defined dashboard, copy the dashboard and
 
 Complete the following steps to change the scope of a dashboard:
 
-1. Navigate to the *DASHBOARD** section in the Web UI, and select a dashboard.
+1. Navigate to the **DASHBOARD** section in the Web UI, and select a dashboard.
 
 2. Click **Edit Scope** to change the default scope. 
 
