@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-01-12"
 
 ---
 
@@ -142,7 +142,7 @@ You can configure a Sysdig agent for any of the following environments:
 * Mesos, Marathon, and DCOS.
 * Linux installations.
 
-For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The Sysdig agent reads log files from the pod where it is installed, and forwards the log data to your Sysdig instance.
+For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The Sysdig agent collects data from the pod where it is installed, and forwards it to your Sysdig instance.
 
 Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 
