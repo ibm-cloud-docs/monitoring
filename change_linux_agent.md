@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-06"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-12-06"
 {:download: .download}
 
 # Customizing Linux Sysdig agents
-{: #change_agent}
+{: #change_linux_agent}
 
 By default, the Sysdig agent collects data from a range of platforms and applications. You can edit the agent config file to change its default behavior, and include or exclude data. You can customize the Sysdig agent configuration file to include custom metrics such as JMX, StatsD, and Prometheus. You also can filter out metrics and containers.
 {:shortdesc}
@@ -45,7 +45,7 @@ files:
 
 
 ## Editing the dragent yaml file
-{: #edit_agent}
+{: #change_linux_agent_edit_agent}
 
 The yaml file is loacated in */opt/draios/etc/*.
 
@@ -62,7 +62,7 @@ Complete the following steps to edit the file and apply the changes:
 
 
 ## Blocking ports
-{: #ports}
+{: #change_linux_agent_block_ports}
 
 To block network traffic and metrics from network ports, you must customize the **blacklisted_ports** section in the *dragent.yaml* file. You must list the ports from which you want to filter out any data.
 
@@ -78,7 +78,7 @@ blacklisted_ports:
 {: screen}
 
 ## Including and excluding metrics
-{: #params}
+{: #change_linux_agent_inc_exc_metrics}
 
 To filter custom metrics, you must customize the **metrics_filter** section in the *dragent.yaml* file. You can specify which metrics to include and which ones to filter out by configuring the **include** and **exclude** filtering parameters.
 
@@ -103,7 +103,7 @@ metrics_filter:
 
 
 ## Changing the log level
-{: #log_level}
+{: #change_linux_agent_log_level}
 
 To configure the log level, you must customize the **log** section in the *dragent.yaml* file. 
 

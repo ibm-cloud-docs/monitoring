@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2019-01-09"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -25,7 +25,7 @@ You can associate one or more tags to each Sysdig agent. Tags are comma-separate
 {: tip}
 
 ## Configuring a Sysdig agent on Linux
-{: #linux}
+{: #config_agent_linux}
 
 Complete the following steps to configure a Sysdig agent on Linux to collect and forward metrics to an instance of the IBM Cloud Monitoring with Sysdig service:
 
@@ -70,7 +70,7 @@ If the Sysdig agent fails to install correctly, install the kernel headers manua
 
 
 ## Configuring a Sysdig agent on a Docker container
-{: #docker}
+{: #config_agent_docker}
 
 Complete the following steps to configure a Sysdig agent on a Docker container to collect and forward metrics to an instance of the IBM Cloud Monitoring with Sysdig service:
 
@@ -103,7 +103,7 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
 
 
 ## Configuring a Sysdig agent on a Kubernetes cluster by using a script
-{: #kube_script}
+{: #config_agent_kube_script}
 
 Complete the following steps to configure a Sysdig agent on a Kubernetes cluster that runs in the {{site.data.keyword.containerlong_notm}}:
 
@@ -146,7 +146,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
 
 ## Configuring a Sysdig agent on a Kubernetes cluster manually
-{: #kube_manually}
+{: #config_agent_kube_manually}
 
 Complete the following steps to configure a Sysdig agent on a Kubernetes cluster that runs in the {{site.data.keyword.containerlong_notm}}:
 
@@ -172,14 +172,14 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 4. Create a service account called **sysdig-agent** to monitor the kubernetes cluster. Run the following command:
 
     ```
-    kubectl create serviceaccount sysdig-agent
+    kubectl create serviceaccount sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
 5. Add a secret to your Kubernetes cluster. Run the following command:
 
     ```
-    kubectl create secret generic sysdig-agent --from-literal=access-key=SYSDIG_ACCESS_KEY
+    kubectl create secret generic sysdig-agent --from-literal=access-key=SYSDIG_ACCESS_KEY -n ibm-observe
     ```
     {: codeblock}
 
@@ -201,7 +201,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     To add a cluster role binding, run the following command:
 
     ```
-    kubectl create clusterrolebinding sysdig-agent --clusterrole=sysdig-agent --serviceaccount=default:sysdig-agent
+    kubectl create clusterrolebinding sysdig-agent --clusterrole=sysdig-agent --serviceaccount=default:sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 

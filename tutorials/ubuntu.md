@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -31,7 +31,7 @@ You view metrics via Sysdig's web-based user interface.
 
 
 ## Before you begin
-{: #prereqs}
+{: #ubuntu_prereqs}
 
 Work in the US-South region. 
 
@@ -51,7 +51,7 @@ Install the {{site.data.keyword.Bluemix_notm}} CLI. For more information, see [I
 
 
 ## Step1: Provision an IBM Cloud Monitoring with Sysdig instance
-{: #step1}
+{: #ubuntu_step1}
 
 To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
 
@@ -90,7 +90,7 @@ After you provision an instance, the *Observability* dashboard opens.
 
 
 ## Step2: Configure your Ubuntu server to send metrics to your instance
-{: #step2}
+{: #ubuntu_step2}
 
 To configure your Ubuntu server to send metrics to your IBM Cloud Monitoring with Sysdig instance, you must install a Sysdig agent. 
 
@@ -145,7 +145,7 @@ If the Sysdig agent fails to install correctly, install the kernel headers manua
 
 
 ## Step3: Launch the Sysdig Web UI
-{: #step3}
+{: #ubuntu_step3}
 
 Complete the following steps to launch the web UI:
 
@@ -172,7 +172,7 @@ You can only have one Web UI session open per browser.
 
 
 ## Step 4: Monitor your Ubuntu server
-{: step4}
+{: #ubuntu_step4}
 
 You can monitor your Ubuntu server in the **EXPLORE** view that is available through the Web UI. This view is the starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI for users.
 
@@ -187,7 +187,7 @@ For example, to configure color-coding for a column, complete the following step
 
 
 ## Next steps
-{: #next_steps}
+{: #ubuntu_next_steps}
 
 Create a custom dashboard. For more information, see [Working with dashboards](/docs/services/Monitoring-with-Sysdig/dashboards.html#dashboards).
 

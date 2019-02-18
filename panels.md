@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-05"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -39,7 +39,7 @@ You can use any of the following panel types:
 
 
 ## Copy a panel into a dashboard
-{: #copy}
+{: #panels_copy}
 
 Complete the following steps to copy a panel:
 
@@ -54,7 +54,7 @@ Complete the following steps to copy a panel:
 
 
 ## Change the scope of a panel
-{: #scope}
+{: #panels_scope}
 
 Complete the following steps to change the scope of a panel:
 
@@ -78,7 +78,7 @@ Complete the following steps to change the scope of a panel:
 
 
 ## Duplicate panel
-{: #duplicate}
+{: #panels_duplicate}
 
 Complete the following steps to duplicate a panel in the current dashboard:
 
@@ -88,7 +88,7 @@ Complete the following steps to duplicate a panel in the current dashboard:
 
 
 ## Delete panel
-{: #delete}
+{: #panels_delete}
 
 Complete the following steps to delete a panel in the current dashboard:
 
@@ -101,7 +101,7 @@ Complete the following steps to delete a panel in the current dashboard:
 
 
 ## Export data from a panel
-{: #export}
+{: #panels_export}
 
 Consider the following information when you export data:
 
@@ -126,7 +126,7 @@ Complete the following steps to export data from a panel:
 
 
 ## Create Alert
-{: #alert}
+{: #panels_alert}
 
 You can create alerts directly from a panel.
 

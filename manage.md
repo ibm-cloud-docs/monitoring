@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -24,7 +24,7 @@ Use labels to group infrastructure resources into logical hierarchies, filter ou
 
 
 ## Labels
-{: #labels}
+{: #manage_labels}
 
 **Labels** define the characteristics of a metric. You can use labels to identify and differentiate characteristics of a metric. 
 
@@ -34,7 +34,7 @@ Labels are classified as infrastructure labels and metric descriptor labels. Eac
 * You can use **metric descriptor labels** to define custom labels. These labels are key-value pairs that are applied directly to metrics, and obtained from integrations like StatsD, Prometheus, and JMX. 
 
 ## Groups
-{: #groups}
+{: #manage_groups}
 
 **Groups** organize infrastructure objects into logical hierarchies. Use groups to structure your infrastructure and ease how you monitor your environment.
 
@@ -52,7 +52,7 @@ In the *Explore* view of the Web UI, you can run any of the following actions:
 
 
 ## Aggregation
-{: #aggregation}
+{: #manage_aggregation}
 
 **Aggregation** of data occurs automatically when you configure a graph or create an alert for a metric. There are two types of aggregation: time aggregation and group aggregation. 
 * Time aggregation is always performed before group aggregation.
@@ -71,7 +71,7 @@ There are two forms of aggregation used for metrics:
 
 
 ### Time aggregation
-{: #time_aggregation}
+{: #manage_time_aggregation}
 
 **By default, a Sysdig agent collects and reports metrics at a 10 second resolution.**
 
@@ -101,7 +101,7 @@ Rate and average are very similar aggregation types. They often provide the same
 
 
 ### Group aggregation
-{: #group_aggregation}
+{: #manage_group_aggregation}
 
 **By default, metrics that are applied to a group of resources, such as several containers, hosts, or nodes, are averaged between the members of the group.**
 
@@ -123,7 +123,7 @@ The following table lists different types of group aggregation types:
 
 
 ## Scope
-{: #scope}
+{: #manage_scope}
 
 **Scope** is a collection of labels that define the conditions to filter out data points when you create dashboards and panels, configure alerts, and customize teams. 
 
@@ -131,14 +131,14 @@ The following table lists the tasks that you can run to change the scope in the 
 
 | Task                                                                                        | Description     |
 |---------------------------------------------------------------------------------------------|-----------------|
-| [Changing the scope of a dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#scope) | Change the scope of a dashboard to filter out data points for all metrics displayed through panels on the dashboard. |
-| [Changing the scope of a panel](/docs/services/Monitoring-with-Sysdig/panel.html#scope) | Change the scope of a panel to filter out data for a specific metric that is displayed through the panel. |
-| [Changing the scope of a team](/docs/services/Monitoring-with-Sysdig/teams.html#scope) | Change the scope of the data that is visible to users that are members of a team. |
+| [Changing the scope of a dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#dashboards_scope) | Change the scope of a dashboard to filter out data points for all metrics displayed through panels on the dashboard. |
+| [Changing the scope of a panel](/docs/services/Monitoring-with-Sysdig/panel.html#panel_scope) | Change the scope of a panel to filter out data for a specific metric that is displayed through the panel. |
+| [Changing the scope of a team](/docs/services/Monitoring-with-Sysdig/teams.html#teams_scope) | Change the scope of the data that is visible to users that are members of a team. |
 {: caption="Table 4. Tasks to change the scope" caption-side="top"} 
 
 
 ## Teams
-{: #teams}
+{: #manage_teams}
 
 **Teams** group users and control the data and the permissions to work with Sysdig captures and infrastructure events for those users. 
 
@@ -164,10 +164,10 @@ The following table lists the tasks that you can run when you work with teams:
 
 | Task                                                                            | Description                 |
 |---------------------------------------------------------------------------------|-----------------------------|
-| [Creating a team](/docs/services/Monitoring-with-Sysdig/teams.html#create)      | Create a team to control data visibility.  |
-| [Deleting a team](/docs/services/Monitoring-with-Sysdig/teams.html#delete)      | Delete a team. </br>**Note:** When you delete a team, users that only belong to this team will be moved to the default team. |
-| [Adding team members](/docs/services/Monitoring-with-Sysdig/teams.html#users)   | Add more users to a team. |
-| [Edit a team ](/docs/services/Monitoring-with-Sysdig/teams.html#scope)          | Change the scope of the data that is visible to users that are members of a team.  |
+| [Creating a team](/docs/services/Monitoring-with-Sysdig/teams.html#teams_create)      | Create a team to control data visibility.  |
+| [Deleting a team](/docs/services/Monitoring-with-Sysdig/teams.html#teams_delete)      | Delete a team. </br>**Note:** When you delete a team, users that only belong to this team will be moved to the default team. |
+| [Adding team members](/docs/services/Monitoring-with-Sysdig/teams.html#teams_users)   | Add more users to a team. |
+| [Edit a team ](/docs/services/Monitoring-with-Sysdig/teams.html#teams_scope)          | Change the scope of the data that is visible to users that are members of a team.  |
 {: caption="Table 5. Tasks to work with teams" caption-side="top"} 
 
 

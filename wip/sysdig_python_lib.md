@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-05"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -26,7 +26,7 @@ When you use the API from your custom scripts or programs, you must use a Sysdig
 {: tip}
 
 ## Configuring the local environment to run Python scripts
-{: #config_env}
+{: #sysdig_python_lib_config_env}
 
 Complete the following steps to configure your local environment to run programmatic dashboard tasks:
 

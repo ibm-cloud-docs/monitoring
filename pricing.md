@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -43,14 +43,14 @@ Data is collected and retained per the standard guidelines across all plans. For
 
 
 ## Checking your usage
-{: #usage}
+{: #pricing_usage}
 
 To monitor how the IBM Cloud Monitoring with Sysdig service is used and the costs associated to its usage, see [Viewing your usage](/docs/billing-usage/viewing_usage.html#viewingusage).
 
 
 
 ## Enabling the alert that notifies on a tier change
-{: #alert}
+{: #pricing_alert}
 
 To be notified when there is a tier change, you must enable the following alert: **[{{site.data.keyword.IBM_notm}}]: Usage Tier Change**
 
@@ -66,7 +66,7 @@ Complete the following steps to enable an alert:
 
 
 ## How is the service plan alert generated?
-{: #how}
+{: #pricing_how}
 
 To be notified when there is a tier change, you must enable the following alert: **[{{site.data.keyword.IBM_notm}}]: Usage Tier Change**
 
@@ -102,7 +102,7 @@ Notice that the alert is only generated if a node moves from *Basic* tier to *Pr
 
 
 ### Examples
-{: #examples}
+{: #pricing_examples}
 
 **Sample 1** 
 

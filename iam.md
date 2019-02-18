@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -42,7 +42,7 @@ lastupdated: "2018-12-03"
 
 
 ## Managing access by using access groups
-{: #groups}
+{: #iam_groups}
 
 To manage access or assign new access for users by using access groups, you must be the account owner, administrator or editor on all Identity and Access enabled services in the account, or the assigned administrator or editor for the IAM Access Groups Service. 
 
@@ -53,7 +53,7 @@ Choose any of the following actions to manage access groups in the {{site.data.k
 
 
 ## Managing access by assigning policies directly to users
-{: #users}
+{: #iam_users}
 
 To manage access or assign new access for users by using IAM policies, you must be the account owner, administrator on all services in the account, or an administrator for the particular service or service instance. 
 
@@ -67,7 +67,7 @@ Choose any of the following actions to manage IAM policies in the {{site.data.ke
 
 
 ## {{site.data.keyword.Bluemix_notm}} platform roles
-{: #platform}
+{: #iam_platform}
 
 Use the following table to identify the platform role that you can grant a user in the {{site.data.keyword.Bluemix_notm}} to run any of the following platform actions:
 
@@ -84,7 +84,7 @@ Use the following table to identify the platform role that you can grant a user 
 
 
 ## Sysdig roles
-{: #sysdig_roles}
+{: #iam_sysdig_roles}
 
 The following table outlines the Sysdig roles and actions per role:
 
@@ -103,7 +103,7 @@ The following table outlines the Sysdig roles and actions per role:
 
 
 ## Mapping of Sysdig roles to {{site.data.keyword.Bluemix_notm}} roles
-{: #sysdig}
+{: #iam_sysdig}
 
 Use the following table to see how an {{site.data.keyword.Bluemix_notm}} role maps to a Sysdig role:
 

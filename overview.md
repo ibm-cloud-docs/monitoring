@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -48,14 +48,14 @@ The following figure shows the components overview for the IBM Cloud Monitoring 
 
 
 ## Data collection
-{: #collection}
+{: #overview_collection}
 
 When you configure a Sysdig agent to collect and forward data to an IBM Cloud Monitoring with Sysdig instance, data is automatically collected and available for analysis through the web UI.
 
 Data is collected at 10 seconds frequency. 
 
 ## Data availability
-{: #availability}
+{: #overview_availability}
 
 Data is available for a maximum of 15 months.
 
@@ -66,7 +66,7 @@ After you delete an instance of the IBM Cloud Monitoring with Sysdig service, da
 
 
 ## Data retention
-{: #retention}
+{: #overview_retention}
 
 Data is retained for each instance based on a *roll-up* policy.
 
@@ -81,7 +81,7 @@ The roll-up policy describes the granularity of the data over time:
 * Data is retained at 1 day resolution for one year.
 
 ## Data deletion
-{: #data_deletion}
+{: #overview_data_deletion}
 
 When you delete an instance of {{site.data.keyword.mon_full_notm}} from the {{site.data.keyword.Bluemix_notm}}, you must open a case through support to request the data to be  deleted. For details, see [contacting support](/docs/get-support/howtogetsupport.html#getting-customer-support).
 
@@ -92,7 +92,7 @@ When you delete a capture, the data file for that capture is automatically delet
 
 
 ## Data location
-{: #data_location}
+{: #overview_data_location}
 
 IBM Cloud Monitoring with Sysdig collects and aggregates metrics. 
 
@@ -103,7 +103,7 @@ IBM Cloud Monitoring with Sysdig collects and aggregates metrics.
 
 
 ## IBM Cloud Monitoring with Sysdig agents
-{: #sysdig_agent}
+{: #overview_sysdig_agent}
 
 The IBM Cloud Monitoring with Sysdig agent automatically collects and reports on pre-defined metrics. 
 
@@ -118,19 +118,19 @@ For more information, see [Configuring a Sysdig agent](/docs/services/Monitoring
 
 
 ## Viewing usage
-{: #usage}
+{: #overview_usage}
 
 To monitor the usage and costs of your service, see [Viewing your usage](/docs/billing-usage/viewing_usage.html#viewingusage).
 
 
 ## Service plans
-{: #plans}
+{: #overview_plans}
 
 Different pricing plans are available for an IBM Cloud Monitoring with Sysdig instance. For more information, see [Pricing](/docs/services/Monitoring-with-Sysdig/pricing.html#pricing_plans).
 
 
 ## Security considerations
-{: #security}
+{: #overview_security}
 
 **Captures**
 

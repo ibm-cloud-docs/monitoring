@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-21"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -25,7 +25,7 @@ For more information, see [Captures](/docs/services/Monitoring-with-Sysdig/monit
 
 
 ## Creating a capture
-{: #create}
+{: #captures_create}
 
 You create a capture in the *Explore* view.
 
@@ -63,7 +63,7 @@ The status of a capture file can be any of the following values:
 
 
 ## Deleting a capture
-{: #delete}
+{: #captures_delete}
 
 Complete the following steps to delete a capture file:
 
@@ -74,7 +74,7 @@ Complete the following steps to delete a capture file:
 
 
 ## Exploring a capture
-{: #explore}
+{: #captures_explore}
 
 Complete the following steps to explore a capture file:
 
@@ -85,7 +85,7 @@ Complete the following steps to explore a capture file:
 
 
 ## Downloading a capture
-{: #download}
+{: #captures_download}
 
 Complete the following steps to download a capture file:
 
@@ -95,7 +95,7 @@ Complete the following steps to download a capture file:
 
 
 ## Chisels
-{: #chisels}
+{: #captures_chisels}
 
 A Sysdig chisel is a script that is written in Lua, a scripting language. You can use it to analyze data in a capture file. 
 
@@ -104,7 +104,7 @@ For more information on how to use a chisel, see this user guide: [Chisels User 
 
 
 ## Csysdig
-{: #csysdig}
+{: #captures_csysdig}
 
 Csysdig is an open source tool for Linux that is designed for monitoring and debugging. You can use it to analyze capture files. 
 

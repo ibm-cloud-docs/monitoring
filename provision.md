@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-05"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-11-05"
 {:download: .download}
 
 # Provisioning an instance
-{: #sysdig_provision}
+{: #provision}
 
 Before you can monitor and manage metrics with Sysdig, you must first provision an instance of the service in {{site.data.keyword.Bluemix}}.
 {:shortdesc}

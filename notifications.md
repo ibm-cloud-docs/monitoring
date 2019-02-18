@@ -24,7 +24,7 @@ Configure notification channels to be notified when an alert is triggered. You m
  
 
 ## Configuring a notification channel
-{: #create}
+{: #notifications_create}
 
 Complete the following steps to add a notification channel:
 
@@ -65,7 +65,7 @@ Complete the following steps to add a notification channel:
 
 
 ## Modifying a notification channel
-{: #update}
+{: #notifications_update}
 
 Complete the following steps to modify a notification channel:
 
@@ -82,7 +82,7 @@ Complete the following steps to modify a notification channel:
 
 
 ## Testing a notification channel
-{: #test}
+{: #notifications_test}
 
 Complete the following steps to test a notification channel:
 
@@ -97,7 +97,7 @@ Complete the following steps to test a notification channel:
 
 
 ## Disabling a notification channel
-{: #disable}
+{: #notifications_disable}
 
 Complete the following steps to temporarily disable a notification channel:
 
@@ -110,7 +110,7 @@ Complete the following steps to temporarily disable a notification channel:
 4. In the *Notifications* section, enable *Downtime* to disable alerts temporarily and mute all notifications.
 
 ## Deleting a notification channel
-{: #delete}
+{: #notifications_delete}
 
 Complete the following steps to delete a notification channel:
 

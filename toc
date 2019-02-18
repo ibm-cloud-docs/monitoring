@@ -30,7 +30,7 @@ IBM Cloud Monitoring with Sysdig
     {: .topicgroup}
     Customizing the agent
         change_kube_agent.md
-        change_agent.md
+        change_linux_agent.md
         chage_container_agent.md
 
     launch.md
@@ -46,7 +46,7 @@ IBM Cloud Monitoring with Sysdig
     teams.md
     iam_work.md
     captures.md
-    sysdig_python_lib.md
+    api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

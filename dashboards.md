@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-05"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -44,7 +44,7 @@ You can run scripts to complete any of the following actions programmatically:
 
 
 ## Pre-defined dashboards
-{: #predefined}
+{: #dashboards_predefined}
 
 Pre-defined dashboards are designed around various supported applications, network topologies, infrastructure layouts, and services. 
 
@@ -64,7 +64,7 @@ The following table lists the different types of pre-defined dashboards:
 
 
 ## Creating custom dashboards in the Web UI
-{: #create}
+{: #dashboards_create}
 
 When you create a custom dashboard, you can start from a template such as a pre-defined dashboard, or choose a blank dashboard. A dashboard includes panels that are configured to display specific data in a number of different formats. You also set how data is aggregated. The **scope** defines what data is used for aggregation and displayed. You can set the scope at a dashboard level, or override for individual panels. 
 
@@ -108,7 +108,7 @@ Complete the following steps to create a custom dashboard:
 
 
 ## Changing the scope
-{: #scope}
+{: #dashboards_scope}
 
 Instead of changing the scope of a pre-defined dashboard, copy the dashboard and change the scope in the copied dashboard.
 {: tip}
@@ -135,7 +135,7 @@ Complete the following steps to change the scope of a dashboard:
 
 
 ## Copying a dashboard
-{: #copy}
+{: #dashboards_copy}
 
 When you copy a dashboard, you create a duplicate.
 
@@ -165,7 +165,7 @@ Complete the following steps to copy a dashboard in the Web UI:
     5. Check that the scope of the dashboard in the new team is updated based on the permissions of the destination team.
 
 ## Deleting a dashboard
-{: #delete}
+{: #dashboards_delete}
 
 Complete the following steps to delete a dashboard in the Web UI:
 
@@ -176,7 +176,7 @@ Complete the following steps to delete a dashboard in the Web UI:
 
 
 ## Sharing a dashboard
-{: #share}
+{: #dashboards_share}
 
 You can share dashboards between users in a team, and externally, by configuring a public URL for the dashboard.  
 
@@ -207,7 +207,7 @@ Share a dashboard externally to allow external users to view the dashboard metri
 
 
 ## Managing dashboards programmatically
-{: #programmatically}
+{: #dashboards_programmatically}
 
 Use the Sysdig REST API to automate routine tasks and monitor notifications. You can also use the Sysdig Python library. 
 

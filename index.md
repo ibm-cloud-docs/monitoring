@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-12"
 
 ---
 
@@ -142,7 +142,7 @@ You can configure a Sysdig agent for any of the following environments:
 * Mesos, Marathon, and DCOS.
 * Linux installations.
 
-For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The Sysdig agent reads log files from the pod where it is installed, and forwards the log data to your Sysdig instance.
+For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The Sysdig agent collects data from the pod where it is installed, and forwards it to your Sysdig instance.
 
 Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 
@@ -218,7 +218,7 @@ You can use events to review, track, and resolve issues. An event is a notificat
 
 There are different types of events: 
 
-* *Alert events* are events that are triggered by user-configured alerts. For example, configure alerts to be notified of problems that require attention. For more information, see [Working with alerts](/docs/services/Monitoring-with-Sysdig/monitoring.html#alerts).
+* *Alert events* are events that are triggered by user-configured alerts. For example, configure alerts to be notified of problems that require attention. For more information, see [Working with alerts](/docs/services/Monitoring-with-Sysdig/monitoring.html#monitoring_alerts).
 * *Infrastructure-based events* are events that are collected from Docker and Kubernetes nodes. By default, the Sysdig agent automatically discovers and collects data from a select group of events. You can edit the agent configuration file to enable more events.
 * *Custom events* that you configure through any of the following integrations: Slackbot, pre-built Python scripts, custom user-created Python scripts, or cURL requests.
 

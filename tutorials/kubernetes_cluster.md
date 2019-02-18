@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2019-01-09"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -33,7 +33,7 @@ You view metrics via Sysdig's web-based user interface.
 
 
 ## Before you begin
-{: #prereqs}
+{: #kubernetes_cluster_prereqs}
 
 To complete the steps in this getting tutorial, instructions are  provided to provision an instance of the IBM Cloud Monitoring with Sysdig in the US-South region. You can use an exiting cluster or a new **cluster version 1.10**. The cluster can be available in a different region.  
 
@@ -58,7 +58,7 @@ Install the Kubernetes CLI plugin. For more information, see [Installing the CLI
 
 
 ## Step1: Provision an IBM Cloud Monitoring with Sysdig instance
-{: #step1}
+{: #kubernetes_cluster_step1}
 
 To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
 
@@ -97,7 +97,7 @@ After you provision an instance, the *Observability* dashboard opens.
 
 
 ## Step2: Configure your Kubernetes cluster to send metrics to your instance
-{: #step2}
+{: #kubernetes_cluster_step2}
 
 To configure your Kubernetes cluster to send metrics to your IBM Cloud Monitoring with Sysdig instance, you must install a Sysdig agent pod on each node of your cluster. The Sysdig agent is installed via a DaemonSet which ensures an instance of the agent is running on every worker node. The Sysdig agent collects metrics from the pod where it is installed, and forwards the data to your instance.
 
@@ -160,7 +160,7 @@ To configure your Kubernetes cluster to forward metrics to your IBM Cloud Monito
 
 
 ## Step3: Launch the Sysdig web UI
-{: #step3}
+{: #kubernetes_cluster_step3}
 
 Complete the following steps to launch the web UI:
 
@@ -187,7 +187,7 @@ You can only have one Web UI session open per browser.
 
 
 ## Step 4: Monitor your cluster
-{: step4}
+{: #kubernetes_cluster_step4}
 
 You can monitor your cluster in the **EXPLORE** view that is available through the Web UI. This view is the starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI for users.
 
@@ -207,7 +207,7 @@ If you select a worker, a default dashboard is displayed. Click on the ![switch 
 
 
 ## Next steps
-{: #next_steps}
+{: #kubernetes_cluster_next_steps}
 
 Create a custom dashboard. For more information, see [Working with dashboards](/docs/services/Monitoring-with-Sysdig/dashboards.html#dashboards).
 

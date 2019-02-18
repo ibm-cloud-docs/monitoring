@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-12-06"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -24,7 +24,7 @@ When you have an additional firewall set up, or you have customized the firewall
 
 
 ## Allowing traffic from your host to send metrics
-{: #send}
+{: #network_send}
 
 To send metric data to the IBM Cloud Monitoring with Sysdig service, you must define the following firewall rule in your host:
 
@@ -35,7 +35,7 @@ To send metric data to the IBM Cloud Monitoring with Sysdig service, you must de
 
 
 ## Allowing traffic from your host to access the web UI
-{: #web}
+{: #network_web}
 
 To access the IBM Cloud Monitoring with Sysdig web UI, you must define the following firewall rule in your host:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -25,7 +25,7 @@ An administrator or a manager of an IBM Cloud Monitoring with Sysdig instance mu
 {: tip}
 
 ## Creating a team
-{: #create}
+{: #teams_create}
 
 Complete the following steps to create a team:
 
@@ -64,7 +64,7 @@ Complete the following steps to create a team:
 
 
 ## Changing the scope of a team
-{: #scope}
+{: #teams_scope}
 
 To change the scope of the data that is visible to members of a team, complete the following steps: 
 
@@ -82,7 +82,7 @@ To change the scope of the data that is visible to members of a team, complete t
 
 
 ## Adding users to a team
-{: #users}
+{: #teams_users}
 
 To add members to a team, complete the following steps: 
 
@@ -100,7 +100,7 @@ To add members to a team, complete the following steps:
 
 
 ## Deleting a team
-{: #delete}
+{: #teams_delete}
 
 The default team, **Monitor Operations**, cannot be deleted. 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -23,7 +23,7 @@ The **Access Key** is a token that you must use to configure Sysdig agents to su
 
 
 ## Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI
-{: #ibm_cloud_ui}
+{: #access_key_ibm_cloud_ui}
 
 To get the access key for an IBM Cloud Monitoring with Sysdig instance through the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
 
@@ -44,7 +44,7 @@ To get the access key for an IBM Cloud Monitoring with Sysdig instance through t
 
 
 ## Getting the access key through the CLI
-{: #cli}
+{: #access_key_cli}
 
 To get the access key for a Sysdig instance through the command line, complete the following steps:
 
@@ -119,7 +119,7 @@ Parameters:
 
 
 ## Resetting the access key 
-{: #reset}
+{: #access_key_reset}
 
 If the access key is compromised or you have a policy to renew it after a number of days, you can generate a new key and delete the old one.
 
