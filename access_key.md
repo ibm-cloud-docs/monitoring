@@ -50,7 +50,7 @@ To get the access key for a Sysdig instance through the command line, complete t
 
 1. [Pre-requisite] Install the {{site.data.keyword.Bluemix_notm}} CLI.
 
-   For more information, see [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview).
+   For more information, see [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
    If the CLI is installed, continue with the next step.
 
@@ -125,7 +125,7 @@ If the access key is compromised or you have a policy to renew it after a number
 
 To renew the access key for an IBM Cloud Monitoring with Sysdig instance, complete the following steps:
 
-1. Launch the IBM Cloud Monitoring with Sysdig web UI. For more information, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch).
+1. Launch the IBM Cloud Monitoring with Sysdig web UI. For more information, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 
 2. From the *Selector* button in the navigation bar, choose **Settings**.
 

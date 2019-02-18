@@ -32,7 +32,7 @@ You can create a dashboard by duplicating an existing dashboard.
 
 Complete the following steps to create a dashboard:
 
-1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#token).
+1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
 
 2. Create the json file that describes the dashboard. The following fields must be set as indicated:
 
@@ -59,7 +59,7 @@ Complete the following steps to create a dashboard:
 
     where
 
-    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
     * *SYSDIG_API_TOKEN* is the API token you got in the previous step.
 
@@ -167,7 +167,7 @@ For example, to create a dashboard, a sample json file looks as follows:
 
 Complete the following steps to download the dashboards that are available for a team:
 
-1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#token).
+1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
 
 2. Run the following cURL command:
 
@@ -178,7 +178,7 @@ Complete the following steps to download the dashboards that are available for a
 
     where
 
-    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
     * *SYSDIG_API_TOKEN* is the API token you got in the previous step.
 
@@ -197,9 +197,9 @@ The output is a JSON file where each dashboard starts with the field **id**. The
 
 Complete the following steps to delete a dashboard from the list of dashboards that is available for a team:
 
-1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#token).
+1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
 
-2. Get all the dashboards that are available for the team. For more information, see [Saving dashboards by using the API](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_api).
+2. Get all the dashboards that are available for the team. For more information, see [Saving dashboards by using the API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_save_dashboard).
 
 3. Find the ID of the dashboard you want to delete. Look for the the **id** value that is associated with the dashboard **name** that you want to delete.
 
@@ -214,7 +214,7 @@ Complete the following steps to delete a dashboard from the list of dashboards t
 
     * *ID* is the ID of the dashboard that you want to delete.
 
-    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
     * *SYSDIG_API_TOKEN* is the API token you got in the previous step.
 

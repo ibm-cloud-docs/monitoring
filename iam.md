@@ -48,8 +48,8 @@ To manage access or assign new access for users by using access groups, you must
 
 Choose any of the following actions to manage access groups in the {{site.data.keyword.Bluemix_notm}}:
 
-* [Creating an access group](/docs/iam/groups.html#creating-an-access-group).
-* [Assigning access to a group](/docs/iam/groups.html#assigning-access-to-a-group).
+* [Creating an access group](/docs/iam?topic=iam-groups#create_ag).
+* [Assigning access to a group](/docs/iam?topic=iam-groups#access_ag).
 
 
 ## Managing access by assigning policies directly to users
@@ -59,11 +59,10 @@ To manage access or assign new access for users by using IAM policies, you must 
 
 Choose any of the following actions to manage IAM policies in the {{site.data.keyword.Bluemix_notm}}:
 
-* To modify the permissions of a user, see [Editing existing access](/docs/iam/mngiam.html#editing-existing-access).
-* To grant permissions to a user, see [Assign new access](/docs/iam/mngiam.html#assignaccess).
-* To revoke permissions, see [Removing access](/docs/iam/mngiam.html#removing-access).
-* To review a user's permissions, see [Reviewing your assigned access](/docs/iam/mngiam.html#reviewing-your-assigned-access).
-
+* To modify the permissions of a user, see [Editing existing access](/docs/iam?topic=iam-iammanidaccser#edit_existing).
+* To grant permissions to a user, see [Assign new access](/docs/iam?topic=iam-iammanidaccser#assign_new_access).
+* To revoke permissions, see [Removing access](/docs/iam?topic=iam-iammanidaccser#removing_access).
+* To review a user's permissions, see [Reviewing your assigned access](/docs/iam?topic=iam-iammanidaccser#review_your_access).
 
 
 ## {{site.data.keyword.Bluemix_notm}} platform roles

@@ -31,7 +31,7 @@ IBM Cloud Monitoring with Sysdig
     Customizing the agent
         change_kube_agent.md
         change_linux_agent.md
-        chage_container_agent.md
+        change_container_agent.md
 
     launch.md
     groups.md

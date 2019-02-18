@@ -33,13 +33,13 @@ Before you provision an instance, consider the following information:
 
 You provision an instance within the context of a resource group. A resource group lets you organize your services for access control and billing purposes. You can provision the IBM Cloud Monitoring with Sysdig instance in the *default* resource group or in a custom resource group.
 
-When you [provision an instance](/docs/services/Monitoring-with-Sysdig/provision.html#provision), you automatically get an ingestion key,known as the [*Sysdig access key*](/docs/services/Monitoring-with-Sysdig/access_key.html#access_key).
+When you [provision an instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision), you automatically get an ingestion key,known as the [Sysdig access key](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key).
 
 After you provision an instance, you must configure a IBM Cloud Monitoring with Sysdig agent for each metric source. A metric source is a cloud resource that you want to monitor and control its performance and health. You must configure a IBM Cloud Monitoring with Sysdig agent in each environment that you want to monitor. For example, a metric source can be a Kubernetes cluster. You use the access key to configure the Sysdig agent that is responsible for collecting and forwarding metric data to your instance.
 
 After the IBM Cloud Monitoring with Sysdig agent is deployed in a metric source, collection and forwarding of metrics to the instance is automatic. The IBM Cloud Monitoring with Sysdig agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in an environment.
 
-You can [monitor](/docs/services/Monitoring-with-Sysdig/monitoring.html#monitoring), and [manage](/docs/services/Monitoring-with-Sysdig/manage.html#manage)  data through the IBM Cloud Monitoring with Sysdig Web UI.  
+You can [monitor](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring), and [manage](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-manage#manage)  data through the IBM Cloud Monitoring with Sysdig Web UI.  
 
 The following figure shows the components overview for the IBM Cloud Monitoring with Sysdig service that is running on {{site.data.keyword.Bluemix_notm}}:
 
@@ -83,7 +83,7 @@ The roll-up policy describes the granularity of the data over time:
 ## Data deletion
 {: #overview_data_deletion}
 
-When you delete an instance of {{site.data.keyword.mon_full_notm}} from the {{site.data.keyword.Bluemix_notm}}, you must open a case through support to request the data to be  deleted. For details, see [contacting support](/docs/get-support/howtogetsupport.html#getting-customer-support).
+When you delete an instance of {{site.data.keyword.mon_full_notm}} from the {{site.data.keyword.Bluemix_notm}}, you must open a case through support to request the data to be  deleted. For details, see [contacting support](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp).
 
 When you delete a capture, the data file for that capture is automatically deleted.
 
@@ -114,7 +114,7 @@ The following list outlines IBM Cloud Monitoring with Sysdig agents that are ava
 * IBM Cloud Monitoring with Sysdig agent for Mesos, Marathon, and DCOS.
 * IBM Cloud Monitoring with Sysdig agent for manual Linux installations.
 
-For more information, see [Configuring a Sysdig agent](/docs/services/Monitoring-with-Sysdig/config_agent.html#config_agent) and [Removing a Sysdig agent](/docs/services/Monitoring-with-Sysdig/remove_agent.html#remove_agent).
+For more information, see [Configuring a Sysdig agent](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-config_agent#config_agent) and [Removing a Sysdig agent](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-remove#remove).
 
 
 ## Viewing usage
@@ -126,7 +126,7 @@ To monitor the usage and costs of your service, see [Viewing your usage](/docs/b
 ## Service plans
 {: #overview_plans}
 
-Different pricing plans are available for an IBM Cloud Monitoring with Sysdig instance. For more information, see [Pricing](/docs/services/Monitoring-with-Sysdig/pricing.html#pricing_plans).
+Different pricing plans are available for an IBM Cloud Monitoring with Sysdig instance. For more information, see [Pricing](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 
 
 ## Security considerations

@@ -42,11 +42,11 @@ In the *Explore* view of the Web UI, you can run any of the following actions:
 
 | Task                                                                                        | Description     |
 |---------------------------------------------------------------------------------------------|-----------------|
-| [Copy a group](/docs/services/Monitoring-with-Sysdig/groups.html#copy_group)                | Copy a group to other teams. |
-| [Create a group](/docs/services/Monitoring-with-Sysdig/groups.html#create_group)            | Create a new group. |
-| [Delete a group](/docs/services/Monitoring-with-Sysdig/groups.html#delete_group)            | Delete a group. |
-| [Rename a group](/docs/services/Monitoring-with-Sysdig/groups.html#rename_group)            | Rename a group. |
-| [Share a group](/docs/services/Monitoring-with-Sysdig/groups.html#share_group)              | Share a group with other members in the team. |
+| [Copy a group](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#copy_group)                | Copy a group to other teams. |
+| [Create a group](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#create_group)            | Create a new group. |
+| [Delete a group](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#delete_group)            | Delete a group. |
+| [Rename a group](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#rename_group)            | Rename a group. |
+| [Share a group](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#share_group)              | Share a group with other members in the team. |
 {: caption="Table 1. Tasks grouping labels" caption-side="top"} 
 
 
@@ -131,9 +131,9 @@ The following table lists the tasks that you can run to change the scope in the 
 
 | Task                                                                                        | Description     |
 |---------------------------------------------------------------------------------------------|-----------------|
-| [Changing the scope of a dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#dashboards_scope) | Change the scope of a dashboard to filter out data points for all metrics displayed through panels on the dashboard. |
-| [Changing the scope of a panel](/docs/services/Monitoring-with-Sysdig/panel.html#panel_scope) | Change the scope of a panel to filter out data for a specific metric that is displayed through the panel. |
-| [Changing the scope of a team](/docs/services/Monitoring-with-Sysdig/teams.html#teams_scope) | Change the scope of the data that is visible to users that are members of a team. |
+| [Changing the scope of a dashboard](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_scope) | Change the scope of a dashboard to filter out data points for all metrics displayed through panels on the dashboard. |
+| [Changing the scope of a panel](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_scope) | Change the scope of a panel to filter out data for a specific metric that is displayed through the panel. |
+| [Changing the scope of a team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams_scope) | Change the scope of the data that is visible to users that are members of a team. |
 {: caption="Table 4. Tasks to change the scope" caption-side="top"} 
 
 
@@ -164,10 +164,10 @@ The following table lists the tasks that you can run when you work with teams:
 
 | Task                                                                            | Description                 |
 |---------------------------------------------------------------------------------|-----------------------------|
-| [Creating a team](/docs/services/Monitoring-with-Sysdig/teams.html#teams_create)      | Create a team to control data visibility.  |
-| [Deleting a team](/docs/services/Monitoring-with-Sysdig/teams.html#teams_delete)      | Delete a team. </br>**Note:** When you delete a team, users that only belong to this team will be moved to the default team. |
-| [Adding team members](/docs/services/Monitoring-with-Sysdig/teams.html#teams_users)   | Add more users to a team. |
-| [Edit a team ](/docs/services/Monitoring-with-Sysdig/teams.html#teams_scope)          | Change the scope of the data that is visible to users that are members of a team.  |
+| [Creating a team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams_create)      | Create a team to control data visibility.  |
+| [Deleting a team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams_delete)      | Delete a team. </br>**Note:** When you delete a team, users that only belong to this team will be moved to the default team. |
+| [Adding team members](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams_users)   | Add more users to a team. |
+| [Edit a team ](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams_scope)          | Change the scope of the data that is visible to users that are members of a team.  |
 {: caption="Table 5. Tasks to work with teams" caption-side="top"} 
 
 

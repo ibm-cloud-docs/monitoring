@@ -39,13 +39,13 @@ When the number of containers per node or the number of metrics goes above the g
 You can request a **custom price quote** for anything beyond the upper bound of the *Advanced graduated tier paid pricing plan* by opening a ticket with [IBM Cloud Support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/unifiedsupport/supportcenter){:new_window}.
 {: tip}
 
-Data is collected and retained per the standard guidelines across all plans. For more information see [data collection and retention](/docs/services/Monitoring-with-Sysdig/overview.html#data).
+Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#overview_collection) and [data retention](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#overview_retention).
 
 
 ## Checking your usage
 {: #pricing_usage}
 
-To monitor how the IBM Cloud Monitoring with Sysdig service is used and the costs associated to its usage, see [Viewing your usage](/docs/billing-usage/viewing_usage.html#viewingusage).
+To monitor how the IBM Cloud Monitoring with Sysdig service is used and the costs associated to its usage, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
 
 
 
@@ -56,8 +56,8 @@ To be notified when there is a tier change, you must enable the following alert:
 
 Complete the following steps to enable an alert:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
-2. Create a notification channel. For more information, see [Configuring a notification channel](/docs/services/Monitoring-with-Sysdig/notifications.html#create). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+2. Create a notification channel. For more information, see [Configuring a notification channel](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-notifications#notifications_create). 
 3. Click **ALERTS** to navigate to the *Alerts* section.
 2. Search for **[IBM]: Usage Tier Change**.
 3. Edit the alert to add the notification channel.
