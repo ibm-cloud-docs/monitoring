@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -26,7 +26,7 @@ You can use labels to group infrastructure objects into logical hierarchies.
 
 Complete the following steps to create a group:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Click **EXPLORE** to navigate to the *Explore* section.
 
@@ -50,7 +50,7 @@ Complete the following steps to create a group:
 
 Complete the following steps to rename a group:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Click **EXPLORE** to navigate to the *Explore* section.
 
@@ -74,7 +74,7 @@ Complete the following steps to rename a group:
 
 Complete the following steps to copy a group to other teams:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Click **EXPLORE** to navigate to the *Explore* section.
 
@@ -99,7 +99,7 @@ Complete the following steps to copy a group to other teams:
 
 Complete the following steps to share a group with other members of the team:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Click **EXPLORE** to navigate to the *Explore* section.
 
@@ -122,7 +122,7 @@ Complete the following steps to share a group with other members of the team:
 
 Complete the following steps to delete a group:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Click **EXPLORE** to navigate to the *Explore* section.
 

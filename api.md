@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-05"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -16,80 +16,23 @@ lastupdated: "2018-11-05"
 {:download: .download}
 
 
-# Working with the Sysdig Python library and REST API
-{: #sysdig_python_lib}
+# Working with the Sysdig REST API
+{: #api}
 
-Use the Sysdig REST API to automate routine tasks and monitor notifications. You can also use the Sysdig Python library. Notice that the library exposes part of the Sysdig REST API functionality. 
+Use the Sysdig REST API to automate routine tasks and monitor notifications.
 {:shortdesc}
 
 When you use the API from your custom scripts or programs, you must use a Sysdig token to authenticate with the IBM Cloud Monitoring with Sysdig instance. 
 {: tip}
 
-## Configuring the local environment to run Python scripts
-{: #config_env}
-
-Complete the following steps to configure your local environment to run programmatic dashboard tasks:
-
-1. Install the following software:
-
-    * Python 2.x (2.7.x)
-
-    * pip version 1.3 or later. (Note: pip is installed as part of the Python package for version 2.7 and later versions.)
-
-2. Install the Sysdig Python client. Choose one of the following options:
-
-    * Option 1: Install the client by using **pip**. Run the following command: 
-    
-        ```
-        pip install sdcclient
-        ```
-        {: codeblock}
-
-    * Option 2: Download [Sysdig Monitor/Secure Python client library [External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client){:new_window}. Then, unpack the *.zip* file.
-
-    * Option 3: Clone the repository. Run the following command:
-
-        ```
-        git clone https://github.com/draios/python-sdc-client.git
-        ```
-        {: codeblock}
-
-        Change to the *python-sdc-client* directory, and run the following command:
-
-        ```
-        python setup.py install
-        ```
-        {: codeblock}
-
-
-
-The library exports the *SdcClient* library. To instantiate its functions, you can use the following code:
-
-```
-#! /usr/bin/python
-
-# import client
-from sdcclient import SdcClient
-
-# Input Sysdig API token
-api_token = "SYSDIG_API_TOKEN"
-
-# Instantiate the Sysdig client
-
-sdclient = SdcClient(sdc_token)
-```
-{: codeblock}
-
-
-
 ## Creating a dashboard by using the API
-{: #create_api}
+{: #api_create_dashboard}
 
 You can create a dashboard by duplicating an existing dashboard.  
 
 Complete the following steps to create a dashboard:
 
-1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#token).
+1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
 
 2. Create the json file that describes the dashboard. The following fields must be set as indicated:
 
@@ -116,7 +59,7 @@ Complete the following steps to create a dashboard:
 
     where
 
-    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
     * *SYSDIG_API_TOKEN* is the API token you got in the previous step.
 
@@ -220,11 +163,11 @@ For example, to create a dashboard, a sample json file looks as follows:
 
 
 ## Saving the dashboards of a team by using the API
-{: #save_api}
+{: #api_save_dashboard}
 
 Complete the following steps to download the dashboards that are available for a team:
 
-1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#token).
+1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
 
 2. Run the following cURL command:
 
@@ -235,7 +178,7 @@ Complete the following steps to download the dashboards that are available for a
 
     where
 
-    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
     * *SYSDIG_API_TOKEN* is the API token you got in the previous step.
 
@@ -250,13 +193,13 @@ The output is a JSON file where each dashboard starts with the field **id**. The
 
 
 ## Deleting a dashboard by using the API
-{: #delete_api}
+{: #api_delete_dashboard}
 
 Complete the following steps to delete a dashboard from the list of dashboards that is available for a team:
 
-1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#token).
+1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
 
-2. Get all the dashboards that are available for the team. For more information, see [Saving dashboards by using the API](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_api).
+2. Get all the dashboards that are available for the team. For more information, see [Saving dashboards by using the API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_save_dashboard).
 
 3. Find the ID of the dashboard you want to delete. Look for the the **id** value that is associated with the dashboard **name** that you want to delete.
 
@@ -271,7 +214,7 @@ Complete the following steps to delete a dashboard from the list of dashboards t
 
     * *ID* is the ID of the dashboard that you want to delete.
 
-    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
     * *SYSDIG_API_TOKEN* is the API token you got in the previous step.
 

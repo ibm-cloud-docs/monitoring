@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-05"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-11-05"
 {:download: .download}
 
 # Provisioning an instance
-{: #sysdig_provision}
+{: #provision}
 
 Before you can monitor and manage metrics with Sysdig, you must first provision an instance of the service in {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -32,7 +32,7 @@ To provision an instance of Sysdig from the {{site.data.keyword.Bluemix_notm}} c
 
 1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://bluemix.net){:new_window}.
+    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com){:new_window}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} UI opens.
 
@@ -46,7 +46,7 @@ To provision an instance of Sysdig from the {{site.data.keyword.Bluemix_notm}} c
 
 6. Select a service plan. By default, the **Trial** plan is set.
 
-    For more information about the service plans, see [Service plans](/docs/services/Monitoring-with-Sysdig/overview.html#pricing_plans).
+    For more information about the service plans, see [Service plans](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 
 7. Select a resource group. By default, the **Default** resource group is set.
 
@@ -68,7 +68,7 @@ To provision an instance of Sysdig through the command line, complete the follow
 
 1. [Pre-requisite] Install the {{site.data.keyword.Bluemix_notm}} CLI.
 
-   For more information, see [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview).
+   For more information, see [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
    If the CLI is installed, continue with the next step.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2019-01-09"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -25,13 +25,13 @@ You can associate one or more tags to each Sysdig agent. Tags are comma-separate
 {: tip}
 
 ## Configuring a Sysdig agent on Linux
-{: #linux}
+{: #config_agent_linux}
 
 Complete the following steps to configure a Sysdig agent on Linux to collect and forward metrics to an instance of the IBM Cloud Monitoring with Sysdig service:
 
-1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/access_key.html#ibm_cloud_ui).
+1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#ingestion).
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
 3. Deploy the Sysdig agent. Run the following command from a terminal.
 
@@ -48,7 +48,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. 
 
-    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
+    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
     * Set **secure** to *true* to use SSL with the communication.
 
@@ -70,13 +70,13 @@ If the Sysdig agent fails to install correctly, install the kernel headers manua
 
 
 ## Configuring a Sysdig agent on a Docker container
-{: #docker}
+{: #config_agent_docker}
 
 Complete the following steps to configure a Sysdig agent on a Docker container to collect and forward metrics to an instance of the IBM Cloud Monitoring with Sysdig service:
 
-1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/access_key.html#ibm_cloud_ui).
+1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#ingestion).
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
 3. Deploy the Sysdig agent. Run the following command:
 
@@ -103,13 +103,13 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
 
 
 ## Configuring a Sysdig agent on a Kubernetes cluster by using a script
-{: #kube_script}
+{: #config_agent_kube_script}
 
 Complete the following steps to configure a Sysdig agent on a Kubernetes cluster that runs in the {{site.data.keyword.containerlong_notm}}:
 
-1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/access_key.html#ibm_cloud_ui).
+1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#ingestion).
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
 3. Set up the cluster environment. Run the following commands:
 
@@ -146,13 +146,13 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
 
 ## Configuring a Sysdig agent on a Kubernetes cluster manually
-{: #kube_manually}
+{: #config_agent_kube_manually}
 
 Complete the following steps to configure a Sysdig agent on a Kubernetes cluster that runs in the {{site.data.keyword.containerlong_notm}}:
 
-1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/access_key.html#ibm_cloud_ui).
+1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#ingestion).
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
 3. Set up the cluster environment. Run the following commands:
 
@@ -172,14 +172,14 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 4. Create a service account called **sysdig-agent** to monitor the kubernetes cluster. Run the following command:
 
     ```
-    kubectl create serviceaccount sysdig-agent
+    kubectl create serviceaccount sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
 5. Add a secret to your Kubernetes cluster. Run the following command:
 
     ```
-    kubectl create secret generic sysdig-agent --from-literal=access-key=SYSDIG_ACCESS_KEY
+    kubectl create secret generic sysdig-agent --from-literal=access-key=SYSDIG_ACCESS_KEY -n ibm-observe
     ```
     {: codeblock}
 
@@ -201,7 +201,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     To add a cluster role binding, run the following command:
 
     ```
-    kubectl create clusterrolebinding sysdig-agent --clusterrole=sysdig-agent --serviceaccount=default:sysdig-agent
+    kubectl create clusterrolebinding sysdig-agent --clusterrole=sysdig-agent --serviceaccount=default:sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -223,11 +223,11 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     
     * **new_k8s**: This parameter must be set to *true* to capture kube state metrics.
 
-    * **sysdig_capture_enabled**: This parameter enables or disables the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
+    * **sysdig_capture_enabled**: This parameter enables or disables the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
     An example yaml file looks like this:
 
-     ```
+    ```
      apiVersion: v1
      kind: ConfigMap
      metadata:

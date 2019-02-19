@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -33,13 +33,13 @@ You view metrics via Sysdig's web-based user interface.
 
 
 ## Before you begin
-{: #prereqs}
+{: #kubernetes_cluster_prereqs}
 
-To complete the steps in this getting tutorial, instructions are  provided to provision an instance of the IBM Cloud Monitoring with Sysdig in the US-South region. You can use an exiting cluster or a new **cluster version 1.10**. The cluster can be available in a different region. 
+To complete the steps in this getting tutorial, instructions are  provided to provision an instance of the IBM Cloud Monitoring with Sysdig in the US-South region. You can use an exiting cluster or a new **cluster version 1.10**. The cluster can be available in a different region.  
 
-Read about IBM Cloud Monitoring with Sysdig. For more information, see [About](/docs/services/Monitoring-with-Sysdig/overview.html#about).
+Read about IBM Cloud Monitoring with Sysdig. For more information, see [About](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#about).
 
-Use a user ID that is a member or an owner of an {{site.data.keyword.Bluemix_notm}} account. To get an {{site.data.keyword.Bluemix_notm}} user ID, go to: [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/registration/){:new_window}.
+Use a user ID that is a member or an owner of an {{site.data.keyword.Bluemix_notm}} account. To get an {{site.data.keyword.Bluemix_notm}} user ID, go to: [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/registration/){:new_window}.
 
 Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each of the following resources: 
 
@@ -50,15 +50,13 @@ Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each o
 | Kubernetes cluster instance          |  Resource                 | Editor  | us-south  | This policy is required to configure the secret and the Sysdig agent in the Kubernetes cluster. |
 {: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"} 
 
-For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers/cs_access_reference.html#understanding).
+For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
 
-Install the {{site.data.keyword.Bluemix_notm}} CLI. For more information, see [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview).
-
-Install the Kubernetes CLI plugin. For more information, see [Installing the CLI](/docs/containers/cs_cli_install.html#cs_cli_install).
+Install the {{site.data.keyword.Bluemix_notm}} CLI and the Kubernetes CLI plugin. For more information, see [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
 
 ## Step1: Provision an IBM Cloud Monitoring with Sysdig instance
-{: #step1}
+{: #kubernetes_cluster_step1}
 
 To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
 
@@ -86,18 +84,18 @@ To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.
 
     By default, the **Trial** plan is set.
 
-    For more information about other service plans, see [Pricing plans](/docs/services/Monitoring-with-Sysdig/pricing.html#pricing_plans).
+    For more information about other service plans, see [Pricing plans](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 
 9. To provision the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix_notm}} resource group where you are logged in, click **Create**.
 
 After you provision an instance, the *Observability* dashboard opens. 
 
 
-**Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/Monitoring-with-Sysdig/provision.html#provision_cli).
+**Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli).
 
 
 ## Step2: Configure your Kubernetes cluster to send metrics to your instance
-{: #step2}
+{: #kubernetes_cluster_step2}
 
 To configure your Kubernetes cluster to send metrics to your IBM Cloud Monitoring with Sysdig instance, you must install a Sysdig agent pod on each node of your cluster. The Sysdig agent is installed via a DaemonSet which ensures an instance of the agent is running on every worker node. The Sysdig agent collects metrics from the pod where it is installed, and forwards the data to your instance.
 
@@ -129,9 +127,9 @@ To configure your Kubernetes cluster to forward metrics to your IBM Cloud Monito
 
     **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.Bluemix_notm}}.
 
-3. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig/access_key.html#ibm_cloud_ui).
+3. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
-4. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig/endpoints.html#sysdig).
+4. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
 5. Deploy the Sysdig agent. Run the following command:
 
@@ -148,7 +146,7 @@ To configure your Kubernetes cluster to forward metrics to your IBM Cloud Monito
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
-    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
+    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
 6. Verify that the Sysdig agent is created successfully and its status. Run the following command:
 
@@ -160,7 +158,7 @@ To configure your Kubernetes cluster to forward metrics to your IBM Cloud Monito
 
 
 ## Step3: Launch the Sysdig web UI
-{: #step3}
+{: #kubernetes_cluster_step3}
 
 Complete the following steps to launch the web UI:
 
@@ -187,7 +185,7 @@ You can only have one Web UI session open per browser.
 
 
 ## Step 4: Monitor your cluster
-{: step4}
+{: #kubernetes_cluster_step4}
 
 You can monitor your cluster in the **EXPLORE** view that is available through the Web UI. This view is the starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI for users.
 
@@ -207,11 +205,11 @@ If you select a worker, a default dashboard is displayed. Click on the ![switch 
 
 
 ## Next steps
-{: #next_steps}
+{: #kubernetes_cluster_next_steps}
 
-Create a custom dashboard. For more information, see [Working with dashboards](/docs/services/Monitoring-with-Sysdig/dashboards.html#dashboards).
+Create a custom dashboard. For more information, see [Working with dashboards](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards).
 
-You can also learn about alerts. For more information, see [Working with alerts](/docs/services/Monitoring-with-Sysdig/monitoring.html#alerts). 
+You can also learn about alerts. For more information, see [Working with alerts](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring_alerts). 
 
 
 

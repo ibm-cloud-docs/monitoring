@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-08"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -23,7 +23,7 @@ After you provision an instance of the {{site.data.keyword.mon_full_notm}} servi
 
 
 ## Grant IAM policies to a user to view data 
-{: #step1}
+{: #launch_step1}
 
 **Note:** You must be an administrator of the {{site.data.keyword.mon_full_notm}} service, an administrator of the {{site.data.keyword.mon_full_notm}} instance, or have account IAM permissions to grant other users policies.
 
@@ -35,11 +35,11 @@ The following table lists the minimum policies that a user must have to be able 
 | `{{site.data.keyword.mon_full_notm}}` | Service role: Writer      | Allows the user to launch the Web UI and view metrics in the Web UI.  |
 {: caption="Table 1. IAM policies" caption-side="top"} 
 
-For more information on how to configure these policies for a user, see [Granting permissions to a user to view metrics](/docs/services/Monitoring-with-Sysdig/iam_work.html#user_sysdig).
+For more information on how to configure these policies for a user, see [Granting permissions to a user to view metrics](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_work#user_sysdig).
 
 
 ## Launch the web UI through the {{site.data.keyword.Bluemix_notm}} UI
-{: #step2}
+{: #launch_step2}
 
 You launch the Web UI within the context of an {{site.data.keyword.mon_full_notm}} instance, from the {{site.data.keyword.Bluemix_notm}} UI. 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-05"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -16,14 +16,14 @@ lastupdated: "2018-11-05"
 {:download: .download}
 
 # Removing a Sysdig agent
-{: #sysdig_remove_agent}
+{: #remove_agent}
 
 When you delete an IBM Cloud Monitoring with Sysdig instance, or if you want to stop collecting metrics from a source, you must uninstall the Sysdig agent.
 {:shortdesc}
 
 
 ## Removing a Sysdig agent from a Kubernetes cluster
-{: #kube}
+{: #remove_agent_kube}
 
 Complete the following steps to remove a Sysdig agent from a Kubernetes cluster:
 
@@ -52,21 +52,21 @@ Complete the following steps to remove a Sysdig agent from a Kubernetes cluster:
 3. Remove the service account. Run the following command:
 
     ```
-    kubectl delete serviceaccount -n default sysdig-agent
+    kubectl delete serviceaccount -n ibm-observe sysdig-agent
     ```
     {: codeblock}
 
 4. Remove the daemonset. Run the following command:
 
     ```
-    kubectl delete daemonset sysdig-agent
+    kubectl delete daemonset sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
 5. Remove the secret. Run the following command:
 
     ```
-    kubectl delete secret sysdig-agent
+    kubectl delete secret sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -74,7 +74,7 @@ Complete the following steps to remove a Sysdig agent from a Kubernetes cluster:
 
 
 ## Removing a Sysdig agent on Linux
-{: #linux}
+{: #remove_agent_linux}
 
 Complete the following steps to remove a Sysdig agent on Linux:
 
@@ -91,6 +91,5 @@ Complete the following steps to remove a Sysdig agent on Linux:
     sudo yum erase draios-agent
     ```
     {: codeblock}
-
 
 

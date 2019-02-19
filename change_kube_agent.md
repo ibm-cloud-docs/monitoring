@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-06"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -38,7 +38,7 @@ There are two methods that you can use to modify a configuration file:
 * Method 2: Modify the file locally and apply the changes to the cluster.
 
 ## Editing the Kubernetes Sysdig agent configuration by using kubectl edit
-{: #edit_kube_agent_method1}
+{: #change_kube_agent_edit_kube_agent_method1}
 
 Complete the following steps to edit a Kubernetes Sysdig agent configuration:
 
@@ -62,7 +62,7 @@ Complete the following steps to edit a Kubernetes Sysdig agent configuration:
     Run the following command:
 
     ```
-    kubectl edit configmap sysdig-agent
+    kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -75,7 +75,7 @@ Complete the following steps to edit a Kubernetes Sysdig agent configuration:
     Run the following command: 
 
     ```
-    kubectl edit daemonset sysdig-agent
+    kubectl edit daemonset sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -84,7 +84,7 @@ Complete the following steps to edit a Kubernetes Sysdig agent configuration:
     Save the changes. Changes are applied automatically.
 
 ## Editing the Kubernetes Sysdig agent configuration by using kubectl apply
-{: #edit_kube_agent_method2}
+{: #change_kube_agent_edit_kube_agent_method2}
 
 Use this method if you have the configuration yaml files stored and managed in a source control system.
 
@@ -95,14 +95,14 @@ Complete the following steps to edit a Kubernetes Sysdig agent configuration:
     To create a local file with the configuration that is deployed in a cluster, you can also run the command:
     
     ```
-    kubectl get configmap sysdig-agent -o=yaml > prod-sysdig-agent-configmap.yaml
+    kubectl get configmap sysdig-agent -n=ibm-observe -o=yaml > prod-sysdig-agent-configmap.yaml
     ```
     {: codeblock} 
     
     or 
     
     ```
-    kubectl get daemonset sysdig-agent -o=yaml > prod-sysdig-agent-daemonset-v2.yaml
+    kubectl get daemonset sysdig-agent -n=ibm-observe -o=yaml > prod-sysdig-agent-daemonset-v2.yaml
     ```
     {: codeblock}
 
@@ -126,7 +126,7 @@ Running agents will automatically pick the new configuration after Kubernetes pu
 
 
 ## Adding more tags to data collected from a Kubernetes Sysdig agent
-{: #tag}
+{: #change_kube_agent_add_tags}
 
 Complete the following steps to add more tags to a Kubernetes Sysdig agent configuration that you have already deployed:
 
@@ -150,7 +150,7 @@ Complete the following steps to add more tags to a Kubernetes Sysdig agent confi
     Run the following command:
 
     ```
-    kubectl edit configmap sysdig-agent
+    kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -180,7 +180,7 @@ For the sample provided, you would get the tags **agent.tag.cluster_version** an
 
 
 ## Collecting a set of Kubernetes events
-{: #kube}
+{: #change_kube_agent_collect_events}
 
 {{site.data.keyword.mon_full_notm}} supports event integrations with Kubernetes. Sysdig agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
 
@@ -211,7 +211,7 @@ To filter events from Kubernetes pods, complete the following steps:
     Run the following command:
 
     ```
-    kubectl edit configmap sysdig-agent
+    kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -261,7 +261,7 @@ For more information on how to work with custom events, see [Working with custom
 
 
 ## Disabling collection of events
-{: #disable}
+{: #change_kube_agent_disable_events}
 
 To disable a Sysdig agent from collecting Kubernetes events, you must modify the *sysdig-agent-configmap.yaml* file. Set the **Kubernetes** entry in the **events** section to *none*. 
 
@@ -287,7 +287,7 @@ Complete the following steps:
     Run the following command:
 
     ```
-    kubectl edit configmap sysdig-agent
+    kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -309,7 +309,7 @@ Changes are applied automatically.
 
 
 ## Including and excluding metrics
-{: #params}
+{: #change_kube_agent_inc_exc_metrics}
 
 To filter custom metrics, you must customize the **metrics_filter** section in the *sysdig-agent-configmap.yaml* file. You can specify which metrics to include and which ones to filter out by configuring the **include** and **exclude** filtering parameters.
 
@@ -337,7 +337,7 @@ Complete the following steps:
     Run the following command:
 
     ```
-    kubectl edit configmap sysdig-agent
+    kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -362,7 +362,7 @@ Complete the following steps:
 
     * The entry `exclude: metricA.*` is ignored.
 
-6. Save the changes. 
+4. Save the changes. 
 
 Changes are applied automatically. 
 
@@ -370,7 +370,7 @@ Changes are applied automatically.
 
 
 ## Filtering kubernetes objects and containers from which data is collected
-{: #filtering}
+{: #change_kube_agent_filter_data}
 
 A Kubernetes Sysdig agent automatically collects metrics from *all containers* that it detects in a cluster, including Prometheus, StatsD, JMX, app-checks, and built-in metrics.
  
@@ -426,7 +426,7 @@ Complete the following steps to filter out containers that a Sysdig agent monito
     Run the following command:
 
     ```
-    kubectl edit configmap sysdig-agent
+    kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -456,7 +456,7 @@ Changes are applied automatically.
 
 
 ## Blocking ports
-{: #ports}
+{: #change_kube_agent_block_ports}
 
 To block network traffic and metrics from network ports, you must customize the **blacklisted_ports** section in the *sysdig-agent-configmap.yaml* file. You must list the ports from which you want to filter out any data.
 
@@ -484,7 +484,7 @@ Complete the following steps:
     Run the following command:
 
     ```
-    kubectl edit configmap sysdig-agent
+    kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -506,7 +506,7 @@ Changes are applied automatically.
 
 
 ## Changing the log level
-{: #log_level}
+{: #change_kube_agent_log_level}
 
 To configure the log level, you must customize the **log** section in the *sysdig-agent-daemonset-v2.yaml* file. 
 
@@ -549,7 +549,7 @@ Complete the following steps to configure the log level:
     Run the following command:
 
     ```
-    kubectl edit daemonset sysdig-agent
+    kubectl edit daemonset sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -572,7 +572,7 @@ Changes are applied automatically.
 
 
 ## Filtering Kubernetes events by severity
-{: #severity}
+{: #change_kube_agent_filterby_severity}
 
 To filter events by severity, you must modify the *sysdig-agent-daemonset-v2.yaml* file. Set the entry **event_priority** in the **log** section to *none*. 
 
@@ -602,7 +602,7 @@ Complete the following steps:
     Run the following command:
 
     ```
-    kubectl edit daemonset sysdig-agent
+    kubectl edit daemonset sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -621,7 +621,7 @@ Complete the following steps:
 Changes are applied automatically. 
 
 ## Logging into a file what metrics are included or excluded
-{: #log_metrics}
+{: #change_kube_agent_log_metrics}
 
 To log into a file information about which custom metrics are included and which ones are excluded, you must customize the *sysdig-agent-daemonset-v2.yaml* file. Set the entry **metrics_excess_log** to **true** in the **log** section.
 
@@ -675,7 +675,7 @@ Complete the following steps:
     Run the following command:
 
     ```
-    kubectl edit daemonset sysdig-agent
+    kubectl edit daemonset sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -695,7 +695,7 @@ Changes are applied automatically.
 
 
 ## Sample configmap yaml file
-{: #configmap}
+{: #change_kube_agent_sample_configmap}
 
 ```
 apiVersion: v1
@@ -753,7 +753,7 @@ metadata:
 {: codeblock}
 
 ## Sample daemonset yaml file
-{: #daemonset}
+{: #change_kube_agent_sample_daemonset}
 
 ```
  Please edit the object below. Lines beginning with a '#' will be ignored,

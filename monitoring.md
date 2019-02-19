@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-17"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -30,7 +30,7 @@ You can analyze data in the *Explore* tab and in the *Dashboard* tab of the web 
 * Use a metric view to monitor an individual metric.
 * Use dashboards to get a specialized insight into network data, application data, topology, services, hosts, and containers by monitoring data through panels. A panel displays a metric or group of metrics in a dashboard.
 
-For each metric view and dashboard, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. For more information, see [Managing data](https://console.test.cloud.ibm.com/docs/services/Monitoring-with-Sysdig/manage.html#manage).
+For each metric view and dashboard, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. For more information, see [Managing data](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-manage#manage).
 
 In the *Explore* tab, you can monitor data by using default metrics and default dashboards. You can use labels to define new infrastructure groups that you can then use to aggregate data differently and monitor your environment. You can also use custom dashboards that you define through the *Dashboard* tab.
 
@@ -46,7 +46,7 @@ You can use alerts to notify users of problems that require attention through on
 You can request a capture on a node to analyze what happens in that node during a time frame. For example, you can use it to analyze bottlenecks, or component interactions.
 
 ## Metrics
-{: #metrics}
+{: #monitoring_metrics}
 
 A metric is a quantitaive measure that has one or more labels to define its characteristics. Use metrics to analyze statistically data that has numerical values. 
 
@@ -54,8 +54,8 @@ A metric is represented by time series. A time series is a set of numeric data p
 
 Metrics are classified into two groups: 
 
-* [Default metrics](/docs/services/Monitoring-with-Sysdig/metrics.html#default) 
-* [Custom metrics](/docs/services/Monitoring-with-Sysdig/metrics.html#custom)
+* [Default metrics](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-metrics#metrics_default) 
+* [Custom metrics](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-metrics#metrics_custom)
 
 Labels are classified as infrastructure labels and metric descriptor lables. Each metric has a set of pre-defined labels. For custom metrics, you can configure more labels. 
 
@@ -64,10 +64,10 @@ You can use labels to identify and differentiate characteristics of a metric, fo
 * You can filter out data. 
 * You can split aggregated data into segments. 
 
-For more information, see [Labels](/docs/services/Monitoring-with-Sysdig/metrics.html#labels).
+For more information, see [Labels](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-metrics#metrics_labels).
 
 ## Panels
-{: panels}
+{: #monitoring_panels}
 
 A panel displays a metric or group of metrics in a dashboard. 
 
@@ -97,17 +97,17 @@ The following table lists the tasks that you can run with panels:
 
 | Task | Description |
 |------|-------------|
-| [Copy panel](/docs/services/Monitoring-with-Sysdig/panel.html#copy) | Copy a panel into a new dashboard.  |
-| [Change scope](/docs/services/Monitoring-with-Sysdig/panel.html#change) | Change the scope of a panel. |
-| [Duplicate panel](/docs/services/Monitoring-with-Sysdig/panel.html#duplicate) | Copy a panel in the same dashboard.  |
-| [Delete panel](/docs/services/Monitoring-with-Sysdig/panel.html#delete) | Delete a panel from the dashboard.  |
-| [Export data](/docs/services/Monitoring-with-Sysdig/panel.html#export) | Export data from a panel into a csv file or a json file.  |
-| [Create alert](/docs/services/Monitoring-with-Sysdig/panel.html#alert) | Define an alert on a metric. |
+| [Copy panel](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_copy) | Copy a panel into a new dashboard.  |
+| [Change scope](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_scope) | Change the scope of a panel. |
+| [Duplicate panel](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_duplicate) | Copy a panel in the same dashboard.  |
+| [Delete panel](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_delete) | Delete a panel from the dashboard.  |
+| [Export data](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_export) | Export data from a panel into a csv file or a json file.  |
+| [Create alert](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_alert) | Define an alert on a metric. |
 {: caption="Table 4. Panel tasks" caption-side="top"} 
 
 
 ## Dashboards
-{: #dashboards}
+{: #monitoring_dashboards}
 
 A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers. Use dashboards to monitor your infrastructure, applications, and services.
 
@@ -130,32 +130,32 @@ The following table outlines tasks that you can run to work with dashboards from
 
 | Task | Description |
 |------|-------------|
-| [Create dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#create) | Create a custom dashboard in the web UI. |
-| [Copy a dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#copy) | Make a copy of a dashboard in the current team where the dashboard is available, or copy a dashboard to another team. |
-| [Changing the scope](/docs/services/Monitoring-with-Sysdig/dashboards.html#scope) | Chang the scope of a dashboard.       |
-| [Delete dashboard](/docs/services/Monitoring-with-Sysdig/dashboards.html#delete) |  Delete a dashboard. |
-| [Share a dashboard]() | Share dashboards between users in a team, and externally, by configuring a public URL for the dashboard. |
+| [Create dashboard](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_create) | Create a custom dashboard in the web UI. |
+| [Copy a dashboard](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_copy) | Make a copy of a dashboard in the current team where the dashboard is available, or copy a dashboard to another team. |
+| [Changing the scope](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_scope) | Chang the scope of a dashboard.       |
+| [Delete dashboard](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_delete) |  Delete a dashboard. |
+| [Share a dashboard](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_share) | Share dashboards between users in a team, and externally, by configuring a public URL for the dashboard. |
 {: caption="Table 1. Dashboard tasks that you can run in the web UI" caption-side="top"} 
 
 The following table outlines tasks that you can run programmatically to work with dashboards:
 
-| Task                    |	Using Python script             | Using REST API                |
-|-------------------------|---------------------------------|-------------------------------|
-| Create a dashboard      | [Creating custom dashboards](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#create_python) | [Creating a dashboard by using the API](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#create_api) |
-| Delete a dashboard      | [Deleting a dashboard](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#delete_python) | [Deleting a dashboard by using the API](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#delete_api) |
-| Saving dashboards       | [Saving dashboards for a team by using a python script](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_python) | [Saving the dashboards of a team by using the API](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_api) |
+| Task                    |	Using REST API                |
+|-------------------------|-------------------------------|
+| Create a dashboard      | [Creating a dashboard by using the API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_create_dashboard) |
+| Delete a dashboard      | [Deleting a dashboard by using the API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_delete_dashboard) |
+| Saving dashboards       | [Saving the dashboards of a team by using the API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_save_dashboard) |
 {: caption="Table 2. Tasks to manage dashboards programmatically" caption-side="top"} 
 
 
 
 ## Events
-{: #events}
+{: #monitoring_events}
 
 An event is a notification that informs about something that has occurred in any of the nodes that forward data to your IBM Cloud Monitoring with Sysdig instance. Use events to review, track, and resolve issues. 
 
 There are different types of events: 
 
-* *Alert events* are events that are triggered by user-configured alerts. For more information, see [Working with alerts](/docs/services/Monitoring-with-Sysdig/monitoring.html#alerts).
+* *Alert events* are events that are triggered by user-configured alerts. For more information, see [Working with alerts](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring_alerts).
 * *Infrastructure-based events* are events that are collected from Docker and Kubernetes nodes. By default, the Sysdig agent automatically discovers and collects data from a select group of events. You can edit the agent configuration file to enable more events.
 * *Custom events* that you configure through any of the following integrations: Slackbot, pre-built Python scripts, custom user-created Python scripts, or cURL requests.
 
@@ -167,7 +167,7 @@ You manage events in the *Events* section of the web UI.
 * You can view alert events through the *Alert Events* tab.
 * You can view infrastructure-based events through the *Custom events* tab.
 * You can view custom events through the *Custom events* tab.
-* You can send custom events to any of your teams by using the [API token for that team](/docs/services/Monitoring-with-Sysdig/api_token.html#api_token). For more information, see [Custom events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events){:new_window}.
+* You can send custom events to any of your teams by using the [API token for that team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token). For more information, see [Custom events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events){:new_window}.
 
 You can resolve the situation that triggered an event. While you wait for the condition that triggered the event to run again and set its status to *OK*, you can set the event as **Resolved** to display graphically that the issue has been addressed. 
 {: #tip}
@@ -175,7 +175,7 @@ You can resolve the situation that triggered an event. While you wait for the co
 
 
 ## Alerts
-{: #alerts}
+{: #monitoring_alerts}
 
 An alert is a notification event that you can use to warn about situations that require attention. Each alert has a severity status. This status informs you about the criticality of the information it reports on. 
 
@@ -202,7 +202,7 @@ You can define one or more notification channels for any of the following notifi
 * OpsGenie Notifications
 * Configure a Webhook Channel
 
-For more information, see [Configuring a notification channel](/docs/services/Monitoring-with-Sysdig/notifications.html#create).
+For more information, see [Configuring a notification channel](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-notifications#notifications_create).
 
 
 You can enable predefined alerts, modify alerts, and create custom alerts in the web UI and by using the Sysdig API.
@@ -222,7 +222,7 @@ The following list outlines the main tasks when you work with alerts:
 
 
 ## Captures
-{: #captures}
+{: #monitoring_captures}
 
 A capture is a trace file that you can generate to analyze what happens in a node during a time frame. The capture file size limit is 100MB. For example, you can use it to analyze bottlenecks, or component interactions. 
 
@@ -241,11 +241,11 @@ You can create, explore, download, and delete *captures* for individual nodes. A
 When you enable the capture feature for a team, capture files are only be visible to members of that team.
 
 The following list outlines the main tasks when you work with captures:
-* [Creating a capture](/docs/services/Monitoring-with-Sysdig/captures.html#create)
-* [Deleting a capture](/docs/services/Monitoring-with-Sysdig/captures.html#delete)
-* [Explore a capture](/docs/services/Monitoring-with-Sysdig/captures.html#explore)
-* [Download a capture](/docs/services/Monitoring-with-Sysdig/captures.html#download)
+* [Creating a capture](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures_create)
+* [Deleting a capture](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures_delete)
+* [Explore a capture](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures_explore)
+* [Download a capture](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures_download)
 
-For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
+For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -35,7 +35,7 @@ Metrics are classified into two groups:
 
 
 ## Labels
-{: #labels}
+{: #metrics_labels}
 
 **Labels define the characteristics of a metric.**
 
@@ -48,7 +48,7 @@ You can use labels to identify and differentiate characteristics of a metric, fo
 
 
 ## Default metrics 
-{: #default}
+{: #metrics_default}
 
 **Default metrics report on the system, the orchestrator, and the network infrastructure.**
 
@@ -56,7 +56,7 @@ The monitoring service automatically adds labels to each metric.
 
 
 ## Custom metrics
-{: #custom}
+{: #metrics_custom}
 
 **Custom metrics vary based on the type of infrastructure, and the applications that you monitor. Some examples are JMX, Prometheus, and StatsD.**
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-05"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -29,7 +29,7 @@ Consider the following information for each instance of the IBM Cloud Monitoring
 
 
 ## Getting the Sysdig API token
-{: #token}
+{: #api_token_get}
 
 
 Complete the following steps to get the token:
@@ -38,7 +38,7 @@ Complete the following steps to get the token:
 2. From the *Sysdig Monitor API* section, copy the **Sysdig Monitor API Token**.
 
 ## Resetting the Sysdig API token
-{: #reset}
+{: #api_token_reset}
 
 Complete the following steps to get the token:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-21"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -40,7 +40,7 @@ Enable the **sysdig_capture_enabled** feature in the Sysdig agent that runs on t
 ## Is the status of your capture file set to *requested* and does not change to status *uploaded*?
 {: #troubleshoot-entry-2}
 
-The status of a [capture file](/docs/services/Monitoring-with-Sysdig/captures.html#captures) is set to *requested* and does not change to status *uploaded*. You are waiting for the capture file to be available for analysis.
+The status of a [capture file](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures) is set to *requested* and does not change to status *uploaded*. You are waiting for the capture file to be available for analysis.
 
 In the *Captures* section of the web UI, you the status of the capture file for a host does not change to *uploaded*.
 {: tsSymptoms}
@@ -49,7 +49,7 @@ The host has the TCP port 6443 disabled.
 {: tsCauses}
 
 
-Check that port 6443 is opened. For more information, see [Managing network traffic](/docs/services/Monitoring-with-Sysdig/network.html#send)
+Check that port 6443 is opened. For more information, see [Managing network traffic](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-network#network_send)
 {: tsResolve}
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-05"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -17,13 +17,13 @@ lastupdated: "2018-11-05"
 
 
 # Predefined dashboards
-{: #predefined_dashboards}
+{: #default_dashboards}
 You can choose any of the following pre-defined dashboards to monitor your infrastructure:
 {:shortdesc}
 
 
 ## Applications
-{: #applications}
+{: #default_dashboards_applications}
 
 The following table lists the pre-defined dashboards that you can select to monitor your applications and infrastructure components:
 
@@ -39,7 +39,7 @@ The following table lists the pre-defined dashboards that you can select to moni
 
 
 ## Host and container dashboards
-{: #host_container}
+{: #default_dashboards_host_container}
 
 The following table lists the pre-defined dashboards that you can use to monitor resource utilization and system activity on your hosts and in your containers:
 
@@ -59,7 +59,7 @@ The following table lists the pre-defined dashboards that you can use to monitor
 {: caption="Table 2. List of host and container pre-defined dashboards" caption-side="top"} 
 
 ## Network
-{: #network}
+{: #default_dashboards_network}
 
 The following table lists the pre-defined dashboards that you can select to monitor your network connections and activity:
 
@@ -74,7 +74,7 @@ The following table lists the pre-defined dashboards that you can select to moni
 
 
 ## Service
-{: #service}
+{: #default_dashboards_service}
 
 
 The following table lists the pre-defined dashboards that you can use to monitor the performance of your services, even if those services are deployed in orchestrated containers:
@@ -88,7 +88,7 @@ The following table lists the pre-defined dashboards that you can use to monitor
 
 
 ## Topology
-{: #topology}
+{: #default_dashboards_topology}
 
 The following table lists the pre-defined dashboards that you can use to monitor the logical dependencies of your application tiers:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-05"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -44,7 +44,7 @@ You can run scripts to complete any of the following actions programmatically:
 
 
 ## Pre-defined dashboards
-{: #predefined}
+{: #dashboards_predefined}
 
 Pre-defined dashboards are designed around various supported applications, network topologies, infrastructure layouts, and services. 
 
@@ -54,17 +54,17 @@ The following table lists the different types of pre-defined dashboards:
 
 | Type | Description | More information | 
 |------|-------------|------------------|
-| Applications | Dashboards that you can use to monitor your applications and infrastructure components.  | [Application dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#applications) |
-| Host and containers | Dashboards that you can use to monitor resource utilization and system activity on your hosts and in your containers. | [Host and container dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#host_container) |
-| Network | Dashboards that you can use to monitor your network connections and activity. | [Network dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#network) |
-| Service | Dashboards that you can use to monitor the performance of your services, even if those services are deployed in orchestrated containers. | [Service dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#service) |
-| Topology | Dashboards that you can use to monitor the logical dependencies of your application tiers and overlay metrics. | [Topology dashboards](/docs/services/Monitoring-with-Sysdig/default_dashboards.html#topology) |
+| Applications | Dashboards that you can use to monitor your applications and infrastructure components.  | [Application dashboards](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-default_dashboards#default_dashboards_applications) |
+| Host and containers | Dashboards that you can use to monitor resource utilization and system activity on your hosts and in your containers. | [Host and container dashboards](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-default_dashboards#default_dashboards_host_container) |
+| Network | Dashboards that you can use to monitor your network connections and activity. | [Network dashboards](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-default_dashboards#default_dashboards_network) |
+| Service | Dashboards that you can use to monitor the performance of your services, even if those services are deployed in orchestrated containers. | [Service dashboards](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-default_dashboards#default_dashboards_service) |
+| Topology | Dashboards that you can use to monitor the logical dependencies of your application tiers and overlay metrics. | [Topology dashboards](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-default_dashboards#default_dashboards_topology) |
 {: caption="Table 1. List of pre-defined dashboards" caption-side="top"} 
 
 
 
 ## Creating custom dashboards in the Web UI
-{: #create}
+{: #dashboards_create}
 
 When you create a custom dashboard, you can start from a template such as a pre-defined dashboard, or choose a blank dashboard. A dashboard includes panels that are configured to display specific data in a number of different formats. You also set how data is aggregated. The **scope** defines what data is used for aggregation and displayed. You can set the scope at a dashboard level, or override for individual panels. 
 
@@ -108,7 +108,7 @@ Complete the following steps to create a custom dashboard:
 
 
 ## Changing the scope
-{: #scope}
+{: #dashboards_scope}
 
 Instead of changing the scope of a pre-defined dashboard, copy the dashboard and change the scope in the copied dashboard.
 {: tip}
@@ -135,7 +135,7 @@ Complete the following steps to change the scope of a dashboard:
 
 
 ## Copying a dashboard
-{: #copy}
+{: #dashboards_copy}
 
 When you copy a dashboard, you create a duplicate.
 
@@ -165,7 +165,7 @@ Complete the following steps to copy a dashboard in the Web UI:
     5. Check that the scope of the dashboard in the new team is updated based on the permissions of the destination team.
 
 ## Deleting a dashboard
-{: #delete}
+{: #dashboards_delete}
 
 Complete the following steps to delete a dashboard in the Web UI:
 
@@ -176,16 +176,16 @@ Complete the following steps to delete a dashboard in the Web UI:
 
 
 ## Sharing a dashboard
-{: #share}
+{: #dashboards_share}
 
 You can share dashboards between users in a team, and externally, by configuring a public URL for the dashboard.  
 
 The following table outlines the different actions and user permissions that are required for users to share or work with a shared dashboard:
 
-| Action                  |	Who can share             |	Dashboard instance	            | Who can view the dashboard             | Who can edit the dashboard  |
-|-------------------------|---------------------------|---------------------------------|----------------------------------------|-----------------------------|
+| Action      |	Who can share        |	Dashboard instance	       | Who can view the dashboard        | Who can edit the dashboard  |
+|-------------|-------------------|-----------------------------|------------------------------------|-----------------------------|
 | Share with current Team |	Dashboard creator         |	Share same dashboard instance   | Team members with viewing permissions  | Team members with editing permissions   |
-| Share publicly as URL	  | Any Edit User of the team |	Share same dashboard instance   | Anyone                                 | No one                      |
+| Share publicly as URL	  | Any Edit User of the team |	Share same dashboard instance   | Anyone     | No one                      |
 {: caption="Table 3. Information about users and dashboards related to sharing dashboards" caption-side="top"} 
 
 
@@ -207,21 +207,21 @@ Share a dashboard externally to allow external users to view the dashboard metri
 
 
 ## Managing dashboards programmatically
-{: #programmatically}
+{: #dashboards_programmatically}
 
 Use the Sysdig REST API to automate routine tasks and monitor notifications. You can also use the Sysdig Python library. 
 
 **Note:** The Python library exposes part of the Sysdig REST API functionality. 
 
 
-When you use the API from your custom scripts or programs, you must use a Sysdig token to authenticate with the IBM Cloud Monitoring with Sysdig instance. For more information, see [Working with the Sysdig API token](/docs/services/Monitoring-with-Sysdig/api_token.html#api_token).
+When you use the API from your custom scripts or programs, you must use a Sysdig token to authenticate with the IBM Cloud Monitoring with Sysdig instance. For more information, see [Working with API tokens](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token).
 
 
-| Task                    |	Using Python script             | Using REST API                |
-|-------------------------|---------------------------------|-------------------------------|
-| Create a dashboard      | [Creating custom dashboards](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#create_python) | [Creating a dashboard by using the API](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#create_api) |
-| Delete a dashboard      | [Deleting a dashboard](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#delete_python) | [Deleting a dashboard by using the API](/docs/services/Monitoring-with-Sysdig/Monitoring-with-Sysdig#delete_api) |
-| Saving dashboards       | [Saving dashboards for a team by using a python script](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_python) | [Saving the dashboards of a team by using the API](/docs/services/Monitoring-with-Sysdig/sysdig_python_lib.html#save_api) |
+| Task                    | Using REST API                |
+|-------------------------|-------------------------------|
+| Create a dashboard      | [Creating a dashboard by using the API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_create_dashboard) |
+| Delete a dashboard      | [Deleting a dashboard by using the API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_delete_dashboard) |
+| Saving dashboards       | [Saving the dashboards of a team by using the API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_save_dashboard) |
 {: caption="Table 4. Tasks to manage dashboards programmatically" caption-side="top"} 
 
 

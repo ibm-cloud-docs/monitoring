@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years: 2018, 2019
+lastupdated: "2019-02-18"
 
 ---
 
@@ -25,11 +25,11 @@ An administrator or a manager of an IBM Cloud Monitoring with Sysdig instance mu
 {: tip}
 
 ## Creating a team
-{: #create}
+{: #teams_create}
 
 Complete the following steps to create a team:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
 
@@ -64,11 +64,11 @@ Complete the following steps to create a team:
 
 
 ## Changing the scope of a team
-{: #scope}
+{: #teams_scope}
 
 To change the scope of the data that is visible to members of a team, complete the following steps: 
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
 
@@ -82,11 +82,11 @@ To change the scope of the data that is visible to members of a team, complete t
 
 
 ## Adding users to a team
-{: #users}
+{: #teams_users}
 
 To add members to a team, complete the following steps: 
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
 
@@ -100,13 +100,13 @@ To add members to a team, complete the following steps:
 
 
 ## Deleting a team
-{: #delete}
+{: #teams_delete}
 
 The default team, **Monitor Operations**, cannot be deleted. 
 
 Complete the following steps to delete a team:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig/launch.html#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
 
