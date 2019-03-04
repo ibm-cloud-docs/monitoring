@@ -38,24 +38,24 @@ The following table lists the minimum policies that a user must have to be able 
 For more information on how to configure these policies for a user, see [Granting permissions to a user to view metrics](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_work#user_sysdig).
 
 
-## Launch the web UI through the {{site.data.keyword.Bluemix_notm}} UI
+## Launch the web UI through the {{site.data.keyword.cloud_notm}} UI
 {: #launch_step2}
 
-You launch the Web UI within the context of an {{site.data.keyword.mon_full_notm}} instance, from the {{site.data.keyword.Bluemix_notm}} UI. 
+You launch the Web UI within the context of an {{site.data.keyword.mon_full_notm}} instance, from the {{site.data.keyword.cloud_notm}} UI. 
 
 Complete the following steps to launch the web UI:
 
-1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com  ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com ){:new_window}.
+    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
 
-	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} Dashboard opens.
+	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
 2. In the navigation menu, select **Observability**. 
 
 3. Select **Monitoring**. 
 
-    The list of instances that are available on {{site.data.keyword.Bluemix_notm}} is displayed.
+    The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
 4. Select one instance. Then, click **View Sysdig**.
 

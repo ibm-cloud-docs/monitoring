@@ -21,7 +21,7 @@ lastupdated: "2019-02-18"
 You can remove an instance of the IBM Cloud Monitoring with Sysdig service from the {{site.data.keyword.Bluemix}} UI or through the command line.
 {:shortdesc}
 
-When you remove an instance from the {{site.data.keyword.Bluemix_notm}}, consider the following information to tidy up:
+When you remove an instance from the {{site.data.keyword.cloud_notm}}, consider the following information to tidy up:
 
 1. Write down the list of sources that forward metrics to the IBM Cloud Monitoring with Sysdig instance that you want to remove. You must remove the Sysdig agent from each source.
 2. Remove permissions granted to users to work with the instance. 
@@ -33,19 +33,19 @@ When you remove an instance from the {{site.data.keyword.Bluemix_notm}}, conside
     If you have granted individual policies to users, you must gather the information of each user that has access, and remove one by one the policies that relate to the instance that you want to delete.
 
 
-Then, delete the instance from the {{site.data.keyword.Bluemix_notm}} Dashboard.
+Then, delete the instance from the {{site.data.keyword.cloud_notm}} Dashboard.
 
 
-## Removing an instance through the {{site.data.keyword.Bluemix_notm}} UI
+## Removing an instance through the {{site.data.keyword.cloud_notm}} UI
 {: #remove_ui}
 
-To remove an instance of IBM Cloud Monitoring with Sysdig by using the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
+To remove an instance of IBM Cloud Monitoring with Sysdig by using the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
-1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com){:new_window}.
+    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
 
-	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} UI opens.
+	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 
 2. Select **Observability**. 
 
@@ -61,13 +61,13 @@ To remove an instance of IBM Cloud Monitoring with Sysdig by using the {{site.da
 
 To remove an instance of IBM Cloud Monitoring with Sysdig through the command line, complete the following steps:
 
-1. [Pre-requisite] Install the {{site.data.keyword.Bluemix_notm}} CLI.
+1. [Pre-requisite] Install the {{site.data.keyword.cloud_notm}} CLI.
 
-   For more information, see [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+   For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
    If the CLI is installed, continue with the next step.
 
-2. Log in to the region in the {{site.data.keyword.Bluemix_notm}} where you want to provision the instance. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
+2. Log in to the region in the {{site.data.keyword.cloud_notm}} where you want to provision the instance. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
 3. Set the resource group where the instance is provisioned. Run the following command: [`ibmcloud target`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_target)
 
