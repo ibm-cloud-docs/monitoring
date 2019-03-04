@@ -22,9 +22,9 @@ lastupdated: "2019-02-12"
 IBM Cloud Monitoring with Sysdig is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.Bluemix}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. IBM Cloud Monitoring with Sysdig is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
 {:shortdesc}
 
-The following figure shows the components overview for the IBM Cloud Monitoring with Sysdig service that is running on {{site.data.keyword.Bluemix_notm}}:
+The following figure shows the components overview for the IBM Cloud Monitoring with Sysdig service that is running on {{site.data.keyword.cloud_notm}}:
 
-![IBM Cloud Monitoring with Sysdig component overview on the {{site.data.keyword.Bluemix_notm}}](images/components.png "IBM Cloud Monitoring with Sysdig component overview on the {{site.data.keyword.Bluemix_notm}}")
+![IBM Cloud Monitoring with Sysdig component overview on the {{site.data.keyword.cloud_notm}}](images/components.png "IBM Cloud Monitoring with Sysdig component overview on the {{site.data.keyword.cloud_notm}}")
 
 
 ## Features
@@ -36,7 +36,7 @@ IBM Cloud Monitoring with Sysdig offers deep visibility into your infrastructure
 
 **Control the cost of your monitoring infrastructure.**
 
-IBM Cloud Monitoring with Sysdig includes functionality that help you control the cost of your monitoring infrastructure in the {{site.data.keyword.Bluemix_notm}}. You can configure the metric sources for which you want to monitor their performance. You can enable a pre-defined alert to warn you of usage changes that will impact your billing. 
+IBM Cloud Monitoring with Sysdig includes functionality that help you control the cost of your monitoring infrastructure in the {{site.data.keyword.cloud_notm}}. You can configure the metric sources for which you want to monitor their performance. You can enable a pre-defined alert to warn you of usage changes that will impact your billing. 
 
 **Explore and visualize easily your entire environment.**
 
@@ -54,7 +54,7 @@ IBM Cloud Monitoring with Sysdig includes alerts and multi-channel notifications
 ## Before you begin
 {: #prereqs}
 
-You must have a user ID that is a member or an owner of an {{site.data.keyword.Bluemix_notm}} account. To get an {{site.data.keyword.Bluemix_notm}} user ID, go to: [Registration ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/registration/){:new_window}.
+You must have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
 The service is currently available in US South. Complete any getting started steps in the US-South region.
 
@@ -62,14 +62,14 @@ The service is currently available in US South. Complete any getting started ste
 ## Step 1: Manage user access
 {: #step1}
 
-Every user that accesses the IBM Cloud Monitoring with Sysdig service in your account must be assigned an access policy with an IAM user role defined. The policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.Bluemix_notm}}](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam#iam).
+Every user that accesses the IBM Cloud Monitoring with Sysdig service in your account must be assigned an access policy with an IAM user role defined. The policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.cloud_notm}}](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam#iam).
 
-When a user is granted permissions in the {{site.data.keyword.Bluemix_notm}} to work with the IBM Cloud Monitoring with Sysdig service, the user is automatically granted a Sysdig role. This role determines the actions that a user has permissions to run. Valid roles are *Sysdig admin* and *Sysdig user*. For more information, see [Mapping of Sysdig roles to {{site.data.keyword.Bluemix_notm}} roles](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam#iam_sysdig).
+When a user is granted permissions in the {{site.data.keyword.cloud_notm}} to work with the IBM Cloud Monitoring with Sysdig service, the user is automatically granted a Sysdig role. This role determines the actions that a user has permissions to run. Valid roles are *Sysdig admin* and *Sysdig user*. For more information, see [Mapping of Sysdig roles to {{site.data.keyword.cloud_notm}} roles](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam#iam_sysdig).
 
 Before you can provision an instance, consider the following information:
-* The account owner can create, view, and delete an instance of a service in the {{site.data.keyword.Bluemix_notm}}, and can grant permissions to other users to work with the IBM Cloud Monitoring with Sysdig service.
+* The account owner can create, view, and delete an instance of a service in the {{site.data.keyword.cloud_notm}}, and can grant permissions to other users to work with the IBM Cloud Monitoring with Sysdig service.
 * You must have permissions to create resources in the *Default* resource group.
-* Other {{site.data.keyword.Bluemix_notm}} users with `administrator` or `editor` permissions can manage the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix_notm}}. These users must also have platform permissions to create resources within the context of the resource group where they plan to provision the instance.
+* Other {{site.data.keyword.cloud_notm}} users with `administrator` or `editor` permissions can manage the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.cloud_notm}}. These users must also have platform permissions to create resources within the context of the resource group where they plan to provision the instance.
 
 To grant a user administrator role for the service and to manage instances within a resource group in the account, the user must have an IAM policy for the IBM Cloud Monitoring with Sysdig service with the platform role **Administrator** within the context of the resource group. 
 
@@ -92,7 +92,7 @@ Complete the following steps to assign a user administrator role to the IBM Clou
 ## Step2: Provision an instance of the IBM Cloud Monitoring with Sysdig service
 {: #step2}
 
-To add monitoring features with IBM Cloud Monitoring with Sysdig in the {{site.data.keyword.Bluemix_notm}}, you must provision an instance of the IBM Cloud Monitoring with Sysdig service. 
+To add monitoring features with IBM Cloud Monitoring with Sysdig in the {{site.data.keyword.cloud_notm}}, you must provision an instance of the IBM Cloud Monitoring with Sysdig service. 
 
 When you provision an instance, your data is sent to a third party.
 {: tip}
@@ -101,15 +101,15 @@ You provision an instance within the context of a resource group. A resource gro
 
 When you provision an instance, you automatically get an ingestion key, known as the *Sysdig access key*.
 
-To provision an instance of through the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
+To provision an instance of through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
-1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com  ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com ){:new_window}.
+    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
 
-	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} UI opens.
+	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 
-2. Click **Catalog**. The list of the services that are available in {{site.data.keyword.Bluemix_notm}} opens.
+2. Click **Catalog**. The list of the services that are available in {{site.data.keyword.cloud_notm}} opens.
 
 3. To filter the list of services that is displayed, select the **Developer Tools** category.
 
@@ -125,7 +125,7 @@ To provision an instance of through the {{site.data.keyword.Bluemix_notm}} UI, c
 
 The service UI opens.
 
-**Note:** To provision an instance of Sysdig through the CLI, see [Provisioning Sysdig through the {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli).
+**Note:** To provision an instance of Sysdig through the CLI, see [Provisioning Sysdig through the {{site.data.keyword.cloud_notm}} CLI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli).
 
 
 ## Step3: Configure a Sysdig agent
@@ -148,7 +148,7 @@ Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 
 | Resource                |	Tutorial                        | Environment                | Scenario   |
 |-------------------------|---------------------------------|----------------------------|------------|
-| Containers running on the {{site.data.keyword.containershort}} |[Analyze metrics for an app that is deployed in a Kubernetes cluster](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-kubernetes_cluster#kubernetes_cluster) | {{site.data.keyword.Bluemix_notm}} Public | ![{{site.data.keyword.containershort}} and IBM Cloud Monitoring with Sysdig](images/kube.png "{{site.data.keyword.containershort}} and IBM Cloud Monitoring with Sysdig") |
+| Containers running on the {{site.data.keyword.containershort}} |[Analyze metrics for an app that is deployed in a Kubernetes cluster](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-kubernetes_cluster#kubernetes_cluster) | {{site.data.keyword.cloud_notm}} Public | ![{{site.data.keyword.containershort}} and IBM Cloud Monitoring with Sysdig](images/kube.png "{{site.data.keyword.containershort}} and IBM Cloud Monitoring with Sysdig") |
 |Linux Ubuntu/Debian | [Analyze metrics for an Ubuntu server](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-ubuntu#ubuntu) | On-premises | ![Ubuntu and IBM Cloud Monitoring with Sysdig](images/kube.png "Ubuntu and IBM Cloud Monitoring with Sysdig") |
 {: caption="Table 1. Tutorials to get started working with IBM Cloud Monitoring with Sysdig" caption-side="top"} 
 
@@ -161,21 +161,21 @@ After the Sysdig agent is deployed, collection and forwarding of metrics to the 
 
 After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for your node, you can view, monitor, and manage data through the service's web UI.
 
-You launch the web UI within the context of the Sysdig instance, from the {{site.data.keyword.Bluemix_notm}} UI. 
+You launch the web UI within the context of the Sysdig instance, from the {{site.data.keyword.cloud_notm}} UI. 
 
 Complete the following steps to launch the Sysdig web UI:
 
-1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com  ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com ){:new_window}.
+    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
 
-	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} Dashboard opens.
+	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
 2. In the navigation menu, select **Observability**. 
 
 3. Select **Monitoring**. 
 
-    The list of monitoring instances that are available on {{site.data.keyword.Bluemix_notm}} is displayed.
+    The list of monitoring instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
 4. Select one instance. Then, click **View Sysdig**.
 
