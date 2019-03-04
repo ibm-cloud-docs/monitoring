@@ -16,7 +16,7 @@ lastupdated: "2019-02-12"
 {:download: .download}
 
 
-# Getting started with IBM Cloud Monitoring with Sysdig
+# Getting started tutorial
 {: #getting-started}
 
 IBM Cloud Monitoring with Sysdig is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.Bluemix}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. IBM Cloud Monitoring with Sysdig is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
