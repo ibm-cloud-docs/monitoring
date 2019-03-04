@@ -1,11 +1,11 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Sysdig" audience="service" arm="4158185" href="/docs/services/Monitoring-with-Sysdig/index.html" path="services/Monitoring-with-Sysdig"}
+{: .toc subcollection="Sysdig" audience="service" arm="4158185" href="/docs/services/Monitoring-with-Sysdig?topic=Sysdig-getting-started#getting-started" path="services/Monitoring-with-Sysdig"}
 IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="learn"}
-    index.md
+    getting-started.md
     overview.md
     endpoints.md
     pricing.md
@@ -30,8 +30,8 @@ IBM Cloud Monitoring with Sysdig
     {: .topicgroup}
     Customizing the agent
         change_kube_agent.md
-        change_agent.md
-        chage_container_agent.md
+        change_linux_agent.md
+        change_container_agent.md
 
     launch.md
     groups.md
@@ -46,7 +46,7 @@ IBM Cloud Monitoring with Sysdig
     teams.md
     iam_work.md
     captures.md
-    sysdig_python_lib.md
+    api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -76,6 +76,7 @@ IBM Cloud Monitoring with Sysdig
     gettinghelp.md
     troubleshoot.md
     {: .navgroup-end}
+
 
 
 

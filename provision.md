@@ -28,15 +28,15 @@ To provision a Sysdig instance in a Public Cloud region, you must select the ser
 ## Provisioning a Sysdig instance from the catalog
 {: #provision_ui}
 
-To provision an instance of Sysdig from the {{site.data.keyword.Bluemix_notm}} catalog, complete the following steps:
+To provision an instance of Sysdig from the {{site.data.keyword.cloud_notm}} catalog, complete the following steps:
 
-1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com){:new_window}.
+    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
 
-	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} UI opens.
+	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 
-2. Click **Catalog**. The list of the services that are available on {{site.data.keyword.Bluemix_notm}} opens.
+2. Click **Catalog**. The list of the services that are available on {{site.data.keyword.cloud_notm}} opens.
 
 3. To filter the list of services that is displayed, select the **Developer Tools** category.
 
@@ -66,13 +66,13 @@ Next, configure a metric source by adding a Sysdig agent. This agent is responsi
 
 To provision an instance of Sysdig through the command line, complete the following steps:
 
-1. [Pre-requisite] Install the {{site.data.keyword.Bluemix_notm}} CLI.
+1. [Pre-requisite] Install the {{site.data.keyword.cloud_notm}} CLI.
 
-   For more information, see [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+   For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
    If the CLI is installed, continue with the next step.
 
-2. Log in to the region in the {{site.data.keyword.Bluemix_notm}} where you want to provision the instance. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
+2. Log in to the region in the {{site.data.keyword.cloud_notm}} where you want to provision the instance. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
 3. Set the resource group where you want to provision the instance. Run the following command: [`ibmcloud target`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_target)
 
@@ -89,7 +89,7 @@ To provision an instance of Sysdig through the command line, complete the follow
 
     * NAME is the name of the Sysdig instance
     
-    * *sysdig-monitor* is the name of the IBM Cloud Monitoring with Sysdig service name in the {{site.data.keyword.Bluemix_notm}}
+    * *sysdig-monitor* is the name of the IBM Cloud Monitoring with Sysdig service name in the {{site.data.keyword.cloud_notm}}
     
     * SERVICE_PLAN_NAME is the type of plan. Valid values are: *lite*, *graduated-tier*
     

@@ -19,7 +19,7 @@ lastupdated: "2019-02-18"
 # Analyze metrics for an app that is deployed in a Kubernetes cluster
 {: #kubernetes_cluster}
 
-Use this tutorial to learn how to configure a cluster to forward metrics to the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix_notm}}.
+Use this tutorial to learn how to configure a cluster to forward metrics to the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
 You can use the IBM Cloud Monitoring with Sysdig service to monitor Kubernetes clusters.
@@ -28,7 +28,7 @@ To configure a cluster to forward metrics, you must install an agent onto each w
 
 You view metrics via Sysdig's web-based user interface.
 
-![Components overview on the {{site.data.keyword.Bluemix_notm}}](../images/kube.png "Components overview on the {{site.data.keyword.Bluemix_notm}}")
+![Components overview on the {{site.data.keyword.cloud_notm}}](../images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}")
 
 
 
@@ -39,7 +39,7 @@ To complete the steps in this getting tutorial, instructions are  provided to pr
 
 Read about IBM Cloud Monitoring with Sysdig. For more information, see [About](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#about).
 
-Use a user ID that is a member or an owner of an {{site.data.keyword.Bluemix_notm}} account. To get an {{site.data.keyword.Bluemix_notm}} user ID, go to: [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/registration/){:new_window}.
+Use a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
 Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each of the following resources: 
 
@@ -52,21 +52,21 @@ Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each o
 
 For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
 
-Install the {{site.data.keyword.Bluemix_notm}} CLI and the Kubernetes CLI plugin. For more information, see [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+Install the {{site.data.keyword.cloud_notm}} CLI and the Kubernetes CLI plugin. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
 
 ## Step1: Provision an IBM Cloud Monitoring with Sysdig instance
 {: #kubernetes_cluster_step1}
 
-To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
+To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
-1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com  ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com ){:new_window}.
+    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
 
-	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} UI opens.
+	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 
-2. Click **Catalog**. The list of the services that are available in {{site.data.keyword.Bluemix_notm}} opens.
+2. Click **Catalog**. The list of the services that are available in {{site.data.keyword.cloud_notm}} opens.
 
 3. To filter the list of services that is displayed, select the **Developer Tools** category.
 
@@ -86,12 +86,12 @@ To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.
 
     For more information about other service plans, see [Pricing plans](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 
-9. To provision the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix_notm}} resource group where you are logged in, click **Create**.
+9. To provision the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.cloud_notm}} resource group where you are logged in, click **Create**.
 
 After you provision an instance, the *Observability* dashboard opens. 
 
 
-**Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli).
+**Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli).
 
 
 ## Step2: Configure your Kubernetes cluster to send metrics to your instance
@@ -103,7 +103,7 @@ To configure your Kubernetes cluster to send metrics to your IBM Cloud Monitorin
 
 To configure your Kubernetes cluster to forward metrics to your IBM Cloud Monitoring with Sysdig instance, complete the following steps from the command line:
 
-1. Open a terminal. Then, log in to the {{site.data.keyword.Bluemix_notm}}. Run the following command and follow the prompts:
+1. Open a terminal. Then, log in to the {{site.data.keyword.cloud_notm}}. Run the following command and follow the prompts:
 
     ```
     ibmcloud login -a api.ng.bluemix.net
@@ -125,9 +125,9 @@ To configure your Kubernetes cluster to forward metrics to your IBM Cloud Monito
 
     Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
 
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.Bluemix_notm}}.
+    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
 
-3. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
+3. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
 4. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
@@ -162,17 +162,17 @@ To configure your Kubernetes cluster to forward metrics to your IBM Cloud Monito
 
 Complete the following steps to launch the web UI:
 
-1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
-    The {{site.data.keyword.Bluemix_notm}} dashboard can be found at: [http://cloud.ibm.com  ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com ){:new_window}.
+    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
 
-	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} Dashboard opens.
+	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
 2. In the navigation menu, select **Observability**. 
 
 3. Select **Monitoring**. 
 
-    The list of instances that are available on {{site.data.keyword.Bluemix_notm}} is displayed.
+    The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
 4. Select your instance. Then, click **View Sysdig**.
 
