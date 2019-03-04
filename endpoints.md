@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-04"
 
 ---
 
@@ -59,8 +59,8 @@ The following table list the **Sysdig endpoints** that are available per region:
 
 | Region       | Endpoint                                                  | Port |
 |--------------|-----------------------------------------------------------|------|
-| `US South`   | `https://us-south.monitoring.cloud.ibm.com `              | TCP 443 |  
-| `EU-DE`      | `https://us-south.monitoring.cloud.ibm.com `              | TCP 443 |
+| `US South`   | `https://us-south.monitoring.cloud.ibm.com `              | https (TLS) 443 |  
+| `EU-DE`      | `https://us-south.monitoring.cloud.ibm.com `              | https (TLS) 443 |
 {: caption="Table 3. List of Sysdig endpoints" caption-side="top"} 
 
 
