@@ -36,11 +36,11 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 3. Deploy the Sysdig agent. Run the following command from a terminal.
 
     ```
-    curl -s https://s3.amazonaws.com/download.draios.com/stable/install-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure true --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
+    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure true --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
     ```
     {: codeblock}
 
-    where
+    Where
 
     * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
