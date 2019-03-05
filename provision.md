@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: monitoring, provision instance
+
+subcollection: Sysdig
 
 ---
 
@@ -14,6 +18,8 @@ lastupdated: "2019-02-18"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 # Provisioning an instance
 {: #provision}
@@ -40,7 +46,7 @@ To provision an instance of Sysdig from the {{site.data.keyword.cloud_notm}} cat
 
 3. To filter the list of services that is displayed, select the **Developer Tools** category.
 
-4. Click the **IBM Cloud Monitoring with Sysdig** tile. The *Observability* dashboard opens.
+4. Click the **{{site.data.keyword.mon_full_notm}}** tile. The *Observability* dashboard opens.
 
 5. Select **Create instance**. 
 
@@ -89,7 +95,7 @@ To provision an instance of Sysdig through the command line, complete the follow
 
     * NAME is the name of the Sysdig instance
     
-    * *sysdig-monitor* is the name of the IBM Cloud Monitoring with Sysdig service name in the {{site.data.keyword.cloud_notm}}
+    * *sysdig-monitor* is the name of the {{site.data.keyword.mon_full_notm}} service name in the {{site.data.keyword.cloud_notm}}
     
     * SERVICE_PLAN_NAME is the type of plan. Valid values are: *lite*, *graduated-tier*
     

@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-03"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: monitoring, notification channel
+
+subcollection: Sysdig
 
 ---
 
@@ -14,6 +18,8 @@ lastupdated: "2018-12-03"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 
 # Working with notification channels

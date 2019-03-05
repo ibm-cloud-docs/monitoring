@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-12"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: monitoring, getting started
+
+subcollection: Sysdig
 
 ---
 
@@ -14,17 +18,19 @@ lastupdated: "2019-02-12"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 
 # Getting started tutorial
 {: #getting-started}
 
-IBM Cloud Monitoring with Sysdig is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. IBM Cloud Monitoring with Sysdig is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.mon_full_notm}} is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
 {:shortdesc}
 
-The following figure shows the components overview for the IBM Cloud Monitoring with Sysdig service that is running on {{site.data.keyword.cloud_notm}}:
+The following figure shows the components overview for the {{site.data.keyword.mon_full_notm}} service that is running on {{site.data.keyword.cloud_notm}}:
 
-![IBM Cloud Monitoring with Sysdig component overview on the {{site.data.keyword.cloud_notm}}](images/components.png "IBM Cloud Monitoring with Sysdig component overview on the {{site.data.keyword.cloud_notm}}")
+![{{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}](images/components.png "{{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}")
 
 
 ## Features
@@ -32,23 +38,23 @@ The following figure shows the components overview for the IBM Cloud Monitoring 
 
 **Accelerate the diagnosis and resolution of performance incidents.**
 
-IBM Cloud Monitoring with Sysdig offers deep visibility into your infrastructure and applications with the ability to troubleshoot from service level all the way down to the system level. Pre-defined dashboards and alerts simplify identification of potential threats or problems. By using IBM Cloud Monitoring with Sysdig, developers and DevOps teams monitor and troubleshoot performance issues in real-time, identify the source of errors, and eliminate problems. 
+{{site.data.keyword.mon_full_notm}} offers deep visibility into your infrastructure and applications with the ability to troubleshoot from service level all the way down to the system level. Pre-defined dashboards and alerts simplify identification of potential threats or problems. By using {{site.data.keyword.mon_full_notm}}, developers and DevOps teams monitor and troubleshoot performance issues in real-time, identify the source of errors, and eliminate problems. 
 
 **Control the cost of your monitoring infrastructure.**
 
-IBM Cloud Monitoring with Sysdig includes functionality that help you control the cost of your monitoring infrastructure in the {{site.data.keyword.cloud_notm}}. You can configure the metric sources for which you want to monitor their performance. You can enable a pre-defined alert to warn you of usage changes that will impact your billing. 
+{{site.data.keyword.mon_full_notm}} includes functionality that help you control the cost of your monitoring infrastructure in the {{site.data.keyword.cloud_notm}}. You can configure the metric sources for which you want to monitor their performance. You can enable a pre-defined alert to warn you of usage changes that will impact your billing. 
 
 **Explore and visualize easily your entire environment.**
 
-IBM Cloud Monitoring with Sysdig makes it easy to visually explore your environment. Dynamic topology maps provide a view of dependencies between services. Multi-dimensional queries across high churn, high cardinality, high frequency metrics accelerate troubleshooting. Customizable dashboards allow you to visualize what matters most. 
+{{site.data.keyword.mon_full_notm}} makes it easy to visually explore your environment. Dynamic topology maps provide a view of dependencies between services. Multi-dimensional queries across high churn, high cardinality, high frequency metrics accelerate troubleshooting. Customizable dashboards allow you to visualize what matters most. 
 
 **Get critical Kubernetes and container insights for dynamic microservice monitoring.**
 
-IBM Cloud Monitoring with Sysdig auto-discovers Kubernetes environments providing out-of-the-box dashboards and alerts for clusters, nodes, namespaces, services, deployments, pods and more. A single agent per node dynamically discovers all microservices and auto-collects metrics and events from various sources including Kubernetes, hosts, networks, containers, processes, applications and custom metrics like Prometheus, JMX, and StatsD. 
+{{site.data.keyword.mon_full_notm}} auto-discovers Kubernetes environments providing out-of-the-box dashboards and alerts for clusters, nodes, namespaces, services, deployments, pods and more. A single agent per node dynamically discovers all microservices and auto-collects metrics and events from various sources including Kubernetes, hosts, networks, containers, processes, applications and custom metrics like Prometheus, JMX, and StatsD. 
 
 **Mitigate the impact of abnormal situations with proactive notifications.**
 
-IBM Cloud Monitoring with Sysdig includes alerts and multi-channel notifications that you can use to reduce the impact on your day to day operations and accelerate your reaction and response time to anomalies, downtime, and performance degradation. Notification channels that you can easily configure include *email*, *slack*, *PagerDuty*, *Webhooks*, *OpsGenie*, and *VictorOps*.
+{{site.data.keyword.mon_full_notm}} includes alerts and multi-channel notifications that you can use to reduce the impact on your day to day operations and accelerate your reaction and response time to anomalies, downtime, and performance degradation. Notification channels that you can easily configure include *email*, *slack*, *PagerDuty*, *Webhooks*, *OpsGenie*, and *VictorOps*.
 
 
 ## Before you begin
@@ -62,18 +68,18 @@ The service is currently available in US South. Complete any getting started ste
 ## Step 1: Manage user access
 {: #step1}
 
-Every user that accesses the IBM Cloud Monitoring with Sysdig service in your account must be assigned an access policy with an IAM user role defined. The policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.cloud_notm}}](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam#iam).
+Every user that accesses the {{site.data.keyword.mon_full_notm}} service in your account must be assigned an access policy with an IAM user role defined. The policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.cloud_notm}}](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam#iam).
 
-When a user is granted permissions in the {{site.data.keyword.cloud_notm}} to work with the IBM Cloud Monitoring with Sysdig service, the user is automatically granted a Sysdig role. This role determines the actions that a user has permissions to run. Valid roles are *Sysdig admin* and *Sysdig user*. For more information, see [Mapping of Sysdig roles to {{site.data.keyword.cloud_notm}} roles](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam#iam_sysdig).
+When a user is granted permissions in the {{site.data.keyword.cloud_notm}} to work with the {{site.data.keyword.mon_full_notm}} service, the user is automatically granted a Sysdig role. This role determines the actions that a user has permissions to run. Valid roles are *Sysdig admin* and *Sysdig user*. For more information, see [Mapping of Sysdig roles to {{site.data.keyword.cloud_notm}} roles](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam#iam_sysdig).
 
 Before you can provision an instance, consider the following information:
-* The account owner can create, view, and delete an instance of a service in the {{site.data.keyword.cloud_notm}}, and can grant permissions to other users to work with the IBM Cloud Monitoring with Sysdig service.
+* The account owner can create, view, and delete an instance of a service in the {{site.data.keyword.cloud_notm}}, and can grant permissions to other users to work with the {{site.data.keyword.mon_full_notm}} service.
 * You must have permissions to create resources in the *Default* resource group.
-* Other {{site.data.keyword.cloud_notm}} users with `administrator` or `editor` permissions can manage the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.cloud_notm}}. These users must also have platform permissions to create resources within the context of the resource group where they plan to provision the instance.
+* Other {{site.data.keyword.cloud_notm}} users with `administrator` or `editor` permissions can manage the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}. These users must also have platform permissions to create resources within the context of the resource group where they plan to provision the instance.
 
-To grant a user administrator role for the service and to manage instances within a resource group in the account, the user must have an IAM policy for the IBM Cloud Monitoring with Sysdig service with the platform role **Administrator** within the context of the resource group. 
+To grant a user administrator role for the service and to manage instances within a resource group in the account, the user must have an IAM policy for the {{site.data.keyword.mon_full_notm}} service with the platform role **Administrator** within the context of the resource group. 
 
-Complete the following steps to assign a user administrator role to the IBM Cloud Monitoring with Sysdig service within the context of a resource group: 
+Complete the following steps to assign a user administrator role to the {{site.data.keyword.mon_full_notm}} service within the context of a resource group: 
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and then select **Users**.
 2. From the row for the user that you want to assign access, select the **Actions** menu, and then click **Assign access**.
@@ -83,21 +89,21 @@ Complete the following steps to assign a user administrator role to the IBM Clou
 
     Depending on the role that you select, the user can view the resource group on their dashboard, edit the resource group name, or manage user access to the group. 
     
-    You can select **No access**, if you want the user to only have access to the IBM Cloud Monitoring with Sysdig service in the resource group.
+    You can select **No access**, if you want the user to only have access to the {{site.data.keyword.mon_full_notm}} service in the resource group.
 
-6. Select **IBM Cloud Monitoring with Sysdig**.
+6. Select **{{site.data.keyword.mon_full_notm}}**.
 7. Select the platform role **Administrator**.
 8. Click **Assign**.
 
-## Step2: Provision an instance of the IBM Cloud Monitoring with Sysdig service
+## Step2: Provision an instance of the {{site.data.keyword.mon_full_notm}} service
 {: #step2}
 
-To add monitoring features with IBM Cloud Monitoring with Sysdig in the {{site.data.keyword.cloud_notm}}, you must provision an instance of the IBM Cloud Monitoring with Sysdig service. 
+To add monitoring features with {{site.data.keyword.mon_full_notm}} in the {{site.data.keyword.cloud_notm}}, you must provision an instance of the {{site.data.keyword.mon_full_notm}} service. 
 
 When you provision an instance, your data is sent to a third party.
 {: tip}
 
-You provision an instance within the context of a resource group. A resource group lets you organize your services for access control and billing purposes. You can provision the IBM Cloud Monitoring with Sysdig instance in the *default* resource group or in a custom resource group.
+You provision an instance within the context of a resource group. A resource group lets you organize your services for access control and billing purposes. You can provision the {{site.data.keyword.mon_full_notm}} instance in the *default* resource group or in a custom resource group.
 
 When you provision an instance, you automatically get an ingestion key, known as the *Sysdig access key*.
 
@@ -113,7 +119,7 @@ To provision an instance of through the {{site.data.keyword.cloud_notm}} UI, com
 
 3. To filter the list of services that is displayed, select the **Developer Tools** category.
 
-4. Click the **IBM Cloud Monitoring with Sysdig** tile.
+4. Click the **{{site.data.keyword.mon_full_notm}}** tile.
 
 5. Select a service plan. By default, the **Trial** plan is set.
 
@@ -148,9 +154,9 @@ Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 
 | Resource                |	Tutorial                        | Environment                | Scenario   |
 |-------------------------|---------------------------------|----------------------------|------------|
-| Containers running on the {{site.data.keyword.containershort}} |[Analyze metrics for an app that is deployed in a Kubernetes cluster](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-kubernetes_cluster#kubernetes_cluster) | {{site.data.keyword.cloud_notm}} Public | ![{{site.data.keyword.containershort}} and IBM Cloud Monitoring with Sysdig](images/kube.png "{{site.data.keyword.containershort}} and IBM Cloud Monitoring with Sysdig") |
-|Linux Ubuntu/Debian | [Analyze metrics for an Ubuntu server](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-ubuntu#ubuntu) | On-premises | ![Ubuntu and IBM Cloud Monitoring with Sysdig](images/kube.png "Ubuntu and IBM Cloud Monitoring with Sysdig") |
-{: caption="Table 1. Tutorials to get started working with IBM Cloud Monitoring with Sysdig" caption-side="top"} 
+| Containers running on the {{site.data.keyword.containershort}} |[Analyze metrics for an app that is deployed in a Kubernetes cluster](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-kubernetes_cluster#kubernetes_cluster) | {{site.data.keyword.cloud_notm}} Public | ![{{site.data.keyword.containershort}} and {{site.data.keyword.mon_full_notm}}](images/kube.png "{{site.data.keyword.containershort}} and {{site.data.keyword.mon_full_notm}}") |
+|Linux Ubuntu/Debian | [Analyze metrics for an Ubuntu server](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-ubuntu#ubuntu) | On-premises | ![Ubuntu and {{site.data.keyword.mon_full_notm}}](images/kube.png "Ubuntu and {{site.data.keyword.mon_full_notm}}") |
+{: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"} 
 
 For more information, see [Configuring a Sysdig agent](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-config_agent#config_agent) and [Removing a Sysdig agent](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-remove#remove).
 
@@ -159,7 +165,7 @@ After the Sysdig agent is deployed, collection and forwarding of metrics to the 
 ## Step 4: Launch the web UI
 {: #step4}
 
-After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for your node, you can view, monitor, and manage data through the service's web UI.
+After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for your node, you can view, monitor, and manage data through the service's web UI.
 
 You launch the web UI within the context of the Sysdig instance, from the {{site.data.keyword.cloud_notm}} UI. 
 
@@ -179,9 +185,9 @@ Complete the following steps to launch the Sysdig web UI:
 
 4. Select one instance. Then, click **View Sysdig**.
 
-The IBM Cloud Monitoring with Sysdig Web UI opens. By default, the *Explore* tab is displayed.
+The {{site.data.keyword.mon_full_notm}} Web UI opens. By default, the *Explore* tab is displayed.
 
-By default, users are automatically added as members of the **Monitor Operations** team that is predefined for each IBM Cloud Monitoring with Sysdig instance. Users have full permissions to see all the data in the web UI. **Note:** An administrator can restrict access to data by managing users in teams and controlling what data is visible. For example, to restrict users viewing permissions, an administrator can create a default team with limited scope and visibility. Then, manually assign users to other teams. For more information, see [Working with teams](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams).
+By default, users are automatically added as members of the **Monitor Operations** team that is predefined for each {{site.data.keyword.mon_full_notm}} instance. Users have full permissions to see all the data in the web UI. **Note:** An administrator can restrict access to data by managing users in teams and controlling what data is visible. For example, to restrict users viewing permissions, an administrator can create a default team with limited scope and visibility. Then, manually assign users to other teams. For more information, see [Working with teams](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams).
 
 
 ## Step 5: Monitor your environment
@@ -214,7 +220,7 @@ For more information, see [Managing data](/docs/services/Monitoring-with-Sysdig?
 ## Next steps: Configure alerts and explore events
 {: #next}
 
-You can use events to review, track, and resolve issues. An event is a notification that informs about something that has occurred in any of the nodes that forward data to your IBM Cloud Monitoring with Sysdig instance. 
+You can use events to review, track, and resolve issues. An event is a notification that informs about something that has occurred in any of the nodes that forward data to your {{site.data.keyword.mon_full_notm}} instance. 
 
 There are different types of events: 
 

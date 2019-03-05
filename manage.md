@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: monitoring, manage
+
+subcollection: Sysdig
 
 ---
 
@@ -14,6 +18,8 @@ lastupdated: "2019-02-18"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 # Managing data
 {: #manage}
@@ -148,13 +154,13 @@ A Sysdig administrator can define any number of teams. For each team, he can con
 * The scope: You can limit what data users can see. You can choose *Host* or *Container* to define the level of data that is visible. Then, you can add one or more conditions. If the scope is set to *Host*, users can see all host-level and container-level information. If the scope is set to *Container*, users can see only container-level information.
 * Permissions: You can enable or disable the following features: *Sysdig captures*, and *infrastructure events*. Capture files will only be visible to members of the team. **Note:** Captures include detailed information from every container on a host, regardless of the team’s scope. When infrastructure events is enabled, users can view all custom infrastructure events from every user and Sysdig agent in the instance.
 
-By default, there is a **Monitor Operations** team that is predefined for each IBM Cloud Monitoring with Sysdig instance.
+By default, there is a **Monitor Operations** team that is predefined for each {{site.data.keyword.mon_full_notm}} instance.
 * This team cannot be deleted.
 * Users are automatically added as members of this team and granted full visibility on all the resources that are available in the instance. 
 
 **Note:** 
 * An administrator must switch to the *Monitor Operations* team before he can create teams or change the settings for others teams.
-* After a user logs in to the {{site.data.keyword.Bluemix_notm}} and launches the Sysdig web UI, an administrator can manage that user in the Sysdig web UI. The user is created in the Sysdig database when the user logs in to the Sysdig web UI for the first time. 
+* After a user logs in to the {{site.data.keyword.cloud_notm}} and launches the Sysdig web UI, an administrator can manage that user in the Sysdig web UI. The user is created in the Sysdig database when the user logs in to the Sysdig web UI for the first time. 
 
 To restrict users viewing permissions, an administrator can do any of the following actions:
 * Change the user's role in the default *Monitor Operations* team to *Read* User. 

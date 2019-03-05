@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-03-04"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: monitoring, regions, endpoints
+
+subcollection: Sysdig
 
 ---
 
@@ -14,18 +18,20 @@ lastupdated: "2019-03-04"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 
 # Regions and endpoints
 {: #endpoints}
 
-List of supported regions and endpoints for the IBM Cloud Monitoring with Sysdig service:
+List of supported regions and endpoints for the {{site.data.keyword.mon_full_notm}} service:
 {:shortdesc}
 
 ## Regions
 {: #endpoints_regions}
 
-The IBM Cloud Monitoring with Sysdig service is available in the following regions:
+The {{site.data.keyword.mon_full_notm}} service is available in the following regions:
 
 | Region                | Location  | 
 |-----------------------|-----------|

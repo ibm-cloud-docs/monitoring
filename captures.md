@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: monitoring, captures
+
+subcollection: Sysdig
 
 ---
 
@@ -14,11 +18,13 @@ lastupdated: "2019-02-18"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 # Working with captures
 {: #captures}
 
-A capture is a trace file that you can generate to analyze what happens in a host during a time frame. For example, you can use it to analyze bottlenecks, or component interactions. In the IBM Cloud Monitoring with Sysdig service, you can create, explore, download, and delete *captures* for individual nodes. 
+A capture is a trace file that you can generate to analyze what happens in a host during a time frame. For example, you can use it to analyze bottlenecks, or component interactions. In the {{site.data.keyword.mon_full_notm}} service, you can create, explore, download, and delete *captures* for individual nodes. 
 {:shortdesc}
 
 For more information, see [Captures](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).

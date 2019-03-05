@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: monitoring, troubleshooting
+
+subcollection: Sysdig
 
 ---
 
@@ -16,10 +20,10 @@ lastupdated: "2019-02-18"
 {:pre: .pre}
 {:note:.deprecated}
 
-# Troubleshooting for IBM Cloud Monitoring with Sysdig
+# Troubleshooting for {{site.data.keyword.mon_full_notm}}
 {: #troubleshoot}
 
-General problems with using IBM Cloud Monitoring with Sysdig might include xxx or xxx. In many cases, you can recover from these problems by following a few easy steps.
+This topic covers general problems that you may encounter when you use the {{site.data.keyword.mon_full_notm}} service. In many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
 
 ## Are you getting an error creating a capture?

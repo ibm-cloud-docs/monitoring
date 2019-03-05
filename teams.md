@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: monitoring, teams
+
+subcollection: Sysdig
 
 ---
 
@@ -14,14 +18,16 @@ lastupdated: "2019-02-18"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 # Working with teams
 {: #teams}
 
-An administrator or a manager of an IBM Cloud Monitoring with Sysdig instance can create, delete, add members, and change the scope of teams in that instance. 
+An administrator or a manager of an {{site.data.keyword.mon_full_notm}} instance can create, delete, add members, and change the scope of teams in that instance. 
 {:shortdesc} 
 
-An administrator or a manager of an IBM Cloud Monitoring with Sysdig instance must switch to the *Monitor Operations* team before he can create teams and manage existing teams.
+An administrator or a manager of an {{site.data.keyword.mon_full_notm}} instance must switch to the *Monitor Operations* team before he can create teams and manage existing teams.
 {: tip}
 
 ## Creating a team
