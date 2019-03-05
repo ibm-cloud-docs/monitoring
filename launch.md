@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2019
 lastupdated: "2019-03-06"
 
-keywords: monitoring, launch web UI
+keywords: Sysdig, IBM Cloud, monitoring, launch web UI
 
 subcollection: Sysdig
 

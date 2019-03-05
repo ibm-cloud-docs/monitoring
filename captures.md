@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2019
 lastupdated: "2019-03-06"
 
-keywords: monitoring, captures
+keywords: Sysdig, IBM Cloud, monitoring, captures
 
 subcollection: Sysdig
 

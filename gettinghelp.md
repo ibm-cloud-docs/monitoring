@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2019
 lastupdated: "2019-03-06"
 
-keywords: monitoring, support, help
+keywords: Sysdig, IBM Cloud, monitoring, support, help
 
 subcollection: Sysdig
 

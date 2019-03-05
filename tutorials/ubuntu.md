@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2019
 lastupdated: "2019-03-06"
 
-keywords: monitoring, ubuntu, analyze metrics
+keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
 subcollection: Sysdig
 

@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2019
 lastupdated: "2019-03-06"
 
-keywords: monitoring, sysdig rest api
+keywords: Sysdig, IBM Cloud, monitoring, sysdig rest api
 
 subcollection: Sysdig
 

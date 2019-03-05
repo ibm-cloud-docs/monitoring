@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2019
 lastupdated: "2019-03-06"
 
-keywords: monitoring,  predefined dashboards
+keywords: Sysdig, IBM Cloud, monitoring,  predefined dashboards
 
 subcollection: Sysdig
 

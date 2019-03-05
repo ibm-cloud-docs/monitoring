@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2019
 lastupdated: "2019-03-06"
 
-keywords: monitoring, customize, linux agent
+keywords: Sysdig, IBM Cloud, monitoring, customize, linux agent
 
 subcollection: Sysdig
 
