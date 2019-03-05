@@ -207,7 +207,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     To add a cluster role binding, run the following command:
 
     ```
-    kubectl create clusterrolebinding sysdig-agent --clusterrole=sysdig-agent --serviceaccount=default:sysdig-agent -n ibm-observe
+    kubectl create clusterrolebinding sysdig-agent --clusterrole=sysdig-agent --serviceaccount=ibm-observe:sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -241,7 +241,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
      data:
        dragent.yaml: |
        tags: linux:ubuntu,dept:dev,local:nyc
-       collector: us-south.monitoring.cloud.ibm.com
+       collector: ingest.us-south.monitoring.cloud.ibm.com
        collector_port: 6443
        ssl: true
        new_k8s: true
