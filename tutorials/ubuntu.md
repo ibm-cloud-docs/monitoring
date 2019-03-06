@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
+
+subcollection: Sysdig
 
 ---
 
@@ -14,15 +18,17 @@ lastupdated: "2019-02-18"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 
 # Analyze metrics for an Ubuntu host
 {: #ubuntu}
 
-Use this tutorial to learn how to configure an Ubuntu host to forward metrics to the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.cloud_notm}}.
+Use this tutorial to learn how to configure an Ubuntu host to forward metrics to the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
-To configure an Ubuntu server to forward metrics, you must install a Sysdig agent. The agent uses an access key (token) to authenticate with the IBM Cloud Monitoring with Sysdig instance. The Sysdig agent acts as a data collector. It automatically collects metrics.
+To configure an Ubuntu server to forward metrics, you must install a Sysdig agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The Sysdig agent acts as a data collector. It automatically collects metrics.
 
 You view metrics via Sysdig's web-based user interface.
 
@@ -35,7 +41,7 @@ You view metrics via Sysdig's web-based user interface.
 
 Work in the US-South region. 
 
-Read about IBM Cloud Monitoring with Sysdig. For more information, see [About](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#about).
+Read about {{site.data.keyword.mon_full_notm}}. For more information, see [About](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#about).
 
 Use a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
@@ -44,16 +50,16 @@ Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each o
 | Resource                             | Scope of the access policy | Role    | Region    | Information                  |
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
 | Resource group **Default**           |  Resource group            | Viewer  | us-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
-| IBM Cloud Monitoring with Sysdig service |  Resource group            | Editor  | us-south  | This policy is required to allow the user to provision and administer the IBM Cloud Monitoring with Sysdig service in the Default resource group.   |
+| {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | us-south  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the Default resource group.   |
 {: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"} 
 
 Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
 
-## Step1: Provision an IBM Cloud Monitoring with Sysdig instance
+## Step1: Provision an {{site.data.keyword.mon_full_notm}} instance
 {: #ubuntu_step1}
 
-To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
+To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
@@ -65,7 +71,7 @@ To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.
 
 3. To filter the list of services that is displayed, select the **Developer Tools** category.
 
-4. Click the **IBM Cloud Monitoring with Sysdig** tile. The *Observability* dashboard opens.
+4. Click the **{{site.data.keyword.mon_full_notm}}** tile. The *Observability* dashboard opens.
 
 5. Select **Create instance**. 
 
@@ -81,7 +87,7 @@ To provision an instance of IBM Cloud Monitoring with Sysdig through the {{site.
 
     For more information about other service plans, see [Pricing plans](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 
-9. To provision the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.cloud_notm}} resource group where you are logged in, click **Create**.
+9. To provision the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}} resource group where you are logged in, click **Create**.
 
 After you provision an instance, the *Observability* dashboard opens. 
 
@@ -92,7 +98,7 @@ After you provision an instance, the *Observability* dashboard opens.
 ## Step2: Configure your Ubuntu server to send metrics to your instance
 {: #ubuntu_step2}
 
-To configure your Ubuntu server to send metrics to your IBM Cloud Monitoring with Sysdig instance, you must install a Sysdig agent. 
+To configure your Ubuntu server to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a Sysdig agent. 
 
 Complete the following steps from the command line:
 
@@ -103,7 +109,7 @@ Complete the following steps from the command line:
     ```
     {: codeblock}
 
-    Select the account where you have provisioned the IBM Cloud Monitoring with Sysdig instance.
+    Select the account where you have provisioned the {{site.data.keyword.mon_full_notm}} instance.
 
 2. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 

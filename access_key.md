@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: Sysdig, IBM Cloud, monitoring, access key
+
+subcollection: Sysdig
 
 ---
 
@@ -14,28 +18,30 @@ lastupdated: "2019-02-18"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 # Working with access keys
 {: #access_key}
 
-The **Access Key** is a token that you must use to configure Sysdig agents to successfully forward data to your IBM Cloud Monitoring with Sysdig instance in {{site.data.keyword.Bluemix}}.   
+The **Access Key** is a token that you must use to configure Sysdig agents to successfully forward data to your {{site.data.keyword.mon_full_notm}} instance in {{site.data.keyword.Bluemix}}.   
 {:shortdesc}
 
 
-## Getting the access key through the {{site.data.keyword.Bluemix_notm}} UI
+## Getting the access key through the {{site.data.keyword.cloud_notm}} UI
 {: #access_key_ibm_cloud_ui}
 
-To get the access key for an IBM Cloud Monitoring with Sysdig instance through the {{site.data.keyword.Bluemix_notm}} UI, complete the following steps:
+To get the access key for an {{site.data.keyword.mon_full_notm}} instance through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
-1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
     Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
 
-	After you log in with your user ID and password, the {{site.data.keyword.Bluemix_notm}} UI opens.
+	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 
 2. In the navigation menu, select **Observability**. 
 
-3. Select **Monitoring**. The IBM Cloud Monitoring with Sysdig dashboard opens. You can see the list of monitoring instances that are available on {{site.data.keyword.Bluemix_notm}}.
+3. Select **Monitoring**. The {{site.data.keyword.mon_full_notm}} dashboard opens. You can see the list of monitoring instances that are available on {{site.data.keyword.cloud_notm}}.
 
 3. Identify the instance for which you want to get the access key, and click **View access key**.
 
@@ -48,13 +54,13 @@ To get the access key for an IBM Cloud Monitoring with Sysdig instance through t
 
 To get the access key for a Sysdig instance through the command line, complete the following steps:
 
-1. [Pre-requisite] Install the {{site.data.keyword.Bluemix_notm}} CLI.
+1. [Pre-requisite] Install the {{site.data.keyword.cloud_notm}} CLI.
 
-   For more information, see [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+   For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
    If the CLI is installed, continue with the next step.
 
-2. Log in to the region in the {{site.data.keyword.Bluemix_notm}} where the Sysdig instance is running. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
+2. Log in to the region in the {{site.data.keyword.cloud_notm}} where the Sysdig instance is running. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
 3. Set the resource group where the Sysdig instance is running. Run the following command: [`ibmcloud target`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_target)
 
@@ -91,11 +97,11 @@ To get the access key for a Sysdig instance through the command line, complete t
 For example, the following command shows the output of a sample service ID:
 
 ```
-$ ic resource service-key "IBM Cloud Monitoring with Sysdig-shg-key-admin"
-Retrieving service key IBM Cloud Monitoring with Sysdig-shg-key-admin in resource group Default under account Sample's Account as sample@ibm.com...
+$ ic resource service-key "{{site.data.keyword.mon_full_notm}}-shg-key-admin"
+Retrieving service key {{site.data.keyword.mon_full_notm}}-shg-key-admin in resource group Default under account Sample's Account as sample@ibm.com...
 OK
                   
-Name:          IBM Cloud Monitoring with Sysdig-shg-key-admin   
+Name:          {{site.data.keyword.mon_full_notm}}-shg-key-admin   
 ID:            crn:v1:staging:public:sysdig-monitor:us-south:a/1234567891234567891212346461b066:6e2637ff-4548-47a6-bf30-063fbe49760e:resource-key:bb18c701-0dba-4c4e-bda5-74380e41c4bf   
 Created At:    Fri Nov  2 13:40:39 UTC 2018   
 State:         active   
@@ -123,12 +129,12 @@ Parameters:
 
 If the access key is compromised or you have a policy to renew it after a number of days, you can generate a new key and delete the old one.
 
-To renew the access key for an IBM Cloud Monitoring with Sysdig instance, complete the following steps:
+To renew the access key for an {{site.data.keyword.mon_full_notm}} instance, complete the following steps:
 
-1. Launch the IBM Cloud Monitoring with Sysdig web UI. For more information, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Launch the {{site.data.keyword.mon_full_notm}} web UI. For more information, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 
 2. From the *Selector* button in the navigation bar, choose **Settings**.
 
 2. In the *Password management* section, click **Reset your password**.
 
-**Note:** After you reset the Sysdig access key, you must update the access key for any log sources that you have configured to forward metrics to this IBM Cloud Monitoring with Sysdig instance.
+**Note:** After you reset the Sysdig access key, you must update the access key for any log sources that you have configured to forward metrics to this {{site.data.keyword.mon_full_notm}} instance.

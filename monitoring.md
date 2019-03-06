@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: Sysdig, IBM Cloud, monitoring
+
+subcollection: Sysdig
 
 ---
 
@@ -14,14 +18,16 @@ lastupdated: "2019-02-18"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 # Monitoring your environment
 {: #monitoring}
 
-You can monitor your infrastructure, and the applications running on it with the IBM Cloud Monitoring with Sysdig service. You can request a capture to analyze what happens in a node during a time frame.
+You can monitor your infrastructure, and the applications running on it with the {{site.data.keyword.mon_full_notm}} service. You can request a capture to analyze what happens in a node during a time frame.
 {:shortdesc}
 
-After you provision an instance of the IBM Cloud Monitoring with Sysdig service in the {{site.data.keyword.Bluemix}}, and configure Sysdig agents for your metrics sources, you can view, monitor, and manage data through the service's web UI.
+After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.Bluemix}}, and configure Sysdig agents for your metrics sources, you can view, monitor, and manage data through the service's web UI.
 
 Data for default metrics is automatically collected. You can configure custom metrics and add labels to those metrics to describe their characteristics. Data for these custom metrics is also automatically collected.
 
@@ -151,7 +157,7 @@ The following table outlines tasks that you can run programmatically to work wit
 ## Events
 {: #monitoring_events}
 
-An event is a notification that informs about something that has occurred in any of the nodes that forward data to your IBM Cloud Monitoring with Sysdig instance. Use events to review, track, and resolve issues. 
+An event is a notification that informs about something that has occurred in any of the nodes that forward data to your {{site.data.keyword.mon_full_notm}} instance. Use events to review, track, and resolve issues. 
 
 There are different types of events: 
 

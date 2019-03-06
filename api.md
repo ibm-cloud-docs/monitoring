@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: Sysdig, IBM Cloud, monitoring, sysdig rest api
+
+subcollection: Sysdig
 
 ---
 
@@ -14,6 +18,8 @@ lastupdated: "2019-02-18"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 
 # Working with the Sysdig REST API
@@ -22,7 +28,7 @@ lastupdated: "2019-02-18"
 Use the Sysdig REST API to automate routine tasks and monitor notifications.
 {:shortdesc}
 
-When you use the API from your custom scripts or programs, you must use a Sysdig token to authenticate with the IBM Cloud Monitoring with Sysdig instance. 
+When you use the API from your custom scripts or programs, you must use a Sysdig token to authenticate with the {{site.data.keyword.mon_full_notm}} instance. 
 {: tip}
 
 ## Creating a dashboard by using the API

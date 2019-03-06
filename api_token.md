@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: Sysdig, IBM Cloud, monitoring, api token
+
+subcollection: Sysdig
 
 ---
 
@@ -14,15 +18,17 @@ lastupdated: "2019-02-18"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 
 # Working with API tokens
 {: #api_token}
 
-Use the API token to authenticate with the IBM Cloud Monitoring with Sysdig service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 
+Use the API token to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 
 {:shortdesc}
 
-Consider the following information for each instance of the IBM Cloud Monitoring with Sysdig service:
+Consider the following information for each instance of the {{site.data.keyword.mon_full_notm}} service:
 
 * There is an API token per team.
 * If the token is compromised or your organization's security policies require resetting the token after certain conditions, a user with administration permissions can reset the API token.

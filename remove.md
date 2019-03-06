@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: Sysdig, IBM Cloud, monitoring, delete instance
+
+subcollection: Sysdig
 
 ---
 
@@ -14,16 +18,18 @@ lastupdated: "2019-02-18"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 # Removing an instance
 {: #remove}
 
-You can remove an instance of the IBM Cloud Monitoring with Sysdig service from the {{site.data.keyword.Bluemix}} UI or through the command line.
+You can remove an instance of the {{site.data.keyword.mon_full_notm}} service from the {{site.data.keyword.Bluemix}} UI or through the command line.
 {:shortdesc}
 
 When you remove an instance from the {{site.data.keyword.cloud_notm}}, consider the following information to tidy up:
 
-1. Write down the list of sources that forward metrics to the IBM Cloud Monitoring with Sysdig instance that you want to remove. You must remove the Sysdig agent from each source.
+1. Write down the list of sources that forward metrics to the {{site.data.keyword.mon_full_notm}} instance that you want to remove. You must remove the Sysdig agent from each source.
 2. Remove permissions granted to users to work with the instance. 
 
     If you use an access group to manage access to the instance, you must remove the access group.
@@ -39,7 +45,7 @@ Then, delete the instance from the {{site.data.keyword.cloud_notm}} Dashboard.
 ## Removing an instance through the {{site.data.keyword.cloud_notm}} UI
 {: #remove_ui}
 
-To remove an instance of IBM Cloud Monitoring with Sysdig by using the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
+To remove an instance of {{site.data.keyword.mon_full_notm}} by using the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
@@ -59,7 +65,7 @@ To remove an instance of IBM Cloud Monitoring with Sysdig by using the {{site.da
 ## Removing an instance through the CLI
 {: #remove_cli}
 
-To remove an instance of IBM Cloud Monitoring with Sysdig through the command line, complete the following steps:
+To remove an instance of {{site.data.keyword.mon_full_notm}} through the command line, complete the following steps:
 
 1. [Pre-requisite] Install the {{site.data.keyword.cloud_notm}} CLI.
 

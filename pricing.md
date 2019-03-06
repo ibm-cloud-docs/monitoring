@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-18"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
+
+keywords: Sysdig, IBM Cloud, monitoring, pricing
+
+subcollection: Sysdig
 
 ---
 
@@ -14,12 +18,14 @@ lastupdated: "2019-02-18"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
+{:important: .important}
+{:note: .note}
 
 
 # Pricing
 {: #pricing_plans}
 
-Different pricing plans are available for an IBM Cloud Monitoring with Sysdig instance.
+Different pricing plans are available for an {{site.data.keyword.mon_full_notm}} instance.
 {:shortdesc}
  
 
@@ -45,7 +51,7 @@ Data is collected and retained per the standard guidelines across all plans. For
 ## Checking your usage
 {: #pricing_usage}
 
-To monitor how the IBM Cloud Monitoring with Sysdig service is used and the costs associated to its usage, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
+To monitor how the {{site.data.keyword.mon_full_notm}} service is used and the costs associated to its usage, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
 
 
 

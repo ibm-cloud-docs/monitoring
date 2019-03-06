@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Sysdig" audience="service" arm="4158185" href="/docs/services/Monitoring-with-Sysdig?topic=Sysdig-getting-started" path="services/Monitoring-with-Sysdig"}
+{: .toc subcollection="Sysdig" audience="service" arm="4158185" href="/docs/services/Monitoring-with-Sysdig?topic=Sysdig-getting-started#getting-started" path="services/Monitoring-with-Sysdig"}
 IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="learn"}
