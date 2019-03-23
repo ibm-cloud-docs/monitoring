@@ -40,7 +40,7 @@ The {{site.data.keyword.mon_full_notm}} service is available in the following re
 | `EU-GB`               | London    | 
 {: caption="Table 1. List of regions where the service is available" caption-side="top"} 
 
-Currently, the **Frankfurt** location is **not** EU-managed. For more information, see [Enabling the EU Supported setting](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported).
+Currently, **Frankfurt** and **EU GB** are locations that are **not** EU-managed. For more information, see [Enabling the EU Supported setting](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported).
 {: important}
 
 
