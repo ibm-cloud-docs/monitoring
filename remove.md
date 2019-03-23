@@ -79,10 +79,10 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} through the command
 
     By default, the `default` resource group is set.
 
-4. Remove the instance. Run the [`ibmcloud resource service-instance-delete`](/docs/cli/reference/ibmcloud/cli_resource_group.html#ibmcloud_resource_service_instance_create) command:
+4. Remove the instance. Run the [`ibmcloud resource service-instance-delete`](/docs/cli/reference/ibmcloud/cli_resource_group.html#ibmcloud_resource_service_instance_delete) command:
 
     ```
-    ibmcloud resource service-instance-create NAME 
+    ibmcloud resource service-instance-delete NAME 
     ```
     {: codeblock}
 
