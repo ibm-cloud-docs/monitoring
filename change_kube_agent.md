@@ -395,9 +395,9 @@ The following table outlines the parameters that you can define to set the filte
 | `container.image`                  | Container image name                           |
 | `container.name`                   | Container name                                 |
 | `container.label.*`                | Container label                                |
-| `kubernetes.<object>.*`            | Kubernetes object. An object can be a pod, a namespace, etc.   |
-| `kubernetes.<object>.annotation.*` | Kubernetes object annotation                   |
-| `kubernetes.<object>.label.*`      | Kubernetes object label                        |
+| `kubernetes.object.*`             | Kubernetes object. An object can be a pod, a namespace, etc.   |
+| `kubernetes.object.annotation.*`  | Kubernetes object annotation                   |
+| `kubernetes.object.label.*`       | Kubernetes object label                        |
 | `all`                              | Default rule to specify all objects            |
 {: caption="Table 2. Parameters to define conditions on containers" caption-side="top"} 
 
@@ -406,8 +406,6 @@ Consider the following information on how the Sysdig agent applies the rules tha
 * The first matching rule in the list determines if the container is included or excluded.
 * The conditions consist of a key name and a value. If the given key for a container matches the value, the rule is applied.
 * When a rule contains multiple conditions, `all the conditions` need to match for the rule to be applied.
-{: tip}
-
 
 Complete the following steps to filter out containers that a Sysdig agent monitors in a cluster:
 
