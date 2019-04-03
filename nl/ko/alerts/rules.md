@@ -93,15 +93,15 @@ subcollection: cloud-monitoring
 	
 2. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오.
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
 3. 보안 토큰을 가져오십시오. UAA 토큰, IAM 토큰 또는 API 키를 사용할 수 있습니다. 다음 방법 중 하나를 선택하여 보안 토큰을 얻으십시오.
 	
-	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)를 참조하십시오.
+	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)를 참조하십시오.
 	
-	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)를 참조하십시오.
+	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)를 참조하십시오.
 	
-	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)를 참조하십시오.
+	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)를 참조하십시오.
 	
 	예를 들어, IAM 토큰을 사용하려면 다음 명령을 실행하십시오.
     
@@ -184,7 +184,7 @@ subcollection: cloud-monitoring
 	
 	* Space는 영역의 GUID입니다. 
 	
-	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 	
     예를 들어 다음과 같습니다. 	
 	
@@ -200,15 +200,15 @@ subcollection: cloud-monitoring
 
 1. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
 2. 보안 토큰을 가져오십시오. UAA 토큰, IAM 토큰 또는 API 키를 사용할 수 있습니다. 다음 방법 중 하나를 선택하여 보안 토큰을 얻으십시오.
 	
-	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)를 참조하십시오.
+	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)를 참조하십시오.
 	
-	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)를 참조하십시오.
+	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)를 참조하십시오.
 	
-	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)를 참조하십시오.
+	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)를 참조하십시오.
 	
 	예를 들어, IAM 토큰을 사용하려면 다음 명령을 실행하십시오.
 
@@ -291,7 +291,7 @@ subcollection: cloud-monitoring
 	
 	* Rule_Name은 필드 *name*에 지정된 규칙의 이름입니다.
 	
-	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 	
     
 	
@@ -302,15 +302,15 @@ subcollection: cloud-monitoring
 
 1. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
 2. 보안 토큰을 가져오십시오. UAA 토큰, IAM 토큰 또는 API 키를 사용할 수 있습니다. 다음 방법 중 하나를 선택하여 보안 토큰을 얻으십시오.
 	
-	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)를 참조하십시오.
+	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)를 참조하십시오.
 	
-	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)를 참조하십시오.
+	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)를 참조하십시오.
 	
-	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)를 참조하십시오.
+	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)를 참조하십시오.
 	
 	예를 들어, IAM 토큰을 사용하려면 다음 명령을 실행하십시오.
 
@@ -391,7 +391,7 @@ subcollection: cloud-monitoring
 	
 	* Space는 영역의 GUID입니다. 
 	
-	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 	
 
 	
@@ -404,15 +404,15 @@ subcollection: cloud-monitoring
 
 1. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
 2. 보안 토큰을 가져오십시오. UAA 토큰, IAM 토큰 또는 API 키를 사용할 수 있습니다. 다음 방법 중 하나를 선택하여 보안 토큰을 얻으십시오.
 	
-	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)를 참조하십시오.
+	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)를 참조하십시오.
 	
-	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)를 참조하십시오.
+	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)를 참조하십시오.
 	
-	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)를 참조하십시오.
+	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)를 참조하십시오.
 	
 	예를 들어, IAM 토큰을 사용하려면 다음 명령을 실행하십시오.
 
@@ -495,7 +495,7 @@ subcollection: cloud-monitoring
 	
 	* Rule_Name은 필드 *name*에 지정된 규칙의 이름입니다.
 	
-	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 	
 
 ## 규칙 업데이트
@@ -505,15 +505,15 @@ subcollection: cloud-monitoring
 
 1. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
 2. 보안 토큰을 가져오십시오. UAA 토큰, IAM 토큰 또는 API 키를 사용할 수 있습니다. 다음 방법 중 하나를 선택하여 보안 토큰을 얻으십시오.
 	
-	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)를 참조하십시오.
+	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)를 참조하십시오.
 	
-	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)를 참조하십시오.
+	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)를 참조하십시오.
 	
-	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)를 참조하십시오.
+	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)를 참조하십시오.
 	
 	예를 들어, IAM 토큰을 사용하려면 다음 명령을 실행하십시오.
 
@@ -596,7 +596,7 @@ subcollection: cloud-monitoring
 	
 	* Space는 영역의 GUID입니다. 
 	
-	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 
 	
 	

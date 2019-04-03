@@ -54,7 +54,7 @@ Ce tutoriel vous guide dans les étapes du scénario de bout en bout suivant dan
     
     * Une règle IAM pour {{site.data.keyword.containershort}} avec des droits *operator* ou *administrator*.
     
-    Pour plus d'informations, voir [Affectation d'une règle IAM à un utilisateur via l'interface utilisateur IBM Cloud](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui).
+    Pour plus d'informations, voir [Affectation d'une règle IAM à un utilisateur via l'interface utilisateur IBM Cloud](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui).
 
 2. Disposer d'une session de terminal depuis laquelle vous pouvez gérer le cluster Kubernetes et déployer des applications depuis la ligne de commande. Les exemples dans ce tutoriel sont valables pour un système Ubuntu Linux.
 
@@ -63,7 +63,7 @@ Ce tutoriel vous guide dans les étapes du scénario de bout en bout suivant dan
     * Installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. 
     * Installez l'interface de ligne de commande {{site.data.keyword.containershort}} pour créer et gérer vos clusters Kubernetes dans {{site.data.keyword.containershort}} et pour déployer des applications conteneurisées sur votre cluster.
     
-    Pour plus d'informations, voir [Installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.](/docs/cli/index.html#overview)
+    Pour plus d'informations, voir [Installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)
     
     
 
@@ -75,11 +75,11 @@ Ce tutoriel vous guide dans les étapes du scénario de bout en bout suivant dan
 
 Procédez comme suit :
 
-1. Créez un cluster Kubernetes standard. Pour plus d'informations, voir la rubrique relative à la [création d'un cluster Kubernetes standard](/docs/containers/cs_tutorials.html#cs_cluster_tutorial).
+1. Créez un cluster Kubernetes standard. Pour plus d'informations, voir la rubrique relative à la [création d'un cluster Kubernetes standard](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial).
 
 2. Configurez le contexte de cluster dans un terminal. Une fois le contexte défini, vous pouvez gérer le cluster Kubernetes et déployer l'application dans ce cluster.
 
-    Connectez-vous à la région, l'organisation et l'espace dans l'environnement {{site.data.keyword.Bluemix_notm}} associé au cluster que vous avez créé. Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/CloudLogAnalysis/qa/cli_qa.html#login).
+    Connectez-vous à la région, l'organisation et l'espace dans l'environnement {{site.data.keyword.Bluemix_notm}} associé au cluster que vous avez créé. Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/CloudLogAnalysis/qa?topic=cloudloganalysis-cli_qa#login).
 
 	Initialisez le plug-in du service {{site.data.keyword.containershort}}.
 
@@ -125,7 +125,7 @@ Pour autoriser un utilisateur à gérer le service {{site.data.keyword.monitorin
 	
 3. Si l'utilisateur est membre du compte, sélectionnez le nom de l'utilisateur dans la liste ou cliquez sur **Gérer un utilisateur** dans le menu *Actions*.
 
-    Si l'utilisateur n'est pas membre du compte, voir [Invitation d'utilisateurs](/docs/iam/iamuserinv.html#iamuserinv).
+    Si l'utilisateur n'est pas membre du compte, voir [Invitation d'utilisateurs](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Sélectionnez **Règles d'accès > Affecter un accès > Affecter l'accès aux ressources**.
 
@@ -170,7 +170,7 @@ Pour octroyer les droits au propriétaire de compte {{site.data.keyword.containe
 ## Etape 4 : Déploiement d'un exemple d'application dans le cluster Kubernetes
 {: #ks_step4}
 
-Déployez et exécutez un modèle d'application dans le cluster Kubernetes. Effectuez les étapes du tutoriel suivant pour déployer l'exemple d'application :[Leçon 1 : Déploiement d'applications d'instance uniques sur des clusters Kubernetes](/docs/containers/cs_tutorials_apps.html#cs_apps_tutorial_lesson1).
+Déployez et exécutez un modèle d'application dans le cluster Kubernetes. Effectuez les étapes du tutoriel suivant pour déployer l'exemple d'application :[Leçon 1 : Déploiement d'applications d'instance uniques sur des clusters Kubernetes](/docs/containers?topic=containers-cs_apps_tutorial#cs_apps_tutorial_lesson1).
 
 L'application est une application Hello World Node.js :
 
@@ -195,13 +195,13 @@ Dans cet exemple d'application, lorsque vous testez votre application dans un na
 
 Lancez Grafana à partir d'un domaine et définissez le domaine {{site.data.keyword.monitoringshort}} dans lequel vous pourrez visualiser les métriques de cluster.
 
-Pour analyser les métriques pour un cluster, vous devez accéder à Grafana dans la région publique du cloud où le cluster a été créé. Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Pour analyser les métriques pour un cluster, vous devez accéder à Grafana dans la région publique du cloud où le cluster a été créé. Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 1. A partir d'un navigateur, démarrez Grafana. 
 
     Entrez l'adresse URL du service {{site.data.keyword.monitoringshort}} pour la région où vous avez créé le cluster. 
     
-    Pour obtenir les adresses URL par région, voir [URL pour le service de surveillance](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Pour obtenir les adresses URL par région, voir [URL pour le service de surveillance](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Par exemple, pour la région Sud des Etats-Unis, démarrez : [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -232,4 +232,4 @@ L'exemple de tableau de bord s'ouvre.
 ## Etapes suivantes
 {: #ks_next_steps}
 
-Définissez une alerte pour une métrique. Pour plus d'informations, voir [Configuration d'alertes](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Définissez une alerte pour une métrique. Pour plus d'informations, voir [Configuration d'alertes](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

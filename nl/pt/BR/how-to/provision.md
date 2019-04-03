@@ -54,7 +54,7 @@ Conclua as etapas a seguir para provisionar uma instância do serviço {{site.da
 	
 	* Por padrão, o plano **Lite** é configurado, o que autoriza você para a coleta de métricas de plataforma no espaço em que estiver provisionando o serviço e um período de retenção de 15 dias para essas métricas. 
 
-    Para obter mais informações sobre os planos de serviços, veja [Planos de serviços](/docs/services/cloud-monitoring/monitoring_ov.html#plan).
+    Para obter mais informações sobre os planos de serviços, veja [Planos de serviços](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan).
 	
 6. Clique em **Criar** para provisionar o serviço do {{site.data.keyword.monitoringshort}} no espaço do {{site.data.keyword.Bluemix_notm}} no qual você está com login efetuado.
   
@@ -67,13 +67,13 @@ Conclua as etapas a seguir para provisionar uma instância do serviço {{site.da
 
 1. [Pré-requisito] Instale a CLI do {{site.data.keyword.Bluemix_notm}}.
 
-   Para obter mais informações, veja [Instalando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#overview).
+   Para obter mais informações, consulte [Instalando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
    
    Se a CLI estiver instalada, continue com a próxima etapa.
     
 2. Efetue login em uma região, uma organização e um espaço no {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 	
 3. Execute o comando `ibmcloud service create` para provisionar uma instância.
 
@@ -85,7 +85,7 @@ Conclua as etapas a seguir para provisionar uma instância do serviço {{site.da
     Em que
     	
     * * service_name *  é  ** Monitoring **.
-    * * service_plan *  é o nome do plano de serviços. Para coletar e acessar as métricas por até 45 dias e para definir as regras de alerta, incluindo as regras com curingas, selecione o plano **Premium**. Por padrão, o plano **Lite** é configurado, o que autoriza você para a coleta de métricas de plataforma no espaço em que estiver provisionando o serviço e um período de retenção de 15 dias para essas métricas. Para obter uma lista de planos, consulte os [planos de serviços do {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/monitoring_ov.html#plan).
+    * * service_plan *  é o nome do plano de serviços. Para coletar e acessar as métricas por até 45 dias e para definir as regras de alerta, incluindo as regras com curingas, selecione o plano **Premium**. Por padrão, o plano **Lite** é configurado, o que autoriza você para a coleta de métricas de plataforma no espaço em que estiver provisionando o serviço e um período de retenção de 15 dias para essas métricas. Para obter uma lista de planos, consulte [Planos de serviço do {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan).
     * *service_instance_name* é o nome que você deseja usar para a nova instância de serviço criada.
     
     Por exemplo, para criar uma instância do serviço do {{site.data.keyword.monitoringshort}} com um plano premium, execute o comando a seguir:

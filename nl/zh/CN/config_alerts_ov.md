@@ -80,9 +80,9 @@ subcollection: cloud-monitoring
 
 2. 针对在 Grafana 仪表板上定义的度量值查询配置警报。
 
-    * [配置用于发送电子邮件的警报](/docs/services/cloud-monitoring/alerts/configure_email_alert.html#configure_email_alert)。
-    * [配置用于发送 PagerDuty 通知的警报](/docs/services/cloud-monitoring/alerts/configure_pagerduty_alert.html#configure_pagerduty_alert)。
-    * [配置用于发送 Webhook 通知的警报](/docs/services/cloud-monitoring/alerts/configure_webhook_alert.html#configure_webhook_alert)。
+    * [配置用于发送电子邮件的警报](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_email_alert#configure_email_alert)。
+    * [配置用于发送 PagerDuty 通知的警报](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_pagerduty_alert#configure_pagerduty_alert)。
+    * [配置用于发送 Webhook 通知的警报](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_webhook_alert#configure_webhook_alert)。
 
     **注：**您只能为在帐户度量值域中定义的度量值查询定义电子邮件通知。
 
@@ -106,7 +106,7 @@ subcollection: cloud-monitoring
 
 2. 针对在 Grafana 仪表板上定义的度量值查询配置警报。
 
-    有关更多信息，请参阅[在 Grafana 中配置警报](/docs/services/cloud-monitoring/alerts/config_alerts_grafana.html#config_alerts_grafana)。
+    有关更多信息，请参阅[在 Grafana 中配置警报](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-config_alerts_grafana#config_alerts_grafana)。
 
 
 ## 警报状态
@@ -141,7 +141,7 @@ subcollection: cloud-monitoring
 
 例如，如果超过了警告阈值，那么会生成一条历史记录，用于记录状态从 *OK* 转换为 *WARNING*。与此类似，当值恢复到低于阈值时，也会生成一条历史记录，用于记录状态从 *WARNING* 转换为 *OK*。
 
-有关更多信息，请参阅[检索规则的历史记录](/docs/services/cloud-monitoring/alerts/retrieve_history.html#retrieve_history)。
+有关更多信息，请参阅[检索规则的历史记录](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#retrieve_history)。
 
 
 ## 规则
@@ -149,13 +149,13 @@ subcollection: cloud-monitoring
 
 规则描述要监视的度量值查询、阈值以及超过阈值时要执行的操作。 
 
-* 可以使用警报 API 创建、删除、更新规则，显示规则的详细信息，以及列出所有规则。有关更多信息，请参阅[使用规则](/docs/services/cloud-monitoring/alerts/rules.html#rules)。
+* 可以使用警报 API 创建、删除、更新规则，显示规则的详细信息，以及列出所有规则。有关更多信息，请参阅[使用规则](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#rules)。
 
-    * 要创建规则，请参阅[创建规则](/docs/services/cloud-monitoring/alerts/rules.html#create)。
-	* 要删除规则，请参阅[删除规则](/docs/services/cloud-monitoring/alerts/rules.html#delete)。
-	* 要更新规则，请参阅[更新规则](/docs/services/cloud-monitoring/alerts/rules.html#update)。
-	* 要列出所有规则，请参阅[列出所有规则](/docs/services/cloud-monitoring/alerts/rules.html#list)。
-	* 要显示有关规则的信息，请参阅[显示规则的详细信息](/docs/services/cloud-monitoring/alerts/rules.html#showing-the-details-of-a-rule)。
+    * 要创建规则，请参阅[创建规则](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create)。
+	* 要删除规则，请参阅[删除规则](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#delete)。
+	* 要更新规则，请参阅[更新规则](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#update)。
+	* 要列出所有规则，请参阅[列出所有规则](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#list)。
+	* 要显示有关规则的信息，请参阅[显示规则的详细信息](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#showing-the-details-of-a-rule)。
 
 * 警报系统每 5 分钟检查一次在空间中启用的规则。
 
@@ -274,11 +274,11 @@ mple-topic.BytesInPerSec.15MinuteRate,\"5min\")",
 
 * 可以使用[警报 REST API](https://console.bluemix.net/apidocs/940-ibm-cloud-monitoring-alerts-api?&language=node#introduction){: new_window} 来创建、删除和更新通知，显示通知的详细信息，以及列出空间中定义的通知。
 
-    * 要创建通知，请参阅[创建通知](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create)。
-	* 要删除通知，请参阅[删除通知](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_delete)。
-	* 要更新通知，请参阅[更新通知](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_update)。
-	* 要列出所有通知，请参阅[列出所有通知](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_list)。
-	* 要显示有关通知的信息，请参阅[显示通知的详细信息](/docs/services/cloud-monitoring/alerts/notifications.html#show)。
+    * 要创建通知，请参阅[创建通知](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create)。
+	* 要删除通知，请参阅[删除通知](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_delete)。
+	* 要更新通知，请参阅[更新通知](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_update)。
+	* 要列出所有通知，请参阅[列出所有通知](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_list)。
+	* 要显示有关通知的信息，请参阅[显示通知的详细信息](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#show)。
 
 * 您可以配置电子邮件通知、PagerDuty 配置和 Webhook 通知。 
 

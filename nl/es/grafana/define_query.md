@@ -43,7 +43,7 @@ Obtenga la información siguiente para el servicio o la app CF que desee supervi
 ## Paso 2: Iniciar Grafana
 {: #step27}
 
-Inicie Grafana desde un navegador. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Inicie Grafana desde un navegador. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 Asegúrese de que, en Grafana, haya iniciado sesión en la cuenta, organización y región donde se ejecuta el servicio o la app CF. 
 
@@ -93,11 +93,11 @@ Realice los pasos siguientes para crear un panel de control de Grafana y definir
           </tr>
           <tr>
             <td>{{site.data.keyword.containershort_notm}}</td>
-            <td>[Formato de consulta para métricas de CPU recopiladas para contenedores](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers) </br>[Formato de consulta para métricas de carga recopiladas para trabajadores](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers) </br>[Formato de consulta para métricas de memoria recopiladas para contenedores](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)</td> 
+            <td>[Formato de consulta para métricas de CPU recopiladas para contenedores](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers) </br>[Formato de consulta para métricas de carga recopiladas para trabajadores](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers) </br>[Formato de consulta para métricas de memoria recopiladas para contenedores](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)</td> 
           </tr>
           <tr>
             <td>Apps CF</td>
-            <td>[Formato de consulta para apps CF](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)</td> 
+            <td>[Formato de consulta para apps CF](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)</td> 
           </tr>
         </table>
 
@@ -123,15 +123,15 @@ Realice los pasos siguientes para crear un panel de control de Grafana y definir
           </tr>
           <tr>
             <td>{{site.data.keyword.containershort_notm}}</td>
-            <td>[Métricas de CPU](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics) </br>[Métricas de disco](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics) </br>[Métricas de memoria](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td> 
+            <td>[Métricas de CPU](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics) </br>[Métricas de disco](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics) </br>[Métricas de memoria](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td> 
           </tr>
           <tr>
             <td>Apps CF</td>
-            <td>[Métricas de CPU](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics)  </br>[Métricas de disco](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics)   </br>[Métricas de memoria](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td> 
+            <td>[Métricas de CPU](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics)  </br>[Métricas de disco](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics)   </br>[Métricas de memoria](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td> 
           </tr>
           <tr>
             <td>{{site.data.keyword.messagehub}}</td>
-            <td>[Métricas para un tema de Kafka](/docs/services/cloud-monitoring/mh/monitoring_mh_ov.html#kafka_topic_metrics) </br>[Métricas para una partición de Kafka](/docs/services/cloud-monitoring/mh/monitoring_mh_ov.html#kafka_partition_metrics)</td> 
+            <td>[Métricas para un tema de Kafka](/docs/services/cloud-monitoring/mh?topic=cloud-monitoring-monitoring_mh_ov#kafka_topic_metrics) </br>[Métricas para una partición de Kafka](/docs/services/cloud-monitoring/mh?topic=cloud-monitoring-monitoring_mh_ov#kafka_partition_metrics)</td> 
           </tr>
         </table>
 

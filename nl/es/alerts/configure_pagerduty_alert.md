@@ -32,9 +32,9 @@ Para configurar una alerta PagerDuty en una métrica, defina una regla y una not
 Realice los siguientes pasos:
 
 ## Paso 1: Crear una regla
-{: #step12}
+{: #cpa_step1}
 
-Cree una regla para una consulta métrica que ha definido en Grafana. Para obtener más información, consulte [Creación de una regla](/docs/services/cloud-monitoring/alerts/rules.html#create).
+Cree una regla para una consulta métrica que ha definido en Grafana. Para obtener más información, consulte [Creación de una regla](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create).
 
 Por ejemplo, cree el archivo de reglas `s-rule-1.json` en el directorio `~/cloud-monitoring/rules/`. 
 
@@ -67,21 +67,21 @@ export RULE_FILE="s-rule-1.json"
 {: screen}
 
 ## Paso 2: Registrar la regla en el servicio de supervisión
-{: #step22}
+{: #cpa_step2}
 	
 En un terminal, siga los pasos siguientes:
 
 1. Inicie la sesión en una región, organización y espacio en {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Obtenga la señal de seguridad. Puede utilizar una señal de UAA, una señal de IAM o una clave de API. Elija uno de los métodos siguientes para obtener la señal de seguridad:
 	
-	* Para obtener una señal UAA, consulte [Obtención de la señal de UAA mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Para obtener una señal UAA, consulte [Obtención de la señal de UAA mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Para obtener una señal de IAM, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Para obtener una señal de IAM, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Para obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Para obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Por ejemplo, para utilizar la señal de IAM, ejecute el siguiente mandato:
 
@@ -164,7 +164,7 @@ En un terminal, siga los pasos siguientes:
 	
 	* Space es el GUID del espacio. 
 	
-	* METRICS_ENDPOINT representa el punto de entrada al servicio. Cada región tiene un URL diferente. Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* METRICS_ENDPOINT representa el punto de entrada al servicio. Cada región tiene un URL diferente. Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 	Para verificar que la regla se ha creado correctamente, ejecute el siguiente mandato:
 
@@ -181,12 +181,12 @@ En un terminal, siga los pasos siguientes:
 	{: screen}
 
 ## Paso 3: Crear una notificación PagerDuty
-{: #step31}
+{: #cpa_step3}
 
 
 Para crear un archivo de notificación, tenga en cuenta la siguiente información:
 
-* Utilice la plantilla de notificación de alertas PagerDuty. Para obtener más información, consulte [Plantillas de notificación](/docs/services/cloud-monitoring/config_alerts_ov.html#notification_template).
+* Utilice la plantilla de notificación de alertas PagerDuty. Para obtener más información, consulte [Plantillas de notificación](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#notification_template).
 * Cree el archivo en un directorio local, por ejemplo, `~/cloud-monitoring/notifications`.
 
 Por ejemplo, cree el archivo **pagerduty.json** mediante el editor vi: 
@@ -201,24 +201,24 @@ Por ejemplo, cree el archivo **pagerduty.json** mediante el editor vi:
 ```
 {: codeblock}	
 	
-Para obtener más información, consulte [Creación de una notificación](/docs/services/cloud-monitoring/alerts/notifications.html#create).
+Para obtener más información, consulte [Creación de una notificación](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#create).
 	
 ## Paso 4: Registrar el método de notificación en el servicio de supervisión
-{: #step41}
+{: #cpa_step4}
 	
 En un terminal, siga los pasos siguientes:
 
 1. Inicie la sesión en una región, organización y espacio en {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Obtenga la señal de seguridad. Puede utilizar una señal de UAA, una señal de IAM o una clave de API. Elija uno de los métodos siguientes para obtener la señal de seguridad:
 	
-	* Para obtener una señal UAA, consulte [Obtención de la señal de UAA mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Para obtener una señal UAA, consulte [Obtención de la señal de UAA mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Para obtener una señal de IAM, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Para obtener una señal de IAM, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Para obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Para obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Por ejemplo, para utilizar la señal de IAM, ejecute el siguiente mandato:
 
@@ -301,7 +301,7 @@ En un terminal, siga los pasos siguientes:
 	
 	* Space es el GUID del espacio. 
 	
-	* METRICS_ENDPOINT representa el punto de entrada al servicio. Cada región tiene un URL diferente. Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* METRICS_ENDPOINT representa el punto de entrada al servicio. Cada región tiene un URL diferente. Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
     Para verificar que la notificación se ha creado correctamente, ejecute el siguiente mandato:
 

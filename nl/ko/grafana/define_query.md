@@ -43,7 +43,7 @@ subcollection: cloud-monitoring
 ## 2단계: Grafana 실행
 {: #step27}
 
-브라우저에서 Grafana를 실행하십시오. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)을 참조하십시오.
+브라우저에서 Grafana를 실행하십시오. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)을 참조하십시오.
 
 Grafana에서 CF 앱 또는 서비스가 실행 중인 계정, 조직 및 지역에 로그인되어 있는지 확인하십시오. 
 
@@ -93,11 +93,11 @@ Grafana 대시보드를 작성하고 조회를 정의하려면 다음 단계를 
           </tr>
           <tr>
             <td>{{site.data.keyword.containershort_notm}}</td>
-            <td>[컨테이너에 대해 수집된 CPU 메트릭의 조회 형식](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers) </br>[작업자에 대해 수집된 로드 메트릭의 조회 형식](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers) </br>[컨테이너에 대해 수집된 메모리 메트릭의 조회 형식](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)</td> 
+            <td>[컨테이너에 대해 수집된 CPU 메트릭의 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers) </br>[작업자에 대해 수집된 로드 메트릭의 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers) </br>[컨테이너에 대해 수집된 메모리 메트릭의 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)</td> 
           </tr>
           <tr>
             <td>CF 앱</td>
-            <td>[CF 앱의 조회 형식](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)</td> 
+            <td>[CF 앱의 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)</td> 
           </tr>
         </table>
 
@@ -123,15 +123,15 @@ Grafana 대시보드를 작성하고 조회를 정의하려면 다음 단계를 
           </tr>
           <tr>
             <td>{{site.data.keyword.containershort_notm}}</td>
-            <td>[CPU 메트릭](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics) </br>[디스크 메트릭](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics) </br>[메모리 메트릭](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td> 
+            <td>[CPU 메트릭](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics) </br>[디스크 메트릭](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics) </br>[메모리 메트릭](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td> 
           </tr>
           <tr>
             <td>CF 앱</td>
-            <td>[CPU 메트릭](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics)  </br>[디스크 메트릭](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics)   </br>[메모리 메트릭](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td> 
+            <td>[CPU 메트릭](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics)  </br>[디스크 메트릭](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics)   </br>[메모리 메트릭](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td> 
           </tr>
           <tr>
             <td>{{site.data.keyword.messagehub}}</td>
-            <td>[Kafka 토픽에 대한 메트릭](/docs/services/cloud-monitoring/mh/monitoring_mh_ov.html#kafka_topic_metrics) </br>[Kafka 파티션에 대한 메트릭](/docs/services/cloud-monitoring/mh/monitoring_mh_ov.html#kafka_partition_metrics)</td> 
+            <td>[Kafka 토픽에 대한 메트릭](/docs/services/cloud-monitoring/mh?topic=cloud-monitoring-monitoring_mh_ov#kafka_topic_metrics) </br>[Kafka 파티션에 대한 메트릭](/docs/services/cloud-monitoring/mh?topic=cloud-monitoring-monitoring_mh_ov#kafka_partition_metrics)</td> 
           </tr>
         </table>
 

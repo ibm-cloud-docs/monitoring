@@ -36,13 +36,13 @@ Grafana는 다음 방법 중 하나로 실행할 수 있습니다.
     Grafana의 특정 Docker 컨테이너 메트릭은 해당 컨테이너의 컨텍스트에서 시작할 수 있습니다. 이 기능은 {{site.data.keyword.Bluemix_notm}} 관리 인프라에 배치된 컨테이너에만 적용됩니다. 
     
     자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 대시보드에서 Grafana 대시보드로
-    이동](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_bluemix)을 참조하십시오.
+    이동](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_bluemix)을 참조하십시오.
 
 * 직접 브라우저 링크에서
 
     보고 있는 데이터가 제공된 {{site.data.keyword.Bluemix_notm}} 영역 내의 서비스로부터 로그를 집계하도록 Grafana를 실행할 수 있습니다.
     
-    자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)을 참조하십시오.
+    자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)을 참조하십시오.
     
 Grafana에 대한 자세한 정보는 [Grafana 사용자 안내 서![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.grafana.org/guides/getting_started/){: new_window}를 참조하십시오.
 

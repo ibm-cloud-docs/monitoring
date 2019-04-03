@@ -48,7 +48,7 @@ subcollection: cloud-monitoring
 * 叢集可以在「美國南部」地區中使用。 
 * 您的使用者 ID 具有 {{site.data.keyword.monitoringshort}} 服務的 IAM 原則及 **viewer** 許可權。
 
-若要完成此指導教學，您必須完成[在 Grafana 中分析 Kubernetes 叢集中所部署應用程式的度量值](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics)指導教學，或已佈建至少部署 1 個應用程式的叢集。
+若要完成此指導教學，您必須完成[在 Grafana 中分析 Kubernetes 叢集中所部署應用程式的度量值](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics)指導教學，或已佈建至少部署 1 個應用程式的叢集。
 
 
 
@@ -57,13 +57,13 @@ subcollection: cloud-monitoring
 
 從瀏覽器啟動 Grafana，並設定您可檢視叢集度量值的 {{site.data.keyword.monitoringshort}} 網域。
 
-若要分析叢集的度量值，您必須在叢集建立所在的「雲端公用」地區中存取 Grafana。如需相關資訊，請參閱[從 Web 瀏覽器導覽至 Grafana 儀表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)。
+若要分析叢集的度量值，您必須在叢集建立所在的「雲端公用」地區中存取 Grafana。如需相關資訊，請參閱[從 Web 瀏覽器導覽至 Grafana 儀表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)。
 
 1. 從瀏覽器啟動 Grafana。 
 
     輸入您已建立叢集之地區的 {{site.data.keyword.monitoringshort}} 服務 URL。 
     
-    若要取得每個地區的 URL，請參閱[監視服務的 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)。
+    若要取得每個地區的 URL，請參閱[監視服務的 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)。
 
     例如，對於「美國南部」地區，啟動：[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)。
 
@@ -107,7 +107,7 @@ subcollection: cloud-monitoring
 
 定義過濾圖形中所顯示資料的查詢。此查詢會監視容器的所有核心的 CPU 時間（十億分之一秒）。
 
-如需查詢格式的相關資訊，請參閱[針對容器所收集之 CPU 度量值的查詢格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)。
+如需查詢格式的相關資訊，請參閱[針對容器所收集之 CPU 度量值的查詢格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)。
  
 在*度量值*標籤中，選取**新增查詢**。<br>即會新增查詢項目。每一個查詢都會以一個字母標示。 
 
@@ -137,7 +137,7 @@ subcollection: cloud-monitoring
 	
     例如，若要監視容器的所有核心的 CPU 時間（十億分之一秒），請選取 **cpu** 作為類型，並選取 **usage** 作為子類型。
 		
-	如需 CPU 度量值的清單，請參閱[容器的 CPU 度量值](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers)。
+	如需 CPU 度量值的清單，請參閱[容器的 CPU 度量值](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers)。
     
 11. 按一下加號影像 ![新增圖示](images/grafana_plus_image.gif "加號影像")，然後選擇函數。您可以新增函數，以在可供度量值使用的資料上轉換、結合及執行運算。
 
@@ -167,4 +167,4 @@ subcollection: cloud-monitoring
 ## 後續步驟
 {: #cgd_next_steps}
 
-定義度量值的警示。如需相關資訊，請參閱[配置警示](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)。
+定義度量值的警示。如需相關資訊，請參閱[配置警示](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)。

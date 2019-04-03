@@ -29,7 +29,7 @@ subcollection: cloud-monitoring
 {{site.data.keyword.Bluemix}} では、コンテナーについて選択された CPU メトリックが自動的に収集されます。 {{site.data.keyword.monitoringlong}} を介してそれらをモニターするには、Grafana 照会を定義する必要があります。 
 {:shortdesc}
 
-自動的に収集される CPU メトリックのリストについては、[コンテナーの CPU メトリック](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers)を参照してください。
+自動的に収集される CPU メトリックのリストについては、[コンテナーの CPU メトリック](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers)を参照してください。
 
 
 ## 手順 1: モニターするコンテナーのデータの収集
@@ -73,7 +73,7 @@ $ ibmcloud cs cluster-get ClusterName --json
 ## 手順 2: Grafana の起動
 {: #step24}
 
-ブラウザーから Grafana を起動します。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)を参照してください。
+ブラウザーから Grafana を起動します。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)を参照してください。
 
 Grafana では、クラスターが実行されているアカウントに必ずログインしてください。 
 
@@ -81,7 +81,7 @@ Grafana では、クラスターが実行されているアカウントに必ず
 
     クラスターを作成した地域の {{site.data.keyword.monitoringshort}} サービス URL を入力します。 
     
-    地域ごとの URL を取得するには、[Monitoring サービスの URL](/docs/services/cloud-monitoring/monitoring_ov.html#region) を参照してください。
+    地域ごとの URL を取得するには、[Monitoring サービスの URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region) を参照してください。
 
     例えば、米国南部地域の場合は、[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)を起動します。
 
@@ -119,7 +119,7 @@ Grafana ダッシュボードを作成し、コンテナーの CPU 使用量を�
 
 3. グラフに表示されるデータをフィルターに掛ける照会を定義します。 
 
-    照会のフォーマットについて詳しくは、[コンテナーに関して収集される CPU メトリックの照会フォーマット](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)を参照してください。
+    照会のフォーマットについて詳しくは、[コンテナーに関して収集される CPU メトリックの照会フォーマット](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)を参照してください。
 
     *「Metrics」*タブで、**「Add query」**を選択します。 </br>照会項目が追加されます。 各照会には、1 文字のラベルが付いています。
 	
@@ -146,7 +146,7 @@ Grafana ダッシュボードを作成し、コンテナーの CPU 使用量を�
 	10. **「Select metric」**をクリックしてメトリック・タイプを指定し、次に**「Select metric」**をクリックしてメトリックのサブタイプを指定します。
 	
 	    CPU メトリックのリストについては、
-[コンテナー用の CPU メトリック](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers)を参照してください。
+[コンテナー用の CPU メトリック](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers)を参照してください。
 	
 	11. 正符号イメージ ![追加アイコン](images/grafana_plus_image.gif "正符号イメージ") をクリックし、関数を選択します。 関数を追加すると、メトリックに使用可能なデータを変換したり、結合したり、それらのデータに対して計算を実行したりすることができます。
 

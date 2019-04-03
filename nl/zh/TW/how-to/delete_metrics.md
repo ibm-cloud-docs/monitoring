@@ -30,7 +30,7 @@ subcollection: cloud-monitoring
 您可以使用 [Metrics API](https://console.bluemix.net/apidocs/monitoring-metrics-api)，刪除 {{site.data.keyword.monitoringshort}} 服務中的度量值。
 {:shortdesc}
 
-在您[登入 {{site.data.keyword.Bluemix_notm}} 中的地區](/docs/services/cloud-monitoring/qa/cli_qa.html#login)之後，請完成下列步驟來刪除通知：
+在您[登入 {{site.data.keyword.Bluemix_notm}} 中的地區](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)之後，請完成下列步驟來刪除通知：
 
 
 ## 步驟 1：取得安全記號
@@ -40,9 +40,9 @@ subcollection: cloud-monitoring
 
 選擇下列其中一種方法來取得安全記號：
 	
-* 若要取得 UAA 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 UAA 記號](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)。
-* 若要取得 IAM 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)。
-* 若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。
+* 若要取得 UAA 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 UAA 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)。
+* 若要取得 IAM 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)。
+* 若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。
 	
 例如，若要使用 IAM 記號，請執行下列指令：
 
@@ -163,7 +163,7 @@ curl -H "X-Auth-User-Token: apikey ${TOKEN}" -XGET METRICS_ENDPOINT/v1/metrics/l
 	
 * Space 是空間的 GUID。 
 	
-* METRICS_ENDPOINT 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* METRICS_ENDPOINT 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 
 * *query* 定義所套用的過濾器。例如，`query=metric-service.*` 會列出階層 `metric-service.*` 下存在的所有度量值，`query=*` 會列出網域中的所有度量值。
 
@@ -198,7 +198,7 @@ curl -H "X-Auth-User-Token: Auth_Type ${Token}" -XDELETE  METRICS_ENDPOINT/v1/me
 	
 * *Space* 代表空間的 GUID。 
 	
-* *METRICS_ENDPOINT* 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* *METRICS_ENDPOINT* 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 
 * *query* 定義所套用的過濾器。`query=*` 會指出網域中的所有度量值。
 
@@ -233,7 +233,7 @@ curl -H "X-Auth-User-Token: Auth_Type ${Token}" -XDELETE  METRICS_ENDPOINT/v1/me
 	
 * *Space* 代表空間的 GUID。 
 	
-* *METRICS_ENDPOINT* 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* *METRICS_ENDPOINT* 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 
 * *query* 定義所套用的過濾器。`query=*` 會指出網域中的所有度量值。
 

@@ -51,7 +51,7 @@ subcollection: cloud-monitoring
 若要監視在 {{site.data.keyword.Bluemix_notm}} 外部執行的 CF 應用程式，您可以使用 Metrics API，將 CF 應用程式度量值轉遞至 {{site.data.keyword.monitoringshort}} 服務。
 
 * 如需 API 的相關資訊，請參閱 [Metrics API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-metrics-api?&language=node#introduction)。
-* 如需使用 API 的相關資訊，請參閱[使用 Metrics API 傳送資料](/docs/services/cloud-monitoring/send-metrics/send_data_api.html#send_data_api)。
+* 如需使用 API 的相關資訊，請參閱[使用 Metrics API 傳送資料](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-send_data_api#send_data_api)。
 
 
 
@@ -63,14 +63,14 @@ subcollection: cloud-monitoring
 
 {{site.data.keyword.monitoringlong}} 服務使用 Grafana（一種開放程式碼分析與視覺化平台），可用來以各種圖形（例如圖表和表格）監視、搜尋、分析及視覺化您的度量值。
 
-您可以從瀏覽器啟動 Grafana。如需相關資訊，請參閱[從 Web 瀏覽器導覽至 Grafana 儀表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)。
+您可以從瀏覽器啟動 Grafana。如需相關資訊，請參閱[從 Web 瀏覽器導覽至 Grafana 儀表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)。
 
 **附註：**您必須在 CF 應用程式實例執行所在的相同 {{site.data.keyword.Bluemix_notm}} 地區中啟動 Grafana。
 
 
-若要監視 CF 應用程式，您必須在 Grafana 中定義一個以上的查詢。如需相關資訊，請參閱[在 Grafana 中配置度量值查詢](/docs/services/cloud-monitoring/grafana/define_query.html#define_query)。 
+若要監視 CF 應用程式，您必須在 Grafana 中定義一個以上的查詢。如需相關資訊，請參閱[在 Grafana 中配置度量值查詢](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query)。 
 
-您也可以定義查詢的警示。如需相關資訊，請參閱[配置警示](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)。
+您也可以定義查詢的警示。如需相關資訊，請參閱[配置警示](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)。
 
 
 
@@ -174,7 +174,7 @@ ibmcloud.public.cloud-foundry.au-syd.logtester.0.container.memory.utilization
 ```
 {: screen}
 
-如需相關資訊，請參閱 [CF 應用程式度量值格式](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)。
+如需相關資訊，請參閱 [CF 應用程式度量值格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)。
 
 **附註：**CF 應用程式名稱中容許的所有字元並不是都可以在度量值系列名稱中使用。例如，不容許大寫。您在定義查詢時可於 Grafana 中看到的 CF 應用程式名稱都會變更為全部小寫。
 

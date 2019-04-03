@@ -34,15 +34,15 @@ subcollection: cloud-monitoring
 
 1. 登录到 {{site.data.keyword.Bluemix_notm}} 中的区域、组织和空间。 
 
-    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
 2. 获取安全性令牌。 您可以使用 UAA 令牌、IAM 令牌或 API 密钥。 选择下列其中一种方法来获取安全性令牌：
 	
-	* 要获取 UAA 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 UAA 令牌](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)。
+	* 要获取 UAA 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 UAA 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)。
 	
-	* 要获取 IAM 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)。
+	* 要获取 IAM 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)。
 	
-	* 要获取 API 密钥，请参阅[获取 API 密钥](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。
+	* 要获取 API 密钥，请参阅[获取 API 密钥](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。
 	
 	通过您登录到 {{site.data.keyword.Bluemix_notm}} 的相同终端，为令牌设置 Token 变量。
 
@@ -106,9 +106,9 @@ subcollection: cloud-monitoring
 	
 4. 检索规则的历史记录。
 
-    * 要按规则的名称检索规则的历史记录，请参阅[使用规则名称检索规则的历史记录](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_name)。
-	* 要检索一段时间的规则历史记录，请参阅[检索最近 48 小时的规则历史记录](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_time)。
-	* 要从规则的历史记录中检索多个条目，请参阅[检索规则的历史记录中的最后 3 个条目](/docs/services/cloud-monitoring/alerts/retrieve_history.html#number)。
+    * 要按规则的名称检索规则的历史记录，请参阅[使用规则名称检索规则的历史记录](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_name)。
+	* 要检索一段时间的规则历史记录，请参阅[检索最近 48 小时的规则历史记录](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_time)。
+	* 要从规则的历史记录中检索多个条目，请参阅[检索规则的历史记录中的最后 3 个条目](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#number)。
 	
 	
 ## 按规则名称检索规则的历史记录
@@ -139,7 +139,7 @@ curl -XGET --header "X-Auth-User-Token: Auth_Type ${Token}" --header "X-Auth-Sco
 	
 * *RULE_NAME* 是用于触发警报的规则的名称。 值为在 *name* 字段中指定的名称。
 	
-* *METRICS_ENDPOINT* 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* *METRICS_ENDPOINT* 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 	
     
 例如，规则 `highNginxCPU` 的历史记录如下所示：
@@ -205,7 +205,7 @@ curl -H "X-Auth-User-Token: iam $Token" -H "X-Auth-Scope-Id:$Space" METRICS_ENDP
 	
 * *RULE_NAME* 是用于触发警报的规则的名称。 值为在 *name* 字段中指定的名称。
 	
-* *METRICS_ENDPOINT* 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* *METRICS_ENDPOINT* 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 	
 
 ## 检索规则的历史记录中的最后 3 个条目
@@ -236,5 +236,5 @@ curl -H "X-Auth-User-Token: iam $Token" -H "X-Auth-Scope-Id:$Space" METRICS_ENDP
 	
 * *RULE_NAME* 是用于触发警报的规则的名称。 值为在 *name* 字段中指定的名称。
 	
-* *METRICS_ENDPOINT* 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* *METRICS_ENDPOINT* 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 	

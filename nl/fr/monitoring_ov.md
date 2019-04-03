@@ -35,7 +35,7 @@ La figure suivante est une vue générale des différentes ressources à partir 
 
 Par défaut, {{site.data.keyword.Bluemix}} collecte et affiche des métriques de performance relatives à l'utilisation de l'unité centrale, à l'utilisation de la mémoire et aux entrées-sorties de réseau pour le service {{site.data.keyword.containershort}}. Vous pouvez utiliser le service {{site.data.keyword.monitoringshort}} dans {{site.data.keyword.Bluemix_notm}} pour collecter et mesurer automatiquement des métriques clés à partir de votre environnement et de vos applications. Aucune instrumentation spéciale n'est requise pour collecter les métriques. Par exemple, vous pouvez utiliser les informations fournies par les métriques de performance pour surveiller le fonctionnement d'un service dans le cloud, détecter des goulots d'étranglement de ressources et garder un oeil sur l'accord sur les niveaux de licence. Lorsque vous analysez les données de performance d'un service, vous pouvez détecter des situations susceptibles de générer un goulot d'étranglement des ressources et d'affecter votre accord sur les niveaux de licence fournis à vos clients. En agissant suffisamment tôt, vous pouvez empêcher que des situations pouvant avoir un effet négatif sur votre activité ne se développent.  
 
-Vous pouvez envoyer des métriques pour vos applications et machines virtuelles Cloud Foundry (CF) dans le service {{site.data.keyword.monitoringshort}}. Pour plus d'informations sur l'envoi des métriques, voir[Envoi de métriques au service {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#send_retrieve_metrics_ov).
+Vous pouvez envoyer des métriques pour vos applications et machines virtuelles Cloud Foundry (CF) dans le service {{site.data.keyword.monitoringshort}}. Pour plus d'informations sur l'envoi des métriques, voir[Envoi de métriques au service {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#send_retrieve_metrics_ov).
 
 Vous pouvez mettre à disposition le service {{site.data.keyword.monitoringshort}} via le catalogue {{site.data.keyword.Bluemix_notm}}.  
 
@@ -76,7 +76,7 @@ Vous pouvez visualiser et analyser des métriques collectées par le service {{s
 
 Le service {{site.data.keyword.monitoringshort}} met à disposition plusieurs plans. Chaque plan propose des fonctions différentes de collecte et de conservation des métriques, et de définition d'alerte. 
 
-Vous pouvez changer de plan dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou via la ligne de commande. Vous pouvez mettre à niveau ou rétrograder votre plan à tout moment. Pour plus d'informations sur les mises à niveau des plans de service dans {{site.data.keyword.Bluemix_notm}}, voir [Modification du plan](/docs/services/cloud-monitoring/plan/change_plan.html#change_plan). 
+Vous pouvez changer de plan dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou via la ligne de commande. Vous pouvez mettre à niveau ou rétrograder votre plan à tout moment. Pour plus d'informations sur les mises à niveau des plans de service dans {{site.data.keyword.Bluemix_notm}}, voir [Modification du plan](/docs/services/cloud-monitoring/plan?topic=cloud-monitoring-change_plan#change_plan). 
 
 Le tableau suivant présente les plans disponibles lorsque vous mettez à disposition le service {{site.data.keyword.monitoringshort}} dans un espace :
 
@@ -137,7 +137,7 @@ Les métriques qui n'ont pas été actualisées pendant 7 jours sont supprimées
 ## Mise à disposition du service Monitoring
 {: #provision1}
 
-Vous trouverez le service {{site.data.keyword.monitoringshort}} dans la section **DevOps** du catalogue {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur la mise à disposition d'un service dans {{site.data.keyword.Bluemix_notm}}, voir [Mise à disposition du service {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to/provision.html#provision).
+Vous trouverez le service {{site.data.keyword.monitoringshort}} dans la section **DevOps** du catalogue {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur la mise à disposition d'un service dans {{site.data.keyword.Bluemix_notm}}, voir [Mise à disposition du service {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 Prenez en compte les informations suivantes pour le service {{site.data.keyword.monitoringshort}} :
 

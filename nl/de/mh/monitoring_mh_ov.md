@@ -31,7 +31,7 @@ In {{site.data.keyword.Bluemix}} werden {{site.data.keyword.messagehub}}-Metrike
 {:shortdesc}
 
 
-**Hinweis:** {{site.data.keyword.messagehub}}-Metriken sind im Rahmen des {{site.data.keyword.messagehub}}-Standardplans nur in den Regionen USA (Süden), Vereinigtes Königreich und Sydney verfügbar.  
+**Hinweis:** {{site.data.keyword.messagehub}}-Metriken sind im Rahmen des {{site.data.keyword.messagehub}}-Standardplans nur in den Regionen USA (Süden), Vereinigtes Königreich und Sydney verfügbar. 
 
 
 
@@ -53,15 +53,15 @@ Sie können Grafana auf eine der folgenden Weisen starten:
 
     Stellen Sie sicher, dass Sie sich in der richtigen Organisation und im richtigen Bereich befinden, in der bzw. in dem die {{site.data.keyword.messagehub}}-Instanz ausgeführt wird.
     
-    Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+    Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
     
 
 Beachten Sie die folgenden Informationen:
 
 * Sie müssen Grafana in derselben {{site.data.keyword.Bluemix_notm}}-Region starten, in der auch die {{site.data.keyword.messagehub}}-Instanz ausgeführt wird.
 * Verwenden Sie das Grafana-Dashboard, das standardmäßig bereitgestellt wird, um mit der Überwachung Ihrer {{site.data.keyword.messagehub}}-Instanz zu beginnen.
-* Erstellen Sie benutzerdefinierte Grafana-Dashboards, um Ad-hoc-Dashboards zu erstellen. Sie können eine oder mehrere Metrikabfragen in einem Grafana-Dashboard definieren, um eine {{site.data.keyword.messagehub}}-Instanz zu überwachen. Weitere Informationen finden Sie unter [Metrikabfrage in Grafana konfigurieren](/docs/services/cloud-monitoring/grafana/define_query.html#define_query).
-* Außerdem können Sie Alerts für Abfragen definieren. Weitere Informationen finden Sie unter [Alerts konfigurieren ](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+* Erstellen Sie benutzerdefinierte Grafana-Dashboards, um Ad-hoc-Dashboards zu erstellen. Sie können eine oder mehrere Metrikabfragen in einem Grafana-Dashboard definieren, um eine {{site.data.keyword.messagehub}}-Instanz zu überwachen. Weitere Informationen finden Sie unter [Metrikabfrage in Grafana konfigurieren](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query).
+* Außerdem können Sie Alerts für Abfragen definieren. Weitere Informationen finden Sie unter [Alerts konfigurieren ](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).
 
 
 ## Metriken für einen Kafka-Abschnitt
@@ -124,6 +124,6 @@ Für jede Kafka-Partition mit einer Cloudspeicherbrücke, die Nachrichten verarb
 ## Referenzinformationen
 {: #mhlinks}
 
-* [Einführung in Message Hub](/docs/services/EventStreams/index.html#getting_started)
+* [Einführung in Message Hub](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started)
 * [Überwachung und Protokollierung](/docs/services/EventStreams/messagehub072.html#monitoring)
 

@@ -30,11 +30,11 @@ subcollection: cloud-monitoring
 下面是对将 {{site.data.keyword.Bluemix}} CLI 与 {{site.data.keyword.monitoringshort}} 服务一起使用时的常见问题的解答。
 {:shortdesc}
 
-* [如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)
-* [如何安装 {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/cloud-monitoring/qa/cli_qa.html#install_bmx_cli)
-* [如何获取帐户的 GUID](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid)
-* [如何获取组织的 GUID](/docs/services/cloud-monitoring/qa/cli_qa.html#org_guid)
-* [如何获取空间的 GUID](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid)
+* [如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)
+* [如何安装 {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#install_bmx_cli)
+* [如何获取帐户的 GUID](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid)
+* [如何获取组织的 GUID](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#org_guid)
+* [如何获取空间的 GUID](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid)
 
 ## 如何登录到 IBM Cloud？
 {: #login}
@@ -97,7 +97,7 @@ ibmcloud target -o OrgName -s SpaceName
 ## 如何安装 IBM Cloud CLI？
 {: #install_bmx_cli}
 
-请参阅[下载并安装 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview)。
+请参阅[下载并安装 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)。
 
 ## 如何获取帐户的 GUID
 {: #account_guid}

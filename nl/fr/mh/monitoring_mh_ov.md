@@ -53,15 +53,15 @@ Vous pouvez démarrer Grafana de l'une des manières suivantes :
 
     Assurez-vous de bien vous placer dans l'espace et l'organisation où s'exécute l'instance {{site.data.keyword.messagehub}}.
     
-    Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+    Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
     
 
 Tenez compte des informations suivantes :
 
 * Vous devez lancer Grafana dans la même région {{site.data.keyword.Bluemix_notm}} que celle dans laquelle l'instance {{site.data.keyword.messagehub}} s'exécute.
 * Utilisez le tableau de bord Grafana fourni par défaut pour démarrer la surveillance de votre instance {{site.data.keyword.messagehub}}.
-* Créez des tableaux de bord Grafana personnalisés afin de répondre à des besoins spécifiques. Vous pouvez définir une ou plusieurs requêtes de métrique dans un tableau de bord Grafana pour surveiller une instance {{site.data.keyword.messagehub}}. Pour plus d'informations, voir [Configuration d'une requête de métrique dans Grafana](/docs/services/cloud-monitoring/grafana/define_query.html#define_query).
-* Vous pouvez également définir des alertes sur des requêtes. Pour plus d'informations, voir [Configuration d'alertes](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+* Créez des tableaux de bord Grafana personnalisés afin de répondre à des besoins spécifiques. Vous pouvez définir une ou plusieurs requêtes de métrique dans un tableau de bord Grafana pour surveiller une instance {{site.data.keyword.messagehub}}. Pour plus d'informations, voir [Configuration d'une requête de métrique dans Grafana](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query).
+* Vous pouvez également définir des alertes sur des requêtes. Pour plus d'informations, voir [Configuration d'alertes](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).
 
 
 ## Métriques pour une rubrique Kafka
@@ -124,6 +124,6 @@ Pour chaque partition Kafka disposant d'un pont Cloud Storage qui consomme des m
 ## Références
 {: #mhlinks}
 
-* [Initiation à Message Hub](/docs/services/EventStreams/index.html#getting_started)
+* [Initiation à Message Hub](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started)
 * [Surveillance et journalisation](/docs/services/EventStreams/messagehub072.html#monitoring)
 

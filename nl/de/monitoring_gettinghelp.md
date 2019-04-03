@@ -37,5 +37,5 @@ Wenn Sie bei der Verwendung der Überwachungsfunktionen in {{site.data.keyword.B
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
   * Bei Fragen zum Service sowie zu einführenden Anweisungen, verwenden Sie das Forum [{{site.data.keyword.IBM_notm}} developerWorks dW Answers](https://developer.ibm.com/answers/topics/ibm-cloud-monitoring/?smartspace=ibm-cloud){:new_window}.
 
-* Wenn das Problem weiterhin nicht behoben werden kann, können Sie ein IBM Support-Ticket öffnen. Informationen zum Öffnen eines IBM Support-Tickets oder zu den Support-Levels und Ticketprioritäten finden Sie in [Support kontaktieren](/docs/get-support/howtogetsupport.html#getting-customer-support). 
+* Wenn das Problem weiterhin nicht behoben werden kann, können Sie ein IBM Support-Ticket öffnen. Informationen zum Öffnen eines IBM Support-Tickets oder zu den Support-Levels und Ticketprioritäten finden Sie in [Support kontaktieren](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support).
 

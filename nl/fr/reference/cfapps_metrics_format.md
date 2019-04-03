@@ -85,7 +85,7 @@ où
   </tr>
   <tr>
     <td>Metric Subtype</td>
-	  <td>Métrique à afficher. </br>[Métriques d'unité centrale](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics) </br>[Métriques de disque](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics) </br>[Métriques de mémoire](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td>
+	  <td>Métrique à afficher. </br>[Métriques d'unité centrale](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics) </br>[Métriques de disque](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics) </br>[Métriques de mémoire](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td>
 	  <td></td>
   </tr>
   <tr>

@@ -33,7 +33,7 @@ In {{site.data.keyword.Bluemix}} werden Clustermetriken automatisch erfasst. Sie
 **Anmerkung:** 
 
 * Metriken werden mithilfe des {{site.data.keyword.monitoringshort}}-Service für Container erfasst und verfügbar gemacht, die in Standardclustern ausgeführt werden.
-* Zur Überwachung von Clustermetriken müssen Sie eine Instanz des Monitoring-Service bereitstellen. Weitere Informationen finden Sie in [Monitoring-Service bereitstellen](/docs/services/cloud-monitoring/how-to/provision.html#provision). 
+* Zur Überwachung von Clustermetriken müssen Sie eine Instanz des Monitoring-Service bereitstellen. Weitere Informationen finden Sie in [Monitoring-Service bereitstellen](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 
 ## Informationen zur Überwachung in Public
@@ -117,7 +117,7 @@ In der folgenden Tabelle sind die Speichermetriken aufgelistet, die automatisch 
 | Metrik | Beschreibung | Einheiten |
 |----------|---------|---------|
 | `memory.current` | Diese Metrik gibt die Anzahl an Byte des Speichers aus, die der Container gerade verwendet. | Byte |
-| `memory.limit` | Diese Metrik gibt den Speichergrenzwert des Containers an. Der Container wird standardmäßig ohne Speichergrenzwerte ausgeführt. Ein Container kann so viel Speicher verbrauchen, wie auf dem Worker zur Verfügung steht, auf dem er ausgeführt wird. Wenn Sie einen Pod bereitstellen, können Sie Grenzwerte für die Speichermenge festlegen, die die zugehörigen Container nutzen können.| Byte |
+| `memory.limit` | Diese Metrik gibt den Speichergrenzwert des Containers an. Der Container wird standardmäßig ohne Speichergrenzwerte ausgeführt. Ein Container kann so viel Speicher verbrauchen, wie auf dem Worker zur Verfügung steht, auf dem er ausgeführt wird. Wenn Sie einen Pod bereitstellen, können Sie Grenzwerte für die Speichermenge festlegen, die die zugehörigen Container nutzen können. | Byte |
 | `memory.usage-pct` | Diese Metrik gibt den verwendeten Speicher als Prozentsatz der Speicherbegrenzung des Containers aus. </br>Wenn Sie Grenzwerte für die Speicherkapazität festlegen, berichtet diese Metrik die Speichernutzung als Prozentsatz der von Ihnen festgelegten Grenzwerte. | Prozentsatz | 
 | `memory.working-set` | Diese Metrik gibt die Menge an aktivem Speicher (in Byte) an, die der Container momentan im vorbereiteten Cache verwendet. | Byte |
 {: caption="Speichermetriken für Container" caption-side="top"} 
@@ -232,20 +232,20 @@ Verwenden Sie Grafana, um die Leistung von Containern und Workern zu überwachen
 
 Der {{site.data.keyword.monitoringlong}}-Service verwendet Grafana, eine Open-Source-Analyse- und Darstellungsplattform, mit der Sie Ihre Metriken in einer Vielfalt von Grafiken (z. B. Diagramme und Tabellen) überwachen, durchsuchen, analysieren und visualisieren können.
 
-Sie können Grafana von einem Browser starten. Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Sie können Grafana von einem Browser starten. Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 Zum Überwachen von Containern und Workern, die in einem Kubernetes-Cluster ausgeführt werden, müssen Sie für jede Ressource eine Abfrage in Grafana definieren:
 
-* Informationen darüber, wie Sie eine Abfrage definieren, mit der eine CPU-Metrik für einen Container überwacht wird, finden Sie unter [CPU-Metriken für einen Container in Grafana konfigurieren](/docs/services/cloud-monitoring/containers/config_cpu_containers.html#config_cpu_containers).
-* Informationen darüber, wie Sie eine Abfrage definieren, mit der eine Speichermetrik für einen Container überwacht wird, finden Sie unter [Speichermetriken für einen Container in Grafana konfigurieren](/docs/services/cloud-monitoring/containers/config_mem_container.html#config_mem_container).
-* Informationen darüber, wie Sie eine Abfrage definieren, mit der eine Lademetrik für einen Worker überwacht wird, finden Sie unter [Auslastungsmetriken für einen Worker in Grafana konfigurieren](/docs/services/cloud-monitoring/containers/config_load_worker.html#config_load_worker).
+* Informationen darüber, wie Sie eine Abfrage definieren, mit der eine CPU-Metrik für einen Container überwacht wird, finden Sie unter [CPU-Metriken für einen Container in Grafana konfigurieren](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_cpu_containers#config_cpu_containers).
+* Informationen darüber, wie Sie eine Abfrage definieren, mit der eine Speichermetrik für einen Container überwacht wird, finden Sie unter [Speichermetriken für einen Container in Grafana konfigurieren](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_mem_container#config_mem_container).
+* Informationen darüber, wie Sie eine Abfrage definieren, mit der eine Lademetrik für einen Worker überwacht wird, finden Sie unter [Auslastungsmetriken für einen Worker in Grafana konfigurieren](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_load_worker#config_load_worker).
 
 
 Das Format der Abfrage ist je nach Ressourcentyp und Art der Abfrage anders:
 
-* Weitere Informationen zum Format der Abfragen zum Überwachen der CPU für einen Container finden Sie unter [Abfrageformat für CPU-Metriken für einen Container](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers). 
-* Weitere Informationen zum Format der Abfragen zum Überwachen der Auslastung für einen Worker finden Sie unter [Abfrageformat für Lademetriken für einen Worker](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers).
-* Weitere Informationen zum Format der Abfragen zum Überwachen von Speicher für einen Container finden Sie unter [Abfrageformat für Speichermetriken für einen Container](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers).
+* Weitere Informationen zum Format der Abfragen zum Überwachen der CPU für einen Container finden Sie unter [Abfrageformat für CPU-Metriken für einen Container](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers). 
+* Weitere Informationen zum Format der Abfragen zum Überwachen der Auslastung für einen Worker finden Sie unter [Abfrageformat für Lademetriken für einen Worker](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers).
+* Weitere Informationen zum Format der Abfragen zum Überwachen von Speicher für einen Container finden Sie unter [Abfrageformat für Speichermetriken für einen Container](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers).
 
 
 ## Netzverkehr für angepasste Firewallkonfigurationen in {{site.data.keyword.Bluemix_notm}} konfigurieren
@@ -287,6 +287,6 @@ Sie müssen TCP-Port 443 und TCP-Port 9091 an jedem Worker für den {{site.data.
 ## Lernprogramme
 {: #tutorial}
 
-Informationen zur Verwendung des {{site.data.keyword.monitoringshort}}-Service für die Überwachung der Containerleistung finden Sie in [Metriken in Grafana für eine App analysieren, die in einem Kubernetes-Cluster bereitgestellt wurde](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics).
+Informationen zur Verwendung des {{site.data.keyword.monitoringshort}}-Service für die Überwachung der Containerleistung finden Sie in [Metriken in Grafana für eine App analysieren, die in einem Kubernetes-Cluster bereitgestellt wurde](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics).
 
-Informationen zur Erstellung eines Grafana-Dashboards im {{site.data.keyword.monitoringshort}}-Service für die Überwachung der Clusterleistung finden Sie in [Erstellen eines Grafana-Dashboards für die Überwachung eines Kubernetes-Clusters](/docs/services/cloud-monitoring/tutorials/container_grafana_dashboard.html#container_grafana_dashboard).
+Informationen zur Erstellung eines Grafana-Dashboards im {{site.data.keyword.monitoringshort}}-Service für die Überwachung der Clusterleistung finden Sie in [Erstellen eines Grafana-Dashboards für die Überwachung eines Kubernetes-Clusters](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_grafana_dashboard#container_grafana_dashboard).

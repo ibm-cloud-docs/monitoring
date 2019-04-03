@@ -36,14 +36,14 @@ Para configurar una alerta en una consulta de métrica mediante la interfaz de u
 4. Configure la alerta a través del separador **Alertas** en un gráfico de Grafana.
 
 ## Paso 1: Iniciar Grafana
-{: #step1_cag1}
+{: #step1_cag}
 
 Inicie Grafana desde un navegador. Por ejemplo, escriba el siguiente URL para abrir Grafana en la región EE.UU. sur: [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
-Para obtener una lista de URL de Grafana por región, consulte [URL para el servicio {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+Para obtener una lista de URL de Grafana por región, consulte [URL para el servicio {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
 ## Paso 2: Definir uno o varios canales de notificación
-{: #step2_cag2}
+{: #step2_cag}
 
 Realice los siguientes pasos:
 
@@ -98,15 +98,15 @@ separadas por comas.</td>
   </tr>
   <tr>
     <td>URL POST de Webhook</td>
-    <td>Escriba el URL en el que se debe realizar la acción POST.</td>
+    <td>Escriba el URL en el que se debe realizar la solicitud POST.</td>
   </tr>
   <tr>
-    <td>Cabeceras Webhook</td>
-    <td>Escriba cualquier cabecera.</td>
+    <td>Cabeceras de Webhook</td>
+    <td>Especifique las cabeceras.</td>
   </tr>
   <tr>
     <td>Parámetros de consulta de Webhook</td>
-    <td>Escriba cualquier parámetro de consulta.</td>
+    <td>Escriba los parámetros de consulta.</td>
   </tr>
 </table>
 
@@ -135,7 +135,7 @@ separadas por comas.</td>
 </table>
 
 ## Paso 3: Definir una métrica
-{: #step3_cag3}
+{: #step3_cag}
 
 Siga los siguientes pasos para crear un nuevo panel de control:
 
@@ -157,7 +157,7 @@ A continuación, añada una consulta de métrica:
 
 
 ## Paso 4: Definir una alerta
-{: #step4_cag4}
+{: #step4_cag}
 
 Siga los siguientes pasos para definir una alerta en la interfaz de usuario de Grafana:
 
@@ -175,7 +175,7 @@ Siga los siguientes pasos para definir una alerta en la interfaz de usuario de G
 * Si selecciona **Suprimir**, la alerta se suprimirá.
 
 ## Siguiente: Verifique que se haya generado una alerta
-{: #next_cag5}
+{: #next_cag}
 
 Por ejemplo, si ha creado un canal de notificación por correo electrónico, compruebe su correo electrónico.
 

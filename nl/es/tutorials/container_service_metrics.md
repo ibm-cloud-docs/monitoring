@@ -33,11 +33,11 @@ Utilice esta guía de aprendizaje para aprender a utilizar el servicio {{site.da
 ## Objetivos
 {: #ks_objectives}
 
-Aprenda a buscar y analizar métricas de contenedor de una app que se despliega en un clúster Kubernetes:
+Aprenda a buscar y analizar métricas de contenedor de una app que se despliega en un clúster de Kubernetes:
 
 1. Identifique dónde se reenvían las métricas que se recopilan en un clúster al servicio {{site.data.keyword.monitoringshort}}. 
 2. Inicie Grafana y establezca el dominio {{site.data.keyword.monitoringshort}} donde pueda ver las métricas del clúster.
-3. Busque y analice métricas de contenedor de una app desplegada en un clúster Kubernetes en {{site.data.keyword.Bluemix_notm}}.
+3. Busque y analice métricas de contenedor de una app desplegada en un clúster de Kubernetes en {{site.data.keyword.Bluemix_notm}}.
 
 Esta guía de aprendizaje le guiará por los pasos necesarios para que el siguiente caso de ejemplo completo funcione en {{site.data.keyword.Bluemix_notm}}: Suministro de un clúster, identificación de dónde envía métricas el clúster al servicio {{site.data.keyword.monitoringshort}} en {{site.data.keyword.Bluemix_notm}}, despliegue de una app en el clúster, y uso de Grafana para ver y filtrar métricas de contenedor para dicho clúster.
 
@@ -48,22 +48,22 @@ Esta guía de aprendizaje le guiará por los pasos necesarios para que el siguie
 ## Requisitos previos
 {: #ks_prereqs}
 
-1. Ser miembro o propietario de una cuenta de {{site.data.keyword.Bluemix_notm}} con permisos para crear clústeres Kubernetes estándares, desplegar apps en clústeres, y consultar métricas en {{site.data.keyword.Bluemix_notm}} para supervisión en Grafana.
+1. Ser miembro o propietario de una cuenta de {{site.data.keyword.Bluemix_notm}} con permisos para crear clústeres de Kubernetes estándares, desplegar apps en clústeres, y consultar métricas en {{site.data.keyword.Bluemix_notm}} para supervisión en Grafana.
 
     Su ID de usuario para {{site.data.keyword.Bluemix_notm}} debe tener las siguientes políticas asignadas:
     
     * Una política de IAM para {{site.data.keyword.containershort}} con permisos de *operador* o *administrador*.
     
-    Para obtener más información, consulte [Asignar una política de IAM a un usuario mediante la IU de IBM Cloud](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui).
+    Para obtener más información, consulte [Asignar una política de IAM a un usuario mediante la IU de IBM Cloud](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui).
 
-2. Tener una sesión de terminal desde la que gestionar el clúster Kubernetes y desplegar apps desde la línea de mandatos. Los ejemplos en esta guía de aprendizaje se proporcionan para un sistema Ubuntu Linux.
+2. Tener una sesión de terminal desde la que gestionar el clúster de Kubernetes y desplegar apps desde la línea de mandatos. Los ejemplos en esta guía de aprendizaje se proporcionan para un sistema Ubuntu Linux.
 
 3. Instalar las CLI para trabajar con {{site.data.keyword.containershort}} en el sistema Ubuntu.
 
     * Instale la CLI de {{site.data.keyword.Bluemix_notm}}. 
-    * Instale la CLI de {{site.data.keyword.containershort}} para crear y gestionar los clústeres Kubernetes en {{site.data.keyword.containershort}}, y para desplegar apps contenerizadas en el clúster.
+    * Instale la CLI de {{site.data.keyword.containershort}} para crear y gestionar los clústeres de Kubernetes en {{site.data.keyword.containershort}}, y para desplegar apps contenerizadas en el clúster.
     
-    Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#overview).
+    Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
     
     
 
@@ -75,11 +75,11 @@ Esta guía de aprendizaje le guiará por los pasos necesarios para que el siguie
 
 Realice los siguientes pasos:
 
-1. Cree un clúster de Kubernetes estándar. Para obtener más información, consulte [Cree un clúster de Kubernetes estándar](/docs/containers/cs_tutorials.html#cs_cluster_tutorial).
+1. Cree un clúster de Kubernetes estándar. Para obtener más información, consulte [Cree un clúster de Kubernetes estándar](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial).
 
-2. Configure el contexto del clúster en un terminal. Después de haber configurado el contexto, podrá gestionar el clúster Kubernetes y desplegar la aplicación en dicho clúster Kubernetes.
+2. Configure el contexto del clúster en un terminal. Después de haber configurado el contexto, podrá gestionar el clúster de Kubernetes y desplegar la aplicación en dicho clúster de Kubernetes.
 
-    Inicie la sesión en la región, organización y espacio en {{site.data.keyword.Bluemix_notm}} que están asociados al clúster que ha creado. Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/CloudLogAnalysis/qa/cli_qa.html#login).
+    Inicie la sesión en la región, organización y espacio en {{site.data.keyword.Bluemix_notm}} que están asociados al clúster que ha creado. Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/CloudLogAnalysis/qa?topic=cloudloganalysis-cli_qa#login).
 
 	Inicialice el plug-in del servicio {{site.data.keyword.containershort}}.
 
@@ -115,7 +115,7 @@ Complete los pasos siguientes para otorgar permisos a un usuario para trabajar c
 
 1. Inicie sesión en la consola de {{site.data.keyword.Bluemix_notm}}.
 
-    Abra un navegador web y lance el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
+    Abra un navegador web e inicie el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
 	
 	Después de iniciar sesión con su ID de usuario y su contraseña, se abre la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
 
@@ -125,7 +125,7 @@ Complete los pasos siguientes para otorgar permisos a un usuario para trabajar c
 	
 3. Si el usuario es un miembro de la cuenta, seleccione el nombre de usuario de la lista, o pulse **Gestionar usuario** del menú *Acciones*.
 
-    Si el usuario no es un miembro de la cuenta, consulte [Invitación a usuarios](/docs/iam/iamuserinv.html#iamuserinv).
+    Si el usuario no es un miembro de la cuenta, consulte [Invitación a usuarios](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Seleccione **Políticas de acceso > Asignar acceso > Asignar acceso a recursos**.
 
@@ -146,7 +146,7 @@ Realice los pasos siguientes para otorgar los permisos de propietario de claves 
 
 1. Inicie sesión en la consola de {{site.data.keyword.Bluemix_notm}}.
 
-    Abra un navegador web y lance el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
+    Abra un navegador web e inicie el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
 	
 	Después de iniciar sesión con su ID de usuario y su contraseña, se abre la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
 
@@ -167,16 +167,16 @@ Realice los pasos siguientes para otorgar los permisos de propietario de claves 
 
 
 
-## Paso 4: Desplegar una app de ejemplo en el clúster Kubernetes
+## Paso 4: Desplegar una app de ejemplo en el clúster de Kubernetes
 {: #ks_step4}
 
-Desplegar y ejecutar una app de ejemplo en el clúster Kubernetes. Complete los pasos de la siguiente guía de aprendizaje para desplegar la app de ejemplo: [Lección 1: Despliegue de apps de una sola instancia en clústeres Kubernetes](/docs/containers/cs_tutorials_apps.html#cs_apps_tutorial_lesson1).
+Desplegar y ejecutar una app de ejemplo en el clúster de Kubernetes. Complete los pasos de la siguiente guía de aprendizaje para desplegar la app de ejemplo: [Lección 1: Despliegue de apps de una sola instancia en clústeres de Kubernetes](/docs/containers?topic=containers-cs_apps_tutorial#cs_apps_tutorial_lesson1).
 
 La app es una app Node.js Hello World:
 
 ```
 var express = require('express')
-    var app = express()
+var app = express()
 
 app.get('/', function(req, res) {
   res.send('Hello world! Your app is up and running in a cluster!\n')
@@ -195,13 +195,13 @@ En esta app de ejemplo, cuando prueba la app en un navegador, la app escribe en 
 
 Inicie Grafana desde un navegador y establezca el dominio de {{site.data.keyword.monitoringshort}} donde puede ver las métricas de clúster.
 
-Para analizar las métricas de un clúster, debe acceder a Grafana en la región pública de la nube en la que se ha creado el clúster. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Para analizar las métricas de un clúster, debe acceder a Grafana en la región pública de la nube en la que se ha creado el clúster. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 1. Desde un navegador, inicie Grafana. 
 
     Especifique el URL del servicio {{site.data.keyword.monitoringshort}} para la región en la que ha creado el clúster. 
     
-    Para obtener los URL por región, consulte [URL para el servicio de supervisión](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Para obtener los URL por región, consulte [URL para el servicio de supervisión](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Por ejemplo, para la región EE.UU. sur, inicie: [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -232,4 +232,4 @@ Se abrirá el panel de control de ejemplo.
 ## Pasos siguientes
 {: #ks_next_steps}
 
-Defina una alerta para una métrica. Para obtener más información, consulte [Configuración de alertas](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Defina una alerta para una métrica. Para obtener más información, consulte [Configuración de alertas](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

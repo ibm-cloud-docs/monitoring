@@ -38,13 +38,13 @@ subcollection: cloud-monitoring
 
 1. (전제조건) {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오.
 
-   자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI 설치](/docs/services/cloud-monitoring/qa/cli_qa.html#cli_qa)를 참조하십시오.
+   자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI 설치](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#cli_qa)를 참조하십시오.
    
    CLI가 설치되어 있는 경우에는 다음 단계를 진행하십시오.
     
 2. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 	
 3. `ibmcloud iam oauth-tokens` 명령을 실행하여 IAM 토큰을 가져오십시오.
 

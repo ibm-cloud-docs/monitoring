@@ -35,7 +35,7 @@ subcollection: cloud-monitoring
 
 {{site.data.keyword.Bluemix}} は、デフォルトで、{{site.data.keyword.containershort}} の CPU 使用量、メモリー使用量、およびネットワーク入出力のメトリックを収集して表示します。 {{site.data.keyword.Bluemix_notm}} で {{site.data.keyword.monitoringshort}} サービスを使用すると、ご使用の環境およびアプリケーションから主要メトリックを自動的に収集し、測定することができます。 メトリックの収集には、特別な計測装置は必要ありません。 例えば、パフォーマンス・メトリックによって提供される情報を使用して、サービスがクラウドでどのように稼働しているのかをモニターしたり、リソースのボトルネックを検出したり、SLA (Service Level Agreement) を監視したりできます。 サービスのパフォーマンス・データを分析している時、リソースのボトルネックを引き起こし、結果的にクライアントへのサービス SLA に影響する可能性のある状況を検出できます。 早期に処置することで、業務に悪影響を与える可能性のある状況を防止できます。  
 
-ご使用の Cloud Foundry (CF) アプリケーションおよび仮想マシン (VM) のメトリックを {{site.data.keyword.monitoringshort}} サービスに送信できます。 メトリックの送信方法について詳しくは、[{{site.data.keyword.monitoringshort}} サービスへのメトリックの送信](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#send_retrieve_metrics_ov)を参照してください。
+ご使用の Cloud Foundry (CF) アプリケーションおよび仮想マシン (VM) のメトリックを {{site.data.keyword.monitoringshort}} サービスに送信できます。 メトリックの送信方法について詳しくは、[{{site.data.keyword.monitoringshort}} サービスへのメトリックの送信](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#send_retrieve_metrics_ov)を参照してください。
 
 {{site.data.keyword.Bluemix_notm}} カタログを通じて {{site.data.keyword.monitoringshort}} サービスをプロビジョンできます。  
 
@@ -76,7 +76,7 @@ subcollection: cloud-monitoring
 
 {{site.data.keyword.monitoringshort}} サービスでは、複数のプランが用意されています。 各プランは、異なるメトリック収集、保存、およびアラート定義の機能を持っています。 
 
-プランは、{{site.data.keyword.Bluemix_notm}} UI またはコマンド・ラインを介して変更できます。 プランのアップグレード、またはライト・プランへの切り替えは、いつでも実行できます。 {{site.data.keyword.Bluemix_notm}} でのサービス・プランのアップグレードについて詳しくは、[プランの変更](/docs/services/cloud-monitoring/plan/change_plan.html#change_plan)を参照してください。 
+プランは、{{site.data.keyword.Bluemix_notm}} UI またはコマンド・ラインを介して変更できます。 プランのアップグレード、またはライト・プランへの切り替えは、いつでも実行できます。 {{site.data.keyword.Bluemix_notm}} でのサービス・プランのアップグレードについて詳しくは、[プランの変更](/docs/services/cloud-monitoring/plan?topic=cloud-monitoring-change_plan#change_plan)を参照してください。 
 
 以下の表は、スペースに {{site.data.keyword.monitoringshort}} サービスをプロビジョンする場合に使用可能なプランの概要を示しています。
 
@@ -137,7 +137,7 @@ subcollection: cloud-monitoring
 ## Monitoring サービスのプロビジョニング
 {: #provision1}
 
-{{site.data.keyword.Bluemix_notm}} カタログの **DevOps** セクションに {{site.data.keyword.monitoringshort}} サービスがあります。 {{site.data.keyword.Bluemix_notm}} でのサービスのプロビジョニングについて詳しくは、[{{site.data.keyword.monitoringshort}} サービスのプロビジョニング](/docs/services/cloud-monitoring/how-to/provision.html#provision)を参照してください。
+{{site.data.keyword.Bluemix_notm}} カタログの **DevOps** セクションに {{site.data.keyword.monitoringshort}} サービスがあります。 {{site.data.keyword.Bluemix_notm}} でのサービスのプロビジョニングについて詳しくは、[{{site.data.keyword.monitoringshort}} サービスのプロビジョニング](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision)を参照してください。
 
 {{site.data.keyword.monitoringshort}} サービスに関する以下の情報を考慮してください。
 

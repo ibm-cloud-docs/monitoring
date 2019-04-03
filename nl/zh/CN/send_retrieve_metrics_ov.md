@@ -113,14 +113,14 @@ subcollection: cloud-monitoring
 
 
 
-* 必须指定要发送度量值的 API 端点。每个区域都有一个端点。例如，对于美国南部区域，端点为以下内容：`https://metrics.ng.bluemix.net/v1/metrics`。有关端点的更多信息，请参阅 [{{site.data.keyword.monitoringshort}} 服务的 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region){: new_window}。
+* 必须指定要发送度量值的 API 端点。每个区域都有一个端点。例如，对于美国南部区域，端点为以下内容：`https://metrics.ng.bluemix.net/v1/metrics`。有关端点的更多信息，请参阅 [{{site.data.keyword.monitoringshort}} 服务的 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region){: new_window}。
 
 
 您可以使用以下任何方法将度量值发送到 {{site.data.keyword.monitoringshort}} 服务：
 
 * *方法 1：配置 {{site.data.keyword.monitoringshort}} 插件*。
 
-    有关更多信息，请参阅[配置 {{site.data.keyword.monitoringshort}} 插件](/docs/services/cloud-monitoring/send-metrics/conf_monitoring_plugin.html#conf_monitoring_plugin)。
+    有关更多信息，请参阅[配置 {{site.data.keyword.monitoringshort}} 插件](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-conf_monitoring_plugin#conf_monitoring_plugin)。
 
     下图显示了如何使用 {{site.data.keyword.monitoringshort}} 插件，将度量值发送到 {{site.data.keyword.monitoringshort}} 服务的高级视图：
 
@@ -128,7 +128,7 @@ subcollection: cloud-monitoring
 
 * *方法 2：使用“度量值”API。*
 
-    有关更多信息，请参阅[使用度量值 API 发送度量值](/docs/services/cloud-monitoring/send-metrics/send_data_api.html#send_data_api)。
+    有关更多信息，请参阅[使用度量值 API 发送度量值](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-send_data_api#send_data_api)。
 
 
 ## 检索度量值
@@ -136,15 +136,15 @@ subcollection: cloud-monitoring
 
 如果需要在 {{site.data.keyword.monitoringshort}} 服务外部执行进一步分析，或者如果您的应用程序希望使用度量值来进行决策，那么可以使用“度量值”API 对每个请求最多检索五个度量值。 
 
-* 有关如何检索度量值的更多信息，请参阅[检索域的度量值](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#retrieve_data_api)
+* 有关如何检索度量值的更多信息，请参阅[检索域的度量值](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#retrieve_data_api)
 * 有关“度量值”API 的更多信息，请参阅[度量值 API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window}。
 
 要检索度量值，请考虑以下信息： 
 
 * 必须设置要从中检索数据的空间。 
 * 您必须提供安全性令牌或 API 密钥才能使用 {{site.data.keyword.monitoringshort}} 服务。 
-* 必须指定 1 个或多个度量值的路径。有关更多信息，请参阅[定义度量值](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics)。
-* （可选）您可以指定定制时间段。缺省情况下，如果未指定时间段，那么检索的数据是与过去 24 小时相对应的数据。有关更多信息，请参阅[配置时间段](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time)。
+* 必须指定 1 个或多个度量值的路径。有关更多信息，请参阅[定义度量值](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics)。
+* （可选）您可以指定定制时间段。缺省情况下，如果未指定时间段，那么检索的数据是与过去 24 小时相对应的数据。有关更多信息，请参阅[配置时间段](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time)。
 
 
 ## 列出度量值
@@ -167,7 +167,7 @@ subcollection: cloud-monitoring
 
     每个区域都有不同的 URL。例如，对于美国南部区域，可以使用 API 端点 `https://metrics.ng.bluemix.net/v1/metrics/list` 
 
-    要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+    要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 
     有关 API 的更多信息，请参阅[度量值 API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window}。
 

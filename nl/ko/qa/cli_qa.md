@@ -30,11 +30,11 @@ subcollection: cloud-monitoring
 여기에는 {{site.data.keyword.Bluemix}} CLI를 {{site.data.keyword.monitoringshort}} 서비스와 함께 사용하는 데 대한 일반적인 질문의 답이 제공되어 있습니다. 
 {:shortdesc}
 
-* [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)
-* [{{site.data.keyword.Bluemix_notm}} CLI 설치 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#install_bmx_cli)
-* [계정의 GUID를 가져오는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid)
-* [조직의 GUID를 가져오는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#org_guid)
-* [영역의 GUID를 가져오는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid)
+* [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)
+* [{{site.data.keyword.Bluemix_notm}} CLI 설치 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#install_bmx_cli)
+* [계정의 GUID를 가져오는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid)
+* [조직의 GUID를 가져오는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#org_guid)
+* [영역의 GUID를 가져오는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid)
 
 ## IBM Cloud에 로그인하는 방법
 {: #login}
@@ -97,7 +97,7 @@ ibmcloud target -o OrgName -s SpaceName
 ## IBM Cloud CLI 설치 방법
 {: #install_bmx_cli}
 
-[{{site.data.keyword.Bluemix_notm}} CLI 다운로드 및 설치](/docs/cli/index.html#overview)를 참조하십시오.
+[{{site.data.keyword.Bluemix_notm}} CLI 다운로드 및 설치](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)를 참조하십시오.
 
 ## 계정의 GUID를 가져오는 방법
 {: #account_guid}

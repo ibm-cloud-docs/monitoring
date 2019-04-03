@@ -85,7 +85,7 @@ subcollection: cloud-monitoring
   </tr>
   <tr>
     <td>度量值子类型</td>
-	  <td>要显示的度量值。</br>[CPU 度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics) </br>[磁盘度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics)</br>[内存度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td>
+	  <td>要显示的度量值。</br>[CPU 度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics) </br>[磁盘度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics)</br>[内存度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td>
 	  <td></td>
   </tr>
   <tr>

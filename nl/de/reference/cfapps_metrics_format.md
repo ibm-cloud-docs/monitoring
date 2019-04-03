@@ -85,7 +85,7 @@ Dabei gilt Folgendes:
   </tr>
   <tr>
     <td>Metric Subtype</td>
-	  <td>Anzuzeigende Metrik. </br>[CPU-Metriken](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics) </br>[Plattenmetriken](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics) </br>[Speichermetriken](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td>
+	  <td>Anzuzeigende Metrik. </br>[CPU-Metriken](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics) </br>[Plattenmetriken](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics) </br>[Speichermetriken](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td>
 	  <td></td>
   </tr>
   <tr>

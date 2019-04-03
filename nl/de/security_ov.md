@@ -40,10 +40,10 @@ Für die Arbeit mit Metriken, die im {{site.data.keyword.monitoringshort}}-Servi
 
 Informationen zum Abrufen eines Sicherheitstoken finden Sie unter:
 
-* [Ein UAA-Token abrufen](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa)
-* [Ein IAM-Token abrufen](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)
+* [UAA-Token abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa)
+* [IAM-Token abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)
 
-Informationen zum Abrufen eines API-Schlüssels finden Sie unter [API-Schlüssel generieren](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key). Wenn die Sicherheit des API-Schlüssels beeinträchtigt ist, können Sie ihn widerrufen, indem Sie ihn löschen. Anschließend können Sie einen neuen erstellen. Weitere Informationen finden Sie in [API-Schlüssel über die {{site.data.keyword.Bluemix_notm}}-Benuzterschnittstelle widerrufen](/docs/services/cloud-monitoring/security/auth_api_key.html#revoke_ui). 
+Informationen zum Abrufen eines API-Schlüssels finden Sie unter [API-Schlüssel generieren](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key). Wenn die Sicherheit des API-Schlüssels beeinträchtigt ist, können Sie ihn widerrufen, indem Sie ihn löschen. Anschließend können Sie einen neuen erstellen. Weitere Informationen finden Sie in [API-Schlüssel über die {{site.data.keyword.Bluemix_notm}}-Benuzterschnittstelle widerrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#revoke_ui). 
 
 Ein UAA-Token und ein IAM-Token laufen nach einem bestimmten Zeitraum ab. Der API-Schlüssel läuft nicht ab. 
 
@@ -104,7 +104,7 @@ In der folgenden Tabelle sind die Zugriffsrechte für jede Cloud Foundry-Rolle f
   </tr>
 </table>
 
-Informationen zum Zuordnen von Benutzerrollen in der Benutzerschnittstelle finden Sie unter [Cloud Foundry-Zugriff verwalten](/docs/iam/mngcf.html#mngcf).
+Informationen zum Zuordnen von Benutzerrollen in der Benutzerschnittstelle finden Sie unter [Cloud Foundry-Zugriff verwalten](/docs/iam?topic=iam-mngcf#mngcf).
 
 
 
@@ -163,5 +163,5 @@ In der folgenden Tabelle sind die {{site.data.keyword.monitoringshort}}-Servicea
   </tr>
 </table>
 
-Informationen zum Zuordnen von Benutzerrollen in der Benutzerschnittstelle finden Sie unter [IAM-Zugriff verwalten](/docs/iam/mngiam.html#iammanidaccser).
+Informationen zum Zuordnen von Benutzerrollen in der Benutzerschnittstelle finden Sie unter [IAM-Zugriff verwalten](/docs/iam?topic=iam-iammanidaccser#iammanidaccser).
 

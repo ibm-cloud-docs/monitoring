@@ -36,7 +36,7 @@ Führen Sie die folgenden Schritte aus, um Metriken von einem Bereich abzurufen:
 
 1. Melden Sie sich bei einer Region, einer Organisation und einem Bereich in {{site.data.keyword.Bluemix_notm}} an. 
 
-    Weitere Informationen finden Sie unter [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Weitere Informationen finden Sie in [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Legen Sie das Sicherheitstoken oder den API-Schlüssel fest.
   
@@ -44,11 +44,11 @@ Führen Sie die folgenden Schritte aus, um Metriken von einem Bereich abzurufen:
 
     Wählen Sie zunächst eine der folgenden Methoden aus, um das Sicherheitstoken abzurufen, das Sie zum Senden von Metriken benötigen:
 	
-    * Informationen zum Abrufen eines UAA-Tokens finden Sie unter [UAA-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+    * Informationen zum Abrufen eines UAA-Tokens finden Sie unter [UAA-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
     
-	* Informationen zum Abrufen eines IAM-Tokens finden Sie unter [IAM-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Informationen zum Abrufen eines IAM-Tokens finden Sie unter [IAM-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
     
-	* Informationen zum Abrufen eines API-Schlüssels finden Sie unter [API-Schlüssel abrufen](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key). 
+	* Informationen zum Abrufen eines API-Schlüssels finden Sie unter [API-Schlüssel abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key). 
 
     Ein Token oder API-Schlüssel muss als Präfix einen der folgenden Werte ausweisen: `apikey`, `iam` oder `uaa`. 
 
@@ -124,11 +124,11 @@ Führen Sie die folgenden Schritte aus, um Metriken von einem Bereich abzurufen:
 	
 	* *Space* (Bereich) stellt die GUID des Bereichs dar. 
 	
-	* *Start_Time* gibt den Beginn der Anforderung an. Diese Information wird zur Berechnung des relativen oder absoluten Zeitraums verwendet. *End_Time* gibt das Ende der Anforderung an. Diese Information wird zur Berechnung des relativen oder absoluten Zeitraums verwendet. Weitere Informationen finden Sie unter [Zeitraum festlegen](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time).
+	* *Start_Time* gibt den Beginn der Anforderung an. Diese Information wird zur Berechnung des relativen oder absoluten Zeitraums verwendet. *End_Time* gibt das Ende der Anforderung an. Diese Information wird zur Berechnung des relativen oder absoluten Zeitraums verwendet. Weitere Informationen finden Sie unter [Zeitraum festlegen](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time).
 	
-	* *Path* gibt eine oder mehrere Metriken an. Optional können Sie Funktionen für die jeweilige Metrik anwenden. Die Pfadangabe unterstützt auch Platzhalterzeichen, mit denen Sie mehrere Metriken in einem einzelnen Pfad angeben können. Weitere Informationen finden Sie in [Metriken definieren](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics).
+	* *Path* gibt eine oder mehrere Metriken an. Optional können Sie Funktionen für die jeweilige Metrik anwenden. Die Pfadangabe unterstützt auch Platzhalterzeichen, mit denen Sie mehrere Metriken in einem einzelnen Pfad angeben können. Weitere Informationen finden Sie in [Metriken definieren](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics).
 	
-	* *METRICS_ENDPOINT* stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* *METRICS_ENDPOINT* stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 
 	

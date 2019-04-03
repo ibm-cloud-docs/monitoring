@@ -53,7 +53,7 @@ subcollection: cloud-monitoring
 	
 	* デフォルトでは、**「ライト」**プランが設定されます。このプランでは、サービスをプロビジョンしているスペース内のプラットフォーム・メトリックを収集し、それらのメトリックを 15 日間保持することが可能です。 
 
-    サービス・プランについて詳しくは、[サービス・プラン](/docs/services/cloud-monitoring/monitoring_ov.html#plan)を参照してください。
+    サービス・プランについて詳しくは、[サービス・プラン](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan)を参照してください。
 	
 6. **「作成」**をクリックして、ログインした {{site.data.keyword.Bluemix_notm}} スペースで {{site.data.keyword.monitoringshort}} サービスをプロビジョンします。
   
@@ -66,13 +66,13 @@ subcollection: cloud-monitoring
 
 1. [前提条件] {{site.data.keyword.Bluemix_notm}} CLI をインストールします。
 
-   詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI のインストール](/docs/cli/index.html#overview)を参照してください。
+   詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI のインストール](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)を参照してください。
    
    CLI がインストールされたら、次の手順に進んでください。
     
 2. {{site.data.keyword.Bluemix_notm}} で、地域、組織、およびスペースにログインします。 
 
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/cli_qa.html#login)を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)を参照してください。
 	
 3. `ibmcloud service create` コマンドを実行して、インスタンスをプロビジョンします。
 
@@ -84,7 +84,7 @@ subcollection: cloud-monitoring
     ここで、
     	
     * *service_name* は**「モニタリング」**です。
-    * *service_plan* は、サービス・プラン名です。 最大 45 日間のメトリックの収集およびアクセス、およびワイルドカードを使用するルールを含むアラート・ルールの定義を行うには、**「プレミアム」**プランを選択します。 デフォルトでは、**「ライト」**プランが設定されます。このプランでは、サービスをプロビジョンしているスペース内のプラットフォーム・メトリックを収集し、それらのメトリックを 15 日間保持することが可能です。 プランのリストについては、[{{site.data.keyword.monitoringshort}} サービス・プラン](/docs/services/cloud-monitoring/monitoring_ov.html#plan)を参照してください。
+    * *service_plan* は、サービス・プラン名です。 最大 45 日間のメトリックの収集およびアクセス、およびワイルドカードを使用するルールを含むアラート・ルールの定義を行うには、**「プレミアム」**プランを選択します。 デフォルトでは、**「ライト」**プランが設定されます。このプランでは、サービスをプロビジョンしているスペース内のプラットフォーム・メトリックを収集し、それらのメトリックを 15 日間保持することが可能です。 プランのリストについては、[{{site.data.keyword.monitoringshort}} サービス・プラン](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan)を参照してください。
     * *service_instance_name* は、作成する新規サービス・インスタンスに使用する名前です。
     
     例えば、プレミアム・プランで {{site.data.keyword.monitoringshort}} サービスのインスタンスを作成するには、以下のコマンドを実行します。

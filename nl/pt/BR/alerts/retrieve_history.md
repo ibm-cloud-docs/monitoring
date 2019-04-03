@@ -34,15 +34,15 @@ Para recuperar o histórico de um alerta usando a API Alerts, conclua as etapas 
 
 1. Efetue login em uma região, uma organização e um espaço no {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Obtenha o token de segurança. É possível usar um token do UAA, um token do IAM ou uma chave API. Escolha um dos métodos a seguir para obter o token de segurança:
 	
-	* Para obter um token do UAA, consulte [Obtendo o token do UAA usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Para obter um token do UAA, consulte [Obtendo o token do UAA usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Para obter uma chave API, consulte [Recebendo uma chave API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Para obter uma chave API, consulte [Recebendo uma chave API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Por meio do mesmo terminal em que efetuou login no {{site.data.keyword.Bluemix_notm}}, configure a variável do Token para o token.
 
@@ -63,7 +63,7 @@ Para recuperar o histórico de um alerta usando a API Alerts, conclua as etapas 
 	Em seguida, exporte a variável *Token*:
 	
 	```
-	export Token="djn .. _l_HWtlNTibmcloudslBXs0qjBI9GqCnuQ "
+	export Token="djn.._l_HWtlNTibmcloudslBXs0qjBI9GqCnuQ"
 	```
 	{: screen}
 	
@@ -106,9 +106,9 @@ prefixado com *s-* para identificar um espaço.
 	
 4. Recuperar o histórico de uma regra
 
-    * Para recuperar o histórico de uma regra por seu nome, consulte [Recuperando o histórico de uma regra usando seu nome](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_name).
-	* Para recuperar o histórico de uma regra por um período de tempo, consulte [Recuperando o histórico de uma regra das últimas 48 horas](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_time).
-	* Para recuperar várias entradas por meio do histórico de uma regra, consulte [Recuperando as 3 últimas entradas no histórico de uma regra](/docs/services/cloud-monitoring/alerts/retrieve_history.html#number).
+    * Para recuperar o histórico de uma regra por seu nome, consulte [Recuperando o histórico de uma regra usando seu nome](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_name).
+	* Para recuperar o histórico de uma regra por um período de tempo, consulte [Recuperando o histórico de uma regra das últimas 48 horas](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_time).
+	* Para recuperar várias entradas por meio do histórico de uma regra, consulte [Recuperando as 3 últimas entradas no histórico de uma regra](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#number).
 	
 	
 ## Recuperando o histórico de uma regra pelo nome da regra
@@ -139,7 +139,7 @@ Em que
 	
 * *RULE_NAME* é o nome da regra que é usada para acionar o alerta. O valor é aquele que está especificado no campo *name*.
 	
-* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
     
 Por exemplo, o histórico da regra `highNginxCPU` é o seguinte:
@@ -205,7 +205,7 @@ Em que
 	
 * *RULE_NAME* é o nome da regra que é usada para acionar o alerta. O valor é aquele que está especificado no campo *name*.
 	
-* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 
 ## Recuperando as 3 últimas entradas no histórico de uma regra
@@ -236,5 +236,5 @@ Em que
 	
 * *RULE_NAME* é o nome da regra que é usada para acionar o alerta. O valor é aquele que está especificado no campo *name*.
 	
-* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	

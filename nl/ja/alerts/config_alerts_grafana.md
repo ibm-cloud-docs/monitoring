@@ -36,14 +36,14 @@ Grafana UI を使用してメトリック照会にアラートを構成するに
 4. Grafana グラフの**「Alerts」**タブでアラートを構成します。
 
 ## 手順 1: Grafana の起動
-{: #step1_cag1}
+{: #step1_cag}
 
 ブラウザーから Grafana を起動します。 例えば、米国南部の地域で Grafana を開くには、次の URL を入力します。[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)
 
-地域ごとの Grafana URL のリストについては、[{{site.data.keyword.monitoringshort}} サービスの URL](/docs/services/cloud-monitoring/monitoring_ov.html#region) を参照してください。
+地域ごとの Grafana URL のリストについては、[{{site.data.keyword.monitoringshort}} サービスの URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)を参照してください。
 
 ## 手順 2: 1 つ以上の通知チャネルの定義
-{: #step2_cag2}
+{: #step2_cag}
 
 以下のステップを実行します。
 
@@ -134,7 +134,7 @@ Grafana UI を使用してメトリック照会にアラートを構成するに
 </table>
 
 ## 手順 3: メトリックの定義
-{: #step3_cag3}
+{: #step3_cag}
 
 以下の手順を実行して、新規ダッシュボードを作成します。
 
@@ -156,7 +156,7 @@ Grafana UI を使用してメトリック照会にアラートを構成するに
 
 
 ## 手順 4: アラートの定義
-{: #step4_cag4}
+{: #step4_cag}
 
 Grafana UI でアラートを定義するには、以下の手順を実行します。
 
@@ -174,11 +174,11 @@ Grafana UI でアラートを定義するには、以下の手順を実行しま
 * **「Delete」**を選択すると、アラートが削除されます。
 
 ## 次: アラートが生成されることの確認
-{: #next_cag5}
+{: #next_cag}
 
 例えば、E メール通知チャネルを作成した場合、E メールを確認します。
 
-**「IBM Cloud Monitoriing」**が送信者になっている E メールを探します。
+**「IBM Cloud Monitoring」**が送信者になっている E メールを探します。
 
 E メールには、出されたアラートに関する情報と、状態を表示できる Grafana ダッシュボードへのリンクが含まれています。
 

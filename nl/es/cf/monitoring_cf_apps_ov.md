@@ -51,7 +51,7 @@ La figura siguiente muestra una vista de nivel alto de supervisión de las apps 
 Para supervisar apps de CF que se ejecutan fuera de {{site.data.keyword.Bluemix_notm}}, puede utilizar la API de métricas para reenviar las métricas de la app CF al servicio {{site.data.keyword.monitoringshort}}.
 
 * Para obtener más información sobre la API, consulte [API de métricas](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-metrics-api?&language=node#introduction).
-* Para obtener más información sobre el uso de la API, consulte [Envío de datos mediante la API de métricas](/docs/services/cloud-monitoring/send-metrics/send_data_api.html#send_data_api).
+* Para obtener más información sobre el uso de la API, consulte [Envío de datos mediante la API de métricas](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-send_data_api#send_data_api).
 
 
 
@@ -63,14 +63,14 @@ Para supervisar el rendimiento de las aplicaciones CF en {{site.data.keyword.Blu
 
 El servicio {{site.data.keyword.monitoringlong}} utiliza Grafana, un análisis de código abierto y una plataforma de visualización, que puede utilizar para supervisar, buscar, analizar y visualizar las métricas en diversos gráficos, como por ejemplo diagramas y tablas.
 
-Grafana se puede iniciar desde un navegador. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Grafana se puede iniciar desde un navegador. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 **Nota:** Debe iniciar Grafana en la misma región de {{site.data.keyword.Bluemix_notm}} donde está en ejecución la instancia de app CF.
 
 
-Para supervisar aplicaciones CF, debe definir una o varias consultas en Grafana. Para obtener más información, consulte [Configuración de una consulta de métrica en Grafana](/docs/services/cloud-monitoring/grafana/define_query.html#define_query). 
+Para supervisar aplicaciones CF, debe definir una o varias consultas en Grafana. Para obtener más información, consulte [Configuración de una consulta de métricas en Grafana](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query). 
 
-También puede definir alertas en las consultas. Para obtener más información, consulte [Configuración de alertas](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+También puede definir alertas en las consultas. Para obtener más información, consulte [Configuración de alertas](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).
 
 
 
@@ -174,7 +174,7 @@ ibmcloud.public.cloud-foundry.au-syd.logtester.0.container.memory.utilization
 ```
 {: screen}
 
-Para obtener más información, consulte [Formato de métricas de apps CF](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format).
+Para obtener más información, consulte [Formato de métricas de apps CF](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format).
 
 **Nota:** No todos los caracteres permitidos en los nombres de app CF están permitidos en los nombres de serie de métricas. Por ejemplo, no están permitidas las mayúsculas. El nombre de la app CF que puede ver en Grafana al definir una consulta se modifica a todo en minúsculas.
 

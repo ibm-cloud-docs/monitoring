@@ -53,7 +53,7 @@ Siga estos pasos para suministrar una instancia del servicio {{site.data.keyword
 	
 	* De forma predeterminada, se establece el plan **Lite**, que le autoriza para recopilar métricas de plataforma en el espacio donde suministra el servicio y permite un periodo de retención de 15 días para dichas métricas. 
 
-    Para obtener más información acerca de los planes de servicio, consulte [Planes de servicio](/docs/services/cloud-monitoring/monitoring_ov.html#plan).
+    Para obtener más información sobre los planes de servicio, consulte [Planes de servicio](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan).
 	
 6. Pulse **Crear** para suministrar el servicio {{site.data.keyword.monitoringshort}} en el espacio de {{site.data.keyword.Bluemix_notm}} en el que ha iniciado la sesión.
   
@@ -66,13 +66,13 @@ Siga estos pasos para suministrar una instancia del servicio {{site.data.keyword
 
 1. [Requisito previo] Instale la CLI de {{site.data.keyword.Bluemix_notm}}.
 
-   Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#overview).
+   Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
    
    Si la CLI está instalada, continúe en el paso siguiente.
     
 2. Inicie la sesión en una región, organización y espacio en {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 	
 3. Ejecute el mandato `ibmcloud service create` para suministrar una instancia.
 
@@ -84,7 +84,7 @@ Siga estos pasos para suministrar una instancia del servicio {{site.data.keyword
     donde
     	
     * *service_name* es **Supervisión**.
-    * *service_plan* es el nombre del plan de servicio. Para recopilar y acceder a las métricas durante un máximo de 45 días, y para definir reglas de alertas, incluidas reglas con caracteres comodín, seleccione el plan **Premium**. De forma predeterminada, se establece el plan **Lite**, que le autoriza para recopilar métricas de plataforma en el espacio donde suministra el servicio y permite un periodo de retención de 15 días para dichas métricas. Para ver una lista de planes, consulte [Planes de servicio de {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/monitoring_ov.html#plan).
+    * *service_plan* es el nombre del plan de servicio. Para recopilar y acceder a las métricas durante un máximo de 45 días, y para definir reglas de alertas, incluidas reglas con caracteres comodín, seleccione el plan **Premium**. De forma predeterminada, se establece el plan **Lite**, que le autoriza para recopilar métricas de plataforma en el espacio donde suministra el servicio y permite un periodo de retención de 15 días para dichas métricas. Para ver una lista de planes, consulte [Planes de servicio de {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan).
     * *service_instance_name* es el nombre que desea utilizar para la nueva instancia del servicio que crea.
     
     Por ejemplo, para crear una instancia del servicio {{site.data.keyword.monitoringshort}} con un plan premium, ejecute el mandato siguiente:

@@ -85,7 +85,7 @@ subcollection: cloud-monitoring
   </tr>
   <tr>
     <td>Metric Subtype</td>
-	  <td>表示されるメトリック。 </br>[CPU メトリック](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics) </br>[ディスクのメトリック](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics) </br>[メモリーのメトリック](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td>
+	  <td>表示されるメトリック。 </br>[CPU メトリック](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics) </br>[ディスクのメトリック](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics) </br>[メモリーのメトリック](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td>
 	  <td></td>
   </tr>
   <tr>

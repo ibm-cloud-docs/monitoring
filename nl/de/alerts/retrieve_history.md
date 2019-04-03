@@ -34,15 +34,15 @@ Führen Sie die folgenden Schritte aus, um das Verlaufsprotokoll eines Alerts mi
 
 1. Melden Sie sich bei einer Region, einer Organisation und einem Bereich in {{site.data.keyword.Bluemix_notm}} an. 
 
-    Weitere Informationen finden Sie unter [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Weitere Informationen finden Sie in [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Rufen Sie das Sicherheitstoken ab. Sie können ein UAA-Token, ein IAM-Token oder einen API-Schlüssel verwenden. Wählen Sie eine der folgenden Methoden aus, um das Sicherheitstoken abzurufen:
 	
-	* Informationen zum Abrufen eines UAA-Tokens finden Sie unter [UAA-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Informationen zum Abrufen eines UAA-Tokens finden Sie unter [UAA-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Informationen zum Abrufen eines IAM-Tokens finden Sie unter [IAM-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Informationen zum Abrufen eines IAM-Tokens finden Sie unter [IAM-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Informationen zum Abrufen eines API-Schlüssels finden Sie unter [API-Schlüssel abrufen](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Informationen zum Abrufen eines API-Schlüssels finden Sie unter [API-Schlüssel abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Legen Sie auf demselben Terminal, von dem aus Sie sich bei {{site.data.keyword.Bluemix_notm}} angemeldet haben, die Token-Variable für das Token fest.
 
@@ -106,9 +106,9 @@ Führen Sie die folgenden Schritte aus, um das Verlaufsprotokoll eines Alerts mi
 	
 4. Rufen Sie das Verlaufsprotokoll einer Regel ab.
 
-    * Informationen zum Abrufen des Verlaufsprotokolls einer Regel nach ihrem Namen finden Sie unter [Verlaufsprotokoll einer Regel über ihren Namen abrufen](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_name).
-	* Informationen zum Abrufen des Verlaufsprotokolls einer Regel über einen bestimmten Zeitraum finden Sie unter [Verlaufsprotokoll einer Regel für die letzten 48 Stunden abrufen](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_time).
-	* Informationen zum Abrufen einer bestimmten Anzahl von Einträgen aus dem Verlaufsprotokoll einer Regel finden Sie unter [Letzte 3 Einträge im Verlaufsprotokoll einer Regel abrufen](/docs/services/cloud-monitoring/alerts/retrieve_history.html#number).
+    * Informationen zum Abrufen des Verlaufsprotokolls einer Regel nach ihrem Namen finden Sie unter [Verlaufsprotokoll einer Regel über ihren Namen abrufen](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_name).
+	* Informationen zum Abrufen des Verlaufsprotokolls einer Regel über einen bestimmten Zeitraum finden Sie unter [Verlaufsprotokoll einer Regel für die letzten 48 Stunden abrufen](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_time).
+	* Informationen zum Abrufen einer bestimmten Anzahl von Einträgen aus dem Verlaufsprotokoll einer Regel finden Sie unter [Letzte 3 Einträge im Verlaufsprotokoll einer Regel abrufen](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#number).
 	
 	
 ## Verlaufsprotokoll einer Regel nach Regelnamen abrufen
@@ -139,7 +139,7 @@ Dabei gilt Folgendes:
 	
 * *RULE_NAME* ist der Name der Regel, die zum Auslösen des Alerts verwendet wird. Der Wert ist der im Feld *name* festgelegte Wert.
 	
-* *METRICS_ENDPOINT* stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+* *METRICS_ENDPOINT* stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
     
 Beispiel: Das Verlaufsprotokoll der Regel `highNginxCPU` ist nachfolgend dargestellt:
@@ -205,7 +205,7 @@ Dabei gilt Folgendes:
 	
 * *RULE_NAME* ist der Name der Regel, die zum Auslösen des Alerts verwendet wird. Der Wert ist der im Feld *name* festgelegte Wert.
 	
-* *METRICS_ENDPOINT* stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+* *METRICS_ENDPOINT* stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 
 ## Letzte 3 Einträge im Verlaufsprotokoll einer Regel abrufen
@@ -236,5 +236,5 @@ Dabei gilt Folgendes:
 	
 * *RULE_NAME* ist der Name der Regel, die zum Auslösen des Alerts verwendet wird. Der Wert ist der im Feld *name* festgelegte Wert.
 	
-* *METRICS_ENDPOINT* stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+* *METRICS_ENDPOINT* stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	

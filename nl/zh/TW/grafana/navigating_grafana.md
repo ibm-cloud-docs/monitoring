@@ -35,13 +35,13 @@ subcollection: cloud-monitoring
 
     在 Grafana 中，您可以在特定 Docker 容器的環境定義下，啟動至該特定容器的度量值。此特性只適用於 {{site.data.keyword.Bluemix_notm}} 所管理基礎架構中部署的容器。 
     
-    如需相關資訊，請參閱[從 {{site.data.keyword.Bluemix_notm}} 儀表板導覽至 Grafana 儀表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_bluemix)。
+    如需相關資訊，請參閱[從 {{site.data.keyword.Bluemix_notm}} 儀表板導覽至 Grafana 儀表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_bluemix)。
 
 * 從直接瀏覽器鏈結
 
     您可以啟動 Grafana，以讓您看到的資料能從所提供的 {{site.data.keyword.Bluemix_notm}} 空間內的服務聚集日誌。
     
-    如需相關資訊，請參閱[從 Web 瀏覽器導覽至 Grafana 儀表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)。
+    如需相關資訊，請參閱[從 Web 瀏覽器導覽至 Grafana 儀表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)。
     
 如需 Grafana 的相關資訊，請參閱 [Grafana User Guide ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.grafana.org/guides/getting_started/){: new_window}。
 

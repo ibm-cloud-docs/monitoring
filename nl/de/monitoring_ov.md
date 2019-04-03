@@ -35,7 +35,7 @@ Die folgende Abbildung zeigt eine Übersicht der unterschiedlichen Ressourcen, v
 
 {{site.data.keyword.Bluemix}} erfasst standardmäßig Metriken zur CPU-Nutzung, Speicherauslastung und Netzein-/-ausgabe für den {{site.data.keyword.containershort}} und zeigt diese an. Sie können den {{site.data.keyword.monitoringshort}}-Service in {{site.data.keyword.Bluemix_notm}} verwenden, um Schlüsselmesswerte in Ihrer Umgebung und Ihren Anwendungen automatisch zu erfassen und zu messen. Es ist keine spezielle Instrumentierung erforderlich, um Metriken zu erfassen. Sie können beispielsweise Informationen, die von Leistungsmetriken bereitgestellt wurden, verwenden, um zu überwachen, wie ein Service in der Cloud ausgeführt wird. Sie können Ressourcenengpässe erkennen und das Service-Level-Agreement (SLA) im Blick behalten. Wenn Sie Leistungsdaten für einen Service analysieren, können Sie Situationen erkennen, die zu einem Ressourcenengpass führen können und folglich Ihr Service-SLA mit Ihren Kunden betreffen. Indem Sie in einem frühen Stadium Maßnahmen ergreifen, können Sie verhindern, dass solche Situationen Ihr Geschäft beeinträchtigen.  
 
-Sie können Metriken für Ihre Cloud Foundry-Anwendungen (CF-Anwendungen) und virtuellen Maschinen (VM) an den {{site.data.keyword.monitoringshort}}-Service senden. Weitere Informationen zur Vorgehensweise beim Senden von Metriken finden Sie unter [Metriken an den {{site.data.keyword.monitoringshort}}-Service senden.](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#send_retrieve_metrics_ov)
+Sie können Metriken für Ihre Cloud Foundry-Anwendungen (CF-Anwendungen) und virtuellen Maschinen (VM) an den {{site.data.keyword.monitoringshort}}-Service senden. Weitere Informationen zur Vorgehensweise beim Senden von Metriken finden Sie unter [Metriken an den {{site.data.keyword.monitoringshort}}-Service senden.](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#send_retrieve_metrics_ov)
 
 Sie können den {{site.data.keyword.monitoringshort}}-Service über den {{site.data.keyword.Bluemix_notm}}-Katalog bereitstellen.  
 
@@ -76,7 +76,7 @@ Sie können vom {{site.data.keyword.monitoringshort}}-Service erfasste Metriken 
 
 Der {{site.data.keyword.monitoringshort}}-Service bietet mehrere Pläne. Jeder Plan weist eine andere Funktionalität bei der Metrikzusammenstellung, Aufbewahrung und Alertdefinition auf. 
 
-Sie können einen Plan über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder über die Befehlszeile ändern. Sie können Ihren Plan jederzeit aktualisieren oder reduzieren. Weitere Informationen zu Serviceplanupgrades in {{site.data.keyword.Bluemix_notm}} finden Sie in [Plan ändern](/docs/services/cloud-monitoring/plan/change_plan.html#change_plan). 
+Sie können einen Plan über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder über die Befehlszeile ändern. Sie können Ihren Plan jederzeit aktualisieren oder reduzieren. Weitere Informationen zu Serviceplanupgrades in {{site.data.keyword.Bluemix_notm}} finden Sie in [Plan ändern](/docs/services/cloud-monitoring/plan?topic=cloud-monitoring-change_plan#change_plan). 
 
 In der folgenden Tabelle sind die Pläne aufgeführt, die bei der Bereitstellung des {{site.data.keyword.monitoringshort}}-Service in einem Bereich verfügbar sind:
 
@@ -137,7 +137,7 @@ Metriken, die in den letzten 7 Tagen keine Daten erhalten haben, werden gelösch
 ## Bereitstellungs- und Überwachungsservice
 {: #provision1}
 
-Im {{site.data.keyword.Bluemix_notm}}-Katalog können Sie den {{site.data.keyword.monitoringshort}}-Service im **DevOps**-Abschnitt finden. Weitere Informationen zur Bereitstellung eines Service in {{site.data.keyword.Bluemix_notm}} finden Sie in [{{site.data.keyword.monitoringshort}}-Service bereitstellen](/docs/services/cloud-monitoring/how-to/provision.html#provision).
+Im {{site.data.keyword.Bluemix_notm}}-Katalog können Sie den {{site.data.keyword.monitoringshort}}-Service im **DevOps**-Abschnitt finden. Weitere Informationen zur Bereitstellung eines Service in {{site.data.keyword.Bluemix_notm}} finden Sie in [{{site.data.keyword.monitoringshort}}-Service bereitstellen](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 Beachten Sie die folgenden Informationen zum {{site.data.keyword.monitoringshort}}-Service:
 

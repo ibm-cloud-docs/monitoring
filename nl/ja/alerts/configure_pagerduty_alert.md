@@ -33,11 +33,11 @@ subcollection: cloud-monitoring
 以下のステップを実行します。
 
 ## 手順 1: ルールの作成
-{: #step12}
+{: #cpa_step1}
 
 Grafana に定義したメトリック照会のルールを作成します。 詳しくは、
 [
-ルールの作成](/docs/services/cloud-monitoring/alerts/rules.html#create)を参照してください。
+ルールの作成](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create)を参照してください。
 
 例えば、ルール・ファイル `s-rule-1.json` を `~/cloud-monitoring/rules/` ディレクトリーに作成します。 
 
@@ -70,22 +70,22 @@ export RULE_FILE="s-rule-1.json"
 {: screen}
 
 ## 手順 2: Monitoring サービスでのルールの登録
-{: #step22}
+{: #cpa_step2}
 	
 端末から、以下の手順を実行します。
 
 1. {{site.data.keyword.Bluemix_notm}} で、地域、組織、およびスペースにログインします。 
 
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/cli_qa.html#login)を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)を参照してください。
 
 2. セキュリティー・トークンを取得します。 UAA トークン、IAM トークン、または API キーを使用することができます。 以下のいずれかの方法を選択して、セキュリティー・トークンを取得します。
 	
-	* UAA トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した UAA トークンの取得](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)を参照してください。
+	* UAA トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した UAA トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)をご覧ください。
 	
-	* IAM トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの 取得](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)を参照してください。
+	* IAM トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)をご覧ください。
 	
 	* API キーを取得する場合は、
-[API キーの取得](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)を参照してください。
+[API キーの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)を参照してください。
 	
 	例えば、IAM トークンを使用するには、以下のコマンドを実行します。
 
@@ -169,7 +169,7 @@ export RULE_FILE="s-rule-1.json"
 	* Space は、スペースの GUID です。 
 	
 	* METRICS_ENDPOINT はサービスへのエントリー・ポイントを示しています。 各地域の URL は異なります。 地域ごとのエンドポイントのリストを取得するには、
-[エンドポイント](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)を参照してください。
+[エンドポイント](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)を参照してください。
 	
 	ルールが正常に作成されていることを検証するには、以下のコマンドを実行します。
 
@@ -186,13 +186,13 @@ export RULE_FILE="s-rule-1.json"
 	{: screen}
 
 ## 手順 3: PagerDuty 通知の作成
-{: #step31}
+{: #cpa_step3}
 
 
 通知ファイルを作成するには、次の情報を考慮します。
 
 * PagerDuty アラートのための通知テンプレートを使用します。 詳しくは、
-[通知テンプレート](/docs/services/cloud-monitoring/config_alerts_ov.html#notification_template)を参照してください。
+[通知テンプレート](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#notification_template)を参照してください。
 * ローカル・ディレクトリー (例: 「`~/cloud-monitoring/notifications`」) にファイルを作成します。
 
 例えば、以下のように、vi エディターを使用してファイル **pagerduty.json** を作成します。 
@@ -207,25 +207,25 @@ export RULE_FILE="s-rule-1.json"
 ```
 {: codeblock}	
 	
-詳細情報については、[通知の作成](/docs/services/cloud-monitoring/alerts/notifications.html#create)を参照してください。
+詳細情報については、[通知の作成](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#create)を参照してください。
 	
 ## 手順 4: Monitoring サービスへの通知方法の登録
-{: #step41}
+{: #cpa_step4}
 	
 端末から、以下の手順を実行します。
 
 1. {{site.data.keyword.Bluemix_notm}} で、地域、組織、およびスペースにログインします。 
 
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/cli_qa.html#login)を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)を参照してください。
 
 2. セキュリティー・トークンを取得します。 UAA トークン、IAM トークン、または API キーを使用することができます。 以下のいずれかの方法を選択して、セキュリティー・トークンを取得します。
 	
-	* UAA トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した UAA トークンの取得](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)を参照してください。
+	* UAA トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した UAA トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)をご覧ください。
 	
-	* IAM トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの 取得](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)を参照してください。
+	* IAM トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)をご覧ください。
 	
 	* API キーを取得する場合は、
-[API キーの取得](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)を参照してください。
+[API キーの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)を参照してください。
 	
 	例えば、IAM トークンを使用するには、以下のコマンドを実行します。
 
@@ -309,7 +309,7 @@ export RULE_FILE="s-rule-1.json"
 	* Space は、スペースの GUID です。 
 	
 	* METRICS_ENDPOINT はサービスへのエントリー・ポイントを示しています。 各地域の URL は異なります。 地域ごとのエンドポイントのリストを取得するには、
-[エンドポイント](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)を参照してください。
+[エンドポイント](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)を参照してください。
 	
     通知が正常に作成されていることを検証するには、以下のコマンドを実行します。
 

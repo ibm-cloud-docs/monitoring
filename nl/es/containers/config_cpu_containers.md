@@ -29,7 +29,7 @@ subcollection: cloud-monitoring
 En {{site.data.keyword.Bluemix}}, las métricas de CPU seleccionadas para un contenedor se recopilan automáticamente. Para supervisarlas mediante {{site.data.keyword.monitoringlong}}, debe definir una consulta de Grafana. 
 {:shortdesc}
 
-Para obtener una lista de las métricas de CPU que se recopilan automáticamente, consulte [Métricas de CPU para contenedores](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers).
+Para obtener una lista de las métricas de CPU que se recopilan automáticamente, consulte [Métricas de CPU para contenedores](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers).
 
 
 ## Paso 1: Recopilar los datos para el contenedor que desea supervisar
@@ -73,7 +73,7 @@ Si los campos tienen una organización de CF y un espacio de CF establecidos, la
 ## Paso 2: Iniciar Grafana
 {: #step24}
 
-Inicie Grafana desde un navegador. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Inicie Grafana desde un navegador. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 Asegúrese de que, en Grafana, haya iniciado sesión en la cuenta donde el clúster está en ejecución. 
 
@@ -81,7 +81,7 @@ Asegúrese de que, en Grafana, haya iniciado sesión en la cuenta donde el clús
 
     Especifique el URL del servicio {{site.data.keyword.monitoringshort}} para la región en la que ha creado el clúster. 
     
-    Para obtener los URL por región, consulte [URL para el servicio de supervisión](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Para obtener los URL por región, consulte [URL para el servicio de supervisión](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Por ejemplo, para la región EE.UU. sur, inicie: [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -119,7 +119,7 @@ Realice los pasos siguientes para crear un panel de control de Grafana y definir
 
 3. Defina la consulta que filtra los datos que se muestran en el gráfico. 
 
-    Para obtener información sobre el formato de la consulta, consulte [Formato de consulta para las métricas de CPU recopiladas para contenedores](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers).
+    Para obtener información sobre el formato de la consulta, consulte [Formato de consulta para las métricas de CPU recopiladas para contenedores](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers).
 
     En el separador *Métricas*, seleccione **Añadir consulta**. </br>Se añade una entrada de consulta. Cada consulta está etiquetada con una letra.
 	
@@ -145,7 +145,7 @@ Realice los pasos siguientes para crear un panel de control de Grafana y definir
 	
 	10. Pulse **Seleccionar métrica** para especificar el tipo de métrica y, a continuación, pulse **Seleccionar métrica** para especificar el subtipo de métrica.
 	
-	    Para obtener una lista de las métricas de CPU, consulte [Métricas de CPU para contenedores](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers).
+	    Para obtener una lista de las métricas de CPU, consulte [Métricas de CPU para contenedores](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers).
 	
 	11. Pulse la imagen del símbolo más ![Añadir iconos](images/grafana_plus_image.gif "Imagen del símbolo Más") y elija una función. Puede añadir una función para transformar, combinar y realizar cálculos sobre los datos disponibles para una métrica.
 

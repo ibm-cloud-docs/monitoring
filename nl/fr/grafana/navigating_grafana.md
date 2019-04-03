@@ -1,4 +1,4 @@
----
+﻿---
 
 copyright:
   years: 2017, 2019
@@ -36,13 +36,13 @@ Vous pouvez démarrer Grafana de l'une des manières suivantes :
     Vous pouvez accéder dans Grafana à vos métriques de conteneur spécifiques à Docker, dans le contexte du conteneur concerné. Cette fonctionnalité ne s'applique qu'aux conteneurs déployés dans l'infrastructure gérée par {{site.data.keyword.Bluemix_notm}}. 
     
     Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis le tableau de bord {{site.data.keyword.Bluemix_notm}}
-    ](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_bluemix).
+    ](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_bluemix).
 
 * A partir d'un lien de navigateur direct
 
     Vous pouvez démarrer Grafana afin que les données affichées agrègent les journaux des services dans l'espace {{site.data.keyword.Bluemix_notm}} désigné.
     
-    Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+    Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
     
 Pour plus d'informations sur Grafana, reportez-vous au manuel [Grafana User Guide ![Icône de lien externe](../../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.grafana.org/guides/getting_started/){: new_window}.
 

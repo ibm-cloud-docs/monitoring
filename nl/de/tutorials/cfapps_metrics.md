@@ -49,11 +49,11 @@ Für dieses Lernprogramm wird angenommen, dass Sie in der Region 'USA (Süden)' 
 
     Ihre Benutzer-ID für {{site.data.keyword.Bluemix_notm}} muss über eine CF-Rolle für den Bereich verfügen, in dem der {{site.data.keyword.monitoringshort}}-Service und die CF-App bereitgestellt werden. Die dafür erforderlich Rolle ist der *Entwickler*.
     
-    Weitere Informationen finden Sie unter [Einem Benutzer eine CF-Rolle über die IBM Cloud-Benutzerschnittstelle zuweisen](/docs/services/cloud-monitoring/security/assign_policy.html#grant_permissions_ui_space).
+    Weitere Informationen finden Sie unter [Einem Benutzer eine CF-Rolle über die IBM Cloud-Benutzerschnittstelle zuweisen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#grant_permissions_ui_space).
 
 2. Stellen Sie den {{site.data.keyword.monitoringshort}}-Service in einem Bereich bereit, für den Sie über Berechtigungen zum Bereitstellen von Services in der Region 'USA (Süden)' verfügen.
 
-    Weitere Informationen finden Sie unter [{{site.data.keyword.monitoringshort}}-Service bereitstellen](/docs/services/cloud-monitoring/how-to/provision.html#provision).
+    Weitere Informationen finden Sie in [{{site.data.keyword.monitoringshort}}-Service bereitstellen](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 ## Schritt 1: Dem Benutzer Berechtigungen für die Arbeit mit CF-Apps und dem {{site.data.keyword.monitoringshort}}-Service erteilen
 {: #cfapps_step1}
@@ -140,7 +140,7 @@ Starten Sie Grafana über einen Browser und legen Sie die {{site.data.keyword.mo
 
     Geben Sie die URL für den {{site.data.keyword.monitoringshort}}-Service für die Region an, in der der {{site.data.keyword.monitoringshort}}-Service bereitgestellt wurde.
     
-    Informationen zum Abrufen der URLs nach Region finden Sie unter [URLs für den Überwachungsservice](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Informationen zum Abrufen der URLs nach Region finden Sie unter [URLs für den Überwachungsservice](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Starten Sie zum Beispiel für die Region 'USA (Süden)': [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -169,7 +169,7 @@ Fügen Sie in Grafana Zeilen hinzu, um das Dashboard in Abschnitte zu unterteile
 
 Definieren Sie die Abfrage, die die in der Grafik angezeigten Daten filtert. Mit dieser Abfrage wird der Prozentsatz der CPU-Auslastung im Hinblick auf das Limit des Containers überwacht.
 
-Informationen zum Format der Abfrage finden Sie unter [Grafana-Abfrageformat für CF-Apps](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format).
+Informationen zum Format der Abfrage finden Sie unter [Grafana-Abfrageformat für CF-Apps](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format).
     
 1. Fügen Sie eine *Grafik*anzeige hinzu, um die Nanosekunden der CPU-Zeit über alle zentralen Bestandteile für einen Container zu überwachen.
     
@@ -231,4 +231,4 @@ Speichern Sie das Dashboard zur späteren Wiederverwendung.
 ## Nächste Schritte
 {: #cfapps_next_steps}
 
-Definieren Sie einen Alert für eine Metrik. Weitere Informationen finden Sie unter [Alerts konfigurieren ](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Definieren Sie einen Alert für eine Metrik. Weitere Informationen finden Sie unter [Alerts konfigurieren ](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

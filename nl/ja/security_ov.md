@@ -43,11 +43,11 @@ subcollection: cloud-monitoring
 
 セキュリティー・トークンを取得する場合は、以下を参照してください。
 
-* [UAA トークンの取得](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa)
-* [IAM トークンの取得](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)
+* [UAA トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa)
+* [IAM トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)
 
 API キーを取得する場合は、
-[API キーの取得](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)を参照してください。 API キーが漏えいした場合は、それを削除することによって取り消すことができます。 その後、新しい API キーを再作成できます。 詳しくは、[{{site.data.keyword.Bluemix_notm}} UI を使用した API キーの取り消し](/docs/services/cloud-monitoring/security/auth_api_key.html#revoke_ui)を参照してください。 
+[API キーの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)を参照してください。 API キーが漏えいした場合は、それを削除することによって取り消すことができます。 その後、新しい API キーを再作成できます。 詳しくは、[{{site.data.keyword.Bluemix_notm}} UI を使用した API キーの取り消し](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#revoke_ui)を参照してください。 
 
 UAA トークンおよび IAM トークンは、一定期間後に期限切れになります。 API キーには有効期限切れはありません。 
 
@@ -108,7 +108,7 @@ UAA トークンおよび IAM トークンは、一定期間後に期限切れ�
   </tr>
 </table>
 
-UI でのユーザー役割の割り当てについては、[Cloud Foundry アクセス権限の管理](/docs/iam/mngcf.html#mngcf)を参照してください。
+UI でのユーザー役割の割り当てについては、[Cloud Foundry アクセス権限の管理](/docs/iam?topic=iam-mngcf#mngcf)を参照してください。
 
 
 
@@ -169,5 +169,5 @@ UI でのユーザー役割の割り当てについては、[Cloud Foundry ア�
   </tr>
 </table>
 
-UI でのユーザー役割の割り当てについては、[IAM アクセス権限の管理](/docs/iam/mngiam.html#iammanidaccser)を参照してください。
+UI でのユーザー役割の割り当てについては、[IAM アクセス権限の管理](/docs/iam?topic=iam-iammanidaccser#iammanidaccser)を参照してください。
 

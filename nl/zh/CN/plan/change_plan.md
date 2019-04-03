@@ -55,7 +55,7 @@ subcollection: cloud-monitoring
 
 1. 登录到 {{site.data.keyword.Bluemix_notm}} 中的区域、组织和空间。 
 
-    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 	
 2. 运行 `ibmcloud service list` 命令以检查当前套餐，并从空间中可用的服务列表中获取 {{site.data.keyword.loganalysisshort}} 服务名称。 
 

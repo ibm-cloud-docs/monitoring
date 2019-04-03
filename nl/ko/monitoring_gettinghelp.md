@@ -37,5 +37,5 @@ subcollection: cloud-monitoring
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
   * 서비스 및 시작하기 지시사항에 대한 질문이 있는 경우에는 [{{site.data.keyword.IBM_notm}} developerWorks dW Answers](https://developer.ibm.com/answers/topics/ibm-cloud-monitoring/?smartspace=ibm-cloud){:new_window} 포럼을 사용하십시오.
 
-* 문제점을 여전히 해결할 수 없는 경우에는 IBM 지원 티켓을 열 수 있습니다. IBM 지원 티켓을 열거나 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 문의](/docs/get-support/howtogetsupport.html#getting-customer-support)를 참조하십시오.
+* 문제점을 여전히 해결할 수 없는 경우에는 IBM 지원 티켓을 열 수 있습니다. IBM 지원 티켓을 열거나 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 문의](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)를 참조하십시오.
 

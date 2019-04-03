@@ -36,13 +36,13 @@ Complete los pasos siguientes para generar una clave de API utilizando la CLI de
 
 1. (Requisito previo) Instalar la CLI de {{site.data.keyword.Bluemix_notm}}.
 
-   Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#cli_qa).
+   Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#cli_qa).
    
    Si la CLI está instalada, continúe en el paso siguiente.
 	
 2. Inicie la sesión en una región, organización y espacio en {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
  
 3. Ejecute el mandato `ibmcloud iam api-key-create` para crear una clave de API.
 
@@ -74,7 +74,7 @@ Complete los pasos siguientes para generar una clave de API mediante la IU de {{
 
 1. Inicie sesión en la consola de {{site.data.keyword.Bluemix_notm}}.
 
-    Abra un navegador web y lance el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://console.bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
+    Abra un navegador web e inicie el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://console.bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
 	
 	Después de iniciar sesión con su ID de usuario y su contraseña, se abre la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
 
@@ -99,7 +99,7 @@ Siga estos pasos para revocar una clave de API IAM mediante la interfaz de usuar
 
 1. Inicie sesión en la consola de {{site.data.keyword.Bluemix_notm}}.
 
-    Abra un navegador web y lance el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://console.bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
+    Abra un navegador web e inicie el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://console.bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
 	
 	Después de iniciar sesión con su ID de usuario y su contraseña, se abre la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
 

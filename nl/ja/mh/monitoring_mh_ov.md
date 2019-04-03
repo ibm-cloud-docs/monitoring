@@ -53,15 +53,15 @@ Grafana は以下のいずれかの方法で起動できます。
 
     {{site.data.keyword.messagehub}} インスタンスが実行されている正しい組織およびスペースにあることを確認します。
     
-    詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)を参照してください。
+    詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)を参照してください。
     
 
 以下の情報を考慮してください。
 
 * Grafana は、{{site.data.keyword.messagehub}} インスタンスが実行されているのと同じ {{site.data.keyword.Bluemix_notm}} 地域で起動する必要があります。
 * デフォルトで提供されている Grafana ダッシュボードを使用して、{{site.data.keyword.messagehub}} インスタンスのモニターを開始します。
-* カスタム Grafana ダッシュボードを作成して、随時ダッシュボードをビルドします。 Grafana ダッシュボードで 1 つ以上のメトリック照会を定義して、{{site.data.keyword.messagehub}} インスタンスをモニターできます。 詳しくは、[Grafana でのメトリック照会の構成](/docs/services/cloud-monitoring/grafana/define_query.html#define_query)を参照してください。
-* また、照会にアラートを定義することもできます。 詳しくは、[アラートの構成](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)を参照してください。
+* カスタム Grafana ダッシュボードを作成して、随時ダッシュボードをビルドします。 Grafana ダッシュボードで 1 つ以上のメトリック照会を定義して、{{site.data.keyword.messagehub}} インスタンスをモニターできます。 詳しくは、[Grafana でのメトリック照会の構成](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query)を参照してください。
+* また、照会にアラートを定義することもできます。 詳しくは、[アラートの構成](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)を参照してください。
 
 
 ## Kafka トピックのメトリック
@@ -124,6 +124,6 @@ Grafana は以下のいずれかの方法で起動できます。
 ## 参照
 {: #mhlinks}
 
-* [Message Hub の開始](/docs/services/EventStreams/index.html#getting_started)
+* [Message Hub の開始](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started)
 * [モニタリングとロギング](/docs/services/EventStreams/messagehub072.html#monitoring)
 

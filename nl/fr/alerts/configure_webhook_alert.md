@@ -32,9 +32,9 @@ Pour configurer une alerte webhook sur une métrique, définissez une règle et 
 Procédez comme suit :
 
 ## Etape 1 : Création d'une règle
-{: #step14}
+{: #cwa_step1}
 
-Créez une règle pour une requête de métrique que vous avez définie dans Grafana. Pour plus d'informations, voir [Création d'une règle](/docs/services/cloud-monitoring/alerts/rules.html#create).
+Créez une règle pour une requête de métrique que vous avez définie dans Grafana. Pour plus d'informations, voir [Création d'une règle](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create).
 
 Par exemple, créez le fichier de règle `s-rule-1.json` dans le répertoire `~/cloud-monitoring/rules/`. 
 
@@ -67,21 +67,21 @@ export RULE_FILE="s-rule-1.json"
 {: screen}
 
 ## Etape 2 : Enregistrement de la règle dans le service Monitoring
-{: #step23}
+{: #cwa_step2}
 	
 A partir d'un terminal, procédez comme suit :
 
 1. Connectez-vous à une région, une organisation et un espace dans {{site.data.keyword.Bluemix_notm}}. 
 
-    Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Obtenez le jeton de sécurité. Vous pouvez utiliser un jeton UAA, un jeton IAM ou une clé d'API. Choisissez l'une des méthodes suivantes pour obtenir le jeton de sécurité :
 	
-	* Pour obtenir un jeton, voir [Obtention du jeton UAA à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Pour obtenir un jeton, voir [Obtention du jeton UAA à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Pour obtenir un jeton IAM, voir [Obtention du jeton IAM à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Pour obtenir un jeton IAM, voir [Obtention du jeton IAM à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Pour obtenir une clé d'API, voir [Obtention d'une clé d'API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Pour obtenir une clé d'API, voir [Obtention d'une clé d'API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Par exemple, pour utiliser le jeton IAM, exécutez la commande suivante :
 
@@ -164,7 +164,7 @@ A partir d'un terminal, procédez comme suit :
 	
 	* SPACE est l'identificateur global unique de l'espace. 
 	
-	* METRICS_ENDPOINT représente le point d'entrée vers le service. Chaque région a une adresse URL différente. Pour la liste des noeuds finaux par région, voir [Noeuds finaux](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* METRICS_ENDPOINT représente le point d'entrée vers le service. Chaque région a une adresse URL différente. Pour la liste des noeuds finaux par région, voir [Noeuds finaux](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 	Pour vérifier que la règle a été créée, exécutez la commande suivante :
 	
@@ -181,12 +181,12 @@ A partir d'un terminal, procédez comme suit :
 	{: screen}
 
 ## Etape 3 : Création d'une notification par webhook
-{: #step32}
+{: #cwa_step3}
 
 
 Prenez en compte les informations suivantes pour créer un fichier de notification :
 
-* Utilisez le modèle de notification pour les alertes webhook. Pour plus d'informations, voir [Modèles de notification](/docs/services/cloud-monitoring/config_alerts_ov.html#notification_template).
+* Utilisez le modèle de notification pour les alertes webhook. Pour plus d'informations, voir [Modèles de notification](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#notification_template).
 * Créez le fichier dans un répertoire local, par exemple, `~/cloud-monitoring/notifications`.
 
 Par exemple, créez le fichier **webhook.json** à l'aide de l'éditeur vi : 
@@ -203,24 +203,24 @@ Par exemple, créez le fichier **webhook.json** à l'aide de l'éditeur vi :
 
 Pour qu'un webhook soit appelé, la zone *detail* doit comporter l'adresse URL à laquelle la demande POST doit être émise. Configurez un webhook pour les noeuds finaux https et ajoutez un paramètre.
 	
-Pour plus d'informations, voir [Création d'une notification](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create).
+Pour plus d'informations, voir [Création d'une notification](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create).
 	
 ## Etape 4 : Enregistrement de la méthode de notification dans le service Monitoring
-{: #step42}
+{: #cwa_step4}
 	
 A partir d'un terminal, procédez comme suit :
 
 1. Connectez-vous à une région, une organisation et un espace dans {{site.data.keyword.Bluemix_notm}}. 
 
-    Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Obtenez le jeton de sécurité. Vous pouvez utiliser un jeton UAA, un jeton IAM ou une clé d'API. Choisissez l'une des méthodes suivantes pour obtenir le jeton de sécurité :
 	
-	* Pour obtenir un jeton, voir [Obtention du jeton UAA à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Pour obtenir un jeton, voir [Obtention du jeton UAA à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Pour obtenir un jeton IAM, voir [Obtention du jeton IAM à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Pour obtenir un jeton IAM, voir [Obtention du jeton IAM à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Pour obtenir une clé d'API, voir [Obtention d'une clé d'API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Pour obtenir une clé d'API, voir [Obtention d'une clé d'API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Par exemple, pour utiliser le jeton IAM, exécutez la commande suivante :
 
@@ -303,7 +303,7 @@ A partir d'un terminal, procédez comme suit :
 	
 	* SPACE est l'identificateur global unique de l'espace. 
 	
-	* METRICS_ENDPOINT représente le point d'entrée vers le service. Chaque région a une adresse URL différente. Pour la liste des noeuds finaux par région, voir [Noeuds finaux](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* METRICS_ENDPOINT représente le point d'entrée vers le service. Chaque région a une adresse URL différente. Pour la liste des noeuds finaux par région, voir [Noeuds finaux](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
     Pour vérifier que la notification a été créée, exécutez la commande suivante :
 

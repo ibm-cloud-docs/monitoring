@@ -49,11 +49,11 @@ subcollection: cloud-monitoring
 
     {{site.data.keyword.Bluemix_notm}} 的用户标识必须具有在其中供应 {{site.data.keyword.monitoringshort}} 服务和 CF 应用程序的空间的 CF 角色。所需的角色是*开发者*。
     
-    有关更多信息，请参阅[使用 IBM Cloud UI 授予用户 CF 角色](/docs/services/cloud-monitoring/security/assign_policy.html#grant_permissions_ui_space)。
+    有关更多信息，请参阅[使用 IBM Cloud UI 授予用户 CF 角色](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#grant_permissions_ui_space)。
 
 2. 在您有权在美国南部区域供应服务的空间内供应 {{site.data.keyword.monitoringshort}} 服务。
 
-    有关更多信息，请参阅[供应 {{site.data.keyword.monitoringshort}} 服务](/docs/services/cloud-monitoring/how-to/provision.html#provision)。
+    有关更多信息，请参阅[供应 {{site.data.keyword.monitoringshort}} 服务](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision)。
 
 ## 步骤 1：授予用户使用 CF 应用程序和 {{site.data.keyword.monitoringshort}} 服务的许可权
 {: #cfapps_step1}
@@ -141,7 +141,7 @@ CF 应用程序运行后，系统会立即收集度量值并将其转发到 {{si
 
     输入供应 {{site.data.keyword.monitoringshort}} 服务的区域的 {{site.data.keyword.monitoringshort}} 服务 URL。
     
-    要获取每个区域的 URL，请参阅 [Monitoring 服务的 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)。
+    要获取每个区域的 URL，请参阅 [Monitoring 服务的 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)。
 
     例如，对于美国南部区域，请启动：[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)。
 
@@ -170,7 +170,7 @@ CF 应用程序运行后，系统会立即收集度量值并将其转发到 {{si
 
 定义用于过滤图形中所显示数据的查询。此查询监视趋近于容器限制的 CPU 利用率的百分比。
 
-有关查询格式的信息，请参阅 [Grafana 的 CF 应用程序查询格式](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)。
+有关查询格式的信息，请参阅 [Grafana 的 CF 应用程序查询格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)。
     
 1. 添加*图形*面板以针对容器监视所有核心中 CPU 时间的纳秒数。
     
@@ -232,4 +232,4 @@ CF 应用程序运行后，系统会立即收集度量值并将其转发到 {{si
 ## 后续步骤
 {: #cfapps_next_steps}
 
-为度量值定义警报。有关更多信息，请参阅[配置警报](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)。
+为度量值定义警报。有关更多信息，请参阅[配置警报](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)。

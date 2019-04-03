@@ -52,7 +52,7 @@ O tutorial supõe que:
 
 Para concluir este tutorial, deve-se concluir o tutorial
 [Analisar
-métricas no Grafana para um app que é implementado em um cluster do Kubernetes](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics) ou ter um cluster
+métricas no Grafana para um app que é implementado em um cluster do Kubernetes](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics) ou ter um cluster
 fornecido com pelo menos 1 aplicativo implementado.
 
 
@@ -63,7 +63,7 @@ fornecido com pelo menos 1 aplicativo implementado.
 Ative o Grafana em um navegador e configure o domínio do {{site.data.keyword.monitoringshort}}
 no qual é possível visualizar as métricas do cluster.
 
-Para analisar métricas para um cluster, deve-se acessar o Grafana na região Pública de nuvem na qual o cluster estiver criado. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Para analisar métricas para um cluster, deve-se acessar o Grafana na região Pública de nuvem na qual o cluster estiver criado. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 1. Em um navegador, ative o Grafana. 
 
@@ -71,7 +71,7 @@ Para analisar métricas para um cluster, deve-se acessar o Grafana na região P�
     
     Para obter as URLs por região, consulte
 [URLs para o serviço de
-monitoramento](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+monitoramento](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Por exemplo, para a região Sul dos EUA, ative:
 [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
@@ -118,7 +118,7 @@ Conclua as etapas a seguir:
 Defina a consulta que filtra os dados que são exibidos no gráfico. Essa consulta monitora os
 nanossegundos de tempo de CPU em todos os núcleos de um contêiner.
 
-Para obter informações sobre o formato da consulta, veja [Formato de consulta para métricas de CPU coletadas para contêineres](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers).
+Para obter informações sobre o formato da consulta, veja [Formato de consulta para métricas de CPU coletadas para contêineres](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers).
  
 Na guia *Métricas*, selecione **Incluir consulta**. <br>Uma entrada de consulta é incluído. Cada consulta é rotulada com uma letra. 
 
@@ -158,7 +158,7 @@ seguida, clique em **Selecionar métrica** para especificar o subtipo de métric
 contêiner, selecione **cpu** para o tipo e **usage** para o subtipo.
 		
 	Para obter uma lista de métricas da CPU, consulte
-[Métricas da CPU para contêineres](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers).
+[Métricas da CPU para contêineres](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers).
     
 11. Clique na imagem de mais ![Ícones Incluir](images/grafana_plus_image.gif "Imagem de mais") e escolha uma função. Será possível incluir uma função para transformar, combinar e executar cálculos nos dados que estiverem disponíveis para uma métrica.
 
@@ -188,4 +188,4 @@ Salve o painel para reutilização posterior.
 ## Etapas Seguintes
 {: #cgd_next_steps}
 
-Defina um alerta para uma métrica. Para obter mais informações, consulte [Configurando alertas](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Defina um alerta para uma métrica. Para obter mais informações, consulte [Configurando alertas](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

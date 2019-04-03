@@ -60,13 +60,11 @@ necessária é *desenvolvedor*.
     
     Para obter mais informações, consulte
 [Concedendo
-a um usuário uma função CF usando a UI do IBM Cloud](/docs/services/cloud-monitoring/security/assign_policy.html#grant_permissions_ui_space).
+a um usuário uma função CF usando a UI do IBM Cloud](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#grant_permissions_ui_space).
 
 2. Forneça o serviço do {{site.data.keyword.monitoringshort}} em um espaço no qual você tenha permissões para fornecimento de serviços na região Sul dos EUA.
 
-    Para obter mais informações, consulte
-[Fornecendo o
-serviço do {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to/provision.html#provision).
+    Para obter mais informações, consulte [Fornecendo o serviço {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 ## Etapa 1: Conceder ao usuário permissões para trabalhar com apps CF e com o serviço
 do {{site.data.keyword.monitoringshort}}
@@ -169,7 +167,7 @@ região em que o serviço do {{site.data.keyword.monitoringshort}} é fornecido.
     
     Para obter as URLs por região, consulte
 [URLs para o serviço de
-monitoramento](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+monitoramento](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Por exemplo, para a região Sul dos EUA, ative:
 [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
@@ -205,7 +203,7 @@ de utilização da CPU para o limite do contêiner.
 
 Para obter informações sobre o formato da consulta, consulte
 [Formato
-de consulta do Grafana para apps CF](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format).
+de consulta do Grafana para apps CF](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format).
     
 1. Inclua um painel de *Graph* para monitorar os nanossegundos de tempo de CPU em todos os núcleos para um contêiner.
     
@@ -276,4 +274,4 @@ Salve o painel para reutilização posterior.
 ## Etapas Seguintes
 {: #cfapps_next_steps}
 
-Defina um alerta para uma métrica. Para obter mais informações, consulte [Configurando alertas](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Defina um alerta para uma métrica. Para obter mais informações, consulte [Configurando alertas](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

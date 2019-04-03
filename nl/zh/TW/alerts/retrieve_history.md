@@ -34,15 +34,15 @@ subcollection: cloud-monitoring
 
 1. 登入 {{site.data.keyword.Bluemix_notm}} 中的地區、組織及空間。 
 
-    如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
 2. 取得安全記號。您可以使用 UAA 記號、IAM 記號或 API 金鑰。選擇下列其中一種方法來取得安全記號：
 	
-	* 若要取得 UAA 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 UAA 記號](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)。
+	* 若要取得 UAA 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 UAA 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)。
 	
-	* 若要取得 IAM 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)。
+	* 若要取得 IAM 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)。
 	
-	* 若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。
+	* 若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。
 	
 	從登入 {{site.data.keyword.Bluemix_notm}} 的相同終端機中，設定記號的 Token 變數。
 
@@ -106,9 +106,9 @@ subcollection: cloud-monitoring
 	
 4. 擷取規則的歷程
 
-    * 若要依規則名稱擷取規則的歷程，請參閱[使用規則名稱擷取規則的歷程](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_name)。
-	* 若要擷取一段期間的規則歷程，請參閱[擷取過去 48 小時的規則歷程](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_time)。
-	* 若要從規則歷程中擷取一些項目，請參閱[擷取規則歷程中的最後 3 個項目](/docs/services/cloud-monitoring/alerts/retrieve_history.html#number)。
+    * 若要依規則名稱擷取規則的歷程，請參閱[使用規則名稱擷取規則的歷程](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_name)。
+	* 若要擷取一段期間的規則歷程，請參閱[擷取過去 48 小時的規則歷程](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_time)。
+	* 若要從規則歷程中擷取一些項目，請參閱[擷取規則歷程中的最後 3 個項目](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#number)。
 	
 	
 ## 依規則名稱擷取規則的歷程
@@ -139,7 +139,7 @@ curl -XGET --header "X-Auth-User-Token: Auth_Type ${Token}" --header "X-Auth-Sco
 	
 * *RULE_NAME* 是用來觸發警示的規則的名稱。該值是指定在 *name* 欄位中的值。
 	
-* *METRICS_ENDPOINT* 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* *METRICS_ENDPOINT* 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 	
     
 例如，`highNginxCPU` 規則的歷程如下：
@@ -205,7 +205,7 @@ curl -H "X-Auth-User-Token: iam $Token" -H "X-Auth-Scope-Id:$Space" METRICS_ENDP
 	
 * *RULE_NAME* 是用來觸發警示的規則的名稱。該值是指定在 *name* 欄位中的值。
 	
-* *METRICS_ENDPOINT* 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* *METRICS_ENDPOINT* 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 	
 
 ## 擷取規則歷程中的最後 3 個項目
@@ -236,5 +236,5 @@ curl -H "X-Auth-User-Token: iam $Token" -H "X-Auth-Scope-Id:$Space" METRICS_ENDP
 	
 * *RULE_NAME* 是用來觸發警示的規則的名稱。該值是指定在 *name* 欄位中的值。
 	
-* *METRICS_ENDPOINT* 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* *METRICS_ENDPOINT* 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 	

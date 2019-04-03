@@ -35,7 +35,7 @@ subcollection: cloud-monitoring
 
 依預設，{{site.data.keyword.Bluemix}} 會收集及顯示 {{site.data.keyword.containershort}} 的 CPU 用量、記憶體使用率及網路 I/O 等度量值。您可以使用 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.monitoringshort}} 服務，以自動收集及測量環境及應用程式中的重要度量值。不需要特殊檢測，即可收集度量值。例如，您可以使用效能度量值所提供的資訊來監視服務在雲端中的執行情況、偵測資源瓶頸，以及留意服務水準合約 (SLA)。當您分析服務的效能資料時，可以偵測到可能會導致資源瓶頸因而影響用戶端服務 SLA 的狀況。提早採取動作，可以避免可能會對您的業務造成負面影響的狀況。  
 
-您可以將 Cloud Foundry (CF) 應用程式及虛擬機器 (VM) 的度量值傳送至 {{site.data.keyword.monitoringshort}} 服務。如需如何傳送度量值的相關資訊，請參閱[將度量值傳送至 {{site.data.keyword.monitoringshort}} 服務](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#send_retrieve_metrics_ov)。
+您可以將 Cloud Foundry (CF) 應用程式及虛擬機器 (VM) 的度量值傳送至 {{site.data.keyword.monitoringshort}} 服務。如需如何傳送度量值的相關資訊，請參閱[將度量值傳送至 {{site.data.keyword.monitoringshort}} 服務](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#send_retrieve_metrics_ov)。
 
 您可以透過 {{site.data.keyword.Bluemix_notm}} 型錄佈建 {{site.data.keyword.monitoringshort}} 服務。  
 
@@ -76,7 +76,7 @@ subcollection: cloud-monitoring
 
 {{site.data.keyword.monitoringshort}} 服務會提供多個方案。每一個方案都有不同的度量值收集、保留和警示定義功能。 
 
-您可以透過 {{site.data.keyword.Bluemix_notm}} 使用者介面或透過指令行來變更方案。您隨時可以升級或降低方案。如需 {{site.data.keyword.Bluemix_notm}} 中服務方案升級的相關資訊，請參閱[變更方案](/docs/services/cloud-monitoring/plan/change_plan.html#change_plan)。 
+您可以透過 {{site.data.keyword.Bluemix_notm}} 使用者介面或透過指令行來變更方案。您隨時可以升級或降低方案。如需 {{site.data.keyword.Bluemix_notm}} 中服務方案升級的相關資訊，請參閱[變更方案](/docs/services/cloud-monitoring/plan?topic=cloud-monitoring-change_plan#change_plan)。 
 
 下表概述當您在空間中佈建 {{site.data.keyword.monitoringshort}} 服務時可用的方案：
 
@@ -137,7 +137,7 @@ subcollection: cloud-monitoring
 ## 佈建監視服務
 {: #provision1}
 
-在 {{site.data.keyword.Bluemix_notm}} 型錄中，您可以在 **DevOps** 區段中找到 {{site.data.keyword.monitoringshort}} 服務。如需在 {{site.data.keyword.Bluemix_notm}} 中佈建服務的相關資訊，請參閱[佈建 {{site.data.keyword.monitoringshort}} 服務](/docs/services/cloud-monitoring/how-to/provision.html#provision)。
+在 {{site.data.keyword.Bluemix_notm}} 型錄中，您可以在 **DevOps** 區段中找到 {{site.data.keyword.monitoringshort}} 服務。如需在 {{site.data.keyword.Bluemix_notm}} 中佈建服務的相關資訊，請參閱[佈建 {{site.data.keyword.monitoringshort}} 服務](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision)。
 
 請考量 {{site.data.keyword.monitoringshort}} 服務的下列相關資訊：
 

@@ -39,13 +39,13 @@ Führen Sie die folgenden Schritte aus, um das UAA-Token abzurufen:
 
 1. (Voraussetzung) Installieren Sie die {{site.data.keyword.Bluemix_notm}}-CLI.
 
-   Weitere Informationen finden Sie unter [{{site.data.keyword.Bluemix_notm}}-CLI installieren](/docs/services/cloud-monitoring/qa/cli_qa.html#cli_qa).
+   Weitere Informationen dazu finden Sie unter [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#cli_qa).
    
    Wenn die CLI installiert ist, fahren Sie mit dem nächsten Schritt fort.
     
 2. Melden Sie sich bei einer Region, einer Organisation und einem Bereich in {{site.data.keyword.Bluemix_notm}} an. 
 
-    Weitere Informationen finden Sie unter [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Weitere Informationen finden Sie in [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 	
 3. Führen Sie den Befehl `ibmcloud iam oauth-tokens` aus, um das UAA-Token abzurufen.
 

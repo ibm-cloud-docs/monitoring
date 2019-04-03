@@ -118,18 +118,14 @@ Metrics API を使用するか、{{site.data.keyword.monitoringshort}} プラグ
 *管理者*、*編集者*、および*オペレーター*。
 
 * メトリックを送信する API エンドポイントを指定する必要があります。 地域ごとに 1 つのエンドポイントがあります。 例えば、米国南部地域の場合は、エンドポイントは以下になります:
-`https://metrics.ng.bluemix.net/v1/metrics`。 エンドポイントについて詳しくは、
-[{{site.data.keyword.monitoringshort}}
-サービスの URL](/docs/services/cloud-monitoring/monitoring_ov.html#region){: new_window} を参照してください。
+`https://metrics.ng.bluemix.net/v1/metrics`。 エンドポイントについて詳しくは、[{{site.data.keyword.monitoringshort}} サービスの URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region){: new_window}を参照してください。
 
 
 以下の方法のいずれかを使用して、{{site.data.keyword.monitoringshort}} サービスにメトリックを送信することができます。
 
 * *方法 1: {{site.data.keyword.monitoringshort}} プラグインの構成*
 
-    詳しくは、
-[{{site.data.keyword.monitoringshort}}
-プラグインの構成](/docs/services/cloud-monitoring/send-metrics/conf_monitoring_plugin.html#conf_monitoring_plugin)を参照してください。
+    詳しくは、[{{site.data.keyword.monitoringshort}} プラグインの構成](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-conf_monitoring_plugin#conf_monitoring_plugin)を参照してください。
 
     以下の図は、{{site.data.keyword.monitoringshort}} プラグインを使用して {{site.data.keyword.monitoringshort}} サービスにメトリックを送信する方法の概要図を示しています。
 
@@ -138,7 +134,7 @@ Metrics API を使用するか、{{site.data.keyword.monitoringshort}} プラグ
 * *方法 2: Metrics API の使用*
 
     詳しくは、
-[Metrics API を使用したメトリックの送信](/docs/services/cloud-monitoring/send-metrics/send_data_api.html#send_data_api)を
+[Metrics API を使用したメトリックの送信](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-send_data_api#send_data_api)を
 参照してください。
 
 
@@ -149,7 +145,7 @@ Metrics API を使用するか、{{site.data.keyword.monitoringshort}} プラグ
 に分析する必要がある場合、または、ご使用のアプリケーションで行う決定にメトリックの使用が必要である場合は、
 Metrics API を使用して 1 要求につき最大で 5 つのメトリックを取得することができます。 
 
-* メトリックの取得方法について詳しくは、[ドメインからのメトリックの取得](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#retrieve_data_api)を参照してください。
+* メトリックの取得方法について詳しくは、[ドメインからのメトリックの取得](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#retrieve_data_api)を参照してください。
 * Metrics API について詳しくは、
 [Metrics API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window} を参照してください。
 
@@ -157,8 +153,8 @@ Metrics API を使用して 1 要求につき最大で 5 つのメトリック�
 
 * データの取得元のスペースを設定する必要があります。 
 * {{site.data.keyword.monitoringshort}} サービスで作業するためのセキュリティー・トークンまたは API キーを入力する必要があります。 
-* 1 つ以上のメトリックのパスを指定する必要があります。 詳しくは、[メトリックの定義](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics)を参照してください。
-* オプションで、カスタム期間を指定できます。 デフォルトでは、期間を指定しない場合、取得するデータは直近の 24 時間に対応するデータです。 詳しくは、[期間の構成](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time)を参照してください。
+* 1 つ以上のメトリックのパスを指定する必要があります。 詳しくは、[メトリックの定義](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics)を参照してください。
+* オプションで、カスタム期間を指定できます。 デフォルトでは、期間を指定しない場合、取得するデータは直近の 24 時間に対応するデータです。 詳しくは、[期間の構成](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time)を参照してください。
 
 
 ## メトリックのリスト表示
@@ -183,7 +179,7 @@ Metrics API を使用して 1 要求につき最大で 5 つのメトリック�
 `https://metrics.ng.bluemix.net/v1/metrics/list` を使用することができます。 
 
     地域ごとのエンドポイントのリストを取得するには、
-[エンドポイント](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)を参照してください。
+[エンドポイント](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)を参照してください。
 
     API について詳しくは、[Metrics API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window} を参照してください。
 

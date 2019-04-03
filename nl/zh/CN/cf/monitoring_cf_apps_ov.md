@@ -51,7 +51,7 @@ subcollection: cloud-monitoring
 要监视在 {{site.data.keyword.Bluemix_notm}} 外部运行的 CF 应用程序，可以使用度量值 API 将 CF 应用程序度量值转发到 {{site.data.keyword.monitoringshort}} 服务。
 
 * 有关该 API 的更多信息，请参阅[度量值 API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-metrics-api?&language=node#introduction)。
-* 有关使用该 API 的更多信息，请参阅[使用度量值 API 发送数据](/docs/services/cloud-monitoring/send-metrics/send_data_api.html#send_data_api)。
+* 有关使用该 API 的更多信息，请参阅[使用度量值 API 发送数据](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-send_data_api#send_data_api)。
 
 
 
@@ -63,14 +63,14 @@ subcollection: cloud-monitoring
 
 {{site.data.keyword.monitoringlong}} 服务使用 Grafana（一种开放式源代码分析和可视化平台）通过各种图形（例如，图表和表）来对度量值进行监视、搜索、分析和可视化表示。
 
-您可以通过浏览器启动 Grafana。有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)。
+您可以通过浏览器启动 Grafana。有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)。
 
 **注：**您必须在运行 CF 应用程序实例的同一 {{site.data.keyword.Bluemix_notm}} 区域中启动 Grafana。
 
 
-要监视 CF 应用程序，您必须在 Grafana 中定义一个或多个查询。有关更多信息，请参阅[在 Grafana 中配置度量值查询](/docs/services/cloud-monitoring/grafana/define_query.html#define_query)。 
+要监视 CF 应用程序，您必须在 Grafana 中定义一个或多个查询。有关更多信息，请参阅[在 Grafana 中配置度量值查询](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query)。 
 
-您还可以针对查询定义警报。有关更多信息，请参阅[配置警报](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)。
+您还可以针对查询定义警报。有关更多信息，请参阅[配置警报](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)。
 
 
 
@@ -174,7 +174,7 @@ ibmcloud.public.cloud-foundry.au-syd.logtester.0.container.memory.utilization
 ```
 {: screen}
 
-有关更多信息，请参阅 [CF 应用程序度量值格式](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)。
+有关更多信息，请参阅 [CF 应用程序度量值格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)。
 
 **注：**并非 CF 应用程序名称中允许使用的所有字符都允许用于度量值序列名称。例如，不允许使用大写字母。定义查询时在 Grafana 中可以看到的 CF 应用程序名称会更改为全部小写。
 

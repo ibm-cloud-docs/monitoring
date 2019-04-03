@@ -41,13 +41,13 @@ subcollection: cloud-monitoring
 
 1. （必要條件）安裝 {{site.data.keyword.Bluemix_notm}} CLI。
 
-   如需相關資訊，請參閱[安裝 {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/cloud-monitoring/qa/cli_qa.html#cli_qa)。
+   如需相關資訊，請參閱[安裝 {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#cli_qa)。
    
    如果已安裝 CLI，請繼續進行下一步。
 	
 2. 登入 {{site.data.keyword.Bluemix_notm}} 中的地區、組織及空間。 
 
-    如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
     例如，若要登入「美國南部」地區，請執行下列指令：
 	
@@ -190,8 +190,8 @@ subcollection: cloud-monitoring
 
 若要為使用者指派 IAM 原則，請選擇下列其中一種方法：
 
-* 透過 {{site.data.keyword.Bluemix_notm}} 使用者介面：如需相關資訊，請參閱[透過 {{site.data.keyword.Bluemix_notm}} 使用者介面為使用者指派 IAM 原則](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui)。
-* 使用指令行：如需相關資訊，請參閱[使用指令行為使用者指派 IAM 原則](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_commandline)。
+* 透過 {{site.data.keyword.Bluemix_notm}} 使用者介面：如需相關資訊，請參閱[透過 {{site.data.keyword.Bluemix_notm}} 使用者介面為使用者指派 IAM 原則](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui)。
+* 使用指令行：如需相關資訊，請參閱[使用指令行為使用者指派 IAM 原則](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_commandline)。
  
 ### 步驟 2：取得 API 金鑰
 {: #api_key}
@@ -200,7 +200,7 @@ subcollection: cloud-monitoring
 
 
 
-如需如何取得 API 金鑰的相關資訊，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。
+如需如何取得 API 金鑰的相關資訊，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。
 	
 從登入 {{site.data.keyword.Bluemix_notm}} 的相同終端機中，設定記號 APIKEY 變數。
 
@@ -216,7 +216,7 @@ export APIKEY="kjshdgf.....ldkdjdj"
 ### 步驟 3：取得端點的相關資訊
 {: #endpoint}
 
-若要判斷您將在其中傳送度量值的 {{site.data.keyword.monitoringshort}} 端點，請查看每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)，並識別您要傳送度量值的地區。
+若要判斷您將在其中傳送度量值的 {{site.data.keyword.monitoringshort}} 端點，請查看每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)，並識別您要傳送度量值的地區。
 
 從登入 {{site.data.keyword.Bluemix_notm}} 的相同終端機中，設定 **METRIC_ENDPOINT** 變數。例如，
 
@@ -230,7 +230,7 @@ export METRIC_ENDPOINT="metrics.ng.bluemix.net"
 ### 步驟 4：取得空間網域 ID 的相關資訊 
 {: #domain}
 
-若要取得空間的網域 ID，請[取得空間 GUID](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid)。然後，如下所示設定網域 ID：`s-SpaceID`，其中 SpaceID 是空間的 GUID。
+若要取得空間的網域 ID，請[取得空間 GUID](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid)。然後，如下所示設定網域 ID：`s-SpaceID`，其中 SpaceID 是空間的 GUID。
 
 從登入 {{site.data.keyword.Bluemix_notm}} 的相同終端機中，設定 SpaceID 變數：
 

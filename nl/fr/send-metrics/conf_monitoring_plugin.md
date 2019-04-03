@@ -41,13 +41,13 @@ A partir d'un terminal, procédez comme suit :
 
 1. (Prérequis) Installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
-   Pour plus d'informations, voir [Installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.](/docs/services/cloud-monitoring/qa/cli_qa.html#cli_qa)
+   Pour plus d'informations, voir [Installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#cli_qa)
    
    Si l'interface de ligne de commande est installée, passez à l'étape suivante.
 	
 2. Connectez-vous à une région, une organisation et un espace dans {{site.data.keyword.Bluemix_notm}}. 
 
-    Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
     Par exemple, pour vous connecter à la région Sud des Etats-Unis, exécutez la commande suivante :
 	
@@ -190,15 +190,15 @@ Pour envoyer des métriques à n'importe quel domaine, votre ID utilisateur doit
 
 Pour affecter une règle IAM à un utilisateur, choisissez l'une des méthodes suivantes :
 
-* Via l'interface utilisateur {{site.data.keyword.Bluemix_notm}} : Pour plus d'informations, voir [Affectation d'une règle IAM à un utilisateur via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui).
-* Via la ligne de commande : Pour plus d'informations, voir [Affectation d'une règle IAM à un utilisateur via la ligne de commande](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_commandline).
+* Via l'interface utilisateur {{site.data.keyword.Bluemix_notm}} : Pour plus d'informations, voir [Affectation d'une règle IAM à un utilisateur via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui).
+* Via la ligne de commande : Pour plus d'informations, voir [Affectation d'une règle IAM à un utilisateur via la ligne de commande](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_commandline).
  
 ### Etape 2 : Obtention d'une clé d'API
 {: #api_key}
  
 Pour envoyer des métriques à un espace, vous devez obtenir une clé d'API permettant de vous authentifier auprès du service {{site.data.keyword.monitoringshort}}.
 
-Pour plus d'informations sur la manière d'obtenir une clé d'API, voir [Obtention d'une clé d'API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+Pour plus d'informations sur la manière d'obtenir une clé d'API, voir [Obtention d'une clé d'API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 Sur le terminal à partir duquel vous vous êtes connecté à {{site.data.keyword.Bluemix_notm}}, définissez la variable APIKEY pour le jeton.
 
@@ -212,7 +212,7 @@ export APIKEY="kjshdgf.....ldkdjdj"
 ### Etape 3 : Obtention des informations relatives au noeud final
 {: #endpoint}
 
-Pour déterminer le noeud final {{site.data.keyword.monitoringshort}} auquel vous allez envoyer les métriques, reportez-vous à la liste des métriques par région, consultez [Noeuds finaux](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints), et identifiez celui de la région où vous voulez envoyer les métriques.
+Pour déterminer le noeud final {{site.data.keyword.monitoringshort}} auquel vous allez envoyer les métriques, reportez-vous à la liste des métriques par région, consultez [Noeuds finaux](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints), et identifiez celui de la région où vous voulez envoyer les métriques.
 
 Sur le terminal à partir duquel vous vous êtes connecté à {{site.data.keyword.Bluemix_notm}}, définissez la variable **METRIC_ENDPOINT**. Par exemple
 
@@ -226,7 +226,7 @@ export METRIC_ENDPOINT="metrics.ng.bluemix.net"
 ### Etape 4 : Obtention des informations relatives à l'ID de domaine d'espace 
 {: #domain}
 
-Pour obtenir l'ID de domaine d'un espace, [procurez-vous l'identificateur global unique de l'espace](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid). Définissez ensuite l'ID de domaine comme suit : `s-SpaceID` où SpaceID est l'identificateur global unique de l'espace.
+Pour obtenir l'ID de domaine d'un espace, [procurez-vous l'identificateur global unique de l'espace](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid). Définissez ensuite l'ID de domaine comme suit : `s-SpaceID` où SpaceID est l'identificateur global unique de l'espace.
 
 Sur le terminal à partir duquel vous vous êtes connecté à {{site.data.keyword.Bluemix_notm}}, définissez la variable SpaceID :
 

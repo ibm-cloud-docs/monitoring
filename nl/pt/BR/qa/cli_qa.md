@@ -30,11 +30,11 @@ subcollection: cloud-monitoring
 Aqui estão as respostas para perguntas comuns sobre como usar a CLI do {{site.data.keyword.Bluemix}} com o serviço {{site.data.keyword.monitoringshort}}. 
 {:shortdesc}
 
-* [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)
-* [Como instalar o {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/cloud-monitoring/qa/cli_qa.html#install_bmx_cli)
-* [Como obter o GUID de uma conta](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid)
-* [Como obter o GUID de uma organização](/docs/services/cloud-monitoring/qa/cli_qa.html#org_guid)
-* [Como obter o GUID de um espaço](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid)
+* [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)
+* [Como instalar o {{site.data.keyword.Bluemix_notm}} CLI](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#install_bmx_cli)
+* [Como obter o GUID de uma conta](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid)
+* [Como obter o GUID de uma organização](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#org_guid)
+* [Como obter o GUID de um espaço](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid)
 
 ## Como efetuar login no IBM Cloud.
 {: #login}
@@ -97,7 +97,7 @@ Em que
 ## Como instalar a CLI do IBM Cloud?
 {: #install_bmx_cli}
 
-Consulte  [ Fazer download e instalar a  {{site.data.keyword.Bluemix_notm}}  CLI ](/docs/cli/index.html#overview).
+Consulte  [ Fazer download e instalar a  {{site.data.keyword.Bluemix_notm}}  CLI ](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
 
 ## Como obter o GUID de uma conta
 {: #account_guid}

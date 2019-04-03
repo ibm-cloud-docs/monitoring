@@ -37,5 +37,5 @@ Si tiene problemas o preguntas al utilizar las funciones de supervisión de {{si
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
   * Para formular preguntas sobre el servicio y obtener instrucciones de iniciación, utilice el foro [{{site.data.keyword.IBM_notm}} developerWorks dW Answers](https://developer.ibm.com/answers/topics/ibm-cloud-monitoring/?smartspace=ibm-cloud){:new_window}.
 
-* Si todavía no puede resolver el problema, puede abrir una incidencia de soporte de IBM. Para obtener información sobre cómo abrir una incidencia de soporte de IBM, o sobre los niveles de soporte y gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/get-support/howtogetsupport.html#getting-customer-support).
+* Si todavía no puede resolver el problema, puede abrir una incidencia de soporte de IBM. Para obtener información sobre cómo abrir una incidencia de soporte de IBM, o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support).
 

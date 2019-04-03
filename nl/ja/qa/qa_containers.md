@@ -30,12 +30,12 @@ subcollection: cloud-monitoring
 {{site.data.keyword.monitoringshort}} サービスおよび {{site.data.keyword.containershort_notm}} サービスに関する一般的な質問の回答を以下に示します。 
 {:shortdesc}
 
-* [コンテナーの Grafana 照会がデータを表示しないか、エラーになる](/docs/services/cloud-monitoring/qa/qa_containers.html#metric_format_change)
-* [端末セッションでクラスター環境をセットアップするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)
-* [クラスター名とクラスター ID をどこで取得できますか](/docs/services/cloud-monitoring/qa/qa_containers.html#qa3)
-* [名前空間のリストを取得するにはどうすればよいですか](/docs/services/cloud-monitoring/qa/qa_containers.html#qa7)
-* [Kubernetes クラスター内の名前空間にあるポッドのリストを取得するにはどうすればよいですか](/docs/services/cloud-monitoring/qa/qa_containers.html#qa8)
-* [クラスター内のすべてのポッドを名前空間別に取得するにはどうすればよいですか](/docs/services/cloud-monitoring/qa/qa_containers.html#qa9)
+* [コンテナーの Grafana 照会がデータを表示しないか、エラーになる](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#metric_format_change)
+* [端末セッションでクラスター環境をセットアップするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)
+* [クラスター名とクラスター ID をどこで取得できますか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa3)
+* [名前空間のリストを取得するにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa7)
+* [Kubernetes クラスター内の名前空間にあるポッドのリストを取得するにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa8)
+* [クラスター内のすべてのポッドを名前空間別に取得するにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa9)
 
 ## コンテナーの Grafana 照会がデータを表示しないか、エラーになる
 {: #metric_format_change}
@@ -51,9 +51,9 @@ subcollection: cloud-monitoring
 
 有効な新しいフォーマットは、以下のとおりです。
 
-* [コンテナーの CPU メトリック照会フォーマット](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)
-* [ワーカーのロード・メトリック照会フォーマット](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers)
-* [コンテナーのメモリー・メトリック照会フォーマット](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)
+* [コンテナーの CPU メトリック照会フォーマット](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)
+* [ワーカーのロード・メトリック照会フォーマット](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers)
+* [コンテナーのメモリー・メトリック照会フォーマット](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)
 
 Grafana でデータを視覚化できるように、古い照会を新しいフォーマットに移行してください。
 
@@ -100,7 +100,7 @@ Grafana でデータを視覚化できるように、古い照会を新しいフ
       </tr>
       <tr>
         <td>Account</td>
-        <td>メトリックの収集が行われるアカウントの GUID。 <br>このフィールドのフォーマットは、`a_ID` です。ここで、ID はアカウントの GUID です。 <br>アカウントの GUID を取得するには、[アカウントの GUID の取得方法](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid)を参照してください。</td>
+        <td>メトリックの収集が行われるアカウントの GUID。 <br>このフィールドのフォーマットは、`a_ID` です。ここで、ID はアカウントの GUID です。 <br>アカウントの GUID を取得するには、[アカウントの GUID の取得方法](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid)を参照してください。</td>
         <td>a_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
       </tr>
       <tr>
@@ -112,7 +112,7 @@ Grafana でデータを視覚化できるように、古い照会を新しいフ
         <td>Metric</td>
         <td>コンテナーのために自動的に収集されるメトリック。</td>
         <td>CPU メトリックのリストについては、
-[コンテナー用の CPU メトリック](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers)を参照してください。 <br>メモリーのメトリックのリストについては、[メモリーのメトリック](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#memory_metrics)を参照してください。 </td>
+[コンテナー用の CPU メトリック](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers)を参照してください。 <br>メモリーのメトリックのリストについては、[メモリーのメトリック](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#memory_metrics)を参照してください。 </td>
       </tr>
       <tr>
         <td>Container in a pod</td>
@@ -136,7 +136,7 @@ Grafana でデータを視覚化できるように、古い照会を新しいフ
 
 クラスターのコンテキストをセットアップするには、以下の手順を実行します。
 
-1. {{site.data.keyword.Bluemix_notm}} で、作成したクラスターに関連付けられた、地域、組織、およびスペースにログインします。 詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/cli_qa.html#login)を参照してください。
+1. {{site.data.keyword.Bluemix_notm}} で、作成したクラスターに関連付けられた、地域、組織、およびスペースにログインします。 詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)を参照してください。
 
 2. {{site.data.keyword.containershort_notm}} サービス・プラグインを初期化します。 以下のコマンドを実行します。
 
@@ -187,7 +187,7 @@ UI を使用してクラスター名と ID を取得するには、以下の手�
 
 コマンド・ラインを使用してクラスター名と ID を取得するには、以下の手順を実行します。
 
-1. {{site.data.keyword.Bluemix_notm}} で、作成したクラスターに関連付けられた、地域、組織、およびスペースにログインします。 詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/cli_qa.html#login)を参照してください。
+1. {{site.data.keyword.Bluemix_notm}} で、作成したクラスターに関連付けられた、地域、組織、およびスペースにログインします。 詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)を参照してください。
 
 2. アカウントで使用可能なクラスターをリストします。 以下のコマンドを実行します。 
 
@@ -214,7 +214,7 @@ UI を使用してクラスター名と ID を取得するには、以下の手�
 
 以下のステップを実行します。
 
-1. クラスター・コンテキストをセットアップします。 詳しくは、[端末セッションでクラスター環境をセットアップするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)を参照してください。
+1. クラスター・コンテキストをセットアップします。 詳しくは、[端末セッションでクラスター環境をセットアップするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)を参照してください。
 
 2. すべての名前空間をリストします。 以下の kubectl コマンドを実行します。
 
@@ -228,7 +228,7 @@ UI を使用してクラスター名と ID を取得するには、以下の手�
 		
 名前空間内のポッドのリストを取得するには、以下の手順を実行します。
 
-1. クラスター・コンテキストをセットアップします。 詳しくは、[端末セッションでクラスター環境をセットアップするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)を参照してください。
+1. クラスター・コンテキストをセットアップします。 詳しくは、[端末セッションでクラスター環境をセットアップするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)を参照してください。
 
 2. Kubernetes クラスター内の名前空間ごとのポッドのリストを取得するには、以下のコマンドを実行します。
 
@@ -244,7 +244,7 @@ UI を使用してクラスター名と ID を取得するには、以下の手�
 		
 以下のステップを実行します。
 
-1. クラスター・コンテキストをセットアップします。 詳しくは、[端末セッションでクラスター環境をセットアップするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)を参照してください。
+1. クラスター・コンテキストをセットアップします。 詳しくは、[端末セッションでクラスター環境をセットアップするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)を参照してください。
 	
 2. クラスター内のすべてのポッドを名前空間別に取得するには、以下のコマンドを実行します。
 

@@ -112,14 +112,14 @@ Pour envoyer des métriques au service {{site.data.keyword.monitoringshort}}, pr
 
 * L'ID {{site.data.keyword.IBM_notm}} de l'utilisateur qui envoie des métriques doit avoir une règle IAM affectée pour le service {{site.data.keyword.monitoringshort}}. Les rôles IAM suivants autorisent un utilisateur à envoyer des métriques : *Administrateur*, *Editeur* et *Opérateur*.
 
-* Vous devez indiquer le noeud final d'API où vous envoyez les métriques. Il existe un noeud final par région. Par exemple, pour la région Sud des Etats-Unis, le noeud final est le suivant : `https://metrics.ng.bluemix.net/v1/metrics`. Pour plus d'informations sur les noeuds finaux, voir [Adresses URL du service {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/monitoring_ov.html#region){: new_window}.
+* Vous devez indiquer le noeud final d'API où vous envoyez les métriques. Il existe un noeud final par région. Par exemple, pour la région Sud des Etats-Unis, le noeud final est le suivant : `https://metrics.ng.bluemix.net/v1/metrics`. Pour plus d'informations sur les noeuds finaux, voir [Adresses URL du service {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region){: new_window}.
 
 
 Vous pouvez envoyer des métriques au service {{site.data.keyword.monitoringshort}} en utilisant l'une des méthodes suivantes :
 
 * *Méthode 1 : Configurez le plug-in {{site.data.keyword.monitoringshort}}. *
 
-    Pour plus d'informations, voir [Configuration du plug-in {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/send-metrics/conf_monitoring_plugin.html#conf_monitoring_plugin).
+    Pour plus d'informations, voir [Configuration du plug-in {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-conf_monitoring_plugin#conf_monitoring_plugin).
 
     La figure suivante offre une vue d'ensemble de l'utilisation du plug-in {{site.data.keyword.monitoringshort}} pour envoyer des métriques au service {{site.data.keyword.monitoringshort}} :
 
@@ -127,7 +127,7 @@ Vous pouvez envoyer des métriques au service {{site.data.keyword.monitoringshor
 
 * *Méthode 2 : Utilisez l'API Metrics. *
 
-    Pour plus d'informations, voir [Envoi de métriques à l'aide de l'API Metrics](/docs/services/cloud-monitoring/send-metrics/send_data_api.html#send_data_api).
+    Pour plus d'informations, voir [Envoi de métriques à l'aide de l'API Metrics](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-send_data_api#send_data_api).
 
 
 ## Extraction de métriques
@@ -135,15 +135,15 @@ Vous pouvez envoyer des métriques au service {{site.data.keyword.monitoringshor
 
 Si vous avez besoin d'effectuer une analyse plus approfondie en dehors du service {{site.data.keyword.monitoringshort}} ou si votre application nécessite d'utiliser des métriques pour prendre des décisions, vous pouvez utiliser l'API Metrics pour extraire jusqu'à cinq métriques par requête. 
 
-* Pour plus d'informations sur l'extraction de métriques, voir [Extraction de métriques à partir d'un domaine](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#retrieve_data_api)
+* Pour plus d'informations sur l'extraction de métriques, voir [Extraction de métriques à partir d'un domaine](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#retrieve_data_api)
 * Pour plus d'informations sur l'API Metrics, voir [API Metrics](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window}.
 
 Pour extraire des métriques, prenez en compte les informations suivantes : 
 
 * Vous devez définir l'espace à partir duquel vous voulez extraire les données. 
 * Vous devez fournir un jeton de sécurité ou une clé d'API pour gérer le service {{site.data.keyword.monitoringshort}}. 
-* Vous devez spécifier un chemin d'accès à 1 ou plusieurs métriques. Pour plus d'informations, voir [Définition des métriques](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics).
-* Vous pouvez éventuellement spécifier une période personnalisée. Par défaut, si vous ne spécifiez pas de période, les données que vous extrayez sont celles qui correspondent aux 24 dernières heures. Pour plus d'informations, voir [Configuration d'une période](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time).
+* Vous devez spécifier un chemin d'accès à 1 ou plusieurs métriques. Pour plus d'informations, voir [Définition des métriques](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics).
+* Vous pouvez éventuellement spécifier une période personnalisée. Par défaut, si vous ne spécifiez pas de période, les données que vous extrayez sont celles qui correspondent aux 24 dernières heures. Pour plus d'informations, voir [Configuration d'une période](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time).
 
 
 ## Liste des métriques
@@ -166,7 +166,7 @@ Pour afficher la liste des métriques, prenez en compte les informations suivant
 
     Chaque région a une adresse URL différente. Par exemple, pour la région Sud des Etats-Unis, vous pouvez utiliser le noeud final d'API `https://metrics.ng.bluemix.net/v1/metrics/list` 
 
-    Pour la liste des noeuds finaux par région, voir [Noeuds finaux](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+    Pour la liste des noeuds finaux par région, voir [Noeuds finaux](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 
     Pour plus d'informations sur l'API, voir [API Metrics](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window}.
 

@@ -31,18 +31,16 @@ Aqui estão as respostas para perguntas comuns sobre o serviço
 do {{site.data.keyword.monitoringshort}} e o serviço do {{site.data.keyword.containershort_notm}}. 
 {:shortdesc}
 
-* [A consulta do
-Grafana para meus contêineres não está mostrando dados ou está com erro](/docs/services/cloud-monitoring/qa/qa_containers.html#metric_format_change)
-* [Como configurar um ambiente em
-cluster na minha sessão de terminal?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)
+* [A consulta do Grafana para meus contêineres não está mostrando dados ou está com erro](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#metric_format_change)
+* [Como configurar um ambiente em cluster na minha sessão de terminal?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)
 * [Onde posso obter o nome do
-cluster e o ID do cluster?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa3)
+cluster e o ID do cluster?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa3)
 * [Como obter a lista de
-namespaces?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa7)
+namespaces?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa7)
 * [Como obter a lista de pods em
-um namespace em um cluster do Kubernetes?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa8)
+um namespace em um cluster do Kubernetes?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa8)
 * [Como obter todos os pods em um
-cluster por namespace?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa9)
+cluster por namespace?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa9)
 
 ## A consulta do Grafana para meus contêineres não está mostrando dados ou está com erro
 {: #metric_format_change}
@@ -58,9 +56,9 @@ O formato a seguir foi descontinuado:
 
 Os novos formatos que são válidos são os seguintes:
 
-* [Formato de consulta de métrica de CPU para um contêiner](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)
-* [Formato de consulta de métrica de carga para um trabalhador](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers)
-* [Formato de consulta de métrica de memória para um contêiner](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)
+* [Formato de consulta de métrica de CPU para um contêiner](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)
+* [Formato de consulta de métrica de carga para um trabalhador](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers)
+* [Formato de consulta de métrica de memória para um contêiner](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)
 
 Migre suas consultas antigas para o novo formato para visualizar seus dados no Grafana.
 
@@ -109,7 +107,7 @@ A tabela a seguir lista os campos no formato que foi descontinuado:
       </tr>
       <tr>
         <td>Conta</td>
-        <td>GUID da conta em que as métricas são coletadas. <br>O formato deste campo é o seguinte: `a_ID` em que ID é o GUID da conta. <br>Para obter o GUID da conta, consulte [Como obter o GUID de uma conta](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid).</td>
+        <td>GUID da conta em que as métricas são coletadas. <br>O formato deste campo é o seguinte: `a_ID` em que ID é o GUID da conta. <br>Para obter o GUID da conta, consulte [Como obter o GUID de uma conta](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid).</td>
         <td>a_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
       </tr>
       <tr>
@@ -121,8 +119,8 @@ A tabela a seguir lista os campos no formato que foi descontinuado:
         <td>de Métrica</td>
         <td>A métrica que é coletada automaticamente para um contêiner.</td>
         <td>Para obter uma lista de métricas da CPU, consulte
-[Métricas da CPU para contêineres](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers) <br>Para obter uma lista de métricas da memória, consulte
-[Métricas da memória](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#memory_metrics) </td>
+[Métricas da CPU para contêineres](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers) <br>Para obter uma lista de métricas da memória, consulte
+[Métricas da memória](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#memory_metrics) </td>
       </tr>
       <tr>
         <td>Contêiner em uma vagem</td>
@@ -149,7 +147,7 @@ para concluir a tarefa.
 
 Conclua as etapas a seguir para configurar o contexto de um cluster:
 
-1. Efetue login na região, na organização e no espaço no {{site.data.keyword.Bluemix_notm}} que está associado ao cluster criado. Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+1. Efetue login na região, na organização e no espaço no {{site.data.keyword.Bluemix_notm}} que está associado ao cluster criado. Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Inicialize o plug-in do serviço {{site.data.keyword.containershort_notm}}. Execute o seguinte comando:
 
@@ -200,7 +198,7 @@ Conclua as etapas a seguir para obter o nome e o ID do cluster por meio da IU:
 
 Complete the following steps to get the cluster name and ID thorugh the command line:
 
-1. Efetue login na região, na organização e no espaço no {{site.data.keyword.Bluemix_notm}} que está associado ao cluster criado. Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+1. Efetue login na região, na organização e no espaço no {{site.data.keyword.Bluemix_notm}} que está associado ao cluster criado. Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Liste os clusters que estão disponíveis na conta. Execute o seguinte comando: 
 
@@ -227,7 +225,7 @@ Para obter uma lista de todos os namespaces no cluster, conclua as etapas a segu
 
 Conclua as etapas a seguir:
 
-1. Configure o contexto do cluster. Para obter mais informações, veja [Como eu configuro um ambiente em cluster em minha sessão de terminal?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1).
+1. Configure o contexto do cluster. Para obter mais informações, veja [Como eu configuro um ambiente em cluster em minha sessão de terminal?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1).
 
 2. Liste todos os namespaces. Run the following kubectl command:
 
@@ -241,7 +239,7 @@ Conclua as etapas a seguir:
 		
 To get the list of pods in a namespace, complete the following steps:
 
-1. Configure o contexto do cluster. Para obter mais informações, veja [Como eu configuro um ambiente em cluster em minha sessão de terminal?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1).
+1. Configure o contexto do cluster. Para obter mais informações, veja [Como eu configuro um ambiente em cluster em minha sessão de terminal?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1).
 
 2. Para obter a lista de pods por namespace em um cluster do Kubernetes, execute o comando a seguir:
 
@@ -257,7 +255,7 @@ To get the list of pods in a namespace, complete the following steps:
 		
 Conclua as etapas a seguir:
 
-1. Configure o contexto do cluster. Para obter mais informações, veja [Como eu configuro um ambiente em cluster em minha sessão de terminal?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1).
+1. Configure o contexto do cluster. Para obter mais informações, veja [Como eu configuro um ambiente em cluster em minha sessão de terminal?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1).
 	
 2. Para obter todos os pods em um cluster por namespace, execute o comando a seguir:
 

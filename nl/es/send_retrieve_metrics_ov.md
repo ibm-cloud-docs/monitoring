@@ -38,7 +38,7 @@ La figura siguiente muestra una vista de alto nivel de las distintas fuentes de 
 
 ![Vista de alto nivel de los recursos que pueden enviar métricas al servicio {{site.data.keyword.monitoringlong}} ](images/monitoring_ov_f1.gif)
 
-En los contenedores que se ejecutan en un clúster Kubernetes en {{site.data.keyword.Bluemix_notm}}, y para los servicios seleccionados, las métricas del sistema básico se recopilan automáticamente. 
+En los contenedores que se ejecutan en un clúster de Kubernetes en {{site.data.keyword.Bluemix_notm}}, y para los servicios seleccionados, las métricas del sistema básico se recopilan automáticamente. 
 También puede recopilar más métricas, o enviar métricas desde fuera de {{site.data.keyword.IBM_notm}} Cloud, en el servicio {{site.data.keyword.monitoringshort}}. Hay disponibles diferentes métodos. Las tablas siguientes listan los métodos por origen de métrica:
 
 <table>
@@ -50,7 +50,7 @@ También puede recopilar más métricas, o enviar métricas desde fuera de {{sit
 	<th>Más información</th>
   </tr>
   <tr>
-    <td>Contenedores que se ejecutan en un clúster Kubernetes en {{site.data.keyword.Bluemix_notm}}</td>
+    <td>Contenedores que se ejecutan en un clúster de Kubernetes en {{site.data.keyword.Bluemix_notm}}</td>
 	<td>Sí</td>
 	<td>Sí</td>
 	<td>Las métricas del sistema básico se recopilan automáticamente. Puede instalar collectd de forma explicita y enviar métricas avanzadas o personalizadas que no se proporcionan de forma predeterminada.</td>
@@ -112,14 +112,14 @@ Para enviar métricas al servicio {{site.data.keyword.monitoringshort}}, tenga e
 
 * El ID de {{site.data.keyword.IBM_notm}} del usuario que envía métricas debe tener una política de IAM asignada para el servicio {{site.data.keyword.monitoringshort}}. Los roles de IAM siguientes permite al usuario enviar métricas: *Administrador*, *Editor*, y *Operador*.
 
-* Debe especificar el punto final de API al que está enviando las métricas. Hay un punto final por región. Por ejemplo, para la región EE.UU. sur, el punto final es el siguiente: `https://metrics.ng.bluemix.net/v1/metrics`. Para obtener más información acerca de los puntos finales, consulte los [URL para el servicio {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/monitoring_ov.html#region){: new_window}.
+* Debe especificar el punto final de API al que está enviando las métricas. Hay un punto final por región. Por ejemplo, para la región EE.UU. sur, el punto final es el siguiente: `https://metrics.ng.bluemix.net/v1/metrics`. Para obtener más información acerca de los puntos finales, consulte los [URL para el servicio {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region){: new_window}.
 
 
 Puede enviar métricas al servicio {{site.data.keyword.monitoringshort}} utilizando cualquiera de los métodos siguientes:
 
 * *Método 1: Configurar el plugin de {{site.data.keyword.monitoringshort}}.*
 
-    Para obtener más información, consulte [Configuración del plugin de {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/send-metrics/conf_monitoring_plugin.html#conf_monitoring_plugin).
+    Para obtener más información, consulte [Configuración del plugin de {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-conf_monitoring_plugin#conf_monitoring_plugin).
 
     La figura siguiente muestra una vista de nivel alto sobre cómo utilizar el plugin de {{site.data.keyword.monitoringshort}} para enviar métricas al servicio {{site.data.keyword.monitoringshort}}:
 
@@ -127,7 +127,7 @@ Puede enviar métricas al servicio {{site.data.keyword.monitoringshort}} utiliza
 
 * *Método 2: Utilizar la API de métricas.*
 
-    Para obtener más información, consulte [Envío de métricas mediante la API de métricas](/docs/services/cloud-monitoring/send-metrics/send_data_api.html#send_data_api).
+    Para obtener más información, consulte [Envío de métricas mediante la API de métricas](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-send_data_api#send_data_api).
 
 
 ## Recuperación de métricas
@@ -135,15 +135,15 @@ Puede enviar métricas al servicio {{site.data.keyword.monitoringshort}} utiliza
 
 Si necesita realizar más análisis fuera del servicio {{site.data.keyword.monitoringshort}}, o si su aplicación desea utilizar métricas para tomar decisiones, puede utilizar la API de métricas para recuperar un máximo de cinco métricas por solicitud. 
 
-* Para obtener más información sobre cómo recuperar métricas, consulte [Recuperación de métricas desde un dominio](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#retrieve_data_api)
+* Para obtener más información sobre cómo recuperar métricas, consulte [Recuperación de métricas desde un dominio](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#retrieve_data_api)
 * Para obtener más información acerca la de API de métricas, consulte [API de métricas](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window}.
 
 Para recuperar métricas, tenga en cuenta la información siguiente: 
 
 * Debe establecer el espacio desde el que desea recuperar los datos. 
 * Debe proporcionar una señal de seguridad o una clave de API para trabajar con el servicio {{site.data.keyword.monitoringshort}}. 
-* Debe especificar una vía de acceso a 1 o más métricas. Para obtener más información, consulte [Definición de las métricas](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics).
-* De forma opcional, puede especificar un periodo de tiempo personalizado. De forma predeterminada, si no especifica un periodo de tiempo, los datos que recupera son los datos que corresponden a las últimas 24 horas. Para obtener más información, consulte [Configuración de un periodo de tiempo](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time).
+* Debe especificar una vía de acceso a 1 o más métricas. Para obtener más información, consulte [Definición de las métricas](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics).
+* De forma opcional, puede especificar un periodo de tiempo personalizado. De forma predeterminada, si no especifica un periodo de tiempo, los datos que recupera son los datos que corresponden a las últimas 24 horas. Para obtener más información, consulte [Configuración de un periodo de tiempo](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time).
 
 
 ## Listado de métricas
@@ -166,7 +166,7 @@ Para enumerar las métricas, tenga en cuenta la información siguiente:
 
     Cada región tiene un URL diferente. Por ejemplo, para la región EE.UU. sur, puede utilizar el punto final de la API `https://metrics.ng.bluemix.net/v1/metrics/list` 
 
-    Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+    Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 
     Para obtener más información acerca de la API, consulte [la API de métricas](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window}.
 

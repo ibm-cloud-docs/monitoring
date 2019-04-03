@@ -112,14 +112,14 @@ subcollection: cloud-monitoring
 
 * 메트릭을 전송하는 사용자의 {{site.data.keyword.IBM_notm}} ID에는 {{site.data.keyword.monitoringshort}} 서비스에 대해 지정된 IAM 정책이 있어야 합니다. *관리자*, *편집자* 또는 *운영자* IAM 역할이 사용자가 메트릭을 전송하도록 허용합니다.
 
-* 메트릭을 전송 중인 API 엔드포인트를 지정해야 합니다. 지역당 하나의 엔드포인트가 있습니다. 예를 들어, 미국 남부 지역의 경우 엔드포인트는 `https://metrics.ng.bluemix.net/v1/metrics`입니다. 엔드포인트에 대한 자세한 정보는 [{{site.data.keyword.monitoringshort}} 서비스의 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region){: new_window}을 참조하십시오.
+* 메트릭을 전송 중인 API 엔드포인트를 지정해야 합니다. 지역당 하나의 엔드포인트가 있습니다. 예를 들어, 미국 남부 지역의 경우 엔드포인트는 `https://metrics.ng.bluemix.net/v1/metrics`입니다. 엔드포인트에 대한 자세한 정보는 [{{site.data.keyword.monitoringshort}} 서비스의 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region){: new_window}을 참조하십시오.
 
 
 다음 방법 중 하나를 사용하여 메트릭을 {{site.data.keyword.monitoringshort}} 서비스에 전송할 수 있습니다.
 
 * *방법 1: {{site.data.keyword.monitoringshort}} 플러그인을 구성합니다.*
 
-    자세한 정보는 [{{site.data.keyword.monitoringshort}} 플러그인 구성](/docs/services/cloud-monitoring/send-metrics/conf_monitoring_plugin.html#conf_monitoring_plugin)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.monitoringshort}} 플러그인 구성](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-conf_monitoring_plugin#conf_monitoring_plugin)을 참조하십시오.
 
     다음 그림은 {{site.data.keyword.monitoringshort}} 플러그인을 사용하여 {{site.data.keyword.monitoringshort}} 서비스에 메트릭을 전송하는 방법에 대한 상위 레벨 보기를 보여줍니다.
 
@@ -127,7 +127,7 @@ subcollection: cloud-monitoring
 
 * *방법 2: 메트릭 API를 사용합니다.*
 
-    자세한 정보는 [메트릭 API를 사용하여 메트릭 전송](/docs/services/cloud-monitoring/send-metrics/send_data_api.html#send_data_api)을 참조하십시오.
+    자세한 정보는 [메트릭 API를 사용하여 메트릭 전송](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-send_data_api#send_data_api)을 참조하십시오.
 
 
 ## 메트릭 검색
@@ -135,15 +135,15 @@ subcollection: cloud-monitoring
 
 {{site.data.keyword.monitoringshort}} 서비스 외부에서 추가 분석을 수행해야 하거나 애플리케이션에서 메트릭을 사용하여 의사결정을 내리려는 경우 메트릭 API를 사용하여 요청당 최대 5개의 메트릭을 검색할 수 있습니다. 
 
-* 메트릭을 검색하는 방법에 대한 자세한 정보는 [도메인에서 메트릭 검색](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#retrieve_data_api)을 참조하십시오.
+* 메트릭을 검색하는 방법에 대한 자세한 정보는 [도메인에서 메트릭 검색](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#retrieve_data_api)을 참조하십시오.
 * 메트릭 API에 대한 자세한 정보는 [메트릭 API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window}를 참조하십시오.
 
 메트릭을 검색하려는 경우에는 다음 정보를 고려하십시오. 
 
 * 데이터를 검색할 영역을 설정해야 합니다. 
 * {{site.data.keyword.monitoringshort}} 서비스를 사용한 작업에 필요한 보안 토큰 또는 API 키를 제공해야 합니다. 
-* 하나 이상의 메트릭에 대한 경로를 지정해야 합니다. 자세한 정보는 [메트릭 정의](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics)를 참조하십시오.
-* 선택적으로 사용자 정의 기간을 지정할 수 있습니다. 기본적으로, 기간을 지정하지 않는 경우 검색되는 데이터는 최근 24시간에 해당하는 데이터입니다. 자세한 정보는 [기간 구성](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time)을 참조하십시오.
+* 하나 이상의 메트릭에 대한 경로를 지정해야 합니다. 자세한 정보는 [메트릭 정의](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics)를 참조하십시오.
+* 선택적으로 사용자 정의 기간을 지정할 수 있습니다. 기본적으로, 기간을 지정하지 않는 경우 검색되는 데이터는 최근 24시간에 해당하는 데이터입니다. 자세한 정보는 [기간 구성](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time)을 참조하십시오.
 
 
 ## 메트릭 나열
@@ -166,7 +166,7 @@ subcollection: cloud-monitoring
 
     각 지역의 URL은 서로 다릅니다. 예를 들어, 미국 남부 지역의 경우 API 엔드포인트 `https://metrics.ng.bluemix.net/v1/metrics/list`를 사용할 수 있습니다. 
 
-    지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+    지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 
     API에 대한 자세한 정보는 [메트릭 API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window}를 참조하십시오.
 

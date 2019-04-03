@@ -30,12 +30,12 @@ subcollection: cloud-monitoring
 以下是關於 {{site.data.keyword.monitoringshort}} 服務及 {{site.data.keyword.containershort_notm}} 服務的常見問題與解答。
 {:shortdesc}
 
-* [我容器中的 Grafana 查詢未顯示資料，或發生錯誤](/docs/services/cloud-monitoring/qa/qa_containers.html#metric_format_change)
-* [如何在終端機階段作業中設定叢集環境？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)
-* [我可以在何處取得叢集名稱及叢集 ID？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa3)
-* [如何取得名稱空間清單？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa7)
-* [如何取得 Kubernetes 叢集之名稱空間中的 Pod 清單？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa8)
-* [如何依名稱空間取得叢集中的所有 Pod？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa9)
+* [我容器中的 Grafana 查詢未顯示資料，或發生錯誤](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#metric_format_change)
+* [如何在終端機階段作業中設定叢集環境？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)
+* [我可以在何處取得叢集名稱及叢集 ID？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa3)
+* [如何取得名稱空間清單？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa7)
+* [如何取得 Kubernetes 叢集之名稱空間中的 Pod 清單？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa8)
+* [如何依名稱空間取得叢集中的所有 Pod？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa9)
 
 ## 我容器中的 Grafana 查詢未顯示資料，或發生錯誤
 {: #metric_format_change}
@@ -51,9 +51,9 @@ subcollection: cloud-monitoring
 
 有效的新格式如下：
 
-* [容器的 CPU 度量值查詢格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)
-* [工作者節點的負載度量值查詢格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers)
-* [容器的記憶體度量值查詢格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)
+* [容器的 CPU 度量值查詢格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)
+* [工作者節點的負載度量值查詢格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers)
+* [容器的記憶體度量值查詢格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)
 
 將舊查詢移轉為新格式，以在 Grafana 中視覺化資料。
 
@@ -100,7 +100,7 @@ subcollection: cloud-monitoring
       </tr>
       <tr>
         <td>帳戶</td>
-        <td>在其中收集度量值之帳戶的 GUID。<br>此欄位的格式如下：`a_ID`，其中 ID 是帳戶的 GUID。<br>若要取得帳戶的 GUID，請參閱[如何取得帳戶的 GUID](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid)。</td>
+        <td>在其中收集度量值之帳戶的 GUID。<br>此欄位的格式如下：`a_ID`，其中 ID 是帳戶的 GUID。<br>若要取得帳戶的 GUID，請參閱[如何取得帳戶的 GUID](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid)。</td>
         <td>a_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
       </tr>
       <tr>
@@ -111,7 +111,7 @@ subcollection: cloud-monitoring
       <tr>
         <td>度量值</td>
         <td>自動收集的容器度量值。</td>
-        <td>如需 CPU 度量值的清單，請參閱[容器的 CPU 度量值](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers) <br>如需記憶體度量值的清單，請參閱[記憶體度量值](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#memory_metrics) </td>
+        <td>如需 CPU 度量值的清單，請參閱[容器的 CPU 度量值](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers) <br>如需記憶體度量值的清單，請參閱[記憶體度量值](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#memory_metrics) </td>
       </tr>
       <tr>
         <td>POD 中的容器</td>
@@ -135,7 +135,7 @@ subcollection: cloud-monitoring
 
 請完成下列步驟，以設定叢集的環境定義：
 
-1. 登入 {{site.data.keyword.Bluemix_notm}} 中與所建立叢集相關聯的地區、組織及空間。如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+1. 登入 {{site.data.keyword.Bluemix_notm}} 中與所建立叢集相關聯的地區、組織及空間。如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
 2. 起始設定 {{site.data.keyword.containershort_notm}} 服務外掛程式。執行下列指令：
 
@@ -186,7 +186,7 @@ subcollection: cloud-monitoring
 
 請完成下列步驟，透過指令行取得叢集名稱及 ID：
 
-1. 登入 {{site.data.keyword.Bluemix_notm}} 中與所建立叢集相關聯的地區、組織及空間。如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+1. 登入 {{site.data.keyword.Bluemix_notm}} 中與所建立叢集相關聯的地區、組織及空間。如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
 2. 列出帳戶中的可用叢集。執行下列指令： 
 
@@ -213,7 +213,7 @@ subcollection: cloud-monitoring
 
 請完成下列步驟：
 
-1. 設定叢集環境定義。如需相關資訊，請參閱[如何在終端機階段作業中設定叢集環境？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)。
+1. 設定叢集環境定義。如需相關資訊，請參閱[如何在終端機階段作業中設定叢集環境？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)。
 
 2. 列出所有名稱空間。請執行下列 kubectl 指令：
 
@@ -227,7 +227,7 @@ kubectl get namespaces
 		
 若要取得名稱空間中的 Pod 清單，請完成下列步驟：
 
-1. 設定叢集環境定義。如需相關資訊，請參閱[如何在終端機階段作業中設定叢集環境？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)。
+1. 設定叢集環境定義。如需相關資訊，請參閱[如何在終端機階段作業中設定叢集環境？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)。
 
 2. 若要取得 Kubernetes 叢集中每個名稱空間的 Pod 清單，請執行下列指令：
 
@@ -243,7 +243,7 @@ kubectl get namespaces
 		
 請完成下列步驟：
 
-1. 設定叢集環境定義。如需相關資訊，請參閱[如何在終端機階段作業中設定叢集環境？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)。
+1. 設定叢集環境定義。如需相關資訊，請參閱[如何在終端機階段作業中設定叢集環境？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)。
 	
 2. 若要依名稱空間取得叢集中的所有 Pod，請執行下列指令：
 

@@ -35,13 +35,14 @@ No {{site.data.keyword.Bluemix}}, é possível usar o Grafana, uma plataforma de
 
     É possível ativar suas métricas de contêiner do Docker específicas no Grafana dentro do contexto para esse contêiner específico. Esse recurso se aplica somente aos contêineres que são implementados na infraestrutura gerenciada pelo {{site.data.keyword.Bluemix_notm}}. 
     
-    Para obter mais informações, consulte [Navegando para o painel Grafana do painel do {{site.data.keyword.Bluemix_notm}}] (/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_bluemix).
+    Para obter mais informações, consulte [Navegando para o painel do Grafana por meio do painel do {{site.data.keyword.Bluemix_notm}}
+    ](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_bluemix).
 
 * Em um link direto do navegador
 
     É possível ativar o Grafana para que os dados que são exibidos agreguem logs de serviços em um espaço fornecido do {{site.data.keyword.Bluemix_notm}}.
     
-    Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+    Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
     
 Para obter mais informações sobre Grafana, consulte o [Guia do Usuário do Grafana ![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.grafana.org/guides/getting_started/){: new_window}.
 

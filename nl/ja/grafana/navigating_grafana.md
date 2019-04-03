@@ -35,13 +35,13 @@ Grafana は以下のいずれかの方法で起動できます。
 
     Grafana で特定の Docker コンテナーのメトリックを指定し、その特定のコンテナーに応じて起動することができます。 この機能は、{{site.data.keyword.Bluemix_notm}} が管理するインフラストラクチャーにデプロイされたコンテナーにのみ適用されます。 
     
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} ダッシュボードから Grafana ダッシュボードへのナビゲート] (/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_bluemix) を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} ダッシュボードから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_bluemix) を参照してください。
 
 * ブラウザーの直接リンクから
 
     Grafana を起動し、表示されているデータが、提供されている {{site.data.keyword.Bluemix_notm}} スペース内のサービスのログを集約するようにすることができます。
     
-    詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)を参照してください。
+    詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)を参照してください。
     
 Grafana について詳しくは、[Grafana User Guide ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.grafana.org/guides/getting_started/){: new_window} を参照してください。
 

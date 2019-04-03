@@ -31,7 +31,7 @@ subcollection: cloud-monitoring
 
 以下の手順を実行して、Grafana ダッシュボードを作成します。
 
-1. Web ブラウザーから Grafana を起動します。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)を参照してください。
+1. Web ブラウザーから Grafana を起動します。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)を参照してください。
 
 2. デフォルト・ダッシュボードを保存します。
 

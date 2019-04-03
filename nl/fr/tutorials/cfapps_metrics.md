@@ -49,11 +49,11 @@ Ce tutoriel part du principe que vous travaillez dans la région Sud des Etats-U
 
     Votre ID utilisateur pour {{site.data.keyword.Bluemix_notm}} doit posséder un rôle CF pour l'espace où le service {{site.data.keyword.monitoringshort}} et l'application CF sont mis à disposition. Le rôle requis est *developer*.
     
-    Pour plus d'informations, voir [Octroi d'un rôle CF à un utilisateur à l'aide de l'interface utilisateur IBM Cloud](/docs/services/cloud-monitoring/security/assign_policy.html#grant_permissions_ui_space).
+    Pour plus d'informations, voir [Octroi d'un rôle CF à un utilisateur à l'aide de l'interface utilisateur IBM Cloud](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#grant_permissions_ui_space).
 
 2. Mettez à disposition le service {{site.data.keyword.monitoringshort}} dans un espace sur lequel vous disposez des droits vous permettant de mettre des services à disposition dans la région Sud des Etats-Unis.
 
-    Pour plus d'informations, voir [Mise à disposition du service {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to/provision.html#provision).
+    Pour plus d'informations, voir [Mise à disposition du service {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 ## Etape 1 : Octroi des droits permettant à votre utilisateur de gérer des applications CF et le service {{site.data.keyword.monitoringshort}}
 {: #cfapps_step1}
@@ -140,7 +140,7 @@ Lancez Grafana à partir d'un navigateur et définissez le domaine {{site.data.k
 
     Entrez l'adresse URL du service {{site.data.keyword.monitoringshort}} pour la région où ce dernier a été mis à disposition.
     
-    Pour obtenir les adresses URL par région, voir [URL pour le service de surveillance](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Pour obtenir les adresses URL par région, voir [URL pour le service de surveillance](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Par exemple, pour la région Sud des Etats-Unis, démarrez : [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -169,7 +169,7 @@ Dans Grafana, ajoutez des lignes pour diviser le tableau de bord en sections. Un
 
 Définissez la requête qui filtre les données affichées dans le graphique. Cette requête surveille le pourcentage d'utilisation de l'unité centrale par rapport à la limite du conteneur.
 
-Pour plus d'informations sur le format de la requête, voir [Format de requête Grafana pour les applications CF](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format).
+Pour plus d'informations sur le format de la requête, voir [Format de requête Grafana pour les applications CF](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format).
     
 1. Ajoutez un panneau *Graph* afin de surveiller les nanosecondes de temps UC sur tous les coeurs d'un conteneur.
     
@@ -231,4 +231,4 @@ Sauvegardez le tableau de bord en vue de sa réutilisation ultérieure.
 ## Etapes suivantes
 {: #cfapps_next_steps}
 
-Définissez une alerte pour une métrique. Pour plus d'informations, voir [Configuration d'alertes](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Définissez une alerte pour une métrique. Pour plus d'informations, voir [Configuration d'alertes](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

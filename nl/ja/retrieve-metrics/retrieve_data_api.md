@@ -36,7 +36,7 @@ subcollection: cloud-monitoring
 
 1. {{site.data.keyword.Bluemix_notm}} で、地域、組織、およびスペースにログインします。 
 
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/cli_qa.html#login)を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)を参照してください。
 
 2. セキュリティー・トークンまたは API キーを取得します。
   
@@ -44,12 +44,12 @@ subcollection: cloud-monitoring
 
     最初に、以下のいずれかの方法を選択して、メトリックの送信に必要なセキュリティー・トークンを取得します。
 	
-    * UAA トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した UAA トークンの取得](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)を参照してください。
+    * UAA トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した UAA トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)をご覧ください。
     
-	* IAM トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの 取得](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)を参照してください。
+	* IAM トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)をご覧ください。
     
 	* API キーを取得する場合は、
-[API キーの取得](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)を参照してください。 
+[API キーの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)を参照してください。 
 
     トークンまたは API キーには、`apikey`、`iam`、または `uaa` のいずれかの値が接頭部として付いている必要があります。 
 
@@ -125,12 +125,12 @@ subcollection: cloud-monitoring
 	
 	* *Space* はスペースの GUID を示しています。 
 	
-	* *Start_Time* は、要求の開始を定義します。 この情報は、相対的または絶対的な期間を計算するために使用されます。 *End_Time* は、要求の終わりを定義します。 この情報は、相対的または絶対的な期間を計算するために使用されます。 詳しくは、[期間の設定](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time)を参照してください。
+	* *Start_Time* は、要求の開始を定義します。 この情報は、相対的または絶対的な期間を計算するために使用されます。 *End_Time* は、要求の終わりを定義します。 この情報は、相対的または絶対的な期間を計算するために使用されます。 詳しくは、[期間の設定](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time)を参照してください。
 	
-	* *Path* は、1 つまたは複数のメトリックを識別します。 オプションで、関数を各メトリックに適用できます。 パスではワイルドカードもサポートします。これにより、単一のパスで複数のメトリックを識別できます。 詳しくは、[メトリックの定義](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics)を参照してください。
+	* *Path* は、1 つまたは複数のメトリックを識別します。 オプションで、関数を各メトリックに適用できます。 パスではワイルドカードもサポートします。これにより、単一のパスで複数のメトリックを識別できます。 詳しくは、[メトリックの定義](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics)を参照してください。
 	
 	* *METRICS_ENDPOINT* はサービスへのエントリー・ポイントを示しています。 各地域の URL は異なります。 地域ごとのエンドポイントのリストを取得するには、
-[エンドポイント](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)を参照してください。
+[エンドポイント](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)を参照してください。
 	
 
 	

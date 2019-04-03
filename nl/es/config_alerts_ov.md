@@ -80,9 +80,9 @@ Para definir una alerta en una consulta de métricas mediante la API de alertas,
 
 2. Configurar una alerta en una consulta de métricas definida en el panel de control de Grafana.
 
-    * [Configuración de una alerta que envía un correo electrónico](/docs/services/cloud-monitoring/alerts/configure_email_alert.html#configure_email_alert).
-    * [Configuración de una alerta que envía una notificación de PagerDuty](/docs/services/cloud-monitoring/alerts/configure_pagerduty_alert.html#configure_pagerduty_alert).
-    * [Configuración de una alerta que envía una notificación de Webhook](/docs/services/cloud-monitoring/alerts/configure_webhook_alert.html#configure_webhook_alert).
+    * [Configuración de una alerta que envía un correo electrónico](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_email_alert#configure_email_alert).
+    * [Configuración de una alerta que envía una notificación de PagerDuty](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_pagerduty_alert#configure_pagerduty_alert).
+    * [Configuración de una alerta que envía una notificación de Webhook](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_webhook_alert#configure_webhook_alert).
 
     **Nota:** Solo puede definir notificaciones por correo electrónico para consultas de métrica definidas en el dominio de métrica de cuenta.
 
@@ -106,7 +106,7 @@ Para definir una alerta en una consulta de métricas directamente en un panel de
 
 2. Configurar una alerta en una consulta de métricas definida en el panel de control de Grafana.
 
-    Para obtener más información, consulte [Configuración de alertas en Grafana](/docs/services/cloud-monitoring/alerts/config_alerts_grafana.html#config_alerts_grafana).
+    Para obtener más información, consulte [Configuración de alertas en Grafana](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-config_alerts_grafana#config_alerts_grafana).
 
 
 ## Estados de alerta
@@ -141,7 +141,7 @@ El estado de una alerta se utiliza para definir el estado en cualquiera de los s
 
 Por ejemplo, si se supera un umbral de aviso, se genera un registro histórico que registrará la transición de *OK* a *WARNING*. Paralelamente, cuando el valor vuelve a estar por debajo del umbral, se genera un registro histórico que registra la transición de *WARNING* a *OK*.
 
-Para obtener más información, consulte [Recuperación del historial de una regla](/docs/services/cloud-monitoring/alerts/retrieve_history.html#retrieve_history).
+Para obtener más información, consulte [Recuperación del historial de una regla](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#retrieve_history).
 
 
 ## Reglas
@@ -149,13 +149,13 @@ Para obtener más información, consulte [Recuperación del historial de una reg
 
 Una regla describe la consulta de métrica que se va a supervisar, el valor de umbral y la acción que se emprenderá cuando se supere el umbral. 
 
-* Puede crear, suprimir, actualizar y mostrar los detalles de una regla y elaborar una lista de todas las reglas mediante la API de alertas. Para obtener más información, consulte [Cómo trabajar con reglas](/docs/services/cloud-monitoring/alerts/rules.html#rules).
+* Puede crear, suprimir, actualizar y mostrar los detalles de una regla y elaborar una lista de todas las reglas mediante la API de alertas. Para obtener más información, consulte [Cómo trabajar con reglas](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#rules).
 
-    * Para crear una regla, consulte [Creación de una regla](/docs/services/cloud-monitoring/alerts/rules.html#create).
-	* Para suprimir una regla, consulte [Supresión de una regla](/docs/services/cloud-monitoring/alerts/rules.html#delete).
-	* Para actualizar una regla, consulte [Actualización de una regla](/docs/services/cloud-monitoring/alerts/rules.html#update).
-	* Para listar todas las reglas, consulte [Listado de todas las reglas](/docs/services/cloud-monitoring/alerts/rules.html#list).
-	* Para mostrar información sobre una regla, consulte [Visualización de detalles de una regla](/docs/services/cloud-monitoring/alerts/rules.html#showing-the-details-of-a-rule).
+    * Para crear una regla, consulte [Creación de una regla](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create).
+	* Para suprimir una regla, consulte [Supresión de una regla](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#delete).
+	* Para actualizar una regla, consulte [Actualización de una regla](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#update).
+	* Para listar todas las reglas, consulte [Listado de todas las reglas](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#list).
+	* Para mostrar información sobre una regla, consulte [Visualización de detalles de una regla](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#showing-the-details-of-a-rule).
 
 * El sistema de alerta comprueba cada 5 minutos las reglas que están habilitadas en el espacio.
 
@@ -275,11 +275,11 @@ Una notificación describe el método y los detalles que se utilizan para la not
 
 * Puede utilizar la [API REST de alertas](https://console.bluemix.net/apidocs/940-ibm-cloud-monitoring-alerts-api?&language=node#introduction){: new_window} para crear, suprimir y actualizar una notificación, para mostrar los detalles de una notificación y para crear una lista de las notificaciones definidas en un espacio.
 
-    * Para crear una notificación, consulte [Creación de una notificación](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create).
-	* Para suprimir una notificación, consulte [Supresión de una notificación](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_delete).
-	* Para actualizar una notificación, consulte [Actualización de una notificación](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_update).
-	* Para listar todas las notificaciones, consulte [Listado de todas las notificaciones](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_list).
-	* Para mostrar información acerca de una notificación, consulte [Visualización de los detalles de una notificación](/docs/services/cloud-monitoring/alerts/notifications.html#show).
+    * Para crear una notificación, consulte [Creación de una notificación](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create).
+	* Para suprimir una notificación, consulte [Supresión de una notificación](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_delete).
+	* Para actualizar una notificación, consulte [Actualización de una notificación](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_update).
+	* Para listar todas las notificaciones, consulte [Listado de todas las notificaciones](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_list).
+	* Para mostrar información acerca de una notificación, consulte [Visualización de los detalles de una notificación](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#show).
 
 * Puede configurar una notificación de correo electrónico, una configuración de PagerDuty y una notificación de webhook. 
 
@@ -319,8 +319,8 @@ La tabla siguiente incluye una plantilla de notificación para el tipo de métod
 	"name": "my-email",
 	"type": "Email",
 	"description" : "Send email notification when there is an infrastructure problem.",
-    "detail": "xxx@yyy.com"
-    }
+	"detail": "xxx@yyy.com"
+	}
 	```
 	{: screen}
 	</td>
@@ -344,8 +344,8 @@ La tabla siguiente incluye una plantilla de notificación para el tipo de métod
 	"name": "my-webhook",
 	"type": "Webhook",
 	"description" : "Fire a webhook when there is an infrastructure problem..",
-    "detail": "https://myendpoint.bluemix.net?key=abcd1234"
-    }
+	"detail": "https://myendpoint.bluemix.net?key=abcd1234"
+	}
 	```
 	{: screen}
 	</td>
@@ -368,8 +368,8 @@ La tabla siguiente incluye una plantilla de notificación para el tipo de métod
 	"name": "my-pagerduty",
 	"type": "PagerDuty",
 	"description" : "Fire a PagerDuty alert when there is an infrastructure problem..",
-    "detail": "abcd1234"
-    }
+	"detail": "abcd1234"
+	}
 	```
 	{: screen}
 	</td>

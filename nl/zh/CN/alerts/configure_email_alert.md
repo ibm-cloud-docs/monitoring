@@ -31,9 +31,9 @@ subcollection: cloud-monitoring
 请完成以下步骤：
 
 ## 步骤 1：创建规则
-{: #step11}
+{: #cea_step1}
 
-为您在 Grafana 中定义的度量值查询创建规则。 有关更多信息，请参阅[创建规则](/docs/services/cloud-monitoring/alerts/rules.html#create)。
+为您在 Grafana 中定义的度量值查询创建规则。 有关更多信息，请参阅[创建规则](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create)。
 
 例如，在 `~/cloud-monitoring/rules/` 目录中创建 `s-rule-1.json` 规则文件。 
 
@@ -66,21 +66,21 @@ export RULE_FILE="s-rule-1.json"
 {: screen}
 
 ## 步骤 2：在 Monitoring 服务中注册规则
-{: #step2}
+{: #cea_step2}
 	
 通过终端，完成以下步骤：
 
 1. 登录到 {{site.data.keyword.Bluemix_notm}} 中的区域、组织和空间。 
 
-    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
 2. 获取安全性令牌。 您可以使用 UAA 令牌、IAM 令牌或 API 密钥。 选择下列其中一种方法来获取安全性令牌：
 	
-	* 要获取 UAA 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 UAA 令牌](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)。
+	* 要获取 UAA 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 UAA 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)。
 	
-	* 要获取 IAM 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)。
+	* 要获取 IAM 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)。
 	
-	* 要获取 API 密钥，请参阅[获取 API 密钥](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。
+	* 要获取 API 密钥，请参阅[获取 API 密钥](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。
 	
 	例如，要使用 IAM 令牌，请运行以下命令：
 
@@ -163,7 +163,7 @@ export RULE_FILE="s-rule-1.json"
 	
 	* Space 是空间的 GUID。 
 	
-	* METRICS_ENDPOINT 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+	* METRICS_ENDPOINT 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 	
 	要验证规则是否已成功创建，请运行以下命令：
 	
@@ -180,12 +180,12 @@ export RULE_FILE="s-rule-1.json"
 	{: screen}
 
 ## 步骤 3：创建电子邮件通知
-{: #step3}
+{: #cea_step3}
 
 
 要创建用于发送电子邮件的通知文件，请考虑以下信息：
 
-* 使用通知模板来发送电子邮件。 有关更多信息，请参阅[通知模板](/docs/services/cloud-monitoring/config_alerts_ov.html#notification_template)。
+* 使用通知模板来发送电子邮件。 有关更多信息，请参阅[通知模板](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#notification_template)。
 * 在本地目录中创建该文件，例如，`~/cloud-monitoring/notifications`。
 
 例如，使用 vi 编辑器创建 **email.json** 文件： 
@@ -200,24 +200,24 @@ export RULE_FILE="s-rule-1.json"
 ```
 {: codeblock}	
 	
-有关更多信息，请参阅[创建通知](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create)。
+有关更多信息，请参阅[创建通知](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create)。
 	
 ## 步骤 4：在 Monitoring 服务中注册通知方法
-{: #step4}
+{: #cea_step4}
 	
 通过终端，完成以下步骤：
 
 1. 登录到 {{site.data.keyword.Bluemix_notm}} 中的区域、组织和空间。 
 
-    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
 2. 获取安全性令牌。 您可以使用 UAA 令牌、IAM 令牌或 API 密钥。 选择下列其中一种方法来获取安全性令牌：
 	
-	* 要获取 UAA 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 UAA 令牌](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)。
+	* 要获取 UAA 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 UAA 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)。
 	
-	* 要获取 IAM 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)。
+	* 要获取 IAM 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)。
 	
-	* 要获取 API 密钥，请参阅[获取 API 密钥](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。
+	* 要获取 API 密钥，请参阅[获取 API 密钥](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。
 	
 	例如，要使用 IAM 令牌，请运行以下命令：
 
@@ -300,7 +300,7 @@ export RULE_FILE="s-rule-1.json"
 	
 	* Space 是空间的 GUID。 
 	
-	* METRICS_ENDPOINT 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+	* METRICS_ENDPOINT 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 	
     要验证通知是否已成功创建，请运行以下命令：
 

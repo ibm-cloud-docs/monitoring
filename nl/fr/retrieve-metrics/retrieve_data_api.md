@@ -36,7 +36,7 @@ Pour extraire des métriques à partir d'un espace, procédez comme suit :
 
 1. Connectez-vous à une région, une organisation et un espace dans {{site.data.keyword.Bluemix_notm}}. 
 
-    Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Définissez le jeton de sécurité ou la clé d'API
   
@@ -44,11 +44,11 @@ Pour extraire des métriques à partir d'un espace, procédez comme suit :
 
     Tout d'abord, choisissez l'une des méthodes suivantes pour obtenir le jeton de sécurité nécessaire pour envoyer des métriques :
 	
-    * Pour obtenir un jeton, voir [Obtention du jeton UAA à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+    * Pour obtenir un jeton, voir [Obtention du jeton UAA à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
     
-	* Pour obtenir un jeton IAM, voir [Obtention du jeton IAM à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Pour obtenir un jeton IAM, voir [Obtention du jeton IAM à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
     
-	* Pour obtenir une clé d'API, voir [Obtention d'une clé d'API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key). 
+	* Pour obtenir une clé d'API, voir [Obtention d'une clé d'API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key). 
 
     Un jeton ou une clé d'API doit avoir pour préfixe l'une des valeurs suivantes : `apikey`, `iam` ou `uaa` 
 
@@ -124,11 +124,11 @@ Pour extraire des métriques à partir d'un espace, procédez comme suit :
 	
 	* *Space* représente l'identificateur global unique de l'espace. 
 	
-	* *Start_Time* définit le début de la demande. Cette information est utilisée pour calculer la période relative ou absolue. *End_Time* définit la fin de la demande. Cette information est utilisée pour calculer la période relative ou absolue. Pour plus d'informations, voir [Définition d'une période](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time).
+	* *Start_Time* définit le début de la demande. Cette information est utilisée pour calculer la période relative ou absolue. *End_Time* définit la fin de la demande. Cette information est utilisée pour calculer la période relative ou absolue. Pour plus d'informations, voir [Définition d'une période](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time).
 	
-	* *Path* identifie une ou plusieurs métriques. Vous pouvez éventuellement appliquer des fonctions à chaque métrique. Les chemins prennent également en charge l'utilisation des caractères génériques, ce qui vous permet d'identifier une ou plusieurs métriques dans un seul chemin. Pour plus d'informations, voir [Définition des métriques](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics).
+	* *Path* identifie une ou plusieurs métriques. Vous pouvez éventuellement appliquer des fonctions à chaque métrique. Les chemins prennent également en charge l'utilisation des caractères génériques, ce qui vous permet d'identifier une ou plusieurs métriques dans un seul chemin. Pour plus d'informations, voir [Définition des métriques](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics).
 	
-	* *METRICS_ENDPOINT* représente le point d'entrée vers le service. Chaque région a une adresse URL différente. Pour la liste des noeuds finaux par région, voir [Noeuds finaux](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* *METRICS_ENDPOINT* représente le point d'entrée vers le service. Chaque région a une adresse URL différente. Pour la liste des noeuds finaux par région, voir [Noeuds finaux](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 
 	

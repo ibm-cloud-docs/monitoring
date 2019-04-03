@@ -44,7 +44,7 @@ Obtenha as informações a seguir para o app ou serviço do CF que você deseja 
 ## Etapa 2: Ativar o Grafana
 {: #step27}
 
-Ative o Grafana por meio de um navegador. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Ative o Grafana por meio de um navegador. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 No Grafana, assegure-se de que você está com login efetuado na conta, na organização e na região nas quais o app CF está em execução. 
 
@@ -98,11 +98,11 @@ Conclua as etapas a seguir para criar um painel do Grafana e definir uma consult
           </tr>
           <tr>
             <td>{{site.data.keyword.containershort_notm}}</td>
-            <td>[Formato de consulta para as métricas da CPU coletadas para os contêineres](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers) </br>[Formato de consulta para as métricas de carregamento coletadas para os trabalhadores](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers) </br>[Formato de consulta para as métricas da memória coletadas para contêineres](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)</td> 
+            <td>[Formato de consulta para as métricas da CPU coletadas para os contêineres](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers) </br>[Formato de consulta para as métricas de carregamento coletadas para os trabalhadores](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers) </br>[Formato de consulta para as métricas da memória coletadas para contêineres](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)</td> 
           </tr>
           <tr>
             <td>Apps CF</td>
-            <td>[Formato da consulta para apps CF](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)</td> 
+            <td>[Formato da consulta para apps CF](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)</td> 
           </tr>
         </table>
 
@@ -131,15 +131,15 @@ do app CF, por exemplo, `0`.
           </tr>
           <tr>
             <td>{{site.data.keyword.containershort_notm}}</td>
-            <td>[Métricas da CPU](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics) </br>[Métricas de disco](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics) </br>[Métricas da memória](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td> 
+            <td>[Métricas da CPU](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics) </br>[Métricas de disco](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics) </br>[Métricas da memória](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td> 
           </tr>
           <tr>
             <td>Apps CF</td>
-            <td>[Métricas da CPU](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics)  </br>[Métricas de disco](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics)   </br>[Métricas da memória](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td> 
+            <td>[Métricas da CPU](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics)  </br>[Métricas de disco](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics)   </br>[Métricas da memória](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td> 
           </tr>
           <tr>
             <td>{{site.data.keyword.messagehub}}</td>
-            <td>[Métricas para um tópico do Kafka](/docs/services/cloud-monitoring/mh/monitoring_mh_ov.html#kafka_topic_metrics) </br>[Métricas para uma partição do Kafka](/docs/services/cloud-monitoring/mh/monitoring_mh_ov.html#kafka_partition_metrics)</td> 
+            <td>[Métricas para um tópico do Kafka](/docs/services/cloud-monitoring/mh?topic=cloud-monitoring-monitoring_mh_ov#kafka_topic_metrics) </br>[Métricas para uma partição do Kafka](/docs/services/cloud-monitoring/mh?topic=cloud-monitoring-monitoring_mh_ov#kafka_partition_metrics)</td> 
           </tr>
         </table>
 

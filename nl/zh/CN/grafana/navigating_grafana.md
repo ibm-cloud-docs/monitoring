@@ -35,13 +35,13 @@ subcollection: cloud-monitoring
 
     可以在特定 Docker 容器的上下文中，使用 Grafana 显示该 Docker 容器的度量值。 此功能仅适用于在 {{site.data.keyword.Bluemix_notm}} 管理的基础架构中部署的容器。 
     
-    有关更多信息，请参阅[通过 {{site.data.keyword.Bluemix_notm}} 仪表板导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_bluemix)。
+    有关更多信息，请参阅[从 {{site.data.keyword.Bluemix_notm}} 仪表板导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_bluemix)。
 
 * 通过浏览器链接直接打开
 
     您可以启动 Grafana，以便您看到的数据从所提供 {{site.data.keyword.Bluemix_notm}} 空间内的服务聚集日志。
     
-    有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)。
+    有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)。
     
 有关 Grafana 的更多信息，请参阅 [Grafana 用户指南 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://docs.grafana.org/guides/getting_started/){: new_window}。
 

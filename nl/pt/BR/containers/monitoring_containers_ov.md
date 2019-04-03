@@ -34,7 +34,7 @@ possível usar o Grafana para monitorar o desempenho de seu cluster.
 **Nota:** 
 
 * As métricas são coletadas e ficam disponíveis para monitoramento por meio do serviço de {{site.data.keyword.monitoringshort}} para contêineres em execução em clusters padrão.
-* Para monitorar as métricas do cluster, deve-se provisionar uma instância do serviço de Monitoramento. Para obter mais informações, consulte [Fornecendo o serviço de Monitoramento](/docs/services/cloud-monitoring/how-to/provision.html#provision).
+* Para monitorar as métricas do cluster, deve-se provisionar uma instância do serviço de Monitoramento. Para obter mais informações, consulte [Fornecendo o serviço de Monitoramento](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 
 ## Sobre monitoramento no Public
@@ -137,7 +137,7 @@ A tabela a seguir lista as métricas de memória capturadas automaticamente:
 | de Métrica | Descrição | Unidades |
 |----------|---------|---------|
 | `memory.current` | Essa métrica relata os bytes de memória que o contêiner está usando atualmente. | bytes |
-| `memory.limit` | Essa métrica relata o limite de memória do contêiner. Por padrão, os contêineres são executados com limites de memória ilimitados. Um contêiner poderá consumir tanta memória quanto houver no trabalhador no qual ele está em execução. Ao implementar um pod, será possível configurar limites para a quantia de memória que seus contêineres podem usar.  | bytes |
+| `memory.limit` | Essa métrica relata o limite de memória do contêiner. Por padrão, os contêineres são executados com limites de memória ilimitados. Um contêiner poderá consumir tanta memória quanto houver no trabalhador no qual ele está em execução. Ao implementar um pod, será possível configurar limites para a quantia de memória que seus contêineres podem usar. | bytes |
 | `memory.usage-pct` | Essa métrica relata a memória que é usada como uma porcentagem do limite de memória do contêiner. </br>Se você configurar limites para a quantia de memória que um contêiner pode usar, esta métrica relatará o uso de memória como uma porcentagem dos limites configurados. | Percentual | 
 | `memory.working-set` | Essa métrica relata os bytes da memória ativa que o contêiner está usando atualmente no cache quente. | bytes |
 {: caption="Métricas da memória para contêineres" caption-side="top"} 
@@ -152,8 +152,8 @@ A tabela a seguir lista as métricas de rede relacionadas à recepção de dados
 | de Métrica | Descrição | Unidades |
 |----------|---------|---------|
 | `container.namespace.podName.network.rx.bytes` | Essa métrica relata o número de bytes que o pod recebe.  | bytes  |
-| `container.namespace.podName.network.rx.error` | Essa métrica relata o número de erros que o pod teve ao receber quadros. | N£mero  |
-| `container.namespace.podName.network.rx.packets` | Essa métrica relata o número de pacotes que o pod recebe.  | N£mero  |
+| `container.namespace.podName.network.rx.error` | Essa métrica relata o número de erros que o pod teve ao receber quadros. | Número  |
+| `container.namespace.podName.network.rx.packets` | Essa métrica relata o número de pacotes que o pod recebe.  | Número  |
 {: caption="Métricas de rede RX para os pods" caption-side="top"} 
 
 A tabela a seguir lista as métricas de rede relacionadas à transmissão de dados e capturadas automaticamente:
@@ -161,8 +161,8 @@ A tabela a seguir lista as métricas de rede relacionadas à transmissão de dad
 | de Métrica | Descrição | Unidades |
 |----------|---------|---------|
 | `container.namespace.podName.network.tx.bytes` | Essa métrica relata o número de bytes que são enviados para o pod.  | bytes  |
-| `container.namespace.podName.network.tx.errors` | Essa métrica relata o número de erros que o pod teve ao enviar quadros.  | N£mero  |
-| `container.namespace.podName.network.tx.packets` | Essa métrica relata o número de pacotes que são enviados para o pod.  | N£mero  |
+| `container.namespace.podName.network.tx.errors` | Essa métrica relata o número de erros que o pod teve ao enviar quadros.  | Número  |
+| `container.namespace.podName.network.tx.packets` | Essa métrica relata o número de pacotes que são enviados para o pod.  | Número  |
 {: caption="Métricas de rede TX para os pods" caption-side="top"} 
 
 
@@ -195,7 +195,7 @@ A tabela a seguir lista as métricas da CPU que são capturadas automaticamente 
 | de Métrica | Descrição | Unidades |
 |----------|---------|---------|
 | `load.avg-1` | Essa métrica relata o carregamento médio de CPU para o host do Kubernetes no último 1 minuto. </br>Uma carga média de CPU maior que o número de núcleos no trabalhador indica que o tráfego para o host está sendo enfileirado  | Número  |
-| `load.avg-5` | Essa métrica relata o carregamento médio de CPU para o host do Kubernetes nos últimos 5 minutos. </br>Uma carga de CPU média que é maior que o número de núcleos no trabalhador indica que o tráfego para o host está enfileirando.  | N£mero  |
+| `load.avg-5` | Essa métrica relata o carregamento médio de CPU para o host do Kubernetes nos últimos 5 minutos. </br>Uma carga de CPU média que é maior que o número de núcleos no trabalhador indica que o tráfego para o host está enfileirando.  | Número  |
 | `load.avg-15` | Essa métrica relata o carregamento médio de CPU para o host do Kubernetes nos últimos 15 minutos. </br>Uma carga de CPU média que é maior que o número de núcleos no trabalhador indica que o tráfego para o host está enfileirando.  |  Número |
 {: caption="Métricas de carregamento para os trabalhadores" caption-side="top"} 
 
@@ -221,8 +221,8 @@ A tabela a seguir lista as métricas de rede relacionadas à recepção de dados
 | de Métrica | Descrição | Unidades |
 |----------|---------|---------|
 | `network.interface.rx.bytes` | Essa métrica relata o número de bytes que o trabalhador recebeu na interface.  | bytes  |
-| `network.interface.rx.errs` | Essa métrica relata o número de erros que o trabalhador teve ao receber quadros na interface. | N£mero |
-| `network.interface.rx.packets` | Essa métrica relata o número de pacotes que o trabalhador recebeu na interface. | N£mero |
+| `network.interface.rx.errs` | Essa métrica relata o número de erros que o trabalhador teve ao receber quadros na interface. | Número  |
+| `network.interface.rx.packets` | Essa métrica relata o número de pacotes que o trabalhador recebeu na interface. | Número  |
 {: caption="Métricas de rede RX para trabalhadores" caption-side="top"} 
 
 A tabela a seguir lista as métricas de rede relacionadas à transmissão de dados e capturadas automaticamente:
@@ -230,16 +230,16 @@ A tabela a seguir lista as métricas de rede relacionadas à transmissão de dad
 | de Métrica | Descrição | Unidades |
 |----------|---------|---------|
 | `network.interface.tx.bytes` | Essa métrica relata o número de bytes que o trabalhador enviou por meio da interface. | bytes  |
-| `network.interface.tx.err` | Essa métrica relata o número de erros que o trabalhador teve ao enviar quadros na interface.  | N£mero  |
-| `network.interface.tx.packets` | Essa métrica relata o número de pacotes que o trabalhador enviou por meio da interface.  | N£mero  |
+| `network.interface.tx.err` | Essa métrica relata o número de erros que o trabalhador teve ao enviar quadros na interface.  | Número  |
+| `network.interface.tx.packets` | Essa métrica relata o número de pacotes que o trabalhador enviou por meio da interface.  | Número  |
 {: caption="Métricas de rede TX para trabalhadores" caption-side="top"} 
 
 A tabela a seguir lista as métricas de rede relacionadas a soquetes abertos e capturadas automaticamente:
 
 | de Métrica | Descrição | Unidades |
 |----------|---------|---------|
-| `network.sockets.udp` </br>` network.sockets.udp6 ` </br>`network.sockets.tcp` </br>`network.sockets.tcp6.open` | Essa métrica relata o número de soquetes abertos para um protocolo.   | N£mero  |
-| `network.sockets.tcp` </br>`network.sockets.tcp6.timewait` | Essa métrica relata o número de soquetes TCP abertos no estado `time wait`.  | N£mero  |
+| `network.sockets.udp` </br>` network.sockets.udp6 ` </br>`network.sockets.tcp` </br>`network.sockets.tcp6.open` | Essa métrica relata o número de soquetes abertos para um protocolo.   | Número  |
+| `network.sockets.tcp` </br>`network.sockets.tcp6.timewait` | Essa métrica relata o número de soquetes TCP abertos no estado `time wait`.  | Número  |
 {: caption="Métricas de rede de soquetes para trabalhadores" caption-side="top"} 
 
 
@@ -253,33 +253,33 @@ Kubernetes no {{site.data.keyword.Bluemix_notm}}, use o Grafana.
 
 O serviço do {{site.data.keyword.monitoringlong}} usa o Grafana, uma plataforma de software livre para análise de dados e visualização, que pode ser usada para monitorar, procurar, analisar e visualizar suas métricas em uma variedade de gráficos, por exemplo, diagramas e tabelas.
 
-É possível ativar o Grafana em um navegador. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+É possível ativar o Grafana em um navegador. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 Para monitorar contêineres e trabalhadores que são executados em um cluster do Kubernetes, deve-se definir
 uma consulta no Grafana para cada recurso:
 
-* Para definir uma consulta que monitora uma métrica de CPU para um contêiner, consulte [Configurando métricas de CPU para um contêiner no Grafana](/docs/services/cloud-monitoring/containers/config_cpu_containers.html#config_cpu_containers).
+* Para definir uma consulta que monitora uma métrica de CPU para um contêiner, consulte [Configurando métricas de CPU para um contêiner no Grafana](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_cpu_containers#config_cpu_containers).
 * Para definir uma consulta que monitora uma métrica de memória para um contêiner, consulte
 [Configurando
-métricas da memória para um contêiner no Grafana](/docs/services/cloud-monitoring/containers/config_mem_container.html#config_mem_container).
+métricas da memória para um contêiner no Grafana](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_mem_container#config_mem_container).
 * Para definir uma consulta que monitora uma métrica de carregamento para um trabalhador, consulte
 [Configurando
-métricas de carregamento para um trabalhador no Grafana](/docs/services/cloud-monitoring/containers/config_load_worker.html#config_load_worker).
+métricas de carregamento para um trabalhador no Grafana](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_load_worker#config_load_worker).
 
 
 O formato da consulta é diferente por tipo de recurso e tipo de consulta:
 
 * Para obter mais informações sobre o formato de consultas para monitorar a CPU de um contêiner,
 consulte [Formato
-de consulta de métrica de CPU para um contêiner](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers). 
+de consulta de métrica de CPU para um contêiner](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers). 
 * Para obter mais informações sobre o formato de consultas para monitorar o carregamento de um
 trabalhador, consulte
 [Formato de
-consulta de métrica de carregamento para um trabalhador](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers).
+consulta de métrica de carregamento para um trabalhador](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers).
 * Para obter mais informações sobre o formato de consultas para monitorar a memória de um contêiner,
 consulte
 [Formato
-de consulta de métrica de memória para um contêiner](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers).
+de consulta de métrica de memória para um contêiner](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers).
 
 
 ## Configurando o tráfego de rede para configurações de firewall customizado no {{site.data.keyword.Bluemix_notm}}
@@ -321,6 +321,6 @@ Deve-se abrir a porta TCP 443 e a porta TCP 9091 de cada trabalhador para o serv
 ## Tutorials
 {: #tutorial}
 
-Para aprender como usar o serviço {{site.data.keyword.monitoringshort}} para monitorar o desempenho do seu contêiner, consulte [Analisar métricas no Grafana para um app que é implementado em um cluster do Kubernetes](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics).
+Para aprender como usar o serviço {{site.data.keyword.monitoringshort}} para monitorar o desempenho do seu contêiner, consulte [Analisar métricas no Grafana para um app que é implementado em um cluster do Kubernetes](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics).
 
-Para aprender como criar um painel do Grafana no serviço {{site.data.keyword.monitoringshort}} para monitorar o desempenho do seu cluster, consulte [Criar um painel do Grafana para monitorar um cluster do Kubernetes](/docs/services/cloud-monitoring/tutorials/container_grafana_dashboard.html#container_grafana_dashboard).
+Para aprender como criar um painel do Grafana no serviço {{site.data.keyword.monitoringshort}} para monitorar o desempenho do seu cluster, consulte [Criar um painel do Grafana para monitorar um cluster do Kubernetes](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_grafana_dashboard#container_grafana_dashboard).

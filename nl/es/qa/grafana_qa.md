@@ -30,11 +30,11 @@ subcollection: cloud-monitoring
 Aquí encontrará las respuestas a preguntas comunes sobre el uso de Grafana con el servicio {{site.data.keyword.monitoringshort}}. 
 {:shortdesc}
 
-* [No puedo ver las alertas que he definido mediante la API de Alertas en mi panel de control de Grafana](/docs/services/cloud-monitoring/qa/grafana_qa.html#alerts1)
-* [Recibo un error BXNMSAL41E al intentar guardar un cambio que he realizado en mi panel de control de Grafana](/docs/services/cloud-monitoring/qa/grafana_qa.html#BXNMSAL41E)
-* [Recibo un error BXNMSAL36E al intentar guardar un cambio después de añadir una alerta a mi panel de control de Grafana](/docs/services/cloud-monitoring/qa/grafana_qa.html#BXNMSAL36E)
-* [Recibo un error 404 cuando inicio una sesión en la interfaz de usuario web del servicio de supervisión](/docs/services/cloud-monitoring/qa/grafana_qa.html#404)
-* [Acabo de cargar datos json para un panel de control de Grafana; ¿por qué he perdido la barra de desplazamiento?](/docs/services/cloud-monitoring/qa/grafana_qa.html#2)
+* [No puedo ver las alertas que he definido mediante la API de Alertas en mi panel de control de Grafana](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#alerts1)
+* [Recibo un error BXNMSAL41E al intentar guardar un cambio que he realizado en mi panel de control de Grafana](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#BXNMSAL41E)
+* [Recibo un error BXNMSAL36E al intentar guardar un cambio después de añadir una alerta a mi panel de control de Grafana](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#BXNMSAL36E)
+* [Recibo un error 404 cuando inicio una sesión en la interfaz de usuario web del servicio de supervisión](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#404)
+* [Acabo de cargar datos json para un panel de control de Grafana; ¿por qué he perdido la barra de desplazamiento?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#2)
 
 
 ## No puedo ver las alertas que he definido mediante la API de Alertas en mi panel de control de Grafana
@@ -42,7 +42,7 @@ Aquí encontrará las respuestas a preguntas comunes sobre el uso de Grafana con
 
 Las alertas que defina mediante la API de Alertas no se muestran en el separador de alertas en Grafana. Para ver alertas en Grafana, debe definirlas directamente en un panel de control de Grafana.
 
-Para obtener más información, consulte [Configuración de alertas en Grafana](/docs/services/cloud-monitoring/alerts/config_alerts_grafana.html#config_alerts_grafana).
+Para obtener más información, consulte [Configuración de alertas en Grafana](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-config_alerts_grafana#config_alerts_grafana).
 
 ## Recibo un error BXNMSAL41E al intentar guardar un cambio que he realizado en mi panel de control de Grafana
 {: #BXNMSAL41E}
@@ -60,7 +60,7 @@ Si se llega a la cuota para el dominio donde está supervisando las métricas en
 
 Actualice su plan y vuelva a intentarlo.
 
-Para obtener más información sobre cómo actualizar su plan, consulte [Cambio del plan](/docs/services/cloud-monitoring/plan/change_plan.html#change_plan).
+Para obtener más información sobre cómo actualizar su plan, consulte [Cambio del plan](/docs/services/cloud-monitoring/plan?topic=cloud-monitoring-change_plan#change_plan).
 
 
 ## Recibo un error 404 cuando inicio una sesión en la interfaz de usuario web del servicio de supervisión utilizando el modelo de autorización UUA
@@ -68,7 +68,7 @@ Para obtener más información sobre cómo actualizar su plan, consulte [Cambio 
 
 Si recibe un error 404 al intentar iniciar una sesión en la interfaz de usuario web (Grafana) del servicio {{site.data.keyword.monitoringshort}}, compruebe que el espacio exista y que tenga acceso al mismo.
 
-Si utiliza el [modelo de autenticación UAA](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa) para acceder al servicio {{site.data.keyword.monitoringshort}}, debe utilizar el mismo ID de usuario y contraseña que ha utilizado para iniciar la sesión en la consola de {{site.data.keyword.Bluemix_notm}}. 
+Si utiliza el [modelo de autenticación UAA](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa) para acceder al servicio {{site.data.keyword.monitoringshort}}, debe utilizar el mismo ID de usuario y contraseña que ha utilizado para iniciar la sesión en la consola de {{site.data.keyword.Bluemix_notm}}. 
 
 Para comprobar que tiene acceso a la cuenta, organización y espacio donde desea iniciar la sesión, inicie la sesión en la consola de {{site.data.keyword.Bluemix_notm}} y vaya al espacio. 
 

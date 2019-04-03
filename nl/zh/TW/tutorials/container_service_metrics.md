@@ -54,7 +54,7 @@ subcollection: cloud-monitoring
     
     * 具有 *operator* 或 *administrator* 許可權之 {{site.data.keyword.containershort}} 的 IAM 原則。
     
-    如需相關資訊，請參閱[透過 IBM Cloud 使用者介面將 IAM 原則指派給使用者](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui)。
+    如需相關資訊，請參閱[透過 IBM Cloud 使用者介面將 IAM 原則指派給使用者](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui)。
 
 2. 具有終端機階段作業，您可以從中管理 Kubernetes 叢集，並從指令行部署應用程式。本指導教學中的範例是針對 Ubuntu Linux 系統。
 
@@ -63,7 +63,7 @@ subcollection: cloud-monitoring
     * 安裝 {{site.data.keyword.Bluemix_notm}} CLI。 
     * 安裝 {{site.data.keyword.containershort}} CLI，以在 {{site.data.keyword.containershort}} 中建立及管理 Kubernetes 叢集，以及將容器化應用程式部署至叢集。
     
-    如需相關資訊，請參閱[安裝 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview)。
+    如需相關資訊，請參閱[安裝 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)。
     
     
 
@@ -75,11 +75,11 @@ subcollection: cloud-monitoring
 
 請完成下列步驟：
 
-1. 建立標準 Kubernetes 叢集。如需相關資訊，請參閱[建立 Kubernetes 標準叢集](/docs/containers/cs_tutorials.html#cs_cluster_tutorial)。
+1. 建立標準 Kubernetes 叢集。如需相關資訊，請參閱[建立 Kubernetes 標準叢集](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial)。
 
 2. 在終端機中設定叢集環境定義。設定環境定義之後，您可以管理 Kubernetes 叢集，並在 Kubernetes 叢集中部署應用程式。
 
-    登入 {{site.data.keyword.Bluemix_notm}} 中與所建立叢集相關聯的地區、組織及空間。如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/CloudLogAnalysis/qa/cli_qa.html#login)。
+    登入 {{site.data.keyword.Bluemix_notm}} 中與所建立叢集相關聯的地區、組織及空間。如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/CloudLogAnalysis/qa?topic=cloudloganalysis-cli_qa#login)。
 
 	起始設定 {{site.data.keyword.containershort}} 服務外掛程式。
 
@@ -125,7 +125,7 @@ subcollection: cloud-monitoring
 	
 3. 如果使用者是帳戶成員，請從清單中選取使用者名稱，或按一下*動作* 功能表中的**管理使用者**。
 
-    如果使用者不是帳戶的成員，請參閱[邀請使用者](/docs/iam/iamuserinv.html#iamuserinv)。
+    如果使用者不是帳戶的成員，請參閱[邀請使用者](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 
 4. 選取**存取原則 > 指派存取權 > 指派資源的存取權**。
 
@@ -170,7 +170,7 @@ subcollection: cloud-monitoring
 ## 步驟 4：在 Kubernetes 叢集中部署範例應用程式
 {: #ks_step4}
 
-在 Kubernetes 叢集中部署及執行範例應用程式。完成下列指導教學中的步驟，以部署範例應用程式：[課程 1：將單一實例應用程式部署至 Kubernetes 叢集](/docs/containers/cs_tutorials_apps.html#cs_apps_tutorial_lesson1)。
+在 Kubernetes 叢集中部署及執行範例應用程式。完成下列指導教學中的步驟，以部署範例應用程式：[課程 1：將單一實例應用程式部署至 Kubernetes 叢集](/docs/containers?topic=containers-cs_apps_tutorial#cs_apps_tutorial_lesson1)。
 
 應用程式是 Hello World Node.js 應用程式：
 
@@ -195,13 +195,13 @@ app.listen(8080, function() {
 
 從瀏覽器啟動 Grafana，並設定您可檢視叢集度量值的 {{site.data.keyword.monitoringshort}} 網域。
 
-若要分析叢集的度量值，您必須在叢集建立所在的「雲端公用」地區中存取 Grafana。如需相關資訊，請參閱[從 Web 瀏覽器導覽至 Grafana 儀表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)。
+若要分析叢集的度量值，您必須在叢集建立所在的「雲端公用」地區中存取 Grafana。如需相關資訊，請參閱[從 Web 瀏覽器導覽至 Grafana 儀表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)。
 
 1. 從瀏覽器啟動 Grafana。 
 
     輸入您已建立叢集之地區的 {{site.data.keyword.monitoringshort}} 服務 URL。 
     
-    若要取得每個地區的 URL，請參閱[監視服務的 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)。
+    若要取得每個地區的 URL，請參閱[監視服務的 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)。
 
     例如，對於「美國南部」地區，啟動：[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)。
 
@@ -232,4 +232,4 @@ app.listen(8080, function() {
 ## 後續步驟
 {: #ks_next_steps}
 
-定義度量值的警示。如需相關資訊，請參閱[配置警示](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)。
+定義度量值的警示。如需相關資訊，請參閱[配置警示](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)。

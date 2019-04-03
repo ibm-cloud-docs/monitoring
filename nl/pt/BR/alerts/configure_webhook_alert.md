@@ -33,9 +33,9 @@ Conclua as etapas
 a seguir:
 
 ## Etapa 1: criar uma regra
-{: #step14}
+{: #cwa_step1}
 
-Crie uma regra para uma consulta de métrica que você definiu em Grafana. Para obter mais informações, consulte [Criando uma regra](/docs/services/cloud-monitoring/alerts/rules.html#create).
+Crie uma regra para uma consulta de métrica que você definiu em Grafana. Para obter mais informações, consulte [Criando uma regra](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create).
 
 Por exemplo, crie o arquivo de regras `s-rule-1.json` no diretório `~/cloud-monitoring/rules/`. 
 
@@ -68,21 +68,21 @@ export RULE_FILE="s-rule-1.json"
 {: screen}
 
 ## Etapa 2: registrar a regra no Serviço de monitoramento
-{: #step23}
+{: #cwa_step2}
 	
 Em um terminal, conclua as etapas a seguir:
 
 1. Efetue login em uma região, uma organização e um espaço no {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
-2. Obtenha o token de segurança. É possível usar um token UAA, um token IAM ou uma chave API. Escolha um dos métodos a seguir para obter o token de segurança:
+2. Obtenha o token de segurança. É possível usar um token do UAA, um token do IAM ou uma chave API. Escolha um dos métodos a seguir para obter o token de segurança:
 	
-	* Para obter um token do UAA, consulte [Obtendo o token do UAA usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Para obter um token do UAA, consulte [Obtendo o token do UAA usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Para obter uma chave API, consulte [Recebendo uma chave API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Para obter uma chave API, consulte [Recebendo uma chave API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Por exemplo, para usar o token IAM, execute o comando a seguir:
 
@@ -164,7 +164,7 @@ Em um terminal, conclua as etapas a seguir:
 	
 	* Espaço é o GUID do espaço. 
 	
-	* METRICS_ENDPOINT representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* METRICS_ENDPOINT representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 	Para verificar se a regra foi criada com sucesso, execute o comando a seguir:
 	
@@ -181,12 +181,12 @@ Em um terminal, conclua as etapas a seguir:
 	{: screen}
 
 ## Etapa 3: Criar uma Notificação de webhook
-{: #step32}
+{: #cwa_step3}
 
 
 Para criar um arquivo de notificação, considere as seguintes informações:
 
-* Use o modelo de notificação para alertas webhook. Para obter mais informações, consulte [Modelos de notificação](/docs/services/cloud-monitoring/config_alerts_ov.html#notification_template).
+* Use o modelo de notificação para alertas webhook. Para obter mais informações, consulte [Modelos de notificação](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#notification_template).
 * Crie o arquivo em um diretório local, por exemplo, `~/cloud-monitoring/notifications`.
 
 Por exemplo, crie o arquivo **webhook.json** usando o editor de vi: 
@@ -201,24 +201,24 @@ Por exemplo, crie o arquivo **webhook.json** usando o editor de vi:
 
 Para chamar um webhook, o campo *detail* deve ser configurado para a URL em que o POST deve ser feito. Configure um webhook para terminais https e inclua um parâmetro.
 	
-Para obter mais informações, veja [Criando uma notificação](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create).
+Para obter mais informações, veja [Criando uma notificação](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create).
 	
 ## Etapa 4: Registrar o método de notificação no serviço Monitoring
-{: #step42}
+{: #cwa_step4}
 	
 Em um terminal, conclua as etapas a seguir:
 
 1. Efetue login em uma região, uma organização e um espaço no {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
-2. Obtenha o token de segurança. É possível usar um token UAA, um token IAM ou uma chave API. Escolha um dos métodos a seguir para obter o token de segurança:
+2. Obtenha o token de segurança. É possível usar um token do UAA, um token do IAM ou uma chave API. Escolha um dos métodos a seguir para obter o token de segurança:
 	
-	* Para obter um token do UAA, consulte [Obtendo o token do UAA usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Para obter um token do UAA, consulte [Obtendo o token do UAA usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Para obter uma chave API, consulte [Recebendo uma chave API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Para obter uma chave API, consulte [Recebendo uma chave API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Por exemplo, para usar o token IAM, execute o comando a seguir:
 
@@ -300,7 +300,7 @@ Em um terminal, conclua as etapas a seguir:
 	
 	* Espaço é o GUID do espaço. 
 	
-	* METRICS_ENDPOINT representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* METRICS_ENDPOINT representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
     Para verificar se a notificação foi criada com sucesso, execute o comando a seguir:
 

@@ -48,7 +48,7 @@ subcollection: cloud-monitoring
 * 米国南部地域に、使用可能なクラスターがあります。 
 * ご使用のユーザー ID は、**ビューアー**権限が設定された {{site.data.keyword.monitoringshort}} サービスの IAM ポリシーを持っています。
 
-このチュートリアルを完了するには、チュートリアル[『Kubernetes クラスターにデプロイされたアプリに関する Grafana でのメトリックの分析』](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics)を完了するか、クラスターがプロビジョンされ、少なくとも 1 つのアプリケーションがそこにデプロイされている必要があります。
+このチュートリアルを完了するには、チュートリアル[『Kubernetes クラスターにデプロイされたアプリに関する Grafana でのメトリックの分析』](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics)を完了するか、クラスターがプロビジョンされ、少なくとも 1 つのアプリケーションがそこにデプロイされている必要があります。
 
 
 
@@ -57,13 +57,13 @@ subcollection: cloud-monitoring
 
 ブラウザーから Grafana を起動し、クラスター・メトリックを表示できる {{site.data.keyword.monitoringshort}} ドメインを設定します。
 
-クラスターのメトリックを分析するには、そのクラスターが作成されているクラウド Public 地域で Grafana にアクセスする必要があります。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)を参照してください。
+クラスターのメトリックを分析するには、そのクラスターが作成されているクラウド Public 地域で Grafana にアクセスする必要があります。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)を参照してください。
 
 1. ブラウザーから Grafana を起動します。 
 
     クラスターを作成した地域の {{site.data.keyword.monitoringshort}} サービス URL を入力します。 
     
-    地域ごとの URL を取得するには、[Monitoring サービスの URL](/docs/services/cloud-monitoring/monitoring_ov.html#region) を参照してください。
+    地域ごとの URL を取得するには、[Monitoring サービスの URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region) を参照してください。
 
     例えば、米国南部地域の場合は、[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)を起動します。
 
@@ -107,7 +107,7 @@ Grafana で、ダッシュボードを複数のセクションに分割するた
 
 グラフに表示されるデータをフィルターに掛ける照会を定義します。 この照会では、コンテナーの全コアにわたって CPU 時間のナノ秒をモニターします。
 
-照会のフォーマットについて詳しくは、[コンテナーに関して収集される CPU メトリックの照会フォーマット](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)を参照してください。
+照会のフォーマットについて詳しくは、[コンテナーに関して収集される CPU メトリックの照会フォーマット](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)を参照してください。
  
 *「Metrics」*タブで、**「Add query」**を選択します。 <br>照会項目が追加されます。 各照会には、1 文字のラベルが付いています。 
 
@@ -138,7 +138,7 @@ Grafana で、ダッシュボードを複数のセクションに分割するた
     例えば、コンテナーの全コアにわたって CPU 時間のナノ秒をモニターするには、タイプには**「cpu」**を選択し、サブタイプには**「usage」** を選択します。
 		
 	CPU メトリックのリストについては、
-[コンテナー用の CPU メトリック](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers)を参照してください。
+[コンテナー用の CPU メトリック](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers)を参照してください。
     
 11. 正符号イメージ ![追加アイコン](images/grafana_plus_image.gif "正符号イメージ") をクリックし、関数を選択します。 関数を追加すると、メトリックに使用可能なデータを変換したり、結合したり、それらのデータに対して計算を実行したりすることができます。
 
@@ -168,4 +168,4 @@ Grafana で、ダッシュボードを複数のセクションに分割するた
 ## 次の手順
 {: #cgd_next_steps}
 
-メトリックのアラートを定義します。 詳しくは、[アラートの構成](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)を参照してください。
+メトリックのアラートを定義します。 詳しくは、[アラートの構成](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)を参照してください。

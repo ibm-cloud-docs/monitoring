@@ -30,7 +30,7 @@ subcollection: cloud-monitoring
 In {{site.data.keyword.Bluemix}} werden ausgewählte Auslastungsmetriken für einen Worker automatisch erfasst. Um diese mit {{site.data.keyword.monitoringlong}} zu überwachen, müssen Sie eine Grafana-Abfrage definieren. 
 {:shortdesc}
 
-Eine Liste der Auslastungsmetriken, die automatisch erfasst werden, finden Sie unter [Auslastungsmetriken für Worker](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#load_metrics_workers).
+Eine Liste der Auslastungsmetriken, die automatisch erfasst werden, finden Sie unter [Auslastungsmetriken für Worker](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#load_metrics_workers).
 
 
 ## Schritt 1: Daten für den Worker erfassen, der überwacht werden soll
@@ -66,7 +66,7 @@ Wenn in den Feldern eine CF-Organisation und ein CF-Bereich angegeben ist, werde
 ## Schritt 2: Grafana starten
 {: #step25}
 
-Starten Sie Grafana von einem Browser. Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Starten Sie Grafana von einem Browser. Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 Stellen Sie in Grafana sicher, dass Sie bei dem Konto angemeldet sind, für das der Cluster ausgeführt wird. 
 
@@ -74,7 +74,7 @@ Stellen Sie in Grafana sicher, dass Sie bei dem Konto angemeldet sind, für das 
 
     Geben Sie die {{site.data.keyword.monitoringshort}}-Service-URL für die Region ein, in der Sie den Cluster erstellt haben. 
     
-    Informationen zum Abrufen der URLs nach Region finden Sie unter [URLs für den Überwachungsservice](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Informationen zum Abrufen der URLs nach Region finden Sie unter [URLs für den Überwachungsservice](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Starten Sie zum Beispiel für die Region 'USA (Süden)': [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -111,7 +111,7 @@ Führen Sie die folgenden Schritte aus, um ein Grafana-Dashboard zu erstellen un
 
 3. Definieren Sie die Abfrage, die die in der Grafik angezeigten Daten filtert. 
 
-    Weitere Informationen zum Format der Abfrage finden Sie unter [Abfrageformat für für Worker erfasste Lademetriken](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers).
+    Weitere Informationen zum Format der Abfrage finden Sie unter [Abfrageformat für für Worker erfasste Lademetriken](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers).
 
     Wählen Sie auf der Registerkarte *Metriken* die Option **Abfrage hinzufügen** aus. <br>Ein Abfrageeintrag wird hinzugefügt. Jede Abfrage wird mit einem Buchstaben gekennzeichnet.
 	
@@ -131,7 +131,7 @@ Führen Sie die folgenden Schritte aus, um ein Grafana-Dashboard zu erstellen un
 	
 	7. Klicken Sie auf **Metrik auswählen**, um den Metriktyp auszuwählen, und klicken Sie dann auf **Metrik auswählen**, um den Metrikuntertyp festzulegen.
 	
-	    Eine Liste der CPU-Metriken finden Sie unter [CPU-Metriken für Worker](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#load_metrics_workers).
+	    Eine Liste der CPU-Metriken finden Sie unter [CPU-Metriken für Worker](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#load_metrics_workers).
 	
 	10. Klicken Sie auf das Pluszeichen ![Symbol für das Hinzufügen](images/grafana_plus_image.gif "Pluszeichen") und wählen Sie eine Funktion aus. Sie können eine Funktion zur Transformation, zur Kombination und zur Durchführung von Berechnungen mit den Daten hinzufügen, die für eine Metrik zur Verfügung stehen.
 

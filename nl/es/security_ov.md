@@ -40,10 +40,10 @@ Para trabajar con métricas que se almacenan en el servicio {{site.data.keyword.
 
 Para obtener una señal de seguridad, consulte:
 
-* [Obtención de una señal de UAA](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa)
-* [Obtención de una señal de IAM](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)
+* [Obtención de una señal de UAA](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa)
+* [Obtención de una señal de IAM](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)
 
-Para obtener una clave de API, consulte [Generación de una clave de API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key). Si la clave de API está en peligro, puede revocarla suprimiéndola. A continuación, puede volver a crear una nueva. Para obtener más información, consulte [Revocación de una clave de API mediante la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_api_key.html#revoke_ui). 
+Para obtener una clave de API, consulte [Generación de una clave de API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key). Si la clave de API está en peligro, puede revocarla suprimiéndola. A continuación, puede volver a crear una nueva. Para obtener más información, consulte [Revocación de una clave de API mediante la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#revoke_ui). 
 
 Las señales UAA y las señales IAM caducan después de un periodo de tiempo. La clave de API no caduca. 
 
@@ -104,7 +104,7 @@ En la tabla siguiente se muestran los privilegios de cada rol de Cloud Foundry p
   </tr>
 </table>
 
-Para obtener información sobre la asignación de roles de usuario en la interfaz de usuario, consulte [Gestión del acceso de Cloud Foundry](/docs/iam/mngcf.html#mngcf).
+Para obtener información sobre la asignación de roles de usuario en la interfaz de usuario, consulte [Gestión del acceso de Cloud Foundry](/docs/iam?topic=iam-mngcf#mngcf).
 
 
 
@@ -163,5 +163,5 @@ La tabla siguiente lista las acciones de servicio {{site.data.keyword.monitoring
   </tr>
 </table>
 
-Para obtener información sobre la asignación de roles de usuario en la interfaz de usuario, consulte [Gestión del acceso IAM](/docs/iam/mngiam.html#iammanidaccser).
+Para obtener información sobre la asignación de roles de usuario en la interfaz de usuario, consulte [Gestión del acceso IAM](/docs/iam?topic=iam-iammanidaccser#iammanidaccser).
 

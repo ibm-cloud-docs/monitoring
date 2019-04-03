@@ -36,14 +36,14 @@ subcollection: cloud-monitoring
 4. 通过 Grafana 图形上的**警报**选项卡来配置警报。
 
 ## 步骤 1：启动 Grafana
-{: #step1_cag1}
+{: #step1_cag}
 
 通过浏览器启动 Grafana。例如，输入以下 URL 以在美国南部区域中打开 Grafana：[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)。
 
-有关每个区域的 Grafana URL 的列表，请参阅 [{{site.data.keyword.monitoringshort}} 服务的 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)。
+有关每个区域的 Grafana URL 列表，请参阅 [{{site.data.keyword.monitoringshort}} 服务的 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)。
 
 ## 步骤 2：定义一条或多条通知通道
-{: #step2_cag2}
+{: #step2_cag}
 
 请完成以下步骤：
 
@@ -134,7 +134,7 @@ subcollection: cloud-monitoring
 </table>
 
 ## 步骤 3：定义度量值
-{: #step3_cag3}
+{: #step3_cag}
 
 要创建新仪表板，请完成以下步骤：
 
@@ -156,7 +156,7 @@ subcollection: cloud-monitoring
 
 
 ## 步骤 4：定义警报
-{: #step4_cag4}
+{: #step4_cag}
 
 要在 Grafana UI 中定义警报，请完成以下步骤：
 
@@ -174,11 +174,11 @@ subcollection: cloud-monitoring
 * 如果选择**删除**，将删除该警报。
 
 ## 下一步：验证是否生成了警报
-{: #next_cag5}
+{: #next_cag}
 
 例如，如果创建了电子邮件通知通道，请检查电子邮件。
 
-查找发件人为 **IBM Cloud Monitoriing** 的电子邮件。
+查找发件人为 **IBM Cloud Monitoring** 的电子邮件。
 
 电子邮件中包含有关所发出警报的信息以及 Grafana 仪表板的链接，您可以在此仪表板中查看相关情况。
 

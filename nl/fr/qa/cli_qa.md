@@ -30,11 +30,11 @@ subcollection: cloud-monitoring
 Vous trouverez ci-après les réponses aux questions fréquentes concernant l'utilisation de l'interface de ligne de commande {{site.data.keyword.Bluemix}} avec le service {{site.data.keyword.monitoringshort}}. 
 {:shortdesc}
 
-* [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)
-* [Comment installer l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#install_bmx_cli)
-* [Comment obtenir l'identificateur global unique d'un compte](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid)
-* [Comment obtenir l'identificateur global unique d'une organisation](/docs/services/cloud-monitoring/qa/cli_qa.html#org_guid)
-* [Comment obtenir l'identificateur global unique d'un espace](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid)
+* [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)
+* [Comment installer l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#install_bmx_cli)
+* [Comment obtenir l'identificateur global unique d'un compte](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid)
+* [Comment obtenir l'identificateur global unique d'une organisation](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#org_guid)
+* [Comment obtenir l'identificateur global unique d'un espace](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid)
 
 ## Comment se connecter à IBM Cloud ?
 {: #login}
@@ -97,7 +97,7 @@ où
 ## Comment installer l'interface de ligne de commande IBM Cloud ?
 {: #install_bmx_cli}
 
-Voir [Téléchargement et installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#overview).
+Voir [Téléchargement et installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
 
 ## Comment obtenir l'identificateur global unique d'un compte ?
 {: #account_guid}

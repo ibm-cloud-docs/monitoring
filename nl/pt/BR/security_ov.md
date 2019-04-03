@@ -41,12 +41,10 @@ para um espaço, você requer um token de autenticação ou uma chave API.
 
 Para obter um token de segurança, veja:
 
-* [Obtendo um token do UAA](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa)
-* [Obtendo um token do IAM](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)
+* [Obtendo um token do UAA](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa)
+* [Obtendo um token do IAM](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)
 
-Para obter uma chave API, veja [Gerando uma chave API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key). Se a chave API estiver comprometida, será possível revogá-la excluindo-a. Em seguida, será possível será possível uma nova. Para obter mais informações, consulte
-[Revogando uma chave API
-usando a UI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_api_key.html#revoke_ui). 
+Para obter uma chave API, veja [Gerando uma chave API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key). Se a chave API estiver comprometida, será possível revogá-la excluindo-a. Em seguida, será possível será possível uma nova. Para obter mais informações, consulte [Revogando uma chave de API usando a IU do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#revoke_ui). 
 
 Um token do UAA e um token do IAM expiram após um período de tempo. A chave API não expira. 
 
@@ -108,7 +106,7 @@ serviço do {{site.data.keyword.monitoringshort}}:
   </tr>
 </table>
 
-Para obter informações sobre como designar funções de usuário na IU, consulte [Gerenciando o acesso ao Cloud Foundry](/docs/iam/mngcf.html#mngcf).
+Para obter informações sobre como designar funções de usuário na IU, consulte [Gerenciando o acesso ao Cloud Foundry](/docs/iam?topic=iam-mngcf#mngcf).
 
 
 
@@ -167,5 +165,5 @@ A tabela a seguir lista as ações de serviço do {{site.data.keyword.monitoring
   </tr>
 </table>
 
-Para obter informações sobre como designar funções de usuário na IU, consulte [Gerenciando o acesso ao IAM](/docs/iam/mngiam.html#iammanidaccser).
+Para obter informações sobre como designar funções de usuário na IU, consulte [Gerenciando o acesso ao IAM](/docs/iam?topic=iam-iammanidaccser#iammanidaccser).
 

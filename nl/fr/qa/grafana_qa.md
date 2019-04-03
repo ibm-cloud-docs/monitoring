@@ -30,11 +30,11 @@ subcollection: cloud-monitoring
 Vous trouverez ci-après les réponses aux questions fréquentes concernant l'utilisation de Grafana avec le service {{site.data.keyword.monitoringshort}}. 
 {:shortdesc}
 
-* [Les alertes que j'ai définies à l'aide de l'API Alerts n'apparaissent pas dans mon tableau de bord Grafana](/docs/services/cloud-monitoring/qa/grafana_qa.html#alerts1)
-* [Un message BXNMSAL41E s'affiche lorsque j'essaie de sauvegarder une modification que j'ai apportée à mon tableau de bord Grafana](/docs/services/cloud-monitoring/qa/grafana_qa.html#BXNMSAL41E)
-* [Un message BXNMSAL36E s'affiche lorsque j'essaie de sauvegarder une modification après que j'ai ajouté une alerte à mon tableau de bord Grafana](/docs/services/cloud-monitoring/qa/grafana_qa.html#BXNMSAL36E)
-* [Un message d'erreur 404 s'affiche lorsque je me connecte à l'interface utilisateur Web du service Monitoring](/docs/services/cloud-monitoring/qa/grafana_qa.html#404)
-* [J'ai téléchargé des données json pour un tableau de bord Grafana ; pourquoi ai-je perdu ma barre de défilement ?](/docs/services/cloud-monitoring/qa/grafana_qa.html#2)
+* [Les alertes que j'ai définies à l'aide de l'API Alerts n'apparaissent pas dans mon tableau de bord Grafana](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#alerts1)
+* [Un message BXNMSAL41E s'affiche lorsque j'essaie de sauvegarder une modification que j'ai apportée à mon tableau de bord Grafana](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#BXNMSAL41E)
+* [Un message BXNMSAL36E s'affiche lorsque j'essaie de sauvegarder une modification après que j'ai ajouté une alerte à mon tableau de bord Grafana](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#BXNMSAL36E)
+* [Un message d'erreur 404 s'affiche lorsque je me connecte à l'interface utilisateur Web du service Monitoring](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#404)
+* [J'ai téléchargé des données json pour un tableau de bord Grafana ; pourquoi ai-je perdu ma barre de défilement ?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#2)
 
 
 ## Les alertes que j'ai définies à l'aide de l'API Alerts n'apparaissent pas dans mon tableau de bord Grafana
@@ -42,7 +42,7 @@ Vous trouverez ci-après les réponses aux questions fréquentes concernant l'ut
 
 Les alertes que vous définissez à l'aide de l'API Alerts n'apparaissent pas dans le tableau de bord Grafana. Pour voir des alertes dans Grafana, vous devez les définir directement dans un tableau de bord Grafana.
 
-Pour plus d'informations, voir [Configuration d'alertes dans Grafana](/docs/services/cloud-monitoring/alerts/config_alerts_grafana.html#config_alerts_grafana).
+Pour plus d'informations, voir [Configuration d'alertes dans Grafana](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-config_alerts_grafana#config_alerts_grafana).
 
 ## Un message BXNMSAL41E s'affiche lorsque j'essaie de sauvegarder une modification que j'ai apportée à mon tableau de bord Grafana
 {: #BXNMSAL41E}
@@ -60,7 +60,7 @@ Si vous atteignez le quota du domaine où vous surveillez des métriques dans le
 
 Mettez à niveau votre plan, puis faites une nouvelle tentative.
 
-Pour plus d'informations sur la mise à jour de votre plan, voir [Modification du plan](/docs/services/cloud-monitoring/plan/change_plan.html#change_plan).
+Pour plus d'informations sur la mise à jour de votre plan, voir [Modification du plan](/docs/services/cloud-monitoring/plan?topic=cloud-monitoring-change_plan#change_plan).
 
 
 ## Un message d'erreur 404 s'affiche lorsque je me connecte à l'interface utilisateur Web du service Monitoring
@@ -68,7 +68,7 @@ Pour plus d'informations sur la mise à jour de votre plan, voir [Modification d
 
 Si vous obtenez une erreur 404 lorsque vous tentez de vous connecter à l'interface utilisateur Web du service {{site.data.keyword.monitoringshort}} (Grafana), vérifiez que l'espace existe et que vous y avez accès.
 
-Lorsque vous utilisez le [modèle d'authentification UAA](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa) pour accéder au service {{site.data.keyword.monitoringshort}}, vous devez vous servir de l'ID utilisateur et du mot de passe que vous avez utilisés pour vous connecter à la console {{site.data.keyword.Bluemix_notm}}. 
+Lorsque vous utilisez le [modèle d'authentification UAA](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa) pour accéder au service {{site.data.keyword.monitoringshort}}, vous devez vous servir de l'ID utilisateur et du mot de passe que vous avez utilisés pour vous connecter à la console {{site.data.keyword.Bluemix_notm}}. 
 
 Pour vérifier que vous avez accès au compte, à l'organisation et à l'espace auxquels vous voulez vous connecter, connectez-vous à la console {{site.data.keyword.Bluemix_notm}} et accédez à l'espace. 
 

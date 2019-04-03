@@ -1,11 +1,11 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-monitoring" audience="service" arm="3385829" href="/docs/services/cloud-monitoring?topic=cloud-monitoring-getting-started-with-ibm-cloud-monitoring#getting-started-with-ibm-cloud-monitoring" path="services/cloud-monitoring"}
+{: .toc subcollection="cloud-monitoring" audience="service" arm="3385829" href="/docs/services/cloud-monitoring?topic=cloud-monitoring-getting-started" path="services/cloud-monitoring"}
 IBM Cloud Monitoring
 
     {: .navgroup id="learn"}
-    index.md
+    getting-started.md
     
     {: .topicgroup}
     IBM Cloud Monitoring について
@@ -60,7 +60,6 @@ IBM Cloud Monitoring
     Grafana
         grafana/navigating_grafana.md
         grafana/define_query.md
-        alerts/config_alerts_grafana.md
 
     {: .topicgroup}
     メトリック

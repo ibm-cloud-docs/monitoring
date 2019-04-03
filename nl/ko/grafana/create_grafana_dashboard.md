@@ -31,7 +31,7 @@ subcollection: cloud-monitoring
 
 Grafana 대시보드를 작성하려면 다음 단계를 완료하십시오.
 
-1. 웹 브라우저에서 Grafana를 실행하십시오. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)을 참조하십시오.
+1. 웹 브라우저에서 Grafana를 실행하십시오. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)을 참조하십시오.
 
 2. 기본 대시보드를 저장하십시오.
 

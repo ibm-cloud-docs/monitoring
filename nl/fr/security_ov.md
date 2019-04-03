@@ -40,10 +40,10 @@ Une jeton d'authentification ou une clé d'API est nécessaire pour utiliser des
 
 Pour obtenir un jeton de sécurité, voir :
 
-* [Obtention d'un jeton UAA](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa)
-* [Obtention d'un jeton IAM](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)
+* [Obtention d'un jeton UAA](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa)
+* [Obtention d'un jeton IAM](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)
 
-Pour obtenir une clé d'API, voir [Génération d'une clé d'API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key). Si la clé d'API est compromise, vous pouvez la révoquer en la supprimant. Ensuite, vous pouvez en créer une nouvelle. Pour plus d'informations, voir [Révocation d'une clé d'API à l'aide de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_api_key.html#revoke_ui). 
+Pour obtenir une clé d'API, voir [Génération d'une clé d'API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key). Si la clé d'API est compromise, vous pouvez la révoquer en la supprimant. Ensuite, vous pouvez en créer une nouvelle. Pour plus d'informations, voir [Révocation d'une clé d'API à l'aide de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#revoke_ui). 
 
 Un jeton UAA et un jeton IAM arrivent à expiration au bout d'un certain temps. La clé d'API n'arrive jamais à expiration. 
 
@@ -104,7 +104,7 @@ Le tableau suivant répertorie les privilèges de chaque rôle Cloud Foundry pou
   </tr>
 </table>
 
-Pour plus d'informations sur l'affectation de rôles utilisateur dans l'interface utilisateur, voir [Gestion de l'accès Cloud Foundry](/docs/iam/mngcf.html#mngcf).
+Pour plus d'informations sur l'affectation de rôles utilisateur dans l'interface utilisateur, voir [Gestion de l'accès Cloud Foundry](/docs/iam?topic=iam-mngcf#mngcf).
 
 
 
@@ -163,5 +163,5 @@ Le tableau suivant répertorie les actions du service {{site.data.keyword.monito
   </tr>
 </table>
 
-Pour plus d'informations sur l'affectation de rôles utilisateur dans l'interface utilisateur, voir [Gestion de l'accès IAM](/docs/iam/mngiam.html#iammanidaccser).
+Pour plus d'informations sur l'affectation de rôles utilisateur dans l'interface utilisateur, voir [Gestion de l'accès IAM](/docs/iam?topic=iam-iammanidaccser#iammanidaccser).
 

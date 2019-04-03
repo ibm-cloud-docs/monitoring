@@ -85,7 +85,7 @@ Grafana 中所定義以監視「{{site.data.keyword.Bluemix}} 公用」中執行
   </tr>
   <tr>
     <td>度量值子類型</td>
-	  <td>要顯示的度量值。</br>[CPU 度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics) </br>[磁碟度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics)   </br>[記憶體度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td>
+	  <td>要顯示的度量值。</br>[CPU 度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics) </br>[磁碟度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics)   </br>[記憶體度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td>
 	  <td></td>
   </tr>
   <tr>

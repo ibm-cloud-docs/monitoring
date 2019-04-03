@@ -31,7 +31,7 @@ subcollection: cloud-monitoring
 
 要创建 Grafana 仪表板，请完成以下步骤：
 
-1. 通过 Web 浏览器启动 Grafana。有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)。
+1. 通过 Web 浏览器启动 Grafana。有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)。
 
 2. 保存缺省仪表板。
 

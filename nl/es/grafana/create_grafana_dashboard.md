@@ -31,7 +31,7 @@ Cree un panel de control personalizado de Grafana para mostrar métricas corresp
 
 Siga los siguientes pasos para crear un panel de control de Grafana:
 
-1. Inicie Grafana desde un navegador web. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+1. Inicie Grafana desde un navegador web. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 2. Guarde el panel de control predeterminado.
 

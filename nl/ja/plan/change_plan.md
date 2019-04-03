@@ -55,7 +55,7 @@ CLI を介して {{site.data.keyword.Bluemix_notm}} のサービス・プラン�
 
 1. {{site.data.keyword.Bluemix_notm}} で、地域、組織、およびスペースにログインします。 
 
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/cli_qa.html#login)を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)を参照してください。
 	
 2. `ibmcloud service list` コマンドを実行して現在のプランを確認し、スペース内で使用可能なサービスのリストから {{site.data.keyword.loganalysisshort}} サービス名を取得します。 
 

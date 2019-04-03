@@ -36,14 +36,14 @@ Führen Sie die folgenden Schritte aus, um einen Alert für eine Metrikabfrage �
 4. Konfigurieren Sie den Alert über die Registerkarte **Alerts** für eine Grafana-Grafik.
 
 ## Schritt 1: Grafana starten
-{: #step1_cag1}
+{: #step1_cag}
 
 Starten Sie Grafana von einem Browser. Geben Sie beispielsweise die folgende URL ein, um Grafana in der Region 'USA (Süden)' zu öffnen: [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
-Eine Liste der Grafana-URLs nach Region finden Sie unter [URLs für den {{site.data.keyword.monitoringshort}}-Service](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+Eine Liste der Grafana-URLs nach Region finden Sie unter [URLs für den {{site.data.keyword.monitoringshort}}-Service](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
 ## Schritt 2: Mindestens einen Benachrichtigungskanal definieren
-{: #step2_cag2}
+{: #step2_cag}
 
 Führen Sie die folgenden Schritte aus:
 
@@ -134,7 +134,7 @@ Führen Sie die folgenden Schritte aus:
 </table>
 
 ## Schritt 3: Metrik definieren
-{: #step3_cag3}
+{: #step3_cag}
 
 Führen Sie die folgenden Schritte aus, um ein neues Dashboard zu erstellen:
 
@@ -156,7 +156,7 @@ Fügen Sie als Nächstes eine Metrikabfrage hinzu:
 
 
 ## Schritt 4: Alert definieren
-{: #step4_cag4}
+{: #step4_cag}
 
 Führen Sie die folgenden Schritte aus, um einen Alert in der Grafana-Benutzerschnittstelle zu definieren:
 
@@ -174,7 +174,7 @@ Führen Sie die folgenden Schritte aus, um einen Alert in der Grafana-Benutzersc
 * Wenn Sie **Löschen** wählen, wird der Alert gelöscht.
 
 ## Nächster Schritt: Sicherstellen, dass ein Alert generiert wird
-{: #next_cag5}
+{: #next_cag}
 
 Wenn Sie beispielsweise einen Benachrichtigungskanal für E-Mails erstellt haben, überprüfen Sie Ihre E-Mails.
 

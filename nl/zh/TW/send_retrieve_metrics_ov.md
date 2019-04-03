@@ -112,14 +112,14 @@ subcollection: cloud-monitoring
 
 * 傳送度量值之使用者的 {{site.data.keyword.IBM_notm}} ID 必須已為 {{site.data.keyword.monitoringshort}} 服務指派 IAM 原則。下列 IAM 角色容許使用者傳送度量值：*管理者*、*編輯者*及*操作員*。
 
-* 您必須指定要在其中傳送度量值的 API 端點。每個地區都有一個端點。例如，對於「美國南部」地區，端點如下：`https://metrics.ng.bluemix.net/v1/metrics`。如需端點的相關資訊，請參閱 [{{site.data.keyword.monitoringshort}} 服務的 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region){: new_window}。
+* 您必須指定要在其中傳送度量值的 API 端點。每個地區都有一個端點。例如，對於「美國南部」地區，端點如下：`https://metrics.ng.bluemix.net/v1/metrics`。如需端點的相關資訊，請參閱 [{{site.data.keyword.monitoringshort}} 服務的 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region){: new_window}。
 
 
 您可以使用下列任何方法，將度量值傳送至 {{site.data.keyword.monitoringshort}} 服務：
 
 * *方法 1：配置 {{site.data.keyword.monitoringshort}} 外掛程式。*
 
-    如需相關資訊，請參閱[配置 {{site.data.keyword.monitoringshort}} 外掛程式](/docs/services/cloud-monitoring/send-metrics/conf_monitoring_plugin.html#conf_monitoring_plugin)。
+    如需相關資訊，請參閱[配置 {{site.data.keyword.monitoringshort}} 外掛程式](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-conf_monitoring_plugin#conf_monitoring_plugin)。
 
     下圖顯示如何使用 {{site.data.keyword.monitoringshort}} 外掛程式將度量值傳送至 {{site.data.keyword.monitoringshort}} 服務的高階視圖：
 
@@ -127,7 +127,7 @@ subcollection: cloud-monitoring
 
 * *方法 2：使用 Metrics API。*
 
-    如需相關資訊，請參閱[使用 Metrics API 傳送度量值](/docs/services/cloud-monitoring/send-metrics/send_data_api.html#send_data_api)。
+    如需相關資訊，請參閱[使用 Metrics API 傳送度量值](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-send_data_api#send_data_api)。
 
 
 ## 擷取度量值
@@ -135,15 +135,15 @@ subcollection: cloud-monitoring
 
 如果您需要在 {{site.data.keyword.monitoringshort}} 服務外部執行進一步分析，或者您的應用程式想要使用度量值來進行決策，您可以使用 Metrics API 針對每個要求最多擷取五個度量值。 
 
-* 如需如何擷取度量值的相關資訊，請參閱[從網域中擷取度量值](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#retrieve_data_api)
+* 如需如何擷取度量值的相關資訊，請參閱[從網域中擷取度量值](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#retrieve_data_api)
 * 如需 Metrics API 的相關資訊，請參閱 [Metrics API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window}。
 
 若要擷取度量值，請考量下列資訊： 
 
 * 您必須設定要從中擷取資料的空間。 
 * 您必須提供安全記號或 API 金鑰，以便使用 {{site.data.keyword.monitoringshort}} 服務。 
-* 您必須指定一個以上度量值的路徑。如需相關資訊，請參閱[定義度量值](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics)。
-* 您可以選擇指定自訂的時段。依預設，如果沒有指定時段，則您擷取的資料是對應於過去 24 小時的資料。如需相關資訊，請參閱[配置時段](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time)。
+* 您必須指定一個以上度量值的路徑。如需相關資訊，請參閱[定義度量值](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics)。
+* 您可以選擇指定自訂的時段。依預設，如果沒有指定時段，則您擷取的資料是對應於過去 24 小時的資料。如需相關資訊，請參閱[配置時段](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time)。
 
 
 ## 列出度量值
@@ -166,7 +166,7 @@ subcollection: cloud-monitoring
 
     每一個地區都有不同的 URL。例如，對於「美國南部」地區，您可以使用 API 端點：`https://metrics.ng.bluemix.net/v1/metrics/list` 
 
-    若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+    若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 
     如需 API 的相關資訊，請參閱 [Metrics API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-rest-api?&language=node#introduction){: new_window}。
 

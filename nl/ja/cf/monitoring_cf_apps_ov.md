@@ -51,7 +51,7 @@ subcollection: cloud-monitoring
 {{site.data.keyword.Bluemix_notm}} の外部で実行されている CF アプリをモニターするために、メトリック API を使用して CF アプリのメトリックを {{site.data.keyword.monitoringshort}} サービスに転送することができます。
 
 * API について詳しくは、[メトリック API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-metrics-api?&language=node#introduction) を参照してください。
-* API　の使用について詳しくは、[メトリック API を使用したデータの送信](/docs/services/cloud-monitoring/send-metrics/send_data_api.html#send_data_api)を参照してください。
+* API　の使用について詳しくは、[メトリック API を使用したデータの送信](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-send_data_api#send_data_api)を参照してください。
 
 
 
@@ -63,14 +63,14 @@ subcollection: cloud-monitoring
 
 {{site.data.keyword.monitoringlong}} サービスは、Grafana を使用します。Grafana は、さまざまなグラフ (例えば、チャートや表) でメトリックをモニター、検索、分析、および視覚化するために使用できる、分析および視覚化のためのオープン・ソース・プラットフォームです。
 
-Grafana は、ブラウザーから起動できます。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)を参照してください。
+Grafana は、ブラウザーから起動できます。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)を参照してください。
 
 **注:** Grafana は、CF アプリ・インスタンスが実行されている {{site.data.keyword.Bluemix_notm}} 地域と同じ地域内で起動する必要があります。
 
 
-CF アプリケーションをモニターするには、Grafana で 1 つ以上の照会を定義する必要があります。 詳しくは、[Grafana でのメトリック照会の構成](/docs/services/cloud-monitoring/grafana/define_query.html#define_query)を参照してください。 
+CF アプリケーションをモニターするには、Grafana で 1 つ以上の照会を定義する必要があります。 詳しくは、[Grafana でのメトリック照会の構成](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query)を参照してください。 
 
-また、照会にアラートを定義することもできます。 詳しくは、[アラートの構成](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)を参照してください。
+また、照会にアラートを定義することもできます。 詳しくは、[アラートの構成](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)を参照してください。
 
 
 
@@ -174,7 +174,7 @@ ibmcloud.public.cloud-foundry.au-syd.logtester.0.container.memory.utilization
 ```
 {: screen}
 
-詳細情報については、[CF アプリのメトリックのフォーマット](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)を参照してください。
+詳細情報については、[CF アプリのメトリックのフォーマット](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)を参照してください。
 
 **注:** CF アプリ名で使用できる文字のすべてが、メトリック・シリーズ名でも使用できるとは限りません。 例えば、大文字は許可されません。 照会を定義するときに Grafana に表示される CF アプリ名は、すべて小文字に変更されます。
 

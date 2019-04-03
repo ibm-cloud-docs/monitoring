@@ -43,13 +43,13 @@ collectd を構成して、環境内でメトリックを収集することが�
 
 1. (前提条件) {{site.data.keyword.Bluemix_notm}} CLI をインストールします。
 
-   詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI のインストール](/docs/services/cloud-monitoring/qa/cli_qa.html#cli_qa)を参照してください。
+   詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI のインストール](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#cli_qa)を参照してください。
    
    CLI がインストールされたら、次の手順に進んでください。
 	
 2. {{site.data.keyword.Bluemix_notm}} で、地域、組織、およびスペースにログインします。 
 
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/cli_qa.html#login)を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)を参照してください。
 
     例えば、米国南部地域にログインするには、以下のコマンドを実行します。
 	
@@ -192,15 +192,15 @@ collectd を構成して、環境内でメトリックを収集することが�
 
 IAM ポリシーをユーザーに割り当てるには、以下のいずれかの方法を選択します。
 
-* {{site.data.keyword.Bluemix_notm}} UI を使用する: 詳しくは、[{{site.data.keyword.Bluemix_notm}} UI を使用した IAM ポリシーのユーザーへの割り当て](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui)を参照してください。
-* コマンド・ラインを使用する: 詳しくは、[コマンド・ラインを使用した IAM ポリシーのユーザーへの割り当て](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_commandline)を参照してください。
+* {{site.data.keyword.Bluemix_notm}} UI を使用する: 詳しくは、[{{site.data.keyword.Bluemix_notm}} UI を使用した IAM ポリシーのユーザーへの割り当て](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui)を参照してください。
+* コマンド・ラインを使用する: 詳しくは、[コマンド・ラインを使用した IAM ポリシーのユーザーへの割り当て](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_commandline)を参照してください。
  
 ### 手順 2: API キーの取得
 {: #api_key}
  
 スペースにメトリックを送信するには、{{site.data.keyword.monitoringshort}} サービスを使用して認証する API キーを取得する必要があります。
 
-API キーの取得方法について詳しくは、[API キーの取得](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)を参照してください。
+API キーの取得方法について詳しくは、[API キーの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)を参照してください。
 	
 {{site.data.keyword.Bluemix_notm}} にログインした同じ端末から、トークンに APIKEY 変数を設定します。
 
@@ -214,7 +214,7 @@ export APIKEY="kjshdgf.....ldkdjdj"
 ### 手順 3: エンドポイントに関する情報の取得
 {: #endpoint}
 
-{{site.data.keyword.monitoringshort}}  エンドポイントを決定するには、地域ごとのエンドポイントのリストおよび[エンドポイント](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)を参照し、メトリックを送信する地域のエンドポイントを識別します。
+{{site.data.keyword.monitoringshort}}  エンドポイントを決定するには、地域ごとのエンドポイントのリストおよび[エンドポイント](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)を参照し、メトリックを送信する地域のエンドポイントを識別します。
 
 {{site.data.keyword.Bluemix_notm}} にログインした同じ端末から、**METRIC_ENDPOINT** 変数を設定します。 以下に例を示します。
 
@@ -228,7 +228,7 @@ export METRIC_ENDPOINT="metrics.ng.bluemix.net"
 ### 手順 4: スペース・ドメイン ID に関する情報の取得 
 {: #domain}
 
-スペースのドメイン ID を取得するには、[スペース GUID を取得](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid)します。 次に、「`s-SpaceID`」としてドメイン ID を設定します。ここで「SpaceID」は、スペースの GUID です。
+スペースのドメイン ID を取得するには、[スペース GUID を取得](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid)します。 次に、「`s-SpaceID`」としてドメイン ID を設定します。ここで「SpaceID」は、スペースの GUID です。
 
 {{site.data.keyword.Bluemix_notm}} にログインした同じ端末から、SpaceID 変数を設定します。
 

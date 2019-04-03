@@ -33,7 +33,7 @@ Dans {{site.data.keyword.Bluemix}}, les métriques de cluster sont automatiqueme
 **Remarque :** 
 
 * Les métriques sont collectées et disponibles pour la surveillance via le service {{site.data.keyword.monitoringshort}} pour les conteneurs qui s'exécutent dans des clusters standard.
-* Pour surveiller les métriques de cluster, vous devez mettre à disposition d'une instance du service Monitoring. Pour plus d'informations, voir [Mise à disposition du service Monitoring](/docs/services/cloud-monitoring/how-to/provision.html#provision).
+* Pour surveiller les métriques de cluster, vous devez mettre à disposition d'une instance du service Monitoring. Pour plus d'informations, voir [Mise à disposition du service Monitoring](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 
 ## A propos de la surveillance dans un environnement public
@@ -117,7 +117,7 @@ Le tableau suivant répertorie les métriques de mémoire qui sont automatiqueme
 | Métrique | Description | Unités |
 |----------|---------|---------|
 | `memory.current` | Cette métrique rend compte du nombre d'octets de mémoire utilisé actuellement par le conteneur. | Octets |
-| `memory.limit` | Cette métrique rend compte de la limite de mémoire du conteneur. Par défaut, les containers peuvent opèrent sans limites de mémoire. Un container peut consommer autant de mémoire que celle disponible sur l'agent où il s'exécute. Lorsque vous déployez un pod, vous pouvez fixer des limites quant à la quantité de mémoire qu'il peut utiliser.  | Octets |
+| `memory.limit` | Cette métrique rend compte de la limite de mémoire du conteneur. Par défaut, les containers peuvent opèrent sans limites de mémoire. Un container peut consommer autant de mémoire que celle disponible sur l'agent où il s'exécute. Lorsque vous déployez un pod, vous pouvez fixer des limites quant à la quantité de mémoire qu'il peut utiliser. | Octets |
 | `memory.usage-pct` | Cette métrique rend compte de la mémoire utilisée en pourcentage de la limite de mémoire du conteneur. </br>Si vous définissez des limites à la quantité de mémoire qu'un conteneur peut utiliser, cette métrique rend compte de l'utilisation de la mémoire en pourcentage des limites définies. | Pourcentage | 
 | `memory.working-set` | Cette métrique rend compte du nombre d'octets de mémoire active utilisé actuellement par le conteneur dans le cache à chaud. | Octets |
 {: caption="Métriques de mémoire pour les conteneurs" caption-side="top"} 
@@ -232,20 +232,20 @@ Pour surveiller les performances des conteneurs et des agents qui sont déployé
 
 Le service {{site.data.keyword.monitoringlong}} utilise la plateforme de visualisation et d'analyse open source Grafana dont vous pouvez vous servir pour surveiller, rechercher, analyser et visualiser vos métriques dans différents graphiques, par exemple, dans des diagrammes et des tableaux.
 
-Vous pouvez démarrer Grafana depuis un navigateur. Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Vous pouvez démarrer Grafana depuis un navigateur. Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 Pour surveiller les conteneurs et les agents qui s'exécutent dans un cluster Kubernetes, vous devez définir une requête dans Grafana pour chaque ressource :
 
-* Pour définir une requête qui surveille une métrique d'UC pour un conteneur, voir [Configuration de métriques d'unité centrale pour un conteneur dans Grafana](/docs/services/cloud-monitoring/containers/config_cpu_containers.html#config_cpu_containers).
-* Pour définir une requête qui surveille une métrique de mémoire pour un conteneur, voir [Configuration de métriques de mémoire pour un conteneur dans Grafana](/docs/services/cloud-monitoring/containers/config_mem_container.html#config_mem_container).
-* Pour définir une requête qui surveille une métrique de charge pour un agent, voir [Configuration de métriques de charge pour un agent dans Grafana](/docs/services/cloud-monitoring/containers/config_load_worker.html#config_load_worker).
+* Pour définir une requête qui surveille une métrique d'UC pour un conteneur, voir [Configuration de métriques d'unité centrale pour un conteneur dans Grafana](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_cpu_containers#config_cpu_containers).
+* Pour définir une requête qui surveille une métrique de mémoire pour un conteneur, voir [Configuration de métriques de mémoire pour un conteneur dans Grafana](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_mem_container#config_mem_container).
+* Pour définir une requête qui surveille une métrique de charge pour un agent, voir [Configuration de métriques de charge pour un agent dans Grafana](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_load_worker#config_load_worker).
 
 
 Le format de la requête varie en fonction des types de ressource et des types de requête :
 
-* Pour plus d'informations sur le format des requêtes permettant de surveiller l'unité centrale pour un conteneur, voir [Format de requête de métrique d'unité centrale pour un conteneur](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers). 
-* Pour plus d'informations sur le format des requêtes permettant de surveiller la charge pour un agent, voir [Format de requête de métrique de charge pour un agent](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers).
-* Pour plus d'informations sur le format des requêtes permettant de surveiller la mémoire pour un conteneur, voir [Format de requête de métrique de mémoire pour un conteneur](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers).
+* Pour plus d'informations sur le format des requêtes permettant de surveiller l'unité centrale pour un conteneur, voir [Format de requête de métrique d'unité centrale pour un conteneur](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers). 
+* Pour plus d'informations sur le format des requêtes permettant de surveiller la charge pour un agent, voir [Format de requête de métrique de charge pour un agent](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers).
+* Pour plus d'informations sur le format des requêtes permettant de surveiller la mémoire pour un conteneur, voir [Format de requête de métrique de mémoire pour un conteneur](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers).
 
 
 ## Configuration du trafic réseau pour les configurations de pare-feu personnalisées dans {{site.data.keyword.Bluemix_notm}}
@@ -287,6 +287,6 @@ Vous devez ouvrir le port TCP 443 et le port TCP 9091 depuis chaque agent vers l
 ## Tutoriels
 {: #tutorial}
 
-Pour apprendre à utiliser le service {{site.data.keyword.monitoringshort}} dans le but de surveiller les performances du conteneur, voir[Analyse de métriques dans Grafana pour une application qui est déployée dans un cluster Kubernetes](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics).
+Pour apprendre à utiliser le service {{site.data.keyword.monitoringshort}} dans le but de surveiller les performances du conteneur, voir[Analyse de métriques dans Grafana pour une application qui est déployée dans un cluster Kubernetes](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics).
 
-Pour apprendre à créer un tableau de bord Grafana dans le service {{site.data.keyword.monitoringshort}} dans le but de surveiller les performances de votre cluster, voir [Création d'un tableau de bord Grafana pour surveiller un cluster Kubernetes](/docs/services/cloud-monitoring/tutorials/container_grafana_dashboard.html#container_grafana_dashboard).
+Pour apprendre à créer un tableau de bord Grafana dans le service {{site.data.keyword.monitoringshort}} dans le but de surveiller les performances de votre cluster, voir [Création d'un tableau de bord Grafana pour surveiller un cluster Kubernetes](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_grafana_dashboard#container_grafana_dashboard).

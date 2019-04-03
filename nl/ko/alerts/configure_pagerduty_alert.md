@@ -32,9 +32,9 @@ subcollection: cloud-monitoring
 다음 단계를 완료하십시오.
 
 ## 1단계: 규칙 작성
-{: #step12}
+{: #cpa_step1}
 
-Grafana에서 정의한 메트릭 조회에 대한 규칙을 작성하십시오. 자세한 정보는 [규칙 작성](/docs/services/cloud-monitoring/alerts/rules.html#create)을 참조하십시오.
+Grafana에서 정의한 메트릭 조회에 대한 규칙을 작성하십시오. 자세한 정보는 [규칙 작성](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create)을 참조하십시오.
 
 예를 들어, 규칙 파일 `s-rule-1.json`을 `~/cloud-monitoring/rules/` 디렉토리에 작성하십시오. 
 
@@ -67,21 +67,21 @@ export RULE_FILE="s-rule-1.json"
 {: screen}
 
 ## 2단계: Monitoring 서비스에서 규칙 등록
-{: #step22}
+{: #cpa_step2}
 	
 터미널에서 다음 단계를 완료하십시오.
 
 1. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
 2. 보안 토큰을 가져오십시오. UAA 토큰, IAM 토큰 또는 API 키를 사용할 수 있습니다. 다음 방법 중 하나를 선택하여 보안 토큰을 얻으십시오.
 	
-	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)를 참조하십시오.
+	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)를 참조하십시오.
 	
-	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)를 참조하십시오.
+	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)를 참조하십시오.
 	
-	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)를 참조하십시오.
+	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)를 참조하십시오.
 	
 	예를 들어, IAM 토큰을 사용하려면 다음 명령을 실행하십시오.
 
@@ -164,7 +164,7 @@ export RULE_FILE="s-rule-1.json"
 	
 	* Space는 영역의 GUID입니다. 
 	
-	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 	
 	규칙이 작성되었는지 확인하려면 다음 명령을 실행하십시오.
 
@@ -181,12 +181,12 @@ export RULE_FILE="s-rule-1.json"
 	{: screen}
 
 ## 3단계: PagerDuty 알림 작성
-{: #step31}
+{: #cpa_step3}
 
 
 알림 파일을 작성하려면 다음 정보를 고려하십시오.
 
-* PagerDuty 경보에 대한 알림 템플리트를 사용하십시오. 자세한 정보는 [알림 템플리트](/docs/services/cloud-monitoring/config_alerts_ov.html#notification_template)를 참조하십시오.
+* PagerDuty 경보에 대한 알림 템플리트를 사용하십시오. 자세한 정보는 [알림 템플리트](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#notification_template)를 참조하십시오.
 * 로컬 디렉토리에 파일을 작성하십시오(예: `~/cloud-monitoring/notifications`).
 
 예를 들어, vi 편집기를 사용하여 **pagerduty.json** 파일을 작성하십시오. 
@@ -201,24 +201,24 @@ export RULE_FILE="s-rule-1.json"
 ```
 {: codeblock}	
 	
-자세한 정보는 [알림 작성](/docs/services/cloud-monitoring/alerts/notifications.html#create)을 참조하십시오.
+자세한 정보는 [알림 작성](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#create)을 참조하십시오.
 	
 ## 4단계: Monitoring 서비스에서 알림 메소드 등록
-{: #step41}
+{: #cpa_step4}
 	
 터미널에서 다음 단계를 완료하십시오.
 
 1. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
 2. 보안 토큰을 가져오십시오. UAA 토큰, IAM 토큰 또는 API 키를 사용할 수 있습니다. 다음 방법 중 하나를 선택하여 보안 토큰을 얻으십시오.
 	
-	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)를 참조하십시오.
+	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)를 참조하십시오.
 	
-	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)를 참조하십시오.
+	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)를 참조하십시오.
 	
-	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)를 참조하십시오.
+	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)를 참조하십시오.
 	
 	예를 들어, IAM 토큰을 사용하려면 다음 명령을 실행하십시오.
 
@@ -301,7 +301,7 @@ export RULE_FILE="s-rule-1.json"
 	
 	* Space는 영역의 GUID입니다. 
 	
-	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+	* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 	
     알림이 작성되었는지 확인하려면 다음 명령을 실행하십시오.
 

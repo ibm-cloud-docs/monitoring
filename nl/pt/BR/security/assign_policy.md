@@ -49,7 +49,7 @@ Conclua as etapas a seguir para conceder permissões a um usuário para trabalha
 	
 3. Se o usuário é um membro da conta, selecione o nome do usuário na lista ou clique em **Gerenciar usuário** no menu *Ações*.
 
-    Se o usuário não é um membro da conta, veja [Convidando usuários](/docs/iam/iamuserinv.html#iamuserinv).
+    Se o usuário não é um membro da conta, veja [Convidando usuários](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Clique em **Designar políticas de serviço**.
 
@@ -69,7 +69,7 @@ Conclua as etapas a seguir para conceder permissões a um usuário para trabalha
 	  </tr>
 	  <tr>
 	    <td>Funções</td>
-		<td>Selecione uma ou mais funções do IAM. <br>As funções válidas são: *administrador*, *operador*, *editor* e *visualizador*. <br>Para obter mais informações sobre as ações que são permitidas por função, veja [Funções do IAM](/docs/services/cloud-monitoring/security_ov.html#iam_roles).</td>
+		<td>Selecione uma ou mais funções do IAM. <br>As funções válidas são: *administrador*, *operador*, *editor* e *visualizador*. <br>Para obter mais informações sobre as ações que são permitidas por função, veja [Funções do IAM](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#iam_roles).</td>
 		<td>Exigido</td>
 	  </tr>
 	  <tr>
@@ -90,13 +90,13 @@ Conclua as etapas a seguir para conceder acesso a um usuário para visualizar m�
 
 1. (Pré-requisito) Instale a CLI do {{site.data.keyword.Bluemix_notm}}.
 
-   Para obter mais informações, veja [Instalando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#overview).
+   Para obter mais informações, consulte [Instalando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
    
    Se a CLI estiver instalada, continue com a próxima etapa.
 	
 2. Efetue login em uma região, uma organização e um espaço no {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 	
 3. Obtenha o ID da conta. 
 
@@ -129,7 +129,7 @@ Conclua as etapas a seguir para conceder acesso a um usuário para visualizar m�
 	
 	    Por exemplo, solicite ao usuário para executar os comandos a seguir para obter o ID do usuário:
 		
-		Obtenha o token do IAM. Para obter mais informações, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli).
+		Obtenha o token do IAM. Para obter mais informações, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli).
 
         Obtenha os dados do token do IAM que estão entre os primeiros 2 pontos no token do IAM. Exporte os dados para uma variável shell, como `$user_data`. 
 		
@@ -167,7 +167,7 @@ Conclua as etapas a seguir para conceder acesso a um usuário para visualizar m�
 		```
 		{: codeblock}
 
-3. Convide o usuário para a conta se ele ainda não for um membro. Para obter mais informações, veja [Convidando usuários](/docs/iam/iamuserinv.html#iamuserinv).
+3. Convide o usuário para a conta se ele ainda não for um membro. Para obter mais informações, veja [Convidando usuários](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
     Por exemplo, execute o comando a seguir para convidar o usuário xxx@yyy.com para a conta zzz@ggg.com:
 	
@@ -201,7 +201,7 @@ Conclua as etapas a seguir para conceder acesso a um usuário para visualizar m�
 	
 5. Obtenha o token do IAM para seu ID do usuário.
 
-    Para obter mais informações, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli).
+    Para obter mais informações, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli).
 
     Exporte o token do IAM para uma variável shell como `$iam_token`, por exemplo:
 	
@@ -252,7 +252,7 @@ Conclua as etapas a seguir para conceder permissões a um usuário para trabalha
 	
 3. Se o usuário é um membro da conta, selecione o nome do usuário na lista ou clique em **Gerenciar usuário** no menu *Ações*.
 
-    Se o usuário não é um membro da conta, veja [Convidando usuários](/docs/iam/iamuserinv.html#iamuserinv).
+    Se o usuário não é um membro da conta, veja [Convidando usuários](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Clique em  ** Designar organização **.
 
@@ -282,7 +282,7 @@ Conclua as etapas a seguir para conceder permissões a um usuário para trabalha
 	  </tr>
 	  <tr>
 	    <td>Funções de espaço</td>
-		<td>Escolha uma função de espaço na lista. <br>Os valores válidos são: **Manager**, **Auditor**, **Developer** e **No space role**. Para obter mais informações, consulte [Funções do Cloud Foundry](/docs/services/cloud-monitoring/security_ov.html#bmx_roles).</td>
+		<td>Escolha uma função de espaço na lista. <br>Os valores válidos são: **Manager**, **Auditor**, **Developer** e **No space role**. Para obter mais informações, consulte [Funções do Cloud Foundry](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#bmx_roles).</td>
 	  </tr>
 	</table>
 	

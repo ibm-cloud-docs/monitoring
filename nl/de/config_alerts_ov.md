@@ -80,9 +80,9 @@ Um einen Alert für eine Metrikabfrage mithilfe der Alert-API zu definieren, mü
 
 2. Konfigurieren Sie einen Alert für eine Metrikabfrage, die im Grafana-Dashboard definiert ist.
 
-    * [Alert konfigurieren, der eine E-Mail sendet](/docs/services/cloud-monitoring/alerts/configure_email_alert.html#configure_email_alert).
-    * [Alert konfigurieren, der eine PagerDuty-Benachrichtigung sendet](/docs/services/cloud-monitoring/alerts/configure_pagerduty_alert.html#configure_pagerduty_alert).
-    * [Alert konfigurieren, der eine Webhook-Benachrichtigung sendet](/docs/services/cloud-monitoring/alerts/configure_webhook_alert.html#configure_webhook_alert).
+    * [Alert konfigurieren, der eine E-Mail sendet](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_email_alert#configure_email_alert).
+    * [Alert konfigurieren, der eine PagerDuty-Benachrichtigung sendet](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_pagerduty_alert#configure_pagerduty_alert).
+    * [Alert konfigurieren, der eine Webhook-Benachrichtigung sendet](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_webhook_alert#configure_webhook_alert).
 
     **Hinweis:** Sie können nur E-Mail-Benachrichtigungen für Metrikabfragen definieren, die in der Kontometrikdomäne angegeben sind.
 
@@ -106,7 +106,7 @@ Um einen Alert für eine Metrikabfrage direkt in einem Grafana-Dashboard zu defi
 
 2. Konfigurieren Sie einen Alert für eine Metrikabfrage, die im Grafana-Dashboard definiert ist.
 
-    Weitere Informationen finden Sie unter [Alerts in Grafana konfigurieren](/docs/services/cloud-monitoring/alerts/config_alerts_grafana.html#config_alerts_grafana).
+    Weitere Informationen finden Sie unter [Alerts in Grafana konfigurieren](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-config_alerts_grafana#config_alerts_grafana).
 
 
 ## Alertstatus
@@ -141,7 +141,7 @@ Der Status eines Alerts wird verwendet, um den Status in einem der folgenden Sze
 
 Wenn zum Beispiel ein Warnungsschwellenwert überschritten wird, wird ein Protokollsatz generiert, der den Übergang von *OK* zu *WARNING* aufzeichnet. Ebenso wird ein Protokollsatz generiert, wenn der Wert wieder unter den Schwellenwert sinkt. Dieser Protokollsatz zeichnet dann den Übergang von *WARNING* zu *OK* auf.
 
-Weitere Informationen finden Sie unter [Verlaufsprotokoll einer Regel abrufen](/docs/services/cloud-monitoring/alerts/retrieve_history.html#retrieve_history).
+Weitere Informationen finden Sie unter [Verlaufsprotokoll einer Regel abrufen](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#retrieve_history).
 
 
 ## Regeln
@@ -149,13 +149,13 @@ Weitere Informationen finden Sie unter [Verlaufsprotokoll einer Regel abrufen](/
 
 Eine Regel beschreibt die zu überwachende Metrikabfrage, den Schwellenwert und die Aktion, die ausgeführt werden soll, wenn der Schwellenwert überschritten wird. 
 
-* Sie können mithilfe der Alert-API eine Regel erstellen, löschen, aktualisieren, Details für eine Regel anzeigen und alle Regeln auflisten. [Mit Regeln arbeiten](/docs/services/cloud-monitoring/alerts/rules.html#rules).
+* Sie können mithilfe der Alert-API eine Regel erstellen, löschen, aktualisieren, Details für eine Regel anzeigen und alle Regeln auflisten. [Mit Regeln arbeiten](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#rules).
 
-    * Informationen zum Erstellen einer Regel finden Sie unter [Eine Regel erstellen](/docs/services/cloud-monitoring/alerts/rules.html#create).
-	* Informationen zum Löschen einer Regel finden Sie unter [Eine Regel löschen](/docs/services/cloud-monitoring/alerts/rules.html#delete).
-	* Informationen zum Aktualisieren einer Regel finden Sie unter [Eine Regel aktualisieren](/docs/services/cloud-monitoring/alerts/rules.html#update).
-	* Informationen zum Auflisten aller Regeln finden Sie unter [Alle Regeln auflisten](/docs/services/cloud-monitoring/alerts/rules.html#list).
-	* Informationen zum Anzeigen von Informationen zu einer Regel finden Sie unter [Details einer Regel anzeigen](/docs/services/cloud-monitoring/alerts/rules.html#showing-the-details-of-a-rule).
+    * Informationen zum Erstellen einer Regel finden Sie unter [Eine Regel erstellen](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create).
+	* Informationen zum Löschen einer Regel finden Sie unter [Eine Regel löschen](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#delete).
+	* Informationen zum Aktualisieren einer Regel finden Sie unter [Eine Regel aktualisieren](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#update).
+	* Informationen zum Auflisten aller Regeln finden Sie unter [Alle Regeln auflisten](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#list).
+	* Informationen zum Anzeigen von Informationen zu einer Regel finden Sie unter [Details einer Regel anzeigen](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#showing-the-details-of-a-rule).
 
 * Das Alertsystem überprüft alle 5 Minuten die Regeln, die im Bereich aktiviert sind.
 
@@ -274,11 +274,11 @@ Eine Benachrichtigung beschreibt die Methode und die Details, die für die Benac
 
 * Sie können die [Alerts-REST-API](https://console.bluemix.net/apidocs/940-ibm-cloud-monitoring-alerts-api?&language=node#introduction){: new_window} verwenden, um eine Benachrichtigung zu erstellen, zu löschen oder zu aktualisieren, um die Details einer Benachrichtigung anzuzeigen und um die Benachrichtigungen aufzulisten, die in einem Bereich definiert sind.
 
-    * Informationen zum Erstellen einer Benachrichtigung finden Sie unter [Eine Benachrichtigung erstellen ](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create).
-	* Informationen zum Löschen einer Benachrichtigung finden Sie unter [Eine Benachrichtigung löschen](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_delete).
-	* Informationen zum Aktualisieren einer Benachrichtigung finden Sie unter [Eine Benachrichtigung aktualisieren](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_update).
-	* Informationen zum Auflisten aller Benachrichtigungen finden Sie unter [Alle Benachrichtigungen auflisten](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_list).
-	* Informationen zum Anzeigen von Informationen zu einer Benachrichtigung finden Sie unter [Details einer Benachrichtigung anzeigen](/docs/services/cloud-monitoring/alerts/notifications.html#show).
+    * Informationen zum Erstellen einer Benachrichtigung finden Sie unter [Eine Benachrichtigung erstellen ](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create).
+	* Informationen zum Löschen einer Benachrichtigung finden Sie unter [Eine Benachrichtigung löschen](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_delete).
+	* Informationen zum Aktualisieren einer Benachrichtigung finden Sie unter [Eine Benachrichtigung aktualisieren](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_update).
+	* Informationen zum Auflisten aller Benachrichtigungen finden Sie unter [Alle Benachrichtigungen auflisten](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_list).
+	* Informationen zum Anzeigen von Informationen zu einer Benachrichtigung finden Sie unter [Details einer Benachrichtigung anzeigen](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#show).
 
 * Sie können eine E-Mail-Benachrichtigung, eine PagerDuty-Konfiguration und eine Webhook-Benachrichtigung konfigurieren. 
 

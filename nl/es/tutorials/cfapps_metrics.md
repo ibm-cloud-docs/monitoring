@@ -49,11 +49,11 @@ Esta guía de aprendizaje presupone que está trabajando en la región EE.UU. su
 
     El ID de usuario para {{site.data.keyword.Bluemix_notm}} debe tener un rol de CF para el espacio donde se proporciona el servicio {{site.data.keyword.monitoringshort}} y la app CF. El rol necesario es *desarrollador*.
     
-    Para obtener más información, consulte [Otorgar un rol de CF a un usuario mediante la IU de IBM Cloud](/docs/services/cloud-monitoring/security/assign_policy.html#grant_permissions_ui_space).
+    Para obtener más información, consulte [Otorgar un rol de CF a un usuario mediante la IU de IBM Cloud](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#grant_permissions_ui_space).
 
 2. Suministre el servicio {{site.data.keyword.monitoringshort}} en un espacio donde tiene permisos para suministrar servicios en la región EE.UU. sur.
 
-    Para obtener más información, consulte [Suministro del servicio {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to/provision.html#provision).
+    Para obtener más información, consulte [Suministro del servicio {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 ## Paso 1: Otorgar permisos de usuario para trabajar con apps CF y el servicio {{site.data.keyword.monitoringshort}}
 {: #cfapps_step1}
@@ -66,7 +66,7 @@ Complete los pasos siguientes para otorgar permisos a un usuario para completar 
 
 1. Inicie sesión en la consola de {{site.data.keyword.Bluemix_notm}}.
 
-    Abra un navegador web y lance el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
+    Abra un navegador web e inicie el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
 	
 	Después de iniciar sesión con su ID de usuario y su contraseña, se abre la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
 
@@ -140,7 +140,7 @@ Inicie Grafana desde un navegador y establezca el dominio de {{site.data.keyword
 
     Especifique el URL del servicio {{site.data.keyword.monitoringshort}} para la región donde se suministra el servicio {{site.data.keyword.monitoringshort}}.
     
-    Para obtener los URL por región, consulte [URL para el servicio de Supervisión](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Para obtener los URL por región, consulte [URL para el servicio de supervisión](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Por ejemplo, para la región EE.UU. sur, inicie: [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -169,7 +169,7 @@ En Grafana, puede añadir filas para dividir el panel de control en secciones. U
 
 Defina la consulta que filtra los datos que se muestran en el gráfico. Esta consulta supervisa el porcentaje de utilización de CPU hacia el límite del contenedor.
 
-Para obtener información sobre el formato de la consulta, consulte [Formato de consulta de Grafana para apps CF](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format).
+Para obtener información sobre el formato de la consulta, consulte [Formato de consulta de Grafana para apps CF](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format).
     
 1. Añada un panel *Gráfico* para supervisar los nanosegundos de tiempo de cpu en todos los núcleos de un contenedor.
     
@@ -231,4 +231,4 @@ Guarde el panel de control para utilizarlo más adelante.
 ## Pasos siguientes
 {: #cfapps_next_steps}
 
-Defina una alerta para una métrica. Para obtener más información, consulte [Configuración de alertas](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Defina una alerta para una métrica. Para obtener más información, consulte [Configuración de alertas](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

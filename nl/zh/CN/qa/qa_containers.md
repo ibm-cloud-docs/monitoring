@@ -30,12 +30,12 @@ subcollection: cloud-monitoring
 下面是对 {{site.data.keyword.monitoringshort}} 服务和 {{site.data.keyword.containershort_notm}} 服务的常见问题的解答。
 {:shortdesc}
 
-* [对容器执行 Grafana 查询不显示数据或者发生错误](/docs/services/cloud-monitoring/qa/qa_containers.html#metric_format_change)
-* [如何在终端会话中设置集群环境？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)
-* [在哪里可以获取集群名称和集群标识？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa3)
-* [如何获取名称空间的列表？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa7)
-* [如何获取 Kubernetes 集群中名称空间的 pod 列表？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa8)
-* [如何按名称空间获取集群中的所有 pod？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa9)
+* [对容器执行 Grafana 查询不显示数据或者发生错误](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#metric_format_change)
+* [如何在终端会话中设置集群环境？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)
+* [在哪里可以获取集群名称和集群标识？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa3)
+* [如何获取名称空间的列表？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa7)
+* [如何获取 Kubernetes 集群中名称空间的 pod 列表？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa8)
+* [如何按名称空间获取集群中的所有 pod？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa9)
 
 ## 对容器执行 Grafana 查询不显示数据或者发生错误
 {: #metric_format_change}
@@ -51,9 +51,9 @@ subcollection: cloud-monitoring
 
 有效的新格式如下：
 
-* [容器的 CPU 度量值查询格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)
-* [工作程序的负载度量值查询格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers)
-* [容器的内存度量值查询格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)
+* [容器的 CPU 度量值查询格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)
+* [工作程序的负载度量值查询格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers)
+* [容器的内存度量值查询格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)
 
 将旧查询迁移到新格式，以在 Grafana 中对数据进行可视化。
 
@@ -100,7 +100,7 @@ subcollection: cloud-monitoring
       </tr>
       <tr>
         <td>帐户</td>
-        <td>收集度量值的帐户的 GUID。<br>此字段的格式如下：`a_ID`，其中 ID 是帐户的 GUID。<br>要获取帐户的 GUID，请参阅[如何获取帐户的 GUID](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid)。</td>
+        <td>收集度量值的帐户的 GUID。<br>此字段的格式如下：`a_ID`，其中 ID 是帐户的 GUID。<br>要获取帐户的 GUID，请参阅[如何获取帐户的 GUID](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid)。</td>
         <td>a_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
       </tr>
       <tr>
@@ -111,7 +111,7 @@ subcollection: cloud-monitoring
       <tr>
         <td>度量值</td>
         <td>为容器自动收集的度量值。</td>
-        <td>有关 CPU 度量值的列表，请参阅[容器的 CPU 度量值](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers)<br>有关内存度量值的列表，请参阅[内存度量值](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#memory_metrics)</td>
+        <td>有关 CPU 度量值的列表，请参阅[容器的 CPU 度量值](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers)<br>有关内存度量值的列表，请参阅[内存度量值](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#memory_metrics)</td>
       </tr>
       <tr>
         <td>pod 中的容器</td>
@@ -135,7 +135,7 @@ subcollection: cloud-monitoring
 
 要设置集群的上下文，请完成以下步骤：
 
-1. 登录到 {{site.data.keyword.Bluemix_notm}} 中与已创建集群关联的区域、组织和空间。有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+1. 登录到 {{site.data.keyword.Bluemix_notm}} 中与已创建集群关联的区域、组织和空间。有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
 2. 初始化 {{site.data.keyword.containershort_notm}} 服务插件。运行以下命令：
 
@@ -194,7 +194,7 @@ subcollection: cloud-monitoring
 
 
 
-1. 登录到 {{site.data.keyword.Bluemix_notm}} 中与已创建集群关联的区域、组织和空间。有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+1. 登录到 {{site.data.keyword.Bluemix_notm}} 中与已创建集群关联的区域、组织和空间。有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
 2. 列出帐户中可用的集群。运行以下命令： 
 
@@ -223,7 +223,7 @@ subcollection: cloud-monitoring
 
 请完成以下步骤：
 
-1. 设置集群上下文。有关更多信息，请参阅[如何在终端会话中设置集群环境？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)。
+1. 设置集群上下文。有关更多信息，请参阅[如何在终端会话中设置集群环境？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)。
 
 2. 列出所有名称空间。运行以下 kubectl 命令：
 
@@ -241,7 +241,7 @@ subcollection: cloud-monitoring
 
 
 
-1. 设置集群上下文。有关更多信息，请参阅[如何在终端会话中设置集群环境？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)。
+1. 设置集群上下文。有关更多信息，请参阅[如何在终端会话中设置集群环境？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)。
 
 2. 要获取 Kubernetes 集群中每个名称空间的 pod 列表，请运行以下命令：
 
@@ -257,7 +257,7 @@ subcollection: cloud-monitoring
 		
 请完成以下步骤：
 
-1. 设置集群上下文。有关更多信息，请参阅[如何在终端会话中设置集群环境？](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)。
+1. 设置集群上下文。有关更多信息，请参阅[如何在终端会话中设置集群环境？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)。
 	
 2. 要按名称空间获取集群中的所有 pod，请运行以下命令：
 

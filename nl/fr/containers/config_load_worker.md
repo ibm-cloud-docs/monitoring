@@ -30,7 +30,7 @@ subcollection: cloud-monitoring
 Dans {{site.data.keyword.Bluemix}}, certaines métriques de charge pour un agent sont automatiquement collectées. Pour les surveiller via {{site.data.keyword.monitoringlong}}, vous devez définir une requête Grafana. 
 {:shortdesc}
 
-Pour obtenir la liste des métriques de charge qui sont automatiquement collectées, voir [Métriques de charge pour les agents](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#load_metrics_workers).
+Pour obtenir la liste des métriques de charge qui sont automatiquement collectées, voir [Métriques de charge pour les agents](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#load_metrics_workers).
 
 
 ## Etape 1 : Collecte de données pour l'agent à surveiller
@@ -66,7 +66,7 @@ Si une organisation CF et un espace CF sont définis dans ces zones, les métriq
 ## Etape 2 : Lancement de Grafana
 {: #step25}
 
-Démarrez Grafana depuis un navigateur. Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Démarrez Grafana depuis un navigateur. Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 Assurez-vous que, dans Grafana, vous êtes connecté au compte dans lequel le cluster s'exécute. 
 
@@ -74,7 +74,7 @@ Assurez-vous que, dans Grafana, vous êtes connecté au compte dans lequel le cl
 
     Entrez l'adresse URL du service {{site.data.keyword.monitoringshort}} pour la région où vous avez créé le cluster. 
     
-    Pour obtenir les adresses URL par région, voir [URL pour le service de surveillance](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Pour obtenir les adresses URL par région, voir [URL pour le service de surveillance](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Par exemple, pour la région Sud des Etats-Unis, démarrez : [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -111,7 +111,7 @@ Pour créer un tableau de bord Grafana et définir une requête visant à survei
 
 3. Définissez la requête qui filtre les données affichées dans le graphique. 
 
-    Pour plus d'informations sur le format de la requête, voir [Format de requête des métriques de charge collectées pour les agents](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers).
+    Pour plus d'informations sur le format de la requête, voir [Format de requête des métriques de charge collectées pour les agents](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers).
 
     Dans l'onglet *Metrics*, sélectionnez **Add query**. <br>Une entrée de requête est ajoutée. Chaque requête est associée à une lettre.
 	
@@ -131,7 +131,7 @@ Pour créer un tableau de bord Grafana et définir une requête visant à survei
 	
 	7. Cliquez sur **Select metric** pour spécifier le type de métrique, puis cliquez sur **Select metric** pour spécifier le sous-type de métrique.
 	
-	    Pour obtenir une liste de métriques d'unité centrale, voir [Métriques d'unité centrale pour les agents](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#load_metrics_workers).
+	    Pour obtenir une liste de métriques d'unité centrale, voir [Métriques d'unité centrale pour les agents](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#load_metrics_workers).
 	
 	10. Cliquez sur le signe plus ![Icône Ajouter](images/grafana_plus_image.gif "Signe Plus"), puis choisissez une fonction. Vous pouvez ajouter une fonction pour transformer et combiner des données disponibles pour une métrique, et effectuer des calculs sur ces données.
 

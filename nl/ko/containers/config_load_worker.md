@@ -30,7 +30,7 @@ subcollection: cloud-monitoring
 {{site.data.keyword.Bluemix}}에서 작업자에 대해 선택된 로드 메트릭이 자동으로 수집됩니다. {{site.data.keyword.monitoringlong}}을 통해 모니터링하려면 Grafana 조회를 정의해야 합니다. 
 {:shortdesc}
 
-자동으로 수집되는 로드 메트릭에 대한 목록을 보려면 [작업자에 대한 로드 메트릭](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#load_metrics_workers)을 참조하십시오.
+자동으로 수집되는 로드 메트릭에 대한 목록을 보려면 [작업자에 대한 로드 메트릭](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#load_metrics_workers)을 참조하십시오.
 
 
 ## 1단계: 모니터링할 작업자에 대한 데이터 수집
@@ -66,7 +66,7 @@ $ ibmcloud cs cluster-get ClusterName --json
 ## 2단계: Grafana 실행
 {: #step25}
 
-브라우저에서 Grafana를 실행하십시오. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)을 참조하십시오.
+브라우저에서 Grafana를 실행하십시오. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)을 참조하십시오.
 
 Grafana에서 클러스터가 실행 중인 계정에 로그인되어 있는지 확인하십시오. 
 
@@ -74,7 +74,7 @@ Grafana에서 클러스터가 실행 중인 계정에 로그인되어 있는지 
 
     클러스터를 작성한 지역에 대한 {{site.data.keyword.monitoringshort}} 서비스 URL을 입력하십시오. 
     
-    지역별 URL을 가져오려면 [모니터링 서비스에 대한 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)을 참조하십시오.
+    지역별 URL을 가져오려면 [모니터링 서비스에 대한 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)을 참조하십시오.
 
     예를 들어, 미국 남부 지역의 경우 [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)을 실행하십시오.
 
@@ -111,7 +111,7 @@ Grafana에서 클러스터가 실행 중인 계정에 로그인되어 있는지 
 
 3. 그래프에 표시되는 데이터를 필터링하는 조회를 정의하십시오. 
 
-    조회의 형식에 대한 정보는 [작업자에 대해 수집된 로드 메트릭의 조회 형식](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers)을 참조하십시오.
+    조회의 형식에 대한 정보는 [작업자에 대해 수집된 로드 메트릭의 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers)을 참조하십시오.
 
     *메트릭* 탭에서 **조회 추가**를 선택하십시오. <br>조회 항목이 추가됩니다. 각 조회는 하나의 문자로 레이블 지정됩니다.
 	
@@ -131,7 +131,7 @@ Grafana에서 클러스터가 실행 중인 계정에 로그인되어 있는지 
 	
 	7. **메트릭 선택**을 클릭하여 메트릭 유형을 지정한 다음 **메트릭 선택**을 클릭하여 메트릭 하위 유형을 지정하십시오.
 	
-	    CPU 메트릭 목록은 [작업자에 대한 CPU 메트릭](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#load_metrics_workers)을 참조하십시오.
+	    CPU 메트릭 목록은 [작업자에 대한 CPU 메트릭](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#load_metrics_workers)을 참조하십시오.
 	
 	10. 더하기 이미지 ![추가 아이콘](images/grafana_plus_image.gif "더하기 이미지")를 클릭하고 함수를 선택하십시오. 함수를 추가하여 메트릭에 대해 사용 가능한 데이터를 변환하거나, 결합하거나, 이에 대한 계산을 수행할 수 있습니다.
 

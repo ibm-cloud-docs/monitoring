@@ -30,7 +30,7 @@ subcollection: cloud-monitoring
 [경보 API](https://console.bluemix.net/apidocs/940-ibm-cloud-monitoring-alerts-api?&language=node#introduction){: new_window}를 사용하여 {{site.data.keyword.monitoringshort}} 서비스에서 알림을 삭제할 수 있습니다.
 {:shortdesc}
 
-[{{site.data.keyword.Bluemix_notm}}의 지역에 로그인](/docs/services/cloud-monitoring/qa/cli_qa.html#login)한 후에 다음 단계를 완료하여 알림을 삭제하십시오.
+[{{site.data.keyword.Bluemix_notm}}의 지역에 로그인](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)한 후에 다음 단계를 완료하여 알림을 삭제하십시오.
 
 
 ## 1단계: 보안 토큰 가져오기
@@ -40,9 +40,9 @@ UAA 토큰, IAM 토큰 또는 API 키를 사용할 수 있습니다.
 
 다음 방법 중 하나를 선택하여 보안 토큰을 얻으십시오.
 	
-* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)를 참조하십시오.
-* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)를 참조하십시오.
-* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)를 참조하십시오.
+* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)를 참조하십시오.
+* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)를 참조하십시오.
+* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)를 참조하십시오.
 	
 예를 들어, IAM 토큰을 사용하려면 다음 명령을 실행하십시오.
 
@@ -141,7 +141,7 @@ curl -H "X-Auth-User-Token: apikey ${TOKEN}" -XGET METRICS_ENDPOINT/v1/alert/not
 	
 * Space는 영역의 GUID입니다. 
 	
-* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 
 
 ## 4단계: 알림 삭제
@@ -179,7 +179,7 @@ curl -H "X-Auth-User-Token: apikey ${TOKEN}" -XDELETE METRICS_ENDPOINT/v1/alert/
 	
 * Space는 영역의 GUID입니다. 
 	
-* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+* METRICS_ENDPOINT는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 
 * *name*은 삭제하려는 알림의 이름입니다.
 	

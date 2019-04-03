@@ -34,16 +34,16 @@ subcollection: cloud-monitoring
 
 1. {{site.data.keyword.Bluemix_notm}} で、地域、組織、およびスペースにログインします。 
 
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/cli_qa.html#login)を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)を参照してください。
 
 2. セキュリティー・トークンを取得します。 UAA トークン、IAM トークン、または API キーを使用することができます。 以下のいずれかの方法を選択して、セキュリティー・トークンを取得します。
 	
-	* UAA トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した UAA トークンの取得](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)を参照してください。
+	* UAA トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した UAA トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)をご覧ください。
 	
-	* IAM トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの 取得](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)を参照してください。
+	* IAM トークンを取得するには、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)をご覧ください。
 	
 	* API キーを取得する場合は、
-[API キーの取得](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)を参照してください。
+[API キーの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)を参照してください。
 	
 	{{site.data.keyword.Bluemix_notm}} にログインした同じ端末から、トークンに Token 変数を設定します。
 
@@ -107,9 +107,9 @@ subcollection: cloud-monitoring
 	
 4. ルールの履歴の取得
 
-    * 名前によりルールの履歴を取得するには、[名前を使用したルールの履歴の取得](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_name)を参照してください。
-	* 一定期間のルールの履歴を取得するには、[過去 48 時間のルールの履歴の取得](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_time)を参照してください。
-	* 一定期間のルールの履歴を取得するには、[ルールの履歴の過去 3 エントリーの取得](/docs/services/cloud-monitoring/alerts/retrieve_history.html#number)を参照してください。
+    * 名前によりルールの履歴を取得するには、[名前を使用したルールの履歴の取得](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_name)を参照してください。
+	* 一定期間のルールの履歴を取得するには、[過去 48 時間のルールの履歴の取得](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_time)を参照してください。
+	* 一定期間のルールの履歴を取得するには、[ルールの履歴の過去 3 エントリーの取得](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#number)を参照してください。
 	
 	
 ## ルール名によるルールの履歴の取得
@@ -141,7 +141,7 @@ curl -XGET --header "X-Auth-User-Token: Auth_Type ${Token}" --header "X-Auth-Sco
 * *RULE_NAME* は、アラートをトリガーするために使用されるルールの名前です。 この値は、*name* フィールドに指定されている値です。
 	
 * *METRICS_ENDPOINT* はサービスへのエントリー・ポイントを示しています。 各地域の URL は異なります。 地域ごとのエンドポイントのリストを取得するには、
-[エンドポイント](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)を参照してください。
+[エンドポイント](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)を参照してください。
 	
     
 例えば、ルール `highNginxCPU` の履歴は以下のようになります。
@@ -208,7 +208,7 @@ curl -H "X-Auth-User-Token: iam $Token" -H "X-Auth-Scope-Id:$Space" METRICS_ENDP
 * *RULE_NAME* は、アラートをトリガーするために使用されるルールの名前です。 この値は、*name* フィールドに指定されている値です。
 	
 * *METRICS_ENDPOINT* はサービスへのエントリー・ポイントを示しています。 各地域の URL は異なります。 地域ごとのエンドポイントのリストを取得するには、
-[エンドポイント](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)を参照してください。
+[エンドポイント](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)を参照してください。
 	
 
 ## ルールの履歴の過去 3 エントリーの取得
@@ -240,5 +240,5 @@ curl -H "X-Auth-User-Token: iam $Token" -H "X-Auth-Scope-Id:$Space" METRICS_ENDP
 * *RULE_NAME* は、アラートをトリガーするために使用されるルールの名前です。 この値は、*name* フィールドに指定されている値です。
 	
 * *METRICS_ENDPOINT* はサービスへのエントリー・ポイントを示しています。 各地域の URL は異なります。 地域ごとのエンドポイントのリストを取得するには、
-[エンドポイント](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)を参照してください。
+[エンドポイント](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)を参照してください。
 	

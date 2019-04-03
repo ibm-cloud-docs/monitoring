@@ -55,7 +55,7 @@ Führen Sie die folgenden Schritte aus, um Ihren Serviceplan in {{site.data.keyw
 
 1. Melden Sie sich bei einer Region, einer Organisation und einem Bereich in {{site.data.keyword.Bluemix_notm}} an. 
 
-    Weitere Informationen finden Sie unter [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Weitere Informationen finden Sie in [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 	
 2. Führen Sie den Befehl `ibmcloud service list` aus, um Ihren aktuellen Plan zu überprüfen und um den {{site.data.keyword.loganalysisshort}}-Servicenamen aus der Liste der Services abzurufen, die im Bereich verfügbar sind. 
 

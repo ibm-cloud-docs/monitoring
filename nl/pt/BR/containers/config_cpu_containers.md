@@ -32,7 +32,7 @@ uma consulta do Grafana.
 {:shortdesc}
 
 Para obter uma lista das métricas da CPU que são coletadas automaticamente, consulte
-[Métricas da CPU para contêineres](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers).
+[Métricas da CPU para contêineres](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers).
 
 
 ## Etapa 1: Reunir os dados para o contêiner que você deseja monitorar
@@ -78,7 +78,7 @@ o domínio de espaço que estiver associado a esse espaço.
 ## Etapa 2: Ativar o Grafana
 {: #step24}
 
-Ative o Grafana por meio de um navegador. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Ative o Grafana por meio de um navegador. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 No Grafana, assegure-se de que você está com login efetuado na conta na qual o cluster está em
 execução. 
@@ -89,7 +89,7 @@ execução.
     
     Para obter as URLs por região, consulte
 [URLs para o serviço de
-monitoramento](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+monitoramento](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Por exemplo, para a região Sul dos EUA, ative:
 [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
@@ -136,7 +136,7 @@ de CPU de um contêiner:
 
 3. Defina a consulta que filtra os dados que são exibidos no gráfico. 
 
-    Para obter informações sobre o formato da consulta, veja [Formato de consulta para métricas de CPU coletadas para contêineres](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers).
+    Para obter informações sobre o formato da consulta, veja [Formato de consulta para métricas de CPU coletadas para contêineres](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers).
 
     Na guia *Métricas*, selecione **Incluir consulta**. </br>Uma entrada de consulta é incluído. Cada consulta é rotulada com uma letra.
 	
@@ -171,7 +171,7 @@ que você deseja monitorar.
 seguida, clique em **Selecionar métrica** para especificar o subtipo de métrica.
 	
 	    Para obter uma lista de métricas da CPU, consulte
-[Métricas da CPU para contêineres](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers).
+[Métricas da CPU para contêineres](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers).
 	
 	11. Clique na imagem de mais ![Ícones Incluir](images/grafana_plus_image.gif "Imagem de mais") e escolha uma função. Será possível incluir uma função para transformar, combinar e executar cálculos nos dados que estiverem disponíveis para uma métrica.
 

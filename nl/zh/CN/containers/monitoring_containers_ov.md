@@ -33,7 +33,7 @@ subcollection: cloud-monitoring
 **注：** 
 
 * 系统将针对在标准集群中运行的容器收集度量值，并可通过 {{site.data.keyword.monitoringshort}} 服务对这些度量值进行监视。
-* 要监视集群度量值，必须供应 Monitoring 服务的实例。有关更多信息，请参阅[供应 Monitoring 服务](/docs/services/cloud-monitoring/how-to/provision.html#provision)。
+* 要监视集群度量值，必须供应 Monitoring 服务的实例。有关更多信息，请参阅[供应 Monitoring 服务](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision)。
 
 
 ## 关于在 Public 中进行监视
@@ -232,20 +232,20 @@ subcollection: cloud-monitoring
 
 {{site.data.keyword.monitoringlong}} 服务使用 Grafana（一种开放式源代码分析和可视化平台）通过各种图形（例如，图表和表）来对度量值进行监视、搜索、分析和可视化表示。
 
-您可以通过浏览器启动 Grafana。 有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)。
+您可以通过浏览器启动 Grafana。 有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)。
 
 要监视在 Kubernetes 集群中运行的容器和工作程序，必须在 Grafana 中针对每种资源定义一个查询：
 
-* 要定义用于监视容器的 CPU 度量值的查询，请参阅[在 Grafana 中配置容器的 CPU 度量值](/docs/services/cloud-monitoring/containers/config_cpu_containers.html#config_cpu_containers)。
-* 要定义用于监视容器的内存度量值的查询，请参阅[在 Grafana 中配置容器的内存度量值](/docs/services/cloud-monitoring/containers/config_mem_container.html#config_mem_container)。
-* 要定义用于监视工作程序的负载度量值的查询，请参阅[在 Grafana 中配置工作程序的负载度量值](/docs/services/cloud-monitoring/containers/config_load_worker.html#config_load_worker)。
+* 要定义用于监视容器的 CPU 度量值的查询，请参阅[在 Grafana 中配置容器的 CPU 度量值](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_cpu_containers#config_cpu_containers)。
+* 要定义用于监视容器的内存度量值的查询，请参阅[在 Grafana 中配置容器的内存度量值](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_mem_container#config_mem_container)。
+* 要定义用于监视工作程序的负载度量值的查询，请参阅[在 Grafana 中配置工作程序的负载度量值](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_load_worker#config_load_worker)。
 
 
 查询的格式根据资源类型和查询类型而有所不同：
 
-* 有关用于监视容器 CPU 的查询格式的更多信息，请参阅[容器的 CPU 度量值查询格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)。 
-* 有关用于监视工作程序负载的查询格式的更多信息，请参阅[工作程序的负载度量值查询格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers)。
-* 有关用于监视容器内存的查询格式的更多信息，请参阅[容器的内存度量值查询格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)。
+* 有关用于监视容器 CPU 的查询格式的更多信息，请参阅[容器的 CPU 度量值查询格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)。 
+* 有关用于监视工作程序负载的查询格式的更多信息，请参阅[工作程序的负载度量值查询格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers)。
+* 有关用于监视容器内存的查询格式的更多信息，请参阅[容器的内存度量值查询格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)。
 
 
 ## 在 {{site.data.keyword.Bluemix_notm}} 中配置定制防火墙配置的网络流量
@@ -287,6 +287,6 @@ subcollection: cloud-monitoring
 ## 教程
 {: #tutorial}
 
-要了解如何使用 {{site.data.keyword.monitoringshort}} 服务来监视容器的性能，请参阅[在 Grafana 中分析部署在 Kubernetes 集群中的应用程序的度量值](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics)。
+要了解如何使用 {{site.data.keyword.monitoringshort}} 服务来监视容器的性能，请参阅[在 Grafana 中分析部署在 Kubernetes 集群中的应用程序的度量值](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics)。
 
-要了解如何在 {{site.data.keyword.monitoringshort}} 服务中创建 Grafana 仪表板以监视集群的性能，请参阅[创建 Grafana 仪表板以监视 Kubernetes 集群](/docs/services/cloud-monitoring/tutorials/container_grafana_dashboard.html#container_grafana_dashboard)。
+要了解如何在 {{site.data.keyword.monitoringshort}} 服务中创建 Grafana 仪表板以监视集群的性能，请参阅[创建 Grafana 仪表板以监视 Kubernetes 集群](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_grafana_dashboard#container_grafana_dashboard)。

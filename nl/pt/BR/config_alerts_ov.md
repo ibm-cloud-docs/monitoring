@@ -80,9 +80,9 @@ Para definir um alerta em uma consulta de métrica usando a API Alerts, deve-se:
 
 2. Configure um alerta em uma consulta de métrica que seja definida no painel do Grafana.
 
-    * [Configurando um alerta que envia um e-mail](/docs/services/cloud-monitoring/alerts/configure_email_alert.html#configure_email_alert).
-    * [Configurando um alerta que envia uma notificação do PagerDuty](/docs/services/cloud-monitoring/alerts/configure_pagerduty_alert.html#configure_pagerduty_alert).
-    * [Configurando um alerta que envia uma notificação do webhook](/docs/services/cloud-monitoring/alerts/configure_webhook_alert.html#configure_webhook_alert).
+    * [Configurando um alerta que envia um e-mail](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_email_alert#configure_email_alert).
+    * [Configurando um alerta que envia uma notificação do PagerDuty](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_pagerduty_alert#configure_pagerduty_alert).
+    * [Configurando um alerta que envia uma notificação do webhook](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_webhook_alert#configure_webhook_alert).
 
     **Nota:** é possível definir notificações por e-mail somente para consultas de métrica definidas no domínio de métrica da conta.
 
@@ -106,7 +106,7 @@ Para definir um alerta em uma consulta de métrica diretamente em um painel do G
 
 2. Configure um alerta em uma consulta de métrica que seja definida no painel do Grafana.
 
-    Para obter mais informações, consulte [Configurando alertas no Grafana](/docs/services/cloud-monitoring/alerts/config_alerts_grafana.html#config_alerts_grafana).
+    Para obter mais informações, consulte [Configurando alertas no Grafana](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-config_alerts_grafana#config_alerts_grafana).
 
 
 ## Estados do Alerta
@@ -141,7 +141,7 @@ O estado de um alerta é usado para definir o status em qualquer um dos seguinte
 
 Por exemplo, se um limite de aviso for excedido, então, será gerado um registro de histórico que registrará a transição de *OK* para *AVISO*. Da mesma forma, quando o valor ficar abaixo do limite, será gerado um registro de histórico para registrar a transição de *AVISO* para *OK*.
 
-Para obter mais informações, veja [Recuperando o histórico de uma regra](/docs/services/cloud-monitoring/alerts/retrieve_history.html#retrieve_history).
+Para obter mais informações, veja [Recuperando o histórico de uma regra](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#retrieve_history).
 
 
 ## Rules
@@ -149,13 +149,13 @@ Para obter mais informações, veja [Recuperando o histórico de uma regra](/doc
 
 Uma regra descreve a consulta de métrica a ser monitorada, o valor do limite e a ação a ser executada quando o limite é cruzado. 
 
-* É possível criar, excluir, atualizar e mostrar os detalhes para uma regra, além de listar todas as regras usando a API de Alertas. Para obter mais informações, consulte [Trabalhando com regras](/docs/services/cloud-monitoring/alerts/rules.html#rules).
+* É possível criar, excluir, atualizar e mostrar os detalhes para uma regra, além de listar todas as regras usando a API de Alertas. Para obter mais informações, consulte [Trabalhando com regras](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#rules).
 
-    * Para criar uma regra, veja [Criando uma regra](/docs/services/cloud-monitoring/alerts/rules.html#create).
-	* Para excluir uma regra, veja [Excluindo uma regra](/docs/services/cloud-monitoring/alerts/rules.html#delete).
-	* Para atualizar uma regra, veja [Atualizando uma regra](/docs/services/cloud-monitoring/alerts/rules.html#update).
-	* Para listar todas as regras, veja [Listando todas as regras](/docs/services/cloud-monitoring/alerts/rules.html#list).
-	* Para mostrar informações sobre uma regra, veja [Mostrando os detalhes de uma regra](/docs/services/cloud-monitoring/alerts/rules.html#showing-the-details-of-a-rule).
+    * Para criar uma regra, veja [Criando uma regra](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create).
+	* Para excluir uma regra, veja [Excluindo uma regra](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#delete).
+	* Para atualizar uma regra, veja [Atualizando uma regra](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#update).
+	* Para listar todas as regras, veja [Listando todas as regras](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#list).
+	* Para mostrar informações sobre uma regra, veja [Mostrando os detalhes de uma regra](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#showing-the-details-of-a-rule).
 
 * O sistema de alerta verificará a cada 5 minutos as regras que estiverem ativadas no espaço.
 
@@ -277,11 +277,11 @@ Uma notificação descreve o método e os detalhes usados para notificar quando 
 * É possível usar a [API de REST de Alertas](https://console.bluemix.net/apidocs/940-ibm-cloud-monitoring-alerts-api?&language=node#introduction){: new_window} para criar, excluir e atualizar uma notificação, para mostrar os detalhes para uma notificação e
 para listar as notificações que são definidas em um espaço.
 
-    * Para criar uma notificação, veja [Criando uma notificação](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create).
-	* Para excluir uma notificação, veja [Excluindo uma notificação](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_delete).
-	* Para atualizar uma notificação, veja [Atualizando uma notificação](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_update).
-	* Para listar todas as notificações, veja [Listando todas as notificações](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_list).
-	* Para mostrar informações sobre uma notificação, veja [Mostrando os detalhes de uma notificação](/docs/services/cloud-monitoring/alerts/notifications.html#show).
+    * Para criar uma notificação, veja [Criando uma notificação](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create).
+	* Para excluir uma notificação, veja [Excluindo uma notificação](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_delete).
+	* Para atualizar uma notificação, veja [Atualizando uma notificação](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_update).
+	* Para listar todas as notificações, veja [Listando todas as notificações](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_list).
+	* Para mostrar informações sobre uma notificação, veja [Mostrando os detalhes de uma notificação](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#show).
 
 * É possível configurar uma notificação por e-mail, uma configuração do PagerDuty e uma notificação de webhook. 
 

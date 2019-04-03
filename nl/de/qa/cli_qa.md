@@ -30,11 +30,11 @@ subcollection: cloud-monitoring
 Hier sind die Antworten auf häufig gestellte Fragen zur Verwendung der {{site.data.keyword.Bluemix}}-CLI mit dem {{site.data.keyword.monitoringshort}}-Service. 
 {:shortdesc}
 
-* [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa/cli_qa.html#login)
-* [ Wie installiere ich die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle?](/docs/services/cloud-monitoring/qa/cli_qa.html#install_bmx_cli)
-* [Wie erhalte ich die GUID eines Kontos?](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid)
-* [Wie erhalte ich die GUID einer Organisation?](/docs/services/cloud-monitoring/qa/cli_qa.html#org_guid)
-* [Wie erhalte ich die GUID eines Bereichs?](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid)
+* [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)
+* [ Wie installiere ich die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#install_bmx_cli)
+* [Wie erhalte ich die GUID eines Kontos?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid)
+* [Wie erhalte ich die GUID einer Organisation?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#org_guid)
+* [Wie erhalte ich die GUID eines Bereichs?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid)
 
 ## Wie melde ich mich bei IBM Cloud an?
 {: #login}
@@ -97,7 +97,7 @@ Dabei gilt Folgendes:
 ## Wie installiere ich die IBM Cloud-Benutzerschnittstelle?
 {: #install_bmx_cli}
 
-Weitere Informationen finden Sie unter [{{site.data.keyword.Bluemix_notm}}-CLI herunterladen und installieren](/docs/cli/index.html#overview).
+Weitere Informationen finden Sie in [{{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle herunterladen und installieren](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
 
 ## Wie erhalte ich die GUID eines Kontos?
 {: #account_guid}

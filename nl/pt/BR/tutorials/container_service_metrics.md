@@ -55,7 +55,7 @@ Este tutorial percorre as etapas necessárias para o funcionamento do cenário d
     
     * Uma política do IAM para o {{site.data.keyword.containershort}} com permissões de *operador* ou *administrador*.
     
-    Para obter mais informações, consulte [Designar uma política do IAM a um usuário por meio da IU do IBM Cloud](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui).
+    Para obter mais informações, consulte [Designar uma política do IAM a um usuário por meio da IU do IBM Cloud](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui).
 
 2. Tenha uma sessão de terminal da qual seja possível gerenciar o cluster do Kubernetes e implementar apps por meio da linha de comandos. Os exemplos neste tutorial são fornecidos para um sistema Ubuntu Linux.
 
@@ -64,7 +64,7 @@ Este tutorial percorre as etapas necessárias para o funcionamento do cenário d
     * Instale a CLI do {{site.data.keyword.Bluemix_notm}}. 
     * Instale a CLI do {{site.data.keyword.containershort}} para criar e gerenciar seus clusters do Kubernetes no {{site.data.keyword.containershort}} e para implementar apps conteinerizados em seu cluster.
     
-    Para obter mais informações, veja [Instalando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#overview).
+    Para obter mais informações, consulte [Instalando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
     
     
 
@@ -76,11 +76,11 @@ Este tutorial percorre as etapas necessárias para o funcionamento do cenário d
 
 Conclua as etapas a seguir:
 
-1. Crie um cluster padrão do Kubernetes. Para obter mais informações, consulte [Criar um cluster padrão do Kubernetes](/docs/containers/cs_tutorials.html#cs_cluster_tutorial).
+1. Crie um cluster padrão do Kubernetes. Para obter mais informações, consulte [Criar um cluster padrão do Kubernetes](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial).
 
 2. Configure o contexto do cluster em um terminal. Após o contexto ser configurado, é possível gerenciar o cluster do Kubernetes e implementar o aplicativo no cluster do Kubernetes.
 
-    Efetue login na região, na organização e no espaço no {{site.data.keyword.Bluemix_notm}} que está associado ao cluster criado. Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/CloudLogAnalysis/qa/cli_qa.html#login).
+    Efetue login na região, na organização e no espaço no {{site.data.keyword.Bluemix_notm}} que está associado ao cluster criado. Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/CloudLogAnalysis/qa?topic=cloudloganalysis-cli_qa#login).
 
 	Inicialize o plug-in do serviço {{site.data.keyword.containershort}}.
 
@@ -126,7 +126,7 @@ Conclua as etapas a seguir para conceder permissões a um usuário para trabalha
 	
 3. Se o usuário é um membro da conta, selecione o nome do usuário na lista ou clique em **Gerenciar usuário** no menu *Ações*.
 
-    Se o usuário não é um membro da conta, veja [Convidando usuários](/docs/iam/iamuserinv.html#iamuserinv).
+    Se o usuário não é um membro da conta, veja [Convidando usuários](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Selecione **Políticas de acesso > Designar acesso > Designar acesso a recursos**.
 
@@ -171,7 +171,7 @@ Conclua as etapas a seguir para conceder as permissões de proprietário de chav
 ## Etapa 4: implementar um app de amostra no cluster do Kubernetes
 {: #ks_step4}
 
-Implemente e execute um aplicativo de amostra no cluster do Kubernetes. Conclua as etapas no tutorial a seguir para implementar o app de amostra: [Lição 1: Implementando apps de instância única em clusters do Kubernetes](/docs/containers/cs_tutorials_apps.html#cs_apps_tutorial_lesson1).
+Implemente e execute um aplicativo de amostra no cluster do Kubernetes. Conclua as etapas no tutorial a seguir para implementar o app de amostra: [Lição 1: Implementando apps de instância única em clusters do Kubernetes](/docs/containers?topic=containers-cs_apps_tutorial#cs_apps_tutorial_lesson1).
 
 O app é um app Hello World Node.js:
 
@@ -197,7 +197,7 @@ Nesse aplicativo de amostra, quando você testa seu app em um navegador, o app g
 Ative o Grafana em um navegador e configure o domínio do {{site.data.keyword.monitoringshort}}
 no qual é possível visualizar as métricas do cluster.
 
-Para analisar métricas para um cluster, deve-se acessar o Grafana na região Pública de nuvem na qual o cluster estiver criado. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Para analisar métricas para um cluster, deve-se acessar o Grafana na região Pública de nuvem na qual o cluster estiver criado. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 1. Em um navegador, ative o Grafana. 
 
@@ -205,7 +205,7 @@ Para analisar métricas para um cluster, deve-se acessar o Grafana na região P�
     
     Para obter as URLs por região, consulte
 [URLs para o serviço de
-monitoramento](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+monitoramento](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Por exemplo, para a região Sul dos EUA, ative:
 [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
@@ -237,4 +237,4 @@ O painel de amostra é aberto.
 ## Etapas Seguintes
 {: #ks_next_steps}
 
-Defina um alerta para uma métrica. Para obter mais informações, consulte [Configurando alertas](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Defina um alerta para uma métrica. Para obter mais informações, consulte [Configurando alertas](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

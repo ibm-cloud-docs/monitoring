@@ -49,11 +49,11 @@ subcollection: cloud-monitoring
 
     您的 {{site.data.keyword.Bluemix_notm}} 使用者 ID 必須具有 {{site.data.keyword.monitoringshort}} 服務及 CF 應用程式佈建所在空間的 CF 角色。此必要角色是 *developer*。
     
-    如需相關資訊，請參閱[使用 IBM Cloud 使用者介面將 CF 角色授與使用者](/docs/services/cloud-monitoring/security/assign_policy.html#grant_permissions_ui_space)。
+    如需相關資訊，請參閱[使用 IBM Cloud 使用者介面將 CF 角色授與使用者](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#grant_permissions_ui_space)。
 
 2. 在您具有於「美國南部」地區佈建服務之許可權的空間中，佈建 {{site.data.keyword.monitoringshort}} 服務。
 
-    如需相關資訊，請參閱[佈建 {{site.data.keyword.monitoringshort}} 服務](/docs/services/cloud-monitoring/how-to/provision.html#provision)。
+    如需相關資訊，請參閱[佈建 {{site.data.keyword.monitoringshort}} 服務](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision)。
 
 ## 步驟 1：將使用 CF 應用程式及 {{site.data.keyword.monitoringshort}} 服務的許可權授與使用者
 {: #cfapps_step1}
@@ -140,7 +140,7 @@ subcollection: cloud-monitoring
 
     輸入 {{site.data.keyword.monitoringshort}} 服務佈建所在地區的 {{site.data.keyword.monitoringshort}} 服務 URL。
     
-    若要取得每個地區的 URL，請參閱[監視服務的 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)。
+    若要取得每個地區的 URL，請參閱[監視服務的 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)。
 
     例如，對於「美國南部」地區，啟動：[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)。
 
@@ -169,7 +169,7 @@ subcollection: cloud-monitoring
 
 定義過濾圖形中所顯示資料的查詢。此查詢會監視達到容器限制的 CPU 用量百分比。
 
-如需查詢格式的相關資訊，請參閱 [CF 應用程式的 Grafana 查詢格式](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)。
+如需查詢格式的相關資訊，請參閱 [CF 應用程式的 Grafana 查詢格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)。
     
 1. 新增*圖形*畫面，以監視容器的所有核心的 CPU 時間（十億分之一秒）。
     
@@ -231,4 +231,4 @@ subcollection: cloud-monitoring
 ## 後續步驟
 {: #cfapps_next_steps}
 
-定義度量值的警示。如需相關資訊，請參閱[配置警示](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)。
+定義度量值的警示。如需相關資訊，請參閱[配置警示](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)。

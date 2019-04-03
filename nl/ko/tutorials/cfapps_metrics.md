@@ -49,11 +49,11 @@ CF 앱에 대한 메트릭을 검색하고 분석하는 방법에 대해 배웁�
 
     {{site.data.keyword.Bluemix_notm}}에 대한 사용자 ID에 {{site.data.keyword.monitoringshort}} 서비스 및 CF 앱이 프로비저닝된 영역에 대한 CF 역할이 있어야 합니다. 필수 역할은 *개발자*입니다.
     
-    자세한 정보는 [IBM Cloud UI를 사용하여 사용자에게 CF 역할 부여](/docs/services/cloud-monitoring/security/assign_policy.html#grant_permissions_ui_space)를 참조하십시오.
+    자세한 정보는 [IBM Cloud UI를 사용하여 사용자에게 CF 역할 부여](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#grant_permissions_ui_space)를 참조하십시오.
 
 2. 미국 남부 지역에서 서비스를 프로비저닝할 수 있는 권한이 있는 영역에 {{site.data.keyword.monitoringshort}} 서비스를 프로비저닝하십시오.
 
-    자세한 정보는 [{{site.data.keyword.monitoringshort}} 서비스 프로비저닝](/docs/services/cloud-monitoring/how-to/provision.html#provision)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.monitoringshort}} 서비스 프로비저닝](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision)을 참조하십시오.
 
 ## 1단계: 사용자에게 CF 앱 및 {{site.data.keyword.monitoringshort}} 서비스를 사용하여 작업할 수 있는 권한 부여
 {: #cfapps_step1}
@@ -140,7 +140,7 @@ CF 앱이 실행되는 즉시 메트릭이 수집되고 {{site.data.keyword.moni
 
     {{site.data.keyword.monitoringshort}} 서비스를 프로비저닝한 지역에 대한 {{site.data.keyword.monitoringshort}} 서비스 URL을 입력하십시오.
     
-    지역별 URL을 가져오려면 [모니터링 서비스에 대한 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)을 참조하십시오.
+    지역별 URL을 가져오려면 [모니터링 서비스에 대한 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)을 참조하십시오.
 
     예를 들어, 미국 남부 지역의 경우 [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)을 실행하십시오.
 
@@ -169,7 +169,7 @@ Grafana에서는 행을 추가하여 대시보드를 섹션으로 나눕니다. 
 
 그래프에 표시되는 데이터를 필터링하는 조회를 정의하십시오. 이 조회는 컨테이너의 한계에 대한 CPU 사용률의 백분율을 모니터링합니다.
 
-조회의 형식에 대한 정보는 [CF 앱에 대한 Grafana 조회 형식](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)을 참조하십시오.
+조회의 형식에 대한 정보는 [CF 앱에 대한 Grafana 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)을 참조하십시오.
     
 1. 컨테이너의 모든 코어의 CPU 시간(나노초(ns))을 모니터링하는 *그래프* 패널을 추가하십시오.
     
@@ -231,4 +231,4 @@ Grafana에서는 행을 추가하여 대시보드를 섹션으로 나눕니다. 
 ## 다음 단계
 {: #cfapps_next_steps}
 
-메트릭에 대한 경보를 정의하십시오. 자세한 정보는 [경보 구성](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)을 참조하십시오.
+메트릭에 대한 경보를 정의하십시오. 자세한 정보는 [경보 구성](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)을 참조하십시오.

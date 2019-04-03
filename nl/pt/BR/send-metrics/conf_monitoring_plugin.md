@@ -41,13 +41,13 @@ Em um terminal, conclua as etapas a seguir:
 
 1. (Pré-requisito) Instale a CLI do {{site.data.keyword.Bluemix_notm}}.
 
-   Para obter mais informações, veja [Instalando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#cli_qa).
+   Para obter mais informações, consulte [Instalando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#cli_qa).
    
    Se a CLI estiver instalada, continue com a próxima etapa.
 	
 2. Efetue login em uma região, uma organização e um espaço no {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
     Por exemplo, para efetuar login na região sul dos EUA, execute o comando a seguir:
 	
@@ -190,15 +190,15 @@ Para enviar métricas para qualquer domínio, seu ID do usuário deve receber um
 
 Para designar um usuário a uma política do IAM, escolha um dos métodos a seguir:
 
-* Por meio da IU do {{site.data.keyword.Bluemix_notm}}: para obter mais informações, consulte [Designando a um usuário uma política do IAM por meio da IU do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui).
-* Usando a linha de comandos: para obter mais informações, consulte [Designando a um usuário uma política do IAM usando a linha de comandos](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_commandline).
+* Por meio da IU do {{site.data.keyword.Bluemix_notm}}: para obter mais informações, consulte [Designando uma política de IAM a um usuário por meio da IU do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui).
+* Usando a linha de comandos: para obter mais informações, consulte [Designando a um usuário uma política do IAM usando a linha de comandos](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_commandline).
  
 ### Etapa 2: Obter uma chave API
 {: #api_key}
  
 Para enviar métricas para um espaço, deve-se obter uma chave API para autenticar com o serviço {{site.data.keyword.monitoringshort}}.
 
-Para obter mais informações sobre como obter uma chave API, consulte [Obtendo uma chave API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+Para obter mais informações sobre como obter uma chave API, consulte [Obtendo uma chave API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 From the same terminal where you logged in to the {{site.data.keyword.Bluemix_notm}}, set the APIKEY variable for the token.
 
@@ -212,7 +212,7 @@ export APIKEY="kjshdgf.....ldkdjdj"
 ### Etapa 3: Obter informações sobre o terminal
 {: #endpoint}
 
-Para determinar o terminal do {{site.data.keyword.monitoringshort}} no qual você enviará as métricas, consulte as lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints) e identifique aquela para a região na qual você deseja enviar métricas.
+Para determinar o terminal do {{site.data.keyword.monitoringshort}} no qual você enviará as métricas, consulte as lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints) e identifique aquela para a região na qual você deseja enviar métricas.
 
 No mesmo terminal no qual você efetuou login no {{site.data.keyword.Bluemix_notm}}, configure a variável **METRIC_ENDPOINT**. Por exemplo,
 
@@ -226,7 +226,7 @@ export METRIC_ENDPOINT="metrics.ng.bluemix.net"
 ### Etapa 4: Obter informações sobre o ID do domínio de espaço 
 {: #domain}
 
-Para obter o ID do domínio para um espaço, [obtenha o GUID do espaço](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid). Em seguida, configure o ID do domínio como a seguir: `s-SpaceID`, em que SpaceID é o GUID do espaço.
+Para obter o ID do domínio para um espaço, [obtenha o GUID do espaço](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid). Em seguida, configure o ID do domínio como a seguir: `s-SpaceID`, em que SpaceID é o GUID do espaço.
 
 From the same terminal where you logged in to the {{site.data.keyword.Bluemix_notm}}, set the SpaceID variable:
 

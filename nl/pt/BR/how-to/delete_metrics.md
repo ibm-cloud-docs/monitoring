@@ -30,7 +30,7 @@ subcollection: cloud-monitoring
 É possível excluir métricas do serviço {{site.data.keyword.monitoringshort}} usando [a API de Métricas](https://console.bluemix.net/apidocs/monitoring-metrics-api).
 {:shortdesc}
 
-Depois de [efetuar login em uma região no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login), conclua as etapas a seguir para excluir uma notificação:
+Depois de [efetuar login em uma região no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login), conclua as etapas a seguir para excluir uma notificação:
 
 
 ## Etapa 1: Obter o token de segurança
@@ -40,9 +40,9 @@ Depois de [efetuar login em uma região no {{site.data.keyword.Bluemix_notm}}](/
 
 Escolha um dos métodos a seguir para obter o token de segurança:
 	
-* Para obter um token do UAA, consulte [Obtendo o token do UAA usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
-* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
-* Para obter uma chave API, consulte [Recebendo uma chave API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+* Para obter um token do UAA, consulte [Obtendo o token do UAA usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
+* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
+* Para obter uma chave API, consulte [Recebendo uma chave API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 Por exemplo, para usar o token IAM, execute o comando a seguir:
 
@@ -163,7 +163,7 @@ Em que
 	
 * Espaço é o GUID do espaço. 
 	
-* METRICS_ENDPOINT representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+* METRICS_ENDPOINT representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 
 * *query* define o filtro aplicado. Por exemplo, `query=metric-service.*` lista todas as métricas existentes na hierarquia `metric-service.*` e `query=*` lista todas as métricas no domínio.
 
@@ -198,7 +198,7 @@ Em que
 	
 * *Espaço* representa o GUID do espaço. 
 	
-* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 
 * *query* define o filtro aplicado. `query=*` indica todas as métricas no domínio.
 
@@ -233,7 +233,7 @@ Em que
 	
 * *Espaço* representa o GUID do espaço. 
 	
-* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 
 * *query* define o filtro aplicado. `query=*` indica todas as métricas no domínio.
 

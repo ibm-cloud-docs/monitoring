@@ -30,12 +30,12 @@ subcollection: cloud-monitoring
 여기에는 {{site.data.keyword.monitoringshort}} 서비스 및 {{site.data.keyword.containershort_notm}} 서비스에 대한 일반적인 질문의 답이 제공되어 있습니다. 
 {:shortdesc}
 
-* [내 컨테이너에 대한 Grafana 조회가 데이터를 표시하지 않거나 오류가 있음](/docs/services/cloud-monitoring/qa/qa_containers.html#metric_format_change)
-* [내 터미널 세션에서 클러스터 환경을 설정하는 방법](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)
-* [클러스터 이름 및 클러스터 ID를 가져오는 방법](/docs/services/cloud-monitoring/qa/qa_containers.html#qa3)
-* [네임스페이스의 목록을 가져오는 방법](/docs/services/cloud-monitoring/qa/qa_containers.html#qa7)
-* [Kubernetes 클러스터 내의 네임스페이스의 팟(Pod) 목록을 가져오는 방법](/docs/services/cloud-monitoring/qa/qa_containers.html#qa8)
-* [네임스페이스 기준으로 클러스터 내의 모든 팟(Pod)을 가져오는 방법](/docs/services/cloud-monitoring/qa/qa_containers.html#qa9)
+* [내 컨테이너에 대한 Grafana 조회가 데이터를 표시하지 않거나 오류가 있음](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#metric_format_change)
+* [내 터미널 세션에서 클러스터 환경을 설정하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)
+* [클러스터 이름 및 클러스터 ID를 가져오는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa3)
+* [네임스페이스의 목록을 가져오는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa7)
+* [Kubernetes 클러스터 내의 네임스페이스의 팟(Pod) 목록을 가져오는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa8)
+* [네임스페이스 기준으로 클러스터 내의 모든 팟(Pod)을 가져오는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa9)
 
 ## 내 컨테이너에 대한 Grafana 조회가 데이터를 표시하지 않거나 오류가 있음
 {: #metric_format_change}
@@ -51,9 +51,9 @@ subcollection: cloud-monitoring
 
 유효한 새 형식은 다음과 같습니다.
 
-* [컨테이너에 대한 CPU 메트릭 조회 형식](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)
-* [작업자에 대한 로드 메트릭 조회 형식](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers)
-* [컨테이너에 대한 메모리 메트릭 조회 형식](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)
+* [컨테이너에 대한 CPU 메트릭 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)
+* [작업자에 대한 로드 메트릭 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers)
+* [컨테이너에 대한 메모리 메트릭 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)
 
 이전 조회를 새 형식으로 마이그레이션하여 Grafana에서 데이터를 시각화하십시오.
 
@@ -100,7 +100,7 @@ subcollection: cloud-monitoring
       </tr>
       <tr>
         <td>Account</td>
-        <td>메트릭이 수집되는 계정의 GUID입니다. <br>이 필드의 형식은 `a_ID`이며, 여기서 ID는 계정의 GUID입니다. <br>계정의 GUID를 가져오려면 [계정의 GUID를 가져오는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid)을 참조하십시오.</td>
+        <td>메트릭이 수집되는 계정의 GUID입니다. <br>이 필드의 형식은 `a_ID`이며, 여기서 ID는 계정의 GUID입니다. <br>계정의 GUID를 가져오려면 [계정의 GUID를 가져오는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid)을 참조하십시오.</td>
         <td>a_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
       </tr>
       <tr>
@@ -111,7 +111,7 @@ subcollection: cloud-monitoring
       <tr>
         <td>Metric</td>
         <td>컨테이너에 대해 자동으로 수집되는 메트릭입니다.</td>
-        <td>CPU 메트릭 목록은 [컨테이너에 대한 CPU 메트릭](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers)을 참조하십시오. <br>메모리 메트릭 목록은 [메모리 메트릭](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#memory_metrics)을 참조하십시오. </td>
+        <td>CPU 메트릭 목록은 [컨테이너에 대한 CPU 메트릭](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers)을 참조하십시오. <br>메모리 메트릭 목록은 [메모리 메트릭](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#memory_metrics)을 참조하십시오. </td>
       </tr>
       <tr>
         <td>Container in a pod</td>
@@ -135,7 +135,7 @@ subcollection: cloud-monitoring
 
 클러스터의 컨텍스트를 설정하려면 다음 단계를 완료하십시오.
 
-1. 작성한 클러스터와 연관된 {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+1. 작성한 클러스터와 연관된 {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
 2. {{site.data.keyword.containershort_notm}} 서비스 플러그인을 초기화하십시오. 다음 명령을 실행하십시오.
 
@@ -186,7 +186,7 @@ UI를 통해 클러스터 이름 및 ID를 가져오려면 다음 단계를 완�
 
 다음 단계를 완료하여 명령행을 통해 클러스터 이름 및 ID를 가져올 수 있습니다.
 
-1. 작성한 클러스터와 연관된 {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+1. 작성한 클러스터와 연관된 {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
 2. 계정에서 사용 가능한 클러스터를 나열하십시오. 다음 명령을 실행하십시오. 
 
@@ -213,7 +213,7 @@ UI를 통해 클러스터 이름 및 ID를 가져오려면 다음 단계를 완�
 
 다음 단계를 완료하십시오.
 
-1. 클러스터 컨텍스트를 설정하십시오. 자세한 정보는 [내 터미널 세션에서 클러스터 환경을 설정하는 방법](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)을 참조하십시오.
+1. 클러스터 컨텍스트를 설정하십시오. 자세한 정보는 [내 터미널 세션에서 클러스터 환경을 설정하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)을 참조하십시오.
 
 2. 모든 네임스페이스를 나열하십시오. 다음 kubectl 명령을 실행하십시오.
 
@@ -227,7 +227,7 @@ UI를 통해 클러스터 이름 및 ID를 가져오려면 다음 단계를 완�
 		
 네임스페이스의 팟(Pod) 목록을 가져오려면 다음 단계를 완료하십시오.
 
-1. 클러스터 컨텍스트를 설정하십시오. 자세한 정보는 [내 터미널 세션에서 클러스터 환경을 설정하는 방법](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)을 참조하십시오.
+1. 클러스터 컨텍스트를 설정하십시오. 자세한 정보는 [내 터미널 세션에서 클러스터 환경을 설정하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)을 참조하십시오.
 
 2. Kubernetes 클러스터 내의 네임스페이스별 팟(Pod) 목록을 가져오려면 다음 명령을 실행하십시오.
 
@@ -243,7 +243,7 @@ UI를 통해 클러스터 이름 및 ID를 가져오려면 다음 단계를 완�
 		
 다음 단계를 완료하십시오.
 
-1. 클러스터 컨텍스트를 설정하십시오. 자세한 정보는 [내 터미널 세션에서 클러스터 환경을 설정하는 방법](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)을 참조하십시오.
+1. 클러스터 컨텍스트를 설정하십시오. 자세한 정보는 [내 터미널 세션에서 클러스터 환경을 설정하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)을 참조하십시오.
 	
 2. 네임스페이스 기준으로 클러스터 내의 모든 팟(Pod)을 가져오려면 다음 명령을 실행하십시오.
 

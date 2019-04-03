@@ -49,7 +49,7 @@ subcollection: cloud-monitoring
 	
 3. 사용자가 계정의 구성원이면 목록에서 사용자 이름을 선택하거나 *조치* 메뉴에서 **사용자 관리**를 클릭하십시오.
 
-    사용자가 계정의 구성원이 아닌 경우 [사용자 초대](/docs/iam/iamuserinv.html#iamuserinv)를 참조하십시오.
+    사용자가 계정의 구성원이 아닌 경우 [사용자 초대](/docs/iam?topic=iam-iamuserinv#iamuserinv)를 참조하십시오.
 
 4. **서비스 정책 지정**을 클릭하십시오.
 
@@ -69,7 +69,7 @@ subcollection: cloud-monitoring
 	  </tr>
 	  <tr>
 	    <td>역할</td>
-		<td>하나 이상의 IAM 역할을 선택하십시오. <br>올바른 역할은 *관리자*, *운영자*, *편집자* 및 *뷰어*입니다. <br>역할별로 허용되는 조치에 대한 자세한 정보는 [IAM 역할](/docs/services/cloud-monitoring/security_ov.html#iam_roles)을 참조하십시오.</td>
+		<td>하나 이상의 IAM 역할을 선택하십시오. <br>올바른 역할은 *관리자*, *운영자*, *편집자* 및 *뷰어*입니다. <br>역할별로 허용되는 조치에 대한 자세한 정보는 [IAM 역할](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#iam_roles)을 참조하십시오.</td>
 		<td>필수</td>
 	  </tr>
 	  <tr>
@@ -90,13 +90,13 @@ subcollection: cloud-monitoring
 
 1. (전제조건) {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오.
 
-   자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI 설치](/docs/cli/index.html#overview)를 참조하십시오.
+   자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI 설치](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)를 참조하십시오.
    
    CLI가 설치되어 있는 경우에는 다음 단계를 진행하십시오.
 	
 2. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 	
 3. 계정 ID를 가져오십시오. 
 
@@ -129,7 +129,7 @@ subcollection: cloud-monitoring
 	
 	    예를 들어, 사용자에게 다음 명령을 실행하여 자신의 사용자 ID를 가져오도록 요청하십시오.
 		
-		IAM 토큰을 가져오십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli)를 참조하십시오.
+		IAM 토큰을 가져오십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli)를 참조하십시오.
 
         IAM 토큰의 처음 2개 점 사이에 있는 데이터를 IAM 토큰에서 가져오십시오. `$user_data`와 같은 쉘 변수로 데이터를 내보내십시오. 
 		
@@ -167,7 +167,7 @@ subcollection: cloud-monitoring
 		```
 		{: codeblock}
 
-3. 아직 구성원이 아닌 경우 사용자를 계정에 초대하십시오. 자세한 정보는 [사용자 초대](/docs/iam/iamuserinv.html#iamuserinv)를 참조하십시오.
+3. 아직 구성원이 아닌 경우 사용자를 계정에 초대하십시오. 자세한 정보는 [사용자 초대](/docs/iam?topic=iam-iamuserinv#iamuserinv)를 참조하십시오.
 
     예를 들어, xxx@yyy.com 사용자를 zzz@ggg.com 계정에 초대하려면 다음 명령을 실행하십시오.
 	
@@ -201,7 +201,7 @@ subcollection: cloud-monitoring
 	
 5. 사용자 ID에 대한 IAM 토큰을 가져오십시오.
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli)를 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli)를 참조하십시오.
 
     IAM 토큰을 `$iam_token`과 같은 쉘 변수로 내보내십시오. 예를 들어, 다음과 같습니다.
 	
@@ -252,7 +252,7 @@ subcollection: cloud-monitoring
 	
 3. 사용자가 계정의 구성원이면 목록에서 사용자 이름을 선택하거나 *조치* 메뉴에서 **사용자 관리**를 클릭하십시오.
 
-    사용자가 계정의 구성원이 아닌 경우 [사용자 초대](/docs/iam/iamuserinv.html#iamuserinv)를 참조하십시오.
+    사용자가 계정의 구성원이 아닌 경우 [사용자 초대](/docs/iam?topic=iam-iamuserinv#iamuserinv)를 참조하십시오.
 
 4. **조직 지정**을 클릭하십시오.
 
@@ -282,7 +282,7 @@ subcollection: cloud-monitoring
 	  </tr>
 	  <tr>
 	    <td>영역 역할</td>
-		<td>목록에서 영역 역할을 선택하십시오. <br>올바른 값은 **관리자**, **감사자**, **개발자** 및 **영역 역할이 없음**입니다. 자세한 정보는 [Cloud Foundry 역할](/docs/services/cloud-monitoring/security_ov.html#bmx_roles)을 참조하십시오.</td>
+		<td>목록에서 영역 역할을 선택하십시오. <br>올바른 값은 **관리자**, **감사자**, **개발자** 및 **영역 역할이 없음**입니다. 자세한 정보는 [Cloud Foundry 역할](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#bmx_roles)을 참조하십시오.</td>
 	  </tr>
 	</table>
 	

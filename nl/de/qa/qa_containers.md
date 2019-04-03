@@ -30,12 +30,12 @@ subcollection: cloud-monitoring
 Hier sind die Antworten auf häufig gestellte Fragen zum {{site.data.keyword.monitoringshort}}-Service und zum {{site.data.keyword.containershort_notm}}-Service. 
 {:shortdesc}
 
-* [Die Grafana-Abfrage für meine Container enthält keine Daten oder ist fehlerhaft](/docs/services/cloud-monitoring/qa/qa_containers.html#metric_format_change)
-* [Wie richte ich eine Clusterumgebung in meiner Terminalsitzung ein?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)
-* [Wo finde ich den Clusternamen und die Cluster-ID?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa3)
-* [Wie rufe ich die Liste der Namensbereiche ab?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa7)
-* [Wie rufe ich die Liste der Pods in einem Namensbereich in einem Kubernetes-Cluster ab?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa8)
-* [Wie rufe ich alle Pods in einem Cluster nach Namensbereich ab?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa9)
+* [Die Grafana-Abfrage für meine Container enthält keine Daten oder ist fehlerhaft](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#metric_format_change)
+* [Wie richte ich eine Clusterumgebung in meiner Terminalsitzung ein?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)
+* [Wo finde ich den Clusternamen und die Cluster-ID?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa3)
+* [Wie rufe ich die Liste der Namensbereiche ab?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa7)
+* [Wie rufe ich die Liste der Pods in einem Namensbereich in einem Kubernetes-Cluster ab?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa8)
+* [Wie rufe ich alle Pods in einem Cluster nach Namensbereich ab?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa9)
 
 ## Die Grafana-Abfrage für meine Container enthält keine Daten oder ist fehlerhaft
 {: #metric_format_change}
@@ -51,9 +51,9 @@ Das folgende Format ist veraltet:
 
 Die neuen gültigen Formate sind wie folgt:
 
-* [Abfrageformat für CPU-Metriken für einen Container](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)
-* [Abfrageformat für Lademetriken für einen Worker](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers)
-* [Abfrageformat für Speichermetriken für einen Container](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)
+* [Abfrageformat für CPU-Metriken für einen Container](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)
+* [Abfrageformat für Lademetriken für einen Worker](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers)
+* [Abfrageformat für Speichermetriken für einen Container](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)
 
 Migrieren Sie Ihre alten Abfragen auf das neue Format, um Ihre Daten in Grafana zu visualisieren.
 
@@ -100,7 +100,7 @@ In der folgenden Tabelle sind die Felder in dem veralteten Format aufgeführt:
       </tr>
       <tr>
         <td>Konto</td>
-        <td>GUID des Kontos, in dem Metriken erfasst werden. <br>Das Format dieses Feldes ist `a_ID`. Dabei ist ID die GUID des Kontos. <br>Informationen zum Abrufen der GUID für das Konto finden Sie unter [Vorgehensweise zum Abrufen der GUID eines Kontos](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid).</td>
+        <td>GUID des Kontos, in dem Metriken erfasst werden. <br>Das Format dieses Feldes ist `a_ID`. Dabei ist ID die GUID des Kontos. <br>Informationen zum Abrufen der GUID für das Konto finden Sie unter [Vorgehensweise zum Abrufen der GUID eines Kontos](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid).</td>
         <td>a_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
       </tr>
       <tr>
@@ -111,7 +111,7 @@ In der folgenden Tabelle sind die Felder in dem veralteten Format aufgeführt:
       <tr>
         <td>Metrik</td>
         <td>Metrik, die automatisch für einen Container erfasst wird.</td>
-        <td>Eine Liste der CPU-Metriken finden Sie unter [CPU-Metriken für Container](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers). <br>Eine Liste der Speichermetriken finden Sie unter [Speichermetriken](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#memory_metrics). </td>
+        <td>Eine Liste der CPU-Metriken finden Sie unter [CPU-Metriken für Container](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers). <br>Eine Liste der Speichermetriken finden Sie unter [Speichermetriken](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#memory_metrics). </td>
       </tr>
       <tr>
         <td>Container in einem Pod</td>
@@ -135,7 +135,7 @@ Sie müssen den Kontext eines Kubernetes-Clusters festlegen, um diesen mithilfe 
 
 Führen Sie die folgenden Schritte aus, um den Kontext eines Clusters einzurichten:
 
-1. Melden Sie sich bei der Region, der Organisation und dem Bereich in {{site.data.keyword.Bluemix_notm}} an, die/der dem von Ihnen erstellten Cluster zugeordnet ist. Weitere Informationen finden Sie unter [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+1. Melden Sie sich bei der Region, der Organisation und dem Bereich in {{site.data.keyword.Bluemix_notm}} an, die/der dem von Ihnen erstellten Cluster zugeordnet ist. Weitere Informationen finden Sie in [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Initialisieren Sie das {{site.data.keyword.containershort_notm}}-Service-Plug-in. Führen Sie folgenden Befehl aus:
 
@@ -186,7 +186,7 @@ Führen Sie die folgenden Schritte aus, um den Clusternamen und die ID über die
 
 Führen Sie die folgenden Schritte aus, um den Clusternamen und die ID über die Befehlszeile abzurufen:
 
-1. Melden Sie sich bei der Region, der Organisation und dem Bereich in {{site.data.keyword.Bluemix_notm}} an, die/der dem von Ihnen erstellten Cluster zugeordnet ist. Weitere Informationen finden Sie unter [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+1. Melden Sie sich bei der Region, der Organisation und dem Bereich in {{site.data.keyword.Bluemix_notm}} an, die/der dem von Ihnen erstellten Cluster zugeordnet ist. Weitere Informationen finden Sie in [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Listen Sie die im Konto verfügbaren Cluster auf. Führen Sie folgenden Befehl aus: 
 
@@ -213,7 +213,7 @@ Führen Sie die folgenden Schritte aus, um eine Liste aller Namensbereiche in Ih
 
 Führen Sie die folgenden Schritte aus:
 
-1. Richten Sie den Clusterkontext ein. Weitere Informationen finden Sie unter [Wie richte ich eine Clusterumgebung in meiner Terminalsitzung ein?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1).
+1. Richten Sie den Clusterkontext ein. Weitere Informationen finden Sie unter [Wie richte ich eine Clusterumgebung in meiner Terminalsitzung ein?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1).
 
 2. Listen Sie alle Namensbereiche auf. Führen Sie den folgenden 'kubectl'-Befehl aus:
 
@@ -227,7 +227,7 @@ Führen Sie die folgenden Schritte aus:
 		
 Führen Sie die folgenden Schritte aus, um die Liste der Pods in einem Namensbereich abzurufen:
 
-1. Richten Sie den Clusterkontext ein. Weitere Informationen finden Sie unter [Wie richte ich eine Clusterumgebung in meiner Terminalsitzung ein?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1).
+1. Richten Sie den Clusterkontext ein. Weitere Informationen finden Sie unter [Wie richte ich eine Clusterumgebung in meiner Terminalsitzung ein?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1).
 
 2. Führen Sie den folgenden Befehl aus, um die Liste der Pods für jeden Namensbereich in einem Kubernetes-Cluster abzurufen:
 
@@ -243,7 +243,7 @@ Führen Sie die folgenden Schritte aus, um die Liste der Pods in einem Namensber
 		
 Führen Sie die folgenden Schritte aus:
 
-1. Richten Sie den Clusterkontext ein. Weitere Informationen finden Sie unter [Wie richte ich eine Clusterumgebung in meiner Terminalsitzung ein?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1).
+1. Richten Sie den Clusterkontext ein. Weitere Informationen finden Sie unter [Wie richte ich eine Clusterumgebung in meiner Terminalsitzung ein?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1).
 	
 2. Führen Sie den folgenden Befehl aus, um alle Pods in einem Cluster nach Namensbereich abzurufen:
 

@@ -31,27 +31,27 @@ Para configurar una alerta de correo electrónico en una métrica, defina una re
 Realice los siguientes pasos:
 
 ## Paso 1: Crear una regla
-{: #step11}
+{: #cea_step1}
 
-Cree una regla para una consulta métrica que ha definido en Grafana. Para obtener más información, consulte [Creación de una regla](/docs/services/cloud-monitoring/alerts/rules.html#create).
+Cree una regla para una consulta métrica que ha definido en Grafana. Para obtener más información, consulte [Creación de una regla](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create).
 
 Por ejemplo, cree el archivo de reglas `s-rule-1.json` en el directorio `~/cloud-monitoring/rules/`. 
 
 ```
 {
 "name": "checkbytesin",
-    "description": "MH check Bytes In per second",
-    "expression": "movingAverage(messagehub.65qser11-8034-1234-5678-c82fb42wdfgh.1.kafka-java-console-sample-topic.BytesInPerSec.15MinuteRate,\"5min\")",
-    "enabled": true,
-    "from": "-5min",
-    "until": "now",
-    "comparison": "above",
-    "comparison_scope": "last",
-    "error_level" : 27,
-    "warning_level" : 25,
-    "frequency": "1min",
-    "dashboard_url": "https://metrics.ng.bluemix.net",
-    "notifications": [
+"description": "MH check Bytes In per second",
+"expression": "movingAverage(messagehub.65qser11-8034-1234-5678-c82fb42wdfgh.1.kafka-java-console-sample-topic.BytesInPerSec.15MinuteRate,\"5min\")",
+"enabled": true,
+"from": "-5min",
+"until": "now",
+"comparison": "above",
+"comparison_scope": "last",
+"error_level" : 27,
+"warning_level" : 25,
+"frequency": "1min",
+"dashboard_url": "https://metrics.ng.bluemix.net",
+"notifications": [
 "NOTIFICATION_NAME"
 ]
 }
@@ -66,21 +66,21 @@ export RULE_FILE="s-rule-1.json"
 {: screen}
 
 ## Paso 2: Registrar la regla en el servicio de supervisión
-{: #step2}
+{: #cea_step2}
 	
 En un terminal, siga los pasos siguientes:
 
 1. Inicie la sesión en una región, organización y espacio en {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Obtenga la señal de seguridad. Puede utilizar una señal de UAA, una señal de IAM o una clave de API. Elija uno de los métodos siguientes para obtener la señal de seguridad:
 	
-	* Para obtener una señal UAA, consulte [Obtención de la señal de UAA mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Para obtener una señal UAA, consulte [Obtención de la señal de UAA mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Para obtener una señal de IAM, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Para obtener una señal de IAM, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Para obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Para obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Por ejemplo, para utilizar la señal de IAM, ejecute el siguiente mandato:
 
@@ -163,7 +163,7 @@ En un terminal, siga los pasos siguientes:
 	
 	* Space es el GUID del espacio. 
 	
-	* METRICS_ENDPOINT representa el punto de entrada al servicio. Cada región tiene un URL diferente. Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* METRICS_ENDPOINT representa el punto de entrada al servicio. Cada región tiene un URL diferente. Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 	Para verificar que la regla se ha creado correctamente, ejecute el siguiente mandato:
 	
@@ -180,12 +180,12 @@ En un terminal, siga los pasos siguientes:
 	{: screen}
 
 ## Paso 3: Crear una notificación de correo electrónico
-{: #step3}
+{: #cea_step3}
 
 
 Para crear un archivo de notificación que envíe un correo electrónico, tenga en cuenta la siguiente información:
 
-* Utilice la plantilla de notificación para enviar correos electrónicos. Para obtener más información, consulte [Plantillas de notificación](/docs/services/cloud-monitoring/config_alerts_ov.html#notification_template).
+* Utilice la plantilla de notificación para enviar correos electrónicos. Para obtener más información, consulte [Plantillas de notificación](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#notification_template).
 * Cree el archivo en un directorio local, por ejemplo, `~/cloud-monitoring/notifications`.
 
 Por ejemplo, cree el archivo **email.json** mediante el editor vi: 
@@ -200,24 +200,24 @@ Por ejemplo, cree el archivo **email.json** mediante el editor vi:
 ```
 {: codeblock}	
 	
-Para obtener más información, consulte [Creación de una notificación](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create).
+Para obtener más información, consulte [Creación de una notificación](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create).
 	
 ## Paso 4: Registrar el método de notificación en el servicio de supervisión
-{: #step4}
+{: #cea_step4}
 	
 En un terminal, siga los pasos siguientes:
 
 1. Inicie la sesión en una región, organización y espacio en {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Obtenga la señal de seguridad. Puede utilizar una señal de UAA, una señal de IAM o una clave de API. Elija uno de los métodos siguientes para obtener la señal de seguridad:
 	
-	* Para obtener una señal UAA, consulte [Obtención de la señal de UAA mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Para obtener una señal UAA, consulte [Obtención de la señal de UAA mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Para obtener una señal de IAM, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Para obtener una señal de IAM, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Para obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Para obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Por ejemplo, para utilizar la señal de IAM, ejecute el siguiente mandato:
 
@@ -300,7 +300,7 @@ En un terminal, siga los pasos siguientes:
 	
 	* Space es el GUID del espacio. 
 	
-	* METRICS_ENDPOINT representa el punto de entrada al servicio. Cada región tiene un URL diferente. Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* METRICS_ENDPOINT representa el punto de entrada al servicio. Cada región tiene un URL diferente. Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
     Para verificar que la notificación se ha creado correctamente, ejecute el siguiente mandato:
 

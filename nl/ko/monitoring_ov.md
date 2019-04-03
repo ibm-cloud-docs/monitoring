@@ -35,7 +35,7 @@ subcollection: cloud-monitoring
 
 {{site.data.keyword.Bluemix}}에서는 기본적으로 {{site.data.keyword.containershort}}의 CPU 사용량, 메모리 이용량 및 네트워크 I/O에 대한 메트릭을 수집하고 표시합니다. {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.monitoringshort}} 서비스를 사용하여 환경 및 애플리케이션에서 주요 메트릭을 자동으로 수집하고 측정할 수 있습니다. 메트릭을 수집하는 데 특수 인스트루먼테이션이 필요하지는 않습니다. 예를 들면, 성능 메트릭에서 제공된 정보를 사용하여 클라우드에서 실행 중인 서비스의 상태를 모니터하고, 리소스 병목을 발견하고, 서비스 레벨 계약(SLA) 관련 내용을 지속적으로 살펴 볼 수 있습니다. 서비스의 성능 데이터를 분석하면 리소스 병목으로 발전하여 클라이언트에 대한 서비스 SLA에 영향을 줄 수 있는 상황을 발견할 수 있습니다. 조기에 조치를 취하여 비즈니스에 악영향을 줄 수 있는 상황을 방지할 수 있습니다.  
 
-Cloud Foundry(CF) 애플리케이션 및 가상 머신(VM)에 대한 메트릭을 {{site.data.keyword.monitoringshort}} 서비스에 전송할 수 있습니다. 메트릭을 전송하는 방법에 대한 자세한 정보는 [{{site.data.keyword.monitoringshort}} 서비스에 메트릭 전송](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#send_retrieve_metrics_ov)을 참조하십시오.
+Cloud Foundry(CF) 애플리케이션 및 가상 머신(VM)에 대한 메트릭을 {{site.data.keyword.monitoringshort}} 서비스에 전송할 수 있습니다. 메트릭을 전송하는 방법에 대한 자세한 정보는 [{{site.data.keyword.monitoringshort}} 서비스에 메트릭 전송](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#send_retrieve_metrics_ov)을 참조하십시오.
 
 {{site.data.keyword.Bluemix_notm}} 카탈로그를 통해 {{site.data.keyword.monitoringshort}} 서비스를 프로비저닝할 수 있습니다.  
 
@@ -76,7 +76,7 @@ Cloud Foundry(CF) 애플리케이션 및 가상 머신(VM)에 대한 메트릭�
 
 {{site.data.keyword.monitoringshort}} 서비스는 다양한 플랜을 제공합니다. 각 플랜에는 서로 다른 메트릭 수집, 보존 및 경보 정의 기능이 있습니다. 
 
-{{site.data.keyword.Bluemix_notm}} UI 또는 명령행을 통해 플랜을 변경할 수 있습니다. 플랜은 언제든지 업그레이드하거나 다운그레이드할 수 있습니다. {{site.data.keyword.Bluemix_notm}}의 서비스 플랜 업그레이드에 대한 자세한 정보는 [플랜 변경](/docs/services/cloud-monitoring/plan/change_plan.html#change_plan)을 참조하십시오. 
+{{site.data.keyword.Bluemix_notm}} UI 또는 명령행을 통해 플랜을 변경할 수 있습니다. 플랜은 언제든지 업그레이드하거나 다운그레이드할 수 있습니다. {{site.data.keyword.Bluemix_notm}}의 서비스 플랜 업그레이드에 대한 자세한 정보는 [플랜 변경](/docs/services/cloud-monitoring/plan?topic=cloud-monitoring-change_plan#change_plan)을 참조하십시오. 
 
 다음 표에는 영역에서 {{site.data.keyword.monitoringshort}} 서비스를 프로비저닝할 때 사용 가능한 플랜이 간략하게 설명되어 있습니다.
 
@@ -137,7 +137,7 @@ Cloud Foundry(CF) 애플리케이션 및 가상 머신(VM)에 대한 메트릭�
 ## Monitoring 서비스 프로비저닝
 {: #provision1}
 
-{{site.data.keyword.Bluemix_notm}} 카탈로그에서는 **DevOps** 섹션에서 {{site.data.keyword.monitoringshort}} 서비스를 찾을 수 있습니다. {{site.data.keyword.Bluemix_notm}}에서 서비스를 프로비저닝하는 데 대한 자세한 정보는 [{{site.data.keyword.monitoringshort}} 서비스 프로비저닝](/docs/services/cloud-monitoring/how-to/provision.html#provision)을 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 카탈로그에서는 **DevOps** 섹션에서 {{site.data.keyword.monitoringshort}} 서비스를 찾을 수 있습니다. {{site.data.keyword.Bluemix_notm}}에서 서비스를 프로비저닝하는 데 대한 자세한 정보는 [{{site.data.keyword.monitoringshort}} 서비스 프로비저닝](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision)을 참조하십시오.
 
 {{site.data.keyword.monitoringshort}} 서비스에 대해 다음 정보를 고려하십시오.
 

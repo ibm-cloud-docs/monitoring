@@ -36,7 +36,7 @@ Para recuperar métricas desde un espacio, siga estos pasos:
 
 1. Inicie la sesión en una región, organización y espacio en {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Establezca la señal de seguridad o la clave de API
   
@@ -44,11 +44,11 @@ Para recuperar métricas desde un espacio, siga estos pasos:
 
     En primer lugar, elija uno de los métodos siguientes para obtener la señal de seguridad que necesita para enviar métricas:
 	
-    * Para obtener una señal UAA, consulte [Obtención de la señal de UAA mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+    * Para obtener una señal UAA, consulte [Obtención de la señal de UAA mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
     
-	* Para obtener una señal de IAM, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Para obtener una señal de IAM, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
     
-	* Para obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key). 
+	* Para obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key). 
 
     Una señal o clave de API debe tener como prefijo uno de los valores siguientes: `apikey`, `iam` o `uaa` 
 
@@ -124,11 +124,11 @@ Para recuperar métricas desde un espacio, siga estos pasos:
 	
 	* *Space* representa el GUID del espacio. 
 	
-	* *Start_Time* define el inicio de la solicitud. Esta información se utiliza para calcular el periodo de tiempo relativo o absoluto. *End_Time* define el final de la solicitud. Esta información se utiliza para calcular el periodo de tiempo relativo o absoluto. Para obtener más información, consulte [Establecimiento de un período de tiempo](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time).
+	* *Start_Time* define el inicio de la solicitud. Esta información se utiliza para calcular el periodo de tiempo relativo o absoluto. *End_Time* define el final de la solicitud. Esta información se utiliza para calcular el periodo de tiempo relativo o absoluto. Para obtener más información, consulte [Establecimiento de un período de tiempo](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time).
 	
-	* *Path* identifica una o varias métricas. Opcionalmente, puede aplicar funciones a cada métrica. En las vías de acceso también se admiten los comodines, que permiten identificar más de una métrica en una sola vía de acceso. Para obtener más información, consulte [Definición de las métricas](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics).
+	* *Path* identifica una o varias métricas. Opcionalmente, puede aplicar funciones a cada métrica. En las vías de acceso también se admiten los comodines, que permiten identificar más de una métrica en una sola vía de acceso. Para obtener más información, consulte [Definición de las métricas](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics).
 	
-	* *METRICS_ENDPOINT* representa el punto de entrada al servicio. Cada región tiene un URL diferente. Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* *METRICS_ENDPOINT* representa el punto de entrada al servicio. Cada región tiene un URL diferente. Para obtener la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 
 	

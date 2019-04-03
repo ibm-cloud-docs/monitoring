@@ -33,7 +33,7 @@ subcollection: cloud-monitoring
 ## コンポーネントの概要
 {: #overview}
 
-{{site.data.keyword.monitoringshort}} サービスは、一連のデータをメトリック・ストレージ・データベースに保管します。 照会エディターを通じてこのデータを照会できます。  
+{{site.data.keyword.monitoringshort}} サービスは、一連のデータをメトリック・ストレージ・データベースに保管します。 照会エディターを通じてこのデータを照会できます。 
 
 Grafana では、メトリック・ストレージ・データベースで使用可能なデータにアクセスするには、{{site.data.keyword.Bluemix_notm}} へのログインに使用するユーザー ID とパスワードで、スペース、組織、および地域にログインする必要があります。 
 

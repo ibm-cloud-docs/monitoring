@@ -31,9 +31,9 @@ Wenn Sie einen E-Mail-Alert für eine Metrik konfigurieren möchten, definieren 
 Führen Sie die folgenden Schritte aus:
 
 ## Schritt 1: Erstellen Sie eine Regel.
-{: #step11}
+{: #cea_step1}
 
-Erstellen Sie eine Regel für eine Metrikabfrage, die Sie in Grafana definiert haben. Weitere Informationen finden Sie unter [Eine Regel erstellen](/docs/services/cloud-monitoring/alerts/rules.html#create).
+Erstellen Sie eine Regel für eine Metrikabfrage, die Sie in Grafana definiert haben. Weitere Informationen finden Sie unter [Eine Regel erstellen](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create).
 
 Erstellen Sie zum Beispiel die Regeldatei `s-rule-1.json` im Verzeichnis `~/cloud-monitoring/rules/`. 
 
@@ -66,21 +66,21 @@ export RULE_FILE="s-rule-1.json"
 {: screen}
 
 ## Schritt 2: Registrieren Sie die Regel im Überwachungsservice.
-{: #step2}
+{: #cea_step2}
 	
-Führen Sie von einem Terminal aus die folgenden Schritte durch: 
+Führen Sie von einem Terminal aus die folgenden Schritte durch:
 
 1. Melden Sie sich bei einer Region, einer Organisation und einem Bereich in {{site.data.keyword.Bluemix_notm}} an. 
 
-    Weitere Informationen finden Sie unter [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Weitere Informationen finden Sie in [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Rufen Sie das Sicherheitstoken ab. Sie können ein UAA-Token, ein IAM-Token oder einen API-Schlüssel verwenden. Wählen Sie eine der folgenden Methoden aus, um das Sicherheitstoken abzurufen:
 	
-	* Informationen zum Abrufen eines UAA-Tokens finden Sie unter [UAA-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Informationen zum Abrufen eines UAA-Tokens finden Sie unter [UAA-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Informationen zum Abrufen eines IAM-Tokens finden Sie unter [IAM-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Informationen zum Abrufen eines IAM-Tokens finden Sie unter [IAM-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Informationen zum Abrufen eines API-Schlüssels finden Sie unter [API-Schlüssel abrufen](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Informationen zum Abrufen eines API-Schlüssels finden Sie unter [API-Schlüssel abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Führen Sie zum Beispiel den folgenden Befehl aus, um das IAM-Token zu verwenden:
 
@@ -163,7 +163,7 @@ Führen Sie von einem Terminal aus die folgenden Schritte durch:
 	
 	* Space (Bereich) ist die GUID des Bereichs. 
 	
-	* METRICS_ENDPOINT stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* METRICS_ENDPOINT stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 	Um zu überprüfen, ob die Regel erfolgreich erstellt wurde, führen Sie den folgenden Befehl aus:
 	
@@ -180,12 +180,12 @@ Führen Sie von einem Terminal aus die folgenden Schritte durch:
 	{: screen}
 
 ## Schritt 3: Erstellen Sie eine E-Mail-Benachrichtigung
-{: #step3}
+{: #cea_step3}
 
 
 Berücksichtigen Sie die folgenden Informationen, wenn Sie eine Benachrichtigungsdatei erstellen, die eine E-Mail sendet:
 
-* Verwenden Sie die Benachrichtigungsvorlage zum Senden von E-Mails. Weitere Informationen finden Sie unter [Benachrichtigungsvorlagen](/docs/services/cloud-monitoring/config_alerts_ov.html#notification_template).
+* Verwenden Sie die Benachrichtigungsvorlage zum Senden von E-Mails. Weitere Informationen finden Sie unter [Benachrichtigungsvorlagen](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#notification_template).
 * Erstellen Sie die Datei in einem lokalen Verzeichnis, z. B. `~/cloud-monitoring/notifications`.
 
 Erstellen Sie zum Beispiel die Datei **email.json** mit dem Editor vi: 
@@ -200,24 +200,24 @@ Erstellen Sie zum Beispiel die Datei **email.json** mit dem Editor vi:
 ```
 {: codeblock}	
 	
-Weitere Informationen finden Sie unter [Eine Benachrichtigung erstellen](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create).
+Weitere Informationen finden Sie unter [Eine Benachrichtigung erstellen](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create).
 	
 ## Schritt 4: Registrieren Sie die Benachrichtigungsmethode im Überwachungsservice.
-{: #step4}
+{: #cea_step4}
 	
-Führen Sie von einem Terminal aus die folgenden Schritte durch: 
+Führen Sie von einem Terminal aus die folgenden Schritte durch:
 
 1. Melden Sie sich bei einer Region, einer Organisation und einem Bereich in {{site.data.keyword.Bluemix_notm}} an. 
 
-    Weitere Informationen finden Sie unter [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Weitere Informationen finden Sie in [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Rufen Sie das Sicherheitstoken ab. Sie können ein UAA-Token, ein IAM-Token oder einen API-Schlüssel verwenden. Wählen Sie eine der folgenden Methoden aus, um das Sicherheitstoken abzurufen:
 	
-	* Informationen zum Abrufen eines UAA-Tokens finden Sie unter [UAA-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Informationen zum Abrufen eines UAA-Tokens finden Sie unter [UAA-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
 	
-	* Informationen zum Abrufen eines IAM-Tokens finden Sie unter [IAM-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Informationen zum Abrufen eines IAM-Tokens finden Sie unter [IAM-Token über die {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
-	* Informationen zum Abrufen eines API-Schlüssels finden Sie unter [API-Schlüssel abrufen](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+	* Informationen zum Abrufen eines API-Schlüssels finden Sie unter [API-Schlüssel abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	Führen Sie zum Beispiel den folgenden Befehl aus, um das IAM-Token zu verwenden:
 
@@ -300,7 +300,7 @@ Führen Sie von einem Terminal aus die folgenden Schritte durch:
 	
 	* Space (Bereich) ist die GUID des Bereichs. 
 	
-	* METRICS_ENDPOINT stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* METRICS_ENDPOINT stellt den Eingangspunkt zum Service dar. Jede Region verfügt über eine andere URL. Informationen zum Abrufen der Liste der Endpunkte nach Region finden Sie unter [Endpunkte](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
     Führen Sie folgenden Befehl aus, um zu überprüfen, ob die Benachrichtigung erfolgreich erstellt wurde:
 

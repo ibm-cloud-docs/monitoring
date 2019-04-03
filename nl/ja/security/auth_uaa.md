@@ -40,13 +40,13 @@ UAA トークンを取得するには、以下の手順を実行します。
 
 1. (前提条件) {{site.data.keyword.Bluemix_notm}} CLI をインストールします。
 
-   詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI のインストール](/docs/services/cloud-monitoring/qa/cli_qa.html#cli_qa)を参照してください。
+   詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI のインストール](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#cli_qa)を参照してください。
    
    CLI がインストールされたら、次の手順に進んでください。
     
 2. {{site.data.keyword.Bluemix_notm}} で、地域、組織、およびスペースにログインします。 
 
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/cli_qa.html#login)を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)を参照してください。
 	
 3. `ibmcloud iam oauth-tokens` コマンドを実行して、UAA トークンを取得します。
 

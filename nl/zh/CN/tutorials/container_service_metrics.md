@@ -54,7 +54,7 @@ subcollection: cloud-monitoring
     
     * 具有 {{site.data.keyword.containershort}} 的*操作员*或*管理员*许可权的 IAM 策略。
     
-    有关更多信息，请参阅[通过 IBM Cloud UI 向用户分配 IAM 策略](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui)。
+    有关更多信息，请参阅[通过 IBM Cloud UI 向用户分配 IAM 策略](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui)。
 
 2. 打开终端会话，您可以在其中通过命令行来管理 Kubernetes 集群和部署应用程序。 本教程中提供的示例适用于 Ubuntu Linux 系统。
 
@@ -63,7 +63,7 @@ subcollection: cloud-monitoring
     * 安装 {{site.data.keyword.Bluemix_notm}} CLI。 
     * 安装 {{site.data.keyword.containershort}} CLI 以在 {{site.data.keyword.containershort}} 中创建和管理 Kubernetes 集群，以及将容器化应用程序部署到集群中。
     
-    有关更多信息，请参阅[安装 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview)。
+    有关更多信息，请参阅[安装 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)。
     
     
 
@@ -75,11 +75,11 @@ subcollection: cloud-monitoring
 
 请完成以下步骤：
 
-1. 创建标准 Kubernetes 集群。 有关更多信息，请参阅[创建 Kubernetes 标准集群](/docs/containers/cs_tutorials.html#cs_cluster_tutorial)。
+1. 创建标准 Kubernetes 集群。 有关更多信息，请参阅[创建 Kubernetes 标准集群](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial)。
 
 2. 在终端中设置集群上下文。 设置上下文后，您可以管理 Kubernetes 集群并在 Kubernetes 集群中部署应用程序。
 
-    登录到 {{site.data.keyword.Bluemix_notm}} 中与已创建集群关联的区域、组织和空间。 有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/CloudLogAnalysis/qa/cli_qa.html#login)。
+    登录到 {{site.data.keyword.Bluemix_notm}} 中与已创建集群关联的区域、组织和空间。 有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/CloudLogAnalysis/qa?topic=cloudloganalysis-cli_qa#login)。
 
 	初始化 {{site.data.keyword.containershort}} 服务插件。
 
@@ -125,7 +125,7 @@ subcollection: cloud-monitoring
 	
 3. 如果用户是帐户的成员，请从列表中选择用户名，或从*操作*菜单中单击**管理用户**。
 
-    如果用户不是帐户的成员，请参阅[邀请用户](/docs/iam/iamuserinv.html#iamuserinv)。
+    如果用户不是帐户的成员，请参阅[邀请用户](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 
 4. 选择**访问策略 > 分配访问权 > 分配对资源的访问权**。
 
@@ -170,7 +170,7 @@ subcollection: cloud-monitoring
 ## 步骤 4：在 Kubernetes 集群中部署样本应用程序
 {: #ks_step4}
 
-在 Kubernetes 集群中部署并运行样本应用程序。 完成以下教程中的步骤以部署样本应用程序：[第 1 课：将单实例应用程序部署到 Kubernetes 集群](/docs/containers/cs_tutorials_apps.html#cs_apps_tutorial_lesson1)。
+在 Kubernetes 集群中部署并运行样本应用程序。 完成以下教程中的步骤以部署样本应用程序：[第 1 课：将单实例应用程序部署到 Kubernetes 集群](/docs/containers?topic=containers-cs_apps_tutorial#cs_apps_tutorial_lesson1)。
 
 该应用程序是 Hello World Node.js 应用程序：
 
@@ -195,13 +195,13 @@ app.listen(8080, function() {
 
 通过浏览器启动 Grafana，并设置可以在其中查看集群度量值的 {{site.data.keyword.monitoringshort}} 域。
 
-要分析集群的度量值，您必须在创建集群的云公共区域中访问 Grafana。 有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)。
+要分析集群的度量值，您必须在创建集群的云公共区域中访问 Grafana。 有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)。
 
 1. 通过浏览器启动 Grafana。 
 
     输入创建集群的区域的 {{site.data.keyword.monitoringshort}} 服务 URL。 
     
-    要获取每个区域的 URL，请参阅 [Monitoring 服务的 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)。
+    要获取每个区域的 URL，请参阅 [Monitoring 服务的 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)。
 
     例如，对于美国南部区域，请启动：[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)。
 
@@ -232,4 +232,4 @@ app.listen(8080, function() {
 ## 后续步骤
 {: #ks_next_steps}
 
-为度量值定义警报。 有关更多信息，请参阅[配置警报](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)。
+为度量值定义警报。 有关更多信息，请参阅[配置警报](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)。

@@ -37,5 +37,5 @@ subcollection: cloud-monitoring
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
   * 若為服務及開始使用指示的相關問題，請使用 [{{site.data.keyword.IBM_notm}} developerWorks dW Answers](https://developer.ibm.com/answers/topics/ibm-cloud-monitoring/?smartspace=ibm-cloud){:new_window} 討論區。
 
-* 如果您仍然無法解決問題，則可以開立 IBM 支援問題單。如需開立 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/get-support/howtogetsupport.html#getting-customer-support)。
+* 如果您仍然無法解決問題，則可以開立 IBM 支援問題單。如需開立 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)。
 

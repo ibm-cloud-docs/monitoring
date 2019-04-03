@@ -53,7 +53,7 @@ subcollection: cloud-monitoring
 	
 	* 기본적으로는 **Lite** 플랜이 설정되어 있으며, 이 플랜은 서비스를 프로비저닝 중인 영역에서 플랫폼 메트릭을 수집할 수 있도록 하고 이러한 메트릭에 대해 15일의 보존 기간을 허용합니다. 
 
-    서비스 플랜에 대한 자세한 정보는 [서비스 플랜](/docs/services/cloud-monitoring/monitoring_ov.html#plan)을 참조하십시오.
+    서비스 플랜에 대한 자세한 정보는 [서비스 플랜](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan)을 참조하십시오.
 	
 6. **작성**을 클릭하여 로그인한 {{site.data.keyword.Bluemix_notm}} 영역에서 {{site.data.keyword.monitoringshort}} 서비스를 제공하십시오.
   
@@ -66,13 +66,13 @@ subcollection: cloud-monitoring
 
 1. [전제조건] {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오.
 
-   자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI 설치](/docs/cli/index.html#overview)를 참조하십시오.
+   자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI 설치](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)를 참조하십시오.
    
    CLI가 설치되어 있는 경우에는 다음 단계를 진행하십시오.
     
 2. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 	
 3. `ibmcloud service create` 명령을 실행하여 인스턴스를 프로비저닝하십시오.
 
@@ -84,7 +84,7 @@ subcollection: cloud-monitoring
     여기서,
     	
     * *service_name*은 **Monitoring**입니다.
-    * *service_plan*은 서비스 플랜 이름입니다. 최대 45일 내의 메트릭을 수집하고 액세스하며, 와일드카드가 있는 규칙을 포함한 경보 규칙을 정의하려면 **프리미엄** 플랜을 선택하십시오. 기본적으로는 **Lite** 플랜이 설정되어 있으며, 이 플랜은 서비스를 프로비저닝 중인 영역에서 플랫폼 메트릭을 수집할 수 있도록 하고 이러한 메트릭에 대해 15일의 보존 기간을 허용합니다. 플랜 목록은 [{{site.data.keyword.monitoringshort}} 서비스 플랜](/docs/services/cloud-monitoring/monitoring_ov.html#plan)을 참조하십시오.
+    * *service_plan*은 서비스 플랜 이름입니다. 최대 45일 내의 메트릭을 수집하고 액세스하며, 와일드카드가 있는 규칙을 포함한 경보 규칙을 정의하려면 **프리미엄** 플랜을 선택하십시오. 기본적으로는 **Lite** 플랜이 설정되어 있으며, 이 플랜은 서비스를 프로비저닝 중인 영역에서 플랫폼 메트릭을 수집할 수 있도록 하고 이러한 메트릭에 대해 15일의 보존 기간을 허용합니다. 플랜 목록은 [{{site.data.keyword.monitoringshort}} 서비스 플랜](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan)을 참조하십시오.
     * *service_instance_name*은 작성하는 새 서비스 인스턴스에 대해 사용할 이름입니다.
     
     예를 들어, 프리미엄 플랜을 사용하여 {{site.data.keyword.monitoringshort}} 서비스를 작성하려면 다음 명령을 실행하십시오.

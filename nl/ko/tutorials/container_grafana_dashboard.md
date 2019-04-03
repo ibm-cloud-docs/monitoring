@@ -48,7 +48,7 @@ Kubernetes 클러스터에 배치된 앱에 대한 컨테이너 메트릭을 검
 * 클러스터가 미국 남부 지역에서 사용 가능합니다. 
 * 사용자 ID에는 **뷰어** 권한이 있는 {{site.data.keyword.monitoringshort}} 서비스에 대한 IAM 정책이 있습니다.
 
-이 튜토리얼을 완료하려면 [Kubernetes 클러스터에 배치된 앱에 대한 Grafana에서 메트릭 분석](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics)을 완료하거나 하나 이상의 애플리케이션이 배치되어 프로비저닝된 클러스터가 있어야 합니다.
+이 튜토리얼을 완료하려면 [Kubernetes 클러스터에 배치된 앱에 대한 Grafana에서 메트릭 분석](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics)을 완료하거나 하나 이상의 애플리케이션이 배치되어 프로비저닝된 클러스터가 있어야 합니다.
 
 
 
@@ -57,13 +57,13 @@ Kubernetes 클러스터에 배치된 앱에 대한 컨테이너 메트릭을 검
 
 브라우저에서 Grafana를 실행하고 클러스터 메트릭을 볼 수 있는 {{site.data.keyword.monitoringshort}} 도메인을 설정하십시오.
 
-클러스터의 메트릭을 분석하려면 클러스터가 작성된 클라우드 퍼블릭 지역에서 Grafana에 액세스해야 합니다. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)을 참조하십시오.
+클러스터의 메트릭을 분석하려면 클러스터가 작성된 클라우드 퍼블릭 지역에서 Grafana에 액세스해야 합니다. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)을 참조하십시오.
 
 1. 브라우저에서 Grafana를 실행하십시오. 
 
     클러스터를 작성한 지역에 대한 {{site.data.keyword.monitoringshort}} 서비스 URL을 입력하십시오. 
     
-    지역별 URL을 가져오려면 [모니터링 서비스에 대한 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)을 참조하십시오.
+    지역별 URL을 가져오려면 [모니터링 서비스에 대한 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)을 참조하십시오.
 
     예를 들어, 미국 남부 지역의 경우 [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)을 실행하십시오.
 
@@ -107,7 +107,7 @@ Grafana에서는 행을 추가하여 대시보드를 섹션으로 나눕니다. 
 
 그래프에 표시되는 데이터를 필터링하는 조회를 정의하십시오. 이 조회는 컨테이너의 모든 코어의 CPU 시간(나노초(ns))을 모니터링합니다.
 
-조회의 형식에 대한 정보는 [컨테이너에 대해 수집된 CPU 메트릭의 조회 형식](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)을 참조하십시오.
+조회의 형식에 대한 정보는 [컨테이너에 대해 수집된 CPU 메트릭의 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)을 참조하십시오.
  
 *메트릭* 탭에서 **조회 추가**를 선택하십시오. <br>조회 항목이 추가됩니다. 각 조회는 하나의 문자로 레이블 지정됩니다. 
 
@@ -137,7 +137,7 @@ Grafana에서는 행을 추가하여 대시보드를 섹션으로 나눕니다. 
 	
     예를 들어, 컨테이너의 모든 코어의 CPU 시간(나노초(ns))을 모니터링하려면 유형으로 **cpu**를 선택하고 하위 유형으로 **사용량**을 선택하십시오.
 		
-	CPU 메트릭 목록은 [컨테이너에 대한 CPU 메트릭](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers)을 참조하십시오.
+	CPU 메트릭 목록은 [컨테이너에 대한 CPU 메트릭](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers)을 참조하십시오.
     
 11. 더하기 이미지 ![추가 아이콘](images/grafana_plus_image.gif "더하기 이미지")를 클릭하고 함수를 선택하십시오. 함수를 추가하여 메트릭에 대해 사용 가능한 데이터를 변환하거나, 결합하거나, 이에 대한 계산을 수행할 수 있습니다.
 
@@ -167,4 +167,4 @@ Grafana에서는 행을 추가하여 대시보드를 섹션으로 나눕니다. 
 ## 다음 단계
 {: #cgd_next_steps}
 
-메트릭에 대한 경보를 정의하십시오. 자세한 정보는 [경보 구성](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)을 참조하십시오.
+메트릭에 대한 경보를 정의하십시오. 자세한 정보는 [경보 구성](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)을 참조하십시오.

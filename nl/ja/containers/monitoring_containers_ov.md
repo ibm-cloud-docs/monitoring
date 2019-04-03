@@ -33,7 +33,7 @@ subcollection: cloud-monitoring
 **注:** 
 
 * 標準クラスターで実行中のコンテナーに関して、メトリックが収集され、{{site.data.keyword.monitoringshort}} サービスでのモニターに使用できます。
-* クラスター・メトリックをモニターするには、Monitoring サービスのインスタンスをプロビジョンする必要があります。詳しくは、[Monitoring サービスのプロビジョニング](/docs/services/cloud-monitoring/how-to/provision.html#provision)を参照してください。
+* クラスター・メトリックをモニターするには、Monitoring サービスのインスタンスをプロビジョンする必要があります。 詳しくは、[Monitoring サービスのプロビジョニング](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision)を参照してください。
 
 
 ## Public でのモニタリングについて
@@ -235,20 +235,20 @@ Grafana でクラスターのメトリックを表示および分析するには
 
 {{site.data.keyword.monitoringlong}} サービスは、Grafana を使用します。Grafana は、さまざまなグラフ (例えば、チャートや表) でメトリックをモニター、検索、分析、および視覚化するために使用できる、分析および視覚化のためのオープン・ソース・プラットフォームです。
 
-Grafana は、ブラウザーから起動できます。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)を参照してください。
+Grafana は、ブラウザーから起動できます。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)を参照してください。
 
 Kubernetes クラスターで実行されているコンテナーおよびワーカーをモニターするには、以下のように各リソースの照会を Grafana に定義する必要があります。
 
-* コンテナーの CPU メトリックをモニターする照会を定義するには、[Grafana でのコンテナーの CPU メトリックの構成](/docs/services/cloud-monitoring/containers/config_cpu_containers.html#config_cpu_containers)を参照してください。
-* コンテナーのメモリー・メトリックをモニターする照会を定義するには、[Grafana でのコンテナーのメモリー・メトリックの構成](/docs/services/cloud-monitoring/containers/config_mem_container.html#config_mem_container)を参照してください。
-* ワーカーのロード・メトリックをモニターする照会を定義するには、[Grafana でのワーカーのロード・メトリックの構成](/docs/services/cloud-monitoring/containers/config_load_worker.html#config_load_worker)を参照してください。
+* コンテナーの CPU メトリックをモニターする照会を定義するには、[Grafana でのコンテナーの CPU メトリックの構成](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_cpu_containers#config_cpu_containers)を参照してください。
+* コンテナーのメモリー・メトリックをモニターする照会を定義するには、[Grafana でのコンテナーのメモリー・メトリックの構成](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_mem_container#config_mem_container)を参照してください。
+* ワーカーのロード・メトリックをモニターする照会を定義するには、[Grafana でのワーカーのロード・メトリックの構成](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_load_worker#config_load_worker)を参照してください。
 
 
 照会のフォーマットは、リソース・タイプおよび照会のタイプごとに異なります。
 
-* コンテナーの CPU をモニターする照会のフォーマットについて詳しくは、[コンテナーの CPU メトリック照会のフォーマット](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)を参照してください。 
-* ワーカーのロードをモニターする照会のフォーマットについて詳しくは、[ワーカーのロード・メトリック照会のフォーマット](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers)を参照してください。
-* コンテナーのメモリーをモニターする照会のフォーマットについて詳しくは、[コンテナーのメモリー・メトリック照会のフォーマット](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)を参照してください。
+* コンテナーの CPU をモニターする照会のフォーマットについて詳しくは、[コンテナーの CPU メトリック照会のフォーマット](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)を参照してください。 
+* ワーカーのロードをモニターする照会のフォーマットについて詳しくは、[ワーカーのロード・メトリック照会のフォーマット](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers)を参照してください。
+* コンテナーのメモリーをモニターする照会のフォーマットについて詳しくは、[コンテナーのメモリー・メトリック照会のフォーマット](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)を参照してください。
 
 
 ## {{site.data.keyword.Bluemix_notm}} のカスタム・ファイアウォール構成に対するネットワーク・トラフィックの構成
@@ -290,6 +290,6 @@ Kubernetes クラスターで実行されているコンテナーおよびワー
 ## チュートリアル
 {: #tutorial}
 
-{{site.data.keyword.monitoringshort}} サービスを使用してコンテナーのパフォーマンスをモニターする方法を学習するには、[Grafana での Kubernetes クラスターにデプロイされたアプリに関するメトリックの分析](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics)を参照してください。
+{{site.data.keyword.monitoringshort}} サービスを使用してコンテナーのパフォーマンスをモニターする方法を学習するには、[Grafana での Kubernetes クラスターにデプロイされたアプリに関するメトリックの分析](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics)を参照してください。
 
-クラスターのパフォーマンスをモニターするために {{site.data.keyword.monitoringshort}} サービスで Grafana ダッシュボードを作成する方法を学習するには、[Kubernetes クラスターをモニターするための Grafana ダッシュボードの作成](/docs/services/cloud-monitoring/tutorials/container_grafana_dashboard.html#container_grafana_dashboard)を参照してください。
+クラスターのパフォーマンスをモニターするために {{site.data.keyword.monitoringshort}} サービスで Grafana ダッシュボードを作成する方法を学習するには、[Kubernetes クラスターをモニターするための Grafana ダッシュボードの作成](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_grafana_dashboard#container_grafana_dashboard)を参照してください。

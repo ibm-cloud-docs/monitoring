@@ -36,7 +36,7 @@ Para recuperar métricas de um espaço, conclua as etapas a seguir:
 
 1. Efetue login em uma região, uma organização e um espaço no {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Configure o token de segurança ou a chave API
   
@@ -46,13 +46,13 @@ chave API. É possível usar um token do UAA, um token do IAM ou uma chave API.
     Primeiramente, escolha um dos métodos a seguir para obter o token de segurança que você precisa
 para enviar métricas:
 	
-    * Para obter um token do UAA, consulte [Obtendo o token do UAA usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+    * Para obter um token do UAA, consulte [Obtendo o token do UAA usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli).
     
-	* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
     
 	* Para obter uma chave API, consulte
 [Obtendo uma chave
-API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key). 
+API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key). 
 
     Um token ou uma chave API deve ser prefixada com um dos valores a seguir: `apikey`, `iam` ou `uaa` 
 
@@ -133,11 +133,11 @@ prefixado com *s-* para identificar um espaço.
 	
 	* *Start_Time* define o início da solicitação. Essas informações são usadas para calcular o período de
 tempo relativo ou absoluto. *End_Time* define o término da solicitação. Essas informações são usadas para calcular o período de
-tempo relativo ou absoluto. Para obter mais informações, consulte [Configurando um período de tempo](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time).
+tempo relativo ou absoluto. Para obter mais informações, consulte [Configurando um período de tempo](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time).
 	
-	* *Path* identifica uma ou várias métricas. É possível, opcionalmente, aplicar funções em cada métrica. Caminhos também suportam curingas, o que permite que você identifique mais de uma métrica em um único caminho. Para obter mais informações, veja [Definindo as métricas](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics).
+	* *Path* identifica uma ou várias métricas. É possível, opcionalmente, aplicar funções em cada métrica. Caminhos também suportam curingas, o que permite que você identifique mais de uma métrica em um único caminho. Para obter mais informações, veja [Definindo as métricas](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics).
 	
-	* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* *METRICS_ENDPOINT* representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 
 	

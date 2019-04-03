@@ -43,7 +43,7 @@ subcollection: cloud-monitoring
 ## 步骤 2：启动 Grafana
 {: #step27}
 
-通过浏览器启动 Grafana。有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)。
+通过浏览器启动 Grafana。有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)。
 
 确保在 Grafana 中登录到运行 CF 应用程序或服务的帐户、组织和区域。 
 
@@ -93,11 +93,11 @@ subcollection: cloud-monitoring
           </tr>
           <tr>
             <td>{{site.data.keyword.containershort_notm}}</td>
-            <td>[为容器收集的 CPU 度量值的查询格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers) </br>[为工作程序收集的负载度量值的查询格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers) </br>[为容器收集的内存度量值的查询格式](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers) </td> 
+            <td>[为容器收集的 CPU 度量值的查询格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers) </br>[为工作程序收集的负载度量值的查询格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers) </br>[为容器收集的内存度量值的查询格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)</td> 
           </tr>
           <tr>
             <td>CF 应用程序</td>
-            <td>[CF 应用程序的查询格式](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)</td> 
+            <td>[CF 应用程序的查询格式](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)</td> 
           </tr>
         </table>
 
@@ -123,15 +123,15 @@ subcollection: cloud-monitoring
           </tr>
           <tr>
             <td>{{site.data.keyword.containershort_notm}}</td>
-            <td>[CPU 度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics) </br>[磁盘度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics)</br>[内存度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td> 
+            <td>[CPU 度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics) </br>[磁盘度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics)</br>[内存度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td> 
           </tr>
           <tr>
             <td>CF 应用程序</td>
-            <td>[CPU 度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics) </br>[磁盘度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics)</br>[内存度量值](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td> 
+            <td>[CPU 度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics) </br>[磁盘度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics)</br>[内存度量值](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td> 
           </tr>
           <tr>
             <td>{{site.data.keyword.messagehub}}</td>
-            <td>[Kafka 主题的度量值](/docs/services/cloud-monitoring/mh/monitoring_mh_ov.html#kafka_topic_metrics)</br>[Kafka 分区的度量值](/docs/services/cloud-monitoring/mh/monitoring_mh_ov.html#kafka_partition_metrics)</td> 
+            <td>[Kafka 主题的度量值](/docs/services/cloud-monitoring/mh?topic=cloud-monitoring-monitoring_mh_ov#kafka_topic_metrics)</br>[Kafka 分区的度量值](/docs/services/cloud-monitoring/mh?topic=cloud-monitoring-monitoring_mh_ov#kafka_partition_metrics)</td> 
           </tr>
         </table>
 

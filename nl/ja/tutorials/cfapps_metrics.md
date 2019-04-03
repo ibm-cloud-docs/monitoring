@@ -49,11 +49,11 @@ CF アプリのメトリックを以下のように検索および分析する�
 
     {{site.data.keyword.Bluemix_notm}} のユーザー ID には、{{site.data.keyword.monitoringshort}} サービスと CF アプリがプロビジョンされているスペースに対する CF 役割が必要です。 必要な役割は  *開発者* です。
     
-    詳しくは、[IBM Cloud UI の使用によるユーザーへの CF 役割の付与 (Granting a user a CF role by using the IBM Cloud UI)](/docs/services/cloud-monitoring/security/assign_policy.html#grant_permissions_ui_space) を参照してください。
+    詳しくは、[IBM Cloud UI の使用によるユーザーへの CF 役割の付与 (Granting a user a CF role by using the IBM Cloud UI)](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#grant_permissions_ui_space) を参照してください。
 
 2. 米国南部地域内で、サービスをプロビジョンする権限があるスペースで、{{site.data.keyword.monitoringshort}} サービスをプロビジョンします。
 
-    詳しくは、[{{site.data.keyword.monitoringshort}} サービスのプロビジョニング](/docs/services/cloud-monitoring/how-to/provision.html#provision)を参照してください。
+    詳しくは、[{{site.data.keyword.monitoringshort}} サービスのプロビジョニング](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision)を参照してください。
 
 ## 手順 1: CF アプリおよび {{site.data.keyword.monitoringshort}} サービスの作業を行うための権限をユーザーに付与
 {: #cfapps_step1}
@@ -141,7 +141,7 @@ CF アプリが実行中になるとすぐに、メトリックが収集され�
 
     {{site.data.keyword.monitoringshort}} サービスがプロビジョンされている地域の {{site.data.keyword.monitoringshort}} サービス URL を入力します。
     
-    地域ごとの URL を取得するには、[Monitoring サービスの URL](/docs/services/cloud-monitoring/monitoring_ov.html#region) を参照してください。
+    地域ごとの URL を取得するには、[Monitoring サービスの URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region) を参照してください。
 
     例えば、米国南部地域の場合は、[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)を起動します。
 
@@ -170,7 +170,7 @@ Grafana で、ダッシュボードを複数のセクションに分割するた
 
 グラフに表示されるデータをフィルターに掛ける照会を定義します。 この照会は、コンテナーの限度に対する CPU 使用率のパーセンテージをモニターします。
 
-照会のフォーマットについては、[CF アプリに関する Grafana の照会フォーマット](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)を参照してください。
+照会のフォーマットについては、[CF アプリに関する Grafana の照会フォーマット](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)を参照してください。
     
 1. コンテナーの全コアにわたって CPU 時間のナノ秒をモニターするために、*「Graph」*パネルを追加します。
     
@@ -232,4 +232,4 @@ Grafana で、ダッシュボードを複数のセクションに分割するた
 ## 次の手順
 {: #cfapps_next_steps}
 
-メトリックのアラートを定義します。 詳しくは、[アラートの構成](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)を参照してください。
+メトリックのアラートを定義します。 詳しくは、[アラートの構成](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)を参照してください。

@@ -53,7 +53,7 @@ Führen Sie die folgenden Schritte aus, um eine Instanz des {{site.data.keyword.
 	
 	* Standardmäßig ist der **Lite**-Plan festgelegt, der Sie zur Erfassung von Plattformmetriken in dem Bereich, in dem Sie den Service bereitstellen, und zu einer Aufbewahrungsdauer von 15 Tagen für diese Metriken berechtigt. 
 
-    Weitere Informationen zu den Serviceplänen finden Sie in [Servicepläne](/docs/services/cloud-monitoring/monitoring_ov.html#plan).
+    Weitere Informationen zu den Serviceplänen finden Sie in [Servicepläne](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan).
 	
 6. Klicken Sie auf **Erstellen**, um den {{site.data.keyword.monitoringshort}}-Service in dem {{site.data.keyword.Bluemix_notm}}-Bereich bereitzustellen, bei dem Sie angemeldet sind.
   
@@ -66,13 +66,13 @@ Führen Sie die folgenden Schritte aus, um eine Instanz des {{site.data.keyword.
 
 1. [Voraussetzung] Installieren Sie die {{site.data.keyword.Bluemix_notm}}-CLI.
 
-   Weitere Informationen dazu finden Sie unter [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview).
+   Weitere Informationen dazu finden Sie unter [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
    
    Wenn die CLI installiert ist, fahren Sie mit dem nächsten Schritt fort.
     
 2. Melden Sie sich bei einer Region, einer Organisation und einem Bereich in {{site.data.keyword.Bluemix_notm}} an. 
 
-    Weitere Informationen finden Sie unter [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Weitere Informationen finden Sie in [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 	
 3. Führen Sie den Befehl `ibmcloud service create` aus, um eine Instanz bereitzustellen.
 
@@ -84,7 +84,7 @@ Führen Sie die folgenden Schritte aus, um eine Instanz des {{site.data.keyword.
     Dabei gilt Folgendes:
     	
     * *service_name* ist **Monitoring**.
-    * *service_plan* ist der Name des Serviceplans. Für die Erfassung und den Zugriff auf Metriken für bis zu 45 Tage und für die Definition von Alertregeln, einschließlich Regeln mit Platzhaltern, wählen Sie den **Premium**-Plan aus. Standardmäßig ist der **Lite**-Plan festgelegt, der Sie zur Erfassung von Plattformmetriken in dem Bereich, in dem Sie den Service bereitstellen, und zu einer Aufbewahrungsdauer von 15 Tagen für diese Metriken berechtigt. Eine Liste der Pläne finden Sie unter [{{site.data.keyword.monitoringshort}}-Servicepläne](/docs/services/cloud-monitoring/monitoring_ov.html#plan).
+    * *service_plan* ist der Name des Serviceplans. Für die Erfassung und den Zugriff auf Metriken für bis zu 45 Tage und für die Definition von Alertregeln, einschließlich Regeln mit Platzhaltern, wählen Sie den **Premium**-Plan aus. Standardmäßig ist der **Lite**-Plan festgelegt, der Sie zur Erfassung von Plattformmetriken in dem Bereich, in dem Sie den Service bereitstellen, und zu einer Aufbewahrungsdauer von 15 Tagen für diese Metriken berechtigt. Eine Liste der Pläne finden Sie unter [{{site.data.keyword.monitoringshort}}-Servicepläne](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan).
     * *service_instance_name* ist der Name, der für die neue Serviceinstanz verwendet werden soll, die Sie erstellen.
     
     Führen Sie zum Beispiel den folgenden Befehl aus, um eine Instanz des {{site.data.keyword.monitoringshort}}-Service mit einem Premium-Plan zu erstellen:

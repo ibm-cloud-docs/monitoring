@@ -36,14 +36,14 @@ subcollection: cloud-monitoring
 4. 透過 Grafana 圖形上的**警示**標籤，以配置警示。
 
 ## 步驟 1：啟動 Grafana
-{: #step1_cag1}
+{: #step1_cag}
 
 從瀏覽器啟動 Grafana。例如，輸入下列 URL，以在「美國南部」地區中開啟 Grafana：[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)。
 
-如需每個地區的 Grafana URL 清單，請參閱 [{{site.data.keyword.monitoringshort}} 服務的 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)。
+如需每個地區的 Grafana URL 清單，請參閱 [{{site.data.keyword.monitoringshort}} 服務的 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)。
 
 ## 步驟 2：定義一個以上的通知通道
-{: #step2_cag2}
+{: #step2_cag}
 
 請完成下列步驟：
 
@@ -134,7 +134,7 @@ subcollection: cloud-monitoring
 </table>
 
 ## 步驟 3：定義度量值
-{: #step3_cag3}
+{: #step3_cag}
 
 請完成下列步驟，以建立新的儀表板：
 
@@ -156,7 +156,7 @@ subcollection: cloud-monitoring
 
 
 ## 步驟 4：定義警示
-{: #step4_cag4}
+{: #step4_cag}
 
 請完成下列步驟，以在 Grafana 使用者介面中定義警示：
 
@@ -174,11 +174,11 @@ subcollection: cloud-monitoring
 * 如果您選取**刪除**，則會刪除警示。
 
 ## 下一步：驗證已產生警示
-{: #next_cag5}
+{: #next_cag}
 
 例如，如果您已建立電子郵件通知通道，請檢查電子郵件。
 
-尋找寄件者為 **IBM Cloud Monitoriing** 的電子郵件。
+尋找寄件者為 **IBM Cloud Monitoring** 的電子郵件。
 
 電子郵件包括所發出警示的資訊，以及您可在其中檢視狀況之 Grafana 儀表板的鏈結。
 

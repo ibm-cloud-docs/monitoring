@@ -53,15 +53,15 @@ Puede iniciar Grafana de cualquiera de estas formas:
 
     Compruebe que está en la organización y en el espacio correctos donde se esté ejecutando la instancia de {{site.data.keyword.messagehub}}.
     
-    Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+    Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
     
 
 Tenga en cuenta la información siguiente:
 
 * Debe iniciar Grafana en la misma región de {{site.data.keyword.Bluemix_notm}} donde está en ejecución la instancia de {{site.data.keyword.messagehub}}.
 * Utilice el panel de control de Grafana que se proporciona de forma predeterminada para empezar a supervisar la instancia de {{site.data.keyword.messagehub}}.
-* Cree paneles de control personalizados de Grafana para crear paneles de control ad-hoc. Puede definir una o varias consultas de métrica en un panel de control de Grafana para supervisar una instancia de {{site.data.keyword.messagehub}}. Para obtener más información, consulte [Configuración de una consulta de métrica en Grafana](/docs/services/cloud-monitoring/grafana/define_query.html#define_query).
-* También puede definir alertas en las consultas. Para obtener más información, consulte [Configuración de alertas](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+* Cree paneles de control personalizados de Grafana para crear paneles de control ad-hoc. Puede definir una o varias consultas de métrica en un panel de control de Grafana para supervisar una instancia de {{site.data.keyword.messagehub}}. Para obtener más información, consulte [Configuración de una consulta de métricas en Grafana](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query).
+* También puede definir alertas en las consultas. Para obtener más información, consulte [Configuración de alertas](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).
 
 
 ## Métricas para un tema de Kafka
@@ -124,6 +124,6 @@ Para cada partición de Kafka que tenga un puente de Cloud Storage que consuma m
 ## Referencias
 {: #mhlinks}
 
-* [Iniciación a Message Hub](/docs/services/EventStreams/index.html#getting_started)
+* [Iniciación a Message Hub](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started)
 * [Supervisión y registro](/docs/services/EventStreams/messagehub072.html#monitoring)
 

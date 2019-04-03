@@ -31,9 +31,9 @@ subcollection: cloud-monitoring
 請完成下列步驟：
 
 ## 步驟 1：建立規則
-{: #step11}
+{: #cea_step1}
 
-為您在 Grafana 中定義的度量值查詢建立規則。如需相關資訊，請參閱[建立規則](/docs/services/cloud-monitoring/alerts/rules.html#create)。
+為您在 Grafana 中定義的度量值查詢建立規則。如需相關資訊，請參閱[建立規則](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create)。
 
 例如，在 `~/cloud-monitoring/rules/` 目錄建立規則檔案 `s-rule-1.json`。 
 
@@ -66,21 +66,21 @@ export RULE_FILE="s-rule-1.json"
 {: screen}
 
 ## 步驟 2：在「監視」服務中登錄規則
-{: #step2}
+{: #cea_step2}
 	
 從終端機中，完成下列步驟：
 
 1. 登入 {{site.data.keyword.Bluemix_notm}} 中的地區、組織及空間。 
 
-    如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
 2. 取得安全記號。您可以使用 UAA 記號、IAM 記號或 API 金鑰。選擇下列其中一種方法來取得安全記號：
 	
-	* 若要取得 UAA 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 UAA 記號](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)。
+	* 若要取得 UAA 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 UAA 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)。
 	
-	* 若要取得 IAM 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)。
+	* 若要取得 IAM 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)。
 	
-	* 若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。
+	* 若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。
 	
 	例如，若要使用 IAM 記號，請執行下列指令：
 
@@ -163,7 +163,7 @@ export RULE_FILE="s-rule-1.json"
 	
 	* Space 是空間的 GUID。 
 	
-	* METRICS_ENDPOINT 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+	* METRICS_ENDPOINT 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 	
 	若要驗證已順利建立規則，請執行下列指令：
 	
@@ -180,12 +180,12 @@ export RULE_FILE="s-rule-1.json"
 	{: screen}
 
 ## 步驟 3：建立電子郵件通知
-{: #step3}
+{: #cea_step3}
 
 
 若要建立傳送電子郵件的通知檔案，請考量下列資訊：
 
-* 使用傳送電子郵件的通知範本。如需相關資訊，請參閱[通知範本](/docs/services/cloud-monitoring/config_alerts_ov.html#notification_template)。
+* 使用傳送電子郵件的通知範本。如需相關資訊，請參閱[通知範本](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#notification_template)。
 * 在本端目錄建立檔案，例如 `~/cloud-monitoring/notifications`。
 
 例如，使用 vi 編輯器建立檔案 **email.json**： 
@@ -200,24 +200,24 @@ export RULE_FILE="s-rule-1.json"
 ```
 {: codeblock}	
 	
-如需相關資訊，請參閱[建立通知](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create)。
+如需相關資訊，請參閱[建立通知](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create)。
 	
 ## 步驟 4：在「監視」服務中登錄通知方法
-{: #step4}
+{: #cea_step4}
 	
 從終端機中，完成下列步驟：
 
 1. 登入 {{site.data.keyword.Bluemix_notm}} 中的地區、組織及空間。 
 
-    如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
 2. 取得安全記號。您可以使用 UAA 記號、IAM 記號或 API 金鑰。選擇下列其中一種方法來取得安全記號：
 	
-	* 若要取得 UAA 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 UAA 記號](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)。
+	* 若要取得 UAA 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 UAA 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)。
 	
-	* 若要取得 IAM 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)。
+	* 若要取得 IAM 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)。
 	
-	* 若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。
+	* 若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。
 	
 	例如，若要使用 IAM 記號，請執行下列指令：
 
@@ -300,7 +300,7 @@ export RULE_FILE="s-rule-1.json"
 	
 	* Space 是空間的 GUID。 
 	
-	* METRICS_ENDPOINT 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+	* METRICS_ENDPOINT 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 	
     若要驗證已順利建立通知，請執行下列指令：
 

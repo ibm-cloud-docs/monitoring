@@ -41,13 +41,13 @@ subcollection: cloud-monitoring
 
 1. (전제조건) {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오.
 
-   자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI 설치](/docs/services/cloud-monitoring/qa/cli_qa.html#cli_qa)를 참조하십시오.
+   자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI 설치](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#cli_qa)를 참조하십시오.
    
    CLI가 설치되어 있는 경우에는 다음 단계를 진행하십시오.
 	
 2. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
     예를 들어, 미국 남부 지역에 로그인하려면 다음 명령을 실행하십시오.
 	
@@ -190,15 +190,15 @@ subcollection: cloud-monitoring
 
 사용자에게 IAM 정책을 지정하려면 다음 방법 중 하나를 선택하십시오.
 
-* {{site.data.keyword.Bluemix_notm}} UI를 통해: 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} UI를 통해 사용자에게 IAM 정책 지정 ](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui).
-* 명령행 사용: 자세한 정보는 [명령행을 사용하여 사용자에게 IAM 정책 지정](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_commandline)을 참조하십시오.
+* {{site.data.keyword.Bluemix_notm}} UI를 통해: 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} UI를 통해 사용자에게 IAM 정책 지정 ](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui).
+* 명령행 사용: 자세한 정보는 [명령행을 사용하여 사용자에게 IAM 정책 지정](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_commandline)을 참조하십시오.
  
 ### 2단계: API 키 가져오기
 {: #api_key}
  
 메트릭을 영역에 전송하려면 {{site.data.keyword.monitoringshort}} 서비스에 인증하기 위한 API 키를 가져와야 합니다.
 
-API 키를 가져오는 방법에 대한 자세한 정보는 [API 키 가져오기](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)를 참조하십시오.
+API 키를 가져오는 방법에 대한 자세한 정보는 [API 키 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)를 참조하십시오.
 	
 {{site.data.keyword.Bluemix_notm}}에 로그인한 것과 동일한 터미널에서 토큰에 대한 APIKEY 변수를 설정하십시오.
 
@@ -212,7 +212,7 @@ export APIKEY="kjshdgf.....ldkdjdj"
 ### 3단계: 엔드포인트에 대한 정보
 {: #endpoint}
 
-메트릭을 전송할 {{site.data.keyword.monitoringshort}} 엔드포인트를 판별하려면 지역별 엔드포인트 목록과 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하고 메트릭을 전송하려는 지역에 대한 엔드포인트를 식별하십시오.
+메트릭을 전송할 {{site.data.keyword.monitoringshort}} 엔드포인트를 판별하려면 지역별 엔드포인트 목록과 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하고 메트릭을 전송하려는 지역에 대한 엔드포인트를 식별하십시오.
 
 {{site.data.keyword.Bluemix_notm}}에 로그인한 터미널에서 **METRIC_ENDPOINT** 변수를 설정하십시오. 예를 들어 다음과 같습니다.
 
@@ -226,7 +226,7 @@ export METRIC_ENDPOINT="metrics.ng.bluemix.net"
 ### 4단계: 영역 도메인 ID에 대한 정보 가져오기 
 {: #domain}
 
-영역의 도메인 ID를 가져오려면 [영역 GUID 가져오기](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid)를 수행하십시오. 그런 다음, `s-SpaceID`와 같이 도메인 ID를 설정하십시오. 여기서 SpaceID는 영역의 GUID입니다.
+영역의 도메인 ID를 가져오려면 [영역 GUID 가져오기](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid)를 수행하십시오. 그런 다음, `s-SpaceID`와 같이 도메인 ID를 설정하십시오. 여기서 SpaceID는 영역의 GUID입니다.
 
 {{site.data.keyword.Bluemix_notm}}에 로그인한 것과 동일한 터미널에서 SpaceID 변수를 설정하십시오.
 

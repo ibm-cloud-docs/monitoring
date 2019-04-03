@@ -80,9 +80,9 @@ subcollection: cloud-monitoring
 
 2. Grafana ダッシュボードで定義されているメトリック照会にアラートを構成します。
 
-    * [E メールを送信するアラートを構成します](/docs/services/cloud-monitoring/alerts/configure_email_alert.html#configure_email_alert)。
-    * [PagerDuty 通知を送信するアラートを構成します](/docs/services/cloud-monitoring/alerts/configure_pagerduty_alert.html#configure_pagerduty_alert)。
-    * [Webhook 通知を送信するアラートを構成します](/docs/services/cloud-monitoring/alerts/configure_webhook_alert.html#configure_webhook_alert)。
+    * [E メールを送信するアラートを構成します](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_email_alert#configure_email_alert)。
+    * [PagerDuty 通知を送信するアラートを構成します](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_pagerduty_alert#configure_pagerduty_alert)。
+    * [Webhook 通知を送信するアラートを構成します](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_webhook_alert#configure_webhook_alert)。
 
     **注:** E メール通知を定義できるのは、アカウント・メトリック・ドメインで定義されているメトリック照会に対してのみになります。
 
@@ -106,7 +106,7 @@ Grafana ダッシュボードで直接メトリック照会にアラートを定
 
 2. Grafana ダッシュボードで定義されているメトリック照会にアラートを構成します。
 
-    詳しくは、[Grafana でのアラートの構成](/docs/services/cloud-monitoring/alerts/config_alerts_grafana.html#config_alerts_grafana)を参照してください。
+    詳しくは、[Grafana でのアラートの構成](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-config_alerts_grafana#config_alerts_grafana)を参照してください。
 
 
 ## アラートの状態
@@ -143,7 +143,7 @@ Grafana ダッシュボードで直接メトリック照会にアラートを定
 
 詳しくは、
 [
-ルールの履歴の取得](/docs/services/cloud-monitoring/alerts/retrieve_history.html#retrieve_history)を参照してください。
+ルールの履歴の取得](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#retrieve_history)を参照してください。
 
 
 ## ルール
@@ -151,19 +151,19 @@ Grafana ダッシュボードで直接メトリック照会にアラートを定
 
 ルールは、モニターするメトリック照会、しきい値、およびしきい値を超えた際に実行するアクションを記述します。 
 
-* アラート API を使用して、ルールの作成、削除、および更新、ルールの詳細の表示、およびすべてのルールのリストを行うことができます。 詳しくは、[ルールの処理](/docs/services/cloud-monitoring/alerts/rules.html#rules)を参照してください。
+* アラート API を使用して、ルールの作成、削除、および更新、ルールの詳細の表示、およびすべてのルールのリストを行うことができます。 詳しくは、[ルールの処理](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#rules)を参照してください。
 
     * ルールを作成するには、
 [
-ルールの作成](/docs/services/cloud-monitoring/alerts/rules.html#create)を参照してください。
+ルールの作成](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create)を参照してください。
 	* ルールを削除するには、
-[ルールの削除](/docs/services/cloud-monitoring/alerts/rules.html#delete)を参照してください。
+[ルールの削除](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#delete)を参照してください。
 	* ルールを更新するには、
-[ルールの更新](/docs/services/cloud-monitoring/alerts/rules.html#update)を参照してください。
+[ルールの更新](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#update)を参照してください。
 	* すべてのルールをリストするには、
-[すべてのルールのリスト表示](/docs/services/cloud-monitoring/alerts/rules.html#list)を参照してください。
+[すべてのルールのリスト表示](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#list)を参照してください。
 	* ルールに関する情報を表示するには、
-[ルールの詳細の表示](/docs/services/cloud-monitoring/alerts/rules.html#showing-the-details-of-a-rule)を参照してください。
+[ルールの詳細の表示](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#showing-the-details-of-a-rule)を参照してください。
 
 * アラート・システムは、スペース内で有効になっているルールを 5 分ごとにチェックします。
 
@@ -284,15 +284,15 @@ mple-topic.BytesInPerSec.15MinuteRate,\"5min\")",
 * [アラート REST API](https://console.bluemix.net/apidocs/940-ibm-cloud-monitoring-alerts-api?&language=node#introduction){: new_window} を使用して、通知の作成、削除、および更新、通知の詳細表示、およびスペース内に定義されている通知のリストを行うことができます。
 
     * 通知を作成するには、
-[通知の作成](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create)を参照してください。
+[通知の作成](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create)を参照してください。
 	* 通知を削除するには、
-[通知の削除](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_delete)を参照してください。
+[通知の削除](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_delete)を参照してください。
 	* 通知を更新するには、
-[通知の更新](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_update)を参照してください。
+[通知の更新](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_update)を参照してください。
 	* すべての通知をリストするには、
-[すべての通知のリスト表示](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_list)を参照してください。
+[すべての通知のリスト表示](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_list)を参照してください。
 	* 通知に関する情報を表示するには、
-[通知の詳細の表示](/docs/services/cloud-monitoring/alerts/notifications.html#show)を参照してください。
+[通知の詳細の表示](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#show)を参照してください。
 
 * E メール通知、PagerDuty 通知、Webhook 通知を構成することができます。 
 

@@ -39,7 +39,7 @@ Complete los pasos siguientes para otorgar permisos a un usuario para trabajar c
 
 1. Inicie sesión en la consola de {{site.data.keyword.Bluemix_notm}}.
 
-    Abra un navegador web y lance el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://console.bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
+    Abra un navegador web e inicie el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://console.bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
 	
 	Después de iniciar sesión con su ID de usuario y su contraseña, se abre la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
 
@@ -49,7 +49,7 @@ Complete los pasos siguientes para otorgar permisos a un usuario para trabajar c
 	
 3. Si el usuario es un miembro de la cuenta, seleccione el nombre de usuario de la lista, o pulse **Gestionar usuario** del menú *Acciones*.
 
-    Si el usuario no es un miembro de la cuenta, consulte [Invitación a usuarios](/docs/iam/iamuserinv.html#iamuserinv).
+    Si el usuario no es un miembro de la cuenta, consulte [Invitación a usuarios](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Pulse **Asignar política de servicio**.
 
@@ -69,7 +69,7 @@ Complete los pasos siguientes para otorgar permisos a un usuario para trabajar c
 	  </tr>
 	  <tr>
 	    <td>Roles</td>
-		<td>Seleccione uno o varios roles de IAM. <br>Los roles válidos son: *administrador*, *operador*, *editor*, y *visor*. <br>Para obtener más información sobre las acciones que están permitidas por rol, consulte [Roles de IAM](/docs/services/cloud-monitoring/security_ov.html#iam_roles).</td>
+		<td>Seleccione uno o varios roles de IAM. <br>Los roles válidos son: *administrador*, *operador*, *editor*, y *visor*. <br>Para obtener más información sobre las acciones que están permitidas por rol, consulte [Roles de IAM](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#iam_roles).</td>
 		<td>Obligatorio</td>
 	  </tr>
 	  <tr>
@@ -90,13 +90,13 @@ Complete los pasos siguientes para otorgar acceso a un usuario para ver las mét
 
 1. (Requisito previo) Instalar la CLI de {{site.data.keyword.Bluemix_notm}}.
 
-   Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#overview).
+   Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
    
    Si la CLI está instalada, continúe en el paso siguiente.
 	
 2. Inicie la sesión en una región, organización y espacio en {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 	
 3. Obtenga el ID de cuenta. 
 
@@ -129,7 +129,7 @@ Complete los pasos siguientes para otorgar acceso a un usuario para ver las mét
 	
 	    Por ejemplo, solicite al usuario que ejecute los mandatos siguientes para obtener su ID de usuario:
 		
-		Obtenga la señal de IAM. Para obtener más información, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli).
+		Obtenga la señal de IAM. Para obtener más información, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli).
 
         Obtenga los datos de la señal de IAM que se encuentran entre los dos primeros puntos en la señal de IAM. Exporte los datos a una variable de shell como `$user_data`. 
 		
@@ -167,7 +167,7 @@ Complete los pasos siguientes para otorgar acceso a un usuario para ver las mét
 		```
 		{: codeblock}
 
-3. Invite el usuario a la cuenta si no es un miembro. Para obtener más información, consulte [Invitación a usuarios](/docs/iam/iamuserinv.html#iamuserinv).
+3. Invite el usuario a la cuenta si no es un miembro. Para obtener más información, consulte [Invitación a usuarios](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
     Por ejemplo, ejecute el mandato siguiente para invitar al usuario xxx@yyy.com a la cuenta zzz@ggg.com:
 	
@@ -201,7 +201,7 @@ Complete los pasos siguientes para otorgar acceso a un usuario para ver las mét
 	
 5. Obtenga la señal de IAM para su ID de usuario.
 
-    Para obtener más información, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli).
+    Para obtener más información, consulte [Obtención de la señal de IAM mediante la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli).
 
     Exporte la señal de IAM a una variable de shell como, por ejemplo, `$iam_token`:
 	
@@ -242,7 +242,7 @@ Complete los pasos siguientes para otorgar permisos a un usuario para trabajar c
 
 1. Inicie sesión en la consola de {{site.data.keyword.Bluemix_notm}}.
 
-    Abra un navegador web y lance el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
+    Abra un navegador web e inicie el panel de control de {{site.data.keyword.Bluemix_notm}}: [http://bluemix.net ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}
 	
 	Después de iniciar sesión con su ID de usuario y su contraseña, se abre la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
 
@@ -252,7 +252,7 @@ Complete los pasos siguientes para otorgar permisos a un usuario para trabajar c
 	
 3. Si el usuario es un miembro de la cuenta, seleccione el nombre de usuario de la lista, o pulse **Gestionar usuario** del menú *Acciones*.
 
-    Si el usuario no es un miembro de la cuenta, consulte [Invitación a usuarios](/docs/iam/iamuserinv.html#iamuserinv).
+    Si el usuario no es un miembro de la cuenta, consulte [Invitación a usuarios](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Pulse **Asignar organización**.
 
@@ -282,7 +282,7 @@ Complete los pasos siguientes para otorgar permisos a un usuario para trabajar c
 	  </tr>
 	  <tr>
 	    <td>Roles de espacio</td>
-		<td>Seleccione un rol de espacio de la lista. <br>Los valores válidos son: **Gestor**, **Auditor**, **Desarrollador** y **Sin rol de espacio**. Para obtener más información, consulte [Roles de Cloud Foundry](/docs/services/cloud-monitoring/security_ov.html#bmx_roles).</td>
+		<td>Seleccione un rol de espacio de la lista. <br>Los valores válidos son: **Gestor**, **Auditor**, **Desarrollador** y **Sin rol de espacio**. Para obtener más información, consulte [Roles de Cloud Foundry](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#bmx_roles).</td>
 	  </tr>
 	</table>
 	

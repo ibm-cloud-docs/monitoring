@@ -23,7 +23,7 @@ subcollection: cloud-monitoring
 {:note: .note}
 
 
-# Cree un panel de control de Grafana para supervisar un clúster Kubernetes
+# Cree un panel de control de Grafana para supervisar un clúster de Kubernetes
 {: #container_grafana_dashboard}
 
 
@@ -34,7 +34,7 @@ Utilice esta guía de aprendizaje para aprender a crear un panel de control de G
 ## Objetivos
 {: #cgd_objectives}
 
-Aprenda a buscar y analizar métricas de contenedor de una app que se despliega en un clúster Kubernetes:
+Aprenda a buscar y analizar métricas de contenedor de una app que se despliega en un clúster de Kubernetes:
 
 1. Inicie Grafana y establezca el dominio {{site.data.keyword.monitoringshort}} donde pueda ver las métricas del clúster.
 2. Cree un panel de control de Grafana y defina una métrica que supervise el uso de CPU de un contenedor.
@@ -48,7 +48,7 @@ La guía de aprendizaje presupone:
 * Un clúster está disponible en la región EE.UU. sur. 
 * El ID de usuario tiene una política de IAM para el servicio {{site.data.keyword.monitoringshort}} con permisos de **visor**.
 
-Para completar esta guía de aprendizaje, debe completar la guía de aprendizaje [Analizar métricas en Grafana para una app desplegada en un clúster Kubernetes](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics) o tener un clúster suministrado con al menos una aplicación desplegada.
+Para completar esta guía de aprendizaje, debe completar la guía de aprendizaje [Analizar métricas en Grafana para una app desplegada en un clúster de Kubernetes](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics) o tener un clúster suministrado con al menos una aplicación desplegada.
 
 
 
@@ -57,13 +57,13 @@ Para completar esta guía de aprendizaje, debe completar la guía de aprendizaje
 
 Inicie Grafana desde un navegador y establezca el dominio de {{site.data.keyword.monitoringshort}} donde puede ver las métricas de clúster.
 
-Para analizar las métricas de un clúster, debe acceder a Grafana en la región pública de la nube en la que se ha creado el clúster. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Para analizar las métricas de un clúster, debe acceder a Grafana en la región pública de la nube en la que se ha creado el clúster. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 1. Desde un navegador, inicie Grafana. 
 
     Especifique el URL del servicio {{site.data.keyword.monitoringshort}} para la región en la que ha creado el clúster. 
     
-    Para obtener los URL por región, consulte [URL para el servicio de supervisión](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Para obtener los URL por región, consulte [URL para el servicio de supervisión](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Por ejemplo, para la región EE.UU. sur, inicie: [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -107,7 +107,7 @@ Realice los siguientes pasos:
 
 Defina la consulta que filtra los datos que se muestran en el gráfico. Esta consulta supervisa los nanosegundos de tiempo de cpu en todos los núcleos de un contenedor.
 
-Para obtener información sobre el formato de la consulta, consulte [Formato de consulta para las métricas de CPU recopiladas para contenedores](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers).
+Para obtener información sobre el formato de la consulta, consulte [Formato de consulta para las métricas de CPU recopiladas para contenedores](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers).
  
 En el separador *Métricas*, seleccione **Añadir consulta**. <br>Se añade una entrada de consulta. Cada consulta está etiquetada con una letra. 
 
@@ -137,7 +137,7 @@ Siga los siguientes pasos para definir la consulta:
 	
     Por ejemplo, para supervisar los nanosegundos de tiempo de cpu en todos los núcleos de un contenedor, seleccione **cpu** para el tipo, y **uso** para el subtipo.
 		
-	Para obtener una lista de las métricas de CPU, consulte [Métricas de CPU para contenedores](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers).
+	Para obtener una lista de las métricas de CPU, consulte [Métricas de CPU para contenedores](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers).
     
 11. Pulse la imagen del símbolo más ![Añadir iconos](images/grafana_plus_image.gif "Imagen del símbolo Más") y elija una función. Puede añadir una función para transformar, combinar y realizar cálculos sobre los datos disponibles para una métrica.
 
@@ -167,4 +167,4 @@ Guarde el panel de control para utilizarlo más adelante.
 ## Pasos siguientes
 {: #cgd_next_steps}
 
-Defina una alerta para una métrica. Para obtener más información, consulte [Configuración de alertas](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Defina una alerta para una métrica. Para obtener más información, consulte [Configuración de alertas](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

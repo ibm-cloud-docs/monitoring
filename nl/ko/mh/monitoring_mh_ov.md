@@ -31,7 +31,7 @@ subcollection: cloud-monitoring
 {:shortdesc}
 
 
-**참고:** {{site.data.keyword.messagehub}} 메트릭은 미국 남부, 영국 및 시드니에서만 {{site.data.keyword.messagehub}} 표준 플랜으로 사용 가능합니다.  
+**참고:** {{site.data.keyword.messagehub}} 메트릭은 미국 남부, 영국 및 시드니에서만 {{site.data.keyword.messagehub}} 표준 플랜으로 사용 가능합니다. 
 
 
 
@@ -53,15 +53,15 @@ Grafana는 다음 방법 중 하나로 실행할 수 있습니다.
 
     {{site.data.keyword.messagehub}} 인스턴스가 실행 중인 올바른 조직 및 영역에 있는지 확인하십시오.
     
-    자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)을 참조하십시오.
+    자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)을 참조하십시오.
     
 
 다음 정보를 고려하십시오.
 
 * {{site.data.keyword.messagehub}} 인스턴스가 실행 중인 동일한 {{site.data.keyword.Bluemix_notm}} 지역에서 Grafana를 실행해야 합니다.
 * 기본적으로 제공되는 Grafana 대시보드를 사용하여 {{site.data.keyword.messagehub}} 인스턴스의 모니터링을 시작하십시오.
-* 임시 대시보드를 빌드하려면 사용자 정의 Grafana 대시보드를 작성하십시오. Grafana 대시보드에 하나 이상의 메트릭 조회를 정의하여 {{site.data.keyword.messagehub}} 인스턴스를 모니터링할 수 있습니다. 자세한 정보는 [Grafana에서 메트릭 조회 구성](/docs/services/cloud-monitoring/grafana/define_query.html#define_query)을 참조하십시오.
-* 또한 조회에 대한 경보를 정의할 수 있습니다. 자세한 정보는 [경보 구성](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)을 참조하십시오.
+* 임시 대시보드를 빌드하려면 사용자 정의 Grafana 대시보드를 작성하십시오. Grafana 대시보드에 하나 이상의 메트릭 조회를 정의하여 {{site.data.keyword.messagehub}} 인스턴스를 모니터링할 수 있습니다. 자세한 정보는 [Grafana에서 메트릭 조회 구성](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query)을 참조하십시오.
+* 또한 조회에 대한 경보를 정의할 수 있습니다. 자세한 정보는 [경보 구성](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)을 참조하십시오.
 
 
 ## Kafka 토픽에 대한 메트릭
@@ -124,6 +124,6 @@ Grafana는 다음 방법 중 하나로 실행할 수 있습니다.
 ## 참조
 {: #mhlinks}
 
-* [메시지 허브 시작하기](/docs/services/EventStreams/index.html#getting_started)
+* [메시지 허브 시작하기](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started)
 * [모니터링 및 로깅](/docs/services/EventStreams/messagehub072.html#monitoring)
 

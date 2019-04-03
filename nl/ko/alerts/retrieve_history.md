@@ -34,15 +34,15 @@ subcollection: cloud-monitoring
 
 1. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
 2. 보안 토큰을 가져오십시오. UAA 토큰, IAM 토큰 또는 API 키를 사용할 수 있습니다. 다음 방법 중 하나를 선택하여 보안 토큰을 얻으십시오.
 	
-	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)를 참조하십시오.
+	* UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)를 참조하십시오.
 	
-	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)를 참조하십시오.
+	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)를 참조하십시오.
 	
-	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)를 참조하십시오.
+	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)를 참조하십시오.
 	
 	{{site.data.keyword.Bluemix_notm}}에 로그인한 것과 동일한 터미널에서 토큰에 대한 Token 변수를 설정하십시오.
 
@@ -106,9 +106,9 @@ subcollection: cloud-monitoring
 	
 4. 규칙의 히스토리 검색
 
-    * 해당 이름을 사용하여 규칙의 히스토리를 검색하려면 [해당 이름을 사용하여 규칙의 히스토리 검색](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_name)을 참조하십시오.
-	* 일정 기간 동안의 규칙 히스토리를 검색하려면 [최근 48시간 동안의 규칙 히스토리 검색](/docs/services/cloud-monitoring/alerts/retrieve_history.html#by_time)을 참조하십시오.
-	* 규칙의 히스토리에서 여러 항목을 검색하려면 [규칙의 히스토리에서 최근 3개의 항목 검색](/docs/services/cloud-monitoring/alerts/retrieve_history.html#number)을 참조하십시오.
+    * 해당 이름을 사용하여 규칙의 히스토리를 검색하려면 [해당 이름을 사용하여 규칙의 히스토리 검색](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_name)을 참조하십시오.
+	* 일정 기간 동안의 규칙 히스토리를 검색하려면 [최근 48시간 동안의 규칙 히스토리 검색](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#by_time)을 참조하십시오.
+	* 규칙의 히스토리에서 여러 항목을 검색하려면 [규칙의 히스토리에서 최근 3개의 항목 검색](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#number)을 참조하십시오.
 	
 	
 ## 규칙 이름을 사용하여 규칙의 히스토리 검색
@@ -139,7 +139,7 @@ curl -XGET --header "X-Auth-User-Token: Auth_Type ${Token}" --header "X-Auth-Sco
 	
 * *RULE_NAME*은 이 경보를 트리거하는 데 사용되는 규칙의 이름입니다. 이 값은 *name* 필드에 지정된 값입니다.
 	
-* *METRICS_ENDPOINT*는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+* *METRICS_ENDPOINT*는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 	
     
 예를 들어, 규칙 `highNginxCPU`의 히스토리는 다음과 같습니다.
@@ -205,7 +205,7 @@ curl -H "X-Auth-User-Token: iam $Token" -H "X-Auth-Scope-Id:$Space" METRICS_ENDP
 	
 * *RULE_NAME*은 이 경보를 트리거하는 데 사용되는 규칙의 이름입니다. 이 값은 *name* 필드에 지정된 값입니다.
 	
-* *METRICS_ENDPOINT*는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+* *METRICS_ENDPOINT*는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 	
 
 ## 규칙의 히스토리에서 최근 3개의 항목 검색
@@ -236,5 +236,5 @@ curl -H "X-Auth-User-Token: iam $Token" -H "X-Auth-Scope-Id:$Space" METRICS_ENDP
 	
 * *RULE_NAME*은 이 경보를 트리거하는 데 사용되는 규칙의 이름입니다. 이 값은 *name* 필드에 지정된 값입니다.
 	
-* *METRICS_ENDPOINT*는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+* *METRICS_ENDPOINT*는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 	

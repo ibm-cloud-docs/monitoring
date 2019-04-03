@@ -30,12 +30,12 @@ subcollection: cloud-monitoring
 Vous trouverez ci-après les réponses aux questions fréquentes concernant le service {{site.data.keyword.monitoringshort}} et le service {{site.data.keyword.containershort_notm}}. 
 {:shortdesc}
 
-* [La requête Grafana portant sur mes conteneurs ne renvoie aucune donnée ou est erronée](/docs/services/cloud-monitoring/qa/qa_containers.html#metric_format_change)
-* [Comment configurer un environnement de cluster dans ma session de terminal ?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1)
-* [Où le nom et l'ID du cluster sont-ils définis ?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa3)
-* [Comment obtenir la liste des espaces de noms ?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa7)
-* [Comment obtenir la liste des pods par espace de noms dans un cluster Kubernetes ?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa8)
-* [Comment obtenir tous les pods d'un cluster par espace de noms ?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa9)
+* [La requête Grafana portant sur mes conteneurs ne renvoie aucune donnée ou est erronée](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#metric_format_change)
+* [Comment configurer un environnement de cluster dans ma session de terminal ?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1)
+* [Où le nom et l'ID du cluster sont-ils définis ?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa3)
+* [Comment obtenir la liste des espaces de noms ?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa7)
+* [Comment obtenir la liste des pods par espace de noms dans un cluster Kubernetes ?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa8)
+* [Comment obtenir tous les pods d'un cluster par espace de noms ?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa9)
 
 ## La requête Grafana portant sur mes conteneurs ne renvoie aucune donnée ou est erronée
 {: #metric_format_change}
@@ -51,9 +51,9 @@ Le format suivant est obsolète :
 
 Les nouveaux formats valides sont les suivants :
 
-* [Format de requête de métrique d'UC pour un conteneur](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)
-* [Format de requête de métrique de charge pour un agent](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers)
-* [Format de requête de métrique de mémoire pour un conteneur](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)
+* [Format de requête de métrique d'UC pour un conteneur](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)
+* [Format de requête de métrique de charge pour un agent](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers)
+* [Format de requête de métrique de mémoire pour un conteneur](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)
 
 Faites migrer vos anciennes requêtes vers le nouveau format afin de visualiser vos données dans Grafana.
 
@@ -100,7 +100,7 @@ Le tableau suivant répertorie les zones dans le format qui est devenu obsolète
       </tr>
       <tr>
         <td>Account</td>
-        <td>Identificateur global unique du compte sur lequel les métriques sont collectées. <br>Le format de cette zone est le suivant : `a_ID` où ID est l'identificateur global unique du compte. <br>Pour obtenir l'identificateur global unique du compte, voir [Comment obtenir l'identificateur global unique d'un compte](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid).</td>
+        <td>Identificateur global unique du compte sur lequel les métriques sont collectées. <br>Le format de cette zone est le suivant : `a_ID` où ID est l'identificateur global unique du compte. <br>Pour obtenir l'identificateur global unique du compte, voir [Comment obtenir l'identificateur global unique d'un compte](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid).</td>
         <td>a_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
       </tr>
       <tr>
@@ -111,7 +111,7 @@ Le tableau suivant répertorie les zones dans le format qui est devenu obsolète
       <tr>
         <td>Metric</td>
         <td>Métrique automatiquement collectée pour un conteneur.</td>
-        <td>Pour obtenir une liste de métriques d'unité centrale, voir [Métriques d'unité centrale pour les conteneurs](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers). <br>Pour obtenir la liste des métriques de mémoire, voir [Métriques de mémoire](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#memory_metrics). </td>
+        <td>Pour obtenir une liste de métriques d'unité centrale, voir [Métriques d'unité centrale pour les conteneurs](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers). <br>Pour obtenir la liste des métriques de mémoire, voir [Métriques de mémoire](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#memory_metrics). </td>
       </tr>
       <tr>
         <td>Container in a pod</td>
@@ -135,7 +135,7 @@ Vous devez définir le contexte d'un cluster Kubernetes pour le gérer à l'aide
 
 Procédez comme suit pour configurer le contexte d'un cluster :
 
-1. Connectez-vous à la région, l'organisation et l'espace dans l'environnement {{site.data.keyword.Bluemix_notm}} associé au cluster que vous avez créé. Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+1. Connectez-vous à la région, l'organisation et l'espace dans l'environnement {{site.data.keyword.Bluemix_notm}} associé au cluster que vous avez créé. Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Initialisez le plug-in du service {{site.data.keyword.containershort_notm}}. Exécutez la commande suivante :
 
@@ -186,7 +186,7 @@ Procédez comme suit pour obtenir le nom et l'ID du cluster à l'aide de l'inter
 
 Procédez comme suit pour obtenir le nom et l'ID du cluster à l'aide de la ligne de commande :
 
-1. Connectez-vous à la région, l'organisation et l'espace dans l'environnement {{site.data.keyword.Bluemix_notm}} associé au cluster que vous avez créé. Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+1. Connectez-vous à la région, l'organisation et l'espace dans l'environnement {{site.data.keyword.Bluemix_notm}} associé au cluster que vous avez créé. Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Répertoriez les clusters qui sont disponibles dans le compte. Exécutez la commande suivante : 
 
@@ -213,7 +213,7 @@ Pour obtenir la liste de tous les espaces de nom de votre cluster, procédez com
 
 Procédez comme suit :
 
-1. Configurez le contexte de cluster. Pour plus d'informations, voir [Comment configurer un environnement de cluster dans ma session de terminal ?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1).
+1. Configurez le contexte de cluster. Pour plus d'informations, voir [Comment configurer un environnement de cluster dans ma session de terminal ?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1).
 
 2. Répertoriez tous les espaces de nom. Exécutez la commande kubectl suivante :
 
@@ -227,7 +227,7 @@ Procédez comme suit :
 		
 Pour obtenir la liste des pods d'un espace de nom, procédez comme suit :
 
-1. Configurez le contexte de cluster. Pour plus d'informations, voir [Comment configurer un environnement de cluster dans ma session de terminal ?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1).
+1. Configurez le contexte de cluster. Pour plus d'informations, voir [Comment configurer un environnement de cluster dans ma session de terminal ?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1).
 
 2. Pour obtenir la liste des pods par espace de nom dans un cluster Kubernetes, exécutez la commande suivante :
 
@@ -243,7 +243,7 @@ Pour obtenir la liste des pods d'un espace de nom, procédez comme suit :
 		
 Procédez comme suit :
 
-1. Configurez le contexte de cluster. Pour plus d'informations, voir [Comment configurer un environnement de cluster dans ma session de terminal ?](/docs/services/cloud-monitoring/qa/qa_containers.html#qa1).
+1. Configurez le contexte de cluster. Pour plus d'informations, voir [Comment configurer un environnement de cluster dans ma session de terminal ?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-qa_containers#qa1).
 	
 2. Pour obtenir tous les pods d'un cluster par espace de nom, exécutez la commande suivante :
 

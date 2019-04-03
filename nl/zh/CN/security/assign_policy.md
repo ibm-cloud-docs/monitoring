@@ -50,7 +50,7 @@ subcollection: cloud-monitoring
 	
 3. 如果用户是帐户的成员，请从列表中选择用户名，或从*操作*菜单中单击**管理用户**。
 
-    如果用户不是帐户的成员，请参阅[邀请用户](/docs/iam/iamuserinv.html#iamuserinv)。
+    如果用户不是帐户的成员，请参阅[邀请用户](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 
 4. 单击**分配服务策略**。
 
@@ -70,7 +70,7 @@ subcollection: cloud-monitoring
 	  </tr>
 	  <tr>
 	    <td>角色</td>
-		<td>选择一个或多个 IAM 角色。<br>有效角色为：*管理员*、*操作员*、*编辑者*和*查看者*。<br>有关每个角色允许的操作的更多信息，请参阅 [IAM 角色](/docs/services/cloud-monitoring/security_ov.html#iam_roles)。</td>
+		<td>选择一个或多个 IAM 角色。<br>有效角色为：*管理员*、*操作员*、*编辑者*和*查看者*。<br>有关每个角色允许的操作的更多信息，请参阅 [IAM 角色](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#iam_roles)。</td>
 		<td>必需</td>
 	  </tr>
 	  <tr>
@@ -92,13 +92,13 @@ subcollection: cloud-monitoring
 
 1. （先决条件）安装 {{site.data.keyword.Bluemix_notm}} CLI。
 
-   有关更多信息，请参阅[安装 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview)。
+   有关更多信息，请参阅[安装 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)。
    
    如果 CLI 已安装，请继续执行下一步。
 	
 2. 登录到 {{site.data.keyword.Bluemix_notm}} 中的区域、组织和空间。 
 
-    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 	
 3. 获取帐户标识。 
 
@@ -136,7 +136,7 @@ subcollection: cloud-monitoring
 
 
 		
-		获取 IAM 令牌。有关更多信息，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli)。
+		获取 IAM 令牌。有关更多信息，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli)。
 
         从 IAM 令牌的前两个点之间的 IAM 令牌获取数据。将数据导出到 shell 变量，例如，`$user_data`。 
 		
@@ -178,7 +178,7 @@ subcollection: cloud-monitoring
 		```
 		{: codeblock}
 
-3. 如果用户尚未成为成员，请邀请用户加入帐户。有关更多信息，请参阅[邀请用户](/docs/iam/iamuserinv.html#iamuserinv)。
+3. 如果用户尚未成为成员，请邀请用户加入帐户。有关更多信息，请参阅[邀请用户](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 
     例如，运行以下命令以邀请用户 xxx@yyy.com 加入帐户 zzz@ggg.com：
 	
@@ -212,7 +212,7 @@ subcollection: cloud-monitoring
 	
 5. 获取您用户标识的 IAM 令牌。
 
-    有关更多信息，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli)。
+    有关更多信息，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli)。
 
     将 IAM 令牌导出到 shell 变量（如 `$iam_token`），例如：
 	
@@ -267,7 +267,7 @@ subcollection: cloud-monitoring
 	
 3. 如果用户是帐户的成员，请从列表中选择用户名，或从*操作*菜单中单击**管理用户**。
 
-    如果用户不是帐户的成员，请参阅[邀请用户](/docs/iam/iamuserinv.html#iamuserinv)。
+    如果用户不是帐户的成员，请参阅[邀请用户](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 
 4. 单击**分配组织**。
 
@@ -297,7 +297,7 @@ subcollection: cloud-monitoring
 	  </tr>
 	  <tr>
 	    <td>空间角色</td>
-		<td>从列表中选择一个空间角色。<br>有效值为：**管理者**、**审计员**、**开发者**和**无空间角色**。有关更多信息，请参阅 [Cloud Foundry 角色](/docs/services/cloud-monitoring/security_ov.html#bmx_roles)。</td>
+		<td>从列表中选择一个空间角色。<br>有效值为：**管理者**、**审计员**、**开发者**和**无空间角色**。有关更多信息，请参阅 [Cloud Foundry 角色](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#bmx_roles)。</td>
 	  </tr>
 	</table>
 	

@@ -56,7 +56,7 @@ subcollection: cloud-monitoring
 **「ユーザーの管理 (Manage user)」**をクリックします。
 
     ユーザーがアカウントのメンバーではない場合、
-[ユーザーの招待](/docs/iam/iamuserinv.html#iamuserinv)を参照してください。
+[ユーザーの招待](/docs/iam?topic=iam-iamuserinv#iamuserinv)を参照してください。
 
 4. **「サービス・ポリシーの割り当て (Assign service policies)」**をクリックします。
 
@@ -76,7 +76,7 @@ subcollection: cloud-monitoring
 	  </tr>
 	  <tr>
 	    <td>役割</td>
-		<td>1 つ以上の IAM 役割を選択してください。 <br>有効な役割は、*アドミニストレーター*、*オペレーター*、*エディター*、*ビューアー*です。 <br>役割ごとに許可されるアクションについて詳しくは、[IAM の役割](/docs/services/cloud-monitoring/security_ov.html#iam_roles)を参照してください。</td>
+		<td>1 つ以上の IAM 役割を選択してください。 <br>有効な役割は、*アドミニストレーター*、*オペレーター*、*エディター*、*ビューアー*です。 <br>役割ごとに許可されるアクションについて詳しくは、[IAM の役割](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#iam_roles)を参照してください。</td>
 		<td>必須</td>
 	  </tr>
 	  <tr>
@@ -97,13 +97,13 @@ subcollection: cloud-monitoring
 
 1. (前提条件) {{site.data.keyword.Bluemix_notm}} CLI をインストールします。
 
-   詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI のインストール](/docs/cli/index.html#overview)を参照してください。
+   詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI のインストール](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)を参照してください。
    
    CLI がインストールされたら、次の手順に進んでください。
 	
 2. {{site.data.keyword.Bluemix_notm}} で、地域、組織、およびスペースにログインします。 
 
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa/cli_qa.html#login)を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)を参照してください。
 	
 3. アカウント ID を取得します。 
 
@@ -136,7 +136,7 @@ subcollection: cloud-monitoring
 	
 	    例えば、ユーザーに自分のユーザー ID を取得するために以下のコマンドを実行するよう依頼します。
 		
-		IAM トークンを取得します。 詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの取得](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli)を参照してください。
+		IAM トークンを取得します。 詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli)を参照してください。
 
         IAM トークンの最初の 2 つのドットの間にある IAM トークンのデータを取得します。 「`$user_data`」のようなシェル変数にデータをエクスポートします。 
 		
@@ -174,7 +174,7 @@ subcollection: cloud-monitoring
 		```
 		{: codeblock}
 
-3. ユーザーがアカウントのメンバーではない場合は招待します。 詳しくは、[ユーザーの招待](/docs/iam/iamuserinv.html#iamuserinv)を参照してください。
+3. ユーザーがアカウントのメンバーではない場合は招待します。 詳しくは、[ユーザーの招待](/docs/iam?topic=iam-iamuserinv#iamuserinv)を参照してください。
 
     例えば、以下のコマンドを実行してユーザー xxx@yyy.com をアカウント zzz@ggg.com に招待します。
 	
@@ -208,7 +208,7 @@ subcollection: cloud-monitoring
 	
 5. ご使用のユーザー ID の IAM トークンを取得します。
 
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの取得](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli)を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI を使用した IAM トークンの取得](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli)を参照してください。
 
     `$iam_token` のようなシェル変数に IAM トークンをエクスポートします。以下に例を挙げます。
 	
@@ -262,7 +262,7 @@ subcollection: cloud-monitoring
 **「ユーザーの管理 (Manage user)」**をクリックします。
 
     ユーザーがアカウントのメンバーではない場合、
-[ユーザーの招待](/docs/iam/iamuserinv.html#iamuserinv)を参照してください。
+[ユーザーの招待](/docs/iam?topic=iam-iamuserinv#iamuserinv)を参照してください。
 
 4. **「組織の割り当て」**をクリックします。
 
@@ -292,7 +292,7 @@ subcollection: cloud-monitoring
 	  </tr>
 	  <tr>
 	    <td>スペースの役割</td>
-		<td>リストからスペースの役割を選択してください。 <br>有効な値は、**「管理者」**、**「監査員」**、**「開発者」**、および**「スペースの役割なし」**です。 詳しくは、[Cloud Foundry の役割](/docs/services/cloud-monitoring/security_ov.html#bmx_roles)を参照してください。</td>
+		<td>リストからスペースの役割を選択してください。 <br>有効な値は、**「管理者」**、**「監査員」**、**「開発者」**、および**「スペースの役割なし」**です。 詳しくは、[Cloud Foundry の役割](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#bmx_roles)を参照してください。</td>
 	  </tr>
 	</table>
 	

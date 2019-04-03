@@ -41,13 +41,13 @@ En un terminal, siga los pasos siguientes:
 
 1. (Requisito previo) Instalar la CLI de {{site.data.keyword.Bluemix_notm}}.
 
-   Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#cli_qa).
+   Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#cli_qa).
    
    Si la CLI está instalada, continúe en el paso siguiente.
 	
 2. Inicie la sesión en una región, organización y espacio en {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
     Por ejemplo, para iniciar sesión en la región EE. UU. sur, ejecute el siguiente mandato:
 	
@@ -73,7 +73,7 @@ Como administrador, realice los pasos siguientes para instalar collectd:
 
 2.	Instale el paquete Network Time Protocol (NTP) para sincronizar la hora de los registros. 
 
-    Por ejemplo, para un sistema Ubuntu, compruebe si `timedatectl status` muestra *Network time on: yes*. Si no lo hace, el sistema Ubuntu ya está configurado para utilizar ntp y puede omitir este paso.
+    Por ejemplo, para un sistema Ubuntu, compruebe si `timedatectl status` muestra *Network time on: yes*. Si es así, significa que el sistema Ubuntu ya está configurado para utilizar ntp y puede saltarse este paso.
     
     ```
     # timedatectl status
@@ -124,7 +124,7 @@ Como administrador, realice los pasos siguientes para instalar collectd:
         ```
         {: codeblock}
         
-        El resultado confirma que el tiempo se ajusta, por ejemplo:
+        El resultado confirma que se ha ajustado la hora, por ejemplo:
         
         ```
         4 May 19:02:17 ntpdate[5732]: adjust time server 50.116.55.65 offset 0.000685 sec
@@ -190,15 +190,15 @@ Para enviar métricas a un dominio, es necesario otorgar un rol de IAM al ID de 
 
 Para asignar a un usuario una política de IAM, elija uno de los métodos siguientes:
 
-* Mediante la IU de {{site.data.keyword.Bluemix_notm}}: Para obtener más información, consulte [Asignación de una política de IAM a un usuario mediante la IU de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui).
-* Mediante la línea de mandatos: Para obtener más información, consulte [Asignación de una política de IAM a un usuario mediante la línea de mandatos](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_commandline).
+* Mediante la IU de {{site.data.keyword.Bluemix_notm}}: Para obtener más información, consulte [Asignación de una política de IAM a un usuario mediante la IU de {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui).
+* Mediante la línea de mandatos: Para obtener más información, consulte [Asignación de una política de IAM a un usuario mediante la línea de mandatos](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_commandline).
  
 ### Paso 2: Obtener una clave de API
 {: #api_key}
  
 Para enviar métrica a un espacio, debe disponer de una clave de API para autenticarse con el servicio {{site.data.keyword.monitoringshort}}.
 
-Para obtener más información sobre cómo obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+Para obtener más información sobre cómo obtener una clave de API, consulte [Obtención de una clave de API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 En el mismo terminal en el que ha iniciado sesión en {{site.data.keyword.Bluemix_notm}}, establezca la variable APIKEY para la señal.
 
@@ -212,7 +212,7 @@ export APIKEY="kjshdgf.....ldkdjdj"
 ### Paso 3: Obtenga información acerca del punto final
 {: #endpoint}
 
-Para determinar el punto final de {{site.data.keyword.monitoringshort}} al que va a enviar las métricas, consulte la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints) e identifique uno para la región a la que desea enviar las métricas.
+Para determinar el punto final de {{site.data.keyword.monitoringshort}} al que va a enviar las métricas, consulte la lista de puntos finales por región, consulte [Puntos finales](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints) e identifique uno para la región a la que desea enviar las métricas.
 
 En el mismo terminal en el que ha iniciado sesión en {{site.data.keyword.Bluemix_notm}}, establezca la variable **METRIC_ENDPOINT**. Por ejemplo,
 
@@ -226,7 +226,7 @@ export METRIC_ENDPOINT="metrics.ng.bluemix.net"
 ### Paso 4: Obtenga información acerca del ID de dominio de espacio 
 {: #domain}
 
-Para obtener el ID de dominio del espacio, [obtener del GUID de espacio](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid). A continuación, establezca el ID de dominio como se indica a continuación: `s-SpaceID` donde SpaceID es el GUID del espacio.
+Para obtener el ID de dominio del espacio, [obtener del GUID de espacio](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid). A continuación, establezca el ID de dominio como se indica a continuación: `s-SpaceID` donde SpaceID es el GUID del espacio.
 
 En el mismo terminal en el que ha iniciado sesión en {{site.data.keyword.Bluemix_notm}}, establezca la variable SpaceID:
 

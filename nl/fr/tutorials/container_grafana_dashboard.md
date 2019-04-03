@@ -48,7 +48,7 @@ Les hypothèses du tutoriel sont les suivantes :
 * Un cluster est disponible dans la région Sud des Etats-Unis. 
 * Votre ID utilisateur contient une règle IAM pour le service {{site.data.keyword.monitoringshort}} avec des droits **viewer**.
 
-Avant de suivre ce tutoriel, vous devez exécuter le tutoriel [Analyse des métriques dans Grafana pour une application qui est déployée dans un cluster Kubernetes](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics) ou disposer d'un cluster mis à disposition avec au moins 1 application déployée.
+Avant de suivre ce tutoriel, vous devez exécuter le tutoriel [Analyse des métriques dans Grafana pour une application qui est déployée dans un cluster Kubernetes](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics) ou disposer d'un cluster mis à disposition avec au moins 1 application déployée.
 
 
 
@@ -57,13 +57,13 @@ Avant de suivre ce tutoriel, vous devez exécuter le tutoriel [Analyse des métr
 
 Lancez Grafana à partir d'un domaine et définissez le domaine {{site.data.keyword.monitoringshort}} dans lequel vous pourrez visualiser les métriques de cluster.
 
-Pour analyser les métriques pour un cluster, vous devez accéder à Grafana dans la région publique du cloud où le cluster a été créé. Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Pour analyser les métriques pour un cluster, vous devez accéder à Grafana dans la région publique du cloud où le cluster a été créé. Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 1. A partir d'un navigateur, démarrez Grafana. 
 
     Entrez l'adresse URL du service {{site.data.keyword.monitoringshort}} pour la région où vous avez créé le cluster. 
     
-    Pour obtenir les adresses URL par région, voir [URL pour le service de surveillance](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Pour obtenir les adresses URL par région, voir [URL pour le service de surveillance](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Par exemple, pour la région Sud des Etats-Unis, démarrez : [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -107,7 +107,7 @@ Procédez comme suit :
 
 Définissez la requête qui filtre les données affichées dans le graphique. Cette requête surveille le nombre de nanosecondes du temps UC sur tous les coeurs d'un conteneur.
 
-Pour plus d'informations sur le format de la requête, voir [Format de requête des métriques d'unité centrale collectées pour les conteneurs](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers).
+Pour plus d'informations sur le format de la requête, voir [Format de requête des métriques d'unité centrale collectées pour les conteneurs](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers).
  
 Dans l'onglet *Metrics*, sélectionnez **Add query**. <br>Une entrée de requête est ajoutée. Chaque requête est associée à une lettre. 
 
@@ -137,7 +137,7 @@ Procédez comme suit pour définir la requête :
 	
     Par exemple, pour surveiller le nombre de nanosecondes du temps UC sur tous les coeurs pour un conteneur, sélectionnez **cpu** pour le type et **usage** pour le sous-type.
 		
-	Pour obtenir une liste de métriques d'unité centrale, voir [Métriques d'unité centrale pour les conteneurs](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers).
+	Pour obtenir une liste de métriques d'unité centrale, voir [Métriques d'unité centrale pour les conteneurs](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers).
     
 11. Cliquez sur le signe plus ![Icône Ajouter](images/grafana_plus_image.gif "Signe Plus"), puis choisissez une fonction. Vous pouvez ajouter une fonction pour transformer et combiner des données disponibles pour une métrique, et effectuer des calculs sur ces données.
 
@@ -167,4 +167,4 @@ Sauvegardez le tableau de bord en vue de sa réutilisation ultérieure.
 ## Etapes suivantes
 {: #cgd_next_steps}
 
-Définissez une alerte pour une métrique. Pour plus d'informations, voir [Configuration d'alertes](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Définissez une alerte pour une métrique. Pour plus d'informations, voir [Configuration d'alertes](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

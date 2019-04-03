@@ -53,7 +53,7 @@ subcollection: cloud-monitoring
 	
 	* 缺省情况下，会设置 **Lite** 套餐，通过该套餐，您可以收集供应服务所在空间中的平台度量值，并保留这些度量值 15 天。 
 
-    有关服务套餐的更多信息，请参阅[服务套餐](/docs/services/cloud-monitoring/monitoring_ov.html#plan)。
+    有关服务套餐的更多信息，请参阅[服务套餐](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan)。
 	
 6. 单击**创建**以在您登录的 {{site.data.keyword.Bluemix_notm}} 空间中供应 {{site.data.keyword.monitoringshort}} 服务。
   
@@ -66,13 +66,13 @@ subcollection: cloud-monitoring
 
 1. [先决条件] 安装 {{site.data.keyword.Bluemix_notm}} CLI。
 
-   有关更多信息，请参阅[安装 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview)。
+   有关更多信息，请参阅[安装 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)。
    
    如果 CLI 已安装，请继续执行下一步。
     
 2. 登录到 {{site.data.keyword.Bluemix_notm}} 中的区域、组织和空间。 
 
-    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 	
 3. 运行 `ibmcloud service create` 命令以供应实例。
 
@@ -84,7 +84,7 @@ subcollection: cloud-monitoring
     其中
     	
     * *service_name* 是 **Monitoring**。
-    * *service_plan* 是服务套餐名称。要收集和访问最多 45 天的度量值，以及定义警报规则（包括带有通配符的规则），请选择**高级**套餐。缺省情况下，会设置 **Lite** 套餐，通过该套餐，您可以收集供应服务所在空间中的平台度量值，并保留这些度量值 15 天。有关套餐的列表，请参阅 [{{site.data.keyword.monitoringshort}} 服务套餐](/docs/services/cloud-monitoring/monitoring_ov.html#plan)。
+    * *service_plan* 是服务套餐名称。要收集和访问最多 45 天的度量值，以及定义警报规则（包括带有通配符的规则），请选择**高级**套餐。缺省情况下，会设置 **Lite** 套餐，通过该套餐，您可以收集供应服务所在空间中的平台度量值，并保留这些度量值 15 天。有关套餐的列表，请参阅 [{{site.data.keyword.monitoringshort}} 服务套餐](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#plan)。
     * *service_instance_name* 是要用于所创建的新服务实例的名称。
     
     例如，要使用高端套餐创建 {{site.data.keyword.monitoringshort}} 服务的实例，请运行以下命令：

@@ -31,7 +31,7 @@ subcollection: cloud-monitoring
 {:shortdesc}
 
 
-在您[登入 {{site.data.keyword.Bluemix_notm}} 中的地區](/docs/services/cloud-monitoring/qa/cli_qa.html#login)之後，請完成下列步驟來刪除通知：
+在您[登入 {{site.data.keyword.Bluemix_notm}} 中的地區](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)之後，請完成下列步驟來刪除通知：
 
 
 ## 步驟 1：取得安全記號
@@ -41,9 +41,9 @@ subcollection: cloud-monitoring
 
 選擇下列其中一種方法來取得安全記號：
 	
-* 若要取得 UAA 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 UAA 記號](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)。
-* 若要取得 IAM 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)。
-* 若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。
+* 若要取得 UAA 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 UAA 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)。
+* 若要取得 IAM 記號，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)。
+* 若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。
 	
 例如，若要使用 IAM 記號，請執行下列指令：
 
@@ -142,7 +142,7 @@ curl -H "X-Auth-User-Token: apikey ${TOKEN}" -XGET METRICS_ENDPOINT/v1/alert/rul
 	
 * Space 是空間的 GUID。 
 	
-* METRICS_ENDPOINT 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* METRICS_ENDPOINT 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 
 
 ## 步驟 4：刪除警示規則
@@ -180,7 +180,7 @@ curl -H "X-Auth-User-Token: apikey ${TOKEN}" -XDELETE METRICS_ENDPOINT/v1/alert/
 	
 * Space 是空間的 GUID。 
 	
-* METRICS_ENDPOINT 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* METRICS_ENDPOINT 代表服務的進入點。每一個地區都有不同的 URL。若要取得每個地區的端點清單，請參閱[端點](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 
 * *name* 是您要刪除的規則的名稱。
 	

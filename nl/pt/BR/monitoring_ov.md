@@ -40,7 +40,7 @@ utilização de memória e E/S de rede para o {{site.data.keyword.containershort
 serviço do {{site.data.keyword.monitoringshort}} no {{site.data.keyword.Bluemix_notm}}
 para coletar e medir automaticamente as métricas de chave de seu ambiente e aplicativos. Nenhuma instrumentação especial é necessária para coletar métricas. Por exemplo, é possível usar as informações fornecidas por métricas de desempenho para monitorar como um serviço está em execução na nuvem, detectar gargalos de recursos e manter-se atento ao acordo de nível de serviço (SLA). Ao analisar dados de desempenho para um serviço, é possível detectar situações que podem levar a um gargalo de recurso e, consequentemente, afetar seu SLA do serviço para seus clientes. Tomando uma ação antecipada, é possível evitar situações que podem impactar negativamente seus negócios.  
 
-É possível enviar métricas dos aplicativos Cloud Foundry (CF) e das Máquinas virtuais (VMs) para o serviço {{site.data.keyword.monitoringshort}}. Para obter mais informações sobre como enviar métricas, veja [Enviando métricas para o serviço do {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#send_retrieve_metrics_ov).
+É possível enviar métricas dos aplicativos Cloud Foundry (CF) e das Máquinas virtuais (VMs) para o serviço {{site.data.keyword.monitoringshort}}. Para obter mais informações sobre como enviar métricas, consulte [Enviando métricas para o serviço {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#send_retrieve_metrics_ov).
 
 É possível fornecer o serviço do {{site.data.keyword.monitoringshort}} por meio do
 catálogo {{site.data.keyword.Bluemix_notm}}.  
@@ -84,7 +84,7 @@ do {{site.data.keyword.monitoringshort}} por meio do painel do
 
 O {{site.data.keyword.monitoringshort}} serviço fornece vários planos. Cada plano tem diferentes recursos de métricas de coleta, de retenção e de definição de alerta. 
 
-É possível mudar um plano por meio da UI do {{site.data.keyword.Bluemix_notm}} ou por meio da linha de comandos. É possível fazer upgrade ou reduzir seu plano a qualquer momento. Para obter mais informações sobre upgrades de plano de serviço no {{site.data.keyword.Bluemix_notm}}, veja [Mudando o plano](/docs/services/cloud-monitoring/plan/change_plan.html#change_plan). 
+É possível mudar um plano por meio da UI do {{site.data.keyword.Bluemix_notm}} ou por meio da linha de comandos. É possível fazer upgrade ou reduzir seu plano a qualquer momento. Para obter mais informações sobre upgrades de plano de serviço no {{site.data.keyword.Bluemix_notm}}, veja [Mudando o plano](/docs/services/cloud-monitoring/plan?topic=cloud-monitoring-change_plan#change_plan). 
 
 A tabela a seguir descreve os planos que estão disponíveis ao fornecer o
 serviço do {{site.data.keyword.monitoringshort}} em um espaço:
@@ -150,9 +150,7 @@ As métricas que não tiverem recebido dados nos últimos 7 dias serão excluíd
 ## Fornecendo o serviço Monitoring
 {: #provision1}
 
-No catálogo do {{site.data.keyword.Bluemix_notm}}, é possível localizar o serviço {{site.data.keyword.monitoringshort}} na seção **DevOps**. Para obter mais informações sobre o fornecimento de um serviço no {{site.data.keyword.Bluemix_notm}},
-consulte [Fornecendo o
-serviço do {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to/provision.html#provision).
+No catálogo do {{site.data.keyword.Bluemix_notm}}, é possível localizar o serviço {{site.data.keyword.monitoringshort}} na seção **DevOps**. Para obter mais informações sobre o fornecimento de um serviço no {{site.data.keyword.Bluemix_notm}}, consulte [Fornecendo o serviço {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 Considere as informações a seguir sobre o serviço do {{site.data.keyword.monitoringshort}}:
 

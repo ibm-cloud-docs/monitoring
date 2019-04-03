@@ -49,7 +49,7 @@ Pour autoriser un utilisateur à gérer le service {{site.data.keyword.monitorin
 	
 3. Si l'utilisateur est membre du compte, sélectionnez le nom de l'utilisateur dans la liste ou cliquez sur **Gérer un utilisateur** dans le menu *Actions*.
 
-    Si l'utilisateur n'est pas membre du compte, voir [Invitation d'utilisateurs](/docs/iam/iamuserinv.html#iamuserinv).
+    Si l'utilisateur n'est pas membre du compte, voir [Invitation d'utilisateurs](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Cliquez sur **Affecter une règle de service**.
 
@@ -69,7 +69,7 @@ Pour autoriser un utilisateur à gérer le service {{site.data.keyword.monitorin
 	  </tr>
 	  <tr>
 	    <td>Rôles</td>
-		<td>Sélectionnez un ou plusieurs rôles IAM. <br>Les rôles valides sont : *administrateur*, *opérateur*, *éditeur* et *afficheur*. <br>Pour plus d'informations sur les actions autorisées pour chaque rôle, voir [Rôle IAM](/docs/services/cloud-monitoring/security_ov.html#iam_roles).</td>
+		<td>Sélectionnez un ou plusieurs rôles IAM. <br>Les rôles valides sont : *administrateur*, *opérateur*, *éditeur* et *afficheur*. <br>Pour plus d'informations sur les actions autorisées pour chaque rôle, voir [Rôle IAM](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#iam_roles).</td>
 		<td>Obligatoire</td>
 	  </tr>
 	  <tr>
@@ -90,13 +90,13 @@ Pour autoriser un utilisateur à afficher des métriques via la ligne de command
 
 1. (Prérequis) Installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
-   Pour plus d'informations, voir [Installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.](/docs/cli/index.html#overview)
+   Pour plus d'informations, voir [Installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)
    
    Si l'interface de ligne de commande est installée, passez à l'étape suivante.
 	
 2. Connectez-vous à une région, une organisation et un espace dans {{site.data.keyword.Bluemix_notm}}. 
 
-    Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Pour plus d'informations, voir [Comment se connecter à {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 	
 3. Obtenez l'ID de compte. 
 
@@ -129,7 +129,7 @@ Pour autoriser un utilisateur à afficher des métriques via la ligne de command
 	
 	    Demandez, par exemple, à l'utilisateur d'exécuter les commandes suivantes pour obtenir son ID utilisateur :
 		
-		Obtenez le jeton IAM. Pour plus d'informations, voir [Obtention du jeton IAM à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli).
+		Obtenez le jeton IAM. Pour plus d'informations, voir [Obtention du jeton IAM à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli).
 
         Prenez les données situées entre les deux premiers points dans le jeton IAM. Exportez les données vers une variable d'environnement telle que `$user_data`. 
 		
@@ -167,7 +167,7 @@ Pour autoriser un utilisateur à afficher des métriques via la ligne de command
 		```
 		{: codeblock}
 
-3. Invitez l'utilisateur au compte s'il n'en est pas déjà membre. Pour plus d'informations, voir [Invitation d'utilisateurs](/docs/iam/iamuserinv.html#iamuserinv).
+3. Invitez l'utilisateur au compte s'il n'en est pas déjà membre. Pour plus d'informations, voir [Invitation d'utilisateurs](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
     Par exemple, exécutez la commande suivante pour inviter l'utilisateur xxx@yyy.com au compte zzz@ggg.com:
 	
@@ -201,7 +201,7 @@ Pour autoriser un utilisateur à afficher des métriques via la ligne de command
 	
 5. Obtenez le jeton IAM pour votre ID utilisateur.
 
-    Pour plus d'informations, voir [Obtention du jeton IAM à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli).
+    Pour plus d'informations, voir [Obtention du jeton IAM à l'aide de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli).
 
     Exportez le jeton IAM vers une variable d'environnement telle que `$iam_token`, par exemple :
 	
@@ -252,7 +252,7 @@ Pour autoriser un utilisateur à gérer le service {{site.data.keyword.monitorin
 	
 3. Si l'utilisateur est membre du compte, sélectionnez le nom de l'utilisateur dans la liste ou cliquez sur **Gérer un utilisateur** dans le menu *Actions*.
 
-    Si l'utilisateur n'est pas membre du compte, voir [Invitation d'utilisateurs](/docs/iam/iamuserinv.html#iamuserinv).
+    Si l'utilisateur n'est pas membre du compte, voir [Invitation d'utilisateurs](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Cliquez sur **Affecter une organisation**.
 
@@ -282,7 +282,7 @@ Pour autoriser un utilisateur à gérer le service {{site.data.keyword.monitorin
 	  </tr>
 	  <tr>
 	    <td>Rôles d'espace</td>
-		<td>Sélectionnez un rôle d'espace dans la liste. <br>Les valeurs valides sont : **Responsable**, **Auditeur**, **Développeur** et **Aucun rôle d'espace**. Pour plus d'informations, voir [Rôles Cloud Foundry](/docs/services/cloud-monitoring/security_ov.html#bmx_roles).</td>
+		<td>Sélectionnez un rôle d'espace dans la liste. <br>Les valeurs valides sont : **Responsable**, **Auditeur**, **Développeur** et **Aucun rôle d'espace**. Pour plus d'informations, voir [Rôles Cloud Foundry](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#bmx_roles).</td>
 	  </tr>
 	</table>
 	

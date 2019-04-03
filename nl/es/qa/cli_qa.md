@@ -30,11 +30,11 @@ subcollection: cloud-monitoring
 Aquí encontrará las respuestas a preguntas comunes sobre el uso de la CLI de {{site.data.keyword.Bluemix}} con el servicio {{site.data.keyword.monitoringshort}}. 
 {:shortdesc}
 
-* [¿Cómo iniciar sesión en {{site.data.keyword.Bluemix_notm}}?](/docs/services/cloud-monitoring/qa/cli_qa.html#login)
-* [¿Cómo se instala la CLI de {{site.data.keyword.Bluemix_notm}}?](/docs/services/cloud-monitoring/qa/cli_qa.html#install_bmx_cli)
-* [¿Cómo se obtiene el GUID de una cuenta?](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid)
-* [¿Cómo se obtiene el GUID de una organización?](/docs/services/cloud-monitoring/qa/cli_qa.html#org_guid)
-* [¿Cómo se obtiene el GUID de un espacio?](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid)
+* [¿Cómo iniciar sesión en {{site.data.keyword.Bluemix_notm}}?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)
+* [¿Cómo se instala la CLI de {{site.data.keyword.Bluemix_notm}}?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#install_bmx_cli)
+* [¿Cómo se obtiene el GUID de una cuenta?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid)
+* [¿Cómo se obtiene el GUID de una organización?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#org_guid)
+* [¿Cómo se obtiene el GUID de un espacio?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid)
 
 ## ¿Cómo iniciar sesión en IBM Cloud?
 {: #login}
@@ -97,7 +97,7 @@ donde
 ## ¿Cómo se instala la CLI de IBM Cloud?
 {: #install_bmx_cli}
 
-Consulte [Descargar e instalar la CLI de {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview).
+Consulte [Descargar e instalar la CLI de {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
 
 ## ¿Cómo se obtiene el GUID de una cuenta?
 {: #account_guid}
@@ -266,7 +266,7 @@ Siga estos pasos para obtener el GUID de un espacio:
     ```
     {: codeblock}
 	
-2. Ejecute el mandato `ibmcloud iam space` para obtener el GUID de espacio. 
+2. Ejecute el mandato `ibmcloud iam space` para obtener el GUID del espacio. 
 
     ```
     ibmcloud iam space NAME --guid
@@ -275,7 +275,7 @@ Siga estos pasos para obtener el GUID de un espacio:
 	
     donde NAME es el nombre de un espacio de {{site.data.keyword.Bluemix_notm}}. 
 	
-    Por ejemplo, para obtener la GUID para el espacio *dev*, ejecute el mandato siguiente:
+    Por ejemplo, para obtener la GUID del espacio *dev*, ejecute el mandato siguiente:
 	
     ```
     ibmcloud iam space dev --guid

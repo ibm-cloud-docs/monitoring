@@ -40,10 +40,10 @@ Per utilizzare le metriche archiviate nel servizio {{site.data.keyword.monitorin
 
 Per ottenere un token di sicurezza, consulta:
 
-* [Acquisizione di un token UAA ](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa)
-* [Acquisizione di un token IAM](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)
+* [Acquisizione di un token UAA ](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa)
+* [Acquisizione di un token IAM](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)
 
-Per ottenere una chiave API, vedi [Generazione di una chiave API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key). Se la chiave API è compromessa, puoi revocarla eliminandola. Puoi quindi ricrearne una nuova. Per ulteriori informazioni, vedi [Revoca di una chiave API utilizzando la IU {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_api_key.html#revoke_ui). 
+Per ottenere una chiave API, vedi [Generazione di una chiave API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key). Se la chiave API è compromessa, puoi revocarla eliminandola. Puoi quindi ricrearne una nuova. Per ulteriori informazioni, vedi [Revoca di una chiave API utilizzando la IU {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#revoke_ui). 
 
 Un token UAA e un token IAM scadono dopo un certo periodo di tempo. La chiave API non scade. 
 
@@ -104,7 +104,7 @@ La seguente tabella elenca i privilegi di ogni ruolo Cloud Foundry per utilizzar
   </tr>
 </table>
 
-Per informazioni sull'assegnazione dei ruoli utente nell'IU, consulta [Gestione dell'accesso a Cloud Foundry](/docs/iam/mngcf.html#mngcf).
+Per informazioni sull'assegnazione dei ruoli utente nell'IU, consulta [Gestione dell'accesso a Cloud Foundry](/docs/iam?topic=iam-mngcf#mngcf).
 
 
 
@@ -163,5 +163,5 @@ La seguente tabella elenca le azioni del servizio {{site.data.keyword.monitoring
   </tr>
 </table>
 
-Per informazioni sull'assegnazione dei ruoli utente nell'IU, consulta [Gestione dell'accesso IAM](/docs/iam/mngiam.html#iammanidaccser).
+Per informazioni sull'assegnazione dei ruoli utente nell'IU, consulta [Gestione dell'accesso IAM](/docs/iam?topic=iam-iammanidaccser#iammanidaccser).
 

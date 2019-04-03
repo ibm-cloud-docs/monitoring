@@ -31,7 +31,7 @@ Erstellen Sie ein angepasstes Grafana-Dashboard, um Metriken für alle Container
 
 Führen Sie die folgenden Schritte aus, um ein Grafana-Dashboard zu erstellen:
 
-1. Starten Sie Grafana über einen Web-Browser. Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+1. Starten Sie Grafana über einen Web-Browser. Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 2. Speichern Sie das Standarddashboard.
 

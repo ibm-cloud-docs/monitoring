@@ -49,7 +49,7 @@ Führen Sie die folgenden Schritte aus, um einem Benutzer die Berechtigung zum A
 	
 3. Wenn der Benutzer Mitglied des Kontos ist, wählen Sie den Benutzernamen in der Liste aus oder klicken Sie im Menü *Aktionen* auf **Benutzer verwalten**.
 
-    Wenn der Benutzer kein Mitglied des Kontos ist, finden Sie weitere Informationen unter [Benutzer einladen](/docs/iam/iamuserinv.html#iamuserinv).
+    Wenn der Benutzer kein Mitglied des Kontos ist, finden Sie weitere Informationen unter [Benutzer einladen](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Klicken Sie auf **Servicerichtlinien zuweisen**.
 
@@ -69,7 +69,7 @@ Führen Sie die folgenden Schritte aus, um einem Benutzer die Berechtigung zum A
 	  </tr>
 	  <tr>
 	    <td>Rollen</td>
-		<td>Wählen Sie eine oder mehrere IAM-Rollen aus. <br>Gültige Rollen sind: *Administrator*, *Operator*, *Editor* und *Viewer*. <br>Weitere Informationen zu den Aktionen, die für die jeweilige Rolle zulässig sind, finden Sie unter [IAM-Rollen](/docs/services/cloud-monitoring/security_ov.html#iam_roles).</td>
+		<td>Wählen Sie eine oder mehrere IAM-Rollen aus. <br>Gültige Rollen sind: *Administrator*, *Operator*, *Editor* und *Viewer*. <br>Weitere Informationen zu den Aktionen, die für die jeweilige Rolle zulässig sind, finden Sie unter [IAM-Rollen](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#iam_roles).</td>
 		<td>Erforderlich</td>
 	  </tr>
 	  <tr>
@@ -79,7 +79,7 @@ Führen Sie die folgenden Schritte aus, um einem Benutzer die Berechtigung zum A
 	  </tr>
 	</table>
 	
-6. Klicken Sie auf **Richtlinie zuweisen**. 
+6. Klicken Sie auf **Richtlinie zuweisen**.
 	
 Die Richtlinie, die Sie konfigurieren, gilt für die ausgewählten Regionen. 
 
@@ -90,13 +90,13 @@ Führen Sie die folgenden Schritte aus, um einen Benutzerzugriff für die Anzeig
 
 1. (Voraussetzung) Installieren Sie die {{site.data.keyword.Bluemix_notm}}-CLI.
 
-   Weitere Informationen dazu finden Sie unter [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview).
+   Weitere Informationen dazu finden Sie unter [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
    
    Wenn die CLI installiert ist, fahren Sie mit dem nächsten Schritt fort.
 	
 2. Melden Sie sich bei einer Region, einer Organisation und einem Bereich in {{site.data.keyword.Bluemix_notm}} an. 
 
-    Weitere Informationen finden Sie unter [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Weitere Informationen finden Sie in [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 	
 3. Rufen Sie die Konto-ID ab. 
 
@@ -129,7 +129,7 @@ Führen Sie die folgenden Schritte aus, um einen Benutzerzugriff für die Anzeig
 	
 	    Fordern Sie zum Beispiel den Benutzer auf, die folgenden Befehle auszuführen, um seine Benutzer-ID abzurufen:
 		
-		Rufen Sie das IAM-Token ab. Weitere Informationen finden Sie unter [IAM-Token mithilfe der {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli).
+		Rufen Sie das IAM-Token ab. Weitere Informationen finden Sie unter [IAM-Token mithilfe der {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli).
 
         Rufen Sie die Daten aus dem IAM-Token ab, die sich zwischen den ersten 2 Punkten im IAM-Token befinden. Exportieren Sie die Daten in eine Shellvariable wie z. B. `$user_data` 
 		
@@ -167,7 +167,7 @@ Führen Sie die folgenden Schritte aus, um einen Benutzerzugriff für die Anzeig
 		```
 		{: codeblock}
 
-3. Laden Sie den Benutzer zu dem Konto ein, wenn er noch kein Mitglied ist. Weitere Informationen finden Sie unter [Benutzer einladen](/docs/iam/iamuserinv.html#iamuserinv).
+3. Laden Sie den Benutzer zu dem Konto ein, wenn er noch kein Mitglied ist. Weitere Informationen finden Sie unter [Benutzer einladen](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
     Führen Sie z. B. den folgenden Befehl aus, um den Benutzer 'xxx@yyy.com' zum Konto 'zzz@ggg.com' einzuladen:
 	
@@ -201,7 +201,7 @@ Führen Sie die folgenden Schritte aus, um einen Benutzerzugriff für die Anzeig
 	
 5. Rufen Sie das IAM-Token für Ihre Benutzer-ID ab.
 
-    Weitere Informationen finden Sie unter [IAM-Token mithilfe der {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli).
+    Weitere Informationen finden Sie unter [IAM-Token mithilfe der {{site.data.keyword.Bluemix_notm}}-CLI abrufen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli).
 
     Exportieren Sie das IAM-Token in eine Shellvariable wie z. B. `$iam_token`. Beispiel:
 	
@@ -252,7 +252,7 @@ Führen Sie die folgenden Schritte aus, um einem Benutzer die Berechtigung zum A
 	
 3. Wenn der Benutzer Mitglied des Kontos ist, wählen Sie den Benutzernamen in der Liste aus oder klicken Sie im Menü *Aktionen* auf **Benutzer verwalten**.
 
-    Wenn der Benutzer kein Mitglied des Kontos ist, finden Sie weitere Informationen unter [Benutzer einladen](/docs/iam/iamuserinv.html#iamuserinv).
+    Wenn der Benutzer kein Mitglied des Kontos ist, finden Sie weitere Informationen unter [Benutzer einladen](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Klicken Sie auf **Organisation zuweisen**.
 
@@ -282,11 +282,11 @@ Führen Sie die folgenden Schritte aus, um einem Benutzer die Berechtigung zum A
 	  </tr>
 	  <tr>
 	    <td>Bereichsrollen</td>
-		<td>Wählen Sie eine Bereichsrolle aus der Liste aus. <br>Gültige Werte sind: **Manager**, **Auditor**, **Entwickler** und **Keine Bereichsrolle**. Weitere Informationen finden Sie unter [Cloud Foundry-Rollen](/docs/services/cloud-monitoring/security_ov.html#bmx_roles).</td>
+		<td>Wählen Sie eine Bereichsrolle aus der Liste aus. <br>Gültige Werte sind: **Manager**, **Auditor**, **Entwickler** und **Keine Bereichsrolle**. Weitere Informationen finden Sie unter [Cloud Foundry-Rollen](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#bmx_roles).</td>
 	  </tr>
 	</table>
 	
-6. Klicken Sie auf **Richtlinie zuweisen**. 
+6. Klicken Sie auf **Richtlinie zuweisen**.
 	
 Die Richtlinie, die Sie konfigurieren, gilt für die ausgewählten Regionen. 
 

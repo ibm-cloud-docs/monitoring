@@ -82,7 +82,7 @@ donde
   </tr>
   <tr>
     <td>Espacio de nombres</td>
-	<td>Espacio de nombres donde se despliega el contenedor en un clúster Kubernetes.</td>
+	<td>Espacio de nombres donde se despliega el contenedor en un clúster de Kubernetes.</td>
 	<td></td>
   </tr>
    <tr>
@@ -112,7 +112,7 @@ donde
    </tr>
 </table>
 
-Por ejemplo, una consulta para supervisar el uso de CPU para un contenedor que se ejecuta en un clúster Kubernetes en la región EE.UU. sur se define de la forma siguiente:
+Por ejemplo, una consulta para supervisar el uso de CPU para un contenedor que se ejecuta en un clúster de Kubernetes en la región EE.UU. sur se define de la forma siguiente:
 
 ```
 ibmcloud.public.containers-kubernetes.us-south.myCluster.container.default.myPod.myContainer-1775968925-kfwfk.cpu.usage
@@ -192,7 +192,7 @@ donde
    </tr>
 </table>
 
-Por ejemplo, una consulta para supervisar el uso de CPU para un trabajador que se ejecuta en un clúster Kubernetes en la región EE.UU. sur se define de la forma siguiente:
+Por ejemplo, una consulta para supervisar el uso de CPU para un trabajador que se ejecuta en un clúster de Kubernetes en la región EE.UU. sur se define de la forma siguiente:
 
 ```
 ibmcloud.public.containers-kubernetes.us-south.myCluster.worker.MyWorker.load.avg-1
@@ -251,7 +251,7 @@ donde
   </tr>
   <tr>
     <td>Espacio de nombres</td>
-	<td>Espacio de nombres donde se despliega el contenedor en un clúster Kubernetes.</td>
+	<td>Espacio de nombres donde se despliega el contenedor en un clúster de Kubernetes.</td>
 	<td></td>
   </tr>
    <tr>
@@ -281,7 +281,7 @@ donde
    </tr>
 </table>
 
-Por ejemplo, una consulta para supervisar el uso de memoria para un contenedor que se ejecuta en un clúster Kubernetes en la región EE.UU. sur se define de la forma siguiente:
+Por ejemplo, una consulta para supervisar el uso de memoria para un contenedor que se ejecuta en un clúster de Kubernetes en la región EE.UU. sur se define de la forma siguiente:
 
 ```
 ibmcloud.public.containers-kubernetes.us-south.myCluster.container.default.myPod.myContainer-1775968925-kfwfk.memory.usage

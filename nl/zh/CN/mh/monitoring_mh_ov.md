@@ -53,15 +53,15 @@ subcollection: cloud-monitoring
 
     检查您是否位于运行 {{site.data.keyword.messagehub}} 实例的同一组织和空间。
     
-    有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)。
+    有关更多信息，请参阅[通过 Web 浏览器导航至 Grafana 仪表板](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)。
     
 
 请考虑以下信息：
 
 * 您必须在运行 {{site.data.keyword.messagehub}} 实例的同一 {{site.data.keyword.Bluemix_notm}} 区域中启动 Grafana。
 * 使用缺省情况下提供的 Grafana 仪表板来开始监视您的 {{site.data.keyword.messagehub}} 实例。
-* 通过创建定制的 Grafana 仪表板来构建特别的仪表板。 您可以在 Grafana 仪表板中定义一个或多个度量值查询，以监视 {{site.data.keyword.messagehub}} 实例。 有关更多信息，请参阅[在 Grafana 中配置度量值查询](/docs/services/cloud-monitoring/grafana/define_query.html#define_query)。
-* 您还可以针对查询定义警报。 有关更多信息，请参阅[配置警报](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)。
+* 通过创建定制的 Grafana 仪表板来构建特别的仪表板。 您可以在 Grafana 仪表板中定义一个或多个度量值查询，以监视 {{site.data.keyword.messagehub}} 实例。 有关更多信息，请参阅[在 Grafana 中配置度量值查询](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query)。
+* 您还可以针对查询定义警报。 有关更多信息，请参阅[配置警报](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)。
 
 
 ## Kafka 主题的度量值
@@ -124,6 +124,6 @@ subcollection: cloud-monitoring
 ## 参考
 {: #mhlinks}
 
-* [Message Hub 入门](/docs/services/EventStreams/index.html#getting_started)
+* [Message Hub 入门](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started)
 * [监视和记录](/docs/services/EventStreams/messagehub072.html#monitoring)
 

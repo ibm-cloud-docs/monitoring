@@ -36,13 +36,13 @@ Sie können Grafana auf eine der folgenden Weisen starten:
     Sie können für Ihre spezifischen Docker-Container Metriken in Grafana im Kontext dieser spezifischen Container starten. Dieses Feature gilt nur für Container, die in der {{site.data.keyword.Bluemix_notm}}-verwalteten Infrastruktur bereitgestellt sind. 
     
     Weitere Informationen finden Sie in [Vom {{site.data.keyword.Bluemix_notm}}-Dashboard zum
-    Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_bluemix). 
+    Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_bluemix). 
 
 * Von einem direkten Browser-Link
 
     Sie können Grafana starten, so dass die angezeigten Daten Protokolle von Services innerhalb des bereitgestellten {{site.data.keyword.Bluemix_notm}}-Bereichs zusammenfassen.
     
-    Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+    Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
     
 Weitere Informationen zu Grafana finden Sie im [Grafana Benutzerhandbuch![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.grafana.org/guides/getting_started/){: new_window}.
 

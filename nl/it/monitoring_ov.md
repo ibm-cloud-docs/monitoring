@@ -35,7 +35,7 @@ La seguente figura mostra una visualizzazione di alto livello delle diverse riso
 
 {{site.data.keyword.Bluemix}}, per impostazione predefinita, raccoglie e visualizza le metriche per l'utilizzo della CPU, l'utilizzo della memoria e l'I/O di rete per {{site.data.keyword.containershort}}. Puoi utilizzare il servizio {{site.data.keyword.monitoringshort}} in {{site.data.keyword.Bluemix_notm}} per raccogliere e misurare automaticamente le metriche chiave dall'ambiente e dalle applicazioni. Non è richiesta alcuna strumentazione speciale per raccogliere le metriche. Ad esempio, puoi utilizzare le informazioni fornite dalle metriche delle prestazioni per monitorare in che modo un servizio viene eseguito nel cloud, per rilevare colli di bottiglia delle risorse e per controllare lo SLA (Service Level Agreement). Quando analizzi i dati delle prestazioni di un servizio, puoi rilevare delle situazioni che possono causare un collo di bottiglia delle risorse e di conseguenza influire sullo SLA del servizio per i tuoi clienti. Adottando delle azioni tempestive, puoi prevenire situazioni che possono compromettere il tuo business.  
 
-Puoi inviare le metriche per le tue applicazioni CF (Cloud Foundry) e VM (Virtual Machine, macchine virtuali) nel servizio {{site.data.keyword.monitoringshort}}. Per ulteriori informazioni su come inviare le metriche, vedi [Invio di metriche al servizio {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#send_retrieve_metrics_ov).
+Puoi inviare le metriche per le tue applicazioni CF (Cloud Foundry) e VM (Virtual Machine, macchine virtuali) nel servizio {{site.data.keyword.monitoringshort}}. Per ulteriori informazioni su come inviare le metriche, vedi [Invio di metriche al servizio {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#send_retrieve_metrics_ov).
 
 Puoi eseguire il provisioning del servizio {{site.data.keyword.monitoringshort}} tramite il catalogo {{site.data.keyword.Bluemix_notm}}.  
 
@@ -76,7 +76,7 @@ Puoi visualizzare e analizzare le metriche raccolte dal servizio {{site.data.key
 
 Il servizio {{site.data.keyword.monitoringshort}} fornisce più piani. Ogni piano ha diverse funzionalità di raccolta, conservazione e definizione degli avvisi delle metriche. 
 
-Puoi modificare un piano tramite la IU di {{site.data.keyword.Bluemix_notm}} o attraverso la riga di comando. Puoi aggiornare o ridurre il tuo piano in qualsiasi momento. Per ulteriori informazioni sugli upgrade dei piani di servizio in {{site.data.keyword.Bluemix_notm}}, vedi [Modifica del piano](/docs/services/cloud-monitoring/plan/change_plan.html#change_plan). 
+Puoi modificare un piano tramite la IU di {{site.data.keyword.Bluemix_notm}} o attraverso la riga di comando. Puoi aggiornare o ridurre il tuo piano in qualsiasi momento. Per ulteriori informazioni sugli upgrade dei piani di servizio in {{site.data.keyword.Bluemix_notm}}, vedi [Modifica del piano](/docs/services/cloud-monitoring/plan?topic=cloud-monitoring-change_plan#change_plan). 
 
 La seguente tabella illustra i piani disponibili quando esegui il provisioning del servizio {{site.data.keyword.monitoringshort}} in uno spazio:
 
@@ -137,7 +137,7 @@ Le metriche che non hanno ricevuto dati per gli ultimi 7 giorni vengono eliminat
 ## Provisioning del servizio di monitoraggio
 {: #provision1}
 
-Nel catalogo {{site.data.keyword.Bluemix_notm}}, puoi trovare il servizio {{site.data.keyword.monitoringshort}} nella sezione **DevOps**. Per ulteriori informazioni sul provisioning di un servizio in {{site.data.keyword.Bluemix_notm}}, consulta [Provisioning del servizio {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to/provision.html#provision).
+Nel catalogo {{site.data.keyword.Bluemix_notm}}, puoi trovare il servizio {{site.data.keyword.monitoringshort}} nella sezione **DevOps**. Per ulteriori informazioni sul provisioning di un servizio in {{site.data.keyword.Bluemix_notm}}, consulta [Provisioning del servizio {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 Considera le seguenti informazioni sul servizio {{site.data.keyword.monitoringshort}}:
 

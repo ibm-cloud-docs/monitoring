@@ -54,7 +54,7 @@ Dieses Lernprogramm führt Sie durch die erforderlichen Schritte zum Erzielen de
     
     * Eine IAM-Richtlinie für den {{site.data.keyword.containershort}} mit der Berechtigung *Operator* oder *Administrator*.
     
-    Weitere Informationen finden Sie in [Einem Benutzer eine IAM-Richtlinie über die IBM Cloud-Benutzerschnittstelle zuweisen](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui).
+    Weitere Informationen finden Sie in [Einem Benutzer eine IAM-Richtlinie über die IBM Cloud-Benutzerschnittstelle zuweisen](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui).
 
 2. Öffnen Sie eine Terminalsitzung, von der aus Sie die Kubernetes-Cluster verwalten und die Apps über die Befehlszeile bereitstellen können. Die Beispiele in diesem Lernprogramm gelten für ein Ubuntu Linux-System.
 
@@ -63,7 +63,7 @@ Dieses Lernprogramm führt Sie durch die erforderlichen Schritte zum Erzielen de
     * Installieren Sie die {{site.data.keyword.Bluemix_notm}}-CLI. 
     * Installieren Sie die {{site.data.keyword.containershort}}-CLI zum Erstellen und Verwalten Ihrer Kubernetes-Cluster in {{site.data.keyword.containershort}} und zum Bereitstellen containerisierten Apps im Cluster.
     
-    Weitere Informationen dazu finden Sie unter [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview).
+    Weitere Informationen dazu finden Sie unter [Installing the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
     
     
 
@@ -75,11 +75,11 @@ Dieses Lernprogramm führt Sie durch die erforderlichen Schritte zum Erzielen de
 
 Führen Sie die folgenden Schritte aus:
 
-1. Erstellen Sie einen Kubernetes-Standardcluster. Weitere Informationen finden Sie in [Kubernetes-Standardcluster erstellen](/docs/containers/cs_tutorials.html#cs_cluster_tutorial).
+1. Erstellen Sie einen Kubernetes-Standardcluster. Weitere Informationen finden Sie in [Kubernetes-Standardcluster erstellen](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial).
 
 2. Richten Sie den Clusterkontext in einem Terminal ein. Nach der Konfiguration des Kontexts können Sie den Kubernetes-Cluster verwalten und die Anwendung im Kubernetes-Cluster bereitstellen.
 
-    Melden Sie sich bei der Region, der Organisation und dem Bereich in {{site.data.keyword.Bluemix_notm}} an, die/der dem von Ihnen erstellten Cluster zugeordnet ist. Weitere Informationen finden Sie unter [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/CloudLogAnalysis/qa/cli_qa.html#login).
+    Melden Sie sich bei der Region, der Organisation und dem Bereich in {{site.data.keyword.Bluemix_notm}} an, die/der dem von Ihnen erstellten Cluster zugeordnet ist. Weitere Informationen finden Sie in [Wie melde ich mich bei {{site.data.keyword.Bluemix_notm}} an?](/docs/services/CloudLogAnalysis/qa?topic=cloudloganalysis-cli_qa#login).
 
 	Initialisieren Sie das {{site.data.keyword.containershort}}-Service-Plug-in.
 
@@ -125,7 +125,7 @@ Führen Sie die folgenden Schritte aus, um einem Benutzer die Berechtigung zum A
 	
 3. Wenn der Benutzer Mitglied des Kontos ist, wählen Sie den Benutzernamen in der Liste aus oder klicken Sie im Menü *Aktionen* auf **Benutzer verwalten**.
 
-    Wenn der Benutzer kein Mitglied des Kontos ist, finden Sie weitere Informationen unter [Benutzer einladen](/docs/iam/iamuserinv.html#iamuserinv).
+    Wenn der Benutzer kein Mitglied des Kontos ist, finden Sie weitere Informationen unter [Benutzer einladen](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 
 4. Wählen Sie **Zugriffsrichtlinien > Zugriff zuweisen > Zugriff auf Ressourcen zuweisen** aus.
 
@@ -170,7 +170,7 @@ Führen Sie die folgenden Schritte aus, um die {{site.data.keyword.containershor
 ## Schritt 4: Beispielapp im Kubernetes-Cluster bereitstellen
 {: #ks_step4}
 
-Stellen Sie die Beispielapp im Kubernetes-Cluster bereit und führen Sie sie aus. Führen Sie die Schritte im folgenden Lernprogramm aus, um die Beispielapp bereitzustellen: [Lerneinheit 1: Einzelne Instanzapps in Kubernetes-Clustern bereitstellen](/docs/containers/cs_tutorials_apps.html#cs_apps_tutorial_lesson1).
+Stellen Sie die Beispielapp im Kubernetes-Cluster bereit und führen Sie sie aus. Führen Sie die Schritte im folgenden Lernprogramm aus, um die Beispielapp bereitzustellen: [Lerneinheit 1: Einzelne Instanzapps in Kubernetes-Clustern bereitstellen](/docs/containers?topic=containers-cs_apps_tutorial#cs_apps_tutorial_lesson1).
 
 Die App ist eine 'Hello World'-Node.js-App:
 
@@ -195,13 +195,13 @@ Wenn Sie in dieser Beispiel-App die App in einem Browser testen, schreibt die Ap
 
 Starten Sie Grafana über einen Browser und legen Sie die {{site.data.keyword.monitoringshort}}-Domäne fest, in der Sie die Clustermetriken anzeigen können.
 
-Zum Analysieren von Metriken für einen Cluster müssen Sie auf Grafana in der öffentlichen Cloud-Region zugreifen, in der der Cluster erstellt wird. Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Zum Analysieren von Metriken für einen Cluster müssen Sie auf Grafana in der öffentlichen Cloud-Region zugreifen, in der der Cluster erstellt wird. Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 1. Starten Sie Grafana über einen Browser. 
 
     Geben Sie die {{site.data.keyword.monitoringshort}}-Service-URL für die Region ein, in der Sie den Cluster erstellt haben. 
     
-    Informationen zum Abrufen der URLs nach Region finden Sie unter [URLs für den Überwachungsservice](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Informationen zum Abrufen der URLs nach Region finden Sie unter [URLs für den Überwachungsservice](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Starten Sie zum Beispiel für die Region 'USA (Süden)': [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -232,4 +232,4 @@ Das Beispieldashboard wird geöffnet.
 ## Nächste Schritte
 {: #ks_next_steps}
 
-Definieren Sie einen Alert für eine Metrik. Weitere Informationen finden Sie unter [Alerts konfigurieren ](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Definieren Sie einen Alert für eine Metrik. Weitere Informationen finden Sie unter [Alerts konfigurieren ](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

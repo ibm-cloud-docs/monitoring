@@ -36,7 +36,7 @@ subcollection: cloud-monitoring
 
 1. 登录到 {{site.data.keyword.Bluemix_notm}} 中的区域、组织和空间。 
 
-    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    有关更多信息，请参阅[如何登录到 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 
 2. 设置安全性令牌或 API 密钥
   
@@ -44,11 +44,11 @@ subcollection: cloud-monitoring
 
     首先，选择下列其中一种方法来获取发送度量值所需的安全性令牌：
 	
-    * 要获取 UAA 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 UAA 令牌](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)。
+    * 要获取 UAA 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 UAA 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)。
     
-	* 要获取 IAM 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)。
+	* 要获取 IAM 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)。
     
-	* 要获取 API 密钥，请参阅[获取 API 密钥](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。 
+	* 要获取 API 密钥，请参阅[获取 API 密钥](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。 
 
     令牌或 API 密钥必须以下列其中一个值作为前缀：`apikey`、`iam` 或 `uaa` 
 
@@ -124,11 +124,11 @@ subcollection: cloud-monitoring
 	
 	* *Space* 表示空间的 GUID。 
 	
-	* *Start_Time* 定义请求的开始时间。 此信息用于计算相对或绝对时间段。 *End_Time* 定义请求的结束时间。 此信息用于计算相对或绝对时间段。 有关更多信息，请参阅[设置时间段](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time)。
+	* *Start_Time* 定义请求的开始时间。 此信息用于计算相对或绝对时间段。 *End_Time* 定义请求的结束时间。 此信息用于计算相对或绝对时间段。 有关更多信息，请参阅[设置时间段](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time)。
 	
-	* *Path* 表明一个或多个度量值。 您可以选择对每个度量值应用函数。 路径还支持通配符，通过通配符，可以识别单个路径中的多个度量值。 有关更多信息，请参阅[定义度量值](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics)。
+	* *Path* 表明一个或多个度量值。 您可以选择对每个度量值应用函数。 路径还支持通配符，通过通配符，可以识别单个路径中的多个度量值。 有关更多信息，请参阅[定义度量值](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics)。
 	
-	* *METRICS_ENDPOINT* 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+	* *METRICS_ENDPOINT* 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 	
 
 	

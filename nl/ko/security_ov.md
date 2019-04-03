@@ -40,10 +40,10 @@ subcollection: cloud-monitoring
 
 보안 토큰을 가져오려면 다음을 참조하십시오.
 
-* [UAA 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa)
-* [IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)
+* [UAA 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa)
+* [IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)
 
-API 키를 가져오려면 [API 키 생성](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)을 참조하십시오. API 키가 보안 위험에 노출된 경우에는 이를 삭제하여 취소할 수 있습니다. 그 후에는 새 키를 다시 작성할 수 있습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} UI를 사용하여 API 키 취소](/docs/services/cloud-monitoring/security/auth_api_key.html#revoke_ui)를 참조하십시오. 
+API 키를 가져오려면 [API 키 생성](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)을 참조하십시오. API 키가 보안 위험에 노출된 경우에는 이를 삭제하여 취소할 수 있습니다. 그 후에는 새 키를 다시 작성할 수 있습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} UI를 사용하여 API 키 취소](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#revoke_ui)를 참조하십시오. 
 
 UAA 토큰 및 IAM 토큰은 일정 기간이 경과하면 만료됩니다. API 키는 만료되지 않습니다. 
 
@@ -104,7 +104,7 @@ UAA 토큰 및 IAM 토큰은 일정 기간이 경과하면 만료됩니다. API 
   </tr>
 </table>
 
-UI로 사용자 역할을 지정하는 데 대한 정보는 [Cloud Foundry 액세스 관리](/docs/iam/mngcf.html#mngcf)를 참조하십시오.
+UI로 사용자 역할을 지정하는 데 대한 정보는 [Cloud Foundry 액세스 관리](/docs/iam?topic=iam-mngcf#mngcf)를 참조하십시오.
 
 
 
@@ -163,5 +163,5 @@ UI로 사용자 역할을 지정하는 데 대한 정보는 [Cloud Foundry 액�
   </tr>
 </table>
 
-UI로 사용자 역할을 지정하는 데 대한 정보는 [IAM 액세스 관리](/docs/iam/mngiam.html#iammanidaccser)를 참조하십시오.
+UI로 사용자 역할을 지정하는 데 대한 정보는 [IAM 액세스 관리](/docs/iam?topic=iam-iammanidaccser#iammanidaccser)를 참조하십시오.
 

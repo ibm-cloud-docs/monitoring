@@ -49,7 +49,7 @@ subcollection: cloud-monitoring
 	
 3. 如果使用者是帳戶成員，請從清單中選取使用者名稱，或按一下*動作*功能表中的**管理使用者**。
 
-    如果使用者不是帳戶的成員，請參閱[邀請使用者](/docs/iam/iamuserinv.html#iamuserinv)。
+    如果使用者不是帳戶的成員，請參閱[邀請使用者](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 
 4. 按一下**指派服務原則**。
 
@@ -69,7 +69,7 @@ subcollection: cloud-monitoring
 	  </tr>
 	  <tr>
 	    <td>角色</td>
-		<td>選取一個以上 IAM 角色。<br>有效角色包含：*管理者*、*操作員*、*編輯者*及*檢視者*。<br>如需每個角色容許的動作的相關資訊，請參閱 [IAM 角色](/docs/services/cloud-monitoring/security_ov.html#iam_roles)。</td>
+		<td>選取一個以上 IAM 角色。<br>有效角色包含：*管理者*、*操作員*、*編輯者*及*檢視者*。<br>如需每個角色容許的動作的相關資訊，請參閱 [IAM 角色](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#iam_roles)。</td>
 		<td>必要</td>
 	  </tr>
 	  <tr>
@@ -90,13 +90,13 @@ subcollection: cloud-monitoring
 
 1. （必要條件）安裝 {{site.data.keyword.Bluemix_notm}} CLI。
 
-   如需相關資訊，請參閱[安裝 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/index.html#overview)。
+   如需相關資訊，請參閱[安裝 {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)。
    
    如果已安裝 CLI，請繼續進行下一步。
 	
 2. 登入 {{site.data.keyword.Bluemix_notm}} 中的地區、組織及空間。 
 
-    如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login)。
+    如需相關資訊，請參閱[如何登入 {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)。
 	
 3. 取得帳戶 ID。 
 
@@ -129,7 +129,7 @@ subcollection: cloud-monitoring
 	
 	    例如，要求使用者執行下列指令以取得其使用者 ID：
 		
-		取得 IAM 記號。如需相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli)。
+		取得 IAM 記號。如需相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli)。
 
         從 IAM 記號中前 2 兩個點之間的 IAM 記號中取得資料。將資料匯出至 Shell 變數，例如 `$user_data`。 
 		
@@ -167,7 +167,7 @@ subcollection: cloud-monitoring
 		```
 		{: codeblock}
 
-3. 如果使用者還不是成員，請邀請使用者加入帳戶。如需相關資訊，請參閱[邀請使用者](/docs/iam/iamuserinv.html#iamuserinv)。
+3. 如果使用者還不是成員，請邀請使用者加入帳戶。如需相關資訊，請參閱[邀請使用者](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 
     例如，執行下列指令以邀請使用者 xxx@yyy.com 加入帳戶 zzz@ggg.com：
 	
@@ -201,7 +201,7 @@ subcollection: cloud-monitoring
 	
 5. 取得使用者 ID 的 IAM 記號。
 
-    如需相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security/auth_iam.html#iam_token_cli)。
+    如需相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} CLI 取得 IAM 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#iam_token_cli)。
 
     將 IAM 記號匯出至 `$iam_token` 這類 Shell 變數，例如：
 	
@@ -252,7 +252,7 @@ subcollection: cloud-monitoring
 	
 3. 如果使用者是帳戶成員，請從清單中選取使用者名稱，或按一下*動作*功能表中的**管理使用者**。
 
-    如果使用者不是帳戶的成員，請參閱[邀請使用者](/docs/iam/iamuserinv.html#iamuserinv)。
+    如果使用者不是帳戶的成員，請參閱[邀請使用者](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 
 4. 按一下**指派組織**。
 
@@ -282,7 +282,7 @@ subcollection: cloud-monitoring
 	  </tr>
 	  <tr>
 	    <td>空間角色</td>
-		<td>從清單中選擇一個空間角色。<br>有效值包含：**管理員**、**審核員**、**開發人員**及**無空間角色**。如需相關資訊，請參閱 [Cloud Foundry 角色](/docs/services/cloud-monitoring/security_ov.html#bmx_roles)。</td>
+		<td>從清單中選擇一個空間角色。<br>有效值包含：**管理員**、**審核員**、**開發人員**及**無空間角色**。如需相關資訊，請參閱 [Cloud Foundry 角色](/docs/services/cloud-monitoring?topic=cloud-monitoring-security_ov#bmx_roles)。</td>
 	  </tr>
 	</table>
 	

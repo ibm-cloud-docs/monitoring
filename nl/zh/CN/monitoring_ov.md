@@ -35,7 +35,7 @@ subcollection: cloud-monitoring
 
 缺省情况下，{{site.data.keyword.Bluemix}} 会为 {{site.data.keyword.containershort}} 收集并显示 CPU 使用率、内存利用率和网络 I/O 的度量值。您可以使用 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.monitoringshort}} 服务从环境和应用程序自动收集并度量关键度量值。无需进行特殊检测，即可收集度量值。例如，可以使用性能度量值提供的信息来监视服务在云中的运行情况，检测资源瓶颈，并密切关注服务级别协议 (SLA)。分析服务的性能数据时，可以检测会导致资源瓶颈并因而影响客户的服务 SLA 的情况。通过及早采取措施，可以避免会对业务造成负面影响的情况。  
 
-您可以将 Cloud Foundry (CF) 应用程序和虚拟机 (VM) 的度量值发送到 {{site.data.keyword.monitoringshort}} 服务。有关如何发送度量值的更多信息，请参阅[向 {{site.data.keyword.monitoringshort}} 服务发送度量值](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#send_retrieve_metrics_ov)。
+您可以将 Cloud Foundry (CF) 应用程序和虚拟机 (VM) 的度量值发送到 {{site.data.keyword.monitoringshort}} 服务。有关如何发送度量值的更多信息，请参阅[向 {{site.data.keyword.monitoringshort}} 服务发送度量值](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#send_retrieve_metrics_ov)。
 
 您可以通过 {{site.data.keyword.Bluemix_notm}}“目录”供应 {{site.data.keyword.monitoringshort}} 服务。  
 
@@ -78,7 +78,7 @@ subcollection: cloud-monitoring
 
 {{site.data.keyword.monitoringshort}} 服务提供了多种套餐。每种套餐都有不同的度量值收集、保留时间和警报定义功能。 
 
-可以通过 {{site.data.keyword.Bluemix_notm}} UI 或通过命令行来更改套餐。您可以随时升级或降级套餐。有关 {{site.data.keyword.Bluemix_notm}} 中服务套餐升级的更多信息，请参阅[更改套餐](/docs/services/cloud-monitoring/plan/change_plan.html#change_plan)。 
+可以通过 {{site.data.keyword.Bluemix_notm}} UI 或通过命令行来更改套餐。您可以随时升级或降级套餐。有关 {{site.data.keyword.Bluemix_notm}} 中服务套餐升级的更多信息，请参阅[更改套餐](/docs/services/cloud-monitoring/plan?topic=cloud-monitoring-change_plan#change_plan)。 
 
 下表概括了在空间中供应 {{site.data.keyword.monitoringshort}} 服务时可用的套餐：
 
@@ -140,7 +140,7 @@ subcollection: cloud-monitoring
 ## 供应 Monitoring 服务
 {: #provision1}
 
-在 {{site.data.keyword.Bluemix_notm}}“目录”的 **DevOps** 部分中，可以找到 {{site.data.keyword.monitoringshort}} 服务。有关在 {{site.data.keyword.Bluemix_notm}} 中供应服务的更多信息，请参阅[供应 {{site.data.keyword.monitoringshort}} 服务](/docs/services/cloud-monitoring/how-to/provision.html#provision)。
+在 {{site.data.keyword.Bluemix_notm}}“目录”的 **DevOps** 部分中，可以找到 {{site.data.keyword.monitoringshort}} 服务。有关在 {{site.data.keyword.Bluemix_notm}} 中供应服务的更多信息，请参阅[供应 {{site.data.keyword.monitoringshort}} 服务](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision)。
 
 请考虑有关 {{site.data.keyword.monitoringshort}} 服务的以下信息：
 

@@ -36,17 +36,15 @@ Para configurar um alerta em uma consulta de métrica por meio da UI do Grafana,
 4. Configure o alerta por meio da guia **Alertas** no gráfico do Grafana.
 
 ## Etapa 1: Ativar o Grafana
-{: #step1_cag1}
+{: #step1_cag}
 
 Ative o Grafana por meio de um navegador. Por exemplo, insira a URL a seguir para abrir o Grafana na
 região Sul dos EUA: [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
-Para obter uma lista de URLs do Grafana por região, consulte
-[URLs para o
-serviço do {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+Para uma lista de URLs do Grafana por região, consulte [URLs para o serviço {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
 ## Etapa 2: Definir um ou mais canais de notificação
-{: #step2_cag2}
+{: #step2_cag}
 
 Conclua as etapas a seguir:
 
@@ -138,7 +136,7 @@ separados por vírgulas.</td>
 </table>
 
 ## Etapa 3: Definir uma métrica
-{: #step3_cag3}
+{: #step3_cag}
 
 Conclua as etapas a seguir para criar um novo painel:
 
@@ -160,7 +158,7 @@ Em seguida, inclua uma consulta de métrica:
 
 
 ## Etapa 4: Definir um alerta
-{: #step4_cag4}
+{: #step4_cag}
 
 Conclua as etapas a seguir para definir um alerta na UI do Grafana:
 
@@ -180,11 +178,11 @@ conjunto de limites. É possível arrastá-la no gráfico para mudá-la.
 * Se você selecionar **Excluir**, o alerta será excluído.
 
 ## Próximo: verifique se um alerta é gerado
-{: #next_cag5}
+{: #next_cag}
 
 Por exemplo, se você criou um canal de notificação por e-mail, verifique seu e-mail.
 
-Procure por e-mails com o emissor **IBM Cloud Monitoring**.
+Procure por e-mails com o remetente **IBM Cloud Monitoring**.
 
 Um e-mail inclui informações sobre o alerta emitido e um link para o painel do Grafana no qual é
 possível visualizar a situação.

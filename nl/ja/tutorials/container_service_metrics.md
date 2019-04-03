@@ -54,7 +54,7 @@ subcollection: cloud-monitoring
     
     * *オペレーター* または*管理者* 権限が設定された、{{site.data.keyword.containershort}} の IAM ポリシー。
     
-    詳しくは、[IBM Cloud UI を使用してユーザーに IAM ポリシーを割り当てる](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui)を参照してください。
+    詳しくは、[IBM Cloud UI を使用してユーザーに IAM ポリシーを割り当てる](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui)を参照してください。
 
 2. コマンド・ラインから Kubernetes クラスターの管理およびアプリのデプロイを実行できる端末セッションを用意します。 このチュートリアルの例は、Ubuntu Linux システム用です。
 
@@ -63,7 +63,7 @@ subcollection: cloud-monitoring
     * {{site.data.keyword.Bluemix_notm}} CLI をインストールします。 
     * {{site.data.keyword.containershort}} での Kubernetes クラスターの作成と管理、およびクラスターへのコンテナー化アプリのデプロイを行うための {{site.data.keyword.containershort}} CLI をインストールします。
     
-    詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI のインストール](/docs/cli/index.html#overview)を参照してください。
+    詳しくは、[{{site.data.keyword.Bluemix_notm}} CLI のインストール](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)を参照してください。
     
     
 
@@ -75,11 +75,11 @@ subcollection: cloud-monitoring
 
 以下のステップを実行します。
 
-1. 標準の Kubernetes クラスターを作成します。 詳しくは、[Kubernetes 標準クラスターの作成](/docs/containers/cs_tutorials.html#cs_cluster_tutorial)を参照してください。
+1. 標準の Kubernetes クラスターを作成します。 詳しくは、[Kubernetes 標準クラスターの作成](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial)を参照してください。
 
 2. 端末にクラスター・コンテキストをセットアップします。 コンテキストを設定すると、Kubernetes クラスターを管理し、Kubernetes クラスターにアプリケーションをデプロイできるようになります。
 
-    {{site.data.keyword.Bluemix_notm}} で、作成したクラスターに関連付けられた、地域、組織、およびスペースにログインします。 詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/CloudLogAnalysis/qa/cli_qa.html#login)を参照してください。
+    {{site.data.keyword.Bluemix_notm}} で、作成したクラスターに関連付けられた、地域、組織、およびスペースにログインします。 詳しくは、[{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/CloudLogAnalysis/qa?topic=cloudloganalysis-cli_qa#login)を参照してください。
 
 	{{site.data.keyword.containershort}} サービス・プラグインを初期化します。
 
@@ -128,7 +128,7 @@ subcollection: cloud-monitoring
 **「ユーザーの管理 (Manage user)」**をクリックします。
 
     ユーザーがアカウントのメンバーではない場合、
-[ユーザーの招待](/docs/iam/iamuserinv.html#iamuserinv)を参照してください。
+[ユーザーの招待](/docs/iam?topic=iam-iamuserinv#iamuserinv)を参照してください。
 
 4. **「アクセス・ポリシー」>「アクセス権限の割り当て」>「リソースへのアクセス権限の割り当て」**と選択します。
 
@@ -174,7 +174,7 @@ subcollection: cloud-monitoring
 ## 手順 4: Kubernetes クラスターへのサンプル・アプリのデプロイ
 {: #ks_step4}
 
-Kubernetes クラスターにサンプル・アプリをデプロイし、実行します。 チュートリアル[『演習 1: Kubernetes クラスターへの単一インスタンス・アプリのデプロイ (Lesson 1: Deploying single instance apps to Kubernetes clusters)』](/docs/containers/cs_tutorials_apps.html#cs_apps_tutorial_lesson1)の手順を実行して、サンプル・アプリをデプロイします。
+Kubernetes クラスターにサンプル・アプリをデプロイし、実行します。 チュートリアル[『演習 1: Kubernetes クラスターへの単一インスタンス・アプリのデプロイ (Lesson 1: Deploying single instance apps to Kubernetes clusters)』](/docs/containers?topic=containers-cs_apps_tutorial#cs_apps_tutorial_lesson1)の手順を実行して、サンプル・アプリをデプロイします。
 
 このアプリは、以下のような Hello World Node.js アプリです。
 
@@ -199,13 +199,13 @@ app.listen(8080, function() {
 
 ブラウザーから Grafana を起動し、クラスター・メトリックを表示できる {{site.data.keyword.monitoringshort}} ドメインを設定します。
 
-クラスターのメトリックを分析するには、そのクラスターが作成されているクラウド Public 地域で Grafana にアクセスする必要があります。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)を参照してください。
+クラスターのメトリックを分析するには、そのクラスターが作成されているクラウド Public 地域で Grafana にアクセスする必要があります。 詳しくは、[Web ブラウザーから Grafana ダッシュボードへのナビゲート](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)を参照してください。
 
 1. ブラウザーから Grafana を起動します。 
 
     クラスターを作成した地域の {{site.data.keyword.monitoringshort}} サービス URL を入力します。 
     
-    地域ごとの URL を取得するには、[Monitoring サービスの URL](/docs/services/cloud-monitoring/monitoring_ov.html#region) を参照してください。
+    地域ごとの URL を取得するには、[Monitoring サービスの URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region) を参照してください。
 
     例えば、米国南部地域の場合は、[https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)を起動します。
 
@@ -236,4 +236,4 @@ app.listen(8080, function() {
 ## 次の手順
 {: #ks_next_steps}
 
-メトリックのアラートを定義します。 詳しくは、[アラートの構成](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)を参照してください。
+メトリックのアラートを定義します。 詳しくは、[アラートの構成](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)を参照してください。

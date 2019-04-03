@@ -40,10 +40,10 @@ subcollection: cloud-monitoring
 
 要获取安全性令牌，请参阅：
 
-* [获取 UAA 令牌](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa)
-* [获取 IAM 令牌](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)
+* [获取 UAA 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa)
+* [获取 IAM 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)
 
-要获取 API 密钥，请参阅[生成 API 密钥](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。如果 API 密钥已损坏，可以通过删除 API 密钥来将其撤销。然后，您可以重新创建一个新的 API 密钥。有关更多信息，请参阅[使用 {{site.data.keyword.Bluemix_notm}} UI 撤销 API 密钥](/docs/services/cloud-monitoring/security/auth_api_key.html#revoke_ui)。 
+要获取 API 密钥，请参阅[生成 API 密钥](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。如果 API 密钥已损坏，可以通过删除 API 密钥来将其撤销。然后，您可以重新创建一个新的 API 密钥。有关更多信息，请参阅[使用 {{site.data.keyword.Bluemix_notm}} UI 撤销 API 密钥](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#revoke_ui)。 
 
 UAA 令牌和 IAM 令牌在一段时间后到期。API 密钥不会到期。
  
@@ -105,7 +105,7 @@ UAA 令牌和 IAM 令牌在一段时间后到期。API 密钥不会到期。
   </tr>
 </table>
 
-有关在 UI 中分配用户角色的信息，请参阅[管理 Cloud Foundry 访问权](/docs/iam/mngcf.html#mngcf)。
+有关在 UI 中分配用户角色的信息，请参阅[管理 Cloud Foundry 访问权](/docs/iam?topic=iam-mngcf#mngcf)。
 
 
 
@@ -164,5 +164,5 @@ UAA 令牌和 IAM 令牌在一段时间后到期。API 密钥不会到期。
   </tr>
 </table>
 
-有关在 UI 中分配用户角色的信息，请参阅[管理 IAM 访问权](/docs/iam/mngiam.html#iammanidaccser)。
+有关在 UI 中分配用户角色的信息，请参阅[管理 IAM 访问权](/docs/iam?topic=iam-iammanidaccser#iammanidaccser)。
 

@@ -36,7 +36,7 @@ subcollection: cloud-monitoring
 
 1. {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 
 
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa/cli_qa.html#login)을 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)을 참조하십시오.
 
 2. 보안 토큰 또는 API 키를 설정하십시오.
   
@@ -44,11 +44,11 @@ subcollection: cloud-monitoring
 
     먼저, 다음 방법 중 하나를 선택하여 메트릭을 전송하는 데 필요한 보안 토큰을 얻으십시오.
 	
-    * UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)를 참조하십시오.
+    * UAA 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 UAA 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)를 참조하십시오.
     
-	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)를 참조하십시오.
+	* IAM 토큰을 가져오려면 [{{site.data.keyword.Bluemix_notm}} CLI를 사용하여 IAM 토큰 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)를 참조하십시오.
     
-	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)를 참조하십시오. 
+	* API 키를 가져오려면 [API 키 가져오기](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)를 참조하십시오. 
 
     토큰 또는 API 키에는 `apikey`, `iam` 또는 `uaa` 값 중 하나로 접두부가 지정되어야 합니다. 
 
@@ -124,11 +124,11 @@ subcollection: cloud-monitoring
 	
 	* *Space*는 영역의 GUID를 나타냅니다. 
 	
-	* *Start_Time*은 요청의 시작을 정의합니다. 이 정보는 상대 또는 절대 시간을 계산하는 데 사용됩니다. *End_Time*은 요청의 시작을 정의합니다. 이 정보는 상대 또는 절대 시간을 계산하는 데 사용됩니다. 자세한 정보는 [기간 설정](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#time)을 참조하십시오.
+	* *Start_Time*은 요청의 시작을 정의합니다. 이 정보는 상대 또는 절대 시간을 계산하는 데 사용됩니다. *End_Time*은 요청의 시작을 정의합니다. 이 정보는 상대 또는 절대 시간을 계산하는 데 사용됩니다. 자세한 정보는 [기간 설정](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#time)을 참조하십시오.
 	
-	* *Path*는 하나 또는 몇 가지 메트릭을 식별합니다. 선택적으로 각 메트릭에 함수를 적용할 수 있습니다. 경로는 하나의 경로에서 둘 이상의 메트릭을 식별할 수 있게 해 주는 와일드카드 또한 지원합니다. 자세한 정보는 [메트릭 정의](/docs/services/cloud-monitoring/retrieve-metrics/retrieve_data_api.html#metrics)를 참조하십시오.
+	* *Path*는 하나 또는 몇 가지 메트릭을 식별합니다. 선택적으로 각 메트릭에 함수를 적용할 수 있습니다. 경로는 하나의 경로에서 둘 이상의 메트릭을 식별할 수 있게 해 주는 와일드카드 또한 지원합니다. 자세한 정보는 [메트릭 정의](/docs/services/cloud-monitoring/retrieve-metrics?topic=cloud-monitoring-retrieve_data_api#metrics)를 참조하십시오.
 	
-	* *METRICS_ENDPOINT*는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)를 참조하십시오.
+	* *METRICS_ENDPOINT*는 서비스에 대한 시작점을 나타냅니다. 각 지역의 URL은 서로 다릅니다. 지역별 엔드포인트 목록을 가져오려면 [엔드포인트](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)를 참조하십시오.
 	
 
 	

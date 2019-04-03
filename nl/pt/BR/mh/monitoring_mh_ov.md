@@ -53,15 +53,15 @@ O serviço do {{site.data.keyword.monitoringlong}} usa o Grafana, uma plataforma
 
     Verifique se você está na organização e no espaço corretos onde a instância do {{site.data.keyword.messagehub}} está em execução.
     
-    Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+    Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
     
 
 Considere as seguintes informações:
 
 * Deve-se ativar o Grafana na mesma região do {{site.data.keyword.Bluemix_notm}} em que a instância do {{site.data.keyword.messagehub}} está em execução.
 * Use o painel do Grafana fornecido por padrão para iniciar o monitoramento de sua instância do {{site.data.keyword.messagehub}}.
-* Crie painéis customizados do Grafana para construir painéis ad hoc. É possível definir uma ou mais consultas de métricas em um painel do Grafana para monitorar uma instância do {{site.data.keyword.messagehub}}. Para obter mais informações, consulte [Configurando uma consulta de métrica no Grafana](/docs/services/cloud-monitoring/grafana/define_query.html#define_query).
-* Também é possível definir alertas em consultas. Para obter mais informações, consulte [Configurando alertas](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+* Crie painéis customizados do Grafana para construir painéis ad hoc. É possível definir uma ou mais consultas de métricas em um painel do Grafana para monitorar uma instância do {{site.data.keyword.messagehub}}. Para obter mais informações, consulte [Configurando uma consulta de métrica no Grafana](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query).
+* Também é possível definir alertas em consultas. Para obter mais informações, consulte [Configurando alertas](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).
 
 
 ## Métricas para um tópico do Kafka
@@ -124,6 +124,6 @@ Para cada partição do Kafka com uma ponte do Cloud Storage que consome mensage
 ## References
 {: #mhlinks}
 
-* [Introdução ao Message Hub](/docs/services/EventStreams/index.html#getting_started)
+* [Introdução ao Message Hub](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started)
 * [Monitoramento e criação de log](/docs/services/EventStreams/messagehub072.html#monitoring)
 

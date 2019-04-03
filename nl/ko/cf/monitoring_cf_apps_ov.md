@@ -51,7 +51,7 @@ subcollection: cloud-monitoring
 {{site.data.keyword.Bluemix_notm}} 외부에서 실행 중인 CF 앱을 모니터링하려면 메트릭 API를 사용하여 CF 앱 메트릭을 {{site.data.keyword.monitoringshort}} 서비스로 전달할 수 있습니다.
 
 * API에 대한 자세한 정보는 [메트릭 API](https://console.bluemix.net/apidocs/927-ibm-cloud-monitoring-metrics-api?&language=node#introduction)를 참조하십시오.
-* API 사용에 대한 자세한 정보는 [메트릭 API를 사용하여 데이터 전송](/docs/services/cloud-monitoring/send-metrics/send_data_api.html#send_data_api)을 참조하십시오.
+* API 사용에 대한 자세한 정보는 [메트릭 API를 사용하여 데이터 전송](/docs/services/cloud-monitoring/send-metrics?topic=cloud-monitoring-send_data_api#send_data_api)을 참조하십시오.
 
 
 
@@ -63,14 +63,14 @@ subcollection: cloud-monitoring
 
 {{site.data.keyword.monitoringlong}} 서비스는 오픈 소스 분석 및 시각화 플랫폼인 Grafana를 사용하여 메트릭을 모니터링하고, 검색하고, 분석하고, 다양한 그래프(예: 차트 및 표)로 시각화합니다.
 
-Grafana는 브라우저에서 실행할 수 있습니다. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)을 참조하십시오.
+Grafana는 브라우저에서 실행할 수 있습니다. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)을 참조하십시오.
 
 **참고:** CF 앱이 실행 중인 지역과 동일한 {{site.data.keyword.Bluemix_notm}} 지역에서 Grafana를 실행해야 합니다.
 
 
-CF 애플리케이션을 모니터링하려면 Grafana에서 한 개 이상의 조회를 정의해야 합니다. 자세한 정보는 [Grafana에서 메트릭 조회 구성](/docs/services/cloud-monitoring/grafana/define_query.html#define_query)을 참조하십시오. 
+CF 애플리케이션을 모니터링하려면 Grafana에서 한 개 이상의 조회를 정의해야 합니다. 자세한 정보는 [Grafana에서 메트릭 조회 구성](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-define_query#define_query)을 참조하십시오. 
 
-또한 조회에 대한 경보를 정의할 수 있습니다. 자세한 정보는 [경보 구성](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)을 참조하십시오.
+또한 조회에 대한 경보를 정의할 수 있습니다. 자세한 정보는 [경보 구성](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)을 참조하십시오.
 
 
 
@@ -174,7 +174,7 @@ ibmcloud.public.cloud-foundry.au-syd.logtester.0.container.memory.utilization
 ```
 {: screen}
 
-자세한 정보는 [CF 앱 메트릭 형식](/docs/services/cloud-monitoring/reference/cfapps_metrics_format.html#cfapps_metrics_format)을 참조하십시오.
+자세한 정보는 [CF 앱 메트릭 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-cfapps_metrics_format#cfapps_metrics_format)을 참조하십시오.
 
 **참고:** CF 앱 이름에 사용할 수 있는 모든 문자를 메트릭 시리즈 이름에 사용할 수 있는 것은 아닙니다. 예를 들어, 대문자는 사용할 수 없습니다. 조회를 정의할 때 Grafana에 표시되는 CF 앱 이름이 모두 소문자로 변경됩니다.
 

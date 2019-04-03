@@ -33,15 +33,15 @@ En {{site.data.keyword.Bluemix}}, las métricas de clúster se recopilan automá
 **Nota:** 
 
 * Las métricas se recopilan y están disponibles para la supervisión a través del servicio {{site.data.keyword.monitoringshort}} para contenedores que se ejecutan en clústeres estándares.
-* Para supervisar las métricas de clúster, debe suministrar una instancia del servicio de supervisión. Para obtener más información, consulte [Suministro del servicio de supervisión](/docs/services/cloud-monitoring/how-to/provision.html#provision).
+* Para supervisar las métricas de clúster, debe suministrar una instancia del servicio de supervisión. Para obtener más información, consulte [Suministro del servicio de supervisión](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision).
 
 
 ## Acerca de la supervisión en Public
 {: #public1}
 
-En {{site.data.keyword.Bluemix_notm}}, puede utilizar el servicio {{site.data.keyword.monitoringshort}} para almacenar y analizar métricas de contenedor y métricas de clúster Kubernetes recopiladas automáticamente por {{site.data.keyword.containershort}} en Public.
+En {{site.data.keyword.Bluemix_notm}}, puede utilizar el servicio {{site.data.keyword.monitoringshort}} para almacenar y analizar métricas de contenedor y métricas de clúster de Kubernetes recopiladas automáticamente por {{site.data.keyword.containershort}} en Public.
 
-Puede tener uno o varios clústeres Kubernetes en una cuenta. Las métricas las recopila automáticamente {{site.data.keyword.containershort}} en cuanto se suministra el clúster.  Las métricas de contenedor se recopilan en cuanto se despliega el pod. Las métricas se reenvían automáticamente al servicio {{site.data.keyword.monitoringshort}}:
+Puede tener uno o varios clústeres de Kubernetes en una cuenta. Las métricas las recopila automáticamente {{site.data.keyword.containershort}} en cuanto se suministra el clúster.  Las métricas de contenedor se recopilan en cuanto se despliega el pod. Las métricas se reenvían automáticamente al servicio {{site.data.keyword.monitoringshort}}:
 
 Al crear un clúster, las métricas se reenviarán al dominio de cuenta en el servicio {{site.data.keyword.monitoringshort}}. Para que las métricas se reenvíen al dominio de cuenta, el propietario de la clave {{site.data.keyword.containershort}} debe tener las siguientes políticas de IAM:
 
@@ -51,7 +51,7 @@ Al crear un clúster, las métricas se reenviarán al dominio de cuenta en el se
 
 En la siguiente figura se muestra una vista de alto nivel de la supervisión para {{site.data.keyword.containershort}}:
 
-![Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster Kubernetes](images/monitoring_kube.png "Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster Kubernetes")
+![Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster de Kubernetes](images/monitoring_kube.png "Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster de Kubernetes")
 
 El rastreador es un proceso que se ejecuta en el host y realiza una supervisión sin agente para las métricas. El rastreador recopila constantemente métricas de CPU y de memoria de todos los contenedores de forma predeterminada.
 
@@ -67,15 +67,15 @@ Para analizar métricas en Grafana para un clúster, tenga en cuenta la informac
 
 En la siguiente figura se muestra una vista de alto nivel de supervisión en Public para {{site.data.keyword.containershort}}. El clúster reenvía métricas al dominio de la cuenta:
 
-![Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster Kubernetes](images/containers_kube_metrics_public_acc.png "Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster Kubernetes")
+![Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster de Kubernetes](images/containers_kube_metrics_public_acc.png "Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster de Kubernetes")
 
 
 ## Acerca de la supervisión en Dedicated
 {: #dedicated}
 
-En {{site.data.keyword.Bluemix_notm}}, puede utilizar el servicio {{site.data.keyword.monitoringshort}} en Public para almacenar y analizar métricas de contenedor y métricas de clúster Kubernetes que recopila automáticamente {{site.data.keyword.containershort}} en Dedicated.
+En {{site.data.keyword.Bluemix_notm}}, puede utilizar el servicio {{site.data.keyword.monitoringshort}} en Public para almacenar y analizar métricas de contenedor y métricas de clúster de Kubernetes que recopila automáticamente {{site.data.keyword.containershort}} en Dedicated.
 
-Puede tener uno o varios clústeres Kubernetes en una cuenta. Las métricas las recopila automáticamente {{site.data.keyword.containershort}} en cuanto se suministra el clúster.  Las métricas de contenedor se recopilan en cuanto se despliega el pod. Las métricas se reenvían automáticamente al dominio de cuenta del servicio {{site.data.keyword.monitoringshort}}.
+Puede tener uno o varios clústeres de Kubernetes en una cuenta. Las métricas las recopila automáticamente {{site.data.keyword.containershort}} en cuanto se suministra el clúster.  Las métricas de contenedor se recopilan en cuanto se despliega el pod. Las métricas se reenvían automáticamente al dominio de cuenta del servicio {{site.data.keyword.monitoringshort}}.
 
 Al crear un clúster, las métricas se reenviarán al dominio de cuenta en el servicio {{site.data.keyword.monitoringshort}}. Para que las métricas se reenvíen al dominio de cuenta, el propietario de la clave {{site.data.keyword.containershort}} debe tener las siguientes políticas de IAM:
 
@@ -93,7 +93,7 @@ Para ver y analizar las métricas de un clúster en Grafana, tenga en cuenta la 
 
 En la siguiente figura se muestra una vista de alto nivel de supervisión en Dedicated para {{site.data.keyword.containershort}}:
 
-![Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster Kubernetes](images/containers_kube_metrics_dedicated.png "Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster Kubernetes")
+![Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster de Kubernetes](images/containers_kube_metrics_dedicated.png "Visión general de los componentes de alto nivel de los contenedores desplegados en un clúster de Kubernetes")
 
 ## Contenedores: Métricas de CPU
 {: #cpu_metrics_containers}
@@ -225,27 +225,27 @@ La tabla siguiente lista las métricas de red relacionadas con los sockets abier
 
 
 
-## Definición de consultas para supervisar recursos en un clúster Kubernetes
+## Definición de consultas para supervisar recursos en un clúster de Kubernetes
 {: #monitoring_metrics_kube}
 
-Para supervisar el rendimiento de contenedores y trabajadores desplegados en un clúster Kubernetes en {{site.data.keyword.Bluemix_notm}}, utilice Grafana. 
+Para supervisar el rendimiento de contenedores y trabajadores desplegados en un clúster de Kubernetes en {{site.data.keyword.Bluemix_notm}}, utilice Grafana. 
 
 El servicio {{site.data.keyword.monitoringlong}} utiliza Grafana, un análisis de código abierto y una plataforma de visualización, que puede utilizar para supervisar, buscar, analizar y visualizar las métricas en diversos gráficos, como por ejemplo diagramas y tablas.
 
-Grafana se puede iniciar desde un navegador. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Grafana se puede iniciar desde un navegador. Para obtener más información, consulte [Navegación al panel de control de Grafana desde un navegador web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
-Para supervisar contenedores y trabajadores que se ejecutan en un clúster Kubernetes, debe definir una consulta en Grafana para cada recurso:
+Para supervisar contenedores y trabajadores que se ejecutan en un clúster de Kubernetes, debe definir una consulta en Grafana para cada recurso:
 
-* Para definir una consulta que supervisa una métrica CPU para un contenedor, consulte [Configuración de métricas de CPU para un contenedor en Grafana](/docs/services/cloud-monitoring/containers/config_cpu_containers.html#config_cpu_containers).
-* Para definir una consulta que supervisa una métrica de memoria para un contenedor, consulte [Configuración de métricas de memoria para un contenedor en Grafana](/docs/services/cloud-monitoring/containers/config_mem_container.html#config_mem_container).
-* Para definir una consulta que supervisa una métrica de carga para un trabajador, consulte [Configuración de métricas de carga para un trabajador en Grafana](/docs/services/cloud-monitoring/containers/config_load_worker.html#config_load_worker).
+* Para definir una consulta que supervisa una métrica CPU para un contenedor, consulte [Configuración de métricas de CPU para un contenedor en Grafana](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_cpu_containers#config_cpu_containers).
+* Para definir una consulta que supervisa una métrica de memoria para un contenedor, consulte [Configuración de métricas de memoria para un contenedor en Grafana](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_mem_container#config_mem_container).
+* Para definir una consulta que supervisa una métrica de carga para un trabajador, consulte [Configuración de métricas de carga para un trabajador en Grafana](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_load_worker#config_load_worker).
 
 
 El formato de la consulta es diferente por tipo de recurso y tipo de consulta:
 
-* Para obtener más información sobre el formato de las consultas para supervisar CPU para un contenedor, consulte [Formato de consulta de métricas de CPU para un contenedor](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers). 
-* Para obtener más información sobre el formato de las consultas para supervisar la carga para un trabajador, consulte [Formato de consulta de métricas de carga para un trabajador](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers).
-* Para obtener más información sobre el formato de las consultas para supervisar la memoria para un contenedor, consulte [Formato de consulta de métricas de memoria para un contenedor](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers).
+* Para obtener más información sobre el formato de las consultas para supervisar CPU para un contenedor, consulte [Formato de consulta de métricas de CPU para un contenedor](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers). 
+* Para obtener más información sobre el formato de las consultas para supervisar la carga para un trabajador, consulte [Formato de consulta de métricas de carga para un trabajador](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers).
+* Para obtener más información sobre el formato de las consultas para supervisar la memoria para un contenedor, consulte [Formato de consulta de métricas de memoria para un contenedor](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers).
 
 
 ## Configuración del tráfico de red para configuraciones personalizadas de cortafuegos en {{site.data.keyword.Bluemix_notm}}
@@ -287,6 +287,6 @@ Debe abrir el puerto TCP 443 y el puerto TCP 9091 entre cada trabajador y el ser
 ## Guías de aprendizaje
 {: #tutorial}
 
-Para aprender a utilizar el servicio {{site.data.keyword.monitoringshort}} para supervisar el rendimiento de su contenedor, consulte [Analice métricas en Grafana para una app desplegada en un clúster Kubernetes](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics).
+Para aprender a utilizar el servicio {{site.data.keyword.monitoringshort}} para supervisar el rendimiento de su contenedor, consulte [Analice métricas en Grafana para una app desplegada en un clúster de Kubernetes](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics).
 
-Para aprender a crear un panel de control de Grafana en el servicio {{site.data.keyword.monitoringshort}} para supervisar el rendimiento de su clúster, consulte [Cree un panel de control de Grafana para supervisar un clúster Kubernetes](/docs/services/cloud-monitoring/tutorials/container_grafana_dashboard.html#container_grafana_dashboard).
+Para aprender a crear un panel de control de Grafana en el servicio {{site.data.keyword.monitoringshort}} para supervisar el rendimiento de su clúster, consulte [Cree un panel de control de Grafana para supervisar un clúster de Kubernetes](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_grafana_dashboard#container_grafana_dashboard).

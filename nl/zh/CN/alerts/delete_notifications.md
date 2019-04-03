@@ -30,7 +30,7 @@ subcollection: cloud-monitoring
 您可以使用 [警报 API](https://console.bluemix.net/apidocs/940-ibm-cloud-monitoring-alerts-api?&language=node#introduction){: new_window} 从 {{site.data.keyword.monitoringshort}} 服务删除通知。
 {:shortdesc}
 
-在您[登录到 {{site.data.keyword.Bluemix_notm}} 中的一个区域](/docs/services/cloud-monitoring/qa/cli_qa.html#login)后，完成以下步骤来删除通知：
+在您[登录到 {{site.data.keyword.Bluemix_notm}} 中的一个区域](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)后，请完成以下步骤来删除通知：
 
 
 ## 步骤 1：获取安全性令牌
@@ -40,9 +40,9 @@ subcollection: cloud-monitoring
 
 选择下列其中一种方法来获取安全性令牌：
 	
-* 要获取 UAA 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 UAA 令牌](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli)。
-* 要获取 IAM 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)。
-* 要获取 API 密钥，请参阅[获取 API 密钥](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。
+* 要获取 UAA 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 UAA 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli)。
+* 要获取 IAM 令牌，请参阅[使用 {{site.data.keyword.Bluemix_notm}} CLI 获取 IAM 令牌](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)。
+* 要获取 API 密钥，请参阅[获取 API 密钥](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。
 	
 例如，要使用 IAM 令牌，请运行以下命令：
 
@@ -141,7 +141,7 @@ curl -H "X-Auth-User-Token: apikey ${TOKEN}" -XGET METRICS_ENDPOINT/v1/alert/not
 	
 * Space 是空间的 GUID。 
 	
-* METRICS_ENDPOINT 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* METRICS_ENDPOINT 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 
 
 ## 步骤 4：删除通知
@@ -179,7 +179,7 @@ curl -H "X-Auth-User-Token: apikey ${TOKEN}" -XDELETE METRICS_ENDPOINT/v1/alert/
 	
 * Space 是空间的 GUID。 
 	
-* METRICS_ENDPOINT 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints)。
+* METRICS_ENDPOINT 表示服务的入口点。 每个区域都有不同的 URL。 要获取每个区域的端点列表，请参阅[端点](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints)。
 
 * *name* 是要删除的通知的名称。
 	

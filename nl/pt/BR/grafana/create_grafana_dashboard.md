@@ -32,7 +32,7 @@ em um espaço de sua organização do {{site.data.keyword.Bluemix}}.
 
 Conclua as etapas a seguir para criar um painel do Grafana:
 
-1. Ative o Grafana em um navegador da web. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+1. Ative o Grafana em um navegador da web. Para obter mais informações, veja [Navegando para o painel do Grafana por meio de um navegador da web](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 2. Salve o painel padrão.
 

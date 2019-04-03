@@ -40,10 +40,10 @@ subcollection: cloud-monitoring
 
 若要取得安全記號，請參閱：
 
-* [取得 UAA 記號](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa)
-* [取得 IAM 記號](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam)
+* [取得 UAA 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa)
+* [取得 IAM 記號](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam)
 
-若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key)。如果 API 金鑰外洩，您可以藉由刪除它來加以撤銷。然後，您可以重建新的金鑰。如需相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} 使用者介面撤銷 API 金鑰](/docs/services/cloud-monitoring/security/auth_api_key.html#revoke_ui)。 
+若要取得 API 金鑰，請參閱[取得 API 金鑰](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key)。如果 API 金鑰外洩，您可以藉由刪除它來加以撤銷。然後，您可以重建新的金鑰。如需相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} 使用者介面撤銷 API 金鑰](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#revoke_ui)。 
 
 UAA 記號和 IAM 記號會在一段時間後到期。API 金鑰不會到期。
  
@@ -105,7 +105,7 @@ UAA 記號和 IAM 記號會在一段時間後到期。API 金鑰不會到期。
   </tr>
 </table>
 
-如需在使用者介面中指派使用者角色的相關資訊，請參閱[管理 Cloud Foundry 存取](/docs/iam/mngcf.html#mngcf)。
+如需在使用者介面中指派使用者角色的相關資訊，請參閱[管理 Cloud Foundry 存取](/docs/iam?topic=iam-mngcf#mngcf)。
 
 
 
@@ -164,5 +164,5 @@ UAA 記號和 IAM 記號會在一段時間後到期。API 金鑰不會到期。
   </tr>
 </table>
 
-如需在使用者介面中指派使用者角色的相關資訊，請參閱[管理 IAM 存取](/docs/iam/mngiam.html#iammanidaccser)。
+如需在使用者介面中指派使用者角色的相關資訊，請參閱[管理 IAM 存取](/docs/iam?topic=iam-iammanidaccser#iammanidaccser)。
 

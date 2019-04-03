@@ -36,14 +36,14 @@ Pour configurer une alerte sur une requête de métrique via l'interface utilisa
 4. Configurez l'alerte via l'onglet **Alerts** sur un graphique Grafana.
 
 ## Etape 1 : Lancement de Grafana
-{: #step1_cag1}
+{: #step1_cag}
 
 Démarrez Grafana depuis un navigateur. Par exemple, entrez l'URL suivante pour ouvrir Grafana dans la région Sud des Etats-Unis : [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
-Pour obtenir la liste des adresses URL Grafana par région, voir [URL pour le service {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+Pour obtenir la liste des adresses URL Grafana par région, voir [URL pour le service {{site.data.keyword.monitoringshort}}](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
 ## Etape 2 : Définition d'un ou de plusieurs canaux de notification
-{: #step2_cag2}
+{: #step2_cag}
 
 Procédez comme suit :
 
@@ -135,7 +135,7 @@ en les séparant par des virgules.</td>
 </table>
 
 ## Etape 3 : Définition d'une métrique
-{: #step3_cag3}
+{: #step3_cag}
 
 Pour créer un nouveau tableau de bord, procédez comme suit :
 
@@ -157,7 +157,7 @@ Ajoutez une métrique :
 
 
 ## Etape 4 : Définition d'une alerte
-{: #step4_cag4}
+{: #step4_cag}
 
 Pour définir une alerte dans l'interface utilisateur Grafana, procédez comme suit :
 
@@ -175,7 +175,7 @@ Pour définir une alerte dans l'interface utilisateur Grafana, procédez comme s
 * Si vous sélectionnez **Delete**, l'alerte est supprimée.
 
 ## Etape suivante : Vérification de la génération d'une alerte
-{: #next_cag5}
+{: #next_cag}
 
 Par exemple, si vous avez créé un canal de notification par courrier électronique, vérifiez vos courriers électroniques.
 

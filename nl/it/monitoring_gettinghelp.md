@@ -37,5 +37,5 @@ In caso di problemi o domande durante l'utilizzo delle funzionalità di monitora
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
   * Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [{{site.data.keyword.IBM_notm}} developerWorks dW Answers](https://developer.ibm.com/answers/topics/ibm-cloud-monitoring/?smartspace=ibm-cloud){:new_window}.
 
-* Se ancora non riesci a risolvere il problema, puoi aprire un ticket di supporto IBM. Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto](/docs/get-support/howtogetsupport.html#getting-customer-support).
+* Se ancora non riesci a risolvere il problema, puoi aprire un ticket di supporto IBM. Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support).
 

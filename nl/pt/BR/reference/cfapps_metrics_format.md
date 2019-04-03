@@ -88,7 +88,7 @@ Se você escalar o app CF, por exemplo, para 10 instâncias, você terá 0 a 9 c
   </tr>
   <tr>
     <td>Subtipo de métrica</td>
-	  <td>Métrica a ser exibida. </br>[Métricas da CPU](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#cpu_metrics) </br>[Métricas de disco](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#disk_metrics) </br>[Métricas da memória](/docs/services/cloud-monitoring/cf/monitoring_cf_apps_ov.html#mem_metrics)</td>
+	  <td>Métrica a ser exibida. </br>[Métricas da CPU](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#cpu_metrics) </br>[Métricas de disco](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#disk_metrics) </br>[Métricas da memória](/docs/services/cloud-monitoring/cf?topic=cloud-monitoring-cloud-foundry-apps#mem_metrics)</td>
 	  <td></td>
   </tr>
   <tr>

@@ -41,21 +41,19 @@ Para enviar métricas para um espaço usando cURL, conclua as etapas a seguir:
 
 1. Efetue login em uma região, uma organização e um espaço no {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obter mais informações, veja [Como efetuar login no {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 
 2. Obtenha o token de segurança. É possível usar um token do UAA, um token do IAM ou uma chave API.
 
     Escolha um dos métodos a seguir para obter o token de segurança que você precisa para enviar métricas:
 	
-	* Para obter um token do UAA, consulte
-[Obtendo o token do UAA usando a
-CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_uaa.html#uaa_cli).
+	* Para obter um token do UAA, consulte [Obtendo o token do UAA usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#uaa_cli);
 	
-	* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security/auth_iam.html#auth_iam).
+	* Para obter um token do IAM, consulte [Obtendo o token do IAM usando a CLI do {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_iam#auth_iam).
 	
 	* Para obter uma chave API, consulte
 [Obtendo uma chave
-API](/docs/services/cloud-monitoring/security/auth_api_key.html#auth_api_key).
+API](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_api_key#auth_api_key).
 	
 	No mesmo terminal em que você efetuou login no {{site.data.keyword.Bluemix_notm}}, configure
 a variável *Token* para o token.
@@ -123,7 +121,7 @@ prefixado com *s-* para identificar um espaço.
 	
 	* Espaço representa o GUID do espaço. 
 	
-	* Terminal representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring/send_retrieve_metrics_ov.html#endpoints).
+	* Terminal representa o ponto de entrada para o serviço. Cada região possui uma URL diferente. Para obter a lista de terminais por região, consulte [Terminais](/docs/services/cloud-monitoring?topic=cloud-monitoring-send_retrieve_metrics_ov#endpoints).
 	
 	Por exemplo, é possível executar o comando a seguir para enviar duas métricas, `myhost.cpu.idle` e `myapp.login.attempts`, para o serviço {{site.data.keyword.monitoringshort}}:
 	

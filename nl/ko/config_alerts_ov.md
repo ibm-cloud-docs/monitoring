@@ -80,9 +80,9 @@ subcollection: cloud-monitoring
 
 2. Grafana 대시보드에서 정의된 메트릭 조회에 대한 경보를 구성하십시오.
 
-    * [이메일을 발송하는 경보 구성](/docs/services/cloud-monitoring/alerts/configure_email_alert.html#configure_email_alert).
-    * [PagerDuty 알림을 발송하는 경보 구성](/docs/services/cloud-monitoring/alerts/configure_pagerduty_alert.html#configure_pagerduty_alert).
-    * [웹훅 알림을 발송하는 경보 구성](/docs/services/cloud-monitoring/alerts/configure_webhook_alert.html#configure_webhook_alert).
+    * [이메일을 발송하는 경보 구성](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_email_alert#configure_email_alert).
+    * [PagerDuty 알림을 발송하는 경보 구성](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_pagerduty_alert#configure_pagerduty_alert).
+    * [웹훅 알림을 발송하는 경보 구성](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-configure_webhook_alert#configure_webhook_alert).
 
     **참고:** 계정 메트릭 도메인에서 정의된 메트릭 조회에 대해서만 이메일 알림을 정의할 수 있습니다.
 
@@ -106,7 +106,7 @@ Grafana 대시보드에서 직접 메트릭 조회에 대한 경보를 정의하
 
 2. Grafana 대시보드에서 정의된 메트릭 조회에 대한 경보를 구성하십시오.
 
-    자세한 정보는 [Grafana에서 경보 구성](/docs/services/cloud-monitoring/alerts/config_alerts_grafana.html#config_alerts_grafana)을 참조하십시오.
+    자세한 정보는 [Grafana에서 경보 구성](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-config_alerts_grafana#config_alerts_grafana)을 참조하십시오.
 
 
 ## 경보 상태
@@ -141,7 +141,7 @@ Grafana 대시보드에서 직접 메트릭 조회에 대한 경보를 정의하
 
 예를 들어, 경고 임계값이 초과된 경우에는 *OK*에서 *WARNING*으로의 상태 전이를 기록하는 히스토리 레코드가 생성됩니다. 마찬가지로, 값이 다시 임계값 미만으로 내려가면 *WARNING*에서 *OK*로의 상태 전이를 기록하는 히스토리 레코드가 생성됩니다.
 
-자세한 정보는 [규칙의 히스토리 검색](/docs/services/cloud-monitoring/alerts/retrieve_history.html#retrieve_history)을 참조하십시오.
+자세한 정보는 [규칙의 히스토리 검색](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-retrieve_history#retrieve_history)을 참조하십시오.
 
 
 ## 규칙
@@ -149,13 +149,13 @@ Grafana 대시보드에서 직접 메트릭 조회에 대한 경보를 정의하
 
 규칙은 모니터되는 메트릭 조회, 임계값, 임계값을 초과하는 경우 취할 조치를 나타냅니다. 
 
-* 경보 API를 사용하여 규칙을 작성하거나, 삭제하거나, 업데이트하거나, 규칙의 세부사항을 표시하거나, 모든 규칙을 나열할 수 있습니다. 자세한 정보는 [규칙에 대한 작업](/docs/services/cloud-monitoring/alerts/rules.html#rules)을 참조하십시오.
+* 경보 API를 사용하여 규칙을 작성하거나, 삭제하거나, 업데이트하거나, 규칙의 세부사항을 표시하거나, 모든 규칙을 나열할 수 있습니다. 자세한 정보는 [규칙에 대한 작업](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#rules)을 참조하십시오.
 
-    * 규칙을 작성하려면 [규칙 작성](/docs/services/cloud-monitoring/alerts/rules.html#create)을 참조하십시오.
-	* 규칙을 삭제하려면 [규칙 삭제](/docs/services/cloud-monitoring/alerts/rules.html#delete)를 참조하십시오.
-	* 규칙을 업데이트하려면 [규칙 업데이트](/docs/services/cloud-monitoring/alerts/rules.html#update)를 참조하십시오.
-	* 모든 규칙을 나열하려면 [모든 규칙 나열](/docs/services/cloud-monitoring/alerts/rules.html#list)을 참조하십시오.
-	* 규칙에 대한 정보를 표시하려면 [규칙의 세부사항 표시](/docs/services/cloud-monitoring/alerts/rules.html#showing-the-details-of-a-rule)를 참조하십시오.
+    * 규칙을 작성하려면 [규칙 작성](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#create)을 참조하십시오.
+	* 규칙을 삭제하려면 [규칙 삭제](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#delete)를 참조하십시오.
+	* 규칙을 업데이트하려면 [규칙 업데이트](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#update)를 참조하십시오.
+	* 모든 규칙을 나열하려면 [모든 규칙 나열](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#list)을 참조하십시오.
+	* 규칙에 대한 정보를 표시하려면 [규칙의 세부사항 표시](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-rules#showing-the-details-of-a-rule)를 참조하십시오.
 
 * 경보 시스템은 영역에서 사용으로 설정된 규칙을 5분마다 확인합니다.
 
@@ -274,11 +274,11 @@ mple-topic.BytesInPerSec.15MinuteRate,\"5min\")",
 
 * [Alerts REST API](https://console.bluemix.net/apidocs/940-ibm-cloud-monitoring-alerts-api?&language=node#introduction){: new_window}를 사용하여 알림을 작성하거나, 삭제하거나, 업데이트하거나, 알림의 세부사항을 표시하거나, 영역에 정의된 알림을 나열하십시오.
 
-    * 알림을 작성하려면 [알림 작성](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_create)을 참조하십시오.
-	* 알림을 삭제하려면 [알림 삭제](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_delete)를 참조하십시오.
-	* 알림을 업데이트하려면 [알림 업데이트](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_update)를 참조하십시오.
-	* 모든 알림을 나열하려면 [모든 알림 나열](/docs/services/cloud-monitoring/alerts/notifications.html#notifications_list)을 참조하십시오.
-	* 알림에 대한 정보를 표시하려면 [알림의 세부사항 표시](/docs/services/cloud-monitoring/alerts/notifications.html#show)를 참조하십시오.
+    * 알림을 작성하려면 [알림 작성](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_create)을 참조하십시오.
+	* 알림을 삭제하려면 [알림 삭제](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_delete)를 참조하십시오.
+	* 알림을 업데이트하려면 [알림 업데이트](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_update)를 참조하십시오.
+	* 모든 알림을 나열하려면 [모든 알림 나열](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#notifications_list)을 참조하십시오.
+	* 알림에 대한 정보를 표시하려면 [알림의 세부사항 표시](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-notifications#show)를 참조하십시오.
 
 * 이메일 알림, PagerDuty 구성 및 웹훅 알림을 구성할 수 있습니다. 
 

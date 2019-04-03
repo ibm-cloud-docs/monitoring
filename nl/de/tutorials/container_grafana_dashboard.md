@@ -48,7 +48,7 @@ Für dieses Lernprogramm wird Folgendes angenommen:
 * Es ist ein Cluster in der Region 'USA (Süden)' verfügbar. 
 * Ihre Benutzer-ID verfügt über eine IAM-Richtlinie für den {{site.data.keyword.monitoringshort}}-Service mit **Anzeigeberechtigung**.
 
-Um dieses Lernprogramm durchzuführen, müssen Sie das Lernprogramm [Metriken in Grafana für eine in einem Kubernetes-Cluster bereitgestellte App analysieren](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics) absolvieren oder es muss ein Cluster mit mindestens einer bereitgestellten Anwendung eingerichtet sein. 
+Um dieses Lernprogramm durchzuführen, müssen Sie das Lernprogramm [Metriken in Grafana für eine in einem Kubernetes-Cluster bereitgestellte App analysieren](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics) absolvieren oder es muss ein Cluster mit mindestens einer bereitgestellten Anwendung eingerichtet sein.
 
 
 
@@ -57,13 +57,13 @@ Um dieses Lernprogramm durchzuführen, müssen Sie das Lernprogramm [Metriken in
 
 Starten Sie Grafana über einen Browser und legen Sie die {{site.data.keyword.monitoringshort}}-Domäne fest, in der Sie die Clustermetriken anzeigen können.
 
-Zum Analysieren von Metriken für einen Cluster müssen Sie auf Grafana in der öffentlichen Cloud-Region zugreifen, in der der Cluster erstellt wird. Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser).
+Zum Analysieren von Metriken für einen Cluster müssen Sie auf Grafana in der öffentlichen Cloud-Region zugreifen, in der der Cluster erstellt wird. Weitere Informationen finden Sie unter [Von einem Web-Browser zum Grafana-Dashboard navigieren](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser).
 
 1. Starten Sie Grafana über einen Browser. 
 
     Geben Sie die {{site.data.keyword.monitoringshort}}-Service-URL für die Region ein, in der Sie den Cluster erstellt haben. 
     
-    Informationen zum Abrufen der URLs nach Region finden Sie unter [URLs für den Überwachungsservice](/docs/services/cloud-monitoring/monitoring_ov.html#region).
+    Informationen zum Abrufen der URLs nach Region finden Sie unter [URLs für den Überwachungsservice](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region).
 
     Starten Sie zum Beispiel für die Region 'USA (Süden)': [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
@@ -107,7 +107,7 @@ Führen Sie die folgenden Schritte aus:
 
 Definieren Sie die Abfrage, die die in der Grafik angezeigten Daten filtert. Diese Abfrage überwacht die Nanosekunden der CPU-Zeit über alle zentralen Bestandteile hinweg für einen Container.
 
-Weitere Informationen zum Format der Abfrage finden Sie unter [Abfrageformat für für Container erfasste CPU-Metriken](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers).
+Weitere Informationen zum Format der Abfrage finden Sie unter [Abfrageformat für für Container erfasste CPU-Metriken](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers).
  
 Wählen Sie auf der Registerkarte *Metriken* die Option **Abfrage hinzufügen** aus. <br>Ein Abfrageeintrag wird hinzugefügt. Jede Abfrage wird mit einem Buchstaben gekennzeichnet. 
 
@@ -137,7 +137,7 @@ Führen Sie die folgenden Schritte aus, um die Abfrage zu definieren:
 	
     Um beispielsweise die Nanosekunden der CPU-Zeit über alle zentralen Bestandteile hinweg für einen Container zu überwachen, wählen Sie als Typ **cpu** und als Untertyp **usage** aus.
 		
-	Eine Liste der CPU-Metriken finden Sie unter [CPU-Metriken für Container](/docs/services/cloud-monitoring/containers/monitoring_containers_ov.html#cpu_metrics_containers).
+	Eine Liste der CPU-Metriken finden Sie unter [CPU-Metriken für Container](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-monitoring_bmx_containers_ov#cpu_metrics_containers).
     
 11. Klicken Sie auf das Pluszeichen ![Symbol für das Hinzufügen](images/grafana_plus_image.gif "Pluszeichen") und wählen Sie eine Funktion aus. Sie können eine Funktion zur Transformation, zur Kombination und zur Durchführung von Berechnungen mit den Daten hinzufügen, die für eine Metrik zur Verfügung stehen.
 
@@ -167,4 +167,4 @@ Speichern Sie das Dashboard zur späteren Wiederverwendung.
 ## Nächste Schritte
 {: #cgd_next_steps}
 
-Definieren Sie einen Alert für eine Metrik. Weitere Informationen finden Sie unter [Alerts konfigurieren ](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov).
+Definieren Sie einen Alert für eine Metrik. Weitere Informationen finden Sie unter [Alerts konfigurieren ](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov).

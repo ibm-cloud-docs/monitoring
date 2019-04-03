@@ -33,7 +33,7 @@ subcollection: cloud-monitoring
 **참고:** 
 
 * 메트릭은 표준 클러스터에서 실행 중인 컨테이너에 대한 {{site.data.keyword.monitoringshort}} 서비스를 통해 수집되고 모니터링에 사용될 수 있습니다.
-* 클러스터 메트릭을 모니터하려면 모니터링 서비스의 인스턴스를 프로비저닝해야 합니다. 자세한 정보는 [모니터링 서비스 프로비저닝](/docs/services/cloud-monitoring/how-to/provision.html#provision)을 참조하십시오.
+* 클러스터 메트릭을 모니터하려면 모니터링 서비스의 인스턴스를 프로비저닝해야 합니다. 자세한 정보는 [모니터링 서비스 프로비저닝](/docs/services/cloud-monitoring/how-to?topic=cloud-monitoring-provision#provision)을 참조하십시오.
 
 
 ## 퍼블릭에서의 모니터링에 대한 정보
@@ -117,7 +117,7 @@ Grafana에서 클러스터에 대한 메트릭을 보고 분석하려면 다음 
 |메트릭 |설명 | 단위 |
 |----------|---------|---------|
 | `memory.current` |이 메트릭은 컨테이너가 현재 사용 중인 메모리의 바이트 수를 보고합니다. | 바이트 |
-| `memory.limit` | 이 메트릭은 컨테이너의 메모리 한계를 보고합니다.  기본적으로 컨테이너는 메모리 한계가 무제한으로 설정되어 실행됩니다. 컨테이너는 자신이 실행 중인 작업자만큼의 메모리를 이용할 수 있습니다. 팟(Pod)을 배치할 때는 컨테이너가 사용할 수 있는 메모리 양에 대해 한계를 설정할 수 있습니다.  | 바이트 |
+| `memory.limit` | 이 메트릭은 컨테이너의 메모리 한계를 보고합니다. 기본적으로 컨테이너는 메모리 한계가 무제한으로 설정되어 실행됩니다. 컨테이너는 자신이 실행 중인 작업자만큼의 메모리를 이용할 수 있습니다. 팟(Pod)을 배치할 때는 컨테이너가 사용할 수 있는 메모리 양에 대해 한계를 설정할 수 있습니다. | 바이트 |
 | `memory.usage-pct` |이 메트릭은 사용된 메모리를 컨테이너 메모리 한계의 백분율로 보고합니다. </br>컨테이너에서 사용할 수 있는 메모리의 양으로 한계를 설정하면 이 메트릭이 설정한 한계의 백분율로 메모리 사용량을 보고합니다. | 백분율 | 
 | `memory.working-set` |이 메트릭은 컨테이너가 웜 캐시에서 현재 사용 중인 활성 메모리의 바이트 수를 보고합니다. | 바이트 |
 {: caption="컨테이너에 대한 메모리 메트릭" caption-side="top"} 
@@ -232,20 +232,20 @@ Grafana에서 클러스터에 대한 메트릭을 보고 분석하려면 다음 
 
 {{site.data.keyword.monitoringlong}} 서비스는 오픈 소스 분석 및 시각화 플랫폼인 Grafana를 사용하여 메트릭을 모니터링하고, 검색하고, 분석하고, 다양한 그래프(예: 차트 및 표)로 시각화합니다.
 
-Grafana는 브라우저에서 실행할 수 있습니다. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)을 참조하십시오.
+Grafana는 브라우저에서 실행할 수 있습니다. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)을 참조하십시오.
 
 Kubernetes 클러스터에서 실행되는 컨테이너 및 작업자를 모니터링하려면 각 리소스에 대한 Grafana에서 조회를 정의해야 합니다.
 
-* 컨테이너에 대한 CPU 메트릭을 모니터링하는 조회를 정의하려면 [Grafana에서 컨테이너에 대한 CPU 메트릭 구성](/docs/services/cloud-monitoring/containers/config_cpu_containers.html#config_cpu_containers)을 참조하십시오.
-* 컨테이너에 대한 메모리 메트릭을 모니터링하는 조회를 정의하려면 [Grafana에서 컨테이너에 대한 메모리 메트릭 구성](/docs/services/cloud-monitoring/containers/config_mem_container.html#config_mem_container)을 참조하십시오.
-* 작업자에 대한 로드 메트릭을 모니터링하는 조회를 정의하려면 [Grafana에서 작업자에 대한 로드 메트릭 구성](/docs/services/cloud-monitoring/containers/config_load_worker.html#config_load_worker)을 참조하십시오.
+* 컨테이너에 대한 CPU 메트릭을 모니터링하는 조회를 정의하려면 [Grafana에서 컨테이너에 대한 CPU 메트릭 구성](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_cpu_containers#config_cpu_containers)을 참조하십시오.
+* 컨테이너에 대한 메모리 메트릭을 모니터링하는 조회를 정의하려면 [Grafana에서 컨테이너에 대한 메모리 메트릭 구성](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_mem_container#config_mem_container)을 참조하십시오.
+* 작업자에 대한 로드 메트릭을 모니터링하는 조회를 정의하려면 [Grafana에서 작업자에 대한 로드 메트릭 구성](/docs/services/cloud-monitoring/containers?topic=cloud-monitoring-config_load_worker#config_load_worker)을 참조하십시오.
 
 
 조회의 형식은 리소스 유형 및 조회 유형별로 다릅니다.
 
-* 컨테이너에 대한 CPU를 모니터링할 조회의 형식에 대한 자세한 정보는 [컨테이너에 대한 CPU 메트릭 조회 형식](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#cpu_containers)을 참조하십시오. 
-* 작업자에 대한 로드를 모니터링할 조회의 형식에 대한 자세한 정보는 [작업자에 대한 로드 메트릭 조회 형식](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#load_workers)을 참조하십시오.
-* 컨테이너에 대한 메모리를 모니터링할 조회의 형식에 대한 자세한 정보는 [컨테이너에 대한 메모리 메트릭 조회 형식](/docs/services/cloud-monitoring/reference/metrics_format_containers.html#mem_containers)을 참조하십시오.
+* 컨테이너에 대한 CPU를 모니터링할 조회의 형식에 대한 자세한 정보는 [컨테이너에 대한 CPU 메트릭 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#cpu_containers)을 참조하십시오. 
+* 작업자에 대한 로드를 모니터링할 조회의 형식에 대한 자세한 정보는 [작업자에 대한 로드 메트릭 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#load_workers)을 참조하십시오.
+* 컨테이너에 대한 메모리를 모니터링할 조회의 형식에 대한 자세한 정보는 [컨테이너에 대한 메모리 메트릭 조회 형식](/docs/services/cloud-monitoring/reference?topic=cloud-monitoring-metrics_format_containers#mem_containers)을 참조하십시오.
 
 
 ## {{site.data.keyword.Bluemix_notm}}에서 사용자 정의 방화벽 구성에 대한 네트워크 트래픽 구성
@@ -287,6 +287,6 @@ Kubernetes 클러스터에서 실행되는 컨테이너 및 작업자를 모니�
 ## 튜토리얼
 {: #tutorial}
 
-{{site.data.keyword.monitoringshort}} 서비스를 사용하여 컨테이너의 성능을 모니터링하는 방법을 배우려면 [Kubernetes 클러스터에 배치된 앱에 대한 Grafana에서 메트릭 분석](/docs/services/cloud-monitoring/tutorials/container_service_metrics.html#container_service_metrics)을 참조하십시오.
+{{site.data.keyword.monitoringshort}} 서비스를 사용하여 컨테이너의 성능을 모니터링하는 방법을 배우려면 [Kubernetes 클러스터에 배치된 앱에 대한 Grafana에서 메트릭 분석](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_service_metrics#container_service_metrics)을 참조하십시오.
 
-{{site.data.keyword.monitoringshort}} 서비스에서 Grafana 대시보드를 작성하는 방법을 배우려면 [Kubernetes 클러스터를 모니터링하기 위해 Grafana 대시보드 작성](/docs/services/cloud-monitoring/tutorials/container_grafana_dashboard.html#container_grafana_dashboard)을 참조하십시오.
+{{site.data.keyword.monitoringshort}} 서비스에서 Grafana 대시보드를 작성하는 방법을 배우려면 [Kubernetes 클러스터를 모니터링하기 위해 Grafana 대시보드 작성](/docs/services/cloud-monitoring/tutorials?topic=cloud-monitoring-container_grafana_dashboard#container_grafana_dashboard)을 참조하십시오.

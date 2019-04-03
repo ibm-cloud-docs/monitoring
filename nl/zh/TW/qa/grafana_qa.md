@@ -30,11 +30,11 @@ subcollection: cloud-monitoring
 以下是關於搭配使用 Grafana 與 {{site.data.keyword.monitoringshort}} 服務的常見問題與解答。
 {:shortdesc}
 
-* [我看不到在 Grafana 儀表板中使用 Alerts API 所定義的警示](/docs/services/cloud-monitoring/qa/grafana_qa.html#alerts1)
-* [嘗試儲存對 Grafana 儀表板進行的變更時收到 BXNMSAL41E](/docs/services/cloud-monitoring/qa/grafana_qa.html#BXNMSAL41E)
-* [將警示新增至 Grafana 儀表板之後，當我嘗試儲存變更時收到 BXNMSAL36E](/docs/services/cloud-monitoring/qa/grafana_qa.html#BXNMSAL36E)
-* [登入監視服務 Web 使用者介面時顯示 404](/docs/services/cloud-monitoring/qa/grafana_qa.html#404)
-* [我只上傳了 Grafana 儀表板的 json 資料，為何捲軸消失？](/docs/services/cloud-monitoring/qa/grafana_qa.html#2)
+* [我看不到在 Grafana 儀表板中使用 Alerts API 所定義的警示](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#alerts1)
+* [嘗試儲存對 Grafana 儀表板進行的變更時收到 BXNMSAL41E](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#BXNMSAL41E)
+* [將警示新增至 Grafana 儀表板之後，當我嘗試儲存變更時收到 BXNMSAL36E](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#BXNMSAL36E)
+* [登入監視服務 Web 使用者介面時顯示 404](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#404)
+* [我只上傳了 Grafana 儀表板的 json 資料，為何捲軸消失？](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-grafana_qa#2)
 
 
 ## 我看不到在 Grafana 儀表板中使用 Alerts API 所定義的警示
@@ -42,7 +42,7 @@ subcollection: cloud-monitoring
 
 Grafana 的警示標籤中未顯示使用 Alerts API 所定義的警示。若要查看 Grafana 中的警示，您必須直接在 Grafana 儀表板中定義它們。
 
-如需相關資訊，請參閱[在 Grafana 中配置警示](/docs/services/cloud-monitoring/alerts/config_alerts_grafana.html#config_alerts_grafana)。
+如需相關資訊，請參閱[在 Grafana 中配置警示](/docs/services/cloud-monitoring/alerts?topic=cloud-monitoring-config_alerts_grafana#config_alerts_grafana)。
 
 ## 嘗試儲存對 Grafana 儀表板進行的變更時收到 BXNMSAL41E
 {: #BXNMSAL41E}
@@ -60,7 +60,7 @@ Grafana 的警示標籤中未顯示使用 Alerts API 所定義的警示。若要
 
 請升級方案，然後重試。
 
-如需如何升級方案的相關資訊，請參閱[變更方案](/docs/services/cloud-monitoring/plan/change_plan.html#change_plan)。
+如需如何升級方案的相關資訊，請參閱[變更方案](/docs/services/cloud-monitoring/plan?topic=cloud-monitoring-change_plan#change_plan)。
 
 
 ## 使用 UAA 鑑別模型登入監視服務 Web 使用者介面時顯示 404
@@ -68,7 +68,7 @@ Grafana 的警示標籤中未顯示使用 Alerts API 所定義的警示。若要
 
 當您嘗試登入 {{site.data.keyword.monitoringshort}} 服務 Web 使用者介面 (Grafana) 時，如果顯示 404，請確認該空間存在，並確認您具有其存取權。
 
-使用 [UAA 鑑別模型](/docs/services/cloud-monitoring/security/auth_uaa.html#auth_uaa)來存取 {{site.data.keyword.monitoringshort}} 服務時，您必須使用您用來登入 {{site.data.keyword.Bluemix_notm}} 主控台的相同使用者 ID 及密碼。 
+使用 [UAA 鑑別模型](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-auth_uaa#auth_uaa)來存取 {{site.data.keyword.monitoringshort}} 服務時，您必須使用您用來登入 {{site.data.keyword.Bluemix_notm}} 主控台的相同使用者 ID 及密碼。 
 
 若要驗證您有權可存取要登入的帳戶、組織及空間，請登入 {{site.data.keyword.Bluemix_notm}} 主控台並切換至空間。 
 

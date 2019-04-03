@@ -54,7 +54,7 @@ Kubernetes 클러스터에 배치된 앱에 대한 컨테이너 메트릭을 검
     
     * {{site.data.keyword.containershort}}에 대한 IAM 정책(*운영자* 또는 *관리자* 권한의 경우)
     
-    자세한 정보는 [IBM Cloud UI를 통해 사용자에게 IAM 정책 지정](/docs/services/cloud-monitoring/security/assign_policy.html#assign_policy_ui)을 참조하십시오.
+    자세한 정보는 [IBM Cloud UI를 통해 사용자에게 IAM 정책 지정](/docs/services/cloud-monitoring/security?topic=cloud-monitoring-grant_permissions#assign_policy_ui)을 참조하십시오.
 
 2. Kubernetes 클러스터를 관리하고 명령행에서 앱을 배치할 수 있는 터미널 세션이 있어야 합니다. 이 튜토리얼의 경우, Ubuntu Linux 시스템에 대한 예입니다.
 
@@ -63,7 +63,7 @@ Kubernetes 클러스터에 배치된 앱에 대한 컨테이너 메트릭을 검
     * {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 
     * {{site.data.keyword.containershort}} CLI를 설치하여 {{site.data.keyword.containershort}}에서 Kubernetes 클러스터를 작성 및 관리하고 컨테이너화된 앱을 클러스터에 배치하십시오.
     
-    자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI 설치](/docs/cli/index.html#overview)를 참조하십시오.
+    자세한 정보는 [{{site.data.keyword.Bluemix_notm}} CLI 설치](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)를 참조하십시오.
     
     
 
@@ -75,11 +75,11 @@ Kubernetes 클러스터에 배치된 앱에 대한 컨테이너 메트릭을 검
 
 다음 단계를 완료하십시오.
 
-1. 표준 Kubernetes 클러스터를 작성하십시오. 자세한 정보는 [Kubernetes 표준 클러스터 작성](/docs/containers/cs_tutorials.html#cs_cluster_tutorial)을 참조하십시오.
+1. 표준 Kubernetes 클러스터를 작성하십시오. 자세한 정보는 [Kubernetes 표준 클러스터 작성](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial)을 참조하십시오.
 
 2. 터미널에서 클러스터 컨텍스트를 설정하십시오. 컨텍스트가 설정된 후에는 Kubernetes 클러스터를 관리하고 Kubernetes 클러스터에 애플리케이션을 배치할 수 있습니다.
 
-    작성한 클러스터와 연관된 {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/CloudLogAnalysis/qa/cli_qa.html#login)을 참조하십시오.
+    작성한 클러스터와 연관된 {{site.data.keyword.Bluemix_notm}} 지역, 조직 및 영역에 로그인하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 로그인하는 방법](/docs/services/CloudLogAnalysis/qa?topic=cloudloganalysis-cli_qa#login)을 참조하십시오.
 
 	{{site.data.keyword.containershort}} 서비스 플러그인을 초기화하십시오.
 
@@ -125,7 +125,7 @@ Kubernetes 클러스터에 배치된 앱에 대한 컨테이너 메트릭을 검
 	
 3. 사용자가 계정의 구성원이면 목록에서 사용자 이름을 선택하거나 *조치* 메뉴에서 **사용자 관리**를 클릭하십시오.
 
-    사용자가 계정의 구성원이 아닌 경우 [사용자 초대](/docs/iam/iamuserinv.html#iamuserinv)를 참조하십시오.
+    사용자가 계정의 구성원이 아닌 경우 [사용자 초대](/docs/iam?topic=iam-iamuserinv#iamuserinv)를 참조하십시오.
 
 4. **정책 액세스 > 액세스 지정 > 리소스에 대한 액세스 지정**을 선택하십시오.
 
@@ -170,7 +170,7 @@ Kubernetes 클러스터에 배치된 앱에 대한 컨테이너 메트릭을 검
 ## 4단계: Kubernetes 클러스터에 샘플 앱 배치
 {: #ks_step4}
 
-Kubernetes 클러스터에 샘플 앱을 배치하고 실행하십시오. 다음 튜토리얼의 단계를 완료하여 샘플 앱을 배치하십시오. [학습 1: Kubernetes 클러스터에 단일 인스턴스 앱 배치](/docs/containers/cs_tutorials_apps.html#cs_apps_tutorial_lesson1).
+Kubernetes 클러스터에 샘플 앱을 배치하고 실행하십시오. 다음 튜토리얼의 단계를 완료하여 샘플 앱을 배치하십시오. [학습 1: Kubernetes 클러스터에 단일 인스턴스 앱 배치](/docs/containers?topic=containers-cs_apps_tutorial#cs_apps_tutorial_lesson1).
 
 이 앱은 Hello World Node.js 앱입니다.
 
@@ -195,13 +195,13 @@ app.listen(8080, function() {
 
 브라우저에서 Grafana를 실행하고 클러스터 메트릭을 볼 수 있는 {{site.data.keyword.monitoringshort}} 도메인을 설정하십시오.
 
-클러스터의 메트릭을 분석하려면 클러스터가 작성된 클라우드 퍼블릭 지역에서 Grafana에 액세스해야 합니다. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana/navigating_grafana.html#launch_grafana_from_browser)을 참조하십시오.
+클러스터의 메트릭을 분석하려면 클러스터가 작성된 클라우드 퍼블릭 지역에서 Grafana에 액세스해야 합니다. 자세한 정보는 [웹 브라우저에서 Grafana 대시보드로 이동](/docs/services/cloud-monitoring/grafana?topic=cloud-monitoring-navigating_grafana#launch_grafana_from_browser)을 참조하십시오.
 
 1. 브라우저에서 Grafana를 실행하십시오. 
 
     클러스터를 작성한 지역에 대한 {{site.data.keyword.monitoringshort}} 서비스 URL을 입력하십시오. 
     
-    지역별 URL을 가져오려면 [모니터링 서비스에 대한 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)을 참조하십시오.
+    지역별 URL을 가져오려면 [모니터링 서비스에 대한 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)을 참조하십시오.
 
     예를 들어, 미국 남부 지역의 경우 [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/)을 실행하십시오.
 
@@ -232,4 +232,4 @@ app.listen(8080, function() {
 ## 다음 단계
 {: #ks_next_steps}
 
-메트릭에 대한 경보를 정의하십시오. 자세한 정보는 [경보 구성](/docs/services/cloud-monitoring/config_alerts_ov.html#config_alerts_ov)을 참조하십시오.
+메트릭에 대한 경보를 정의하십시오. 자세한 정보는 [경보 구성](/docs/services/cloud-monitoring?topic=cloud-monitoring-config_alerts_ov#config_alerts_ov)을 참조하십시오.

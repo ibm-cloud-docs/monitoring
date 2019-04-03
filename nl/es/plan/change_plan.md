@@ -55,11 +55,11 @@ Para cambiar el plan de servicio en {{site.data.keyword.Bluemix_notm}} a través
 
 1. Inicie la sesión en una región, organización y espacio en {{site.data.keyword.Bluemix_notm}}. 
 
-    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login).
+    Para obtener más información, consulte [Cómo iniciar la sesión en {{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login).
 	
-2. Ejecute el mandato `ibmcloud service list` para comprobar el plan actual y para obtener el nombre del servicio {{site.data.keyword.loganalysisshort}} de la lista de servicios disponibles en el espacio. 
+2. Ejecute el mandato `ibmcloud service list` para comprobar su plan actual y para obtener el nombre del servicio {{site.data.keyword.loganalysisshort}} de la lista de servicios disponibles en el espacio. 
 
-    El valor del campo **name** es el que se debe utilizar para cambiar el plan. 
+    El valor del campo **name** es el que debe utilizar para cambiar el plan. 
 
     Por ejemplo,
 	
@@ -72,7 +72,7 @@ Para cambiar el plan de servicio en {{site.data.keyword.Bluemix_notm}} a través
     ```
 	{: screen}
     
-3. Actualice o reduzca el servicio plan. Ejecute el mandato `ibmcloud service update`.
+3. Actualice o reduzca su plan. Ejecute el mandato `ibmcloud service update`.
     
 	```
 	ibmcloud service update service_name [-p new_plan]

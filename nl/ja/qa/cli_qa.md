@@ -30,11 +30,11 @@ subcollection: cloud-monitoring
 {{site.data.keyword.monitoringshort}} サービスでの {{site.data.keyword.Bluemix}} CLI の使用に関する一般的な質問の回答を以下に示します。 
 {:shortdesc}
 
-* [{{site.data.keyword.Bluemix_notm}}](/docs/services/cloud-monitoring/qa/cli_qa.html#login) にログインするにはどうすればよいですか
-* [{{site.data.keyword.Bluemix_notm}} CLI のインストール方法を教えてください](/docs/services/cloud-monitoring/qa/cli_qa.html#install_bmx_cli)
-* [アカウントの GUID の取得方法を教えてください](/docs/services/cloud-monitoring/qa/cli_qa.html#account_guid)
-* [組織の GUID の取得方法を教えてください](/docs/services/cloud-monitoring/qa/cli_qa.html#org_guid)
-* [スペースの GUID の取得方法を教えてください](/docs/services/cloud-monitoring/qa/cli_qa.html#space_guid)
+* [{{site.data.keyword.Bluemix_notm}} にログインするにはどうすればよいですか](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#login)
+* [{{site.data.keyword.Bluemix_notm}} CLI のインストール方法を教えてください](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#install_bmx_cli)
+* [アカウントの GUID の取得方法を教えてください](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#account_guid)
+* [組織の GUID の取得方法を教えてください](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#org_guid)
+* [スペースの GUID の取得方法を教えてください](/docs/services/cloud-monitoring/qa?topic=cloud-monitoring-cli_qa#space_guid)
 
 ## IBM Cloud にログインするにはどうすればよいですか
 {: #login}
@@ -97,7 +97,7 @@ ibmcloud target -o OrgName -s SpaceName
 ## IBM Cloud CLI のインストール方法を教えてください
 {: #install_bmx_cli}
 
-[{{site.data.keyword.Bluemix_notm}} CLI のダウンロードとインストール](/docs/cli/index.html#overview)を参照してください。
+[{{site.data.keyword.Bluemix_notm}} CLI のダウンロードとインストール](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)を参照してください。
 
 ## アカウントの GUID の取得方法を教えてください
 {: #account_guid}

@@ -36,14 +36,14 @@ Grafana UI를 통해 메트릭 조회에 대한 경보를 구성하려면 다음
 4. Grafana 그래프에서 **경보** 탭을 통해 경보를 구성하십시오.
 
 ## 1단계: Grafana 실행
-{: #step1_cag1}
+{: #step1_cag}
 
 브라우저에서 Grafana를 실행하십시오. 예를 들어, 다음 URL을 입력하여 미국 남부 지역에서 Grafana를 여십시오. [https://metrics.ng.bluemix.net/](https://metrics.ng.bluemix.net/).
 
-지역별 Grafana URL 목록을 보려면 [{{site.data.keyword.monitoringshort}} 서비스 URL](/docs/services/cloud-monitoring/monitoring_ov.html#region)을 참조하십시오.
+지역별 Grafana URL 목록을 보려면 [{{site.data.keyword.monitoringshort}} 서비스 URL](/docs/services/cloud-monitoring?topic=cloud-monitoring-monitoring_ov#region)을 참조하십시오.
 
 ## 2단계: 하나 이상의 알림 채널 정의
-{: #step2_cag2}
+{: #step2_cag}
 
 다음 단계를 완료하십시오.
 
@@ -134,7 +134,7 @@ Grafana UI를 통해 메트릭 조회에 대한 경보를 구성하려면 다음
 </table>
 
 ## 3단계: 메트릭 정의
-{: #step3_cag3}
+{: #step3_cag}
 
 새 대시보드를 작성하려면 다음 단계를 완료하십시오.
 
@@ -156,7 +156,7 @@ Grafana UI를 통해 메트릭 조회에 대한 경보를 구성하려면 다음
 
 
 ## 4단계: 경보 정의
-{: #step4_cag4}
+{: #step4_cag}
 
 Grafana UI에서 경보를 정의하려면 다음 단계를 완료하십시오.
 
@@ -174,11 +174,11 @@ Grafana UI에서 경보를 정의하려면 다음 단계를 완료하십시오.
 * **삭제**를 선택하면 경보가 삭제됩니다.
 
 ## 다음: 경보 생성 여부 확인
-{: #next_cag5}
+{: #next_cag}
 
 예를 들어, 이메일 알림 채널을 작성한 경우, 이메일을 확인하십시오.
 
-**IBM Cloud Monitoriing**이라는 송신자로 이메일을 찾으십시오.
+**IBM Cloud Monitoring**이라는 송신자로 이메일을 찾으십시오.
 
 이메일에는 격상된 경보에 대한 정보 및 상황을 볼 수 있는 Grafana 대시보드에 대한 링크가 포함됩니다.
 
