@@ -1,0 +1,106 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="cloud-monitoring" audience="service" arm="3385829" href="/docs/services/cloud-monitoring?topic=cloud-monitoring-getting-started-with-ibm-cloud-monitoring#getting-started-with-ibm-cloud-monitoring" path="services/cloud-monitoring"}
+IBM Cloud Monitoring
+
+    {: .navgroup id="learn"}
+    index.md
+    
+    {: .topicgroup}
+    Informazioni su IBM Cloud Monitoring
+        monitoring_ov.md
+        security_ov.md
+        send_retrieve_metrics_ov.md
+        config_alerts_ov.md
+        analyze_metrics_ov.md
+        compliance.md
+
+    {: .topicgroup}
+    Monitoraggio delle risorse cloud
+        cf/monitoring_cf_apps_ov.md
+        containers/monitoring_containers_ov.md
+        mh/monitoring_mh_ov.md
+
+    {: .topicgroup}
+    Esercitazioni
+        tutorials/cfapps_metrics.md
+        tutorials/container_service_metrics.md
+        tutorials/container_grafana_dashboard.md
+
+    {: .topicgroup}
+    Link correlati
+        [Guida per l'utente Grafana](http://docs.grafana.org/guides/getting_started/)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    how-to/provision.md
+    plan/change_plan.md
+    
+    {: .topicgroup}
+    Avvisi
+        alerts/rules.md
+        alerts/notifications.md
+        alerts/config_alerts_grafana.md
+        alerts/configure_email_alert.md
+        alerts/configure_pagerduty_alert.md
+        alerts/configure_webhook_alert.md
+        alerts/retrieve_history.md
+        alerts/retrieve_history_grafana.md
+        alerts/delete_notifications.md
+        alerts/delete_alerts.md
+
+    {: .topicgroup}
+    Contenitori
+        containers/config_cpu_containers.md
+        containers/config_load_worker.md
+        containers/config_mem_container.md
+
+    {: .topicgroup}
+    Grafana
+        grafana/navigating_grafana.md
+        grafana/define_query.md
+        alerts/config_alerts_grafana.md
+
+    {: .topicgroup}
+    Metriche
+        send-metrics/send_data_api.md
+        send-metrics/conf_monitoring_plugin.md
+        retrieve-metrics/retrieve_data_api.md
+        how-to/delete_metrics.md
+
+    {: .topicgroup}
+    Sicurezza
+        security/auth_api_key.md
+        security/auth_iam.md
+        security/auth_uaa.md
+        security/assign_policy.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    monitoring_gettinghelp.md
+
+    {: .topicgroup}
+    Domande frequenti (FAQ)
+        qa/qa.md
+        qa/cli_qa.md
+        qa/grafana_qa.md
+        qa/qa_containers.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API Metriche](https://console.bluemix.net/apidocs/monitoring-metrics-api)
+    [API Avvisi](https://console.bluemix.net/apidocs/monitoring-alerts-api)
+    
+    {: .topicgroup}
+    Formati della query Grafana
+        reference/metrics_format.md
+        reference/cfapps_metrics_format.md
+        reference/metrics_format_containers.md
+    {: .navgroup-end}
+
+
+
+
+	
+    
