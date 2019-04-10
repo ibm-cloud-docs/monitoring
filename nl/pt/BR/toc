@@ -1,105 +1,81 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-monitoring" audience="service" arm="3385829" href="/docs/services/cloud-monitoring?topic=cloud-monitoring-getting-started" path="services/cloud-monitoring"}
-IBM Cloud Monitoring
+{: .toc subcollection="Sysdig" audience="service" arm="4158185" href="/docs/services/Monitoring-with-Sysdig?topic=Sysdig-getting-started#getting-started" path="services/Monitoring-with-Sysdig"}
+IBM Cloud Monitoring com Sysdig
 
     {: .navgroup id="learn"}
     getting-started.md
-    
-    {: .topicgroup}
-    Sobre o IBM Cloud Monitoring
-        monitoring_ov.md
-        security_ov.md
-        send_retrieve_metrics_ov.md
-        config_alerts_ov.md
-        analyze_metrics_ov.md
-        compliance.md
-
-    {: .topicgroup}
-    Monitorando recursos em nuvem
-        cf/monitoring_cf_apps_ov.md
-        containers/monitoring_containers_ov.md
-        mh/monitoring_mh_ov.md
+    overview.md
+    endpoints.md
+    pricing.md
+    manage.md
+    monitoring.md
+    customize_agent.md
+    network.md
+    iam.md
 
     {: .topicgroup}
     Tutoriais
-        tutorials/cfapps_metrics.md
-        tutorials/container_service_metrics.md
-        tutorials/container_grafana_dashboard.md
-
-    {: .topicgroup}
-    Links relacionados
-        [Grafana User Guide](http://docs.grafana.org/guides/getting_started/)
+        tutorials/kubernetes_cluster.md
+        tutorials/ubuntu.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    how-to/provision.md
-    plan/change_plan.md
-    
-    {: .topicgroup}
-    Alertas
-        alerts/rules.md
-        alerts/notifications.md
-        alerts/config_alerts_grafana.md
-        alerts/configure_email_alert.md
-        alerts/configure_pagerduty_alert.md
-        alerts/configure_webhook_alert.md
-        alerts/retrieve_history.md
-        alerts/retrieve_history_grafana.md
-        alerts/delete_notifications.md
-        alerts/delete_alerts.md
+    provision.md
+    remove.md
+    config_agent.md
+    remove_agent.md
 
     {: .topicgroup}
-    Contêineres
-        containers/config_cpu_containers.md
-        containers/config_load_worker.md
-        containers/config_mem_container.md
+    Customizando o agente
+        change_kube_agent.md
+        change_linux_agent.md
+        change_container_agent.md
 
-    {: .topicgroup}
-    Grafana
-        grafana/navigating_grafana.md
-        grafana/define_query.md
-
-    {: .topicgroup}
-    Métricas
-        send-metrics/send_data_api.md
-        send-metrics/conf_monitoring_plugin.md
-        retrieve-metrics/retrieve_data_api.md
-        how-to/delete_metrics.md
-
-    {: .topicgroup}
-    Segurança
-        security/auth_api_key.md
-        security/auth_iam.md
-        security/auth_uaa.md
-        security/assign_policy.md
-    {: .navgroup-end}
-
-    {: .navgroup id="help"}
-    monitoring_gettinghelp.md
-
-    {: .topicgroup}
-    FAQ
-        qa/qa.md
-        qa/cli_qa.md
-        qa/grafana_qa.md
-        qa/qa_containers.md
+    launch.md
+    groups.md
+    access_key.md
+    api_token.md
+    [Trabalhando com alertas](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts)
+    [Trabalhando com eventos customizados](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events)
+    dashboards.md
+    panels.md
+    metrics.md
+    notifications.md
+    teams.md
+    iam_work.md
+    captures.md
+    api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API de métricas](https://console.bluemix.net/apidocs/monitoring-metrics-api)
-    [API de alertas](https://console.bluemix.net/apidocs/monitoring-alerts-api)
-    
+    default_dashboards.md
+
     {: .topicgroup}
-    Formatos de consulta do Grafana
-        reference/metrics_format.md
-        reference/cfapps_metrics_format.md
-        reference/metrics_format_containers.md
+    Dicionário de métricas
+        [Contêineres](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209092629/Containers)
+        [Referências do Docker/CIS](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/261750836/Docker+CIS+Benchmarks)
+        [Arquivo](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/240943105/File)
+        [Host](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209027099/Host)
+        [JVM](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209027134/JVM)
+        [Referências do Kubernetes](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/261980260/Kubernetes+Benchmarks)
+        [Estado do Kubernetes](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/208928791/Kubernetes+State)
+        [Uso do Kubernetes](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209027106/Resource+Usage)
+        [Rede](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209027110/Network)
+        [Processo](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/208994374/Process)
+        [Sistema](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209125442/System)
+
+    [Página de produtos do Sysdig Monitor](https://sysdig.com/products/monitor/)
+    [Documentação do Sysdig Monitor](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview)
+    [Blog do Sysdig](https://sysdig.com/blog/)
+    {: .navgroup-end}
+
+
+    {: .navgroup id="help"}
+    gettinghelp.md troubleshoot.md
     {: .navgroup-end}
 
 
 
 
-	
-    
