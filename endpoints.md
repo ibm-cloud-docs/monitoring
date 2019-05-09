@@ -50,14 +50,14 @@ Currently, **Frankfurt** and **EU GB** are locations that are **not** EU-managed
 
 **Sysdig Collector** endpoints are ingestion endpoints that you can use to send data.
 
-The following table list the **Sysdig Collector endpoints** that are available per region:
+The following table lists the **Sysdig Collector endpoints** that are available per region:
 
 | Region        | Endpoint                                                  | Port |
 |---------------|-----------------------------------------------------------|------|
 | `US South`    | `ingest.us-south.monitoring.cloud.ibm.com`                | TCP 6443 |
-| `EU-DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`                   | TCP 6443 | 
-| `EU-GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`                   | TCP 6443 | 
-| `JP-TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`                  | TCP 6443 | 
+| `EU DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`                  | TCP 6443 | 
 {: caption="Table 2. List of ingestion endpoints" caption-side="top"} 
 
 
@@ -65,14 +65,14 @@ The following table list the **Sysdig Collector endpoints** that are available p
 ## Sysdig endpoints
 {: #endpoints_sysdig}
 
-The following table list the **Sysdig endpoints** that are available per region:
+The following table lists the **Sysdig endpoints** that are available per region:
 
-| Region       | Endpoint                                                  | Port |
-|--------------|-----------------------------------------------------------|------|
-| `US South`   | `https://us-south.monitoring.cloud.ibm.com`               | https (TLS) 443 |  
-| `EU-DE`      | `https://eu-de.monitoring.cloud.ibm.com `                 | https (TLS) 443 |
-| `EU-GB`      | `https://eu-gb.monitoring.cloud.ibm.com `                 | https (TLS) 443 |
-| `JP-TOK`      | `https://jp-tok.monitoring.cloud.ibm.com`                 | https (TLS) 443 |
+| Region       | Endpoint                                                  | Port            |
+|--------------|-----------------------------------------------------------|-----------------|
+| `US South`   | `https://us-south.monitoring.cloud.ibm.com`               | HTTPS (TLS) 443 |  
+| `EU DE`      | `https://eu-de.monitoring.cloud.ibm.com `                 | HTTPS (TLS) 443 |
+| `EU GB`      | `https://eu-gb.monitoring.cloud.ibm.com `                 | HTTPS (TLS) 443 |
+| `JP TOK`     | `https://jp-tok.monitoring.cloud.ibm.com`                 | HTTPS (TLS) 443 |
 {: caption="Table 3. List of Sysdig endpoints" caption-side="top"} 
 
 
