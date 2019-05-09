@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Working with the Sysdig REST API
+# Managing the Sysdig REST API
 {: #api}
 
 Use the Sysdig REST API to automate routine tasks and monitor notifications.
@@ -42,17 +42,17 @@ Complete the following steps to create a dashboard:
 
 2. Create the json file that describes the dashboard. The following fields must be set as indicated:
 
-    * *name*: Enter the name of the dashboard.
+    * `name`: Enter the name of the dashboard.
 
-    * *id*: Set to *null*.
+    * `id`: Set to *null*.
 
-    * *version*: Set to *null*.
+    * `version`: Set to *null*.
 
-    * username: Set to the email that is associated with your IBMid.
+    * `username`: Set to the email that is associated with your IBMid.
 
-    * *isShared*: Set to true to share the dashboard with other team members.
+    * `isShared`: Set to true to share the dashboard with other team members.
 
-    * *isPublic*: Set to true if you want the dashboard to be available publicly.
+    * `isPublic`: Set to true if you want the dashboard to be available publicly.
 
     * Configure filters to define the dashboard scope.
     
@@ -63,11 +63,11 @@ Complete the following steps to create a dashboard:
     ```
     {: codeblock}
 
-    where
+    Where
 
     * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* is the API token you got in the previous step.
+    * *SYSDIG_API_TOKEN* is the API token that you got in the previous step.
 
     * *dashboard.json* is the file that describes the new dashboard, including panels and metrics.
 
@@ -182,13 +182,13 @@ Complete the following steps to download the dashboards that are available for a
     ```
     {: codeblock}
 
-    where
+    Where
 
     * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* is the API token you got in the previous step.
+    * *SYSDIG_API_TOKEN* is the API token that you got in the previous step.
 
-For example, to download the dashboards for a team working in the US South region, you can run the following command:
+For example, to download the dashboards for a team that works in the US South region, you can run the following command:
 
 ```
 curl -X GET https://us-south.monitoring.cloud.ibm.com/ui/dashboards -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json'
@@ -216,15 +216,15 @@ Complete the following steps to delete a dashboard from the list of dashboards t
     ```
     {: codeblock}
 
-    where
+    Where
 
     * *ID* is the ID of the dashboard that you want to delete.
 
     * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* is the API token you got in the previous step.
+    * *SYSDIG_API_TOKEN* is the API token that you got in the previous step.
 
-For example, to delete the dashboard with ID *391* from the list of dashboards for a team working in the US South region, you can run the following command:
+For example, to delete the dashboard with ID *391* from the list of dashboards for a team that works in the US South region, you can run the following command:
 
 ```
 curl -X DELETE https://us-south.monitoring.cloud.ibm.com/ui/dashboards/391 -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json' 

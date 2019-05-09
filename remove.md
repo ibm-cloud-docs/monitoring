@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete instance
 
@@ -30,13 +30,13 @@ You can remove an instance of the {{site.data.keyword.mon_full_notm}} service fr
 When you remove an instance from the {{site.data.keyword.cloud_notm}}, consider the following information to tidy up:
 
 1. Write down the list of sources that forward metrics to the {{site.data.keyword.mon_full_notm}} instance that you want to remove. You must remove the Sysdig agent from each source.
-2. Remove permissions granted to users to work with the instance. 
+2. Remove permissions that are granted to users to work with the instance. 
 
-    If you use an access group to manage access to the instance, you must remove the access group.
+    If you use an access group to manage permissions to access the instance, you must remove the access group.
 
-    If you use an access group to manage access to different service instances, you must remove the policies that grant permissions to the instance that you want to remove.
+    If you use an access group to manage permissions to access different service instances, you must remove the policies that grant permissions to the instance that you want to remove.
     
-    If you have granted individual policies to users, you must gather the information of each user that has access, and remove one by one the policies that relate to the instance that you want to delete.
+    If you grant individual policies to users, you must gather the information of each user that has access to the instance. Then, you must remove one by one the policies that relate to the instance that you want to delete.
 
 
 Then, delete the instance from the {{site.data.keyword.cloud_notm}} Dashboard.
@@ -47,9 +47,7 @@ Then, delete the instance from the {{site.data.keyword.cloud_notm}} Dashboard.
 
 To remove an instance of {{site.data.keyword.mon_full_notm}} by using the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
-1. Log in to your {{site.data.keyword.cloud_notm}} account.
-
-    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
+1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 
@@ -67,11 +65,9 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} by using the {{site
 
 To remove an instance of {{site.data.keyword.mon_full_notm}} through the command line, complete the following steps:
 
-1. [Pre-requisite] Install the {{site.data.keyword.cloud_notm}} CLI.
+1. [Pre-requisite] Installion of the {{site.data.keyword.cloud_notm}} CLI. If the CLI is installed, continue with the next step.
 
    For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
-
-   If the CLI is installed, continue with the next step.
 
 2. Log in to the region in the {{site.data.keyword.cloud_notm}} where you want to provision the instance. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -86,7 +82,7 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} through the command
     ```
     {: codeblock}
 
-    where NAME is the name of the instance
+    Where NAME is the name of the instance
 
     For example, to remove an instance, run the following command:
 

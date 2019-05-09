@@ -43,27 +43,25 @@ Work in the US-South region.
 
 Read about {{site.data.keyword.mon_full_notm}}. For more information, see [About](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#about).
 
-Use a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+Use a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
 Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each of the following resources: 
 
 | Resource                             | Scope of the access policy | Role    | Region    | Information                  |
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
-| Resource group **Default**           |  Resource group            | Viewer  | us-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
-| {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | us-south  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the Default resource group.   |
+| Resource group **Default**           |  Resource group            | Viewer  | `Us-south`  | This policy is required to allow the user to see service instances in the Default resource group.    |
+| {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | `Us-south`  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the Default resource group.   |
 {: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"} 
 
 Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
 
-## Step1: Provision an {{site.data.keyword.mon_full_notm}} instance
+## Step 1. Provision an {{site.data.keyword.mon_full_notm}} instance
 {: #ubuntu_step1}
 
 To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
-1. Log in to your {{site.data.keyword.cloud_notm}} account.
-
-    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
+1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 
@@ -95,7 +93,7 @@ After you provision an instance, the *Observability* dashboard opens.
 **Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli).
 
 
-## Step2: Configure your Ubuntu server to send metrics to your instance
+## Step 2. Configure your Ubuntu server to send metrics to your instance
 {: #ubuntu_step2}
 
 To configure your Ubuntu server to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a Sysdig agent. 
@@ -109,7 +107,7 @@ Complete the following steps from the command line:
     ```
     {: codeblock}
 
-    Select the account where you have provisioned the {{site.data.keyword.mon_full_notm}} instance.
+    Select the account where the {{site.data.keyword.mon_full_notm}} instance is available.
 
 2. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
@@ -122,13 +120,13 @@ Complete the following steps from the command line:
     ```
     {: codeblock}
 
-    where
+    Where
 
     * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
     * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
 
-    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example, *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
     * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
@@ -150,14 +148,12 @@ If the Sysdig agent fails to install correctly, install the kernel headers manua
 
 
 
-## Step3: Launch the Sysdig Web UI
+## Step 3. Launch the Sysdig Web UI
 {: #ubuntu_step3}
 
 Complete the following steps to launch the web UI:
 
-1. Log in to your {{site.data.keyword.cloud_notm}} account.
-
-    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
+1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
@@ -173,16 +169,16 @@ If the Sysdig agent is configured successfully, the *EXPLORE* view opens.
 
 However, if the Sysdig agent is not installed successfully, points to the wrong ingestion endpoint, or the access key is incorrect, the page that opens informs you about what to do next.
 
-You can only have one Web UI session open per browser.
+You only can have one web UI session open per browser.
 {: tip}
 
 
-## Step 4: Monitor your Ubuntu server
+## Step 4. Monitor your Ubuntu server
 {: #ubuntu_step4}
 
 You can monitor your Ubuntu server in the **EXPLORE** view that is available through the Web UI. This view is the starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI for users.
 
-In the section *Host and containers*, you can find the entry for your Ubuntu server. Click **Host and containers** ![Host and containers](../images/switch_hosts.png) to switch data sources. Then, select your Ubuntu server. The data that is displayed corresponds to the Ubuntu server that you have selected.
+In the section *Host and containers*, you can find the entry for your Ubuntu server. Click **Host and containers** ![Host and containers](../images/switch_hosts.png) to switch data sources. Then, select your Ubuntu server. The data that is displayed corresponds to the Ubuntu server that you select.
 
 For example, to configure color-coding for a column, complete the following steps:
 
