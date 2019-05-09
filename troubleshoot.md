@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, troubleshooting
 
@@ -23,10 +23,10 @@ subcollection: Sysdig
 # Troubleshooting for {{site.data.keyword.mon_full_notm}}
 {: #troubleshoot}
 
-This topic covers general problems that you may encounter when you use the {{site.data.keyword.mon_full_notm}} service. In many cases, you can recover from these problems by following a few easy steps.
+Learn more about some general problems that you might encounter when you use the {{site.data.keyword.mon_full_notm}} service. In many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
 
-## Are you getting an error creating a capture?
+## Are you getting an error when you create a capture?
 {: #troubleshoot-entry-1}
 
 You are failing to create a [capture file](/docs/services/Monitoring-with-Sysdig/captures.html#captures) for a host in your infrastructure. 
@@ -46,7 +46,7 @@ Enable the **sysdig_capture_enabled** feature in the Sysdig agent that runs on t
 
 The status of a [capture file](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures) is set to *requested* and does not change to status *uploaded*. You are waiting for the capture file to be available for analysis.
 
-In the *Captures* section of the web UI, you the status of the capture file for a host does not change to *uploaded*.
+In the *Captures* section of the web UI, the status of the capture file for a host does not change to *uploaded*.
 {: tsSymptoms}
 
 The host has the TCP port 6443 disabled.
