@@ -56,14 +56,14 @@ In this tutorial, you configure metrics with Sysdig in your {{site.data.keyword.
 
 4. Make sure that your user ID is assigned the following {{site.data.keyword.iamlong}} policies:
 
-| Resource                             | Scope of the access policy | Role    | Region    | Information                  |
-|--------------------------------------|----------------------------|---------|-----------|------------------------------|
-| Resource group **default**           |  Resource group            | Viewer  | Us-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
-| {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | Us-south  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the default resource group.   |
-| Kubernetes cluster instance          |  Resource                 | Editor  | Us-south  | This policy is required to configure the secret and the Sysdig agent in the Kubernetes cluster. |
-{: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"}
+    | Resource                             | Scope of the access policy | Role    | Region    | Information                  |
+    |--------------------------------------|----------------------------|---------|-----------|------------------------------|
+    | Resource group **default**           |  Resource group            | Viewer  | Us-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
+    | {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | Us-south  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the default resource group.   |
+    | Kubernetes cluster instance          |  Resource                 | Editor  | Us-south  | This policy is required to configure the secret and the Sysdig agent in the Kubernetes cluster. |
+    {: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"}
 
-For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
+    For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
 
 5. Install the {{site.data.keyword.cloud_notm}} CLI and the Kubernetes CLI plugin. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
