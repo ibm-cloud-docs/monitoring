@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -52,7 +52,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
     * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
 
-    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. 
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example, *role:serviceX,location:us-south*. 
 
     * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
@@ -91,19 +91,20 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
     ```
     {: codeblock}
 
-    where
+    Where
 
     * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
     * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
 
-    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. 
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example, *role:serviceX,location:us-south*. 
 
     * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
 
     * Set **SECURE** to *true* to use SSL with the communication.
 
-    **Note:**  The container runs in detached mode. To see the container’s output, remove *-d*.
+    The container runs in detached mode. To see the container’s output, remove *-d*.
+    {: note}
 
 
 
@@ -130,8 +131,6 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
 
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
-
 4. Deploy the Sysdig agent. Run the following command:
 
     ```
@@ -139,7 +138,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     ```
     {: codeblock}
 
-    where
+    Where
 
     * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
@@ -173,8 +172,6 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
 
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
-
 4. Create a service account called **sysdig-agent** to monitor the kubernetes cluster. Run the following command:
 
     ```
@@ -191,7 +188,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     The SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
-    The Kubernetes secret contains the ingestion key which is used to authenticate the Sysdig agent with the {{site.data.keyword.mon_full_notm}} service. It is used to open a secure web socket to the ingestion server on the monitoring back-end system.
+    The Kubernetes secret contains the ingestion key that is used to authenticate the Sysdig agent with the {{site.data.keyword.mon_full_notm}} service. It is used to open a secure web socket to the ingestion server on the monitoring back-end system.
 
 6. Create a cluster role and cluster role binding. 
 
@@ -217,11 +214,11 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     Use an editor to open the sysdig-agent-configmap.yaml file. Then, add the following parameters:
 
-    * **k8s_cluster_name**: This parameter specifies the cluster name as a metric label. You can use the label *kubernetes.cluster.name* to navigate the Kubernetes dashboards by cluster name and filter out metrics associated with the cluster.
+    * **k8s_cluster_name**: This parameter specifies the cluster name as a metric label. You can use the label *kubernetes.cluster.name* to navigate the Kubernetes dashboards by cluster name and filter out metrics that are associated with the cluster.
 
     * **collector**: This parameter specifies the ingestion URL for the region where the monitoring instance is available. 
 
-    * **collector_port**: This parameter indicates the port on which the collector is listening on. It's value must be *6443*.
+    * **collector_port**: This parameter indicates the port on which the collector is listening on. The value must be set to *6443*.
     
     * **ssl**: This parameter must be set to *true*.
     
@@ -231,7 +228,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     * **sysdig_capture_enabled**: This parameter enables or disables the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
-    An example yaml file looks like this:
+    An example Yaml file looks as follows:
 
     ```
      apiVersion: v1

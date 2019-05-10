@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -62,7 +62,13 @@ The following figure shows the components overview for the {{site.data.keyword.m
 
 You must have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
-The service is currently available in US South. Complete any getting started steps in the US-South region.
+The service is available in the following regions:
+* *US South*
+* *EU-DE*
+* *EU-GB*
+* *JP-TOK*
+
+You can complete the getting started steps in any of the supported regions.
 
 
 ## Step 1: Manage user access

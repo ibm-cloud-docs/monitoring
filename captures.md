@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, captures
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Working with captures
+# Managing captures
 {: #captures}
 
 A capture is a trace file that you can generate to analyze what happens in a host during a time frame. For example, you can use it to analyze bottlenecks, or component interactions. In the {{site.data.keyword.mon_full_notm}} service, you can create, explore, download, and delete *captures* for individual nodes. 
@@ -37,13 +37,13 @@ You create a capture in the *Explore* view.
 
 Complete the following steps to create a capture file:
 
-1. Navigate to the *EXPLORE* section in the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Navigate to the *EXPLORE* section in the web UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 
-2. Click the switch host icon ![switch host icon](images/switch_hosts.png).
+2. Click the switch host icon ![Switch host icon](images/switch_hosts.png).
 
 3. Select a host or a container.
 
-4. Click the actions icon ![three dots icon](images/actions.png) and select **Sysdig capture**.
+4. Click the actions icon ![Three dots icon](images/actions.png) and select **Sysdig capture**.
 
     The *Sysdig Capture* window opens.
 
@@ -62,9 +62,9 @@ Complete the following steps to create a capture file:
 The *Captures* page shows a table that lists the capture file name, the host it was retrieved from, the time frame, and the size of the capture. 
 
 The status of a capture file can be any of the following values:
-* **Requested**: A file is being generated.
-* **Uploaded**:  A file is available for download, and analysis.
-* **Error**: A file is not available due to a timeout, data that was never received, or an agent error.
+* `Requested`: A file is being generated.
+* `Uploaded`:  A file is available for download, and analysis.
+* `Error`: A file is not available due to a timeout, data that was never received, or an agent error.
 
 
 
@@ -73,7 +73,7 @@ The status of a capture file can be any of the following values:
 
 Complete the following steps to delete a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identify and select the capture file that you want to delete.
 3. Click **Delete**.
 
@@ -84,7 +84,7 @@ Complete the following steps to delete a capture file:
 
 Complete the following steps to explore a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identify and select the capture file that contains the data for the host that you want to analyze.
 3. Click **EXPLORE**.
 
@@ -95,7 +95,7 @@ Complete the following steps to explore a capture file:
 
 Complete the following steps to download a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identify and select the capture file that contains the data that you want to download.
 3. Click **DOWNLOAD**.
 
@@ -105,7 +105,7 @@ Complete the following steps to download a capture file:
 
 A Sysdig chisel is a script that is written in Lua, a scripting language. You can use it to analyze data in a capture file. 
 
-For more information on how to use a chisel, see this user guide: [Chisels User Guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}
+For more information, see [Chisels User Guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}.
 
 
 

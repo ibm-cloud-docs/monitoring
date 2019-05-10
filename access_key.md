@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -21,10 +21,10 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Working with access keys
+# Managing access keys
 {: #access_key}
 
-The **Access Key** is a token that you must use to configure Sysdig agents to successfully forward data to your {{site.data.keyword.mon_full_notm}} instance in {{site.data.keyword.Bluemix}}.   
+The **Access Key** is a token that you must use to configure Sysdig agents to successfully forward data to your {{site.data.keyword.mon_full_notm}} instance in {{site.data.keyword.cloud_notm}}.   
 {:shortdesc}
 
 
@@ -91,7 +91,7 @@ To get the access key for a Sysdig instance through the command line, complete t
 
     where APIKEY_NAME is the name of the API key.
  
-    The output from this command includes the field **Sysdig Access Key** which contains the access key for the instance.
+    The output from this command includes the field **Sysdig Access Key** that contains the access key for the instance.
 
 
 For example, the following command shows the output of a sample service ID:
@@ -137,4 +137,4 @@ To renew the access key for an {{site.data.keyword.mon_full_notm}} instance, com
 
 2. In the *Password management* section, click **Reset your password**.
 
-**Note:** After you reset the Sysdig access key, you must update the access key for any log sources that you have configured to forward metrics to this {{site.data.keyword.mon_full_notm}} instance.
+**Note:** After you reset the Sysdig access key, you must update the access key for any log sources that forward metrics to this {{site.data.keyword.mon_full_notm}} instance.

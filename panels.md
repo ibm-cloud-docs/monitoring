@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, panels
 
@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Working with panels
+# Managing panels
 {: #panels}
 
 Use a panel to display a metric or group of metrics in a dashboard. You can copy, change the scope, duplicate, delete, export, and explore panels.
@@ -32,14 +32,14 @@ You can use any of the following panel types:
 
 | Type | Description |
 |------|-------------|
-| Line | Use this panel to view trends over time for one or more metrics.  |
-| Area | Use this panel to view trends over time for one or more metrics.  |
-| Top list | Use this panel to compare a metric across groups of entities. The bar chart is sorted in descending order.  |
-| Histogram | Use this panel to view the frequency distribution of a metric in buckets.  |
-| Topology | Use this panel to visualize the infrastructure as a topology map, and the relations between entities in the map.  |
-| Number | Use this panel to view a single number that represents the value of an aggregated metric over time for one or more entities.  |
-| Table | Use this panel to display numerical data for your infrastructure based on metrics and segments.  |
-| Text | Use this panel to add text. Use markdown to add your text.  |
+| `Line` | Use this panel to view trends over time for one or more metrics.  |
+| `Area` | Use this panel to view trends over time for one or more metrics.  |
+| `Top list` | Use this panel to compare a metric across groups of entities. The bar chart is sorted in descending order.  |
+| `Histogram` | Use this panel to view the frequency distribution of a metric in buckets.  |
+| `Topology` | Use this panel to visualize the infrastructure as a topology map, and the relations between entities in the map.  |
+| `Number` | Use this panel to view a single number that represents the value of an aggregated metric over time for one or more entities.  |
+| `Table` | Use this panel to display numerical data for your infrastructure based on metrics and segments.  |
+| `Text` | Use this panel to add text. Use markdown to add your text.  |
 {: caption="Table 1. Panel types" caption-side="top"} 
 
 
@@ -49,9 +49,9 @@ You can use any of the following panel types:
 
 Complete the following steps to copy a panel:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that display the metric that you want to copy.
+1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![three dots icon](images/actions.png) and select **Copy panel** ![copy icon](images/actions.png).
+2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Copy panel** ![Copy icon](images/actions.png).
 
 3. Select one of the dashboards that are listed, or enter a name for a new dashboard. 
 
@@ -64,7 +64,7 @@ Complete the following steps to copy a panel:
 
 Complete the following steps to change the scope of a panel:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that display the metric for which you want to change the scope.
+1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric for which you want to change the scope.
 
 2. In the panel, click **Edit Scope** to change the default scope. 
 
@@ -72,7 +72,7 @@ Complete the following steps to change the scope of a panel:
     
 3. Select the scope. 
 
-4. Optionally, click **Override the custom panel scopes** to override the scope for all panels which currently have a custom scope defined. 
+4. Optionally, click **Override the custom panel scopes** to override the scope for all panels with a custom scope defined. 
 
     **Note: This action cannot be undone.** 
 
@@ -88,9 +88,9 @@ Complete the following steps to change the scope of a panel:
 
 Complete the following steps to duplicate a panel in the current dashboard:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that display the metric that you want to copy.
+1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![three dots icon](images/actions.png) and select **Duplicate panel** ![copy icon](images/duplicate.png).
+2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Duplicate panel** ![Copy icon](images/duplicate.png).
 
 
 ## Delete panel
@@ -98,9 +98,9 @@ Complete the following steps to duplicate a panel in the current dashboard:
 
 Complete the following steps to delete a panel in the current dashboard:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that display the metric that you want to copy.
+1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![three dots icon](images/actions.png) and select **Delete panel** ![copy icon](images/delete.png).
+2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Delete panel** ![Copy icon](images/delete.png).
 
 3. Click **Yes, delete panel** to confirm the deletion of the panel.
 
@@ -116,9 +116,9 @@ Consider the following information when you export data:
 
 Complete the following steps to export data from a panel:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that display the metric that you want to copy.
+1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![three dots icon](images/actions.png).
+2. Select the *More options* icon ![Three dots icon](images/actions.png).
 
 3. Choose one of the following options:
 
@@ -138,9 +138,9 @@ You can create alerts directly from a panel.
 
 Complete the following steps to create an alert:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that display the metric that you want to copy.
+1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![three dots icon](images/actions.png).
+2. Select the *More options* icon ![Three dots icon](images/actions.png).
 
 3. Select **Create Alert**.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2018-12-06"
 
 ---
 
@@ -16,14 +16,16 @@ lastupdated: "2019-02-18"
 {:download: .download}
 
 # Customizing container Sysdig agents
-{: #change_container_agent}
+{: #change_agent}
 
 In {{site.data.keyword.mon_full_notm}}, you can customize the Sysdig agent configuration to set a log level, block ports, include or exclude metric data, add or remove events, and filter out containers. 
 {:shortdesc}
 
 
+
+
 ## Editing the dragent yaml file
-{: #change_container_agent_edit_config}
+{: #edit_agent}
 
 The yaml file is located in */opt/draios/etc/*.
 
@@ -41,7 +43,7 @@ Complete the following steps to edit the file and apply the changes:
 
 
 ## Blocking ports
-{: #change_container_agent_block_ports}
+{: #ports}
 
 To block network traffic and metrics from network ports, you must customize the **blacklisted_ports** section in the *dragent.yaml* file. You must list the ports from which you want to filter out any data.
 
@@ -59,7 +61,7 @@ blacklisted_ports:
 
 
 ## Collecting a set of Docker events
-{: #change_container_agent_collect_docker_events}
+{: #docker}
 
 {{site.data.keyword.mon_full_notm}} supports event integration with Docker. Sysdig agents automatically discover Docker sources and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
 
@@ -95,7 +97,7 @@ For example, to filter out Docker image events and collect only events for attac
 
 
 ## Disabling collection of events
-{: #change_container_agent_disable_events}
+{: #disable}
 
 To disable a Sysdig agent from collecting events, modify the *dragent.default.yaml* file. Set the **events** section to *none* in the *dragent.yaml* file.
 
@@ -110,7 +112,7 @@ events:
 
 
 ## Filtering events by severity
-{: #change_container_agent_filterby_severity}
+{: #severity}
 
 To filter events by severity, you can also change the log entry type for events in the *dragent.yaml* file. 
 
@@ -139,7 +141,7 @@ log:
 
 
 ## Including and excluding metrics
-{: #change_container_agent_inc_exc_metrics}
+{: #params}
 
 To filter custom metrics, you must customize the **metrics_filter** section in the *dragent.yaml* file. You can specify which metrics to include and which ones to filter out by configuring the **include** and **exclude** filtering parameters.
 
@@ -164,7 +166,7 @@ metrics_filter:
 
 
 ## Changing the log level
-{: #change_container_agent_log_level}
+{: #log_level}
 
 To configure the log level, you must customize the **log** section in the *dragent.yaml* file. 
 
