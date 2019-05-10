@@ -11,6 +11,7 @@ IBM Cloud Monitoring with Sysdig
     pricing.md
     manage.md
     monitoring.md
+    customize_agent.md
     network.md
     iam.md
 
