@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -24,11 +24,8 @@ subcollection: Sysdig
 # Provisioning an instance
 {: #provision}
 
-Before you can monitor and manage metrics with Sysdig, you must first provision an instance of the service in {{site.data.keyword.Bluemix}}.
+Before you can monitor and manage metrics with Sysdig, you must provision an instance of the service in {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
-
-To provision a Sysdig instance in a Public Cloud region, you must select the service plan that is associated with the instance, the region where your metrics are collected, and the plan that determines the number of metrics that you can monitor and their retention period.
-
 
 
 ## Provisioning a Sysdig instance from the catalog
@@ -72,11 +69,9 @@ Next, configure a metric source by adding a Sysdig agent. This agent is responsi
 
 To provision an instance of Sysdig through the command line, complete the following steps:
 
-1. [Pre-requisite] Install the {{site.data.keyword.cloud_notm}} CLI.
+1. [Pre-requisite] Installion of the {{site.data.keyword.cloud_notm}} CLI. If the CLI is installed, continue with the next step.
 
    For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
-
-   If the CLI is installed, continue with the next step.
 
 2. Log in to the region in the {{site.data.keyword.cloud_notm}} where you want to provision the instance. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -91,15 +86,15 @@ To provision an instance of Sysdig through the command line, complete the follow
     ```
     {: codeblock}
 
-    where
+    Where
 
-    * NAME is the name of the Sysdig instance
+    * NAME is the name of the Sysdig instance.
     
-    * *sysdig-monitor* is the name of the {{site.data.keyword.mon_full_notm}} service name in the {{site.data.keyword.cloud_notm}}
+    * `sysdig-monitor` is the name of the {{site.data.keyword.mon_full_notm}} service name in the {{site.data.keyword.cloud_notm}}.
     
-    * SERVICE_PLAN_NAME is the type of plan. Valid values are: *lite*, *graduated-tier*
+    * SERVICE_PLAN_NAME is the type of plan. Valid values are *lite*, and *graduated-tier*.
     
-    * LOCATION is the region where the instance is created
+    * LOCATION is the region where the instance is created.
 
     For example, to provision an instance with the paid plan, run the following command:
 

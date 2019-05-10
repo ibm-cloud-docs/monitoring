@@ -25,7 +25,7 @@ subcollection: Sysdig
 # Managing network traffic for custom firewall configurations
 {: #network}
 
-When you have an additional firewall set up, or you have customized the firewall settings in your {{site.data.keyword.cloud_notm}} infrastructure, you need to allow outgoing network traffic to the {{site.data.keyword.mon_full_notm}} service. 
+When you have an extra firewall set up, or you customize the firewall settings in your {{site.data.keyword.cloud_notm}} infrastructure, you need to allow outgoing network traffic to the {{site.data.keyword.mon_full_notm}} service. 
 {:shortdesc}
 
 
