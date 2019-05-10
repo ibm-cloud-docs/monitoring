@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-05-10"
 
 keywords: Sysdig, IBM Cloud, monitoring, kubernetes, analyze metrics
 
@@ -50,22 +50,23 @@ In this tutorial, you configure metrics with Sysdig in your {{site.data.keyword.
 
 2. Have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
-3. [Create a cluster](/docs/containers?topic=containers-clusters#clusters) or use an existing {{site.data.keyword.containerlong_notm}} cluster.
+3. Install the {{site.data.keyword.cloud_notm}} CLI and the Kubernetes CLI plugin. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+
+4. [Create a cluster](/docs/containers?topic=containers-clusters#clusters) or use an existing {{site.data.keyword.containerlong_notm}} cluster.
     *  The cluster must run Kubernetes version 1.10 or above.
     *  The cluster does not have to be in the **Dallas** location, but can be in any [{{site.data.keyword.containerlong_notm}} region](/docs/containers/cs_regions.html#regions-and-zones).
 
-4. Make sure that your user ID is assigned the following {{site.data.keyword.iamlong}} policies:
+5. Make sure that your user ID is assigned the following {{site.data.keyword.iamlong}} policies:
 
-    | Resource                             | Scope of the access policy | Role    | Region    | Information                  |
-    |--------------------------------------|----------------------------|---------|-----------|------------------------------|
-    | Resource group **default**           |  Resource group            | Viewer  | Us-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
-    | {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | Us-south  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the default resource group.   |
-    | Kubernetes cluster instance          |  Resource                 | Editor  | Us-south  | This policy is required to configure the secret and the Sysdig agent in the Kubernetes cluster. |
-    {: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"}
+| Resource                             | Scope of the access policy | Role    | Region    | Information                  |
+|--------------------------------------|----------------------------|---------|-----------|------------------------------|
+| Resource group **default**           |  Resource group            | Viewer  | Us-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
+| {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | Us-south  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the default resource group.   |
+| Kubernetes cluster instance          |  Resource                 | Editor  | Us-south  | This policy is required to configure the secret and the Sysdig agent in the Kubernetes cluster. |
+{: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"}
 
-    For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
+For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
 
-5. Install the {{site.data.keyword.cloud_notm}} CLI and the Kubernetes CLI plugin. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
 
 ## Step 1. Provision an {{site.data.keyword.mon_full_notm}} instance
