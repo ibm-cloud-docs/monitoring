@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-05-20"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -106,9 +106,6 @@ Complete the following steps to assign a user administrator role to the {{site.d
 
 To add monitoring features with {{site.data.keyword.mon_full_notm}} in the {{site.data.keyword.cloud_notm}}, you must provision an instance of the {{site.data.keyword.mon_full_notm}} service. 
 
-When you provision an instance, your data is sent to a third party.
-{: tip}
-
 You provision an instance within the context of a resource group. A resource group lets you organize your services for access control and billing purposes. You can provision the {{site.data.keyword.mon_full_notm}} instance in the *default* resource group or in a custom resource group.
 
 When you provision an instance, you automatically get an ingestion key, known as the *Sysdig access key*.
@@ -137,7 +134,8 @@ To provision an instance of through the {{site.data.keyword.cloud_notm}} UI, com
 
 The service UI opens.
 
-**Note:** To provision an instance of Sysdig through the CLI, see [Provisioning Sysdig through the {{site.data.keyword.cloud_notm}} CLI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli).
+To provision an instance of Sysdig through the CLI, see [Provisioning Sysdig through the {{site.data.keyword.cloud_notm}} CLI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli).
+{: tip}
 
 
 ## Step3: Configure a Sysdig agent
@@ -146,6 +144,9 @@ The service UI opens.
 After you provision an instance, you must configure a Sysdig agent for each metric source that you want to monitor. A metric source is a cloud resource that you want to monitor and control its performance and health. For example, a metric source can be a Kubernetes cluster.  
 
 The Sysdig agent automatically collects and reports on pre-defined metrics. You use the *Sysdig access key* to configure the Sysdig agent that is responsible for collecting and forwarding metric data to your instance. For more information, see [Working with access keys](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key).
+
+Data is stored in {{site.data.keyword.cloud_notm}}.
+{: important}
 
 You can configure a Sysdig agent for any of the following environments:
 
