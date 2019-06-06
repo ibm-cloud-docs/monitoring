@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, troubleshooting
 
@@ -29,7 +29,7 @@ Learn more about some general problems that you might encounter when you use the
 ## Are you getting an error when you create a capture?
 {: #troubleshoot-entry-1}
 
-You are failing to create a [capture file](/docs/services/Monitoring-with-Sysdig/captures.html#captures) for a host in your infrastructure. 
+You are failing to create a [capture file](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures) for a host in your infrastructure. 
 
 In the *Captures* section of the web UI, you get an error when you try to create a capture file for a host.
 {: tsSymptoms}

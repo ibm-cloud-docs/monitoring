@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview
 
@@ -127,7 +127,7 @@ For more information, see [Configuring a Sysdig agent](/docs/services/Monitoring
 ## Viewing usage
 {: #overview_usage}
 
-To monitor the usage and costs of your service, see [Viewing your usage](/docs/billing-usage/viewing_usage.html#viewingusage).
+To monitor the usage and costs of your service, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
 
 
 ## Service plans
