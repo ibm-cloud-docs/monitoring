@@ -34,7 +34,7 @@ Different pricing plans are available for an {{site.data.keyword.mon_full_notm}}
 | `Trial`          |              | Data is collected for a maximum of 20 containers per node or for 200 custom metrics per node for 30 days only. |
 | `Graduated tier` | `Basic`      | Data is collected for a maximum of 20 containers per node or for 200 custom metrics per node. |
 | `Graduated tier` | `Pro`        | Data is collected for a maximum of 50 containers per node or for 500 custom metrics per node. |
-| `Graduated tier` | `Advanced`   | Data is collected for a maximum of 110 containers per node or for 1000 custom metrics per node. |
+| `Graduated tier` | `Advanced`   | Data is collected for a maximum of 110 containers per node or for 3000 custom metrics per node. |
 {: caption="Table 1. List of service plans" caption-side="top"} 
 
 

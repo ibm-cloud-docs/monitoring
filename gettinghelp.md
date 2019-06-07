@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-06-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, support, help
 
@@ -32,7 +32,7 @@ If you have problems or questions when using the {{site.data.keyword.mon_full_no
 
 * You can review the forums to see whether other users ran into the same problem. When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
 <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
-  * If you have technical questions about the {{site.data.keyword.mon_full_notm}} service, post your question on [Stack Overflow](http://stackoverflow.com/search?q=ibm-cloud+sysdig){:new_window} and tag your question with "ibm-cloud" and "sysdig".
+  * If you have technical questions about the {{site.data.keyword.mon_full_notm}} service, post your question on [Stack Overflow](https://stackoverflow.com/search?q=ibm-cloud+sysdig){:new_window} and tag your question with "ibm-cloud" and "sysdig".
 
 
 * If you still can't resolve the problem, you can open an IBM support ticket. For information about opening an IBM support ticket, or about support levels and ticket severities, see [Getting support](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support).

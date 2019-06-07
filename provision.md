@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -33,11 +33,7 @@ Before you can monitor and manage metrics with Sysdig, you must provision an ins
 
 To provision an instance of Sysdig from the {{site.data.keyword.cloud_notm}} catalog, complete the following steps:
 
-1. Log in to your {{site.data.keyword.cloud_notm}} account.
-
-    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
-
-	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
+1. [Log in to the {{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
 2. Click **Catalog**. The list of the services that are available on {{site.data.keyword.cloud_notm}} opens.
 
@@ -69,17 +65,15 @@ Next, configure a metric source by adding a Sysdig agent. This agent is responsi
 
 To provision an instance of Sysdig through the command line, complete the following steps:
 
-1. [Pre-requisite] Installion of the {{site.data.keyword.cloud_notm}} CLI. If the CLI is installed, continue with the next step.
+1. [Pre-requisite] [Installion of the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli). If the CLI is installed, continue with the next step.
 
-   For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+2. Log in to the region in the {{site.data.keyword.cloud_notm}} where you want to provision the instance. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_login)
 
-2. Log in to the region in the {{site.data.keyword.cloud_notm}} where you want to provision the instance. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
-
-3. Set the resource group where you want to provision the instance. Run the following command: [`ibmcloud target`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_target)
+3. Set the resource group where you want to provision the instance. Run the following command: [`ibmcloud target`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target)
 
     By default, the `default` resource group is set.
 
-4. Create the Sysdig instance. Run the [`ibmcloud resource service-instance-create`](/docs/cli/reference/ibmcloud/cli_resource_group.html#ibmcloud_resource_service_instance_create) command:
+4. Create the Sysdig instance. Run the [`ibmcloud resource service-instance-create`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
 
     ```
     ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION

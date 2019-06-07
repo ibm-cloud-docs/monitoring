@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete instance
 
@@ -49,9 +49,7 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} by using the {{site
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
-	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
-
-2. Select **Observability**. 
+2. Click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Observability**. 
 
 3. Select **Monitoring**. The list of the instances is displayed.
 
@@ -65,17 +63,15 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} by using the {{site
 
 To remove an instance of {{site.data.keyword.mon_full_notm}} through the command line, complete the following steps:
 
-1. [Pre-requisite] Installion of the {{site.data.keyword.cloud_notm}} CLI. If the CLI is installed, continue with the next step.
+1. [Pre-requisite] [Installion of the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli). If the CLI is installed, continue with the next step.
 
-   For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+2. Log in to the region in the {{site.data.keyword.cloud_notm}} where you want to provision the instance. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_login)
 
-2. Log in to the region in the {{site.data.keyword.cloud_notm}} where you want to provision the instance. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
-
-3. Set the resource group where the instance is provisioned. Run the following command: [`ibmcloud target`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_target)
+3. Set the resource group where the instance is provisioned. Run the following command: [`ibmcloud target`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target)
 
     By default, the `default` resource group is set.
 
-4. Remove the instance. Run the [`ibmcloud resource service-instance-delete`](/docs/cli/reference/ibmcloud/cli_resource_group.html#ibmcloud_resource_service_instance_delete) command:
+4. Remove the instance. Run the [`ibmcloud resource service-instance-delete`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_delete) command:
 
     ```
     ibmcloud resource service-instance-delete NAME 

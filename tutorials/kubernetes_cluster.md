@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, kubernetes, analyze metrics
 
@@ -54,7 +54,7 @@ In this tutorial, you configure metrics with Sysdig in your {{site.data.keyword.
 
 4. [Create a cluster](/docs/containers?topic=containers-clusters#clusters) or use an existing {{site.data.keyword.containerlong_notm}} cluster.
     *  The cluster must run Kubernetes version 1.10 or above.
-    *  The cluster does not have to be in the **Dallas** location, but can be in any [{{site.data.keyword.containerlong_notm}} region](/docs/containers/cs_regions.html#regions-and-zones).
+    *  The cluster does not have to be in the **Dallas** location, but can be in any [{{site.data.keyword.containerlong_notm}} region](/docs/containers?topic=containers-regions-and-zones#regions-and-zones).
 
 5. Make sure that your user ID is assigned the following {{site.data.keyword.iamlong}} policies:
 
