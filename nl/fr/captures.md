@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, captures
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Utilisation des captures
+# Gestion des captures
 {: #captures}
 
 Une capture est un fichier de trace que vous pouvez générer pour analyser les événements qui se produisent sur un hôte pendant une période donnée. Par exemple, vous pouvez l'utiliser pour analyser les goulots d'étranglement ou les interactions de composants. Le service {{site.data.keyword.mon_full_notm}} vous permet de créer, d'explorer, de télécharger et de supprimer des *captures* pour des noeuds individuels. 
@@ -37,8 +37,7 @@ Une capture est créée dans la vue *Explorer*.
 
 Pour créer un fichier de capture, procédez comme suit :
 
-1. Accédez à la section *EXPLORE* dans l'interface utilisateur Web. Pour plus d'informations sur le lancement de l'interface utilisateur Web,
-voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Accédez à la section *EXPLORE* dans l'interface utilisateur Web. [En savoir plus](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 
 2. Cliquez sur l'icône de changement d'hôte ![Icône de changement d'hôte](images/switch_hosts.png).
 
@@ -63,9 +62,9 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 La page *Captures* affiche un tableau qui répertorie le nom du fichier de capture, l'hôte à partir duquel il a été extrait, la période et la taille de la capture. 
 
 Le statut d'un fichier de capture peut être l'un des suivants :
-* **Demandé** : un fichier est en cours de génération.
-* **Téléchargé** : un fichier est disponible pour téléchargement et analyse.
-* **Erreur** : un fichier n'est pas disponible en raison d'un dépassement de délai, de données qui n'ont jamais été reçues ou d'une erreur de l'agent.
+* `Demandé` : un fichier est en cours de génération.
+* `Téléchargé` : un fichier est disponible pour téléchargement et analyse.
+* `Erreur` : un fichier n'est pas disponible en raison d'un dépassement de délai, de données qui n'ont jamais été reçues ou d'une erreur de l'agent.
 
 
 
@@ -74,8 +73,7 @@ Le statut d'un fichier de capture peut être l'un des suivants :
 
 Pour supprimer un fichier de capture, procédez comme suit :
 
-1. Accédez à la section *CAPTURES* dans l'interface utilisateur Web. Pour plus d'informations sur le lancement de l'interface utilisateur Web,
-voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Accédez à la section *CAPTURES* dans l'interface utilisateur Web. [En savoir plus](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identifiez et sélectionnez le fichier de capture que vous voulez supprimer.
 3. Cliquez sur **Supprimer**.
 
@@ -86,8 +84,7 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 Pour explorer un fichier de capture, procédez comme suit :
 
-1. Accédez à la section *CAPTURES* dans l'interface utilisateur Web. Pour plus d'informations sur le lancement de l'interface utilisateur Web,
-voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Accédez à la section *CAPTURES* dans l'interface utilisateur Web. [En savoir plus](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identifiez et sélectionnez le fichier de capture contenant les données de l'hôte que vous voulez analyser.
 3. Cliquez sur **EXPLORE**.
 
@@ -98,8 +95,7 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 Pour télécharger un fichier de capture, procédez comme suit :
 
-1. Accédez à la section *CAPTURES* dans l'interface utilisateur Web. Pour plus d'informations sur le lancement de l'interface utilisateur Web,
-voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Accédez à la section *CAPTURES* dans l'interface utilisateur Web. [En savoir plus](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identifiez et sélectionnez le fichier de capture contenant les données que vous voulez télécharger.
 3. Cliquez sur **TELECHARGER**.
 
@@ -109,7 +105,7 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 Un chisel Sysdig est un script qui est écrit en langage de script Lua. Vous pouvez l'utiliser pour analyser les données d'un fichier de capture. 
 
-Pour plus d'informations sur l'utilisation d'un chisel, consultez ce guide de l'utilisateur : [Chisels User Guide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}
+Pour plus d'informations, voir [Chisels User Guide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}.
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, groups
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# 使用组
+# 管理组
 {: #groups}
 
 您可以使用标签将基础架构对象分组为逻辑层次结构。
@@ -32,7 +32,7 @@ subcollection: Sysdig
 
 要创建组，请完成以下步骤：
 
-1. 启动 Web UI。有关如何启动 Web UI 的更多信息，请参阅[导航至 Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
+1. 启动 Web UI。[了解更多](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. 单击**探索**以导航至*探索*部分。
 
@@ -40,7 +40,7 @@ subcollection: Sysdig
 
 4. 单击*加号 (+)* 图标以添加更多标签。
 
-    添加新标签时，会过滤掉不适合层次结构的标签，以确保仅创建有效的逻辑分组。
+    添加标签时，会过滤掉不适合层次结构的标签，以确保仅创建有效的逻辑分组。
     {: tip}
 
 5. 添加完标签后，单击**新建分组**。
@@ -56,7 +56,7 @@ subcollection: Sysdig
 
 要重命名组，请完成以下步骤：
 
-1. 启动 Web UI。有关如何启动 Web UI 的更多信息，请参阅[导航至 Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
+1. 启动 Web UI。[了解更多](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. 单击**探索**以导航至*探索*部分。
 
@@ -80,7 +80,7 @@ subcollection: Sysdig
 
 要将组复制到其他团队，请完成以下步骤：
 
-1. 启动 Web UI。有关如何启动 Web UI 的更多信息，请参阅[导航至 Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
+1. 启动 Web UI。[了解更多](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. 单击**探索**以导航至*探索*部分。
 
@@ -105,7 +105,7 @@ subcollection: Sysdig
 
 要将组与团队其他成员共享，请完成以下步骤：
 
-1. 启动 Web UI。有关如何启动 Web UI 的更多信息，请参阅[导航至 Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
+1. 启动 Web UI。[了解更多](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. 单击**探索**以导航至*探索*部分。
 
@@ -128,7 +128,7 @@ subcollection: Sysdig
 
 要删除组，请完成以下步骤：
 
-1. 启动 Web UI。有关如何启动 Web UI 的更多信息，请参阅[导航至 Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
+1. 启动 Web UI。[了解更多](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. 单击**探索**以导航至*探索*部分。
 

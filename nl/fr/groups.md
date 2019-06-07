@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, groups
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Utilisation des groupes
+# Gestion de groupes
 {: #groups}
 
 Vous pouvez utiliser des libellés pour regrouper des objets d'infrastructure en hiérarchies logiques.
@@ -32,8 +32,7 @@ Vous pouvez utiliser des libellés pour regrouper des objets d'infrastructure en
 
 Pour créer un groupe, procédez comme suit :
 
-1. Lancez l'interface utilisateur Web. Pour plus d'informations sur le lancement de l'interface utilisateur Web,
-voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Lancez l'interface utilisateur Web. [En savoir plus](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Cliquez sur **EXPLORE** pour accéder à la section *Explore*.
 
@@ -41,7 +40,7 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 4. Cliquez sur l'icône *plus (+)* pour ajouter des libellés supplémentaires.
 
-    Lorsque vous ajoutez un nouveau libellé, ceux qui ne s'insèrent pas dans la hiérarchie sont filtrés pour s'assurer que seuls des regroupements logiques valides sont créés.
+    Lorsque vous ajoutez un libellé, ceux qui ne s'insèrent pas dans la hiérarchie sont filtrés pour s'assurer que seuls des regroupements logiques valides sont créés.
     {: tip}
 
 5. Une fois que vous avez fini d'ajouter des libellés, cliquez sur **New Grouping**.
@@ -57,8 +56,7 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 Pour renommer un groupe, procédez comme suit :
 
-1. Lancez l'interface utilisateur Web. Pour plus d'informations sur le lancement de l'interface utilisateur Web,
-voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Lancez l'interface utilisateur Web. [En savoir plus](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Cliquez sur **EXPLORE** pour accéder à la section *Explore*.
 
@@ -66,9 +64,9 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 4. Sélectionnez un groupe.
 
-5. Cliquez sur l'icône Actions ![icône des trois points](images/actions.png) et sélectionnez **Show grouping actions**.
+5. Cliquez sur l'icône Actions ![Icône des trois points](images/actions.png) et sélectionnez **Show grouping actions**.
 
-6. Sélectionnez l'icône d'édition ![icône du crayon](images/edit.png).
+6. Sélectionnez l'icône d'édition ![Icône de crayon](images/edit.png).
 
 7. Saisissez le nouveau nom.
 
@@ -82,8 +80,7 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 Pour copier un groupe dans d'autres équipes, procédez comme suit :
 
-1. Lancez l'interface utilisateur Web. Pour plus d'informations sur le lancement de l'interface utilisateur Web,
-voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Lancez l'interface utilisateur Web. [En savoir plus](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Cliquez sur **EXPLORE** pour accéder à la section *Explore*.
 
@@ -91,7 +88,7 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 4. Sélectionnez un groupe.
 
-5. Cliquez sur l'icône Actions ![icône des trois points](images/actions.png) et sélectionnez **Show grouping actions**.
+5. Cliquez sur l'icône Actions ![Icône des trois points](images/actions.png) et sélectionnez **Show grouping actions**.
 
 6. Sélectionnez l'icône de copie de groupe ![icône de copie](images/copy.png).
 
@@ -108,8 +105,7 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 Pour partager un groupe avec d'autres membres de l'équipe, procédez comme suit :
 
-1. Lancez l'interface utilisateur Web. Pour plus d'informations sur le lancement de l'interface utilisateur Web,
-voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Lancez l'interface utilisateur Web. [En savoir plus](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Cliquez sur **EXPLORE** pour accéder à la section *Explore*.
 
@@ -117,7 +113,7 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 4. Sélectionnez un groupe.
 
-5. Cliquez sur l'icône Actions ![icône des trois points](images/actions.png) et sélectionnez **Show grouping actions**.
+5. Cliquez sur l'icône Actions ![Icône des trois points](images/actions.png) et sélectionnez **Show grouping actions**.
 
 6. Sélectionnez l'icône de partage de groupe ![icône de partage](images/share.png).
 
@@ -132,8 +128,7 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 Pour supprimer un groupe, procédez comme suit :
 
-1. Lancez l'interface utilisateur Web. Pour plus d'informations sur le lancement de l'interface utilisateur Web,
-voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Lancez l'interface utilisateur Web. [En savoir plus](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Cliquez sur **EXPLORE** pour accéder à la section *Explore*.
 
@@ -141,7 +136,7 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 4. Sélectionnez un groupe.
 
-5. Cliquez sur l'icône Actions ![icône des trois points](images/actions.png) et sélectionnez **Show grouping actions**.
+5. Cliquez sur l'icône Actions ![Icône des trois points](images/actions.png) et sélectionnez **Show grouping actions**.
 
 6. Sélectionnez l'icône de suppression de groupe ![icône de suppression](images/delete.png).
 

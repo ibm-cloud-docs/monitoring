@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -62,7 +62,13 @@ O {{site.data.keyword.mon_full_notm}} inclui alertas e notificações de diverso
 
 Deve-se ter um ID do usuário que seja um membro ou um proprietário de uma conta do {{site.data.keyword.cloud_notm}}. Para obter um ID do usuário do {{site.data.keyword.cloud_notm}}, acesse: [Registro ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/login){:new_window}.
 
-O serviço está atualmente disponível no sul dos EUA. Conclua quaisquer etapas de introdução na região sul dos EUA.
+O serviço está disponível nas regiões a seguir:
+* *US South*
+* *EU-DE*
+* *EU-GB*
+* *JP-TOK*
+
+É possível concluir as etapas de introdução em qualquer uma das regiões suportadas.
 
 
 ## Etapa 1: Gerenciar o acesso de usuário
@@ -109,7 +115,7 @@ Ao provisionar uma instância, você obtém automaticamente uma chave de ingest�
 
 Para provisionar uma instância por meio da IU do {{site.data.keyword.cloud_notm}}, conclua as etapas a seguir:
 
-1. Efetue login em sua conta do  {{site.data.keyword.cloud_notm}} .
+1. Efetue login em sua conta do {{site.data.keyword.cloud_notm}}.
 
     Clique em [Painel do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/login){:new_window} para ativar o painel do {{site.data.keyword.cloud_notm}}.
 
@@ -119,7 +125,7 @@ Para provisionar uma instância por meio da IU do {{site.data.keyword.cloud_notm
 
 3. Para filtrar a lista de serviços exibida, selecione a categoria **Ferramentas do desenvolvedor**.
 
-4. Clique no quadro  ** {{site.data.keyword.mon_full_notm}} ** .
+4. Clique no quadro  ** {{site.data.keyword.mon_full_notm}} **.
 
 5. Selecione um plano de serviço. Por padrão, o plano de **Experiência** é configurado.
 
@@ -171,7 +177,7 @@ Você ativa a IU da web dentro do contexto da instância do Sysdig por meio da I
 
 Conclua as etapas a seguir para ativar a IU da web do Sysdig:
 
-1. Efetue login em sua conta do  {{site.data.keyword.cloud_notm}} .
+1. Efetue login em sua conta do {{site.data.keyword.cloud_notm}}.
 
     Clique em [Painel do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/login){:new_window} para ativar o painel do {{site.data.keyword.cloud_notm}}.
 
@@ -185,7 +191,7 @@ Conclua as etapas a seguir para ativar a IU da web do Sysdig:
 
 4. Selecione uma instância. Em seguida, clique em **Visualizar Sysdig**.
 
-A IU da Web do  {{site.data.keyword.mon_full_notm}}  é aberta. Por padrão, a guia *Explorar* é exibida.
+A IU da Web do {{site.data.keyword.mon_full_notm}}  é aberta. Por padrão, a guia *Explorar* é exibida.
 
 Por padrão, os usuários são incluídos automaticamente como membros da equipe **Operações de monitor** que é predefinida para cada instância do {{site.data.keyword.mon_full_notm}}. Os usuários têm permissões completas para ver todos os dados na IU da web. **Nota:** um administrador pode restringir o acesso a dados gerenciando usuários em equipes e controlando quais dados estão visíveis. Por exemplo, para restringir os usuários a permissões de visualização, um administrador pode criar uma equipe padrão com escopo e visibilidade limitados. Em seguida, designe manualmente os usuários a outras equipes. Para obter mais informações, consulte [Trabalhando com equipes](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams).
 

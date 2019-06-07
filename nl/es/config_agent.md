@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -52,7 +52,7 @@ Siga los pasos siguientes para configurar un agente de Sysdig en Linux para que 
 
     * COLLECTOR_ENDPOINT es el URL de ingestión para la región en la que está disponible la instancia de supervisión.
 
-    * TAG_DATA son etiquetas separadas por comas con el formato *NOMBRE_ETIQUETA_VALOR:ETIQUETA*. Puede asociar una o varias etiquetas al agente de Sysdig. Por ejemplo: *role:serviceX,location:us-south*. 
+    * TAG_DATA son etiquetas separadas por comas con el formato *NOMBRE_ETIQUETA_VALOR:ETIQUETA*. Puede asociar una o varias etiquetas al agente de Sysdig. Por ejemplo, *role:serviceX,location:us-south*. 
 
     * Establezca **sysdig_capture_enabled** en *false* para inhabilitar la característica de captura de Sysdig. De forma predeterminada, está establecido en *true*. Para obtener más información, consulte [Cómo trabajar con capturas](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
@@ -91,19 +91,20 @@ Siga los pasos siguientes para configurar un agente de Sysdig en un contenedor D
     ```
     {: codeblock}
 
-    donde
+    Donde
 
     * SYSDIG_ACCESS_KEY es la clave de ingestión para la instancia.
 
     * COLLECTOR_ENDPOINT es el URL de ingestión para la región en la que está disponible la instancia de supervisión.
 
-    * TAG_DATA son etiquetas separadas por comas con el formato *NOMBRE_ETIQUETA_VALOR:ETIQUETA*. Puede asociar una o varias etiquetas al agente de Sysdig. Por ejemplo: *role:serviceX,location:us-south*. 
+    * TAG_DATA son etiquetas separadas por comas con el formato *NOMBRE_ETIQUETA_VALOR:ETIQUETA*. Puede asociar una o varias etiquetas al agente de Sysdig. Por ejemplo, *role:serviceX,location:us-south*. 
 
     * Establezca **sysdig_capture_enabled** en *false* para inhabilitar la característica de captura de Sysdig. De forma predeterminada, está establecido en *true*. Para obtener más información, consulte [Cómo trabajar con capturas](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
 
     * Establezca **SECURE** en *true* para utilizar SSL con la comunicación.
 
-    **Nota:** el contenedor se ejecuta en modalidad desconectada. Para ver la salida del contenedor, elimine *-d*.
+    El contenedor se ejecuta en modalidad desconectada. Para ver la salida del contenedor, elimine *-d*.
+    {: note}
 
 
 
@@ -130,8 +131,6 @@ Siga los pasos siguientes para configurar un agente de Sysdig en un clúster de 
 
     A continuación, copie y pegue el mandato que se muestra en el terminal para definir la variable de entorno KUBECONFIG.
 
-    **Nota:** cada vez que inicie una sesión en la CLI de {{site.data.keyword.containerlong}} para trabajar con clústeres, debe ejecutar estos mandatos para establecer la vía de acceso al archivo de configuración del clúster como una variable de sesión. La CLI de Kubernetes utiliza esta variable para buscar un archivo de configuración local y los certificados necesarios para conectar con el clúster en {{site.data.keyword.cloud_notm}}.
-
 4. Despliegue el agente de Sysdig. Ejecute el mandato siguiente:
 
     ```
@@ -139,7 +138,7 @@ Siga los pasos siguientes para configurar un agente de Sysdig en un clúster de 
     ```
     {: codeblock}
 
-    donde
+    Donde
 
     * SYSDIG_ACCESS_KEY es la clave de ingestión para la instancia.
 
@@ -172,8 +171,6 @@ Siga los pasos siguientes para configurar un agente de Sysdig en un clúster de 
     Cuando termine la descarga de los archivos de configuración, se muestra un mandato que puede utilizar para establecer la vía de acceso al archivo de configuración de Kubernetes local como variable de entorno.
 
     A continuación, copie y pegue el mandato que se muestra en el terminal para definir la variable de entorno KUBECONFIG.
-
-    **Nota:** cada vez que inicie una sesión en la CLI de {{site.data.keyword.containerlong}} para trabajar con clústeres, debe ejecutar estos mandatos para establecer la vía de acceso al archivo de configuración del clúster como una variable de sesión. La CLI de Kubernetes utiliza esta variable para buscar un archivo de configuración local y los certificados necesarios para conectar con el clúster en {{site.data.keyword.cloud_notm}}.
 
 4. Cree una cuenta de servicio denominada **sysdig-agent** para supervisar el clúster de kubernetes. Ejecute el mandato siguiente:
 
@@ -221,7 +218,7 @@ Siga los pasos siguientes para configurar un agente de Sysdig en un clúster de 
 
     * **collector**: este parámetro especifica el URL de ingestión para la región en la que está disponible la instancia de supervisión. 
 
-    * **collector_port**: este parámetro indica el puerto en el que escucha el recopilador. Su valor debe ser *6443*.
+    * **collector_port**: este parámetro indica el puerto en el que escucha el recopilador. El valor se debe establecer en *6443*.
     
     * **ssl**: este parámetro se debe establecer en *true*.
     
@@ -231,7 +228,7 @@ Siga los pasos siguientes para configurar un agente de Sysdig en un clúster de 
 
     * **sysdig_capture_enabled**: este parámetro habilita o inhabilita la característica de captura de Sysdig. De forma predeterminada, está establecido en *true*. Para obtener más información, consulte [Cómo trabajar con capturas](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
-    A continuación se muestra un archivo yaml de ejemplo:
+    A continuación se muestra un ejemplo de archivo Yaml:
 
     ```
      apiVersion: v1

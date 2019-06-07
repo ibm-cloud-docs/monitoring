@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, troubleshooting
 
@@ -23,10 +23,10 @@ subcollection: Sysdig
 # Traitement des incidents pour {{site.data.keyword.mon_full_notm}}
 {: #troubleshoot}
 
-Cette rubrique traite des problèmes généraux que vous pouvez rencontrer lorsque vous utilisez le service {{site.data.keyword.mon_full_notm}}. Dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
+Informations sur les problèmes généraux que vous pourriez rencontrer lorsque vous utilisez le service {{site.data.keyword.mon_full_notm}}. Dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
 {:shortdesc}
 
-## Obtenez-vous une erreur lors de la création d'une capture ?
+## Obtenez-vous une erreur lorsque vous créez une capture ?
 {: #troubleshoot-entry-1}
 
 Vous ne parvenez pas à créer un [fichier de capture](/docs/services/Monitoring-with-Sysdig/captures.html#captures) pour un hôte dans votre infrastructure. 

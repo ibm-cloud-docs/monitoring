@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, captures
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# キャプチャーの処理
+# キャプチャーの管理
 {: #captures}
 
 キャプチャーとは、時間フレーム中のホスト内での状況を分析するために生成可能なトレース・ファイルです。 例えば、キャプチャーを使用して、ボトルネックまたはコンポーネントの対話を分析できます。 {{site.data.keyword.mon_full_notm}} サービスでは、個別のノードの*キャプチャー* を作成、探索、ダウンロード、および削除できます。 
@@ -37,7 +37,7 @@ subcollection: Sysdig
 
 キャプチャー・ファイルを作成するには、以下のステップを実行します。
 
-1. Web UI の*「探索」*セクションにナビゲートします。 Web UI の起動方法について詳しくは、[Web UI へのナビゲート](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)を参照してください。
+1. Web UI の*「探索」*セクションにナビゲートします。 [詳細はこちら](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 
 2. ホストの切り替えアイコン ![ホストの切り替えアイコン](images/switch_hosts.png) をクリックします。
 
@@ -62,9 +62,9 @@ subcollection: Sysdig
 *「キャプチャー (Captures)」*ページには、キャプチャー・ファイル名、取得元のホスト、時間フレーム、およびキャプチャーのサイズを示す表が表示されます。 
 
 キャプチャー・ファイルの状況は、以下のいずれかの値になります。
-* **要求**: ファイルが生成されています。
-* **アップロードが完了しました**: ファイルをダウンロードして、分析できます。
-* **エラー**: タイムアウト、受信されなかったデータ、またはエージェント・エラーにより、ファイルを使用できません。
+* `要求`: ファイルが生成中です。
+* `アップロードが完了しました`: ファイルをダウンロードして、分析できます。
+* `エラー`: タイムアウト、受信されなかったデータ、またはエージェント・エラーにより、ファイルを使用できません。
 
 
 
@@ -73,7 +73,7 @@ subcollection: Sysdig
 
 キャプチャー・ファイルを削除するには、以下のステップを実行します。
 
-1. Web UI の*「キャプチャー (CAPTURES)」*セクションにナビゲートします。 Web UI の起動方法について詳しくは、[Web UI へのナビゲート](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)を参照してください。
+1. Web UI の*「キャプチャー (CAPTURES)」*セクションにナビゲートします。 [詳細はこちら](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 2. 削除するキャプチャー・ファイルを識別して選択します。
 3. **「削除」**をクリックします。
 
@@ -84,7 +84,7 @@ subcollection: Sysdig
 
 キャプチャー・ファイルを探索するには、以下のステップを実行します。
 
-1. Web UI の*「キャプチャー (CAPTURES)」*セクションにナビゲートします。 Web UI の起動方法について詳しくは、[Web UI へのナビゲート](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)を参照してください。
+1. Web UI の*「キャプチャー (CAPTURES)」*セクションにナビゲートします。 [詳細はこちら](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 2. 分析するホストのデータを含むキャプチャー・ファイルを識別して選択します。
 3. **「探索」**をクリックします。
 
@@ -95,7 +95,7 @@ subcollection: Sysdig
 
 キャプチャー・ファイルをダウンロードするには、以下のステップを実行します。
 
-1. Web UI の*「キャプチャー (CAPTURES)」*セクションにナビゲートします。 Web UI の起動方法について詳しくは、[Web UI へのナビゲート](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)を参照してください。
+1. Web UI の*「キャプチャー (CAPTURES)」*セクションにナビゲートします。 [詳細はこちら](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 2. ダウンロードするデータを含むキャプチャー・ファイルを識別して選択します。
 3. **「ダウンロード」**をクリックします。
 
@@ -105,7 +105,7 @@ subcollection: Sysdig
 
 Sysdig の Chisel は、スクリプト言語 Lua で作成されるスクリプトです。 Chisel を使用して、キャプチャー・ファイルのデータを分析できます。 
 
-Chisel の使用方法について詳しくは、[Chisels User Guide ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window} を参照してください。
+詳しくは、[Chisels User Guide ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window} を参照してください。
 
 
 

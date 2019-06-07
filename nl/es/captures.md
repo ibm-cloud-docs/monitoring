@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, captures
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Cómo trabajar con capturas
+# Gestión de capturas
 {: #captures}
 
 Una captura es un archivo de rastreo que se puede generar para analizar lo que sucede en un host durante un periodo de tiempo. Por ejemplo, puede utilizar una captura para analizar cuellos de botella o interacciones de componentes. En el servicio {{site.data.keyword.mon_full_notm}}, puede crear, explorar, descargar y suprimir *capturas* correspondientes a nodos individuales. 
@@ -37,13 +37,13 @@ Las capturas se crean en la vista *Explorar*.
 
 Siga los pasos siguientes para crear un archivo de captura:
 
-1. Vaya a la sección *EXPLORAR* de la interfaz de usuario web. Para obtener más información sobre cómo iniciar la interfaz de usuario web, consulte [Navegación a la interfaz de usuario web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Vaya a la sección *EXPLORAR* de la interfaz de usuario web. [Más información](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 
-2. Pulse el icono de conmutación de host ![icono de conmutación de host](images/switch_hosts.png).
+2. Pulse el icono de conmutación de host ![Icono de conmutación de host](images/switch_hosts.png).
 
 3. Seleccione un host o un contenedor.
 
-4. Pulse el icono de acciones ![icono con tres puntos](images/actions.png) y seleccione **Captura de Sysdig**.
+4. Pulse el icono de acciones ![Icono con tres puntos](images/actions.png) y seleccione **Captura de Sysdig**.
 
     Se abre la ventana *Captura de Sysdig*.
 
@@ -62,9 +62,9 @@ Siga los pasos siguientes para crear un archivo de captura:
 La página *Capturas* contiene una tabla que muestra el nombre del archivo de captura, el host del que se ha recuperado, el intervalo de tiempo y el tamaño de la captura. 
 
 El estado de un archivo de captura puede ser uno de los siguientes:
-* **Solicitado**: se está generando un archivo.
-* **Cargado**: hay un archivo disponible para que se descargue y se analice.
-* **Error**: no se ha generado un archivo porque se ha excedido el tiempo de espera, nunca se han recibido los datos o se ha producido un error del agente.
+* `Solicitado`: se está generando un archivo.
+* `Cargado`: hay un archivo disponible para que se descargue y se analice.
+* `Error`: no se ha generado un archivo porque se ha excedido el tiempo de espera, nunca se han recibido los datos o se ha producido un error del agente.
 
 
 
@@ -73,7 +73,7 @@ El estado de un archivo de captura puede ser uno de los siguientes:
 
 Siga los pasos siguientes para suprimir un archivo de captura:
 
-1. Vaya a la sección *CAPTURAS* de la interfaz de usuario web. Para obtener más información sobre cómo iniciar la interfaz de usuario web, consulte [Navegación a la interfaz de usuario web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Vaya a la sección *CAPTURAS* de la interfaz de usuario web. [Más información](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identifique y seleccione el archivo de captura que desea suprimir.
 3. Pulse **Suprimir**.
 
@@ -84,7 +84,7 @@ Siga los pasos siguientes para suprimir un archivo de captura:
 
 Siga los pasos siguientes para explorar un archivo de captura:
 
-1. Vaya a la sección *CAPTURAS* de la interfaz de usuario web. Para obtener más información sobre cómo iniciar la interfaz de usuario web, consulte [Navegación a la interfaz de usuario web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Vaya a la sección *CAPTURAS* de la interfaz de usuario web. [Más información](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identifique y seleccione el archivo de captura que contiene los datos correspondientes al host que desea analizar.
 3. Pulse **EXPLORAR**.
 
@@ -95,7 +95,7 @@ Siga los pasos siguientes para explorar un archivo de captura:
 
 Siga los pasos siguientes para descargar un archivo de captura:
 
-1. Vaya a la sección *CAPTURAS* de la interfaz de usuario web. Para obtener más información sobre cómo iniciar la interfaz de usuario web, consulte [Navegación a la interfaz de usuario web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Vaya a la sección *CAPTURAS* de la interfaz de usuario web. [Más información](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identifique y seleccione el archivo de captura que contiene los datos que desea descargar.
 3. Pulse **DESCARGAR**.
 
@@ -105,7 +105,7 @@ Siga los pasos siguientes para descargar un archivo de captura:
 
 Un chisel de Sysdig es un script escrito en Lua, un lenguaje de script. Puede utilizarlo para analizar los datos de un archivo de captura. 
 
-Para obtener más información acerca de cómo utilizar un chisel, consulte esta guía del usuario: [Chisels User Guide ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}
+Para obtener más información, consulte la [Guía del usuario de Chisels ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}.
 
 
 

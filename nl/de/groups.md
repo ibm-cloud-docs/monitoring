@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, groups
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Mit Gruppen arbeiten
+# Gruppen verwalten
 {: #groups}
 
 Sie können Bezeichnungen verwenden, um Infrastrukturobjekte in logische Hierarchien zu gruppieren.
@@ -32,7 +32,7 @@ Sie können Bezeichnungen verwenden, um Infrastrukturobjekte in logische Hierarc
 
 Führen Sie die folgenden Schritte aus, um eine Gruppe zu erstellen:
 
-1. Starten Sie die Webbenutzerschnittstelle. Weitere Informationen zum Starten der Webbenutzerschnittstelle finden Sie im Abschnitt [Zur Webbenutzerschnittstelle navigieren](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Starten Sie die Webbenutzerschnittstelle. [Erfahren Sie mehr darüber](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Klicken Sie auf **ERKUNDEN**, um zum Abschnitt *Erkunden* zu navigieren.
 
@@ -40,7 +40,7 @@ Führen Sie die folgenden Schritte aus, um eine Gruppe zu erstellen:
 
 4. Klicken Sie auf das *Pluszeichen (+)*, um weitere Bezeichnungen hinzuzufügen.
 
-    Wenn Sie eine neue Bezeichnung hinzufügen, werden Bezeichnungen, die nicht in die Hierarchie passen, herausgefiltert, um sicherzustellen, dass nur logische Gruppierungen erstellt werden, die gültig sind.
+    Wenn Sie eine Bezeichnung hinzufügen, werden Bezeichnungen, die nicht in die Hierarchie passen, herausgefiltert, um sicherzustellen, dass nur logische Gruppierungen erstellt werden, die gültig sind.
     {: tip}
 
 5. Wenn Sie das Hinzufügen von Bezeichnungen abgeschlossen haben, klicken Sie auf **Neue Gruppierung**.
@@ -56,7 +56,7 @@ Führen Sie die folgenden Schritte aus, um eine Gruppe zu erstellen:
 
 Führen Sie die folgenden Schritte aus, um eine Gruppe umzubenennen:
 
-1. Starten Sie die Webbenutzerschnittstelle. Weitere Informationen zum Starten der Webbenutzerschnittstelle finden Sie im Abschnitt [Zur Webbenutzerschnittstelle navigieren](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Starten Sie die Webbenutzerschnittstelle. [Erfahren Sie mehr darüber](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Klicken Sie auf **ERKUNDEN**, um zum Abschnitt *Erkunden* zu navigieren.
 
@@ -80,7 +80,7 @@ Führen Sie die folgenden Schritte aus, um eine Gruppe umzubenennen:
 
 Führen Sie die folgenden Schritte aus, um eine Gruppe in andere Teams zu kopieren:
 
-1. Starten Sie die Webbenutzerschnittstelle. Weitere Informationen zum Starten der Webbenutzerschnittstelle finden Sie im Abschnitt [Zur Webbenutzerschnittstelle navigieren](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Starten Sie die Webbenutzerschnittstelle. [Erfahren Sie mehr darüber](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Klicken Sie auf **ERKUNDEN**, um zum Abschnitt *Erkunden* zu navigieren.
 
@@ -105,7 +105,7 @@ Führen Sie die folgenden Schritte aus, um eine Gruppe in andere Teams zu kopier
 
 Führen Sie die folgenden Schritte aus, um eine Gruppe mit anderen Mitgliedern des Teams gemeinsam zu nutzen:
 
-1. Starten Sie die Webbenutzerschnittstelle. Weitere Informationen zum Starten der Webbenutzerschnittstelle finden Sie im Abschnitt [Zur Webbenutzerschnittstelle navigieren](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Starten Sie die Webbenutzerschnittstelle. [Erfahren Sie mehr darüber](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Klicken Sie auf **ERKUNDEN**, um zum Abschnitt *Erkunden* zu navigieren.
 
@@ -128,7 +128,7 @@ Führen Sie die folgenden Schritte aus, um eine Gruppe mit anderen Mitgliedern d
 
 Führen Sie die folgenden Schritte aus, um eine Gruppe zu löschen:
 
-1. Starten Sie die Webbenutzerschnittstelle. Weitere Informationen zum Starten der Webbenutzerschnittstelle finden Sie im Abschnitt [Zur Webbenutzerschnittstelle navigieren](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Starten Sie die Webbenutzerschnittstelle. [Erfahren Sie mehr darüber](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Klicken Sie auf **ERKUNDEN**, um zum Abschnitt *Erkunden* zu navigieren.
 

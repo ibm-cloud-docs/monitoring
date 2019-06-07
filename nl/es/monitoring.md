@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring
 
@@ -27,7 +27,7 @@ subcollection: Sysdig
 Puede supervisar la infraestructura y las aplicaciones que se ejecutan en la misma con el servicio {{site.data.keyword.mon_full_notm}}. Puede solicitar una captura para analizar lo que sucede en un nodo durante un periodo de tiempo.
 {:shortdesc}
 
-Después de suministrar una instancia del servicio {{site.data.keyword.mon_full_notm}} en {{site.data.keyword.Bluemix}} y de configurar los agentes de Sysdig para los orígenes de métricas, puede ver, supervisar y gestionar datos mediante la interfaz de usuario web del servicio.
+En primer lugar, suministre una instancia del servicio {{site.data.keyword.mon_full_notm}} en {{site.data.keyword.cloud_notm}}. Luego configure agentes de Sysdig para los orígenes de métricas. Una vez configurados los orígenes, puede ver, supervisar y gestionar los datos a través de la interfaz de usuario web del servicio.
 
 Los datos correspondientes a las métricas predeterminadas se recopilan automáticamente. Puede configurar métricas personalizadas y añadir etiquetas a esas métricas para describir sus características. También se recopilan automáticamente datos correspondientes a estas métricas personalizadas.
 
@@ -81,15 +81,15 @@ Puede utilizar cualquiera de los siguientes tipos de panel para visualizar métr
 
 | Tipo | Descripción |
 |------|-------------|
-| Línea | Utilice este panel para ver las tendencias a lo largo del tiempo para una o varias métricas.  |
-| Área | Utilice este panel para ver las tendencias a lo largo del tiempo para una o varias métricas.  |
-| Lista de principales | Utilice este panel para comparar una métrica entre grupos de entidades. El diagrama de barras se clasifica en orden descendente.  |
-| Histograma | Utilice este panel para ver la distribución de la frecuencia de una métrica en grupos.  |
-| Topología | Utilice este panel para visualizar la infraestructura como un mapa de topología y las relaciones entre las entidades del mapa.  |
-| Número | Utilice este panel para ver un solo número que representa el valor de una métrica agregada a lo largo del tiempo para una o varias entidades.  |
-| Tabla | Utilice este panel para visualizar los datos numéricos de la infraestructura en función de métricas y segmentos.  |
-| Texto | Utilice este panel para añadir texto. Utilice anotaciones para añadir texto.  |
-{: caption="Tabla 3. Tipos de paneles" caption-side="top"} 
+| `Línea` | Utilice este panel para ver las tendencias a lo largo del tiempo para una o varias métricas.  |
+| `Área` | Utilice este panel para ver las tendencias a lo largo del tiempo para una o varias métricas.  |
+| `Lista de principales` | Utilice este panel para comparar una métrica entre grupos de entidades. El diagrama de barras se clasifica en orden descendente.  |
+| `Histograma` | Utilice este panel para ver la distribución de la frecuencia de una métrica en grupos.  |
+| `Topología` | Utilice este panel para visualizar la infraestructura como un mapa de topología y las relaciones entre las entidades del mapa.  |
+| `Número` | Utilice este panel para ver un solo número que representa el valor de una métrica agregada a lo largo del tiempo para una o varias entidades.  |
+| `Tabla` | Utilice este panel para visualizar los datos numéricos de la infraestructura en función de métricas y segmentos.  |
+| `Texto` | Utilice este panel para añadir texto. Utilice anotaciones para añadir texto.  |
+{: caption="Tabla 1. Tipos de paneles" caption-side="top"} 
 
 Puede copiar, cambiar el ámbito, duplicar, suprimir, exportar y explorar paneles.
 
@@ -109,7 +109,7 @@ En la tabla siguiente se muestran las tareas que puede ejecutar con paneles:
 | [Suprimir panel](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_delete) | Suprimir un panel del panel de control.  |
 | [Exportar datos](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_export) | Exportar datos de un panel a un archivo csv o a un archivo json.  |
 | [Crear alerta](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_alert) | Defina una alerta sobre una métrica. |
-{: caption="Tabla 4. Tareas con paneles" caption-side="top"} 
+{: caption="Tabla 2. Tareas con paneles" caption-side="top"} 
 
 
 ## Paneles de control
@@ -120,13 +120,13 @@ Un **panel de control** muestra grupos de métricas que informan sobre el estado
 
 En la sección **PANELES DE CONTROL** de la interfaz de usuario web, los paneles de control están organizados en tres grupos principales:
 
-* *Mis paneles de control*: son los paneles de control creados por el usuario que actualmente ha iniciado la sesión.
-* *Mis paneles de control compartidos*: son los paneles de control creados por el usuario que ha iniciado la sesión actualmente y que se comparten con otros usuarios.
-* *Paneles de control compartidos conmigo*: son los paneles de control creados por otros usuarios y compartidos con el usuario actual.
+* **Mis paneles de control**: son los paneles de control creados por el usuario que ha iniciado la sesión.
+* **Mis paneles de control compartidos**: son los paneles de control creados por el usuario que ha iniciado la sesión y que se comparten con otros usuarios.
+* **Paneles de control compartidos conmigo**: son los paneles de control creados por otros usuarios y compartidos con el usuario actual.
 
 En la sección **EXPLORAR** de la interfaz de usuario web, los paneles de control están organizados en dos grupos:
-* *Paneles de control predeterminados*: son los paneles de control predefinidos.
-* *Mis paneles de control*: son los paneles de control creados por el usuario que actualmente ha iniciado la sesión.
+* **Paneles de control predeterminados**: son los paneles de control predefinidos.
+* **Mis paneles de control**: son los paneles de control creados por el usuario que ha iniciado la sesión.
 
 Puede utilizar paneles de control predefinidos. También puede crear paneles de control personalizados mediante la interfaz de usuario web o mediante programación. Puede realizar copias de seguridad y restaurar paneles de control mediante scripts Python o mediante la API REST de Sysdig.
 
@@ -141,7 +141,7 @@ En la tabla siguiente se describen las tareas que puede ejecutar para trabajar c
 | [Cambiar el ámbito](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_scope) | Cambiar el ámbito de un panel de control.       |
 | [Suprimir un panel de control](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_delete) |  Suprimir un panel de control. |
 | [Compartir un panel de control](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_share) | Compartir paneles de control entre los usuarios de un equipo y externamente, mediante la configuración de un URL público para el panel de control. |
-{: caption="Tabla 1. Tareas con paneles de control que puede ejecutar en la interfaz de usuario web" caption-side="top"} 
+{: caption="Tabla 3. Tareas con paneles de control que puede ejecutar en la interfaz de usuario web" caption-side="top"} 
 
 En la tabla siguiente se describen las tareas que puede ejecutar mediante programación para trabajar con paneles de control:
 
@@ -150,32 +150,31 @@ En la tabla siguiente se describen las tareas que puede ejecutar mediante progra
 | Crear un panel de control      | [Creación de un panel de control mediante la API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_create_dashboard) |
 | Suprimir un panel de control      | [Supresión de un panel de control mediante la API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_delete_dashboard) |
 | Guardar paneles de control       | [Cómo guardar los paneles de control de un equipo mediante la API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_save_dashboard) |
-{: caption="Tabla 2. Tareas para gestionar paneles de control mediante programación" caption-side="top"} 
+{: caption="Tabla 4. Tareas para gestionar paneles de control mediante programación" caption-side="top"} 
 
 
 
 ## Sucesos
 {: #monitoring_events}
 
-Un suceso es una notificación que informa sobre algo que ha sucedido en cualquiera de los nodos que reenvían datos a la instancia de {{site.data.keyword.mon_full_notm}}. Utilice sucesos para revisar, realizar el seguimiento y resolver problemas. 
+Un suceso es una notificación que informa sobre algo que ocurre en cualquiera de los nodos que reenvían datos a la instancia de {{site.data.keyword.mon_full_notm}}. Utilice sucesos para revisar, realizar el seguimiento y resolver problemas. 
 
-Existen distintos tipos de sucesos: 
+La lista siguiente muestra distintos tipos de sucesos: 
 
 * Los *sucesos de alerta* son sucesos que se desencadenan mediante alertas configuradas por el usuario. Para obtener más información, consulte [Cómo trabajar con alertas](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring_alerts).
 * Los *sucesos basados en infraestructura* son sucesos que se recopilan de los nodos Docker y Kubernetes. De forma predeterminada, el agente de Sysdig descubre y recopila automáticamente datos de un grupo de sucesos seleccionado. Puede editar el archivo de configuración del agente para habilitar más sucesos.
 * *Sucesos personalizados* que se configuran a través de cualquiera de las siguientes integraciones: Slackbot, scripts Python previamente creados, scripts Python personalizados creados por el usuario o solicitudes cURL.
 
 De forma predeterminada, un suceso tiene un estado: 
-* *Activo*: este estado indica que las circunstancias que han desencadenado el suceso siguen en vigor; por ejemplo, un sigue estando inactivo.
-* *Correcto*: este estado indica que la situación ha vuelto a la normalidad; por ejemplo, un nodo está activo y en ejecución.
+* **Activo**: este estado indica que las circunstancias que han desencadenado el suceso siguen en vigor; por ejemplo, un sigue estando inactivo.
+* **Correcto**: este estado indica que la situación ha vuelto a la normalidad; por ejemplo, un nodo está activo y en ejecución.
 
 Los sucesos se gestionan en la sección *Sucesos* de la interfaz de usuario web. 
 * Puede ver los sucesos de alerta a través del separador *Sucesos de alerta*.
 * Puede ver los sucesos basados en infraestructura a través del separador *Sucesos personalizados*.
 * Puede ver los sucesos personalizados a través del separador *Sucesos personalizados*.
 * Puede enviar sucesos personalizados a cualquiera de sus equipos mediante la [señal de API correspondiente a dicho equipo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token). Para obtener más información, consulte [Sucesos personalizados ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events){:new_window}.
-
-Puede resolver la situación que ha desencadenado un suceso. Mientras espera a que la condición que ha desencadenado el suceso se vuelva a ejecutar y establezca su estado en *Correcto*, puede establecer el suceso como **Resuelto** para mostrar gráficamente que el problema se ha solucionado. 
+* Puede establecer el suceso como resuelto (**Resolved**) para notificar a otros usuarios que el problema se ha resuelto en lugar de esperar a que el estado se establezca en **OK**.
 {: #tip}
 
 
@@ -185,7 +184,7 @@ Puede resolver la situación que ha desencadenado un suceso. Mientras espera a q
 
 Una alerta es un suceso de notificación que puede utilizar para advertir acerca de situaciones que requieren atención. Cada alerta tiene un estado de gravedad. Este estado le informa acerca de la importancia de la información que notifica. 
 
-Cuando defina una alerta, debe definir la condición que desencadena la notificación, uno o varios canales de notificación a través de los cuales desea que se le notifique, la gravedad de la alerta y el tipo de alerta. 
+Cuando defina una alerta, debe definir la condición que desencadena la notificación y uno o varios canales de notificación a través de los cuales desea que se le notifique. También debe definir la gravedad de la alerta y el tipo de alerta. 
 
 Puede definir alertas para cualquiera de los siguientes tipos de alertas:
 
@@ -213,7 +212,7 @@ Para obtener más información, consulte [Configuración de un canal de notifica
 
 Puede habilitar alertas predefinidas, modificar alertas y crear alertas personalizadas en la interfaz de usuario web y mediante la API de Sysdig.
 
-Las alertas se gestionan en la vista *Alertas* de la interfaz de usuario web. Puede configurar las columnas de la tabla que se mostrarán en la vista *Alertas*. Las opciones válidas son: *Nombre*, *Ámbito*, *Alertar cuando*, *Segmentar por*, *Notificaciones*, *Habilitado*, *Modificado*, *Capturas*, *Canales*, *Creado*, *Descripción*, *Destinatarios de correo electrónico*, *Durante al menos*, *OpsGenie*, *PagerDuty*, *Gravedad*, *Slack*, *WebHook*, *Temas de SNS*, *Tipo*, *VictorOps*
+Las alertas se gestionan en la vista *Alertas* de la interfaz de usuario web. Puede configurar las columnas de la tabla que se mostrarán en la vista *Alertas*. Las opciones válidas son: *Nombre*, *Ámbito*, *Alertar cuando*, *Segmentar por*, *Notificaciones*, *Habilitado*, *Modificado*, *Capturas*, *Canales*, *Creado*, *Descripción*, *Destinatarios de correo electrónico*, *Durante al menos*, *OpsGenie*, *PagerDuty*, *Gravedad*, *Slack*, *WebHook*, *Temas de SNS*, *Tipo* y *VictorOps*.
 
 En la lista siguiente se describen las tareas principales cuando se trabaja con alertas:
 * [Configuración de una alerta ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-ConfigureanAlert){:new_window}

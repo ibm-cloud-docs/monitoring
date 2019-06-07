@@ -185,7 +185,7 @@ Conclua as etapas a seguir para designar a um usuário ambas as políticas para 
 
 Como um **usuário**, **auditor** ou **desenvolvedor**, você pode precisar de permissões para executar as ações a seguir: 
 
-* Visualize métricas
+* Visualizar Métricas
 * Métricas de procura
 * Filtrar métricas
 

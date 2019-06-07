@@ -49,7 +49,7 @@ In der *Erkunden*-Ansicht der Webbenutzerschnittstelle können Sie eine der folg
 | Task                                                                                        | Beschreibung     |
 |---------------------------------------------------------------------------------------------|-----------------|
 | [Eine Gruppe kopieren](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#copy_group)                | Kopieren Sie eine Gruppe in andere Teams. |
-| [Eine Gruppe erstellen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#create_group)            | Erstellen Sie eine neue Gruppe. |
+| [Eine Gruppe erstellen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#create_group)            | Erstellen Sie eine Gruppe. |
 | [Eine Gruppe löschen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#delete_group)            | Löschen Sie eine Gruppe. |
 | [Eine Gruppe umbenennen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#rename_group)            | Benennen Sie eine Gruppe. |
 | [Eine Gruppe gemeinsam nutzen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#share_group)              | Geben Sie eine Gruppe für andere Mitglieder im Team frei. |
@@ -60,20 +60,21 @@ In der *Erkunden*-Ansicht der Webbenutzerschnittstelle können Sie eine der folg
 ## Aggregation
 {: #manage_aggregation}
 
-Die**Aggregation** von Daten erfolgt automatisch, wenn Sie ein Diagramm konfigurieren oder einen Alert für eine Metrik erstellen. Es gibt zwei Arten von Aggregation: Zeitaggregation und Gruppenaggregation. 
+Die**Aggregation** von Daten erfolgt automatisch, wenn Sie ein Diagramm konfigurieren oder einen Alert für eine Metrik erstellen. 
+
+Es gibt verschiedene Typen von Aggregationen, die für Metriken verwendet werden: 
 * Die Zeitaggregation wird immer vor der Gruppenaggregation ausgeführt.
 * Sie können zusammengefasste Daten auch mithilfe von Bezeichnungen in kleinere Abschnitte aufteilen, die **Segmente** genannt werden, um mehrere Vergleiche und mehrere Alerts zu erstellen. 
 
-Sysdig aggregiert Daten im Laufe der Zeit. Dann werden diese Datenpunkte verwendet und gruppiert, um die Daten in Metriken oder Dashboards anzuzeigen oder die Schwellenwerte für Alerts zu berechnen. 
+Die Zeitaggregation wird immer vor der Gruppenaggregation ausgeführt.
+
+Sysdig aggregiert Daten im Laufe der Zeit. Dann werden diese Datenpunkte verwendet und gruppiert, um die Daten in Metriken oder Dashboards anzuzeigen oder die Schwellenwerte für Alerts zu berechnen.
 {: tip}
 
 Sie können anpassen, wie Daten aggregiert werden, wenn Sie ein Diagramm konfigurieren oder einen Alert für eine Metrik erstellen.
 
-Es gibt zwei Formen der Aggregation für Metriken: 
-* Zeitaggregation
-* Gruppenaggregation
 
-**Die Zeitaggregation wird immer vor der Gruppenaggregation ausgeführt.**
+
 
 
 ### Zeitaggregation
@@ -81,29 +82,29 @@ Es gibt zwei Formen der Aggregation für Metriken:
 
 **Ein Sysdig-Agent erfasst und berichtet Metriken standardmäßig mit einer 10-Sekunden-Auflösung.**
 
-Bei Zeitreihendiagrammen, die Daten für maximal fünf Minuten enthalten: 
+Bei Zeitreihendiagrammen, die Daten für maximal 5 Minuten enthalten: 
 * Datenpunkte werden bei einer Auflösung von 10 Sekunden aufgezeichnet.
 * Es findet keine Zeitaggregation statt.
 
 Die Zeitaggregation erfolgt automatisch in einer der folgenden Situationen:
 
-* Bei Zeitreihendiagrammen, die Daten für einen Zeitraum von mehr als fünf Minuten enthalten, werden Datenpunkte als Aggregat für ein geeignetes Zeitintervall aufgezeichnet. Beispiel: Für ein Diagramm, das Daten für eine Stunde zeigt, stellt jeder Datenpunkt beispielsweise ein 1-Minuten-Intervall dar.
-* Wenn Sie Protokolldaten anzeigen. Daten werden im Laufe der Zeit aufsummiert. Sie können auswählen, welche Datenpunkte verwendet werden sollen, wenn Sie ältere Daten anzeigen.
+* Bei Zeitreihendiagrammen, die Daten für einen Zeitraum von mehr als 5 Minuten enthalten, werden Datenpunkte als Aggregat für ein geeignetes Zeitintervall aufgezeichnet. Beispiel: Für ein Diagramm, das Daten für 1 Stunde zeigt, stellt jeder Datenpunkt beispielsweise ein 1-Minuten-Intervall dar.
+* Wenn Sie Protokolldaten anzeigen, werden Daten im Laufe der Zeit aufsummiert. Sie können auswählen, welche Datenpunkte verwendet werden sollen, wenn Sie ältere Daten anzeigen.
 
 In der folgenden Tabelle werden verschiedene Aggregationstypen für Zeitreihendiagramme aufgelistet:
 
 | Aggregationstyp | Beschreibung                                                              |
 |------------------|--------------------------------------------------------------------------|
-| average          | Durchschnitt der abgerufenen Metrikwerte über den gesamten ausgewerteten Zeitraum hinweg. |
-| rate (timeAvg)   | Durchschnittlicher Wert der Metrik über den gesamten ausgewerteten Zeitraum hinweg.            |
-| maximum	         | Höchster Wert während des ausgewerteten Zeitraums.                          |
-| minimum	         | Geringster Wert während des ausgewerteten Zeitraums.                           |
-| sum              | Kombinierte Summe der Metrik über den gesamten ausgewerteten Zeitraum.             |
+| `average`          | Durchschnitt der abgerufenen Metrikwerte über den gesamten ausgewerteten Zeitraum hinweg. |
+| `rate (timeAvg)`   | Durchschnittlicher Wert der Metrik über den gesamten ausgewerteten Zeitraum hinweg.            |
+| `maximum`	         | Höchster Wert während des ausgewerteten Zeitraums.                          |
+| `minimum`         | Geringster Wert während des ausgewerteten Zeitraums.                           |
+| `sum`              | Kombinierte Summe der Metrik über den gesamten ausgewerteten Zeitraum.             |
 {: caption="Tabelle 2. Aggregationstypen für Zeitreihendiagramme" caption-side="top"} 
 
 **Hinweis:** Standardmäßig wird der Durchschnitt für die Anzeige von Datenpunkten für ein Zeitintervall verwendet.
 
-Die Rate und der Durchschnitt sind sehr ähnliche Aggregationstypen. Sie liefern oft das gleiche Ergebnis. Die Berechnung unterscheidet sich jedoch. Wenn die Zeitaggregation auf eine Minute festgelegt wird, wird der Sysdig-Agent so eingestellt, dass er sechs Proben abruft, alle 10 Sekunden eine Probe. Beachten Sie, dass in einigen Fällen aufgrund von Verbindungstrennungen oder anderen Umständen keine Proben vorhanden sind.
+Die Rate und der Durchschnitt sind ähnliche Aggregationstypen. Sie liefern oft das gleiche Ergebnis. Die Berechnung unterscheidet sich jedoch. Wenn die Zeitaggregation auf 1 Minute festgelegt wird, wird der Sysdig-Agent so eingestellt, dass er sechs Proben abruft, alle 10 Sekunden eine Probe. Beachten Sie, dass in einigen Fällen aufgrund von Verbindungstrennungen oder anderen Umständen keine Proben vorhanden sind.
 
 
 ### Gruppenaggregation
@@ -117,10 +118,10 @@ In der folgenden Tabelle werden verschiedene Typen von Gruppenaggregationstypen 
 
 | Aggregationstyp | Beschreibung                                        |
 |------------------|----------------------------------------------------|
-| average          | Der durchschnittliche Wert der Proben des Intervalls.           |
-| maximum	         | Der höchste Wert der Proben des Intervalls.           |
-| minimum	         | Der niedrigste Wert der Proben des Intervalls.            |
-| sum              | Der kombinierte Wert der Proben des Intervalls.          |
+| `average`          | Der durchschnittliche Wert der Proben des Intervalls.           |
+| `maximum`	         | Der höchste Wert der Proben des Intervalls.           |
+| `minimum`	         | Der niedrigste Wert der Proben des Intervalls.            |
+| `sum`              | Der kombinierte Wert der Proben des Intervalls.          |
 {: caption="Tabelle 3. Aggregationstypen für Gruppenzusammenfassung" caption-side="top"} 
 
 
@@ -149,20 +150,20 @@ In der folgenden Tabelle werden die Tasks aufgelistet, die Sie ausführen könne
 **Teams** gruppieren Benutzer und steuern die Daten sowie die Berechtigungen für die Arbeit mit Sysdig-Erfassungen und Infrastrukturereignissen für diese Benutzer. 
 
 Ein Sysdig-Administrator kann eine beliebige Anzahl von Teams definieren. Er kann für jedes Team die folgenden Informationen konfigurieren:
-* Das *Standardteam*: Sie können dieses Team als das Team festlegen, dem jeden Benutzer, der sich zum ersten Mal bei der Webbenutzerschnittstelle anmeldet, standardmäßig zugeordnet wird.
-* Der *Standardeingangspunkt*: Sie können die Ansicht in der Webbenutzerschnittstelle angeben, die bei jeder Anmeldung eines Benutzers geöffnet wird. Gültige Eingangspunkte sind: Ansicht *Erkunden*, Ansicht *Dashboards*, Ansicht *Ereignisse*, Ansicht *Alerts* und Ansicht *Einstellungen*.
-* Der Geltungsbereich: Sie können die Daten, die Benutzer anzeigen können, einschränken. Sie können *Host* oder *Container* auswählen, um die Ebene der Daten zu definieren, die sichtbar sein sollen. Anschließend können Sie eine oder mehrere Bedingungen hinzufügen. Wenn der Geltungsbereich auf *Host* festgelegt ist, können Benutzer alle Informationen auf der Host- und Containerebene anzeigen. Wenn der Geltungsbereich auf *Container* festgelegt ist, können Benutzer nur Informationen auf Containerebene anzeigen.
-* Die Berechtigungen: Sie können die folgenden Funktionen aktivieren oder inaktivieren: *Sysdig-Erfassungen* und *Infrastrukturereignisse*. Erfassungsdateien sind nur für Mitglieder des Teams sichtbar. **Hinweis:** Erfassungen enthalten detaillierte Informationen aus jedem Container auf einem Host, unabhängig vom Geltungsbereich des Teams. Wenn die Infrastrukturereignisse aktiviert sind, können Benutzer alle angepassten Infrastrukturereignisse von jedem Benutzer und Sysdig-Agenten in der Instanz anzeigen.
+* `Standardteam`: Sie können dieses Team als das Team festlegen, dem jeden Benutzer, der sich zum ersten Mal bei der Webbenutzerschnittstelle anmeldet, standardmäßig zugeordnet wird. 
+* `Standardeingangspunkt`: Sie können die Ansicht in der Webbenutzerschnittstelle angeben, die bei jeder Anmeldung eines Benutzers geöffnet wird. Gültige Eingangspunkte sind: Ansicht *Erkunden*, Ansicht *Dashboards*, Ansicht *Ereignisse*, Ansicht *Alerts* und Ansicht *Einstellungen*. 
+* `Geltungsbereich`: Sie können die Daten, die Benutzer anzeigen können, einschränken. Sie können *Host* oder *Container* auswählen, um die Ebene der Daten zu definieren, die sichtbar sein sollen. Anschließend können Sie eine oder mehrere Bedingungen hinzufügen. Wenn der Geltungsbereich auf *Host* festgelegt ist, können Benutzer alle Informationen auf der Host- und Containerebene anzeigen. Wenn der Geltungsbereich auf *Container* festgelegt ist, können Benutzer nur Informationen auf Containerebene anzeigen.
+* `Berechtigungen`: Sie können die folgenden Funktionen aktivieren oder inaktivieren: *Sysdig-Erfassungen* und *Infrastrukturereignisse*. Erfassungsdateien sind nur für Mitglieder des Teams sichtbar. **Hinweis:** Erfassungen enthalten detaillierte Informationen aus jedem Container auf einem Host, unabhängig vom Geltungsbereich des Teams. Wenn die Infrastrukturereignisse aktiviert sind, können Benutzer alle angepassten Infrastrukturereignisse von jedem Benutzer und Sysdig-Agenten in der Instanz anzeigen.
 
 Standardmäßig gibt es das Team **Operationen überwachen**, das für jede {{site.data.keyword.mon_full_notm}}-Instanz vordefiniert ist.
 * Dieses Team kann nicht gelöscht werden.
 * Benutzer werden automatisch als Mitglieder dieses Teams hinzugefügt und erhalten vollständigen Einblick in alle in der Instanz verfügbaren Ressourcen. 
 
 **Hinweis:** 
-* Ein Administrator muss in das Team *Operationen überwachen* wechseln, bevor er Teams erstellen oder die Einstellungen für andere Teams ändern kann.
+* Ein Administrator muss in das Team *Operationen überwachen* wechseln, um Teams erstellen oder die Einstellungen für andere Teams ändern zu können.
 * Nachdem sich ein Benutzer bei {{site.data.keyword.cloud_notm}} angemeldet und die Sysdig-Webbenutzerschnittstelle gestartet hat, kann ein Administrator diesen Benutzer in der Sysdig-Webbenutzerschnittstelle verwalten. Der Benutzer wird in der Sysdig-Datenbank erstellt, wenn sich der Benutzer zum ersten Mal an der Sysdig-Webbenutzerschnittstelle anmeldet. 
 
-Um die Anzeigeberechtigungen für Benutzer einzuschränken, kann ein Administrator eine der folgenden Aktionen ausführen:
+Ein Administrator kann eine der folgenden Aktionen ausführen, um die Anzeigeberechtigungen eines Benutzers zu beschränken:
 * Ändern Sie die Rolle des Benutzers im Standardteam *Operationen überwachen* zu einem *Leseberechtigten*. 
 * Erstellen Sie ein Standardteam mit eingeschränktem Geltungsbereich und eingeschränkter Sichtbarkeit. Ordnen Sie dann Benutzer manuell anderen Teams zu. 
 

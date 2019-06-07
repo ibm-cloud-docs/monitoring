@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, troubleshooting
 
@@ -23,10 +23,10 @@ subcollection: Sysdig
 # Resolução de problemas para o  {{site.data.keyword.mon_full_notm}}
 {: #troubleshoot}
 
-Este tópico cobre problemas gerais que você pode encontrar ao usar o serviço {{site.data.keyword.mon_full_notm}}. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
+Saiba mais sobre alguns problemas gerais que podem ser encontrados ao usar o serviço {{site.data.keyword.mon_full_notm}}. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
 {:shortdesc}
 
-## Você está obtendo um erro ao criar uma captura?
+## Você está recebendo um erro ao criar uma captura?
 {: #troubleshoot-entry-1}
 
 Você está falhando ao criar um [arquivo de captura](/docs/services/Monitoring-with-Sysdig/captures.html#captures) para um host em sua infraestrutura. 
@@ -46,7 +46,8 @@ Ative o recurso **sysdig_capture_enabled** no agente Sysdig que é executado no 
 
 O status de um [arquivo de captura](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures) é configurado como *solicitado* e não muda para o status *transferido por upload*. Você está esperando o arquivo de captura ficar disponível para análise.
 
-Na seção *Capturas* da IU da web, o status do arquivo de captura para um host não muda para *transferido por upload*.
+Na seção *Capturas* da IU da web, o status do arquivo de captura de um host não muda
+para *transferido por upload*.
 {: tsSymptoms}
 
 O host tem a porta TCP 6443 desativada.

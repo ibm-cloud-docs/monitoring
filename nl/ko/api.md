@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Sysdig REST API 관련 작업
+# Sysdig REST API 관리
 {: #api}
 
 Sysdig REST API를 사용하여 일상적인 태스크를 자동화하고 알림을 모니터할 수 있습니다.
@@ -42,17 +42,17 @@ Sysdig REST API를 사용하여 일상적인 태스크를 자동화하고 알림
 
 2. 대시보드를 기술하는 json 파일을 작성하십시오. 표시된 대로 다음 필드를 설정해야 합니다.
 
-    * *이름*: 대시보드의 이름을 입력하십시오．
+    * `이름`: 대시보드의 이름을 입력하십시오．
 
-    * *id*: *null*로 설정하십시오.
+    * `id`: *null*로 설정하십시오.
 
-    * *버전*: *null*로 설정하십시오.
+    * `버전`: *null*로 설정하십시오.
 
-    * 사용자 이름: IBM ID와 연관된 이메일로 설정하십시오.
+    * `username`: IBM ID와 연관된 이메일로 설정하십시오.
 
-    * *isShared*: 기타 팀 구성원과 대시보드를 공유하려면 true로 설정하십시오.
+    * `isShared`: 기타 팀 구성원과 대시보드를 공유하려면 true로 설정하십시오.
 
-    * *isPublic*: 대시보드가 공개적으로 사용 가능하도록 하려면 true로 설정하십시오.
+    * `isPublic`: 대시보드가 공개적으로 사용 가능하도록 하려면 true로 설정하십시오.
 
     * 대시보드 범위를 정의하기 위한 필터를 구성하십시오.
     
@@ -188,7 +188,7 @@ Sysdig REST API를 사용하여 일상적인 태스크를 자동화하고 알림
 
     * *SYSDIG_API_TOKEN*은 이전 단계에서 가져온 API 토큰입니다.
 
-예를 들어, 미국 남부 지역에서 작업 중인 팀의 대시보드를 다운로드하려면 다음 명령을 실행할 수 있습니다.
+예를 들어, 미국 남부 지역에서 작업하는 팀의 대시보드를 다운로드하려면 다음 명령을 실행할 수 있습니다.
 
 ```
 curl -X GET https://us-south.monitoring.cloud.ibm.com/ui/dashboards -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json'
@@ -224,7 +224,7 @@ curl -X GET https://us-south.monitoring.cloud.ibm.com/ui/dashboards -H 'Authoriz
 
     * *SYSDIG_API_TOKEN*은 이전 단계에서 가져온 API 토큰입니다.
 
-예를 들어, 미국 남부 지역에서 작업 중인 팀의 대시보드 목록에서 ID *391*의 대시보드를 삭제하려면 다음 명령을 실행할 수 있습니다.
+예를 들어, 미국 남부 지역에서 작업하는 팀의 대시보드 목록에서 ID가 *391*인 대시보드를 삭제하려면 다음 명령을 실행할 수 있습니다.
 
 ```
 curl -X DELETE https://us-south.monitoring.cloud.ibm.com/ui/dashboards/391 -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json' 

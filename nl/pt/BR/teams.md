@@ -57,7 +57,7 @@ Conclua as etapas a seguir para criar uma equipe:
 
 6. Configure o escopo da equipe. 
 
-    * [Opcional] Configure **Escopo por** para especificar o nível de dados aos quais os membros da equipe têm acesso. Os valores válidos são  * host *  e  * container *. Se o parâmetro for configurado como *Host*, os membros poderão ver todas as informações de nível do Host e de nível do Contêiner. Se o parâmetro for configurado como *Container*, os membros poderão ver somente informações de nível do Contêiner.
+    * [Opcional] Configure **Escopo por** para especificar o nível de dados aos quais os membros da equipe têm acesso. Os valores válidos são *host* e *container*. Se o parâmetro for configurado como *Host*, os membros poderão ver todas as informações de nível do Host e de nível do Contêiner. Se o parâmetro for configurado como *Container*, os membros poderão ver somente informações de nível do Contêiner.
 
     * Configure o **Escopo** para limitar quais dados os usuários podem ver. É possível configurar uma ou mais condições especificando expressões para métricas. Por padrão, o escopo é configurado como *em todos os lugares*.
 	

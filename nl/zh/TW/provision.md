@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -24,11 +24,8 @@ subcollection: Sysdig
 # 佈建實例
 {: #provision}
 
-在可以使用 Sysdig 來監視及管理度量之前，您必須先在 {{site.data.keyword.Bluemix}} 佈建服務的實例。
+必須在 {{site.data.keyword.cloud_notm}} 中佈建 Sysdig 服務的實例，然後才能使用 Sysdig 來監視和管理度量值。
 {:shortdesc}
-
-若要在「公用雲端」地區中佈建 Sysdig 實例，您必須選取與該實例相關聯的服務方案、收集度量的地區，以及決定您可以監視之度量數及其保留期的方案。
-
 
 
 ## 從型錄佈建 Sysdig 實例
@@ -63,7 +60,7 @@ subcollection: Sysdig
 * 即會開啟*觀察* 儀表板。 
 * 即會自動建立服務 ID。您可以使用此服務 ID 來取得實例的 Sysdig 存取金鑰。
 
-接著，新增 Sysdig 代理程式來配置度量來源。此代理程式負責收集度量，並將其轉遞至 Sysdig。 
+接著，新增 Sysdig 代理程式來配置度量值來源。此代理程式負責收集度量值，並將其轉遞至 Sysdig。 
 
 
 
@@ -72,11 +69,9 @@ subcollection: Sysdig
 
 若要透過指令行佈建 Sysdig 的實例，請完成下列步驟：
 
-1. [必要條件] 安裝 {{site.data.keyword.cloud_notm}} CLI。
+1. [必要條件] 安裝 {{site.data.keyword.cloud_notm}} CLI。如果已安裝 CLI，請繼續進行下一步。
 
    如需相關資訊，請參閱[安裝 {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)。
-
-   如果已安裝 CLI，請繼續進行下一步。
 
 2. 登入 {{site.data.keyword.cloud_notm}} 中要佈建實例的地區。請執行下列指令：[`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -93,13 +88,13 @@ subcollection: Sysdig
 
     其中
 
-    * NAME 是 Sysdig 實例的名稱
+    * NAME 是 Sysdig 實例的名稱。
     
-    * *sysdig-monitor* 是 {{site.data.keyword.cloud_notm}} 中 {{site.data.keyword.mon_full_notm}} 服務的名稱
+    * `sysdig-monitor` 是 {{site.data.keyword.cloud_notm}} 中 {{site.data.keyword.mon_full_notm}} 服務名稱的名稱。
     
-    * SERVICE_PLAN_NAME 是方案的類型。有效值為：*lite*、*graduated-tier*
+    * SERVICE_PLAN_NAME 是方案的類型。有效值為 *lite* 和 *graduated-tier*。
     
-    * LOCATION 是建立實例的地區
+    * LOCATION 是在其中建立實例的地區。
 
     例如，若要使用付款方案來佈建實例，請執行下列指令：
 

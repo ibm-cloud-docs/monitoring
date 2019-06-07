@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -21,10 +21,10 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# 使用存取金鑰
+# 管理存取金鑰
 {: #access_key}
 
-**存取金鑰**是一個記號，您必須將其用來配置 Sysdig 代理程式，才能順利將資料轉遞至 {{site.data.keyword.Bluemix}} 中的 {{site.data.keyword.mon_full_notm}} 實例。   
+**存取金鑰**是一種記號，必須使用此記號來配置 Sysdig 代理程式，才能順利將資料轉遞至 {{site.data.keyword.cloud_notm}} 中的 {{site.data.keyword.mon_full_notm}} 實例。   
 {:shortdesc}
 
 
@@ -91,7 +91,7 @@ subcollection: Sysdig
 
     其中 APIKEY_NAME 是 API 金鑰的名稱。
  
-    此指令的輸出包括 **Sysdig 存取金鑰**欄位，其中包含實例的存取金鑰。
+    這個指令的輸出包含 **Sysdig 存取金鑰**欄位，其中含有實例的存取金鑰。
 
 
 例如，下列指令顯示範例服務 ID 的輸出：
@@ -137,4 +137,4 @@ Parameters:
 
 2. 在*密碼管理* 區段中，按一下**重設您的密碼**。
 
-**附註：**在重設 Sysdig 存取金鑰之後，對於任何已配置為將度量轉遞至此 {{site.data.keyword.mon_full_notm}} 實例的日誌來源，您必須更新其存取金鑰。
+**附註：**在重設 Sysdig 存取金鑰之後，對於任何將度量值轉遞至此 {{site.data.keyword.mon_full_notm}} 實例的日誌來源，您必須更新其存取金鑰。

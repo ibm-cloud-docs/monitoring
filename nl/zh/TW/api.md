@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# 使用 Sysdig REST API
+# 管理 Sysdig REST API
 {: #api}
 
 使用 Sysdig REST API，將例行作業及監視通知自動化。
@@ -42,17 +42,17 @@ subcollection: Sysdig
 
 2. 建立說明儀表板的 json 檔案。下列欄位必須依指示設定：
 
-    * *名稱*：輸入儀表板的名稱。
+    * `名稱`：輸入儀表板的名稱。
 
-    * *ID*：設為*空值*。
+    * `ID`：設為*空值*。
 
-    * *版本*：設為*空值*。
+    * `版本`：設為*空值*。
 
-    * 使用者名稱：設為與您的 IBM ID 相關聯的電子郵件。
+    * `username`：設定為與 IBM ID 關聯的電子郵件。
 
-    * *isShared*：設為 true 以與其他團隊成員共用儀表板。
+    * `isShared`：設為 true 以與其他團隊成員共用儀表板。
 
-    * *isPublic*：如果您要讓儀表板變成公用，請設為 true。
+    * `isPublic`：如果您要讓儀表板變成公用，請設為 true。
 
     * 配置過濾器以定義儀表板範圍。
     
@@ -69,7 +69,7 @@ subcollection: Sysdig
 
     * *SYSDIG_API_TOKEN* 是您在前一個步驟中取得的 API 記號。
 
-    * *dashboard.json* 是說明新儀表板的檔案，其中包括畫面及度量。
+    * *dashboard.json* 是說明新儀表板的檔案，其中包括畫面及度量值。
 
 例如，若要建立儀表板，範例 JSON 檔案如下所示：
 ```
@@ -188,7 +188,7 @@ subcollection: Sysdig
 
     * *SYSDIG_API_TOKEN* 是您在前一個步驟中取得的 API 記號。
 
-例如，若要下載在美國南部地區工作之團隊的儀表板，您可以執行下列指令：
+例如，要為在美國南部地區工作的團隊下載儀表板，可以執行下列指令：
 
 ```
 curl -X GET https://us-south.monitoring.cloud.ibm.com/ui/dashboards -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json'

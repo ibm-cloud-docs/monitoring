@@ -31,7 +31,7 @@ O agente Sysdig usa dois arquivos de configuração que especificam quais dados 
 
 | Arquivo                   | Descrição                                                     | Localização                                |
 |------------------------|-----------------------------------------------------------------|-----------------------------------------|
-| `dragent.default.yaml` | Arquivo de configuração principal </br>**Nota:** **Não edite esse arquivo.  | `/opt/draios/etc/dragent.default.yaml`  |
+| `dragent.default.yaml` | Arquivo de configuração principal </br>**Nota:****não edite esse arquivo.  | `/opt/draios/etc/dragent.default.yaml`  |
 | `dragent.yaml`         | Arquivo de configuração que você edita para customizar o agente Sysdig. | `/opt/draios/etc/dragent.yaml`          |
 {: caption="Tabela 1. Arquivos de configuração do agente Sysdig" caption-side="top"} 
 

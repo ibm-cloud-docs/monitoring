@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -21,10 +21,10 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# 액세스 키 관련 작업
+# 액세스 키 관리
 {: #access_key}
 
-**액세스 키**는 {{site.data.keyword.Bluemix}}의 {{site.data.keyword.mon_full_notm}} 인스턴스에 데이터를 성공적으로 전달하기 위해 Sysdig 에이전트의 구성에 사용해야 하는 토큰입니다.   
+**액세스 키**는 {{site.data.keyword.cloud_notm}}의 {{site.data.keyword.mon_full_notm}} 인스턴스에 데이터를 성공적으로 전달하도록 Sysdig 에이전트를 구성하는 데 사용해야 하는 토큰입니다.   
 {:shortdesc}
 
 
@@ -137,4 +137,4 @@ Parameters:
 
 2. *비밀번호 관리* 섹션에서 **비밀번호 재설정**을 클릭하십시오.
 
-**참고:** Sysdig 액세스 키가 재설정되면, 메트릭을 이 {{site.data.keyword.mon_full_notm}} 인스턴스에 전달하기 위해 구성된 로그 소스에 대한 액세스 키를 업데이트해야 합니다.
+**참고:** Sysdig 액세스 키를 재설정한 후 메트릭을 이 {{site.data.keyword.mon_full_notm}} 인스턴스에 전달하는 로그 소스에 대한 액세스 키를 업데이트해야 합니다.

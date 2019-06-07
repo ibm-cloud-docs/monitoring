@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -21,10 +21,10 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Utilisation des clés d'accès
+# Gestion des clés d'accès
 {: #access_key}
 
-La **clé d'accès** est un jeton que vous devez utiliser pour configurer des agents Sysdig afin qu'ils acheminent correctement les données vers votre instance {{site.data.keyword.mon_full_notm}} dans {{site.data.keyword.Bluemix}}.   
+La **clé d'accès** est un jeton que vous devez utiliser pour configurer des agents Sysdig afin qu'ils acheminent correctement les données vers votre instance {{site.data.keyword.mon_full_notm}} dans {{site.data.keyword.cloud_notm}}.   
 {:shortdesc}
 
 
@@ -138,4 +138,4 @@ voir [Accès à l'interface utilisateur Web](/docs/services/Monitoring-with-Sysd
 
 2. Dans la section relative à la *gestion des mots de passe*, cliquez sur **Réinitialiser votre mot de passe**.
 
-**Remarque :** Une fois que vous avez réinitialisé la clé d'accès Sysdig, vous devez la mettre à jour afin qu'elle indique les sources de journal que vous avez configurées pour transmettre des métriques à cette instance {{site.data.keyword.mon_full_notm}}.
+**Remarque :** Une fois que vous avez réinitialisé la clé d'accès Sysdig, vous devez la mettre à jour afin qu'elle indique les sources de journal qui transmettent des métriques à cette instance {{site.data.keyword.mon_full_notm}}.

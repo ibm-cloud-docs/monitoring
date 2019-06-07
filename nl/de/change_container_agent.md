@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2018-12-06"
 
 ---
 
@@ -16,14 +16,16 @@ lastupdated: "2019-02-18"
 {:download: .download}
 
 # Container-Sysdig-Agenten anpassen
-{: #change_container_agent}
+{: #change_agent}
 
 In {{site.data.keyword.mon_full_notm}} können Sie die Konfiguration des Sysdig-Agenten anpassen, um eine Protokollebene festzulegen, Ports zu blockieren, Metrikdaten ein- und auszuschließen, Ereignisse hinzuzufügen oder zu entfernen und Container zu filtern. 
 {:shortdesc}
 
 
+
+
 ## Die Dragent-YAML-Datei bearbeiten
-{: #change_container_agent_edit_config}
+{: #edit_agent}
 
 Die yaml-Datei befindet sich im Verzeichnis */opt/draios/etc/*.
 
@@ -41,7 +43,7 @@ Führen Sie die folgenden Schritte aus, um die Datei zu bearbeiten und die Ände
 
 
 ## Ports blockieren
-{: #change_container_agent_block_ports}
+{: #ports}
 
 Um den Netzverkehr und die Metriken von Netzports zu blockieren, müssen Sie den Abschnitt **blacklisted_ports** in der Datei *dragent.yaml* anpassen. Sie müssen die Ports auflisten, aus denen Sie Daten herausfiltern möchten.
 
@@ -59,7 +61,7 @@ blacklisted_ports:
 
 
 ## Eine Gruppe von Docker-Ereignissen erfassen
-{: #change_container_agent_collect_docker_events}
+{: #docker}
 
 {{site.data.keyword.mon_full_notm}} unterstützt die Ereignisintegration mit Docker. Sysdig-Agenten erkennen Docker-Quellen automatisch und erfassen ihre Ereignisdaten. Sie können die Agentenkonfigurationsdatei bearbeiten, um ihr Standardverhalten zu ändern und Ereignisdaten ein- oder auszuschließen. 
 
@@ -95,7 +97,7 @@ Wenn Sie z. B. Docker-Image-Ereignisse herausfiltern und nur Ereignisse für Zuo
 
 
 ## Sammlung von Ereignissen inaktivieren
-{: #change_container_agent_disable_events}
+{: #disable}
 
 Um einen Sysdig-Agenten für die Erfassung von Ereignissen zu inaktivieren, müssen Sie die Datei *dragent.default.yaml* ändern. Legen Sie den Abschnitt **events** auf *none* in der Datei *dragent.yaml* fest.
 
@@ -110,7 +112,7 @@ events:
 
 
 ## Ereignisse nach Priorität filtern
-{: #change_container_agent_filterby_severity}
+{: #severity}
 
 Wenn Sie Ereignisse nach Priorität filtern möchten, können Sie auch den Protokolleintragstyp für Ereignisse in der Datei *dragent.yaml* ändern. 
 
@@ -139,7 +141,7 @@ log:
 
 
 ## Metriken einschließen und ausschließen
-{: #change_container_agent_inc_exc_metrics}
+{: #params}
 
 Zum Filtern angepasster Metriken müssen Sie den Abschnitt **metrics_filter** in der Datei *dragent.yaml* anpassen. Sie können angeben, welche Metriken eingeschlossen und welche herausgefiltert werden sollen, indem Sie die Filterparameter **include** und **exclude** konfigurieren.
 
@@ -164,7 +166,7 @@ metrics_filter:
 
 
 ## Die Protokollebene ändern
-{: #change_container_agent_log_level}
+{: #log_level}
 
 Um die Protokollebene zu konfigurieren, müssen Sie den Abschnitt **log** in der Datei *dragent.yaml* anpassen. 
 

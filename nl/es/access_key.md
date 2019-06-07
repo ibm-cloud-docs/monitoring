@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -21,10 +21,10 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Cómo trabajar con claves de acceso
+# Gestión de claves de acceso
 {: #access_key}
 
-La **clave de acceso** es una señal que debe utilizar para configurar los agentes de Sysdig para que puedan enviar correctamente datos a la instancia de {{site.data.keyword.mon_full_notm}} en {{site.data.keyword.Bluemix}}.   
+La **clave de acceso** es una señal que debe utilizar para configurar los agentes de Sysdig para que puedan enviar correctamente datos a la instancia de {{site.data.keyword.mon_full_notm}} en {{site.data.keyword.cloud_notm}}.   
 {:shortdesc}
 
 
@@ -137,4 +137,4 @@ Para renovar la clave de acceso para una instancia de {{site.data.keyword.mon_fu
 
 2. En la sección *Gestión de contraseñas*, pulse **Restablecer la contraseña**.
 
-**Nota:** después de restablecer la clave de acceso de Sysdig, debe actualizar la clave de acceso para cualquier origen de registro que haya configurado de modo que reenvíe métricas a esta instancia de {{site.data.keyword.mon_full_notm}}.
+**Nota:** después de restablecer la clave de acceso de Sysdig, debe actualizar la clave de acceso para cualquier origen de registro que reenvíe métricas a esta instancia de {{site.data.keyword.mon_full_notm}}.

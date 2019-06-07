@@ -51,7 +51,7 @@ Você ativa a IU da web dentro do contexto de uma instância do {{site.data.keyw
 
 Conclua as etapas a seguir para ativar a IU da web:
 
-1. Efetue login em sua conta do  {{site.data.keyword.cloud_notm}} .
+1. Efetue login em sua conta do {{site.data.keyword.cloud_notm}}.
 
     Clique em [Painel do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/login){:new_window} para ativar o painel do {{site.data.keyword.cloud_notm}}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete agent
 
@@ -46,8 +46,6 @@ subcollection: Sysdig
 
     然后，复制并粘贴终端中显示的命令，以设置 KUBECONFIG 环境变量。
 
-    **注：**每次登录到 {{site.data.keyword.containerlong}} CLI 来使用集群时，都必须运行这些命令，以将集群的配置文件的路径设置为会话变量。Kubernetes CLI 使用此变量来查找与 {{site.data.keyword.cloud_notm}} 中的集群连接所必需的本地配置文件和证书。
-
 2. 除去集群角色绑定。运行以下命令：
 
     ```
@@ -62,7 +60,7 @@ subcollection: Sysdig
     ```
     {: codeblock}
 
-4. 除去守护程序集。运行以下命令：
+4. 除去`守护程序集`。运行以下命令：
 
     ```
     kubectl delete daemonset sysdig-agent -n ibm-observe

@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Mit der Sysdig-REST-API arbeiten
+# Die Sysdig-REST-API verwalten
 {: #api}
 
 Verwenden Sie die Sysdig-REST-API, um Routineaufgaben zu automatisieren und Benachrichtigungen zu überwachen.
@@ -42,17 +42,17 @@ Führen Sie die folgenden Schritte aus, um ein Dashboard zu erstellen:
 
 2. Erstellen Sie die JSON-Datei, die das Dashboard beschreibt. Die folgenden Felder müssen wie angegeben festgelegt werden:
 
-    * *name*: Geben Sie den Namen des Dashboards ein.
+    * `name`: Geben Sie den Namen des Dashboards ein.
 
-    * *id*: Legen Sie *null* fest.
+    * `id`: Legen Sie *null* fest.
 
-    * *version*: Legen Sie *null* fest.
+    * `version`: Legen Sie *null* fest.
 
-    * username: Legen Sie die E-Mail auf die E-Mail fest, die Ihrer IBMid zugeordnet ist.
+    * `username`: Legen Sie die E-Mail auf die E-Mail fest, die Ihrer IBMid zugeordnet ist.
 
-    * *isShared*: Legen Sie diese Option auf "true" fest, um das Dashboard mit anderen Teammitgliedern gemeinsam zu nutzen.
+    * `isShared`: Legen Sie diese Option auf "true" fest, um das Dashboard mit anderen Teammitgliedern gemeinsam zu nutzen.
 
-    * *isPublic*: Legen Sie diese Option auf "true" fest, wenn das Dashboard öffentlich verfügbar sein soll.
+    * `isPublic`: Legen Sie diese Option auf "true" fest, wenn das Dashboard öffentlich verfügbar sein soll.
 
     * Konfigurieren Sie Filter, um den Geltungsbereich des Dashboards zu definieren.
     

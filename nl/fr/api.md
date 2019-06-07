@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Utilisation de l'API REST Sysdig
+# Gestion de l'API REST Sysdig
 {: #api}
 
 Utilisez l'API REST Sysdig pour automatiser des tâches de routine et surveiller des notifications.
@@ -42,17 +42,17 @@ Pour créer un tableau de bord, procédez comme suit :
 
 2. Créez le fichier JSON qui décrit le tableau de bord. Les zones suivantes doivent être définies comme indiqué :
 
-    * *name* : saisissez le nom du tableau de bord.
+    * `name` : saisissez le nom du tableau de bord.
 
-    * *id* : définissez ce paramètre sur *null*.
+    * `id` : définissez ce paramètre sur *null*.
 
-    * *version* : définissez ce paramètre sur *null*.
+    * `version` : définissez ce paramètre sur *null*.
 
-    * username : affectez à ce paramètre l'adresse électronique associée à votre IBMid.
+    * `username` : affectez à ce paramètre l'adresse électronique associée à votre IBMid.
 
-    * *isShared* : définissez ce paramètre sur true pour partager le tableau de bord avec d'autres membres de l'équipe.
+    * `isShared` : définissez ce paramètre sur true pour partager le tableau de bord avec d'autres membres de l'équipe.
 
-    * *isPublic* : définissez ce paramètre sur true si vous voulez que le tableau de bord soit public.
+    * `isPublic` : définissez ce paramètre sur true si vous voulez que le tableau de bord soit public.
 
     * Configurez des filtres pour définir la portée du tableau de bord.
     
@@ -188,7 +188,7 @@ Procédez comme suit pour télécharger les tableaux de bord à la disposition d
 
     * *SYSDIG_API_TOKEN* est le jeton d'API que vous avez obtenu à l'étape précédente.
 
-Par exemple, pour télécharger les tableaux de bord d'une équipe travaillant dans la région Sud des Etats-Unis, vous pouvez exécuter la commande suivante :
+Par exemple, pour télécharger les tableaux de bord d'une équipe qui travaille dans la région Sud des Etats-Unis, vous pouvez exécuter la commande suivante :
 
 ```
 curl -X GET https://us-south.monitoring.cloud.ibm.com/ui/dashboards -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json'
@@ -224,7 +224,7 @@ Procédez comme suit pour supprimer un tableau de bord de la liste des tableaux 
 
     * *SYSDIG_API_TOKEN* est le jeton d'API que vous avez obtenu à l'étape précédente.
 
-Par exemple, pour supprimer le tableau portant l'ID *391* de la liste des tableaux de bord d'une équipe travaillant dans la région Sud des Etats-Unis, vous pouvez exécuter la commande suivante :
+Par exemple, pour supprimer le tableau portant l'ID *391* de la liste des tableaux de bord d'une équipe qui travaille dans la région Sud des Etats-Unis, vous pouvez exécuter la commande suivante :
 
 ```
 curl -X DELETE https://us-south.monitoring.cloud.ibm.com/ui/dashboards/391 -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json' 

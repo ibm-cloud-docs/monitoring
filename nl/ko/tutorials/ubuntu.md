@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -49,21 +49,19 @@ subcollection: Sysdig
 
 | 리소스                             | 액세스 정책의 범위 | 역할    | 지역    | 정보                  |
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
-| 리소스 그룹 **기본**           | 리소스 그룹            | 뷰어  | us-south  | 이 정책은 사용자가 기본 리소스 그룹의 서비스 인스턴스를 볼 수 있도록 허용하기 위해 필요합니다.    |
-| {{site.data.keyword.mon_full_notm}} 서비스 | 리소스 그룹            | 편집자  | us-south  | 이 정책은 사용자가 기본 리소스 그룹의 {{site.data.keyword.mon_full_notm}} 서비스를 프로비저닝하고 관리할 수 있도록 허용하기 위해 필요합니다.   |
+| 리소스 그룹 **기본**           | 리소스 그룹            | 뷰어  | `Us-south`  | 이 정책은 사용자가 기본 리소스 그룹의 서비스 인스턴스를 볼 수 있도록 허용하기 위해 필요합니다.    |
+| {{site.data.keyword.mon_full_notm}} 서비스 | 리소스 그룹            | 편집자  | `Us-south`  | 이 정책은 사용자가 기본 리소스 그룹의 {{site.data.keyword.mon_full_notm}} 서비스를 프로비저닝하고 관리할 수 있도록 허용하기 위해 필요합니다.   |
 {: caption="표 1. 튜토리얼 완료에 필요한 IAM 정책의 목록" caption-side="top"} 
 
 {{site.data.keyword.cloud_notm}} CLI를 설치하십시오. 자세한 정보는 [{{site.data.keyword.cloud_notm}} CLI 설치](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)를 참조하십시오.
 
 
-## 1단계: {{site.data.keyword.mon_full_notm}} 인스턴스 프로비저닝
+## 1단계. {{site.data.keyword.mon_full_notm}} 인스턴스 프로비저닝
 {: #ubuntu_step1}
 
 {{site.data.keyword.cloud_notm}} UI를 통해 {{site.data.keyword.mon_full_notm}}의 인스턴스를 프로비저닝하려면 다음 단계를 완료하십시오.
 
-1. {{site.data.keyword.cloud_notm}} 계정에 로그인하십시오.
-
-    [{{site.data.keyword.cloud_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/login){:new_window}를 클릭하여 {{site.data.keyword.cloud_notm}} 대시보드를 실행하십시오.
+1. [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")에 로그인하십시오](https://cloud.ibm.com/login){:new_window}.
 
 	사용자 ID 및 비밀번호를 사용하여 로그인하면 {{site.data.keyword.cloud_notm}} UI가 열립니다.
 
@@ -95,7 +93,7 @@ subcollection: Sysdig
 **참고:** CLI를 통해 인스턴스를 프로비저닝하려면 [{{site.data.keyword.cloud_notm}} CLI를 통해 인스턴스 프로비저닝](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli)을 참조하십시오.
 
 
-## 2단계: 인스턴스에 메트릭을 전송하도록 Ubuntu 서버 구성
+## 2단계. 인스턴스에 메트릭을 전송하도록 Ubuntu 서버 구성
 {: #ubuntu_step2}
 
 {{site.data.keyword.mon_full_notm}} 인스턴스에 메트릭을 전송하도록 Ubuntu 서버를 구성하려면 Sysdig 에이전트를 설치해야 합니다. 
@@ -105,11 +103,11 @@ subcollection: Sysdig
 1. 터미널을 여십시오. 그리고 {{site.data.keyword.cloud_notm}}에 로그인하십시오. 다음 명령을 실행하고 프롬프트의 지시를 따르십시오.
 
     ```
-    ibmcloud login -a api.ng.bluemix.net
+    ibmcloud login -a cloud.ibm.com
     ```
     {: codeblock}
 
-    {{site.data.keyword.mon_full_notm}} 인스턴스가 프로비저닝된 계정을 선택하십시오.
+    {{site.data.keyword.mon_full_notm}} 인스턴스가 사용 가능한 계정을 선택하십시오.
 
 2. Sysdig 액세스 키를 가져오십시오. 자세한 정보는 [{{site.data.keyword.cloud_notm}} UI를 통해 액세스 키 가져오기](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui)를 참조하십시오.
 
@@ -128,7 +126,7 @@ subcollection: Sysdig
 
     * COLLECTOR_ENDPOINT는 모니터링 인스턴스가 사용 가능한 지역에 대한 수집 URL입니다.
 
-    * TAG_DATA는 *TAG_NAME:TAG_VALUE* 형식의 쉼표로 구분된 태그입니다. 사용자는 하나 이상의 태그를 자신의 Sysdig 에이전트에 연관시킬 수 있습니다. 예: *role:serviceX,location:us-south*. 나중에 이러한 태그를 사용하여 에이전트가 실행 중인 환경에서 메트릭을 식별할 수 있습니다.
+    * TAG_DATA는 *TAG_NAME:TAG_VALUE* 형식의 쉼표로 구분된 태그입니다. 사용자는 하나 이상의 태그를 자신의 Sysdig 에이전트에 연관시킬 수 있습니다. 예를 들어, *role:serviceX,location:us-south*입니다. 나중에 이러한 태그를 사용하여 에이전트가 실행 중인 환경에서 메트릭을 식별할 수 있습니다.
 
     * Sysdig 캡처 기능을 사용 안함으로 설정하려면 **sysdig_capture_enabled**를 *false*로 설정하십시오. 기본적으로는 *true*로 설정됩니다. 자세한 정보는 [캡처 관련 작업](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)을 참조하십시오.
 
@@ -150,14 +148,12 @@ Sysdig 에이전트가 올바른 설치에 실패하는 경우에는 커널 헤�
 
 
 
-## 3단계: Sysdig 웹 UI 실행
+## 3단계. Sysdig 웹 UI 실행
 {: #ubuntu_step3}
 
 웹 UI를 실행하려면 다음 단계를 완료하십시오.
 
-1. {{site.data.keyword.cloud_notm}} 계정에 로그인하십시오.
-
-    [{{site.data.keyword.cloud_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/login){:new_window}를 클릭하여 {{site.data.keyword.cloud_notm}} 대시보드를 실행하십시오.
+1. [{{site.data.keyword.cloud_notm}} 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")에 로그인하십시오](https://cloud.ibm.com/login){:new_window}.
 
 	사용자 ID 및 비밀번호를 사용하여 로그인하면 {{site.data.keyword.cloud_notm}} 대시보드가 열립니다.
 
@@ -177,7 +173,7 @@ Sysdig 에이전트의 구성이 완료되면 *탐색* 보기가 열립니다.
 {: tip}
 
 
-## 4단계: Ubuntu 서버 모니터링
+## 4단계. Ubuntu 서버 모니터링
 {: #ubuntu_step4}
 
 웹 UI를 통해 사용 가능한 **탐색** 보기에서 Ubuntu 서버를 모니터할 수 있습니다. 이 보기는 인프라를 모니터하고 해당 문제점을 해결하기 위한 시작점입니다. 이는 사용자에 대한 웹 UI의 기본 홈 페이지입니다.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -21,10 +21,10 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Utilizzo delle chiavi di accesso
+# Gestione delle chiavi di accesso 
 {: #access_key}
 
-La **Chiave di accesso** è un token che devi utilizzare per configurare gli agent Sysdig per inoltrare correttamente i dati alla tua istanza {{site.data.keyword.mon_full_notm}} in {{site.data.keyword.Bluemix}}.   
+La **Chiave di accesso** è un token che devi utilizzare per configurare gli agent Sysdig per inoltrare correttamente i dati alla tua istanza {{site.data.keyword.mon_full_notm}} in {{site.data.keyword.cloud_notm}}.   
 {:shortdesc}
 
 
@@ -137,4 +137,4 @@ Per rinnovare la chiave di accesso per un'istanza {{site.data.keyword.mon_full_n
 
 2. Nella sezione *Password management*, fai clic su **Reset your password**.
 
-**Nota:** dopo aver reimpostato la chiave di accesso Sysdig, devi aggiornare la chiave di accesso di tutte le origini log che hai configurato per inoltrare le metriche a questa istanza {{site.data.keyword.mon_full_notm}}.
+**Nota:** dopo aver reimpostato la chiave di accesso Sysdig, devi aggiornare la chiave di accesso di tutte le origini log che inoltrano le metriche a questa istanza {{site.data.keyword.mon_full_notm}}.

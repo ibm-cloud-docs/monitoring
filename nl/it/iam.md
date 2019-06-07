@@ -82,8 +82,8 @@ Utilizza la seguente tabella per identificare il ruolo della piattaforma che puo
 | `Provision a service instance`                                          | Amministratore </br>Editor                            | 
 | `Delete a service instance`                                             | Amministratore </br>Editor                            | 
 | `Create a service ID`                                                   | Amministratore </br>Editor                            |
-| `View details of a service instance`                                    | Amministratore </br>Editor </br>Operatore </br>Visualizzatore  | 
-| `View service instances in the Observability Monitoring dashboard`      | Amministratore </br>Editor </br>Operatore </br>Visualizzatore  | 
+| `View details of a service instance`                                    |Amministratore </br>Editor </br>Operatore </br>Visualizzatore | 
+| `View service instances in the Observability Monitoring dashboard`      |Amministratore </br>Editor </br>Operatore </br>Visualizzatore | 
 {: caption="Tabella 1. Azioni e ruoli utente IAM" caption-side="top"}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2018-12-06"
 
 ---
 
@@ -16,14 +16,16 @@ lastupdated: "2019-02-18"
 {:download: .download}
 
 # 컨테이너 Sysdig 에이전트의 사용자 정의
-{: #change_container_agent}
+{: #change_agent}
 
 {{site.data.keyword.mon_full_notm}}에서 사용자는 로그 레벨 설정, 포트 차단, 메트릭 데이터 포함/제외, 이벤트 추가/제거 및 필터링으로 컨테이너 걸러내기를 수행하도록 Sysdig 에이전트 구성을 사용자 정의할 수 있습니다. 
 {:shortdesc}
 
 
+
+
 ## dragent yaml 파일 편집
-{: #change_container_agent_edit_config}
+{: #edit_agent}
 
 yaml 파일은 */opt/draios/etc/*에 있습니다.
 
@@ -41,7 +43,7 @@ yaml 파일은 */opt/draios/etc/*에 있습니다.
 
 
 ## 포트 차단
-{: #change_container_agent_block_ports}
+{: #ports}
 
 네트워크 포트에서 네트워크 트래픽 및 메트릭을 차단하려면 *dragent.yaml* 파일의 **blacklisted_ports** 섹션을 사용자 정의해야 합니다. 사용자는 해당 데이터를 필터링하여 걸러내고자 하는 포트를 나열해야 합니다.
 
@@ -59,7 +61,7 @@ blacklisted_ports:
 
 
 ## Docker 이벤트 세트 수집
-{: #change_container_agent_collect_docker_events}
+{: #docker}
 
 {{site.data.keyword.mon_full_notm}}에서는 Docker와의 이벤트 통합을 지원합니다. Sysdig 에이전트는 Docker 소스를 자동 검색하고 이로부터 이벤트 데이터를 수집합니다. 사용자는 에이전트 구성 파일을 편집하여 기본 작동을 변경하고 이벤트 데이터를 포함 또는 제외할 수 있습니다. 
 
@@ -95,7 +97,7 @@ blacklisted_ports:
 
 
 ## 이벤트 수집 사용 안함
-{: #change_container_agent_disable_events}
+{: #disable}
 
 Sysdig 에이전트가 이벤트를 수집하지 못하도록 하려면 *dragent.default.yaml* 파일을 수정하십시오. *dragent.yaml* 파일에서 **events** 섹션을 *none*으로 설정하십시오.
 
@@ -110,7 +112,7 @@ events:
 
 
 ## 심각도별 이벤트 필터링
-{: #change_container_agent_filterby_severity}
+{: #severity}
 
 심각도별로 이벤트를 필터링하려면 *dragent.yaml* 파일에서 이벤트에 대한 로그 항목 유형 변경도 필요합니다. 
 
@@ -139,7 +141,7 @@ log:
 
 
 ## 메트릭 포함 및 제외
-{: #change_container_agent_inc_exc_metrics}
+{: #params}
 
 사용자 정의 메트릭을 필터링하려면 *dragent.yaml* 파일의 **metrics_filter** 섹션을 사용자 정의해야 합니다. **include** 및 **exclude** 필터링 매개변수를 구성하여 포함할 메트릭과 필터링하여 제외할 메트릭을 지정할 수 있습니다.
 
@@ -164,7 +166,7 @@ metrics_filter:
 
 
 ## 로그 레벨 변경
-{: #change_container_agent_log_level}
+{: #log_level}
 
 로그 레벨을 구성하려면 *dragent.yaml* 파일의 **log** 섹션을 사용자 정의해야 합니다. 
 

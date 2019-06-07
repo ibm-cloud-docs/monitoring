@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, troubleshooting
 
@@ -23,10 +23,10 @@ subcollection: Sysdig
 # {{site.data.keyword.mon_full_notm}}의 문제점 해결
 {: #troubleshoot}
 
-이 주제에서는 {{site.data.keyword.mon_full_notm}} 서비스 사용 시에 발생할 수 있는 일반적인 문제점에 대해 설명합니다. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
+{{site.data.keyword.mon_full_notm}} 서비스를 사용할 때 발생할 수 있는 몇 가지 일반적인 문제점에 대해 알아봅니다. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}
 
-## 캡처 작성 중에 오류가 발생합니까?
+## 캡처를 작성할 때 오류가 발생합니까?
 {: #troubleshoot-entry-1}
 
 인프라의 호스트에 대한 [캡처 파일](/docs/services/Monitoring-with-Sysdig/captures.html#captures) 작성에 실패합니다. 

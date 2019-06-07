@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Cómo trabajar con la API REST de Sysdig
+# Gestión de la API REST de Sysdig
 {: #api}
 
 Utilice la API REST de Sysdig para automatizar las tareas rutinarias y supervisar las notificaciones.
@@ -42,17 +42,17 @@ Siga los pasos siguientes para crear un panel de control:
 
 2. Cree el archivo json que describe el panel de control. Los campos siguientes se deben establecer tal como se indica:
 
-    * *name*: escriba el nombre del panel de control.
+    * `name`: escriba el nombre del panel de control.
 
-    * *id*: establézcalo en *null*.
+    * `id`: establézcalo en *null*.
 
-    * *version*: establézcalo en *null*.
+    * `version`: establézcalo en *null*.
 
-    * username: establézcalo en el correo electrónico asociado a su IBMid.
+    * `username`: establézcalo en el correo electrónico asociado a su IBMid.
 
-    * *isShared*: establézcalo en true para compartir el panel de control con otros miembros del equipo.
+    * `isShared`: establézcalo en true para compartir el panel de control con otros miembros del equipo.
 
-    * *isPublic*: establézcalo en true si desea que el panel de control esté disponible a nivel público.
+    * `isPublic`: establézcalo en true si desea que el panel de control esté disponible a nivel público.
 
     * Configure filtros para definir el ámbito del panel de control.
     
@@ -63,11 +63,11 @@ Siga los pasos siguientes para crear un panel de control:
     ```
     {: codeblock}
 
-    donde
+    Donde
 
     * *ENDPOINT* es el URL de la región en la que está disponible la instancia de supervisión. Para obtener más información, consulte [Puntos finales de Sysdig](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* es la señal de API que se ha obtenido en el paso anterior.
+    * *SYSDIG_API_TOKEN* es la señal de API que ha obtenido en el paso anterior.
 
     * *dashboard.json* es el archivo que describe el nuevo panel de control, incluidos los paneles y las métricas.
 
@@ -182,11 +182,11 @@ Siga los pasos siguientes para descargar los paneles de control que están dispo
     ```
     {: codeblock}
 
-    donde
+    Donde
 
     * *ENDPOINT* es el URL de la región en la que está disponible la instancia de supervisión. Para obtener más información, consulte [Puntos finales de Sysdig](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* es la señal de API que se ha obtenido en el paso anterior.
+    * *SYSDIG_API_TOKEN* es la señal de API que ha obtenido en el paso anterior.
 
 Por ejemplo, para descargar los paneles de control correspondientes a un equipo que trabaja en la región EE. UU. sur, ejecute el siguiente mandato:
 
@@ -216,13 +216,13 @@ Siga los pasos siguientes para suprimir un panel de control de la lista de panel
     ```
     {: codeblock}
 
-    donde
+    Donde
 
     * *ID* es el ID del panel de control que desea suprimir.
 
     * *ENDPOINT* es el URL de la región en la que está disponible la instancia de supervisión. Para obtener más información, consulte [Puntos finales de Sysdig](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* es la señal de API que se ha obtenido en el paso anterior.
+    * *SYSDIG_API_TOKEN* es la señal de API que ha obtenido en el paso anterior.
 
 Por ejemplo, para suprimir el panel de control con el ID *391* de la lista de paneles de control de un equipo que trabaja en la región EE. UU. sur, ejecute el mandato siguiente:
 

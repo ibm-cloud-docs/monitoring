@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -21,10 +21,10 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# アクセス・キーの処理
+# アクセス・キーの管理
 {: #access_key}
 
-**アクセス・キー**は、{{site.data.keyword.Bluemix}} で {{site.data.keyword.mon_full_notm}} インスタンスにデータが正常に転送されるように Sysdig エージェントを構成するために使用する必要があるトークンです。   
+**アクセス・キー** は、{{site.data.keyword.cloud_notm}} で {{site.data.keyword.mon_full_notm}} インスタンスにデータが正常に転送されるように Sysdig エージェントを構成するために使用する必要があるトークンです。   
 {:shortdesc}
 
 
@@ -60,7 +60,7 @@ subcollection: Sysdig
 
    CLI がインストールされている場合は、次のステップに進みます。
 
-2. Sysdig インスタンスが実行されている {{site.data.keyword.cloud_notm}} のリージョンにログインします。 次のコマンドを実行します。 [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
+2. Sysdig インスタンスが実行されている {{site.data.keyword.cloud_notm}} の地域にログインします。 次のコマンドを実行します。 [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
 3. Sysdig インスタンスが実行されているリソース・グループを設定します。 次のコマンドを実行します。 [`ibmcloud target`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_target)
 
@@ -137,4 +137,4 @@ Parameters:
 
 2. *「パスワード管理 (Password management)」*セクションで**「パスワードのリセット (Reset your password)」**をクリックします。
 
-**注:** Sysdig アクセス・キーをリセットした後に、この {{site.data.keyword.mon_full_notm}} インスタンスにメトリックを転送するように構成したすべてのログ・ソースのアクセス・キーを更新する必要があります。
+**注:** Sysdig アクセス・キーをリセットした後に、この {{site.data.keyword.mon_full_notm}} インスタンスにメトリックを転送するすべてのログ・ソースのアクセス・キーを更新する必要があります。

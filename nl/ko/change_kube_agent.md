@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, customize, kubernetes agent
 
@@ -32,7 +32,7 @@ Kubernetes Sysdig 에이전트를 사용자 정의하려면 다음 파일의 섹
 | 파일 이름                        | 조치       |
 |----------------------------------|-------------------|
 | `sysdig-agent-daemonset-v2.yaml` |로그 레벨을 수정합니다. |
-| `sysdig-agent-configmap.yaml`    | 포트를 차단합니다. </br>메트릭 데이터를 포함 또는 제외합니다. </br>이벤트를 추가 또는 제거합니다. </br>컨테이너를 필터링하여 걸러냅니다. |
+| `sysdig-agent-configmap.yaml`    | 포트를 차단합니다. </br>메트릭 데이터를 포함 또는 제외합니다. </br>이벤트를 추가하거나 제거합니다. </br>컨테이너를 필터링합니다. |
 {: caption="표 1. Kubernetes Sysdig 에이전트 구성 파일" caption-side="top"} 
 
 Kubernetes Sysdig 에이전트를 편집하려면 *sysdig-agent-configmap.yaml*, *sysdig-agent-daemonset-v2.yaml* 또는 두 파일을 모두 편집해야 합니다.

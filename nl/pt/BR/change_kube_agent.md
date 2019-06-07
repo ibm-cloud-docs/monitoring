@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, customize, kubernetes agent
 
@@ -32,7 +32,7 @@ Para customizar um agente Sysdig do Kubernetes, pode ser necessário configurar 
 | Nome do arquivo                        | Ações       |
 |----------------------------------|-------------------|
 | `sysdig-agent-daemonset-v2.yaml` | Modifique o nível de log. |
-| `sysdig-agent-configmap.yaml`    | Bloquear portas. </br>Inclua ou exclua dados de métrica. </br>Incluir ou remover eventos. </br>Filtrar contêineres. |
+| `sysdig-agent-configmap.yaml`    | Bloquear portas. </br>Incluir ou excluir dados de métrica. </br>Incluir ou remover eventos. </br>Filtrar contêineres. |
 {: caption="Tabela 1. Arquivos de configuração do agente Sysdig do Kubernetes" caption-side="top"} 
 
 Para editar um agente Sysdig do Kubernetes, pode ser necessário editar o *sysdig-agent-configmap.yaml*, o *sysdig-agent-daemonset-v2.yaml* ou ambos.

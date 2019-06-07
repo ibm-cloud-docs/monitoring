@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-22"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, regions, endpoints
 
@@ -38,6 +38,7 @@ El servicio {{site.data.keyword.mon_full_notm}} está disponible en las regiones
 | `EE. UU. sur`            | Dallas    | 
 | `UE-DE`               | Frankfurt | 
 | `EU-GB`               | Londres    | 
+| `JP-TOK`              | Tokio     |
 {: caption="Tabla 1. Lista de regiones en las que está disponible el servicio" caption-side="top"} 
 
 Actualmente, **Frankfurt** y **EU GB** son las ubicaciones que **no** están gestionadas por la UE. Para obtener más información, consulte [Habilitación del valor Soporte en la UE](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported).
@@ -54,8 +55,9 @@ La tabla siguiente contiene la lista de los **puntos finales de Sysdig Collector
 | Región        | Punto final                                                  | Puerto |
 |---------------|-----------------------------------------------------------|------|
 | `EE. UU. sur`    | `ingest.us-south.monitoring.cloud.ibm.com`                | TCP 6443 |
-| `UE-DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`                   | TCP 6443 | 
-| `EU-GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `UE DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`                  | TCP 6443 | 
 {: caption="Tabla 2. Lista de puntos finales de ingestión" caption-side="top"} 
 
 
@@ -65,11 +67,12 @@ La tabla siguiente contiene la lista de los **puntos finales de Sysdig Collector
 
 La tabla siguiente contiene la lista de los **puntos finales de Sysdig** disponibles por región:
 
-| Región       | Punto final                                                  | Puerto |
-|--------------|-----------------------------------------------------------|------|
-| `EE. UU. sur`   | `https://us-south.monitoring.cloud.ibm.com`              | https (TLS) 443 |  
-| `UE-DE`      | `https://eu-de.monitoring.cloud.ibm.com `                 | https (TLS) 443 |
-| `EU-GB`      | `https://eu-gb.monitoring.cloud.ibm.com `                 | https (TLS) 443 |
+| Región       | Punto final                                                  | Puerto            |
+|--------------|-----------------------------------------------------------|-----------------|
+| `EE. UU. sur`   | `https://us-south.monitoring.cloud.ibm.com`               | HTTPS (TLS) 443 |  
+| `UE DE`      | `https://eu-de.monitoring.cloud.ibm.com `                 | HTTPS (TLS) 443 |
+| `EU GB`      | `https://eu-gb.monitoring.cloud.ibm.com `                 | HTTPS (TLS) 443 |
+| `JP TOK`     | `https://jp-tok.monitoring.cloud.ibm.com`                 | HTTPS (TLS) 443 |
 {: caption="Tabla 3. Lista de puntos finales de Sysdig" caption-side="top"} 
 
 

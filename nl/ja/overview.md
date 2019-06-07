@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview
 
@@ -22,10 +22,10 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# {{site.data.keyword.mon_full_notm}} の概要
+# {{site.data.keyword.mon_full_notm}}
 {: #about}
 
-{{site.data.keyword.mon_full}} は、{{site.data.keyword.cloud_notm}} アーキテクチャーの一部として組み込むことができる、サード・パーティーのクラウド・ネイティブなコンテナー・インテリジェント管理システムです。 このシステムを使用して、アプリケーション、サービス、およびプラットフォームのパフォーマンスと正常性を可視化して運用できます。 モニター、トラブルシューティング、アラートの定義、カスタム・ダッシュボードの設計のための拡張機能により、管理者、DevOps チーム、開発者のフルスタック・テレメトリーを提供します。 {{site.data.keyword.mon_full_notm}} は、{{site.data.keyword.IBM_notm}} との協力関係のもと、Sysdig によって運用されます。
+{{site.data.keyword.mon_full}} は、{{site.data.keyword.cloud_notm}} アーキテクチャーの一部として組み込むことができる、サード・パーティーのクラウド・ネイティブかつコンテナー・インテリジェントな管理システムです。 このシステムを使用して、アプリケーション、サービス、およびプラットフォームのパフォーマンスと正常性について、運用の可視化が可能になります。 管理者、DevOps チーム、開発者向けのフルスタックのテレメトリーを備え、モニター、トラブルシューティング、アラートの定義、カスタム・ダッシュボードの設計を行える高度な機能も用意されています。{{site.data.keyword.mon_full_notm}} は、{{site.data.keyword.IBM_notm}} との協力関係のもと、Sysdig によって運用されます。
 {:shortdesc}
 
 
@@ -34,14 +34,14 @@ subcollection: Sysdig
 インスタンスをプロビジョンする前に、以下の情報を考慮してください。
 
 * お客様のデータはサード・パーティーに送信されます。
-* アカウント所有者は、{{site.data.keyword.cloud_notm}} 内のサービスのインスタンスを作成、表示、および削除でき、{{site.data.keyword.mon_full_notm}} サービスを使用する権限を他のユーザーに付与できます。
-* `administrator` 権限または `editor` 権限を持つ他の {{site.data.keyword.cloud_notm}} ユーザーは、{{site.data.keyword.cloud_notm}} の {{site.data.keyword.mon_full_notm}} サービスを管理できます。 また、これらのユーザーには、インスタンスをプロビジョンする予定のリソース・グループのコンテキスト内でリソースを作成するプラットフォーム権限も必要です。
+* アカウント所有者は、{{site.data.keyword.cloud_notm}} でサービスのインスタンスを作成、表示、および削除できます。このユーザーはまた、{{site.data.keyword.mon_full_notm}} サービスを使用するための権限を他のユーザーに付与できます。
+* `administrator` 権限または `editor` 権限を持つ他の {{site.data.keyword.cloud_notm}} ユーザーは、{{site.data.keyword.cloud_notm}} の {{site.data.keyword.mon_full_notm}} サービスを管理できます。 また、これらのユーザーには、インスタンスをプロビジョンする予定のリソース・グループのコンテキスト内でリソースを作成するためのプラットフォーム権限も必要です。
 
-リソース・グループのコンテキスト内でインスタンスをプロビジョンします。 リソース・グループを使用すると、アクセス制御および請求処理の目的でサービスを編成できます。 {{site.data.keyword.mon_full_notm}} インスタンスは、*デフォルト*・リソース・グループまたはカスタム・リソース・グループにプロビジョンできます。
+リソース・グループのコンテキスト内でインスタンスをプロビジョンします。 リソース・グループを使用すると、アクセス制御および請求処理のためにサービスを編成できます。{{site.data.keyword.mon_full_notm}} インスタンスは、*デフォルト*・リソース・グループまたはカスタム・リソース・グループにプロビジョンできます。
 
-[インスタンスをプロビジョンする](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision)場合、取り込みキー ([Sysdig アクセス・キー](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key)と呼ばれる) が自動的に取得されます。
+[インスタンスをプロビジョンする](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision)と、取り込みキー ([Sysdig アクセス・キー](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key)) が自動的に与えられます。
 
-インスタンスをプロビジョンした後、各メトリック・ソースに対して {{site.data.keyword.mon_full_notm}} エージェントを構成する必要があります。 メトリック・ソースとは、そのパフォーマンスと正常性をモニターして制御する必要があるクラウド・リソースです。 モニターする必要のある環境ごとに、{{site.data.keyword.mon_full_notm}} エージェントを構成する必要があります。 例えば、メトリック・ソースは、Kubernetes クラスターにすることができます。 アクセス・キーを使用して、メトリック・データの収集およびインスタンスへのメトリック・データの転送を行う Sysdig エージェントを構成します。
+インスタンスをプロビジョンしたら、各メトリック・ソースに {{site.data.keyword.mon_full_notm}} エージェントを構成する必要があります。メトリック・ソースとは、そのパフォーマンスと正常性をモニターして制御する必要があるクラウド・リソースです。 モニターする環境ごとに、{{site.data.keyword.mon_full_notm}} エージェントを構成する必要があります。例えば、メトリック・ソースは、Kubernetes クラスターにすることができます。 アクセス・キーを使用して、メトリック・データの収集およびインスタンスへのメトリック・データの転送を行う Sysdig エージェントを構成します。
 
 {{site.data.keyword.mon_full_notm}} エージェントがメトリック・ソースにデプロイされると、メトリックの収集およびインスタンスへのメトリックの転送は自動化されます。 {{site.data.keyword.mon_full_notm}} エージェントは、事前定義されたメトリックについて収集およびレポートを自動的に行います。 環境内でモニターするメトリックを構成できます。
 
@@ -56,9 +56,9 @@ subcollection: Sysdig
 ## データ収集
 {: #overview_collection}
 
-データを収集して {{site.data.keyword.mon_full_notm}} インスタンスに転送するために Sysdig エージェントを構成すると、データは自動的に収集され、Web UI による分析に使用できるようになります。
+データを収集して {{site.data.keyword.mon_full_notm}} インスタンスに転送するように Sysdig エージェントを構成すると、データは自動的に収集され、Web UI による分析に使用できるようになります。
 
-データは、10 秒の頻度で収集されます。 
+データは 10 秒間隔で収集されます。 
 
 ## データ可用性
 {: #overview_availability}
@@ -80,20 +80,21 @@ Sysdig エージェントをホストまたはコンテナーから削除して�
 
 ロールアップ・ポリシーは、経時的なデータの細分度を記述します。
 
-* データは、最初の 6 時間について、10 秒単位の解決で保存されます。
-* データは、2 日間について、1 分単位の解決で保存されます。
-* データは、2 週間について、10 分単位の解決で保存されます。
-* データは、3 カ月間について、1 時間単位の解決で保存されます。
-* データは、1 年間について、1 日単位の解決で保存されます。
+* 最初の 6 時間は、10 秒単位のデータが保持されます。
+* 2 日間は、1 分単位のデータが保持されます。
+* 2 週間は、10 分単位のデータが保持されます。
+* 3 カ月間は、1 時間単位のデータが保持されます。
+* 1 年間は、1 日単位のデータが保持されます。
 
 ## データ削除
 {: #overview_data_deletion}
 
-{{site.data.keyword.mon_full_notm}} のインスタンスを {{site.data.keyword.cloud_notm}} から削除する場合、サポートを介して Case をオープンし、データの削除を要求する必要があります。 詳しくは、[サポートへの問い合わせ](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp)を参照してください。
+{{site.data.keyword.mon_full_notm}} のインスタンスを {{site.data.keyword.cloud_notm}} から削除する場合、サポートを介して Case をオープンし、データの削除を要求する必要があります。 詳しくは、[サポートへの連絡方法](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp)を参照してください。
 
 キャプチャーを削除すると、そのキャプチャーのデータ・ファイルは自動的に削除されます。
 
-**注: {{site.data.keyword.mon_short}} インスタンスで単一の Sysdig エージェントから収集されたデータの削除は、サポートされていません。**
+{{site.data.keyword.mon_short}} インスタンスで単一の Sysdig エージェントから収集されたデータを削除する操作は、サポートされていません。
+{: note}
 
 
 
@@ -104,7 +105,7 @@ Sysdig エージェントをホストまたはコンテナーから削除して�
 
 * メトリック・データは、{{site.data.keyword.cloud_notm}} 上でホストされます。
 * 複数ゾーン地域 (MZR) の場所ごとに、その場所で実行される {{site.data.keyword.mon_full_notm}} の各インスタンスのメトリックが収集および集約されます。
-* データは、{{site.data.keyword.mon_full_notm}} インスタンスがプロビジョンされている同じ地域に配置されます。 例えば、米国南部でプロビジョンされたインスタンスのメトリック・データは、米国南部地域でホストされます。
+* データは、{{site.data.keyword.mon_full_notm}} インスタンスがプロビジョンされている同じ地域に配置されます。 例えば、米国南部にプロビジョンされたインスタンスのメトリック・データは、米国南部地域でホストされます。
 
 
 
@@ -132,7 +133,7 @@ Sysdig エージェントをホストまたはコンテナーから削除して�
 ## サービス・プラン
 {: #overview_plans}
 
-{{site.data.keyword.mon_full_notm}} インスタンスには、さまざまな価格プランを使用できます。 詳しくは、[料金](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans)を参照してください。
+{{site.data.keyword.mon_full_notm}} インスタンスには、さまざまな価格プランを使用できます。 [詳細はこちら](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans)。
 
 
 ## セキュリティーに関する考慮事項
@@ -142,6 +143,6 @@ Sysdig エージェントをホストまたはコンテナーから削除して�
 
 キャプチャーとは、時間フレーム中のホスト内での状況を分析するために生成可能なトレース・ファイルです。 キャプチャーには、システム呼び出しおよびその他の OS イベントが含まれます。 この機能は、該当するノードからメトリックを収集する Sysdig エージェントを構成する際に、ノードごとに有効または無効にできます。 デフォルトでは、Sysdig エージェントの構成時、*キャプチャー* は有効になっています。 ノードは、Sysdig エージェントをインストールしたホスト、コンテナー、仮想マシン、ベアメタル、または任意のメトリック・ソースにすることができます。
 
-**重要** キャプチャーが有効になっている場合、Sysdig により、操作を詳細に可視化できることに注意してください。 セキュリティー・インシデントおよび組織外部にデータが公開される可能性を防ぐには、ノードに対してキャプチャーを有効にする前に、組織のセキュリティー・ポリシーを確認してください。 すべての Sysdig エージェントに対して、*キャプチャー* 機能の無効化を検討してください。
-{: tip}
+キャプチャーを有効にすると、操作が Sysdig で詳細に認識されるようになることに注意してください。セキュリティー・インシデントおよび組織外部にデータが公開される可能性を防ぐには、ノードに対してキャプチャーを有効にする前に、組織のセキュリティー・ポリシーを確認してください。 すべての Sysdig エージェントに対して、*キャプチャー* 機能の無効化を検討してください。
+{: important}
 

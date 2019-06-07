@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Trabalhando com a API REST Sysdig
+# Gerenciando a API de REST do Sysdig
 {: #api}
 
 Use a API de REST do Sysdig para automatizar tarefas de rotina e monitorar notificações.
@@ -42,17 +42,17 @@ Conclua as etapas a seguir para criar um painel:
 
 2. Crie o arquivo json que descreve o painel. Os campos a seguir devem ser configurados conforme indicado:
 
-    * *name*: insira o nome do painel.
+    * `name`: insira o nome do painel.
 
-    * * id *: configurado como  * null *.
+    * ` id `: configurado como  * null *.
 
-    * * version *: configure como  * null *.
+    * ` version `: configure como  * null *.
 
-    * username: configure para o e-mail que está associado a seu IBMid.
+    * `username`: configure como o e-mail associado ao seu IBMid.
 
-    * *isShared*: configure como true para compartilhar o painel com outros membros da equipe.
+    * `isShared`: configure como true para compartilhar o painel com outros membros da equipe.
 
-    * *isPublic*: configure como true se você desejar que o painel esteja disponível publicamente.
+    * `isPublic`: configure como true se você desejar que o painel esteja disponível publicamente.
 
     * Configure filtros para definir o escopo do painel.
     
@@ -63,11 +63,11 @@ Conclua as etapas a seguir para criar um painel:
     ```
     {: codeblock}
 
-    sendo
+    Em que
 
     * *ENDPOINT* é a URL da região na qual a instância de monitoramento está disponível. Para obter mais informações, consulte [Terminais Sysdig](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* é o token de API obtido na etapa anterior.
+    * *SYSDIG_API_TOKEN* é o token da API que você recebeu na etapa anterior.
 
     * *dashboard.json* é o arquivo que descreve o novo painel, incluindo painéis e métricas.
 
@@ -180,13 +180,13 @@ Conclua as etapas a seguir para fazer download dos painéis que estão disponív
     ```
     {: codeblock}
 
-    sendo
+    Em que
 
     * *ENDPOINT* é a URL da região na qual a instância de monitoramento está disponível. Para obter mais informações, consulte [Terminais Sysdig](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* é o token de API obtido na etapa anterior.
+    * *SYSDIG_API_TOKEN* é o token da API que você recebeu na etapa anterior.
 
-Por exemplo, para fazer download dos painéis para uma equipe que está trabalhando na região sul dos EUA, é possível executar o comando a seguir:
+Por exemplo, para fazer download dos painéis para uma equipe que trabalha na região Sul dos EUA, é possível executar o comando a seguir:
 
 ```
 curl -X GET https://us-south.monitoring.cloud.ibm.com/ui/dashboards -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json'
@@ -214,15 +214,16 @@ Conclua as etapas a seguir para excluir um painel da lista de painéis que está
     ```
     {: codeblock}
 
-    sendo
+    Em que
 
     * *ID* é o ID do painel que você deseja excluir.
 
     * *ENDPOINT* é a URL da região na qual a instância de monitoramento está disponível. Para obter mais informações, consulte [Terminais Sysdig](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* é o token de API obtido na etapa anterior.
+    * *SYSDIG_API_TOKEN* é o token da API que você recebeu na etapa anterior.
 
-Por exemplo, para excluir o painel com o ID *391* da lista de painéis para uma equipe que está trabalhando na região sul dos EUA, é possível executar o comando a seguir:
+Por exemplo, para excluir o painel com o ID *391* da lista de painéis para uma equipe
+que trabalha na região Sul dos EUA, é possível executar o comando a seguir:
 
 ```
 curl -X DELETE https://us-south.monitoring.cloud.ibm.com/ui/dashboards/391 -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json' 

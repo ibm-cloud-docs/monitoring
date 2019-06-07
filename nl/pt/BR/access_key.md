@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -21,10 +21,10 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Trabalhando com Chaves de Acesso
+# Gerenciando chaves de acesso
 {: #access_key}
 
-A **Chave de acesso** é um token que deve ser usado para configurar agentes Sysdig para encaminhar dados com êxito para sua instância do {{site.data.keyword.mon_full_notm}} no {{site.data.keyword.Bluemix}}.   
+A **Chave de acesso** é um token que deve ser usado para configurar agentes Sysdig para encaminhar dados com êxito para sua instância do {{site.data.keyword.mon_full_notm}} no {{site.data.keyword.cloud_notm}}.   
 {:shortdesc}
 
 
@@ -33,7 +33,7 @@ A **Chave de acesso** é um token que deve ser usado para configurar agentes Sys
 
 Para obter a chave de acesso para uma instância do {{site.data.keyword.mon_full_notm}} por meio da IU do {{site.data.keyword.cloud_notm}}, conclua as etapas a seguir:
 
-1. Efetue login em sua conta do  {{site.data.keyword.cloud_notm}} .
+1. Efetue login em sua conta do {{site.data.keyword.cloud_notm}}.
 
     Clique em [Painel do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/login){:new_window} para ativar o painel do {{site.data.keyword.cloud_notm}}.
 
@@ -41,7 +41,7 @@ Para obter a chave de acesso para uma instância do {{site.data.keyword.mon_full
 
 2. No menu de navegação, selecione **Observabilidade**. 
 
-3. Selecione **Monitorando**. O painel do  {{site.data.keyword.mon_full_notm}}  é aberto. É possível ver a lista de instâncias de monitoramento que estão disponíveis no {{site.data.keyword.cloud_notm}}.
+3. Selecione **Monitorando**. O painel do {{site.data.keyword.mon_full_notm}}  é aberto. É possível ver a lista de instâncias de monitoramento que estão disponíveis no {{site.data.keyword.cloud_notm}}.
 
 3. Identifique a instância para a qual você deseja obter a chave de acesso e clique em **Visualizar chave de acesso**.
 
@@ -54,7 +54,7 @@ Para obter a chave de acesso para uma instância do {{site.data.keyword.mon_full
 
 Para obter a chave de acesso para uma instância do Sysdig por meio da linha de comandos, conclua as etapas a seguir:
 
-1. [ Pré-requisito ] Instale a CLI do  {{site.data.keyword.cloud_notm}} .
+1. [Pré-requisito] Instale a CLI do {{site.data.keyword.cloud_notm}}.
 
    Para obter mais informações, consulte [Instalando a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
 
@@ -73,7 +73,7 @@ Para obter a chave de acesso para uma instância do Sysdig por meio da linha de 
     ```
     {: pre}
 
-5. Obtenha o nome da chave de API que está associada à instância do Sysdig. Execute o comando  [ ` ibmcloud resource service-keys ` ](/docs/cli/reference/ibmcloud/cli_resource_group.html#ibmcloud_resource_service_instances) :
+5. Obtenha o nome da chave de API que está associada à instância do Sysdig. Execute o comando [ ` ibmcloud resource service-keys ` ](/docs/cli/reference/ibmcloud/cli_resource_group.html#ibmcloud_resource_service_instances) :
 
     ```
     ibmcloud resource service-keys --instance-name INSTANCE_NAME
@@ -82,7 +82,7 @@ Para obter a chave de acesso para uma instância do Sysdig por meio da linha de 
 
     em que INSTANCE_NAME é o nome da instância obtida na etapa anterior.
 
-6. Obtenha a chave de acesso. Execute o comando  [ ` ibmcloud resource service-key ` ](/docs/cli/reference/ibmcloud/cli_resource_group.html#ibmcloud_resource_service_key) :
+6. Obtenha a chave de acesso. Execute o comando [ ` ibmcloud resource service-key ` ](/docs/cli/reference/ibmcloud/cli_resource_group.html#ibmcloud_resource_service_key) :
 
     ```
     ibmcloud resource service-key APIKEY_NAME
@@ -131,10 +131,11 @@ Se a chave de acesso estiver comprometida ou se você tiver uma política para r
 
 Para renovar a chave de acesso para uma instância do {{site.data.keyword.mon_full_notm}}, conclua as etapas a seguir:
 
-1. Ative a IU da web do  {{site.data.keyword.mon_full_notm}} . Para obter mais informações, consulte [Navegando para a IU da web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Ative a IU da web do {{site.data.keyword.mon_full_notm}}. Para obter mais informações, consulte [Navegando para a IU da web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 
 2. No botão *Seletor* na barra de navegação, escolha **Configurações**.
 
 2. Na seção *Gerenciamento de senha*, clique em **Reconfigurar a sua senha**.
 
-**Nota:** depois de reconfigurar a chave de acesso do Sysdig, deve-se atualizar a chave de acesso para quaisquer origens de log configuradas para encaminhar métricas para essa instância do {{site.data.keyword.mon_full_notm}}.
+**Nota:** após reconfigurar a chave de acesso do Sysdig, deve-se atualizar a
+chave de acesso para quaisquer origens de log que encaminhem métricas para essa instância do {{site.data.keyword.mon_full_notm}}.

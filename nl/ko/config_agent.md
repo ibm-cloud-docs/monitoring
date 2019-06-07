@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -52,7 +52,7 @@ subcollection: Sysdig
 
     * COLLECTOR_ENDPOINT는 모니터링 인스턴스가 사용 가능한 지역에 대한 수집 URL입니다.
 
-    * TAG_DATA는 *TAG_NAME:TAG_VALUE* 형식의 쉼표로 구분된 태그입니다. 사용자는 하나 이상의 태그를 자신의 Sysdig 에이전트에 연관시킬 수 있습니다. 예: *role:serviceX,location:us-south*. 
+    * TAG_DATA는 *TAG_NAME:TAG_VALUE* 형식의 쉼표로 구분된 태그입니다. 사용자는 하나 이상의 태그를 자신의 Sysdig 에이전트에 연관시킬 수 있습니다. 예를 들어, *role:serviceX,location:us-south*입니다.  
 
     * Sysdig 캡처 기능을 사용 안함으로 설정하려면 **sysdig_capture_enabled**를 *false*로 설정하십시오. 기본적으로는 *true*로 설정됩니다. 자세한 정보는 [캡처 관련 작업](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)을 참조하십시오.
 
@@ -97,13 +97,14 @@ Sysdig 에이전트가 올바른 설치에 실패하는 경우에는 커널 헤�
 
     * COLLECTOR_ENDPOINT는 모니터링 인스턴스가 사용 가능한 지역에 대한 수집 URL입니다.
 
-    * TAG_DATA는 *TAG_NAME:TAG_VALUE* 형식의 쉼표로 구분된 태그입니다. 사용자는 하나 이상의 태그를 자신의 Sysdig 에이전트에 연관시킬 수 있습니다. 예: *role:serviceX,location:us-south*. 
+    * TAG_DATA는 *TAG_NAME:TAG_VALUE* 형식의 쉼표로 구분된 태그입니다. 사용자는 하나 이상의 태그를 자신의 Sysdig 에이전트에 연관시킬 수 있습니다. 예를 들어, *role:serviceX,location:us-south*입니다.  
 
     * Sysdig 캡처 기능을 사용 안함으로 설정하려면 **sysdig_capture_enabled**를 *false*로 설정하십시오. 기본적으로는 *true*로 설정됩니다. 자세한 정보는 [캡처 관련 작업](/docs/services/Monitoring-with-Sysdig/captures.html#captures)을 참조하십시오.
 
     * 통신에서 SSL을 사용하려면 **SECURE**를 *true*로 설정하십시오.
 
-    **참고:** 컨테이너는 분리 모드에서 실행됩니다. 컨테이너의 출력을 보려면 *-d*를 제거하십시오.
+    컨테이너는 분리 모드에서 실행됩니다. 컨테이너의 출력을 보려면 *-d*를 제거하십시오.
+    {: note}
 
 
 
@@ -129,8 +130,6 @@ Sysdig 에이전트가 올바른 설치에 실패하는 경우에는 커널 헤�
     구성 파일의 다운로드가 완료되면 환경 변수로서 로컬 Kubernetes 구성 파일에 대한 경로 설정에 사용할 수 있는 명령이 표시됩니다.
 
     그리고 터미널에 표시된 명령을 복사하여 붙여넣어서 KUBECONFIG 환경 변수를 설정하십시오.
-
-    **참고:** 클러스터 관련 작업을 위해 {{site.data.keyword.containerlong}} CLI에 로그인할 때마다 이러한 명령을 실행하여 세션 변수로서 클러스터의 구성 파일에 대한 경로를 설정해야 합니다. Kubernetes CLI는 이 변수를 사용하여 {{site.data.keyword.cloud_notm}}에서 클러스터와 연결하는 데 필요한 로컬 구성 파일과 인증서를 찾습니다.
 
 4. Sysdig 에이전트를 배치하십시오. 다음 명령을 실행하십시오.
 
@@ -172,8 +171,6 @@ Sysdig 에이전트가 올바른 설치에 실패하는 경우에는 커널 헤�
     구성 파일의 다운로드가 완료되면 환경 변수로서 로컬 Kubernetes 구성 파일에 대한 경로 설정에 사용할 수 있는 명령이 표시됩니다.
 
     그리고 터미널에 표시된 명령을 복사하여 붙여넣어서 KUBECONFIG 환경 변수를 설정하십시오.
-
-    **참고:** 클러스터 관련 작업을 위해 {{site.data.keyword.containerlong}} CLI에 로그인할 때마다 이러한 명령을 실행하여 세션 변수로서 클러스터의 구성 파일에 대한 경로를 설정해야 합니다. Kubernetes CLI는 이 변수를 사용하여 {{site.data.keyword.cloud_notm}}에서 클러스터와 연결하는 데 필요한 로컬 구성 파일과 인증서를 찾습니다.
 
 4. kubernetes 클러스터를 모니터하기 위한 **sysdig-agent**라고 하는 서비스 계정을 작성하십시오. 다음 명령을 실행하십시오.
 
@@ -221,7 +218,7 @@ Sysdig 에이전트가 올바른 설치에 실패하는 경우에는 커널 헤�
 
     * **collector**: 이 매개변수는 모니터링 인스턴스가 사용 가능한 지역에 대한 수집 URL을 지정합니다. 
 
-    * **collector_port**: 이 매개변수는 콜렉터가 청취하는 포트를 표시합니다. 해당 값은 *6443*이어야 합니다.
+    * **collector_port**: 이 매개변수는 콜렉터가 청취하는 포트를 표시합니다. 값은 *6443*으로 설정되어야 합니다.
     
     * **ssl**: 이 매개변수는 *true*로 설정되어야 합니다.
     
@@ -231,7 +228,7 @@ Sysdig 에이전트가 올바른 설치에 실패하는 경우에는 커널 헤�
 
     * **sysdig_capture_enabled**: 이 매개변수는 Sysdig 캡처 기능을 사용 또는 사용 안함으로 설정합니다. 기본적으로는 *true*로 설정됩니다. 자세한 정보는 [캡처 관련 작업](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)을 참조하십시오.
 
-    예제 yaml 파일은 다음과 같습니다.
+    예제 Yaml 파일은 다음과 같습니다.
 
     ```
      apiVersion: v1

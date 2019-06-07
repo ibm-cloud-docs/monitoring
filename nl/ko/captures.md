@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, captures
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# 캡처 관련 작업
+# 캡처 관리
 {: #captures}
 
 캡처는 시간 범위 중에 호스트에서 발생하는 사항을 분석하기 위해 생성할 수 있는 추적 파일입니다. 예를 들어, 이를 사용하여 병목현상 또는 컴포넌트 상호작용을 분석할 수 있습니다. {{site.data.keyword.mon_full_notm}} 서비스에서 개별 노드에 대한 *캡처*를 작성, 탐색, 다운로드 및 삭제할 수 있습니다. 
@@ -37,7 +37,7 @@ subcollection: Sysdig
 
 캡처 파일을 작성하려면 다음 단계를 완료하십시오.
 
-1. 웹 UI에서 *탐색* 섹션으로 이동하십시오. 웹 UI 실행 방법에 대한 자세한 정보는 [웹 UI로 이동](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)을 참조하십시오.
+1. 웹 UI에서 *탐색* 섹션으로 이동하십시오. [자세히 보기](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 
 2. 호스트 전환 아이콘 ![호스트 전환 아이콘](images/switch_hosts.png)을 클릭하십시오.
 
@@ -62,9 +62,9 @@ subcollection: Sysdig
 *캡처* 페이지는 캡처 파일 이름, 캡처가 검색된 호스트, 시간 범위 및 캡처 크기를 나열하는 테이블을 표시합니다. 
 
 캡처 파일의 상태 값은 다음과 같을 수 있습니다.
-* **요청됨**: 파일을 생성 중입니다.
-* **업로드됨**: 파일을 다운로드 및 분석할 수 있습니다.
-* **오류**: 제한시간 초과, 데이터 미수신 또는 에이전트 오류 때문에 파일을 사용할 수 없습니다.
+* `요청됨`: 파일을 생성 중입니다.
+* `업로드됨`: 파일을 다운로드 및 분석할 수 있습니다.
+* `오류`: 제한시간 초과, 데이터 미수신 또는 에이전트 오류 때문에 파일을 사용할 수 없습니다.
 
 
 
@@ -73,7 +73,7 @@ subcollection: Sysdig
 
 캡처 파일을 삭제하려면 다음 단계를 완료하십시오.
 
-1. 웹 UI에서 *캡처* 섹션으로 이동하십시오. 웹 UI 실행 방법에 대한 자세한 정보는 [웹 UI로 이동](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)을 참조하십시오.
+1. 웹 UI에서 *캡처* 섹션으로 이동하십시오. [자세히 보기](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. 삭제할 캡처 파일을 식별하고 선택하십시오.
 3. **삭제**를 클릭하십시오.
 
@@ -84,7 +84,7 @@ subcollection: Sysdig
 
 캡처 파일을 탐색하려면 다음 단계를 완료하십시오.
 
-1. 웹 UI에서 *캡처* 섹션으로 이동하십시오. 웹 UI 실행 방법에 대한 자세한 정보는 [웹 UI로 이동](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)을 참조하십시오.
+1. 웹 UI에서 *캡처* 섹션으로 이동하십시오. [자세히 보기](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. 분석할 호스트에 대한 데이터가 포함된 캡처 파일을 식별하고 선택하십시오.
 3. **탐색**을 클릭하십시오.
 
@@ -95,7 +95,7 @@ subcollection: Sysdig
 
 캡처 파일을 다운로드하려면 다음 단계를 완료하십시오.
 
-1. 웹 UI에서 *캡처* 섹션으로 이동하십시오. 웹 UI 실행 방법에 대한 자세한 정보는 [웹 UI로 이동](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)을 참조하십시오.
+1. 웹 UI에서 *캡처* 섹션으로 이동하십시오. [자세히 보기](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. 다운로드할 데이터가 포함된 캡처 파일을 식별하고 선택하십시오.
 3. **다운로드**를 클릭하십시오.
 
@@ -105,7 +105,7 @@ subcollection: Sysdig
 
 Sysdig 치즐은 스크립팅 언어인 Lua로 작성된 스크립트입니다. 이를 사용하여 캡처 파일의 데이터를 분석할 수 있습니다. 
 
-치즐 사용법에 대한 자세한 정보는 다음의 사용자 안내서를 참조하십시오. [치즐 사용자 안내서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}
+자세한 정보는 [Chisels User Guide ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}를 참조하십시오.
 
 
 

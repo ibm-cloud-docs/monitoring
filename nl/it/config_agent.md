@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -52,7 +52,7 @@ Completa la seguente procedura per configurare un agent Sysdig su Linux in modo 
 
     * COLLECTOR_ENDPOINT è l'URL di inserimento per la regione in cui è disponibile l'istanza di monitoraggio.
 
-    * TAG_DATA sono tag separate da virgole formattate come *TAG_NAME:TAG_VALUE*. Puoi associare una o più tag al tuo agent Sysdig. Ad esempio: *role:serviceX,location:us-south*. 
+    * TAG_DATA sono tag separate da virgole formattate come *TAG_NAME:TAG_VALUE*. Puoi associare una o più tag al tuo agent Sysdig. Ad esempio, *role:serviceX,location:us-south*.  
 
     * Imposta **sysdig_capture_enabled** su *false* per disabilitare la funzione di acquisizione Sysdig. Per impostazione predefinita è impostato su *true*. Per ulteriori informazioni, consulta [Utilizzo delle acquisizioni](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
@@ -91,19 +91,20 @@ Completa la seguente procedura per configurare un agent Sysdig su un contenitore
     ```
     {: codeblock}
 
-    dove
+    Dove
 
     * SYSDIG_ACCESS_KEY è la chiave di inserimento per l'istanza.
 
     * COLLECTOR_ENDPOINT è l'URL di inserimento per la regione in cui è disponibile l'istanza di monitoraggio.
 
-    * TAG_DATA sono tag separate da virgole formattate come *TAG_NAME:TAG_VALUE*. Puoi associare una o più tag al tuo agent Sysdig. Ad esempio: *role:serviceX,location:us-south*. 
+    * TAG_DATA sono tag separate da virgole formattate come *TAG_NAME:TAG_VALUE*. Puoi associare una o più tag al tuo agent Sysdig. Ad esempio, *role:serviceX,location:us-south*.  
 
     * Imposta **sysdig_capture_enabled** su *false* per disabilitare la funzione di acquisizione Sysdig. Per impostazione predefinita è impostato su *true*. Per ulteriori informazioni, consulta [Utilizzo delle acquisizioni](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
 
     * Imposta **SECURE** su *true* per utilizzare SSL con la comunicazione.
 
-    **Nota:** il contenitore è eseguito in modalità scollegata. Per visualizzare l'output del contenitore, rimuovi *-d*.
+    Il contenitore è eseguito in modalità scollegata. Per visualizzare l'output del contenitore, rimuovi *-d*.
+    {: note}
 
 
 
@@ -130,8 +131,6 @@ Completa la seguente procedura per configurare un agent Sysdig su un contenitore
 
     Poi, copia e incolla il comando visualizzato nel tuo terminale per impostare la variabile di ambiente KUBECONFIG.
 
-    **Nota:** ogni volta che accedi alla CLI {{site.data.keyword.containerlong}} per utilizzare i cluster, devi eseguire questi comandi per impostare il percorso al file di configurazione del cluster come una variabile di sessione. La CLI Kubernetes utilizza questa variabile per trovare i certificati e un file di configurazione locale necessari per il collegamento con il cluster in {{site.data.keyword.cloud_notm}}.
-
 4. Distribuisci l'agent Sysdig. Immetti il seguente comando:
 
     ```
@@ -139,7 +138,7 @@ Completa la seguente procedura per configurare un agent Sysdig su un contenitore
     ```
     {: codeblock}
 
-    dove
+    Dove
 
     * SYSDIG_ACCESS_KEY è la chiave di inserimento per l'istanza.
 
@@ -162,7 +161,7 @@ Completa la seguente procedura per configurare un agent Sysdig su un contenitore
 
 3. Configura l'ambiente cluster. Immetti i seguenti comandi:
 
-    Per prima cosa, richiama il comando per impostare la variabile di ambiente e scaricare i file di configurazione Kubernetes.
+    Per prima cosa, richiama il comando per impostare la variabile di ambiente e scarica i file di configurazione Kubernetes.
 
     ```
     ibmcloud ks cluster-config <cluster_name_or_ID>
@@ -172,8 +171,6 @@ Completa la seguente procedura per configurare un agent Sysdig su un contenitore
     Quando il download dei file di configurazione è terminato, viene visualizzato un comando che puoi utilizzare per impostare il percorso al file di configurazione di Kubernetes locale come una variabile di ambiente.
 
     Poi, copia e incolla il comando visualizzato nel tuo terminale per impostare la variabile di ambiente KUBECONFIG.
-
-    **Nota:** ogni volta che accedi alla CLI {{site.data.keyword.containerlong}} per utilizzare i cluster, devi eseguire questi comandi per impostare il percorso al file di configurazione del cluster come una variabile di sessione. La CLI Kubernetes utilizza questa variabile per trovare i certificati e un file di configurazione locale necessari per il collegamento con il cluster in {{site.data.keyword.cloud_notm}}.
 
 4. Crea un account del servizio denominato **sysdig-agent** per monitorare il cluster Kubernetes. Immetti il seguente comando:
 
@@ -221,7 +218,7 @@ Completa la seguente procedura per configurare un agent Sysdig su un contenitore
 
     * **collector**: questo parametro specifica l'URL di inserimento per la regione in cui è disponibile l'istanza di monitoraggio. 
 
-    * **collector_port**: questo parametro indica la porta su cui è in ascolto il raccoglitore. Il valore deve essere *6443*.
+    * **collector_port**: questo parametro indica la porta su cui è in ascolto il raccoglitore. Il valore deve essere impostato su *6443*.
     
     * **ssl**: questo parametro deve essere impostato su *true*.
     

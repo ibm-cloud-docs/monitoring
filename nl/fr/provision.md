@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -24,11 +24,8 @@ subcollection: Sysdig
 # Mise à disposition d'une instance
 {: #provision}
 
-Pour pouvoir surveiller et gérer des métriques avec Sysdig, vous devez d'abord mettre à disposition une instance du service dans {{site.data.keyword.Bluemix}}.
+Pour pouvoir surveiller et gérer des métriques avec Sysdig, vous devez mettre à disposition une instance du service dans {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
-
-Pour mettre à disposition une instance Sysdig dans une région de cloud public, vous devez sélectionner le plan de service qui est associé à l'instance, la région où vos métriques sont collectées et le plan qui détermine le nombre de métriques que vous pouvez surveiller, ainsi que leur durée de conservation.
-
 
 
 ## Mise à disposition d'une instance Sysdig à partir du catalogue
@@ -72,11 +69,9 @@ Ensuite, configurez une source de métriques en ajoutant un agent Sysdig. Cet ag
 
 Pour mettre à disposition une instance de Sysdig via la ligne de commande, procédez comme suit :
 
-1. [Prérequis] Installez l'interface de ligne de commande {{site.data.keyword.cloud_notm}}.
+1. [Prérequis] Installation de l'interface de ligne de commande {{site.data.keyword.cloud_notm}}. Si l'interface de ligne de commande est installée, passez à l'étape suivante.
 
    Pour plus d'informations, voir [Installation de l'interface de ligne de commande {{site.data.keyword.cloud_notm}}.](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)
-
-   Si l'interface de ligne de commande est installée, passez à l'étape suivante.
 
 2. Connectez-vous à la région d'{{site.data.keyword.cloud_notm}} où vous souhaitez mettre à disposition l'instance. Exécutez la commande suivante : [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -93,13 +88,13 @@ Pour mettre à disposition une instance de Sysdig via la ligne de commande, proc
 
     où
 
-    * NAME est le nom de l'instance Sysdig
+    * NAME est le nom de l'instance Sysdig.
     
-    * *sysdig-monitor* est le nom du service {{site.data.keyword.mon_full_notm}} dans {{site.data.keyword.cloud_notm}}
+    * `sysdig-monitor` est le nom du service {{site.data.keyword.mon_full_notm}} dans {{site.data.keyword.cloud_notm}}.
     
-    * SERVICE_PLAN_NAME est le type de plan. Les valeurs admises sont : *lite*, *graduated-tier*
+    * SERVICE_PLAN_NAME est le type de plan. Valeurs admises : *lite* et *graduated-tier*.
     
-    * LOCATION est la région où l'instance est créée
+    * LOCATION est la région où l'instance est créée.
 
     Par exemple, pour mettre à disposition une instance avec le plan payant, exécutez la commande suivante :
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -103,7 +103,8 @@ Führen Sie die folgenden Schritte aus, um einen Sysdig-Agenten in einem Docker-
 
     * Setzen Sie **SECURE** auf *true* fest, um SSL mit der Kommunikation zu verwenden.
 
-    **Hinweis:** Der Container wird im getrennten Modus ausgeführt. Wenn Sie die Ausgabe des Containers sehen möchten, entfernen Sie *-d*.
+    Der Container wird im getrennten Modus ausgeführt. Wenn Sie die Ausgabe des Containers sehen möchten, entfernen Sie *-d*.
+    {: note}
 
 
 
@@ -129,8 +130,6 @@ Führen Sie die folgenden Schritte aus, um einen Sysdig-Agenten in einem Kuberne
     Wenn der Download der Konfigurationsdateien abgeschlossen ist, wird ein Befehl angezeigt, mit dem Sie den Pfad zur lokalen Kubernetes-Konfigurationsdatei als Umgebungsvariable festlegen können.
 
     Kopieren Sie dann den in Ihrem Terminal angezeigten Befehl und fügen Sie ihn ein, um die Umgebungsvariable KUBECONFIG festzulegen.
-
-    **Hinweis:** Jedes Mal, wenn Sie sich an der {{site.data.keyword.containerlong}}-CLI für die Arbeit mit Clustern anmelden, müssen Sie diese Befehle ausführen, um den Pfad zur Konfigurationsdatei des Clusters als Sitzungsvariable zu definieren. Die Kubernetes-CLI verwendet diese Variable, um eine lokale Konfigurationsdatei und Zertifikate zu finden, die für die Verbindung mit dem Cluster in {{site.data.keyword.cloud_notm}} erforderlich sind.
 
 4. Stellen Sie den Sysdig-Agenten bereit. Führen Sie den folgenden Befehl aus:
 
@@ -172,8 +171,6 @@ Führen Sie die folgenden Schritte aus, um einen Sysdig-Agenten in einem Kuberne
     Wenn der Download der Konfigurationsdateien abgeschlossen ist, wird ein Befehl angezeigt, mit dem Sie den Pfad zur lokalen Kubernetes-Konfigurationsdatei als Umgebungsvariable festlegen können.
 
     Kopieren Sie dann den in Ihrem Terminal angezeigten Befehl und fügen Sie ihn ein, um die Umgebungsvariable KUBECONFIG festzulegen.
-
-    **Hinweis:** Jedes Mal, wenn Sie sich an der {{site.data.keyword.containerlong}}-CLI für die Arbeit mit Clustern anmelden, müssen Sie diese Befehle ausführen, um den Pfad zur Konfigurationsdatei des Clusters als Sitzungsvariable zu definieren. Die Kubernetes-CLI verwendet diese Variable, um eine lokale Konfigurationsdatei und Zertifikate zu finden, die für die Verbindung mit dem Cluster in {{site.data.keyword.cloud_notm}} erforderlich sind.
 
 4. Erstellen Sie ein Servicekonto mit dem Namen **sysdig-agent**, um den Kubernetes-Cluster zu überwachen. Führen Sie den folgenden Befehl aus:
 
@@ -221,7 +218,7 @@ Führen Sie die folgenden Schritte aus, um einen Sysdig-Agenten in einem Kuberne
 
     * **collector**: Dieser Parameter gibt die Aufnahme-URL für die Region an, in der die Überwachungsinstanz verfügbar ist. 
 
-    * **collector_port**: Dieser Parameter gibt den Port an, für den der Collektor empfangsbereit ist. Der Wert muss *6443* sein.
+    * **collector_port**: Dieser Parameter gibt den Port an, für den der Collektor empfangsbereit ist. Der Wert muss auf *6443* festgelegt werden.
     
     * **ssl**: Dieser Parameter muss auf *true* festgelegt sein.
     

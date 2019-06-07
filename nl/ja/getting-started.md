@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -25,7 +25,7 @@ subcollection: Sysdig
 # 入門チュートリアル
 {: #getting-started}
 
-{{site.data.keyword.mon_full_notm}} は、{{site.data.keyword.cloud_notm}} アーキテクチャーの一部として組み込むことができる、サード・パーティーのクラウド・ネイティブなコンテナー・インテリジェント管理システムです。 このシステムを使用して、アプリケーション、サービス、およびプラットフォームのパフォーマンスと正常性を可視化して運用できます。 モニター、トラブルシューティング、アラートの定義、カスタム・ダッシュボードの設計のための拡張機能により、管理者、DevOps チーム、開発者のフルスタック・テレメトリーを提供します。 {{site.data.keyword.mon_full_notm}} は、{{site.data.keyword.IBM_notm}} との協力関係のもと、Sysdig によって運用されます。
+{{site.data.keyword.mon_full_notm}} は、{{site.data.keyword.cloud_notm}} アーキテクチャーの一部として組み込むことができる、サード・パーティーのクラウド・ネイティブかつコンテナー・インテリジェントな管理システムです。 このシステムを使用して、アプリケーション、サービス、およびプラットフォームのパフォーマンスと正常性について、運用の可視化が可能になります。 モニター、トラブルシューティング、アラートの定義、カスタム・ダッシュボードの設計のための拡張機能により、管理者、DevOps チーム、開発者のフルスタック・テレメトリーを提供します。 {{site.data.keyword.mon_full_notm}} は、{{site.data.keyword.IBM_notm}} との協力関係のもと、Sysdig によって運用されます。
 {:shortdesc}
 
 次の図は、{{site.data.keyword.cloud_notm}} で実行中の {{site.data.keyword.mon_full_notm}} サービスのコンポーネント概要を示しています。
@@ -62,7 +62,13 @@ subcollection: Sysdig
 
 {{site.data.keyword.cloud_notm}} アカウントのメンバーまたは所有者であるユーザー ID が必要です。 {{site.data.keyword.cloud_notm}} ユーザー ID を取得するには、[「登録」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/login){:new_window} にアクセスしてください。
 
-このサービスは、現在、米国南部で使用可能です。 米国南部地域での入門ステップを実行します。
+このサービスは、以下の地域で使用可能です。
+* *米国南部*
+* *EU-DE*
+* *EU-GB*
+* *JP-TOK*
+
+サポートされている任意の地域で開始手順を実行できます。
 
 
 ## ステップ 1: ユーザー・アクセスの管理
@@ -70,12 +76,12 @@ subcollection: Sysdig
 
 ご使用のアカウント内の {{site.data.keyword.mon_full_notm}} サービスにアクセスするすべてのユーザーには、IAM ユーザー役割が定義されたアクセス・ポリシーを割り当てる必要があります。 そのポリシーによって、選択したサービスまたはインスタンスのコンテキスト内でユーザーが実行できるアクションが決まります。 許可されるアクションは、サービス上で実行できる操作としてカスタマイズされて定義されます。 その後、操作は IAM ユーザー役割にマップされます。 詳しくは、[{{site.data.keyword.cloud_notm}} でのユーザー・アクセスの管理](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam#iam)を参照してください。
 
-{{site.data.keyword.cloud_notm}} で {{site.data.keyword.mon_full_notm}} サービスを使用する権限がユーザーに付与されると、このユーザーには Sysdig 役割が自動的に付与されます。 この役割によって、ユーザーが実行する権限を持つアクションが決まります。 有効な役割は、*Sysdig 管理者*および *Sysdig ユーザー*です。 詳しくは、[Sysdig 役割の {{site.data.keyword.cloud_notm}} 役割へのマップ](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam#iam_sysdig)を参照してください。
+{{site.data.keyword.cloud_notm}} で {{site.data.keyword.mon_full_notm}} サービスを使用するための権限がユーザーに付与されると、このユーザーには Sysdig 役割が自動的に付与されます。 この役割によって、ユーザーが実行する権限を持つアクションが決まります。 有効な役割は、*Sysdig 管理者*および *Sysdig ユーザー*です。 詳しくは、[Sysdig 役割の {{site.data.keyword.cloud_notm}} 役割へのマップ](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam#iam_sysdig)を参照してください。
 
 インスタンスをプロビジョンする前に、以下の情報を考慮してください。
-* アカウント所有者は、{{site.data.keyword.cloud_notm}} 内のサービスのインスタンスを作成、表示、および削除でき、{{site.data.keyword.mon_full_notm}} サービスを使用する権限を他のユーザーに付与できます。
-* *デフォルト* のリソース・グループのリソースを作成する権限が必要です。
-* `administrator` 権限または `editor` 権限を持つ他の {{site.data.keyword.cloud_notm}} ユーザーは、{{site.data.keyword.cloud_notm}} の {{site.data.keyword.mon_full_notm}} サービスを管理できます。 また、これらのユーザーには、インスタンスをプロビジョンする予定のリソース・グループのコンテキスト内でリソースを作成するプラットフォーム権限も必要です。
+* アカウント所有者は、{{site.data.keyword.cloud_notm}} 内のサービスのインスタンスを作成、表示、および削除でき、{{site.data.keyword.mon_full_notm}} サービスを使用するための権限を他のユーザーに付与できます。
+* *デフォルト* のリソース・グループのリソースを作成するための権限が必要です。
+* `administrator` 権限または `editor` 権限を持つ他の {{site.data.keyword.cloud_notm}} ユーザーは、{{site.data.keyword.cloud_notm}} の {{site.data.keyword.mon_full_notm}} サービスを管理できます。 また、これらのユーザーには、インスタンスをプロビジョンする予定のリソース・グループのコンテキスト内でリソースを作成するためのプラットフォーム権限も必要です。
 
 ユーザーにサービスの管理者役割を付与し、アカウントのリソース・グループ内のインスタンスを管理するには、ユーザーが、リソース・グループのコンテキスト内での**管理者**のプラットフォーム役割とともに、{{site.data.keyword.mon_full_notm}} サービスの IAM ポリシーを持っている必要があります。 
 

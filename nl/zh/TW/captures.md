@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, captures
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# 使用擷取
+# 管理擷取
 {: #captures}
 
 擷取是您可以產生的追蹤檔，用來分析主機在某個時間範圍內發生什麼情況。例如，您可以將其用來分析瓶頸或元件互動。在 {{site.data.keyword.mon_full_notm}} 服務中，您可以建立、探索、下載及刪除個別節點的*擷取*。
@@ -33,11 +33,11 @@ subcollection: Sysdig
 ## 建立擷取
 {: #captures_create}
 
-您可以在*探索*視圖中建立擷取。
+您可以在*探索* 視圖中建立擷取。
 
 請完成下列步驟來建立擷取檔：
 
-1. 導覽至 Web 使用者介面中的*探索* 區段。如需如何啟動 Web 使用者介面的相關資訊，請參閱[導覽至 Web 使用者介面](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
+1. 導覽至 Web 使用者介面中的*探索* 區段。[進一步瞭解](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 
 2. 按一下切換主機圖示 ![切換主機圖示](images/switch_hosts.png)。
 
@@ -62,9 +62,9 @@ subcollection: Sysdig
 *擷取* 頁面會顯示一個表格，其中列出擷取檔名稱、擷取來源的主機、時間範圍，以及擷取的大小。 
 
 擷取檔的狀態可以是下列任何值：
-* **已要求**：正在產生檔案。
-* **已上傳**：檔案可供下載及分析。
-* **錯誤**：由於逾時、從未收到資料或代理程式錯誤，檔案無法使用。
+* `已要求`：正在產生檔案。
+* `已上傳`：檔案可供下載及分析。
+* `錯誤`：由於逾時、從未收到資料或代理程式錯誤，檔案無法使用。
 
 
 
@@ -73,7 +73,7 @@ subcollection: Sysdig
 
 請完成下列步驟來刪除擷取檔：
 
-1. 導覽至 Web 使用者介面中的*擷取* 區段。如需如何啟動 Web 使用者介面的相關資訊，請參閱[導覽至 Web 使用者介面](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
+1. 導覽至 Web 使用者介面中的*擷取* 區段。[進一步瞭解](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 2. 識別並選取您要刪除的擷取檔。
 3. 按一下 **刪除**。
 
@@ -84,7 +84,7 @@ subcollection: Sysdig
 
 請完成下列步驟來探索擷取檔：
 
-1. 導覽至 Web 使用者介面中的*擷取* 區段。如需如何啟動 Web 使用者介面的相關資訊，請參閱[導覽至 Web 使用者介面](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
+1. 導覽至 Web 使用者介面中的*擷取* 區段。[進一步瞭解](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 2. 識別並選取包含您要分析之主機資料的擷取檔。
 3. 按一下**探索**。
 
@@ -95,7 +95,7 @@ subcollection: Sysdig
 
 請完成下列步驟來下載擷取檔：
 
-1. 導覽至 Web 使用者介面中的*擷取* 區段。如需如何啟動 Web 使用者介面的相關資訊，請參閱[導覽至 Web 使用者介面](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
+1. 導覽至 Web 使用者介面中的*擷取* 區段。[進一步瞭解](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 2. 識別並選取包含您要下載之資料的擷取檔。
 3. 按一下**下載**。
 
@@ -105,7 +105,7 @@ subcollection: Sysdig
 
 Sysdig Chisel 是以 LIA（Scripting 語言）撰寫的 Script。您可以將其用來分析擷取檔中的資料。 
 
-如需如何使用 Chisel 的相關資訊，請參閱這個使用手冊：[Chisels User Guide ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}
+如需相關資訊，請參閱 [Chisels User Guide ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}。
 
 
 

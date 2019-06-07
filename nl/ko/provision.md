@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -24,11 +24,8 @@ subcollection: Sysdig
 # 인스턴스 프로비저닝
 {: #provision}
 
-Sysdig에서 메트릭을 모니터하고 관리하려면 우선 {{site.data.keyword.Bluemix}}에서 서비스의 인스턴스를 프로비저닝해야 합니다.
+Sysdig에서 메트릭을 모니터하고 관리하려면 {{site.data.keyword.cloud_notm}}에서 서비스의 인스턴스를 프로비저닝해야 합니다.
 {:shortdesc}
-
-퍼블릭 클라우드 지역에서 Sysdig 인스턴스를 프로비저닝하려면 인스턴스와 연관된 서비스 플랜, 메트릭이 수집되는 지역 및 모니터 가능한 메트릭 수와 이의 보관 기간을 판별하는 플랜을 선택해야 합니다.
-
 
 
 ## 카탈로그에서 Sysdig 인스턴스 프로비저닝
@@ -72,11 +69,9 @@ Sysdig에서 메트릭을 모니터하고 관리하려면 우선 {{site.data.key
 
 명령행을 통해 Sysdig의 인스턴스를 프로비저닝하려면 다음 단계를 완료하십시오.
 
-1. [전제조건] {{site.data.keyword.cloud_notm}} CLI를 설치하십시오.
+1. [전제조건] {{site.data.keyword.cloud_notm}} CLI를 설치하십시오. CLI가 설치되면 다음 단계를 계속하십시오.
 
    자세한 정보는 [{{site.data.keyword.cloud_notm}} CLI 설치](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)를 참조하십시오.
-
-   CLI가 설치되면 다음 단계를 계속하십시오.
 
 2. 인스턴스를 프로비저닝할 {{site.data.keyword.cloud_notm}}의 지역에 로그인하십시오. [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login) 명령을 실행하십시오.
 
@@ -95,9 +90,9 @@ Sysdig에서 메트릭을 모니터하고 관리하려면 우선 {{site.data.key
 
     * NAME은 Sysdig 인스턴스의 이름입니다.
     
-    * *sysdig-monitor*는 {{site.data.keyword.cloud_notm}}에서 {{site.data.keyword.mon_full_notm}} 서비스 이름의 이름입니다.
+    * `sysdig-monitor`는 {{site.data.keyword.cloud_notm}}의 {{site.data.keyword.mon_full_notm}} 서비스 이름입니다.
     
-    * SERVICE_PLAN_NAME은 플랜의 유형입니다. 유효한 값은 *lite*, *graduated-tier*입니다.
+    * SERVICE_PLAN_NAME은 플랜의 유형입니다. 올바른 값은 *lite* 및 *graduated-tier*입니다.
     
     * LOCATION은 인스턴스가 작성된 지역입니다.
 

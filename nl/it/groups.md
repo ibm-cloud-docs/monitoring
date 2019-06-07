@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, groups
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Utilizzo dei gruppi
+# Gestione dei gruppi
 {: #groups}
 
 Puoi utilizzare le etichette per raggruppare gli oggetti dell'infrastruttura in gerarchie logiche.
@@ -32,7 +32,7 @@ Puoi utilizzare le etichette per raggruppare gli oggetti dell'infrastruttura in 
 
 Completa la seguente procedura per creare un gruppo:
 
-1. Avvia l'IU web. Per ulteriori informazioni su come avviare l'IU web, consulta [Passaggio alla IU web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Avvia l'IU web. [Ulteriori informazioni](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Fai clic su **EXPLORE** per passare alla sezione *Explore*.
 
@@ -40,7 +40,7 @@ Completa la seguente procedura per creare un gruppo:
 
 4. Fai clic sull'icona *plus (+)* per aggiungere ulteriori etichette.
 
-    Dopo aver aggiunto una nuova etichetta, le etichette che non si adattano alla gerarchia vengono escluse per garantire che vengano creati solo i raggruppamenti logici che sono validi.
+    Dopo aver aggiunto un'etichetta, le etichette che non si adattano alla gerarchia vengono escluse per garantire che vengano creati solo i raggruppamenti logici che sono validi.
     {: tip}
 
 5. Quando termini di aggiungere le etichette, fai clic su **New Grouping**.
@@ -56,17 +56,17 @@ Completa la seguente procedura per creare un gruppo:
 
 Completa la seguente procedura per ridenominare un gruppo:
 
-1. Avvia l'IU web. Per ulteriori informazioni su come avviare l'IU web, consulta [Passaggio alla IU web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Avvia l'IU web. [Ulteriori informazioni](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Fai clic su **EXPLORE** per passare alla sezione *Explore*.
 
-3. Fai clic sull'icona di scambio host ![icona di scambio host](images/switch_hosts.png).
+3. Fai clic sull'icona di scambio host ![Icona di scambio host](images/switch_hosts.png).
 
 4. Seleziona un gruppo.
 
-5. Fai clic sull'icona delle azioni ![icona tre punti](images/actions.png) e seleziona **Show grouping actions**.
+5. Fai clic sull'icona azioni ![Icona tre punti](images/actions.png) e seleziona **Show grouping actions**.
 
-6. Seleziona l'icona di modifica ![icona matita](images/edit.png).
+6. Seleziona l'icona di modifica ![Icona matita](images/edit.png).
 
 7. Immetti il nuovo nome.
 
@@ -80,15 +80,15 @@ Completa la seguente procedura per ridenominare un gruppo:
 
 Completa la seguente procedura per copiare un gruppo in altri team:
 
-1. Avvia l'IU web. Per ulteriori informazioni su come avviare l'IU web, consulta [Passaggio alla IU web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Avvia l'IU web. [Ulteriori informazioni](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Fai clic su **EXPLORE** per passare alla sezione *Explore*.
 
-3. Fai clic sull'icona di scambio host ![icona di scambio host](images/switch_hosts.png).
+3. Fai clic sull'icona di scambio host ![Icona di scambio host](images/switch_hosts.png).
 
 4. Seleziona un gruppo.
 
-5. Fai clic sull'icona delle azioni ![icona tre punti](images/actions.png) e seleziona **Show grouping actions**.
+5. Fai clic sull'icona azioni ![Icona tre punti](images/actions.png) e seleziona **Show grouping actions**.
 
 6. Seleziona l'icona di copia del gruppo ![icona di copia](images/copy.png).
 
@@ -105,15 +105,15 @@ Completa la seguente procedura per copiare un gruppo in altri team:
 
 Completa la seguente procedura per condividere un gruppo con altri membri del team:
 
-1. Avvia l'IU web. Per ulteriori informazioni su come avviare l'IU web, consulta [Passaggio alla IU web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Avvia l'IU web. [Ulteriori informazioni](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Fai clic su **EXPLORE** per passare alla sezione *Explore*.
 
-3. Fai clic sull'icona di scambio host ![icona di scambio host](images/switch_hosts.png).
+3. Fai clic sull'icona di scambio host ![Icona di scambio host](images/switch_hosts.png).
 
 4. Seleziona un gruppo.
 
-5. Fai clic sull'icona delle azioni ![icona tre punti](images/actions.png) e seleziona **Show grouping actions**.
+5. Fai clic sull'icona azioni ![Icona tre punti](images/actions.png) e seleziona **Show grouping actions**.
 
 6. Seleziona l'icona di condivisione del gruppo ![icona di condivisione](images/share.png).
 
@@ -128,15 +128,15 @@ Completa la seguente procedura per condividere un gruppo con altri membri del te
 
 Completa la seguente procedura per eliminare un gruppo:
 
-1. Avvia l'IU web. Per ulteriori informazioni su come avviare l'IU web, consulta [Passaggio alla IU web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Avvia l'IU web. [Ulteriori informazioni](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Fai clic su **EXPLORE** per passare alla sezione *Explore*.
 
-3. Fai clic sull'icona di scambio host ![icona di scambio host](images/switch_hosts.png).
+3. Fai clic sull'icona di scambio host ![Icona di scambio host](images/switch_hosts.png).
 
 4. Seleziona un gruppo.
 
-5. Fai clic sull'icona delle azioni ![icona tre punti](images/actions.png) e seleziona **Show grouping actions**.
+5. Fai clic sull'icona azioni ![Icona tre punti](images/actions.png) e seleziona **Show grouping actions**.
 
 6. Seleziona l'icona di eliminazione del gruppo ![icona di eliminazione](images/delete.png).
 

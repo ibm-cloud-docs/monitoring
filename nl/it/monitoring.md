@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring
 
@@ -27,11 +27,11 @@ subcollection: Sysdig
 Puoi monitorare la tua infrastruttura e le applicazioni in esecuzione su essa con il servizio {{site.data.keyword.mon_full_notm}}. Puoi richiedere un'acquisizione per analizzare cosa succede in un nodo durante un intervallo di tempo.
 {:shortdesc}
 
-Dopo che hai eseguito il provisioning di un'istanza del servizio {{site.data.keyword.mon_full_notm}} in {{site.data.keyword.Bluemix}} e configurato gli agent Sysdig per le tue origini delle metriche, puoi visualizzare, monitorare e gestire i dati tramite l'IU web del servizio.
+Per prima cosa, esegui il provisioning di un'istanza del servizio {{site.data.keyword.mon_full_notm}} in {{site.data.keyword.cloud_notm}}. Successivamente, configura gli agent Sysdig per le tue origini delle metriche. Dopo aver configurato le origini, puoi visualizzare, monitorare e gestire i dati tramite l'IU web del servizio.
 
 I dati per le metriche predefinite vengono raccolti automaticamente. Puoi configurare delle metriche personalizzate e aggiungere delle etichette a quelle metriche per descriverne le caratteristiche. Anche i dati per queste metriche personalizzate vengono raccolti automaticamente.
 
-Puoi analizzare i dati nella scheda *Explore* e nella scheda *Dashboard* dell'IU web. Monitora i dati tramite le viste e i dashboard della metrica. 
+Puoi analizzare i dati nella scheda *Explore* e nella scheda *Dashboard* dell'IU web. Monitora i dati tramite le viste e i dashboard delle metriche. 
 
 * Utilizza una vista delle metriche per monitorare una sola metrica.
 * Utilizza i dashboard per ottenere delle informazioni approfondite specializzate sui dati di rete, sui dati dell'applicazione, sulla topologia, sui servizi, sugli host e sui contenitori monitorando i dati tramite i pannelli. Un pannello visualizza una metrica o un gruppo di metriche in un dashboard.
@@ -42,7 +42,7 @@ Nella scheda *Explore*, puoi monitorare i dati utilizzando le metriche e i dashb
 
 Nella scheda *Dashboards*, puoi monitorare i dati utilizzando uno qualsiasi dei dashboard predefiniti o creandone di nuovi.
 
-Puoi configurare un dashboard predefinito come punto di ingresso predefinito per un team, unificando l'esperienza di un team e consentendo agli utenti di focalizzare la propria attenzione immediata sulle informazioni più importanti per loro. 
+Puoi configurare un dashboard predefinito come punto di ingresso predefinito per un team, unificando l'esperienza di un team e consentendo agli utenti di focalizzare la propria attenzione immediata sulle informazioni più importanti per loro.
 {: tip}
 
 Puoi utilizzare gli avvisi per avvertire gli utenti di problemi che richiedono attenzione tramite uno o più canali di notifica.
@@ -56,7 +56,7 @@ Puoi richiede un'acquisizione di un nodo per analizzare cosa succede in tale nod
 
 Una metrica è una misura quantitativa con una o più etichette per definire le proprie caratteristiche. Utilizza le metriche per analizzare statisticamente i dati che hanno valori numerici. 
 
-Una metrica viene rappresentata da serie temporali. Una serie temporale è una serie di punti di dati numerici in un periodo di tempo. 
+Una metrica viene rappresentata da serie temporali. Una serie temporale è una serie di punti di dati numerici in un periodo. 
 
 Le metriche sono classificate in due gruppi: 
 
@@ -81,15 +81,15 @@ Puoi utilizzare uno dei seguenti tipi di pannello per visualizzare le metriche:
 
 | Tipo | Descrizione |
 |------|-------------|
-| Riga | Utilizza questo pannello per visualizzare gli andamenti nel tempo di una o più metriche.  |
-| Area | Utilizza questo pannello per visualizzare gli andamenti nel tempo di una o più metriche.  |
-| Elenco superiore | Utilizza questo pannello per confrontare una metrica tra i gruppi di entità. Il grafico a barre viene ordinato in ordine decrescente.  |
-| Istogramma | Utilizza questo pannello per visualizzare la frequenza di distribuzione di una metrica nei bucket.  |
-| Topologia | Utilizza questo pannello per visualizzare l'infrastruttura come una mappa della topologia e le relazioni tra le entità nella mappa.  |
-| Numero | Utilizza questo pannello per visualizzare un solo numero che rappresenta il valore di una metrica aggregata nel tempo per una o più entità.  |
-| Tabella | Utilizza questo pannello per visualizzare i dati numerici per la tua infrastruttura basati sulle metriche e i segmenti.  |
-| Testo | Utilizza questo pannello per aggiungere del testo. Utilizza la markdown per aggiungere il tuo testo.  |
-{: caption="Tabella 3. Tipi di pannello" caption-side="top"} 
+| `Line` | Utilizza questo pannello per visualizzare gli andamenti nel tempo di una o più metriche.  |
+| `Area` | Utilizza questo pannello per visualizzare gli andamenti nel tempo di una o più metriche.  |
+| `Top list` | Utilizza questo pannello per confrontare una metrica tra i gruppi di entità. Il grafico a barre viene ordinato in ordine decrescente.  |
+| `Histogram` | Utilizza questo pannello per visualizzare la frequenza di distribuzione di una metrica nei bucket.  |
+| `Topology` | Utilizza questo pannello per visualizzare l'infrastruttura come una mappa della topologia e le relazioni tra le entità nella mappa.  |
+| `Number` | Utilizza questo pannello per visualizzare un solo numero che rappresenta il valore di una metrica aggregata nel tempo per una o più entità.  |
+| `Table` | Utilizza questo pannello per visualizzare i dati numerici per la tua infrastruttura basati sulle metriche e i segmenti.  |
+| `Text` | Utilizza questo pannello per aggiungere del testo. Utilizza la markdown per aggiungere il tuo testo.  |
+{: caption="Tabella 1. Tipi di pannello" caption-side="top"} 
 
 Puoi copiare, modificare l'ambito, duplicare, eliminare, esportare ed esplorare i pannelli.
 
@@ -109,7 +109,7 @@ La seguente tabella elenca le attività che puoi eseguire con i pannelli:
 | [Elimina il pannello](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_delete) | Elimina un pannello dal dashboard.  |
 | [Esporta i dati](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_export) | Esporta i dati da un pannello in un file csv o json.  |
 | [Crea un avviso](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_alert) | Definisci un avviso su una metrica. |
-{: caption="Tabella 4. Attività del pannello" caption-side="top"} 
+{: caption="Tabella 2. Attività del pannello" caption-side="top"} 
 
 
 ## Dashboard
@@ -120,15 +120,15 @@ Un **dashboard** mostra i gruppi di metriche che forniscono informazioni sull'in
 
 Nella sezione **DASHBOARDS** dell'IU web, i dashboard sono organizzati in tre gruppi principali:
 
-* *My Dashboards*: questi sono i dashboard creati dall'utente che al momento ha eseguito l'accesso.
-* *My Shared Dashboards*: questi sono i dashboard creati dall'utente che al momento ha eseguito l'accesso e che sono condivisi con altri utenti.
-* *Dashboards Shared With Me*: questi sono i dashboard creati da altri utenti e condivisi con l'utente corrente.
+* **My Dashboards**: questi sono i dashboard creati dall'utente che al momento ha eseguito l'accesso.
+* **My Shared Dashboards**: questi sono i dashboard creati dall'utente che al momento ha eseguito l'accesso e che sono condivisi con altri utenti.
+* **Dashboards Shared With Me**: questi sono i dashboard creati da altri utenti e condivisi con l'utente corrente.
 
 Nella sezione **EXPLORE** dell'IU web, i dashboard sono organizzati in due gruppi:
-* *Default dashboards*: questi sono i dashboard predefiniti.
-* *My Dashboards*: questi sono i dashboard creati dall'utente che al momento ha eseguito l'accesso.
+* **Default dashboards**: questi sono i dashboard predefiniti.
+* **My Dashboards**: questi sono i dashboard creati dall'utente che al momento ha eseguito l'accesso.
 
-Puoi utilizzare dei dashboard predefiniti. Puoi anche creare dei dashboard personalizzati tramite l'IU web o in modo programmatico. Puoi eseguire il backup e il ripristino dei dashboard utilizzando gli script Python o l'API REST Sysdig.
+Puoi utilizzare dei dashboard predefiniti. Puoi anche creare dei dashboard personalizzati tramite l'IU web o in modo programmatico. Puoi eseguire il backup e il ripristino dei dashboard utilizzando gli script Python o l'API REST Sysdig. 
 
 Puoi anche copiare e condividere i dashboard tramite l'IU web. 
 
@@ -141,7 +141,7 @@ La seguente tabella illustra le attività che puoi eseguire per utilizzare i das
 | [Modifica dell'ambito](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_scope) | Modifica l'ambito di un dashboard.       |
 | [Elimina un dashboard](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_delete) |  Elimina un dashboard. |
 | [Condividi un dashboard](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_share) | Condividi i dashboard tra gli utenti in un team ed esternamente configurando un URL pubblico per il dashboard. |
-{: caption="Tabella 1. Attività del dashboard che puoi eseguire nell'IU web" caption-side="top"} 
+{: caption="Tabella 3. Attività del dashboard che puoi eseguire nell'IU web" caption-side="top"} 
 
 La seguente tabella illustra le attività che puoi eseguire in modo programmatico per utilizzare i dashboard:
 
@@ -150,32 +150,31 @@ La seguente tabella illustra le attività che puoi eseguire in modo programmatic
 | Crea un dashboard      | [Creazione di un dashboard utilizzando l'API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_create_dashboard) |
 | Elimina un dashboard      | [Eliminazione di un dashboard utilizzando l'API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_delete_dashboard) |
 | Salvataggio dei dashboard       | [Salvataggio dei dashboard di un team utilizzando l'API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_save_dashboard) |
-{: caption="Tabella 2. Attività per gestire i dashboard in modo programmatico" caption-side="top"} 
+{: caption="Tabella 4. Attività per gestire i dashboard in modo programmatico" caption-side="top"} 
 
 
 
 ## Eventi
 {: #monitoring_events}
 
-Un evento è una notifica che ti informa su qualcosa che si è verificato in tutti i nodi che inoltrano i dati alla tua istanza {{site.data.keyword.mon_full_notm}}. Utilizza gli eventi per controllare, tenere traccia e risolvere i problemi. 
+Un evento è una notifica che ti informa su qualcosa che si verifica in tutti i nodi che inoltrano i dati alla tua istanza {{site.data.keyword.mon_full_notm}}.Utilizza gli eventi per controllare, tenere traccia e risolvere i problemi. 
 
-Esistono diversi tipi di eventi: 
+Il seguente elenco mostra i diversi tipi di eventi: 
 
 * Gli *eventi di avviso* sono eventi che vengono attivati dagli avvisi configurati dall'utente. Per ulteriori informazioni, consulta [Utilizzo degli avvisi](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring_alerts).
 * Gli *eventi basati sull'infrastruttura* sono eventi raccolti dai nodi Docker e Kubernetes. Per impostazione predefinita, l'agent Sysdig rileva e raccoglie automaticamente i dati da un gruppo selezionato di eventi. Puoi modificare il file di configurazione dell'agent per abilitare ulteriori eventi.
 * *Eventi personalizzati* che configuri tramite una delle seguenti integrazioni: Slackbot, script Python precostruiti, script Python creati dall'utente personalizzati o richieste cURL.
 
 Per impostazione predefinita, un evento ha uno stato: 
-* *Active*: questo stato indica che le circostanze che hanno attivato l'evento rimangono invariate, ad esempio, un nodo continua ad essere inattivo.
-* *OK*: questo stato indica che la situazione è tornata normale, ad esempio, un nodo è operativo.
+* **Active**: questo stato indica che le circostanze che hanno attivato l'evento rimangono invariate, ad esempio, un nodo continua ad essere inattivo.
+* **OK**: questo stato indica che la situazione è tornata normale, ad esempio, un nodo è operativo.
 
 Gestisci gli eventi nella sezione *Events* dell'IU web. 
 * Puoi visualizzare gli eventi di avviso tramite la scheda *Alert Events*.
 * Puoi visualizzare gli eventi basati sull'infrastruttura tramite la scheda *Custom events*.
 * Puoi visualizzare gli eventi personalizzati tramite la scheda *Custom events*.
 * Puoi inviare gli eventi personalizzati a uno qualsiasi dei tuoi team utilizzando il [token API per tale team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token). Per ulteriori informazioni, consulta [Custom events ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events){:new_window}.
-
-Puoi risolvere la situazione che ha attivato un evento. Mentre attendi che la condizione che ha attivato l'evento venga nuovamente eseguita e di impostare il suo stato su *OK*, puoi impostare l'evento come risolto (**Resolved**) per visualizzare graficamente che il problema è stato risolto. 
+* Puoi impostare un evento come risolto (**Resolved**) per avvisare altri utenti che il problema è stato risolto invece di attendere che lo stato venga impostato su **OK**.
 {: #tip}
 
 
@@ -185,7 +184,7 @@ Puoi risolvere la situazione che ha attivato un evento. Mentre attendi che la co
 
 Un avviso è un evento di notifica che puoi utilizzare per avvertire di situazioni che richiedono attenzione. Ogni avviso ha uno stato di severità. Questo stato ti informa sulla criticità delle informazioni che riporta. 
 
-Quando definisci un avviso, devi definire la condizione che attiva la notifica, uno o più canali di notifica tramite i quali vuoi essere avvertito, la severità dell'avviso e il tipo di avviso. 
+Quando definisci un avviso, devi definire la condizione che attiva la notifica e uno o più canali di notifica tramite i quali vuoi essere avvertito. Devi inoltre definire la severità dell'avviso e il tipo di avviso. 
 
 Puoi definire gli avvisi per tutti i seguenti tipi di avviso:
 
@@ -213,7 +212,7 @@ Per ulteriori informazioni, consulta [Configurazione di un canale di notifica](/
 
 Puoi abilitare avvisi predefiniti, modificarli e crearne di personalizzati nell'IU web e utilizzando l'API Sysdig.
 
-Gestisci gli avvisi nella vista *Alerts* dell'IU web. Puoi configurare le colonne della tabella che vengono visualizzate nella vista *Alerts*. Le opzioni di colonna valide sono: *Name*, *Scope*, *Alert When*, *Segment By*, *Notifications*, *Enabled*, *Modified*, *Captures*, *Channels*, *Created*, *Description*, *Email recipients*, *For at least*, *OpsGenie*, *PagerDuty*, *Severity*, *Slack*, *WebHook*, *SNS topics*, *Type*, *VictorOps*
+Gestisci gli avvisi nella vista *Alerts* dell'IU web. Puoi configurare le colonne della tabella che vengono visualizzate nella vista *Alerts*. Le opzioni di colonna valide sono *Name*, *Scope*, *Alert When*, *Segment By*, *Notifications*, *Enabled*, *Modified*, *Captures*, *Channels*, *Created*, *Description*, *Email recipients*, *For at least*, *OpsGenie*, *PagerDuty*, *Severity*, *Slack*, *WebHook*, *SNS topics*, *Type* e *VictorOps*.
 
 Il seguente elenco illustra le attività principali quando utilizzi gli avvisi:
 * [Configure an alert ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-ConfigureanAlert){:new_window}
@@ -230,7 +229,7 @@ Il seguente elenco illustra le attività principali quando utilizzi gli avvisi:
 ## Acquisizioni
 {: #monitoring_captures}
 
-Un'acquisizione è un file di traccia che puoi generare per analizzare cosa succede in un nodo durante un intervallo di tempo. Il limite della dimensione del file acquisizione è 100MB. Ad esempio, puoi utilizzarla per analizzare i colli di bottiglia o le interazioni tra i componenti. 
+Un'acquisizione è un file di traccia che puoi generare per analizzare cosa succede in un nodo durante un intervallo di tempo. Il limite della dimensione del file acquisizione è 100 MB. Ad esempio, puoi utilizzarla per analizzare i colli di bottiglia o le interazioni tra i componenti. 
 
 Le acquisizioni contengono chiamate di sistema e altri eventi SO come le latenze al livello del sistema, la durata dei lavori batch, i tempi di interruzione delle distribuzioni, le latenze del ridimensionamento automatico, i tempi di avvio del contenitore o il tempo di transazione dell'applicazione. Le acquisizioni includono informazioni dettagliate da ogni contenitore su un nodo. 
 

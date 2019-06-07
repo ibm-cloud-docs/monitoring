@@ -49,7 +49,7 @@ Nella vista *Explore* dell'IU web, puoi eseguire una qualsiasi delle seguenti az
 | Attività                                                                                        | Descrizione     |
 |---------------------------------------------------------------------------------------------|-----------------|
 | [Copia di un gruppo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#copy_group)                | Copia un gruppo in altri team. |
-| [Crea un gruppo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#create_group)            | Crea un nuovo gruppo. |
+| [Crea un gruppo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#create_group)            | Crea un gruppo. |
 | [Elimina un gruppo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#delete_group)            | Elimina un gruppo. |
 | [Ridenomina un gruppo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#rename_group)            | Ridenomina un gruppo. |
 | [Condividi un gruppo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#share_group)              | Condividi un gruppo con altri membri nel team. |
@@ -60,50 +60,51 @@ Nella vista *Explore* dell'IU web, puoi eseguire una qualsiasi delle seguenti az
 ## Aggregazione
 {: #manage_aggregation}
 
-L'**aggregazione** dei dati si verifica automaticamente quando configuri un grafico o crei un avviso per una metrica. Esistono due tipi di aggregazione: aggregazione temporale e gruppo. 
+L'**aggregazione** dei dati si verifica automaticamente quando configuri un grafico o crei un avviso per una metrica. 
+
+Esistono diversi tipi di aggregazione che vengono utilizzati per le metriche:  
 * L'aggregazione temporale viene sempre eseguita prima dell'aggregazione gruppo.
 * Per creare dei confronti tra più serie e più avvisi, puoi anche suddividere i dati aggregati in sezioni più piccole denominate **segmenti** utilizzando le etichette. 
 
-Sysdig aggrega i dati nel tempo. Successivamente, prende questi punti di dati e li raggruppa per visualizzare i dati nelle metriche, nei dashboard o calcolare le soglie dell'avviso. 
+L'aggregazione temporale viene sempre eseguita prima dell'aggregazione gruppo.
+
+Sysdig aggrega i dati nel tempo. Successivamente, prende questi punti di dati e li raggruppa per visualizzare i dati nelle metriche, nei dashboard o calcolare le soglie dell'avviso.
 {: tip}
 
 Puoi personalizzare come i dati vengono aggregati quando configuri un grafico o crei un avviso per una metrica.
 
-Esistono due forme di aggregazione utilizzate per le metriche: 
-* Aggregazione temporale
-* Aggregazione gruppo
 
-**L'aggregazione temporale viene sempre eseguita prima dell'aggregazione gruppo.**
+
 
 
 ### Aggregazione temporale
 {: #manage_time_aggregation}
 
-**Per impostazione predefinita, un agent Sysdig raccoglie e riporta le metriche agent in una risoluzione di 10 secondi.**
+**Per impostazione predefinita, un agent Sysdig raccoglie e riporta le metriche a una risoluzione di 10 secondi.**
 
-Nei grafici delle serie temporali che includono i dati per cinque minuti o meno, 
+Nei grafici delle serie temporali che includono i dati per 5 minuti o meno, 
 * I punti di dati vengono tracciati alla risoluzione di 10 secondi
 * Non si verifica l'aggregazione temporale.
 
 L'aggregazione temporale si verifica automaticamente in una delle seguenti situazioni:
 
-* Nei grafici delle serie temporali che includono i dati per una quantità di tempo superiore a cinque minuti, i punti di dati vengono tracciati come un aggregato per un intervallo di tempo appropriato. Ad esempio, per un grafico che mostra i dati per un'ora, ogni punto di dati rappresenta un intervallo di un minuto.
-* Quando visualizzi i dati cronologici. I dati eseguono il rollup nel tempo. Puoi scegliere quali punti di dati utilizzare quando visualizzi dei dati obsoleti.
+* Nei grafici delle serie temporali che includono i dati per una quantità di tempo superiore a 5 minuti, i punti di dati vengono tracciati come un aggregato per un intervallo di tempo appropriato. Ad esempio, per un grafico che mostra i dati per 1 ora, ogni punto di dati rappresenta un intervallo di 1 minuto.
+* Quando visualizzi i dati cronologici, i dati eseguono il rollup nel tempo. Puoi scegliere quali punti di dati utilizzare quando visualizzi dei dati obsoleti.
 
 La seguente tabella elenca i diversi tipi di aggregazione per i grafici delle serie temporali:
 
 | Tipo di aggregazione | Descrizione                                                              |
 |------------------|--------------------------------------------------------------------------|
-| media          | Media dei valori della metrica richiamata nel periodo di tempo valutato. |
-| frequenza (timeAvg)   | Valore medio della metrica nel periodo di tempo valutato.            |
-| massima	         | Il valore più elevato durante il periodo di tempo valutato.                          |
-| minima	         | Il valore più basso durante il periodo di tempo valutato.                           |
-| somma              | La somma combinata della metrica nel periodo di tempo valutato.             |
+| `average`          | Media dei valori della metrica richiamata nel periodo di tempo valutato. |
+| `rate (timeAvg)`   | Valore medio della metrica nel periodo di tempo valutato.            |
+| `maximum`	         | Il valore più elevato durante il periodo di tempo valutato.                          |
+| `minimum`         | Il valore più basso durante il periodo di tempo valutato.                           |
+| `sum`              | La somma combinata della metrica nel periodo di tempo valutato.             |
 {: caption="Tabella 2. Tipi di aggregazione per i grafici delle serie temporali" caption-side="top"} 
 
 **Nota:** per impostazione predefinita, viene utilizzata la media per visualizzare i punti di dati per un intervallo temporale.
 
-La frequenza e la media sono tipi di aggregazione molto simili. Forniscono spesso lo stesso risultato. Tuttavia, il loro calcolo è diverso. Se l'aggregazione temporale è impostata su un minuto, l'agent Sysdig viene impostato per richiamare sei esempi, uno ogni 10 secondi. Tieni presente che in alcuni casi, gli esempi potrebbero non essere presenti a causa di disconnessioni o altre circostanze.
+La frequenza e la media sono tipi di aggregazione simili. Forniscono spesso lo stesso risultato. Tuttavia, il loro calcolo è diverso. Se l'aggregazione temporale è impostata su 1 minuto, l'agent Sysdig viene impostato per richiamare sei esempi, uno ogni 10 secondi. Tieni presente che in alcuni casi, gli esempi potrebbero non essere presenti a causa di disconnessioni o altre circostanze.
 
 
 ### Aggregazione gruppo
@@ -117,10 +118,10 @@ La seguente tabella elenca i diversi tipi di aggregazione gruppo:
 
 | Tipo di aggregazione | Descrizione                                        |
 |------------------|----------------------------------------------------|
-| media          | Il valore medio degli esempi dell'intervallo.           |
-| massima	         | Il valore più elevato degli esempi dell'intervallo.           |
-| minima	         | Il valore più basso degli esempi dell'intervallo.            |
-| somma              | Il valore combinato degli esempi dell'intervallo.          |
+| `average`          | Il valore medio degli esempi dell'intervallo.           |
+| `maximum`	         | Il valore più elevato degli esempi dell'intervallo.           |
+| `minimum`	         | Il valore più basso degli esempi dell'intervallo.            |
+| `sum`              | Il valore combinato degli esempi dell'intervallo.          |
 {: caption="Tabella 3. Tipi di aggregazione per l'aggregazione gruppo" caption-side="top"} 
 
 
@@ -148,21 +149,21 @@ La seguente tabella elenca le attività che puoi eseguire per modificare l'ambit
 
 I **team** raggruppano gli utenti e controllano i dati e le autorizzazioni per utilizzare gli eventi dell'infrastruttura e le acquisizioni Sysdig per tali utenti. 
 
-Un amministratore Sysdig può definire un qualsiasi numero di team. Per ogni team, può configurare le seguenti informazioni:
-* Il *team predefinito*: puoi impostare questo team come quello a cui viene assegnato qualsiasi utente che accede all'IU web per la prima volta per impostazione predefinita.
-* Il *punto di ingresso predefinito*: puoi specificare la vista nell'IU web che si apre ogni volta che accede un utente. I punti di ingresso validi sono: le viste *Explore*, *Dashboards*, *Events*, *Alerts* e *Settings*.
-* L'ambito: puoi limitare quali dati possono visualizzare gli utenti. Puoi scegliere *Host* o *Container* per definire il livello di dati visibile. Successivamente, puoi aggiungere una o più condizioni. Se l'ambito è impostato su *Host*, gli utenti possono visualizzare tutte le informazioni al livello host e contenitore. Se l'ambito è impostato su *Container*, gli utenti possono visualizzare solo le informazioni al livello contenitore.
-* Autorizzazioni: puoi abilitare o disabilitare le seguenti funzioni: *acquisizioni Sysdig* e *eventi infrastruttura*. I file acquisizione saranno visibili solo ai membri del team. **Nota:** le acquisizioni includono informazioni dettagliate da ogni contenitore su un host, indipendentemente dall'ambito del team. Quando vengono abilitati gli eventi dell'infrastruttura, gli utenti possono visualizzare tutti gli eventi dell'infrastruttura personalizzati da ogni utente e agent Sysdig nell'istanza.
+Un amministratore Sysdig può definire un qualsiasi numero di team. Per ogni team, un amministratore può configurare le seguenti informazioni:
+* `The default team`: puoi impostare questo team come quello a cui viene assegnato qualsiasi utente che accede all'IU web per la prima volta. 
+* `The default entrypoint`: puoi specificare la vista nell'IU web che si apre ogni volta che accede un utente. I punti di ingresso validi sono le viste *Explore*, *Dashboards*, *Events*, *Alerts* e *Settings*. 
+* `The scope`: puoi limitare quali dati possono visualizzare gli utenti. Puoi scegliere *Host* o *Container* per definire il livello di dati visibile. Successivamente, puoi aggiungere una o più condizioni. Se l'ambito è impostato su *Host*, gli utenti possono visualizzare tutte le informazioni al livello host e contenitore. Se l'ambito è impostato su *Container*, gli utenti possono visualizzare solo le informazioni al livello contenitore.
+* `Permissions`: puoi abilitare o disabilitare le seguenti funzioni: *acquisizioni Sysdig* e *eventi infrastruttura*. I file acquisizione sono visibili ai membri del team. **Nota:** le acquisizioni includono informazioni dettagliate da ogni contenitore su un host, indipendentemente dall'ambito del team. Quando vengono abilitati gli eventi dell'infrastruttura, gli utenti possono visualizzare tutti gli eventi dell'infrastruttura personalizzati da ogni utente e agent Sysdig nell'istanza.
 
-Per impostazione predefinita, è presente un team **Monitor Operations** predefinito per ogni istanza {{site.data.keyword.mon_full_notm}}.
+Per impostazione predefinita, un team **Monitor Operations** è predefinito per ogni istanza {{site.data.keyword.mon_full_notm}}.
 * Questo team non può essere eliminato.
 * Gli utenti vengono automaticamente aggiunti come membri di questo team e gli viene concessa la visibilità completa su tutte le risorse disponibili nell'istanza. 
 
 **Nota:** 
-* Un amministratore deve passare al team *Monitor Operations* prima di poter creare dei team o modificare le impostazioni di altri team.
+* Un amministratore deve passare al team *Monitor Operations* per creare dei team o modificare le impostazioni di altri team.
 * Dopo che un utente accede a {{site.data.keyword.cloud_notm}} e avvia l'IU web Sysdig, un amministratore può gestire tale utente nell'IU web Sysdig. L'utente viene creato nel database Sysdig quando accede all'IU web Sysdig per la prima volta. 
 
-Per limitare le autorizzazioni di visualizzazione degli utenti, un amministratore può eseguire una delle seguenti azioni:
+Un amministratore può eseguire tutte le seguenti azioni per limitare la visualizzazione delle autorizzazioni di un utente: 
 * Modificare il ruolo dell'utente nel team *Monitor Operations* predefinito con utente in *lettura*. 
 * Creare un team predefinito con ambito e visibilità limitati. Quindi, assegnare gli utenti manualmente ad altri team. 
 
@@ -171,7 +172,7 @@ La seguente tabella elenca le attività che puoi eseguire quando utilizzi i team
 | Attività                                                                            | Descrizione                 |
 |---------------------------------------------------------------------------------|-----------------------------|
 | [Creazione di un team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams_create)      | Crea un team per controllare la visibilità dei dati.  |
-| [Eliminazione di un team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams_delete)      | Elimina un team. </br>**Nota:** quando elimini un team, solo gli utenti che appartengono a questo team saranno spostati al team predefinito. |
+| [Eliminazione di un team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams_delete)      | Elimina un team. </br>**Nota:** quando elimini un team, solo gli utenti che appartengono a questo team sono spostati al team predefinito.|
 | [Aggiunta di membri del team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams_users)   | Aggiungi ulteriori utenti a un team. |
 | [Modifica di un team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-teams#teams_scope)          | Modifica l'ambito dei dati visibili agli utenti che appartengono a un team.  |
 {: caption="Tabella 5. Attività per utilizzare i team" caption-side="top"} 

@@ -31,7 +31,7 @@ Der Sysdig-Agent verwendet zwei Konfigurationsdateien, die angeben, welche Daten
 
 | Datei                   | Beschreibung                                                     | Position                                |
 |------------------------|-----------------------------------------------------------------|-----------------------------------------|
-| `dragent.default.yaml` | Hauptkonfigurationsdatei </br>**Hinweis:****Bearbeiten Sie diese Datei nicht.  | `/opt/draios/etc/dragent.default.yaml`  |
+| `dragent.default.yaml` | Hauptkonfigurationsdatei </br>**Hinweis:**** Bearbeiten Sie diese Datei nicht. | `/opt/draios/etc/dragent.default.yaml`  |
 | `dragent.yaml`         | Die Konfigurationsdatei, die Sie bearbeiten, um den Sysdig-Agenten anzupassen. | `/opt/draios/etc/dragent.yaml`          |
 {: caption="Tabelle 1. Sysdig-Agentenkonfigurationsdateien" caption-side="top"} 
 

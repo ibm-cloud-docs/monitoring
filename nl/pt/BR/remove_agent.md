@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete agent
 
@@ -46,8 +46,6 @@ Conclua as etapas a seguir para remover um agente Sysdig de um cluster Kubernete
 
     Em seguida, copie e cole o comando exibido em seu terminal para configurar a variável de ambiente KUBECONFIG.
 
-    **Nota:** toda vez que você efetua login na CLI do {{site.data.keyword.containerlong}} para trabalhar com clusters, deve-se executar esses comandos para configurar o caminho para o arquivo de configuração do cluster como uma variável de sessão. O Kubernetes CLI usa essa variável para localizar um arquivo de configuração local e certificados que são necessárias para se conectar ao cluster no {{site.data.keyword.cloud_notm}}.
-
 2. Remova a ligação de função de cluster. Execute o seguinte comando:
 
     ```
@@ -62,7 +60,7 @@ Conclua as etapas a seguir para remover um agente Sysdig de um cluster Kubernete
     ```
     {: codeblock}
 
-4. Remova o daemonset. Execute o seguinte comando:
+4. Remova o `daemonset`. Execute o seguinte comando:
 
     ```
     kubectl delete daemonset sysdig-agent -n ibm-observe

@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# 使用 Sysdig REST API
+# 管理 Sysdig REST API
 {: #api}
 
 使用 Sysdig REST API 可自动执行例程任务和监视通知。
@@ -42,17 +42,17 @@ subcollection: Sysdig
 
 2. 创建用于描述仪表板的 JSON 文件。以下字段必须如下所示进行设置：
 
-    * *name*：输入仪表板的名称。
+    * `name`：输入仪表板的名称。
 
-    * *id*：设置为 *null*。
+    * `id`：设置为 *null*。
 
-    * *version*：设置为 *null*。
+    * `version`：设置为 *null*。
 
-    * username：设置为与 IBM 标识关联的电子邮件。
+    * `username`：设置为与 IBM 标识关联的电子邮件。
 
-    * *isShared*：设置为 true 可与其他团队成员共享仪表板。
+    * `isShared`：设置为 true 可与其他团队成员共享仪表板。
 
-    * *isPublic*：如果希望仪表板公开可用，请设置为 true。
+    * `isPublic`：如果希望仪表板公开可用，请设置为 true。
 
     * 配置过滤器以定义仪表板作用域。
     

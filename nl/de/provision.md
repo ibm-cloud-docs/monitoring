@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -24,11 +24,8 @@ subcollection: Sysdig
 # Eine Instanz bereitstellen
 {: #provision}
 
-Bevor Sie Metriken mit Sysdig überwachen und verwalten können, müssen Sie zuerst eine Instanz des Service in {{site.data.keyword.Bluemix}} bereitstellen.
+Bevor Sie Metriken mit Sysdig überwachen und verwalten können, müssen Sie eine Instanz des Service in {{site.data.keyword.cloud_notm}} bereitstellen.
 {:shortdesc}
-
-Wenn Sie eine Sysdig-Instanz in einer Public Cloud-Region bereitstellen möchten, müssen Sie den Serviceplan, der der Instanz zugeordnet ist, die Region, in der die Metriken erfasst werden, und den Plan, der die Anzahl der Metriken bestimmt, die Sie überwachen können, und deren Aufbewahrungsdauer auswählen.
-
 
 
 ## Eine Sysdig-Instanz aus dem Katalog bereitstellen
@@ -72,11 +69,9 @@ Als Nächstes konfigurieren Sie eine Metrikquelle, indem Sie einen Sysdig-Agente
 
 Führen Sie die folgenden Schritte aus, um eine Instanz von Sysig über die Befehlszeile bereitzustellen:
 
-1. [Voraussetzung] Installieren Sie die {{site.data.keyword.cloud_notm}}-CLI.
+1. [Voraussetzung] Installieren Sie die {{site.data.keyword.cloud_notm}}-CLI. Wenn die Befehlszeilenschnittstelle (CLI) installiert ist, fahren Sie mit dem nächsten Schritt fort.
 
    Weitere Informationen finden Sie unter [Die {{site.data.keyword.cloud_notm}}-CLI installieren](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
-
-   Wenn die Befehlszeilenschnittstelle (CLI) installiert ist, fahren Sie mit dem nächsten Schritt fort.
 
 2. Melden Sie sich an der Region in {{site.data.keyword.cloud_notm}} an, in der die Sysdig-Instanz ausgeführt werden soll. Führen Sie den folgenden Befehl aus: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -95,9 +90,9 @@ Führen Sie die folgenden Schritte aus, um eine Instanz von Sysig über die Befe
 
     * NAME ist der Name der Sysdig-Instanz.
     
-    * *sysdig-monitor* ist der Name des {{site.data.keyword.mon_full_notm}}-Service in {{site.data.keyword.cloud_notm}}.
+    * `sysdig-monitor` ist der Name des {{site.data.keyword.mon_full_notm}}-Service in {{site.data.keyword.cloud_notm}}.
     
-    * SERVICE_PLAN_NAME ist der Typ des Plans. Gültige Werte sind: *lite*, *graduated-tier*
+    * SERVICE_PLAN_NAME ist der Typ des Plans. Gültige Werte sind *lite* und *graduated-tier*. 
     
     * LOCATION ist die Region, in der die Instanz erstellt wird.
 

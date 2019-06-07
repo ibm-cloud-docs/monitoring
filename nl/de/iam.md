@@ -82,8 +82,8 @@ Verwenden Sie die folgende Tabelle, um die Plattformrolle anzugeben, die Sie ein
 | `Eine Serviceinstanz bereitstellen`                                          | Administrator </br>Editor                            | 
 | `Eine Serviceinstanz löschen`                                             | Administrator </br>Editor                            | 
 | `Eine Service-ID erstellen`                                                   | Administrator </br>Editor                            |
-| `Details einer Serviceinstanz anzeigen`                                    | Administrator </br>Editor </br>Operator </br>Anzeigeberechtigter  | 
-| `Serviceinstanzen im Monitoring-Dashboard "Beobachtbarkeit" anzeigen`      | Administrator </br>Editor </br>Operator </br>Anzeigeberechtigter  | 
+| `Details einer Serviceinstanz anzeigen`                                    | Administrator </br>Editor </br>Operator </br>Anzeigeberechtigter | 
+| `Serviceinstanzen im Monitoring-Dashboard "Beobachtbarkeit" anzeigen`      | Administrator </br>Editor </br>Operator </br>Anzeigeberechtigter | 
 {: caption="Tabelle 1. IAM-Benutzerrollen und -Aktionen" caption-side="top"}
 
 
@@ -100,10 +100,10 @@ In der folgenden Tabelle werden die Sysdig-Rollen und -Aktionen pro Rolle aufgef
 | `Teams erstellen, konfigurieren und löschen`                                      | Admin                                                |
 | `Benachrichtigungskanäle konfigurieren und entfernen`                              | Admin                                                | 
 | `Sysdig-Agenten konfigurieren und entfernen`                                       | Admin                                                |
-| `Sysdig-Webbenutzerschnittstellen-Inhalt erstellen, löschen und bearbeiten`                    | Admin </br>Benutzer                                      |  
-| `Metriken über die Sysdig-Webbenutzerschnittstelle anzeigen`                                   | Admin </br>Benutzer                                      |  
-| `Alerts erstellen und löschen`                                                 | Admin </br>Benutzer                                      | 
-| `Erfassungen erstellen und löschen`                                               | Admin </br>Benutzer                                      |   
+| `Sysdig-Webbenutzerschnittstellen-Inhalt erstellen, löschen und bearbeiten`                    | Benutzer mit </br>Administratorberechtigung                                   |  
+| `Metriken über die Sysdig-Webbenutzerschnittstelle anzeigen`                                   | Benutzer mit </br>Administratorberechtigung                                   |  
+| `Alerts erstellen und löschen`                                                 | Benutzer mit </br>Administratorberechtigung                                   | 
+| `Erfassungen erstellen und löschen`                                               | Benutzer mit </br>Administratorberechtigung                                   |   
 {: caption="Tabelle 2. Sysdig-Rollen und -Aktionen" caption-side="top"}
 
 

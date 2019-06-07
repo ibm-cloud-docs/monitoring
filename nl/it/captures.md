@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, captures
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Utilizzo delle acquisizioni
+# Gestione delle acquisizioni
 {: #captures}
 
 Un'acquisizione è un file di traccia che puoi generare per analizzare cosa succede in un host durante un intervallo di tempo. Ad esempio, puoi utilizzarla per analizzare i colli di bottiglia o le interazioni tra i componenti. Nel servizio {{site.data.keyword.mon_full_notm}}, puoi creare, esplorare, scaricare ed eliminare le *acquisizioni* per singoli nodi. 
@@ -37,13 +37,13 @@ Crea un'acquisizione nella vista *Explore*.
 
 Completa la seguente procedura per creare un file acquisizione:
 
-1. Passa alla sezione *EXPLORE* nell'IU web. Per ulteriori informazioni su come avviare l'IU web, consulta [Passaggio alla IU web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Passa alla sezione *EXPLORE* nell'IU web. [Ulteriori informazioni](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 
-2. Fai clic sull'icona cambia host ![icona cambia host](images/switch_hosts.png).
+2. Fai clic sull'icona di scambio host ![Icona di scambio host](images/switch_hosts.png).
 
 3. Seleziona un host o un contenitore.
 
-4. Fai clic sull'icona azioni ![icona tre punti](images/actions.png) e seleziona **Sysdig capture**.
+4. Fai clic sull'icona azioni ![Icona tre punti](images/actions.png) e seleziona **Sysdig capture**.
 
     Si apre la finestra *Sysdig Capture*.
 
@@ -62,9 +62,9 @@ Completa la seguente procedura per creare un file acquisizione:
 La pagina *Captures* mostra una tabella che elenca il nome del file acquisizione, l'host da cui è stata richiamato, l'intervallo di tempo e la dimensione dell'acquisizione. 
 
 Lo stato di un file acquisizione può essere uno qualsiasi dei seguenti valori:
-* **Requested**: un file è in fase di generazione.
-* **Uploaded**:  un file è disponibile per lo scaricamento e l'analisi.
-* **Error**: un file non è disponibile a causa di un timeout, i dati non sono mai stati ricevuti o si è verificato un errore con l'agent.
+* `Requested`: un file è in fase di generazione.
+* `Uploaded`:  un file è disponibile per lo scaricamento e l'analisi.
+* `Error`: un file non è disponibile a causa di un timeout, i dati non sono mai stati ricevuti o si è verificato un errore con l'agent.
 
 
 
@@ -73,7 +73,7 @@ Lo stato di un file acquisizione può essere uno qualsiasi dei seguenti valori:
 
 Completa la seguente procedura per eliminare un file acquisizione:
 
-1. Passa alla sezione *CAPTURES* nell'IU web. Per ulteriori informazioni su come avviare l'IU web, consulta [Passaggio alla IU web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Passa alla sezione *CAPTURES* nell'IU web. [Ulteriori informazioni](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identifica e seleziona il file acquisizione che vuoi eliminare.
 3. Fai clic su **Delete**.
 
@@ -84,7 +84,7 @@ Completa la seguente procedura per eliminare un file acquisizione:
 
 Completa la seguente procedura per esplorare un file acquisizione:
 
-1. Passa alla sezione *CAPTURES* nell'IU web. Per ulteriori informazioni su come avviare l'IU web, consulta [Passaggio alla IU web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Passa alla sezione *CAPTURES* nell'IU web. [Ulteriori informazioni](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identifica e seleziona il file acquisizione che contiene i dati per l'host che vuoi analizzare.
 3. Fai clic su **EXPLORE**.
 
@@ -95,7 +95,7 @@ Completa la seguente procedura per esplorare un file acquisizione:
 
 Completa la seguente procedura per scaricare un file acquisizione:
 
-1. Passa alla sezione *CAPTURES* nell'IU web. Per ulteriori informazioni su come avviare l'IU web, consulta [Passaggio alla IU web](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Passa alla sezione *CAPTURES* nell'IU web. [Ulteriori informazioni](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Identifica e seleziona il file acquisizione che contiene i dati che vuoi scaricare.
 3. Fai clic su **DOWNLOAD**.
 
@@ -105,7 +105,7 @@ Completa la seguente procedura per scaricare un file acquisizione:
 
 Un chisel Sysdig è uno script scritto in Lua, un linguaggio di script. Puoi utilizzarlo per analizzare i dati in un file acquisizione. 
 
-Per ulteriori informazioni su come utilizzare un chisel, consulta questa guida utente: [Chisels User Guide ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}
+Per ulteriori informazioni, consulta [Chisels User Guide ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}.
 
 
 

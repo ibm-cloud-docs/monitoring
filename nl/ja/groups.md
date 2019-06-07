@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, groups
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# グループの処理
+# グループの管理
 {: #groups}
 
 ラベルを使用して、インフラストラクチャー・オブジェクトを論理階層にグループ化できます。
@@ -32,7 +32,7 @@ subcollection: Sysdig
 
 グループを作成するには、以下のステップを実行します。
 
-1. Web UI を起動します。 Web UI の起動方法について詳しくは、[Web UI へのナビゲート](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)を参照してください。 
+1. Web UI を起動します。 [詳細はこちら](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. **「探索」**をクリックして、*「探索」*セクションにナビゲートします。
 
@@ -40,8 +40,7 @@ subcollection: Sysdig
 
 4. *プラス (+)* アイコンをクリックして、さらにラベルを追加します。
 
-    新しいラベルを追加すると、有効な論理グループ化のみが作成されるように、階層に適合しないラベルはフィルターで除外されます。
-    {: tip}
+    ラベルを追加すると、階層に適合しないラベルは除外され、有効な論理グループ化のみが作成されます。{: tip}
 
 5. ラベルの追加が終了したら、**「新規のグループ化 (New Grouping)」**をクリックします。
 
@@ -56,7 +55,7 @@ subcollection: Sysdig
 
 グループの名前を変更するには、以下のステップを実行します。
 
-1. Web UI を起動します。 Web UI の起動方法について詳しくは、[Web UI へのナビゲート](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)を参照してください。 
+1. Web UI を起動します。 [詳細はこちら](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. **「探索」**をクリックして、*「探索」*セクションにナビゲートします。
 
@@ -80,7 +79,7 @@ subcollection: Sysdig
 
 グループを他のチームにコピーするには、以下のステップを実行します。
 
-1. Web UI を起動します。 Web UI の起動方法について詳しくは、[Web UI へのナビゲート](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)を参照してください。 
+1. Web UI を起動します。 [詳細はこちら](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. **「探索」**をクリックして、*「探索」*セクションにナビゲートします。
 
@@ -105,7 +104,7 @@ subcollection: Sysdig
 
 グループをチームの他のメンバーと共有するには、以下のステップを実行します。
 
-1. Web UI を起動します。 Web UI の起動方法について詳しくは、[Web UI へのナビゲート](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)を参照してください。 
+1. Web UI を起動します。 [詳細はこちら](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. **「探索」**をクリックして、*「探索」*セクションにナビゲートします。
 
@@ -128,7 +127,7 @@ subcollection: Sysdig
 
 グループを削除するには、以下のステップを実行します。
 
-1. Web UI を起動します。 Web UI の起動方法について詳しくは、[Web UI へのナビゲート](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)を参照してください。 
+1. Web UI を起動します。 [詳細はこちら](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. **「探索」**をクリックして、*「探索」*セクションにナビゲートします。
 

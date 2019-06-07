@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -50,21 +50,19 @@ Des règles IAM doivent être affectées à votre {{site.data.keyword.IBM_notm}}
 
 | Ressource                             | Portée de la règle d'accès | Rôle    | Région    | Informations                  |
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
-| Groupe de ressources **par défaut**           |  Groupe de ressources            | Afficheur  | us-south  | Cette règle est requise pour permettre à l'utilisateur de voir les instances de service dans le groupe de ressources par défaut.    |
-| Service {{site.data.keyword.mon_full_notm}} |  Groupe de ressources            | Editeur  | us-south  | Cette règle est requise pour permettre à l'utilisateur de mettre à disposition et d'administrer le service {{site.data.keyword.mon_full_notm}} dans le groupe de ressources par défaut.   |
+| Groupe de ressources **par défaut**           |  Groupe de ressources            | Afficheur  | `Sud des Etats-Unis`  | Cette règle est requise pour permettre à l'utilisateur de voir les instances de service dans le groupe de ressources par défaut.    |
+| Service {{site.data.keyword.mon_full_notm}} |  Groupe de ressources            | Editeur  | `Sud des Etats-Unis`  | Cette règle est requise pour permettre à l'utilisateur de mettre à disposition et d'administrer le service {{site.data.keyword.mon_full_notm}} dans le groupe de ressources par défaut.   |
 {: caption="Tableau 1. Liste des règles IAM requises pour l'exécution du tutoriel" caption-side="top"} 
 
 Installez l'interface de ligne de commande {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [Installation de l'interface de ligne de commande {{site.data.keyword.cloud_notm}}.](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)
 
 
-## Etape 1 : Mise à disposition d'une instance {{site.data.keyword.mon_full_notm}}
+## Etape 1. Mise à disposition d'une instance {{site.data.keyword.mon_full_notm}}
 {: #ubuntu_step1}
 
 Pour mettre à disposition une instance {{site.data.keyword.mon_full_notm}} via l'interface utilisateur {{site.data.keyword.cloud_notm}}, procédez comme suit :
 
-1. Connectez-vous à votre compte {{site.data.keyword.cloud_notm}}.
-
-    Cliquez sur le tableau de bord [{{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/login){:new_window} pour lancer le tableau de bord {{site.data.keyword.cloud_notm}}.
+1. [Connectez-vous à votre compte {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/login){:new_window}.
 
 	Une fois que vous êtes connecté avec votre ID utilisateur et votre mot de passe, l'interface utilisateur {{site.data.keyword.cloud_notm}} s'ouvre.
 
@@ -97,7 +95,7 @@ Après avoir mis à disposition une instance, le tableau de bord *Observabilité
 de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli).
 
 
-## Etape 2 : Configuration de votre serveur Ubuntu pour envoyer des métriques à votre instance
+## Etape 2. Configuration de votre serveur Ubuntu pour envoyer des métriques à votre instance
 {: #ubuntu_step2}
 
 Pour configurer votre serveur Ubuntu pour qu'il envoie des métriques à votre instance {{site.data.keyword.mon_full_notm}}, vous devez installer un agent Sysdig. 
@@ -107,11 +105,11 @@ Procédez comme suit à partir de la ligne de commande :
 1. Ouvrez un terminal. Ensuite, connectez-vous à {{site.data.keyword.cloud_notm}}. Exécutez la commande suivante et suivez les invites :
 
     ```
-    ibmcloud login -a api.ng.bluemix.net
+    ibmcloud login -a cloud.ibm.com
     ```
     {: codeblock}
 
-    Sélectionnez le compte où vous avez mis à disposition l'instance {{site.data.keyword.mon_full_notm}}.
+    Sélectionnez le compte où l'instance {{site.data.keyword.mon_full_notm}} est disponible.
 
 2. Obtenez la clé d'accès Sysdig. Pour plus d'informations, voir [Obtention de la clé d'accès via l'interface utilisateur {{site.data.keyword.cloud_notm}}](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
@@ -130,7 +128,7 @@ Procédez comme suit à partir de la ligne de commande :
 
     * COLLECTOR_ENDPOINT est l'URL d'ingestion pour la région où se trouve l'instance de surveillance.
 
-    * TAG_DATA sont des étiquettes séparées par une virgule qui se présentent sous la forme *TAG_NAME:TAG_VALUE*. Vous pouvez associer une ou plusieurs étiquettes à votre agent Sysdig. Exemple : *role:serviceX,location:us-south*. Vous pouvez utiliser ces étiquettes ultérieurement pour identifier les métriques provenant de l'environnement où l'agent s'exécute.
+    * TAG_DATA sont des étiquettes séparées par une virgule qui se présentent sous la forme *TAG_NAME:TAG_VALUE*. Vous pouvez associer une ou plusieurs étiquettes à votre agent Sysdig. Par exemple, *role:serviceX,location:us-south*. Vous pouvez utiliser ces étiquettes ultérieurement pour identifier les métriques provenant de l'environnement où l'agent s'exécute.
 
     * Définissez **sysdig_capture_enabled** sur *false* pour désactiver la fonction de capture Sysdig. La valeur par défaut est *true*. Pour plus d'informations, voir [Utilisation des captures](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
@@ -152,14 +150,12 @@ Si l'agent Sysdig ne parvient pas à s'installer correctement, installez les en-
 
 
 
-## Etape 3 : Lancement de l'interface utilisateur Web Sysdig
+## Etape 3. Lancement de l'interface utilisateur Web Sysdig
 {: #ubuntu_step3}
 
 Pour lancer l'interface utilisateur Web, procédez comme suit :
 
-1. Connectez-vous à votre compte {{site.data.keyword.cloud_notm}}.
-
-    Cliquez sur le tableau de bord [{{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/login){:new_window} pour lancer le tableau de bord {{site.data.keyword.cloud_notm}}.
+1. [Connectez-vous à votre compte {{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/login){:new_window}.
 
 	Une fois que vous êtes connecté avec votre ID utilisateur et votre mot de passe, le tableau de bord {{site.data.keyword.cloud_notm}} s'ouvre.
 
@@ -175,16 +171,16 @@ Si l'agent Sysdig est configuré correctement, la vue *EXPLORE* s'ouvre.
 
 Cependant, si l'agent Sysdig n'est pas installé correctement, pointe vers le mauvais noeud final d'ingestion ou que la clé d'accès est incorrecte, la page qui s'ouvre vous informe de la procédure à suivre.
 
-Une seule session d'interface utilisateur Web peut s'ouvrir par navigateur.
+Vous ne pouvez avoir qu'une seule session d'interface utilisateur Web ouverte par navigateur.
 {: tip}
 
 
-## Etape 4 : Surveillance de votre serveur Ubuntu
+## Etape 4. Surveillance de votre serveur Ubuntu
 {: #ubuntu_step4}
 
 Vous pouvez surveiller votre serveur Ubuntu dans la vue **EXPLORE**, qui est disponible via l'interface utilisateur Web. Cette vue est le point de départ pour identifier et surveiller votre infrastructure. Il s'agit de la page d'accueil par défaut de l'interface utilisateur Web pour les utilisateurs.
 
-La section *Host and containers* contient l'entrée pour votre serveur Ubuntu. Cliquez sur **Host and containers** ![Host and containers](../images/switch_hosts.png) pour basculer entre les sources de données. Ensuite, sélectionnez votre serveur Ubuntu. Les données affichées correspondent au serveur Ubuntu que vous avez sélectionné.
+La section *Host and containers* contient l'entrée pour votre serveur Ubuntu. Cliquez sur **Host and containers** ![Host and containers](../images/switch_hosts.png) pour basculer entre les sources de données. Ensuite, sélectionnez votre serveur Ubuntu. Les données affichées correspondent au serveur Ubuntu que vous sélectionnez.
 
 Par exemple, pour configurer le codage couleur pour une colonne, procédez comme suit :
 

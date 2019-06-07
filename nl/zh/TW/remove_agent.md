@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete agent
 
@@ -24,14 +24,14 @@ subcollection: Sysdig
 # 移除 Sysdig 代理程式
 {: #remove_agent}
 
-當您刪除 {{site.data.keyword.mon_full_notm}} 實例時，或如果想要停止從來源收集度量，則必須解除安裝 Sysdig 代理程式。
+當您刪除 {{site.data.keyword.mon_full_notm}} 實例時，或如果想要停止從來源收集度量值，則必須解除安裝 Sysdig 代理程式。
 {:shortdesc}
 
 
-## 從 Kubernetes 叢集中移除 Sysdig 代理程式
+## 從 Kubernetes 叢集移除 Sysdig 代理程式
 {: #remove_agent_kube}
 
-請完成下列步驟，從 Kubernet 叢集中移除 Sysdig 代理程式：
+請完成下列步驟，從 Kubernetes 叢集移除 Sysdig 代理程式：
 
 1. 設定叢集環境。請執行下列指令：
 
@@ -45,8 +45,6 @@ subcollection: Sysdig
     配置檔下載完成之後，會顯示一個指令，可讓您用來將本端 Kubernetes 配置檔的路徑設為環境變數。
 
     然後，複製並貼上終端機中顯示的指令，以設定 KUBECONFIG 環境變數。
-
-    **附註：**每次您登入 {{site.data.keyword.containerlong}} CLI 來使用叢集，您必須執行這些指令，將叢集配置檔的路徑設為階段作業變數。Kubernetes CLI 會使用此變數來尋找與 {{site.data.keyword.cloud_notm}} 中的叢集連接所需的本端配置檔及憑證。
 
 2. 移除叢集角色連結。請執行下列指令：
 
@@ -62,7 +60,7 @@ subcollection: Sysdig
     ```
     {: codeblock}
 
-4. 移除 daemonset。請執行下列指令：
+4. 移除 `daemonset`。請執行下列指令：
 
     ```
     kubectl delete daemonset sysdig-agent -n ibm-observe

@@ -150,7 +150,7 @@ A tabela a seguir descreve as diferentes ações e permissões de usuário que s
 | Ação     |	Quem pode copiar     |	Instância do painel	   | Quem pode visualizar o painel     | Quem pode editar o painel  |
 |------------|-------------------|-------------------------|--------------------------------|-----------------------------|
 | Copiar para a equipe atual    |	Usuários na equipe com permissões do editor | Nova instância do painel  | Membros da equipe com permissões de visualização	 | Usuários na equipe com permissões do editor |
-| Copiar para outra Equipe    | Usuários na equipe com permissões do editor em ambas as equipes | Nova instância do painel  | Se o painel original não for compartilhado, somente o usuário que copiar o painel terá acesso. </br>Se o painel original for compartilhado, todos os membros da equipe terão acesso. | Se o painel original não for compartilhado, somente o usuário que copiar o painel. </br>Se o painel original for compartilhado, todos os membros da equipe da equipe com permissões de editor. |
+| Copiar para outra Equipe    | Usuários na equipe com permissões do editor em ambas as equipes | Nova instância do painel  | Se o painel original não for compartilhado, somente o usuário que copiar o painel terá acesso. </br>Se o painel original for compartilhado, todos os membros da equipe da equipe terão acesso. | Se o painel original não for compartilhado, somente o usuário que copiar o painel. </br>Se o painel original for compartilhado, todos os membros da equipe da equipe com permissões de editor. |
 {: caption="Tabela 2. Informações sobre usuários e painéis relacionadas à cópia de painéis" caption-side="top"} 
 
 Conclua as etapas a seguir para copiar um painel na IU da web:

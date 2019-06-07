@@ -31,7 +31,7 @@ Sysdig 代理程序使用两个配置文件来指定要自动收集的数据：
 
 |文件|描述|位置|
 |------------------------|-----------------------------------------------------------------|-----------------------------------------|
-|`dragent.default.yaml`|主配置文件</br>**注：**** 请勿编辑此文件。|`/opt/draios/etc/dragent.default.yaml`|
+|`dragent.default.yaml`| 主配置文件 </br>**注：****请勿编辑此文件。|`/opt/draios/etc/dragent.default.yaml`|
 |`dragent.yaml`|用于定制 Sysdig 代理程序的配置文件。|`/opt/draios/etc/dragent.yaml`|
 {: caption="表 1. Sysdig 代理程序配置文件" caption-side="top"} 
 

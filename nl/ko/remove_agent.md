@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete agent
 
@@ -46,8 +46,6 @@ Kubernetes 클러스터에서 Sysdig 에이전트를 제거하려면 다음 단�
 
     그리고 터미널에 표시된 명령을 복사하여 붙여넣어서 KUBECONFIG 환경 변수를 설정하십시오.
 
-    **참고:** 클러스터 관련 작업을 위해 {{site.data.keyword.containerlong}} CLI에 로그인할 때마다 이러한 명령을 실행하여 세션 변수로서 클러스터의 구성 파일에 대한 경로를 설정해야 합니다. Kubernetes CLI는 이 변수를 사용하여 {{site.data.keyword.cloud_notm}}에서 클러스터와 연결하는 데 필요한 로컬 구성 파일과 인증서를 찾습니다.
-
 2. 클러스터 역할 바인딩을 제거하십시오. 다음 명령을 실행하십시오.
 
     ```
@@ -62,7 +60,7 @@ Kubernetes 클러스터에서 Sysdig 에이전트를 제거하려면 다음 단�
     ```
     {: codeblock}
 
-4. daemonset를 제거하십시오. 다음 명령을 실행하십시오.
+4. `daemonset`를 제거하십시오. 다음 명령을 실행하십시오.
 
     ```
     kubectl delete daemonset sysdig-agent -n ibm-observe

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -24,11 +24,9 @@ subcollection: Sysdig
 # Provisionando uma instância
 {: #provision}
 
-Antes de poder monitorar e gerenciar métricas com o Sysdig, deve-se primeiro provisionar uma instância do serviço no {{site.data.keyword.Bluemix}}.
+Antes de poder monitorar e gerenciar métricas com o Sysdig, deve-se provisionar uma instância do
+serviço no {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
-
-Para provisionar uma instância do Sysdig em uma região de Nuvem pública, deve-se selecionar o plano de serviço que está associado à instância, a região em que suas métricas são coletadas e o plano que determina o número de métricas que é possível monitorar e seu período de retenção.
-
 
 
 ## Provisionando uma instância do Sysdig por meio do catálogo
@@ -36,7 +34,7 @@ Para provisionar uma instância do Sysdig em uma região de Nuvem pública, deve
 
 Para provisionar uma instância do Sysdig por meio do catálogo do {{site.data.keyword.cloud_notm}}, conclua as etapas a seguir:
 
-1. Efetue login em sua conta do  {{site.data.keyword.cloud_notm}} .
+1. Efetue login em sua conta do {{site.data.keyword.cloud_notm}}.
 
     Clique em [Painel do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/login){:new_window} para ativar o painel do {{site.data.keyword.cloud_notm}}.
 
@@ -46,7 +44,7 @@ Para provisionar uma instância do Sysdig por meio do catálogo do {{site.data.k
 
 3. Para filtrar a lista de serviços exibida, selecione a categoria **Ferramentas do desenvolvedor**.
 
-4. Clique no quadro  ** {{site.data.keyword.mon_full_notm}} ** . O painel *Observabilidade* é aberto.
+4. Clique no quadro  ** {{site.data.keyword.mon_full_notm}} **. O painel *Observabilidade* é aberto.
 
 5. Selecione **Criar instância**. 
 
@@ -72,11 +70,9 @@ Em seguida, configure uma origem de métrica incluindo um agente Sysdig. Esse ag
 
 Para provisionar uma instância de Sysdig por meio da linha de comandos, conclua as etapas a seguir:
 
-1. [ Pré-requisito ] Instale a CLI do  {{site.data.keyword.cloud_notm}} .
+1. [Pré-requisito] Instale a CLI do {{site.data.keyword.cloud_notm}}. Se a CLI estiver instalada, continue com a próxima etapa.
 
    Para obter mais informações, consulte [Instalando a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
-
-   Se a CLI estiver instalada, continue com a próxima etapa.
 
 2. Efetue login na região no {{site.data.keyword.cloud_notm}} em que você deseja provisionar a instância. Execute o comando a seguir: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -84,22 +80,22 @@ Para provisionar uma instância de Sysdig por meio da linha de comandos, conclua
 
     Por padrão, o grupo de recursos `default` é configurado.
 
-4. Crie a instância Sysdig. Execute o comando  [ ` ibmcloud resource service-instance-create ` ](/docs/cli/reference/ibmcloud/cli_resource_group.html#ibmcloud_resource_service_instance_create) :
+4. Crie a instância Sysdig. Execute o comando [ ` ibmcloud resource service-instance-create ` ](/docs/cli/reference/ibmcloud/cli_resource_group.html#ibmcloud_resource_service_instance_create) :
 
     ```
     ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION
     ```
     {: codeblock}
 
-    sendo
+    Em que
 
-    * NAME é o nome da instância do Sysdig
+    * NAME é o nome da instância do Sysdig.
     
-    * *sysdig-monitor* é o nome do serviço {{site.data.keyword.mon_full_notm}} no {{site.data.keyword.cloud_notm}}
+    * `sysdig-monitor` é o nome do nome do serviço {{site.data.keyword.mon_full_notm}} no {{site.data.keyword.cloud_notm}}.
     
-    * SERVICE_PLAN_NAME é o tipo de plano. Os valores válidos são:  * lite *,  * graduado-tier *
+    * SERVICE_PLAN_NAME é o tipo de plano. Os valores válidos são *lite* e *graduated-tier*.
     
-    * LOCATION é a região na qual a instância é criada
+    * LOCATION é a região na qual a instância é criada.
 
     Por exemplo, para provisionar uma instância com o plano pago, execute o comando a seguir:
 

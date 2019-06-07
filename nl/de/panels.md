@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, panels
 
@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Mit Anzeigen arbeiten
+# Anzeigen verwalten
 {: #panels}
 
 Verwenden Sie eine Anzeige, um eine Metrik oder eine Gruppe von Metriken in einem Dashboard anzuzeigen. Sie können Anzeigen kopieren, ihren Geltungsbereich ändern, die Anzeigen duplizieren, löschen, exportieren und erkunden.
@@ -32,14 +32,14 @@ Sie können einen der folgenden Anzeigentypen verwenden:
 
 | Typ | Beschreibung |
 |------|-------------|
-| Zeile | Verwenden Sie diese Anzeige, um Trends für eine oder mehrere Metriken im Laufe der Zeit anzuzeigen.  |
-| Bereich | Verwenden Sie diese Anzeige, um Trends für eine oder mehrere Metriken im Laufe der Zeit anzuzeigen.  |
-| Top-Liste | Verwenden Sie diese Anzeige, um eine Metrik über mehrere Gruppen von Entitäten hinweg zu vergleichen. Das Balkendiagramm ist in absteigender Reihenfolge sortiert.  |
-| Histogramm | Verwenden Sie diese Anzeige, um die Häufigkeitsverteilung einer Metrik in Buckets anzuzeigen.  |
-| Topologie | Verwenden Sie diese Anzeige, um die Infrastruktur als Topologiemap sowie die Beziehungen zwischen Entitäten in der Map darzustellen.  |
-| Zahl | Verwenden Sie diese Anzeige, um eine einzelne Zahl anzuzeigen, die den Wert einer Aggregationsmetrik für eine oder mehrere Entitäten im Laufe der Zeit darstellt.  |
-| Tabelle | Verwenden Sie diese Anzeige, um numerische Daten für Ihre Infrastruktur basierend auf Metriken und Segmenten anzuzeigen.  |
-| Text | Verwenden Sie diese Anzeige, um Text hinzuzufügen. Verwenden Sie Markdown, um Ihren Text hinzuzufügen.  |
+| `Linie` | Verwenden Sie diese Anzeige, um Trends für eine oder mehrere Metriken im Laufe der Zeit anzuzeigen.  |
+| `Bereich` | Verwenden Sie diese Anzeige, um Trends für eine oder mehrere Metriken im Laufe der Zeit anzuzeigen.  |
+| `Top-Liste` | Verwenden Sie diese Anzeige, um eine Metrik über mehrere Gruppen von Entitäten hinweg zu vergleichen. Das Balkendiagramm ist in absteigender Reihenfolge sortiert.  |
+| `Histogramm` | Verwenden Sie diese Anzeige, um die Häufigkeitsverteilung einer Metrik in Buckets anzuzeigen.  |
+| `Topologie` | Verwenden Sie diese Anzeige, um die Infrastruktur als Topologiemap sowie die Beziehungen zwischen Entitäten in der Map darzustellen.  |
+| `Zahl` | Verwenden Sie diese Anzeige, um eine einzelne Zahl anzuzeigen, die den Wert einer Aggregationsmetrik für eine oder mehrere Entitäten im Laufe der Zeit darstellt.  |
+| `Tabelle` | Verwenden Sie diese Anzeige, um numerische Daten für Ihre Infrastruktur basierend auf Metriken und Segmenten anzuzeigen.  |
+| `Text` | Verwenden Sie diese Anzeige, um Text hinzuzufügen. Verwenden Sie Markdown, um Ihren Text hinzuzufügen.  |
 {: caption="Tabelle 1. Anzeigentypen" caption-side="top"} 
 
 
@@ -51,7 +51,7 @@ Führen Sie die folgenden Schritte aus, um eine Anzeige zu kopieren:
 
 1. Navigieren Sie zum Abschnitt *DASHBOARD** in der Webbenutzerschnittstelle. Wählen Sie ein Dashboard aus. Geben Sie dann die Anzeige an, in der die Metrik angezeigt wird, den Sie kopieren möchten.
 
-2. Wählen Sie das Symbol *Weitere Optionen* ![Drei-Punkte-Symbol](images/actions.png) aus und wählen Sie **Anzeige kopieren** ![Kopieren-Symbol](images/actions.png) aus.
+2. Wählen Sie das Symbol *Weitere Optionen* ![DRei-Punkte-Symbol](images/actions.png) aus und wählen Sie **Anzeige kopieren** ![Kopieren-Symbol](images/actions.png) aus.
 
 3. Wählen Sie eines der aufgelisteten Dashboards aus oder geben Sie einen Namen für ein neues Dashboard ein. 
 
@@ -72,7 +72,7 @@ Führen Sie die folgenden Schritte aus, um den Geltungsbereich einer Anzeige zu 
     
 3. Wählen Sie den Geltungsbereich aus. 
 
-4. Klicken Sie optional auf **Angepasste Anzeigengeltungsbereiche überschreiben**, um den Geltungsbereich für alle Anzeigen zu überschreiben, für die derzeit ein angepasster Geltungsbereich definiert ist. 
+4. Klicken Sie optional auf **Angepasste Anzeigengeltungsbereiche überschreiben**, um den Geltungsbereich für alle Anzeigen zu überschreiben, für die ein angepasster Geltungsbereich definiert ist.  
 
     **Hinweis: Diese Aktion kann nicht rückgängig gemacht werden.** 
 
@@ -90,7 +90,7 @@ Führen Sie die folgenden Schritte aus, um eine Anzeige im aktuellen Dashboard z
 
 1. Navigieren Sie zum Abschnitt *DASHBOARD** in der Webbenutzerschnittstelle. Wählen Sie ein Dashboard aus. Geben Sie dann die Anzeige an, in der die Metrik angezeigt wird, den Sie kopieren möchten.
 
-2. Wählen Sie das Symbol *Weitere Optionen* ![Drei-Punkte-Symbol](images/actions.png) aus und wählen Sie **Anzeige duplizieren** ![Kopieren-Symbol](images/actions.png) aus.
+2. Wählen Sie das Symbol *Weitere Optionen* ![Drei-Punkte-Symbol](images/actions.png) und wählen Sie **Anzeige duplizieren** ![Kopieren-Symbol](images/duplicate.png) aus.
 
 
 ## Eine Anzeige löschen
@@ -100,7 +100,7 @@ Führen Sie die folgenden Schritte aus, um eine Anzeige aus dem aktuellen Dashbo
 
 1. Navigieren Sie zum Abschnitt *DASHBOARD** in der Webbenutzerschnittstelle. Wählen Sie ein Dashboard aus. Geben Sie dann die Anzeige an, in der die Metrik angezeigt wird, den Sie kopieren möchten.
 
-2. Wählen Sie das Symbol *Weitere Optionen* ![Drei-Punkte-Symbol](images/actions.png) aus und wählen Sie **Anzeige löschen** ![Kopieren-Symbol](images/actions.png) aus.
+2. Wählen Sie das Symbol *Weitere Optionen* ![Drei-Punkte-Symbol](images/actions.png) aus und wählen Sie **Eine Anzeige löschen** ![Kopieren-Symbol](images/delete.png) aus.
 
 3. Klicken Sie auf **Ja, Anzeige löschen**, um das Löschen der Anzeige zu bestätigen.
 

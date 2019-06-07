@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, groups
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# 使用群組
+# 管理群組
 {: #groups}
 
 您可以使用標籤，將基礎架構物件分組為邏輯階層。
@@ -32,7 +32,7 @@ subcollection: Sysdig
 
 請完成下列步驟來建立群組：
 
-1. 啟動 Web 使用者介面。如需如何啟動 Web 使用者介面的相關資訊，請參閱[導覽至 Web 使用者介面](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
+1. 啟動 Web 使用者介面。[進一步瞭解](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. 按一下**探索**來導覽至*探索* 區段。
 
@@ -40,7 +40,8 @@ subcollection: Sysdig
 
 4. 按一下*加號 (+)* 圖示以新增其他標籤。
 
-    新增標籤時，會濾出不適合階層的標籤，以確保只會建立有效的邏輯分組。{: tip}
+    新增標籤時，會過濾掉不適合階層的標籤，以確保只會建立有效的邏輯分組。
+    {: tip}
 
 5. 新增標籤完成時，請按一下**新建分組**。
 
@@ -55,7 +56,7 @@ subcollection: Sysdig
 
 請完成下列步驟來重新命名群組：
 
-1. 啟動 Web 使用者介面。如需如何啟動 Web 使用者介面的相關資訊，請參閱[導覽至 Web 使用者介面](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
+1. 啟動 Web 使用者介面。[進一步瞭解](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. 按一下**探索**來導覽至*探索* 區段。
 
@@ -65,7 +66,7 @@ subcollection: Sysdig
 
 5. 按一下動作圖示 ![三點圖示](images/actions.png)，然後選取**顯示分組動作**。
 
-6. 選取編輯圖示 ![鉛筆圖示](images/edit.png)。
+6. 選取「編輯」圖示 ![「鉛筆」圖示](images/edit.png)。
 
 7. 輸入新名稱。
 
@@ -79,7 +80,7 @@ subcollection: Sysdig
 
 請完成下列步驟，將群組複製到其他團隊：
 
-1. 啟動 Web 使用者介面。如需如何啟動 Web 使用者介面的相關資訊，請參閱[導覽至 Web 使用者介面](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
+1. 啟動 Web 使用者介面。[進一步瞭解](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. 按一下**探索**來導覽至*探索* 區段。
 
@@ -89,7 +90,7 @@ subcollection: Sysdig
 
 5. 按一下動作圖示 ![三點圖示](images/actions.png)，然後選取**顯示分組動作**。
 
-6. 選取複製群組圖示 ![複製圖示](images/copy.png)。
+6. 選取「複製群組」圖示 ![「複製」圖示](images/copy.png)。
 
 7. 在*複製到* 欄位中，選取您要複製此群組的團隊。
 
@@ -104,7 +105,7 @@ subcollection: Sysdig
 
 請完成下列步驟，與團隊的其他成員共用群組：
 
-1. 啟動 Web 使用者介面。如需如何啟動 Web 使用者介面的相關資訊，請參閱[導覽至 Web 使用者介面](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
+1. 啟動 Web 使用者介面。[進一步瞭解](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. 按一下**探索**來導覽至*探索* 區段。
 
@@ -114,7 +115,7 @@ subcollection: Sysdig
 
 5. 按一下動作圖示 ![三點圖示](images/actions.png)，然後選取**顯示分組動作**。
 
-6. 選取共用群組圖示 ![共用圖示](images/share.png)。
+6. 選取「共用群組」圖示 ![「共用」圖示](images/share.png)。
 
 7. 在*與團隊共用* 欄位中，切換該列以與團隊的其他成員共用群組。
 
@@ -127,7 +128,7 @@ subcollection: Sysdig
 
 請完成下列步驟來刪除群組：
 
-1. 啟動 Web 使用者介面。如需如何啟動 Web 使用者介面的相關資訊，請參閱[導覽至 Web 使用者介面](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
+1. 啟動 Web 使用者介面。[進一步瞭解](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。 
 
 2. 按一下**探索**來導覽至*探索* 區段。
 
@@ -137,7 +138,7 @@ subcollection: Sysdig
 
 5. 按一下動作圖示 ![三點圖示](images/actions.png)，然後選取**顯示分組動作**。
 
-6. 選取刪除群組圖示 ![刪除圖示](images/delete.png)。
+6. 選取「刪除群組」圖示 ![「刪除」圖示](images/delete.png)。
 
 7. 按一下**是，刪除分組**以確認刪除群組。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2018-12-06"
 
 ---
 
@@ -16,14 +16,16 @@ lastupdated: "2019-02-18"
 {:download: .download}
 
 # コンテナー Sysdig エージェントのカスタマイズ
-{: #change_container_agent}
+{: #change_agent}
 
 {{site.data.keyword.mon_full_notm}} では、Sysdig エージェントの構成をカスタマイズして、ログ・レベルの設定、ポートのブロック、メトリック・データの組み込みまたは除外、イベントの追加または削除、およびコンテナーのフィルターによる除外を行うことができます。 
 {:shortdesc}
 
 
+
+
 ## dragent yaml ファイルの編集
-{: #change_container_agent_edit_config}
+{: #edit_agent}
 
 yaml ファイルは、*/opt/draios/etc/* にあります。
 
@@ -41,7 +43,7 @@ yaml ファイルは、*/opt/draios/etc/* にあります。
 
 
 ## ポートのブロック
-{: #change_container_agent_block_ports}
+{: #ports}
 
 ネットワーク・ポートからのネットワーク・トラフィックおよびメトリックをブロックするには、*dragent.yaml* ファイルの **blacklisted_ports** セクションをカスタマイズする必要があります。 データをフィルターで除外するポートをリストする必要があります。
 
@@ -59,7 +61,7 @@ blacklisted_ports:
 
 
 ## 一連の Docker イベントの収集
-{: #change_container_agent_collect_docker_events}
+{: #docker}
 
 {{site.data.keyword.mon_full_notm}} では、Docker とのイベント統合がサポートされています。 Sysdig エージェントでは、Docker ソースの検出とそこからのイベント・データの収集が自動的に行われます。 エージェントの構成ファイルを編集して、そのデフォルトの動作を変更し、イベント・データを含めたり、除外したりできます。 
 
@@ -95,7 +97,7 @@ blacklisted_ports:
 
 
 ## イベントの収集の無効化
-{: #change_container_agent_disable_events}
+{: #disable}
 
 Sysdig エージェントのイベントの収集を無効にするには、*dragent.default.yaml* ファイルを変更します。 *dragent.yaml* ファイルの **events** セクションを *none* に設定します。
 
@@ -110,7 +112,7 @@ events:
 
 
 ## 重大度別のイベントのフィルター処理
-{: #change_container_agent_filterby_severity}
+{: #severity}
 
 重大度別にイベントをフィルタリングするには、*dragent.yaml* ファイルでイベントのログ・エントリー・タイプを変更することもできます。 
 
@@ -139,7 +141,7 @@ log:
 
 
 ## メトリックの組み込みと除外
-{: #change_container_agent_inc_exc_metrics}
+{: #params}
 
 カスタム・メトリックをフィルタリングするには、*dragent.yaml* ファイルの **metrics_filter** セクションをカスタマイズする必要があります。 **include** と **exclude** のフィルタリング・パラメーターを構成して、含めるメトリックおよびフィルターで除外するメトリックを指定できます。
 
@@ -164,7 +166,7 @@ metrics_filter:
 
 
 ## ログ・レベルの変更
-{: #change_container_agent_log_level}
+{: #log_level}
 
 ログ・レベルを構成するには、*dragent.yaml* ファイルの **log** セクションをカスタマイズする必要があります。 
 

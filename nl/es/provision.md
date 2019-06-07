@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -24,11 +24,8 @@ subcollection: Sysdig
 # Suministro de una instancia
 {: #provision}
 
-Para poder supervisar y gestionar las métricas con Sysdig, primero debe suministrar una instancia del servicio en {{site.data.keyword.Bluemix}}.
+Para poder supervisar y gestionar las métricas con Sysdig, debe suministrar una instancia del servicio en {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
-
-Para suministrar una instancia de Sysdig en una región de nube pública, debe seleccionar el plan de servicio asociado con la instancia, la región en la que se recopilan las métricas y el plan que determina el número de métricas que puede supervisar y su periodo de retención.
-
 
 
 ## Suministro de una instancia de Sysdig desde el catálogo
@@ -54,7 +51,7 @@ Para suministrar una instancia de Sysdig desde el catálogo de {{site.data.keywo
 
     Para obtener más información sobre los planes de servicio, consulte [Planes de servicio](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 
-7. Seleccione un grupo de recursos. De forma predeterminada, se selecciona el grupo de recursos **predeterminado**.
+7. Seleccione un grupo de recursos. De forma predeterminada, está establecido el grupo de recursos predeterminado (**Default**).
 
 8. Pulse **Crear**.
 
@@ -72,11 +69,9 @@ A continuación, configure un origen de métrica añadiendo un agente de Sysdig.
 
 Para suministrar una instancia de Sysdig mediante la línea de mandatos, siga los pasos siguientes:
 
-1. [Requisito previo] Instale la CLI de {{site.data.keyword.cloud_notm}}.
+1. [Requisito previo] Instalación de la CLI de {{site.data.keyword.cloud_notm}}. Si la CLI está instalada, continúe en el paso siguiente.
 
    Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
-
-   Si la CLI está instalada, continúe en el paso siguiente.
 
 2. Inicie una sesión en {{site.data.keyword.cloud_notm}} donde desea suministrar la instancia. Ejecute el siguiente mandato: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -91,15 +86,15 @@ Para suministrar una instancia de Sysdig mediante la línea de mandatos, siga lo
     ```
     {: codeblock}
 
-    donde
+    Donde
 
-    * NAME es el nombre de la instancia de Sysdig
+    * NAME es el nombre de la instancia de Sysdig.
     
-    * *sysdig-monitor* es el nombre del servicio {{site.data.keyword.mon_full_notm}} en {{site.data.keyword.cloud_notm}}
+    * `sysdig-monitor` es el nombre del servicio {{site.data.keyword.mon_full_notm}} en {{site.data.keyword.cloud_notm}}.
     
-    * SERVICE_PLAN_NAME es el tipo de plan. Los valores válidos son: *lite*, *graduated-tier*
+    * SERVICE_PLAN_NAME es el tipo de plan. Los valores válidos son *lite* y *graduated-tier*.
     
-    * LOCATION es la región en la que se crea la instancia
+    * LOCATION es la región en la que se crea la instancia.
 
     Por ejemplo, para suministrar una instancia con el plan de pago, ejecute el mandato siguiente:
 

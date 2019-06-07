@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, troubleshooting
 
@@ -23,7 +23,7 @@ subcollection: Sysdig
 # 有关 {{site.data.keyword.mon_full_notm}} 的故障诊断
 {: #troubleshoot}
 
-本主题涵盖使用 {{site.data.keyword.mon_full_notm}} 服务时可能会遇到的一般问题。在许多情况下，只需执行几个简单的步骤即可解决这些问题。
+了解您在使用 {{site.data.keyword.mon_full_notm}} 服务时可能遇到的一些一般问题的更多信息。在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
 
 ## 创建捕获时是否收到错误？

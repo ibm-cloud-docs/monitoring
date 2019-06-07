@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -62,7 +62,13 @@ subcollection: Sysdig
 
 您必须具有作为 {{site.data.keyword.cloud_notm}} 帐户的成员或所有者的用户标识。要获取 {{site.data.keyword.cloud_notm}} 用户标识，请转至：[注册 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/login){:new_window}。
 
-该服务目前在美国南部可用。请完成美国南部区域中的任何入门步骤。
+服务在以下区域中可用：
+* *US South*
+* *EU-DE*
+* *EU-GB*
+* *JP-TOK*
+
+您可以在任何受支持区域中完成使用入门步骤。
 
 
 ## 步骤 1：管理用户访问权

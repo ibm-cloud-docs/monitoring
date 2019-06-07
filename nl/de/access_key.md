@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -21,10 +21,10 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Mit Zugriffsschlüsseln arbeiten
+# Zugriffsschlüssel verwalten
 {: #access_key}
 
-Der **Zugriffsschlüssel** ist ein Token, das Sie zum Konfigurieren von Sysdig-Agenten verwenden müssen, um Daten erfolgreich an Ihre {{site.data.keyword.mon_full_notm}}-Instanz in {{site.data.keyword.Bluemix}} weiterzuleiten.   
+Der **Zugriffsschlüssel** ist ein Token, das Sie zum Konfigurieren von Sysdig-Agenten verwenden müssen, um Daten erfolgreich an Ihre {{site.data.keyword.mon_full_notm}}-Instanz in {{site.data.keyword.cloud_notm}} weiterzuleiten.   
 {:shortdesc}
 
 
@@ -137,4 +137,4 @@ Führen Sie die folgenden Schritte aus, um den Zugriffsschlüssel für eine {{si
 
 2. Klicken Sie im Abschnitt *Kennwortmanagement* auf **Kennwort zurücksetzen**.
 
-**Hinweis:** Nachdem Sie den Sysdig-Zugriffsschlüssel zurückgesetzt haben, müssen Sie den Zugriffsschlüssel für alle Protokollquellen aktualisieren, die Sie für die Weiterleitung von Metriken an diese {{site.data.keyword.mon_full_notm}}-Instanz konfiguriert haben.
+**Hinweis:** Nachdem Sie den Sysdig-Zugriffsschlüssel zurückgesetzt haben, müssen Sie den Zugriffsschlüssel für alle Protokollquellen aktualisieren, die Metriken an diese {{site.data.keyword.mon_full_notm}}-Instanz weiterleiten.

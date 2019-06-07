@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-22"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, regions, endpoints
 
@@ -38,6 +38,7 @@ subcollection: Sysdig
 | `미국 남부`            |댈러스    | 
 | `EU-DE`               |프랑크푸르트 | 
 | `EU-GB`               |런던    | 
+| `JP-TOK`              |도쿄    |
 {: caption="표 1. 서비스 가능 지역의 목록" caption-side="top"} 
 
 현재, **프랑크푸르트** 및 **EU GB**는 EU에서 관리되지 **않는** 지역입니다. 자세한 정보는 [EU 지원 사용 설정](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported)을 참조하십시오.
@@ -54,8 +55,9 @@ subcollection: Sysdig
 | 지역        | 엔드포인트                                                  | 포트 |
 |---------------|-----------------------------------------------------------|------|
 | `미국 남부`    | `ingest.us-south.monitoring.cloud.ibm.com`                | TCP 6443 |
-| `EU-DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`                   | TCP 6443 | 
-| `EU-GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `EU DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`                  | TCP 6443 | 
 {: caption="표 2. 수집 엔드포인트의 목록" caption-side="top"} 
 
 
@@ -65,11 +67,12 @@ subcollection: Sysdig
 
 다음 표에는 지역마다 사용 가능한 **Sysdig 엔드포인트**가 나열되어 있습니다.
 
-| 지역       | 엔드포인트                                                  | 포트 |
-|--------------|-----------------------------------------------------------|------|
-| `미국 남부`   | `https://us-south.monitoring.cloud.ibm.com `              | https (TLS) 443 |  
-| `EU-DE`      | `https://eu-de.monitoring.cloud.ibm.com `                 | https (TLS) 443 |
-| `EU-GB`      | `https://eu-gb.monitoring.cloud.ibm.com `                 | https (TLS) 443 |
+| 지역       | 엔드포인트                                                  | 포트            |
+|--------------|-----------------------------------------------------------|-----------------|
+| `미국 남부`   | `https://us-south.monitoring.cloud.ibm.com `               | HTTPS(TLS) 443 |  
+| `EU DE`      | `https://eu-de.monitoring.cloud.ibm.com `                 | HTTPS(TLS) 443 |
+| `EU GB`     | `https://eu-gb.monitoring.cloud.ibm.com `                 | HTTPS(TLS) 443 |
+| `JP TOK`     | `https://jp-tok.monitoring.cloud.ibm.com`                 | HTTPS(TLS) 443 |
 {: caption="표 3. Sysdig 엔드포인트의 목록" caption-side="top"} 
 
 

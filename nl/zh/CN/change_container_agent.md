@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2018-12-06"
 
 ---
 
@@ -16,14 +16,16 @@ lastupdated: "2019-02-18"
 {:download: .download}
 
 # 定制容器 Sysdig 代理程序
-{: #change_container_agent}
+{: #change_agent}
 
 在 {{site.data.keyword.mon_full_notm}} 中，可以定制 Sysdig 代理程序配置以设置日志级别，阻止端口，包含或排除度量值数据，添加或除去事件以及过滤掉容器。
 {:shortdesc}
 
 
+
+
 ## 编辑 dragent yaml 文件
-{: #change_container_agent_edit_config}
+{: #edit_agent}
 
 该 YAML 文件位于 */opt/draios/etc/* 中。
 
@@ -41,7 +43,7 @@ lastupdated: "2019-02-18"
 
 
 ## 阻止端口
-{: #change_container_agent_block_ports}
+{: #ports}
 
 要阻止来自网络端口的网络流量和度量值，必须定制 *dragent.yaml* 文件中的 **blacklisted_ports** 部分。必须列出要从中过滤掉任何数据的端口。
 
@@ -59,7 +61,7 @@ blacklisted_ports:
 
 
 ## 收集一组 Docker 事件
-{: #change_container_agent_collect_docker_events}
+{: #docker}
 
 {{site.data.keyword.mon_full_notm}} 支持与 Docker 的事件集成。Sysdig 代理程序会自动发现 Docker 源并从中收集事件数据。您可以编辑代理程序配置文件以更改其缺省行为，还可以包含或排除事件数据。 
 
@@ -95,7 +97,7 @@ blacklisted_ports:
 
 
 ## 禁用事件收集
-{: #change_container_agent_disable_events}
+{: #disable}
 
 要禁止 Sysdig 代理程序收集事件，请修改 *dragent.default.yaml* 文件。在 *dragent.yaml* 文件中，将 **events** 部分设置为 *none*。
 
@@ -110,7 +112,7 @@ events:
 
 
 ## 按严重性过滤事件
-{: #change_container_agent_filterby_severity}
+{: #severity}
 
 要按严重性过滤事件，还可以更改 *dragent.yaml* 文件中事件的日志条目类型。 
 
@@ -139,7 +141,7 @@ log:
 
 
 ## 包含和排除度量值
-{: #change_container_agent_inc_exc_metrics}
+{: #params}
 
 要过滤定制度量值，必须定制 *dragent.yaml* 文件中的 **metrics_filter** 部分。通过配置 **include** 和 **exclude** 过滤参数，可以指定要包含的度量值以及要过滤掉的度量值。
 
@@ -164,7 +166,7 @@ metrics_filter:
 
 
 ## 更改日志级别
-{: #change_container_agent_log_level}
+{: #log_level}
 
 要配置日志级别，必须定制 *dragent.yaml* 文件中的 **log** 部分。 
 

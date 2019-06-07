@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2018-12-06"
 
 ---
 
@@ -16,14 +16,16 @@ lastupdated: "2019-02-18"
 {:download: .download}
 
 # Personnalisation des agents de conteneur Sysdig
-{: #change_container_agent}
+{: #change_agent}
 
 Dans {{site.data.keyword.mon_full_notm}}, vous pouvez personnaliser la configuration de l'agent Sysdig pour définir un niveau de journalisation, des ports de bloc, inclure ou exclure des données de mesure, ajouter ou supprimer des événements, et filtrer des conteneurs. 
 {:shortdesc}
 
 
+
+
 ## Edition du fichier yaml dragent
-{: #change_container_agent_edit_config}
+{: #edit_agent}
 
 Le fichier yaml se trouve dans */opt/draios/etc/*.
 
@@ -41,7 +43,7 @@ Pour éditer le fichier et appliquer les modifications, procédez comme suit :
 
 
 ## Blocage de ports
-{: #change_container_agent_block_ports}
+{: #ports}
 
 Pour bloquer le trafic réseau et les métriques provenant de ports réseau, vous devez personnaliser la section **blacklisted_ports** dans le fichier *dragent.yaml*. Vous devez répertorier les ports à partir desquels vous voulez filtrer les données.
 
@@ -59,7 +61,7 @@ blacklisted_ports:
 
 
 ## Collecte d'un ensemble d'événements Docker
-{: #change_container_agent_collect_docker_events}
+{: #docker}
 
 {{site.data.keyword.mon_full_notm}} prend en charge l'intégration d'événement avec Docker. Les agents Sysdig reconnaissent automatiquement les sources Docker et collectent les données d'événement qu'elles contiennent. Vous pouvez éditer le fichier de configuration de l'agent pour modifier son comportement par défaut et inclure ou exclure des données d'événement. 
 
@@ -95,7 +97,7 @@ Par exemple, pour filtrer les événements d'image Docker et collecter seulement
 
 
 ## Désactivation de la collecte d'événements
-{: #change_container_agent_disable_events}
+{: #disable}
 
 Pour empêcher un agent Sysdig de collecter des événements, modifiez le fichier *dragent.default.yaml*. Définissez la section **events** sur *none* dans le fichier *dragent.yaml*.
 
@@ -110,7 +112,7 @@ events:
 
 
 ## Filtrage des événements par gravité
-{: #change_container_agent_filterby_severity}
+{: #severity}
 
 Pour filtrer des événements par gravité, vous pouvez également modifier le type d'entrée de journal pour les événements dans le fichier *dragent.yaml*. 
 
@@ -139,7 +141,7 @@ log:
 
 
 ## Inclusion et exclusion de métriques
-{: #change_container_agent_inc_exc_metrics}
+{: #params}
 
 Pour filtrer des métriques personnalisées, vous devez personnaliser la section **metrics_filter** dans le fichier *dragent.yaml*. Vous pouvez indiquer les métriques à inclure et celles à filtrer en configurant les paramètres de filtrage **include** et **exclude**.
 
@@ -164,7 +166,7 @@ metrics_filter:
 
 
 ## Modification du niveau de journalisation
-{: #change_container_agent_log_level}
+{: #log_level}
 
 Pour configurer le niveau de journalisation, vous devez personnaliser la section **log** dans le fichier *dragent.yaml*. 
 

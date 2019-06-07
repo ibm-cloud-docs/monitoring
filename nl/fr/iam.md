@@ -100,10 +100,10 @@ Le tableau suivant décrit les rôles Sysdig et les actions pour chacun d'eux :
 | `Création, configuration et suppression d'équipes`                                      | Admin                                                |
 | `Configuration et suppression de canaux de notification`                              | Admin                                                | 
 | `Configuration et suppression d'agents Sysdig`                                       | Admin                                                |
-| `Création, suppression et édition de contenu dans l'interface utilisateur Web Sysdig`                    | Admin </br>Utilisateur                                      |  
-| `Affichage de métriques via l'interface utilisateur Web Sysdig`                                   | Admin </br>Utilisateur                                      |  
-| `Création et suppression d'alertes`                                                 | Admin </br>Utilisateur                                      | 
-| `Création et suppression de captures`                                               | Admin </br>Utilisateur                                      |   
+| `Création, suppression et édition de contenu dans l'interface utilisateur Web Sysdig`                    | Admin </br>Utilisateur                               |  
+| `Affichage de métriques via l'interface utilisateur Web Sysdig`                                   | Admin </br>Utilisateur                               |  
+| `Création et suppression d'alertes`                                                 | Admin </br>Utilisateur                               | 
+| `Création et suppression de captures`                                               | Admin </br>Utilisateur                               |   
 {: caption="Tableau 2. Rôles et actions Sysdig" caption-side="top"}
 
 

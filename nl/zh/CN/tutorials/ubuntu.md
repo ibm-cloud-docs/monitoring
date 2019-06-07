@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -43,27 +43,25 @@ subcollection: Sysdig
 
 请阅读有关 {{site.data.keyword.mon_full_notm}} 的信息。有关更多信息，请参阅[关于](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#about)。
 
-使用作为 {{site.data.keyword.cloud_notm}} 帐户的成员或所有者的用户标识。要获取 {{site.data.keyword.cloud_notm}} 用户标识，请转至：[注册 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/login){:new_window}。
+使用作为 {{site.data.keyword.cloud_notm}} 帐户的成员或所有者的用户标识。要获取 {{site.data.keyword.cloud_notm}} 用户标识，请转至[注册 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/login){:new_window}。
 
 您的 {{site.data.keyword.IBM_notm}} 标识必须分配有针对以下每个资源的 IAM 策略： 
 
 |资源|访问策略的作用域|角色|区域|信息|
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
-|资源组 **Default**|资源组|查看者|us-south|要允许用户查看 Default 资源组中的服务实例，此策略是必需的。|
-|{{site.data.keyword.mon_full_notm}} 服务|资源组|编辑者|us-south|要允许用户在 Default 资源组中供应和管理 {{site.data.keyword.mon_full_notm}} 服务，此策略是必需的。|
+|资源组 **Default**|资源组|查看者| `美国南部`  |要允许用户查看 Default 资源组中的服务实例，此策略是必需的。|
+|{{site.data.keyword.mon_full_notm}} 服务|资源组|编辑者| `美国南部`  |要允许用户在 Default 资源组中供应和管理 {{site.data.keyword.mon_full_notm}} 服务，此策略是必需的。|
 {: caption="表 1. 完成教程所需的 IAM 策略的列表" caption-side="top"} 
 
 安装 {{site.data.keyword.cloud_notm}} CLI。有关更多信息，请参阅[安装 {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)。
 
 
-## 步骤 1：供应 {{site.data.keyword.mon_full_notm}} 实例
+## 步骤 1. 供应 {{site.data.keyword.mon_full_notm}} 实例
 {: #ubuntu_step1}
 
 要通过 {{site.data.keyword.cloud_notm}} UI 供应 {{site.data.keyword.mon_full_notm}} 的实例，请完成以下步骤：
 
-1. 登录到 {{site.data.keyword.cloud_notm}} 帐户。
-
-    单击 [{{site.data.keyword.cloud_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/login){:new_window} 以启动 {{site.data.keyword.cloud_notm}}“仪表板”。
+1. [登录到 {{site.data.keyword.cloud_notm}} 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/login){:new_window}。
 
 	使用用户标识和密码登录后，{{site.data.keyword.cloud_notm}} UI 将打开。
 
@@ -95,7 +93,7 @@ subcollection: Sysdig
 **注：**要通过 CLI 来供应实例，请参阅[通过 {{site.data.keyword.cloud_notm}} CLI 供应实例](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli)。
 
 
-## 步骤 2：配置 Ubuntu 服务器以将度量值发送到实例
+## 步骤 2. 配置 Ubuntu 服务器以将度量值发送到实例
 {: #ubuntu_step2}
 
 要配置 Ubuntu 服务器以将度量值发送到 {{site.data.keyword.mon_full_notm}} 实例，必须安装 Sysdig 代理程序。 
@@ -105,11 +103,11 @@ subcollection: Sysdig
 1. 打开终端。然后，登录到 {{site.data.keyword.cloud_notm}}。运行以下命令并遵循提示进行操作：
 
     ```
-    ibmcloud login -a api.ng.bluemix.net
+    ibmcloud login -a cloud.ibm.com
     ```
     {: codeblock}
 
-    选择已供应 {{site.data.keyword.mon_full_notm}} 实例的帐户。
+    选择 {{site.data.keyword.mon_full_notm}} 实例可用的帐户。
 
 2. 获取 Sysdig 访问密钥。有关更多信息，请参阅[通过 {{site.data.keyword.cloud_notm}} UI 获取访问密钥](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui)。
 
@@ -128,7 +126,7 @@ subcollection: Sysdig
 
     * COLLECTOR_ENDPOINT 是监视实例在其中可用的区域的采集 URL。
 
-    * TAG_DATA 是格式为 *TAG_NAME:TAG_VALUE* 的逗号分隔标记。可以将一个或多个标记与 Sysdig 代理程序相关联。例如：*role:serviceX,location:us-south*。稍后，可以使用这些标记来识别来自运行代理程序的环境中的度量值。
+    * TAG_DATA 是格式为 *TAG_NAME:TAG_VALUE* 的逗号分隔标记。可以将一个或多个标记与 Sysdig 代理程序相关联。例如，*role:serviceX,location:us-south*。稍后，可以使用这些标记来识别来自运行代理程序的环境中的度量值。
 
     * 将 **sysdig_capture_enabled** 设置为 *false* 以禁用 Sysdig 捕获功能。缺省情况下，此值设置为 *true*。有关更多信息，请参阅[使用捕获](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)。
 
@@ -150,14 +148,12 @@ subcollection: Sysdig
 
 
 
-## 步骤 3：启动 Sysdig Web UI
+## 步骤 3. 启动 Sysdig Web UI
 {: #ubuntu_step3}
 
 要启动 Web UI，请完成以下步骤：
 
-1. 登录到 {{site.data.keyword.cloud_notm}} 帐户。
-
-    单击 [{{site.data.keyword.cloud_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/login){:new_window} 以启动 {{site.data.keyword.cloud_notm}}“仪表板”。
+1. [登录到 {{site.data.keyword.cloud_notm}} 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/login){:new_window}。
 
 	使用用户标识和密码登录后，{{site.data.keyword.cloud_notm}}“仪表板”将打开。
 
@@ -177,7 +173,7 @@ subcollection: Sysdig
 {: tip}
 
 
-## 步骤 4：监视 Ubuntu 服务器
+## 步骤 4. 监视 Ubuntu 服务器
 {: #ubuntu_step4}
 
 可以在通过 Web UI 提供的**探索**视图中监视 Ubuntu 服务器。此视图是对基础架构进行故障诊断和监视的起点。它是用户的 Web UI 的缺省主页。

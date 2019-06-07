@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete instance
 
@@ -30,26 +30,27 @@ subcollection: Sysdig
 Ao remover uma instância do {{site.data.keyword.cloud_notm}}, considere as informações a seguir para limpeza:
 
 1. Anote a lista de origens que encaminham métricas para a instância do {{site.data.keyword.mon_full_notm}} que você deseja remover. Deve-se remover o agente Sysdig de cada origem.
-2. Remova as permissões concedidas aos usuários para trabalhar com a instância. 
+2. Remover permissões que são concedidas aos usuários para que trabalhem com a instância. 
 
-    Se você usa um grupo de acesso para gerenciar o acesso à instância, deve-se remover o grupo de acesso.
+    Caso um grupo de acesso seja usado para gerenciar permissões para acessar a instância, deve-se
+remover o grupo de acesso.
 
-    Se você usa um grupo de acesso para gerenciar o acesso a instâncias de serviço diferentes, deve-se remover as políticas que concedem permissões para a instância que deseja remover.
+    Caso um grupo de acesso seja usado para gerenciar permissões para acessar instâncias de serviço diferentes, deve-se remover as políticas que concedem permissões para a instância que você deseja remover.
     
-    Se você concedeu políticas individuais aos usuários, deve-se reunir as informações de cada usuário que tem acesso e remover uma por uma das políticas que estão relacionadas à instância que deseja excluir.
+    Caso políticas individuais sejam concedidas aos usuários, deve-se reunir as informações de
+cada usuário que tem acesso à instância. Em seguida, deve-se remover, uma a uma, as políticas relacionadas
+à instância que você deseja excluir.
 
 
 Em seguida, exclua a instância do Painel do {{site.data.keyword.cloud_notm}}.
 
 
-## Removendo uma instância por meio da IU do  {{site.data.keyword.cloud_notm}}
+## Removendo uma instância por meio da IU do {{site.data.keyword.cloud_notm}}
 {: #remove_ui}
 
 Para remover uma instância do {{site.data.keyword.mon_full_notm}} usando a IU do {{site.data.keyword.cloud_notm}}, conclua as etapas a seguir:
 
-1. Efetue login em sua conta do  {{site.data.keyword.cloud_notm}} .
-
-    Clique em [Painel do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/login){:new_window} para ativar o painel do {{site.data.keyword.cloud_notm}}.
+1. [Efetue login em sua conta do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/login){:new_window}.
 
 	Depois de efetuar login com seu ID de usuário e senha, a IU do {{site.data.keyword.cloud_notm}} é aberta.
 
@@ -67,11 +68,9 @@ Para remover uma instância do {{site.data.keyword.mon_full_notm}} usando a IU d
 
 Para remover uma instância do {{site.data.keyword.mon_full_notm}} por meio da linha de comandos, conclua as etapas a seguir:
 
-1. [ Pré-requisito ] Instale a CLI do  {{site.data.keyword.cloud_notm}} .
+1. [Pré-requisito] Instale a CLI do {{site.data.keyword.cloud_notm}}. Se a CLI estiver instalada, continue com a próxima etapa.
 
    Para obter mais informações, consulte [Instalando a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
-
-   Se a CLI estiver instalada, continue com a próxima etapa.
 
 2. Efetue login na região no {{site.data.keyword.cloud_notm}} em que você deseja provisionar a instância. Execute o comando a seguir: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -86,7 +85,7 @@ Para remover uma instância do {{site.data.keyword.mon_full_notm}} por meio da l
     ```
     {: codeblock}
 
-    em que NAME é o nome da instância
+    Em que NAME é o nome da instância
 
     Por exemplo, para remover uma instância, execute o comando a seguir:
 

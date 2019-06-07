@@ -34,7 +34,7 @@ subcollection: Sysdig
 * `編輯者`平台角色：如果使用者必須能夠在 {{site.data.keyword.cloud_notm}} 佈建或移除 Sysdig 實例，請授與此角色。
 * `管理員`服務角色：如果使用者不能在 {{site.data.keyword.cloud_notm}} 管理 Sysdig 服務，請授與此角色。
 
-若要將 Sysdig 使用者專用權授與使用者，您可以將`作者`服務角色指派給使用者。
+若要將 Sysdig 使用者專用權授與使用者，您可以將`撰寫者`服務角色指派給使用者。
 
 **附註：**若要透過使用 IAM 原則來管理存取權或指派使用者的新存取權，您必須是帳戶擁有者、帳戶中所有服務的管理者，或特定服務或服務實例的管理者。 
 
@@ -144,21 +144,21 @@ subcollection: Sysdig
 7. 選取平台角色**編輯者**。
 8. 按一下**指派**。
 
-## 授與許可權以在 Sysdig 管理度量及配置警示
+## 授與許可權以在 Sysdig 管理度量值及配置警示
 {: #admin_user_sysdig}
 
 作為 Sysdig 中的 **admin 使用者**，您必須具有執行下列動作所需的許可權： 
 
-* 新增度量來源
-* 檢視度量
-* 搜尋度量
-* 過濾度量
+* 新增度量值來源
+* 檢視度量值
+* 搜尋度量值
+* 過濾度量值
 * 配置警示
 
 因此，您需要下列原則：
 
 * 平台角色為**編輯者**對 {{site.data.keyword.mon_full_notm}} 服務的 IAM 原則。此原則可讓您透過指令行及在 {{site.data.keyword.cloud_notm}} 儀表板中檢視服務實例詳細資料。
-* 服務角色為**管理員**對 {{site.data.keyword.mon_full_notm}} 服務的 IAM 原則。此原則可讓您透過 Sysdig Web 使用者介面來監視、過濾及搜尋度量，以及定義警示。
+* 服務角色為**管理員**對 {{site.data.keyword.mon_full_notm}} 服務的 IAM 原則。此原則可讓您透過 Sysdig Web 使用者介面來監視、過濾及搜尋度量值，以及定義警示。
 
 **附註：**身為服務管理者，當您授與使用者這些原則時，請考量在資源群組的環境定義內執行此動作。{{site.data.keyword.mon_full_notm}} 實例佈建在資源群組的環境定義內。因此，您應該在資源群組的環境定義內授與存取權。
 
@@ -180,19 +180,19 @@ subcollection: Sysdig
 8. 選取服務角色**管理員**。
 8. 按一下**指派**。
 
-## 將許可權授與使用者以在 Sysdig 中檢視度量
+## 將許可權授與使用者以在 Sysdig 中檢視度量值
 {: #user_sysdig}
 
 作為**使用者**、**審核員**或**開發人員**，您可能需要許可權來執行下列動作： 
 
-* 檢視度量
-* 搜尋度量
-* 過濾度量
+* 檢視度量值
+* 搜尋度量值
+* 過濾度量值
 
 因此，您需要下列原則：
 
 * 平台角色為**檢視者**對 {{site.data.keyword.mon_full_notm}} 服務的 IAM 原則。此原則可讓您透過指令行及在 {{site.data.keyword.cloud_notm}} 儀表板中檢視服務實例詳細資料。
-* 服務角色為**作者**對 {{site.data.keyword.mon_full_notm}} 服務的 IAM 原則。此原則可讓您透過 Sysdig Web 使用者介面來檢視、過濾及搜尋度量。
+* 服務角色為**撰寫者**對 {{site.data.keyword.mon_full_notm}} 服務的 IAM 原則。此原則可讓您透過 Sysdig Web 使用者介面來檢視、過濾及搜尋度量值。
 
 **附註：**作為服務的管理者，當您授與使用者這些原則時，請考慮在資源群組的環境定義內執行操作。{{site.data.keyword.mon_full_notm}} 實例佈建在資源群組的環境定義內。因此，您應該在資源群組的環境定義內授與存取權。
 
@@ -210,6 +210,6 @@ subcollection: Sysdig
 
 6. 選取 **{{site.data.keyword.mon_full_notm}}**。
 7. 選取平台角色**檢視者**。
-8. 選取服務角色**作者**。
+8. 選取服務角色**撰寫者**。
 8. 按一下**指派**。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-22"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, regions, endpoints
 
@@ -35,9 +35,10 @@ Le service {{site.data.keyword.mon_full_notm}} est disponible dans les régions 
 
 | Région                | Emplacement  | 
 |-----------------------|-----------|
-| `Sud des Etats-Unis`            | Dallas    | 
+| `US SOUTH`            | Dallas    | 
 | `EU-DE`               | Francfort | 
-| `EU-GB`               | Londres   | 
+| `EU-GB`               | Londres    | 
+| `JP-TOK`              | Tokyo     |
 {: caption="Tableau 1. Liste des régions où le service est disponible" caption-side="top"} 
 
 Actuellement, **Francfort** et **EU GB** sont des emplacements qui ne sont **pas** gérés dans l'Union européenne. Pour plus d'informations, voir [Activation du paramètre Support dans l'Union européenne](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported).
@@ -54,8 +55,9 @@ Le tableau suivant répertorie les **noeuds finaux de collecteur Sysdig** dispon
 | Région        | Noeud final                                                  | Port |
 |---------------|-----------------------------------------------------------|------|
 | `Sud des Etats-Unis`    | `ingest.us-south.monitoring.cloud.ibm.com`                | TCP 6443 |
-| `EU-DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`                   | TCP 6443 | 
-| `EU-GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `EU DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`                  | TCP 6443 | 
 {: caption="Tableau 2. Liste des noeuds finaux d'ingestion" caption-side="top"} 
 
 
@@ -65,11 +67,12 @@ Le tableau suivant répertorie les **noeuds finaux de collecteur Sysdig** dispon
 
 Le tableau suivant répertorie les **noeuds finaux Sysdig** disponibles par région :
 
-| Région       | Noeud final                                                  | Port |
-|--------------|-----------------------------------------------------------|------|
-| `Sud des Etats-Unis`   | `https://us-south.monitoring.cloud.ibm.com `              | https (TLS) 443 |  
-| `EU-DE`      | `https://eu-de.monitoring.cloud.ibm.com `                 | https (TLS) 443 |
-| `EU-GB`      | `https://eu-gb.monitoring.cloud.ibm.com `                 | https (TLS) 443 |
+| Région       | Noeud final                                                  | Port            |
+|--------------|-----------------------------------------------------------|-----------------|
+| `Sud des Etats-Unis`   | `https://us-south.monitoring.cloud.ibm.com `               | HTTPS (TLS) 443 |  
+| `EU DE`      | `https://eu-de.monitoring.cloud.ibm.com `                 | HTTPS (TLS) 443 |
+| `EU GB`      | `https://eu-gb.monitoring.cloud.ibm.com `                 | HTTPS (TLS) 443 |
+| `JP TOK`     | `https://jp-tok.monitoring.cloud.ibm.com`                 | HTTPS (TLS) 443 |
 {: caption="Tableau 3. Liste des noeuds finaux Sysdig" caption-side="top"} 
 
 

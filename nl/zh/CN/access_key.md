@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -21,10 +21,10 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# 使用访问密钥
+# 管理访问密钥
 {: #access_key}
 
-**访问密钥**是一种令牌，必须使用此令牌来配置 Sysdig 代理程序，才能成功将数据转发到 {{site.data.keyword.Bluemix}} 中的 {{site.data.keyword.mon_full_notm}} 实例。   
+**访问密钥**是一种令牌，必须使用此令牌来配置 Sysdig 代理程序，才能成功将数据转发到 {{site.data.keyword.cloud_notm}} 中的 {{site.data.keyword.mon_full_notm}} 实例。   
 {:shortdesc}
 
 
@@ -91,7 +91,7 @@ subcollection: Sysdig
 
     其中，APIKEY_NAME 是 API 密钥的名称。
  
-    此命令的输出包含 **Sysdig Access Key** 字段，其中含有实例的访问密钥。
+    此命令的输出包含 **Sysdig 访问密钥**字段，其中含有实例的访问密钥。
 
 
 例如，以下命令显示样本服务标识的输出：
@@ -137,4 +137,4 @@ Parameters:
 
 2. 在*密码管理*部分中，单击**重置密码**。
 
-**注：**重置 Sysdig 访问密钥后，必须更新已配置为将度量值转发到此 {{site.data.keyword.mon_full_notm}} 实例的任何日志源的访问密钥。
+**注：**重置 Sysdig 访问密钥后，必须更新将度量值转发到此 {{site.data.keyword.mon_full_notm}} 实例的任何日志源的访问密钥。

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -62,7 +62,13 @@ La seguente figura mostra la panoramica dei componenti per il servizio {{site.da
 
 Devi avere un ID utente che è un membro o un proprietario di un account {{site.data.keyword.cloud_notm}}. Per ottenere un ID utente {{site.data.keyword.cloud_notm}}, vai a: [Registrazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/login){:new_window}.
 
-Il servizio è al momento disponibile in Stati Uniti Sud. Completa tutte le attività preliminari nella regione Stati Uniti Sud.
+Il servizio è disponibile nelle seguenti regioni:
+* *Stati Uniti Sud*
+* *EU-DE*
+* *EU-GB*
+* *JP-TOK*
+
+Puoi completare i passi iniziali in ognuna delle regioni supportate.
 
 
 ## Passo 1: gestisci l'accesso utente
@@ -79,7 +85,7 @@ Prima di poter eseguire il provisioning di un'istanza, prendi in considerazione 
 
 Per concedere a un utente il ruolo di amministratore per il servizio e per gestire le istanze all'interno di un gruppo di risorse nell'account, l'utente deve avere una politica IAM per il servizio {{site.data.keyword.mon_full_notm}} con il ruolo della piattaforma di **amministratore** all'interno del contesto del gruppo di risorse. 
 
-Completa la seguente procedura per assegnare a un utente il ruolo di amministratore per il servizio {{site.data.keyword.mon_full_notm}} all'interno del contesto di un gruppo di risorse. 
+Completa la seguente procedura per assegnare a un utente il ruolo di amministratore del servizio {{site.data.keyword.mon_full_notm}} all'interno del contesto di un gruppo di risorse: 
 
 1. Dalla barra dei menu, fai clic su **Gestisci** &gt; **Accesso (IAM)** e seleziona **Utenti**.
 2. Dalla riga per l'utente a cui vuoi assegnare l'accesso, seleziona il menu **Azioni** e fai quindi clic su **Assegna accesso**.
@@ -121,7 +127,7 @@ Per eseguire il provisioning di un'istanza tramite l'IU {{site.data.keyword.clou
 
 4. Fai clic sul tile **{{site.data.keyword.mon_full_notm}}**.
 
-5. Seleziona un piano di servizio. Per impostazione predefinita, è impostato il piano **Prova**.
+5. Seleziona un piano di servizio. Per impostazione predefinita, è impostato il piano **Trial**.
 
     Per ulteriori informazioni sui piani di servizio, vedi [Prezzi](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 

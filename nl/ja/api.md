@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Sysdig REST API の処理
+# Sysdig REST API の管理
 {: #api}
 
 Sysdig REST API を使用して、ルーチン・タスクを自動化し、通知をモニターします。
@@ -42,17 +42,17 @@ Sysdig REST API を使用して、ルーチン・タスクを自動化し、通�
 
 2. ダッシュボードが記述される json ファイルを作成します。 以下のように各フィールドを設定してください。
 
-    * *name*: ダッシュボードの名前を入力します。
+    * `name`: ダッシュボードの名前を入力します。
 
-    * *id*: *null* に設定します。
+    * `id`: *null* に設定します。
 
-    * *version*: *null* に設定します。
+    * `version`: *null* に設定します。
 
-    * username: IBMid と関連付けられた E メールに設定します。
+    * `username`: IBMid と関連付けた E メールに設定します。
 
-    * *isShared*: true に設定して他のチーム・メンバーとダッシュボードを共有します。
+    * `isShared`: true に設定して他のチーム・メンバーとダッシュボードを共有します。
 
-    * *isPublic*: ダッシュボードをパブリックに使用可能にする場合は true に設定します。
+    * `isPublic`: ダッシュボードをパブリックに使用可能にする場合は true に設定します。
 
     * ダッシュボードの有効範囲を定義するフィルターを構成します。
     
@@ -63,9 +63,9 @@ Sysdig REST API を使用して、ルーチン・タスクを自動化し、通�
     ```
     {: codeblock}
 
-    各部分の説明:
+    説明
 
-    * *ENDPOINT* は、モニタリング・インスタンスが使用可能なリージョンの URL です。 詳しくは、[Sysdig エンドポイント](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints)を参照してください。
+    * *ENDPOINT* は、モニタリング・インスタンスが使用可能な地域の URL です。 詳しくは、[Sysdig エンドポイント](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints)を参照してください。
 
     * *SYSDIG_API_TOKEN* は、前のステップで取得した API トークンです。
 
@@ -182,13 +182,13 @@ Sysdig REST API を使用して、ルーチン・タスクを自動化し、通�
     ```
     {: codeblock}
 
-    各部分の説明:
+    説明
 
-    * *ENDPOINT* は、モニタリング・インスタンスが使用可能なリージョンの URL です。 詳しくは、[Sysdig エンドポイント](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints)を参照してください。
+    * *ENDPOINT* は、モニタリング・インスタンスが使用可能な地域の URL です。 詳しくは、[Sysdig エンドポイント](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints)を参照してください。
 
     * *SYSDIG_API_TOKEN* は、前のステップで取得した API トークンです。
 
-例えば、米国南部地域で勤務するチームのダッシュボードをダウンロードするには、以下のコマンドを実行します。
+例えば、米国南部地域で作業するチームのダッシュボードをダウンロードするには、以下のコマンドを実行します。
 
 ```
 curl -X GET https://us-south.monitoring.cloud.ibm.com/ui/dashboards -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json'
@@ -216,15 +216,15 @@ curl -X GET https://us-south.monitoring.cloud.ibm.com/ui/dashboards -H 'Authoriz
     ```
     {: codeblock}
 
-    各部分の説明:
+    説明
 
     * *ID* は、削除するダッシュボードの ID です。
 
-    * *ENDPOINT* は、モニタリング・インスタンスが使用可能なリージョンの URL です。 詳しくは、[Sysdig エンドポイント](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints)を参照してください。
+    * *ENDPOINT* は、モニタリング・インスタンスが使用可能な地域の URL です。 詳しくは、[Sysdig エンドポイント](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints)を参照してください。
 
     * *SYSDIG_API_TOKEN* は、前のステップで取得した API トークンです。
 
-例えば、米国南部地域で勤務するチームのダッシュボードのリストから ID が *391* のダッシュボードを削除するには、以下のコマンドを実行します。
+例えば、米国南部地域で作業するチームのダッシュボードのリストから ID が *391* のダッシュボードを削除するには、以下のコマンドを実行します。
 
 ```
 curl -X DELETE https://us-south.monitoring.cloud.ibm.com/ui/dashboards/391 -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json' 

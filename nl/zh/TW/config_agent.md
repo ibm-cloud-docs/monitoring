@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -24,16 +24,16 @@ subcollection: Sysdig
 # 配置 Sysdig 代理程式
 {: #config_agent}
 
-在 {{site.data.keyword.cloud_notm}} 中佈建 {{site.data.keyword.mon_full_notm}} 服務的實例之後，您必須在每一個要監視的環境中配置一個 Sysdig 代理程式。Sysdig 代理程式會自動收集及報告預先定義的度量。您可以配置要在每一個環境中監視的度量。
+在 {{site.data.keyword.cloud_notm}} 中佈建 {{site.data.keyword.mon_full_notm}} 服務的實例之後，您必須在每一個要監視的環境中配置一個 Sysdig 代理程式。Sysdig 代理程式會自動收集及報告預先定義的度量值。您可以配置要在每一個環境中監視的度量值。
 {:shortdesc}
 
-您可以使一個以上的標籤與每一個 Sysdig 代理程式產生關聯。標籤是以逗點區隔的值，其格式為 **TAG_NAME:TAG_VALUE**。監視環境時，您可以使用這些標籤來識別代理程式中可用的度量。例如，您可以包括服務名稱及位置的相關資訊，以及此代理程式所收集的所有度量。
+您可以使一個以上的標籤與每一個 Sysdig 代理程式產生關聯。標籤是以逗點區隔的值，其格式為 **TAG_NAME:TAG_VALUE**。監視環境時，您可以使用這些標籤來識別代理程式中可用的度量值。例如，您可以包括服務名稱及位置的相關資訊，以及此代理程式所收集的所有度量值。
 {: tip}
 
 ## 在 Linux 上配置 Sysdig 代理程式
 {: #config_agent_linux}
 
-請完成下列步驟，在 Linux 上配置 Sysdig 代理程式，以收集度量並將其轉遞至 {{site.data.keyword.mon_full_notm}} 服務的實例：
+請完成下列步驟，在 Linux 上配置 Sysdig 代理程式，以收集度量值並將其轉遞至 {{site.data.keyword.mon_full_notm}} 服務的實例：
 
 1. 取得 Sysdig 存取金鑰。如需相關資訊，請參閱[透過 {{site.data.keyword.cloud_notm}} 使用者介面取得存取金鑰](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui)。
 
@@ -52,9 +52,9 @@ subcollection: Sysdig
 
     * COLLECTOR_ENDPOINT 是可以使用監視實例之地區的汲取 URL。
 
-    * TAG_DATA 是以逗點區隔的標籤，其格式為 *TAG_NAME:TAG_VALUE*。您可以使一個以上的標籤與 Sysdig 代理程式產生關聯。例如：*role:serviceX,location:us-south*。 
+    * TAG_DATA 是以逗點區隔的標籤，其格式為 *TAG_NAME:TAG_VALUE*。您可以使一個以上的標籤與 Sysdig 代理程式產生關聯。例如 *role:serviceX,location:us-south*。 
 
-    * 將 **sysdig_capture_enabled** 設為 *false*，以停用 Sysdig 擷取功能。依預設會設為 *true*。如需相關資訊，請參閱[使用擷取](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)。
+    * 將 **sysdig_capture_enabled** 設為 *false*，以停用 Sysdig 擷取特性。依預設會設為 *true*。如需相關資訊，請參閱[使用擷取](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)。
 
     * 將 **secure** 設為 *true*，以使用 SSL 進行通訊。
 
@@ -78,7 +78,7 @@ subcollection: Sysdig
 ## 在 Docker 容器上配置 Sysdig 代理程式
 {: #config_agent_docker}
 
-請完成下列步驟，在 Docker 容器上配置 Sysdig 代理程式，以收集度量並將其轉遞至 {{site.data.keyword.mon_full_notm}} 服務的實例：
+請完成下列步驟，在 Docker 容器上配置 Sysdig 代理程式，以收集度量值並將其轉遞至 {{site.data.keyword.mon_full_notm}} 服務的實例：
 
 1. 取得 Sysdig 存取金鑰。如需相關資訊，請參閱[透過 {{site.data.keyword.cloud_notm}} 使用者介面取得存取金鑰](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui)。
 
@@ -97,13 +97,14 @@ subcollection: Sysdig
 
     * COLLECTOR_ENDPOINT 是可以使用監視實例之地區的汲取 URL。
 
-    * TAG_DATA 是以逗點區隔的標籤，其格式為 *TAG_NAME:TAG_VALUE*。您可以使一個以上的標籤與 Sysdig 代理程式產生關聯。例如：*role:serviceX,location:us-south*。 
+    * TAG_DATA 是以逗點區隔的標籤，其格式為 *TAG_NAME:TAG_VALUE*。您可以使一個以上的標籤與 Sysdig 代理程式產生關聯。例如 *role:serviceX,location:us-south*。 
 
-    * 將 **sysdig_capture_enabled** 設為 *false*，以停用 Sysdig 擷取功能。依預設會設為 *true*。如需相關資訊，請參閱[使用擷取](/docs/services/Monitoring-with-Sysdig/captures.html#captures)。
+    * 將 **sysdig_capture_enabled** 設為 *false*，以停用 Sysdig 擷取特性。依預設會設為 *true*。如需相關資訊，請參閱[使用擷取](/docs/services/Monitoring-with-Sysdig/captures.html#captures)。
 
     * 將 **SECURE** 設為 *true*，以使用 SSL 進行通訊。
 
-    **附註：**容器以分離模式執行。若要查看容器的輸出，請移除 *-d*。
+    容器以分離模式執行。若要查看容器的輸出，請移除 *-d*。
+    {: note}
 
 
 
@@ -130,8 +131,6 @@ subcollection: Sysdig
 
     然後，複製並貼上終端機中顯示的指令，以設定 KUBECONFIG 環境變數。
 
-    **附註：**每次您登入 {{site.data.keyword.containerlong}} CLI 來使用叢集，您必須執行這些指令，將叢集配置檔的路徑設為階段作業變數。Kubernetes CLI 會使用此變數來尋找與 {{site.data.keyword.cloud_notm}} 中的叢集連接所需的本端配置檔及憑證。
-
 4. 部署 Sysdig 代理程式。請執行下列指令：
 
     ```
@@ -147,7 +146,7 @@ subcollection: Sysdig
 
     * TAG_DATA 是以逗點區隔的標籤，其格式為 *TAG_NAME:TAG_VALUE*。您可以使一個以上的標籤與 Sysdig 代理程式產生關聯。例如：*role:serviceX,location:us-south*。 
 
-    * 將 **sysdig_capture_enabled** 設為 *false*，以停用 Sysdig 擷取功能。依預設會設為 *true*。如需相關資訊，請參閱[使用擷取](/docs/services/Monitoring-with-Sysdig/captures.html#captures)。
+    * 將 **sysdig_capture_enabled** 設為 *false*，以停用 Sysdig 擷取特性。依預設會設為 *true*。如需相關資訊，請參閱[使用擷取](/docs/services/Monitoring-with-Sysdig/captures.html#captures)。
 
 
 
@@ -173,8 +172,6 @@ subcollection: Sysdig
 
     然後，複製並貼上終端機中顯示的指令，以設定 KUBECONFIG 環境變數。
 
-    **附註：**每次您登入 {{site.data.keyword.containerlong}} CLI 來使用叢集，您必須執行這些指令，將叢集配置檔的路徑設為階段作業變數。Kubernetes CLI 會使用此變數來尋找與 {{site.data.keyword.cloud_notm}} 中的叢集連接所需的本端配置檔及憑證。
-
 4. 建立一個稱為 **Sysdig-agent** 的服務帳戶，以監視 kubernetes 叢集。請執行下列指令：
 
     ```
@@ -182,7 +179,7 @@ subcollection: Sysdig
     ```
     {: codeblock}
 
-5. 將密碼新增至您的 Kubernet 叢集。請執行下列指令：
+5. 將密碼新增至您的 Kubernetes 叢集。請執行下列指令：
 
     ```
     kubectl create secret generic sysdig-agent --from-literal=access-key=SYSDIG_ACCESS_KEY -n ibm-observe
@@ -191,7 +188,7 @@ subcollection: Sysdig
 
     SYSDIG_ACCESS_KEY 是實例的汲取金鑰。
 
-    Kubernetes 密碼包含汲取金鑰，可使用此金鑰，透過 {{site.data.keyword.mon_full_notm}} 服務鑑別 Sysdig 代理程式。它是用來在監視後端系統上，開啟汲取伺服器的安全 Web Socket。
+    Kubernetes 密碼包含用於向 {{site.data.keyword.mon_full_notm}} 服務鑑別 Sysdig 代理程式的汲取金鑰。它是用來在監視後端系統上，開啟汲取伺服器的安全 Web Socket。
 
 6. 建立叢集角色及叢集角色連結。 
 
@@ -217,21 +214,21 @@ subcollection: Sysdig
 
     使用編輯器來開啟 sysdig-agent-configmap.yaml 檔。然後，新增下列參數：
 
-    * **k8s_cluster_name**：此參數會將叢集名稱指定為度量標籤。您可以使用標籤 *kubernetes.cluster.name*，依叢集名稱導覽 Kubernetes 儀表板，並濾出與叢集相關聯的度量。
+    * **k8s_cluster_name**：此參數會將叢集名稱指定為度量值標籤。可以使用 *kubernetes.cluster.name* 標籤按叢集名稱導覽 Kubernetes 儀表板，並過濾掉與該叢集關聯的度量值。
 
     * **collector**：此參數指定可以使用監視實例之地區的汲取 URL。 
 
-    * **collector_port**：此參數指出正在其上接聽收集器的埠。其值必須是 *6443*。
+    * **collector_port**：此參數指出正在其上接聽收集器的埠。該值必須設定為 *6443*。
     
     * **ssl**：此參數必須設為 *true*。
     
     * **ssl_verfiy_certificate**：此參數必須設為 *true*。
     
-    * **new_k8s**：此參數必須設為 *true*，才能擷取 kube 狀態度量。
+    * **new_k8s**：此參數必須設為 *true*，才能擷取 kube 狀態度量值。
 
-    * **sysdig_capture_enabled**：此參數可啟用或停用 Sysdig 擷取功能。依預設會設為 *true*。如需相關資訊，請參閱[使用擷取](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)。
+    * **sysdig_capture_enabled**：此參數可啟用或停用 Sysdig 擷取特性。依預設會設為 *true*。如需相關資訊，請參閱[使用擷取](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)。
 
-    範例 yaml 檔案如下所示：
+    YAML 檔案範例如下所示：
 
     ```
      apiVersion: v1

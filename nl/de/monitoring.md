@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring
 
@@ -27,7 +27,7 @@ subcollection: Sysdig
 Sie können Ihre Infrastruktur überwachen. Die Anwendungen, die mit dem {{site.data.keyword.mon_full_notm}}-Service ausgeführt in der Infrastruktur ausgeführt werden, können überwacht werden. Sie können eine Erfassung anfordern, um zu analysieren, was während eines Zeitrahmens in einem Knoten geschieht.
 {:shortdesc}
 
-Nachdem Sie eine Instanz des {{site.data.keyword.mon_full_notm}}-Service in {{site.data.keyword.Bluemix}} bereitgestellt und Sysdig-Agenten für Ihre Metrikquellen konfiguriert haben, können Sie Daten über die Webbenutzerschnittstelle des Service anzeigen, überwachen und verwalten.
+Als Erstes stellen Sie eine Instanz des {{site.data.keyword.mon_full_notm}}-Service in {{site.data.keyword.cloud_notm}} bereit. Dann konfigurieren Sie Sysdig-Agents für Ihre Metrikquellen. Nachdem die Quellen konfiguriert wurden, können Sie Daten über die Webbenutzerschnittstelle des Service anzeigen, überwachen und verwalten.
 
 Die Daten für Standardmetriken werden automatisch erfasst. Sie können angepasste Metriken konfigurieren und Bezeichnungen zu diesen Metriken hinzufügen, um deren Merkmale zu beschreiben. Die Daten für diese angepassten Metriken werden ebenfalls automatisch erfasst.
 
@@ -42,7 +42,7 @@ Auf der Registerkarte *Erkunden* können Sie Daten mithilfe von Standardmetriken
 
 Auf der Registerkarte *Dashboards* können Sie Daten überwachen, indem Sie eines der Standarddashboards verwenden oder neue Dashboards erstellen.
 
-Sie können ein Standarddashboard als Standardeingangspunkt für ein Team konfigurieren und somit die Erfahrung eines Teams vereinheitlichen und es den Benutzern ermöglichen, ihre unmittelbare Aufmerksamkeit auf die für sie relevantesten Informationen zu richten. 
+Sie können ein Standarddashboard als Standardeingangspunkt für ein Team konfigurieren und somit die Erfahrung eines Teams vereinheitlichen und es den Benutzern ermöglichen, ihre unmittelbare Aufmerksamkeit auf die für sie relevantesten Informationen zu richten.
 {: tip}
 
 Sie können Alerts verwenden, um Benutzer über Probleme zu benachrichtigen, die über einen oder mehrere Benachrichtigungskanäle Aufmerksamkeit erfordern.
@@ -81,15 +81,15 @@ Sie können einen der folgenden Anzeigentypen verwenden, um Metriken zu visualis
 
 | Typ | Beschreibung |
 |------|-------------|
-| Zeile | Verwenden Sie diese Anzeige, um Trends für eine oder mehrere Metriken im Laufe der Zeit anzuzeigen.  |
-| Bereich | Verwenden Sie diese Anzeige, um Trends für eine oder mehrere Metriken im Laufe der Zeit anzuzeigen.  |
-| Top-Liste | Verwenden Sie diese Anzeige, um eine Metrik über mehrere Gruppen von Entitäten hinweg zu vergleichen. Das Balkendiagramm ist in absteigender Reihenfolge sortiert.  |
-| Histogramm | Verwenden Sie diese Anzeige, um die Häufigkeitsverteilung einer Metrik in Buckets anzuzeigen.  |
-| Topologie | Verwenden Sie diese Anzeige, um die Infrastruktur als Topologiemap sowie die Beziehungen zwischen Entitäten in der Map darzustellen.  |
-| Zahl | Verwenden Sie diese Anzeige, um eine einzelne Zahl anzuzeigen, die den Wert einer Aggregationsmetrik für eine oder mehrere Entitäten im Laufe der Zeit darstellt.  |
-| Tabelle | Verwenden Sie diese Anzeige, um numerische Daten für Ihre Infrastruktur basierend auf Metriken und Segmenten anzuzeigen.  |
-| Text | Verwenden Sie diese Anzeige, um Text hinzuzufügen. Verwenden Sie Markdown, um Ihren Text hinzuzufügen.  |
-{: caption="Tabelle 3. Anzeigentypen" caption-side="top"} 
+| `Linie` | Verwenden Sie diese Anzeige, um Trends für eine oder mehrere Metriken im Laufe der Zeit anzuzeigen.  |
+| `Bereich` | Verwenden Sie diese Anzeige, um Trends für eine oder mehrere Metriken im Laufe der Zeit anzuzeigen.  |
+| `Top-Liste` | Verwenden Sie diese Anzeige, um eine Metrik über mehrere Gruppen von Entitäten hinweg zu vergleichen. Das Balkendiagramm ist in absteigender Reihenfolge sortiert.  |
+| `Histogramm` | Verwenden Sie diese Anzeige, um die Häufigkeitsverteilung einer Metrik in Buckets anzuzeigen.  |
+| `Topologie` | Verwenden Sie diese Anzeige, um die Infrastruktur als Topologiemap sowie die Beziehungen zwischen Entitäten in der Map darzustellen.  |
+| `Zahl` | Verwenden Sie diese Anzeige, um eine einzelne Zahl anzuzeigen, die den Wert einer Aggregationsmetrik für eine oder mehrere Entitäten im Laufe der Zeit darstellt.  |
+| `Tabelle` | Verwenden Sie diese Anzeige, um numerische Daten für Ihre Infrastruktur basierend auf Metriken und Segmenten anzuzeigen.  |
+| `Text` | Verwenden Sie diese Anzeige, um Text hinzuzufügen. Verwenden Sie Markdown, um Ihren Text hinzuzufügen.  |
+{: caption="Tabelle 1. Anzeigentypen" caption-side="top"} 
 
 Sie können Anzeigen kopieren, ihren Geltungsbereich ändern, die Anzeigen duplizieren, löschen, exportieren und erkunden.
 
@@ -109,7 +109,7 @@ In der folgenden Tabelle sind die Tasks aufgelistet, die Sie mit Anzeigen ausfü
 | [Anzeige löschen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_delete) | Löschen Sie eine Anzeige aus dem Dashboard.  |
 | [Daten exportieren](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_export) | Exportieren Sie Daten aus einer Anzeige in eine CSV- oder JSON-Datei.  |
 | [Alert erstellen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_alert) | Definieren Sie einen Alert für eine Metrik. |
-{: caption="Tabelle 4. Anzeigentasks" caption-side="top"} 
+{: caption="Tabelle 2. Anzeigentasks" caption-side="top"} 
 
 
 ## Dashboards
@@ -120,13 +120,13 @@ Ein **Dashboard** zeigt Gruppen von Metriken an, die einen Bericht über den Zus
 
 Im Abschnitt **DASHBOARDS** der Webbenutzerschnittstelle sind Dashboards in drei Hauptgruppen unterteilt:
 
-* *Meine Dashboards*: Dies sind die Dashboards, die von dem Benutzer erstellt werden, der momentan angemeldet ist.
-* *Meine gemeinsam genutzten Dashboards*: Dies sind die Dashboards, die von dem Benutzer erstellt werden, der momentan angemeldet ist, und die mit anderen Benutzern gemeinsam genutzt werden.
-* *Mit mir gemeinsam genutzte Dashboards*: Dies sind die Dashboards, die von anderen Benutzern erstellt wurden und mit dem aktuellen Benutzer gemeinsam genutzt werden.
+* **Meine Dashboards**: Diese Dashboards werden von dem Benutzer erstellt, der momentan angemeldet ist.
+* **Meine gemeinsam genutzten Dashboards**: Dies sind die Dashboards, die von dem Benutzer erstellt werden, der momentan angemeldet ist, und die mit anderen Benutzern gemeinsam genutzt werden.
+* **Mit mir gemeinsam genutzte Dashboards**: Dies sind die Dashboards, die von anderen Benutzern erstellt wurden und mit dem aktuellen Benutzer gemeinsam genutzt werden.
 
 Im Abschnitt **ERKUNDEN** der Webbenutzerschnittstelle sind Dashboards in zwei Gruppen unterteilt:
-* *Standarddashboards*: Dies sind vordefinierte Dashboards.
-* *Meine Dashboards*: Dies sind die Dashboards, die von dem Benutzer erstellt werden, der momentan angemeldet ist.
+* **Standarddashboards**: Dies sind vordefinierte Dashboards.
+* **Meine Dashboards**: Diese Dashboards werden von dem Benutzer erstellt, der momentan angemeldet ist.
 
 Sie können vordefinierte Dashboards verwenden. Sie können auch benutzerdefinierte Dashboards über die Webbenutzerschnittstelle oder programmgesteuert erstellen. Sie können Dashboards sichern und wiederherstellen, indem Sie Python-Scripts oder die Sysdig-REST-API verwenden.
 
@@ -141,7 +141,7 @@ In der folgenden Tabelle werden die Tasks aufgeführt, die Sie ausführen könne
 | [Geltungsbereich ändern](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_scope) | Ändern Sie den Geltungsbereich eines Dashboards.       |
 | [Dashboard löschen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_delete) |  Löschen Sie ein Dashboard. |
 | [Dashboard gemeinsam nutzen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_share) | Nutzen Sie Dashboards zwischen Benutzern in einem Team und extern gemeinsam, indem Sie eine öffentliche URL für das Dashboard konfigurieren. |
-{: caption="Tabelle 1. Dashboardtasks, die Sie in der Webbenutzerschnittstelle ausführen können" caption-side="top"} 
+{: caption="Tabelle 3. Dashboardtasks, die Sie in der Webbenutzerschnittstelle ausführen können" caption-side="top"} 
 
 In der folgenden Tabelle werden die Tasks aufgeführt, die Sie programmgesteuert ausführen können, um mit Dashboards zu arbeiten:
 
@@ -150,7 +150,7 @@ In der folgenden Tabelle werden die Tasks aufgeführt, die Sie programmgesteuert
 | Dashboard erstellen      | [Dashboard mithilfe der API erstellen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_create_dashboard) |
 | Dashboard löschen      | [Dashboard mithilfe der API löschen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_delete_dashboard) |
 | Dashboards speichern       | [Dashboards eines Teams mithilfe der API speichern](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_save_dashboard) |
-{: caption="Tabelle 2. Tasks zum programmgesteuerten Verwalten von Dashboards" caption-side="top"} 
+{: caption="Tabelle 4. Tasks zum programmgesteuerten Verwalten von Dashboards" caption-side="top"} 
 
 
 
@@ -159,23 +159,22 @@ In der folgenden Tabelle werden die Tasks aufgeführt, die Sie programmgesteuert
 
 Ein Ereignis ist eine Benachrichtigung, die darüber informiert, dass in einem der Knoten, die Daten an Ihre {{site.data.keyword.mon_full_notm}}-Instanz weiterleiten, etwas aufgetreten ist. Verwenden Sie Ereignisse, um Probleme zu überprüfen, zu verfolgen und zu beheben. 
 
-Es gibt verschiedene Arten von Ereignissen: 
+In der folgenden Liste sind die verschiedenen Arten von Ereignissen aufgeführt: 
 
 * *Alertereignisse* sind Ereignisse, die durch vom Benutzer konfigurierte Alerts ausgelöst werden. Weitere Informationen finden Sie im Abschnitt [Mit Alerts arbeiten](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring_alerts).
 * *Infrastrukturbasierte Ereignisse* sind Ereignisse, die von Docker- und Kubernetes-Knoten erfasst werden. Standardmäßig erkennt der Sysdig-Agent automatisch Daten aus einer ausgewählten Gruppe von Ereignissen und erfasst diese. Sie können die Agentenkonfigurationsdatei bearbeiten, um weitere Ereignisse zu aktivieren.
 * *Angepasste Ereignisse*, die Sie über eine der folgenden Integrationen konfigurieren: Slackbot, vordefinierte Python-Scripts, angepasste und vom Benutzer erstellte Python-Scripts oder cURL-Anforderungen.
 
 Ein Ereignis hat standardmäßig einen Status: 
-* *Aktiv*: Dieser Status zeigt an, dass die Umstände, die das Ereignis ausgelöst haben, weiterhin vorhanden sind, z. B. wenn ein Knoten weiterhin inaktiv ist.
-* *OK*: Dieser Status zeigt an, dass die Situation wieder normal ist, z. B. wenn ein Knoten wieder betriebsbereit ist.
+* **Aktiv**: Dieser Status zeigt an, dass die Umstände, die das Ereignis ausgelöst haben, weiterhin vorhanden sind, z. B. wenn ein Knoten weiterhin inaktiv ist.
+* **OK**: Dieser Status zeigt an, dass die Situation wieder normal ist, z. B. wenn ein Knoten wieder betriebsbereit ist.
 
 Ereignisse werden im Abschnitt *Ereignisse* der Webbenutzerschnittstelle verwaltet. 
 * Sie können Alertereignisse über die Registerkarte *Alertereignisse* anzeigen.
 * Sie können infrastrukturbasierte Ereignisse über die Registerkarte *Angepasste Ereignisse* anzeigen.
 * Sie können angepasste Ereignisse über die Registerkarte *Angepasste Ereignisse* anzeigen.
 * Sie können angepasste Ereignisse mithilfe des [API-Token für dieses Team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token) an jedes Ihrer Teams senden. Weitere Informationen finden Sie unter [Angepasste Ereignisse ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events){:new_window}.
-
-Sie können die Situation lösen, die ein Ereignis ausgelöst hat. Während Sie warten, bis die Bedingung, die das Ereignis ausgelöst hat, erneut ausgeführt wird, und den Status auf *OK* setzen, können Sie das Ereignis als **Gelöst** festlegen, um grafisch anzuzeigen, dass das Problem behoben wurde. 
+* Sie können das Ereignis als **Gelöst** festlegen, um andere Benutzer darüber zu informieren, dass das Problem behoben wurde, anstatt auf den Status **OK** zu warten.
 {: #tip}
 
 
@@ -185,7 +184,7 @@ Sie können die Situation lösen, die ein Ereignis ausgelöst hat. Während Sie 
 
 Ein Alert ist ein Benachrichtigungsereignis, das Sie verwenden können, um vor Situationen zu warnen, die Aufmerksamkeit erfordern. Jeder Alert hat einen Prioritätsstatus. Dieser Status informiert Sie über die Kritikalität der Informationen, die gemeldet werden. 
 
-Wenn Sie einen Alert definieren, müssen Sie die Bedingung, die die Benachrichtigung auslöst, einen oder mehrere Benachrichtigungskanäle, über die Sie benachrichtigt werden möchten, die Prioritätsstufe des Alerts und den Typ des Alerts definieren. 
+Wenn Sie einen Alert definieren, müssen Sie die Bedingung, die die Benachrichtigung auslöst, und einen oder mehrere Benachrichtigungskanäle, über die Sie benachrichtigt werden möchten, definieren. Sie müssen auch die Prioritätsstufe des Alerts und den Typ des Alerts definieren. 
 
 Sie können Alerts für einen der folgenden Alerttypen definieren:
 

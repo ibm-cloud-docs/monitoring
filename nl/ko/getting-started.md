@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -62,7 +62,13 @@ subcollection: Sysdig
 
 {{site.data.keyword.cloud_notm}} 계정의 소유자 또는 구성원인 사용자 ID가 있어야 합니다. {{site.data.keyword.cloud_notm}} 사용자 ID를 가져오려면 [등록 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/login){:new_window}으로 이동하십시오.
 
-서비스는 현재 미국 남부에서 사용 가능합니다. 미국 남부 지역에서 시작하기 단계를 완료하십시오.
+이 서비스는 다음 지역에서 사용 가능합니다.
+* *미국 남부*
+* *EU-DE*
+* *EU-GB*
+* *JP-TOK*
+
+지원되는 지역 중 하나에서 시작하기 단계를 완료할 수 있습니다.
 
 
 ## 1단계: 사용자 액세스 관리

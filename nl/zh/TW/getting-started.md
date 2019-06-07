@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -25,7 +25,7 @@ subcollection: Sysdig
 # 入門指導教學
 {: #getting-started}
 
-{{site.data.keyword.mon_full_notm}} 是協力廠商雲端原生和容器智慧管理系統，您可以將其併入為 {{site.data.keyword.cloud_notm}} 架構的一部分。您可以使用它，在作業期間看見應用程式、服務及平台的效能及性能。它提供管理者、DevOps 團隊及開發人員完整堆疊遙測，提供進階功能來監視及疑難排解、定義警示，以及設計自訂儀表板。{{site.data.keyword.mon_full_notm}} 是由與 {{site.data.keyword.IBM_notm}} 具有夥伴關係的 Sysdig 所操作。
+{{site.data.keyword.mon_full_notm}} 是協力廠商雲端原生和容器智慧管理系統，您可以將其併入為 {{site.data.keyword.cloud_notm}} 架構的一部分。您可以使用它，在作業期間看見應用程式、服務及平台的效能及性能。它提供管理者、DevOps 團隊及開發人員完整堆疊遙測，提供進階特性來監視及疑難排解、定義警示，以及設計自訂儀表板。{{site.data.keyword.mon_full_notm}} 是由與 {{site.data.keyword.IBM_notm}} 具有夥伴關係的 Sysdig 所操作。
 {:shortdesc}
 
 下圖顯示正在 {{site.data.keyword.cloud_notm}} 上執行之 {{site.data.keyword.mon_full_notm}} 服務的元件概觀：
@@ -46,11 +46,11 @@ subcollection: Sysdig
 
 **輕鬆地探索並視覺化您的整個環境。**
 
-{{site.data.keyword.mon_full_notm}} 可讓您輕鬆地以視覺化方式探索環境。動態拓蹼對映提供服務之間相依關係的視圖。跨高流失、高基數、高頻率度量的多維查詢可加快疑難排解。可自訂儀表板可讓您將最重要的內容視覺化。 
+{{site.data.keyword.mon_full_notm}} 可讓您輕鬆地以視覺化方式探索環境。動態拓蹼對映提供服務之間相依關係的視圖。跨高流失、高基數、高頻率度量值的多維查詢可加快疑難排解。可自訂儀表板可讓您將最重要的內容視覺化。 
 
 **取得動態微服務監視的重要 Kubernetes 及容器見解。**
 
-{{site.data.keyword.mon_full_notm}} 會自動探索 Kubernets 環境，為叢集、節點、名稱空間、服務、部署、Pod 等提供現成可用的儀表板及警示。每個節點的單一代理程式會動態探索所有微服務，並自動從各種來源收集度量及事件，包括 Kubernetes、主機、網路、容器、處理程序、應用程式及自訂度量（例如 Prometheus、JMX 及 StatsD）。 
+{{site.data.keyword.mon_full_notm}} 會自動探索 Kubernetes 環境，為叢集、節點、名稱空間、服務、部署、Pod 等提供現成可用的儀表板及警示。每個節點的單一代理程式會動態探索所有微服務，並自動從各種來源收集度量值及事件，包括 Kubernetes、主機、網路、容器、處理程序、應用程式及自訂度量值（例如 Prometheus、JMX 及 StatsD）。 
 
 **利用主動通知緩解異常狀況的影響。**
 
@@ -62,7 +62,13 @@ subcollection: Sysdig
 
 您具有的使用者 ID 必須是 {{site.data.keyword.cloud_notm}} 帳戶的成員或擁有者。若要取得 {{site.data.keyword.cloud_notm}} 使用者 ID，請移至：[登錄 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/login){:new_window}。
 
-美國南部目前提供此服務。請完成美國南部地區的任何入門步驟。
+服務在下列地區中可用：
+* *美國南部*
+* *EU-DE*
+* *EU-GB*
+* *JP-TOK*
+
+您可以在任何受支援地區中完成開始使用步驟。
 
 
 ## 步驟 1：管理使用者存取
@@ -98,7 +104,7 @@ subcollection: Sysdig
 ## 步驟 2：佈建 {{site.data.keyword.mon_full_notm}} 服務的實例
 {: #step2}
 
-若要在 {{site.data.keyword.cloud_notm}} 中使用 {{site.data.keyword.mon_full_notm}} 來新增監視功能，您必須佈建 {{site.data.keyword.mon_full_notm}} 服務的實例。 
+若要在 {{site.data.keyword.cloud_notm}} 中使用 {{site.data.keyword.mon_full_notm}} 來新增監視特性，您必須佈建 {{site.data.keyword.mon_full_notm}} 服務的實例。 
 
 佈建實例時，會將您的資料傳送給協力廠商。
 {: tip}
@@ -137,9 +143,9 @@ subcollection: Sysdig
 ## 步驟 3：配置 Sysdig 代理程式
 {: #step3}
 
-在佈建實例之後，您必須為要監視的每一個度量來源配置一個 Sysdig 代理程式。度量來源是您要監視並控制其效能與性能的雲端資源。例如，度量來源可以是 Kubernetes 叢集。  
+在佈建實例之後，您必須為要監視的每一個度量值來源配置一個 Sysdig 代理程式。度量值來源是您要監視並控制其效能與性能的雲端資源。例如，度量值來源可以是 Kubernetes 叢集。  
 
-Sysdig 代理程式會自動收集及報告預先定義的度量。您可以使用 *Sysdig 存取金鑰* 來配置 Sysdig 代理程式，負責收集度量值資料，並將其轉遞至您的實例。如需相關資訊，請參閱[使用存取金鑰](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key)。
+Sysdig 代理程式會自動收集及報告預先定義的度量值。您可以使用 *Sysdig 存取金鑰* 來配置 Sysdig 代理程式，負責收集度量值資料，並將其轉遞至您的實例。如需相關資訊，請參閱[使用存取金鑰](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key)。
 
 您可以針對下列任何環境配置 Sysdig 代理程式：
 
@@ -148,19 +154,19 @@ Sysdig 代理程式會自動收集及報告預先定義的度量。您可以使�
 * Mesos、Marathon 及 DCOS。
 * Linux 安裝。
 
-例如，若要將您的 Kibernees 叢集配置為將度量傳送至您的 Sysdig 實例，您必須在叢集的每一個節點上安裝 `sysdig-agent` Pod。Sysdig 代理程式會從已安裝它的 Pod 中收集資料，然後將其轉遞至您的 Sysdig 實例。
+例如，若要將您的 Kubernetes 叢集配置為將度量值傳送至您的 Sysdig 實例，您必須在叢集的每一個節點上安裝 `sysdig-agent` Pod。Sysdig 代理程式會從已安裝它的 Pod 中收集資料，然後將其轉遞至您的 Sysdig 實例。
 
 請完成下列其中一個指導教學，瞭解如何部署 Sysdig 代理程式：
 
 | 資源                |	指導教學                        | 環境                | 情境   |
 |-------------------------|---------------------------------|----------------------------|------------|
-| 在 {{site.data.keyword.containershort}} 上執行的容器 |[分析 Kubernetes 叢集中部署之應用程式的度量](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-kubernetes_cluster#kubernetes_cluster) | {{site.data.keyword.cloud_notm}} Public | ![{{site.data.keyword.containershort}} 及 {{site.data.keyword.mon_full_notm}}](images/kube.png "{{site.data.keyword.containershort}} 及 {{site.data.keyword.mon_full_notm}}") |
-|Linux Ubuntu/Debian | [分析 Ubuntu 伺服器的度量](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-ubuntu#ubuntu) | 內部部署 | ![Ubuntu 及 {{site.data.keyword.mon_full_notm}}](images/kube.png "Ubuntu 及 {{site.data.keyword.mon_full_notm}}") |
+| 在 {{site.data.keyword.containershort}} 上執行的容器 |[分析 Kubernetes 叢集裡部署之應用程式的度量值](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-kubernetes_cluster#kubernetes_cluster) | {{site.data.keyword.cloud_notm}} Public | ![{{site.data.keyword.containershort}} 及 {{site.data.keyword.mon_full_notm}}](images/kube.png "{{site.data.keyword.containershort}} 及 {{site.data.keyword.mon_full_notm}}") |
+|Linux Ubuntu/Debian | [分析 Ubuntu 伺服器的度量值](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-ubuntu#ubuntu) | 內部部署 | ![Ubuntu 及 {{site.data.keyword.mon_full_notm}}](images/kube.png "Ubuntu 及 {{site.data.keyword.mon_full_notm}}") |
 {: caption="表 1. 開始使用 {{site.data.keyword.mon_full_notm}} 的指導教學" caption-side="top"} 
 
 如需相關資訊，請參閱[配置 Sysdig 代理程式](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-config_agent#config_agent)及[移除 Sysdig 代理程式](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-remove#remove)。
 
-在部署 Sysdig 代理程式之後，即會自動收集度量並將其轉遞至實例。Sysdig 代理程式會自動收集及報告預先定義的度量。您也可以配置要在環境中監視的度量。也會自動收集自訂度量的資料。
+在部署 Sysdig 代理程式之後，即會自動收集度量值並將其轉遞至實例。Sysdig 代理程式會自動收集及報告預先定義的度量值。您也可以配置要在環境中監視的度量值。也會自動收集自訂度量值的資料。
 
 ## 步驟 4：啟動 Web 使用者介面
 {: #step4}
@@ -193,13 +199,13 @@ Sysdig 代理程式會自動收集及報告預先定義的度量。您可以使�
 ## 步驟 5：監視您的環境
 {: #step5}
 
-您可以在*探索* 標籤，以及在 Web 使用者介面的*儀表板* 標籤中分析資料。您可以透過度量視圖和儀表板來監視資料。 
+您可以在*探索* 標籤，以及在 Web 使用者介面的*儀表板* 標籤中分析資料。您可以透過度量值視圖和儀表板來監視資料。 
 
-* 使用度量視圖來監視個別度量。
-* 使用儀表板，透過畫面監視資料，以取得對網路資料、應用程式資料、拓蹼、服務、主機及容器的專業見解。畫面會在儀表板中顯示度量或度量群組。
+* 使用度量值視圖來監視個別度量值。
+* 使用儀表板，透過畫面監視資料，以取得對網路資料、應用程式資料、拓蹼、服務、主機及容器的專業見解。畫面會在儀表板中顯示度量值或度量值群組。
 {: tip}
 
-在*探索* 標籤中，您可以使用預設度量和預設儀表板來監視資料。您可以使用標籤來定義新的基礎架構群組，然後使用這些群組，以不同方式聚集資料，並監視您的環境。您也可以使用透過*儀表板* 標籤定義的自訂儀表板。
+在*探索* 標籤中，您可以使用預設度量值和預設儀表板來監視資料。您可以使用標籤來定義新的基礎架構群組，然後使用這些群組，以不同方式聚集資料，並監視您的環境。您也可以使用透過*儀表板* 標籤定義的自訂儀表板。
 
 在*儀表板* 標籤中，您可以使用任何預設儀表板或建立新的儀表板來監視資料。
 
@@ -210,9 +216,9 @@ Sysdig 代理程式會自動收集及報告預先定義的度量。您可以使�
 ## 步驟 6：管理資料
 {: #step6}
 
-您可以使用標籤，將基礎架構資源分組為邏輯階層、濾出資料，以及將聚集資料分割為區段。自訂在您配置圖形或建立度量的警示時聚集資料的方式。設定儀表板的範圍、畫面或警示來濾出資料點。透過團隊來管理使用者的資料存取，以限制資料存取。 
+您可以使用標籤，將基礎架構資源分組為邏輯階層、過濾掉資料，以及將聚集資料分割為區段。自訂在您配置圖形或建立度量值的警示時聚集資料的方式。設定儀表板的範圍、畫面或警示來過濾掉資料點。透過團隊來管理使用者的資料存取，以限制資料存取。 
 
-例如，對於度量視圖，您可以定義資料的範圍、如何聚集資料，以及要套用至資料的時間和群組過濾器。 
+例如，對於度量值視圖，您可以定義資料的範圍、如何聚集資料，以及要套用至資料的時間和群組過濾器。 
 
 如需相關資訊，請參閱[管理資料](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-manage#manage)。
 

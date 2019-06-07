@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview
 
@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Informationen zu {{site.data.keyword.mon_full_notm}}
+# {{site.data.keyword.mon_full_notm}}
 {: #about}
 
 {{site.data.keyword.mon_full}} ist ein für die Cloud natives Container-Intelligence-Managementsystem eines Drittanbieters, das Sie als Teil Ihrer {{site.data.keyword.cloud_notm}}-Architektur verwenden können. Nutzen Sie es, um Einblick in die Leistung und den Status Ihrer Anwendungen, Services und Plattformen zu erhalten. Es bietet Administratoren, DevOps-Teams und Entwicklern eine vollständige Stack-Telemetrie mit erweiterten Funktionen zum Überwachen und Beheben von Fehlern, zum Definieren von Alerts und zum Entwerfen angepasster Dashboards. {{site.data.keyword.mon_full_notm}} wird von Sysdig in Partnerschaft mit {{site.data.keyword.IBM_notm}} betrieben.
@@ -34,7 +34,7 @@ Um Überwachungsfunktionen mit {{site.data.keyword.mon_full_notm}} in {{site.dat
 Bevor Sie eine Instanz bereitstellen, sollten Sie die folgenden Informationen beachten:
 
 * Ihre Daten werden an einen Drittanbieter gesendet.
-* Der Kontoeigner kann eine Instanz eines Service in {{site.data.keyword.cloud_notm}} erstellen, anzeigen und löschen sowie anderen Benutzern die Berechtigung erteilen, mit dem {{site.data.keyword.mon_full_notm}}-Service zu arbeiten.
+* Der Kontoeigner kann eine Instanz eines Service in {{site.data.keyword.cloud_notm}} erstellen, anzeigen und löschen. Er kann auch anderen Benutzern die Berechtigung erteilen, mit dem {{site.data.keyword.mon_full_notm}}-Service zu arbeiten.
 * Andere {{site.data.keyword.cloud_notm}}-Benutzer mit `Administrator`- oder `Editor`-Berechtigungen können den {{site.data.keyword.mon_full_notm}}-Service in {{site.data.keyword.cloud_notm}} verwalten. Diese Benutzer müssen außerdem über die Plattform-Berechtigungen verfügen, um Ressourcen im Kontext der Ressourcengruppe zu erstellen, in der sie die Instanz bereitstellen wollen.
 
 Sie können eine Instanz im Kontexts einer Ressourcengruppe bereitstellen. Mit einer Ressourcengruppe können Sie Ihre Services für die Zugriffssteuerung und die Abrechnung organisieren. Sie können die {{site.data.keyword.mon_full_notm}}-Instanz in der *Standard*-Ressourcengruppe oder in einer angepassten Ressourcengruppe bereitstellen.
@@ -93,7 +93,8 @@ Wenn Sie eine Instanz von {{site.data.keyword.mon_full_notm}} aus {{site.data.ke
 
 Wenn Sie eine Erfassung löschen, wird die Datendatei für diese Erfassung automatisch gelöscht.
 
-**HINWEIS: Das Löschen von Daten, die von einem einzigen Sysdig-Agenten in einer {{site.data.keyword.mon_short}}-Instanz erfasst werden, wird nicht unterstützt.**
+Das Löschen von Daten, die von einem einzigen Sysdig-Agenten in einer {{site.data.keyword.mon_short}}-Instanz erfasst werden, wird nicht unterstützt.
+{: note}
 
 
 
@@ -132,7 +133,7 @@ Weitere Informationen zur Überwachung der Nutzung und Kosten Ihres Service find
 ## Servicepläne
 {: #overview_plans}
 
-Es sind verschiedene Preisstrukturpläne für eine {{site.data.keyword.mon_full_notm}}-Instanz verfügbar. Weitere Informationen finden Sie in [Preisstruktur](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
+Es sind verschiedene Preisstrukturpläne für eine {{site.data.keyword.mon_full_notm}}-Instanz verfügbar. [Erfahren Sie mehr darüber](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 
 
 ## Sicherheitsaspekte
@@ -142,6 +143,6 @@ Es sind verschiedene Preisstrukturpläne für eine {{site.data.keyword.mon_full_
 
 Eine Erfassung ist eine Tracedatei, die Sie generieren können, um zu analysieren, was in einem Host während eines Zeitrahmens geschieht. Erfassungen enthalten Systemaufrufe und andere Betriebssystemereignisse. Sie können diese Funktion pro Knoten aktivieren oder inaktivieren, wenn Sie den Sysdig-Agenten konfigurieren, der Metriken von diesem Knoten erfasst. Standardmäßig sind *Erfassungen* aktiviert, wenn Sie einen Sysdig-Agenten konfigurieren. Ein Knoten kann ein Host, ein Container, eine virtuelle Maschine, ein Bare Metal oder eine Metrikquelle sein, in der Sie einen Sysdig-Agenten installieren.
 
-**WICHTIG:** Wenn Erfassungen aktiviert sind, ist es möglich, dass Sysdig einen tiefen Einblick in Ihre Operationen hat. Um einen Sicherheitsvorfall und möglicherweise den Zugang von außerhalb Ihres Unternehmens auf Daten zu vermeiden, müssen Sie die Sicherheitsrichtlinien Ihres Unternehmens überprüfen, bevor Sie die Erfassung auf einem Knoten aktivieren. Ziehen Sie die Inaktivierung der *Erfassungsfunktion* für alle Sysdig-Agenten in Betracht.
-{: tip}
+Wenn Erfassungen aktiviert sind, ist es möglich, dass Sysdig einen tiefen Einblick in Ihre Operationen hat. Um einen Sicherheitsvorfall und möglicherweise den Zugang von außerhalb Ihres Unternehmens auf Daten zu vermeiden, müssen Sie die Sicherheitsrichtlinien Ihres Unternehmens überprüfen, bevor Sie die Erfassung auf einem Knoten aktivieren. Ziehen Sie die Inaktivierung der *Erfassungsfunktion* für alle Sysdig-Agenten in Betracht.
+{: important}
 

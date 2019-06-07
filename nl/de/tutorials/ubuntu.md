@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -43,14 +43,14 @@ Arbeiten Sie mit der Region "USA (Süden)".
 
 Lesen Sie mehr über {{site.data.keyword.mon_full_notm}}. Weitere Informationen finden Sie im Abschnitt [Informationen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#about).
 
-Verwenden Sie eine Benutzer-ID, die Mitglied oder ein Eigentümer eines {{site.data.keyword.cloud_notm}}-Kontos ist. Gehen Sie zum Abrufen einer {{site.data.keyword.cloud_notm}}-Benutzer-ID zu [Registrierung ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+Verwenden Sie eine Benutzer-ID, die Mitglied oder ein Eigentümer eines {{site.data.keyword.cloud_notm}}-Kontos ist. Gehen Sie zum Abrufen einer {{site.data.keyword.cloud_notm}}-Benutzer-ID zu [Registrierung ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/login){:new_window}.
 
 Ihrer {{site.data.keyword.IBM_notm}}-ID müssen IAM-Richtlinien für jede der folgenden Ressourcen zugeordnet sein: 
 
 | Ressource                             | Geltungsbereich der Zugriffsrichtlinie | Rolle    | Region    | Informationen                  |
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
-| Ressourcengruppe **Standard**           |  Ressourcengruppe            | Anzeigeberechtigter  | us-south  | Diese Richtlinie ist erforderlich, damit der Benutzer die Serviceinstanzen in der Standardressourcengruppe anzeigen kann.    |
-| {{site.data.keyword.mon_full_notm}}-Service |  Ressourcengruppe            | Editor  | us-south  | Diese Richtlinie ist erforderlich, damit der Benutzer den {{site.data.keyword.mon_full_notm}}-Service in der Standardressourcengruppe bereitstellen und verwalten kann.   |
+| Ressourcengruppe **Standard**           |  Ressourcengruppe            | Anzeigeberechtigter  | `Us-south`  | Diese Richtlinie ist erforderlich, damit der Benutzer die Serviceinstanzen in der Standardressourcengruppe anzeigen kann.    |
+| {{site.data.keyword.mon_full_notm}}-Service |  Ressourcengruppe            | Editor  | `Us-south`  | Diese Richtlinie ist erforderlich, damit der Benutzer den {{site.data.keyword.mon_full_notm}}-Service in der Standardressourcengruppe bereitstellen und verwalten kann.   |
 {: caption="Tabelle 1. Liste der IAM-Richtlinien, um das Lernprogramm abzuschließen" caption-side="top"} 
 
 Installieren Sie die {{site.data.keyword.cloud_notm}}-CLI. Weitere Informationen finden Sie unter [Die {{site.data.keyword.cloud_notm}}-CLI installieren](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
@@ -61,9 +61,7 @@ Installieren Sie die {{site.data.keyword.cloud_notm}}-CLI. Weitere Informationen
 
 Führen Sie die folgenden Schritte aus, um eine Instanz von {{site.data.keyword.mon_full_notm}} über die {{site.data.keyword.cloud_notm}}-Benutzerschnittstelle bereitzustellen:
 
-1. Melden Sie sich bei Ihrem {{site.data.keyword.cloud_notm}}-Konto an.
-
-    Klicken Sie auf das [{{site.data.keyword.cloud_notm}}-Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}, um das {{site.data.keyword.cloud_notm}}-Dashboard zu starten.
+1. [Melden Sie sich bei Ihrem {{site.data.keyword.cloud_notm}}-Konto an ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/login){:new_window}.
 
 	Nachdem Sie sich mit Ihrer Benutzer-ID und Ihrem Kennwort angemeldet haben, wird die {{site.data.keyword.cloud_notm}}-Benutzerschnittstelle geöffnet.
 
@@ -105,11 +103,11 @@ Führen Sie in der Befehlszeile die folgenden Schritte aus:
 1. Öffnen Sie ein Terminal. Melden Sie sich dann an der {{site.data.keyword.cloud_notm}} an. Führen Sie den folgenden Befehl aus und folgen Sie den Eingabeaufforderungen:
 
     ```
-    ibmcloud login -a api.ng.bluemix.net
+    ibmcloud login -a cloud.ibm.com
     ```
     {: codeblock}
 
-    Wählen Sie das Konto aus, in dem Sie die {{site.data.keyword.mon_full_notm}}-Instanz bereitgestellt haben.
+    Wählen Sie das Konto aus, in dem die {{site.data.keyword.mon_full_notm}}-Instanz verfügbar ist.
 
 2. Rufen Sie den Sysdig-Zugriffsschlüssel ab. Weitere Informationen finden Sie im Abschnitt [Zugriffsschlüssel über die {{site.data.keyword.cloud_notm}}-Benutzerschnittstelle abrufen](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
@@ -128,7 +126,7 @@ Führen Sie in der Befehlszeile die folgenden Schritte aus:
 
     * COLLECTOR_ENDPOINT ist die Aufnahme-URL für die Region, in der die Überwachungsinstanz verfügbar ist.
 
-    * TAG_DATA sind durch Kommas getrennte Tags, die als *TAG_NAME:TAG_VALUE* formatiert sind. Sie können Ihrem Sysdig-Agenten einen oder mehrere Tags zuordnen. Beispiel: *role:serviceX,location:us-south*. Später können Sie diese Tags verwenden, um Metriken aus der Umgebung zu identifizieren, in der der Agent ausgeführt wird.
+    * TAG_DATA sind durch Kommas getrennte Tags, die als *TAG_NAME:TAG_VALUE* formatiert sind. Sie können Ihrem Sysdig-Agenten einen oder mehrere Tags zuordnen. Beispiel: *role:serviceX,location:us-south*.Später können Sie diese Tags verwenden, um Metriken aus der Umgebung zu identifizieren, in der der Agent ausgeführt wird.
 
     * Legen Sie **sysdig_capture_enabled** auf *false* fest, um die Sysdig-Erfassungsfunktion zu inaktivieren. Standardmäßig ist *true* festgelegt. Weitere Informationen finden Sie im Abschnitt [Mit Erfassungen arbeiten](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
@@ -155,9 +153,7 @@ Wenn der Sysdig-Agent nicht ordnungsgemäß installiert werden kann, installiere
 
 Führen Sie die folgenden Schritte aus, um die Webbenutzerschnittstelle zu starten:
 
-1. Melden Sie sich bei Ihrem {{site.data.keyword.cloud_notm}}-Konto an.
-
-    Klicken Sie auf das [{{site.data.keyword.cloud_notm}}-Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}, um das {{site.data.keyword.cloud_notm}}-Dashboard zu starten.
+1. [Melden Sie sich bei Ihrem {{site.data.keyword.cloud_notm}}-Konto an ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/login){:new_window}.
 
 	Nachdem Sie sich mit Ihrer Benutzer-ID und Ihrem Kennwort angemeldet haben, wird das {{site.data.keyword.cloud_notm}}-Dashboard geöffnet.
 
@@ -173,11 +169,11 @@ Wenn der Sysdig-Agent erfolgreich konfiguriert wurde, wird die *ERKUNDEN*-Ansich
 
 Wenn der Sysdig-Agent jedoch nicht erfolgreich installiert wurde, wenn er auf den falschen Aufnahmeendpunkt verweist oder der Zugriffsschlüssel falsch ist, öffnet sich eine Seite und informiert Sie darüber, was als Nächstes getan werden soll.
 
-Es kann nur eine Webbenutzerschnittstelle-Sitzung pro Browser geöffnet sein.
+Es kann nur eine Webbenutzerschnittstellensitzung pro Browser geöffnet sein.
 {: tip}
 
 
-## Schritt 4: Ihren Ubuntu-Server überwachen
+## Schritt 4. Ihren Ubuntu-Server überwachen
 {: #ubuntu_step4}
 
 Sie können Ihren Ubuntu-Server in der Ansicht **ERKUNDEN** überwachen, die über die Webbenutzerschnittstelle verfügbar ist. Diese Ansicht ist der Ausgangspunkt für die Fehlerbehebung und die Überwachung Ihrer Infrastruktur. Es handelt sich hierbei um die Standard-Homepage der Webbenutzerschnittstelle für Benutzer.

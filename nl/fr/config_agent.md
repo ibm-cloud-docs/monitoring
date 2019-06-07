@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -52,7 +52,7 @@ Procédez comme suit pour configurer un agent Sysdig sous Linux pour collecter e
 
     * COLLECTOR_ENDPOINT est l'URL d'ingestion pour la région où se trouve l'instance de surveillance.
 
-    * TAG_DATA sont des étiquettes séparées par une virgule qui se présentent sous la forme *TAG_NAME:TAG_VALUE*. Vous pouvez associer une ou plusieurs étiquettes à votre agent Sysdig. Exemple : *role:serviceX,location:us-south*. 
+    * TAG_DATA sont des étiquettes séparées par une virgule qui se présentent sous la forme *TAG_NAME:TAG_VALUE*. Vous pouvez associer une ou plusieurs étiquettes à votre agent Sysdig. Par exemple, *role:serviceX,location:us-south*.  
 
     * Définissez **sysdig_capture_enabled** sur *false* pour désactiver la fonction de capture Sysdig. La valeur par défaut est *true*. Pour plus d'informations, voir [Utilisation des captures](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
@@ -97,13 +97,14 @@ Procédez comme suit pour configurer un agent Sysdig sur un conteneur Docker pou
 
     * COLLECTOR_ENDPOINT est l'URL d'ingestion pour la région où se trouve l'instance de surveillance.
 
-    * TAG_DATA sont des étiquettes séparées par une virgule qui se présentent sous la forme *TAG_NAME:TAG_VALUE*. Vous pouvez associer une ou plusieurs étiquettes à votre agent Sysdig. Exemple : *role:serviceX,location:us-south*. 
+    * TAG_DATA sont des étiquettes séparées par une virgule qui se présentent sous la forme *TAG_NAME:TAG_VALUE*. Vous pouvez associer une ou plusieurs étiquettes à votre agent Sysdig. Par exemple, *role:serviceX,location:us-south*.  
 
     * Définissez **sysdig_capture_enabled** sur *false* pour désactiver la fonction de capture Sysdig. La valeur par défaut est *true*. Pour plus d'informations, voir [Utilisation des captures](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
 
     * Définissez **SECURE** sur *true* pour utiliser la couche SSL avec la communication.
 
-    **Remarque :** Le conteneur s'exécute en mode déconnecté. Pour afficher la sortie du conteneur, supprimez *-d*.
+    Le conteneur s'exécute en mode déconnecté. Pour afficher la sortie du conteneur, supprimez *-d*.
+    {: note}
 
 
 
@@ -130,8 +131,6 @@ Procédez comme suit pour configurer un agent Sysdig sur un cluster Kubernetes q
 
     Ensuite, copiez et collez la commande qui s'affiche sur votre terminal pour définir la variable d'environnement KUBECONFIG.
 
-    **Remarque :** Chaque fois que vous vous connectez à l'interface CLI {{site.data.keyword.containerlong}} pour utiliser des clusters, vous devez exécuter ces commandes pour définir le chemin d'accès au fichier de configuration du cluster en tant que variable de session. L'interface CLI de Kubernetes utilise cette variable pour localiser un fichier de configuration local et les certificats requis pour connexion au cluster dans {{site.data.keyword.cloud_notm}}.
-
 4. Déployez l'agent Sysdig. Exécutez la commande suivante :
 
     ```
@@ -154,7 +153,7 @@ Procédez comme suit pour configurer un agent Sysdig sur un cluster Kubernetes q
 ## Configuration manuelle d'un agent Sysdig sur un cluster Kubernetes
 {: #config_agent_kube_manually}
 
-Procédez comme suit pour configurer un agent Sysdig sur un cluster Kubernetes qui s'exécute dans le {{site.data.keyword.containerlong_notm}} :
+Procédez comme suit pour configurer un agent Sysdig sur un cluster Kubernetes qui s'exécute dans {{site.data.keyword.containerlong_notm}} :
 
 1. Obtenez la clé d'accès Sysdig. Pour plus d'informations, voir [Obtention de la clé d'accès via l'interface utilisateur {{site.data.keyword.cloud_notm}}](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
@@ -172,8 +171,6 @@ Procédez comme suit pour configurer un agent Sysdig sur un cluster Kubernetes q
     Une fois les fichiers de configuration téléchargés, une commande s'affiche ; elle vous permet de définir le chemin vers le fichier de configuration Kubernetes local en tant que variable d'environnement.
 
     Ensuite, copiez et collez la commande qui s'affiche sur votre terminal pour définir la variable d'environnement KUBECONFIG.
-
-    **Remarque :** Chaque fois que vous vous connectez à l'interface CLI {{site.data.keyword.containerlong}} pour utiliser des clusters, vous devez exécuter ces commandes pour définir le chemin d'accès au fichier de configuration du cluster en tant que variable de session. L'interface CLI de Kubernetes utilise cette variable pour localiser un fichier de configuration local et les certificats requis pour connexion au cluster dans {{site.data.keyword.cloud_notm}}.
 
 4. Créez un compte de service appelé **sysdig-agent** pour surveiller le cluster Kubernetes. Exécutez la commande suivante :
 
@@ -217,8 +214,7 @@ Procédez comme suit pour configurer un agent Sysdig sur un cluster Kubernetes q
 
     Utilisez un éditeur pour ouvrir le fichier sysdig-agent-configmap.yaml. Ajoutez ensuite les paramètres suivants :
 
-    * **k8s_cluster_name**: ce paramètre indique le nom de cluster sous forme de libellé de métrique. Vous pouvez utiliser le
-libellé *kubernetes.cluster.name* pour naviguer dans les tableaux de bord Kubernetes par nom de fichier et filtrer les métriques associées au cluster.
+    * **k8s_cluster_name**: ce paramètre indique le nom de cluster sous forme de libellé de métrique. Vous pouvez utiliser le libellé *kubernetes.cluster.name* pour naviguer dans les tableaux de bord Kubernetes par nom de fichier et filtrer les métriques associées au cluster.
 
     * **collector** : ce paramètre indique l'URL d'ingestion pour la région où se trouve l'instance de surveillance. 
 
@@ -232,7 +228,7 @@ libellé *kubernetes.cluster.name* pour naviguer dans les tableaux de bord Kuber
 
     * **sysdig_capture_enabled** : ce paramètre active ou désactive la fonction de capture Sysdig. La valeur par défaut est *true*. Pour plus d'informations, voir [Utilisation des captures](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
-    Voici un exemple de fichier yaml :
+    Voici un exemple de fichier Yaml :
 
     ```
      apiVersion: v1

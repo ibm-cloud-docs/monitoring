@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, captures
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Mit Erfassungen arbeiten
+# Erfassungen verwalten
 {: #captures}
 
 Eine Erfassung ist eine Tracedatei, die Sie generieren können, um zu analysieren, was in einem Host während eines Zeitrahmens geschieht. Sie können diese beispielsweise verwenden, um Engpässe oder Komponenteninteraktionen zu analysieren. Im {{site.data.keyword.mon_full_notm}}-Service können Sie *Erfassungen* für einzelne Knoten erstellen, erkunden, herunterladen und löschen. 
@@ -37,7 +37,7 @@ Sie können eine Erfassung in der Ansicht *Erkunden* erstellen.
 
 Führen Sie die folgenden Schritte aus, um eine Erfassungsdatei zu erstellen:
 
-1. Navigieren Sie zum *ERKUNDEN*-Abschnitt in der Webbenutzerschnittstelle. Weitere Informationen zum Starten der Webbenutzerschnittstelle finden Sie im Abschnitt [Zur Webbenutzerschnittstelle navigieren](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Navigieren Sie zum *ERKUNDEN*-Abschnitt in der Webbenutzerschnittstelle. [Erfahren Sie mehr darüber](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 
 2. Klicken Sie auf das Symbol für den Switch-Host ![Symbol für den Switch-Host](images/switch_hosts.png).
 
@@ -62,9 +62,9 @@ Führen Sie die folgenden Schritte aus, um eine Erfassungsdatei zu erstellen:
 Auf der Seite *Erfassungen* wird eine Tabelle angezeigt, in der der Name der Erfassungsdatei, der Host, von dem sie abgerufen wurde, der Zeitrahmen und die Größe der Erfassung aufgelistet werden. 
 
 Der Status einer Erfassungsdatei kann einen der folgenden Werte haben:
-* **Angefordert**: Es wird eine Datei generiert.
-* **Hochgeladen**: Eine Datei steht zum Herunterladen und zur Analyse zur Verfügung.
-* **Fehler**: Eine Datei ist aufgrund einer Zeitlimitüberschreitung, aufgrund von Daten, die nie empfangen wurden, oder aufgrund eines Agentenfehlers nicht verfügbar.
+* `Angefordert`: Es wird eine Datei generiert.
+* `Hochgeladen`: Eine Datei steht zum Herunterladen und zur Analyse zur Verfügung.
+* `Fehler`: Eine Datei ist aufgrund einer Zeitlimitüberschreitung, aufgrund von Daten, die nie empfangen wurden, oder aufgrund eines Agentenfehlers nicht verfügbar.
 
 
 
@@ -73,7 +73,7 @@ Der Status einer Erfassungsdatei kann einen der folgenden Werte haben:
 
 Führen Sie die folgenden Schritte aus, um eine Erfassungsdatei zu löschen:
 
-1. Navigieren Sie zum *ERFASSUNGEN*-Abschnitt in der Webbenutzerschnittstelle. Weitere Informationen zum Starten der Webbenutzerschnittstelle finden Sie im Abschnitt [Zur Webbenutzerschnittstelle navigieren](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Navigieren Sie zum *ERFASSUNGEN*-Abschnitt in der Webbenutzerschnittstelle. [Erfahren Sie mehr darüber](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Geben Sie die Erfassungsdatei, die Sie löschen möchten, an oder wählen Sie sie aus.
 3. Klicken Sie auf **Löschen**.
 
@@ -84,7 +84,7 @@ Führen Sie die folgenden Schritte aus, um eine Erfassungsdatei zu löschen:
 
 Führen Sie die folgenden Schritte aus, um eine Erfassungsdatei zu erkunden:
 
-1. Navigieren Sie zum *ERFASSUNGEN*-Abschnitt in der Webbenutzerschnittstelle. Weitere Informationen zum Starten der Webbenutzerschnittstelle finden Sie im Abschnitt [Zur Webbenutzerschnittstelle navigieren](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Navigieren Sie zum *ERFASSUNGEN*-Abschnitt in der Webbenutzerschnittstelle. [Erfahren Sie mehr darüber](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Geben Sie die Erfassungsdatei, die die Daten für den Host enthält, den Sie analysieren möchten, an oder wählen Sie sie aus.
 3. Klicken Sie auf **ERKUNDEN**.
 
@@ -95,7 +95,7 @@ Führen Sie die folgenden Schritte aus, um eine Erfassungsdatei zu erkunden:
 
 Führen Sie die folgenden Schritte aus, um eine Erfassungsdatei herunterzuladen:
 
-1. Navigieren Sie zum *ERFASSUNGEN*-Abschnitt in der Webbenutzerschnittstelle. Weitere Informationen zum Starten der Webbenutzerschnittstelle finden Sie im Abschnitt [Zur Webbenutzerschnittstelle navigieren](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
+1. Navigieren Sie zum *ERFASSUNGEN*-Abschnitt in der Webbenutzerschnittstelle. [Erfahren Sie mehr darüber](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch).
 2. Geben Sie die Erfassungsdatei, die die Daten enthält, den Sie herunterladen möchten, an oder wählen Sie sie aus.
 3. Klicken Sie auf **DOWNLOAD**.
 
@@ -105,7 +105,7 @@ Führen Sie die folgenden Schritte aus, um eine Erfassungsdatei herunterzuladen:
 
 Ein Sysdig-Chisel ist ein Skript, das in der Scripting-Sprache Lua geschrieben ist. Sie können es verwenden, um Daten in einer Erfassungsdatei zu analysieren. 
 
-Weitere Informationen zur Verwendung eines Chisels finden Sie in diesem Benutzerhandbuch: [Chisels User Guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}
+Weitere Informationen hierzu finden Sie im Dokument [Chisels User Guide ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}.
 
 
 

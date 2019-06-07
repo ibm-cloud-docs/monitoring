@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -24,11 +24,8 @@ subcollection: Sysdig
 # インスタンスのプロビジョニング
 {: #provision}
 
-Sysdig を使用してメトリックをモニターおよび管理するには、最初にサービスのインスタンスを {{site.data.keyword.Bluemix}} にプロビジョンする必要があります。
+Sysdig を使用してメトリックをモニターおよび管理する前に、サービスのインスタンスを {{site.data.keyword.cloud_notm}} でプロビジョンする必要があります。
 {:shortdesc}
-
-Sysdig インスタンスをパブリック・クラウド地域にプロビジョンするには、そのインスタンスに関連付けられるサービス・プラン、メトリックが収集される地域、およびモニターするメトリック数とその保存期間を決定するプランを選択する必要があります。
-
 
 
 ## カタログからの Sysdig インスタンスのプロビジョニング
@@ -72,11 +69,9 @@ Sysdig のインスタンスを {{site.data.keyword.cloud_notm}} カタログか
 
 Sysdig のインスタンスをコマンド・ラインからプロビジョンするには、以下のステップを実行します。
 
-1. [前提条件] {{site.data.keyword.cloud_notm}} CLI をインストールします。
+1. [前提条件] {{site.data.keyword.cloud_notm}} CLI をインストールします。CLI がインストールされている場合は、次のステップに進みます。
 
    詳しくは、[『{{site.data.keyword.cloud_notm}}CLI のインストール』](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)を参照してください。
-
-   CLI がインストールされている場合は、次のステップに進みます。
 
 2. インスタンスをプロビジョンしたい、{{site.data.keyword.cloud_notm}} の地域にログインします。 次のコマンドを実行します。 [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -91,15 +86,15 @@ Sysdig のインスタンスをコマンド・ラインからプロビジョン�
     ```
     {: codeblock}
 
-    各部分の説明:
+    説明
 
-    * NAME は、Sysdig インスタンスの名前です。
+    * NAME は Sysdig インスタンスの名前です。
     
-    * *sysdig-monitor* は、{{site.data.keyword.cloud_notm}} 内の {{site.data.keyword.mon_full_notm}} サービス名の名前です。
+    * `sysdig-monitor` は、{{site.data.keyword.cloud_notm}} 内の {{site.data.keyword.mon_full_notm}} サービスの名前です。
     
-    * SERVICE_PLAN_NAME は、プランのタイプです。 有効な値は、*「lite」*、*「graduated-tier」*です。
+    * SERVICE_PLAN_NAME は、プランのタイプです。 有効な値は*「lite」*および*「graduated-tier」*です。
     
-    * LOCATION は、インスタンスが作成された地域です。
+    * LOCATION はインスタンスが作成される地域です。
 
     例えば、有料プランでインスタンスをプロビジョンするには、次のコマンドを実行します。
 

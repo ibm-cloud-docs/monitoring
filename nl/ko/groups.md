@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, groups
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# 그룹 관련 작업
+# 그룹 관리
 {: #groups}
 
 레이블을 사용하여 인프라 오브젝트를 논리적 계층 구조로 그룹화할 수 있습니다.
@@ -32,7 +32,7 @@ subcollection: Sysdig
 
 그룹을 작성하려면 다음 단계를 완료하십시오.
 
-1. 웹 UI를 실행하십시오. 웹 UI 실행 방법에 대한 자세한 정보는 [웹 UI로 이동](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)을 참조하십시오. 
+1. 웹 UI를 실행하십시오. [자세히 보기](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. **탐색**을 클릭하여 *탐색* 섹션으로 이동하십시오.
 
@@ -40,7 +40,7 @@ subcollection: Sysdig
 
 4. *더하기(+)* 아이콘을 클릭하여 레이블을 더 추가할 수 있습니다.
 
-    새 레이블을 추가하면 올바른 논리적 그룹화만 작성되도록 계층 구조에 맞지 않는 레이블이 필터링되어 걸러집니다.
+    레이블을 추가하면 올바른 논리적 그룹화만 작성되도록 계층 구조에 맞지 않는 레이블이 필터링되어 걸러집니다.
     {: tip}
 
 5. 레이블 추가가 완료되면 **새 그룹화**를 클릭하십시오.
@@ -56,7 +56,7 @@ subcollection: Sysdig
 
 그룹 이름을 바꾸려면 다음 단계를 완료하십시오.
 
-1. 웹 UI를 실행하십시오. 웹 UI 실행 방법에 대한 자세한 정보는 [웹 UI로 이동](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)을 참조하십시오. 
+1. 웹 UI를 실행하십시오. [자세히 보기](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. **탐색**을 클릭하여 *탐색* 섹션으로 이동하십시오.
 
@@ -80,7 +80,7 @@ subcollection: Sysdig
 
 기타 팀으로 그룹을 복사하려면 다음 단계를 완료하십시오.
 
-1. 웹 UI를 실행하십시오. 웹 UI 실행 방법에 대한 자세한 정보는 [웹 UI로 이동](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)을 참조하십시오. 
+1. 웹 UI를 실행하십시오. [자세히 보기](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. **탐색**을 클릭하여 *탐색* 섹션으로 이동하십시오.
 
@@ -105,7 +105,7 @@ subcollection: Sysdig
 
 팀의 기타 구성원과 그룹을 공유하려면 다음 단계를 완료하십시오.
 
-1. 웹 UI를 실행하십시오. 웹 UI 실행 방법에 대한 자세한 정보는 [웹 UI로 이동](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)을 참조하십시오. 
+1. 웹 UI를 실행하십시오. [자세히 보기](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. **탐색**을 클릭하여 *탐색* 섹션으로 이동하십시오.
 
@@ -117,7 +117,7 @@ subcollection: Sysdig
 
 6. 그룹 공유 아이콘 ![공유 아이콘](images/share.png)을 선택하십시오.
 
-7. *팀과 공유* 필드에서 막대를 토글하여 팀의 기타 구성원과 그룹 공유를 사용으로 설정하십시오.
+7. *팀과 공유* 필드에서 막대를 토글하여 팀의 다른 구성원과의 그룹 공유를 사용으로 설정하십시오.
 
 8. **닫기**를 클릭하십시오.
 
@@ -128,7 +128,7 @@ subcollection: Sysdig
 
 그룹을 삭제하려면 다음 단계를 완료하십시오.
 
-1. 웹 UI를 실행하십시오. 웹 UI 실행 방법에 대한 자세한 정보는 [웹 UI로 이동](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)을 참조하십시오. 
+1. 웹 UI를 실행하십시오. [자세히 보기](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. **탐색**을 클릭하여 *탐색* 섹션으로 이동하십시오.
 

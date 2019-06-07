@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete instance
 
@@ -32,11 +32,11 @@ Cuando elimine una instancia de {{site.data.keyword.cloud_notm}}, tenga en cuent
 1. Anote la lista de orígenes que reenvían métricas a la instancia de {{site.data.keyword.mon_full_notm}} que desea eliminar. Debe eliminar el agente de Sysdig de cada origen.
 2. Elimine los permisos otorgados a los usuarios para que trabajen con la instancia. 
 
-    Si utiliza un grupo de acceso para gestionar el acceso a la instancia, debe eliminar el grupo de acceso.
+    Si utiliza un grupo de acceso para gestionar permisos para acceder a la instancia, debe eliminar el grupo de acceso.
 
-    Si utiliza un grupo de acceso para gestionar el acceso a diferentes instancias de servicio, debe eliminar las políticas que otorgan permisos a la instancia que desea eliminar.
+    Si utiliza un grupo de acceso para gestionar permisos para acceder a diferentes instancias de servicio, debe eliminar las políticas que otorgan permisos a la instancia que desea eliminar.
     
-    Si ha otorgado políticas individuales a los usuarios, debe reunir la información de cada usuario que tenga acceso y eliminar una por una las políticas relacionadas con la instancia que desea suprimir.
+    Si otorga políticas individuales a los usuarios, debe reunir la información de cada usuario que tenga acceso a la instancia. Luego debe eliminar una por una las políticas relacionadas con la instancia que desea suprimir.
 
 
 A continuación, suprima la instancia del panel de control de {{site.data.keyword.cloud_notm}}.
@@ -47,9 +47,7 @@ A continuación, suprima la instancia del panel de control de {{site.data.keywor
 
 Para eliminar una instancia de {{site.data.keyword.mon_full_notm}} mediante la interfaz de usuario de {{site.data.keyword.cloud_notm}}, siga los pasos siguientes:
 
-1. Inicie una sesión en su cuenta de {{site.data.keyword.cloud_notm}}.
-
-    Pulse el [panel de control de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/login){:new_window} para iniciar el panel de control de {{site.data.keyword.cloud_notm}}.
+1. [Inicie una sesión en su cuenta de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/login){:new_window}.
 
 	Cuando inicia una sesión con su ID de usuario y su contraseña, se abre la interfaz de usuario de {{site.data.keyword.cloud_notm}}.
 
@@ -67,11 +65,9 @@ Para eliminar una instancia de {{site.data.keyword.mon_full_notm}} mediante la i
 
 Para eliminar una instancia de {{site.data.keyword.mon_full_notm}} mediante la línea de mandatos, siga los pasos siguientes:
 
-1. [Requisito previo] Instale la CLI de {{site.data.keyword.cloud_notm}}.
+1. [Requisito previo] Instalación de la CLI de {{site.data.keyword.cloud_notm}}. Si la CLI está instalada, continúe en el paso siguiente.
 
    Para obtener más información, consulte [Instalación de la CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
-
-   Si la CLI está instalada, continúe en el paso siguiente.
 
 2. Inicie una sesión en {{site.data.keyword.cloud_notm}} donde desea suministrar la instancia. Ejecute el siguiente mandato: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -86,7 +82,7 @@ Para eliminar una instancia de {{site.data.keyword.mon_full_notm}} mediante la l
     ```
     {: codeblock}
 
-    donde NAME es el nombre de la instancia
+    Donde NAME es el nombre de la instancia
 
     Por ejemplo, para eliminar una instancia, ejecute el mandato siguiente:
 

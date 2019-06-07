@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, troubleshooting
 
@@ -23,10 +23,10 @@ subcollection: Sysdig
 # {{site.data.keyword.mon_full_notm}} 的疑難排解
 {: #troubleshoot}
 
-本主題涵蓋使用 {{site.data.keyword.mon_full_notm}} 服務時可能會遇到的一般問題。在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
+進一步瞭解您在使用 {{site.data.keyword.mon_full_notm}} 服務時可能遇到的一些一般問題。在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
-## 建立擷取時發生錯誤嗎？
+## 建立擷取時是否收到錯誤？
 {: #troubleshoot-entry-1}
 
 您無法為基礎架構中的主機建立[擷取檔](/docs/services/Monitoring-with-Sysdig/captures.html#captures)。 
@@ -34,10 +34,10 @@ subcollection: Sysdig
 在 Web 使用者介面的*擷取* 區段中，當您嘗試建立主機的擷取檔時，會發生錯誤。
 {: tsSymptoms}
 
-主機上執行的 Sysdig 代理程式已將 **sysdig_capture_enabled** 功能設為 *false*。
+主機上執行的 Sysdig 代理程式已將 **sysdig_capture_enabled** 特性設為 *false*。
 {: tsCauses}
 
-在執行於主機的 Sysdig 代理程式中，啟用 **sysdig_capture_enabled** 功能。
+在執行於主機的 Sysdig 代理程式中，啟用 **sysdig_capture_enabled** 特性。
 {: tsResolve}
 
 

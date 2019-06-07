@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete instance
 
@@ -29,17 +29,17 @@ subcollection: Sysdig
 
 從 {{site.data.keyword.cloud_notm}} 移除實例時，請考量下列資訊來開始：
 
-1. 寫下要將度量轉遞至您要移除之 {{site.data.keyword.mon_full_notm}} 實例的來源清單。您必須從每一個來源中移除 Sysdig 代理程式。
-2. 移除授與使用者以使用實例的許可權。 
+1. 寫下要將度量值轉遞至您要移除之 {{site.data.keyword.mon_full_notm}} 實例的來源清單。您必須從每一個來源中移除 Sysdig 代理程式。
+2. 移除授與使用者以使用該實例的許可權。 
 
-    如果您使用存取群組來管理對實例的存取權，則必須移除存取群組。
+    如果您使用存取群組來管理存取實例的許可權，則必須移除存取群組。
 
-    如果您使用存取群組來管理對不同服務實例的存取權，則必須移除授與您要移除之實例許可權的原則。
+    如果您使用存取群組來管理存取不同服務實例的許可權，則必須移除授與您要移除之實例許可權的原則。
     
-    如果您已將個別原則授與使用者，則必須收集具有存取權之每一個使用者的資訊，並逐一移除與您要刪除之實例相關的原則。
+    如果您已將個別原則授與使用者，則必須收集具有存取權之每一個使用者的資訊。然後逐一移除與要刪除之實例相關的原則。
 
 
-然後，從「{{site.data.keyword.cloud_notm}} 儀表板」中刪除實例。
+然後，從「{{site.data.keyword.cloud_notm}} 儀表板」刪除實例。
 
 
 ## 透過 {{site.data.keyword.cloud_notm}} 使用者介面移除實例
@@ -47,9 +47,7 @@ subcollection: Sysdig
 
 若要使用 {{site.data.keyword.cloud_notm}} 使用者介面移除 {{site.data.keyword.mon_full_notm}} 的實例，請完成下列步驟：
 
-1. 登入您的 {{site.data.keyword.cloud_notm}} 帳戶。
-
-    按一下 [{{site.data.keyword.cloud_notm}} 儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/login){:new_window}，以啟動 {{site.data.keyword.cloud_notm}} 儀表板。
+1. [登入 {{site.data.keyword.cloud_notm}} 帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/login){:new_window}。
 
 	在使用您的使用者 ID 和密碼登入之後，即會開啟 {{site.data.keyword.cloud_notm}} 使用者介面。
 
@@ -67,11 +65,9 @@ subcollection: Sysdig
 
 若要透過指令行移除 {{site.data.keyword.mon_full_notm}} 的實例，請完成下列步驟：
 
-1. [必要條件] 安裝 {{site.data.keyword.cloud_notm}} CLI。
+1. [必要條件] 安裝 {{site.data.keyword.cloud_notm}} CLI。如果已安裝 CLI，請繼續進行下一步。
 
    如需相關資訊，請參閱[安裝 {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)。
-
-   如果已安裝 CLI，請繼續進行下一步。
 
 2. 登入 {{site.data.keyword.cloud_notm}} 中要佈建實例的地區。請執行下列指令：[`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 

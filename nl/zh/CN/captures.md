@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, captures
 
@@ -21,7 +21,7 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# 使用捕获
+# 管理捕获
 {: #captures}
 
 捕获是一种跟踪文件，您可以生成该文件来分析在某一时间范围内主机中发生的事件。例如，可以将其用于分析瓶颈或组件交互。在 {{site.data.keyword.mon_full_notm}} 服务中，可以针对各个节点创建、探索、下载和删除*捕获*。
@@ -37,13 +37,13 @@ subcollection: Sysdig
 
 要创建捕获文件，请完成以下步骤：
 
-1. 在 Web UI 中，导航至*探索*部分。有关如何启动 Web UI 的更多信息，请参阅[导航至 Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
+1. 在 Web UI 中，导航至*探索*部分。[了解更多](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 
 2. 单击“切换主机”图标 ![“切换主机”图标](images/switch_hosts.png)。
 
 3. 选择主机或容器。
 
-4. 单击“操作”图标 ![三个点图标](images/actions.png) ，然后选择 **Sysdig 捕获**。
+4. 单击“操作”图标 ![三个点图标](images/actions.png)，然后选择 **Sysdig 捕获**。
 
     这将打开 *Sysdig 捕获*窗口。
 
@@ -62,9 +62,9 @@ subcollection: Sysdig
 *捕获*页面显示了一个表，其中列出了捕获文件名、从中检索到该文件的主机、时间范围和捕获的大小。 
 
 捕获文件的状态可以是以下任一值：
-* **已请求**：正在生成文件。
-* **已上传**：文件可供下载和分析。
-* **错误**：由于超时、从未收到数据或代理程序错误而导致文件不可用。
+* `已请求`：正在生成文件。
+* `已上传`：文件可供下载和分析。
+* `错误`：由于超时、从未收到数据或代理程序错误而导致文件不可用。
 
 
 
@@ -73,7 +73,7 @@ subcollection: Sysdig
 
 要删除捕获文件，请完成以下步骤：
 
-1. 在 Web UI 中，导航至*捕获*部分。有关如何启动 Web UI 的更多信息，请参阅[导航至 Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
+1. 在 Web UI 中，导航至*捕获*部分。[了解更多](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 2. 识别并选择要删除的捕获文件。
 3. 单击**删除**。
 
@@ -84,7 +84,7 @@ subcollection: Sysdig
 
 要探索捕获文件，请完成以下步骤：
 
-1. 在 Web UI 中，导航至*捕获*部分。有关如何启动 Web UI 的更多信息，请参阅[导航至 Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
+1. 在 Web UI 中，导航至*捕获*部分。[了解更多](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 2. 识别并选择包含要分析的主机的数据的捕获文件。
 3. 单击**探索**。
 
@@ -95,7 +95,7 @@ subcollection: Sysdig
 
 要下载捕获文件，请完成以下步骤：
 
-1. 在 Web UI 中，导航至*捕获*部分。有关如何启动 Web UI 的更多信息，请参阅[导航至 Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
+1. 在 Web UI 中，导航至*捕获*部分。[了解更多](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch)。
 2. 识别并选择包含要下载的数据的捕获文件。
 3. 单击**下载**。
 
@@ -105,7 +105,7 @@ subcollection: Sysdig
 
 Sysdig 凿子是一种用 Lua 脚本语言编写的脚本。您可以将其用于分析捕获文件中的数据。 
 
-有关如何使用凿子的更多信息，请参阅以下用户指南：[Chisels User Guide ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}
+有关更多信息，请参阅 [Chisels User Guide ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){:new_window}。
 
 
 

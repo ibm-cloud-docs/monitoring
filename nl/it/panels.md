@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, panels
 
@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Utilizzo dei pannelli
+# Gestione dei pannelli
 {: #panels}
 
 Utilizza un pannello per visualizzare una metrica o un gruppo di metriche in un dashboard. Puoi copiare, modificare l'ambito, duplicare, eliminare, esportare ed esplorare i pannelli.
@@ -32,14 +32,14 @@ Puoi utilizzare uno dei seguenti tipi di pannello:
 
 | Tipo | Descrizione |
 |------|-------------|
-| Riga | Utilizza questo pannello per visualizzare gli andamenti nel tempo di una o più metriche.  |
-| Area | Utilizza questo pannello per visualizzare gli andamenti nel tempo di una o più metriche.  |
-| Elenco superiore | Utilizza questo pannello per confrontare una metrica tra i gruppi di entità. Il grafico a barre viene ordinato in ordine decrescente.  |
-| Istogramma | Utilizza questo pannello per visualizzare la frequenza di distribuzione di una metrica nei bucket.  |
-| Topologia | Utilizza questo pannello per visualizzare l'infrastruttura come una mappa della topologia e le relazioni tra le entità nella mappa.  |
-| Numero | Utilizza questo pannello per visualizzare un solo numero che rappresenta il valore di una metrica aggregata nel tempo per una o più entità.  |
-| Tabella | Utilizza questo pannello per visualizzare i dati numerici per la tua infrastruttura basati sulle metriche e i segmenti.  |
-| Testo | Utilizza questo pannello per aggiungere del testo. Utilizza la markdown per aggiungere il tuo testo.  |
+| `Line` | Utilizza questo pannello per visualizzare gli andamenti nel tempo di una o più metriche.  |
+| `Area` | Utilizza questo pannello per visualizzare gli andamenti nel tempo di una o più metriche.  |
+| `Top list` | Utilizza questo pannello per confrontare una metrica tra i gruppi di entità. Il grafico a barre viene ordinato in ordine decrescente.  |
+| `Histogram` | Utilizza questo pannello per visualizzare la frequenza di distribuzione di una metrica nei bucket.  |
+| `Topology` | Utilizza questo pannello per visualizzare l'infrastruttura come una mappa della topologia e le relazioni tra le entità nella mappa.  |
+| `Number` | Utilizza questo pannello per visualizzare un solo numero che rappresenta il valore di una metrica aggregata nel tempo per una o più entità.  |
+| `Table` | Utilizza questo pannello per visualizzare i dati numerici per la tua infrastruttura basati sulle metriche e i segmenti.  |
+| `Text` | Utilizza questo pannello per aggiungere del testo. Utilizza la markdown per aggiungere il tuo testo.  |
 {: caption="Tabella 1. Tipi di pannello" caption-side="top"} 
 
 
@@ -72,7 +72,7 @@ Completa la seguente procedura per modificare l'ambito di un pannello:
     
 3. Seleziona l'ambito. 
 
-4. Facoltativamente, fai clic su **Override the custom panel scopes** per sovrascrivere l'ambito per tutti i pannelli che al momento hanno un ambito personalizzato definito. 
+4. Facoltativamente, fai clic su **Override the custom panel scopes** per sovrascrivere l'ambito per tutti i pannelli con un ambito personalizzato definito. 
 
     **Nota: questa azione non può essere annullata.** 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -52,7 +52,7 @@ Conclua as etapas a seguir para configurar um agente Sysdig no Linux para coleta
 
     * COLLECTOR_ENDPOINT é a URL de ingestão da região na qual a instância de monitoramento está disponível.
 
-    * TAG_DATA são tags separadas por vírgulas formatadas como *TAG_NAME:TAG_VALUE*. É possível associar uma ou mais tags a seu agente Sysdig. Por exemplo: *role:serviceX,location:us-south*. 
+    * TAG_DATA são tags separadas por vírgula formatadas como *TAG_NAME:TAG_VALUE*. É possível associar uma ou mais tags a seu agente Sysdig. Por exemplo, *role:serviceX,location:us-south*. 
 
     * Configure **sysdig_capture_enabled** como *false* para desativar o recurso de captura de Sysdig. Por padrão, é configurado como *true*. Para obter mais informações, consulte [Trabalhando com capturas](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
@@ -91,19 +91,20 @@ Conclua as etapas a seguir para configurar um agente Sysdig em um contêiner do 
     ```
     {: codeblock}
 
-    sendo
+    Em que
 
     * SYSDIG_ACCESS_KEY é a chave de ingestão para a instância.
 
     * COLLECTOR_ENDPOINT é a URL de ingestão da região na qual a instância de monitoramento está disponível.
 
-    * TAG_DATA são tags separadas por vírgulas formatadas como *TAG_NAME:TAG_VALUE*. É possível associar uma ou mais tags a seu agente Sysdig. Por exemplo: *role:serviceX,location:us-south*. 
+    * TAG_DATA são tags separadas por vírgula formatadas como *TAG_NAME:TAG_VALUE*. É possível associar uma ou mais tags a seu agente Sysdig. Por exemplo, *role:serviceX,location:us-south*. 
 
     * Configure **sysdig_capture_enabled** como *false* para desativar o recurso de captura de Sysdig. Por padrão, é configurado como *true*. Para obter mais informações, consulte [Trabalhando com capturas](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
 
     * Configure **SECURE** como *true* para usar SSL com a comunicação.
 
-    **Nota:** o contêiner é executado no modo separado. Para ver a saída do contêiner, remova *-d*.
+    O contêiner é executado no modo separado. Para ver a saída do contêiner, remova *-d*.
+    {: note}
 
 
 
@@ -130,8 +131,6 @@ Conclua as etapas a seguir para configurar um agente Sysdig em um cluster Kubern
 
     Em seguida, copie e cole o comando exibido em seu terminal para configurar a variável de ambiente KUBECONFIG.
 
-    **Nota:** toda vez que você efetua login na CLI do {{site.data.keyword.containerlong}} para trabalhar com clusters, deve-se executar esses comandos para configurar o caminho para o arquivo de configuração do cluster como uma variável de sessão. O Kubernetes CLI usa essa variável para localizar um arquivo de configuração local e certificados que são necessárias para se conectar ao cluster no {{site.data.keyword.cloud_notm}}.
-
 4. Implemente o agente Sysdig. Execute o seguinte comando:
 
     ```
@@ -139,13 +138,13 @@ Conclua as etapas a seguir para configurar um agente Sysdig em um cluster Kubern
     ```
     {: codeblock}
 
-    sendo
+    Em que
 
     * SYSDIG_ACCESS_KEY é a chave de ingestão para a instância.
 
     * COLLECTOR_ENDPOINT é a URL de ingestão da região na qual a instância de monitoramento está disponível.
 
-    * TAG_DATA são tags separadas por vírgulas formatadas como *TAG_NAME:TAG_VALUE*. É possível associar uma ou mais tags a seu agente Sysdig. Por exemplo: *role:serviceX,location:us-south*. 
+    * TAG_DATA são tags separadas por vírgula formatadas como *TAG_NAME:TAG_VALUE*. É possível associar uma ou mais tags a seu agente Sysdig. Por exemplo: *role:serviceX,location:us-south*. 
 
     * Configure **sysdig_capture_enabled** como *false* para desativar o recurso de captura de Sysdig. Por padrão, é configurado como *true*. Para obter mais informações, consulte [Trabalhando com capturas](/docs/services/Monitoring-with-Sysdig/captures.html#captures).
 
@@ -173,8 +172,6 @@ Conclua as etapas a seguir para configurar um agente Sysdig em um cluster Kubern
 
     Em seguida, copie e cole o comando exibido em seu terminal para configurar a variável de ambiente KUBECONFIG.
 
-    **Nota:** toda vez que você efetua login na CLI do {{site.data.keyword.containerlong}} para trabalhar com clusters, deve-se executar esses comandos para configurar o caminho para o arquivo de configuração do cluster como uma variável de sessão. O Kubernetes CLI usa essa variável para localizar um arquivo de configuração local e certificados que são necessárias para se conectar ao cluster no {{site.data.keyword.cloud_notm}}.
-
 4. Crie uma conta de serviço chamada **sysdig-agent** para monitorar o cluster Kubernetes. Execute o seguinte comando:
 
     ```
@@ -191,11 +188,12 @@ Conclua as etapas a seguir para configurar um agente Sysdig em um cluster Kubern
 
     O SYSDIG_ACCESS_KEY é a chave de ingestão para a instância.
 
-    O segredo do Kubernetes contém a chave de ingestão que é usada para autenticar o agente Sysdig com o serviço {{site.data.keyword.mon_full_notm}}. Ele é usado para abrir um soquete seguro da web para o servidor de ingestão no sistema back-end de monitoramento.
+    O segredo do Kubernetes contém a chave de ingestão que é usada para autenticar o agente Sysdig
+com o serviço {{site.data.keyword.mon_full_notm}}. Ele é usado para abrir um soquete seguro da web para o servidor de ingestão no sistema back-end de monitoramento.
 
 6. Crie uma função de cluster e uma ligação de função de cluster. 
 
-    Faça download do  [ ** sysdig-agent-clusterrole.yaml ** ](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-clusterrole.yaml).
+    Faça download do [ ** sysdig-agent-clusterrole.yaml ** ](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-clusterrole.yaml).
     
     Para incluir uma função de cluster, execute o comando a seguir:
     
@@ -213,15 +211,16 @@ Conclua as etapas a seguir para configurar um agente Sysdig em um cluster Kubern
 
 7. Edite o **sysdig-agent-configmap.yaml** e inclua os parâmetros necessários para configurar o agente para trabalhar no {{site.data.keyword.cloud_notm}}.
 
-    Faça download do  [ ** sysdig-agent-configmap.yaml ** ](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-configmap.yaml).
+    Faça download do [ ** sysdig-agent-configmap.yaml ** ](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-configmap.yaml).
 
     Use um editor para abrir o arquivo sysdig-agent-configmap.yaml. Em seguida, inclua os parâmetros a seguir:
 
-    * **k8s_cluster_name**: esse parâmetro especifica o nome do cluster como um rótulo de métrica. É possível usar o rótulo *kubernetes.cluster.name* para navegar pelos painéis do Kubernetes por nome do cluster e filtrar as métricas associadas ao cluster.
+    * **k8s_cluster_name**: esse parâmetro especifica o nome do cluster como um rótulo de métrica. É possível usar o rótulo *kubernetes.cluster.name* para navegar pelos painéis do
+Kubernetes por nome do cluster e filtrar as métricas que estão associadas ao cluster.
 
     * **collector**: esse parâmetro especifica a URL de ingestão para a região na qual a instância de monitoramento está disponível. 
 
-    * **collector_port**: esse parâmetro indica a porta na qual o coletor está atendendo. O valor deve ser  * 6443 *.
+    * **collector_port**: esse parâmetro indica a porta na qual o coletor está atendendo. O valor deve ser configurado como *6443*.
     
     * **ssl**: esse parâmetro deve ser configurado como *true*.
     
@@ -231,7 +230,7 @@ Conclua as etapas a seguir para configurar um agente Sysdig em um cluster Kubern
 
     * **sysdig_capture_enabled**: esse parâmetro ativa ou desativa o recurso de captura do Sysdig. Por padrão, é configurado como *true*. Para obter mais informações, consulte [Trabalhando com capturas](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
 
-    Um arquivo yaml de exemplo é semelhante ao seguinte:
+    Um arquivo Yaml de exemplo é semelhante ao seguinte:
 
     ```
      apiVersion: v1

@@ -31,7 +31,7 @@ Sysdig エージェントでは、自動的に収集されるデータを指定�
 
 | ファイル                   | 説明                                                     | ロケーション                                |
 |------------------------|-----------------------------------------------------------------|-----------------------------------------|
-| `dragent.default.yaml` | メイン構成ファイル </br>**注:****このファイルを編集しないでください。  | `/opt/draios/etc/dragent.default.yaml`  |
+| `dragent.default.yaml` | 主要な構成ファイル </br>**注:****このファイルを編集しないでください。| `/opt/draios/etc/dragent.default.yaml`  |
 | `dragent.yaml`         | Sysdig エージェントをカスタマイズするために編集する構成ファイル。 | `/opt/draios/etc/dragent.yaml`          |
 {: caption="表 1. Sysdig エージェントの構成ファイル" caption-side="top"} 
 

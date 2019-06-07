@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, troubleshooting
 
@@ -23,7 +23,7 @@ subcollection: Sysdig
 # Risoluzione dei problemi di {{site.data.keyword.mon_full_notm}}
 {: #troubleshoot}
 
-Questo argomento copre i problemi generali che puoi riscontrare quando utilizzi il servizio {{site.data.keyword.mon_full_notm}}. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
+Ottieni ulteriori informazioni su alcuni problemi generali che puoi riscontrare quando utilizzi il servizio {{site.data.keyword.mon_full_notm}}. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
 {:shortdesc}
 
 ## Stai ricevendo un errore durante la creazione di un'acquisizione?

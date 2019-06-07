@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete instance
 
@@ -32,11 +32,11 @@ Wenn Sie eine Instanz aus {{site.data.keyword.cloud_notm}} entfernen, müssen Si
 1. Notieren Sie die Liste der Quellen, die Metriken an die {{site.data.keyword.mon_full_notm}}-Instanz weiterleiten, die Sie entfernen möchten. Sie müssen den Sysdig-Agenten aus jeder Quelle entfernen.
 2. Entfernen Sie die Berechtigungen, die Benutzern erteilt wurden, um mit der Instanz zu arbeiten. 
 
-    Wenn Sie eine Zugriffsgruppe verwenden, um den Zugriff auf die Instanz zu verwalten, müssen Sie die Zugriffsgruppe entfernen.
+    Wenn Sie eine Zugriffsgruppe verwenden, um die Berechtigungen für den Zugriff auf die Instanz zu verwalten, müssen Sie die Zugriffsgruppe entfernen.
 
-    Wenn Sie eine Zugriffsgruppe verwenden, um den Zugriff auf verschiedene Serviceinstanzen zu verwalten, müssen Sie die Richtlinien entfernen, die Berechtigungen für die Instanz erteilen, die Sie entfernen möchten.
+    Wenn Sie eine Zugriffsgruppe verwenden, um die Berechtigungen für den Zugriff auf verschiedene Serviceinstanzen zu verwalten, müssen Sie die Richtlinien entfernen, die Berechtigungen für die Instanz erteilen, die Sie entfernen möchten.
     
-    Wenn Sie Benutzern einzelne Richtlinien erteilt haben, müssen Sie die Informationen jedes Benutzers mit Zugriff zusammenstellen und eine Richtlinie nach der anderen entfernen, die sich auf die Instanz beziehen, die Sie löschen möchten.
+    Wenn Sie Benutzern einzelne Richtlinien erteilt haben, müssen Sie die Informationen jedes Benutzers mit Zugriff auf die Instanz zusammenstellen. Dann müssen Sie eine Richtlinie nach der anderen entfernen, die sich auf die Instanz beziehen, die Sie löschen möchten.
 
 
 Löschen Sie anschließend die Instanz aus dem {{site.data.keyword.cloud_notm}}-Dashboard.
@@ -47,9 +47,7 @@ Löschen Sie anschließend die Instanz aus dem {{site.data.keyword.cloud_notm}}-
 
 Führen Sie die folgenden Schritte aus, um eine Instanz von {{site.data.keyword.mon_full_notm}} mit der {{site.data.keyword.cloud_notm}}-Benutzerschnittstelle zu entfernen:
 
-1. Melden Sie sich bei Ihrem {{site.data.keyword.cloud_notm}}-Konto an.
-
-    Klicken Sie auf das [{{site.data.keyword.cloud_notm}}-Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}, um das {{site.data.keyword.cloud_notm}}-Dashboard zu starten.
+1. [Melden Sie sich bei Ihrem {{site.data.keyword.cloud_notm}}-Konto an ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/login){:new_window}.
 
 	Nachdem Sie sich mit Ihrer Benutzer-ID und Ihrem Kennwort angemeldet haben, wird die {{site.data.keyword.cloud_notm}}-Benutzerschnittstelle geöffnet.
 
@@ -67,11 +65,9 @@ Führen Sie die folgenden Schritte aus, um eine Instanz von {{site.data.keyword.
 
 Führen Sie die folgenden Schritte aus, um eine Instanz von {{site.data.keyword.mon_full_notm}} über die Befehlszeile zu entfernen:
 
-1. [Voraussetzung] Installieren Sie die {{site.data.keyword.cloud_notm}}-CLI.
+1. [Voraussetzung] Installieren Sie die {{site.data.keyword.cloud_notm}}-CLI. Wenn die Befehlszeilenschnittstelle (CLI) installiert ist, fahren Sie mit dem nächsten Schritt fort.
 
    Weitere Informationen finden Sie unter [Die {{site.data.keyword.cloud_notm}}-CLI installieren](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
-
-   Wenn die Befehlszeilenschnittstelle (CLI) installiert ist, fahren Sie mit dem nächsten Schritt fort.
 
 2. Melden Sie sich an der Region in {{site.data.keyword.cloud_notm}} an, in der die Sysdig-Instanz ausgeführt werden soll. Führen Sie den folgenden Befehl aus: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview
 
@@ -22,28 +22,28 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# 關於 {{site.data.keyword.mon_full_notm}}
+# {{site.data.keyword.mon_full_notm}}
 {: #about}
 
-{{site.data.keyword.mon_full}} 是協力廠商雲端原生和容器智慧管理系統，您可以將其併入為 {{site.data.keyword.cloud_notm}} 架構的一部分。您可以使用它，在作業期間看見應用程式、服務及平台的效能及性能。它提供管理者、DevOps 團隊及開發人員完整堆疊遙測，提供進階功能來監視及疑難排解、定義警示，以及設計自訂儀表板。{{site.data.keyword.mon_full_notm}} 是由與 {{site.data.keyword.IBM_notm}} 具有夥伴關係的 Sysdig 所操作。
+{{site.data.keyword.mon_full}} 是協力廠商雲端原生和容器智慧管理系統，您可以將其併入為 {{site.data.keyword.cloud_notm}} 架構的一部分。您可以使用它，在作業期間看見應用程式、服務及平台的效能及性能。它為管理者、DevOps 團隊和開發人員提供了全堆疊遙測特性，其中有多種進階特性，可用於監視和執行疑難排解，定義警示以及設計自訂儀表板。{{site.data.keyword.mon_full_notm}} 是由與 {{site.data.keyword.IBM_notm}} 具有夥伴關係的 Sysdig 所操作。
 {:shortdesc}
 
 
-若要在 {{site.data.keyword.cloud_notm}} 中使用 {{site.data.keyword.mon_full_notm}} 來新增監視功能，您必須佈建 {{site.data.keyword.mon_full_notm}} 服務的實例。
+若要在 {{site.data.keyword.cloud_notm}} 中使用 {{site.data.keyword.mon_full_notm}} 來新增監視特性，您必須佈建 {{site.data.keyword.mon_full_notm}} 服務的實例。
 
 在佈建實例之前，請考量下列資訊：
 
 * 您的資料會傳送至協力廠商。
-* 帳戶擁有者可以在 {{site.data.keyword.cloud_notm}} 中建立、檢視及刪除服務的實例，並可將許可權授與其他使用者來使用 {{site.data.keyword.mon_full_notm}} 服務。
+*  帳戶擁有者可以在 {{site.data.keyword.cloud_notm}} 中建立、檢視和刪除服務的實例。此使用者還可以授權其他使用者使用 {{site.data.keyword.mon_full_notm}} 服務的許可權。
 * 其他 {{site.data.keyword.cloud_notm}} 使用者若具有`管理者`或`編輯者`權限，即可在 {{site.data.keyword.cloud_notm}} 中管理 {{site.data.keyword.mon_full_notm}} 服務。這些使用者還必須具有平台許可權，才能在他們計劃佈建實例之資源群組的環境定義內建立資源。
 
-您可以在資源群組的環境定義內佈建實例。資源群組可讓您基於存取控制及計費目的來組織服務。您可以在 *Default* 資源群組或自訂資源群組中佈建 {{site.data.keyword.mon_full_notm}} 實例。
+您可以在資源群組的環境定義內佈建實例。使用資源群組，可以組織服務以用於存取控制和計費。您可以在 *Default* 資源群組或自訂資源群組中佈建 {{site.data.keyword.mon_full_notm}} 實例。
 
 [佈建實例](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision)時，您會自動取得汲取金鑰，稱為 [Sysdig 存取金鑰](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key)。
 
-在佈建實例之後，您必須為每一個度量來源配置一個 {{site.data.keyword.mon_full_notm}} 代理程式。度量來源是您要監視並控制其效能與性能的雲端資源。您必須在每一個要監視的環境中配置一個 {{site.data.keyword.mon_full_notm}} 代理程式。例如，度量來源可以是 Kubernetes 叢集。您可以使用存取金鑰來配置 Sysdig 代理程式，負責收集度量值資料，並將其轉遞至您的實例。
+佈建實例後，必須為每個度量值來源配置 {{site.data.keyword.mon_full_notm}} 代理程式。度量值來源是您要監視並控制其效能與性能的雲端資源。必須在要監視的每個環境中配置 {{site.data.keyword.mon_full_notm}} 代理程式。例如，度量值來源可以是 Kubernetes 叢集。您可以使用存取金鑰來配置 Sysdig 代理程式，負責收集度量值資料，並將其轉遞至您的實例。
 
-在度量來源中部署 {{site.data.keyword.mon_full_notm}} 代理程式之後，即會自動收集度量並將其轉遞至實例。{{site.data.keyword.mon_full_notm}} 代理程式會自動收集及報告預先定義的度量。您可以配置要在環境中監視的度量。
+在度量值來源中部署 {{site.data.keyword.mon_full_notm}} 代理程式之後，即會自動收集度量值並將其轉遞至實例。{{site.data.keyword.mon_full_notm}} 代理程式會自動收集及報告預先定義的度量值。您可以配置要在環境中監視的度量值。
 
 您可以透過 {{site.data.keyword.mon_full_notm}} Web 使用者介面，來[監視](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring)和[管理](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-manage#manage)資料。  
 
@@ -58,7 +58,7 @@ subcollection: Sysdig
 
 配置 Sysdig 代理程式來收集資料並將其轉遞至 {{site.data.keyword.mon_full_notm}} 實例時，會自動收集資料，並可以透過 Web 使用者介面進行分析。
 
-以 10 秒頻率收集資料。 
+資料收集頻率為 10 秒。 
 
 ## 資料可用性
 {: #overview_availability}
@@ -89,29 +89,30 @@ subcollection: Sysdig
 ## 資料刪除
 {: #overview_data_deletion}
 
-從 {{site.data.keyword.cloud_notm}} 中刪除 {{site.data.keyword.mon_full_notm}} 的實例時，必須透過支援中心開啟案例，才能要求刪除資料。如需詳細資料，請參閱[與支援中心聯絡](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp)。
+從 {{site.data.keyword.cloud_notm}} 中刪除 {{site.data.keyword.mon_full_notm}} 的實例時，必須透過支援中心開啟案例，才能要求刪除資料。如需相關資訊，請參閱[與支援中心聯絡](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp)。
 
 刪除擷取時，會自動刪除該擷取的資料檔。
 
-**附註：不支援刪除從 {{site.data.keyword.mon_short}} 實例中的單一 Sysdig 代理程式收集的資料。**
+不支援刪除從 {{site.data.keyword.mon_short}} 實例中單一 Sysdig 代理程式收集的資料。
+{: note}
 
 
 
 ## 資料位置
 {: #overview_data_location}
 
-{{site.data.keyword.mon_full_notm}} 收集及聚集度量。 
+{{site.data.keyword.mon_full_notm}} 收集及聚集度量值。 
 
 * 度量值資料是在 {{site.data.keyword.cloud_notm}} 上進行管理。
-* 每一個多區域地區 (MZR) 位置都會收集並聚集在該位置中執行之每一個 {{site.data.keyword.mon_full_notm}} 實例的度量。
-* 資料位於佈建 {{site.data.keyword.mon_full_notm}} 實例的地區中。例如，在美國南部佈建之實例的度量值資料是在美國南部地區進行管理。
+* 每一個多區域地區 (MZR) 位置都會收集並聚集在該位置中執行之每一個 {{site.data.keyword.mon_full_notm}} 實例的度量值。
+* 資料位於佈建 {{site.data.keyword.mon_full_notm}} 實例的地區中。例如，在美國南部佈建的實例的度量值資料在美國南部地區進行管理。
 
 
 
 ## {{site.data.keyword.mon_full_notm}} 代理程式
 {: #overview_sysdig_agent}
 
-{{site.data.keyword.mon_full_notm}} 代理程式會自動收集及報告預先定義的度量。 
+{{site.data.keyword.mon_full_notm}} 代理程式會自動收集及報告預先定義的度量值。 
 
 下列清單概述可用的 {{site.data.keyword.mon_full_notm}} 代理程式：
 
@@ -132,7 +133,7 @@ subcollection: Sysdig
 ## 服務方案
 {: #overview_plans}
 
-{{site.data.keyword.mon_full_notm}} 實例提供不同的定價方案。如需相關資訊，請參閱[定價](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans)。
+{{site.data.keyword.mon_full_notm}} 實例提供不同的定價方案。[進一步瞭解](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans)。
 
 
 ## 安全考量
@@ -140,8 +141,8 @@ subcollection: Sysdig
 
 **擷取**
 
-擷取是您可以產生的追蹤檔，用來分析主機在某個時間範圍內發生什麼情況。擷取包含系統呼叫及其他作業系統事件。配置從該節點收集度量的 Sysdig 代理程式時，您可以根據節點啟用或停用此功能。依預設，配置 Sysdig 代理程式時，會啟用*擷取*。節點可以是主機、容器、虛擬機器、裸機，或任何您安裝 Sysdig 代理程式的度量來源。
+擷取是您可以產生的追蹤檔，用來分析主機在某個時間範圍內發生什麼情況。擷取包含系統呼叫及其他作業系統事件。配置從該節點收集度量值的 Sysdig 代理程式時，您可以根據節點啟用或停用此特性。依預設，配置 Sysdig 代理程式時，會啟用*擷取*。節點可以是主機、容器、虛擬機器、裸機，或任何您安裝 Sysdig 代理程式的度量值來源。
 
-**重要事項**啟用「擷取」時，請注意，Sysdig 將深入瞭解您的作業。若要避免發生資安事件，並可能在組織外部公開資料，請先檢查您組織的安全原則，然後再對節點啟用擷取。請考慮停用所有 Sysdig 代理程式的*擷取* 功能。
-{: tip}
+已啟用擷取後，請注意 Sysdig 可深入瞭解您的作業。若要避免發生資安事件，並可能在組織外部公開資料，請先檢查您組織的安全原則，然後再對節點啟用擷取。請考慮停用所有 Sysdig 代理程式的*擷取* 特性。
+{: important}
 

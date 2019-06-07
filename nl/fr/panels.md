@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, panels
 
@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Utilisation des panneaux
+# Gestion des panneaux
 {: #panels}
 
 Un panneau permet d'afficher une métrique ou un groupe de métriques dans un tableau de bord. Vous pouvez copier, modifier la portée, dupliquer, supprimer, exporter et explorer des panneaux.
@@ -32,14 +32,14 @@ Vous pouvez utiliser l'un des types de panneaux suivants :
 
 | Type | Description |
 |------|-------------|
-| Ligne | Utilisez ce panneau pour afficher les tendances au fil du temps pour une ou plusieurs métriques.  |
-| Zone | Utilisez ce panneau pour afficher les tendances au fil du temps pour une ou plusieurs métriques.  |
-| Liste supérieure | Utilisez ce panneau pour comparer une métrique sur un groupe d'entités. Le graphique à barres est trié par ordre décroissant.  |
-| Histogramme | Utilisez ce panneau pour afficher la distribution des fréquences d'une métrique dans des compartiments.  |
-| Topologie | Utilisez ce panneau pour visualiser l'infrastructure sous forme de mappe topologique, ainsi que les relations entre les entités de la mappe.  |
-| Nombre | Utilisez ce panneau pour afficher un seul nombre qui représente la valeur d'une métrique agrégée au fil du temps pour une ou plusieurs entités.  |
-| Tableau | Utilisez ce panneau pour afficher des données numériques pour votre infrastructure en fonction des métriques et segments.  |
-| Texte | Utilisez ce panneau pour ajouter du texte. Utilisez Markdown pour ajouter votre texte.  |
+| `Line` | Utilisez ce panneau pour afficher les tendances au fil du temps pour une ou plusieurs métriques.  |
+| `Area` | Utilisez ce panneau pour afficher les tendances au fil du temps pour une ou plusieurs métriques.  |
+| `Top list` | Utilisez ce panneau pour comparer une métrique sur un groupe d'entités. Le graphique à barres est trié par ordre décroissant.  |
+| `Histogram` | Utilisez ce panneau pour afficher la distribution des fréquences d'une métrique dans des compartiments.  |
+| `Topology` | Utilisez ce panneau pour visualiser l'infrastructure sous forme de mappe topologique, ainsi que les relations entre les entités de la mappe.  |
+| `Number` | Utilisez ce panneau pour afficher un seul nombre qui représente la valeur d'une métrique agrégée au fil du temps pour une ou plusieurs entités.  |
+| `Table` | Utilisez ce panneau pour afficher des données numériques pour votre infrastructure en fonction des métriques et segments.  |
+| `Text` | Utilisez ce panneau pour ajouter du texte. Utilisez Markdown pour ajouter votre texte.  |
 {: caption="Tableau 1. Types de panneaux" caption-side="top"} 
 
 
@@ -49,9 +49,9 @@ Vous pouvez utiliser l'un des types de panneaux suivants :
 
 Pour copier un panneau, procédez comme suit :
 
-1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Ensuite, identifiez le panneau qui affiche la métrique que vous voulez copier.
+1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Identifiez ensuite le panneau qui affiche la métrique que vous voulez copier.
 
-2. Sélectionnez l'icône *Plus d'options* ![icône des trois points](images/actions.png) et sélectionnez **Copy panel** ![icône de copie](images/actions.png).
+2. Sélectionnez l'icône *Plus d'options* ![icône des trois points](images/actions.png) puis sélectionnez **Copy panel** ![icône de copie](images/actions.png).
 
 3. Sélectionnez l'un des tableaux de bord répertoriés, ou entrez un nom pour le nouveau tableau de bord. 
 
@@ -64,7 +64,7 @@ Pour copier un panneau, procédez comme suit :
 
 Procédez comme suit pour modifier la portée d'un panneau :
 
-1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Ensuite, identifiez le panneau qui affiche la métrique dont vous voulez modifier la portée.
+1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Identifiez ensuite le panneau qui affiche la métrique dont vous voulez modifier la portée.
 
 2. Dans le panneau, cliquez sur **Edit Scope** pour modifier la portée par défaut. 
 
@@ -72,7 +72,7 @@ Procédez comme suit pour modifier la portée d'un panneau :
     
 3. Sélectionnez la portée. 
 
-4. Cliquez éventuellement sur **Override the custom panel scopes** pour remplacer la portée de tous les panneaux pour lesquels une portée personnalisée est actuellement définie. 
+4. Cliquez éventuellement sur **Override the custom panel scopes** pour remplacer la portée de tous les panneaux avec une portée personnalisée définie.  
 
     **Remarque : cette action ne peut pas être annulée.** 
 
@@ -88,9 +88,9 @@ Procédez comme suit pour modifier la portée d'un panneau :
 
 Procédez comme suit pour dupliquer un panneau dans le tableau de bord en cours :
 
-1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Ensuite, identifiez le panneau qui affiche la métrique que vous voulez copier.
+1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Identifiez ensuite le panneau qui affiche la métrique que vous voulez copier.
 
-2. Sélectionnez l'icône *Plus d'options* ![icône des trois points](images/actions.png) et sélectionnez **Duplicate panel** ![icône de copie](images/duplicate.png).
+2. Sélectionnez l'icône *Plus d'options* ![icône des trois points](images/actions.png) puis sélectionnez **Duplicate panel** ![icône de copie](images/duplicate.png).
 
 
 ## Suppression d'un panneau
@@ -98,9 +98,9 @@ Procédez comme suit pour dupliquer un panneau dans le tableau de bord en cours 
 
 Procédez comme suit pour supprimer un panneau dans le tableau de bord en cours :
 
-1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Ensuite, identifiez le panneau qui affiche la métrique que vous voulez copier.
+1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Identifiez ensuite le panneau qui affiche la métrique que vous voulez copier.
 
-2. Sélectionnez l'icône *Plus d'options* ![icône des trois points](images/actions.png) et sélectionnez **Delete panel** ![icône de copie](images/delete.png).
+2. Sélectionnez l'icône *Plus d'options* ![icône de trois points](images/actions.png) puis sélectionnez **Delete panel** ![icône de suppression](images/delete.png).
 
 3. Cliquez sur **Yes, delete panel** pour confirmer la suppression du panneau.
 
@@ -116,7 +116,7 @@ Prenez en compte les informations suivantes lorsque vous exportez des données :
 
 Procédez comme suit pour exporter des données à partir d'un panneau :
 
-1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Ensuite, identifiez le panneau qui affiche la métrique que vous voulez copier.
+1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Identifiez ensuite le panneau qui affiche la métrique que vous voulez copier.
 
 2. Sélectionnez l'icône *Plus d'options* ![icône des trois points](images/actions.png).
 
@@ -138,7 +138,7 @@ Vous pouvez créer des alertes directement à partir d'un panneau.
 
 Pour créer une alerte, procédez comme suit :
 
-1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Ensuite, identifiez le panneau qui affiche la métrique que vous voulez copier.
+1. Accédez à la section *TABLEAU DE BORD** dans l'interface utilisateur Web. Sélectionnez un tableau de bord. Identifiez ensuite le panneau qui affiche la métrique que vous voulez copier.
 
 2. Sélectionnez l'icône *Plus d'options* ![icône des trois points](images/actions.png).
 

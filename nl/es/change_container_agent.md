@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-18"
+lastupdated: "2018-12-06"
 
 ---
 
@@ -16,14 +16,16 @@ lastupdated: "2019-02-18"
 {:download: .download}
 
 # Personalización de agentes de Sysdig de contenedor
-{: #change_container_agent}
+{: #change_agent}
 
 En {{site.data.keyword.mon_full_notm}}, puede personalizar la configuración de un agente de Sysdig para establecer un nivel de registro, bloquear puertos, incluir o excluir datos de métricas, añadir o eliminar sucesos y filtrar contenedores. 
 {:shortdesc}
 
 
+
+
 ## Edición del archivo yaml de dragent
-{: #change_container_agent_edit_config}
+{: #edit_agent}
 
 El archivo yaml se encuentra en */opt/draios/etc/*.
 
@@ -41,7 +43,7 @@ Siga los pasos siguientes para editar el archivo y aplicar los cambios:
 
 
 ## Bloqueo de puertos
-{: #change_container_agent_block_ports}
+{: #ports}
 
 Para bloquear el tráfico de red y las métricas procedentes de los puertos de red, debe personalizar la sección **blacklisted_ports** en el archivo *dragent.yaml*. Debe obtener una lista de los puertos de los que desea filtrar los datos.
 
@@ -59,7 +61,7 @@ blacklisted_ports:
 
 
 ## Recopilación de un conjunto de sucesos de Docker
-{: #change_container_agent_collect_docker_events}
+{: #docker}
 
 {{site.data.keyword.mon_full_notm}} da soporte a la integración de sucesos con Docker. Los agentes de Sysdig descubren automáticamente los orígenes de Docker y recopilan datos de sucesos de los mismos. Puede editar el archivo de configuración del agente para cambiar su comportamiento predeterminado e incluir o excluir datos de sucesos. 
 
@@ -96,7 +98,7 @@ Por ejemplo, para filtrar los sucesos de imagen de Docker y recopilar solo suces
 
 
 ## Inhabilitación de la recopilación de sucesos
-{: #change_container_agent_disable_events}
+{: #disable}
 
 Para hacer que un agente de Sysdig deje de recopilar sucesos, debe modificar el archivo *dragent.default.yaml*. Establezca la sección **events** en *none* en el archivo *dragent.yaml*.
 
@@ -111,7 +113,7 @@ events:
 
 
 ## Filtrado de sucesos según su gravedad
-{: #change_container_agent_filterby_severity}
+{: #severity}
 
 Para filtrar sucesos por gravedad, también puede cambiar el tipo de entrada de registro para los sucesos en el archivo *dragent.yaml*. 
 
@@ -140,7 +142,7 @@ log:
 
 
 ## Inclusión y exclusión de métricas
-{: #change_container_agent_inc_exc_metrics}
+{: #params}
 
 Para filtrar métricas personalizadas, debe personalizar la sección **metrics_filter** en el archivo *dragent.yaml*. Puede especificar las métricas que se deben incluir y las que se deben filtrar configurando los parámetros de filtro **include** y **exclude**.
 
@@ -165,7 +167,7 @@ metrics_filter:
 
 
 ## Cambio del nivel de registro
-{: #change_container_agent_log_level}
+{: #log_level}
 
 Para configurar el nivel de registro, debe personalizar la sección **log** del archivo *dragent.yaml*. 
 

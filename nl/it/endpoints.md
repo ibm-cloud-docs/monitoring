@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-22"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, regions, endpoints
 
@@ -35,9 +35,10 @@ Il servizio {{site.data.keyword.mon_full_notm}} è disponibile nelle seguenti re
 
 | Regione                | Ubicazione  | 
 |-----------------------|-----------|
-| `US South`            | Dallas    | 
+| `US SOUTH`            | Dallas    | 
 | `EU-DE`               | Francoforte | 
 | `EU-GB`               | Londra    | 
+| `JP-TOK`              | Tokyo     |
 {: caption="Tabella 1. Elenco di regioni in cui è disponibile il servizio" caption-side="top"} 
 
 Al momento, **Francoforte** e **EU GB** sono ubicazioni **non** gestite dall'Unione Europea. Per ulteriori informazioni, consulta [Abilitazione dell'impostazione Supportato UE](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported).
@@ -54,8 +55,9 @@ La seguente tabella elenca gli **endpoint del raccoglitore Sysdig** disponibili 
 | Regione        | Endpoint                                                  | Porta |
 |---------------|-----------------------------------------------------------|------|
 | `US South`    | `ingest.us-south.monitoring.cloud.ibm.com`                | TCP 6443 |
-| `EU-DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`                   | TCP 6443 | 
-| `EU-GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `EU DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`                   | TCP 6443 | 
+| `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`                  | TCP 6443 | 
 {: caption="Tabella 2. Elenco degli endpoint di inserimento" caption-side="top"} 
 
 
@@ -65,11 +67,12 @@ La seguente tabella elenca gli **endpoint del raccoglitore Sysdig** disponibili 
 
 La seguente tabella elenca gli **endpoint Sysdig** disponibili per regione:
 
-| Regione       | Endpoint                                                  | Porta |
-|--------------|-----------------------------------------------------------|------|
-| `US South`   | `https://us-south.monitoring.cloud.ibm.com `              | https (TLS) 443 |  
-| `EU-DE`      | `https://eu-de.monitoring.cloud.ibm.com `                 | https (TLS) 443 |
-| `EU-GB`      | `https://eu-gb.monitoring.cloud.ibm.com `                 | https (TLS) 443 |
+| Regione       | Endpoint                                                  | Porta            |
+|--------------|-----------------------------------------------------------|-----------------|
+| `US South`   | `https://us-south.monitoring.cloud.ibm.com `               | HTTPS (TLS) 443 |  
+| `EU DE`      | `https://eu-de.monitoring.cloud.ibm.com `                 | HTTPS (TLS) 443 |
+| `EU GB`      | `https://eu-gb.monitoring.cloud.ibm.com `                 | HTTPS (TLS) 443 |
+| `JP TOK`     | `https://jp-tok.monitoring.cloud.ibm.com`                 | HTTPS (TLS) 443 |
 {: caption="Tabella 3. Elenco degli endpoint Sysdig" caption-side="top"} 
 
 

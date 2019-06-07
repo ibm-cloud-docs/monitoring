@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -24,11 +24,8 @@ subcollection: Sysdig
 # Provisioning di un'istanza
 {: #provision}
 
-Prima di poter monitorare e gestire le metriche con Sysdig, devi prima eseguire il provisioning di un'istanza del servizio in {{site.data.keyword.Bluemix}}.
+Prima di poter monitorare e gestire le metriche con Sysdig, devi eseguire il provisioning di un'istanza del servizio in {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
-
-Per eseguire il provisioning di un'istanza Sysdig in una regione cloud pubblica, devi selezionare il piano del servizio associato all'istanza, la regione in sui vengono raccolte le tue metriche e il piano che determina il numero di metriche che puoi monitorare e il loro periodo di conservazione.
-
 
 
 ## Provisioning di un'istanza Sysdig dal catalogo
@@ -72,11 +69,9 @@ Successivamente, configura un'origine della metrica aggiungendo un agent Sysdig.
 
 Per eseguire il provisioning di un'istanza di Sysdig tramite la riga di comando, completa la seguente procedura:
 
-1. [Prerequisito] Installa la CLI {{site.data.keyword.cloud_notm}}.
+1. [Prerequisito] Installazione della CLI {{site.data.keyword.cloud_notm}}. Se la CLI è installata, continua con il passo successivo.
 
    Per ulteriori informazioni, vedi [Installazione della CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
-
-   Se la CLI è installata, continua con il passo successivo.
 
 2. Accedi alla regione in {{site.data.keyword.cloud_notm}} in cui vuoi eseguire il provisioning dell'istanza. Immetti il seguente comando: [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -91,15 +86,15 @@ Per eseguire il provisioning di un'istanza di Sysdig tramite la riga di comando,
     ```
     {: codeblock}
 
-    dove
+    Dove
 
-    * NAME è il nome dell'istanza Sysdig
+    * NAME è il nome dell'istanza Sysdig.
     
-    * *sysdig-monitor* è il nome del nome del servizio {{site.data.keyword.mon_full_notm}} in {{site.data.keyword.cloud_notm}}
+    * `sysdig-monitor` è il nome del nome del servizio {{site.data.keyword.mon_full_notm}} in {{site.data.keyword.cloud_notm}}.
     
-    * SERVICE_PLAN_NAME è il tipo di piano. I valori validi sono: *lite*, *graduated-tier*
+    * SERVICE_PLAN_NAME è il tipo di piano. I valori validi sono *lite* e *graduated-tier*.
     
-    * LOCATION è la regione in cui viene creata l'istanza
+    * LOCATION è la regione in cui viene creata l'istanza.
 
     Ad esempio, per eseguire il provisioning di un'istanza con il piano a pagamento, immetti il seguente comando:
 

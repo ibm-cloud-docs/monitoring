@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview
 
@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Acerca de {{site.data.keyword.mon_full_notm}}
+# {{site.data.keyword.mon_full_notm}}
 {: #about}
 
 {{site.data.keyword.mon_full}} es un sistema de gestión inteligente de contenedores de terceros nativo de la nube que puede incluir como parte de la arquitectura {{site.data.keyword.cloud_notm}}. Utilícelo para obtener visibilidad operativa sobre el rendimiento y el estado de las aplicaciones, los servicios y las plataformas. Ofrece a los administradores, a los equipos DevOps y a los desarrolladores telemetría de pila completa con funciones avanzadas para supervisar y solucionar problemas, definir alertas y diseñar paneles de control personalizados. {{site.data.keyword.mon_full_notm}} es una característica gestionada por Sysdig en asociación con {{site.data.keyword.IBM_notm}}.
@@ -34,10 +34,10 @@ Para añadir características de supervisión con {{site.data.keyword.mon_full_n
 Antes de suministrar una instancia, tenga en cuenta la información siguiente:
 
 * Los datos se envían a un tercero.
-* El propietario de la cuenta puede crear, ver y suprimir una instancia de un servicio en {{site.data.keyword.cloud_notm}}, y puede otorgar permisos a otros usuarios para que trabajen con el servicio {{site.data.keyword.mon_full_notm}}.
+* El propietario de la cuenta puede crear, ver y suprimir una instancia de un servicio en {{site.data.keyword.cloud_notm}}. Este usuario también puede otorgar permisos a otros usuarios para que trabajen con el servicio {{site.data.keyword.mon_full_notm}}.
 * Otros usuarios de {{site.data.keyword.cloud_notm}} con permisos de `administrador` o de `editor` pueden gestionar el servicio {{site.data.keyword.mon_full_notm}} en {{site.data.keyword.cloud_notm}}. Estos usuarios también deben tener permisos de la plataforma para crear recursos dentro del contexto del grupo de recursos en el que van a suministrar la instancia.
 
-Una instancia se suministra dentro del contexto de un grupo de recursos. Un grupo de recursos le permite organizar los servicios para el control de accesos y para la facturación. Puede suministrar la instancia de {{site.data.keyword.mon_full_notm}} en el grupo de recursos *predeterminado* o en un grupo de recursos personalizado.
+Una instancia se suministra dentro del contexto de un grupo de recursos. Utilice un grupo de recursos para organizar los servicios para el control de accesos y para la facturación. Puede suministrar la instancia de {{site.data.keyword.mon_full_notm}} en el grupo de recursos *predeterminado* o en un grupo de recursos personalizado.
 
 Cuando se [suministra una instancia](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision), se obtiene automáticamente una clave de ingestión, conocida como [clave de acceso de Sysdig](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key).
 
@@ -89,11 +89,12 @@ La política de acumulación describe la granularidad de los datos a lo largo de
 ## Supresión de datos
 {: #overview_data_deletion}
 
-Cuando suprima una instancia de {{site.data.keyword.mon_full_notm}} de {{site.data.keyword.cloud_notm}}, debe abrir un caso a través del sistema de soporte para solicitar que se supriman los datos. Para obtener más información, consulte [cómo ponerse en contacto con el servicio de soporte](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp).
+Cuando suprima una instancia de {{site.data.keyword.mon_full_notm}} de {{site.data.keyword.cloud_notm}}, debe abrir un caso a través del sistema de soporte para solicitar que se supriman los datos. Para obtener más información, consulte el apartado sobre [cómo ponerse en contacto con el equipo de soporte](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp).
 
 Cuando se suprime una captura, el archivo de datos correspondiente a dicha captura se suprime automáticamente.
 
-**NOTA: la supresión de los datos que se recopilan desde un solo agente de Sysdig en una instancia de {{site.data.keyword.mon_short}} no recibe soporte.**
+La supresión de los datos que se recopilan desde un solo agente de Sysdig en una instancia de {{site.data.keyword.mon_short}} no recibe soporte.
+{: note}
 
 
 
@@ -133,7 +134,7 @@ Para supervisar el uso y los costes de su servicio, consulte [Visualización del
 ## Planes de servicio
 {: #overview_plans}
 
-Dispone de varios planes de precios para una instancia de {{site.data.keyword.mon_full_notm}}. Para obtener más información, consulte el apartado sobre [Tarifas](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
+Dispone de varios planes de precios para una instancia de {{site.data.keyword.mon_full_notm}}. [Más información](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 
 
 ## Consideraciones sobre seguridad
@@ -143,6 +144,6 @@ Dispone de varios planes de precios para una instancia de {{site.data.keyword.mo
 
 Una captura es un archivo de rastreo que se puede generar para analizar lo que sucede en un host durante un periodo de tiempo. Las capturas contienen llamadas del sistema y otros sucesos del sistema operativo. Puede habilitar o inhabilitar esta característica por nodo cuando configure el agente de Sysdig que recopila métricas de ese nodo. De forma predeterminada, las *Capturas* se habilitan cuando se configura un agente de Sysdig. Un nodo puede ser un host, un contenedor, una máquina virtual, un servidor nativo o cualquier origen de métricas en el que se instala un agente de Sysdig.
 
-**IMPORTANTE** Cuando las capturas están habilitadas, tenga en cuenta que Sysdig tendrá una visibilidad profunda en sus operaciones. Para evitar una incidencia de seguridad y la potencial exposición de datos fuera de su organización, compruebe las políticas de seguridad de su organización antes de habilitar capturas en un nodo. Tenga en cuenta la posibilidad de inhabilitar la característica de *Captura* para todos los agentes de Sysdig.
-{: tip}
+Cuando las capturas están habilitadas, tenga en cuenta que Sysdig tendrá una visibilidad profunda en sus operaciones. Para evitar una incidencia de seguridad y la potencial exposición de datos fuera de su organización, compruebe las políticas de seguridad de su organización antes de habilitar capturas en un nodo. Tenga en cuenta la posibilidad de inhabilitar la característica de *Captura* para todos los agentes de Sysdig.
+{: important}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring
 
@@ -24,10 +24,11 @@ subcollection: Sysdig
 # Monitorando seu ambiente
 {: #monitoring}
 
-É possível monitorar sua infraestrutura e os aplicativos em execução nele com o serviço {{site.data.keyword.mon_full_notm}}. É possível solicitar uma captura para analisar o que acontece em um nó durante um prazo.
+É possível monitorar sua infraestrutura e os aplicativos que são executados nele com o serviço {{site.data.keyword.mon_full_notm}}. É possível solicitar uma captura para analisar o que acontece em um nó durante um prazo.
 {:shortdesc}
 
-Depois de provisionar uma instância do serviço {{site.data.keyword.mon_full_notm}} no {{site.data.keyword.Bluemix}} e configurar os agentes Sysdig para suas origens de métricas, é possível visualizar, monitorar e gerenciar dados por meio da IU da web do serviço.
+Primeiro, você provisiona uma instância do serviço {{site.data.keyword.mon_full_notm}} no {{site.data.keyword.cloud_notm}}. Em seguida, você configura os agentes Sysdig para suas
+origens de métrica. Depois que as origens forem configuradas, será possível visualizar, monitorar e gerenciar dados por meio da IU da web do serviço.
 
 Os dados para as métricas padrão são coletados automaticamente. É possível configurar métricas customizadas e incluir rótulos nessas métricas para descrever suas características. Os dados para essas métricas customizadas também são coletados automaticamente.
 
@@ -42,7 +43,7 @@ Na guia *Explorar*, é possível monitorar dados usando métricas padrão e pain
 
 Na guia *Painéis*, é possível monitorar dados usando qualquer um dos painéis padrão ou criando novos painéis.
 
-É possível configurar um painel padrão como o ponto de entrada padrão para uma equipe, unificar a experiência de uma equipe e permitir que os usuários concentrem sua atenção imediata nas informações mais relevantes para eles. 
+É possível configurar um painel padrão como o ponto de entrada padrão para uma equipe, unificando a experiência de uma equipe e permitindo que os usuários focalizem sua atenção imediata nas informações mais relevantes para eles.
 {: tip}
 
 É possível usar alertas para notificar os usuários de problemas que requerem atenção por meio de um ou mais canais de notificação.
@@ -56,14 +57,14 @@ Na guia *Painéis*, é possível monitorar dados usando qualquer um dos painéis
 
 Uma métrica é uma medida quantitativa que tem um ou mais rótulos para definir suas características. Use métricas para analisar dados estatisticamente que têm valores numéricos. 
 
-Uma métrica é representada por séries temporais. Uma série temporal é um conjunto de pontos de dados numéricos em um período de tempo. 
+Uma métrica é representada por séries temporais. Uma série temporal é um conjunto de pontos de dados numéricos durante um período. 
 
 As métricas são classificadas em dois grupos: 
 
 * [Métricas padrão](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-metrics#metrics_default) 
 * [Métricas Customizadas](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-metrics#metrics_custom)
 
-Os rótulos são classificados como rótulos de infraestrutura e rótulos de descritor de métrica. Cada métrica tem um conjunto de rótulos predefinidos. Para métricas customizadas, é possível configurar mais rótulos. 
+Os rótulos são classificados como rótulos de infraestrutura e rótulos do descritor de métrica. Cada métrica tem um conjunto de rótulos predefinidos. Para métricas customizadas, é possível configurar mais rótulos. 
 
 É possível usar rótulos para identificar e diferenciar características de uma métrica, por exemplo,
 * É possível agrupar objetos de infraestrutura em hierarquias lógicas. 
@@ -81,15 +82,15 @@ Um painel exibe uma métrica ou um grupo de métricas em um painel.
 
 | Tipo | Descrição |
 |------|-------------|
-| Linha | Use esse painel para visualizar as tendências ao longo do tempo para uma ou mais métricas.  |
-| Áreas | Use esse painel para visualizar as tendências ao longo do tempo para uma ou mais métricas.  |
-| Lista superior | Use esse painel para comparar uma métrica entre grupos de entidades. O gráfico de barras é classificado em ordem decrescente.  |
-| Histograma | Use esse painel para visualizar a distribuição de frequência de uma métrica em depósitos.  |
-| Topologia | Use esse painel para visualizar a infraestrutura como um mapa de topologia e as relações entre entidades no mapa.  |
-| Número | Use esse painel para visualizar um único número que representa o valor de uma métrica agregada ao longo do tempo para uma ou mais entidades.  |
-| Tabela | Use esse painel para exibir dados numéricos para sua infraestrutura com base em métricas e segmentos.  |
-| Texto | Use esse painel para incluir texto. Use redução para incluir seu texto.  |
-{: caption="Tabela 3. Tipos de painéis" caption-side="top"} 
+| `Line` | Use esse painel para visualizar as tendências ao longo do tempo para uma ou mais métricas.  |
+| `Area` | Use esse painel para visualizar as tendências ao longo do tempo para uma ou mais métricas.  |
+| `Top list` | Use esse painel para comparar uma métrica entre grupos de entidades. O gráfico de barras é classificado em ordem decrescente.  |
+| `Histogram` | Use esse painel para visualizar a distribuição de frequência de uma métrica em depósitos.  |
+| `Topology` | Use esse painel para visualizar a infraestrutura como um mapa de topologia e as relações entre entidades no mapa.  |
+| `Number` | Use esse painel para visualizar um único número que representa o valor de uma métrica agregada ao longo do tempo para uma ou mais entidades.  |
+| `Table` | Use esse painel para exibir dados numéricos para sua infraestrutura com base em métricas e segmentos.  |
+| `Text` | Use esse painel para incluir texto. Use redução para incluir seu texto.  |
+{: caption="Tabela 1. Tipos de painéis" caption-side="top"} 
 
 É possível copiar, mudar o escopo, duplicar, excluir, exportar e explorar painéis.
 
@@ -109,7 +110,7 @@ A tabela a seguir lista as tarefas que podem ser executadas com painéis:
 | [Excluir painel](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_delete) | Exclua um painel do painel.  |
 | [Exportar dados](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_export) | Exporte dados de um painel para um arquivo csv ou um arquivo json.  |
 | [Criar alerta](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-panels#panels_alert) | Defina um alerta em uma métrica. |
-{: caption="Tabela 4. Tarefas do Painel" caption-side="top"} 
+{: caption="Tabela 2. Tarefas do painel" caption-side="top"} 
 
 
 ## Painéis
@@ -120,15 +121,18 @@ Um **painel** mostra os grupos de métricas que relatam o funcionamento, o desem
 
 Na seção **PAINÉIS** da IU da web, os painéis são organizados em três grupos principais:
 
-* *Meus painéis*: são aqueles criados pelo usuário que está conectado atualmente.
-* *Meus painéis compartilhados*: são aqueles criados pelo usuário que está conectado atualmente e que são compartilhados com outros usuários.
-* *Painéis compartilhados comigo*: são aqueles criados por outros usuários e compartilhados com o usuário atual.
+* **Meus painéis**: esses painéis são criados pelo usuário que atualmente está
+com login efetuado.
+* **Meus painéis compartilhados**: esses painéis são criados pelo usuário que atualmente está com login efetuado e são compartilhados com outros usuários.
+* **Painéis compartilhados comigo**: esses painéis são criados por outros usuários
+e compartilhados com o usuário atual.
 
 Na seção **EXPLORAR** da IU da web, os painéis são organizados em dois grupos:
-* *Painéis padrão*: são os painéis predefinidos.
-* *Meus painéis*: são aqueles criados pelo usuário que está conectado atualmente.
+* **Painéis padrão**: esses painéis são painéis predefinidos.
+* **Meus painéis**: esses painéis são criados pelo usuário que atualmente está
+com login efetuado.
 
-É possível usar painéis predefinidos. Também é possível criar painéis customizados por meio da IU da web ou programaticamente. É possível fazer backup e restaurar os painéis usando scripts Python ou a API de REST do Sysdig.
+É possível usar painéis predefinidos. Também é possível criar painéis customizados por meio da IU da web ou programaticamente. É possível fazer backup e restaurar os painéis usando scripts Python ou a API de REST Sysdig.
 
 Também é possível copiar e compartilhar painéis por meio da IU da web. 
 
@@ -141,7 +145,7 @@ A tabela a seguir descreve as tarefas que podem ser executadas para trabalhar co
 | [Mudando o escopo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_scope) | Mude o escopo de um painel.       |
 | [Excluir painel](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_delete) |  Exclua um painel. |
 | [Compartilhar um painel](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_share) | Compartilhe painéis entre usuários em uma equipe e externamente configurando uma URL pública para o painel. |
-{: caption="Tabela 1. Tarefas de painel que podem ser executadas na IU da web" caption-side="top"} 
+{: caption="Tabela 3. Tarefas do painel que podem ser executadas na IU da web" caption-side="top"} 
 
 A tabela a seguir descreve tarefas que podem ser executadas programaticamente para trabalhar com painéis:
 
@@ -150,32 +154,33 @@ A tabela a seguir descreve tarefas que podem ser executadas programaticamente pa
 | Criar um painel      | [Criando um painel usando a API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_create_dashboard) |
 | Excluir um painel      | [Excluindo um painel usando a API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_delete_dashboard) |
 | Salvando painéis       | [Salvando os painéis de uma equipe usando a API](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api#api_save_dashboard) |
-{: caption="Tabela 2. Tarefas para gerenciar painéis programaticamente" caption-side="top"} 
+{: caption="Tabela 4. Tarefas para gerenciar painéis programaticamente" caption-side="top"} 
 
 
 
 ## Eventos
 {: #monitoring_events}
 
-Um evento é uma notificação que informa sobre algo que ocorreu em qualquer um dos nós que encaminha dados para sua instância do {{site.data.keyword.mon_full_notm}}. Use eventos para revisar, rastrear e resolver problemas. 
+Um evento é uma notificação que informa sobre algo que ocorre em qualquer um dos nós que encaminham
+dados para sua instância do {{site.data.keyword.mon_full_notm}}. Use eventos para revisar, rastrear e resolver problemas. 
 
-Há diferentes tipos de eventos: 
+A lista a seguir descreve diferentes tipos de eventos: 
 
 * *Eventos de alerta* são aqueles acionados por alertas configurados pelo usuário. Para obter mais informações, consulte [Trabalhando com alertas](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring_alerts).
 * *Eventos baseados em infraestrutura* são aqueles coletados dos nós do Docker e do Kubernetes. Por padrão, o agente Sysdig descobre e coleta automaticamente dados de um grupo de eventos selecionado. É possível editar o arquivo de configuração do agente para permitir mais eventos.
 * *Eventos customizados* configurados por meio de qualquer uma das integrações a seguir: Slackbot, scripts Python pré-construídos, scripts Python customizados criados pelo usuário ou solicitações de cURL.
 
 Por padrão, um evento tem um estado: 
-* *Ativo*: esse estado indica que as circunstâncias que acionaram o evento permanecem em vigor, por exemplo, um nó continua inativo.
-* *OK*: esse estado indica que a situação está de volta ao normal, por exemplo, um nó está funcionando.
+* **Ativo**: esse estado indica que as circunstâncias que acionaram o evento permanecem em vigor, por exemplo, um nó continua inativo.
+* **OK**: esse estado indica que a situação está de volta ao normal, por exemplo, um nó está funcionando.
 
 Você gerencia eventos na seção *Eventos* da IU da web. 
 * É possível visualizar eventos de alerta por meio da guia *Eventos de alerta*.
 * É possível visualizar eventos baseados em infraestrutura por meio da guia *Eventos customizados*.
 * É possível visualizar eventos customizados por meio da guia *Eventos customizados*.
 * É possível enviar eventos customizados para qualquer uma de suas equipes usando o [token de API para essa equipe](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token). Para obter mais informações, consulte [Eventos customizados ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events){:new_window}.
-
-É possível resolver a situação que acionou um evento. Enquanto você espera que a condição que acionou o evento seja executada novamente e configura seu status como *OK*, é possível configurar o evento como **Resolvido** para exibir graficamente que o problema foi tratado. 
+* É possível configurar o evento como **Resolvido** para notificar outros
+usuários de que o problema foi endereçado em vez de esperar que o status seja configurado como **OK**.
 {: #tip}
 
 
@@ -185,7 +190,8 @@ Você gerencia eventos na seção *Eventos* da IU da web.
 
 Um alerta é um evento de notificação que pode ser usado para avisar sobre situações que requerem atenção. Cada alerta tem um status de severidade. Esse status informa sobre o grau de severidade das informações sobre as quais ele relata. 
 
-Ao definir um alerta, deve-se definir a condição que aciona a notificação, um ou mais canais de notificação pelos quais você deseja ser notificado, a severidade do alerta e o tipo de alerta. 
+Ao definir um alerta, deve-se definir a condição que aciona a notificação e um ou mais canais de
+notificação pelos quais você deseja ser notificado. Deve-se também definir a severidade e o tipo de alerta. 
 
 É possível definir alertas para qualquer um dos tipos de alerta a seguir:
 
@@ -213,7 +219,7 @@ Para obter mais informações, consulte [Configurando um canal de notificação]
 
 É possível ativar alertas predefinidos, modificar alertas e criar alertas customizados na IU da web e usando a API do Sysdig.
 
-Você gerencia alertas na visualização *Alertas* da IU da web. É possível configurar as colunas da tabela que são exibidas na visualização *Alertas*. As opções de coluna válidas são: *Nome*, *Escopo*, *Alertar quando*, *Segmentar por*, *Notificações*, *Ativado*, *Modificado*, *Capturas*, *Canais*, *Criado*, *Descrição*, *Destinatários de e-mail*, *Por pelo menos*, *OpsGenie*, *PagerDuty*, *Severidade*, *Slack*, *WebHook*, *Tópicos SNS*, *Tipo*, *VictorOps*
+Você gerencia alertas na visualização *Alertas* da IU da web. É possível configurar as colunas da tabela que são exibidas na visualização *Alertas*. As opções de coluna válidas são *Nome*, *Escopo*, *Alertar quando*, *Segmentar por*, *Notificações*, *Ativado*, *Modificado*, *Capturas*, *Canais*, *Criado*, *Descrição*, *Destinatários de e-mail*, *Por pelo menos*, *OpsGenie*, *PagerDuty*, *Severidade*, *Slack*, *WebHook*, *Tópicos SNS*, *Tipo* e *VictorOps*.
 
 A lista a seguir descreve as principais tarefas ao trabalhar com alertas:
 * [Configurar um alerta ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts#Alerts-ConfigureanAlert){:new_window}
@@ -240,11 +246,11 @@ Dependendo das diretrizes de sua organização, considere a desativação de cap
 É possível criar, explorar, fazer download e excluir *capturas* para nós individuais. Um nó pode ser um host, um contêiner, uma máquina virtual, um bare metal ou qualquer origem de métrica na qual você instala um agente Sysdig. 
 
 * Na IU da web, você cria capturas na seção *Explorar* e gerencia arquivos de captura por meio da seção *Capturas*.
-* É possível visualizar dados de uma captura usando a *Csysdig* (a IU da linha de comandos baseada em curses para sysdig) ou os utilitários Sysdig de software livre para analisar os dados em uma captura.
+* É possível visualizar dados de uma captura usando *Csysdig* (a IU da linha de comandos baseada em curses para sysdig) ou os utilitários Sysdig de software livre para analisar os dados em uma captura.
 * É possível procurar dados em uma captura usando filtros.
 * É possível manipular dados em uma captura usando chisels (scripts). 
 
-Quando você ativa o recurso de captura para uma equipe, os arquivos de captura são visíveis somente para membros dessa equipe.
+Quando você ativa o recurso de captura para uma equipe, os arquivos de captura ficam visíveis somente para os membros dessa equipe.
 
 A lista a seguir descreve as principais tarefas quando você trabalha com capturas:
 * [Criando uma Captura](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures_create)

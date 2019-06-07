@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Utilizzo dell'API REST Sysdig
+# Gestione dell'API REST Sysdig
 {: #api}
 
 Utilizza l'API REST Sysdig per automatizzare le attività di routine e monitorare le notifiche.
@@ -42,17 +42,17 @@ Completa la seguente procedura per creare un dashboard:
 
 2. Crea il file JSON che descrive il dashboard. I seguenti campi devono essere configurati come indicato:
 
-    * *name*: immetti il nome del dashboard.
+    * `name`: immetti il nome del dashboard.
 
-    * *id*: imposta su *null*.
+    * `id`: imposta su *null*.
 
-    * *version*: imposta su *null*.
+    * `version`: imposta su *null*.
 
-    * username: imposta sull'email associata al tuo ID IBM.
+    * `username`: imposta sull'email associata al tuo ID IBM.
 
-    * *isShared*: imposta su true per condividere il dashboard con altri membri del team.
+    * `isShared`: imposta su true per condividere il dashboard con altri membri del team.
 
-    * *isPublic*: imposta su true se vuoi che il dashboard sia disponibile pubblicamente.
+    * `isPublic`: imposta su true se vuoi che il dashboard sia disponibile pubblicamente.
 
     * Configura i filtri per definire l'ambito del dashboard.
     
@@ -63,7 +63,7 @@ Completa la seguente procedura per creare un dashboard:
     ```
     {: codeblock}
 
-    dove
+    Dove
 
     * *ENDPOINT* è l'URL per la regione in cui è disponibile l'istanza di monitoraggio. Per ulteriori informazioni, consulta [Endpoint Sysdig](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
@@ -182,7 +182,7 @@ Completa la seguente procedura per scaricare i dashboard disponibili per un team
     ```
     {: codeblock}
 
-    dove
+    Dove
 
     * *ENDPOINT* è l'URL per la regione in cui è disponibile l'istanza di monitoraggio. Per ulteriori informazioni, consulta [Endpoint Sysdig](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
@@ -216,7 +216,7 @@ Completa la seguente procedura per eliminare un dashboard dall'elenco dei dashbo
     ```
     {: codeblock}
 
-    dove
+    Dove
 
     * *ID* è l'ID del dashboard che vuoi eliminare.
 

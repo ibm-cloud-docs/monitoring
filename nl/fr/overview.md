@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview
 
@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# A propos d'{{site.data.keyword.mon_full_notm}}
+# {{site.data.keyword.mon_full_notm}}
 {: #about}
 
 {{site.data.keyword.mon_full}} est un système de gestion d'intelligence de conteneur, tiers et natif pour le cloud, que vous pouvez inclure dans votre architecture
@@ -35,12 +35,12 @@ Pour ajouter des fonctions de surveillance avec {{site.data.keyword.mon_full_not
 Avant de mettre à disposition une instance, prenez en compte les informations suivantes :
 
 * Vos données sont envoyées à un tiers.
-* Le propriétaire du compte peut créer, visualiser et supprimer une instance d'un service dans {{site.data.keyword.cloud_notm}}, et peut autoriser d'autres utilisateurs à utiliser le service {{site.data.keyword.mon_full_notm}}.
+* Le propriétaire du compte peut créer, visualiser et supprimer une instance d'un service dans {{site.data.keyword.cloud_notm}}. Cet utilisateur peut également autoriser d'autres utilisateurs à utiliser le service {{site.data.keyword.mon_full_notm}}.
 * Les autres utilisateurs {{site.data.keyword.cloud_notm}} dotés de droits `administrateur` ou `éditeur`
 peuvent gérer le service {{site.data.keyword.mon_full_notm}} dans {{site.data.keyword.cloud_notm}}. Ces utilisateurs doivent également disposer
 de droits de plateforme pour créer des ressources dans le cadre du groupe de ressources où ils prévoient de mettre à disposition l'instance.
 
-Vous pouvez mettre à disposition une instance dans le cadre d'un groupe de ressources. Un groupe de ressources vous permet d'organiser vos services à des fins de contrôle d'accès et de facturation. Vous pouvez mettre à disposition l'instance {{site.data.keyword.mon_full_notm}} dans le groupe de ressources *par défaut* ou dans un groupe de ressources personnalisé.
+Vous pouvez mettre à disposition une instance dans le cadre d'un groupe de ressources. Vous pouvez utiliser un groupe de ressources afin d'organiser vos services à des fins de contrôle d'accès et de facturation. Vous pouvez mettre à disposition l'instance {{site.data.keyword.mon_full_notm}} dans le groupe de ressources *par défaut* ou dans un groupe de ressources personnalisé.
 
 Lorsque vous [mettez à disposition une instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision), vous obtenez automatiquement une clé d'ingestion, appelée [clé d'accès Sysdig](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key).
 
@@ -93,11 +93,12 @@ La règle de cumul décrit la granularité des données au fil du temps :
 ## Suppression des données
 {: #overview_data_deletion}
 
-Lorsque vous supprimez une instance {{site.data.keyword.mon_full_notm}} d'{{site.data.keyword.cloud_notm}}, vous devez ouvrir un cas via le support pour demander la suppression des données. Pour plus de détails, voir [Contacter le service de support](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp).
+Lorsque vous supprimez une instance {{site.data.keyword.mon_full_notm}} d'{{site.data.keyword.cloud_notm}}, vous devez ouvrir un cas via le support pour demander la suppression des données. Pour plus d'informations, voir [Contacter le service de support](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp).
 
 Lorsque vous supprimez une capture, le fichier de données pour cette capture est automatiquement supprimé.
 
-**REMARQUE : La suppression des données qui sont collectées à partir d'un agent Sysdig unique dans une instance {{site.data.keyword.mon_short}} n'est pas prise en charge.**
+La suppression des données qui sont collectées à partir d'un agent Sysdig unique dans une instance {{site.data.keyword.mon_short}} n'est pas prise en charge.
+{: note}
 
 
 
@@ -136,7 +137,7 @@ Pour surveiller l'utilisation et les coûts de votre service, voir [Affichage de
 ## Plans de service
 {: #overview_plans}
 
-Différents plans de tarification sont disponibles pour une instance {{site.data.keyword.mon_full_notm}}. Pour plus d'informations, voir [Tarification](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
+Différents plans de tarification sont disponibles pour une instance {{site.data.keyword.mon_full_notm}}. [En savoir plus](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 
 
 ## Considérations relatives à la sécurité
@@ -146,6 +147,6 @@ Différents plans de tarification sont disponibles pour une instance {{site.data
 
 Une capture est un fichier de trace que vous pouvez générer pour analyser les événements qui se produisent sur un hôte pendant une période donnée. Les captures contiennent des appels système et d'autres événements de système d'exploitation. Vous pouvez activer ou désactiver cette fonction par noeud lorsque vous configurez l'agent Sysdig qui collecte des métriques à partir de ce noeud. Par défaut, les *captures* sont activées lorsque vous configurez un agent Sysdig. Un noeud peut être un hôte, un conteneur, une machine virtuelle, un serveur bare metal, ou une source de métriques sur laquelle vous installez un agent Sysdig.
 
-**IMPORTANT** Lorsque les captures sont activées, notez que Sysdig aura une visibilité complète de vos opérations. Pour éviter un incident de sécurité et éventuellement d'exposer des données à l'extérieur de votre organisation, vérifiez les règles de sécurité de votre organisation avant d'activer des captures sur un noeud. Pensez à désactiver la fonction *Capture* pour tous vos agents Sysdig.
-{: tip}
+Lorsque les captures sont activées, notez que Sysdig aura une visibilité complète de vos opérations. Pour éviter un incident de sécurité et éventuellement d'exposer des données à l'extérieur de votre organisation, vérifiez les règles de sécurité de votre organisation avant d'activer des captures sur un noeud. Pensez à désactiver la fonction *Capture* pour tous vos agents Sysdig.
+{: important}
 

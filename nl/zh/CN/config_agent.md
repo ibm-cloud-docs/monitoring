@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -52,7 +52,7 @@ subcollection: Sysdig
 
     * COLLECTOR_ENDPOINT 是监视实例在其中可用的区域的采集 URL。
 
-    * TAG_DATA 是格式为 *TAG_NAME:TAG_VALUE* 的逗号分隔标记。可以将一个或多个标记与 Sysdig 代理程序相关联。例如：*role:serviceX,location:us-south*。 
+    * TAG_DATA 是格式为 *TAG_NAME:TAG_VALUE* 的逗号分隔标记。可以将一个或多个标记与 Sysdig 代理程序相关联。例如，*role:serviceX,location:us-south*。 
 
     * 将 **sysdig_capture_enabled** 设置为 *false* 以禁用 Sysdig 捕获功能。缺省情况下，此值设置为 *true*。有关更多信息，请参阅[使用捕获](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)。
 
@@ -97,13 +97,14 @@ subcollection: Sysdig
 
     * COLLECTOR_ENDPOINT 是监视实例在其中可用的区域的采集 URL。
 
-    * TAG_DATA 是格式为 *TAG_NAME:TAG_VALUE* 的逗号分隔标记。可以将一个或多个标记与 Sysdig 代理程序相关联。例如：*role:serviceX,location:us-south*。 
+    * TAG_DATA 是格式为 *TAG_NAME:TAG_VALUE* 的逗号分隔标记。可以将一个或多个标记与 Sysdig 代理程序相关联。例如，*role:serviceX,location:us-south*。 
 
     * 将 **sysdig_capture_enabled** 设置为 *false* 以禁用 Sysdig 捕获功能。缺省情况下，此值设置为 *true*。有关更多信息，请参阅[使用捕获](/docs/services/Monitoring-with-Sysdig/captures.html#captures)。
 
     * 将 **SECURE** 设置为 *true* 以将 SSL 用于通信。
 
-    **注：**容器以拆离方式运行。要查看容器的输出，请除去 *-d*。
+    容器以拆离方式运行。要查看容器的输出，请除去 *-d*。
+    {: note}
 
 
 
@@ -129,8 +130,6 @@ subcollection: Sysdig
     配置文件下载完成后，会显示一个命令，您可以使用该命令将本地 Kubernetes 配置文件的路径设置为环境变量。
 
     然后，复制并粘贴终端中显示的命令，以设置 KUBECONFIG 环境变量。
-
-    **注：**每次登录到 {{site.data.keyword.containerlong}} CLI 来使用集群时，都必须运行这些命令，以将集群的配置文件的路径设置为会话变量。Kubernetes CLI 使用此变量来查找与 {{site.data.keyword.cloud_notm}} 中的集群连接所必需的本地配置文件和证书。
 
 4. 部署 Sysdig 代理程序。运行以下命令：
 
@@ -172,8 +171,6 @@ subcollection: Sysdig
     配置文件下载完成后，会显示一个命令，您可以使用该命令将本地 Kubernetes 配置文件的路径设置为环境变量。
 
     然后，复制并粘贴终端中显示的命令，以设置 KUBECONFIG 环境变量。
-
-    **注：**每次登录到 {{site.data.keyword.containerlong}} CLI 来使用集群时，都必须运行这些命令，以将集群的配置文件的路径设置为会话变量。Kubernetes CLI 使用此变量来查找与 {{site.data.keyword.cloud_notm}} 中的集群连接所必需的本地配置文件和证书。
 
 4. 创建名为 **sysdig-agent** 的服务帐户来监视 Kubernetes 集群。运行以下命令：
 
@@ -221,7 +218,7 @@ subcollection: Sysdig
 
     * **collector**：此参数指定监视实例在其中可用的区域的采集 URL。 
 
-    * **collector_port**：此参数指示收集器侦听的端口。其值必须为 *6443*。
+    * **collector_port**：此参数指示收集器侦听的端口。该值必须设置为 *6443*。
     
     * **ssl**：此参数必须设置为 *true*。
     
@@ -231,7 +228,7 @@ subcollection: Sysdig
 
     * **sysdig_capture_enabled**：此参数启用或禁用 Sysdig 捕获功能。缺省情况下，此值设置为 *true*。有关更多信息，请参阅[使用捕获](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)。
 
-    示例 YAML 文件如下所示：
+    YAML 文件示例如下所示：
 
     ```
      apiVersion: v1

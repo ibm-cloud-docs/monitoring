@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete instance
 
@@ -27,16 +27,16 @@ subcollection: Sysdig
 {{site.data.keyword.mon_full_notm}} サービスのインスタンスは、{{site.data.keyword.Bluemix}} UI またはコマンド・ラインを使用して削除できます。
 {:shortdesc}
 
-{{site.data.keyword.cloud_notm}} からインスタンスを削除する場合、以下の情報のタイディアップ (整理) を考慮してください。
+{{site.data.keyword.cloud_notm}} からインスタンスを削除する場合、タイディアップ (整理) のために、以下の情報を検討してください。
 
 1. 削除する {{site.data.keyword.mon_full_notm}} インスタンスにメトリックを転送しているソースのリストを作成します。 ソースごとに Sysdig エージェントを削除する必要があります。
-2. ユーザーに付与されている、そのインスタンスを処理するための許可を削除します。 
+2. インスタンスを使用するためにユーザーに付与されている権限を削除します。 
 
-    アクセス・グループを使用してインスタンスへのアクセスを管理している場合は、アクセス・グループを削除する必要があります。
+    アクセス・グループを使用してインスタンスへのアクセス権限を管理している場合は、アクセス・グループを削除する必要があります。
 
-    アクセス・グループを使用して別のサービス・インスタンスへのアクセスも管理している場合は、削除するインスタンスへの許可を付与しているポリシーを削除する必要があります。
+    アクセス・グループを使用してさまざまなサービス・インスタンスへのアクセス権限を管理している場合は、削除するインスタンスへの権限を付与しているポリシーを削除する必要があります。
     
-    ユーザーに個別のポリシーを付与している場合は、アクセス権限を持つ各ユーザーの情報を収集して、削除するインスタンスに関連したポリシーを 1 つずつ削除する必要があります。
+    ユーザーに個別にポリシーを付与している場合は、インスタンスへのアクセス権限を持っている各ユーザーの情報を集める必要があります。次に、削除するインスタンスに関連するポリシーを 1 つずつ削除する必要があります。
 
 
 その後、{{site.data.keyword.cloud_notm}} ダッシュボードからインスタンスを削除します。
@@ -47,9 +47,7 @@ subcollection: Sysdig
 
 {{site.data.keyword.cloud_notm}} UI を使用して {{site.data.keyword.mon_full_notm}} のインスタンスを削除するには、以下のステップを実行します。
 
-1. {{site.data.keyword.cloud_notm}} アカウントにログインします。
-
-    [{{site.data.keyword.cloud_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/login){:new_window} をクリックして、{{site.data.keyword.cloud_notm}} ダッシュボードを起動します。
+1. [{{site.data.keyword.cloud_notm}} アカウントにログイン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/login){:new_window} します。
 
 	ユーザー ID とパスワードを使用してログインすると、{{site.data.keyword.cloud_notm}} UI が開きます。
 
@@ -67,11 +65,9 @@ subcollection: Sysdig
 
 コマンド・ラインを使用して {{site.data.keyword.mon_full_notm}} のインスタンスを削除するには、以下のステップを実行します。
 
-1. [前提条件] {{site.data.keyword.cloud_notm}} CLI をインストールします。
+1. [前提条件] {{site.data.keyword.cloud_notm}} CLI をインストールします。CLI がインストールされている場合は、次のステップに進みます。
 
    詳しくは、[『{{site.data.keyword.cloud_notm}}CLI のインストール』](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)を参照してください。
-
-   CLI がインストールされている場合は、次のステップに進みます。
 
 2. インスタンスをプロビジョンしたい、{{site.data.keyword.cloud_notm}} の地域にログインします。 次のコマンドを実行します。 [`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -86,7 +82,7 @@ subcollection: Sysdig
     ```
     {: codeblock}
 
-    ここで、NAME は、インスタンスの名前です。
+    ここで、NAME は、インスタンスの名前です
 
     例えば、インスタンスを削除するために以下のコマンドを実行します。
 

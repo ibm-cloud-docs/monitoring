@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete agent
 
@@ -46,8 +46,6 @@ Kubernetes クラスターから Sysdig エージェントを削除するには�
 
     次に、KUBECONFIG 環境変数を設定するためのコマンドとしてターミナルに表示されたものを、コピーして貼り付けます。
 
-    **注:** クラスターの作業を行うために {{site.data.keyword.containerlong}} CLI にログインするたびに、これらのコマンドを実行して、クラスターの構成ファイルのパスをセッション変数として設定する必要があります。 Kubernetes CLI はこの変数を使用して、{{site.data.keyword.cloud_notm}} 内のクラスターと接続するために必要なローカル構成ファイルと証明書を検索します。
-
 2. クラスター役割バインディングを削除します。 次のコマンドを実行します。
 
     ```
@@ -62,7 +60,7 @@ Kubernetes クラスターから Sysdig エージェントを削除するには�
     ```
     {: codeblock}
 
-4. daemonset を削除します。 次のコマンドを実行します。
+4. `daemonset` を削除します。次のコマンドを実行します。
 
     ```
     kubectl delete daemonset sysdig-agent -n ibm-observe

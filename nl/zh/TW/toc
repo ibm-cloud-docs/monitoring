@@ -11,7 +11,6 @@ IBM Cloud Monitoring with Sysdig
     pricing.md
     manage.md
     monitoring.md
-    customize_agent.md
     network.md
     iam.md
 
@@ -53,7 +52,7 @@ IBM Cloud Monitoring with Sysdig
     default_dashboards.md
 
     {: .topicgroup}
-    度量字典
+    度量值字典
         [容器](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209092629/Containers)
         [Docker/CIS 基準性能測試](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/261750836/Docker+CIS+Benchmarks)
         [檔案](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/240943105/File)

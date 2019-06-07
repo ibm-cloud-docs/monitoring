@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview
 
@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Informazioni su {{site.data.keyword.mon_full_notm}}
+# {{site.data.keyword.mon_full_notm}}
 {: #about}
 
 {{site.data.keyword.mon_full}} è un sistema di gestione di terze parti, nativo cloud e di intelligence del contenitore che puoi includere come parte della tua architettura {{site.data.keyword.cloud_notm}}. Utilizzalo per ottenere visibilità operativa sulle prestazioni e sull'integrità delle applicazioni, dei servizi e delle piattaforme. Offre agli amministratori, agli sviluppatori e ai team DevOps una telemetria di stack completa con funzioni avanzate per il monitoraggio e la risoluzione dei problemi, la definizione di avvisi e la progettazione di dashboard personalizzati. {{site.data.keyword.mon_full_notm}} è gestito da Sysdig in collaborazione con {{site.data.keyword.IBM_notm}}.
@@ -34,10 +34,10 @@ Per aggiungere le funzioni di monitoraggio a {{site.data.keyword.mon_full_notm}}
 Prima di eseguire il provisioning di un'istanza, considera le seguenti informazioni:
 
 * I tuoi dati vengono inviati a una terza parte.
-* Il proprietario dell'account può creare, visualizzare ed eliminare un'istanza di un servizio in {{site.data.keyword.cloud_notm}} e può concedere le autorizzazioni ad altri utenti in modo che possano utilizzare il servizio {{site.data.keyword.mon_full_notm}}.
+* Il proprietario dell'account può creare, visualizzare ed eliminare un'istanza di un servizio in {{site.data.keyword.cloud_notm}}. Questo utente può inoltre concedere le autorizzazioni ad altri utenti in modo che possano utilizzare il servizio {{site.data.keyword.mon_full_notm}}. 
 * Altri utenti {{site.data.keyword.cloud_notm}} con le autorizzazioni `administrator` o `editor` possono gestire il servizio {{site.data.keyword.mon_full_notm}} in {{site.data.keyword.cloud_notm}}. Questi utenti devo disporre anche delle autorizzazioni della piattaforma per creare le risorse all'interno del contesto del gruppo di risorse in cui pensano di eseguire il provisioning dell'istanza.
 
-Esegui il provisioning di un'istanza all'interno del contesto di un gruppo di risorse. Un gruppo di risorse ti consente di organizzare i tuoi servizi per scopi di controllo dell'accesso e fatturazione. Puoi eseguire il provisioning di un'istanza {{site.data.keyword.mon_full_notm}} nel gruppo di risorse *predefinito* o in uno personalizzato.
+Esegui il provisioning di un'istanza all'interno del contesto di un gruppo di risorse. Utilizza un gruppo di risorse per organizzare i tuoi servizi per scopi di controllo dell'accesso e fatturazione. Puoi eseguire il provisioning di un'istanza {{site.data.keyword.mon_full_notm}} nel gruppo di risorse *predefinito* o in uno personalizzato.
 
 Quando [esegui il provisioning di un'istanza](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision), ottieni automaticamente una chiave di inserimento, nota come la [chiave di accesso Sysdig](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key).
 
@@ -58,7 +58,7 @@ La seguente figura mostra la panoramica dei componenti per il servizio {{site.da
 
 Quando configuri un agent Sysdig per raccogliere ed inoltrare i dati a un'istanza {{site.data.keyword.mon_full_notm}}, i dati vengono automaticamente raccolti e sono disponibili per l'analisi tramite l'IU web.
 
-I dati vengono raccolti con una frequenza di 10 secondi. 
+I dati vengono raccolti con una frequenza di 10 secondi.  
 
 ## Disponibilità dei dati
 {: #overview_availability}
@@ -89,11 +89,12 @@ La politica di rollup descrive la granularità dei dati nel tempo:
 ## Eliminazione dei dati
 {: #overview_data_deletion}
 
-Quando elimini un'istanza di {{site.data.keyword.mon_full_notm}} da {{site.data.keyword.cloud_notm}}, devi aprire un caso tramite il supporto per richiedere che i dati vengano eliminati. Per i dettagli, consulta [come contattare il supporto](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp).
+Quando elimini un'istanza di {{site.data.keyword.mon_full_notm}} da {{site.data.keyword.cloud_notm}}, devi aprire un caso tramite il supporto per richiedere che i dati vengano eliminati. Per ulteriori informazioni, consulta [come contattare il supporto](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp).
 
 Quando elimini un'acquisizione, il file di dati per tale acquisizione viene eliminato automaticamente.
 
-**NOTA: l'eliminazione dei dati raccolti da un solo agent Sysdig in un'istanza {{site.data.keyword.mon_short}} non è supportata.**
+L'eliminazione dei dati raccolti da un solo agent Sysdig in un'istanza {{site.data.keyword.mon_short}} non è supportata.
+{: note}
 
 
 
@@ -132,7 +133,7 @@ Per monitorare l'utilizzo e i costi del tuo servizio, consulta [Visualizzazione 
 ## Piani del servizio
 {: #overview_plans}
 
-Sono disponibili diversi piani del servizio per un'istanza {{site.data.keyword.mon_full_notm}}. Per ulteriori informazioni, vedi [Prezzi](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
+Sono disponibili diversi piani del servizio per un'istanza {{site.data.keyword.mon_full_notm}}. [Ulteriori informazioni](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 
 
 ## Considerazioni sulla sicurezza
@@ -142,6 +143,6 @@ Sono disponibili diversi piani del servizio per un'istanza {{site.data.keyword.m
 
 Un'acquisizione è un file di traccia che puoi generare per analizzare cosa succede in un host durante un intervallo di tempo. Le acquisizioni contengono chiamate di sistema e altri eventi SO. Puoi abilitare o disabilitare questa funzione per il nodo quando configuri l'agent Sysdig che raccoglie le metriche per tale nodo. Per impostazione predefinita, le *acquisizioni* vengono abilitate quando configuri un agent Sysdig. Un nodo può essere un host, un contenitore, una macchina virtuale, un server bare metal o una qualsiasi origine della metrica in cui hai installato un agent Sysdig.
 
-**IMPORTANTE** quando le acquisizioni sono abilitate, tieni presente che Sysdig avrà una visibilità approfondita nelle tue operazioni. Per evitare un incidente di sicurezza e la potenziale esposizione dei dati all'esterno della tua organizzazione, controlla le politiche di sicurezza della tua organizzazione prima di abilitare le acquisizioni su un nodo. Considera di disabilitare la funzione *Capture* per tutti i tuoi agent Sysdig.
-{: tip}
+Quando le acquisizioni sono abilitate, tieni presente che Sysdig avrà una visibilità approfondita nelle tue operazioni. Per evitare un incidente di sicurezza e la potenziale esposizione dei dati all'esterno della tua organizzazione, controlla le politiche di sicurezza della tua organizzazione prima di abilitare le acquisizioni su un nodo. Considera di disabilitare la funzione *Capture* per tutti i tuoi agent Sysdig.
+{: important}
 

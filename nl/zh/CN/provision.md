@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -24,11 +24,8 @@ subcollection: Sysdig
 # 供应实例
 {: #provision}
 
-必须先在 {{site.data.keyword.Bluemix}} 中供应 Sysdig 服务的实例，然后才能使用 Sysdig 来监视和管理度量值。
+必须在 {{site.data.keyword.cloud_notm}} 中供应 Sysdig 服务的实例，然后才能使用 Sysdig 来监视和管理度量值。
 {:shortdesc}
-
-要在公共云区域中供应 Sysdig 实例，必须选择与实例关联的服务套餐、收集其中度量值的区域，以及用于确定可以监视的度量值数及其保留期的套餐。
-
 
 
 ## 通过目录供应 Sysdig 实例
@@ -72,11 +69,9 @@ subcollection: Sysdig
 
 要通过命令行供应 Sysdig 的实例，请完成以下步骤：
 
-1. [先决条件] 安装 {{site.data.keyword.cloud_notm}} CLI。
+1. [先决条件] 安装 {{site.data.keyword.cloud_notm}} CLI。如果 CLI 已安装，请继续执行下一步。
 
    有关更多信息，请参阅[安装 {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)。
-
-   如果 CLI 已安装，请继续执行下一步。
 
 2. 登录到 {{site.data.keyword.cloud_notm}} 中要供应实例的区域。运行以下命令：[`ibmcloud login`](/docs/cli/reference/ibmcloud/bx_cli.html#ibmcloud_login)
 
@@ -93,13 +88,13 @@ subcollection: Sysdig
 
     其中
 
-    * NAME 是 Sysdig 实例的名称
+    * NAME 是 Sysdig 实例的名称。
     
-    * *sysdig-monitor* 是 {{site.data.keyword.cloud_notm}} 中 {{site.data.keyword.mon_full_notm}} 服务的名称
+    * `sysdig-monitor` 是 {{site.data.keyword.cloud_notm}} 中 {{site.data.keyword.mon_full_notm}} 服务名称的名称。
     
-    * SERVICE_PLAN_NAME 是套餐的类型。有效值为：*lite* 和 *graduated-tier*
+    * SERVICE_PLAN_NAME 是套餐的类型。有效值为 *lite* 和 *graduated-tier*。
     
-    * LOCATION 是在其中创建实例的区域
+    * LOCATION 是在其中创建实例的区域。
 
     例如，要为实例供应付费套餐，请运行以下命令：
 

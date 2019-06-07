@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -43,27 +43,25 @@ Sysdig の Web ベースのユーザー・インターフェースを使用し�
 
 {{site.data.keyword.mon_full_notm}} についてお読みください。 詳しくは、[概要](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#about)を参照してください。
 
-{{site.data.keyword.cloud_notm}} アカウントのメンバーまたは所有者であるユーザー ID を使用してください。 {{site.data.keyword.cloud_notm}} ユーザー ID を取得するには、[「登録」![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/login){:new_window} にアクセスしてください。
+{{site.data.keyword.cloud_notm}} アカウントのメンバーまたは所有者であるユーザー ID を使用してください。 {{site.data.keyword.cloud_notm}} ユーザー ID を取得するには、[登録 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/login){:new_window} に移動してください。
 
 {{site.data.keyword.IBM_notm}}ID は、以下のリソースごとの IAM ポリシーに割り当てられている必要があります。 
 
 | リソース                             | アクセス・ポリシー有効範囲 | 役割    | 地域    | 情報                  |
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
-| リソース・グループ **デフォルト**           |  リソース・グループ            | ビューアー  | us-south  | デフォルトのリソース・グループのサービス・インスタンスをユーザーが表示するためにこのポリシーは必須です。    |
-| {{site.data.keyword.mon_full_notm}} サービス |  リソース・グループ            | エディター  | us-south  | デフォルトのリソース・グループの {{site.data.keyword.mon_full_notm}} サービスをユーザーがプロビジョンおよび管理するためにこのポリシーは必須です。   |
+| リソース・グループ **デフォルト**           |  リソース・グループ            | ビューアー  | `Us-south`  | デフォルトのリソース・グループのサービス・インスタンスをユーザーが表示するためにこのポリシーは必須です。    |
+| {{site.data.keyword.mon_full_notm}} サービス |  リソース・グループ            | エディター  | `Us-south`  | デフォルトのリソース・グループの {{site.data.keyword.mon_full_notm}} サービスをユーザーがプロビジョンおよび管理するためにこのポリシーは必須です。   |
 {: caption="表 1. チュートリアルを完了するために必要な IAM ポリシーのリスト" caption-side="top"} 
 
 {{site.data.keyword.cloud_notm}} CLI をインストールします。 詳しくは、[『{{site.data.keyword.cloud_notm}}CLI のインストール』](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli)を参照してください。
 
 
-## ステップ 1: {{site.data.keyword.mon_full_notm}} インスタンスのプロビジョン
+## ステップ 1. {{site.data.keyword.mon_full_notm}} インスタンスをプロビジョンする
 {: #ubuntu_step1}
 
 {{site.data.keyword.cloud_notm}} UI を使用して {{site.data.keyword.mon_full_notm}} のインスタンスをプロビジョンするには、以下のステップを実行します。
 
-1. {{site.data.keyword.cloud_notm}} アカウントにログインします。
-
-    [{{site.data.keyword.cloud_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/login){:new_window} をクリックして、{{site.data.keyword.cloud_notm}} ダッシュボードを起動します。
+1. [{{site.data.keyword.cloud_notm}} アカウントにログイン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/login){:new_window} します。
 
 	ユーザー ID とパスワードを使用してログインすると、{{site.data.keyword.cloud_notm}} UI が開きます。
 
@@ -95,7 +93,7 @@ Sysdig の Web ベースのユーザー・インターフェースを使用し�
 **注:** CLI を使用してインスタンスをプロビジョンするには、[{{site.data.keyword.cloud_notm}} CLI を使用したインスタンスのプロビジョン](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli)を参照してください。
 
 
-## ステップ 2: インスタンスにメトリックを送信するように Ubuntu サーバーを構成する
+## ステップ 2. インスタンスにメトリックを送信するように Ubuntu サーバーを構成する
 {: #ubuntu_step2}
 
 {{site.data.keyword.mon_full_notm}} インスタンスにメトリックを送信するように Ubuntu サーバーを構成するには、Sysdig エージェントをインストールする必要があります。 
@@ -105,11 +103,11 @@ Sysdig の Web ベースのユーザー・インターフェースを使用し�
 1. 端末を開きます。 次に、{{site.data.keyword.cloud_notm}} にログインします。 以下のコマンドを実行して、プロンプトに従います。
 
     ```
-    ibmcloud login -a api.ng.bluemix.net
+    ibmcloud login -a cloud.ibm.com
     ```
     {: codeblock}
 
-    {{site.data.keyword.mon_full_notm}} インスタンスをプロビジョンしたアカウントを選択します。
+    {{site.data.keyword.mon_full_notm}} インスタンスを使用できるアカウントを選択します。
 
 2. Sysdig アクセス・キーを取得します。 詳しくは、[{{site.data.keyword.cloud_notm}} UI を使用したアクセス・キーの取得](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui)を参照してください。
 
@@ -122,13 +120,13 @@ Sysdig の Web ベースのユーザー・インターフェースを使用し�
     ```
     {: codeblock}
 
-    各部分の説明:
+    説明
 
     * SYSDIG_ACCESS_KEY はインスタンスの取り込みキーです。
 
     * COLLECTOR_ENDPOINT は、モニタリング・インスタンスが使用可能な地域の取り込み URL です。
 
-    * TAG_DATA は、*TAG_NAME:TAG_VALUE* 形式のコンマ区切りタグです。 1 つ以上のタグを Sysdig エージェントに関連付けることができます。 例えば、*role:serviceX,location:us-south* などです。 後で、これらのタグを使用して、エージェントが実行されている環境のメトリックを識別できます。
+    * TAG_DATA は、*TAG_NAME:TAG_VALUE* 形式のコンマ区切りタグです。 1 つ以上のタグを Sysdig エージェントに関連付けることができます。 例えば、*role:serviceX,location:us-south* などです。後で、これらのタグを使用して、エージェントが実行されている環境のメトリックを識別できます。
 
     * **sysdig_capture_enabled** を *false* に設定して、Sysdig キャプチャー機能を無効にします。 デフォルトでは、*true* に設定されています。 詳しくは、[キャプチャーの処理](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)を参照してください。
 
@@ -150,14 +148,12 @@ Sysdig エージェントを正しくインストールできない場合には�
 
 
 
-## ステップ 3: Sysdig Web UI の起動
+## ステップ 3. Sysdig Web UI を起動する
 {: #ubuntu_step3}
 
 Web UI を起動するには、以下のステップを実行します。
 
-1. {{site.data.keyword.cloud_notm}} アカウントにログインします。
-
-    [{{site.data.keyword.cloud_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/login){:new_window} をクリックして、{{site.data.keyword.cloud_notm}} ダッシュボードを起動します。
+1. [{{site.data.keyword.cloud_notm}} アカウントにログイン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/login){:new_window} します。
 
 	ユーザー ID とパスワードを使用してログインすると、{{site.data.keyword.cloud_notm}} ダッシュボードが開きます。
 
@@ -173,11 +169,11 @@ Sysdig エージェントが正常に構成されている場合、*「探索」
 
 ただし、Sysdig エージェントが正常にインストールされていない場合や、誤った取り込みエンドポイントが指示されている場合、またはアクセス・キーが誤っている場合は、開いたページに対処方法が示されます。
 
-ブラウザーごとに 1 つの Web UI セッションのみ使用できます。
+使用できる Web UI セッションはブラウザーごとに 1 つのみです。
 {: tip}
 
 
-## ステップ 4: Ubuntu サーバーのモニター
+## ステップ 4. Ubuntu サーバーをモニターする
 {: #ubuntu_step4}
 
 Web UI で使用可能な**「探索」**ビューで、Ubuntu サーバーをモニターできます。 このビューは、インフラストラクチャーのトラブルシューティングやモニターの開始点となります。 ユーザーに対する Web UI のデフォルト・ホーム・ページです。

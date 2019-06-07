@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, troubleshooting
 
@@ -23,7 +23,7 @@ subcollection: Sysdig
 # {{site.data.keyword.mon_full_notm}} のトラブルシューティング
 {: #troubleshoot}
 
-このトピックでは、{{site.data.keyword.mon_full_notm}} サービスの使用時に発生する一般的な問題をカバーします。 多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
+{{site.data.keyword.mon_full_notm}} サービスの使用時に発生する一般的な問題のいくつかについて説明します。多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {:shortdesc}
 
 ## キャプチャーの作成中にエラーが発生します
@@ -46,7 +46,7 @@ subcollection: Sysdig
 
 [キャプチャー・ファイル](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-captures#captures)の状況が *requested* に設定され、状況 *uploaded* に変更されません。 分析のためにキャプチャー・ファイルが使用可能になるまで待機しています。
 
-Web UI の*「キャプチャー (Captures)」*セクションで、ホストのキャプチャー・ファイルの状況が *uploaded* に変更されません。
+Web UI の*「キャプチャー (Captures)」*セクションで、ホストのキャプチャー・ファイルの状況が *uploaded* に変わりません。
 {: tsSymptoms}
 
 ホストの TCP ポート 6443 が無効になっています。

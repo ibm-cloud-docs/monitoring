@@ -49,7 +49,7 @@ En la vista *Explorar* de la interfaz de usuario web, puede ejecutar cualquiera 
 | Tarea                                                                                        | Descripción     |
 |---------------------------------------------------------------------------------------------|-----------------|
 | [Copiar un grupo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#copy_group)                | Copiar un grupo en otros equipos. |
-| [Crear un grupo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#create_group)            | Crea un grupo nuevo. |
+| [Crear un grupo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#create_group)            | Crear un grupo. |
 | [Suprimir un grupo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#delete_group)            | Suprimir un grupo. |
 | [Renombrar un grupo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#rename_group)            | Cambiar el nombre de un grupo. |
 | [Compartir un grupo](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-groups#share_group)              | Compartir un grupo con otros miembros del equipo. |
@@ -60,20 +60,21 @@ En la vista *Explorar* de la interfaz de usuario web, puede ejecutar cualquiera 
 ## Agregación
 {: #manage_aggregation}
 
-La **agregación** de datos se produce automáticamente cuando se configura un gráfico o se crea una alerta para una métrica. Hay dos tipos de agregación: agregación de tiempo y agregación de grupos. 
+La **agregación** de datos se produce automáticamente cuando se configura un gráfico o se crea una alerta para una métrica. 
+
+Existen distintos tipos de agregación que se utilizan para las métricas: 
 * La agregación de tiempo se realiza siempre antes que la agregación de grupos.
 * Para crear comparaciones de varias series y varias alertas, también puede dividir los datos agregados en secciones de menor tamaño denominadas **segmentos** mediante el uso de etiquetas. 
 
-Sysdig agrega datos a lo largo del tiempo. Luego toma estos puntos de datos y los agrupa para mostrar los datos en métricas y en paneles de control o para calcular umbrales de alertas. 
+La agregación de tiempo se realiza siempre antes que la agregación de grupos.
+
+Sysdig agrega datos a lo largo del tiempo. Luego tome estos puntos de datos y los agrupa para mostrar los datos en métricas y en paneles de control o para calcular umbrales de alertas. 
 {: tip}
 
 Puede personalizar la forma en que se agregan los datos al configurar un gráfico o al crear una alerta para una métrica.
 
-Hay dos formas de agregación que se utilizan para las métricas: 
-* Agregación de tiempo
-* Agregación de grupos
 
-**La agregación de tiempo se realiza siempre antes que la agregación de grupos.**
+
 
 
 ### Agregación de tiempo
@@ -81,29 +82,29 @@ Hay dos formas de agregación que se utilizan para las métricas:
 
 **De forma predeterminada, un agente de Sysdig recopila y notifica métricas con una resolución de 10 segundos.**
 
-En los gráficos de series temporales que incluyen datos de cinco minutos o menos, 
+En los gráficos de series temporales que incluyen datos de 5 minutos o menos, 
 * Los puntos de datos se dibujan con una resolución de 10 segundos
 * No se produce la agregación de tiempo.
 
 La agregación de tiempo se produce automáticamente en las siguientes situaciones:
 
-* En los gráficos de series temporales que incluyen datos correspondientes a un intervalo de tiempo de más de cinco minutos, los puntos de datos se dibujan como un agregado para un intervalo de tiempo adecuado. Por ejemplo, para un gráfico que muestra datos correspondientes a una hora, cada punto de datos representa un intervalo de un minuto.
-* Cuando se muestran datos históricos. Los datos se acumulan con el tiempo. Puede elegir qué puntos de datos se utilizarán cuando se visualicen datos antiguos.
+* En los gráficos de series temporales que incluyen datos correspondientes a un intervalo de tiempo de más de 5 minutos, los puntos de datos se dibujan como un agregado para un intervalo de tiempo adecuado. Por ejemplo, para un gráfico que muestra datos correspondientes a 1 hora, cada punto de datos representa un intervalo de 1 minuto.
+* Cuando se muestran datos históricos, los datos se acumulan con el tiempo. Puede elegir qué puntos de datos se utilizarán cuando se visualicen datos antiguos.
 
 En la tabla siguiente se muestran distintos tipos de agregación para los gráficos de series de tiempo:
 
 | Tipo de agregación | Descripción                                                              |
 |------------------|--------------------------------------------------------------------------|
-| average          | Promedio de los valores de las métricas recuperadas durante el periodo de tiempo evaluado. |
-| rate (timeAvg)   | Valor medio de la métrica durante el periodo de tiempo evaluado.            |
-| maximum	         | Valor más alto durante el periodo de tiempo evaluado.                          |
-| minimum	         | Valor más bajo durante el periodo de tiempo evaluado.                           |
-| sum              | Suma combinada de la métrica durante el periodo de tiempo evaluado.             |
+| `average`          | Promedio de los valores de las métricas recuperadas durante el periodo de tiempo evaluado. |
+| `rate (timeAvg)`   | Valor medio de la métrica durante el periodo de tiempo evaluado.            |
+| `maximum`	         | Valor más alto durante el periodo de tiempo evaluado.                          |
+| `minimum`         | Valor más bajo durante el periodo de tiempo evaluado.                           |
+| `sum`              | Suma combinada de la métrica durante el periodo de tiempo evaluado.             |
 {: caption="Tabla 2. Tipos de agregación para gráficos de series temporales" caption-side="top"} 
 
 **Nota:** de forma predeterminada, se utiliza el promedio para mostrar puntos de datos correspondientes a un intervalo de tiempo.
 
-Los tipos de agregación rate y average son muy parecidos. Generalmente proporcionan el mismo resultado. Sin embargo, cada uno se calcula de una forma diferente. Si el tiempo de la agregación se ha establecido en un minuto, el agente de Sysdig se establece para recuperar seis muestras, una cada 10 segundos. Tenga en cuenta que, en algunos casos, es posible que las muestras no se encuentren debido a desconexiones u otras circunstancias.
+Los tipos de agregación rate y average son parecidos. Generalmente proporcionan el mismo resultado. Sin embargo, cada uno se calcula de una forma diferente. Si el tiempo de la agregación se ha establecido en 1 minuto, el agente de Sysdig se establece para recuperar seis muestras, una cada 10 segundos. Tenga en cuenta que, en algunos casos, es posible que las muestras no se encuentren debido a desconexiones u otras circunstancias.
 
 
 ### Agregación de grupos
@@ -117,10 +118,10 @@ En la tabla siguiente se muestran los distintos tipos de agregación de grupos:
 
 | Tipo de agregación | Descripción                                        |
 |------------------|----------------------------------------------------|
-| average          | Valor medio de las muestras del intervalo.           |
-| maximum	         | Valor más alto de las muestras del intervalo.           |
-| minimum	         | Valor más bajo de las muestras del intervalo.            |
-| sum              | Valor combinado de las muestras del intervalo.          |
+| `average`          | Valor medio de las muestras del intervalo.           |
+| `maximum`	         | Valor más alto de las muestras del intervalo.           |
+| `minimum`	         | Valor más bajo de las muestras del intervalo.            |
+| `sum`              | Valor combinado de las muestras del intervalo.          |
 {: caption="Tabla 3. Tipos de agregación para la agregación de grupos" caption-side="top"} 
 
 
@@ -148,13 +149,13 @@ En la tabla siguiente se muestran las tareas que puede ejecutar para cambiar el 
 
 Los **equipos** agrupan usuarios y controlan los datos y los permisos para trabajar con las capturas de Sysdig y los sucesos de la infraestructura para dichos usuarios. 
 
-Un administrador de Sysdig puede definir tantos equipos como desee. Para cada equipo, puede configurar la información siguiente:
-* El *equipo predeterminado*: puede definir este equipo de modo que sea el equipo al que se asigna de forma predeterminada cualquier usuario que inicie la sesión por primera vez en la interfaz de usuario web.
-* El *punto de entrada predeterminado*: puede especificar la vista en la interfaz de usuario web que se abre cada vez que un usuario inicia una sesión. Los puntos de entrada válidos son: vista *Explorar*, vista *Paneles de control*, vista *Sucesos*, vista *Alertas* y vista *Valores*.
-* El ámbito: puede limitar los datos que pueden ver los usuarios. Puede elegir *Host* o *Contenedor* para definir el nivel de datos que pueden ver. A continuación, puede añadir una o varias condiciones. Si el ámbito se establece en *Host*, los usuarios pueden ver toda la información a nivel de host y a nivel de contenedor. Si el ámbito se establece en *Contenedor*, los usuarios solo pueden ver la información a nivel contenedor.
-* Permisos: puede habilitar o inhabilitar las características siguientes: *Capturas de Sysdig* y *Sucesos de la infraestructura*. Los archivos de captura solo resultarán visibles para los miembros del equipo. **Nota:** las capturas incluyen información detallada de cada contenedor de un host, independientemente del ámbito del equipo. Cuando los sucesos de infraestructura están habilitados, los usuarios pueden ver todos los sucesos personalizados de la infraestructura de cada usuario y agente de Sysdig de la instancia.
+Un administrador de Sysdig puede definir tantos equipos como desee. Para cada equipo, el administrador puede configurar la información siguiente:
+* `El equipo predeterminado`: puede hacer que este equipo sea el equipo de cualquier usuario que inicie la sesión en la interfaz de usuario web por primera vez. 
+* `El punto de entrada predeterminado`: puede especificar la vista en la interfaz de usuario web que se abre cada vez que un usuario inicia una sesión. Los puntos de entrada válidos son la vista *Explorar*, la vista *Paneles de control*, la vista *Sucesos*, la vista *Alertas* y la vista *Valores*.
+* `El ámbito`: puede limitar los datos que pueden ver los usuarios. Puede elegir *Host* o *Contenedor* para definir el nivel de datos que pueden ver. A continuación, puede añadir una o varias condiciones. Si el ámbito se establece en *Host*, los usuarios pueden ver toda la información a nivel de host y a nivel de contenedor. Si el ámbito se establece en *Contenedor*, los usuarios solo pueden ver la información a nivel contenedor.
+* `Permisos`: puede habilitar o inhabilitar las características siguientes: *capturas de Sysdig* y *sucesos de la infraestructura*. Los archivos de captura son visibles para los miembros del equipo. **Nota:** las capturas incluyen información detallada de cada contenedor de un host, independientemente del ámbito del equipo. Cuando los sucesos de infraestructura están habilitados, los usuarios pueden ver todos los sucesos personalizados de la infraestructura de cada usuario y agente de Sysdig de la instancia.
 
-De forma predeterminada, hay un equipo de **Operaciones de supervisor** que está predefinido para cada instancia de {{site.data.keyword.mon_full_notm}}.
+De forma predeterminada, hay un equipo de **Operaciones de supervisor** predefinido para cada instancia de {{site.data.keyword.mon_full_notm}}.
 * Este equipo no se puede suprimir.
 * Los usuarios se añaden automáticamente como miembros de este equipo y se les otorga visibilidad completa sobre todos los recursos disponibles en la instancia. 
 
@@ -162,7 +163,7 @@ De forma predeterminada, hay un equipo de **Operaciones de supervisor** que est�
 * Un administrador debe cambiar al equipo de *Operaciones de supervisión* para poder crear equipos o cambiar los valores de otros equipos.
 * Después de que un usuario inicie la sesión en {{site.data.keyword.cloud_notm}} e inicie la interfaz de usuario web de Sysdig, un administrador puede gestionar dicho usuario en la interfaz de usuario web de Sysdig. El usuario se crea en la base de datos de Sysdig cuando el usuario inicia la sesión en la interfaz de usuario web de Sysdig por primera vez. 
 
-Para restringir los permisos de visualización de los usuarios, un administrador puede realizar cualquiera de las acciones siguientes:
+Un administrador puede realizar cualquiera de las acciones siguientes para restringir los permisos de visualización de un usuario:
 * Cambiar el rol del usuario en el equipo de *Operaciones de supervisor* predeterminado por usuario de *Lectura*. 
 * Crear un equipo predeterminado con un ámbito y una visibilidad limitados. A continuación, asigne manualmente usuarios a otros equipos. 
 
