@@ -39,6 +39,7 @@ The {{site.data.keyword.mon_full_notm}} service is available in the following re
 | `EU-DE`               | Frankfurt | 
 | `EU-GB`               | London    | 
 | `JP-TOK`              | Tokyo     |
+| `US EAST`             | Washington|
 {: caption="Table 1. List of regions where the service is available" caption-side="top"} 
 
 Currently, **Frankfurt** and **EU GB** are locations that are **not** EU-managed. For more information, see [Enabling the EU Supported setting](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported).
@@ -58,6 +59,7 @@ The following table lists the **Sysdig Collector endpoints** that are available 
 | `EU DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`                   | TCP 6443 | 
 | `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`                   | TCP 6443 | 
 | `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`                  | TCP 6443 | 
+| `US East`     | `ingest.us-east.monitoring.cloud.ibm.com`                 | TCP 6443 | 
 {: caption="Table 2. List of ingestion endpoints" caption-side="top"} 
 
 
@@ -73,6 +75,7 @@ The following table lists the **Sysdig endpoints** that are available per region
 | `EU DE`      | `https://eu-de.monitoring.cloud.ibm.com `                 | HTTPS (TLS) 443 |
 | `EU GB`      | `https://eu-gb.monitoring.cloud.ibm.com `                 | HTTPS (TLS) 443 |
 | `JP TOK`     | `https://jp-tok.monitoring.cloud.ibm.com`                 | HTTPS (TLS) 443 |
+| `US East`    | `https://us-east.monitoring.cloud.ibm.com`                | HTTPS (TLS) 443 |
 {: caption="Table 3. List of Sysdig endpoints" caption-side="top"} 
 
 
