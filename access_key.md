@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-06-17"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -50,7 +50,7 @@ To get the access key for an {{site.data.keyword.mon_full_notm}} instance throug
 
 To get the access key for a Sysdig instance through the command line, complete the following steps:
 
-1. [Pre-requisite] [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+1. [Pre-requisite] [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 
    If the CLI is installed, continue with the next step.
 
