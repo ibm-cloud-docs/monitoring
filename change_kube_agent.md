@@ -433,23 +433,22 @@ Complete the following steps to filter out containers that a Sysdig agent monito
     ```
     {: codeblock}
 
-3. Make changes. Add the *metrics_filter* section or update the section.
+3. Make changes. Add the *use_container_filter* entry and *container_filter* section or update the the existing entries.
 
     For example, see the following extract of a config map:
 
     ```
-    containers:
-        # Enable the feature
-        use_container_filter: true
-        #
-        # Include or exclude conditions
-        container_filter:
-           - include:
-                container.image: 
-           - include:
-                container.name: 
-           - exclude:
-                kubernetes.namespace.name: kube-system
+    # Enable the feature
+    use_container_filter: true
+    #
+    # Include or exclude conditions
+    container_filter:
+       - include:
+            container.image: appdomain/my-app-image
+       - include:
+            container.name: my-java-app
+       - exclude:
+            kubernetes.namespace.name: kube-system
     ```  
     {: codeblock}
 
