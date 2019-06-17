@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-17"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -53,7 +53,7 @@ Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each o
 | {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | `Us-south`  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the Default resource group.   |
 {: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"} 
 
-Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 
 
 ## Step 1. Provision an {{site.data.keyword.mon_full_notm}} instance

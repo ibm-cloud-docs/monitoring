@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-06-17"
 
 keywords: Sysdig, IBM Cloud, monitoring, kubernetes, analyze metrics
 
@@ -50,7 +50,7 @@ In this tutorial, you configure metrics with Sysdig in your {{site.data.keyword.
 
 2. Have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
-3. Install the {{site.data.keyword.cloud_notm}} CLI and the Kubernetes CLI plugin. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli).
+3. Install the {{site.data.keyword.cloud_notm}} CLI and the Kubernetes CLI plugin. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 
 4. [Create a cluster](/docs/containers?topic=containers-clusters#clusters) or use an existing {{site.data.keyword.containerlong_notm}} cluster.
     *  The cluster must run Kubernetes version 1.10 or above.

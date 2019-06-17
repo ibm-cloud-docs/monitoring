@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-06-17"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -65,7 +65,7 @@ Next, configure a metric source by adding a Sysdig agent. This agent is responsi
 
 To provision an instance of Sysdig through the command line, complete the following steps:
 
-1. [Pre-requisite] [Installion of the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#ibmcloud-cli). If the CLI is installed, continue with the next step.
+1. [Pre-requisite] [Installion of the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started). If the CLI is installed, continue with the next step.
 
 2. Log in to the region in the {{site.data.keyword.cloud_notm}} where you want to provision the instance. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_login)
 
