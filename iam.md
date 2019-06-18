@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-06-17"
 
 keywords: Sysdig, IBM Cloud, monitoring, iam
 
@@ -100,10 +100,10 @@ The following table outlines the Sysdig roles and actions per role:
 | `Create, configure, and delete teams`                                      | Admin                                                |
 | `Configure and remove notifications channels`                              | Admin                                                | 
 | `Configure and remove Sysdig agents`                                       | Admin                                                |
-| `Create, delete, and edit content in the Sysdig web UI`                    | Admin </br>User                                      |  
-| `View metrics through the Sysdig Web UI`                                   | Admin </br>User                                      |  
-| `Create and delete alerts`                                                 | Admin </br>User                                      | 
-| `Create and delete captures`                                               | Admin </br>User                                      |   
+| `Create, delete, and edit content in the Sysdig web UI`                    | Admin </br>Advanced user                             |  
+| `View metrics, dashboards, alerts, events, and captures through the Sysdig Web UI`      | Admin </br>Advanced user </br>User      |  
+| `Create and delete alerts`                                                 | Admin </br>Advanced user                             | 
+| `Create and delete captures`                                               | Admin </br>Advanced user                             |   
 {: caption="Table 2. Sysdig roles and actions" caption-side="top"}
 
 
@@ -112,12 +112,15 @@ The following table outlines the Sysdig roles and actions per role:
 
 Use the following table to see how an {{site.data.keyword.cloud_notm}} role maps to a Sysdig role:
 
-| Type of role        | Role               | Sysdig role                | Description                                 |
-|---------------------|--------------------|----------------------------|---------------------------------------------|
-| Platform role       | Administrator      | Admin                      | Grants the user Sysdig admin privileges.   | 
-| Service role        | Manager            | Admin                      | Grants the user Sysdig admin privileges.   | 
-| Service role        | Writer             | User                       | Grants the user Sysdig user privileges.    |
-| Service role        | Reader             |                            | No permissions are granted.                 |
+| Type of role        | Role               | Sysdig role                | Description                                         |
+|---------------------|--------------------|----------------------------|-----------------------------------------------------|
+| Platform role       | Administrator      | Admin                      | Grants the user Sysdig admin privileges.            | 
+| Service role        | Manager            | Admin                      | Grants the user Sysdig admin privileges.            | 
+| Service role        | Writer             | Advanced user                       | Grants the user Sysdig advanced user privileges.    |
+| Service role        | Reader             | User                       | Grants the user Sysdig user privileges.             |
 {: caption="Table 3. Sysdig roles" caption-side="top"}
+
+
+
 
 
