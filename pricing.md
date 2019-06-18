@@ -42,7 +42,7 @@ Different pricing plans are available for an {{site.data.keyword.mon_full_notm}}
 
 When the number of containers per node or the number of metrics goes above the graduated tier plan's threshold limit over a period of time, automatic tier detection is applied. An alert notification is triggered following your billing usage notification configuration if you enable the following alert **[{{site.data.keyword.IBM_notm}}]: Usage Tier Change**
 
-You can request a **custom price quote** for anything beyond the upper bound of the *Advanced graduated tier paid pricing plan* by opening a ticket with [IBM Cloud Support ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/get-support?topic=get-support-getting-customer-support){:new_window}.
+You can request a **custom price quote** for anything beyond the upper bound of the *Advanced graduated tier paid pricing plan* by opening a ticket with [IBM Cloud Support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/unifiedsupport/supportcenter){:new_window}.
 {: tip}
 
 Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#overview_collection) and [data retention](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about#overview_retention).

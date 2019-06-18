@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-06-17"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -172,14 +172,21 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
 
-4. Create a service account called **sysdig-agent** to monitor the kubernetes cluster. Run the following command:
+4. Create the **ibm-observe** namespace.
+
+    ```
+    kubectl create namespace ibm-observe
+    ```
+    {: codeblock}
+
+5. Create a service account called **sysdig-agent** to monitor the kubernetes cluster. Run the following command:
 
     ```
     kubectl create serviceaccount sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
-5. Add a secret to your Kubernetes cluster. Run the following command:
+6. Add a secret to your Kubernetes cluster. Run the following command:
 
     ```
     kubectl create secret generic sysdig-agent --from-literal=access-key=SYSDIG_ACCESS_KEY -n ibm-observe
@@ -190,7 +197,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     The Kubernetes secret contains the ingestion key that is used to authenticate the Sysdig agent with the {{site.data.keyword.mon_full_notm}} service. It is used to open a secure web socket to the ingestion server on the monitoring back-end system.
 
-6. Create a cluster role and cluster role binding. 
+7. Create a cluster role and cluster role binding. 
 
     Download the [**sysdig-agent-clusterrole.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-clusterrole.yaml).
     
@@ -208,7 +215,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     ```
     {: codeblock}
 
-7. Edit the **sysdig-agent-configmap.yaml** and add required parameters for configuring the agent to work in the {{site.data.keyword.cloud_notm}}.
+8. Edit the **sysdig-agent-configmap.yaml** and add required parameters for configuring the agent to work in the {{site.data.keyword.cloud_notm}}.
 
     Download the [**sysdig-agent-configmap.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-configmap.yaml).
 
@@ -247,19 +254,19 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     ```
     {: screen}
 
-8. Apply the config map to the cluster. Run the following command:
+9. Apply the config map to the cluster. Run the following command:
 
     ```
-    kubectl apply -f sysdig-agent-configmap.yaml
+    kubectl apply -f sysdig-agent-configmap.yaml -n ibm-observe
     ```
     {: codeblock}
 
-9. Apply the daemonset to deploy the Sysdig agent to the cluster. Run the following command:
+10. Apply the daemonset to deploy the Sysdig agent to the cluster. Run the following command:
 
     Download the [**sysdig-agent-daemonset-v2.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-daemonset-v2.yaml).
 
     ```
-    kubectl apply -f sysdig-agent-daemonset-v2.yaml
+    kubectl apply -f sysdig-agent-daemonset-v2.yaml -n ibm-observe
     ```
     {: codeblock}
 
