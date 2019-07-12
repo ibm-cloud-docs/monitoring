@@ -43,6 +43,8 @@ When you [provision an instance](/docs/services/Monitoring-with-Sysdig?topic=Sys
 
 After you provision an instance, you must configure an {{site.data.keyword.mon_full_notm}} agent for each metric source. A metric source is a cloud resource that you want to monitor and control its performance and health. You must configure an {{site.data.keyword.mon_full_notm}} agent in each environment that you want to monitor. For example, a metric source can be a Kubernetes cluster. You use the access key to configure the Sysdig agent that is responsible for collecting and forwarding metric data to your instance.
 
+The agent can be configured to push metrics to Sysdig via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints) section.
+
 After the {{site.data.keyword.mon_full_notm}} agent is deployed in a metric source, collection and forwarding of metrics to the instance is automatic. The {{site.data.keyword.mon_full_notm}} agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in an environment.
 
 You can [monitor](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring), and [manage](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-manage#manage)  data through the {{site.data.keyword.mon_full_notm}} Web UI.  
