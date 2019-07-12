@@ -25,7 +25,7 @@ subcollection: Sysdig
 # Getting help and support
 {: #gettinghelp}
 
-If you have problems or questions when using the {{site.data.keyword.mon_full_notm}}, you have several options to get help with determining the cause of the problem and finding a solution. If you're logged in, you can go directly to the [Support center](https://{DomainName}/unifiedsupport/supportcenter) to review common FAQs, open a support case, or search community content. 
+If you have problems or questions when using the {{site.data.keyword.mon_full_notm}} service, you have several options to get help with determining the cause of the problem and finding a solution. If you're logged in, you can go directly to the [Support center](https://{DomainName}/unifiedsupport/supportcenter) to review common FAQs, open a support case, or search community content. 
 {:shortdesc}
 
 
@@ -44,9 +44,9 @@ The Support Center is the preferred method for getting support, but if you can't
 ## Searching forums
 {: #asking-a-question}
 
-If you don't find an existing answer to your question, ask a new question. 
+You can search forums to find answers to your questions. The Stack Overflow forum, for technical questions, and the IBM Developer Answers forum, for general questions, both provide a wide variety of searchable answers to your {{site.data.keyword.cloud_notm}} questions. 
 
-The Stack Overflow forum, for technical questions, and the IBM Developer Answers forum, for general questions, both provide a wide variety of searchable answers to your {{site.data.keyword.cloud_notm}} questions. 
+If you don't find an existing answer to a question, ask a new one. 
 
 You can access Stack Overflow and IBM Developer Answers from the Support Center, or use the following links:
 

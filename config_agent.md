@@ -134,7 +134,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 4. Deploy the Sysdig agent. Run the following command:
 
     ```
-    curl -sL https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/IBMCloud-Kubernetes-Service/install-agent-k8s.sh | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false'
+    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false'
     ```
     {: codeblock}
 
@@ -244,7 +244,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
        name: sysdig-agent
      data:
        dragent.yaml: |
-       tags: linux:ubuntu,dept:dev,local:nyc
+       tags: env:prod
        collector: ingest.us-south.monitoring.cloud.ibm.com
        collector_port: 6443
        ssl: true
