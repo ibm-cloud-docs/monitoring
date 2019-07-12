@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -50,7 +50,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
     * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
-    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available.
+    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example, *role:serviceX,location:us-south*. 
 
@@ -95,7 +95,7 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
 
     * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
-    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available.
+    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example, *role:serviceX,location:us-south*. 
 
@@ -142,7 +142,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
-    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available.
+    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. 
 
