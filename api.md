@@ -50,34 +50,34 @@ Complete the following steps to create a dashboard:
 
     * `username`: Set to the email that is associated with your IBMid.
 
-    * `isShared`: Set to true to share the dashboard with other team members.
+    * `shared`: Set to true to share the dashboard with other team members.
 
-    * `isPublic`: Set to true if you want the dashboard to be available publicly.
+    * `public`: Set to true if you want the dashboard to be available publicly.
 
     * Configure filters to define the dashboard scope.
     
 3. Create the dashboard. Run the following cURL command:
 
     ```
-    curl -X POST ENDPOINT/ui/dashboards -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'Content-Type: application/json -d @dashboard.json' 
+    curl -X POST ENDPOINT/api/v2/dashboards -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'Content-Type: application/json -d @dashboard.json' 
     ```
     {: codeblock}
 
     Where
 
-    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
+    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* is the API token that you got in the previous step.
+    * `SYSDIG_API_TOKEN` is the API token that you got in the previous step.
 
-    * *dashboard.json* is the file that describes the new dashboard, including panels and metrics.
+    * `dashboard.json` is the file that describes the new dashboard, including panels and metrics.
 
 For example, to create a dashboard, a sample json file looks as follows:
+
 ```
 {
   "dashboard": {
-    "filterExpression": null,
     "name": "My new dashboard",
-    "items": [
+    "widgets": [
       {
         "customDisplayOptions": {
           "yAxisLeftDomain": {
@@ -102,26 +102,21 @@ For example, to create a dashboard, a sample json file looks as follows:
           }
         },
         "name": "CPU usage",
-        "overrideFilter": true,
-        "showAsType": "line",
+        "overrideScope": true,
         "showAs": "timeSeries",
         "groupId": "My new cpu dashboardcontainer.namecarboncache1",
         "metrics": [
           {
             "propertyName": "k0",
-            "metricId": "timestamp"
+            "id": "timestamp"
           },
           {
             "propertyName": "v0",
-            "metricId": "cpu.used.percent",
-            "aggregation": "avg",
+            "id": "cpu.used.percent",
+            "timeAggregation": "avg",
             "groupAggregation": "avg"
           }
         ],
-        "paging": {
-          "to": 9,
-          "from": 0
-        },
         "compareToConfig": null,
         "gridConfiguration": {
           "size_y": 4,
@@ -144,23 +139,15 @@ For example, to create a dashboard, a sample json file looks as follows:
         }
       }
     ],
-    "isPublic": false,
+    "public": false,
     "annotations": {
       "createdByEngine": true
     },
     "username": "ENTER YOUR EMAIL ADDRESS",
     "version": null,
-    "layout": [
-      {
-        "size_y": 4,
-        "size_x": 6,
-        "col": 1,
-        "row": 1
-      }
-    ],
     "schema": 1,
     "id": null,
-    "isShared": false
+    "shared": false
   }
 }
 ```
@@ -230,7 +217,3 @@ For example, to delete the dashboard with ID *391* from the list of dashboards f
 curl -X DELETE https://us-south.monitoring.cloud.ibm.com/ui/dashboards/391 -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json' 
 ```
 {: screen}
-
-
-
-
