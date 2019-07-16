@@ -78,6 +78,8 @@ If the Sysdig agent fails to install correctly, install the kernel headers manua
 ## Configuring a Sysdig agent on a Docker container
 {: #config_agent_docker}
 
+You may need to install external linux headers to launch the Sysdig agent correctly, ex. `apt-get -y install linux-headers-$(uname -r)`. Using macOS with a container that returns *...-linuxkit* with the command `uname -r` is most likely not compatible.
+
 Complete the following steps to configure a Sysdig agent on a Docker container to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).

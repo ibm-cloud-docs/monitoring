@@ -82,13 +82,13 @@ To provision an instance of Sysdig through the command line, complete the follow
 
     Where
 
-    * NAME is the name of the Sysdig instance.
+    * `NAME` is the name of the Sysdig instance.
     
     * `sysdig-monitor` is the name of the {{site.data.keyword.mon_full_notm}} service name in the {{site.data.keyword.cloud_notm}}.
     
-    * SERVICE_PLAN_NAME is the type of plan. Valid values are *lite*, and *graduated-tier*.
+    * `SERVICE_PLAN_NAME` is the type of plan. Valid values are *lite*, and *graduated-tier*.
     
-    * LOCATION is the region where the instance is created.
+    * `LOCATION` is the region where the instance is created.
 
     For example, to provision an instance with the paid plan, run the following command:
 
@@ -97,3 +97,17 @@ To provision an instance of Sysdig through the command line, complete the follow
     ```
     {: screen}
 
+5. Create the service key that will be connected to the instance you just created [`ibmcloud resource service-key-create`](https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_resource#ibmcloud_resource_service_key_create)
+
+    ```
+    ibmcloud resource service-key-create NAME ROLE_NAME --instance-name SERVICE_INSTANCE_NAME
+    ```
+    {: codeblock}
+
+    * `NAME` is the name of your new service key
+
+    * `ROLE_NAME` is either `Administrator`, `Manager`, `Writer`, or `Reader`
+
+    * `SERVICE_INSTANCE_NAME` is the name of the instance you created
+
+    This will gain you access to the instance's Sysdig access key.
