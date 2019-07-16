@@ -165,7 +165,7 @@ Complete the following steps to download the dashboards that are available for a
 2. Run the following cURL command:
 
     ```
-    curl -X GET ENDPOINT/ui/dashboards -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'Content-Type: application/json' 
+    curl -X GET ENDPOINT/api/v2/dashboards -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'Content-Type: application/json' 
     ```
     {: codeblock}
 
@@ -178,7 +178,7 @@ Complete the following steps to download the dashboards that are available for a
 For example, to download the dashboards for a team that works in the US South region, you can run the following command:
 
 ```
-curl -X GET https://us-south.monitoring.cloud.ibm.com/ui/dashboards -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json'
+curl -X GET https://us-south.monitoring.cloud.ibm.com/api/v2/dashboards -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json'
 ```
 {: screen}
 
@@ -199,7 +199,7 @@ Complete the following steps to delete a dashboard from the list of dashboards t
 4. Run the following cURL command:
 
     ```
-    curl -X DELETE ENDPOINT/ui/dashboards/ID -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'Content-Type: application/json' 
+    curl -X DELETE ENDPOINT/api/v2/dashboards/ID -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'Content-Type: application/json' 
     ```
     {: codeblock}
 
@@ -214,6 +214,6 @@ Complete the following steps to delete a dashboard from the list of dashboards t
 For example, to delete the dashboard with ID *391* from the list of dashboards for a team that works in the US South region, you can run the following command:
 
 ```
-curl -X DELETE https://us-south.monitoring.cloud.ibm.com/ui/dashboards/391 -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json' 
+curl -X DELETE https://us-south.monitoring.cloud.ibm.com/api/v2/dashboards/391 -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json' 
 ```
 {: screen}
