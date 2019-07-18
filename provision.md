@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-16"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -97,12 +97,14 @@ To provision an instance of Sysdig through the command line, complete the follow
     ```
     {: screen}
 
-5. Create the service key that will be connected to the instance you just created [`ibmcloud resource service-key-create`](https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_resource#ibmcloud_resource_service_key_create)
+5. Create the service key that connects to the instance [`ibmcloud resource service-key-create`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_resource#ibmcloud_resource_service_key_create)
 
     ```
     ibmcloud resource service-key-create NAME ROLE_NAME --instance-name SERVICE_INSTANCE_NAME
     ```
     {: codeblock}
+
+    Where
 
     * `NAME` is the name of your new service key
 
@@ -111,3 +113,5 @@ To provision an instance of Sysdig through the command line, complete the follow
     * `SERVICE_INSTANCE_NAME` is the name of the instance you created
 
     This will gain you access to the instance's Sysdig access key.
+
+

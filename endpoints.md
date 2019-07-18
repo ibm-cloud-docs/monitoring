@@ -57,9 +57,9 @@ The following table lists the **Sysdig Collector endpoints** that are available 
 |---------------|-------------------------------------------------|-------------------------------------------------------|----------|
 | `US South`    | `ingest.us-south.monitoring.cloud.ibm.com`      | `private.ingest.us-south.monitoring.cloud.ibm.com`    | TCP 6443 |
 | `EU DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`         | `private.ingest.eu-de.monitoring.cloud.ibm.com`       | TCP 6443 |
-| `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`         | `private.ingest.eu-gb.monitoring.cloud.ibm.com`       | TCP 6443 |
-| `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`        | `private.ingest.jp-tok.monitoring.cloud.ibm.com`      | TCP 6443 |
-| `US East`     | `ingest.us-east.monitoring.cloud.ibm.com`       | `private.ingest.us-east.monitoring.cloud.ibm.com`     | TCP 6443 |
+| `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`         | `Not available`       |  |
+| `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`        | `Not available`      |  |
+| `US East`     | `ingest.us-east.monitoring.cloud.ibm.com`       | `Not available`    |  |
 {: caption="Table 2. List of ingestion endpoints" caption-side="top"} 
 
 To send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-07-16"
 
 keywords: Sysdig, IBM Cloud, monitoring, sysdig rest api
 
