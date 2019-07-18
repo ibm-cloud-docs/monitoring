@@ -62,22 +62,19 @@ Notice that when you configure the agent to send metrics through the public netw
 
 When you have an extra firewall set up, or you customize the firewall settings in your {{site.data.keyword.cloud_notm}} infrastructure, you need to allow outgoing network traffic to the {{site.data.keyword.mon_full_notm}} service. 
 
-If you configure the Sysdig agent to connect to a monitoring instance through the private network, open a support ticket to request the private IP addresses that you must enable in your firewall. For information about opening an {{site.data.keyword.IBM_notm}} support ticket, see [Getting support](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support).
-{: important}
-
 
 ### Ingestion through a public endpoint
 {: #network_send}
 
 To send metric data to the {{site.data.keyword.mon_full_notm}} service, you must define a firewall rule in your host:
 
-| Region      | Ingestion endpoint                                | Public IP addresses                                     | Ports    |
-|-------------|---------------------------------------------------|---------------------------------------------------------|----------|
-| `US South`  | ingest.us-south.monitoring.cloud.ibm.com          | 169.60.151.174 </br>169.46.0.70 </br>169.48.214.70      | TCP 6443 | 
-| `EU DE`     | ingest.eu-de.monitoring.cloud.ibm.com             | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38   | TCP 6443 | 
-| `EU GB`     | ingest.eu-gb.monitoring.cloud.ibm.com             | 158.175.98.206 </br>141.125.73.118 </br>159.122.210.174 | TCP 6443 | 
-| `JP TOK`    | ingest.jp-tok.monitoring.cloud.ibm.com            | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238     | TCP 6443 | 
-| `US East`   | ingest.us-east.monitoring.cloud.ibm.com           | 169.60.112.74</br> 169.55.109.114 </br> 169.62.3.82     | TCP 6443 | 
+| Region      | Ingestion endpoint                                | Public IP addresses                                     | Private IP addresses                          |   Ports    |
+|-------------|---------------------------------------------------|---------------------------------------------------------|-----------------------------------------------|----------|
+| `US South`  | ingest.us-south.monitoring.cloud.ibm.com          | 169.60.151.174 </br>169.46.0.70 </br>169.48.214.70      | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123  | TCP 6443 | 
+| `EU DE`     | ingest.eu-de.monitoring.cloud.ibm.com             | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38   | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16  | TCP 6443 | 
+| `EU GB`     | ingest.eu-gb.monitoring.cloud.ibm.com             | 158.175.98.206 </br>141.125.73.118 </br>159.122.210.174 | Not available   |  | 
+| `JP TOK`    | ingest.jp-tok.monitoring.cloud.ibm.com            | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238     | Not available   |  | 
+| `US East`   | ingest.us-east.monitoring.cloud.ibm.com           | 169.60.112.74</br> 169.55.109.114 </br> 169.62.3.82     | Not available   |  | 
 {: caption="Table 1. IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
@@ -86,10 +83,10 @@ To send metric data to the {{site.data.keyword.mon_full_notm}} service, you must
 
 To access the {{site.data.keyword.mon_full_notm}} web UI, you must define a firewall rule in your host:
 
-| Region      | Web UI endpoint                        | Public IP addresses                                       | Ports           |
-|-------------|----------------------------------------|-----------------------------------------------------------|-----------------|
-| `US South`  | us-south.monitoring.cloud.ibm.com      | 169.60.151.174 </br>169.46.0.70 </br>169.48.214.70        | https (TLS) 443 | 
-| `EU DE`     | eu-de.monitoring.cloud.ibm.com         | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38     | https (TLS) 443 | 
+| Region      | Web UI endpoint                        | Public IP addresses                                       | Private IP addresses                          | Ports           |
+|-------------|----------------------------------------|-----------------------------------------------------------|-----------------------------------------------|-----------------|
+| `US South`  | us-south.monitoring.cloud.ibm.com      | 169.60.151.174 </br>169.46.0.70 </br>169.48.214.70        | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123  | https (TLS) 443 | 
+| `EU DE`     | eu-de.monitoring.cloud.ibm.com         | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38     | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16  | https (TLS) 443 | 
 | `EU GB`     | eu-gb.monitoring.cloud.ibm.com         | 158.175.98.206 </br>141.125.73.118 </br>159.122.210.174   | https (TLS) 443 | 
 | `JP TOK`    | jp-tok.monitoring.cloud.ibm.com        | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238       | https (TLS) 443 |
 | `US East`   | us-east.monitoring.cloud.ibm.com       | 169.60.112.74</br> 169.55.109.114 </br> 169.62.3.82       | https (TLS) 443 | 
