@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-18"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview
 
@@ -43,6 +43,8 @@ When you [provision an instance](/docs/services/Monitoring-with-Sysdig?topic=Sys
 
 After you provision an instance, you must configure an {{site.data.keyword.mon_full_notm}} agent for each metric source. A metric source is a cloud resource that you want to monitor and control its performance and health. You must configure an {{site.data.keyword.mon_full_notm}} agent in each environment that you want to monitor. For example, a metric source can be a Kubernetes cluster. You use the access key to configure the Sysdig agent that is responsible for collecting and forwarding metric data to your instance.
 
+The agent can be configured to push metrics to Sysdig via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints) section.
+
 After the {{site.data.keyword.mon_full_notm}} agent is deployed in a metric source, collection and forwarding of metrics to the instance is automatic. The {{site.data.keyword.mon_full_notm}} agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in an environment.
 
 You can [monitor](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring), and [manage](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-manage#manage)  data through the {{site.data.keyword.mon_full_notm}} Web UI.  
@@ -56,9 +58,22 @@ The following figure shows the components overview for the {{site.data.keyword.m
 ## Data collection
 {: #overview_collection}
 
-When you configure a Sysdig agent to collect and forward data to an {{site.data.keyword.mon_full_notm}} instance, data is automatically collected and available for analysis through the web UI.
+When you configure a Sysdig agent to collect and forward data to an {{site.data.keyword.mon_full_notm}} instance, data is automatically collected and available for analysis through the web UI. 
+
+You can configure the Sysdig agent to connect to the monitoring instance via the public network and the private network. 
+{: note}
+
+By default, you connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. To configure an agent to send metrics by using a public endpoint, the environment where the agent is running requires internet access to use the public endpoint.
+
+You can enable virtual routing and forwarding (VRF) to move IP routing for your account and all of its resources into a separate routing table. If VRF is enabled, you can then enable {{site.data.keyword.cloud_notm}} service endpoints to connect directly to resources without using the public network. To configure an agent to send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. Once the account is VRF and service endpoint enabled, the Sysdig agent can be configured to use the private network by using the [Private Endpoint](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion) as the ingestion URL.
+* Private endpoints are not accessible from the public internet. 
+* All traffic is routed to the {{site.data.keyword.cloud_notm}} private network. 
+
 
 Data is collected at 10-seconds frequency. 
+{: note}
+
+
 
 ## Data availability
 {: #overview_availability}

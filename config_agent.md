@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-07-18"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -37,7 +37,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
 3. Deploy the Sysdig agent. Run the following command from a terminal.
 
@@ -50,7 +50,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
     * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
-    * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
+    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example, *role:serviceX,location:us-south*. 
 
@@ -78,11 +78,12 @@ If the Sysdig agent fails to install correctly, install the kernel headers manua
 ## Configuring a Sysdig agent on a Docker container
 {: #config_agent_docker}
 
+
 Complete the following steps to configure a Sysdig agent on a Docker container to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
 3. Deploy the Sysdig agent. Run the following command:
 
@@ -95,7 +96,7 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
 
     * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
-    * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
+    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example, *role:serviceX,location:us-south*. 
 
@@ -116,7 +117,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
 3. Set up the cluster environment. Run the following commands:
 
@@ -134,7 +135,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 4. Deploy the Sysdig agent. Run the following command:
 
     ```
-    curl -sL https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/IBMCloud-Kubernetes-Service/install-agent-k8s.sh | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false'
+    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false'
     ```
     {: codeblock}
 
@@ -142,7 +143,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
 
-    * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
+    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. 
 
@@ -157,7 +158,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
 
 3. Set up the cluster environment. Run the following commands:
 
@@ -172,14 +173,21 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
 
-4. Create a service account called **sysdig-agent** to monitor the kubernetes cluster. Run the following command:
+4. Create the **ibm-observe** namespace.
+
+    ```
+    kubectl create namespace ibm-observe
+    ```
+    {: codeblock}
+
+5. Create a service account called **sysdig-agent** to monitor the kubernetes cluster. Run the following command:
 
     ```
     kubectl create serviceaccount sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
-5. Add a secret to your Kubernetes cluster. Run the following command:
+6. Add a secret to your Kubernetes cluster. Run the following command:
 
     ```
     kubectl create secret generic sysdig-agent --from-literal=access-key=SYSDIG_ACCESS_KEY -n ibm-observe
@@ -190,7 +198,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     The Kubernetes secret contains the ingestion key that is used to authenticate the Sysdig agent with the {{site.data.keyword.mon_full_notm}} service. It is used to open a secure web socket to the ingestion server on the monitoring back-end system.
 
-6. Create a cluster role and cluster role binding. 
+7. Create a cluster role and cluster role binding. 
 
     Download the [**sysdig-agent-clusterrole.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-clusterrole.yaml).
     
@@ -208,7 +216,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     ```
     {: codeblock}
 
-7. Edit the **sysdig-agent-configmap.yaml** and add required parameters for configuring the agent to work in the {{site.data.keyword.cloud_notm}}.
+8. Edit the **sysdig-agent-configmap.yaml** and add required parameters for configuring the agent to work in the {{site.data.keyword.cloud_notm}}.
 
     Download the [**sysdig-agent-configmap.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-configmap.yaml).
 
@@ -216,7 +224,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     * **k8s_cluster_name**: This parameter specifies the cluster name as a metric label. You can use the label *kubernetes.cluster.name* to navigate the Kubernetes dashboards by cluster name and filter out metrics that are associated with the cluster.
 
-    * **collector**: This parameter specifies the ingestion URL for the region where the monitoring instance is available. 
+    * **collector**: This parameter specifies the public or private ingestion URL for the region where the monitoring instance is available. 
 
     * **collector_port**: This parameter indicates the port on which the collector is listening on. The value must be set to *6443*.
     
@@ -237,7 +245,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
        name: sysdig-agent
      data:
        dragent.yaml: |
-       tags: linux:ubuntu,dept:dev,local:nyc
+       tags: env:prod
        collector: ingest.us-south.monitoring.cloud.ibm.com
        collector_port: 6443
        ssl: true
@@ -247,19 +255,19 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     ```
     {: screen}
 
-8. Apply the config map to the cluster. Run the following command:
+9. Apply the config map to the cluster. Run the following command:
 
     ```
-    kubectl apply -f sysdig-agent-configmap.yaml
+    kubectl apply -f sysdig-agent-configmap.yaml -n ibm-observe
     ```
     {: codeblock}
 
-9. Apply the daemonset to deploy the Sysdig agent to the cluster. Run the following command:
+10. Apply the daemonset to deploy the Sysdig agent to the cluster. Run the following command:
 
     Download the [**sysdig-agent-daemonset-v2.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-daemonset-v2.yaml).
 
     ```
-    kubectl apply -f sysdig-agent-daemonset-v2.yaml
+    kubectl apply -f sysdig-agent-daemonset-v2.yaml -n ibm-observe
     ```
     {: codeblock}
 
