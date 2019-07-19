@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-07-19"
+lastupdated: "2019-07-21"
 
 keywords: Sysdig, IBM Cloud, monitoring, sysdig rest api
 
@@ -247,7 +247,7 @@ For example, to modify a dashboard, the json file is what you got from step 2, b
 * `createdOn`
 * `modifiedOn`
 
-Then make your desired modifications. Example dashboard.json:
+Then make your desired modifications. For example, a dashboard.json looks as follows:
 
 ```
 {

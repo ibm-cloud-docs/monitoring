@@ -81,12 +81,13 @@ If the Sysdig agent fails to install correctly, install the kernel headers manua
 When you configure a Sysdig agent on a Docker container, you may need to install external linux headers to launch the Sysdig agent correctly. 
 
 For example, you might need to run the following command to install external linux headers:
+
 ```
 apt-get -y install linux-headers-$(uname -r)
 ```
 {: codeblock}
 
-Using MacOS with a container that returns *...-linuxkit* with the command `uname -r` is most likely not compatible.
+Notice that when you use a MacOS with a container that returns *...-linuxkit* with the command `uname -r`, it is most likely not compatible.
 
 Complete the following steps to configure a Sysdig agent on a Docker container to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
 

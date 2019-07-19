@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-07-18"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview
 
