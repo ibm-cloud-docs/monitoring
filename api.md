@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-07-16"
+lastupdated: "2019-07-19"
 
 keywords: Sysdig, IBM Cloud, monitoring, sysdig rest api
 
@@ -154,8 +154,7 @@ For example, to create a dashboard, a sample json file looks as follows:
 {: screen}
 
 
-
-## Saving the dashboards of a team by using the API
+## Saving all the dashboards of a team by using the API
 {: #api_save_dashboard}
 
 Complete the following steps to download the dashboards that are available for a team:
@@ -171,9 +170,9 @@ Complete the following steps to download the dashboards that are available for a
 
     Where
 
-    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
+    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* is the API token that you got in the previous step.
+    * `SYSDIG_API_TOKEN` is the API token that you got in the previous step.
 
 For example, to download the dashboards for a team that works in the US South region, you can run the following command:
 
@@ -183,6 +182,92 @@ curl -X GET https://us-south.monitoring.cloud.ibm.com/api/v2/dashboards -H 'Auth
 {: screen}
 
 The output is a JSON file where each dashboard starts with the field **id**. The name of the dashboard is specified in the field **name**.
+
+
+## Saving a single dashboard of a team by using the API
+{: #api_save_single_dashboard}
+
+Complete the following steps to download a dashboard that is available for a team:
+
+1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
+
+2. Run the following cURL command:
+
+    ```
+    curl -X GET ENDPOINT/api/v2/dashboards/ID -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'Content-Type: application/json' 
+    ```
+    {: codeblock}
+
+    Where
+
+    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
+
+    * `SYSDIG_API_TOKEN` is the API token that you got in the previous step.
+
+For example, to download a dashboard for a team that works in the US South region, you can run the following command:
+
+```
+curl -X GET https://us-south.monitoring.cloud.ibm.com/api/v2/dashboards/391 -H 'Authorization: Bearer xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' -H 'Content-Type: application/json'
+```
+{: screen}
+
+The output is a JSON file that contains a single dashboard. The id and name of the dashboard is specified in the **id** and **name** fields respectively.
+
+
+## Editing a dashboard of a team by using the API
+{: #api_edit_dashboard}
+
+Complete the following steps to edit an existing dashboard:
+
+1. Get the Sysdig API token for the team whose dashboards you want to save. For more information, see [Getting the Sysdig API token](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
+
+2. Follow [Saving a Single Dashboard](#api_save_single_dashboard) to get the existing dashboard properties you want to modify.
+
+3. Run the following cURL command:
+
+    ```
+    curl -X PUT ENDPOINT/api/v2/dashboards/ID -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'Content-Type: application/json' -d @dashboard.json
+    ```
+    {: codeblock}
+
+    Where
+
+    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
+
+    * `SYSDIG_API_TOKEN` is the API token that you got in the previous step.
+
+    * `dashboard.json` is the json file that describes the dashboard.
+
+For example, to modify a dashboard, the json file is what you got from step 2, but omit the following keys:
+
+* `customerId`
+* `userId`
+* `domain`
+* `schema`
+* `createdOn`
+* `modifiedOn`
+
+Then make your desired modifications. Example dashboard.json:
+
+```
+{
+  "dashboard": {
+    "autoCreated": true,
+    "eventsOverlaySettings": {...},
+    "scopeExpressionList": null,
+    "teamId": ...,
+    "widgets": [...],
+    "version": 1,
+    "name": "My Modified Dashboard Name",
+    "public": false,
+    "publicToken": null,
+    "shared": true,
+    "username": "...",
+    "id": ...
+  }
+}
+```
+{: screen}
 
 
 ## Deleting a dashboard by using the API
@@ -205,11 +290,11 @@ Complete the following steps to delete a dashboard from the list of dashboards t
 
     Where
 
-    * *ID* is the ID of the dashboard that you want to delete.
+    * `ID` is the ID of the dashboard that you want to delete.
 
-    * *ENDPOINT* is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
+    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
 
-    * *SYSDIG_API_TOKEN* is the API token that you got in the previous step.
+    * `SYSDIG_API_TOKEN` is the API token that you got in the previous step.
 
 For example, to delete the dashboard with ID *391* from the list of dashboards for a team that works in the US South region, you can run the following command:
 
