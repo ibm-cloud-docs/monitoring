@@ -103,7 +103,7 @@ To send metric data to the {{site.data.keyword.mon_full_notm}} service, you must
 | `EU DE`     | private.ingest.eu-de.monitoring.cloud.ibm.com     | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16  | TCP 6443 | 
 | `EU GB`     | Not available                                     | Not available   |  | 
 | `JP TOK`    | Not available                                     | Not available   |  | 
-| `US East`   | private.ingest.us-east.monitoring.cloud.ibm.com   |    | TCP 6443 | 
+| `US East`   | private.ingest.us-east.monitoring.cloud.ibm.com   | 166.9.22.6 </br>166.9.20.39 </br>166.9.24.21   | TCP 6443 | 
 {: caption="Table 3. Private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
