@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-07-18"
+lastupdated: "2019-07-22"
 
 keywords: Sysdig, IBM Cloud, monitoring, network traffic, firewall
 
@@ -99,28 +99,14 @@ To send metric data to the {{site.data.keyword.mon_full_notm}} service, you must
 
 | Region      | Ingestion endpoint                                | Private IP addresses                          |   Ports    |
 |-------------|---------------------------------------------------|-----------------------------------------------|----------|
-| `US South`  | ingest.us-south.monitoring.cloud.ibm.com          | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123  | TCP 6443 | 
-| `EU DE`     | ingest.eu-de.monitoring.cloud.ibm.com             | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16  | TCP 6443 | 
-| `EU GB`     | ingest.eu-gb.monitoring.cloud.ibm.com             | Not available   |  | 
-| `JP TOK`    | ingest.jp-tok.monitoring.cloud.ibm.com            | Not available   |  | 
-| `US East`   | ingest.us-east.monitoring.cloud.ibm.com           | Not available   |  | 
+| `US South`  | private.ingest.us-south.monitoring.cloud.ibm.com  | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123  | TCP 6443 | 
+| `EU DE`     | private.ingest.eu-de.monitoring.cloud.ibm.com     | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16  | TCP 6443 | 
+| `EU GB`     | Not available                                     | Not available   |  | 
+| `JP TOK`    | Not available                                     | Not available   |  | 
+| `US East`   | private.ingest.us-east.monitoring.cloud.ibm.com   |    | TCP 6443 | 
 {: caption="Table 3. Private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
-
-### Access to the web UI through a private endpoint
-{: #network_ui_private}
-
-To access the {{site.data.keyword.mon_full_notm}} web UI, you must define a firewall rule in your host:
-
-| Region      | Web UI endpoint                        | Private IP addresses                          | Ports           |
-|-------------|----------------------------------------|-----------------------------------------------|-----------------|
-| `US South`  | us-south.monitoring.cloud.ibm.com      | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123  | https (TLS) 443 | 
-| `EU DE`     | eu-de.monitoring.cloud.ibm.com         | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16  | https (TLS) 443 | 
-| `EU GB`     | eu-gb.monitoring.cloud.ibm.com         | Not available   |  | 
-| `JP TOK`    | jp-tok.monitoring.cloud.ibm.com        | Not available   |  | 
-| `US East`   | us-east.monitoring.cloud.ibm.com       | Not available   |  | 
-{: caption="Table 4. Private IP addresses to access the {{site.data.keyword.mon_full_notm}} web UI" caption-side="top"}
 
 
 
