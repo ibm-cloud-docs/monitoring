@@ -108,19 +108,3 @@ To send metric data to the {{site.data.keyword.mon_full_notm}} service, you must
 
 
 
-### Access to the web UI through a private endpoint
-{: #network_ui_private}
-
-To access the {{site.data.keyword.mon_full_notm}} web UI, you must define a firewall rule in your host:
-
-| Region      | Web UI endpoint                        | Private IP addresses                          | Ports           |
-|-------------|----------------------------------------|-----------------------------------------------|-----------------|
-| `US South`  | us-south.monitoring.cloud.ibm.com      | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123  | https (TLS) 443 | 
-| `EU DE`     | eu-de.monitoring.cloud.ibm.com         | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16  | https (TLS) 443 | 
-| `EU GB`     | Not available        | Not available   |  | 
-| `JP TOK`    | Not available      | Not available   |  | 
-| `US East`   | us-east.monitoring.cloud.ibm.com       | Not available   | https (TLS) 443 | 
-{: caption="Table 4. Private IP addresses to access the {{site.data.keyword.mon_full_notm}} web UI" caption-side="top"}
-
-
-
