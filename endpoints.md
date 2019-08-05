@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-01"
 
 keywords: Sysdig, IBM Cloud, monitoring, regions, endpoints
 
@@ -40,6 +40,7 @@ The {{site.data.keyword.mon_full_notm}} service is available in the following re
 | `EU-GB`               | London    | 
 | `JP-TOK`              | Tokyo     |
 | `US EAST`             | Washington|
+| `AU-SYD`              | Sydney    |
 {: caption="Table 1. List of regions where the service is available" caption-side="top"} 
 
 Currently, **Frankfurt** and **EU GB** are locations that are **not** EU-managed. For more information, see [Enabling the EU Supported setting](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported).
@@ -57,9 +58,10 @@ The following table lists the **Sysdig Collector endpoints** that are available 
 |---------------|-------------------------------------------------|-------------------------------------------------------|----------|
 | `US South`    | `ingest.us-south.monitoring.cloud.ibm.com`      | `private.ingest.us-south.monitoring.cloud.ibm.com`    | TCP 6443 |
 | `EU DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`         | `private.ingest.eu-de.monitoring.cloud.ibm.com`       | TCP 6443 |
-| `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`         | `Not available`       |  |
-| `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`        | `Not available`      |  |
-| `US East`     | `ingest.us-east.monitoring.cloud.ibm.com`       | `Not available`    |  |
+| `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`         | `Not available`       | TCP 6443 |
+| `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`        | `Not available`      | TCP 6443 |
+| `US East`     | `ingest.us-east.monitoring.cloud.ibm.com`       | `private.ingest.us-east.monitoring.cloud.ibm.com`     | TCP 6443 |
+| `AU SYD`      | `ingest.au-syd.monitoring.cloud.ibm.com`        | `Not available`    | TCP 6443 |
 {: caption="Table 2. List of ingestion endpoints" caption-side="top"} 
 
 To send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. 
@@ -77,6 +79,7 @@ The following table lists the **Sysdig endpoints** that are available per region
 | `EU GB`      | `https://eu-gb.monitoring.cloud.ibm.com `                 | HTTPS (TLS) 443 |
 | `JP TOK`     | `https://jp-tok.monitoring.cloud.ibm.com`                 | HTTPS (TLS) 443 |
 | `US East`    | `https://us-east.monitoring.cloud.ibm.com`                | HTTPS (TLS) 443 |
+| `AU SYD`     | `https://au-syd.monitoring.cloud.ibm.com`                 | HTTPS (TLS) 443 |
 {: caption="Table 3. List of Sysdig endpoints" caption-side="top"} 
 
 
