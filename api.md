@@ -59,7 +59,7 @@ Complete the following steps to create a dashboard:
 3. Create the dashboard. Run the following cURL command:
 
     ```
-    curl -X POST ENDPOINT/api/v2/dashboards -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'Content-Type: application/json -d @dashboard.json' 
+    curl -X POST ENDPOINT/api/v2/dashboards -H 'Authorization: Bearer SYSDIG_API_TOKEN' -H 'Content-Type: application/json' -d @dashboard.json
     ```
     {: codeblock}
 
