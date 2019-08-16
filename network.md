@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-08-01"
+lastupdated: "2019-08-16"
 
 keywords: Sysdig, IBM Cloud, monitoring, network traffic, firewall
 
@@ -101,15 +101,26 @@ To send metric data to the {{site.data.keyword.mon_full_notm}} service, you must
 
 | Region      | Ingestion endpoint                                | Private IP addresses                          |   Ports    |
 |-------------|---------------------------------------------------|-----------------------------------------------|----------|
-| `US South`  | private.ingest.us-south.monitoring.cloud.ibm.com  | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123  | TCP 6443 | 
-| `EU DE`     | private.ingest.eu-de.monitoring.cloud.ibm.com     | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16  | TCP 6443 | 
-| `EU GB`     | Not available                                     | Not available   |  | 
-| `JP TOK`    | Not available                                     | Not available   |  | 
-| `US East`   | private.ingest.us-east.monitoring.cloud.ibm.com   | 166.9.22.6 </br>166.9.20.39 </br>166.9.24.21   | TCP 6443 | 
+| `US South`  | ingest.private.us-south.monitoring.cloud.ibm.com  | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123  | TCP 6443 | 
+| `EU DE`     | ingest.private.eu-de.monitoring.cloud.ibm.com     | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16  | TCP 6443 | 
+| `EU GB`     | Not available                                     | Not available   | | 
+| `JP TOK`    | ingest.private.jp-tok.monitoring.cloud.ibm.com    | 166.9.40.25 </br>166.9.42.8 </br>166.9.44.2 | TCP 6443 | 
+| `US East`   | ingest.private.us-east.monitoring.cloud.ibm.com   | 166.9.22.6 </br>166.9.20.39 </br>166.9.24.21   | TCP 6443 | 
 | `AU SYD`    | Not available                                     | Not available   |  | 
 {: caption="Table 3. Private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
+### Alert Notifications via Webhooks
+{: #network_alert_subnets}
 
+To receive alert notifications using webhooks from the {{site.data.keyword.mon_full_notm}} service, you may need to define firewall rules for the subnets that are invoking your webhooks.
 
-
+| Region     | Alert Notification Source Subnets                                                                          |
+|------------|------------------------------------------------------------------------------------------------------------|
+| `US South` | 169.61.248.224/28 169.46.0.64/29 169.48.214.64/29 169.48.235.16/28 169.62.221.32/28 169.60.151.168/29      |
+| `EU DE`    | 169.50.9.0/28 159.122.102.32/29 161.156.102.200/29 161.156.69.144/28 149.81.99.192/28 149.81.77.72/29      |
+| `EU GB`    | 159.8.149.208/28 159.122.210.168/29 158.175.75.160/28 158.175.98.200/29 141.125.73.112/29 141.125.73.80/28 |
+| `JP TOK`   | 169.56.51.232/29 169.56.11.208/28 128.168.75.32/28 128.168.75.8/29 165.192.84.8/29 165.192.83.144/28       |
+| `US East`  | 169.55.109.112/29 169.55.122.192/28 169.60.82.240/28 169.60.112.72/29 169.62.28.160/28 169.62.3.80/29      | 
+| `AU SYD`   | 168.1.213.72/29 168.1.41.96/28 130.198.80.152/29 130.198.66.144/28 135.90.73.96/29 135.90.78.192/28        |
+{: caption="Table 4. Source Subnets for Webhook notifications from {{site.data.keyword.mon_full_notm}}" caption-side="top"}

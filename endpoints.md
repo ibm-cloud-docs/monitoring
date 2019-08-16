@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-08-01"
+lastupdated: "2019-08-16"
 
 keywords: Sysdig, IBM Cloud, monitoring, regions, endpoints
 
@@ -56,11 +56,11 @@ The following table lists the **Sysdig Collector endpoints** that are available 
 
 | Region        | Public Endpoint                                 | Private Endpoint                                      | Port     |
 |---------------|-------------------------------------------------|-------------------------------------------------------|----------|
-| `US South`    | `ingest.us-south.monitoring.cloud.ibm.com`      | `private.ingest.us-south.monitoring.cloud.ibm.com`    | TCP 6443 |
-| `EU DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`         | `private.ingest.eu-de.monitoring.cloud.ibm.com`       | TCP 6443 |
-| `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`         | `Not available`       | TCP 6443 |
-| `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`        | `Not available`      | TCP 6443 |
-| `US East`     | `ingest.us-east.monitoring.cloud.ibm.com`       | `private.ingest.us-east.monitoring.cloud.ibm.com`     | TCP 6443 |
+| `US South`    | `ingest.us-south.monitoring.cloud.ibm.com`      | `ingest.private.us-south.monitoring.cloud.ibm.com`    | TCP 6443 |
+| `EU DE`       | `ingest.eu-de.monitoring.cloud.ibm.com`         | `ingest.private.eu-de.monitoring.cloud.ibm.com`       | TCP 6443 |
+| `EU GB`       | `ingest.eu-gb.monitoring.cloud.ibm.com`         | `ingest.private.eu-gb.monitoring.cloud.ibm.com`       | TCP 6443 |
+| `JP TOK`      | `ingest.jp-tok.monitoring.cloud.ibm.com`        | `ingest.private.jp-tok.monitoring.cloud.ibm.com`      | TCP 6443 |
+| `US East`     | `ingest.us-east.monitoring.cloud.ibm.com`       | `ingest.private.us-east.monitoring.cloud.ibm.com`     | TCP 6443 |
 | `AU SYD`      | `ingest.au-syd.monitoring.cloud.ibm.com`        | `Not available`    | TCP 6443 |
 {: caption="Table 2. List of ingestion endpoints" caption-side="top"} 
 
