@@ -101,11 +101,11 @@ To send metric data to the {{site.data.keyword.mon_full_notm}} service, you must
 
 | Region      | Ingestion endpoint                                | Private IP addresses                          |   Ports    |
 |-------------|---------------------------------------------------|-----------------------------------------------|----------|
-| `US South`  | private.ingest.us-south.monitoring.cloud.ibm.com  | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123  | TCP 6443 | 
-| `EU DE`     | private.ingest.eu-de.monitoring.cloud.ibm.com     | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16  | TCP 6443 | 
-| `EU GB`     | Not available                                     | Not available   |  | 
-| `JP TOK`    | Not available                                     | Not available   |  | 
-| `US East`   | private.ingest.us-east.monitoring.cloud.ibm.com   | 166.9.22.6 </br>166.9.20.39 </br>166.9.24.21   | TCP 6443 | 
+| `US South`  | ingest.private.us-south.monitoring.cloud.ibm.com  | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123  | TCP 6443 | 
+| `EU DE`     | ingest.private.eu-de.monitoring.cloud.ibm.com     | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16  | TCP 6443 | 
+| `EU GB`     | Not available                                     | Not available   | | 
+| `JP TOK`    | ingest.private.jp-tok.monitoring.cloud.ibm.com    | 166.9.40.25 </br>166.9.42.8 </br>166.9.44.2 | TCP 6443 | 
+| `US East`   | ingest.private.us-east.monitoring.cloud.ibm.com   | 166.9.22.6 </br>166.9.20.39 </br>166.9.24.21   | TCP 6443 | 
 | `AU SYD`    | Not available                                     | Not available   |  | 
 {: caption="Table 3. Private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
