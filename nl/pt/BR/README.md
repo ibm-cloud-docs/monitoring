@@ -1,1 +1,0 @@
-# Monitoramento-com-Sysdig

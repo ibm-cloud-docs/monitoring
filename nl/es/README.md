@@ -1,1 +1,0 @@
-# Supervisión con Sysdig
