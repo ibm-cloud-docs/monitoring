@@ -27,16 +27,7 @@ subcollection: Sysdig
 In {{site.data.keyword.mon_full_notm}}, you can customize the Sysdig agent configuration to set a log level, block ports, include or exclude metric data, add or remove events, and filter out containers. 
 {:shortdesc}
 
-To customize a Kubernetes Sysdig agent, you might need to configure sections in any of the following files:
-
-| File name                        | Actions       |
-|----------------------------------|-------------------|
-| `sysdig-agent-daemonset-v2.yaml` | Modify log level. |
-| `sysdig-agent-configmap.yaml`    | Block ports. </br>Include or exclude metric data. </br>Add or remove events. </br>Filter out containers. |
-{: caption="Table 1. Kubernetes Sysdig agent configuration files" caption-side="top"} 
-
-To edit a Kubernetes Sysdig agent, you might need to edit the *sysdig-agent-configmap.yaml*, the *sysdig-agent-daemonset-v2.yaml*, or both.
-{: tip}
+To customize a Kubernetes Sysdig agent, you need to configure the `sysdig-agent-configmap.yaml` file.
 
 There are two methods that you can use to modify a configuration file:
 * Method 1: Modify the file directly on the cluster where the agent is running.
@@ -75,19 +66,6 @@ Complete the following steps to edit a Kubernetes Sysdig agent configuration:
 
     Save the changes. Changes are applied automatically. 
 
-3. Edit the *sysdig-agent-daemonset-v2.yaml* file. 
-
-    Run the following command: 
-
-    ```
-    kubectl edit daemonset sysdig-agent -n ibm-observe
-    ```
-    {: codeblock}
-
-    Make changes. **Note:** Refer to `vi` editor instructions to learn how to make changes.
-
-    Save the changes. Changes are applied automatically.
-
 ## Editing the Kubernetes Sysdig agent configuration by using kubectl apply
 {: #change_kube_agent_edit_kube_agent_method2}
 
@@ -104,13 +82,6 @@ Complete the following steps to edit a Kubernetes Sysdig agent configuration:
     ```
     {: codeblock} 
     
-    or 
-    
-    ```
-    kubectl get daemonset sysdig-agent -n=ibm-observe -o=yaml > prod-sysdig-agent-daemonset-v2.yaml
-    ```
-    {: codeblock}
-
 2. Edit the configuration.
 
 3. Apply the changes by using the following commands:
@@ -120,13 +91,6 @@ Complete the following steps to edit a Kubernetes Sysdig agent configuration:
     ```
     {: codeblock}
     
-    or
-    
-    ```
-    kubectl apply -f sysdig-agent-daemonset-v2.yaml
-    ```
-    {: codeblock}
-
 Running agents will automatically pick the new configuration after Kubernetes pushes the changes across all the nodes in the cluster.
 
 
@@ -399,7 +363,7 @@ The following table outlines the parameters that you can define to set the filte
 | `kubernetes.object.annotation.*`  | Kubernetes object annotation                   |
 | `kubernetes.object.label.*`       | Kubernetes object label                        |
 | `all`                              | Default rule to specify all objects            |
-{: caption="Table 2. Parameters to define conditions on containers" caption-side="top"} 
+{: caption="Table 1. Parameters to define conditions on containers" caption-side="top"} 
 
 Consider the following information on how the Sysdig agent applies the rules that you define in the **container_filter** section:
 * You define conditions by configuring them with the **include** and **exclude** filtering parameters. 
@@ -443,11 +407,11 @@ Complete the following steps to filter out containers that a Sysdig agent monito
     #
     # Include or exclude conditions
     container_filter:
-       - include:
+      - include:
             container.image: appdomain/my-app-image
-       - include:
+      - include:
             container.name: my-java-app
-       - exclude:
+      - exclude:
             kubernetes.namespace.name: kube-system
     ```  
     {: codeblock}
@@ -507,129 +471,49 @@ Changes are applied automatically.
 
 
 
-## Changing the log level
-{: #change_kube_agent_log_level}
+## Changing the log configurations
+{: #change_kube_agent_log_configurations}
 
-To configure the log level, you must customize the **log** section in the *sysdig-agent-daemonset-v2.yaml* file. 
+To configure the log configurations, you must customize the **log** section in the *sysdig-agent-configmap.yaml* file.
 
 The Sysdig agent generates log entries in */opt/draios/logs/draios.log*. 
 * The log file rotates when it reaches 10MB in size.
 * The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
-* Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*
-* The default log level is *info*, where an entry is created for each aggregated metrics transmission to the backend servers, once per second, in addition to entries for any warnings and errors.
-* You can customize the type of log and the entries that are collected by configuring the Sysdig agent configuration file **/opt/draios/etc/dragent.yaml**. After you edit the file, you must restart the agent at the shell with `service dragent restart` to activate the changes.
 
 The following table lists some common scenarios and the value that you must set in each one of them:
 
-| Use cases                                     | Log section entry           |
-|-----------------------------------------------|-----------------------------|
-| Troubleshoot agent behavior                   | `file_priority: debug`      |
-| Reduce container console output               | `console_priority: warning` |
-| Filtering events by severity                  | `event_priority: warning`   |
-| Verify what metrics are included or excluded  | `metrics_excess_log: true`  |
+| Use cases                                     | Log section entry           | Default Value |
+|-----------------------------------------------|-----------------------------|---------------|
+| Troubleshoot agent behavior                   | `file_priority: debug`      | `info`        |
+| Reduce container console output               | `console_priority: warning` | `info`        |
+| Filtering events by severity                  | `event_priority: warning`   | `information` |
+| Verify what metrics are included or excluded  | `metrics_excess_log: true`  | `false`       |
 {: caption="Table 2. Log section entries" caption-side="top"} 
 
-Complete the following steps to configure the log level:
+### Changing the log level
+{: #change_kube_agent_log_level}
 
-1. Set up the cluster environment. Run the following commands:
+* The **file_priority** in the **log** section controls the type of log entries written to the file `/opt/draios/logs/draios.log`.
+* The **console_priority** in the **log** section controls the type of log entries written to the container console output when running the containerized agent.
+* The default log level is **info**, where a log entry is created for each aggregated metrics transmission to the backend servers, once per second, in addition to entries for any warnings and errors.
+* Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*
 
-    First, get the command to set the environment variable and download the Kubernetes configuration files.
-
-    ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
-    ```
-    {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
-
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
-
-2. Edit the *sysdig-agent-daemonset-v2.yaml* file. 
-
-    Run the following command:
-
-    ```
-    kubectl edit daemonset sysdig-agent -n ibm-observe
-    ```
-    {: codeblock}
-
-3. Make changes. Add the *log* section or update the section.
-
-    For example, to filter out low severity events (*notice*, *information*, *debug*), you must set the entry **metrics_excess_log** in the **log** section to *true*:
-
-    ```
-    log:
-      file_priority: warning
-      console_priority: info
-      event_priority: warning
-      metrics_excess_log: true
-    ```
-    {: codeblock}
-
-6. Save the changes. 
-
-Changes are applied automatically. 
-
-
-## Filtering Kubernetes events by severity
+### Filtering Kubernetes events by severity
 {: #change_kube_agent_filterby_severity}
 
-To filter events by severity, you must modify the *sysdig-agent-daemonset-v2.yaml* file. Set the entry **event_priority** in the **log** section to *none*. 
+* The **event_priority** in the **log** section controls the type of events that are sent from the agent
+* The default log level is *information*. This means that only warning and higher severity events are transmitted.
+* Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *information*, *debug* and *none*. **Note**: The values are listed from high priority to low priority.
+* Setting the level to `none` will block all event collection.
 
-The default log level is **information**. This means that only warning and higher severity events are transmitted.
 
-Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *information*, *debug* and *none*. **Note**: The values are listed from high priority to low priority.
-
-Complete the following steps:
-
-1. Set up the cluster environment. Run the following commands:
-
-    First, get the command to set the environment variable and download the Kubernetes configuration files.
-
-    ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
-    ```
-    {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
-
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
-
-2. Edit the *sysdig-agent-daemonset-v2.yaml* file. 
-
-    Run the following command:
-
-    ```
-    kubectl edit daemonset sysdig-agent -n ibm-observe
-    ```
-    {: codeblock}
-
-3. Make changes. Add the *log* section or update the section.
-
-    For example, to filter out low severity events (*notice*, *information*, *debug*), you must set the log section **event_priority** to *warning*:
-
-    ```
-    log:
-      event_priority: warning
-    ```
-    {: codeblock}
-
-6. Save the changes. 
-
-Changes are applied automatically. 
-
-## Logging into a file what metrics are included or excluded
+### Logging into a file what metrics are included or excluded
 {: #change_kube_agent_log_metrics}
 
-To log into a file information about which custom metrics are included and which ones are excluded, you must customize the *sysdig-agent-daemonset-v2.yaml* file. Set the entry **metrics_excess_log** to **true** in the **log** section.
-
-* Logging is disabled by default. 
-* Logging occurs at INFO-level every 30 seconds and lasts for 10 seconds. 
-* The log file is available in */opt/draios/logs/draios.log*.
+* Setting **metrics_excess_log** to **true** in the **log** section will enable logging of the custom metrics that are included or excluded.
+* Metric logging is disabled by default.
+* Logging occurs at INFO-level every 30 seconds and lasts for 10 seconds.
+* The **metricsfile** setting is required to specify the location for the metrics to be written by the agent.  The `metricsfile.location` value is a relative path under the /opt/draios directory.  *Note:* The `metricsfile` entry is specified at the same level as `log`( not as a child in the yaml)
 * Logging data is formatted as follows:
 
     ```
@@ -638,16 +522,12 @@ To log into a file information about which custom metrics are included and which
     {: screen}
 
     * *+/-* is a symbol that indicates if the metric is included or excluded. Plus (*+*) indicates that a metric is included. Minus (*-*) indicates that a metric is excluded. 
-
     * *[type]* specifies the metric type, for example, *statsd*.
-    
     * *[metric included/excluded]* indicates in a human readable way whether the metric is included or excluded.
-
     *  *metric.name* indicates the metric name.
+    * *(filter: +/-[metric.filter])* provides information about any filters that are defined in the **metrics_filter** section in the *sysdig-agent-configmap.yaml* file.
 
-    * *(filter: +/-[metric.filter])* provides information about any filters that are defined in the **metrics_filter** section in the *sysdig-agent-daemonset-v2.yaml* file.
-
-A sample entry looks as follows:
+A sample log entry looks as follows:
 
 ```
 -[statsd] metric excluded: mongo.statsd.vsize (filter: -[mongo.statsd.*])
@@ -655,7 +535,8 @@ A sample entry looks as follows:
 ```
 {: screen}
 
-Complete the following steps:
+
+Complete the following steps to configure the log settings:
 
 1. Set up the cluster environment. Run the following commands:
 
@@ -672,28 +553,34 @@ Complete the following steps:
 
     **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
 
-2. Edit the *sysdig-agent-daemonset-v2.yaml* file. 
+2. Edit the *sysdig-agent-configmap.yaml* file.
 
     Run the following command:
 
     ```
-    kubectl edit daemonset sysdig-agent -n ibm-observe
+    kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
-3. Make changes. Add the *log* section or update the section.
+3. Make changes. Add the *log* section or update the section and include the configurations that you wish to modify based on the descriptions above.
 
-    For example, to filter out low severity events (*notice*, *information*, *debug*), you must set the entry **metrics_excess_log** in the **log** section to *true*:
+    For example:
 
     ```
     log:
+      file_priority: warning
+      console_priority: info
+      event_priority: warning
       metrics_excess_log: true
+    metricsfile: { location : metrics }
     ```
     {: codeblock}
 
 6. Save the changes. 
 
 Changes are applied automatically. 
+
+
 
 
 ## Sample configmap yaml file
@@ -732,61 +619,23 @@ data:
       kubernetes:
         node: 
           - Rebooted
-      metrics_filter:
-        - include: metricA.*
-        - exclude: metricA.*
-        - include: metricB.*
-      use_container_filter: true
-      container_filter: 
-        - exclude:
-          kubernetes.namespace.name: kube-system
+    metrics_filter:
+      - include: metricA.*
+      - exclude: metricA.*
+      - include: metricB.*
+    use_container_filter: true
+    container_filter:
+      - exclude:
+        kubernetes.namespace.name: kube-system
+    log:
+      file_priority: warning
+      console_priority: info
+      event_priority: warning
+      metrics_excess_log: true
+    metricsfile: { location : metrics }
 kind: ConfigMap
 metadata:
   annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","data":{"dragent.yaml":"### Agent tags\n# tags: linux:ubuntu,dept:dev,local:nyc\n#### Sysdig Software related config \n####\n# Sysdig collector address\n# collector: xxx.xxx.x.x\n# Collector TCP port\n# collector_port: 6666\n# Whether collector accepts ssl\n# ssl: true\n# collector certificate validation\n# ssl_verify_certificate: true\n#######################################\n#\nk8s_cluster_name: marisa-production\ncollector: ingest.us-south.monitoring.cloud.ibm.com\ncollector_port: 6443\nssl: true\nssl_verify_certificate: true\nsysdig_capture_enabled: true\nnew_k8s: true\ntags: cluster:mycluster,region:us-south\nevents:    \n  kubernetes:\n     node: \n       - Rebooted\nuse_container_filter: true\ncontainer_filter: \n      - exclude:\n         kubernetes.namespace.name: kube-system\n         container.image: \"registry.ng.bluemix.net/*\"\n"},"kind":"ConfigMap","metadata":{"annotations":{},"creationTimestamp":"2018-11-07T10:57:38Z","name":"sysdig-agent","namespace":"default","resourceVersion":"9999999","selfLink":"/api/v1/namespaces/default/configmaps/sysdig-agent","uid":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"}}
-  creationTimestamp: 2018-11-07T10:57:38Z
-  name: sysdig-agent
-  namespace: default
-  resourceVersion: "9999999"
-  selfLink: /api/v1/namespaces/default/configmaps/sysdig-agent
-  uid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+...
 ```
 {: codeblock}
-
-## Sample daemonset yaml file
-{: #change_kube_agent_sample_daemonset}
-
-```
- Please edit the object below. Lines beginning with a '#' will be ignored,
-# and an empty file will abort the edit. If an error occurs while saving this file will be
-# reopened with the relevant failures.
-#
-apiVersion: extensions/v1beta1
-kind: DaemonSet
-metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"extensions/v1beta1","kind":"DaemonSet","metadata":{"annotations":{},"labels":{"app":"sysdig-agent"},"name":"sysdig-agent","namespace":"default"},"spec":{"template":{"metadata":{"labels":{"app":"sysdig-agent"}},"spec":{"containers":[{"image":"sysdig/agent","imagePullPolicy":"Always","name":"sysdig-agent","readinessProbe":{"exec":{"command":["test","-e","/opt/draios/logs/running"]},"initialDelaySeconds":10},"resources":{"limits":{"memory":"1024Mi"},"requests":{"cpu":"100m","memory":"512Mi"}},"securityContext":{"privileged":true},"volumeMounts":[{"mountPath":"/host/var/run/docker.sock","name":"docker-sock","readOnly":false},{"mountPath":"/host/dev","name":"dev-vol","readOnly":false},{"mountPath":"/host/proc","name":"proc-vol","readOnly":true},{"mountPath":"/host/boot","name":"boot-vol","readOnly":true},{"mountPath":"/host/lib/modules","name":"modules-vol","readOnly":true},{"mountPath":"/host/usr","name":"usr-vol","readOnly":true},{"mountPath":"/dev/shm","name":"dshm"},{"mountPath":"/opt/draios/etc/kubernetes/config","name":"sysdig-agent-config"},{"mountPath":"/opt/draios/etc/kubernetes/secrets","name":"sysdig-agent-secrets"}]}],"dnsPolicy":"ClusterFirstWithHostNet","hostNetwork":true,"hostPID":true,"serviceAccount":"sysdig-agent","terminationGracePeriodSeconds":5,"tolerations":[{"effect":"NoSchedule","key":"node-role.kubernetes.io/master"}],"volumes":[{"emptyDir":{"medium":"Memory"},"name":"dshm"},{"hostPath":{"path":"/var/run/docker.sock"},"name":"docker-sock"},{"hostPath":{"path":"/dev"},"name":"dev-vol"},{"hostPath":{"path":"/proc"},"name":"proc-vol"},{"hostPath":{"path":"/boot"},"name":"boot-vol"},{"hostPath":{"path":"/lib/modules"},"name":"modules-vol"},{"hostPath":{"path":"/usr"},"name":"usr-vol"},{"configMap":{"name":"sysdig-agent","optional":true},"name":"sysdig-agent-config"},{"name":"sysdig-agent-secrets","secret":{"secretName":"sysdig-agent"}}]}},"updateStrategy":{"type":"RollingUpdate"}}}
-  creationTimestamp: 2018-11-07T13:39:58Z
-  generation: 2
-  labels:
-    app: sysdig-agent
-  name: sysdig-agent
-  namespace: default
-  resourceVersion: "5980648"
-  selfLink: /apis/extensions/v1beta1/namespaces/default/daemonsets/sysdig-agent
-  uid: 9ea3353f-e292-11e8-b4b3-260d32136de0
-spec:
-  revisionHistoryLimit: 10
-  selector:
-    matchLabels:
-      app: sysdig-agent
-log:
-  event_priority: warning
-  file_priority: warning
-  console_priority: info
-  metrics_excess_log: true
-```
-{: codeblock}
-
