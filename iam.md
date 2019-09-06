@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-09-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, iam
 
@@ -41,9 +41,9 @@ subcollection: Sysdig
 
 *Roles* define the actions that a user or serviceID can run. There are different types of roles in the {{site.data.keyword.cloud_notm}}:
 * *Platform management roles* enable users to perform tasks on service resources at the platform level, for example assign user access for the service, create or delete service IDs, create instances, assign policies for your service to other users, and bind instances to applications.
-* *Service access roles* enable users to be assigned varying levels of permission for calling the service's API.
+* *Service access roles* enable users to be assigned varying levels of permission for calling the service's API or running actions in the Sysdig UI.
 
-**To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use **access groups*.** You can assign a single policy to the group instead of assigning the same access multiple times per individual user or service ID.
+To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use **access groups*.** You can assign a single policy to the group instead of assigning the same access multiple times per individual user or service ID.
 {: tip}
 
 
@@ -84,41 +84,28 @@ Use the following table to identify the platform role that you can grant a user 
 | `Create a service ID`                                                   | Administrator </br>Editor                            |
 | `View details of a service instance`                                    | Administrator </br>Editor </br>Operator </br>Viewer  | 
 | `View service instances in the Observability Monitoring dashboard`      | Administrator </br>Editor </br>Operator </br>Viewer  | 
+| `Launch the Sysdig UI`                                                  | Administrator </br>Editor </br>Operator </br>Viewer  | 
+| `Grant permissions to use the API`                                      | Administrator </br>Editor </br>Operator </br>Viewer  | 
 {: caption="Table 1. IAM user roles and actions" caption-side="top"}
 
+## {{site.data.keyword.cloud_notm}} service roles
+{: #iam_svcroles}
 
-
-## Sysdig roles
-{: #iam_sysdig_roles}
-
-The following table outlines the Sysdig roles and actions per role:
+Use the following table to identify the service role that you can grant a user in the {{site.data.keyword.cloud_notm}} to run any of the following actions:
 
 | Actions                                                                    | Sysdig role                                          | 
 |----------------------------------------------------------------------------|------------------------------------------------------|
-| `Reset the Sysdig access key`                                              | Admin                                                |
-| `Manage users`                                                             | Admin                                                |
-| `Create, configure, and delete teams`                                      | Admin                                                |
-| `Configure and remove notifications channels`                              | Admin                                                | 
-| `Configure and remove Sysdig agents`                                       | Admin                                                |
-| `Create, delete, and edit content in the Sysdig web UI`                    | Admin </br>Advanced user                             |  
-| `View metrics, dashboards, alerts, events, and captures through the Sysdig Web UI`      | Admin </br>Advanced user </br>User      |  
-| `Create and delete alerts`                                                 | Admin </br>Advanced user                             | 
-| `Create and delete captures`                                               | Admin </br>Advanced user                             |   
+| `Reset the Sysdig access key`                                              | Manager                                                |
+| `Manage users`                                                             | Manager                                                |
+| `Create, configure, and delete teams`                                      | Manager                                                |
+| `Configure and remove notifications channels`                              | Manager                                                | 
+| `Configure and remove Sysdig agents`                                       | Manager                                              |
+| `Create, delete, and edit content in the Sysdig web UI`                    | Manager </br>Writer                                  |  
+| `View metrics, dashboards, alerts, events, and captures through the Sysdig Web UI`      | Manager </br>Writer </br>Reader         |  
+| `Create and delete alerts`                                                 | Manager </br>Writer                            | 
+| `Create and delete captures`                                               | Manager </br>Writer                         |   
 {: caption="Table 2. Sysdig roles and actions" caption-side="top"}
 
-
-## Mapping of Sysdig roles to {{site.data.keyword.cloud_notm}} roles
-{: #iam_sysdig}
-
-Use the following table to see how an {{site.data.keyword.cloud_notm}} role maps to a Sysdig role:
-
-| Type of role        | Role               | Sysdig role                | Description                                         |
-|---------------------|--------------------|----------------------------|-----------------------------------------------------|
-| Platform role       | Administrator      | Admin                      | Grants the user Sysdig admin privileges.            | 
-| Service role        | Manager            | Admin                      | Grants the user Sysdig admin privileges.            | 
-| Service role        | Writer             | Advanced user                       | Grants the user Sysdig advanced user privileges.    |
-| Service role        | Reader             | User                       | Grants the user Sysdig user privileges.             |
-{: caption="Table 3. Sysdig roles" caption-side="top"}
 
 
 
