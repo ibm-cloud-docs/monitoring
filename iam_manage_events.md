@@ -152,8 +152,8 @@ Complete the following steps to assign a user administrator role on one instance
 6. Select the service role **Manager**.
 7. Click **Assign**.
 
-### Option 3. Grant permissions to a team in an instance
-{: #admin_account_opt3}
+### Option 4. Grant permissions to a team in an instance
+{: #admin_account_opt4}
 
 
 Complete the following steps to assign a user administrator role on one instance of the {{site.data.keyword.mon_full_notm}} service: 
