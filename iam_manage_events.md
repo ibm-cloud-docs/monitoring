@@ -97,9 +97,9 @@ Complete the following steps to assign a policy to an access group through the U
 Complete the following steps to assign a user administrator role to the {{site.data.keyword.mon_full_notm}} service in the account: 
 
 1. Select **Assign access to resources**.
-2. Select **{{site.data.keyword.mon_full_notm}}**.
-3. Select **All current regions**.
-4. Select **All current service instances**.
+2. In the *Services* section, select **{{site.data.keyword.mon_full_notm}}**.
+3. Skip configuring a value in the *Service Instance* section.
+4. Skip configuring a value in the *Sysdig Team* section.
 5. Select a platform role.
 
     Select **Administrator** to allow the user to manage the service and user access to work with the service.
@@ -132,25 +132,25 @@ Complete the following steps to assign a user administrator role to the {{site.d
 6. Select the service role **Manager**.
 7. Click **Assign**.
 
-### Option 3. Grant permissions in a location
+### Option 3. Grant permissions to a single instance
 {: #admin_account_opt3}
 
-You can only provision 1 instance of the {{site.data.keyword.mon_full_notm}} service per location. Therefore, when you grant permissions by using this option, you are controlling access per location. 
-{: note}
 
 Complete the following steps to assign a user administrator role on one instance of the {{site.data.keyword.mon_full_notm}} service: 
 
 1. Select **Assign access to resources**.
 2. Select **{{site.data.keyword.mon_full_notm}}**.
-3. Select the instance.
-4. Select a platform role.
+3. In the *Service Instance* section, select 1 instance.
+4. In the *Sysdig Team* section, skip the section to grant permissions on all teams that are defined in Sysdig for that instance, or choose a team.
+
+5. Select a platform role.
 
     Select **Administrator** to allow the user to manage the service and user access to work with the service.
 
     Select **Editor** to allow the user to manage the service only.
     
-5. Select the service role **Manager**.
-6. Click **Assign**.
+6. Select the service role **Manager**.
+7. Click **Assign**.
 
 
 

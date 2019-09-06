@@ -99,8 +99,8 @@ Complete the following steps:
 
 1. Select **Assign access to resources**.
 2. Select **{{site.data.keyword.mon_full_notm}}**.
-3. Select **All current regions**.
-4. Select **All current service instances**.
+3. Skip configuring a value in the *Service Instance* section.
+4. Skip configuring a value in the *Sysdig Team* section.
 5. Select the platform role **Viewer**.
 6. Select the service role **Reader**.
 7. Click **Assign**.
@@ -123,18 +123,31 @@ Complete the following steps:
 6. Select the service role **Reader**.
 7. Click **Assign**.
 
-### Option 3. Grant permissions in a location
+### Option 3. Grant permissions to a single instance
 {: #user_opt3}
 
-You can only provision 1 instance per location. Therefore, to grant permissions to view events in a region, complete the following steps: 
+Complete the following steps: 
 
 1. Select **Assign access to resources**.
 2. Select **{{site.data.keyword.mon_full_notm}}**.
-3. Select the instance in the region that the user must have permission to see events.
-4. Select the platform role **Viewer**.
-5. Select the service role **Reader**.
-6. Click **Assign**.
+3. In the *Service Instance* section, select 1 instance.
+4. In the *Sysdig Team* section, skip the section to grant permissions on all teams that are defined in Sysdig for that instance, or choose a team.
+5. Select the platform role **Viewer**.
+6. Select the service role **Reader**.
+7. Click **Assign**.
 
+### Option 4. Grant permissions to a team in an instance
+{: #user_opt4}
+
+Complete the following steps: 
+
+1. Select **Assign access to resources**.
+2. Select **{{site.data.keyword.mon_full_notm}}**.
+3. In the *Service Instance* section, select 1 instance.
+4. In the *Sysdig Team* section, choose a team.
+5. Select the platform role **Viewer**.
+6. Select the service role **Reader**.
+7. Click **Assign**.
 
 ## Step 3. Add a user to the access group
 {: #iam_view_events_step3}
