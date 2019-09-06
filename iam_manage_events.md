@@ -152,7 +152,25 @@ Complete the following steps to assign a user administrator role on one instance
 6. Select the service role **Manager**.
 7. Click **Assign**.
 
+### Option 3. Grant permissions to a team in an instance
+{: #admin_account_opt3}
 
+
+Complete the following steps to assign a user administrator role on one instance of the {{site.data.keyword.mon_full_notm}} service: 
+
+1. Select **Assign access to resources**.
+2. Select **{{site.data.keyword.mon_full_notm}}**.
+3. In the *Service Instance* section, select 1 instance.
+4. In the *Sysdig Team* section, choose a team.
+
+5. Select a platform role.
+
+    Select **Administrator** to allow the user to manage the service and user access to work with the service.
+
+    Select **Editor** to allow the user to manage the service only.
+    
+6. Select the service role **Manager**.
+7. Click **Assign**.
 
 ## Step 3. Add a user or service ID to the access group
 {: #ime_step3}
