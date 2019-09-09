@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2019
-lastupdated: "2019-09-10"
+  years:  2018, 2019
+lastupdated: "2019-03-06"
 
-keywords: Sysdig, IBM Cloud, monitoring, team, teams
+keywords: Sysdig, IBM Cloud, monitoring, teams
 
 subcollection: Sysdig
 
@@ -21,96 +21,107 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Working with Teams
-{: .no_toc }
+# Working with teams
+{: #teams}
 
-Teams allow you to add another dimension of control on top of platform and service access.
+You can use teams to add another dimension of control on the data that is available through a Sysdig instance.
+{:shortdesc} 
 
-In the world of microservices it is becoming harder to track down valuable metrics and ensure that no sensitive data is exposed. Teams fixes this by allowing admins to configure who exactly can see metrics from specific resources. A team can be created for a single service instance and an instance can have many teams. It specifies what resources are visible with fine grain control. Teams also allow you to customize the user experience of the dashboard. Once a team is created an admin can add a user to it through the _Access (IAM)_ page.
+In the world of microservices, it is becoming harder to track down valuable metrics and ensure that no sensitive data is exposed. Teams fixes this by allowing admins to configure who exactly can see metrics from specific resources. A team can be created for a single service instance and an instance can have many teams. It specifies what resources are visible with fine grain control. Teams also allow you to customize the user experience of the dashboard. Once a team is created, an admin can add a user to it through {{site.data.keyword.iamlong}} (IAM).
 
-NOTE: These instructions assume that you have provisioned a Sysdig service instance on IBM Cloud
+## Pre-reqs
+{: #teams_prereqs}
 
-## Creating a Team
+* An administrator or a manager of an {{site.data.keyword.mon_full_notm}} instance must switch to the *Monitor Operations* team before he can create teams and manage existing teams.
+* You must have provisioned an instance of the {{site.data.keyword.mon_full_notm}} service.
+
+## Creating a team
 {: #teams_create}
 
-1. Enter your Sysdig dashboard
+Complete the following steps to create a team:
 
-2. Navigate to the settings page and then the Teams tab
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+    
+2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
 
-3. Press _Add team_
+3. Select **Teams**. The list of existing teams is displayed.
 
-4. Configure the options following the chart below
+4. Click **Add Team**. The team configuration page is displayed.
 
-5. Press _Save_
+5. Configure the team details. 
 
-| Configuration | Required | Description |
-|----------|----------|----------|
-| Color | Yes | Assigns a color to the team to make them easier to identify quickly in a list | 
-| Name | Yes | The name of the team as it will appear in the “Switch to” drop-down selector and other menus |
-| Description | No | Longer description for the team |
-| Default Team | No | If users are not assigned to any team, they will automatically be a part of this team if it's turned on |
-| Default Entry Point | Yes | Defaults to the Explore page; choose an alternate entry if needed |
-| Scope by | No | Determines the highest level the data to which team members will have visibility. If set for _Host_, Team members can see all Host-level and Container-level information. If set for _Container_, Team members can see only Container-level information |
-| Scope | Yes | Further limits what data Team members can see by specifying tag/value expressions for metrics. The pull-down selector defaults to _is_, but can be changed to _is not_, _in_, _contains_, and etc. Complex policies can be created by clicking _Add another_ to create AND chains of several expressions.<br><br>NOTE: Making changes to the Scope settings can have a dramatic impact on what’s visualized in the Team’s Dashboards that are already configured, so you may want to carefully review these before/after your change |
-| Additional Permissions | No | **Sysdig Capture** - Check this box to allow this team to take Sysdig Captures. Captures will only be visible to members of this team.<br>WARNING: Captures will include detailed information from every container on a host, regardless of the team’s Scope<br><br>**Infrastructure Events** - Check this box to allow this team to view ALL infrastructure events (from every user and agent. Otherwise, this team will only see infrastructure events sent specifically to this team |
+    * Choose a color.
 
-<img src="images/team-configuration.png" alt="Team Configuration" width="800" />
+    * Enter the name of the team
 
-## Editing a Team
-{: #teams_edit}
+    * [Optional] Enter a description for this team.
 
-1. You must have the _Manager_ service access role in IAM for the instance containing the team
+    * [Optional] Set the **Default team** parameter if you want this team to become the default team for new users.
 
-2. Enter your Sysdig dashboard
+    * Set the **Default Entry Point** to specify the view in the web UI that opens every time a user logs in. Valid entrypoints are: *Explore* view, *Dashboards* view, *Events* view, *Alerts* view, and *Settings* view. By default, the *Explore* view is set.
 
-3. Switch to the default team, Monitor Operations, by pressing on the user icon
+6. Configure the team scope. 
 
-4. Navigate to the settings page and then the Teams tab
+    * [Optional] Set **Scope by** to specify the level of data that members of the team have access to. Valid values are *host* and *container*. If the parameter is set to *Host*, members can see all Host-level and Container-level information. If the parameter is set to *Container*, members can see only Container-level information.
 
-5. Press the team you want to modify and follow the configuration chart above
+    * Set the **Scope** to limit what data users can see. You can set one or more conditions by specifying expressions for metrics. By default, the scope is set to *everywhere*.
+	
+    * [Optional] Enable or disable **Sysdig captures**. Check this box to allow this team to take Sysdig Captures. Capture files will only be visible to members of this team. **Note:** Captures include detailed information from every container on a host, regardless of the team’s scope.
 
-6. Press _Save_
+    * [Optional] Enable or disable **Infrastructure Events**. Check this box to allow members to view all custom infrastructure events from every user and Sysdig agent. When is not checked, users can see infrastructure events that are sent specifically to this team. 
 
-## Deleting a Team
+6. Add members to the team. Click **Assign user**. Search for a user and add it.
+
+
+
+## Changing the scope of a team
+{: #teams_scope}
+
+To change the scope of the data that is visible to members of a team, complete the following steps: 
+
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+    
+2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
+
+3. Select **Teams**. The list of existing teams is displayed.
+
+4. Identify the team and select it. The details of the team are displayed.
+
+5. Change configuration details in the *Visibility* section.
+
+6. Click **Save**. 
+
+
+## Deleting a team
 {: #teams_delete}
 
-1. You must have the _Manager_ service access role in IAM for the instance containing the team
+The default team, **Monitor Operations**, cannot be deleted. 
 
-2. Enter your Sysdig dashboard
+Complete the following steps to delete a team:
 
-3. You cannot delete the team that you're currently using
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+    
+2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
 
-4. Navigate to the settings page and then the Teams tab
+3. Select **Teams**. The list of existing teams is displayed.
 
-5. Press the team you want to modify
+4. Identify the team that you want to delete and select it. The details of the team are displayed.
 
-6. Press _Delete Team_
+5. Click **Delete team**.
 
-7. Think about the repercussions and then press _Yes, delete_
+**Note:** When you delete a team, users that only belong to this team will be moved to the default team.
 
-NOTE: When you delete a team, users that only belong to this team will be moved to the default team
 
-## Assigning Users to Teams
+## Granting users permissions to work in a team
 {: #teams_assign}
 
-1. Enter the [Access (IAM) page](https://test.cloud.ibm.com/iam/overview) and ensure you have sufficient privileges to modify the user
+To add a user to a team, consider the following information:
+1. You must have **manager** permissions in the Sysdig instance where the team is available.
+2. You must define a team level IAM policy for the user.
 
-2. Enter the Users tab and press on the user you want to add to your team
+When the policy is defined, the user is added to the list of users that have access to work with resources configured for a team.
 
-3. Press the _Access policies_ tab
+[Learn more on how to grant a user permissions to manage all teams in a Sysdig instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_manage_events#admin_account_opt4).
 
-4. Press _Assign access_
+[Learn more on how to grant a user permissions to view data for a team in a Sysdig instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_view_events#user_opt4).
 
-5. Press _Assign access to resources_
-
-6. Search for _IBM Cloud Monitoring with Sysdig_
-
-7. Select your Service Instance
-
-8. Select your team
-
-9. Select your platform and service access roles
-
-10. Press _Assign_
-
-<img src="images/instance-policies.png" alt="Instance Policies" width="800" />
