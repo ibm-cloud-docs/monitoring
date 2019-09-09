@@ -42,6 +42,7 @@ IBM Cloud Monitoring with Sysdig
     panels.md
     metrics.md
     notifications.md
+    teams.md
     iam_manage_events.md
     iam_view_events.md
     captures.md

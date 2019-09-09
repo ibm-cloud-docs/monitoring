@@ -76,37 +76,64 @@ Choose any of the following actions to manage IAM policies in the {{site.data.ke
 
 Use the following table to identify the platform role that you can grant a user in the {{site.data.keyword.cloud_notm}} to run any of the following platform actions:
 
-| Platform actions                                                        | {{site.data.keyword.cloud_notm}} Platform Roles    | 
-|-------------------------------------------------------------------------|------------------------------------------------------|
-| `Grant other account members access to work with the service`           | Administrator                                        | 
-| `Provision a service instance`                                          | Administrator </br>Editor                            | 
-| `Delete a service instance`                                             | Administrator </br>Editor                            | 
-| `Create a service ID`                                                   | Administrator </br>Editor                            |
-| `View details of a service instance`                                    | Administrator </br>Editor </br>Operator </br>Viewer  | 
-| `View service instances in the Observability Monitoring dashboard`      | Administrator </br>Editor </br>Operator </br>Viewer  | 
-| `Launch the Sysdig UI`                                                  | Administrator </br>Editor </br>Operator </br>Viewer  | 
-| `Grant permissions to use the API`                                      | Administrator </br>Editor </br>Operator </br>Viewer  | 
+
+| Platform actions                                                        | Administrator                                     | Editor | Operator | Viewer  |
+|-------------------------------------------------------------------------|:-------------------------------------------------:|:-------:|:--------:|:------:|
+| `Grant other account members access to work with the service`           | ![Checkmark icon](../../icons/checkmark-icon.svg) |         |          |        |
+| `Provision a service instance`                                          | ![Checkmark icon](../../icons/checkmark-icon.svg) |![Checkmark icon](../../icons/checkmark-icon.svg)         |          |        |
+| `Delete a service instance`                                             | ![Checkmark icon](../../icons/checkmark-icon.svg) |![Checkmark icon](../../icons/checkmark-icon.svg)         |          |        |
+| `Create a service ID`                                                   | ![Checkmark icon](../../icons/checkmark-icon.svg) |![Checkmark icon](../../icons/checkmark-icon.svg)         |          |        |
+| `View details of a service instance`                                    | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)    | ![Checkmark icon](../../icons/checkmark-icon.svg)      | ![Checkmark icon](../../icons/checkmark-icon.svg)    |
+| `View service instances in the Observability Monitoring dashboard`      | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)    | ![Checkmark icon](../../icons/checkmark-icon.svg)      | ![Checkmark icon](../../icons/checkmark-icon.svg)    |
+| `Launch the Sysdig UI`                                                  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)    | ![Checkmark icon](../../icons/checkmark-icon.svg)      | ![Checkmark icon](../../icons/checkmark-icon.svg)    |
+| `Make REST API calls`                                      | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)    | ![Checkmark icon](../../icons/checkmark-icon.svg)      | ![Checkmark icon](../../icons/checkmark-icon.svg)    |
 {: caption="Table 1. IAM user roles and actions" caption-side="top"}
+
+
 
 ## {{site.data.keyword.cloud_notm}} service roles
 {: #iam_svcroles}
 
 Use the following table to identify the service role that you can grant a user in the {{site.data.keyword.cloud_notm}} to run any of the following actions:
 
-| Actions                                                                    | Sysdig role                                          | 
-|----------------------------------------------------------------------------|------------------------------------------------------|
-| `Reset the Sysdig access key`                                              | Manager                                                |
-| `Manage users`                                                             | Manager                                                |
-| `Create, configure, and delete teams`                                      | Manager                                                |
-| `Configure and remove notifications channels`                              | Manager                                                | 
-| `Configure and remove Sysdig agents`                                       | Manager                                              |
-| `Create, delete, and edit content in the Sysdig web UI`                    | Manager </br>Writer                                  |  
-| `View metrics, dashboards, alerts, events, and captures through the Sysdig Web UI`      | Manager </br>Writer </br>Reader         |  
-| `Create and delete alerts`                                                 | Manager </br>Writer                            | 
-| `Create and delete captures`                                               | Manager </br>Writer                         |   
+| Actions                                          | Manager                            | Writer                         | Reader |
+|--------------------------------------------------|:----------------------------------:|:------------------------------:|:------:|
+| `Reset the Sysdig access key`                    | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
+| `Create, configure, and delete teams`            | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
+| `Configure and remove notifications channels`    | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
+| `Configure and remove Sysdig agents`             | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
+| `Create, delete, and edit content in the Sysdig web UI`                    | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
+| `Create and delete alerts`                                                 | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
+| `Create and delete captures`                                               | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |  
+| `View metrics, dashboards, alerts, events, and captures through the Sysdig Web UI`      | ![Checkmark icon](../../icons/checkmark-icon.svg)      | ![Checkmark icon](../../icons/checkmark-icon.svg)                    | ![Checkmark icon](../../icons/checkmark-icon.svg)    | 
 {: caption="Table 2. Sysdig roles and actions" caption-side="top"}
 
 
+When you grant a user the **manager** role, the user gets permissions to manage all teams. Grant this role for policies where the scope is limited to 1 or more Sysdig instances in the account.
+{: tip}
+
+
+## Scope of a policy
+{: #iam_policies}
+
+You can define different types of policies that define the scope of the actions for a user:
+* A **service level policy** is a policy that grants a user permissions to manage Sysdig instances in an account. 
+
+    [Learn more on how to grant a user permissions to manage the Sysdig service, that is, to manage all Sysdig instances in the account](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_manage_events#admin_account_opt1).
+
+    [Learn more on how to grant a user permissions to view data in all Sysdig instances in the account](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_view_events#user_opt1).
+
+* An **instance level policy** is a policy that grants a user permissions to manage resources in 1 Sysdig instance. 
+
+    [Learn more on how to grant a user permissions to manage 1 Sysdig instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_manage_events#admin_account_opt3).
+
+    [Learn more on how to grant a user permissions to view data in 1 Sysdig instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_view_events#user_opt3).
+
+* A **team policy** is a policy that grants a user permissions to work in a team that is defined in a Sysdig instance. 
+
+    [Learn more on how to grant a user permissions to manage all teams in a Sysdig instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_manage_events#admin_account_opt4).
+
+    [Learn more on how to grant a user permissions to view data for a team in a Sysdig instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_view_events#user_opt4).
 
 
 

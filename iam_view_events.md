@@ -123,7 +123,7 @@ Complete the following steps:
 6. Select the service role **Reader**.
 7. Click **Assign**.
 
-### Option 3. Grant permissions to a single instance
+### Option 3. Grant permissions on a single instance
 {: #user_opt3}
 
 Complete the following steps: 
@@ -136,7 +136,7 @@ Complete the following steps:
 6. Select the service role **Reader**.
 7. Click **Assign**.
 
-### Option 4. Grant permissions to a team in an instance
+### Option 4. Grant permissions on 1 team
 {: #user_opt4}
 
 Complete the following steps: 
