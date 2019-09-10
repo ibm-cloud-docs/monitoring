@@ -46,7 +46,7 @@ The policy determines what actions the user can perform within the context of th
 * *Platform management roles* enable users to perform tasks on service resources at the platform level, for example assign user access for the service, create or delete service IDs, create instances, assign policies for your service to other users, and bind instances to applications.
 * *Service access roles* enable users to be assigned varying levels of permission for calling the service's API or running actions in the Sysdig UI.
 
-To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use **access groups*.** You can assign a single policy to the group instead of assigning the same access multiple times per individual user or service ID.
+To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use **access groups**. You can assign a single policy to the group instead of assigning the same access multiple times per individual user or service ID.
 {: tip}
 
 
@@ -110,31 +110,27 @@ Use the following table to identify the service role that you can grant a user i
 {: caption="Table 2. Sysdig roles and actions" caption-side="top"}
 
 
-When you grant a user the **manager** role, the user gets permissions to manage all teams. Grant this role for policies where the scope is limited to 1 or more Sysdig instances in the account.
-{: tip}
+
 
 ## {{site.data.keyword.cloud_notm}} roles that are required to launch the Sysdig UI
-{: #iam_sysdigui}
+{: #iam_policies}
 
 Use the following table to identify the platform role and the service role that you can grant a user in the {{site.data.keyword.cloud_notm}} to launch the Sysdig UI from the {{site.data.keyword.cloud_notm}} or a user to have permissions to make REST API calls:
 
-| DevOps role             | Scope           | Platform role      | Service role      | Sysdig role   | Launch Sysdig UI | Make REST API calls |
-|:-----------------------:|:---------------:|:------------------:|:-----------------:|:-------------:|:-----------------:|:-------------------:|
-| `Service administrator` | `All instances` | `Administrator`    |                   | `Admin`       | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Service editor`        | `All instances` | `Editor`           |                   |               | `NO`              | `NO`                  |
-| `Sysdig instance manager` | `Instance`    | `Viewer`           | `Manager`         | `Admin`       | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Sysdig instance editor` | `Instance`     |  `Viewer`           | `Writer`         | `Advanced user` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Team manager`           |  `Team in an instance`  |  `Viewer`  | `Writer`         | `Advanced user in a team` | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
-| `User`                   |  `Instance`     |  `Viewer`           | `Reader`         | `User` |  ![Checkmark icon](../../icons/checkmark-icon.svg) |   |
-| `User`                   |  `Team in an instance`     |  `Viewer`           | `Reader`         | `User in a team` |  ![Checkmark icon](../../icons/checkmark-icon.svg) |   |
+| DevOps role              | Platform scope  | Platform role  | Service role      | Team scope   | Launch Sysdig UI and make REST API calls |
+|--------------------------|-----------------|----------------|-------------------|--------------|-------------------------------------------|
+| `Service administrator`  | `All instances` | `Administrator`|                   |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Service editor`         | `All instances` | `Editor`       |                   |              | `NO`              | 
+| `Sysdig instance manager`| `Instance`      | `Viewer`       | `Manager`         | `(*)`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Sysdig instance writer` | `Instance`      | `Viewer`       | `Writer`          |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Team writer`            | `Instance`      | `Viewer`       | `Writer`          | `Team`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Instance viewer (user)` |  `Instance`     | `Viewer`       | `Reader`          |              |  ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Team viewer (user)`     | `Instance`      | `Viewer`       | `Reader`          | `Team`       |  ![Checkmark icon](../../icons/checkmark-icon.svg) | 
 {: caption="Table 3. Roles and actions" caption-side="top"}
 
 
+`(*)` When you grant a user the **manager** role, the user gets permissions to manage all teams. Grant this role for policies where the scope is limited to 1 or more Sysdig instances in the account.
 
-
-
-## Policy types
-{: #iam_policies}
 
 You can define different types of policies that define the scope of the actions for a user:
 
