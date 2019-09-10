@@ -32,8 +32,9 @@ In the world of microservices, it is becoming harder to track down valuable metr
 ## Pre-reqs
 {: #teams_prereqs}
 
+* You must have manager role to work with an instance of the {{site.data.keyword.mon_full_notm}} service in your account.
 * An administrator or a manager of an {{site.data.keyword.mon_full_notm}} instance must switch to the *Monitor Operations* team before he can create teams and manage existing teams.
-* You must have provisioned an instance of the {{site.data.keyword.mon_full_notm}} service.
+
 
 ## Creating a team
 {: #teams_create}
@@ -70,7 +71,7 @@ Complete the following steps to create a team:
 
     * [Optional] Enable or disable **Infrastructure Events**. Check this box to allow members to view all custom infrastructure events from every user and Sysdig agent. When is not checked, users can see infrastructure events that are sent specifically to this team. 
 
-6. Add members to the team. Click **Assign user**. Search for a user and add it.
+
 
 
 
@@ -109,7 +110,8 @@ Complete the following steps to delete a team:
 
 5. Click **Delete team**.
 
-**Note:** When you delete a team, users that only belong to this team will be moved to the default team.
+When you delete a team, users that only belong to this team will be moved to the default team.
+{: note}
 
 
 ## Granting users permissions to work in a team
