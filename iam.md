@@ -124,33 +124,19 @@ Use the following table to identify the platform role and the service role that 
 | `Sysdig instance manager`| `Instance`      | `Viewer`       | `Manager`         | `(*)`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Sysdig instance writer` | `Instance`      | `Viewer`       | `Writer`          |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Team writer`            | `Instance`      | `Viewer`       | `Writer`          | `Team`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Instance viewer (user)` |  `Instance`     | `Viewer`       | `Reader`          |              |  ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Instance viewer (user)` | `Instance`      | `Viewer`       | `Reader`          |              |  ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Team viewer (user)`     | `Instance`      | `Viewer`       | `Reader`          | `Team`       |  ![Checkmark icon](../../icons/checkmark-icon.svg) | 
 {: caption="Table 3. Roles and actions" caption-side="top"}
 
 
 `(*)` When you grant a user the **manager** role, the user gets permissions to manage all teams. Grant this role for policies where the scope is limited to 1 or more Sysdig instances in the account.
 
+Choose one of the following options to configure a policy for a user or service ID:
 
-You can define different types of policies that define the scope of the actions for a user:
+* [Grant permissions at the service level, that is, for all instances. (Follow step 2, option 1 steps)](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant)
+* [Grant permissions on an instance. (Follow step 2, option 2 steps)](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant)
+* [Grant permissions to work in a team. (Follow step 2, option 3 steps)](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant)
 
-* A **service level policy** is a policy that grants a user permissions to manage Sysdig instances in an account. 
-
-    [Learn more on how to grant a user permissions to manage the Sysdig service, that is, to manage all Sysdig instances in the account](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_manage_events#admin_account_opt1).
-
-    [Learn more on how to grant a user permissions to view data in all Sysdig instances in the account](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_view_events#user_opt1).
-
-* An **instance level policy** is a policy that grants a user permissions to manage resources in a Sysdig instance. 
-
-    [Learn more on how to grant a user permissions to manage 1 Sysdig instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_manage_events#admin_account_opt3).
-
-    [Learn more on how to grant a user permissions to view data in 1 Sysdig instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_view_events#user_opt3).
-
-* A **team policy** is a policy that grants a user permissions to work in a team that is defined in a Sysdig instance. 
-
-    [Learn more on how to grant a user permissions to manage all teams in a Sysdig instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_manage_events#admin_account_opt4).
-
-    [Learn more on how to grant a user permissions to view data for a team in a Sysdig instance](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_view_events#user_opt4).
 
 
 
