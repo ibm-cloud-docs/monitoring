@@ -112,32 +112,48 @@ Use the following table to identify the service role that you can grant a user i
 
 
 
-## Roles that are required to work with Sysdig
+## Policy that is required to work with Sysdig
 {: #iam_policies}
 
-Use the following table to identify the platform role and the service role that you can grant a user in the {{site.data.keyword.cloud_notm}} to launch the Sysdig UI from the {{site.data.keyword.cloud_notm}} or a user to have permissions to make REST API calls:
+Use the following table to identify the platform role and the service role that you must grant a user in the {{site.data.keyword.cloud_notm}} to launch the Sysdig UI from the {{site.data.keyword.cloud_notm}} or to have permissions to make REST API calls:
+
+**Every user must have this policy defined to be able to launch the Sysdig UI and to make REST API calls.** Notice that when you define this policy, you must **not** select a team.
+{: important}
 
 | DevOps role              | Platform scope  | Platform role  | Service role      | Team scope   | Launch Sysdig UI and make REST API calls |
 |--------------------------|-----------------|----------------|-------------------|--------------|-------------------------------------------|
 | `Service administrator`  | `All instances` | `Administrator`|                   |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Service editor`         | `All instances` | `Editor`       |                   |              | `NO`              | 
-| `Sysdig instance manager`| `Instance`      | `Viewer`       | `Manager`         | `(*)`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Sysdig instance manager`| `Instance`      | `Viewer`       | `Manager`         |  `(*)`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Sysdig instance writer` | `Instance`      | `Viewer`       | `Writer`          |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Team writer`            | `Instance`      | `Viewer`       | `Writer`          | `Team`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Instance viewer (user)` | `Instance`      | `Viewer`       | `Reader`          |              |  ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Team viewer (user)`     | `Instance`      | `Viewer`       | `Reader`          | `Team`       |  ![Checkmark icon](../../icons/checkmark-icon.svg) | 
+| `Team writer`            | `Instance`      | `Viewer`       | `Writer`          |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Instance viewer (user)` | `Instance`      | `Viewer`       | `Reader`          |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Team viewer (user)`     | `Instance`      | `Viewer`       | `Reader`          |              | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
 {: caption="Table 3. Roles and actions" caption-side="top"}
 
 
-`(*)` When you grant a user the **manager** role, the user gets permissions to manage all teams. Grant this role for policies where the scope is limited to 1 or more Sysdig instances in the account.
+`(*)` When you grant a user the **manager** role, the user gets permissions to manage all teams.
 
-Choose one of the following options to configure a policy for a user or service ID:
-
-* [Grant permissions at the service level, that is, for all instances. (Follow step 2, option 1 steps)](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant)
-* [Grant permissions on an instance. (Follow step 2, option 2 steps)](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant)
-* [Grant permissions to work in a team. (Follow step 2, option 3 steps)](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant)
+To configure a policy for a user or service ID, see [Granting permissions to launch the Sysdig UI or to make REST API calls](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant).
 
 
 
+## Policy that is required to grant permissions to work in a team
+{: #iam_policies_team}
 
+Use the following table to identify the service role that you must grant a user in the {{site.data.keyword.cloud_notm}} to work in a Sysdig team:
+
+**Every user that must work in a team must have this policy defined.** Notice that when you define this policy, you must select a team.
+
+You cannot combine the policy to work with Sysdig with the policy to work in a team. If you need to work in a team, you need a policy to launch the Sysdig UI or make REST API calls, and a second policy to grant permissions to work in a team.
+{: important}
+
+
+| DevOps role              | Platform scope  | Service role      | Team scope   | Launch Sysdig UI and make REST API calls |
+|--------------------------|-----------------|-------------------|--------------|-------------------------------------------|
+| `Team writer`            | `Instance`      | `Writer`          | `Team`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Team viewer (user)`     | `Instance`      | `Reader`          | `Team`       | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
+{: caption="Table 4. Roles and actions" caption-side="top"}
+
+
+To configure a policy for a user or service ID, see [Granting permissions to work in a team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant_team).
 

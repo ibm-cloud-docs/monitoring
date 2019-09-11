@@ -22,10 +22,10 @@ subcollection: Sysdig
 {:note: .note}
 
  
-# Granting permissions to launch the Sysdig UI or to make REST API calls
-{: #iam_grant}
+# Granting permissions to work in a team
+{: #iam_grant_team}
 
-{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Complete the following steps to grant a user or service ID permissions to work with the {{site.data.keyword.mon_full_notm}} service:
+{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Complete the following steps to grant a user or service ID administration permissions to work with the {{site.data.keyword.mon_full_notm}} service:
 {:shortdesc}
 
 
@@ -90,12 +90,10 @@ Complete the following steps to assign a policy to an access group through the U
 3. Click **Access policies**.
 4. Click **Assign access**.
 5. Select **Assign access to resources**.
-6. In the *Services* section, select **{{site.data.keyword.mon_full_notm}}**.
-7. In the *Service Instance* section, select **all instances** or select a specific instance.
-8. Skip configuring a value in the *Sysdig Team* section.
-5. Select a platform role and a service role. [Learn more about the roles that you need](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
-7. Click **Assign**.
-
+6. In the *Service Instance* section, select 1 instance.
+7. In the *Sysdig Team* section, choose 1 team.
+5. Select a service role. [Learn more about the roles that you need](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
+6. Click **Assign**.
 
 ## Step 3. Add a user or service ID to the access group
 {: #ime_step3}
