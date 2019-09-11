@@ -100,8 +100,7 @@ Complete the following steps to assign a user administrator role to the {{site.d
 2. In the *Services* section, select **{{site.data.keyword.mon_full_notm}}**.
 3. Skip configuring a value in the *Service Instance* section.
 4. Skip configuring a value in the *Sysdig Team* section.
-5. Select a platform role. [Learn more about the roles that you need](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
-6. Select the service role **Manager**.
+5. Select a platform role and a service role. [Learn more about the roles that you need](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
 7. Click **Assign**.
 
 
@@ -116,9 +115,8 @@ Complete the following steps to assign a user administrator role on 1 instance o
 2. Select **{{site.data.keyword.mon_full_notm}}**.
 3. In the *Service Instance* section, select 1 instance.
 4. In the *Sysdig Team* section, skip the section to grant permissions on all teams that are defined in Sysdig for that instance, or choose a team.
-5. Select a platform role. [Learn more about the roles that you need](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
-6. Select the service role **Manager**.
-7. Click **Assign**.
+5. Select a platform role and a service role. [Learn more about the roles that you need](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
+6. Click **Assign**.
 
 ### Option 3. Grant permissions to work in a team
 {: #admin_account_opt3}
@@ -129,9 +127,8 @@ Complete the following steps to assign a user administrator role to manage all t
 2. Select **{{site.data.keyword.mon_full_notm}}**.
 3. In the *Service Instance* section, select 1 instance.
 4. In the *Sysdig Team* section, choose a team.
-5. Select a platform role. [Learn more about the roles that you need](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
-6. Select the service role **Manager** to grant the user permissions to manage all teams.
-7. Click **Assign**.
+5. Select a platform role and a service role. [Learn more about the roles that you need](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
+6. Click **Assign**.
 
 ## Step 3. Add a user or service ID to the access group
 {: #ime_step3}
