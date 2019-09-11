@@ -22,7 +22,7 @@ subcollection: Sysdig
 {:note: .note}
 
  
-# Managing user access in the {{site.data.keyword.cloud_notm}}
+# Controlling access through IAM
 {: #iam}
 
 {{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. You grant permissions through policies that you define on the {{site.data.keyword.mon_full_notm}} service in the account.
