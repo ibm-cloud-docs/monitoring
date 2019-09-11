@@ -112,7 +112,7 @@ Use the following table to identify the service role that you can grant a user i
 
 
 
-## {{site.data.keyword.cloud_notm}} roles that are required to launch the Sysdig UI
+## Roles that are required to work with Sysdig
 {: #iam_policies}
 
 Use the following table to identify the platform role and the service role that you can grant a user in the {{site.data.keyword.cloud_notm}} to launch the Sysdig UI from the {{site.data.keyword.cloud_notm}} or a user to have permissions to make REST API calls:
