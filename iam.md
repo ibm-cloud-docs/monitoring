@@ -97,16 +97,16 @@ Use the following table to identify the platform role that you can grant a user 
 
 Use the following table to identify the service role that you can grant a user in the {{site.data.keyword.cloud_notm}} to run any of the following actions:
 
-| Actions                                          | Manager                            | Writer                         | Reader |
-|--------------------------------------------------|:----------------------------------:|:------------------------------:|:------:|
+| Actions                                          | Manager                                           | Writer                         | Reader |
+|--------------------------------------------------|---------------------------------------------------|------------------------------|------|
 | `Reset the Sysdig access key`                    | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
 | `Create, configure, and delete teams`            | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
 | `Configure and remove notifications channels`    | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
 | `Configure and remove Sysdig agents`             | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
-| `Create, delete, and edit content in the Sysdig web UI`                    | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
-| `Create and delete alerts`                                                 | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
-| `Create and delete captures`                                               | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |  
-| `View metrics, dashboards, alerts, events, and captures through the Sysdig Web UI`      | ![Checkmark icon](../../icons/checkmark-icon.svg)      | ![Checkmark icon](../../icons/checkmark-icon.svg)                    | ![Checkmark icon](../../icons/checkmark-icon.svg)    | 
+| `Create, delete, and edit content in the Sysdig web UI`| ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
+| `Create and delete alerts`                       | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
+| `Create and delete captures`                     | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |  
+| `View metrics, dashboards, alerts, events, and captures through the Sysdig Web UI`  | ![Checkmark icon](../../icons/checkmark-icon.svg)      | ![Checkmark icon](../../icons/checkmark-icon.svg)                    | ![Checkmark icon](../../icons/checkmark-icon.svg)    | 
 {: caption="Table 2. Sysdig roles and actions" caption-side="top"}
 
 
@@ -115,8 +115,8 @@ Use the following table to identify the service role that you can grant a user i
 
 Use the following table to identify the platform role that you must grant a user in the {{site.data.keyword.cloud_notm}} to see the Sysdig instance in the {{site.data.keyword.cloud_notm}}:
 
- DevOps role               | Platform scope  | Platform role  | Service role      | Team scope   | See Sysdig instance in {{site.data.keyword.cloud_notm}}  |
-|--------------------------|-----------------|----------------|-------------------|--------------|-------------------------------------------|
+| DevOps role               | Platform scope  | Platform role  | Service role      | Team scope   | See Sysdig instance in {{site.data.keyword.cloud_notm}}  |
+|--------------------------|-----------------|----------------|-------------------|--------------|----------------------------------------------------------|
 | `Service administrator`  | `All instances` | `Administrator`|                   |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Sysdig instance manager`| `Instance`      | `Editor`       |                   |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Sysdig instance writer` | `Instance`      | `Viewer`       |                   |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
@@ -149,7 +149,7 @@ Use the following table to identify the platform role and the service role that 
 | `Sysdig instance manager`| `Instance`      | `Editor`       | `Manager`         | `(**)`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Sysdig instance writer` | `Instance`      | `Viewer`       | `Writer`          | `(**)`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Instance viewer (user)` | `Instance`      | `Viewer`       | `Reader`          | `(**)`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-{: caption="Table 3. Roles and actions" caption-side="top"}
+{: caption="Table 4. Roles and actions" caption-side="top"}
 
 `(*)`The user gets permissions to manage all teams across all Sysdig instances.
 `(**)` The user gets permissions to work across all teams in 1 Sysdig instance.
@@ -168,14 +168,8 @@ You cannot combine the policy to work with Sysdig with the policy to work in a t
 {: important}
 
 A user that needs to work in a team requires the following policies:
-* 1 policy with a platform role to allow the user to see Sysdig instances in the {{site.data.keyword.cloud_notm}}, and a service role that determines the permissions of that user to work in a Sysdig instance. 
-
-    You cannot assign the manager service role to a user when you configure the policy that is required to work with data through the Sysdig UI or API.
-    {: important}
-
-    To define this policy, see [Granting permissions to launch the Sysdig UI or to make REST API calls](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant).
-
-* 1 policy to grant permissions to work in a team.
+* 1 policy with a platform role to allow the user to see Sysdig instances in the {{site.data.keyword.cloud_notm}}.
+* 1 policy to grant the service role that determines the permissions of that user to work in a Sysdig team.
 
 Use the following table to identify the service role that you must grant a user in the {{site.data.keyword.cloud_notm}} to work in a Sysdig team:
 
@@ -183,7 +177,7 @@ Use the following table to identify the service role that you must grant a user 
 |--------------------------|-----------------|----------------|-------------------|--------------|-------------------------------------------|
 | `Team writer`            | `Instance`      |                | `Writer`          | `Team`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Team viewer`            | `Instance`      |                | `Reader`          | `Team`       | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
-{: caption="Table 4. Roles and actions" caption-side="top"}
+{: caption="Table 5. Roles and actions" caption-side="top"}
 
 Team viewer is a user that can see dashboards, alerts, and notifications in a Sysdig instance, and is limited to analyze data that is available thorugh dashboards for the team the user belongs to.
 Team writer is a user that can see and manage dashboards, alerts, and notifications in a Sysdig instance, and is limited to data that is available for the team it belongs to.  Add link to roles table.
