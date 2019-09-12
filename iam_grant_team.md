@@ -57,7 +57,7 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 
 
 
-## Step 2. Add permissions to manage events
+## Step 2. Add team policy to manage data
 {: #ime_step2}
 
 After you set up your group, you can assign a common access policy to the group. 
@@ -67,21 +67,9 @@ Any policy that you set for an access group applies to all entities, users, and 
 
 You can assign the policy by using the UI or through the command line.
 
-To create an access group policy by using the CLI, you can use the [ibmcloud iam access-group-policy-create](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create) command.
 
-```
-ibmcloud iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
-```
-{: codeblock}
-
-When you define the policy, you need to select a platform role and a service role:
-* Platform management roles cover a range of actions, including the ability to create and delete instances, manage aliases, bindings, and credentials, and manage access. The platform roles are administrator, editor, operator, viewer. Platform management roles also apply to account management services that enable users to invite users, manage service IDs, access policies, catalog entries, and track billing and usage depending on their assigned role on an account management service.
-* Service access roles define a user or service’s ability to perform actions on a service instance. The service access roles are manager, writer, and reader.
-
-To manage the {{site.data.keyword.mon_full_notm}} service, a user needs the following roles:
-* Platform role: **Administrator** or **Editor**. 
-* Service role: **Manager**. 
-[Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
+## Add team policy to manage data through the {{site.data.keyword.cloud_notm}} UI
+{: #ime_step2_ui}
 
 Complete the following steps to assign a policy to an access group through the UI:
 
@@ -94,6 +82,73 @@ Complete the following steps to assign a policy to an access group through the U
 7. In the *Sysdig Team* section, choose 1 team.
 5. Select a service role. [Learn more about the roles that you need](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
 6. Click **Assign**.
+
+## Add team policy to manage data through the CLI
+{: #ime_step2_cli}
+
+To create an access group policy by using the CLI, you can use the [ibmcloud iam access-group-policy-create](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create) command.
+
+```
+ibmcloud iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+```
+{: codeblock}
+
+You must use a JSON file to create the team policy.
+{: important}
+
+For example, you can run the following command:
+
+```
+ibmcloud iam access-group-policy-create accessGroupName accessGroupGUID --file policy.json
+```
+{: codeblock}
+
+And use the following JSON file:
+
+```
+{
+    "type": "access",
+    "subjects": [
+        {
+            "attributes": [
+                {
+                    "name": "access_group_id",
+                    "value": "AccessGroupGuid"
+                }
+            ]
+        }
+    ],
+    "roles" : [
+    {
+            "role_id" : "crn:v1:bluemix:public:iam::::serviceRole:Reader"
+    }
+    ],
+    "resources": [
+        {
+            "attributes": [
+                {
+                    "name": "accountId",
+                    "value": "accountGuid"
+                },
+                {
+                    "name": "serviceName",
+                    "value": "sysdig-monitor"
+                },
+                {
+                    "name": "serviceInstance",
+                    "value": "instanceGuid"
+                },
+                {
+                    "name": "sysdigTeam",
+                    "value": "sysdigTeamID"
+                }
+            ]
+        }
+    ]
+}
+```
+{: codeblock}
+
 
 ## Step 3. Add a user or service ID to the access group
 {: #ime_step3}

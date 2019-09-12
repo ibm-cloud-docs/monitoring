@@ -30,7 +30,7 @@ subcollection: Sysdig
 
 
 ## Prerequisites
-{: #iam_manage_events_prereq}
+{: #iam_manage_sprereq}
 
 Your user ID needs **administrator platform permissions** to manage the {{site.data.keyword.mon_full_notm}} service. Contact the account administrator. The account owner can grant another user access to the account for the purposes of managing user access, and managing account resources. [Learn more](/docs/iam?topic=iam-userroles).
 
@@ -57,7 +57,7 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 
 
 
-## Step 2. Add permissions to manage events
+## Step 2. Add permissions to manage data
 {: #ime_step2}
 
 After you set up your group, you can assign a common access policy to the group. 
@@ -77,11 +77,6 @@ ibmcloud iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --ro
 When you define the policy, you need to select a platform role and a service role:
 * Platform management roles cover a range of actions, including the ability to create and delete instances, manage aliases, bindings, and credentials, and manage access. The platform roles are administrator, editor, operator, viewer. Platform management roles also apply to account management services that enable users to invite users, manage service IDs, access policies, catalog entries, and track billing and usage depending on their assigned role on an account management service.
 * Service access roles define a user or service’s ability to perform actions on a service instance. The service access roles are manager, writer, and reader.
-
-To manage the {{site.data.keyword.mon_full_notm}} service, a user needs the following roles:
-* Platform role: **Administrator** or **Editor**. 
-* Service role: **Manager**. 
-[Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
 
 Complete the following steps to assign a policy to an access group through the UI:
 
