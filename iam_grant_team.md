@@ -68,7 +68,7 @@ Any policy that you set for an access group applies to all entities, users, and 
 You can assign the policy by using the UI or through the command line.
 
 
-## Add team policy to manage data through the {{site.data.keyword.cloud_notm}} UI
+### Add team policy to manage data through the {{site.data.keyword.cloud_notm}} UI
 {: #ime_step2_ui}
 
 Complete the following steps to assign a policy to an access group through the UI:
@@ -83,7 +83,7 @@ Complete the following steps to assign a policy to an access group through the U
 5. Select a service role. [Learn more about the roles that you need](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
 6. Click **Assign**.
 
-## Add team policy to manage data through the CLI
+### Add team policy to manage data through the CLI
 {: #ime_step2_cli}
 
 To create an access group policy by using the CLI, you can use the [ibmcloud iam access-group-policy-create](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create) command.
