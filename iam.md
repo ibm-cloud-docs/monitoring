@@ -134,9 +134,6 @@ An instance writer is a user that can see and manage dashboards, alerts, and not
 
 Use the following table to identify the platform role and the service role that you must grant a user in the {{site.data.keyword.cloud_notm}} to work in the Sysdig UI or to make REST API calls:
 
-**Every user must have 1 policy defined that specifies if that user can work in the Sysdig UI, and can make REST API calls.** 
-{: important}
-
 * The **platform scope** controls the number of instances to which the policy apply. 
 * The **platform role** determines if the user can see Sysdig instances in the {{site.data.keyword.cloud_notm}}. 
 * The **service role** determines the permissions a user have to work Sysdig.
@@ -164,7 +161,7 @@ To configure a policy for a user or service ID, see [Granting permissions to lau
 
 **Every user that must work in a team must have this policy defined.** 
 
-You cannot combine the policy to work with Sysdig with the policy to work in a team. 
+You cannot define the policy to work with Sysdig with the policy to work in a team. Each one needs its own policy.
 {: important}
 
 A user that needs to work in a team requires the following policies:
@@ -180,7 +177,7 @@ Use the following table to identify the service role that you must grant a user 
 {: caption="Table 5. Roles and actions" caption-side="top"}
 
 Team viewer is a user that can see dashboards, alerts, and notifications in a Sysdig instance, and is limited to analyze data that is available thorugh dashboards for the team the user belongs to.
-Team writer is a user that can see and manage dashboards, alerts, and notifications in a Sysdig instance, and is limited to data that is available for the team it belongs to.  Add link to roles table.
+Team writer is a user that can see and manage dashboards, alerts, and notifications in a Sysdig instance, and is limited to data that is available for the team it belongs to.  
 
 To configure a policy for a user or service ID, see [Granting permissions to work in a team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant_team).
 
