@@ -98,7 +98,15 @@ ibmcloud iam access-group-policy-create accessGroupName accessGroupGUID --file p
 ```
 {: codeblock}
 
-And use the following JSON file:
+Where 
+
+* `accessGroupName` is the acces group name.
+* `accessGroupGUID` is the GUID of the access group.
+
+You can run the command `ibmcloud iam access-groups` to get the list of names and corresponding GUIDs in the account.
+{: tip}
+
+And use the following JSON file. 
 
 ```
 {
