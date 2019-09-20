@@ -43,7 +43,8 @@ IBM Cloud Monitoring with Sysdig
     metrics.md
     notifications.md
     teams.md
-    iam_work.md
+    iam_grant.md
+    iam_grant_team.md
     captures.md
     api.md
     {: .navgroup-end}
