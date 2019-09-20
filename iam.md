@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-09-09"
+lastupdated: "2019-09-19"
 
 keywords: Sysdig, IBM Cloud, monitoring, iam
 
@@ -53,7 +53,8 @@ To organize a set of users and service IDs into a single entity that makes it ea
 ## Managing access by using access groups
 {: #iam_groups}
 
-To manage access or assign new access for users by using access groups, you must be the account owner, administrator or editor on all Identity and Access enabled services in the account, or the assigned administrator or editor for the IAM Access Groups Service. 
+To manage access groups, you must be the account owner, administrator or editor on all Identity and Access enabled services in the account, or the assigned administrator or editor for the IAM Access Groups Service. 
+{: note}
 
 Choose any of the following actions to manage access groups in the {{site.data.keyword.cloud_notm}}:
 
@@ -97,8 +98,8 @@ Use the following table to identify the platform role that you can grant a user 
 
 Use the following table to identify the service role that you can grant a user in the {{site.data.keyword.cloud_notm}} to run any of the following actions:
 
-| Actions                                          | Manager                                           | Writer                         | Reader |
-|--------------------------------------------------|---------------------------------------------------|------------------------------|------|
+| Actions                                       | Manager                                           | Writer                         | Reader |
+|-----------------------------------------------|---------------------------------------------------|--------------------------------|--------|
 | `Reset the Sysdig access key`                    | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
 | `Create, configure, and delete teams`            | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
 | `Configure and remove notifications channels`    | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
@@ -115,14 +116,14 @@ Use the following table to identify the service role that you can grant a user i
 
 Use the following table to identify the platform role that you must grant a user in the {{site.data.keyword.cloud_notm}} to see the Sysdig instance in the {{site.data.keyword.cloud_notm}}:
 
-| DevOps role               | Platform scope  | Platform role  | Service role      | Team scope   | See Sysdig instance in {{site.data.keyword.cloud_notm}}  |
-|--------------------------|-----------------|----------------|-------------------|--------------|----------------------------------------------------------|
-| `Service administrator`  | `All instances` | `Administrator`|                   |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Sysdig instance manager`| `Instance`      | `Editor`       |                   |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Sysdig instance writer` | `Instance`      | `Viewer`       |                   |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Team writer`            | `Instance`      | `Viewer`       |                   |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Instance viewer (user)` | `Instance`      | `Viewer`       |                   |              | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Team viewer (user)`     | `Instance`      | `Viewer`       |                   |              | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
+| DevOps role               | Platform scope  | Platform role  | See Sysdig instance in {{site.data.keyword.cloud_notm}}  |
+|--------------------------|-----------------|-----------------|----------------------------------------------------------|
+| `Service administrator`  | `All instances` | `Administrator` | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Sysdig instance manager`| `Instance`      | `Editor`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Sysdig instance writer` | `Instance`      | `Viewer`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Team writer`            | `Instance`      | `Viewer`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Instance viewer (user)` | `Instance`      | `Viewer`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Team viewer (user)`     | `Instance`      | `Viewer`        | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
 {: caption="Table 3. Roles and actions" caption-side="top"}
 
 An instance viewer is a user that can see dashboards, alerts, and notifications in a Sysdig instance for all teams.
@@ -134,10 +135,10 @@ An instance writer is a user that can see and manage dashboards, alerts, and not
 
 Use the following table to identify the platform role and the service role that you must grant a user in the {{site.data.keyword.cloud_notm}} to work in the Sysdig UI or to make REST API calls:
 
-* The **platform scope** controls the number of instances to which the policy apply. 
+* The **platform scope** controls the number of instances that the policy is applied to.
 * The **platform role** determines if the user can see Sysdig instances in the {{site.data.keyword.cloud_notm}}. 
 * The **service role** determines the permissions a user have to work Sysdig.
-* The **team scope** determines whether the policy applies to a team or not. *When you define this policy, ensure that a team is not selected.*
+* The **team scope** determines whether the policy applies to a team or not. When you configure a policy, you have an option to select a team or leave it empty so the policy applies to all teams. *When you define this policy, ensure that a team is not selected.*
 
 
 | DevOps role              | Platform scope  | Platform role  | Service role      | Team scope   | Launch Sysdig UI and make REST API calls |
@@ -149,6 +150,7 @@ Use the following table to identify the platform role and the service role that 
 {: caption="Table 4. Roles and actions" caption-side="top"}
 
 `(*)`The user gets permissions to manage all teams across all Sysdig instances.
+
 `(**)` The user gets permissions to work across all teams in 1 Sysdig instance.
 
 
@@ -170,11 +172,13 @@ A user that needs to work in a team requires the following policies:
 
 Use the following table to identify the service role that you must grant a user in the {{site.data.keyword.cloud_notm}} to work in a Sysdig team:
 
-| DevOps role              | Platform scope  | Platform role  | Service role      | Team scope   | Launch Sysdig UI and make REST API calls |
-|--------------------------|-----------------|----------------|-------------------|--------------|-------------------------------------------|
-| `Team writer`            | `Instance`      |                | `Writer`          | `Team`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Team viewer`            | `Instance`      |                | `Reader`          | `Team`       | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
+| DevOps role              | Platform scope  | Service role      | Team scope   | Launch Sysdig UI and make REST API calls |
+|--------------------------|-----------------|-------------------|--------------|-------------------------------------------|
+| `Team writer`            | `Instance`      | `Writer`          | `{Team}`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Team viewer`            | `Instance`      | `Reader`          | `{Team}`       | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
 {: caption="Table 5. Roles and actions" caption-side="top"}
+
+Where `{Team}` is a team that is configured in the Sysdig instance.
 
 Team viewer is a user that can see dashboards, alerts, and notifications in a Sysdig instance, and is limited to analyze data that is available thorugh dashboards for the team the user belongs to.
 Team writer is a user that can see and manage dashboards, alerts, and notifications in a Sysdig instance, and is limited to data that is available for the team it belongs to.  
