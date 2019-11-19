@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-11-19"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -88,33 +88,6 @@ To get the access key for a Sysdig instance through the command line, complete t
     The output from this command includes the field **Sysdig Access Key** that contains the access key for the instance.
 
 
-For example, the following command shows the output of a sample service ID:
-
-```
-$ ic resource service-key "{{site.data.keyword.mon_full_notm}}-shg-key-admin"
-Retrieving service key {{site.data.keyword.mon_full_notm}}-shg-key-admin in resource group Default under account Sample's Account as sample@ibm.com...
-OK
-                  
-Name:          {{site.data.keyword.mon_full_notm}}-shg-key-admin   
-ID:            crn:v1:staging:public:sysdig-monitor:us-south:a/1234567891234567891212346461b066:6e2637ff-4548-47a6-bf30-063fbe49760e:resource-key:bb18c701-0dba-4c4e-bda5-74380e41c4bf   
-Created At:    Fri Nov  2 13:40:39 UTC 2018   
-State:         active   
-Credentials:                                      
-               iam_role_crn:                crn:v1:bluemix:public:iam::::role:Administrator      
-               iam_serviceid_crn:           crn:v1:staging:public:iam-identity::a/1234567891234567891212346461b066::serviceid:ServiceId-88888888-4444-4444-4444-77777777777      
-               Sysdig Access Key:           xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx      
-               Sysdig Customer Id:          111      
-               iam_apikey_description:      Auto generated apikey during resource-key operation for Instance - crn:v1:staging:public:sysdig-monitor:us-south:a/1234567891234567891212346461b066:6e2637ff-4548-47a6-bf30-063fbe49760e::      
-               iam_apikey_name:             auto-generated-apikey-bb18c701-0dba-4c4e-bda5-74380e41c4bf      
-               Sysdig Collector Endpoint:   ingest.us-south.monitoring.test.cloud.ibm.com      
-               Sysdig Endpoint:             https://us-south.monitoring.test.cloud.ibm.com      
-               apikey:                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     
-                  
-Parameters:                      
-               role_crn:   crn:v1:bluemix:public:iam::::role:Administrator      
-```
-{: screen}
-
 
 
 
@@ -125,19 +98,19 @@ If the access key is compromised or you have a policy to renew it after a number
 
 To create a new access key for an {{site.data.keyword.mon_full_notm}} instance, complete the following steps:
 
-1. Obtain the API Token from the IBM Cloud Monitoring with Sysdig UI ( [see instructions](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get) ).
+1. Obtain the API token from the {{site.data.keyword.mon_full_notm}} UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
 
 2. Issue a curl POST request against the Sysdig endpoint to generate a new access key.
 
     ```
     curl -XPOST -H'Bearer: API_TOKEN' https:ENDPOINT/api/customer/accessKeys
     ```
-    {: codeblock}
+    {: pre}
 
     Where
 
     * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
-    * `API_TOKEN` is the API Token retrieved in Step 1.
+    * `API_TOKEN` is the API token that you get in step 1.
 
     The output will provide the newly generated access key in the response.
 
@@ -160,61 +133,63 @@ To create a new access key for an {{site.data.keyword.mon_full_notm}} instance, 
 
 To disable an existing access key for an {{site.data.keyword.mon_full_notm}} instance, complete the following steps:
 
-1. Obtain the API Token from the IBM Cloud Monitoring with Sysdig UI ( [see instructions](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get) ).
+1. Obtain the API Token from the {{site.data.keyword.mon_full_notm}} UI ( [see instructions](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get) ).
 
 2. Issue a curl POST request against the Sysdig endpoint to disable the given access key.
 
     ```
     curl -XPOST -H'Bearer: API_TOKEN' https:ENDPOINT/api/customer/accessKeys/ACCESS_KEY/disable
     ```
-    {: codeblock}
+    {: pre}
 
     Where
 
     * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
-    * `API_TOKEN` is the API Token retrieved in Step 1.
+    * `API_TOKEN` is the API Token retrieved in step 1.
     * `ACCESS_KEY` is the access key that you wish to disable.
 
-**Note:** Once you disable the Sysdig access key, the agents connected with the access key will be immeditely blocked from sending metrics to this {{site.data.keyword.mon_full_notm}} instance.
+Once you disable the Sysdig access key, the agents connected with the access key will be immeditely blocked from sending metrics to this {{site.data.keyword.mon_full_notm}} instance.
 
-**Note:** There is no option to delete access keys at this time.
+There is no option to delete access keys at this time.
+{: note}
 
 ## Enabling an access key
 {: #access_key_enable}
 
 To enable an existing access key for an {{site.data.keyword.mon_full_notm}} instance, complete the following steps:
 
-1. Obtain the API Token from the IBM Cloud Monitoring with Sysdig UI ( [see instructions](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get) ).
+1. Obtain the API Token from the {{site.data.keyword.mon_full_notm}} UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
 
 2. Issue a curl POST request against the Sysdig endpoint to enable the given access key.
 
     ```
     curl -XPOST -H'Bearer: API_TOKEN' https://ENDPOINT/api/customer/accessKeys/ACCESS_KEY/enable
     ```
-    {: codeblock}
+    {: pre}
 
     Where
 
     * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints).
-    * `API_TOKEN` is the API Token retrieved in Step 1.
+    * `API_TOKEN` is the API Token retrieved in step 1.
     * `ACCESS_KEY` is the access key that you wish to enable.
 
 
-**Note:** After you enable the Sysdig access key, the agents will need to be manually restarted since an agent that connects with a disabled access key will be terminated.
+After you enable the Sysdig access key, the agents will need to be manually restarted since an agent that connects with a disabled access key will be terminated.
+{: note}
 
 ## Viewing the available access keys
 {: #access_key_view}
 
 To view all of the access keys for an {{site.data.keyword.mon_full_notm}} instance, complete the following steps:
 
-1. Obtain the API Token from the IBM Cloud Monitoring with Sysdig UI ( [see instructions](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get) ).
+1. Obtain the API Token from the {{site.data.keyword.mon_full_notm}} UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
 
 2. Issue a curl GET request against the regional monitoring endpoint to cause Sysdig to enable the given access key.
 
     ```
     curl -XGET -H'Bearer: API_TOKEN' https://ENDPOINT/api/customer/accessKeys
     ```
-    {: codeblock}
+    {: pre}
 
     Where
 
