@@ -123,6 +123,9 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
 ## Configuring a Sysdig agent on a Kubernetes cluster by using a script
 {: #config_agent_kube_script}
 
+In order to use this script, you must have a minimum of `Viewer` and `Manager` IAM permissions assigned for the Kubernetes cluster.
+{: tip}
+
 Complete the following steps to configure a Sysdig agent on a Kubernetes cluster that runs in the {{site.data.keyword.containerlong_notm}}:
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
@@ -163,6 +166,9 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
 ## Configuring a Sysdig agent on a Kubernetes cluster manually
 {: #config_agent_kube_manually}
+
+In order to execute all of the commands that follow, you must have a minimum of `Viewer` and `Manager` IAM permissions assigned for the Kubernetes cluster.
+{: tip}
 
 Complete the following steps to configure a Sysdig agent on a Kubernetes cluster that runs in the {{site.data.keyword.containerlong_notm}}:
 
