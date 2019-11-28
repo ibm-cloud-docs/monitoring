@@ -281,6 +281,17 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     ```
     {: codeblock}
 
+11. At this point the Sysdig pods should be starting.  You can run the following command to confirm the pods are running:
 
+    ```
+    kubectl get pods -n ibm-observe
+    ```
+    {: codeblock}
 
+    In the event that the pods are not running, you can run the following command to understand why:
+
+    ```
+    kubectl get events
+    ```
+    {: codeblock}
 
