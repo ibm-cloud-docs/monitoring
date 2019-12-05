@@ -66,7 +66,7 @@ Complete the following steps to get the token:
 
 After you get the token, you can run API calls and use this token in the `Authorization` header. 
 
-When you copy the token include the `Bearer` keyword: `Authorization: Bearer IAM_TOKEN`
+When you copy the token include the `Bearer` keyword: `Authorization: Bearer SYSDIG_TOKEN`
 {: note}
 
 
