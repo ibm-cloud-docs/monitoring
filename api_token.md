@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-03-06"
+lastupdated: "2019-12-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, api token
 
@@ -25,21 +25,30 @@ subcollection: Sysdig
 # Working with API tokens
 {: #api_token}
 
-There are two types of tokens that can be used with the Sysdig API: IBM IAM tokens and Sysdig API tokens. IAM tokens are the recommended method for IBM users.
-
-Use these API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications.
+You can use IAM tokens or Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications.
 {:shortdesc}
 
 ## Getting the IAM API token
-The Sysdig APIs are fully integrated with IBM IAM. Complete the following steps to get the token:
+{: #api_iam_token_get}
 
-1. Log into the ibmcloud CLI
-2. `ibmcloud iam oauth-tokens` will produce the token
-3. Use this token (along with the `Bearer` keyword) in the `Authorization` header when making API calls:
-  ```
-  'Authorization: Bearer IAM_TOKEN'
-  ```
-  {: codeblock}
+The Sysdig APIs are fully integrated with {{site.data.keyword.IBM_notm}} IAM. 
+
+Complete the following steps to get an IAM token:
+
+1. From a terminal, log in to the {{site.data.keyword.cloud_notm}}.
+
+2. Run the following command to get a token:
+
+    ```
+    ibmcloud iam oauth-tokens
+    ```
+    {: pre}
+
+
+After you get the token, you can run API calls and use this token in the `Authorization` header. 
+
+When you copy the token include the `Bearer` keyword: `Authorization: Bearer IAM_TOKEN`
+{: note}
 
 
 ## Getting the Sysdig API token
@@ -54,11 +63,13 @@ Complete the following steps to get the token:
 
 1. From the *Selector* button in the navigation bar, choose **Settings**
 2. From the *Sysdig Monitor API* section, copy the **Sysdig Monitor API Token**.
-3. Use this token (along with the `Bearer` keyword) with the `Authorization` header:
-  ```
-  'Authorization: Bearer SYSDIG_TOKEN'
-  ```
-  {: codeblock}
+
+After you get the token, you can run API calls and use this token in the `Authorization` header. 
+
+When you copy the token include the `Bearer` keyword: `Authorization: Bearer IAM_TOKEN`
+{: note}
+
+
 
 ## Resetting the Sysdig API token
 {: #api_token_reset}

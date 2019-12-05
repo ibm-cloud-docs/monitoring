@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-07-21"
+lastupdated: "2019-12-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, sysdig rest api
 
@@ -22,19 +22,27 @@ subcollection: Sysdig
 {:note: .note}
 
 
-# Managing the Sysdig REST API
+# Working with the Sysdig REST API
 {: #api}
 
 Use the Sysdig REST API to automate routine tasks and monitor notifications.
 {:shortdesc}
 
-When you use the API from your custom scripts or programs, you must use a valid IBM IAM token to authenticate with the {{site.data.keyword.mon_full_notm}} instance. A Sysdig token may also be used, but IAM tokens are the recommended method.
-{: tip}
+
 
 ## Authenticating with the Sysdig API
-See [Working With API Tokens](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get) for information on the types of valid tokens and how to retrieve them.
+{: #api_1}
+
+You can use IAM tokens or Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. For more information, see [Working With API Tokens](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
+
+When you use the Sysdig REST API from your custom scripts or programs, use an IAM token to authenticate with the {{site.data.keyword.mon_full_notm}} instance. 
+{: tip}
+
+
 
 ## Working with the API
+{: #api_2}
+
 See the [official Sysdig REST API conventions](https://docs.sysdig.com/en/sysdig-rest-api-conventions.html) for general information on required headers and syntax.
 
 For dashboard operations, see [Working with Dashboards](https://docs.sysdig.com/en/working-with-dashboards.html)
