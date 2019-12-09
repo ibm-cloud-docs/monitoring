@@ -123,6 +123,9 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
 ## Configuring a Sysdig agent on a Kubernetes cluster by using a script
 {: #config_agent_kube_script}
 
+In order to use this script, you must have a minimum of `Viewer` and `Manager` IAM permissions assigned for the Kubernetes cluster.
+{: tip}
+
 Complete the following steps to configure a Sysdig agent on a Kubernetes cluster that runs in the {{site.data.keyword.containerlong_notm}}:
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
@@ -163,6 +166,9 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
 ## Configuring a Sysdig agent on a Kubernetes cluster manually
 {: #config_agent_kube_manually}
+
+In order to execute all of the commands that follow, you must have a minimum of `Viewer` and `Manager` IAM permissions assigned for the Kubernetes cluster.
+{: tip}
 
 Complete the following steps to configure a Sysdig agent on a Kubernetes cluster that runs in the {{site.data.keyword.containerlong_notm}}:
 
@@ -282,9 +288,8 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     kubectl apply -f sysdig-agent-daemonset-v2.yaml -n ibm-observe
     ```
     {: codeblock}
-
-
-    **Slim Agent:**
+    
+     **Slim Agent:**
 
     Download the [**sysdig-agent-slim-daemonset-v2.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-slim-daemonset-v2.yaml).
 
@@ -293,3 +298,18 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     ```
     {: codeblock}
 
+11. At this point, the Sysdig pods should be starting.  You can run the following command to confirm the pods are running:
+
+    ```
+    kubectl get pods -n ibm-observe
+    ```
+    {: codeblock}
+
+    In the event that the pods are not running, you can run the following command to understand why:
+
+    ```
+    kubectl get events
+    ```
+    {: codeblock}
+    
+   

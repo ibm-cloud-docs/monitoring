@@ -74,7 +74,7 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} through the command
 4. Remove the instance. Run the [`ibmcloud resource service-instance-delete`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_delete) command:
 
     ```
-    ibmcloud resource service-instance-delete NAME 
+    ibmcloud resource service-instance-delete NAME --recursive
     ```
     {: codeblock}
 
@@ -83,6 +83,9 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} through the command
     For example, to remove an instance, run the following command:
 
     ```
-    ibmcloud resource service-instance-delete sysdig-instance-01
+    ibmcloud resource service-instance-delete sysdig-instance-01 --recursive
     ```
     {: codeblock}
+
+    The `--recursive` option is used to delete the service keys that were associated with the Sysdig instance.
+    {: note}
