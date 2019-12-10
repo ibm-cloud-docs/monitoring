@@ -89,3 +89,4 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} through the command
 
     The `--recursive` option is used to delete the service keys that were associated with the Sysdig instance.
     {: note}
+    
