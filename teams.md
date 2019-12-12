@@ -24,14 +24,35 @@ subcollection: Sysdig
 # Working with teams
 {: #teams}
 
-An administrator or a manager of an {{site.data.keyword.mon_full_notm}} instance can create, delete, add members, and change the scope of teams in that instance. 
+You can use teams to add another dimension of control on the data that is available through a Sysdig instance on top of platform and service access controls. A user with the **Manager** service access role of an {{site.data.keyword.mon_full_notm}} instance can create, delete, add members, and change the scope of teams in that instance. Once a team is created, an admin can add a user to it through {{site.data.keyword.iamlong}} (IAM).
 {:shortdesc} 
 
-An administrator or a manager of an {{site.data.keyword.mon_full_notm}} instance must switch to the *Monitor Operations* team before he can create teams and manage existing teams.
-{: tip}
+In the world of microservices, it is becoming harder to track down valuable metrics and ensure that no sensitive data is exposed. By using teams, administrators can apply a fine grain control on resources. Consider the following information when you work with teams:
+* You can create 1 or more teams in a Sysdig instance.
+* You can specify what resources and metrics are visible for users that are granted IAM permissions to work in the team. 
+* You can enhance the users experience by customizing the initial dashboard that users in a team get when they launch the web UI.  
+
+These instructions assume that you have provisioned a Sysdig service instance on {{site.data.keyword.cloud_notm}}.
+{: note}
+
+
+## Assigning a user to a team
+{: #teams_assign}
+
+To add a user to a team, complete the following steps:
+1. Check that you have the **administrator** platform role to work with the Sysdig service or with a specific instance. 
+2. Define a team level IAM policy for the user. For more information, see [Granting permissions to work in a team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant_team).
+
+When the policy is defined, the user is added to the list of users that have access to work with resources configured for a team.
+
 
 ## Creating a team
 {: #teams_create}
+
+You must have **manager** role to create a team in a Sysdig instance.
+
+An administrator or a manager of an {{site.data.keyword.mon_full_notm}} instance must switch to the *Monitor Operations* team before he can create teams and manage existing teams.
+{: note}
 
 Complete the following steps to create a team:
 
@@ -65,12 +86,13 @@ Complete the following steps to create a team:
 
     * [Optional] Enable or disable **Infrastructure Events**. Check this box to allow members to view all custom infrastructure events from every user and Sysdig agent. When is not checked, users can see infrastructure events that are sent specifically to this team. 
 
-6. Add members to the team. Click **Assign user**. Search for a user and add it.
-
+<img src="images/team-configuration.png" alt="Team Configuration" width="800" />
 
 
 ## Changing the scope of a team
 {: #teams_scope}
+
+You must have **manager** role to change the scope of a team in a Sysdig instance.
 
 To change the scope of the data that is visible to members of a team, complete the following steps: 
 
@@ -87,30 +109,15 @@ To change the scope of the data that is visible to members of a team, complete t
 6. Click **Save**. 
 
 
-## Adding users to a team
-{: #teams_users}
-
-To add members to a team, complete the following steps: 
-
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
-    
-2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
-
-3. Select **Teams**. The list of existing teams is displayed.
-
-4. Identify the team and select it. The details of the team are displayed.
-
-5. Click **Assign user** in the *Team users* section.
-
-6. Click **Save** . 
-
-
 ## Deleting a team
 {: #teams_delete}
 
-The default team, **Monitor Operations**, cannot be deleted. 
+You must have **manager** role to delete a team in a Sysdig instance.
 
 Complete the following steps to delete a team:
+
+The default team, **Monitor Operations**, cannot be deleted. 
+{: note}
 
 1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
     
@@ -122,7 +129,6 @@ Complete the following steps to delete a team:
 
 5. Click **Delete team**.
 
-**Note:** When you delete a team, users that only belong to this team will be moved to the default team.
-
-
+When you delete a team, users that only belong to this team will be moved to the default team.
+{: important}
 
