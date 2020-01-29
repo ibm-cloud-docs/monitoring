@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2019
-lastupdated: "2019-06-17"
+  years:  2018, 2020
+lastupdated: "2020-01-29"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete instance
 
@@ -89,3 +89,5 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} through the command
 
     The `--recursive` option is used to delete the service keys that were associated with the Sysdig instance.
     {: note}
+    
+

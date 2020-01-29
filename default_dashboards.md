@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2019
-lastupdated: "2019-05-09"
+  years:  2018, 2020
+lastupdated: "2020-01-29"
 
 keywords: Sysdig, IBM Cloud, monitoring,  predefined dashboards
 
@@ -24,8 +24,9 @@ subcollection: Sysdig
 
 # Predefined dashboards
 {: #default_dashboards}
-You can choose any of the following pre-defined dashboards to monitor your infrastructure:
+{{site.data.keyword.mon_full}} offers pre-defined dashboards to monitor your infrastructure. This topic outlines some of the pre-defined dashboards. [Learn more ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/pre-defined-dashboards.html){:new_window}.
 {:shortdesc}
+
 
 
 ## Applications

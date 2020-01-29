@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2019
-lastupdated: "2019-11-19"
+  years:  2018, 2020
+lastupdated: "2020-01-29"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -52,10 +52,8 @@ To get the access key for a Sysdig instance through the command line, complete t
 
 1. [Pre-requisite] [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 
-   If the CLI is installed, continue with the next step.
-
 2. Log in to the region in the {{site.data.keyword.cloud_notm}} where the Sysdig instance is running. Run the following command: [`ibmcloud login`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_login)
-/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_login
+
 3. Set the resource group where the Sysdig instance is running. Run the following command: [`ibmcloud target`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_target)
 
     By default, the `default` resource group is set.

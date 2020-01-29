@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2019
-lastupdated: "2019-03-06"
+  years:  2018, 2020
+lastupdated: "2020-01-29"
 
 keywords: Sysdig, IBM Cloud, monitoring, notification channel
 

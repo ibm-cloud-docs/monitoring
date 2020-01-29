@@ -7,8 +7,6 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="learn"}
     getting-started.md
     overview.md
-    endpoints.md
-    pricing.md
     manage.md
     monitoring.md
     network.md
@@ -36,8 +34,8 @@ IBM Cloud Monitoring with Sysdig
     groups.md
     access_key.md
     api_token.md
-    [Working with alerts](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/205324292/Alerts)
-    [Working with custom events](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822463/Custom+Events)
+    [Working with alerts](https://docs.sysdig.com/en/alerts.html)
+    [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
     dashboards.md
     panels.md
     metrics.md
@@ -53,19 +51,12 @@ IBM Cloud Monitoring with Sysdig
     default_dashboards.md
 
     {: .topicgroup}
-    Metrics dictionary
-        [Containers](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209092629/Containers)
-        [Docker/CIS Benchmarks](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/261750836/Docker+CIS+Benchmarks)
-        [File](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/240943105/File)
-        [Host](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209027099/Host)
-        [JVM](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209027134/JVM)
-        [Kubernetes Benchmarks](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/261980260/Kubernetes+Benchmarks)
-        [Kubernetes state](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/208928791/Kubernetes+State)
-        [Kubernetes usage](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209027106/Resource+Usage)
-        [Network](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209027110/Network)
-        [Process](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/208994374/Process)
-        [System](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/209125442/System)
-
+    endpoints.md
+    pricing.md
+    default_dashboards.md
+    [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
+    [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
+    [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started.html)
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview)
     [Sysdig Blog](https://sysdig.com/blog/)
