@@ -59,9 +59,6 @@ Where
 `(*)` For more information, see [Enabling the EU Supported setting](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported).
 
 
-Currently, **Frankfurt** and **EU GB** are locations that are **not** EU-managed. For more information, see [Enabling the EU Supported setting](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported).
-{: important}
-
 
 ## Sysdig Collector endpoints
 {: #endpoints_ingestion}

@@ -25,7 +25,7 @@ subcollection: Sysdig
 # Enabling Platform Metrics
 {: #platform_metrics_enabling}
 
-Platform metrics are metrics that are exposed by enabled-Sysdig services and the platform in {{site.data.keyword.cloud_notm}}. You must configure a Sysdig instance in a region to monitor these metrics.
+Platform metrics are metrics that are exposed by Sysdig-enabled services and the platform in {{site.data.keyword.cloud_notm}}. You must configure a Sysdig instance in a region to monitor these metrics.
 {:shortdesc}
 
 * Platform metrics are regional. 
@@ -36,7 +36,7 @@ Platform metrics are metrics that are exposed by enabled-Sysdig services and the
 
     To configure a Sysdig instance, you must set on the *platform metrics* configuration setting. 
 
-* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services]().
+* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from Sysdig-enabled services are collected automatically and available for monitoring through this instance. For more information about Sysdig-enabled services, see [Cloud services]().
 
 
 To monitor platform metrics for a service instance, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the service instance that you want to monitor is provisioned.
