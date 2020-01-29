@@ -23,11 +23,15 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="howto"}
     provision.md
     remove.md
-    config_agent.md
-    remove_agent.md
 
     {: .topicgroup}
-    Customizing the agent
+    Platform Metrics
+        platform_metrics_enabling.md
+
+    {: .topicgroup}
+    Sysdig Agent
+        config_agent.md
+        remove_agent.md
         change_kube_agent.md
         change_linux_agent.md
         change_container_agent.md
