@@ -48,9 +48,6 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    default_dashboards.md
-
-    {: .topicgroup}
     endpoints.md
     pricing.md
     default_dashboards.md

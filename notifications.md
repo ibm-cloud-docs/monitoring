@@ -56,7 +56,7 @@ Complete the following steps to add a notification channel:
 
     * For a **slack** notification channel, add the name of the *Slack channel*.
 
-    * For a **Webhook** notification channel, add the *Webhook URL*. **Note:** When an alert is triggered, the notification is sent as a POST in JSON format to your webhook endpoint. For more information, see [Configuring a Webhook channel ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/242843679/Configure+a+Webhook+Channel){:new_window}. For example, Sysdig can be integrated with ServiceNow using a custom webhook. To learn about configuring Sysdig with ServiceNow, see [Configure ServiceNow ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdigdocs.atlassian.net/wiki/spaces/Platform/pages/242942035/Configure+ServiceNow){:new_window}.
+    * For a **Webhook** notification channel, add the *Webhook URL*. **Note:** When an alert is triggered, the notification is sent as a POST in JSON format to your webhook endpoint. For more information, see [Configuring a Webhook channel ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/configure-a-webhook-channel.html){:new_window}. For example, Sysdig can be integrated with ServiceNow using a custom webhook. To learn about configuring Sysdig with ServiceNow, see [Configure ServiceNow ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/configure-servicenow.html){:new_window}.
 
     * For a **VictorOps** notification channel, add the *API key* and the *Routing key*.
 
