@@ -37,7 +37,7 @@ The following table lists integration services that are Sysdig-enabled:
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-about#about)| {{site.data.keyword.messagehub}} is a high-throughput message bus that is built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.IBM_notm}} and event stream distribution between your services and applications. | [Metrics collected by {{site.data.keyword.messagehub}} ]() |  |
+| [{{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-about#about)| {{site.data.keyword.messagehub}} is a high-throughput message bus that is built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.IBM_notm}} and event stream distribution between your services and applications. | [Metrics collected by {{site.data.keyword.messagehub}} ](/docs/services/EventStreams?topic=eventstreams-metrics) |  |
 {: caption="List of integration Cloud services" caption-side="top"} 
 
 
