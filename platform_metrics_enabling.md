@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-02-04"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
