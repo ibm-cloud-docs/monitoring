@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -43,18 +43,24 @@ To provision an instance of Sysdig from the {{site.data.keyword.cloud_notm}} cat
 
 5. Select **Create instance**. 
 
-6. Select a service plan. By default, the **Trial** plan is set.
+6. Select the region. 
 
-    For more information about the service plans, see [Service plans](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
+7. Select a service plan. By default, the **Trial** plan is set.
 
-7. Select a resource group. By default, the **Default** resource group is set.
+    For more information about the service plans, see [Service plans](/docs/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
 
-8. Click **Create**.
+8. Enter a service name.
+
+9. Select a resource group. By default, the **Default** resource group is set.
+
+10. Set on automatic collection of platform metrics by clicking **Enable**.
+
+11. Click **Create**.
 
 After you provision an instance, 
 
 * The *Observability* dashboard opens. 
-* A service ID is automatically created. You can use this service ID to get the Sysdig access key for your instance.
+* A service ID is automatically created. You can use this service ID to get the Sysdig access key for your instance. The name of the service ID has the following format: `{InstanceName}-key-admin`.
 
 Next, configure a metric source by adding a Sysdig agent. This agent is responsible for collecting and forwarding metrics to Sysdig. 
 
@@ -76,7 +82,7 @@ To provision an instance of Sysdig through the command line, complete the follow
 4. Create the Sysdig instance. Run the [`ibmcloud resource service-instance-create`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
 
     ```
-    ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION
+    ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false}'
     ```
     {: codeblock}
 
@@ -90,12 +96,14 @@ To provision an instance of Sysdig through the command line, complete the follow
     
     * `LOCATION` is the region where the instance is created.
 
+    * `default_receiver` is set to `false` by default. Set to `true` to collect platform metrics automatically through this instance in a region.
+
     For example, to provision an instance with the paid plan, run the following command:
 
     ```
-    ibmcloud resource service-instance-create sysdig-instance-01 sysdig-monitor graduated-tier us-south
+    ibmcloud resource service-instance-create sysdig-instance-01 sysdig-monitor graduated-tier us-south -p '{"default_receiver": false}'
     ```
-    {: screen}
+    {: pre}
 
 5. Create the service key that connects to the instance [`ibmcloud resource service-key-create`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_resource#ibmcloud_resource_service_key_create)
 

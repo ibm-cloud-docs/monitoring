@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Sysdig" category="devops" audience="service" href="/docs/Monitoring-with-Sysdig?topic=Sysdig-getting-started#getting-started" path="Monitoring-with-Sysdig"}
+{: .toc subcollection="Sysdig" audience="service" href="/docs/Monitoring-with-Sysdig?topic=Sysdig-getting-started#getting-started" path="Monitoring-with-Sysdig"}
 IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="learn"}
@@ -21,13 +21,17 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="howto"}
     provision.md
     remove.md
-    config_agent.md
-    remove_agent.md
-
-    platform_metrics_enabling.md
 
     {: .topicgroup}
-    Customizing the agent
+    Platform Metrics
+        platform_metrics_enabling.md
+        cloud_services.md
+        cloud_services_locations.md
+
+    {: .topicgroup}
+    Sysdig Agent
+        config_agent.md
+        remove_agent.md
         change_kube_agent.md
         change_linux_agent.md
         change_container_agent.md
@@ -56,11 +60,8 @@ IBM Cloud Monitoring with Sysdig
     [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started.html)
-    [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
-    [Sysdig Monitor Documentation](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/overview)
     [Sysdig Blog](https://sysdig.com/blog/)
     {: .navgroup-end}
-
 
     {: .navgroup id="help"}
     gettinghelp.md

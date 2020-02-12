@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -28,7 +28,7 @@ subcollection: Sysdig
 Platform metrics are metrics that are exposed by enabled-Sysdig services and the platform in {{site.data.keyword.cloud_notm}}. You must configure a Sysdig instance in a region to monitor these metrics.
 {:shortdesc}
 
-**This feature is currently available in the London region.**
+This feature is available in the London region only.
 {: important}
 
 * Platform metrics are regional. 
@@ -39,12 +39,40 @@ Platform metrics are metrics that are exposed by enabled-Sysdig services and the
 
     To configure a Sysdig instance, you must set on the *platform metrics* configuration setting. 
 
-* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services]().
+* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Sysdig-cloud_services).
 
 
 To monitor platform metrics for a service instance, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the service instance that you want to monitor is provisioned.
 {: important}
 
+## Enabling a Sysdig instance through the UI
+{: #platform_metrics_enabling_ui}
+
+To enable platform metrics in a region, complete the following steps:
+
+### Step 1. Provision a Sysdig instance
+{: #platform_metrics_enabling_step1}
+
+[Provision an instance of Sysdig](/docs/Monitoring-with-Sysdig?topic=Sysdig-provision) in the region where the service that you wish to monitor is running.  
+
+For example, if you are monitoring an {{site.data.keyword.messagehub}} instance in the London region, then you must create a Sysdig instance in London.
+
+### Step 2. Set on the platform metrics flag 
+{: #platform_metrics_enabling_step2}
+
+1. From the{{site.data.keyword.cloud_notm}} dashboard, go to the menu icon ![menu icon](../../icons/icon_hamburger.svg) &gt; **Observability** to access the *Observability* dashboard.
+
+2. Select **Monitoring** &gt; **Configure platform metrics**. 
+
+3. Select a [region](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_regions). 
+
+4. Choose the Sysdig instance that will collect metrics from enabled services on that location. 
+
+5. Click **Save**. 
+
+The main *Observability* page opens.
+
+The instance that you choose to receive metrics shows the flag **Platform metrics**.
 
 
 ## Enabling a Sysdig instance from the command line
@@ -70,13 +98,25 @@ Complete the following steps:
     ```
     {: pre}
 
+5. Get the plan ID of the instance. 
+
+    Run the following command and copy the value of the field `resource_plan_id`. This value is needed to update the instance.
+
+    ```
+    ibmcloud resource service-instance InstanceName --output JSON
+    ```
+    {: pre}
+
+    Where `InstanceName` is the name of your Sysdig instance.
+
 5. Set on the **default_receiver** property. Run the following command:
 
     ```
-    ibmcloud resource service-instance-update InstanceName -p '{"default_receiver": true}'
+    ibmcloud resource service-instance-update InstanceName --service-plan-id PlanID -p '{"default_receiver": true}'
     ```
     {: codeblock}
 
-    Where `InstanceName` is the name of your Sysdig instance.
+    Where `PlanID` is the resource plan ID of your Sysdig instance.
+    
 
 

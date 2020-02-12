@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, iam, access groups
 
@@ -88,7 +88,7 @@ Complete the following steps to assign a policy to an access group through the U
 6. In the *Services* section, select **{{site.data.keyword.mon_full_notm}}**.
 7. In the *Service Instance* section, select **all instances** or select a specific instance.
 8. Skip configuring a value in the *Sysdig Team* section.
-5. Select a platform role and a service role. [Learn more about the roles that you need](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam).
+5. Select a platform role and a service role. [Learn more about the roles that you need](/docs/Monitoring-with-Sysdig?topic=Sysdig-iam).
 7. Click **Assign**.
 
 
