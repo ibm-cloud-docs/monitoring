@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-12-16"
+  years: 2018, 2020
+lastupdated: "2020-02-12"
 
-keywords: LogDNA, IBM, Log Analysis, logging, services
+keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
-subcollection: LogDNA
+subcollection: Sysdig
 
 
 ---
@@ -26,7 +26,7 @@ subcollection: LogDNA
 # Cloud services by location
 {: #cloud_services_locations}
 
-List of locations where {{site.data.keyword.cloud_notm}} services are enabled to send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the Sysdig instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-enabling-platform-metrics).
+List of locations where {{site.data.keyword.cloud_notm}} services are enabled to send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the Sysdig instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/Monitoring-with-Sysdig?topic=Sysdig-enabling-platform-metrics).
 {:shortdesc}
 
 
@@ -35,7 +35,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
 |---------------------------------------------------------------|:-------------------:|:----------------:|
-| {{site.data.keyword.messagehub}}               |                     |  ![Checkmark icon](../../icons/checkmark-icon.svg)  |          
+| {{site.data.keyword.messagehub}}                              |                     | ![Checkmark icon](../../icons/checkmark-icon.svg)  |          
 {: caption="Integration services integration in Europe locations" caption-side="top"}
 {: #cs_integration-table-1}
 {: tab-title="Europe"}

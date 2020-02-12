@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, groups
 
@@ -32,7 +32,7 @@ You can use labels to group infrastructure objects into logical hierarchies.
 
 Complete the following steps to create a group:
 
-1. Launch the web UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Launch the web UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Click **EXPLORE** to navigate to the *Explore* section.
 
@@ -56,7 +56,7 @@ Complete the following steps to create a group:
 
 Complete the following steps to rename a group:
 
-1. Launch the web UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Launch the web UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Click **EXPLORE** to navigate to the *Explore* section.
 
@@ -80,7 +80,7 @@ Complete the following steps to rename a group:
 
 Complete the following steps to copy a group to other teams:
 
-1. Launch the web UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Launch the web UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Click **EXPLORE** to navigate to the *Explore* section.
 
@@ -105,7 +105,7 @@ Complete the following steps to copy a group to other teams:
 
 Complete the following steps to share a group with other members of the team:
 
-1. Launch the web UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Launch the web UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Click **EXPLORE** to navigate to the *Explore* section.
 
@@ -128,7 +128,7 @@ Complete the following steps to share a group with other members of the team:
 
 Complete the following steps to delete a group:
 
-1. Launch the web UI. [Learn more](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
+1. Launch the web UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
 
 2. Click **EXPLORE** to navigate to the *Explore* section.
 

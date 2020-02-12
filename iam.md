@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, iam
 
@@ -154,7 +154,7 @@ Use the following table to identify the platform role and the service role that 
 `(**)` The user gets permissions to work across all teams in 1 Sysdig instance.
 
 
-To configure a policy for a user or service ID, see [Granting permissions to launch the Sysdig UI or to make REST API calls](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant).
+To configure a policy for a user or service ID, see [Granting permissions to launch the Sysdig UI or to make REST API calls](/docs/Monitoring-with-Sysdig?topic=Sysdig-iam_grant).
 
 
 
@@ -183,6 +183,6 @@ Where `{Team}` is a team that is configured in the Sysdig instance.
 Team viewer is a user that can see dashboards, alerts, and notifications in a Sysdig instance, and is limited to analyze data that is available thorugh dashboards for the team the user belongs to.
 Team writer is a user that can see and manage dashboards, alerts, and notifications in a Sysdig instance, and is limited to data that is available for the team it belongs to.  
 
-To configure a policy for a user or service ID, see [Granting permissions to work in a team](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-iam_grant_team).
+To configure a policy for a user or service ID, see [Granting permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Sysdig-iam_grant_team).
 
 
