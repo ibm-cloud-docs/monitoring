@@ -93,7 +93,7 @@ As time progresses, the data is rolled up from a fine granularity to a coarser o
 
 The roll-up policy describes the granularity of the data over time:
 
-* Data is retained at 10-second resolution for the first 6 hours.
+* Data is retained at 10-second resolution for the first 4 hours.
 * Data is retained at 1-minute resolution for 2 days.
 * Data is retained at 10-minute resolution for 2 weeks.
 * Data is retained at 1-hour resolution for 3 months.
