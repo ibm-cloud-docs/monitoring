@@ -17,6 +17,8 @@ IBM Cloud Monitoring with Sysdig
     monitoring.md
     network.md
     iam.md
+    endpoints.md
+    pricing.md
 
     {: .topicgroup}
     Tutorials
@@ -27,10 +29,16 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="howto"}
     provision.md
     remove.md
+    launch.md
 
     {: .topicgroup}
     Platform Metrics
         platform_metrics_enabling.md
+
+    {: .topicgroup}
+    Metrics
+        metrics.md
+        groups.md
 
     {: .topicgroup}
     Sysdig Agent
@@ -39,33 +47,37 @@ IBM Cloud Monitoring with Sysdig
         change_kube_agent.md
         change_linux_agent.md
         change_container_agent.md
-
+ 
     {: .topicgroup}
-    View metrics
-        launch.md
-        groups.md
+    Dashboards
         dashboards.md
         panels.md
-        metrics.md
+        default_dashboards.md
 
     {: .topicgroup}
-    DevOps tasks
+    Alerts
+        [Working with alerts](https://docs.sysdig.com/en/alerts.html)
+        notifications.md
+
+    {: .topicgroup}
+    Events
+        [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
+
+    {: .topicgroup}
+    Captures
+        captures.md
+
+    {: .topicgroup}
+    Security
         access_key.md
         api_token.md
-        notifications.md
         teams.md
         iam_grant.md
         iam_grant_team.md
-        captures.md
         api.md
-        [Working with alerts](https://docs.sysdig.com/en/alerts.html)
-        [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    endpoints.md
-    pricing.md
-    default_dashboards.md
     [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started.html)
