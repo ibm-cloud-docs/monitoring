@@ -6,7 +6,13 @@ IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="learn"}
     getting-started.md
-    overview.md
+    data.md
+
+    {: .topicgroup}
+    Cloud services
+        cloud_services.md
+        cloud_services_locations.md
+
     manage.md
     monitoring.md
     network.md
@@ -25,8 +31,6 @@ IBM Cloud Monitoring with Sysdig
     {: .topicgroup}
     Platform Metrics
         platform_metrics_enabling.md
-        cloud_services.md
-        cloud_services_locations.md
 
     {: .topicgroup}
     Sysdig Agent
@@ -36,21 +40,26 @@ IBM Cloud Monitoring with Sysdig
         change_linux_agent.md
         change_container_agent.md
 
-    launch.md
-    groups.md
-    access_key.md
-    api_token.md
-    [Working with alerts](https://docs.sysdig.com/en/alerts.html)
-    [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
-    dashboards.md
-    panels.md
-    metrics.md
-    notifications.md
-    teams.md
-    iam_grant.md
-    iam_grant_team.md
-    captures.md
-    api.md
+    {: .topicgroup}
+    View metrics
+        launch.md
+        groups.md
+        dashboards.md
+        panels.md
+        metrics.md
+
+    {: .topicgroup}
+    DevOps tasks
+        access_key.md
+        api_token.md
+        notifications.md
+        teams.md
+        iam_grant.md
+        iam_grant_team.md
+        captures.md
+        api.md
+        [Working with alerts](https://docs.sysdig.com/en/alerts.html)
+        [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
