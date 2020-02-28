@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-02-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, pricing
 
@@ -25,25 +25,41 @@ subcollection: Sysdig
 # Pricing
 {: #pricing_plans}
 
-Different pricing plans are available for an {{site.data.keyword.mon_full_notm}} instance.
-{:shortdesc}
- 
+This topic includes information about pricing for the {{site.data.keyword.mon_full_notm}}. You can also review the sample scenarios to learn more about the costs of a Sysdig instance
+{: shortdesc}
 
-| Plans            | Tier         | Data collection  |
-|------------------|--------------|------------------|
-| `Trial`          |              | Data is collected for a maximum of 20 containers per node or for 200 custom metrics per node for 30 days only. |
-| `Graduated tier` | `Basic`      | Data is collected for a maximum of 20 containers per node or for 200 custom metrics per node. |
-| `Graduated tier` | `Pro`        | Data is collected for a maximum of 50 containers per node or for 500 custom metrics per node. |
-| `Graduated tier` | `Advanced`   | Data is collected for a maximum of 110 containers per node or for 3000 custom metrics per node. |
-{: caption="Table 1. List of service plans" caption-side="top"} 
+The costs that are provided in this topic are guidelines and do not represent actual costs. They represent a starting point for estimates of costs that would be incurred in environments with a similar configuration. Actual costs can vary by geography. The prices that are used are based on actual prices as of March 1, 2020 and it is possible they can change.
+{: important}
 
 
-**Note:** A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent.
+| Plans            | Base tier | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
+|------------------|---------------------------------------------------|--------|--------|--------|--------|
+| `Lite`           | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | |
+| `Graduated tier` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+{: caption="Table 1. Time-series tiers per service plans" caption-side="top"} 
 
-When the number of containers per node or the number of metrics goes above the graduated tier plan's threshold limit over a period of time, automatic tier detection is applied. An alert notification is triggered following your billing usage notification configuration if you enable the following alert **[{{site.data.keyword.IBM_notm}}]: Usage Tier Change**
 
-You can request a **custom price quote** for anything beyond the upper bound of the *Advanced graduated tier paid pricing plan* by opening a ticket with [IBM Cloud Support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/unifiedsupport/supportcenter){:new_window}.
-{: tip}
+The *graduated tier* plan is billed based on the following prices:
+
+* **Base tier**: The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, StatsD), 50 containers and 1M API calls.
+* **Tier 1**: The price per host is 0.08 USD for up to 100K time-series per month, or 0.00011 USD time-series per hour.
+* **Tier 2**: The price per host is 0.05 USD for 100K to 1M time-series per month or 0.000069 USD time-series per hour.
+* **Tier 3**: The price per host is 0.03 USD for 1M to 10M time-series per month or 0.000042 USD time-series per hour.
+* **Tier 4**: The price per host is 0.02 USD for more than 10M time-series per month or 0.000028 USD time-series per hour.
+* **Additional containers**: The price is 5 USD per 10 containers per month.
+* **Additional API calls**: The price is 0.01 USD per 1000 API calls across all hosts per month.
+
+Each measure is priced independently when there is an overage.
+{: note}
+
+
+There is no time-series allotment for platform metrics. These time-series are priced based on the tiers.
+{: important}
+
+**Note:** A host can be a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent.
+
+
+
 
 Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/Monitoring-with-Sysdig?topic=Sysdig-about#overview_collection) and [data retention](/docs/Monitoring-with-Sysdig?topic=Sysdig-about#overview_retention).
 
@@ -55,98 +71,273 @@ To monitor how the {{site.data.keyword.mon_full_notm}} service is used and the c
 
 
 
-## Enabling the alert that notifies on a tier change
-{: #pricing_alert}
-
-To be notified when there is a tier change, you must enable the following alert: **[{{site.data.keyword.IBM_notm}}]: Usage Tier Change**
-
-Complete the following steps to enable an alert:
-
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/Monitoring-with-Sysdig?topic=Sysdig-launch#launch). 
-2. Create a notification channel. For more information, see [Configuring a notification channel](/docs/Monitoring-with-Sysdig?topic=Sysdig-notifications#notifications_create). 
-3. Click **ALERTS** to navigate to the *Alerts* section.
-2. Search for **[IBM]: Usage Tier Change**.
-3. Edit the alert to add the notification channel.
-4. Click **Save**.
+## Billing sample 1: Basic usage
+{: #pricing_example1}
 
 
+Consider the following example where you have the following configuration: 
+* 3 hosts
+* Host-1 generates 1200 time-series
+* Host-2 generates 1000 time-series
+* Host-3 generates 1500 time-series
+* 170 containers
+* 1.2M API calls
 
-## How is the service plan alert generated?
-{: #pricing_how}
+The billing calculation for the month is calculated as follows:
 
-To be notified when there is a tier change, you must enable the following alert: **[{{site.data.keyword.IBM_notm}}]: Usage Tier Change**
+* `Cost per host`
 
-**Note:** When you enable this alert, you must specify the notification channels where you want to be notified.
+    The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, StatsD), 50 containers and 1M API calls.
 
-The usage is calculated as the average of the number of nodes and metrics sampled every 10 seconds over the previous hour. Small, short-lived fluctuations are not included. The difference between the previous and the current usage happens once an hour.
+    For 3 hosts, the total cost adds to **105 USD**.
+  
+    ```
+    3 * 35 USD = 105 USD
+    ```
+    {: screen}
 
-The thresholds defined are set in the following way:
+* `Time-series cost`
 
-``` 
-usageTiers {
-  containerDensity {
-    Basic = [0, 20]
-    Pro = [21, 50]
-    Advanced = [51, 100]
-  }
-  metricDensity {
-    Basic = [0, 200]
-    Pro = [201, 500]
-    Advanced = [501, 1000]
-}
+    Each host has a 1000 time-series allotment. The remaining time-series are priced based on the tiers.
+  
+    ```
+    1200 + 1000 + 1500 - ( 3*1000 ) = 700 time-series
+    ```
+    {: screen}
+    
+    The result from adding the time series per host minus the allotment defines the tier that is applied for pricing. 
+    
+    700 time-series corresponf to tier 1. The price per host is 0.08 USD for up to 100K time-series per month.
+    
+    ``` 
+    700 time-series * 0.08 USD (Tier-1) = 56 USD
+    ```
+    {: screen}
+    
+    The total cost for time-series adds to **56 USD**.
+
+* `Containers cost`
+
+    Each host has a 50 containers allotment. The remaining containers are priced 5 USD per 10 containers per month.
+
+    ```
+    170 - (3x50) = 20 
+    (20 containers/10) * 5 USD = 10 USD
+    ```
+    {: screen}
+
+    The total cost for containers adds to **10 USD**.
+
+* `API calls`
+
+    1M API calls are allowed across all hosts per month.
+
+    The price is 0.01 USD per 1000 API calls across all hosts per month.
+  
+    ```
+    1.2M - 1M = 200k 
+    200k * 0.01 USD/1k = 2 USD
+    ```
+    {: screen}
+
+    The total cost for API calls adds to **56 USD**.
+
+The total amount adds to **173 USD**.
+
+```
+105 USD + 56 USD + 10 USD + 2 USD = 173 USD
 ```
 {: screen}
 
-The alert notification is generated as follows:
-1. Every hour, if the number of containers per node in a tier increases, a custom event is generated.
-2. The alert condition checks for any custom events that inform about changes in the number of containers per node. If it finds an event where the number of containers in a tier increases from the last time the usage was calculated, it sends a notification.
-
-The frequency of the alert is once every hour. For a fluctuating node, the frequency of the alert is at most every two hours.
-
-Notice that the alert is only generated if a node moves from *Basic* tier to *Pro* tier or to *Advanced* tier. 
+## Billing sample 2: Unused time-series allotment
+{: #pricing_example2}
 
 
+Consider the following example where you have the following configuration: 
+* 5 hosts
+* Host-1 generates 2000 time-series
+* Host-2 generates 100 time-series
+* Host-3 generates 500 time-series
+* Host-4 generates 100 time-series
+* Host-5 generates 200 time-series
+* 100 containers
+* 700k API calls
 
-### Examples
-{: #pricing_examples}
+The billing calculation for the month is calculated as follows:
 
-**Sample 1** 
+* `Cost per host`
 
-If the average container count is the following: 
+    The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, StatsD), 50 containers and 1M API calls.
 
-| Hour     | Number of containers | Description                                                                   | Is an alert generated? |
-|----------|----------------------|-------------------------------------------------------------------------------|------------------------|
-| 10:00    | 18                   | Tier is set to **Basic**.                                                     | No                     |
-| 11:00    | 21                   | Number of containers is above *Basic* tier. Tier moves to **Pro**.            | Yes                    |
-| 12:00    | 19                   | Number of containers is below *Basic* tier. Tier moves back to **Basic**.     | No                    |
-| 13:00    | 20                   | No tier change. Tier is set to **Basic**.                                     | No                     |
-{: caption="Table 2. Sample 1" caption-side="top"} 
+    For 5 hosts, the total cost adds to **175 USD**.
+  
+    ```
+    5 * 35 USD = 175 USD
+    ```
+    {: screen}
+
+* `Time-series cost`
+
+    Each host has a 1000 time-series allotment. The remaining time-series are priced based on the tiers.
+  
+    ```
+    2000 + 100 + 500 + 100 + 200 - ( 5*1000 ) = -1100 
+    ```
+    {: screen}
+    
+    The result from adding the time series per host minus the allotment defines the tier that is applied for pricing. 
+    
+    You have 1100 more time-series available per your configuration.
+    
+    The total cost for time-series adds to **0 USD**.
+
+* `Containers cost`
+
+    Each host has a 50 containers allotment. The remaining containers are priced 5 USD per 10 containers per month.
+
+    ```
+    100 - 5x50 = -150
+    ```
+    {: screen}
+
+    You have 150 more containers available per your configuration.
+
+    The total cost for containers adds to **0 USD**.
+
+* `API calls`
+
+    1M API calls are allowed across all hosts per month.
+
+    The price is 0.01 USD per 1000 API calls across all hosts per month.
+  
+    ```
+    700k - 1M = -300k
+    ```
+    {: screen}
+
+    You have 300 more API calls available per your configuration.
+
+    The total cost for API calls adds to **0 USD**.
 
 
-**Sample2**
+The total amount adds to **175 USD**.
 
-If the average container count is the following: 
-
-| Hour     | Number of containers | Description                                                                   | Is an alert generated? |
-|----------|----------------------|-------------------------------------------------------------------------------|------------------------|
-| 10:00    | 15                   | Tier is set to **Basic**.                                                     | No                     |
-| 11:00    | 19                   | Tier is set to **Basic**.                                                     | No                     |
-| 12:00    | 20                   | Tier is set to **Basic**.                                                     | No                    |
-| 13:00    | 21                   | Number of containers is above *Basic* tier. Tier moves to **Pro**.            | Yes                     |
-{: caption="Table 3. Sample 2" caption-side="top"}
+```
+175 USD + 0 USD + 0 USD + 0 USD = 175 USD
+```
+{: screen}
 
 
-**Sample3**
 
-If the average container count is the following: 
 
-| Hour     | Number of containers | Description                                                                   | Is an alert generated? |
-|----------|----------------------|-------------------------------------------------------------------------------|------------------------|
-| 10:00    | 15                   | Tier is set to **Basic**.                                                     | No                     |
-| 11:00    | 20                   | Tier is set to **Basic**.                                                     | No                    |
-| 12:00    | 21                   | Tier is set to **Basic**.                                                     | Yes                    |
-| 13:00    | 20                   | Number of containers is back to *Basic* tier. Tier moves to **Pro**.          | No                     |
-{: caption="Table 3. Sample 3" caption-side="top"}
+## Billing sample 3: Platform metrics only
+{: #pricing_example3}
+
+Consider the following example where you have the following configuration for platform metrics: 
+* Event-stream generates 50 time-series per month
+* IBM Cloud Databases generats 60 time-series per month
+
+The billing calculation for the month is calculated as follows:
+  
+```
+50 + 60 = 110 time-series
+```
+{: screen}
+
+For tier 1, the price per host is 0.08 USD for up to 100K time-series per month.
+
+```
+110 * 0.08 USD (Tier-1) = 8.80 USD
+```
+{: screen}
+
+The total amount adds to **8.80 USD**.
+
+
+
+## Billing sample 4: Host allotment and platform metrics combined
+{: #pricing_example4}
+
+The following configuration demonstrates billing for a combination of host time-series allotment as well as platform metrics.
+
+Consider the following example where you have the following configuration: 
+* 3 hosts
+* Host-1 generates 1000 time-series
+* Host-2 generates 100 time-series
+* Host-3 generates 500 time-series
+* Cloud Foundry generates 200 time-series per month
+* Event Streams generates 200 time-series per month
+* IBM Cloud Databases generats 100 time-series per month
+* 100 containers
+* 300k API calls
+
+
+The billing calculation for the month would look like:
+
+
+* `Cost per host`
+
+    The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, StatsD), 50 containers and 1M API calls.
+
+    For 3 hosts, the total cost adds to **105 USD**.
+  
+    ```
+    3 * 35 USD = 105 USD
+    ```
+    {: screen}
+
+* `Time-series cost`
+
+    Each host has a 1000 time-series allotment. The remaining time-series are priced based on the tiers.
+  
+    ```
+    1000 + 100 + 500 + 200 + 200 + 100 - ( 3*1000 ) = -900 time-series
+    ```
+    {: screen}
+    
+    The result from adding the time series per host minus the allotment defines the tier that is applied for pricing. 
+
+    Notice that there is no additional charge for the platform metrics in this case since the excess allotment from the agents can be used to cover the cost of the platform metrics.
+
+    You have 900 more time-series available per your configuration.
+    
+    The total cost for time-series adds to **0 USD**.
+
+* `Containers cost`
+
+    Each host has a 50 containers allotment. The remaining containers are priced 5 USD per 10 containers per month.
+
+    ```
+    100 - 3x50 = -50 containers
+    ```
+    {: screen}
+
+    You have 50 more containers available per your configuration.
+
+    The total cost for containers adds to **0 USD**.
+
+* `API calls`
+
+    1M API calls are allowed across all hosts per month.
+
+    The price is 0.01 USD per 1000 API calls across all hosts per month.
+  
+    ```
+    300k - 1M = -700k
+    ```
+    {: screen}
+
+    You have 700 more API calls available per your configuration.
+
+    The total cost for API calls adds to **0 USD**.
+
+
+The total amount adds to **105 USD**.
+
+```
+105 USD + 0 USD + 0 USD + 0 USD = 105 USD
+```
+{: screen}
 
 
 
