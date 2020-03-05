@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-03-05"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -35,7 +35,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
 |---------------------------------------------------------------|:-------------------:|:----------------:|
-| {{site.data.keyword.messagehub}}                              |                     | ![Checkmark icon](../../icons/checkmark-icon.svg)  |          
+| {{site.data.keyword.messagehub}}                              | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg)  |          
 {: caption="Integration services integration in Europe locations" caption-side="top"}
 {: #cs_integration-table-1}
 {: tab-title="Europe"}
@@ -45,7 +45,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`               |
 |------------------------------------------------|:-------------------:|:------------------------------------:|
-| {{site.data.keyword.messagehub}}               |                     |                                      |          
+| {{site.data.keyword.messagehub}}               | ![Checkmark icon](../../icons/checkmark-icon.svg)   | ![Checkmark icon](../../icons/checkmark-icon.svg)    |          
 {: caption="Integration services integration in America's locations" caption-side="top"}
 {: #cs_integration-table-2}
 {: tab-title="America"}
@@ -53,9 +53,9 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
-|------------------------------------------------|:----------------:|:--------------------------:|
-| {{site.data.keyword.messagehub}}               |                     |                                      |          
+| Service                                        | `Tokyo (jp-tok)` |`Sydney (au-syd)`           | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
+|------------------------------------------------|:----------------:|:--------------------------:|:--------------------------:|:--------------------------:|
+| {{site.data.keyword.messagehub}}               | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |  `Metrics are available through the Sysdig Tokyo instance` | `Metrics are available through the Sysdig Tokyo instance` |       
 {: caption="Integration services integration in AP locations" caption-side="top"}
 {: #cs_integration-table-3}
 {: tab-title="Asia Pacific"}
