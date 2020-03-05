@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-03-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -30,7 +30,7 @@ Platform metrics are metrics that are exposed by enabled-Sysdig services and the
 
 * Platform metrics are regional. 
 
-    You can monitor metrics from Sysdig-enabled services the {{site.data.keyword.cloud_notm}} in the region where the service is available. 
+    You can monitor metrics from enabled-Sysdig services on the {{site.data.keyword.cloud_notm}} in the region where the service is available. 
 
 * You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location. 
 

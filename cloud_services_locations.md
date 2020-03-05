@@ -55,7 +55,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Tokyo (jp-tok)` |`Sydney (au-syd)`           | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
 |------------------------------------------------|:----------------:|:--------------------------:|:--------------------------:|:--------------------------:|
-| {{site.data.keyword.messagehub}}               | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |  `Metrics are available through the Sysdig Tokyo instance` | `Metrics are available through the Sysdig Tokyo instance` |       
+| {{site.data.keyword.messagehub}}               | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |  `Metrics are available through the platform metrics Sysdig instance in Tokyo` | `Metrics are available through the platform metrics Sysdig instance in Tokyo` |       
 {: caption="Integration services integration in AP locations" caption-side="top"}
 {: #cs_integration-table-3}
 {: tab-title="Asia Pacific"}
