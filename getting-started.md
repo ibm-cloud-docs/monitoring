@@ -32,6 +32,29 @@ The following figure shows the components overview for the {{site.data.keyword.m
 
 ![{{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}](images/components.png "{{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}")
 
+To add monitoring features with {{site.data.keyword.mon_full_notm}} in the {{site.data.keyword.cloud_notm}}, you must provision an instance of the {{site.data.keyword.mon_full_notm}} service.
+
+Before you provision an instance, consider the following information:
+* The account owner can create, view, and delete an instance of a service in the {{site.data.keyword.cloud_notm}}. This user can also grant permissions to other users to work with the {{site.data.keyword.mon_full_notm}} service.
+* Other {{site.data.keyword.cloud_notm}} users with `administrator` or `editor` permissions can manage the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}. These users must also have platform permissions to create resources within the context of the resource group where they plan to provision the instance.
+
+You provision an instance within the context of a resource group. You use a resource group to organize your services for access control and billing purposes. You can provision the {{site.data.keyword.mon_full_notm}} instance in the *default* resource group or in a custom resource group.
+
+When you [provision an instance](/docs/Monitoring-with-Sysdig?topic=Sysdig-provision#provision), you automatically get an ingestion key, known as the [Sysdig access key](/docs/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key).
+
+After you provision an instance, you must configure metric sources, enable platform metrics, or both. 
+* A metric source is any resource that you want to monitor and control its performance and health through a Sysdig instance. 
+* You can configure a Sysdig agent to collect metrics from a source. For example, you can configure a Sysdig agent for a Kubernetes cluster. You use the access key to configure the Sysdig agent that is responsible for collecting and forwarding metric data to your instance.
+
+    The Sysdig agent can be configured to push metrics to Sysdig via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints) section.
+
+    After the {{site.data.keyword.mon_full_notm}} agent is deployed in a metric source, collection and forwarding of metrics to the instance is automatic. The {{site.data.keyword.mon_full_notm}} agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in an environment.
+
+* You can enable platform metrics to monitor {{site.data.keyword.cloud_notm}} services. You can only configure 1 Sysdig instance in a region to collect automatically platform metrics. [Learn more](/docs/Monitoring-with-Sysdig?topic=Sysdig-platform_metrics_enabling).
+
+You can [monitor](/docs/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring), and [manage](/docs/Monitoring-with-Sysdig?topic=Sysdig-manage#manage) data through the {{site.data.keyword.mon_full_notm}} Web UI.  
+
+
 
 ## Features
 {: #features}
@@ -226,8 +249,9 @@ For example, for a metric view, you can define the scope of the data, how to agg
 For more information, see [Managing data](/docs/Monitoring-with-Sysdig?topic=Sysdig-manage#manage).
 
 
-## Next steps: Configure alerts and explore events
-{: #next}
+
+## Step 7: Configure alerts and explore events
+{: #step7}
 
 You can use events to review, track, and resolve issues. An event is a notification that informs about something that has occurred in any of the nodes that forward data to your {{site.data.keyword.mon_full_notm}} instance. 
 
@@ -244,5 +268,12 @@ You configure one or more notification channels in the *Settings* section in the
 The *Alerts* section in the web UI shows the list of pre-defined alerts. From this view, you can enable and disable pre-defined alerts; you can modify existing alerts; and you can create new alerts. For more information, see [Working with alerts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/alerts.html){:new_window}.
 
 Next, explore [Working with custom events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/events.html){:new_window}.
+
+
+## Step 8: Monitor usage
+{: #step8}
+
+To monitor the usage and costs of your service, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
+
 
 

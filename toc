@@ -1,16 +1,24 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Sysdig" audience="service" href="/docs/Monitoring-with-Sysdig?topic=Sysdig-getting-started#getting-started" path="Monitoring-with-Sysdig"}
+{: .toc subcollection="Sysdig" audience="service" category="dev_ops" href="/docs/Monitoring-with-Sysdig?topic=Sysdig-getting-started#getting-started" path="Monitoring-with-Sysdig"}
 IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="learn"}
     getting-started.md
-    overview.md
+    data.md
+
+    {: .topicgroup}
+    Cloud services
+        cloud_services.md
+        cloud_services_locations.md
+
     manage.md
     monitoring.md
     network.md
     iam.md
+    endpoints.md
+    pricing.md
 
     {: .topicgroup}
     Tutorials
@@ -21,12 +29,16 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="howto"}
     provision.md
     remove.md
+    launch.md
 
     {: .topicgroup}
     Platform Metrics
         platform_metrics_enabling.md
-        cloud_services.md
-        cloud_services_locations.md
+
+    {: .topicgroup}
+    Metrics
+        metrics.md
+        groups.md
 
     {: .topicgroup}
     Sysdig Agent
@@ -35,22 +47,34 @@ IBM Cloud Monitoring with Sysdig
         change_kube_agent.md
         change_linux_agent.md
         change_container_agent.md
+ 
+    {: .topicgroup}
+    Dashboards
+        dashboards.md
+        panels.md
+        default_dashboards.md
 
-    launch.md
-    groups.md
-    access_key.md
-    api_token.md
-    [Working with alerts](https://docs.sysdig.com/en/alerts.html)
-    [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
-    dashboards.md
-    panels.md
-    metrics.md
-    notifications.md
-    teams.md
-    iam_grant.md
-    iam_grant_team.md
-    captures.md
-    api.md
+    {: .topicgroup}
+    Alerts
+        [Working with alerts](https://docs.sysdig.com/en/alerts.html)
+        notifications.md
+
+    {: .topicgroup}
+    Events
+        [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
+
+    {: .topicgroup}
+    Captures
+        captures.md
+
+    {: .topicgroup}
+    Security
+        access_key.md
+        api_token.md
+        teams.md
+        iam_grant.md
+        iam_grant_team.md
+        api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -58,10 +82,12 @@ IBM Cloud Monitoring with Sysdig
     pricing.md
     default_dashboards.md
     at-events.md
+
     [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started.html)
     [Sysdig Blog](https://sysdig.com/blog/)
+    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
