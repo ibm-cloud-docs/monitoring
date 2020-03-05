@@ -82,6 +82,7 @@ IBM Cloud Monitoring with Sysdig
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started.html)
     [Sysdig Blog](https://sysdig.com/blog/)
+    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
