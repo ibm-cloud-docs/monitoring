@@ -78,6 +78,11 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    endpoints.md
+    pricing.md
+    default_dashboards.md
+    at-events.md
+
     [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started.html)
