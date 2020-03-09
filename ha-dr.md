@@ -2,15 +2,15 @@
 
 copyright:
   years: 2020, 2020
-lastupdated: "2020-02-28"
+lastupdated: "2020-03-09"
 
-keywords: Key Protect availability, Key Protect disaster recovery
 keywords: Sysdig, IBM Cloud, monitoring, disaster recovery
 
 subcollection: Sysdig
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -20,7 +20,6 @@ subcollection: Sysdig
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
-{:term: .term}
 
 # High availability and disaster recovery
 {: #ha-dr}
