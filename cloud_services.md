@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-03-10"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -38,6 +38,7 @@ The following table lists integration services that are Sysdig-enabled:
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.messagehub}}](/docs/EventStreams?topic=eventstreams-about#about)| {{site.data.keyword.messagehub}} is a high-throughput message bus that is built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.IBM_notm}} and event stream distribution between your services and applications. | [Metrics collected by {{site.data.keyword.messagehub}} ](/docs/EventStreams?topic=eventstreams-metrics) |
+|/docs/vsi?topic=virtual-servers-sysdig-monitoring-metrics| IBm Cloud Monitoring with Sysdig| Platform metrics|
 {: caption="List of integration Cloud services" caption-side="top"} 
 
 
