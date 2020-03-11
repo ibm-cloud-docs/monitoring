@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-05"
+lastupdated: "2020-03-10"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -35,7 +35,9 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
 |---------------------------------------------------------------|:-------------------:|:----------------:|
-| {{site.data.keyword.messagehub}}                              | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg)  |          
+| {{site.data.keyword.messagehub}}                              | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
+|IBM Cloud Monitoring with Sysdig| |![Checkmark icon](../../icons/checkmark-icon.svg)|
+![Checkmark icon](../../icons/checkmark-icon.svg)  |          
 {: caption="Integration services integration in Europe locations" caption-side="top"}
 {: #cs_integration-table-1}
 {: tab-title="Europe"}
@@ -46,6 +48,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`               |
 |------------------------------------------------|:-------------------:|:------------------------------------:|
 | {{site.data.keyword.messagehub}}               | ![Checkmark icon](../../icons/checkmark-icon.svg)   | ![Checkmark icon](../../icons/checkmark-icon.svg)    |          
+|IBM Cloud Monitoring with Sysdig| ![Checkmark icon](../../icons/checkmark-icon.svg)|![Checkmark icon](../../icons/checkmark-icon.svg)|
 {: caption="Integration services integration in America's locations" caption-side="top"}
 {: #cs_integration-table-2}
 {: tab-title="America"}
