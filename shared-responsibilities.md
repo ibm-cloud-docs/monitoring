@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-12"
+  years: 2020, 2020
+lastupdated: "2020-03-16"
+
+keywords: Sysdig, IBM Cloud, monitoring, customer responsibilities, IBM responsibilities, terms and conditions
+
+subcollection: Sysdig
 
 ---
 
@@ -18,14 +22,13 @@ lastupdated: "2019-11-12"
 {:download: .download}
 {:preview: .preview}
 
-# Understanding your responsibilities when using {{site.data.keyword.mon_full_tm}}
-{: #your-id}
-<!-- The title of your H1 should be Understanding your responsibilities with using _service-name_, where _service-name_ is the non-trademarked short version conref. -->
+# Understanding your responsibilities when using {{site.data.keyword.mon_full_notm}}
+{: #shared-responsibilities}
 
-Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.mon_full_tm}}. For a high-level view of the service types in {{site.data.keyword.Bluemix}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyboard.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
+Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.mon_full_notm}}. For a high-level view of the service types in {{site.data.keyword.cloud_notm}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyboard.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
 {:shortdesc}
 
-Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.mon_full_notm}}. For the overall terms of use, see [{{site.data.keyword.Bluemix}} Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms).
+Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.mon_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms).
 
   
 ## Incident and operations management
@@ -33,11 +36,15 @@ Review the following sections for the specific responsibilities for you and for 
 
 You and IBM share responsibilities for the set up and maintenance of your {{site.data.keyword.mon_full_notm}} service instance for monitoring your application and infrastructure workloads. You are responsible for incident and operations management of your application data.
 
-| Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
-|----------|-----------------------|--------|
-| Availability | Provide high availability capabilities, such as IBM-owned infrastructure in multizone regions, to meet local access and low latency requirements for each supported region.  | Use the list of [available regions](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints) to plan for and create new instances of the service. |
-| Sysdig agents | Provide images and instructions for how to install the Sysdig agents in environments to be monitoring ( ie. Kubernetes, Linux, Openshift ). | Install the Sysdig agents and monitor that the agents are running in your environment ( Sysdig alerts can help with this ) |
-| Platform metrics | Deliver platform metrics for Sysdig-enabled services to your Sysdig instances in the region where the platform metrics are generated.  | Configure a monitoring instance for platform metrics in each region in order to receive platform metrics into your monitoring instance. |
+| Task              | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
+|-------------------|-------------------------------------------------|-----------------------|
+| Maintain high availability  | Provide high availability capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions (MZR), to meet local access and low latency requirements for each supported region. Operate the {{site.data.keyword.mon_full_notm}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview/terms-of-use?topic=overview-slas). | Use the list of [available regions](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints) to plan for and create new instances of the service. |
+
+| Respond to incidents  |  | 
+
+
+| Sysdig agents     | Provide images and instructions for how to install the Sysdig agents in environments to be monitoring ( ie. Kubernetes, Linux, Openshift ). | Install the Sysdig agents and monitor that the agents are running in your environment ( Sysdig alerts can help with this ) |
+| Platform metrics  | Deliver platform metrics for Sysdig-enabled services to your Sysdig instances in the region where the platform metrics are generated.  | Configure a monitoring instance for platform metrics in each region in order to receive platform metrics into your monitoring instance. |
 | Incidents | Provide notifications for planned maintenance, security bulletins, or unplanned outages | Set preferences to [receive emails about platform notifications](/docs/overview?topic=overview-ui#email-prefsl), and monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements.  |
 {: caption="Table 1. Responsibilities for incident and operations" caption-side="top"}
 
@@ -87,3 +94,12 @@ IBM is responsible for the recovery of {{site.data.keyword.mon_full_notm}} compo
 | Sysdig service | Back up metric data and metadata in the region that the service operates in at least every 24 hrs, and automatically recover and restart service components after any disaster event. |  |
 | Sysdig agents |  | Reinstalling or reconfiguring the Sysdig agents in the event of any disaster event impacting the agent runtime. |
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
+
+| `Backup of the {{site.data.keyword.mon_full_notm}} service`      |
+| `Recovery of the {{site.data.keyword.mon_full_notm}} service`    | 
+| `Backup of the Sysdig agents`                                    | 
+| `Recovery of the Sysdig agents`                                  | 
+| `Back up monitoring metadata`                                    |
+| `Back up monitoring metric data`                                 | Maintain regular backups of toolchain and pipeline definitions, Git repos, and any other toolchain integration data that is stored and managed by IBM.  | To support global failover, create and maintain copies of your toolchain and pipeline definitions, including tool integration data and your Git repos, in another IBM region. |
+| `Restore monitoring metric data`                                 | Restore all toolchain and Git repos to the original {{site.data.keyword.cloud_notm}} region, when that region is available.    | To support global failover, manually switch to using the copied toolchains and repos in another region. |
+| `Restore monitoring metadata`                                    |

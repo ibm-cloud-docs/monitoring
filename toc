@@ -6,19 +6,24 @@ IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="learn"}
     getting-started.md
-    data.md
 
     {: .topicgroup}
-    Cloud services
+    Enhancing security
+        at_events.md
+        data-security.md
+        iam.md
+        ha-dr.md
+        service-connection.md
+        architecture-workload-isolation.md
+
+    {: .topicgroup}
+    IBM Platform metrics
+        platform_metrics_enabling.md
         cloud_services.md
         cloud_services_locations.md
 
     manage.md
     monitoring.md
-    network.md
-    iam.md
-    endpoints.md
-    pricing.md
 
     {: .topicgroup}
     Tutorials
@@ -30,10 +35,7 @@ IBM Cloud Monitoring with Sysdig
     provision.md
     remove.md
     launch.md
-
-    {: .topicgroup}
-    Platform Metrics
-        platform_metrics_enabling.md
+    network.md
 
     {: .topicgroup}
     Metrics
@@ -80,6 +82,7 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="reference"}
     endpoints.md
     pricing.md
+    shared-responsibilities.md
     default_dashboards.md
     at-events.md
 

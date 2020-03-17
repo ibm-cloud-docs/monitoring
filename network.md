@@ -74,8 +74,8 @@ To send metric data to the {{site.data.keyword.mon_full_notm}} service, you must
 | `EU DE`     | ingest.eu-de.monitoring.cloud.ibm.com             | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38   | TCP 6443 | 
 | `EU GB`     | ingest.eu-gb.monitoring.cloud.ibm.com             | 158.175.98.206 </br>141.125.73.118 </br>159.122.210.174 | TCP 6443 | 
 | `JP TOK`    | ingest.jp-tok.monitoring.cloud.ibm.com            | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238     | TCP 6443 | 
-| `US East`   | ingest.us-east.monitoring.cloud.ibm.com           | 169.60.112.74</br> 169.55.109.114 </br> 169.62.3.82     | TCP 6443 |
-| `AU SYD`    | ingest.au-syd.monitoring.cloud.ibm.com            | 135.90.73.100</br> 130.198.80.155 </br> 168.1.213.78     | TCP 6443 | 
+| `US East`   | ingest.us-east.monitoring.cloud.ibm.com           | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82      | TCP 6443 |
+| `AU SYD`    | ingest.au-syd.monitoring.cloud.ibm.com            | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78     | TCP 6443 | 
 {: caption="Table 1. Public IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
@@ -90,8 +90,8 @@ To access the {{site.data.keyword.mon_full_notm}} web UI, you must define a fire
 | `EU DE`     | eu-de.monitoring.cloud.ibm.com         | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38     | https (TLS) 443 | 
 | `EU GB`     | eu-gb.monitoring.cloud.ibm.com         | 158.175.98.206 </br>141.125.73.118 </br>159.122.210.174   | https (TLS) 443 | 
 | `JP TOK`    | jp-tok.monitoring.cloud.ibm.com        | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238       | https (TLS) 443 |
-| `US East`   | us-east.monitoring.cloud.ibm.com       | 169.60.112.74</br> 169.55.109.114 </br> 169.62.3.82       | https (TLS) 443 | 
-| `AU SYD`    | au-syd.monitoring.cloud.ibm.com        | 135.90.73.100</br> 130.198.80.155 </br> 168.1.213.78      | https (TLS) 443 | 
+| `US East`   | us-east.monitoring.cloud.ibm.com       | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82        | https (TLS) 443 | 
+| `AU SYD`    | au-syd.monitoring.cloud.ibm.com        | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78       | https (TLS) 443 | 
 {: caption="Table 2. Public IP addresses to access the {{site.data.keyword.mon_full_notm}} web UI" caption-side="top"}
 
 ### Ingestion through a private endpoint
@@ -117,10 +117,10 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 
 | Region     | Alert Notification Source Subnets                                                                          |
 |------------|------------------------------------------------------------------------------------------------------------|
-| `US South` | 169.61.248.224/28 169.46.0.64/29 169.48.214.64/29 169.48.235.16/28 169.62.221.32/28 169.60.151.168/29      |
-| `EU DE`    | 169.50.9.0/28 159.122.102.32/29 161.156.102.200/29 161.156.69.144/28 149.81.99.192/28 149.81.77.72/29      |
-| `EU GB`    | 159.8.149.208/28 159.122.210.168/29 158.175.75.160/28 158.175.98.200/29 141.125.73.112/29 141.125.73.80/28 |
-| `JP TOK`   | 169.56.51.232/29 169.56.11.208/28 128.168.75.32/28 128.168.75.8/29 165.192.84.8/29 165.192.83.144/28       |
-| `US East`  | 169.55.109.112/29 169.55.122.192/28 169.60.82.240/28 169.60.112.72/29 169.62.28.160/28 169.62.3.80/29      | 
-| `AU SYD`   | 168.1.213.72/29 168.1.41.96/28 130.198.80.152/29 130.198.66.144/28 135.90.73.96/29 135.90.78.192/28        |
+| `US South` | 169.61.248.224/28 </br>169.46.0.64/29 </br>169.48.214.64/29 </br>169.48.235.16/28 </br>169.62.221.32/28 </br>169.60.151.168/29      |
+| `EU DE`    | 169.50.9.0/28 </br>159.122.102.32/29 </br>161.156.102.200/29 </br>161.156.69.144/28 </br>149.81.99.192/28 </br>149.81.77.72/29      |
+| `EU GB`    | 159.8.149.208/28 </br>159.122.210.168/29 </br>158.175.75.160/28 </br>158.175.98.200/29 </br>141.125.73.112/29 </br>141.125.73.80/28 |
+| `JP TOK`   | 169.56.51.232/29 </br>169.56.11.208/28 </br>128.168.75.32/28 </br>128.168.75.8/29 </br>165.192.84.8/29 </br>165.192.83.144/28       |
+| `US East`  | 169.55.109.112/29 </br>169.55.122.192/28 </br>169.60.82.240/28 </br>169.60.112.72/29 </br>169.62.28.160/28 </br>169.62.3.80/29      | 
+| `AU SYD`   | 168.1.213.72/29 </br>168.1.41.96/28 </br>130.198.80.152/29 </br>130.198.66.144/28 </br>135.90.73.96/29 </br>135.90.78.192/28        |
 {: caption="Table 4. Source Subnets for Webhook notifications from {{site.data.keyword.mon_full_notm}}" caption-side="top"}
