@@ -8,7 +8,7 @@ IBM Cloud Monitoring with Sysdig
     getting-started.md
 
     {: .topicgroup}
-    Enhancing security
+    Enhancing security for IBM Cloud Monitoring with Sysdig
         at_events.md
         data-security.md
         iam.md

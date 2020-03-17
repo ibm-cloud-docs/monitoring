@@ -23,7 +23,7 @@ subcollection: Sysdig
 {:preview: .preview}
 
 
-# Securing your connection to {{site.data.keyword.mon_full_notm}}
+# Securing your connection
 {: #service-connection}
 
 To ensure that you have enhanced control and security over your data when you use {{site.data.keyword.mon_full}}, you have the option of using private routes to {{site.data.keyword.cloud_notm}} service endpoints. Private routes are not accessible or reachable over the internet. By using the {{site.data.keyword.cloud_notm}} private service endpoints feature, you can protect your data from threats from the public network and logically extend your private network.

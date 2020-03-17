@@ -38,7 +38,7 @@ You can enable virtual routing and forwarding (VRF) to move IP routing for your 
 * All traffic is routed to the {{site.data.keyword.cloud_notm}} private network. 
 
 
-Data is collected at 10-seconds frequency. 
+Sysdig agent data is collected at 10-seconds frequency. Data that is published by platform metrics is collected on a 1-minute frequency.
 {: note}
 
 
