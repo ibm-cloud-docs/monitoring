@@ -49,6 +49,7 @@ You and IBM share responsibilities for the set up and maintenance of your {{site
 {: caption="Table 1. Responsibilities for incident and operations" caption-side="top"}
 
 
+
 ## Change management
 {: #change-management}
 
@@ -74,6 +75,8 @@ IBM is responsible for the security and compliance of {{site.data.keyword.mon_fu
 | Sysdig service | Provide the ability to restrict access to resources | Depending on your needs, restrict access to resources and service functionality by using Cloud IAM access policies. For more information, see [Managing user access](https://cloud.ibm.com/docs/key-protect?topic=key-protect-manage-access). |
 {: caption="Table 3. Responsibilities for identity and access management" caption-side="top"}
 
+
+
 ## Security and regulation compliance
 {: #security-compliance}
 
@@ -83,6 +86,8 @@ IBM is responsible for the security and compliance of {{site.data.keyword.mon_fu
 |----------|-----------------------|--------|
 | Compliance | Maintain controls that are commensurate to various industry compliance standards, such as SOC and ISO. | Ensure that regulated data is not provided to the {{site.data.keyword.mon_full_notm}} service |
 {: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="top"}
+
+
 
 ## Disaster recovery
 {: #disaster-recovery}
@@ -95,7 +100,7 @@ IBM is responsible for the recovery of {{site.data.keyword.mon_full_notm}} compo
 | Sysdig agents |  | Reinstalling or reconfiguring the Sysdig agents in the event of any disaster event impacting the agent runtime. |
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
 
-| `Backup of the {{site.data.keyword.mon_full_notm}} service`      |
+| `Backup of the {{site.data.keyword.mon_full_notm}} service`      | Backup regularly  is stored and managed by IBM. |
 | `Recovery of the {{site.data.keyword.mon_full_notm}} service`    | 
 | `Backup of the Sysdig agents`                                    | 
 | `Recovery of the Sysdig agents`                                  | 

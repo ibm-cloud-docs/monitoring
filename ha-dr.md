@@ -102,7 +102,7 @@ If a regional disaster occurs, consider the following information:
 ### Manual recovery of the service
 {: #dr-rebuilt}
 
-If a regional disaster occurs, the recovery time of the service depends on the recovery time for the region. To minimize the downtime of teh service and impact to your business, you could implement a manual failover to switch to another region while the region is being restored. To reduce the time to get up and running in a new location, consider using access groups to manage permissions working with the service, and backup the monitoring metadata of each instance. You should backup your alerts, notifications, dashboards and team definitions on a regular basis.
+If a regional disaster occurs, the recovery time of the service depends on the recovery time for the region. To minimize the downtime of the service and impact to your business, you could implement a manual failover to switch to another region while the region is being restored. To reduce the time to get up and running in a new location, consider using access groups to manage permissions working with the service, and backup the monitoring metadata of each instance. You should backup your alerts, notifications, dashboards and team definitions on a regular basis.
 
 How to continue working while a DR site is rebuilt?
 
