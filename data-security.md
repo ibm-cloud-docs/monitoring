@@ -80,8 +80,9 @@ The roll-up policy describes the granularity of the data over time:
 * Data is retained at 10-second resolution for the first 4 hours.
 * Data is retained at 1-minute resolution for 2 days.
 * Data is retained at 10-minute resolution for 2 weeks.
-* Data is retained at 1-hour resolution for 3 months.
-* Data is retained at 1-day resolution for 1 year.
+* Data is retained at 1-hour resolution for 2 months.
+* Data is retained at 1-day resolution for 15 months.
+
 
 
 ### Data availability

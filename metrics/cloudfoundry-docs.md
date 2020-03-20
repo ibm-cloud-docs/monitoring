@@ -2,7 +2,7 @@
 
 copyright:
   years:  2019, 2020
-lastupdated: "2020-02-03"
+lastupdated: "2020-03-18"
 
 keywords: Sysdig, IBM Cloud, monitoring, service, CF, cf
 
@@ -33,8 +33,8 @@ subcollection: Sysdig
 
 Platform metrics are metrics that are exposed by enabled-Sysdig resources in {{site.data.keyword.cloud_notm}}. You must configure a Sysdig instance in a region to monitor these metrics.
 
-You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics. 
-* To configure the Sysdig instance, you must set on the *platform metrics* configuration setting. [Learn more](/docs/Monitoring-with-Sysdig?topic=Sysdig-platform_metrics_enabling).
+You can configure only 1 instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics. 
+* To configure the Sysdig instance, you must set the *platform metrics* configuration setting. [Learn more](/docs/Monitoring-with-Sysdig?topic=Sysdig-platform_metrics_enabling).
 * If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig resources are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Sysdig-cloud_services).
 
 To monitor Cloud Foundry (CF) apps, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where your apps are running.
@@ -83,7 +83,7 @@ You cannot customize a pre-defined CF dashboard. To be able to monitor CF apps, 
 | [Total memory of the CF application](#ibm_cloudfoundry_app_memory_bytes_total) | 
 {: caption="Table 1: Metrics dictionary" caption-side="top"}
 
-
+For more information, see [the official Cloud Foundry documentation: Container metrics](https://docs.cloudfoundry.org/loggregator/container-metrics.html)
 
 
 ### CPU entitlement of the CF application
@@ -229,14 +229,15 @@ The following attributes are available for segmenting all of the metrics:
 
 | Attribute | Attribute Name | Attribute Description | Valid values |
 |-----------|----------------|-----------------------|--------------|
-| `Cloud Type` | `ibm_ctype` | Type of Cloud         | Valid values are `public`, `dedicated`, or `local`. |
-| `Location` | `ibm_location` | Location of the monitored resource | You can specify a region, a data center, or `global`. |
+| `Cloud Type` | `ibm_ctype` | Type of Cloud         | Valid value is `public`. |
+| `Location` | `ibm_location` | Location of the monitored resource | Valid value is the region where you are monitoring metrics. |
 | `Resource` | `ibm_resource` | Resource that is measured | Name or GUID of the resource |
 | `Resource Type` | `ibm_resource_type` | Type of the resource that is measured | Valid value is `cf-application` |
 | `Resource group` | `ibm_resource_group_name` | Resource group that is associated to the service instance. | Choose a resource group from the ones that are available in your account. |
-| `Scope` | `ibm_scope` | The extent of the data samples that are considered  | You can choose the scope to be the account, an organization, or a space GUID that is associated with this metric. |
+| `Scope` | `ibm_scope` | The extent of the data samples that are considered </br>Use this attribute to set the scope to be your account | Valid value is your account.  |
 | `Service name` | `ibm_service_name` | Name of the service that generates this metric | `cloud-foundry` | 
 {: caption="Global segmentation attributes" caption-side="top"}
+
 
 
 ### Additional attributes
