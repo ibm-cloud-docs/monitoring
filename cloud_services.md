@@ -48,7 +48,7 @@ The following table lists CF resources that are Sysdig-enabled:
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
-| [Cloud Foundry (CF)](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) | CF is the premier industry standard Platform-as-a-Service (PaaS), that ensures the fastest, easiest, and most reliable deployment of cloud-native applications.  | [Metrics collected by CF]()|
+| [Cloud Foundry (CF)](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) | CF is the premier industry standard Platform-as-a-Service (PaaS), that ensures the fastest, easiest, and most reliable deployment of cloud-native applications.  | [Metrics collected by CF](/docs/Monitoring-with-Sysdig?topic=Sysdig-monitor-cf-sysdig)|
 {: caption="List of CF resources" caption-side="top"} 
 
 
