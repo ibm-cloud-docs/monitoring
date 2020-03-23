@@ -86,6 +86,10 @@ IBM Cloud Monitoring with Sysdig
     default_dashboards.md
     at-events.md
 
+    {: .topicgroup}
+    Cloud services metrics
+        metrics/cloudfoundry-docs.md
+
     [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started.html)
