@@ -47,7 +47,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
-| Cloud Foundry                                  | ![Checkmark icon](../../icons/checkmark-icon.svg)   | ![Checkmark icon](../../icons/checkmark-icon.svg)    |          
+| Cloud Foundry                                  | `NO`   | ![Checkmark icon](../../icons/checkmark-icon.svg)    |          
 {: caption="CF integration in America's locations" caption-side="top"}
 {: #cs_cf-table-2}
 {: tab-title="America"}
@@ -57,7 +57,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
 |------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
-| Cloud Foundry                                  |                  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |  |       
+| Cloud Foundry                                  | `NO`           | ![Checkmark icon](../../icons/checkmark-icon.svg) | `NO` | `NO`  |       
 {: caption="CF integration in AP locations" caption-side="top"}
 {: #cs_cf-table-3}
 {: tab-title="Asia Pacific"}
