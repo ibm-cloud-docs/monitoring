@@ -31,39 +31,6 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 
 
-## Compute infrastructure services
-{: #cloud_services_locations_infrastructure}
-
-| Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
-|---------------------------------------------------------------|---------------------|------------------|
-| {{site.data.keyword.BluVirtServers}}                          | `NO`                | ![Checkmark icon](../../icons/checkmark-icon.svg)  |          
-{: caption="Infrastructure services integration in Europe locations" caption-side="top"}
-{: #cs_infra-table-1}
-{: tab-title="Europe"}
-{: tab-group="cs_infra"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
-|------------------------------------------------|---------------------|------------------------------------|
-| {{site.data.keyword.BluVirtServers}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)   | ![Checkmark icon](../../icons/checkmark-icon.svg)    |          
-{: caption="Infrastructure services integration in America's locations" caption-side="top"}
-{: #cs_infra-table-2}
-{: tab-title="America"}
-{: tab-group="cs_infra"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
-|------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
-| {{site.data.keyword.BluVirtServers}}           | `NO` | `NO` |  `NO` | `NO` |       
-{: caption="Infrastructure services integration in AP locations" caption-side="top"}
-{: #cs_infra-table-3}
-{: tab-title="Asia Pacific"}
-{: tab-group="cs_infra"}
-{: class="simple-tab-table"}
-{: row-headers}
-
 
 ## Compute Cloud Foundry resources
 {: #cloud_services_locations_platform_cfapps}
