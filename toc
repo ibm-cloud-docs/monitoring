@@ -8,15 +8,6 @@ IBM Cloud Monitoring with Sysdig
     getting-started.md
 
     {: .topicgroup}
-    Enhancing security for IBM Cloud Monitoring with Sysdig
-        at_events.md
-        data-security.md
-        iam.md
-        ha-dr.md
-        service-connection.md
-        architecture-workload-isolation.md
-
-    {: .topicgroup}
     IBM Platform metrics
         platform_metrics_enabling.md
         cloud_services.md
@@ -35,6 +26,16 @@ IBM Cloud Monitoring with Sysdig
     provision.md
     remove.md
     launch.md
+
+    {: .topicgroup}
+    Enhancing security for IBM Cloud Monitoring with Sysdig
+        at_events.md
+        data-security.md
+        iam.md
+        ha-dr.md
+        service-connection.md
+        architecture-workload-isolation.md
+
     network.md
 
     {: .topicgroup}
@@ -94,7 +95,7 @@ IBM Cloud Monitoring with Sysdig
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
     [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started.html)
     [Sysdig Blog](https://sysdig.com/blog/)
-    ha-dr.md
+    deprecated.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

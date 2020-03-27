@@ -113,7 +113,7 @@ Metric data is deleted automatically after 15 months.
 
 User metadata, such as alerts, dashboards, teams, and users, is never deleted. 
 
-You must open a case through support to request the data to be deleted. For more information, see [contacting support](/docs/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp).
+You must open a case through support to request the data to be deleted. For more information, see [Open a support ticket](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)..
 
 ### Deleting data from 1 Sysdig agent
 {: #service-delete-agent}
