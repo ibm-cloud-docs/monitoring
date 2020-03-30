@@ -37,7 +37,7 @@ The following table lists infrastructure services that are Sysdig-enabled:
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.BluVirtServers}}](/docs/vsi?topic=virtual-servers-getting-started-tutorial) | {{site.data.keyword.BluVirtServers}} are scalable virtual servers that are purchased with dedicated cores and memory allocations. They are a great option if you are looking for compute resources, that can be added in minutes, with access to features like image templates. | [Metrics collected by {{site.data.keyword.messagehub}}](/docs/vsi?topic=virtual-servers-sysdig-monitoring-metrics)|
+| [{{site.data.keyword.BluVirtServers}}](/docs/vsi?topic=virtual-servers-getting-started-tutorial) | {{site.data.keyword.BluVirtServers}} are scalable virtual servers that are purchased with dedicated cores and memory allocations. They are a great option if you are looking for compute resources, that can be added in minutes, with access to features like image templates. | [Metrics collected by {{site.data.keyword.BluVirtServers}}](/docs/vsi?topic=virtual-servers-sysdig-monitoring-metrics)|
 {: caption="List of integration Cloud services" caption-side="top"} 
 
 
