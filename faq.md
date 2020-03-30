@@ -88,7 +88,7 @@ There are a number of dashboards available out the box for a team to use and sha
 
 Yes!  While viewing the dashboard choose the `Options` menu (ellipsis icon) and choose `Share`.  You will be presented with two options `Share with Team` and `Share Public URL`.  Choosing the public URL will mean that anyone with the URL will be able to view the metrics on the dashboard.  
 
-**Just make sure you are careful not to expose any confidential information since there is no access control on these links.**
+**Do not expose any confidential information through shared dashboards since there is no access control on these links.**
 {: important}
 
 ### Is the Sysdig agent restricted in its namespace or kernel isolated?
