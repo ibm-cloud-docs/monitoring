@@ -263,12 +263,7 @@ The followinf locations are valid for VPC Gen 1 and VPC Gen 2:
 
 | Service                                | `Dallas (us-south)`                                | `Washington (us-east)`               |
 |----------------------------------------|----------------------------------------------------|--------------------------------------|
-| Storage resources                      | ![Checkmark icon](../../icons/checkmark-icon.svg)  | `NO`   |            
-| Compute resources                      | ![Checkmark icon](../../icons/checkmark-icon.svg)  |  `NO` |
-| Network resources                      | ![Checkmark icon](../../icons/checkmark-icon.svg)  |  `NO` |
-| Load Balancer                          | ![Checkmark icon](../../icons/checkmark-icon.svg)  |  `NO` |
-| VPN                                    | ![Checkmark icon](../../icons/checkmark-icon.svg)  | `NO` |
-| Images                                 | ![Checkmark icon](../../icons/checkmark-icon.svg)  | `NO`    |
+| Virtual Private Cloud (VPC)   | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)   |            
 {: caption="VPC events in America's locations" caption-side="top"}
 {: #cs-vpc-table-1}
 {: tab-title="America"}
@@ -278,12 +273,7 @@ The followinf locations are valid for VPC Gen 1 and VPC Gen 2:
 
 | Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
 |-----------------------------------------------------------------|------------------|----------------------------|
-| Storage resources                      | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |            
-| Compute resources                      | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |            
-| Network resources                      | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |            
-| Load Balancer                          | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| VPN                                    | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
-| Images                                 | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |           
+| Virtual Private Cloud (VPC)  | `NO`               | `NO` |             
 {: caption="VPC events in AP locations" caption-side="top"}
 {: #cs-vpc-table-2}
 {: tab-title="Asia Pacific"}
@@ -293,12 +283,7 @@ The followinf locations are valid for VPC Gen 1 and VPC Gen 2:
 
 | Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
-| Storage resources                      | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |            
-| Compute resources                      | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |            
-| Network resources                      | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |            
-| Load Balancer                          | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| VPN                                    | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |   
-| Images                                 | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |         
+| Virtual Private Cloud (VPC)  | `NO`   | ![Checkmark icon](../../icons/checkmark-icon.svg) |            
 {: caption="VPC events in Europe locations" caption-side="top"}
 {: #cs-vpc-table-3}
 {: tab-title="Europe"}

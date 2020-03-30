@@ -115,10 +115,13 @@ User metadata, such as alerts, dashboards, teams, and users, is never deleted.
 
 You must open a case through support to request the data to be deleted. For more information, see [Open a support ticket](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)..
 
-### Deleting data from 1 Sysdig agent
+
+### Deleting a subset of data 
 {: #service-delete-agent}
 
-Deletion of data that is collected from one single Sysdig agent in a {{site.data.keyword.mon_short}} instance is not supported.
+Deletion of a subset of data is not supported.
+
+For example, deletion of data that is collected from 1 Sysdig agent in a {{site.data.keyword.mon_short}} instance is not supported.
 
 
 ### Deleting captures
