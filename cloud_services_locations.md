@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-27"
+lastupdated: "2020-03-14"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -30,6 +30,39 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {:shortdesc}
 
 
+
+## Compute infrastructure services
+{: #cloud_services_locations_infrastructure}
+
+| Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------|------------------|
+| {{site.data.keyword.BluVirtServers}}                          | `NO`                | ![Checkmark icon](../../icons/checkmark-icon.svg)  |          
+{: caption="Infrastructure services integration in Europe locations" caption-side="top"}
+{: #cs_infra-table-1}
+{: tab-title="Europe"}
+{: tab-group="cs_infra"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
+|------------------------------------------------|---------------------|------------------------------------|
+| {{site.data.keyword.BluVirtServers}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)   | ![Checkmark icon](../../icons/checkmark-icon.svg)    |          
+{: caption="Infrastructure services integration in America's locations" caption-side="top"}
+{: #cs_infra-table-2}
+{: tab-title="America"}
+{: tab-group="cs_infra"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | 
+|------------------------------------------------|------------------|----------------------------|
+| {{site.data.keyword.BluVirtServers}}           | `NO` | `NO` |     
+{: caption="Infrastructure services integration in AP locations" caption-side="top"}
+{: #cs_infra-table-3}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_infra"}
+{: class="simple-tab-table"}
+{: row-headers}
 
 
 ## Compute Cloud Foundry resources
@@ -154,6 +187,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 
 
+
 ## Platform storage services
 {: #cloud_services_locations_storage}
 
@@ -187,6 +221,42 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {: class="simple-tab-table"}
 {: row-headers}
 
+
+
+## VPC infrastructure services
+{: #cloud_services_locations_vpc_infrastructure}
+
+The followinf locations are valid for VPC Gen 1 and VPC Gen 2:
+
+| Service                                | `Dallas (us-south)`                                | `Washington (us-east)`               |
+|----------------------------------------|----------------------------------------------------|--------------------------------------|
+| Virtual Private Cloud (VPC)   | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)   |            
+{: caption="VPC events in America's locations" caption-side="top"}
+{: #cs-vpc-table-1}
+{: tab-title="America"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
+|-----------------------------------------------------------------|------------------|----------------------------|
+| Virtual Private Cloud (VPC)  | `NO`               | `NO` |             
+{: caption="VPC events in AP locations" caption-side="top"}
+{: #cs-vpc-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------|------------------|
+| Virtual Private Cloud (VPC)  | `NO`   | ![Checkmark icon](../../icons/checkmark-icon.svg) |            
+{: caption="VPC events in Europe locations" caption-side="top"}
+{: #cs-vpc-table-3}
+{: tab-title="Europe"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
 
 
 

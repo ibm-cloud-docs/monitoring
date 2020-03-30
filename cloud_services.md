@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-27"
+lastupdated: "2020-03-14"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -30,6 +30,15 @@ List of {{site.data.keyword.cloud}} services that send metrics to {{site.data.ke
 {:shortdesc}
 
 
+## Compute infrastructure services
+{: #infrastructure}
+
+The following table lists infrastructure services that are Sysdig-enabled:
+
+| Service     | Description | Metrics | 
+|-------------|-------------|-------------------|
+| [{{site.data.keyword.BluVirtServers}}](/docs/vsi?topic=virtual-servers-getting-started-tutorial) | {{site.data.keyword.BluVirtServers}} are scalable virtual servers that are purchased with dedicated cores and memory allocations. They are a great option if you are looking for compute resources, that can be added in minutes, with access to features like image templates. | [Metrics collected by {{site.data.keyword.BluVirtServers}}](/docs/vsi?topic=virtual-servers-sysdig-monitoring-metrics)|
+{: caption="List of integration Cloud services" caption-side="top"} 
 
 
 ## Compute Cloud Foundry resources
@@ -70,6 +79,7 @@ The following table lists integration services that are Sysdig-enabled:
 
 
 
+
 ## Platform storage services
 {: #storage}
 
@@ -82,7 +92,16 @@ The following table lists integration services that are Sysdig-enabled:
 {: caption="List of integration Cloud services" caption-side="top"} 
 
 
+## VPC infrastructure
+{: #vpc_infrastructure}
 
+You can provision a Virtual Private Cloud (VPC) in the {{site.data.keyword.cloud_notm}} to run an isolated environment within the public cloud. VPC gives you the security of a private cloud, with the agility and ease of a public cloud. For more information, see [About Virtual Private Cloud](/docs/vpc-on-classic?topic=vpc-on-classic-about).
+
+There are 2 types of VPC infrastructure that you can provision in your account:
+* [Virtual Private Cloud classic Gen 1](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)
+* [{{site.data.keyword.vpc_full}} Gen 2](/docs/vpc?topic=vpc-getting-started)
+
+To learn about VPC metrics, see [Monitoring VPC metrics](/docs/vsi?topic=virtual-servers-sysdig-monitoring-metrics).
 
 
 
