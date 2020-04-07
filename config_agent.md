@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-04-08"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -137,7 +137,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
 
@@ -181,7 +181,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
 
