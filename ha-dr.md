@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-04-22"
 
 keywords: Sysdig, IBM Cloud, monitoring, disaster recovery, ha, high availability, redundancy
 
@@ -90,13 +90,10 @@ Disaster recovery is about surviving a catastrophic failure or loss of availabil
 {{site.data.keyword.mon_full_notm}} follows {{site.data.keyword.cloud_notm}} requirements for [planning and recovering from disaster events](/docs/overview?topic=overview-zero-downtime#disaster-recovery).
 
 If a regional disaster occurs, consider the following information:
-* Metric data and the monitoring metadata such as dashboards, alerts, teams, and users, are backed up every 24 hours. In the event of an un-recoverable disaster, up to 24 hours of metric data and metadata changes to the monitoring instance in the failure region can be lost.
 * The estimated recovery time for rebuilding the regional site and restoring the service at another location is 24 hours.
-* Due to the large volume of data, historical data will not be available at the time the service is restored, as this process requires additional time to recover data from the backups.  
-* You might have 1 or more monitoring instances in the region. When these service instances are available in the new location, you will be able to use them while the historical data is restored into the newly constructed region.
 * You will have to update the endpoints of applications and Sysdig agents to point to the ingestion endpoint in the new location. 
-
-
+* You will have to restore the service instance's metadata, that is, dashboards and alerts definitions, from your backups.
+* If you need access to historical data, you will have to restore data from your backups.
 
 
 ### Manual recovery of the service

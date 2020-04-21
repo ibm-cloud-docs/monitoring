@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-04-22"
 
 keywords: Sysdig, IBM Cloud, monitoring, customer responsibilities, IBM responsibilities, terms and conditions
 
@@ -96,15 +96,13 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 ## Disaster recovery
 {: #disaster-recovery}
 
-{{site.data.keyword.IBM_notm}} is responsible for the recovery of {{site.data.keyword.mon_full_notm}} components in case of disaster. You are responsible for the recovery of the Sysdig agents running in your environment should they be impacted by a disaster.
+{{site.data.keyword.IBM_notm}} is responsible for the recovery of {{site.data.keyword.mon_full_notm}} components in case of disaster.
 {: note}
 
 | Task                                                            | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-----------------------------------------------------------------|-------------------------------------------------|-----------------------|
-| `Backup the {{site.data.keyword.mon_full_notm}} service`        | Daily backup of the {{site.data.keyword.mon_full_notm}} infrastructure and components. | `N/A` |
-| `Recovery of the {{site.data.keyword.mon_full_notm}} service`   | Re-establish the {{site.data.keyword.mon_full_notm}} service after any disaster event. | `N/A` |
-| `Backup Sysdig agents`                                          | `N/A`  | Backup each Sysdig agent yaml file that is deployed in your organization. |
-| `Recovery of Sysdig agents`                                     | `N/A` | Reinstall or reconfigure the Sysdig agents in the event of any disaster event that impacts the agent runtime. |
-| `Backup monitoring data`                                        | Back up monitoring data in the region that the service operates in every 24 hrs. | Use access groups to manage permissions to work with the {{site.data.keyword.mon_full_notm}}. |
-| `Restore monitoring data`                                       | Restore monitoring data after any disaster event.   | Add or modify policies to the access groups in your account that control permissions to work with the monitoring service in the new location where the region is recovered. |
+| `Service`         | Automatically recover and restart service components after any disaster event. | `N/A` |
+| `Data`            | `N/A` |Extract and save data, dashboards definitions, and alert definitions if you cannot afford for it to be lost in the event of an un-recoverable event. | 
+| `Sysdig agent`    | `N/A` |  Recovery of the Sysdig agents running in your environment should they be impacted by a disaster. |
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
+
