@@ -142,9 +142,7 @@ Next, change the scope or make a copy of the *Default* dashboard to monitor a {{
 | [CPU utilization of the Cloud Foundry application](#ibm_cloudfoundry_app_cpu_utilization) | 
 | [Container age of the Cloud Foundry application](#ibm_cloudfoundry_app_container_age) | 
 | [Disk usage of the Cloud Foundry application](#ibm_cloudfoundry_app_disk_bytes_used) | 
-| [Disk utilization of the Cloud Foundry application](#ibm_cloudfoundry_app_disk_utilization) | 
 | [Memory usage of the Cloud Foundry application](#ibm_cloudfoundry_app_memory_bytes_used) | 
-| [Memory utilization of the Cloud Foundry application](#ibm_cloudfoundry_app_memory_utilization) | 
 | [Total disk size of the Cloud Foundry application](#ibm_cloudfoundry_app_disk_bytes_total) | 
 | [Total memory of the Cloud Foundry application](#ibm_cloudfoundry_app_memory_bytes_total) | 
 {: caption="Table 1: Metrics Available" caption-side="top"}
