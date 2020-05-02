@@ -79,18 +79,11 @@ Comnplete the following steps to configure the Prometheus WMI exporter in your W
     {: codeblock}
 
 
-## Step 2. Configure the Prometheus Blackbox exporter
+
+
+
+## Step 2. Configure network settings
 {: #windows_step2}
-
-Configure the Prometheus Blackbox exporter to get information about the availability of a Windows system.
-
-The Prometheus Blackbox exporter can be run as an application or a docker container from a Linux system in conjunction with the Sysdig agent.
-
-The [Blackbox exporter](docs/observability-monitoring?topic=observability-monitoring-blackbox-exporter) 
-
-
-## Step 3. Configure network settings
-{: #windows_step3}
 
 Complete the following steps:
 1. Enable the Windows firewall to allow access to `wmi_exporter-0.10.2-amd64.exe`.
@@ -100,19 +93,19 @@ Complete the following steps:
     If you use private endpoints, add an inbound rule to the security group for port `9182` with `source type = Security Group` and choose the security group for the Windows system.
 
 
-## Step 4. Choose the method to collect metrics
+## Step 3. Choose the method to collect metrics
 {: #windows_step4}
 
 
 ### Option 1: Run a Sysdig agent on a Linux system and remotely scrape the Windows endpoint
-{: #windows_step4_1}
+{: #windows_step3_1}
 
 Complete the following steps:
 
 1. Update the `/opt/draios/etc/dragemt.yaml` to [enable remote scraping ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){:new_window}. 
 
-    See the following sample configuration to enable scraping for each of the Windows systems in your environment:
-
+    See the following sample configuration that you can set to enable scraping for a Windows system in your environment:
+ 
     ```
     prometheus:
     enabled: true
@@ -132,7 +125,65 @@ Complete the following steps:
     ```
     {: codeblock}
 
-2. [Install the Sysdig agent on a Linux node](https://cloud.ibm.com/docs/Monitoring-with-Sysdig?topic=Sysdig-config_agent#config_agent_linux).
+
+2. [Optional] Configure the Prometheus Blackbox exporter to get information about the availability of a Windows system.
+
+    The Prometheus Blackbox exporter can be run as an application or a docker container from a Linux system in conjunction with the Sysdig agent.
+
+    The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
+
+    The exporters are available as [binary releases](https://github.com/prometheus/blackbox_exporter/releases), as a [docker containers](https://hub.docker.com/r/prom/blackbox-exporter/) or the [code is available in github](https://github.com/prometheus/blackbox_exporter).
+
+    For example, complete the following instructions when for the container approach is used:
+
+    1. Download the [blackbox.yml file](https://github.com/prometheus/blackbox_exporter/blob/master/blackbox.yml) from Github.
+
+    2. Start the blackbox exporter.
+
+        ```
+        docker run --rm -d -p 9115:9115 --name blackbox_exporter -v `pwd`:/config/ prom/blackbox-exporter:master --config.file=/config/blackbox.yml
+        ```
+        {: codeblock}
+
+    3. Test the blackbox exporter is working by manually running the probe to test your Windows system.  
+
+        For example, you can do a simple icmp check to see if the system is responding. See the [documentation](https://github.com/prometheus/blackbox_exporter/blob/master/README.md) for other options. 
+
+        ```
+        curl 'http://localhost:9115/probe?module=icmp&target=<system ip>'
+        ```
+        {: codeblock}
+
+        where `<system ip>` is the IP of the host you are checking.
+
+        You should get a payload back with `probe_success 1` as the last line to indicate that the system at `<system ip>` is up.
+
+    5. Update the `/opt/draios/etc/dragemt.yaml` to enable `probe_success` metrics.
+
+        You must add details about the check that you want to run on the call. 
+
+        ```
+        prometheus:
+            enabled: true
+            interval: 30
+            log_errors: true
+            max_metrics: 3000
+            max_metrics_per_process: 3000
+            max_tags_per_metric: 20
+            remote_services:
+                - blackbox_win_1:
+                    always:
+                    conf:
+                    url: "http://localhost:9115/probe?module=icmp&target=10.240.0.5"
+                    tags:
+                        service: windows_uptime
+                        windows_hostname: windows-test-01
+        ```
+        {: codeblock}
+
+        When you enable this option, you can segment data by `windows_hostname` and build alerts upon this metric.
+
+3. [Install the Sysdig agent on a Linux node](https://cloud.ibm.com/docs/Monitoring-with-Sysdig?topic=Sysdig-config_agent#config_agent_linux).
 
     `curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a <access key> -c ingest.private.<region>.monitoring.cloud.ibm.com --collector_port 6443 --secure true -ac "sysdig_capture_enabled: false"`
 
@@ -144,7 +195,7 @@ Complete the following steps:
     You can collect a maximum of 3000 time series per Sysdig Linux agent. If you need to collect more than 3000 time series for all your Windows systems, you need more than one Linux agent.
     {: important}
     
-3. Configure the Sysdig agent to reduce the number of metrics that are collected by the Windows wmi_exporter. 
+4. Configure the Sysdig agent to reduce the number of metrics that are collected by the Windows wmi_exporter. 
 
     You can either remove the metrics for the collector itself or other metrics that you do not wish to collect by configuring the `metrics_filter` section.
 
@@ -160,7 +211,7 @@ Complete the following steps:
 
 
 ### Option 2: Use the Prometheus remote-write capabilities to push the metrics from the Windows system by running Prometheus as a client collector on Windows
-{: #windows_step4_2}
+{: #windows_step3_2}
 
 Complete the following steps:
 
@@ -283,7 +334,7 @@ Complete the following steps:
 
 
 
-#### Sample prometheus yaml file
+#### Sample Prometheus yaml file
 {: #windows_sample_config}
 
 ```yaml
@@ -340,8 +391,8 @@ remote_write:
 ```
 {: codeblock}
 
-## Step 5. Monitor Windows system metrics
-{: #windows_step5}
+## Step 4. Monitor Windows system metrics
+{: #windows_step4}
 
 To monitor Windows systems metrics, you can use the default dashboard `Windows wmi_exporter` to view the Windows metrics. 
 
