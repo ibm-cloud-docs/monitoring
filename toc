@@ -12,6 +12,7 @@ IBM Cloud Monitoring with Sysdig
         platform_metrics_enabling.md
         cloud_services.md
         cloud_services_locations.md
+        windows.md
 
     manage.md
     monitoring.md
