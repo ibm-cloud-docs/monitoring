@@ -27,7 +27,7 @@ subcollection: Sysdig
 
 Windows support with Prometheus
 
-{{site.data.keyword.mon_full_notm}} is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
+You can monitor a Windows system with {{site.data.keyword.mon_full_notm}}.
 {:shortdesc}
 
 Complete the following steps to configure the following Windows images to send metrics to a Sysdig instance:
