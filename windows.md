@@ -276,7 +276,7 @@ Complete the following steps:
     ```
     {: codeblock}
 
-5) Start the Prometheus executable from the location containing the `prometheus.yml` file.
+5. Start the Prometheus executable from the location containing the `prometheus.yml` file.
 
     ```
     .\prometheus.exe
