@@ -50,9 +50,9 @@ The following collectors are supported:
 * Network interface metrics
 
 
-Comnplete the following steps to configure the Prometheus WMI exporter in your Windows system:
+Complete the following steps to configure the Prometheus WMI exporter in your Windows system:
 
-1. Login to your Windows system, for example, you can connect via remore desktop (RDP).
+1. Login to your Windows system, for example, you can connect via remote desktop (RDP).
 
 2. [Download the Prometheus exporter ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/martinlindhe/wmi_exporter/releases){:new_window}.
 
@@ -63,7 +63,7 @@ Comnplete the following steps to configure the Prometheus WMI exporter in your W
     ```
     .\wmi_exporter-0.10.2-amd64.exe --collectors.enabled <COLLECTORS> 
     ```
-    {: screen}
+    {: codeblock}
 
     Where `<COLLECTORS>` indicates the list of connectors that you want to configure.
 
@@ -128,7 +128,7 @@ Complete the following steps:
 
     `<WINDOWS_IP>` is the IP of the Windows system
 
-    `<HOSTNAME>` is the name of teh Windows system
+    `<HOSTNAME>` is the name of the Windows system
 
     See the following sample configuration that you can set to enable scraping for a Windows system with hostname `my-windows-hostname` in your environment:
  
@@ -153,7 +153,7 @@ Complete the following steps:
 
 3. Configure the Sysdig agent to reduce the number of metrics that are collected by the Windows wmi_exporter. 
 
-    You can configure the `metrics_filter` section to remove mnetrics. For example, you can remove collector metrics. You can also remove specific metrics that you do not wish to collect.
+    You can configure the `metrics_filter` section to remove metrics. For example, you can remove collector metrics. You can also remove specific metrics that you do not wish to collect.
 
     For example, to remove go metrics and the logical disk request metrics, you can set the section in the following way:
 
@@ -358,7 +358,7 @@ For example, complete the following instructions when the container approach is 
 
 3. Test the blackbox exporter is working by manually running the probe to test your Windows system.  
 
-    For example, you can do a simple icmp check to see if the system is responding. See the [documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/prometheus/blackbox_exporter/blob/master/README.md){:new_window} for other options. 
+    For example, you can do a simple `icmp` check to see if the system is responding. See the [documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/prometheus/blackbox_exporter/blob/master/README.md){:new_window} for other options. 
 
     ```
     curl 'http://localhost:9115/probe?module=icmp&target=<system ip>'
