@@ -114,13 +114,13 @@ Complete the following steps:
         max_metrics_per_process: 3000
         max_tags_per_metric: 20
         remote_services:
-        - <HOSTNAME>:
-            always: true
-            conf:
-                url: "http://<WINDOWS_IP>:9182/metrics"
-            tags:
-                service: windows
-                windows_hostname: <HOSTNAME>
+            - <HOSTNAME>:
+                always: true
+                conf:
+                    url: "http://<WINDOWS_IP>:9182/metrics"
+                    tags:
+                        region: us-east
+                        instance: <HOSTNAME>
     ```
     {: codeblock}
 
@@ -141,13 +141,13 @@ Complete the following steps:
         max_metrics_per_process: 3000
         max_tags_per_metric: 20
         remote_services:
-        - my-windows-hostname:
-            always: true
-            conf:
-                url: "http://10.23.123.34:9182/metrics"
-            tags:
-                service: windows
-                windows_hostname: my-windows-hostname
+            - my-windows-hostname:
+                always: true
+                conf:
+                    url: "http://10.245.0.5:9182/metrics"
+                    tags:
+                        region: us-east
+                        instance: my-windows-hostname
     ```
     {: screen}
 
@@ -177,44 +177,21 @@ Complete the following steps:
 
 3. Edit the `prometheus.yml` file. For example, you can edit it with notepad. 
 
-4. Configure the `prometheus.yml` as follows:
-    
-    Modify the file as follows:
+4. Configure the `scrape_configs` section of `prometheus.yml` configuration file as follows to have prometheus scrape the Windows wmi_exporter.
 
-    ```yaml
-    # Scrape configuration that contains one endpoint to scrape:
+    ```
     scrape_configs:
       # The job name is added as a label `job=<job_name>` to any timeseries scraped from this configuration.
-      - job_name: 'prometheus'
-
-        # metrics_path defaults to '/metrics'
-        # scheme defaults to 'http'.
+      - job_name: 'wmi_exporter'
 
         static_configs:
-        # - targets: ['localhost:9090']
+         - targets: ['localhost:9182']
     ```
     {: codeblock}
 
-    For example, for a Windows system with hostname `my-windows-hostname`, see the following example for the `scrape_configs` section:
+    Next, you will add the `remote_write` configuration to the end of the `prometheus.yml` file to configure the target Sysdig instance that will receive the metrics.
 
-    ```yaml
-    # A scrape configuration containing exactly one endpoint to scrape:
-    scrape_configs:
-      # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
-      - job_name: 'prometheus'
-
-        static_configs:
-        - targets: ['localhost:9182']
-
-          labels:
-            instance: "my-windows-hostname"
-            region: "us-south"
     ```
-    {: codeblock}
-
-    Then, add the following sections, **remote_write** and **bear_token**.
-
-    ```yaml
     remote_write:
        - url: "ENDPOINT/api/prometheus/write"
   
@@ -243,13 +220,45 @@ Complete the following steps:
 
     `sysdig-apikey` is the file that contains the **Sysdig Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
 
-    For example, for collecting metrics through a Sysdig instance that is located in London, see the following example:
-
-    ```yaml
-    remote_write:
-       - url: "https://ingest.eu-gb.monitoring.cloud.ibm.com/api/prometheus/write"
+    For example, the completed version of the prometheus.yml could look like :
   
-        bearer_token_file: C:\Users\Administrator\prom\sysdig-apikey
+    ```
+    # my global config
+    global:
+      scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+      evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+      # scrape_timeout is set to the global default (10s).
+
+    # Alertmanager configuration
+    alerting:
+      alertmanagers:
+      - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+    # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+    rule_files:
+      # - "first_rules.yml"
+      # - "second_rules.yml"
+
+    # A scrape configuration containing exactly one endpoint to scrape:
+    # Here it's Prometheus itself.
+    scrape_configs:
+      # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+      - job_name: 'prometheus'
+
+        static_configs:
+        - targets: ['localhost:9182']
+
+          labels:
+            instance: "my-windows-hostname"
+            region: "us-south"
+
+    # Connection to sysdig 
+    remote_write:
+      - url: "https://ingest.eu-gb.monitoring.test.cloud.ibm.com/api/prometheus/write"
+
+        bearer_token_file: C:\Users\Administrator\prom\bearer-token
 
         write_relabel_configs:
           - source_labels: ["__name__"]
@@ -266,66 +275,13 @@ Complete the following steps:
             action: labelkeep
     ```
     {: codeblock}
-    
 
-#### Sample Prometheus yaml file
-{: #windows_sample_config}
+5) Start the Prometheus executable from the location containing the `prometheus.yml` file.
 
-```yaml
-# my global config
-global:
-  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
-  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
-  # scrape_timeout is set to the global default (10s).
-
-# Alertmanager configuration
-alerting:
-  alertmanagers:
-  - static_configs:
-    - targets:
-      # - alertmanager:9093
-
-# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
-rule_files:
-  # - "first_rules.yml"
-  # - "second_rules.yml"
-
-# A scrape configuration containing exactly one endpoint to scrape:
-# Here it's Prometheus itself.
-scrape_configs:
-  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
-  - job_name: 'prometheus'
-
-    static_configs:
-    - targets: ['localhost:9182']
-
-      labels:
-        instance: "my-windows-hostname"
-        region: "us-south"
-
-# Connection to sysdig 
-remote_write:
-  - url: "https://ingest.eu-gb.monitoring.test.cloud.ibm.com/api/prometheus/write"
-
-    bearer_token_file: C:\Users\Administrator\prom\bearer-token
-
-    write_relabel_configs:
-      - source_labels: ["__name__"]
-        regex: "^wmi_(.*)"
-        action: keep
-    
-      - source_labels: ["__name__"]
-        regex: "^wmi_(.*)"
-        target_label: "_storage_"
-        replacement: "1"
-        action: replace
-
-      - regex: "(__name__)|(_storage_)|(region)|(instance)|(status)|(core)|(name)|(start_mode)|(nic)|(volume)|(state)|(version)|(mode)|(branch)|(timezone)|(goversion)|(collector)|(revision)"
-        action: labelkeep
-```
-{: codeblock}
-
-
+    ```
+    .\prometheus.exe
+    ```
+    {: codeblock}
 
 
 ## Step 4. Monitor Windows system metrics
