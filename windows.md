@@ -245,7 +245,7 @@ Complete the following steps:
     # Here it's Prometheus itself.
     scrape_configs:
       # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
-      - job_name: 'prometheus'
+      - job_name: 'wmi_exporter'
 
         static_configs:
         - targets: ['localhost:9182']
@@ -258,7 +258,7 @@ Complete the following steps:
     remote_write:
       - url: "https://ingest.eu-gb.monitoring.test.cloud.ibm.com/api/prometheus/write"
 
-        bearer_token_file: C:\Users\Administrator\prom\bearer-token
+        bearer_token_file: C:\Users\Administrator\prom\sysdig-api
 
         write_relabel_configs:
           - source_labels: ["__name__"]
