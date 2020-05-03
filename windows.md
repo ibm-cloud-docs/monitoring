@@ -65,9 +65,7 @@ Comnplete the following steps to configure the Prometheus WMI exporter in your W
     ```
     {: screen}
 
-    Where 
-
-    * `<COLLECTORS>` indicates the list of connectors that you want to configure.
+    Where `<COLLECTORS>` indicates the list of connectors that you want to configure.
 
     For example, to collect computer system metrics (cs), CPU metrics, disk metrics and network interface I/O metrics, see the following example:
 
