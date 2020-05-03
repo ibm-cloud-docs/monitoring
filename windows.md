@@ -105,7 +105,7 @@ Complete the following steps:
     
 2. Update the `/opt/draios/etc/dragent.yaml` to [enable remote scraping ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){:new_window}. 
 
-    ```
+    ```yaml
     prometheus:
         enabled: true
         interval: 30
@@ -132,7 +132,7 @@ Complete the following steps:
 
     See the following sample configuration that you can set to enable scraping for a Windows system with hostname `my-windows-hostname` in your environment:
  
-    ```
+    ```yaml
     prometheus:
         enabled: true
         interval: 30
@@ -157,7 +157,7 @@ Complete the following steps:
 
     For example, to remove go metrics and the logical disk request metrics, you can set the section in the following way:
 
-    ```
+    ```yaml
     metrics_filter:
       - exclude: go_*
       - exclude: wmi_logical_disk_requests_queued
@@ -191,7 +191,7 @@ Complete the following steps:
 
     Next, you will add the `remote_write` configuration to the end of the `prometheus.yml` file to configure the target Sysdig instance that will receive the metrics.
 
-    ```
+    ```yaml
     remote_write:
        - url: "ENDPOINT/api/prometheus/write"
   
@@ -222,7 +222,7 @@ Complete the following steps:
 
     For example, the completed version of the prometheus.yml could look like :
   
-    ```
+    ```yaml
     # my global config
     global:
       scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
@@ -276,12 +276,7 @@ Complete the following steps:
     ```
     {: codeblock}
 
-5. Start the Prometheus executable from the location containing the `prometheus.yml` file.
-
-    ```
-    .\prometheus.exe
-    ```
-    {: codeblock}
+5. Start the Prometheus executable from the location containing the `prometheus.yml` file. Run `.\prometheus.exe`.
 
 
 ## Step 4. Monitor Windows system metrics
@@ -329,7 +324,7 @@ For example, complete the following instructions when the container approach is 
 
     You must add details about the check that you want to run on the call. 
 
-    ```
+    ```yaml
     prometheus:
         enabled: true
         interval: 30
