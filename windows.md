@@ -25,19 +25,16 @@ subcollection: Sysdig
 # Monitoring a Windows environment
 {: #windows}
 
-Windows support with Prometheus
-
-You can monitor a Windows system with {{site.data.keyword.mon_full_notm}}.
+The standard Sysdig agent cannot be installed on a Windows platform. In order to monitor a Windows system with {{site.data.keyword.mon_full_notm}}, you can leverage the Prometheus WMI Exporter to perform the collection of the metrics on the system.
 {:shortdesc}
+
+Once the metrics are collected you have two options for publishing the metrics to Sysdig, remotely scraping the metrics with a Linux Sysdig agent,or pushing from a local instance of Prometheus using remote write. Step 3 will cover these two options, but step 1 and 2 are the same regardless of how the metrics are sent.
 
 Complete the following steps to configure the following Windows images to send metrics to a Sysdig instance:
 * Windows Server 2019 Standard Edition (64 bit)
 * Windows Server 2016 Standard Edition (64 bit)
 * Windows Server 2012 Standard Edition (64 bit)
 * Windows Server 2012 R2 Standard Edition (64 bit)
-
-
-To monitor a Windows system with {{site.data.keyword.mon_full_notm}}, complete the following steps:
 
 ## Step 1. Configure the Prometheus WMI exporter
 {: #windows_step1}
@@ -64,12 +61,13 @@ Comnplete the following steps to configure the Prometheus WMI exporter in your W
 4. Run the `wmi_exporter` and configure the collectors that you want to enable.
 
     ```
-    .\wmi_exporter-0.10.2-amd64.exe --collectors.enabled COLLECTORS 
+    .\wmi_exporter-0.10.2-amd64.exe --collectors.enabled <COLLECTORS> 
     ```
-    {: codeblock}
+    {: screen}
 
     Where 
-    * COLLECTORS` indicates the list of connectors that you want to configure.
+    
+    * `<COLLECTORS>` indicates the list of connectors that you want to configure.
 
     For example, to collect computer system metrics (cs), CPU metrics, disk metrics and network interface I/O metrics, see the following example:
 
