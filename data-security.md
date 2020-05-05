@@ -49,6 +49,8 @@ In Sysdig, you can also enable captures when you configure a Sysdig agent. A cap
 * Captures contain system calls, and other OS events. 
 * You can enable or disable this feature per node when you configure the Sysdig agent that collects metrics from that node. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent.
 
+By default, the IBM instructions for configuring the Sysdig agents disables the capture feature. If you choose to follow other instructions, IBM recommends disabling capture by setting the `sysdig_capture_enabled: false` in your dragent.yaml for Linux installations or the Kubernetes sysdig-agent Deployment custom resource.
+{: note}
 
 When Captures are enabled, notice that Sysdig will have deep visibility into your operations. To avoid a security incident and potentially exposing data outside of your organization, check your organization's security policies before you enable captures on a node. Consider disabling the *Capture* feature for all your Sysdig agents.
 {: important}
