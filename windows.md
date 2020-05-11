@@ -103,7 +103,7 @@ Complete the following steps:
     You can collect a maximum of 3000 time series per Sysdig Linux agent. If you need to collect more than 3000 time series for all your Windows systems, you need more than one Linux agent.
     {: important}
     
-2. Update the `/opt/draios/etc/dragent.yaml` to [enable remote scraping ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){:new_window}. 
+2. Update the `/opt/draios/etc/dragent.yml` to [enable remote scraping ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){:new_window}. 
 
     ```yaml
     prometheus:
@@ -121,6 +121,7 @@ Complete the following steps:
                     tags:
                         region: us-east
                         instance: <HOSTNAME>
+                        job: <JOBNAME>
     ```
     {: codeblock}
 
@@ -129,6 +130,8 @@ Complete the following steps:
     `<WINDOWS_IP>` is the IP of the Windows system
 
     `<HOSTNAME>` is the name of the Windows system
+
+    `<JOBNAME>` is a custom attribute that you can set to identify the role of the node that you are scraping, and you can also use to scope the data in Sysdig
 
     See the following sample configuration that you can set to enable scraping for a Windows system with hostname `my-windows-hostname` in your environment:
  
@@ -148,6 +151,7 @@ Complete the following steps:
                     tags:
                         region: us-east
                         instance: my-windows-hostname
+                        job: my-job-name
     ```
     {: screen}
 
@@ -186,8 +190,19 @@ Complete the following steps:
 
         static_configs:
          - targets: ['localhost:9182']
+
+         labels:
+           region: us-east
+           instance: <HOSTNAME>
+           job: <JOBNAME>
     ```
     {: codeblock}
+
+    Where
+
+    `<HOSTNAME>` is the name of the Windows system
+
+    `<JOBNAME>` is a custom attribute that you can set to identify the role of the node that you are scraping, and you can also use to scope the data in Sysdig
 
     Next, you will add the `remote_write` configuration to the end of the `prometheus.yml` file to configure the target Sysdig instance that will receive the metrics.
 
