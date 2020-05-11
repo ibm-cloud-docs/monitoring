@@ -90,7 +90,7 @@ Complete the following steps:
 
 
 ## Step 3. Choose the method to collect metrics
-{: #windows_step4}
+{: #windows_step3}
 
 
 ### Option 1: Run a Sysdig agent on a Linux system and remotely scrape the Windows endpoint
