@@ -13,7 +13,8 @@ IBM Cloud Monitoring with Sysdig
     iam.md
 
     {: .topicgroup}
-    Tutorials
+    Integrations
+        windows.md
         tutorials/kubernetes_cluster.md
         tutorials/ubuntu.md
     {: .navgroup-end}
