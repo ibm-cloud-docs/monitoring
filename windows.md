@@ -282,7 +282,7 @@ Complete the following steps:
 ## Step 4. Monitor Windows system metrics
 {: #windows_step4}
 
-To monitor Windows systems metrics, you can use the default dashboard `Windows wmi_exporter` to view the Windows metrics. 
+To monitor Windows systems metrics, you can use the default dashboard `Windows Node Overview` to view the Windows metrics. This default dashboard is located in the section **Hosts adn Containers.**
 
 
 ## Step 5. [Optional] Verifying uptime for Windows with Prometheus Blackbox exporter
