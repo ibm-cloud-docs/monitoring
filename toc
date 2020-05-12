@@ -79,7 +79,16 @@ IBM Cloud Monitoring with Sysdig
         teams.md
         iam_grant.md
         iam_grant_team.md
-        api.md
+    {: .navgroup-end}
+
+    {: .topicgroup}
+    REST API
+        api/api.md
+        api/dashboard-api.md
+        api/alerting-api.md
+        api/notifications-api.md
+        api/metrics-query-api.md
+        api/downtimes-api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
