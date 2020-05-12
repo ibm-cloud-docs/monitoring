@@ -86,10 +86,10 @@ Returns:
 
 ```json
 { 
-    "downtime":{
-        "id":42,
-        "start":1576624681000,
-        "notificationChannelIds":[...]
+    "downtime": {
+        "id": 42,
+        "start": 1576624681000,
+        "notificationChannelIds": [...]
     }
 }
 ```
@@ -104,15 +104,15 @@ Once the downtime has completed, you can disable the downtime event via the PUT 
 |----|---|----|
 | PUT | `api/downtimes/<id>` |  |
 
-returns:
+Returns:
 
 ```json
 {
     "downtime":{
-        "id":42,
-        "start":1576624681000,
-        "end":1576624727000,
-        "notificationChannelIds":[...]
+        "id": 42,
+        "start": 1576624681000,
+        "end": 1576624727000,
+        "notificationChannelIds": [...]
     }
 }
 ```

@@ -133,4 +133,4 @@ sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 # You can now use sdclient to perform actions that will be authenticated using IAM
 ```
 
-  - `GUID` can be found using `ibmcloud resource service-instance <NAME>`
+- `GUID` can be found using `ibmcloud resource service-instance <NAME>`

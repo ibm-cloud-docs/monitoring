@@ -60,18 +60,18 @@ curl -X POST \
 
 ### Using python client
 
-  ```python
-  from sdcclient import IbmAuthHelper, SdMonitorClient
+```python
+from sdcclient import IbmAuthHelper, SdMonitorClient
 
-  URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
-  APIKEY = <IAM_APIKEY>
-  GUID = <GUID>
-  ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
-  sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
+URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
+APIKEY = <IAM_APIKEY>
+GUID = <GUID>
+ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
+sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 
-  json_res = sdclient.get_alerts()
-  print(json_res)
-  ```
+json_res = sdclient.get_alerts()
+print(json_res)
+```
 
 ### Using curl
 
@@ -93,38 +93,38 @@ Check out [Working with cURL](#curl-guide)
 
 #### Sample response body for alert
 
-  ```json
-  {
-    "alert": {
-      "autoCreated": false,
-      "condition": "min(min(dallas_prod)) = 0",
-      "createdOn": 1551358413000,
-      "enabled": false,
-      "id": 23211,
-      "modifiedOn": 1551634372000,
-      "name": "Monitoring Uptime Alert",
-      "filter": "env in (\"prod\")",
-      "notificationChannelIds": [
-        4
-      ],
-      "segmentBy": [
-        "host.hostname"
-      ],
-      "segmentCondition": {
-        "type": "ANY"
-      },
-      "notificationCount": 60,
-      "rateOfChange": false,
-      "reNotify": false,
-      "severity": 0,
-      "severityLabel": "HIGH",
-      "teamId": 493,
-      "timespan": 60000000,
-      "type": "MANUAL",
-      "version": 9
-    }
+```json
+{
+  "alert": {
+    "autoCreated": false,
+    "condition": "min(min(dallas_prod)) = 0",
+    "createdOn": 1551358413000,
+    "enabled": false,
+    "id": 23211,
+    "modifiedOn": 1551634372000,
+    "name": "Monitoring Uptime Alert",
+    "filter": "env in (\"prod\")",
+    "notificationChannelIds": [
+      4
+    ],
+    "segmentBy": [
+      "host.hostname"
+    ],
+    "segmentCondition": {
+      "type": "ANY"
+    },
+    "notificationCount": 60,
+    "rateOfChange": false,
+    "reNotify": false,
+    "severity": 0,
+    "severityLabel": "HIGH",
+    "teamId": 493,
+    "timespan": 60000000,
+    "type": "MANUAL",
+    "version": 9
   }
-  ```
+}
+```
 
 #### Response body parameters
 
@@ -153,62 +153,62 @@ Check out [Working with cURL](#curl-guide)
 
 ### Using the python client to create new alert
 
-  ```python
-  from sdcclient import IbmAuthHelper, SdMonitorClient
+```python
+from sdcclient import IbmAuthHelper, SdMonitorClient
 
-  URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
-  APIKEY = <IAM_APIKEY>
-  GUID = <GUID>
-  ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
-  sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
+URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
+APIKEY = <IAM_APIKEY>
+GUID = <GUID>
+ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
+sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 
-  # Find notification channels (you need IDs to create an alert).
-  notify_channels = [
-    {
-      'type': 'SLACK',
-      'channel': '#python-sdc-test-alert'
-    },
-    {
-      'type': 'EMAIL',
-      'emailRecipients': [
-        'python-sdc-testing@draios.com', 'test@sysdig.com'
-      ]
-    }
-  ]
+# Find notification channels (you need IDs to create an alert).
+notify_channels = [
+  {
+    'type': 'SLACK',
+    'channel': '#python-sdc-test-alert'
+  },
+  {
+    'type': 'EMAIL',
+    'emailRecipients': [
+      'python-sdc-testing@draios.com', 'test@sysdig.com'
+    ]
+  }
+]
 
-  res = sdclient.get_notification_ids(notify_channels)
-  if not res[0]:
-      print("Failed to fetch notification channel ID's")
+res = sdclient.get_notification_ids(notify_channels)
+if not res[0]:
+    print("Failed to fetch notification channel ID's")
 
-  notification_channel_ids = res
-  res = sdclient.create_alert(
-      name=<ALERT_NAME>,
-      description=<ALERT_DESCRIPTION>,
-      # Number from 0 to 7 where 0 means 'emergency' and 7 is 'debug'
-      severity=<SEVERITY>,
-      # The alert will fire if the condition is met for at least number of consecutive seconds
-      for_atleast_s=<FOR_ATLEAST_S>,
-      # The alert condition
-      condition=<CONDITION>,
-      # For example, segmenting a CPU alert by ['host.mac', 'proc.name'] we want to check this metric for every process on every machine
-      segmentby=<SEGMENTBY>,
-      # Optional Default value `ANY`
-      segment_condition=<SEGMENT_CONDITION>,
-      # Filter. We want to receive a notification only if the name of the process meets the condition
-      user_filter=<USER_FILTER>,
-      # Type of notification you want this alert to generate, Mention Notification channel ID's
-      notify=<NOTIFICATION_CHANNEL_IDS>,
-      # If the alert will be enabled when created. True by default
-      enabled=<ENABLED>,
-      # Custom properties to associate with the alert
-      annotations=<ANNOTATIONS>,
-      # Use an Alert object instead of specifying the individual parameters
-      alert_obj=<ALERT_OBJ>
-  )
+notification_channel_ids = res
+res = sdclient.create_alert(
+    name=<ALERT_NAME>,
+    description=<ALERT_DESCRIPTION>,
+    # Number from 0 to 7 where 0 means 'emergency' and 7 is 'debug'
+    severity=<SEVERITY>,
+    # The alert will fire if the condition is met for at least number of consecutive seconds
+    for_atleast_s=<FOR_ATLEAST_S>,
+    # The alert condition
+    condition=<CONDITION>,
+    # For example, segmenting a CPU alert by ['host.mac', 'proc.name'] we want to check this metric for every process on every machine
+    segmentby=<SEGMENTBY>,
+    # Optional Default value `ANY`
+    segment_condition=<SEGMENT_CONDITION>,
+    # Filter. We want to receive a notification only if the name of the process meets the condition
+    user_filter=<USER_FILTER>,
+    # Type of notification you want this alert to generate, Mention Notification channel ID's
+    notify=<NOTIFICATION_CHANNEL_IDS>,
+    # If the alert will be enabled when created. True by default
+    enabled=<ENABLED>,
+    # Custom properties to associate with the alert
+    annotations=<ANNOTATIONS>,
+    # Use an Alert object instead of specifying the individual parameters
+    alert_obj=<ALERT_OBJ>
+)
 
-  if not res[0]:
-      print("Alert creation failed")
-  ```
+if not res[0]:
+    print("Alert creation failed")
+```
 
 ### Using curl to create a new alert from a json
 
@@ -220,31 +220,31 @@ Check out [Working with cURL](#curl-guide)
 
 Example alert.json:
 
-  ```json
-  {
-    "alert": {
-      "version": null,
-      "name": "My Exciting Alert!",
-      "description": null,
-      "teamId": null,
-      "enabled": false,
-      "filter": null,
-      "type": "MANUAL",
-      "condition": "avg(timeAvg(uptime)) <= 0",
-      "timespan": 600000000,
-      "notificationChannelIds": [],
-      "reNotify": false,
-      "reNotifyMinutes": 30,
-      "segmentBy": [
-        "host.hostName"
-      ],
-      "segmentCondition": {
-        "type": "ANY"
-      },
-      "severityLabel": "LOW"
-    }
+```json
+{
+  "alert": {
+    "version": null,
+    "name": "My Exciting Alert!",
+    "description": null,
+    "teamId": null,
+    "enabled": false,
+    "filter": null,
+    "type": "MANUAL",
+    "condition": "avg(timeAvg(uptime)) <= 0",
+    "timespan": 600000000,
+    "notificationChannelIds": [],
+    "reNotify": false,
+    "reNotifyMinutes": 30,
+    "segmentBy": [
+      "host.hostName"
+    ],
+    "segmentCondition": {
+      "type": "ANY"
+    },
+    "severityLabel": "LOW"
   }
-  ```
+}
+```
 
 #### Request body parameters
 
@@ -271,22 +271,22 @@ Updating an existing alerts requires the user to know the ID of that alert.
 
 ### Using the python client to update existing alerts
 
-  ```python
-  from sdcclient import IbmAuthHelper, SdMonitorClient
+```python
+from sdcclient import IbmAuthHelper, SdMonitorClient
 
-  URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
-  APIKEY = <IAM_APIKEY>
-  GUID = <GUID>
-  ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
-  sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
+URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
+APIKEY = <IAM_APIKEY>
+GUID = <GUID>
+ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
+sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 
-  res = sdclient.get_alerts()
-  if not res[0]:
+res = sdclient.get_alerts()
+if not res[0]:
     print("Failed to fetch existing alerts")
 
-  alert_found = False
+alert_found = False
 
-  for alert in res['alerts']:
+for alert in res['alerts']:
     if alert['name'] == alert_name:
         alert_found = True
         if 'notificationChannelIds' in alert:
@@ -300,9 +300,9 @@ Updating an existing alerts requires the user to know the ID of that alert.
         if not res_update:
             print("Alert update failed")
 
-  if not alert_found:
-      print('Alert to be updated not found')
-  ```
+if not alert_found:
+    print('Alert to be updated not found')
+```
 
 ### Using curl to update an existing alert from a json
 
@@ -314,30 +314,30 @@ Check out [Working with cURL](#curl-guide)
 
 Example alert.json:
 
-   ```json
-   {
-      "alert": {
-         "type": "MANUAL",
-         "id": 23212,
-         "version": 10,
-         "name": "CheckNginxConnections",
-         "description": "Active connections of nginx server",
-         "enabled": false,
-         "severity": 2,
-         "timespan": 1000000,
-         "condition": "avg(avg(nginx.net.connections)) > 1000",
-         "segmentBy": [
-             "host.hostName"
-         ],
-         "segmentCondition": {
-             "type": "ANY"
-         },
-         "notificationChannelIds": [
-             2
-         ]
-       }
-   }
-   ```
+```json
+{
+  "alert": {
+      "type": "MANUAL",
+      "id": 23212,
+      "version": 10,
+      "name": "CheckNginxConnections",
+      "description": "Active connections of nginx server",
+      "enabled": false,
+      "severity": 2,
+      "timespan": 1000000,
+      "condition": "avg(avg(nginx.net.connections)) > 1000",
+      "segmentBy": [
+          "host.hostName"
+      ],
+      "segmentCondition": {
+          "type": "ANY"
+      },
+      "notificationChannelIds": [
+          2
+      ]
+    }
+}
+```
 
 **Note:** alert version can be retrieved through the response body of [alerts api](#fetch-specific-user-alert).
 
@@ -347,26 +347,26 @@ Deletion of an existing alerts requires the user to know the ID of that alert.
 
 ### Using the python client
 
-  ```python
-  from sdcclient import IbmAuthHelper, SdMonitorClient
-  
-  URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
-  APIKEY = <IAM_APIKEY>
-  GUID = <GUID>
-  ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
-  sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
+```python
+from sdcclient import IbmAuthHelper, SdMonitorClient
 
-  res = sdclient.get_alerts()
-  if not res[0]:
+URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
+APIKEY = <IAM_APIKEY>
+GUID = <GUID>
+ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
+sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
+
+res = sdclient.get_alerts()
+if not res[0]:
     print("Failed to fetch existing alerts")
 
-  for alert in res['alerts']:
+for alert in res['alerts']:
     if alert['name'] == alert_name:
         print("Deleting alert")
         res = sdclient.delete_alert(alert)
         if not res:
-          print("Alert deletion failed")
-  ```
+            print("Alert deletion failed")
+```
 
 ### Using curl to delete an existing alert
 

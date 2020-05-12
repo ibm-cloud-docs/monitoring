@@ -78,25 +78,25 @@ Check out [Working with cURL](#curl-guide)
 
 #### Sample output for notification type email
 
-  ```json
-  {
-    "notificationChannel": {
-      "id": 20,
-      "version": 1,
-      "createdOn": 1466023669000,
-      "modifiedOn": 1466023669000,
-      "type": "EMAIL",
-      "enabled": true,
-      "name": "emailChannel",
-      "options": {
-        "emailRecipients": [
-          "jhon@us.ibm.com"
-        ],
-        "notifyOnOk": false
-      }
+```json
+{
+  "notificationChannel": {
+    "id": 20,
+    "version": 1,
+    "createdOn": 1466023669000,
+    "modifiedOn": 1466023669000,
+    "type": "EMAIL",
+    "enabled": true,
+    "name": "emailChannel",
+    "options": {
+      "emailRecipients": [
+        "jhon@us.ibm.com"
+      ],
+      "notifyOnOk": false
     }
   }
-  ```
+}
+```
 
 #### Response body parameters
 
@@ -146,20 +146,20 @@ Check out [Working with cURL](#curl-guide)
 
 Example notification.json:
 
-  ```json
-  {
-    "notificationChannel": {
-        "type": "WEBHOOK",
-        "enabled": false,
-        "name": "test-tip-webhook",
-        "options": {
-          "notifyOnOk": true,
-          "url": "https://tip.endpoint.com",
-          "notifyOnResolve": true,
-        }
+```json
+{
+  "notificationChannel": {
+      "type": "WEBHOOK",
+      "enabled": false,
+      "name": "test-tip-webhook",
+      "options": {
+        "notifyOnOk": true,
+        "url": "https://tip.endpoint.com",
+        "notifyOnResolve": true,
       }
-   }
-   ```
+    }
+  }
+  ```
 
 ## Update a notification
 
@@ -180,22 +180,22 @@ Check out [Working with cURL](#curl-guide)
 
 Example notification.json:
 
-  ```json
-  {
-    "notificationChannel": {
-      "id": 9,
-      "version": 2,
-      "type": "WEBHOOK",
-      "enabled": true,
-      "name": "test-tip-webhook",
-      "options": {
-        "notifyOnOk": false,
-        "url": "https://test-tip.endpoint.com",
-        "notifyOnResolve": true
-      }
+```json
+{
+  "notificationChannel": {
+    "id": 9,
+    "version": 2,
+    "type": "WEBHOOK",
+    "enabled": true,
+    "name": "test-tip-webhook",
+    "options": {
+      "notifyOnOk": false,
+      "url": "https://test-tip.endpoint.com",
+      "notifyOnResolve": true
     }
   }
-  ```
+}
+```
 
 **Note:** Notification version can get through response body of [notificationChannels API](#fetch-specific-user-notification). User can also add [customHeaders & customData](https://docs.sysdig.com/en/configure-a-webhook-channel.html#al_UUID-a6715905-0530-a08a-a3ab-cb10b2c5d19b_UUID-f9896786-62e5-c4c3-d2ef-38d3a2f7dfab) to notfications based on their requirements.
 
