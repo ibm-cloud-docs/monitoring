@@ -286,7 +286,7 @@ Complete the following steps:
             replacement: "1"
             action: replace
 
-          - regex: "(__name__)|(_storage_)|(region)|(instance)|(status)|(core)|(name)|(start_mode)|(nic)|(volume)|(state)|(version)|(mode)|(branch)|(timezone)|(goversion)|(collector)|(revision)"
+          - regex: "(__name__)|(_job_)|(region)|(instance)|(status)|(core)|(name)|(start_mode)|(nic)|(volume)|(state)|(version)|(mode)|(branch)|(timezone)|(goversion)|(collector)|(revision)"
             action: labelkeep
     ```
     {: codeblock}
@@ -297,7 +297,7 @@ Complete the following steps:
 ## Step 4. Monitor Windows system metrics
 {: #windows_step4}
 
-To monitor Windows systems metrics, you can use the default dashboard `Windows Node Overview` to view the Windows metrics. This default dashboard is located in the section **Hosts adn Containers.**
+To monitor Windows systems metrics, you can use the default dashboard `Windows Node Overview` to view the Windows metrics. This default dashboard is located in the section **Hosts and Containers.**
 
 
 ## Step 5. [Optional] Verifying uptime for Windows with Prometheus Blackbox exporter
