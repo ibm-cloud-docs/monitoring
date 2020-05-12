@@ -108,153 +108,94 @@ Check out [Working with cURL](#curl-guide)
 
 Template metrics.json:
 
+[Please refer this link](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html) for more details on usage of the below syntax.
+
 ```json
 {
-  "start": <>,
-  "end": <>,
+  "start": "Number: seconds",
+  "end": "Number: seconds",
+  "last": "Number: last available seconds",
   "metrics": [
     {
-      "id": <>,
-      "aggregations": <>,
-      ...
+      "id": "<>",
+      "aggregations": {}
     }
   ],
-  "sampling": <>,
-  "data": <>,
-  "dataSourceType": <HOST/CONTAINER>,
-  "last": <>,
-  "filter": <>,
-  "sampling": <>
+  "sampling": "Number: <10|60|600|3600|86400>",
+  "dataSourceType": "<host|container>",
+  "filter": "<>",
+  "paging": {
+    "from": "Number",
+    "to": "Number"
+  }
 }
 ```
-
-Please refer this [link](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html) for more details on usage of the above syntax.
 
 ### Metrics dictionary
 
 Metrics dictionary can contain all current default metrics supported by Sysdig.
-For more details on metrics dictionary please refer this [link](https://docs.sysdig.com/en/metrics-dictionary.html).
+For more details on metrics dictionary [please refer this link](https://docs.sysdig.com/en/metrics-dictionary.html).
 
-Sysdig Monitor allows us to adjust the aggregation settings. For more details refer this [link](https://docs.sysdig.com/en/data-aggregation.html).
+Sysdig Monitor allows us to adjust the aggregation settings. [For more details refer this link](https://docs.sysdig.com/en/data-aggregation.html).
 
 ## Examples
 
-### CPU by host
+### Retrieve platform metrics
 
-Template metrics.json:
+This example is fetching platform metrics from Cloud Foundry!
+"I want the service name, app container age, number of bytes my app is using, and instance ID"
+"I want the metrics only for us-south"
+"I want metrics for the last 24 hours"
+
+**Template metrics.json:**
 
 ```json
 {
   "metrics": [
     {
-      "id": "host.hostName"
+      "id": "ibm_service_name"
     },
     {
-      "id": "cpu.used.percent",
+      "id": "ibm_cloudfoundry_app_container_age",
+      "aggregations": {"group": "max", "time": "max"}
+    },
+    {
+      "id": "ibm_cloudfoundry_app_memory_bytes_used",
       "aggregations": {"group": "avg", "time": "avg"}
-    }
-  ],
-  "dataSourceType": "host",
-  "last": 600
-}
-```
-
-- Here datasource type is `Host`
-
-Result for the above API call:
-
-```json
-{
-  "data": [
-    {"d": ["jupiter-vm781", 52.062]},
-    {"d": ["jupiter-vm853", 4.245]}
-  ],
-  "start": 1553071030,
-  "end": 1553071630
-}
-```
-
-### CPU by container
-
-Template metrics.json:
-
-```json
-{
-  "metrics": [
-    {
-      "id": "container.name"
     },
     {
-      "id": "cpu.used.percent",
-      "aggregations": {
-        "group": "avg",
-        "time": "avg"
-      }
+      "id": "ibm_resource"
     }
   ],
-  "dataSourceType": "container",
-  "last": 600
+  "filter": "ibm_location = \"us-south\"",
+  "sampling": 86400,
+  "last": 86400
 }
 ```
 
-- Here datasource type is `Container`
-
-Result for the above API call:
+**Result for the above API call:**
 
 ```json
 {
   "data": [
-    {"d": ["sysdig-agent", 1.586]},
-    {"d": ["Container_1", 0.905]},
-    {"d": ["Container_2", 0.893]},
-    {"d": ["Container_3", 0.892]},
-    {"d": ["Container_4", 0.886]},
-    {"d": ["Container_5", 0.885]},
-    {"d": ["Container_6", 0.873]}
-  ],
-  "start": 1553074770,
-  "end": 1553075370
-}
-```
-
-### CPU by Host with start and end time
-
-Template metrics.json:
-
-```json
-{
-  "start": "1533078521",
-  "end": "1553078521",
-  "metrics": [
     {
-      "id": "host.hostName"
-    },
-    {
-      "id": "cpu.used.percent",
-      "aggregations": {"group": "avg", "time": "avg"}
+      "d": [
+        "cloud-foundry",
+        316660942465643,
+        18809015.575,
+        "73a9d202-7e97-45b2-a107-3b1528856be3"
+      ],
+      "t": 1587772800
     }
   ],
-  "dataSourceType": "host"
+  "end": 1587772800,
+  "start": 1587686400
 }
 ```
 
-- Here `last` field is not required as we have used `start` and `end`
+### CPU by Host with start, end, and, sampling
 
-Result for the above API call:
-
-```json
-{
-  "data": [
-    {"d": ["jupiter-vm376", 38.453]},
-    {"d": ["jupiter-vm853", 9.853]}
-  ],
-  "start": 1532995200, "end": 1553040000
-}
-```
-
-### CPU by Host with start, end time and sampling
-
-Template metrics.json:
+**Template metrics.json:**
 
 ```json
 {
@@ -274,10 +215,7 @@ Template metrics.json:
 }
 ```
 
-- Here `sampling` field is to fetch sampled data for the given time period.
-- Valid options for `sampling` are 10, 60, 600, 3600, 86400 seconds.
-
-Result for the above API call:
+**Result for the above API call:**
 
 ```json
 {
