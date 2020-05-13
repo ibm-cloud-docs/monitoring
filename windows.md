@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-05-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, windows
 
@@ -208,7 +208,7 @@ Complete the following steps:
 
     ```yaml
     remote_write:
-       - url: "ENDPOINT/api/prometheus/write"
+      - url: "ENDPOINT/api/prometheus/write"
   
         bearer_token_file: C:\Users\Administrator\prom\sysdig-apikey
 
@@ -217,14 +217,8 @@ Complete the following steps:
           - source_labels: ["__name__"]
             regex: "^wmi_(.*)"
             action: keep
-    
-          - source_labels: ["__name__"]
-            regex: "^wmi_(.*)"
-            target_label: "_storage_"
-            replacement: "1"
-            action: replace
 
-          - regex: "(__name__)|(_storage_)|(region)|(instance)|(status)|(core)|(name)|(start_mode)|(nic)|(volume)|(state)|(version)|(mode)|(branch)|(timezone)|(goversion)|(collector)|(revision)"
+          - regex: "(__name__)|(job)|(region)|(instance)|(status)|(core)|(name)|(start_mode)|(nic)|(volume)|(state)|(version)|(mode)|(branch)|(timezone)|(goversion)|(collector)|(revision)"
             action: labelkeep
     ```
     {: codeblock}
@@ -271,7 +265,7 @@ Complete the following steps:
 
     # Connection to sysdig 
     remote_write:
-      - url: "https://ingest.eu-gb.monitoring.test.cloud.ibm.com/api/prometheus/write"
+      - url: "https://ingest.eu-gb.monitoring.cloud.ibm.com/api/prometheus/write"
 
         bearer_token_file: C:\Users\Administrator\prom\sysdig-api
 
@@ -279,14 +273,8 @@ Complete the following steps:
           - source_labels: ["__name__"]
             regex: "^wmi_(.*)"
             action: keep
-    
-          - source_labels: ["__name__"]
-            regex: "^wmi_(.*)"
-            target_label: "_storage_"
-            replacement: "1"
-            action: replace
 
-          - regex: "(__name__)|(_job_)|(region)|(instance)|(status)|(core)|(name)|(start_mode)|(nic)|(volume)|(state)|(version)|(mode)|(branch)|(timezone)|(goversion)|(collector)|(revision)"
+          - regex: "(__name__)|(job)|(region)|(instance)|(status)|(core)|(name)|(start_mode)|(nic)|(volume)|(state)|(version)|(mode)|(branch)|(timezone)|(goversion)|(collector)|(revision)"
             action: labelkeep
     ```
     {: codeblock}
