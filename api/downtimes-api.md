@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2020, 2020
-lastupdated: "2020-02-13"
+  years:  2020
+lastupdated: "2020-05-13"
 
 keywords: Sysdig, IBM Cloud, monitoring, downtimes, api
 
