@@ -143,7 +143,7 @@ Sysdig Monitor allows us to adjust the aggregation settings. [For more details r
 ### Retrieve platform metrics
 
 This example is fetching platform metrics from Cloud Foundry!
-"I want the service name, app container age, number of bytes my app is using, and instance ID"
+"I want the instance ID, app container age, and number of bytes my app is using"
 "I want the metrics only for us-south"
 "I want metrics for the last 24 hours"
 
@@ -153,7 +153,7 @@ This example is fetching platform metrics from Cloud Foundry!
 {
   "metrics": [
     {
-      "id": "ibm_service_name"
+      "id": "ibm_resource"
     },
     {
       "id": "ibm_cloudfoundry_app_container_age",
@@ -162,9 +162,6 @@ This example is fetching platform metrics from Cloud Foundry!
     {
       "id": "ibm_cloudfoundry_app_memory_bytes_used",
       "aggregations": {"group": "avg", "time": "avg"}
-    },
-    {
-      "id": "ibm_resource"
     }
   ],
   "filter": "ibm_location = \"us-south\"",
@@ -180,10 +177,9 @@ This example is fetching platform metrics from Cloud Foundry!
   "data": [
     {
       "d": [
-        "cloud-foundry",
+        "73a9d202-7e97-45b2-a107-3b1528856be3",
         316660942465643,
-        18809015.575,
-        "73a9d202-7e97-45b2-a107-3b1528856be3"
+        18809015.575
       ],
       "t": 1587772800
     }
