@@ -50,7 +50,7 @@ Read about [Sysdig integration with Prometheus![External link icon](../icons/lau
 
 
 ## Step 3. Configure a VPN connection between your terminal and the bare metal server
-To provision an instance of the {{site.data.keyword.mon_full_notm}} service, see []().
+{: #baremetal_ubuntu_step3}
 
 Virtual Private Networking (VPN) access enables users to manage all servers remotely and securely over the {{site.data.keyword.cloud}} private network. A VPN connection from your location to the private network allows out-of-band management and server rescue through an encrypted VPN tunnel. VPN tunnels can be initiated to any IBM Cloud data center or PoP allowing you geographic redundancy. 
 
@@ -68,7 +68,7 @@ Complete the following steps to configure a VPN connection between your terminal
 
 
 ## Step 4. Connect to a bare metal server by using SSH
-
+{: #baremetal_ubuntu_step4}
 
 Complete the following steps to get the bare metal information that you need to SSH into the server:
 
@@ -100,7 +100,7 @@ For example, you can use the following ssh command: `root@45.123.122.12`
 
 
 ## Step 5. Configure a Sysdig agent to collect metrics from the bare metal server
-
+{: #baremetal_ubuntu_step5}
 
 You must install a Sysdig agent to collect and forward metrics from a bare metal server to an {{site.data.keyword.mon_full_notm}} instance. 
 
@@ -147,7 +147,7 @@ Complete the following steps from the command line to install a Sysdig agent:
 
 
 ## Step 6. Launch the Sysdig Web UI to verify that you are getting data to monitor the bare metal server
-
+{: #baremetal_ubuntu_step6}
 
 Complete the following steps to launch the web UI:
 
@@ -178,6 +178,7 @@ You only can have one web UI session open per browser.
 
 
 ## Step 7. Configure the Prometheus IPMI Exporter to monitor sensor metrics
+{: #baremetal_ubuntu_step7}
 
 In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server. 
 
@@ -228,6 +229,7 @@ Complete the following steps to configure the Prometheus IPMI Exporter:
 
 
 ### Step 7.1. Install the Prometheus IPMI exporter
+{: #baremetal_ubuntu_step7-1}
 
 Complete the following steps:
 
@@ -330,6 +332,7 @@ Complete the following steps:
 
 
 ### Step 7.2. Install the Prometheus exporter
+{: #baremetal_ubuntu_step7-2}
 
 The Sysdig agent automatically collects metrics from Prometheus exporters. Therefore, to collect metrics from your IPMI exporter, you must also configure the Prometheus exporter.
 
@@ -424,6 +427,7 @@ Complete the following steps to run the Prometheus exporter:
 
 
 ### Step 7.3. Configure network settings
+{: #baremetal_ubuntu_step7-3}
 
 If you want to collect metrics from remote servers, complete the following steps:
 
@@ -436,6 +440,7 @@ If you want to collect metrics from remote servers, complete the following steps
 
 
 ### Step 7.4. Update the Sysdig agent that is running in the bare metal server
+{: #baremetal_ubuntu_step7-4}
     
 Complete the following steps:
 
@@ -484,14 +489,14 @@ Complete the following steps:
 
 
 
-## Step 7. Verify that you can see the prometheus ipmi metrics
+## Step 8. Verify that you can see the prometheus ipmi metrics
+{: #baremetal_ubuntu_step8}
 
+## Step 9. Configure a dashboard to analyze the IPMI status of your Bare metal
+{: #baremetal_ubuntu_step9}
 
-## Step 8. Configure a dashboard to analyze the IPMI status of your Bare metal
-
-
-## Step 8. Create an alert to notify of a temperature increase
-
+## Step 10. Create an alert to notify of a temperature increase
+{: #baremetal_ubuntu_step10}
 
 
 
