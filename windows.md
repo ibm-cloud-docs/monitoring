@@ -168,7 +168,12 @@ Complete the following steps:
     ```
     {: codeblock}
 
+4. Restart the Sysdig agent. Run the following command:
 
+    ```
+    service dragent restart
+    ```
+    {: pre}
 
 ### Option 2: Use the Prometheus remote-write capabilities to push the metrics from the Windows system by running Prometheus as a client collector on Windows
 {: #windows_step3_2}
@@ -348,6 +353,11 @@ For example, complete the following instructions when the container approach is 
 
     When you enable this option, you can segment data by `windows_hostname` and build alerts upon this metric.
 
+4. Restart the Sysdig agent. Run the following command:
 
+    ```
+    service dragent restart
+    ```
+    {: pre}
 
 
