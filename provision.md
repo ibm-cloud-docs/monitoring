@@ -6,7 +6,7 @@ lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -47,7 +47,7 @@ To provision an instance of Sysdig from the {{site.data.keyword.cloud_notm}} cat
 
 7. Select a service plan. By default, the **Trial** plan is set.
 
-    For more information about the service plans, see [Service plans](/docs/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
+    For more information about the service plans, see [Service plans](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans#pricing_plans).
 
 8. Enter a service name.
 

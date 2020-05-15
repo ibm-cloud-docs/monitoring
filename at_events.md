@@ -6,7 +6,7 @@ lastupdated: "2020-03-16"
 
 keywords: activity tracker for IBM Cloud Monitoring with Sysdig, Sysdig, IBM Cloud, audit, activity tracker, events, audit logs
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 

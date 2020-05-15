@@ -6,7 +6,7 @@ lastupdated: "2020-03-16"
 
 keywords: Sysdig, IBM Cloud, monitoring, security, connection
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -94,7 +94,7 @@ The {{site.data.keyword.mon_full_notm}} service offers the following private end
 {: caption="Table 1. Private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
-You can [configure the Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Sysdig-config_agent) to use the private network by using a private endpoint as the ingestion URL.
+You can [configure the Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) to use the private network by using a private endpoint as the ingestion URL.
 
 What happens when you configure the Sysdig agent to use a private endpoint?
 * Private endpoints are not accessible from the public internet. 

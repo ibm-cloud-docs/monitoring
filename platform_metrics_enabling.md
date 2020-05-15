@@ -6,7 +6,7 @@ lastupdated: "2020-04-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -36,7 +36,7 @@ Platform metrics are metrics that are exposed by enabled-Sysdig services and the
 
     To configure a Sysdig instance, you must set on the *platform metrics* configuration setting. 
 
-* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Sysdig-cloud_services).
+* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
 
 * You must be assigned the IAM Editor role or higher for the IBM Cloud Monitoring with Sysdig service to configure platform metrics.
 
@@ -51,7 +51,7 @@ To enable platform metrics in a region, complete the following steps:
 ### Step 1. Provision a Sysdig instance
 {: #platform_metrics_enabling_step1}
 
-[Provision an instance of Sysdig](/docs/Monitoring-with-Sysdig?topic=Sysdig-provision) in the region where the service that you wish to monitor is running.  
+[Provision an instance of Sysdig](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision) in the region where the service that you wish to monitor is running.  
 
 For example, if you are monitoring an {{site.data.keyword.messagehub}} instance in the London region, then you must create a Sysdig instance in London.
 
@@ -62,7 +62,7 @@ For example, if you are monitoring an {{site.data.keyword.messagehub}} instance 
 
 2. Select **Monitoring** &gt; **Configure platform metrics**. 
 
-3. Select a [region](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_regions). 
+3. Select a [region](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_regions). 
 
 4. Choose the Sysdig instance that will collect metrics from enabled services on that location. 
 

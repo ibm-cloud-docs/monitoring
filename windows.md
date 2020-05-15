@@ -6,7 +6,7 @@ lastupdated: "2020-05-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, windows
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -98,7 +98,7 @@ Complete the following steps:
 
 Complete the following steps:
 
-1. [Install the Sysdig agent on a Linux node](/docs/Monitoring-with-Sysdig?topic=Sysdig-config_agent#config_agent_linux).
+1. [Install the Sysdig agent on a Linux node](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent#config_agent_linux).
 
     You can collect a maximum of 3000 time series per Sysdig Linux agent. If you need to collect more than 3000 time series for all your Windows systems, you need more than one Linux agent.
     {: important}
@@ -230,9 +230,9 @@ Complete the following steps:
 
     Where 
     
-    `ENDPOINT` is the Sysdig collector endpoint. To see the list of endpoints, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
+    `ENDPOINT` is the Sysdig collector endpoint. To see the list of endpoints, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
-    `sysdig-apikey` is the file that contains the **Sysdig Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
+    `sysdig-apikey` is the file that contains the **Sysdig Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
 
     For example, the completed version of the prometheus.yml could look like :
   

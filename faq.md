@@ -6,7 +6,7 @@ lastupdated: "2020-03-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, faq, frequently asked questions
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -30,12 +30,12 @@ subcollection: Sysdig
 ### I'm new to Sysdig - where should I start?
 {: #faqs-gs-1}
 
-Use the [Getting started tutorial](/docs/Monitoring-with-Sysdig?topic=Sysdig-getting-started#prereqs) to provision an instance of Sysdig, connect an agent to Sysdig and launch the web UI.  There are also a number of getting started videos on https://learn.sysdig.com/ to help you become familiar with Sysdig agents, Web UI, dashboards and alerts. Notice that these tutorials make references to sysdig.com, but the same functionality is also available within the {{site.data.keyword.mon_full_notm}} service.
+Use the [Getting started tutorial](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#prereqs) to provision an instance of Sysdig, connect an agent to Sysdig and launch the web UI.  There are also a number of getting started videos on https://learn.sysdig.com/ to help you become familiar with Sysdig agents, Web UI, dashboards and alerts. Notice that these tutorials make references to sysdig.com, but the same functionality is also available within the {{site.data.keyword.mon_full_notm}} service.
 
 ### What are the Sysdig endpoints I should be using?
 {: #faqs-gs-2}
 
-You can access the Sysdig web application from the View Sysdig links on the [Observability Monitoring page](https://cloud.ibm.com/observe/monitoring).  The endpoints are also documented [here](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints).
+You can access the Sysdig web application from the View Sysdig links on the [Observability Monitoring page](https://cloud.ibm.com/observe/monitoring).  The endpoints are also documented [here](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 
 ### Where can I see the available versions for the Sysdig agents?
 {: #faqs-gs-3}
@@ -54,7 +54,7 @@ Using the Sysdig Spotlight, you can see the number of agents that are up to date
 ### Can I use Grafana to view my Sysdig metrics and dashboards?
 {: #faqs-gs-5}
 
-Yes, you can use the [grafana plugin](https://github.com/draios/grafana-sysdig-datasource) to install Sysdig's plugin into your Grafana instance.  Notice that this is a `run your own Grafana` solution and not a SaaS offering.  When you follow the instructions to configure it, you should use the [IBM Cloud Monitoring with Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints) and tokens.  Follow the on-premise directions where directed in the instructions since that will give you the opportunity to provide a different URL from the sysdig.com default that is otherwise assumed in the plugin documentation.
+Yes, you can use the [grafana plugin](https://github.com/draios/grafana-sysdig-datasource) to install Sysdig's plugin into your Grafana instance.  Notice that this is a `run your own Grafana` solution and not a SaaS offering.  When you follow the instructions to configure it, you should use the [IBM Cloud Monitoring with Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints) and tokens.  Follow the on-premise directions where directed in the instructions since that will give you the opportunity to provide a different URL from the sysdig.com default that is otherwise assumed in the plugin documentation.
 
 
 ## Platform Metrics
@@ -63,7 +63,7 @@ Yes, you can use the [grafana plugin](https://github.com/draios/grafana-sysdig-d
 ### Why don't I see any metrics for the IBM service that I'm using in Sysdig?
 {: #faqs-platform-1}
 
-Service will be enabling platform metrics on their own schedule.  To see if the service you want to use is available, please check the [Cloud Services](/docs/Monitoring-with-Sysdig?topic=Sysdig-cloud_services) and the [Cloud services by location](/docs/Monitoring-with-Sysdig?topic=Sysdig-cloud_services_locations) topics to ensure the service is enabled in the region your service instance to be monitored is running.  If the service you wish to use is listed, then the next step would be to confirm that you have a Sysdig instance created in the same region as your instance generating the metrics, and that the Sysdig instance has been [enabled for Platform Metrics](/docs/Monitoring-with-Sysdig?topic=Sysdig-platform_metrics_enabling).
+Service will be enabling platform metrics on their own schedule.  To see if the service you want to use is available, please check the [Cloud Services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services) and the [Cloud services by location](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services_locations) topics to ensure the service is enabled in the region your service instance to be monitored is running.  If the service you wish to use is listed, then the next step would be to confirm that you have a Sysdig instance created in the same region as your instance generating the metrics, and that the Sysdig instance has been [enabled for Platform Metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
 
 ### Why can't I edit the default dashboards?
 {: #faqs-platform-2}

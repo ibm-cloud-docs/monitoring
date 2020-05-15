@@ -6,7 +6,7 @@ lastupdated: "2020-01-29"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete instance
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
