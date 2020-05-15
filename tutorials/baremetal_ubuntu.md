@@ -36,7 +36,7 @@ Read about {{site.data.keyword.mon_full_notm}}. For more information, see [About
 
 Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 
-
+Read about [Sysdig integration with Prometheus![External link icon](../icons/launch-glyph.svg "External link icon") ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/integrate-prometheus-metrics.html){: new_window}.
 
 ## Step 1. Provision an {{site.data.keyword.mon_full_notm}} instance
 {: #baremetal_ubuntu_step1}
