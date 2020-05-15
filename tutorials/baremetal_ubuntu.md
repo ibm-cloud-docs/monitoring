@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-05-15"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -47,6 +47,8 @@ Read about [Sysdig integration with Prometheus![External link icon](../icons/lau
 {: #baremetal_ubuntu_step2}
 
 [Provision a bare metal server](/docs/bare-metal?topic=bare-metal-getting-started).
+
+Ensure you have internet access from the bare metal. This is needed for configuring the Sysdig agent.
 
 
 ## Step 3. Configure a VPN connection between your terminal and the bare metal server
@@ -492,8 +494,53 @@ Complete the following steps:
 ## Step 8. Verify that you can see the prometheus ipmi metrics
 {: #baremetal_ubuntu_step8}
 
+Cpmplete the following steps:
+
+1. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**. 
+
+2. Select **Monitoring**. 
+
+3. Identify the monitoring instance that you created. Then, click **Launch Sysdig**.
+
+4. In the `Explore` view, select **Hosts and Containers**. Then, select the bare metal server that you want to monitor.
+
+    ![Sysdig Hosts and Containers view](images/sysdig-baremetal-img2.png "Sysdig Hosts and Containers view")
+
+5. Select **Overview by Process**. Then, enter in the search bar **ipmi**. The list of IPMI metrics is displayed.
+
+    ![IPMI metrics](images/sysdig-baremetal-img3.png "IPMI metrics")
+
+
 ## Step 9. Configure a dashboard to analyze the IPMI status of your Bare metal
 {: #baremetal_ubuntu_step9}
+
+To create a dashboard to monitor the IPMI metrics, complete the following steps:
+
+1. Select the `ipmi_up` metric.
+
+    ![ipmi_up metris](images/sysdig-baremetal-img4.png "ipmi_up metric")
+
+2. Select the 3 dots icon. Then, select **Copy to dashboard**.
+
+    ![Copy dashboard](images/sysdig-baremetal-img5.png "Copy dashboard")
+
+3. Enter the name **[Bare Metal] IPMI monitoring**. Then, click **Copy and Open**.
+
+    ![Copy and open a dashboard](images/sysdig-baremetal-img6.png "Copy and open a dashboard")
+
+    The dashboard opens.
+
+    ![IPMI custom dashboard](images/sysdig-baremetal-img7.png "IPMI custom dashboard")
+
+4. Add more IPMI metrics to the **[Bare Metal] IPMI monitoring** custom dashboard. Repeat the steps for each of the IPMI metrics that you want to monitor.
+
+5. Drag and drop, and resize panels to get the dashboard layout that you want. Save the layout.
+
+
+
+IPMI metrics are collected (ipmi_up)
+
+
 
 ## Step 10. Create an alert to notify of a temperature increase
 {: #baremetal_ubuntu_step10}
