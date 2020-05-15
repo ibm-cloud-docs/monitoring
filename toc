@@ -19,7 +19,7 @@ IBM Cloud Monitoring with Sysdig
     {: .topicgroup}
     Integrations
         windows.md
-        baremetal_ubuntu.md
+        tutorials/baremetal_ubuntu.md
         tutorials/kubernetes_cluster.md
         tutorials/ubuntu.md
     {: .navgroup-end}
