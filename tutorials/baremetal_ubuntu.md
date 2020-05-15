@@ -29,39 +29,6 @@ To configure a Linux Ubuntu bare metal server to forward metrics to an {{site.da
 {:shortdesc}
 
 
-
-
-Monitoring your Linux servers is critical as they represent the basis of your infrastructure. You need to know immediately when there is a sudden change in CPU or memory usage that could affect the performance of your applications. 
-    CPU – It is crucial to monitor CPU, as it can reach a high utilization rate and temperature. It can have multiple cores, but an application can be directed to only one of these cores, pointing to a dangerous hardware behavior.
-    Load – This specifies whether the CPU is being used, how much is being executed, and how long it has been running.
-    Disk Capacity and IO – Disk capacity is especially important when it comes to image servers, files, and VMs, as it can directly affect system shutdown, corrupt the operating system, or cause extreme IO slowness. Along with disk monitoring, it’s possible to plan for an eventual change or addition of a disk, and to verify the behavior of a disk that demonstrates signs of hardware failure.
-    Network – When it comes to DNS, DHCP, firewall, file server, and proxy, it is extremely important to monitor network performance as input and output of data packets. With network performance logs, you can measure the utilization of the card, and create a plan to suit the application according to the use of the network.
-    Memory – Memory monitoring in other components determines the immediate stop of a system due to memory overflow or misdirection for a single application.
-    Swap – This is virtual memory created by the system and allocated to disk to be used when necessary. Its high utilization can indicate that the amount of memory for the server is insufficient.
-
-With this information from Linux systems, you can have good monitoring and a team that can act immediately on downtime that can paralyze critical systems.
-
-    Load average
-    CPU utilization - overall CPU usage, CPU usage by cores, interrupts and context switches, CPU idle time, nice time, wait time, steal time, system time, hardware & software interrupts time, user space time
-    Memory utilization - overall memory usage, swap memory utilization, used memory utilization, memory pages (In/Out/Fault), installed memory
-    Memory break-up - free physical memory (MB), free swap memory (MB)
-    Disk idle and busy percentage
-    Disk usage with capacity plan
-    Recent events
-    Top process by CPU and memory
-    System statistics including login count, total services and processes running
-    Processes - stats on CPU and memory usage, thread and handle count, and the number of instances
-    Disks - Average and individual disk usage, disk partition details, disk (I/O)
-    Network stats on data sent and received, input and output traffic, bandwidth, packets sent and received, error packets
-    Resource Checks - monitor files, directories, syslogs, URLs and ports
-
-health of the hardware for your bare metal instances, including components such as the CPU, motherboard, DIMM, and NVMe drives. 
-A fault has been detected in one or more CPUs
-A fault in the memory subsystem was detected during instance launch or a recent reboot
-A fault in the memory subsystem was detected
-A fault in the instance management controller has been detected
-A fault in the PCI subsystem has been detected
-
 ## Before you begin
 {: #baremetal_ubuntu_prereqs}
 
