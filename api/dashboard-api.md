@@ -6,7 +6,7 @@ lastupdated: "2020-05-13"
 
 keywords: Sysdig, IBM Cloud, monitoring, dashboard, api
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
