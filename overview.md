@@ -6,7 +6,7 @@ lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -37,15 +37,15 @@ Before you provision an instance, consider the following information:
 
 You provision an instance within the context of a resource group. You use a resource group to organize your services for access control and billing purposes. You can provision the {{site.data.keyword.mon_full_notm}} instance in the *default* resource group or in a custom resource group.
 
-When you [provision an instance](/docs/Monitoring-with-Sysdig?topic=Sysdig-provision#provision), you automatically get an ingestion key, known as the [Sysdig access key](/docs/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key).
+When you [provision an instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision), you automatically get an ingestion key, known as the [Sysdig access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
 
 After you provision an instance, you must configure an {{site.data.keyword.mon_full_notm}} agent for each metric source. A metric source is a cloud resource that you want to monitor and control its performance and health. You must configure an {{site.data.keyword.mon_full_notm}} agent in each environment that you want to monitor. For example, a metric source can be a Kubernetes cluster. You use the access key to configure the Sysdig agent that is responsible for collecting and forwarding metric data to your instance.
 
-The agent can be configured to push metrics to Sysdig via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints) section.
+The agent can be configured to push metrics to Sysdig via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints) section.
 
 After the {{site.data.keyword.mon_full_notm}} agent is deployed in a metric source, collection and forwarding of metrics to the instance is automatic. The {{site.data.keyword.mon_full_notm}} agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in an environment.
 
-You can [monitor](/docs/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring), and [manage](/docs/Monitoring-with-Sysdig?topic=Sysdig-manage#manage)  data through the {{site.data.keyword.mon_full_notm}} Web UI.  
+You can [monitor](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitoring#monitoring), and [manage](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-manage#manage)  data through the {{site.data.keyword.mon_full_notm}} Web UI.  
 
 The following figure shows the components overview for the {{site.data.keyword.mon_full_notm}} service that is running on {{site.data.keyword.cloud_notm}}:
 
@@ -63,7 +63,7 @@ You can configure the Sysdig agent to connect to the monitoring instance via the
 
 By default, you connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. To configure an agent to send metrics by using a public endpoint, the environment where the agent is running requires internet access to use the public endpoint.
 
-You can enable virtual routing and forwarding (VRF) to move IP routing for your account and all of its resources into a separate routing table. If VRF is enabled, you can then enable {{site.data.keyword.cloud_notm}} service endpoints to connect directly to resources without using the public network. To configure an agent to send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. Once the account is VRF and service endpoint enabled, the Sysdig agent can be configured to use the private network by using the [Private Endpoint](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion) as the ingestion URL.
+You can enable virtual routing and forwarding (VRF) to move IP routing for your account and all of its resources into a separate routing table. If VRF is enabled, you can then enable {{site.data.keyword.cloud_notm}} service endpoints to connect directly to resources without using the public network. To configure an agent to send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. Once the account is VRF and service endpoint enabled, the Sysdig agent can be configured to use the private network by using the [Private Endpoint](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion) as the ingestion URL.
 * Private endpoints are not accessible from the public internet. 
 * All traffic is routed to the {{site.data.keyword.cloud_notm}} private network. 
 
@@ -102,7 +102,7 @@ The roll-up policy describes the granularity of the data over time:
 ## Data deletion
 {: #overview_data_deletion}
 
-When you delete an instance of {{site.data.keyword.mon_full_notm}} from the {{site.data.keyword.cloud_notm}}, you must open a case through support to request the data to be  deleted. For more information, see [contacting support](/docs/Monitoring-with-Sysdig?topic=Sysdig-gettinghelp#gettinghelp).
+When you delete an instance of {{site.data.keyword.mon_full_notm}} from the {{site.data.keyword.cloud_notm}}, you must open a case through support to request the data to be  deleted. For more information, see [contacting support](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-gettinghelp#gettinghelp).
 
 When you delete a capture, the data file for that capture is automatically deleted.
 
@@ -134,7 +134,7 @@ The following list outlines {{site.data.keyword.mon_full_notm}} agents that are 
 * {{site.data.keyword.mon_full_notm}} agent for Mesos, Marathon, and DCOS.
 * {{site.data.keyword.mon_full_notm}} agent for manual Linux installations.
 
-For more information, see [Configuring a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Sysdig-config_agent#config_agent) and [Removing a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Sysdig-remove#remove).
+For more information, see [Configuring a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent#config_agent) and [Removing a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove#remove).
 
 
 ## Viewing usage
@@ -146,7 +146,7 @@ To monitor the usage and costs of your service, see [Viewing your usage](/docs/b
 ## Service plans
 {: #overview_plans}
 
-Different pricing plans are available for an {{site.data.keyword.mon_full_notm}} instance. [Learn more](/docs/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
+Different pricing plans are available for an {{site.data.keyword.mon_full_notm}} instance. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans#pricing_plans).
 
 
 ## Security considerations

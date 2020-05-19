@@ -6,7 +6,7 @@ lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, dashboards
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -60,11 +60,11 @@ The following table lists the different types of pre-defined dashboards:
 
 | Type | Description | More information | 
 |------|-------------|------------------|
-| Applications | Dashboards that you can use to monitor your applications and infrastructure components.  | [Application dashboards](/docs/Monitoring-with-Sysdig?topic=Sysdig-default_dashboards#default_dashboards_applications) |
-| Host and containers | Dashboards that you can use to monitor resource utilization and system activity on your hosts and in your containers. | [Host and container dashboards](/docs/Monitoring-with-Sysdig?topic=Sysdig-default_dashboards#default_dashboards_host_container) |
-| Network | Dashboards that you can use to monitor your network connections and activity. | [Network dashboards](/docs/Monitoring-with-Sysdig?topic=Sysdig-default_dashboards#default_dashboards_network) |
-| Service | Dashboards that you can use to monitor the performance of your services, even if those services are deployed in orchestrated containers. | [Service dashboards](/docs/Monitoring-with-Sysdig?topic=Sysdig-default_dashboards#default_dashboards_service) |
-| Topology | Dashboards that you can use to monitor the logical dependencies of your application tiers and overlay metrics. | [Topology dashboards](/docs/Monitoring-with-Sysdig?topic=Sysdig-default_dashboards#default_dashboards_topology) |
+| Applications | Dashboards that you can use to monitor your applications and infrastructure components.  | [Application dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-default_dashboards#default_dashboards_applications) |
+| Host and containers | Dashboards that you can use to monitor resource utilization and system activity on your hosts and in your containers. | [Host and container dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-default_dashboards#default_dashboards_host_container) |
+| Network | Dashboards that you can use to monitor your network connections and activity. | [Network dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-default_dashboards#default_dashboards_network) |
+| Service | Dashboards that you can use to monitor the performance of your services, even if those services are deployed in orchestrated containers. | [Service dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-default_dashboards#default_dashboards_service) |
+| Topology | Dashboards that you can use to monitor the logical dependencies of your application tiers and overlay metrics. | [Topology dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-default_dashboards#default_dashboards_topology) |
 {: caption="Table 1. List of pre-defined dashboards" caption-side="top"} 
 
 
@@ -220,14 +220,14 @@ Use the Sysdig REST API to automate routine tasks and monitor notifications. You
 **Note:** The Python library exposes part of the Sysdig REST API functionality. 
 
 
-When you use the API from your custom scripts or programs, you must use a Sysdig token to authenticate with the {{site.data.keyword.mon_full_notm}} instance. For more information, see [Working with API tokens](/docs/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token).
+When you use the API from your custom scripts or programs, you must use a Sysdig token to authenticate with the {{site.data.keyword.mon_full_notm}} instance. For more information, see [Working with API tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token).
 
 
 | Task                    | Using REST API                |
 |-------------------------|-------------------------------|
-| Create a dashboard      | [Creating a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Sysdig-api#api_create_dashboard) |
-| Delete a dashboard      | [Deleting a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Sysdig-api#api_delete_dashboard) |
-| Saving dashboards       | [Saving the dashboards of a team by using the API](/docs/Monitoring-with-Sysdig?topic=Sysdig-api#api_save_dashboard) |
+| Create a dashboard      | [Creating a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_create_dashboard) |
+| Delete a dashboard      | [Deleting a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_delete_dashboard) |
+| Saving dashboards       | [Saving the dashboards of a team by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_save_dashboard) |
 {: caption="Table 4. Tasks to manage dashboards programmatically" caption-side="top"} 
 
 

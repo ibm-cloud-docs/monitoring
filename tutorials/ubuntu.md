@@ -6,7 +6,7 @@ lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -41,7 +41,7 @@ You view metrics via Sysdig's web-based user interface.
 
 Work in the US-South region. 
 
-Read about {{site.data.keyword.mon_full_notm}}. For more information, see [About](/docs/Monitoring-with-Sysdig?topic=Sysdig-about#about).
+Read about {{site.data.keyword.mon_full_notm}}. For more information, see [About](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-about#about).
 
 Use a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
@@ -83,14 +83,14 @@ To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{si
 
     By default, the **Lite** plan is set.
 
-    For more information about other service plans, see [Pricing plans](/docs/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans#pricing_plans).
+    For more information about other service plans, see [Pricing plans](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans#pricing_plans).
 
 9. To provision the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}} resource group where you are logged in, click **Create**.
 
 After you provision an instance, the *Observability* dashboard opens. 
 
 
-**Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_cli).
+**Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_cli).
 
 
 ## Step 2. Configure your Ubuntu server to send metrics to your instance
@@ -109,9 +109,9 @@ Complete the following steps from the command line:
 
     Select the account where the {{site.data.keyword.mon_full_notm}} instance is available.
 
-2. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
+2. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
-3. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
+3. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 4. Deploy the Sysdig agent. Run the following command:
 
@@ -128,7 +128,7 @@ Complete the following steps from the command line:
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example, *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
-    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
+    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 
 If the Sysdig agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the Sysdig agent.
 
@@ -191,9 +191,9 @@ For example, to configure color-coding for a column, complete the following step
 ## Next steps
 {: #ubuntu_next_steps}
 
-Create a custom dashboard. For more information, see [Working with dashboards](/docs/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards).
+Create a custom dashboard. For more information, see [Working with dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards).
 
-You can also learn about alerts. For more information, see [Working with alerts](/docs/Monitoring-with-Sysdig?topic=Sysdig-monitoring#monitoring_alerts). 
+You can also learn about alerts. For more information, see [Working with alerts](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitoring#monitoring_alerts). 
 
 
 

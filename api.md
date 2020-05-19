@@ -6,7 +6,7 @@ lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, sysdig rest api
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -33,7 +33,7 @@ Use the Sysdig REST API to automate routine tasks and monitor notifications.
 ## Authenticating with the Sysdig API
 {: #api_1}
 
-You can use IAM tokens or Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. For more information, see [Working With API Tokens](/docs/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
+You can use IAM tokens or Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. For more information, see [Working With API Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
 
 When you use the Sysdig REST API from your custom scripts or programs, use an IAM token to authenticate with the {{site.data.keyword.mon_full_notm}} instance. 
 {: tip}

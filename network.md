@@ -6,7 +6,7 @@ lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, network traffic, firewall
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -47,7 +47,7 @@ For example, you might have the following requirements when you are working in t
 
 When you have these requirements, you should move from the public network to the private network. You should consider connecting the Sysdig agent over the private network. 
 
-You can enable virtual routing and forwarding (VRF) to move IP routing for your account and all of its resources into a separate routing table. If VRF is enabled, you can then enable {{site.data.keyword.cloud_notm}} service endpoints to connect directly to resources without using the public network. To configure an agent to send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. Once the account is VRF and service endpoint enabled, the Sysdig agent can be configured to use the private network by using the [Private Endpoint](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints) as the ingestion URL.
+You can enable virtual routing and forwarding (VRF) to move IP routing for your account and all of its resources into a separate routing table. If VRF is enabled, you can then enable {{site.data.keyword.cloud_notm}} service endpoints to connect directly to resources without using the public network. To configure an agent to send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. Once the account is VRF and service endpoint enabled, the Sysdig agent can be configured to use the private network by using the [Private Endpoint](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints) as the ingestion URL.
 * Private endpoints are not accessible from the public internet. 
 * All traffic is routed to the {{site.data.keyword.cloud_notm}} private network. 
 * Services like {{site.data.keyword.mon_full_notm}} are no longer served on an internet routable IP address.
