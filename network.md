@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-05-21"
 
 keywords: Sysdig, IBM Cloud, monitoring, network traffic, firewall
 
@@ -70,12 +70,12 @@ To send metric data to the {{site.data.keyword.mon_full_notm}} service, you must
 
 | Region      | Ingestion endpoint                                   | Private IP addresses                              |   Ports   |
 |-------------|------------------------------------------------------|---------------------------------------------------|-----------|
-| `US South`  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123   | TCP 6443  | 
-| `EU DE`     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16     | TCP 6443  | 
-| `EU GB`     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.20 </br>166.9.36.7                       |  TCP 6443 |
-| `JP TOK`    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.40.25 </br>166.9.42.8 </br>166.9.44.2       | TCP 6443  | 
-| `US East`   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.6 </br>166.9.20.39 </br>166.9.24.21      | TCP 6443  | 
-| `AU SYD`    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.54.2 </br>166.9.52.10  </br>166.9.56.24     |  TCP 6443 |
+| `US South`  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170 </br>166.9.13.52 </br>166.9.17.11   | TCP 6443  | 
+| `EU DE`     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51 </br>166.9.30.53 </br>166.9.28.71     | TCP 6443  | 
+| `EU GB`     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56 </br>166.9.36.71                       |  TCP 6443 |
+| `JP TOK`    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38 </br>166.9.40.35 </br>166.9.42.48       | TCP 6443  | 
+| `US East`   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50 </br>166.9.24.43 </br>166.9.20.53      | TCP 6443  | 
+| `AU SYD`    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32 </br>166.9.52.27  </br>166.9.54.27     |  TCP 6443 |
 {: caption="Table 1. Private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 {: #endpoints-table-1}
 {: tab-title="Private endpoints"}
@@ -97,6 +97,8 @@ To send metric data to the {{site.data.keyword.mon_full_notm}} service, you must
 {: tab-group="endpoints"}
 {: class="simple-tab-table"}
 {: row-headers}
+
+
 
 
 ### Access to the web UI through a public endpoint

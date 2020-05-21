@@ -17,7 +17,7 @@ IBM Cloud Monitoring with Sysdig
     monitoring.md
 
     {: .topicgroup}
-    Integrations
+    Monitoring environments
         windows.md
         baremetal_ubuntu.md
         kubernetes_cluster.md
