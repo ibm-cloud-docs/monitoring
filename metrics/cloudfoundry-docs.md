@@ -6,7 +6,7 @@ lastupdated: "2020-04-27"
 
 keywords: Sysdig, IBM Cloud, monitoring, service, CF, cf
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -34,8 +34,8 @@ subcollection: Sysdig
 Platform metrics are metrics that are exposed by enabled-Sysdig resources in {{site.data.keyword.cloud_notm}}. You must configure a Sysdig instance in a region to monitor these metrics.
 
 You can configure only 1 instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics. 
-* To configure the Sysdig instance, you must set the *platform metrics* configuration setting. [Learn more](/docs/Monitoring-with-Sysdig?topic=Sysdig-platform_metrics_enabling).
-* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig resources are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Sysdig-cloud_services).
+* To configure the Sysdig instance, you must set the *platform metrics* configuration setting. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
+* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig resources are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
 
 To monitor Cloud Foundry (CF) apps, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where your apps are running.
 {: important}
@@ -49,7 +49,7 @@ To monitor CF apps, you must launch the Sysdig web UI in the region where your C
 
 Complete the following steps to launch the Sysdig web UI from the *Observability* page and open the pre-defined CF dashboard:
 
-1.[Launch the Sysdig web UI](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch).
+1.[Launch the Sysdig web UI](/docs/services/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 2. Select **DASHBOARDS**.
 3. In the **Default Dashboards** section, expand **IBM**.
 4. Choose the pre-defined CF dashboard **Overview CF apps** from the list.
@@ -58,8 +58,8 @@ Complete the following steps to launch the Sysdig web UI from the *Observability
 {: #view_metrics}
 
 You cannot customize a pre-defined CF dashboard. To be able to monitor CF apps, you must complete the following steps:
-1. [Copy the pre-defined dashboard](/docs/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_copy). 
-2. [Change the scope of the new dashboard](/docs/Monitoring-with-Sysdig?topic=Sysdig-dashboards#dashboards_scope).
+1. [Copy the pre-defined dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_copy). 
+2. [Change the scope of the new dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_scope).
 
     You can change the scope for all the metrics that are included in the dashboard. You can also change the scope of each metric.
 

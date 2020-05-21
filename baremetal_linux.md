@@ -6,7 +6,7 @@ lastupdated: "2020-05-15"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -33,7 +33,7 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 ## Before you begin
 {: #baremetal_linux_prereqs}
 
-Read about {{site.data.keyword.mon_full_notm}}. For more information, see [About](/docs/Monitoring-with-Sysdig?topic=Sysdig-about#about).
+Read about {{site.data.keyword.mon_full_notm}}. For more information, see [About](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-about#about).
 
 Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 
@@ -42,7 +42,7 @@ Read about [Sysdig integration with Prometheus![External link icon](../icons/lau
 ## Step 1. Provision an {{site.data.keyword.mon_full_notm}} instance
 {: #baremetal_linux_step1}
 
-[Provision an {{site.data.keyword.mon_full_notm}} instance from the catalog](/docs/Monitoring-with-Sysdig?topic=Sysdig-provision#provision_ui).
+[Provision an {{site.data.keyword.mon_full_notm}} instance from the catalog](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_ui).
 
 ## Step 2. Provision a bare metal server
 {: #baremetal_linux_step2}
@@ -118,9 +118,9 @@ Complete the following steps from the command line to install a Sysdig agent:
 
     Select the account where the {{site.data.keyword.mon_full_notm}} instance is available.
 
-2. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Sysdig-access_key#access_key_ibm_cloud_ui).
+2. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
-3. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_ingestion).
+3. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 4. Deploy the Sysdig agent. Run the following command:
 
@@ -137,7 +137,7 @@ Complete the following steps from the command line to install a Sysdig agent:
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example, *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
-    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Sysdig-captures#captures).
+    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 
     If `cURL` is not available, you must install it. For example, for an Ubuntu bare metal, run the following command: `sudo apt-get update`. Then, run the install command: `sudo apt-get install curl`.
 

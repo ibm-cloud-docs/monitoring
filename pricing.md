@@ -6,7 +6,7 @@ lastupdated: "2020-02-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, pricing
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -62,7 +62,7 @@ There is no time-series allotment for platform metrics. These time-series are pr
 
 
 
-Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/Monitoring-with-Sysdig?topic=Sysdig-about#overview_collection) and [data retention](/docs/Monitoring-with-Sysdig?topic=Sysdig-about#overview_retention).
+Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-about#overview_collection) and [data retention](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-about#overview_retention).
 
 
 ## Checking your usage

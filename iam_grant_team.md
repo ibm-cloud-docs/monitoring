@@ -6,7 +6,7 @@ lastupdated: "2020-02-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, iam, access groups
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -80,7 +80,7 @@ Complete the following steps to assign a policy to an access group through the U
 5. Select **Assign access to resources**.
 6. In the *Service Instance* section, select 1 instance.
 7. In the *Sysdig Team* section, choose 1 team.
-5. Select a service role. [Learn more about the roles that you need](/docs/Monitoring-with-Sysdig?topic=Sysdig-iam).
+5. Select a service role. [Learn more about the roles that you need](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam).
 6. Click **Assign**.
 
 ### Add team policy to manage data through the CLI

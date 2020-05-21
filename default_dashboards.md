@@ -6,7 +6,7 @@ lastupdated: "2020-01-29"
 
 keywords: Sysdig, IBM Cloud, monitoring,  predefined dashboards
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 

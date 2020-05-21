@@ -6,7 +6,7 @@ lastupdated: "2020-02-03"
 
 keywords: Sysdig, IBM Cloud, monitoring, service, cloud foundry, cf
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -33,7 +33,7 @@ subcollection: Sysdig
 
 You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics. 
 * To configure the Sysdig instance, you must set on the *platform metrics* configuration setting. 
-* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Sysdig-cloud_services).
+* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
 
 To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.messagehub}} instance is provisioned.
 {: important}
@@ -97,7 +97,7 @@ Complete the following steps to launch the Sysdig web UI from the {{site.data.ke
 
 Complete the following steps to launch the Sysdig web UI from the *Observability* page:
 
-1.[Launch the Sysdig web UI.](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-launch)
+1.[Launch the Sysdig web UI.](/docs/services/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch)
 2. Select **DASHBOARDS**.
 3. In the **Default Dashboards** section, expand **IBM**.
 4. Choose the {{site.data.keyword.messagehub}} dashboard from the list.
