@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-05-22"
 
 keywords: Sysdig, IBM Cloud, monitoring, manage
 
@@ -21,7 +21,7 @@ subcollection: Monitoring-with-Sysdig
 {:important: .important}
 {:note: .note}
 
-# Managing data
+# Organizing metric data
 {: #manage}
 
 Use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. Customize how data is aggregated when you configure a graph or create an alert for a metric. Set the scope of a dashboard, a panel, or an alert to filter out data points. Restrict access to data by managing users' data access through teams. 
@@ -159,13 +159,12 @@ By default, a **Monitor Operations** team is predefined for each {{site.data.key
 * This team cannot be deleted.
 * Users are automatically added as members of this team and granted full visibility on all the resources that are available in the instance. 
 
-**Note:** 
-* An administrator must switch to the *Monitor Operations* team to create teams or change the settings for others teams.
-* After a user logs in to the {{site.data.keyword.cloud_notm}} and launches the Sysdig web UI, an administrator can manage that user in the Sysdig web UI. The user is created in the Sysdig database when the user logs in to the Sysdig web UI for the first time. 
+An administrator must switch to the *Monitor Operations* team to create teams or change the settings for others teams.
+{: note}
 
 An administrator can do any of the following actions to restrict the viewing permissions of a user:
 * Change the user's role in the default *Monitor Operations* team to *Read* User. 
-* Create a default team with limited scope and visibility. Then, manually assign users to other teams. 
+* Create a default team with limited scope and visibility. Then, grant permissions to users to work in other teams. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team).
 
 The following table lists the tasks that you can run when you work with teams:
 
@@ -173,7 +172,7 @@ The following table lists the tasks that you can run when you work with teams:
 |---------------------------------------------------------------------------------|-----------------------------|
 | [Creating a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams#teams_create)      | Create a team to control data visibility.  |
 | [Deleting a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams#teams_delete)      | Delete a team. </br>**Note:** When you delete a team, users that belong only to this team are moved to the default team. |
-| [Adding team members](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams#teams_users)   | Add more users to a team. |
+| [Grant permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team) | Grant a user or service ID administration permissions. | 
 | [Edit a team ](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams#teams_scope)          | Change the scope of the data that is visible to users that are members of a team.  |
 {: caption="Table 5. Tasks to work with teams" caption-side="top"} 
 

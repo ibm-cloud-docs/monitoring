@@ -6,17 +6,23 @@ IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="learn"}
     getting-started.md
-    overview.md
-    manage.md
-    monitoring.md
-    network.md
-    iam.md
 
     {: .topicgroup}
-    Integrations
+    Monitoring infrastructure
         windows.md
-        tutorials/kubernetes_cluster.md
-        tutorials/ubuntu.md
+        baremetal_linux.md
+        kubernetes_cluster.md
+        ubuntu.md
+
+    {: .topicgroup}
+    Monitoring IBM Cloud services
+        platform_metrics_enabling.md
+        cloud_services.md
+        cloud_services_locations.md
+
+    overview.md
+    network.md
+    iam.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -24,33 +30,54 @@ IBM Cloud Monitoring with Sysdig
     remove.md
 
     {: .topicgroup}
-    Platform Metrics
-        platform_metrics_enabling.md
-        cloud_services.md
-        cloud_services_locations.md
-
-    {: .topicgroup}
     Sysdig Agent
         config_agent.md
         remove_agent.md
+        access_key.md
         change_kube_agent.md
         change_linux_agent.md
         change_container_agent.md
 
     launch.md
-    groups.md
-    access_key.md
-    api_token.md
-    [Working with alerts](https://docs.sysdig.com/en/alerts.html)
-    [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
-    dashboards.md
-    panels.md
-    metrics.md
-    notifications.md
-    teams.md
-    iam_grant.md
-    iam_grant_team.md
-    captures.md
+    manage.md
+
+    {: .topicgroup}
+    IAM integration
+        api_token.md
+        iam_grant.md
+        iam_grant_team.md
+
+    manage.md
+    network.md
+
+    {: .topicgroup}
+    Metrics
+        metrics.md
+        groups.md
+
+    {: .topicgroup}
+    Dashboards
+        dashboards.md
+        panels.md
+        default_dashboards.md
+
+    {: .topicgroup}
+    Alerts
+        [Working with alerts](https://docs.sysdig.com/en/alerts.html)
+        notifications.md
+
+    {: .topicgroup}
+    Events
+        [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
+
+    {: .topicgroup}
+    Captures
+        captures.md
+
+    {: .topicgroup}
+    Teams
+        teams.md
+
     api.md
     {: .navgroup-end}
 
@@ -58,6 +85,7 @@ IBM Cloud Monitoring with Sysdig
     endpoints.md
     pricing.md
     default_dashboards.md
+    monitoring.md
 
     {: .topicgroup}
     Cloud services metrics

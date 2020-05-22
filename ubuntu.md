@@ -22,7 +22,7 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 
 
-# Analyze metrics for an Ubuntu host
+# Monitoring a Linux host
 {: #ubuntu}
 
 Use this tutorial to learn how to configure an Ubuntu host to forward metrics to the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}.

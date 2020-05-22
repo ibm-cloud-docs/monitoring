@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-05-22"
 
 keywords: Sysdig, IBM Cloud, monitoring, kubernetes, analyze metrics
 
@@ -22,7 +22,7 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 
 
-# Analyzing metrics for an app that is deployed in a Kubernetes cluster
+# Monitoring a Kubernetes cluster
 {: #kubernetes_cluster}
 
 Use this tutorial to learn how to configure an {{site.data.keyword.containerlong}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.
