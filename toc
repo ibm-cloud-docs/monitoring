@@ -73,6 +73,15 @@ IBM Cloud Monitoring with Sysdig
     Teams
         teams.md
 
+    {: .topicgroup}
+    REST API
+        api/api.md
+        api/dashboard-api.md
+        api/alerting-api.md
+        api/notifications-api.md
+        api/metrics-query-api.md
+        api/downtimes-api.md
+        
     api.md
     {: .navgroup-end}
 
