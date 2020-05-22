@@ -8,36 +8,41 @@ IBM Cloud Monitoring with Sysdig
     getting-started.md
 
     {: .topicgroup}
-    IBM Platform metrics
-        platform_metrics_enabling.md
-        cloud_services.md
-        cloud_services_locations.md
-
-    manage.md
-    monitoring.md
-
-    {: .topicgroup}
-    Monitoring environments
+    Monitoring infrastructure
         windows.md
         baremetal_ubuntu.md
         kubernetes_cluster.md
         ubuntu.md
+
+    {: .topicgroup}
+    Monitoring IBM Cloud services
+        platform_metrics_enabling.md
+        cloud_services.md
+        cloud_services_locations.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     provision.md
     remove.md
+
+    {: .topicgroup}
+    Sysdig Agent
+        config_agent.md
+        remove_agent.md
+        access_key.md
+        change_kube_agent.md
+        change_linux_agent.md
+        change_container_agent.md
+
     launch.md
 
     {: .topicgroup}
-    Enhancing security for IBM Cloud Monitoring with Sysdig
-        at_events.md
-        data-security.md
-        iam.md
-        ha-dr.md
-        service-connection.md
-        architecture-workload-isolation.md
+    IAM integration
+        api_token.md
+        iam_grant.md
+        iam_grant_team.md
 
+    manage.md
     network.md
 
     {: .topicgroup}
@@ -45,14 +50,6 @@ IBM Cloud Monitoring with Sysdig
         metrics.md
         groups.md
 
-    {: .topicgroup}
-    Sysdig Agent
-        config_agent.md
-        remove_agent.md
-        change_kube_agent.md
-        change_linux_agent.md
-        change_container_agent.md
- 
     {: .topicgroup}
     Dashboards
         dashboards.md
@@ -73,13 +70,10 @@ IBM Cloud Monitoring with Sysdig
         captures.md
 
     {: .topicgroup}
-    Security
-        access_key.md
-        api_token.md
+    Teams
         teams.md
-        iam_grant.md
-        iam_grant_team.md
-        api.md
+
+    api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -87,11 +81,20 @@ IBM Cloud Monitoring with Sysdig
     pricing.md
     shared-responsibilities.md
     default_dashboards.md
-    at-events.md
+    monitoring.md
 
     {: .topicgroup}
     Cloud services metrics
         metrics/cloudfoundry-docs.md
+
+    {: .topicgroup}
+    Enhancing security for IBM Cloud Monitoring with Sysdig
+        at_events.md
+        data-security.md
+        iam.md
+        ha-dr.md
+        service-connection.md
+        architecture-workload-isolation.md
 
     [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
