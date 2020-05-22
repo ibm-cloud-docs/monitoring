@@ -23,6 +23,9 @@ subcollection: Monitoring-with-Sysdig
 
 # Dashboard API Operations
 
+For dashboard operations, see [Working with Dashboards](https://docs.sysdig.com/en/working-with-dashboards.html).
+For saving and backing up dashboards, see [Save and Restore Dashboards](https://docs.sysdig.com/en/save-and-restore-dashboards-with-scripts.html).
+
 ## Working with cURL
 {: #curl-guide}
 
