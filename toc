@@ -20,9 +20,6 @@ IBM Cloud Monitoring with Sysdig
         cloud_services.md
         cloud_services_locations.md
 
-    overview.md
-    network.md
-    iam.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -49,6 +46,7 @@ IBM Cloud Monitoring with Sysdig
 
     manage.md
     network.md
+    iam.md
 
     {: .topicgroup}
     Metrics
@@ -86,6 +84,7 @@ IBM Cloud Monitoring with Sysdig
     pricing.md
     default_dashboards.md
     monitoring.md
+    overview.md
 
     {: .topicgroup}
     Cloud services metrics
