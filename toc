@@ -10,7 +10,7 @@ IBM Cloud Monitoring with Sysdig
     {: .topicgroup}
     Monitoring infrastructure
         windows.md
-        baremetal_ubuntu.md
+        baremetal_linux.md
         kubernetes_cluster.md
         ubuntu.md
 
