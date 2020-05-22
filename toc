@@ -37,16 +37,14 @@ IBM Cloud Monitoring with Sysdig
 
     launch.md
     manage.md
+    network.md
 
     {: .topicgroup}
     IAM integration
+        iam.md
         api_token.md
         iam_grant.md
         iam_grant_team.md
-
-    manage.md
-    network.md
-    iam.md
 
     {: .topicgroup}
     Metrics
