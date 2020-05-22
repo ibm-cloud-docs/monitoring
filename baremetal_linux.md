@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-05-15"
+lastupdated: "2020-05-22"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -22,45 +22,38 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 
 
-# Configure a Linux Ubuntu bare metal server
-{: #baremetal_ubuntu}
+# Monitoring a Linux bare metal server
+{: #baremetal_linux}
 
-To configure a Linux Ubuntu bare metal server to forward metrics to an {{site.data.keyword.mon_full_notm}} instance, you must install a Sysdig agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The Sysdig agent acts as a data collector. It automatically collects metrics. You view metrics via Sysdig's web-based user interface.
+You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by configuring a Sysdig agent in your server. The Sysdig agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The Sysdig agent acts as a data collector. It automatically collects metrics. You view metrics via Sysdig's web-based user interface.
 {:shortdesc}
 
 
+
 ## Before you begin
-{: #baremetal_ubuntu_prereqs}
+{: #baremetal_linux_prereqs}
 
-Read about {{site.data.keyword.mon_full_notm}}. For more information, see [About](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-about#about).
+1. [Read about {{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started).
 
-Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
+2. Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 
-Read about [Sysdig integration with Prometheus![External link icon](../icons/launch-glyph.svg "External link icon") ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/integrate-prometheus-metrics.html){: new_window}.
+3. [Provision an {{site.data.keyword.mon_full_notm}} instance from the catalog](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_ui).
 
-## Step 1. Provision an {{site.data.keyword.mon_full_notm}} instance
-{: #baremetal_ubuntu_step1}
+4. [Provision a bare metal server](/docs/bare-metal?topic=bare-metal-getting-started). 
 
-[Provision an {{site.data.keyword.mon_full_notm}} instance from the catalog](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_ui).
+    To complete the steps in this topic, ensure you have internet access from the bare metal. This is needed for configuring the Sysdig agent.
 
-## Step 2. Provision a bare metal server
-{: #baremetal_ubuntu_step2}
+5. Configure a VPN connection between your terminal and the bare metal server  
 
-[Provision a bare metal server](/docs/bare-metal?topic=bare-metal-getting-started).
+    Virtual Private Networking (VPN) access enables users to manage all servers remotely and securely over the {{site.data.keyword.cloud}} private network. A VPN connection from your location to the private network allows out-of-band management and server rescue through an encrypted VPN tunnel. VPN tunnels can be initiated to any IBM Cloud data center or PoP allowing you geographic redundancy. 
 
-Ensure you have internet access from the bare metal. This is needed for configuring the Sysdig agent.
+    Complete the following steps to configure a VPN connection between your terminal and the bare metal server:
 
-
-## Step 3. Configure a VPN connection between your terminal and the bare metal server
-{: #baremetal_ubuntu_step3}
-
-Virtual Private Networking (VPN) access enables users to manage all servers remotely and securely over the {{site.data.keyword.cloud}} private network. A VPN connection from your location to the private network allows out-of-band management and server rescue through an encrypted VPN tunnel. VPN tunnels can be initiated to any IBM Cloud data center or PoP allowing you geographic redundancy. 
-
-Complete the following steps to configure a VPN connection between your terminal and the bare metal server:
-
-1. [Enable VPN access on each account that needs VPN access](/docs/iaas-vpn?topic=iaas-vpn-getting-started#enable-user-vpn-access).
-2. Depending on your operating system, download the latest `MotionPro` 32-bit or 64-bit files from the Array Networks [Clients and Tools](https://support.arraynetworks.net/prx/001/http/supportportal.arraynetworks.net/downloads/downloads.html) download site. [Learn more](/docs/iaas-vpn?topic=iaas-vpn-standalone-vpn-clients).
-3. Configure a standalone SSL VPN client and open a connection:
+    1. [Enable VPN access on each account that needs VPN access](/docs/iaas-vpn?topic=iaas-vpn-getting-started#enable-user-vpn-access).
+    
+    2. Depending on your operating system, download the latest `MotionPro` 32-bit or 64-bit files from the Array Networks [Clients and Tools](https://support.arraynetworks.net/prx/001/http/supportportal.arraynetworks.net/downloads/downloads.html) download site. [Learn more](/docs/iaas-vpn?topic=iaas-vpn-standalone-vpn-clients).
+    
+    3. Configure a standalone SSL VPN client and open a connection:
 
     For example, if you use the MotionPro Plus client for MacOS, to add a profile, click **Add**. 
     
@@ -68,63 +61,57 @@ Complete the following steps to configure a VPN connection between your terminal
 
     To open a secure connection, click **Login**.
 
+6. Connect to a bare metal server by using SSH
 
-## Step 4. Connect to a bare metal server by using SSH
-{: #baremetal_ubuntu_step4}
+    You may require a VPN to access your system depending on your security setup and `ssh` configuration on the bare metal host.
 
-Complete the following steps to get the bare metal information that you need to SSH into the server:
+    You must `ssh` to the host by using your credentials, or the root credentials that are available from the {{site.data.keyword.cloud_notm}} Console.  
+    
+    You will require root permissions in order to install the Sysdig agent.
 
-1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+    For example, you can complete the following steps to get the bare metal information that you need to SSH into the server:
 
-2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Classic Infrastructure** &gt; **Device List**.
+    1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
-3. Identify the bare metal server that you want to monitor. Copy the **Public IP**.
+    2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Classic Infrastructure** &gt; **Device List**.
 
-4. Click the bare metal server device name. 
+    3. Identify the bare metal server that you want to monitor. Copy the **Public IP**.
 
-5. Select **Passwords**. Copy the password for the **root** user.
+    4. Click the bare metal server device name. 
+
+    5. Select **Passwords**. Copy the password for the **root** user.
+
+    Then, from a terminal, run the following command:
+
+    ```
+    ssh <USER_ID>@<IP_ADDRESS>
+    ```
+    {: pre}
+
+    Where
+
+    `<USER_ID>` is the user ID that you use to log in to the bare metal server. For example, use `root`.
+
+    `<IP_ADDRESS>` is the public IP address of the bare metal server.
+
+    For example, you can use the following ssh command: `root@45.123.122.12`
 
 
-Then, from a terminal, run the following command:
-
-```
-ssh <USER_ID>@<IP_ADDRESS>
-```
-{: pre}
-
-Where
-
-`<USER_ID>` is the user ID that you use to log in to the bare metal server. For example, use `root`.
-
-`<IP_ADDRESS>` is the public IP address of the bare metal server.
-
-For example, you can use the following ssh command: `root@45.123.122.12`
-
-
-## Step 5. Configure a Sysdig agent to collect metrics from the bare metal server
-{: #baremetal_ubuntu_step5}
+## Step 1. Configure a Sysdig agent to collect metrics from the bare metal server
+{: #baremetal_linux_step1}
 
 You must install a Sysdig agent to collect and forward metrics from a bare metal server to an {{site.data.keyword.mon_full_notm}} instance. 
 
 Complete the following steps from the command line to install a Sysdig agent:
 
-1. Open a terminal. Then, log in to the {{site.data.keyword.cloud_notm}}. Run the following command and follow the prompts:
+1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+
+2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+
+3. Deploy the Sysdig agent. Run the following command:
 
     ```
-    ibmcloud login -a cloud.ibm.com
-    ```
-    {: codeblock}
-
-    Select the account where the {{site.data.keyword.mon_full_notm}} instance is available.
-
-2. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
-
-3. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
-
-4. Deploy the Sysdig agent. Run the following command:
-
-    ```
-    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure false --check_certificate false --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
+    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure false --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
     ```
     {: pre}
 
@@ -143,13 +130,13 @@ Complete the following steps from the command line to install a Sysdig agent:
     For example, see the following sample command to install a Sysdig agent that forwards metrics to a Sysdig instance in US South (Dallas):
 
     ```
-    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a xxxxxxxxxxxxx -c ingest.us-south.monitoring.cloud.ibm.com --collector_port 6443 --secure true -ac "sysdig_capture_enabled: false" --tags sourceType:baremetal,location:dallas
+    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a xxxxxxxxxxxxx -c ingest.us-south.monitoring.cloud.ibm.com --collector_port 6443 --secure false -ac "sysdig_capture_enabled: false" --tags sourceType:baremetal,location:dallas
     ```
     {: screen}
 
 
-## Step 6. Launch the Sysdig Web UI to verify that you are getting data to monitor the bare metal server
-{: #baremetal_ubuntu_step6}
+## Step 2. Launch the Sysdig Web UI to verify that you are getting data to monitor the bare metal server
+{: #baremetal_linux_step2}
 
 Complete the following steps to launch the web UI:
 
@@ -174,15 +161,15 @@ If the Sysdig agent is configured successfully, in the **EXPLORE** view you can 
 It may take some time before you see the bare metal entry while the information is initally collected and processed by the Sysdig agent.
 {: note}
 
-You only can have one web UI session open per browser.
+You only can monitor one instance per browser. You could have multiple tabs for the same instance.
 {: tip}
 
 
 
-## Step 7. Configure the Prometheus IPMI Exporter to monitor sensor metrics
-{: #baremetal_ubuntu_step7}
+## Step 3. [Optional] Configure the Prometheus IPMI Exporter to monitor sensor metrics
+{: #baremetal_linux_step3}
 
-In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server. 
+In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server. For more information, see [Sysdig integration with Prometheus![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/integrate-prometheus-metrics.html){: new_window}. 
 
 * The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP). 
 * When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter. 
@@ -225,13 +212,12 @@ You can collect the following metrics when you configure the IPMI exporter in a 
     The metric ipmi_bmc_info includes information about the firmware revision and manufacturer in labels and has a value of `1`.
 
 For more information, see [Prometheus IPMI Exporter ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/soundcloud/ipmi_exporter){:new_window}.
+
  
 Complete the following steps to configure the Prometheus IPMI Exporter:
 
-
-
-### Step 7.1. Install the Prometheus IPMI exporter
-{: #baremetal_ubuntu_step7-1}
+### Step 3.1. Install the Prometheus IPMI exporter
+{: #baremetal_linux_step3-1}
 
 Complete the following steps:
 
@@ -333,8 +319,8 @@ Complete the following steps:
 
 
 
-### Step 7.2. Install the Prometheus exporter
-{: #baremetal_ubuntu_step7-2}
+### Step 3.2. Install the Prometheus exporter
+{: #baremetal_linux_step3-2}
 
 The Sysdig agent automatically collects metrics from Prometheus exporters. Therefore, to collect metrics from your IPMI exporter, you must also configure the Prometheus exporter.
 
@@ -428,8 +414,8 @@ Complete the following steps to run the Prometheus exporter:
     
 
 
-### Step 7.3. Configure network settings
-{: #baremetal_ubuntu_step7-3}
+### Step 3.3. Configure network settings
+{: #baremetal_linux_step3-3}
 
 If you want to collect metrics from remote servers, complete the following steps:
 
@@ -441,8 +427,8 @@ If you want to collect metrics from remote servers, complete the following steps
 
 
 
-### Step 7.4. Update the Sysdig agent that is running in the bare metal server
-{: #baremetal_ubuntu_step7-4}
+### Step 3.4. Update the Sysdig agent that is running in the bare metal server
+{: #baremetal_linux_step3-4}
     
 Complete the following steps:
 
@@ -491,8 +477,8 @@ Complete the following steps:
 
 
 
-## Step 8. Verify that you can see the prometheus ipmi metrics
-{: #baremetal_ubuntu_step8}
+## Step 4. Verify that you can see the prometheus ipmi metrics
+{: #baremetal_linux_step4}
 
 Cpmplete the following steps:
 
@@ -511,8 +497,8 @@ Cpmplete the following steps:
     ![IPMI metrics](images/sysdig-baremetal-img3.png "IPMI metrics")
 
 
-## Step 9. Configure a dashboard to analyze the IPMI status of your Bare metal
-{: #baremetal_ubuntu_step9}
+## Step 5. Configure a dashboard to analyze the IPMI status of your Bare metal
+{: #baremetal_linux_step5}
 
 To create a dashboard to monitor the IPMI metrics, complete the following steps:
 
@@ -536,14 +522,6 @@ To create a dashboard to monitor the IPMI metrics, complete the following steps:
 
 5. Drag and drop, and resize panels to get the dashboard layout that you want. Save the layout.
 
-
-
-IPMI metrics are collected (ipmi_up)
-
-
-
-## Step 10. Create an alert to notify of a temperature increase
-{: #baremetal_ubuntu_step10}
 
 
 

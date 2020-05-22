@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-05-22"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -22,7 +22,7 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 
 
-# Analyze metrics for an Ubuntu host
+# Monitoring a Linux host
 {: #ubuntu}
 
 Use this tutorial to learn how to configure an Ubuntu host to forward metrics to the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}.
