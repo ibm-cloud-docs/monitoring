@@ -116,6 +116,5 @@ There are 2 types of VPC infrastructure that you can provision in your account:
 
 To learn about VPC metrics, see [Monitoring VPC metrics](/docs/vsi?topic=virtual-servers-sysdig-monitoring-metrics).
 
-
-
+The {{site.data.keyword.cloud}} VPN for Virtual Private Cloud allows you to connect private networks in a secure fashion. You can use VPN to set up a connection between your VPC and your on-premise private network or another VPC. To learn about VPC VPN metrics, see [Monitoring VPC VPN metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-sysdig-monitoring-metrics).
 

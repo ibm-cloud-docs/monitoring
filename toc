@@ -81,8 +81,6 @@ IBM Cloud Monitoring with Sysdig
         api/notifications-api.md
         api/metrics-query-api.md
         api/downtimes-api.md
-        
-    api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
