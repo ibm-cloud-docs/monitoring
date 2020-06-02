@@ -121,7 +121,7 @@ The following table lists the **Sysdig endpoints** that are available per region
 
 
 
-###  Subnets for webhook notifications from {{site.data.keyword.mon_full_notm}}
+## Subnets for webhook notifications from {{site.data.keyword.mon_full_notm}}
 {: #endpoints_network_alert_subnets}
 
 To receive alert notifications using webhooks from the {{site.data.keyword.mon_full_notm}} service, you may need to define firewall rules for the subnets that are invoking your webhooks.

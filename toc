@@ -43,7 +43,6 @@ IBM Cloud Monitoring with Sysdig
         iam_grant_team.md
 
     manage.md
-    network.md
 
     {: .topicgroup}
     Metrics
