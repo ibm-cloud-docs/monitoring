@@ -23,12 +23,15 @@ subcollection: Monitoring-with-Sysdig
 
 # Using Sysdig APIs
 
+
+{:shortdesc}
+
 [Before you start, see Working With API Tokens](https://test.cloud.ibm.com/docs/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get)
 
 **Sysdig documentation**
 - [Sysdig REST API Conventions](https://docs.sysdig.com/en/sysdig-rest-api-conventions.html)
 
-## Prerequisites for Using the API
+## Prerequisites for using the API
 {: #prerequisites}
 
 - The Sysdig endpoint, `<SYSDIG-ENDPOINT>`, is the Sysdig domain used to view the UI. Ex: us-south.monitoring.test.cloud.ibm.com

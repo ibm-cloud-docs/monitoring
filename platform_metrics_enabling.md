@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-04-06"
+lastupdated: "2020-06-01"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -98,14 +98,12 @@ Complete the following steps:
 
 5. Get the plan ID of the instance. 
 
-    Run the following command and copy the value of the field `resource_plan_id`. This value is needed to update the instance.
+    Run the following command. Look for the entry for the monitoring instance. Then, copy the value of the field `resource_plan_id`. This value is needed to update the instance.
 
     ```
-    ibmcloud resource service-instance InstanceName --output JSON
+    ibmcloud resource service-instances --long --output JSON
     ```
     {: pre}
-
-    Where `InstanceName` is the name of your Sysdig instance.
 
 5. Set on the **default_receiver** property. Run the following command:
 

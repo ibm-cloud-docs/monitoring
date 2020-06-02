@@ -2,11 +2,11 @@
 
 copyright:
   years:  2018, 2019, 2020
-lastupdated: "2020-05-13"
+lastupdated: "2020-05-22"
 
 keywords: Sysdig, IBM Cloud, monitoring, alerting, api
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 

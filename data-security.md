@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-06-02"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview, personal data, data deletion, PHI, data, data security, _service-name_
 
@@ -33,7 +33,7 @@ When you configure a Sysdig agent to collect and forward data to an {{site.data.
 
 To connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network, you can configure an agent to send metrics by using a public endpoint. The environment where the agent is running requires internet access to use the public endpoint.
 
-You can enable virtual routing and forwarding (VRF) to move IP routing for your account and all of its resources into a separate routing table. If VRF is enabled, you can then enable {{site.data.keyword.cloud_notm}} service endpoints to connect directly to resources without using the public network. To configure an agent to send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. Once the account is VRF and service endpoint enabled, the Sysdig agent can be configured to use the private network by using the [Private Endpoint](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion) as the ingestion URL.
+You can enable virtual routing and forwarding (VRF) to move IP routing for your account and all of its resources into a separate routing table. If VRF is enabled, you can then enable {{site.data.keyword.cloud_notm}} service endpoints to connect directly to resources without using the public network. To configure an agent to send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. Once the account is VRF enabled, the Sysdig agent can be configured to use the private network by using the [Private Endpoint](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion) as the ingestion URL.
 * Private endpoints are not accessible from the public internet. 
 * All traffic is routed to the {{site.data.keyword.cloud_notm}} private network. 
 
@@ -115,7 +115,7 @@ Metric data is deleted automatically after 15 months.
 
 User metadata, such as alerts, dashboards, teams, and users, is never deleted. 
 
-You must open a case through support to request the metadata to be deleted. For more information, see [Open a support ticket](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)..
+You must open a case through support to request the metadata to be deleted. For more information, see [Open a support ticket](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support).
 
 
 ### Deleting a subset of data 

@@ -53,6 +53,7 @@ You can enable virtual routing and forwarding (VRF) to move IP routing for your 
 * Services like {{site.data.keyword.mon_full_notm}} are no longer served on an internet routable IP address.
 
 Notice that when you configure the agent to send metrics through the public network, the environment where the agent is running requires internet access to use the public endpoint.
+{: important}
 
 
 
