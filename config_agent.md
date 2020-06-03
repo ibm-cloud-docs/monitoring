@@ -118,7 +118,7 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
     {: note}
 
 
-### Configuring a Sysdig agent on a standard Kubernetes cluster
+## Configuring a Sysdig agent on a standard Kubernetes cluster
 {: #config_agent_kube_std}
 
 ### Configuring a Sysdig agent on a standard Kubernetes cluster by using a script
@@ -316,7 +316,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     {: codeblock}
     
    
-### Configuring a Sysdig agent on an OpenShift cluster
+## Configuring a Sysdig agent on an OpenShift cluster
 {: #config_agent_kube_os}
 
 ### Pre-reqs
