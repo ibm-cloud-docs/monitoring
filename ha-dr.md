@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-06-02"
 
 keywords: Sysdig, IBM Cloud, monitoring, disaster recovery, ha, high availability, redundancy
 
@@ -93,8 +93,9 @@ If a regional disaster occurs, consider the following information:
 * The estimated recovery time for rebuilding the regional site and restoring the service at another location is 24 hours.
 * You will have to update the endpoints of applications and Sysdig agents to point to the ingestion endpoint in the new location. 
 * You will have to restore the service instance's metadata, that is, dashboards and alerts definitions, from your backups.
-* If you need access to historical data, you will have to restore data from your backups.
 
+Historical data may be lost during a disaster. If you require historical metrics for auditing purposes, backup the metrics regularly by querying the metrics from the service and storing them at a remote backup site.
+{: note}
 
 ### Manual recovery of the service
 {: #dr-rebuilt}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-06-02"
 
 keywords: Sysdig, IBM Cloud, monitoring, security, connection
 
@@ -50,6 +50,7 @@ You can configure a Sysdig agent to connect to an {{site.data.keyword.mon_full_n
 The type of network defines the level of isolation and security that is configured to move workloads between cloud-based resources in your account. Consider connecting the Sysdig agent over the private network.
 
 
+
 ## Setting up private service endpoints for {{site.data.keyword.mon_full_notm}}
 {: #endpoint-setup}
 
@@ -59,12 +60,7 @@ Private network endpoints support routing services over the {{site.data.keyword.
 ### Step 1: Enabling your account
 {: #endpoint-setup-step1}
 
-To use private network endpoints, the following account features must be enabled for your account:
-* Virtual routing and forwarding (VRF)
-* Service endpoints
-
-    Enabling service endpoints means that all users in the account can connect to private network endpoints.
-    {: note}
+To use private network endpoints, you must enable the Virtual routing and forwarding (VRF) account feature.
 
 You must first enable virtual routing and forwarding in your account, and then you can enable the use of IBM Cloud private service endpoints. 
 * To enable VRF, you create a support case. 
@@ -76,31 +72,43 @@ You must first enable virtual routing and forwarding in your account, and then y
 
 After your account is enabled for VRF and service endpoints, you can configure a Sysdig agent to connect to an {{site.data.keyword.mon_full_notm}} instance through the private network. 
 
-A service instance can have a private network endpoint, a public network endpoint, or both.
-* Public network endpoint: A service endpoint on the {{site.data.keyword.cloud_notm}} public network.
-* Private network endpoint: A service endpoint that is accessible only on the {{site.data.keyword.cloud_notm}} private network with no access from the public internet.
-* Both public and private network endpoints: Service endpoints that allow access over both networks.
+The monitoring service is available on both private and public endpoints. The monitoring service currently does not support only-public or only-private configurations.
+{: note}
 
-The {{site.data.keyword.mon_full_notm}} service offers the following private endpoints:
-
-| Region      | Ingestion endpoint                                   | Private IP addresses                              |   Ports   |
-|-------------|------------------------------------------------------|---------------------------------------------------|-----------|
-| `US South`  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.12.247 </br>166.9.16.99 </br>166.9.15.123   | TCP 6443  | 
-| `EU DE`     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.30.20 </br>166.9.28.32 </br>166.9.32.16     | TCP 6443  | 
-| `EU GB`     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.20 </br>166.9.36.7                       | TCP 6443  |
-| `JP TOK`    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.40.25 </br>166.9.42.8 </br>166.9.44.2       | TCP 6443  | 
-| `US East`   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.6 </br>166.9.20.39 </br>166.9.24.21      | TCP 6443  | 
-| `AU SYD`    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.54.2 </br>166.9.52.10  </br>166.9.56.24     | TCP 6443  |
-{: caption="Table 1. Private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
-
-
-You can [configure the Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) to use the private network by using a private endpoint as the ingestion URL.
+You can [configure the Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) to use the private network by using a private endpoint as the ingestion URL. To get information about private endpoints, see [Private endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion_private).
 
 What happens when you configure the Sysdig agent to use a private endpoint?
 * Private endpoints are not accessible from the public internet. 
 * All traffic is routed to the {{site.data.keyword.cloud_notm}} private network. 
-* Services like {{site.data.keyword.mon_full_notm}} are no longer served on an internet routable IP address.
 
+
+
+## Allowing outgoing network traffic
+{: #network_outgoing_traffic}
+
+When you have an extra firewall set up, or you customize the firewall settings in your {{site.data.keyword.cloud_notm}} infrastructure, you need to allow outgoing network traffic to the {{site.data.keyword.mon_full_notm}} service. 
+
+
+### Ingestion through an endpoint
+{: #network_send}
+
+To send metric data to the {{site.data.keyword.mon_full_notm}} service, you may need to define a firewall rule in your host:
+
+* To get information about private endpoints, see [Private endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion_private).
+* To get information about public endpoints, see [Public endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion_public).
+
+
+### Access to the web UI through a public endpoint
+{: #network_ui}
+
+To access the {{site.data.keyword.mon_full_notm}} web UI, you may need to define a firewall rule in your host. To get information about the endpoints, see [Sysdig web UI endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig).
+
+
+
+### Alert Notifications via Webhooks
+{: #network_alert_subnets}
+
+To receive alert notifications using webhooks from the {{site.data.keyword.mon_full_notm}} service, you may need to define firewall rules for the subnets that are invoking your webhooks. To get information about the subnets, see [Subnets for webhook notifications](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_network_alert_subnets).
 
 
 

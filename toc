@@ -43,7 +43,6 @@ IBM Cloud Monitoring with Sysdig
         iam_grant_team.md
 
     manage.md
-    network.md
 
     {: .topicgroup}
     Metrics
@@ -81,8 +80,6 @@ IBM Cloud Monitoring with Sysdig
         api/notifications-api.md
         api/metrics-query-api.md
         api/downtimes-api.md
-        
-    api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
