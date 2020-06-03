@@ -24,9 +24,9 @@ subcollection: Monitoring-with-Sysdig
 # Using Sysdig APIs
 
 
+[Before you start, see Working With API Tokens](/docs/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get)
 {:shortdesc}
 
-[Before you start, see Working With API Tokens](https://test.cloud.ibm.com/docs/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get)
 
 **Sysdig documentation**
 - [Sysdig REST API Conventions](https://docs.sysdig.com/en/sysdig-rest-api-conventions.html)
@@ -35,7 +35,7 @@ subcollection: Monitoring-with-Sysdig
 {: #prerequisites}
 
 - The Sysdig endpoint, `<SYSDIG-ENDPOINT>`, is the Sysdig domain used to view the UI. Ex: us-south.monitoring.test.cloud.ibm.com
-    - [Sysdig endpoints](https://test.cloud.ibm.com/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_sysdig)
+    - [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_sysdig)
 - The recommended authentication method is IAM; to use it you will need an API key and an IBM Cloud Monitoring with Sysdig instance
 
 ## Working with cURL
@@ -54,7 +54,7 @@ curl -X GET \
   -H 'Content-Type: application/json'
 ```
 
-* [Sysdig endpoints](https://test.cloud.ibm.com/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_sysdig)
+* [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_sysdig)
 
 **Headers for IAM Tokens (Recommended)**:
 ```shell
@@ -137,3 +137,11 @@ sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 ```
 
 - `GUID` can be found using `ibmcloud resource service-instance <NAME>`
+
+## cURL/Python Working Examples
+
+- [Dashboard API Operations](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard-api-operations)
+- [Alerting API Operations](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api-operations)
+- [Notification API Operations](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-notification-api-operations)
+- [Metric Query API Operations](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metric-query-api-operations)
+- [Downtimes API Operations](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-downtimes-api-operations)
