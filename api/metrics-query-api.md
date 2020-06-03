@@ -40,7 +40,7 @@ curl -X POST \
   -d @metrics.json
 ```
 
-* [Sysdig endpoints](https://test.cloud.ibm.com/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_sysdig)
+* [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_sysdig)
 
 **Headers for IAM Tokens (Recommended)**:
 ```shell
