@@ -36,15 +36,14 @@ IBM Cloud Monitoring with Sysdig
         change_container_agent.md
 
     launch.md
-    manage.md
-    network.md
 
     {: .topicgroup}
     IAM integration
-        iam.md
         api_token.md
         iam_grant.md
         iam_grant_team.md
+
+    manage.md
 
     {: .topicgroup}
     Metrics
@@ -83,6 +82,14 @@ IBM Cloud Monitoring with Sysdig
     default_dashboards.md
     monitoring.md
     overview.md
+
+    {: .topicgroup}
+    Enhancing security for IBM Cloud Monitoring with Sysdig
+        data-security.md
+        iam.md
+        ha-dr.md
+        service-connection.md
+        architecture-workload-isolation.md
 
     {: .topicgroup}
     Cloud services metrics
