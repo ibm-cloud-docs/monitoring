@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-06-02"
 
 keywords: Sysdig, IBM Cloud, monitoring, customer responsibilities, IBM responsibilities, terms and conditions
 
@@ -40,7 +40,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for the set up and
 | Task              | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-------------------|-------------------------------------------------|-----------------------|
 | `Monitor incidents`  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | Set preferences to [receive emails about platform notifications](/docs/overview?topic=overview-ui#email-prefsl). </br>Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
-| `Maintain {{site.data.keyword.cloud_notm}} high availability SLA`  | Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview/terms-of-use?topic=overview-slas). | `N/A` |
+| `Maintain {{site.data.keyword.cloud_notm}} high availability SLA`  | Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview/terms-of-use?topic=overview-slas). |   |
 | `Provide high availability capabilities` | Provide capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions (MZR), to meet local access and low latency requirements for each supported region.  | Use the list of [available regions](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints) to plan for and create new instances of the service. |
 | `Monitor Sysdig agents`   | Provide images and instructions for how to install Sysdig agents in environments that you want to monitor, such as Kubernetes, Linux, Openshift. | Install and configure Sysdig agents. </br>Monitor that the agents are running in your environment, for example, by using Sysdig alerts. |
 | `Deliver platform metrics`  | Deliver platform metrics for Sysdig-enabled services to the Sysdig instance that collects platform metrics and is located in the region where the platform metrics are generated.  | Configure 1 monitoring instance per region to collect platform metrics in that region. |
@@ -56,11 +56,11 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 
 | Task                                                    | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |---------------------------------------------------------|-----------------------|--------|
-| `Update the {{site.data.keyword.mon_full_notm}} service` | Provide regular updates to the service with new features, fixes for defects, and security fixes. | `N/A` |
+| `Update the {{site.data.keyword.mon_full_notm}} service` | Provide regular updates to the service with new features, fixes for defects, and security fixes. |   |
 | `Update the Sysdig agent image that is hosted in {{site.data.keyword.cloud_notm}}` | Provide regular updates to the Sysdig agent image with new features, fixes to defects, and security fixes. Document changes in the [Agent release notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)  | Update the agent to keep it up to date as new versions are made available. |
 | `Update default dashboards `                            | Update the default dashboards as requirements change. | Update custom dashboards and track changes by using your own change management process. |
 | `Update pre-defined alert definitions`                  | Update the default alert definitions as requirements change. | Update custom alert definitions and track changes by using your own change management process. |
-| `Track versions of custom dashboards, alerts, notifications, and teams`    | `N/A` | Use your own change management process to control versions of monitoring resources such as dashboards, alert definitions, teams, and notifications. | 
+| `Track versions of custom dashboards, alerts, notifications, and teams`    |   | Use your own change management process to control versions of monitoring resources such as dashboards, alert definitions, teams, and notifications. | 
 {: caption="Table 2. Responsibilities for change management" caption-side="top"}
 
 
@@ -88,7 +88,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 
 | Task                                       | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |--------------------------------------------|-------------------------------------------------|-----------------------|
-| `Meet security and compliance objectives`  | Maintain controls that are commensurate to supported industry compliance standards, such as SOC and ISO. | Ensure that regulated data is not provided to the {{site.data.keyword.mon_full_notm}} service. |
+| `Meet security and compliance objectives`  | Maintain controls that are commensurate to supported industry compliance standards, such as SOC. | Ensure that regulated data is not provided to the {{site.data.keyword.mon_full_notm}} service. |
 {: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="top"}
 
 
@@ -101,8 +101,8 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 
 | Task                                                            | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-----------------------------------------------------------------|-------------------------------------------------|-----------------------|
-| `Service`         | Automatically recover and restart service components after any disaster event. | `N/A` |
-| `Data`            | `N/A` |Extract and save data, dashboards definitions, and alert definitions if you cannot afford for it to be lost in the event of an un-recoverable event. | 
-| `Sysdig agent`    | `N/A` |  Recovery of the Sysdig agents running in your environment should they be impacted by a disaster. |
+| `Service`         | Automatically recover and restart service components after any disaster event. |   |
+| `Data`            |   |Extract and save data, dashboards definitions, and alert definitions if you cannot afford for it to be lost in the event of an un-recoverable event. | 
+| `Sysdig agent`    |   |  Recovery of the Sysdig agents running in your environment should they be impacted by a disaster. |
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
 

@@ -173,14 +173,7 @@ The Sysdig agent automatically collects and reports on pre-defined metrics. You 
 Data is stored in {{site.data.keyword.cloud_notm}}.
 {: important}
 
-You can configure a Sysdig agent for any of the following environments:
-
-* Kubernetes, GKE, and OpenShift.
-* Docker containers or for non-containerized services.
-* Mesos, Marathon, and DCOS.
-* Linux installations.
-
-For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The Sysdig agent collects data from the pod where it is installed, and forwards it to your Sysdig instance.
+You can configure a Sysdig agent for different environments. For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The Sysdig agent collects data from the pod where it is installed, and forwards it to your Sysdig instance.
 
 Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 
