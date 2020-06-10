@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2019, 2020
-lastupdated: "2020-05-22"
+  years:  2018, 2020
+lastupdated: "2020-06-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, alerting, api
 
@@ -22,13 +22,19 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 
 # Alerting API Operations
+{: #alerting-api}
+
+{{site.data.keyword.mon_full_notm}} instance.
+{:shortdesc}
+
 
 ## Working with cURL
-{: #curl-guide}
+{: #alerting-api-curl-guide}
 
 ```shell
 curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
 ```
+{: pre}
 
 An example being:
 ```shell
@@ -56,102 +62,20 @@ curl -X POST \
 ```
 * `SYSDIG_TOKEN` can be found in the Sysdig dashboard settings under Sysdig Monitor API
 
-## Fetch all user alerts
 
-### Using python client
 
-```python
-from sdcclient import IbmAuthHelper, SdMonitorClient
-
-URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
-APIKEY = <IAM_APIKEY>
-GUID = <GUID>
-ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
-sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
-
-json_res = sdclient.get_alerts()
-print(json_res)
-```
-
-### Using curl
-
-Check out [Working with cURL](#curl-guide)
-
-| Method | API_URL | Data File |
-|----|---|----|
-| GET | `api/alerts` | |
-
-## Fetch specific user alert
-
-### Using curl
-
-Check out [Working with cURL](#curl-guide)
-
-| Method | API_URL | Data File |
-|----|---|----|
-| GET | `api/alerts/<ID>` | |
-
-#### Sample response body for alert
-
-```json
-{
-  "alert": {
-    "autoCreated": false,
-    "condition": "min(min(dallas_prod)) = 0",
-    "createdOn": 1551358413000,
-    "enabled": false,
-    "id": 23211,
-    "modifiedOn": 1551634372000,
-    "name": "Monitoring Uptime Alert",
-    "filter": "env in (\"prod\")",
-    "notificationChannelIds": [
-      4
-    ],
-    "segmentBy": [
-      "host.hostname"
-    ],
-    "segmentCondition": {
-      "type": "ANY"
-    },
-    "notificationCount": 60,
-    "rateOfChange": false,
-    "reNotify": false,
-    "severity": 0,
-    "severityLabel": "HIGH",
-    "teamId": 493,
-    "timespan": 60000000,
-    "type": "MANUAL",
-    "version": 9
-  }
-}
-```
-
-#### Response body parameters
-
-- **id**: Alert ID
-- **type**: Type of alert; Valid values are:
-  - `MANUAL` for manual alerts
-  - `BASELINE` for baseline alerts
-  - `HOST_COMPARISON` for host comparison alerts
-- **name**: Name of the alert. Note that alert names must be unique
-- **enabled**: true if the alert is being processed and events can fire; false otherwise
-- **filter**: String-encoded filter of the alert. The filter can be used to select nodes and/or entities
-- **condition**: Valid for manual alerts only. Configures the threshold for the alert
-- **segmentBy**: Segmentation to apply to condition, if needed
-- **segmentCondition**: If segmentBy is set, it configures whether alert events will be triggered when all segments reach  
-  the threshold or at least one does. The format is an object with a type property with ALL or ANY respectively (e.g. { "type": "ANY" }
-- **timespan**: Number of microseconds. Minimum time interval for which the alert condition must be met before the alert
-  will fire a event; Minimum value is 60000000 (1 minute) and values must be multiple of 60000000 (1 minute)
-- **severity**: null to instruct the alert to set event severity automatically, a number from 0 (emergency) to 7 (debug) to set a manual severity
-- **notificationChannelIds**: List of notification channel identifiers
-- **version**: Revision version of the alert configuration
-- **createdOn**: Unix-timestamp of time when the alert was created
-- **modifiedOn**: Unix-timestamp of time when the alert was last modified
-- **notificationCount**: Number of events fired for the alert during the past 2 weeks
 
 ## Create an alert
+{: #alerting-api-create-alert}
 
-### Using the python client to create new alert
+You can create an alert by choosing any of the following options:
+* Create an alert by using a Python client
+* Create an alert by using a cURL command
+
+### Creating an alert by using a Python client
+{: #alerting-api-create-alert-python}
+
+The following example shows how to create an alert by using Python:
 
 ```python
 from sdcclient import IbmAuthHelper, SdMonitorClient
@@ -166,7 +90,7 @@ sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 notify_channels = [
   {
     'type': 'SLACK',
-    'channel': '#python-sdc-test-alert'
+    'channel': '<SLACK_CHANNEL>' # '#python-sdc-test-alert'
   },
   {
     'type': 'EMAIL',
@@ -209,8 +133,21 @@ res = sdclient.create_alert(
 if not res[0]:
     print("Alert creation failed")
 ```
+{: codeblock}
 
-### Using curl to create a new alert from a json
+| Replace in the sample script | 
+|------------------------------|
+| `<SYSDIG-ENDPOINT>`          |
+| `<IAM_APIKEY>`               |
+| `<GUID>`                     |
+
+
+
+
+
+
+### Create an alert by using a cURL command from a json
+{: #alerting-api-create-alert-curl}
 
 Check out [Working with cURL](#curl-guide)
 
@@ -264,6 +201,10 @@ Example alert.json:
   scope of the alert. For example: *kubernetes.namespace.name='production' and container.image='nginx'*.
 - **notificationChannelIds**: the type of notification you want this alert to generate. Options are *EMAIL*,*PAGER_DUTY*, *WEBHOOK*. To fetch channelID's, Please refer to section `Fetch specific user notification` under [notificationChannelIds](observability-monitoring?topic=observability-monitoring-notification-api-operations#fetch-specific-user-notification)
 - **enabled**: if True, the alert will be enabled when created.
+
+
+
+
 
 ## Update an alert
 
@@ -341,6 +282,11 @@ Example alert.json:
 
 **Note:** alert version can be retrieved through the response body of [alerts api](#fetch-specific-user-alert).
 
+
+
+
+
+
 ## Delete an alert
 
 Deletion of an existing alerts requires the user to know the ID of that alert.
@@ -375,3 +321,105 @@ Check out [Working with cURL](#curl-guide)
 | Method | API_URL | Data File |
 |----|---|----|
 | DELETE | `api/alerts/<ID>` | |
+
+
+
+## Fetch all user alerts
+{: #alerting-api-fetch-user-alerts}
+
+### Using python client
+
+```python
+from sdcclient import IbmAuthHelper, SdMonitorClient
+
+URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
+APIKEY = <IAM_APIKEY>
+GUID = <GUID>
+ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
+sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
+
+json_res = sdclient.get_alerts()
+print(json_res)
+```
+
+### Using curl
+
+Check out [Working with cURL](#curl-guide)
+
+| Method | API_URL | Data File |
+|----|---|----|
+| GET | `api/alerts` | |
+
+
+
+## Fetch specific user alert
+{: #alerting-api-fetch-user-alert}
+
+### Using curl
+
+Check out [Working with cURL](#curl-guide)
+
+| Method | API_URL | Data File |
+|----|---|----|
+| GET | `api/alerts/<ID>` | |
+
+#### Sample response body for alert
+
+```json
+{
+  "alert": {
+    "autoCreated": false,
+    "condition": "min(min(dallas_prod)) = 0",
+    "createdOn": 1551358413000,
+    "enabled": false,
+    "id": 23211,
+    "modifiedOn": 1551634372000,
+    "name": "Monitoring Uptime Alert",
+    "filter": "env in (\"prod\")",
+    "notificationChannelIds": [
+      4
+    ],
+    "segmentBy": [
+      "host.hostname"
+    ],
+    "segmentCondition": {
+      "type": "ANY"
+    },
+    "notificationCount": 60,
+    "rateOfChange": false,
+    "reNotify": false,
+    "severity": 0,
+    "severityLabel": "HIGH",
+    "teamId": 493,
+    "timespan": 60000000,
+    "type": "MANUAL",
+    "version": 9
+  }
+}
+```
+
+#### Response body parameters
+
+- **id**: Alert ID
+- **type**: Type of alert; Valid values are:
+  - `MANUAL` for manual alerts
+  - `BASELINE` for baseline alerts
+  - `HOST_COMPARISON` for host comparison alerts
+- **name**: Name of the alert. Note that alert names must be unique
+- **enabled**: true if the alert is being processed and events can fire; false otherwise
+- **filter**: String-encoded filter of the alert. The filter can be used to select nodes and/or entities
+- **condition**: Valid for manual alerts only. Configures the threshold for the alert
+- **segmentBy**: Segmentation to apply to condition, if needed
+- **segmentCondition**: If segmentBy is set, it configures whether alert events will be triggered when all segments reach  
+  the threshold or at least one does. The format is an object with a type property with ALL or ANY respectively (e.g. { "type": "ANY" }
+- **timespan**: Number of microseconds. Minimum time interval for which the alert condition must be met before the alert
+  will fire a event; Minimum value is 60000000 (1 minute) and values must be multiple of 60000000 (1 minute)
+- **severity**: null to instruct the alert to set event severity automatically, a number from 0 (emergency) to 7 (debug) to set a manual severity
+- **notificationChannelIds**: List of notification channel identifiers
+- **version**: Revision version of the alert configuration
+- **createdOn**: Unix-timestamp of time when the alert was created
+- **modifiedOn**: Unix-timestamp of time when the alert was last modified
+- **notificationCount**: Number of events fired for the alert during the past 2 weeks
+
+
+
