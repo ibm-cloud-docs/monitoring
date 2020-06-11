@@ -28,41 +28,9 @@ subcollection: Monitoring-with-Sysdig
 {:shortdesc}
 
 
-## Working with cURL
-{: #alerting-api-curl-guide}
-
-```shell
-curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
-```
-{: pre}
-
-An example being:
-```shell
-curl -X POST \
-  https://us-south.monitoring.test.cloud.ibm.com/api/alerts \
-  -H 'Authorization: Bearer eyJraW...' \
-  -H 'IBMInstanceID: fc8ceb8a-...' \
-  -H 'Content-Type: application/json' \
-  -d @alert.json
-```
-
-* [Sysdig endpoints](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_sysdig)
-
-**Headers for IAM Tokens (Recommended)**:
-```shell
--H "Authorization: Bearer $AUTH_TOKEN"
--H "IBMInstanceID: $GUID"
-```
-* `AUTH_TOKEN=$(ibmcloud iam oauth-tokens | awk '{print $4}')`
-* `GUID=$(ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid')`
-
-**Headers for Sysdig Token**:
-```shell
--H "Authorization: Bearer $SYSDIG_TOKEN"
-```
-* `SYSDIG_TOKEN` can be found in the Sysdig dashboard settings under Sysdig Monitor API
-
-
+| Action               | REST API Method  | API_URL            | Data File      |
+|----------------------|------------------|--------------------|----------------|
+| Create an alert      | `POST`           | `api/alerts`       | alert.json |
 
 
 ## Create an alert

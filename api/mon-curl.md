@@ -22,13 +22,17 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 
 
-# Using cURL to call the Sysdig API
+# Using cURL to make Sysdig REST API calls
 {: #mon-curl}
 
-You can use cURL from a terminal to make API calls to the {{site.data.keyword.mon_full_notm}} service.
+You can use cURL, a command line tool, from a terminal to make API calls to the {{site.data.keyword.mon_full_notm}} service by using URL syntax.
 {:shortdesc}
 
-Use the following command from a terminal, to run a cURL command:
+
+## cURL syntax
+{: #mon-curl-tool}
+
+Use the following syntax from a terminal to run a cURL command:
 
 ```shell
 curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
@@ -37,34 +41,84 @@ curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
 
 Where
 
-* `<METHOD>`
-* `<SYSDIG-ENDPOINT>` must be replaced with the endpoint where the monitoring instance is available. For more inforamtion, see [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
+* `<METHOD>` indicates the type of REST API call that you want to make.
+* `<SYSDIG-ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more inforamtion, see [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
 * `<API_URL>`
-* `HEADERS` 
-* `DATA` 
+* `HEADERS` add additional information such as information to authenticate with the {{site.data.keyword.mon_full_notm}} service.
+* `DATA` allows you to pass additional information that might be required.
 
 
 
-## Headers for IAM Tokens (Recommended)
+### Headers for IAM Tokens 
 {: #mon-curl-headers-iam}
 
+Use IAM tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use the Sysdig REST API to automate routine tasks and monitor notifications.
+{: important}
+
+In a cURL command, add the following options to authenticate with the {{site.data.keyword.mon_full_notm}} service by using an IAM token:
 
 ```shell
 -H "Authorization: Bearer $AUTH_TOKEN"
 -H "IBMInstanceID: $GUID"
 ```
+{: codeblock}
 
-* `AUTH_TOKEN=$(ibmcloud iam oauth-tokens | awk '{print $4}')`
-* `GUID=$(ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid')`
+Where
 
-## Headers for Sysdig Token
+* `IBMInstanceID` indicates the GUID of the {{site.data.keyword.mon_full_notm}} instance that you want to target with the cURL command. 
+
+    To get the GUID of the monitoring instance, run the following command: `ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid')`
+
+* `Authorization` indicates the IAM token that is used to authenticate with the {{site.data.keyword.mon_full_notm}} service instance.
+
+    To get the IAM `AUTH_TOKEN` token, run the following command: `ibmcloud iam oauth-tokens | awk '{print $4}')`
+    
+    For more information, see [Getting the IAM API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_iam_token_get). 
+
+
+
+### Headers for Sysdig Token
 {: #mon-curl-headers-sysdig}
 
+You can also Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use the Sysdig REST API to automate routine tasks and monitor notifications.
+
+In a cURL command, add the following command option to authenticate with the {{site.data.keyword.mon_full_notm}} service by using a Sysdig token:
 
 ```shell
 -H "Authorization: Bearer $SYSDIG_TOKEN"
 ```
-* `SYSDIG_TOKEN` can be found in the Sysdig dashboard settings under Sysdig Monitor API
+{: codeblock}
+
+To get the Sysdig token, see [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+
+
+
+## Running a cURL API query
+{: #mon-curl-query}
+
+To run a cURL API query and authrnticat by using the IAM token, complete the following steps:
+
+1. Set the IAM token.
+
+    ```
+    AUTH_TOKEN=$(ibmcloud iam oauth-tokens | awk '{print $4}')
+    ```
+    {: codeblock}
+
+2. Set the {{site.data.keyword.mon_full_notm}} instance GUID.
+
+    ```
+    GUID=$(ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid')
+    ```
+    {: codeblock}
+
+3. Run the cURL API query.
+
+    ```
+    curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID"
+    ```
+    {: codeblock}
+
 
 
 ## Samples

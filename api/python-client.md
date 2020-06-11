@@ -22,11 +22,12 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 
 
-# Using a Python client to call the Sysdig API
+# Using a Python client to make Sysdig REST API calls
 {: #python-client}
 
-You can use the [Python Client ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client){:new_window} to make API calls to the {{site.data.keyword.mon_full_notm}} service.
+You can use the [Python Client ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client){:new_window} to manage the {{site.data.keyword.mon_full_notm}} service. The client is also known as the **sdcclient**.
 {:shortdesc}
+
 
 ## Installing the Python client
 {: #python-client-install}
@@ -141,7 +142,7 @@ Complete the following steps:
 
     `<IAM_APIKEY>` must be replaced with a valid IAM API key. For more information, see [Working With API Tokens](/docs/Monitoring-with-Sysdig?topic=Sysdig-api_token#api_token_get).
 
-    `<GUID>` must be replaced with the GUID of the monitoring instance that you obtain in the previous step.
+    `<GUID>` must be replaced with the GUID of the monitoring instance that you obtain in the previous step. To get the GUID of the monitoring instance, run the following command: `ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid')`
 
 
 You can now use the `sdclient` to perform actions that will be authenticated by using IAM.

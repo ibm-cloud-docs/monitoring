@@ -96,6 +96,7 @@ IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="reference"}
     endpoints.md
+    api/rest_apis.md
     pricing.md
     shared-responsibilities.md
     default_dashboards.md
