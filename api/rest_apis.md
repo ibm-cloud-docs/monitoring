@@ -28,10 +28,21 @@ subcollection: Monitoring-with-Sysdig
 You can use cURL, a command line tool, to make API calls to the {{site.data.keyword.mon_full_notm}} service by using URL syntax. You can also use the Python client, `sdcclient`, to automate routine tasks and monitor notifications.
 {:shortdesc}
 
+You can use public or private endpoints to make REST API calls. For more information, see [REST API endpoints]().
 
-## Alert REST API
+## Alerting REST API
 {: #rest_apis_alerts}
 
+| Action                     | REST API Method  | API_URL                             | 
+|----------------------------|------------------|-------------------------------------|
+| Create an alert            | `POST`           | `<ENDPOINT>/api/alerts`             |
+| Update an alert            | `PUT`            | `<ENDPOINT>/api/alerts/<ALERT_ID>`  |
+| Delete an alert            | `DELETE`         | `<ENDPOINT>/api/alerts/<ALERT_ID>`  |
+| Fetch a specific alert     | `GET`            | `<ENDPOINT>/api/alerts/<ALERT_ID>`  |
+| Fetch all user alerts      | `GET`            | `<ENDPOINT>/api/alerts`             |
+{: caption="Table 1. Alerting REST API" caption-side="top"}
+
+For more information, see [Alerting by using REST API operations]().
 
 
 

@@ -22,10 +22,10 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 
 
-# Using cURL to make Sysdig REST API calls
+# Using cURL
 {: #mon-curl}
 
-You can use cURL, a command line tool, from a terminal to make API calls to the {{site.data.keyword.mon_full_notm}} service by using URL syntax.
+You can use cURL, a command line tool, from a terminal to manage the {{site.data.keyword.mon_full_notm}} service by using URL syntax.
 {:shortdesc}
 
 

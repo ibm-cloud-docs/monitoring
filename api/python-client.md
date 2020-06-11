@@ -22,14 +22,14 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 
 
-# Using a Python client to make Sysdig REST API calls
+# Using a Python client
 {: #python-client}
 
 You can use the [Python Client ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client){:new_window} to manage the {{site.data.keyword.mon_full_notm}} service. The client is also known as the **sdcclient**.
 {:shortdesc}
 
 
-## Installing the Python client
+## Step 1. Installing the Python client
 {: #python-client-install}
 
 
@@ -82,10 +82,10 @@ Complete the following steps:
     {: pre}
 
 
-## Reference the Python client in your Python script
+## Step 2. Reference the Python client in your Python script
 {: #python-client-reference-client}
     
-## Reference the Python client that is installed by using pip
+### Reference the Python client that is installed by using pip
 {: #python-client-reference-pip-client}
 
 You can reference the Python client by adding the following statement to your application:
@@ -96,7 +96,7 @@ from sdcclient import IbmAuthHelper, SdMonitorClient
 {: pre}
 
 
-## Reference the Python client that is installed by cloning a GitHub repo
+### Reference the Python client that is installed by cloning a GitHub repo
 {: #python-client-reference-github-client}
 
 Add the following entries to your Python script to import the GitHub cloned package into your script:
@@ -109,17 +109,18 @@ from sdcclient import IbmAuthHelper, SdMonitorClient
 {: codeblock}
 
 
-## Authenticate your user or service ID by using IAM
+## Step 3. Authenticate your user or service ID by using IAM
 {: #python-client-iam-auth}
 
-To use {{site.data.keyword.cloud_notm}} IAM authentication with the Python client, you must use a Sysdig endpoint, an API key, and the GUID from your {{site.data.keyword.mon_full_notm}} instance.
+To use {{site.data.keyword.cloud_notm}} IAM authentication with the Python client, you must specify a Sysdig endpoint, an API key, and the GUID from your {{site.data.keyword.mon_full_notm}} instance.
+{: note}
 
 Complete the following steps:
 
 1. From a terminal, get the GUID of your {{site.data.keyword.mon_full_notm}} instance. Run the following command:
 
     ```
-    ibmcloud resource service-instance <NAME>
+    ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid'
     ```
     {: pre}
 

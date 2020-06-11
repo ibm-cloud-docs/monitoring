@@ -151,13 +151,13 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 
 | Region      | Private REST API endpoint                                     | 
 |-------------|---------------------------------------------------------------|
-| `US South`  | `https://private.us-south.monitoring.cloud.ibm.com/api/`      | 
-| `EU DE`     | `https://private.eu-de.monitoring.cloud.ibm.com/api/`         |
-| `EU GB`     | `https://private.eu-gb.monitoring.cloud.ibm.com/api/`         |
-| `JP TOK`    | `https://private.jp-tok.monitoring.cloud.ibm.com/api/`        |
-| `US East`   | `https://private.us-east.monitoring.cloud.ibm.com/api/`       |
-| `AU SYD`    | `https://private.au-syd.monitoring.cloud.ibm.com/api/`        |
-{: caption="Table 6. REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
+| `US South`  | `https://private.us-south.monitoring.cloud.ibm.com/api`      | 
+| `EU DE`     | `https://private.eu-de.monitoring.cloud.ibm.com/api`         |
+| `EU GB`     | `https://private.eu-gb.monitoring.cloud.ibm.com/api`         |
+| `JP TOK`    | `https://private.jp-tok.monitoring.cloud.ibm.com/api`        |
+| `US East`   | `https://private.us-east.monitoring.cloud.ibm.com/api`       |
+| `AU SYD`    | `https://private.au-syd.monitoring.cloud.ibm.com/api`        |
+{: caption="Table 6. Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
 
 ### Public REST API endpoints
@@ -166,11 +166,11 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 
 | Region      | Public REST API endpoint                                      | 
 |-------------|---------------------------------------------------------------|
-| `US South`  | `https://us-south.monitoring.cloud.ibm.com/api/`      | 
-| `EU DE`     | `https://eu-de.monitoring.cloud.ibm.com/api/`         |
-| `EU GB`     | `https://eu-gb.monitoring.cloud.ibm.com/api/`         |
-| `JP TOK`    | `https://jp-tok.monitoring.cloud.ibm.com/api/`        |
-| `US East`   | `https://us-east.monitoring.cloud.ibm.com/api/`       |
-| `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com/api/`        |
-{: caption="Table 6. REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
+| `US South`  | `https://us-south.monitoring.cloud.ibm.com/api`      | 
+| `EU DE`     | `https://eu-de.monitoring.cloud.ibm.com/api`         |
+| `EU GB`     | `https://eu-gb.monitoring.cloud.ibm.com/api`         |
+| `JP TOK`    | `https://jp-tok.monitoring.cloud.ibm.com/api`        |
+| `US East`   | `https://us-east.monitoring.cloud.ibm.com/api`       |
+| `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com/api`        |
+{: caption="Table 7. Public REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 

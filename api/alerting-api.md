@@ -21,58 +21,57 @@ subcollection: Monitoring-with-Sysdig
 {:important: .important}
 {:note: .note}
 
-# Alerting API Operations
+# Alerting by using REST API operations
 {: #alerting-api}
 
-{{site.data.keyword.mon_full_notm}} instance.
+You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance through REST API operations that you can run by using a Python client or a cURL command.
 {:shortdesc}
 
 
-| Action               | REST API Method  | API_URL            | Data File      |
-|----------------------|------------------|--------------------|----------------|
-| Create an alert      | `POST`           | `api/alerts`       | alert.json |
-
-
-## Create an alert
+## Create an alert (POST)
 {: #alerting-api-create-alert}
 
-You can create an alert by choosing any of the following options:
-* Create an alert by using a Python client
-* Create an alert by using a cURL command
 
 ### Creating an alert by using a Python client
 {: #alerting-api-create-alert-python}
 
-The following example shows how to create an alert by using Python:
+The following code shows the structure of a Python script that you can use to create an alert:
 
 ```python
+# Reference the Python client
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
-URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
+# Add the monitoring instance information that is required for authentication
+URL = <SYSDIG-ENDPOINT> 
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
+
+# Instantiate the Python client 
 sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 
-# Find notification channels (you need IDs to create an alert).
+# Add the notification channels to send an alert when the alert is triggered
 notify_channels = [
   {
     'type': 'SLACK',
-    'channel': '<SLACK_CHANNEL>' # '#python-sdc-test-alert'
+    'channel': '<SLACK_CHANNEL_NAME>'
   },
   {
     'type': 'EMAIL',
     'emailRecipients': [
-      'python-sdc-testing@draios.com', 'test@sysdig.com'
+      'user1@ibm.com', 'user2@ibm.com'
     ]
   }
 ]
 
+# Get the IDs of the notification channels that you have configured
 res = sdclient.get_notification_ids(notify_channels)
 if not res[0]:
     print("Failed to fetch notification channel ID's")
 
 notification_channel_ids = res
+
+# Create and define the alert details
 res = sdclient.create_alert(
     name=<ALERT_NAME>,
     description=<ALERT_DESCRIPTION>,
@@ -103,15 +102,35 @@ if not res[0]:
 ```
 {: codeblock}
 
-| Replace in the sample script | 
-|------------------------------|
-| `<SYSDIG-ENDPOINT>`          |
-| `<IAM_APIKEY>`               |
-| `<GUID>`                     |
+Consider the following information when you create a Python script:
+
+* You must include the following information: `<SYSDIG-ENDPOINT>`, `<IAM_APIKEY>`, and `<GUID>` These data is required to authenticate the request with the monitoring instance. To get the monitoring instance information, see [Authenticate your user or service ID by using IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client#python-client-iam-auth).
+
+* You must define the notification channels by which you want to be notified on the alert.
+
+    Valid notification channel types are `SLACK`, and `EMAIL`.
+
+    When you define the notification channels, the channels must be configured in the monitoring instance.
+
+    When you add an email notification channel, you can add multiple recipients. You separate values by using a comma.
+
+    When you define a Slack channel, replace `<SLACK_CHANNEL_NAME>` with the name of your channel. Do not include the symbol `#`.
+
+* You must define the name of the alert name by replacing `<ALERT_NAME>`.
 
 
+<ALERT_DESCRIPTION>
+<SEVERITY>,
+# Number from 0 to 7 where 0 means 'emergency' and 7 is 'debug'
+<FOR_ATLEAST_S>  The alert will fire if the condition is met for at least number of consecutive seconds
+<CONDITION>
+<SEGMENT_CONDITION>  Default value `ANY`
+<USER_FILTER> Filter. We want to receive a notification only if the name of the process meets the condition
 
-
+<NOTIFICATION_CHANNEL_IDS>  Type of notification you want this alert to generate, Mention Notification channel ID's
+<ENABLED> If the alert will be enabled when created. True by default
+<ANNOTATIONS> Custom properties to associate with the alert
+<ALERT_OBJ> Use an Alert object instead of specifying the individual parameters
 
 
 ### Create an alert by using a cURL command from a json

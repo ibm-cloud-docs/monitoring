@@ -87,11 +87,11 @@ IBM Cloud Monitoring with Sysdig
     REST API
         api/mon-curl.md
         api/python-client.md
-        api/dashboard-api.md
         api/alerting-api.md
-        api/notifications-api.md
-        api/metrics-query-api.md
+        api/dashboard-api.md
         api/downtimes-api.md
+        api/metrics-query-api.md
+        api/notifications-api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
