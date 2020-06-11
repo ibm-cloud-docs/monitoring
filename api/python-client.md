@@ -146,7 +146,7 @@ Complete the following steps:
     `<GUID>` must be replaced with the GUID of the monitoring instance that you obtain in the previous step. To get the GUID of the monitoring instance, run the following command: `ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid')`
 
 
-You can now use the `sdclient` to perform actions that will be authenticated by using IAM.
+You can now use the **sdclient** to perform actions that will be authenticated by using IAM.
 
 
 

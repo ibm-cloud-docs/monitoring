@@ -30,7 +30,7 @@ You can use cURL, a command line tool, to make API calls to the {{site.data.keyw
 
 You can use public or private endpoints to make REST API calls. For more information, see [REST API endpoints]().
 
-## Alerting REST API
+## Alerts REST API
 {: #rest_apis_alerts}
 
 | Action                     | REST API Method  | API_URL                             | 
@@ -42,9 +42,9 @@ You can use public or private endpoints to make REST API calls. For more informa
 | Fetch all user alerts      | `GET`            | `<ENDPOINT>/api/alerts`             |
 {: caption="Table 1. Alerting REST API" caption-side="top"}
 
-For more information, see [Alerting by using REST API operations]().
+For more information, see [Alerting by using REST API operations](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api).
 
-
+For more information about the Sysdig Alerts API, see [Sysdig Cloud API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://app.sysdigcloud.com/apidocs/#!/Alerts/){:new_window}.
 
 
 

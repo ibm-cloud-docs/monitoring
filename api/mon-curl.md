@@ -80,7 +80,7 @@ Where
 ### Headers for Sysdig Token
 {: #mon-curl-headers-sysdig}
 
-You can also Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use the Sysdig REST API to automate routine tasks and monitor notifications.
+You can also use Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use the Sysdig REST API to automate routine tasks and monitor notifications.
 
 In a cURL command, add the following command option to authenticate with the {{site.data.keyword.mon_full_notm}} service by using a Sysdig token:
 

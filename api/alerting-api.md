@@ -21,7 +21,7 @@ subcollection: Monitoring-with-Sysdig
 {:important: .important}
 {:note: .note}
 
-# Alerting by using REST API operations
+# Managing alerts by using the Sysdig Alerts REST API
 {: #alerting-api}
 
 You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance through REST API operations that you can run by using a Python client or a cURL command.
@@ -75,25 +75,16 @@ notification_channel_ids = res
 res = sdclient.create_alert(
     name=<ALERT_NAME>,
     description=<ALERT_DESCRIPTION>,
-    # Number from 0 to 7 where 0 means 'emergency' and 7 is 'debug'
     severity=<SEVERITY>,
-    # The alert will fire if the condition is met for at least number of consecutive seconds
     for_atleast_s=<FOR_ATLEAST_S>,
-    # The alert condition
     condition=<CONDITION>,
     # For example, segmenting a CPU alert by ['host.mac', 'proc.name'] we want to check this metric for every process on every machine
     segmentby=<SEGMENTBY>,
-    # Optional Default value `ANY`
     segment_condition=<SEGMENT_CONDITION>,
-    # Filter. We want to receive a notification only if the name of the process meets the condition
     user_filter=<USER_FILTER>,
-    # Type of notification you want this alert to generate, Mention Notification channel ID's
     notify=<NOTIFICATION_CHANNEL_IDS>,
-    # If the alert will be enabled when created. True by default
     enabled=<ENABLED>,
-    # Custom properties to associate with the alert
     annotations=<ANNOTATIONS>,
-    # Use an Alert object instead of specifying the individual parameters
     alert_obj=<ALERT_OBJ>
 )
 
@@ -106,49 +97,80 @@ Consider the following information when you create a Python script:
 
 * You must include the following information: `<SYSDIG-ENDPOINT>`, `<IAM_APIKEY>`, and `<GUID>` These data is required to authenticate the request with the monitoring instance. To get the monitoring instance information, see [Authenticate your user or service ID by using IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client#python-client-iam-auth).
 
-* You must define the notification channels by which you want to be notified on the alert.
+* You must define the notification channels through which you want to be notified when the alert is triggered.
 
-    Valid notification channel types are `SLACK`, and `EMAIL`.
+    Valid notification channel types are `SLACK`, `PAGER_DUTY`, `VICTOROPS`, `WEBHOOK`, and `EMAIL`.
 
     When you define the notification channels, the channels must be configured in the monitoring instance.
 
     When you add an email notification channel, you can add multiple recipients. You separate values by using a comma.
 
-    When you define a Slack channel, replace `<SLACK_CHANNEL_NAME>` with the name of your channel. Do not include the symbol `#`.
-
-* You must define the name of the alert name by replacing `<ALERT_NAME>`.
+    When you define a Slack channel, replace `<SLACK_CHANNEL_NAME>` with the name of your channel. You must include the symbol `#` with the name of the channel, for example, `#my_sysdig_alert_channel`.
 
 
-<ALERT_DESCRIPTION>
-<SEVERITY>,
-# Number from 0 to 7 where 0 means 'emergency' and 7 is 'debug'
-<FOR_ATLEAST_S>  The alert will fire if the condition is met for at least number of consecutive seconds
-<CONDITION>
-<SEGMENT_CONDITION>  Default value `ANY`
-<USER_FILTER> Filter. We want to receive a notification only if the name of the process meets the condition
+When you configure the alert, complete the following sections:
 
-<NOTIFICATION_CHANNEL_IDS>  Type of notification you want this alert to generate, Mention Notification channel ID's
-<ENABLED> If the alert will be enabled when created. True by default
-<ANNOTATIONS> Custom properties to associate with the alert
-<ALERT_OBJ> Use an Alert object instead of specifying the individual parameters
+* [`name` and `description`]: You must define a unique name for the alert name by replacing `<ALERT_NAME>`, and optionally, add a description by replacing `<ALERT_DESCRIPTION>`.
+
+* [`severity`]: You must define the severity of the alert by replacing `<SEVERITY>` with a number. Valid values are `0`, `1`, `2`, `3`, `4`, `5`, `6`, and `7`.
+
+* [`for_atleast_s`]: You must define the number of consecutive seconds that the condition is met before the alert is triggered. Replace `<FOR_ATLEAST_S>` with the number of seconds.
+
+* [`condition`]: You must define the condition that defines when the alert is triggered.
+
+* [`segmentby`]: You can define the scope of an alert by configuring the `segmentedby` section. The default value is `ANY`.
+
+* [`segment_condition`]: 
+
+* [`user_filter`]: You can define a filter that indicates when a notification is sent. For example, you could define this entry if you want to receive a notification only if the name of the process meets the condition.
+
+* [`notify`]: You can define the type of notifications that you want the alert to generate. Set this entry to the notification IDs of the channels that you have defined.
+
+* [`enabled`]: You can configure the status of the alert when it is created. By default, alerts are enabled and the entry is set to `true`. Set to `false` if you do not want it enabled when you create it.
+
+* [`annotations`]: You can add custom properties that you can associate with the alert.
+
+* [`alert_obj`]: You can attach an alert object instead of specifying the individual parameters.
 
 
-### Create an alert by using a cURL command from a json
+### Create an alert by using a cURL command
 {: #alerting-api-create-alert-curl}
 
-Check out [Working with cURL](#curl-guide)
 
-| Method | API_URL | Data File |
-|----|---|----|
-| POST | `api/alerts` | alert.json |
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to create an alert:
 
-Example alert.json:
+
+```shell
+curl -X POST <SYSDIG_REST_API_ENDPOINT>/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" [-d DATA]
+```
+{: codeblock}
+
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* You can pass data to create the alert by using `-d`. 
+
+    You can pass a JSON file that includes the alert body parameters. You can name the file `alert.json`.
+    
+    You can pass each body parameter individually.
+
+* When you create an alert, you must include the following parameters: *type*, *name*,  *severity*, *timespan*, *condition*, *segmentby*, *segmentConditionn*, *filter*, *notificationChannelIds*, *enabled*
+
+    Other parameters like *description*, are optional. For more information about the list of parameters that you can use, see [cURL command: Common parameters in the request and in the response body]().
+
+
+The following sample shows the request body parameters that you can set to create an alert: 
 
 ```json
 {
   "alert": {
     "version": null,
-    "name": "My Exciting Alert!",
+    "name": "My Alert!",
     "description": null,
     "teamId": null,
     "enabled": false,
@@ -169,27 +191,7 @@ Example alert.json:
   }
 }
 ```
-
-#### Request body parameters
-
-- **type**: Type of alert; Valid values are:
-  - `MANUAL` for manual alerts
-  - `BASELINE` for baseline alerts
-  - `HOST_COMPARISON` for host comparison alerts
-- **name**: Name of the alert. This will appear in the Sysdig Monitor UI and in notification emails.
-- **description**: The alert description. This will appear in the Sysdig Monitor UI and in notification emails.
-- **severity**: syslog-encoded alert severity. This is a number from 0 to 7 where 0 means 'emergency' and 7 is 'debug'.
-- **timespan**: The number of consecutive seconds the condition must be satisfied for the alert to fire.
-- **condition**: The alert condition, as described here [post_api_alerts](https://app.sysdigcloud.com/apidocs/#!/Alerts/post_api_alerts)
-- **segmentby**: A list of Sysdig Monitor segmentation criteria that can be used to apply the alert to multiple entities. For
-  example, segmenting a CPU alert by ['host.mac', 'proc.name'] allows to apply it to any process in any machine.
-- **segmentConditionn**: When *segmentby* is specified (and therefore the alert will cover multiple entities) this field is used to determine when it will fire. In particular, you have two options for *segment_condition*: **ANY** (the alert will fire when at least one of the monitored entities satisfies the condition) and **ALL** (the alert will fire when all of the monitored entities satisfy the condition).
-- **filter**: A boolean expression combining Sysdig Monitor segmentation criteria that makes it possible to reduce the
-  scope of the alert. For example: *kubernetes.namespace.name='production' and container.image='nginx'*.
-- **notificationChannelIds**: the type of notification you want this alert to generate. Options are *EMAIL*,*PAGER_DUTY*, *WEBHOOK*. To fetch channelID's, Please refer to section `Fetch specific user notification` under [notificationChannelIds](observability-monitoring?topic=observability-monitoring-notification-api-operations#fetch-specific-user-notification)
-- **enabled**: if True, the alert will be enabled when created.
-
-
+{: screen}
 
 
 
@@ -407,6 +409,191 @@ Check out [Working with cURL](#curl-guide)
 - **createdOn**: Unix-timestamp of time when the alert was created
 - **modifiedOn**: Unix-timestamp of time when the alert was last modified
 - **notificationCount**: Number of events fired for the alert during the past 2 weeks
+
+
+
+## cURL command: Common parameters in the request and in the response body
+{: #alerting-api-parm}
+
+
+### version (string)
+{: #alerting-api-parm-version}
+
+This parameter indicates the revision version of the alert.
+
+### name (string)
+{: #alerting-api-parm-name}
+
+This parameter defines the name of the alert. 
+
+The name is used to identify the alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
+
+### description (string)
+{: #alerting-api-parm-desc}
+
+This parameter descrines the alert. 
+
+The description is available when you view an alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
+
+### teamId (string)
+{: #alerting-api-parm-teamid}
+
+This parameter defines the team GUID that owns the alert.
+
+### enabled (boolean)
+{: #alerting-api-req-parm-enabled}
+
+This parameter defines whether the alert is enabled once it is created.
+
+By default, this parameter is set to `true` and the alert is enabled.
+
+### filter (boolean)
+{: #alerting-api-parm-filter}
+
+This parameter is a boolean expression that combines segmentation criteria and makes it possible to reduce the scope of the alert. 
+
+For example: *kubernetes.namespace.name='production' and container.image='nginx'*.
+
+
+### type (string)
+{: #alerting-api-parm-type}
+
+This parameter defines the type of alert.
+
+Valid values are the following:
+
+* `MANUAL`: Set to this value for manual alerts. 
+* `BASELINE`: Set to this value for baseline alerts. 
+* `HOST_COMPARISON`: Set to this value for host comparison alerts.
+
+
+
+### condition (string)
+{: #alerting-api-parm-condition}
+
+This parameter indicates the threshold for the alert.
+
+For example, you can defines a consition as follows: `avg(timeAvg(uptime)) <= 0`
+
+
+
+### timespan (microseconds)
+{: #alerting-api-parm-timespan}
+
+This parameter indicates the minimum time interval for which the alert condition must be met before the alert is triggered.
+
+The minimum value is 60000000 microseconds, that is, 1 minute.
+The value of this parameter must be a multiple of 60000000 microseconds.
+
+
+
+### notificationChannelIds (string)
+{: #alerting-api-parm-not}
+
+This parameter indicates the type of notification you want this alert to generate. 
+
+Valid options are `EMAIL`, `PAGER_DUTY`, `WEBHOOK`, `VICTOROPS`, and `SLACK`. 
+
+
+### reNotify (boolean)
+{: #alerting-api-parm-renotify}
+
+This parameter indicates if you want to get follow up notifications until the alert condition is acknoeldged and resolved.
+
+By default, follow up notifications are not enabled and the field is set to `false`.
+
+
+### reNotifyMinutes (integer)
+{: #alerting-api-parm-renotmin}
+
+This parameter indicates how often do you want to receive notifications on an alert that is not resolved.
+
+You specify the number of minutes before a reminder is sent.
+
+
+### severity (string)
+{: #alerting-api-parm-severity}
+
+This parameter defines the syslog-encoded alert severity. 
+
+The following table lists the values that you can set:
+
+| Severity | Info        |
+|----------|-------------|
+| `0`      | `emergency` |
+| `1`      | `alert`     |
+| `2`      | `critical`  |
+| `3`      | `error`     |
+| `4`      | `warning`   |
+| `5`      | `notice`    |
+| `6`      | `informational`|
+| `7`      | `debug` |
+{: caption="Table 1. Severity values" caption-side="top"} 
+
+### severityLabel (string)
+{: #alerting-api-parm-sevlevel}
+
+This parameter defines the criticality of an alert. Valid values are `high`, `medium`, `low`, and `info`.
+
+The following table shows the severity status that must be set depending on the severity parameter value:
+
+| Severity | Severity status   |
+|----------|------------------|
+| `0`      | `High`           |
+| `1`      | `High`           |
+| `2`      | `Medium`         |
+| `3`      | `Medium`         |
+| `4`      | `Low`            |
+| `5`      | `Low`            |
+| `6`      | `Info`           |
+| `7`      | `Info`           |
+{: caption="Table 2. Severity level values" caption-side="top"} 
+
+### segmentBy (string)
+{: #alerting-api-parm-segmentedby}
+
+This parameter defines one or more entities that are monitored. 
+
+For example, you can segment a CPU alert by `['host.mac', 'proc.name']` so the alert can report on any process in any machine for which you get data in the monitoring instance.
+
+### segmentCondition (string)
+{: #alerting-api-parm-segmentcondition}
+
+This parameter defines when the alert is triggered for each monitored entity that is specified in the *segmentBy* parameter. 
+
+Valid values are the following:
+* **ANY**: The alert is triggered when at least one of the monitored entities satisfies the condition.
+* **ALL**: The alert is triggered when all of the monitored entities satisfy the condition.
+
+
+
+
+
+
+## cURL command: Parameters that are specific to the response body
+{: #alerting-api-res-parm}
+
+### id
+{: #alerting-api-res-parm-id}
+
+This parameter returns the alert ID.
+
+### createdOn
+{: #alerting-api-res-parm-created}
+
+This parameter returns the Unix-timestamp when the alert was created.
+
+### modifiedOn
+{: #alerting-api-res-parm-modified}
+
+This parameter defines the Unix-timestamp when the alert was last modified.
+
+### notificationCount
+{: #alerting-api-res-parm-not-count}
+
+This parameter returns the number of events that are sent for the alert during the past 2 weeks.
+
+
 
 
 
