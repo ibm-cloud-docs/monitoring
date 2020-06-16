@@ -87,7 +87,7 @@ The following table lists integration services that are Sysdig-enabled:
 The following table lists Cloud services that send logs to {{site.data.keyword.la_full_notm}}:
 
 
-| Service     | Description | More info about the integration with {{site.data.keyword.la_full_notm}} |
+| Service     | Description | Metrics |
 |-------------|-------------|-------------------------------------------------------------------------|
 | [{{site.data.keyword.loadbalancer_full}}](/docs/loadbalancer-service?topic=loadbalancer-service-getting-started) | Use this service to improve availability of business-critical applications by distributing traffic among multiple application server instances, and by forwarding traffic to healthy instances only. | [Metrics collected by {{site.data.keyword.loadbalancer_full}}](/docs/loadbalancer-service?topic=loadbalancer-service-monitoring-metrics-with-ibm-cloud-load-balancer)
 {: caption="List of security networking services" caption-side="top"} 
@@ -100,7 +100,7 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 
 The following table lists integration services that are Sysdig-enabled:
 
-| Service     | Description | Events |
+| Service     | Description | Metrics |
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started)| You can use {{site.data.keyword.cos_full_notm}} to store unstructured data in the {{site.data.keyword.cloud_notm}}.  | [Metrics that are collected by {{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-mm-cos-integration&programming_language=Console) |
 {: caption="List of integration Cloud services" caption-side="top"} 
@@ -121,7 +121,7 @@ There are 2 types of VPC infrastructure that you can provision in your account:
 
 The following table lists VPC infrastructure services that send events to {{site.data.keyword.at_full_notm}}:
 
-| Service     | Description |Events             |
+| Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
 | [Storage resources](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-getting-started)| Use this service to provide hypervisor-mounted, high-performance data storage for virtual server instances (instances) in your VPC. |  |
 | [Compute resources](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-getting-started)| Use this service to provision scalable compute resources in the IBM Cloud. |  |
@@ -138,7 +138,7 @@ The following table lists VPC infrastructure services that send events to {{site
 
 The following table lists VPC infrastructure services that send events to {{site.data.keyword.at_full_notm}}:
 
-| Service     | Description |Events             |
+| Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
 | [Storage resources](/docs/vpc?topic=vpc-block-storage-about) | Use this service to provide hypervisor-mounted, high-performance data storage for virtual server instances (instances) in your VPC. |  |
 | [Compute resources](/docs/vpc?topic=vpc-about-advanced-virtual-servers) | Use this service to provision scalable compute resources in the IBM Cloud. |  |
