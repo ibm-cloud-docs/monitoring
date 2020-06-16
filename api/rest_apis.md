@@ -42,10 +42,25 @@ You can use public or private endpoints to make REST API calls. For more informa
 | Fetch all user alerts      | `GET`            | `<ENDPOINT>/api/alerts`             |
 {: caption="Table 1. Alerting REST API" caption-side="top"}
 
-For more information, see [Alerting by using REST API operations](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api).
+For more information, see [Managing alerts (Alerts REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api).
 
 For more information about the Sysdig Alerts API, see [Sysdig Cloud API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://app.sysdigcloud.com/apidocs/#!/Alerts/){:new_window}.
 
+
+
+## Dashboards REST API
+{: #rest_apis_dashboards}
+
+| Action                     | REST API Method  | API_URL                             | 
+|----------------------------|------------------|-------------------------------------|
+| Create an alert            | `POST`           | `<ENDPOINT>/api/alerts`             |
+| Update an alert            | `PUT`            | `<ENDPOINT>/api/alerts/<ALERT_ID>`  |
+| Delete an alert            | `DELETE`         | `<ENDPOINT>/api/alerts/<ALERT_ID>`  |
+| Fetch a specific alert     | `GET`            | `<ENDPOINT>/api/alerts/<ALERT_ID>`  |
+| Fetch all user alerts      | `GET`            | `<ENDPOINT>/api/alerts`             |
+{: caption="Table 1. Alerting REST API" caption-side="top"}
+
+For more information, see [Managing alerts (Alerts REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api).
 
 
 

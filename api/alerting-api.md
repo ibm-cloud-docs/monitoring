@@ -21,7 +21,7 @@ subcollection: Monitoring-with-Sysdig
 {:important: .important}
 {:note: .note}
 
-# Managing alerts by using the Sysdig Alerts REST API
+# Managing alerts (Alerts REST API)
 {: #alerting-api}
 
 You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance through REST API operations that you can run by using a Python client or a cURL command.
@@ -34,6 +34,8 @@ You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance through 
 
 ### Creating an alert by using a Python client
 {: #alerting-api-create-alert-python}
+
+To learn how to use the Pythin client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
 
 The following code shows the structure of a Python script that you can use to create an alert:
 
@@ -78,7 +80,6 @@ res = sdclient.create_alert(
     severity=<SEVERITY>,
     for_atleast_s=<FOR_ATLEAST_S>,
     condition=<CONDITION>,
-    # For example, segmenting a CPU alert by ['host.mac', 'proc.name'] we want to check this metric for every process on every machine
     segmentby=<SEGMENTBY>,
     segment_condition=<SEGMENT_CONDITION>,
     user_filter=<USER_FILTER>,
@@ -116,7 +117,9 @@ When you configure the alert, complete the following sections:
 
 * [`for_atleast_s`]: You must define the number of consecutive seconds that the condition is met before the alert is triggered. Replace `<FOR_ATLEAST_S>` with the number of seconds.
 
-* [`condition`]: You must define the condition that defines when the alert is triggered.
+* [`condition`]: You must define the condition that defines when the alert is triggered. For example, you can set this parameter to `['host.mac', 'proc.name']` to check a CPU alert for every process on every machine.
+
+    For more information, see [Multi-Condition Alerts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/alerts.html#al_UUID-21e3bcab-eaf2-993b-96e5-bdbc631504bc_UUID-9177b0b6-2f26-ea2f-1f3c-8b9a36192bfc){:new_window}.
 
 * [`segmentby`]: You can define the scope of an alert by configuring the `segmentedby` section. The default value is `ANY`.
 
@@ -195,11 +198,13 @@ The following sample shows the request body parameters that you can set to creat
 
 
 
-## Update an alert
+## Updating an alert
+{: #alerting-api-update-alert}
 
 Updating an existing alerts requires the user to know the ID of that alert.
 
-### Using the python client to update existing alerts
+### Updating an alert by using a Python client
+{: #alerting-api-update-alert-python}
 
 ```python
 from sdcclient import IbmAuthHelper, SdMonitorClient
@@ -234,7 +239,8 @@ if not alert_found:
     print('Alert to be updated not found')
 ```
 
-### Using curl to update an existing alert from a json
+### Updating an alert by using cURL
+{: #alerting-api-update-alert-curl}
 
 Check out [Working with cURL](#curl-guide)
 
@@ -276,11 +282,13 @@ Example alert.json:
 
 
 
-## Delete an alert
+## Deleting an alert
+{: #alerting-api-delete-alert}
 
 Deletion of an existing alerts requires the user to know the ID of that alert.
 
-### Using the python client
+### Deleting an alert by using the python client
+{: #alerting-api-delete-alert-python}
 
 ```python
 from sdcclient import IbmAuthHelper, SdMonitorClient
@@ -303,7 +311,8 @@ for alert in res['alerts']:
             print("Alert deletion failed")
 ```
 
-### Using curl to delete an existing alert
+### Deleting an alert by using cURL
+{: #alerting-api-delete-alert-curl}
 
 Check out [Working with cURL](#curl-guide)
 
@@ -533,20 +542,20 @@ The following table lists the values that you can set:
 ### severityLabel (string)
 {: #alerting-api-parm-sevlevel}
 
-This parameter defines the criticality of an alert. Valid values are `high`, `medium`, `low`, and `info`.
+This parameter defines the criticality of an alert. Valid values are `HIGH`, `MEDIUM`, `LOW`, and `INFO`.
 
 The following table shows the severity status that must be set depending on the severity parameter value:
 
 | Severity | Severity status   |
 |----------|------------------|
-| `0`      | `High`           |
-| `1`      | `High`           |
-| `2`      | `Medium`         |
-| `3`      | `Medium`         |
-| `4`      | `Low`            |
-| `5`      | `Low`            |
-| `6`      | `Info`           |
-| `7`      | `Info`           |
+| `0`      | `HIGH`           |
+| `1`      | `HIGH`           |
+| `2`      | `MEDIUM`         |
+| `3`      | `MEDIUM`         |
+| `4`      | `LOW`            |
+| `5`      | `LOW`            |
+| `6`      | `INFO`           |
+| `7`      | `INFO`           |
 {: caption="Table 2. Severity level values" caption-side="top"} 
 
 ### segmentBy (string)

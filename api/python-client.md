@@ -22,7 +22,7 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 
 
-# Using a Python client
+# Using the Python client
 {: #python-client}
 
 You can use the [Python Client ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client){:new_window} to manage the {{site.data.keyword.mon_full_notm}} service. The client is also known as the **sdcclient**.
