@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-14"
+lastupdated: "2020-05-22"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -102,7 +102,6 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 ## Platform database services
 {: #cloud_services_locations_database}
 
- us-south, us-east, eu-gb, jp-tok, au-syd
 
 | Service                                                         | `Frankfurt (eu-de)`                                | `London (eu-gb)`                                   |
 |-----------------------------------------------------------------|----------------------------------------------------|----------------------------------------------------|
@@ -112,6 +111,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
+| {{site.data.keyword.cloudant_full_notm}}                        | `NO`                                               | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 {: caption="Database services integration in Europe locations" caption-side="top"}
 {: #cs_db-table-1}
 {: tab-title="Europe"}
@@ -127,6 +127,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](../../icons/checkmark-icon.svg)` | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
+| {{site.data.keyword.cloudant_full_notm}}                        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 {: caption="Database services integration in America's locations" caption-side="top"}
 {: #cs_db-table-2}
 {: tab-title="America"}
@@ -141,7 +142,8 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | 
+| {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
+| {{site.data.keyword.cloudant_full_notm}}                        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 {: caption="Database services integration in AP locations" caption-side="top"}
 {: #cs_db-table-3}
 {: tab-title="Asia Pacific"}
@@ -156,7 +158,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
-| {{site.data.keyword.messagehub}}                              | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg)  |          
+| {{site.data.keyword.messagehub}}                              | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |          
 {: caption="Integration services integration in Europe locations" caption-side="top"}
 {: #cs_integration-table-1}
 {: tab-title="Europe"}
@@ -186,6 +188,39 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 
 
+
+## Networking services
+{: #cs_locations_networking}
+
+| Service                                                         | `Dallas (us-south)` | `Washington (us-east)`                   |
+|-----------------------------------------------------------------|---------------------|--------------------------------------|
+| {{site.data.keyword.loadbalancer_full}}                 | ![Checkmark icon](../../icons/checkmark-icon.svg)               | `NO`                                 |            
+{: caption="Table 10. Security services integration in America's locations" caption-side="top"}
+{: #cs-int-table-1}
+{: tab-title="America"}
+{: tab-group="cs_int"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
+|-----------------------------------------------------------------|----------------|---------------------------|
+| {{site.data.keyword.loadbalancer_full}}                   | `NO`    | `NO`  |
+{: caption="Table 11. Security services integration in AP locations" caption-side="top"}
+{: #cs-int-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_int"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
+|---------------------------------------------------------------|-------------------|----------------|
+| {{site.data.keyword.loadbalancer_full}}                |  `NO`              | `NO`  |
+{: caption="Table 12. Security services  integration in Europe locations" caption-side="top"}
+{: #cs-int-table-3}
+{: tab-title="Europe"}
+{: tab-group="cs_int"}
+{: class="simple-tab-table"}
+{: row-headers}
 
 
 ## Platform storage services
@@ -230,7 +265,8 @@ The followinf locations are valid for VPC Gen 1 and VPC Gen 2:
 
 | Service                                | `Dallas (us-south)`                                | `Washington (us-east)`               |
 |----------------------------------------|----------------------------------------------------|--------------------------------------|
-| Virtual Private Cloud (VPC)   | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)   |            
+| Virtual Private Cloud (VPC)   | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)   |   
+| Virtual Private Cloud VPN   | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)   |           
 {: caption="VPC events in America's locations" caption-side="top"}
 {: #cs-vpc-table-1}
 {: tab-title="America"}
@@ -240,7 +276,8 @@ The followinf locations are valid for VPC Gen 1 and VPC Gen 2:
 
 | Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
 |-----------------------------------------------------------------|------------------|----------------------------|
-| Virtual Private Cloud (VPC)  | `NO`               | `NO` |             
+| Virtual Private Cloud (VPC)                                     | `NO`               | `NO` |             
+| Virtual Private Cloud VPN          | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |  
 {: caption="VPC events in AP locations" caption-side="top"}
 {: #cs-vpc-table-2}
 {: tab-title="Asia Pacific"}
@@ -250,7 +287,44 @@ The followinf locations are valid for VPC Gen 1 and VPC Gen 2:
 
 | Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
-| Virtual Private Cloud (VPC)  | `NO`   | ![Checkmark icon](../../icons/checkmark-icon.svg) |            
+| Virtual Private Cloud (VPC)  | `NO`   | ![Checkmark icon](../../icons/checkmark-icon.svg) |      
+| Virtual Private Cloud VPN  | ![Checkmark icon](../../icons/checkmark-icon.svg)   | ![Checkmark icon](../../icons/checkmark-icon.svg) |        
+{: caption="VPC events in Europe locations" caption-side="top"}
+{: #cs-vpc-table-3}
+{: tab-title="Europe"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+
+## VPC VPN service
+{: #cloud_services_locations_vpc_vpn}
+
+The following locations are valid for VPC VPN:
+
+| Service                                | `Dallas (us-south)`                                | `Washington (us-east)`               |
+|----------------------------------------|----------------------------------------------------|--------------------------------------|
+| Virtual Private Cloud VPN   | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)   |            
+{: caption="VPC events in America's locations" caption-side="top"}
+{: #cs-vpc-table-1}
+{: tab-title="America"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
+|-----------------------------------------------------------------|------------------|----------------------------|
+| Virtual Private Cloud VPN  | ![Checkmark icon](../../icons/checkmark-icon.svg)               | ![Checkmark icon](../../icons/checkmark-icon.svg) |             
+{: caption="VPC events in AP locations" caption-side="top"}
+{: #cs-vpc-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------|------------------|
+| Virtual Private Cloud VPN  | ![Checkmark icon](../../icons/checkmark-icon.svg)   | ![Checkmark icon](../../icons/checkmark-icon.svg) |            
 {: caption="VPC events in Europe locations" caption-side="top"}
 {: #cs-vpc-table-3}
 {: tab-title="Europe"}
