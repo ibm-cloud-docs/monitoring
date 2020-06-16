@@ -105,14 +105,13 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                         | `Frankfurt (eu-de)`                                | `London (eu-gb)`                                   |
 |-----------------------------------------------------------------|----------------------------------------------------|----------------------------------------------------|
-| {{site.data.keyword.cloudant_short_notm}}                     | ![Checkmark icon](../../icons/checkmark-icon.svg)    | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| {{site.data.keyword.cloudant_full_notm}}                        | `NO`  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.cloudant_full_notm}}                        | `NO`                                               | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 {: caption="Database services integration in Europe locations" caption-side="top"}
 {: #cs_db-table-1}
 {: tab-title="Europe"}
@@ -122,14 +121,13 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                         | `Dallas (us-south)`                                | `Washington (us-east)`                             |
 |-----------------------------------------------------------------|----------------------------------------------------|----------------------------------------------------|
-| {{site.data.keyword.cloudant_short_notm}}                       | ![Checkmark icon](../../icons/checkmark-icon.svg)  | `NO`                |
+| {{site.data.keyword.cloudant_full_notm}}                       | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](../../icons/checkmark-icon.svg)` | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.cloudant_full_notm}}                        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 {: caption="Database services integration in America's locations" caption-side="top"}
 {: #cs_db-table-2}
 {: tab-title="America"}
@@ -139,14 +137,13 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                         | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
 |-----------------------------------------------------------------|------------------|----------------------------|
-| {{site.data.keyword.cloudant_short_notm}}                       | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
+| {{site.data.keyword.cloudant_full_notm}}                        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
 | {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | 
 | {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.cloudant_full_notm}}                        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
 {: caption="Database services integration in AP locations" caption-side="top"}
 {: #cs_db-table-3}
 {: tab-title="Asia Pacific"}
