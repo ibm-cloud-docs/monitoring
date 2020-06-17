@@ -106,12 +106,12 @@ Where
 
     `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
-* You can pass data to extract metrics by using `-d`. 
+* You can pass the file `metrics.json` to extract metrics by using `-d`, for example, `-d @metrics.json`.
 
-    You can name the file `metrics.json`.
+ 
     
 
-The following sample shows a sample `metrics.json` template:
+The following sample shows a template for the `metrics.json` file:
 
 ```json
 {
@@ -157,20 +157,15 @@ To learn about data aggregation, see [Data Aggregation ![External link icon](../
 {: #metrics-query-api-samples-platform}
 
 
-This example shows how to extract platform metrics from Cloud Foundry in *us-south*.
-
+This example shows different ways how to extract platform metrics from Cloud Foundry in *us-south* for the last 24 hours.
 
 ```shell
-curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" [-d DATA]
+curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d @metrics.json
 ```
 {: codeblock}
 
 
-"I want the instance ID, app container age, and number of bytes my app is using"
-"I want the metrics only for us-south"
-"I want metrics for the last 24 hours"
-
-**Template metrics.json:**
+The following example of the `metrics.json` file shows how to configure the file to extract data by instance ID, app container age, and number of bytes the app is using:
 
 ```json
 {
@@ -192,8 +187,9 @@ curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorizatio
   "last": 86400
 }
 ```
+{: codeblock}
 
-**Result for the above API call:**
+The result for extracting data returns the following information:
 
 ```json
 {
@@ -211,10 +207,11 @@ curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorizatio
   "start": 1587686400
 }
 ```
+{: screen}
 
-### CPU by Host with start, end, and, sampling
 
-**Template metrics.json:**
+
+The following example of the `metrics.json` file shows how to configure the file to extract CPU data by host with start, end, and, sampling limit:
 
 ```json
 {
@@ -233,8 +230,9 @@ curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorizatio
   "dataSourceType": "host"
 }
 ```
+{: codeblock}
 
-**Result for the above API call:**
+The result for extracting data returns the following information:
 
 ```json
 {
@@ -286,3 +284,4 @@ curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorizatio
   "start": 1555404790
 }
 ```
+{: screen}
