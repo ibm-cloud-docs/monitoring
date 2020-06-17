@@ -43,7 +43,7 @@ Where
 
 * `<METHOD>` indicates the type of REST API call that you want to make.
 * `<SYSDIG-ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more inforamtion, see [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
-* `<API_URL>`
+* `<API_URL>` For more information about API URLs, see [Sysdig REST APIs](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-rest_apis).
 * `HEADERS` add additional information such as information to authenticate with the {{site.data.keyword.mon_full_notm}} service.
 * `DATA` allows you to pass additional information that might be required.
 
@@ -120,13 +120,6 @@ To run a cURL API query and authrnticat by using the IAM token, complete the fol
     {: codeblock}
 
 
-
-## Samples
-{: #mon-curl-samples}
-
-### Create an alert
-{: #mon-curl-samples-alert}
-
 For example, to create an alert where the alert definition and notification channel is defined through a JSON file, you can run the following command:
 
 ```shell
@@ -138,59 +131,4 @@ curl -X POST \
   -d @alert.json
 ```
 {: screen}
-
-### Create a dashboard
-{: #mon-curl-samples-dashboard}
-
-```shell
-curl -X POST \
-  https://us-south.monitoring.cloud.ibm.com/api/v2/dashboards \
-  -H 'Authorization: Bearer eyJraW...' \
-  -H 'IBMInstanceID: fc8ceb8a-...' \
-  -H 'Content-Type: application/json' \
-  -d @dashboard.json
-```
-{: screen}
-
-### Get information on a downtime event
-{: #mon-curl-samples-downtime-event}
-
-```shell
-curl -X POST \
-  https://us-south.monitoring.cloud.ibm.com/api/downtimes \
-  -H 'Authorization: Bearer eyJraW...' \
-  -H 'IBMInstanceID: fc8ceb8a-...' \
-  -H 'Content-Type: application/json' \
-  -d @downtimes.json
-```
-{: screen}
-
-### Create an alert
-{: #mon-curl-samples-alert}
-
-```shell
-curl -X POST \
-  https://us-south.monitoring.cloud.ibm.com/api/data \
-  -H 'Authorization: Bearer eyJraW...' \
-  -H 'IBMInstanceID: fc8ceb8a-...' \
-  -H 'Content-Type: application/json' \
-  -d @metrics.json
-```
-{: screen}
-
-
-### List notification channels
-{: #mon-curl-samples-alert}
-
-```shell
-curl -X POST \
-  https://us-south.monitoring.cloud.ibm.com/api/notificationChannels \
-  -H 'Authorization: Bearer eyJraW...' \
-  -H 'IBMInstanceID: fc8ceb8a-...' \
-  -H 'Content-Type: application/json' \
-  -d @notification.json
-```
-{: screen}
-
-
 
