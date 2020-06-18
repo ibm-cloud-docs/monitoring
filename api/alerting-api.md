@@ -598,6 +598,8 @@ For example, the response body for an alert looks as follows:
     {
       "id": 0,
       "version": 0,
+      "enabled": false,
+      "teamId": null,
       "type": "MANUAL",
       "name": "string",
       "description": "string",
@@ -622,6 +624,9 @@ For example, the response body for an alert looks as follows:
       "notify": [
         "EMAIL"
       ],
+      "notificationChannelIds": [],
+      "reNotify": false,
+      "reNotifyMinutes": 30,
       "notificationCount": 0,
       "target": {}
     }
@@ -667,6 +672,17 @@ This parameter returns the Unix-timestamp when the alert was created.
 This parameter descrines the alert. 
 
 The description is available when you view an alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
+
+
+
+### enabled (boolean)
+{: #alerting-api-req-parm-enabled}
+
+Defines the status of an alert.
+{: note}
+
+By default, this parameter is set to `true` and the alert is enabled when it is created.
+
 
 
 ### filter (string)
@@ -755,6 +771,23 @@ Lists the notification channels that are configured to notify when an alert is t
 
 
 
+### notificationChannelIds (array)
+{: #alerting-api-parm-not}
+
+Lists the notification channels that are configured to notify when an alert is triggered.
+{: note}
+
+Valid options are `EMAIL`, `PAGER_DUTY`, `WEBHOOK`, `VICTOROPS`, and `SLACK`. 
+
+```json
+"notificationChannelIds": [
+      "EMAIL", 
+      "WEBHOOK"
+    ]
+```
+{: codeblock}
+
+
 ### notificationCount (integer)
 {: #alerting-api-res-parm-not-count}
 
@@ -762,16 +795,22 @@ Defines the number of notifications that are sent for the alert during the past 
 {: note}
 
 
+### reNotify (boolean)
+{: #alerting-api-parm-renotify}
 
-### notificationChannelIds (string)
-{: #alerting-api-parm-not}
-
-Defines the type of notification channels that you want this alert to generate.
+Defines whether you want to get follow up notifications until the alert condition is acknoeldged and resolved.
 {: note}
 
-Valid options are `EMAIL`, `PAGER_DUTY`, `WEBHOOK`, `VICTOROPS`, and `SLACK`. 
+By default, follow up notifications are not enabled and the field is set to `false`.
 
 
+### reNotifyMinutes (integer)
+{: #alerting-api-parm-renotmin}
+
+Defines how often do you want to receive notifications on an alert that is not resolved.
+{: note}
+
+You specify the number of minutes before a reminder is sent.
 
 
 ### severity (integer)
@@ -842,6 +881,14 @@ Defines when a notification is sent. When the metric value is more then X standa
 {: note}
 
 
+
+### teamId (string)
+{: #alerting-api-parm-teamid}
+
+Defines the GUID of the team that owns the alert.
+{: note}
+
+
 ### type (string)
 {: #alerting-api-parm-type}
 
@@ -879,7 +926,7 @@ The version is used for optimistic locking.
 
 
 
-### Query parameters
+## Query parameters
 {: #alerting-api-parm-query}
 
 
@@ -903,34 +950,4 @@ Defines the end timestamp, in microseconds, that is used when you request inform
 
 
 
-
-
-
-### teamId (string)
-{: #alerting-api-parm-teamid}
-
-This parameter defines the team GUID that owns the alert.
-
-### enabled (boolean)
-{: #alerting-api-req-parm-enabled}
-
-This parameter defines whether the alert is enabled once it is created.
-
-By default, this parameter is set to `true` and the alert is enabled.
-
-
-### reNotify (boolean)
-{: #alerting-api-parm-renotify}
-
-This parameter indicates if you want to get follow up notifications until the alert condition is acknoeldged and resolved.
-
-By default, follow up notifications are not enabled and the field is set to `false`.
-
-
-### reNotifyMinutes (integer)
-{: #alerting-api-parm-renotmin}
-
-This parameter indicates how often do you want to receive notifications on an alert that is not resolved.
-
-You specify the number of minutes before a reminder is sent.
 
