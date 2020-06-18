@@ -293,7 +293,7 @@ if not alert_found:
 {: #alerting-api-update-alert-curl}
 
 
-You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to create an alert:
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to update an alert:
 
 
 ```shell
@@ -395,7 +395,8 @@ The following table show common error response codes:
 ## Deleting an alert
 {: #alerting-api-delete-alert}
 
-Deletion of an existing alerts requires the user to know the ID of that alert.
+To delete an existing alert, you need the ID of that alert.
+{: note}
 
 ### Deleting an alert by using the python client
 {: #alerting-api-delete-alert-python}
@@ -432,12 +433,33 @@ for alert in res['alerts']:
 ### Deleting an alert by using cURL
 {: #alerting-api-delete-alert-curl}
 
-Check out [Working with cURL](#curl-guide)
 
-| Method | API_URL | Data File |
-|----|---|----|
-| DELETE | `api/alerts/<ID>` | |
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to delete an alert:
 
+
+```shell
+curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d '"alertId": "<ALERT_ID>"' 
+```
+{: codeblock}
+
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* `<ALERT_ID>` defines the ID of the alert that you want to modify.
+
+
+The following table show common error response codes:
+
+| RC    | Description  |
+|-------|--------------|
+| `401` | Unauthorized access. |
+| `404` | The alert ID is not recognized. |
+{: caption="Table 3. RC" caption-side="top"} 
 
 
 ## Fetch all user alerts
@@ -468,6 +490,28 @@ print(json_res)
 ```
 
 ### Using curl
+
+
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to get information about all the alerts:
+
+
+```shell
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID"
+```
+{: codeblock}
+
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+
+
+
+
 
 Check out [Working with cURL](#curl-guide)
 
@@ -792,6 +836,20 @@ Defines when the alert is triggered for each monitored entity that is specified 
 Valid values are the following:
 * **ANY**: The alert is triggered when at least one of the monitored entities satisfies the condition.
 * **ALL**: The alert is triggered when all of the monitored entities satisfy the condition.
+
+
+### from (long)
+{: #alerting-api-parm-from}
+
+Defines the start timestamp, in microseconds, that is used when you request information about alerts that are defined.
+{: note}
+
+### to (long)
+{: #alerting-api-parm-to}
+
+Defines the end timestamp, in microseconds, that is used when you request information about alerts that are defined.
+{: note}
+
 
 
 
