@@ -47,8 +47,6 @@ Use this API to manage alerts.
 
 For more information, see [Managing alerts (Alerts REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api).
 
-For more information about the Sysdig Alerts API, see [Sysdig Cloud API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://app.sysdigcloud.com/apidocs/#!/Alerts/){:new_window}.
-
 
 
 ## Dashboards REST API

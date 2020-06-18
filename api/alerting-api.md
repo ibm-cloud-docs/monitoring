@@ -123,8 +123,8 @@ When you configure the alert, complete the following sections:
 
 * [`segmentby`]: You can define the scope of an alert by configuring the `segmentedby` section. The default value is `ANY`.
 
-* [`segment_condition`]: 
-
+* [`segment_condition`]: When the parameter *segmentby* is specified, set this field to determine when the alert will be triggered. Valid values are **ANY** and **ALL**. [Learn more]().
+            
 * [`user_filter`]: You can define a filter that indicates when a notification is sent. For example, you could define this entry if you want to receive a notification only if the name of the process meets the condition.
 
 * [`notify`]: You can define the type of notifications that you want the alert to generate. Set this entry to the notification IDs of the channels that you have defined.
@@ -160,43 +160,7 @@ Where
 
     When you create an alert, include the following parameters: *type*, *name*,  *severity*, *timespan*, *condition*, *segmentby*, *segmentConditionn*, *filter*, *notificationChannelIds*, *enabled*
 
-    The following JSON shows the body parameters schema:
-
-    ```json
-    {
-      "alert": {
-        "id": 0,   
-        "version": 0,
-        "type": "MANUAL",
-        "name": "string",
-        "description": "string",
-        "createdOn": 0,
-        "modifiedOn": 0,
-        "severity": 0,
-        "timespan": 0,
-        "filter": "string",
-        "segmentBy": [
-          "string"
-        ],
-      "segmentCondition": {
-        "type": "ALL"
-      },
-      "condition": "string",
-      "monitor": [
-        {
-          "metric": "string",
-          "stdDevFactor": 0
-        }
-      ],
-      "notify": [
-        "EMAIL"
-      ],
-      "notificationCount": 0,
-      "target": {}
-    }
-  }
-  ```
-  {: codeblock}
+    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alerting-api-schema).
 
 
 The following sample shows the request body parameters that you can set to create an alert: 
@@ -313,43 +277,7 @@ Where
 
 * You can pass data to create the alert in the `alert.json` file by using `-d`. 
 
-    The following JSON shows the body parameters schema:
-
-    ```json
-    {
-      "alert": {
-        "id": 0,
-        "version": 0,
-        "type": "MANUAL",
-        "name": "string",
-        "description": "string",
-        "createdOn": 0,
-        "modifiedOn": 0,
-        "severity": 0,
-        "timespan": 0,
-        "filter": "string",
-        "segmentBy": [
-          "string"
-        ],
-        "segmentCondition": {
-          "type": "ALL"
-        },
-        "condition": "string",
-        "monitor": [
-          {
-            "metric": "string",
-            "stdDevFactor": 0
-         }
-        ],
-        "notify": [
-          "EMAIL"
-        ],
-        "notificationCount": 0,
-        "target": {}
-      }
-    }
-    ```
-    {: codeblock}
+    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alerting-api-schema).
 
 
 The following sample shows the request body parameters that you can set to update an alert: 
@@ -516,6 +444,8 @@ Where
 {: caption="Table 4. RC" caption-side="top"} 
 
 
+For more information about the response format, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alerting-api-schema).
+
 ## Get a specific user alert
 {: #alerting-api-fetch-user-alert}
 
@@ -589,51 +519,76 @@ For example, the response body for an alert looks as follows:
 
 
 
-## Alerts schema
-{: #alerting-api-schema}
+## Alerts schema: Request body
+{: #alerting-api-schema-req}
 
 ```json
 {
   "alerts": [
     {
-      "id": 0,
-      "version": 0,
-      "enabled": false,
+    "alert": {
+      "version": null,
+      "name": "",
+      "description": null,
       "teamId": null,
-      "type": "MANUAL",
-      "name": "string",
-      "description": "string",
-      "createdOn": 0,
-      "modifiedOn": 0,
-      "severity": 0,
-      "timespan": 0,
-      "filter": "string",
-      "segmentBy": [
-        "string"
-      ],
-      "segmentCondition": {
-        "type": "ALL"
-      },
-      "condition": "string",
-      "monitor": [
-        {
-          "metric": "string",
-          "stdDevFactor": 0
-        }
-      ],
-      "notify": [
-        "EMAIL"
-      ],
+      "enabled": false,
+      "filter": null,
+      "type": "",
+      "condition": "",
+      "timespan": 600000000,
       "notificationChannelIds": [],
       "reNotify": false,
       "reNotifyMinutes": 30,
-      "notificationCount": 0,
-      "target": {}
+      "segmentBy": [],
+      "segmentCondition": {
+        "type": ""
+      },
+      "severityLabel": ""
     }
+  }
   ]
 }
 ```
 {: codeblock}
+
+## Alerts schema: Response body
+{: #alerting-api-schema-res}
+
+```json
+{
+  "alerts": [
+    {
+    "alert": {
+      "autoCreated": false,
+      "condition": "",
+      "createdOn": 1551358413000,
+      "enabled": false,
+      "id": 23211,
+      "modifiedOn": 1551634372000,
+      "name": "",
+      "filter": "",
+      "notificationChannelIds": [],
+      "segmentBy": [],
+      "segmentCondition": {
+        "type": "ANY"
+      },
+      "notificationCount": 60,
+      "rateOfChange": false,
+      "reNotify": false,
+      "severity": 0,
+      "severityLabel": "",
+      "teamId": 493,
+      "timespan": 60000000,
+      "type": "",
+      "version": 9
+      }
+    }
+  ]
+}
+```
+{: screen}
+
+
 
 
 ## Body parameters
@@ -731,43 +686,6 @@ Defines when an alert was last modified in milliseconds.
 This parameter defines the Unix-timestamp when the alert was last modified.
 
 
-
-## monitor (array)
-{: #alerting-api-parm-monitor}
-
-Defines the metrics that are monitored. This parameter is required for `BASELINE` and `HOST_COMPARISON` alerts only.
-{: note}
-
-```json
-"monitor": [
-      {
-        "metric": "string",
-        "stdDevFactor": 0
-      }
-    ]
-```
-{: codeblock}
-
-### metric (string)
-{: #alerting-api-parm-monitor-metric}
-
-Defines a metric ID.
-{: note}
-
-
-
-### notify (array)
-{: #alerting-api-res-parm-notify}
-
-Lists the notification channels that are configured to notify when an alert is triggered.
-{: note}
-
-```json
-"notify": [
-      "EMAIL"
-    ]
-```
-{: codeblock}
 
 
 
@@ -873,12 +791,6 @@ Valid values are the following:
 * **ANY**: The alert is triggered when at least one of the monitored entities satisfies the condition.
 * **ALL**: The alert is triggered when all of the monitored entities satisfy the condition.
 
-
-### stdDevFactor (number)
-{: #alerting-api-parm-monitor-stdDevFactor}
-
-Defines when a notification is sent. When the metric value is more then X standard deviations from average, the notification is sent. 
-{: note}
 
 
 
