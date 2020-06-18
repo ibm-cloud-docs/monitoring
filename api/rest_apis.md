@@ -49,46 +49,6 @@ For more information, see [Managing alerts (Alerts REST API)](/docs/Monitoring-w
 
 For more information about the Sysdig Alerts API, see [Sysdig Cloud API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://app.sysdigcloud.com/apidocs/#!/Alerts/){:new_window}.
 
-### Alert schema
-{: #rest_apis_alerts_schema}
-
-```json
-{
-  "alerts": [
-    {
-      "id": 0,
-      "version": 0,
-      "type": "MANUAL",
-      "name": "string",
-      "description": "string",
-      "createdOn": 0,
-      "modifiedOn": 0,
-      "severity": 0,
-      "timespan": 0,
-      "filter": "string",
-      "segmentBy": [
-        "string"
-      ],
-      "segmentCondition": {
-        "type": "ALL"
-      },
-      "condition": "string",
-      "monitor": [
-        {
-          "metric": "string",
-          "stdDevFactor": 0
-        }
-      ],
-      "notify": [
-        "EMAIL"
-      ],
-      "notificationCount": 0,
-      "target": {}
-    }
-  ]
-}
-```
-{: codeblock}
 
 
 ## Dashboards REST API

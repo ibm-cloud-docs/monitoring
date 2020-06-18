@@ -594,7 +594,49 @@ Check out [Working with cURL](#curl-guide)
 
 
 
-## cURL command: Parameters
+## Alerts schema
+{: #alerting-api-schema}
+
+```json
+{
+  "alerts": [
+    {
+      "id": 0,
+      "version": 0,
+      "type": "MANUAL",
+      "name": "string",
+      "description": "string",
+      "createdOn": 0,
+      "modifiedOn": 0,
+      "severity": 0,
+      "timespan": 0,
+      "filter": "string",
+      "segmentBy": [
+        "string"
+      ],
+      "segmentCondition": {
+        "type": "ALL"
+      },
+      "condition": "string",
+      "monitor": [
+        {
+          "metric": "string",
+          "stdDevFactor": 0
+        }
+      ],
+      "notify": [
+        "EMAIL"
+      ],
+      "notificationCount": 0,
+      "target": {}
+    }
+  ]
+}
+```
+{: codeblock}
+
+
+## Body parameters
 {: #alerting-api-parm}
 
 
@@ -605,32 +647,14 @@ ID of an alert.
 {: note}
 
 
-### version (integer)
-{: #alerting-api-parm-version}
 
-Version of an alert.
+### condition (string)
+{: #alerting-api-parm-condition}
+
+Defines the threshold that is configured for the alert. This parameter is required for `MANUAL` alerts only.
 {: note}
 
-The version changes every time you update an alert.
-
-The version is used for optimistic locking.
-
-
-### name (string)
-{: #alerting-api-parm-name}
-
-Name of the alert. Must be unique.
-{: note}
-
-The name is used to identify the alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
-
-
-### description (string)
-{: #alerting-api-parm-desc}
-
-This parameter descrines the alert. 
-
-The description is available when you view an alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
+For example, you can defines a consition as follows: `avg(timeAvg(uptime)) <= 0`
 
 
 ### createdOn (integer)
@@ -642,14 +666,12 @@ Defines the creation time of an alert in milliseconds.
 This parameter returns the Unix-timestamp when the alert was created.
 
 
+### description (string)
+{: #alerting-api-parm-desc}
 
-### modifiedOn (integer)
-{: #alerting-api-parm-modified}
+This parameter descrines the alert. 
 
-Defines when an alert was last modified in milliseconds.
-{: note}
-
-This parameter defines the Unix-timestamp when the alert was last modified.
+The description is available when you view an alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
 
 
 ### filter (string)
@@ -677,6 +699,28 @@ kubernetes.namespace.name='production' and container.image='nginx'*.
 ```
 {: screen}
 
+### name (string)
+{: #alerting-api-parm-name}
+
+Name of the alert. Must be unique.
+{: note}
+
+The name is used to identify the alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
+
+
+
+
+
+### modifiedOn (integer)
+{: #alerting-api-parm-modified}
+
+Defines when an alert was last modified in milliseconds.
+{: note}
+
+This parameter defines the Unix-timestamp when the alert was last modified.
+
+
+
 ## monitor (array)
 {: #alerting-api-parm-monitor}
 
@@ -698,48 +742,6 @@ Defines the metrics that are monitored. This parameter is required for `BASELINE
 
 Defines a metric ID.
 {: note}
-
-### stdDevFactor (number)
-{: #alerting-api-parm-monitor-stdDevFactor}
-
-Defines when a notification is sent. When the metric value is more then X standard deviations from average, the notification is sent. 
-{: note}
-
-
-### type (string)
-{: #alerting-api-parm-type}
-
-Defines the type of alert. Valid values are *MANUAL*, *BASELINE*, and *HOST_COMPARISON*.
-{: note}
-
-Set to `MANUAL` for alerts that you want to control when a notification is sent. You must define the threshold that determines when the alert is triggered.
-
-Set to `BASELINE` for alerts that you want to notify when unexpected metric values are detected. New metric data is compared with metric values that are collected over time.
-
-Set to `HOST_COMPARISON` for alerts that you want to notify when 1 host in a group reports metrics values that are different from the other hosts in the group.
-
-
-### condition (string)
-{: #alerting-api-parm-condition}
-
-Defines the threshold that is configured for the alert. This parameter is required for `MANUAL` alerts only.
-{: note}
-
-For example, you can defines a consition as follows: `avg(timeAvg(uptime)) <= 0`
-
-
-
-### timespan (integer)
-{: #alerting-api-parm-timespan}
-
-Minimum time interval, in microseconds, for which the alert condition must be met before the alert is triggered.
-{: note}
-
-The minimum value is 60000000 microseconds, that is, 1 minute.
-
-The value of this parameter must be a multiple of 60000000 microseconds.
-
-
 
 
 
@@ -837,6 +839,60 @@ Valid values are the following:
 * **ANY**: The alert is triggered when at least one of the monitored entities satisfies the condition.
 * **ALL**: The alert is triggered when all of the monitored entities satisfy the condition.
 
+
+### stdDevFactor (number)
+{: #alerting-api-parm-monitor-stdDevFactor}
+
+Defines when a notification is sent. When the metric value is more then X standard deviations from average, the notification is sent. 
+{: note}
+
+
+### type (string)
+{: #alerting-api-parm-type}
+
+Defines the type of alert. Valid values are *MANUAL*, *BASELINE*, and *HOST_COMPARISON*.
+{: note}
+
+Set to `MANUAL` for alerts that you want to control when a notification is sent. You must define the threshold that determines when the alert is triggered.
+
+Set to `BASELINE` for alerts that you want to notify when unexpected metric values are detected. New metric data is compared with metric values that are collected over time.
+
+Set to `HOST_COMPARISON` for alerts that you want to notify when 1 host in a group reports metrics values that are different from the other hosts in the group.
+
+
+
+### timespan (integer)
+{: #alerting-api-parm-timespan}
+
+Minimum time interval, in microseconds, for which the alert condition must be met before the alert is triggered.
+{: note}
+
+The minimum value is 60000000 microseconds, that is, 1 minute.
+
+The value of this parameter must be a multiple of 60000000 microseconds.
+
+
+### version (integer)
+{: #alerting-api-parm-version}
+
+Version of an alert.
+{: note}
+
+The version changes every time you update an alert.
+
+The version is used for optimistic locking.
+
+
+
+### Query parameters
+{: #alerting-api-parm-query}
+
+
+### alertId (integer)
+{: #alerting-api-parm-alertid}
+
+ID of an alert.
+{: note}
 
 ### from (long)
 {: #alerting-api-parm-from}
