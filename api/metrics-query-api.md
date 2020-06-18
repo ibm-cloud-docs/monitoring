@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-17"
+lastupdated: "2020-06-18"
 
 keywords: Sysdig, IBM Cloud, monitoring, query, api
 
@@ -94,7 +94,7 @@ For Python examples, see any of the following examples:
 You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to create an alert:
 
 ```shell
-curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" [-d DATA]
+curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d DATA
 ```
 {: codeblock}
 
@@ -154,10 +154,9 @@ To learn about data aggregation, see [Data Aggregation ![External link icon](../
 
 
 ## Sample: Extract platform metrics
-{: #metrics-query-api-samples-platform}
+{: #metrics-query-api-sample-platform}
 
-
-This example shows different ways how to extract platform metrics from Cloud Foundry in *us-south* for the last 24 hours.
+This example shows how to extract platform metrics from Cloud Foundry in *us-south* for the last 24 hours.
 
 ```shell
 curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d @metrics.json
@@ -209,9 +208,12 @@ The result for extracting data returns the following information:
 ```
 {: screen}
 
+## Sample: Extract CPU data
+{: #metrics-query-api-sample-cpu}
 
+This example shows how to extract CPU data by host with start, end, and, sampling limit.
 
-The following example of the `metrics.json` file shows how to configure the file to extract CPU data by host with start, end, and, sampling limit:
+The following example of the `metrics.json` file shows how to configure the file to extract CPU data:
 
 ```json
 {
