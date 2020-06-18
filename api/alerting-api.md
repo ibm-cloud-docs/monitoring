@@ -203,7 +203,7 @@ The following table show common error response codes:
 
 
 
-## Updating an alert
+## Updating an alert (PUT)
 {: #alerting-api-update-alert}
 
 To update an existing alert, you need the ID of that alert.
@@ -320,7 +320,7 @@ The following table show common error response codes:
 
 
 
-## Deleting an alert
+## Deleting an alert (DELETE)
 {: #alerting-api-delete-alert}
 
 To delete an existing alert, you need the ID of that alert.
@@ -390,7 +390,7 @@ The following table show common error response codes:
 {: caption="Table 3. RC" caption-side="top"} 
 
 
-## Get all user alerts
+## Get all user alerts (GET)
 {: #alerting-api-fetch-user-alerts}
 
 ### Get all alerts by using the python client
@@ -446,7 +446,7 @@ Where
 
 For more information about the response format, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alerting-api-schema).
 
-## Get a specific user alert
+## Get a specific user alert (GET)
 {: #alerting-api-fetch-user-alert}
 
 
