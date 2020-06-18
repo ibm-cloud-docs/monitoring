@@ -438,7 +438,7 @@ You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Moni
 
 
 ```shell
-curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d '"alertId": "<ALERT_ID>"' 
+curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" 
 ```
 {: codeblock}
 
@@ -462,11 +462,11 @@ The following table show common error response codes:
 {: caption="Table 3. RC" caption-side="top"} 
 
 
-## Fetch all user alerts
+## Get all user alerts
 {: #alerting-api-fetch-user-alerts}
 
-### Using python client
-
+### Get all alerts by using the python client
+{: #alerting-api-fetch-user-alerts-python}
 
 To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
 
@@ -489,14 +489,14 @@ json_res = sdclient.get_alerts()
 print(json_res)
 ```
 
-### Using curl
-
+### Get all alerts by using cURL
+{: #alerting-api-fetch-user-alerts-curl}
 
 You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to get information about all the alerts:
 
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID"
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d '"to": <START_TIMESTAMP>' -d '"from": <END_TIMESTAMP>'
 ```
 {: codeblock}
 
@@ -508,33 +508,50 @@ Where
 
     `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
+* `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the alerts. 
+
+| RC    | Description  |
+|-------|--------------|
+| `401` | Unauthorized access. |
+{: caption="Table 4. RC" caption-side="top"} 
 
 
-
-
-
-Check out [Working with cURL](#curl-guide)
-
-| Method | API_URL | Data File |
-|----|---|----|
-| GET | `api/alerts` | |
-
-
-
-## Fetch specific user alert
+## Get a specific user alert
 {: #alerting-api-fetch-user-alert}
 
 
+### Get a specific user alert by using cURL
+{: #alerting-api-fetch-user-alert-curl}
 
-### Using curl
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to get information about all the alerts:
 
-Check out [Working with cURL](#curl-guide)
 
-| Method | API_URL | Data File |
-|----|---|----|
-| GET | `api/alerts/<ID>` | |
+```shell
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" 
+```
+{: codeblock}
 
-#### Sample response body for alert
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* `<ALERT_ID>` defines the ID of the alert that you want to modify.
+
+
+The following table show common error response codes:
+
+| RC    | Description  |
+|-------|--------------|
+| `401` | Unauthorized access. |
+| `404` | The alert ID is not recognized. |
+{: caption="Table 5. RC" caption-side="top"} 
+
+
+For example, the response body for an alert looks as follows:
 
 ```json
 {
@@ -568,29 +585,7 @@ Check out [Working with cURL](#curl-guide)
   }
 }
 ```
-
-#### Response body parameters
-
-- **id**: Alert ID
-- **type**: Type of alert; Valid values are:
-  - `MANUAL` for manual alerts
-  - `BASELINE` for baseline alerts
-  - `HOST_COMPARISON` for host comparison alerts
-- **name**: Name of the alert. Note that alert names must be unique
-- **enabled**: true if the alert is being processed and events can fire; false otherwise
-- **filter**: String-encoded filter of the alert. The filter can be used to select nodes and/or entities
-- **condition**: Valid for manual alerts only. Configures the threshold for the alert
-- **segmentBy**: Segmentation to apply to condition, if needed
-- **segmentCondition**: If segmentBy is set, it configures whether alert events will be triggered when all segments reach  
-  the threshold or at least one does. The format is an object with a type property with ALL or ANY respectively (e.g. { "type": "ANY" }
-- **timespan**: Number of microseconds. Minimum time interval for which the alert condition must be met before the alert
-  will fire a event; Minimum value is 60000000 (1 minute) and values must be multiple of 60000000 (1 minute)
-- **severity**: null to instruct the alert to set event severity automatically, a number from 0 (emergency) to 7 (debug) to set a manual severity
-- **notificationChannelIds**: List of notification channel identifiers
-- **version**: Revision version of the alert configuration
-- **createdOn**: Unix-timestamp of time when the alert was created
-- **modifiedOn**: Unix-timestamp of time when the alert was last modified
-- **notificationCount**: Number of events fired for the alert during the past 2 weeks
+{: screen}
 
 
 
