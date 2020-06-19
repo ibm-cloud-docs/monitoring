@@ -24,7 +24,7 @@ subcollection: Monitoring-with-Sysdig
 # Managing alerts by using the Python client
 {: #alert_python}
 
-You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance through REST API operations that you can run by using a Python client or by using a cURL command.
+You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance by using the Sysdig Python client.
 {:shortdesc}
 
 To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).

@@ -57,7 +57,8 @@ IBM Cloud Monitoring with Sysdig
     Metrics
         metrics.md
         groups.md
-        api/metrics-query-api.md
+        api/metrics_api.md
+        api/metrics_python.md
 
     {: .topicgroup}
     Dashboards
@@ -71,6 +72,7 @@ IBM Cloud Monitoring with Sysdig
         api/alert_api.md
         api/alert_python.md
         notifications.md
+        api/notifications_api.md
 
     {: .topicgroup}
     Events
@@ -91,6 +93,7 @@ IBM Cloud Monitoring with Sysdig
         api/dashboard-api.md
         api/downtimes-api.md
         api/notifications-api.md
+        api/metrics-query-api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

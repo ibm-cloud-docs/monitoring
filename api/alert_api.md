@@ -24,178 +24,16 @@ subcollection: Monitoring-with-Sysdig
 # Managing alerts by using the Alerts API
 {: #alert_api}
 
-You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance through REST API operations that you can run by using a Python client or by using a cURL command.
+You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance by using the Sysdig API.
 {:shortdesc}
 
-
-## Create an alert
-{: #alert_api-create-alert}
-
-You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to create an alert:
+To learn how to use cURL, see [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl).
 
 
-```shell
-curl -X POST <SYSDIG_REST_API_ENDPOINT>/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d @alert.json
-```
-{: codeblock}
-
-Where 
-
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
-
-* You can pass multiple headers by using `-H`. 
-
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
-
-* You can pass data to create the alert in the `alert.json` file by using `-d`. 
-
-    When you create an alert, include the following parameters: *type*, *name*,  *severity*, *timespan*, *condition*, *segmentby*, *segmentConditionn*, *filter*, *notificationChannelIds*, *enabled*
-
-    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alert_api-schema-req).
-
-
-The following sample shows the request body parameters that you can set to create an alert: 
-
-```json
-{
-  "alert": {
-    "version": null,
-    "name": "My Alert!",
-    "description": null,
-    "teamId": null,
-    "enabled": false,
-    "filter": null,
-    "type": "MANUAL",
-    "condition": "avg(timeAvg(uptime)) <= 0",
-    "timespan": 600000000,
-    "notificationChannelIds": [],
-    "reNotify": false,
-    "reNotifyMinutes": 30,
-    "segmentBy": [
-      "host.hostName"
-    ],
-    "segmentCondition": {
-      "type": "ANY"
-    },
-    "severityLabel": "LOW"
-  }
-}
-```
-{: screen}
-
-
-
-## Updating an alert (PUT)
-{: #alert_api-update-alert}
-
-To update an existing alert, you need the ID of that alert.
-{: note}
-
-You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to update an alert:
-
-
-```shell
-curl -X PUT <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d '"alertId": "<ALERT_ID>"' -d @alert.json
-```
-{: codeblock}
-
-Where 
-
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
-
-* You can pass multiple headers by using `-H`. 
-
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
-
-* `<ALERT_ID>` defines the ID of the alert that you want to modify.
-
-* You can pass data to create the alert in the `alert.json` file by using `-d`. 
-
-    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alert_api-schema-req).
-
-
-The following sample shows the request body parameters that you can set to update an alert: 
-
-```json
-{
-  "alert": {
-      "type": "MANUAL",
-      "id": 23212,
-      "version": 10,
-      "name": "CheckNginxConnections",
-      "description": "Active connections of nginx server",
-      "enabled": false,
-      "severity": 2,
-      "timespan": 1000000,
-      "condition": "avg(avg(nginx.net.connections)) > 1000",
-      "segmentBy": [
-          "host.hostName"
-      ],
-      "segmentCondition": {
-          "type": "ANY"
-      },
-      "notificationChannelIds": [
-          2
-      ]
-    }
-}
-```
-{: screen}
-
-
-## Deleting an alert (DELETE)
-{: #alert_api-delete-alert}
-
-To delete an existing alert, you need the ID of that alert.
-{: note}
-
-
-You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to delete an alert:
-
-
-```shell
-curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" 
-```
-{: codeblock}
-
-Where 
-
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
-
-* You can pass multiple headers by using `-H`. 
-
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
-
-* `<ALERT_ID>` defines the ID of the alert that you want to modify.
-
-
-## Get all user alerts (GET)
-{: #alert_api-fetch-user-alerts}
-
-You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to get information about all the alerts:
-
-
-```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d '"to": <START_TIMESTAMP>' -d '"from": <END_TIMESTAMP>'
-```
-{: codeblock}
-
-Where 
-
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
-
-* You can pass multiple headers by using `-H`. 
-
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
-
-* `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the alerts. 
-
-For more information about the response format, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alert_api-schema).
-
-## Get a specific user alert (GET)
+## Get details about a user alert
 {: #alert_api-fetch-user-alert}
 
-You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to get information about all the alerts:
+You can use the following cURL command to get information about an alert:
 
 
 ```shell
@@ -249,6 +87,172 @@ For example, the response body for an alert looks as follows:
 }
 ```
 {: screen}
+
+
+## Create an alert
+{: #alert_api-create-alert}
+
+You can use the following cURL command to create an alert:
+
+
+```shell
+curl -X POST <SYSDIG_REST_API_ENDPOINT>/api/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d @alert.json
+```
+{: codeblock}
+
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* You can pass data to create the alert in the `alert.json` file by using `-d`. 
+
+    When you create an alert, include the following parameters: *type*, *name*,  *severity*, *timespan*, *condition*, *segmentby*, *segmentConditionn*, *filter*, *notificationChannelIds*, *enabled*
+
+    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alert_api-schema-req).
+
+
+The following sample shows the request body parameters that you can set to create an alert: 
+
+```json
+{
+  "alert": {
+    "version": null,
+    "name": "My Alert!",
+    "description": null,
+    "teamId": null,
+    "enabled": false,
+    "filter": null,
+    "type": "MANUAL",
+    "condition": "avg(timeAvg(uptime)) <= 0",
+    "timespan": 600000000,
+    "notificationChannelIds": [],
+    "reNotify": false,
+    "reNotifyMinutes": 30,
+    "segmentBy": [
+      "host.hostName"
+    ],
+    "segmentCondition": {
+      "type": "ANY"
+    },
+    "severityLabel": "LOW"
+  }
+}
+```
+{: screen}
+
+
+
+## Update an alert
+{: #alert_api-update-alert}
+
+To update an existing alert, you need the ID of that alert.
+{: note}
+
+You can use the following cURL command to update an alert:
+
+
+```shell
+curl -X PUT <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d @alert.json
+```
+{: codeblock}
+
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* `<ALERT_ID>` defines the ID of the alert that you want to modify.
+
+* You can pass data to create the alert in the `alert.json` file by using `-d`. 
+
+    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alert_api-schema-req).
+
+
+The following sample shows the request body parameters that you can set to update an alert: 
+
+```json
+{
+  "alert": {
+      "type": "MANUAL",
+      "id": 23212,
+      "version": 10,
+      "name": "CheckNginxConnections",
+      "description": "Active connections of nginx server",
+      "enabled": false,
+      "severity": 2,
+      "timespan": 1000000,
+      "condition": "avg(avg(nginx.net.connections)) > 1000",
+      "segmentBy": [
+          "host.hostName"
+      ],
+      "segmentCondition": {
+          "type": "ANY"
+      },
+      "notificationChannelIds": [
+          2
+      ]
+    }
+}
+```
+{: screen}
+
+
+## Delete an alert
+{: #alert_api-delete-alert}
+
+To delete an existing alert, you need the ID of that alert.
+{: note}
+
+
+You can use the following cURL command to delete an alert:
+
+
+```shell
+curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" 
+```
+{: codeblock}
+
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* `<ALERT_ID>` defines the ID of the alert that you want to modify.
+
+
+## Get all user alerts
+{: #alert_api-fetch-user-alerts}
+
+You can use the following cURL command to get information about all the alerts:
+
+
+```shell
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d '"to": <START_TIMESTAMP>' -d '"from": <END_TIMESTAMP>'
+```
+{: codeblock}
+
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the alerts. 
+
+For more information about the response format, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alert_api-schema).
+
 
 
 
@@ -371,7 +375,7 @@ This parameter returns the Unix-timestamp when the alert was created.
 ### description (string)
 {: #alert_api-parm-desc}
 
-This parameter descrines the alert. 
+This parameter describes the alert. 
 
 The description is available when you view an alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
 
