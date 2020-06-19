@@ -20,8 +20,6 @@ IBM Cloud Monitoring with Sysdig
         cloud_services.md
         cloud_services_locations.md
 
-    api/api.md
-
     {: .topicgroup}
     Security and compliance
         at_events.md
@@ -59,6 +57,7 @@ IBM Cloud Monitoring with Sysdig
     Metrics
         metrics.md
         groups.md
+        api/metrics-query-api.md
 
     {: .topicgroup}
     Dashboards
@@ -69,6 +68,8 @@ IBM Cloud Monitoring with Sysdig
     {: .topicgroup}
     Alerts
         [Working with alerts](https://docs.sysdig.com/en/alerts.html)
+        api/alert_api.md
+        api/alert_python.md
         notifications.md
 
     {: .topicgroup}
@@ -83,24 +84,30 @@ IBM Cloud Monitoring with Sysdig
     Teams
         teams.md
 
+
     {: .topicgroup}
-    REST API
-        api/mon-curl.md
-        api/python-client.md
+    WIP
         api/alerting-api.md
         api/dashboard-api.md
         api/downtimes-api.md
-        api/metrics-query-api.md
         api/notifications-api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     endpoints.md
-    api/rest_apis.md
     pricing.md
     shared-responsibilities.md
     default_dashboards.md
     monitoring.md
+
+    {: .topicgroup}
+    Sysdig API
+        api/rest_apis.md
+        api/mon-curl.md
+
+    {: .topicgroup}
+    Sysdig Python client
+        api/python-client.md
 
     {: .topicgroup}
     Cloud services metrics
