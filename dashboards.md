@@ -223,12 +223,6 @@ Use the Sysdig REST API to automate routine tasks and monitor notifications. You
 
 When you use the API from your custom scripts or programs, you must use a Sysdig token to authenticate with the {{site.data.keyword.mon_full_notm}} instance. For more information, see [Working with API tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token).
 
-
-| Task                    | Using REST API                |
-|-------------------------|-------------------------------|
-| Create a dashboard      | [Creating a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_create_dashboard) |
-| Delete a dashboard      | [Deleting a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_delete_dashboard) |
-| Saving dashboards       | [Saving the dashboards of a team by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_save_dashboard) |
-{: caption="Table 4. Tasks to manage dashboards programmatically" caption-side="top"} 
+[Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api).
 
 
