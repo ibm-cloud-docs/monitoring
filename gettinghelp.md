@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, support, help
 
@@ -20,6 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 
 # Getting help and support
@@ -50,8 +51,8 @@ If you don't find an existing answer to a question, ask a new one.
 
 You can access Stack Overflow and IBM Developer Answers from the Support Center, or use the following links:
 
-  * Go to [Stack Overflow ![External link icon](../icons/launch-glyph.svg "External link icon")](https://stackoverflow.com/questions/tagged/ibm-cloud){: new_window} to ask technical questions about the {{site.data.keyword.mon_full_notm}} service. 
-  * Go to [IBM Developer Answers ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/ibm-cloud/){: new_window} to ask general questions about the {{site.data.keyword.mon_full_notm}} service and about getting started instructions.
+  * Go to [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to ask technical questions about the {{site.data.keyword.mon_full_notm}} service. 
+  * Go to [IBM Developer Answers](https://developer.ibm.com/answers/topics/ibm-cloud/){: external} to ask general questions about the {{site.data.keyword.mon_full_notm}} service and about getting started instructions.
 
 Tag your questions with **ibm-cloud** and **sysdig**.
 {: important}
@@ -63,7 +64,7 @@ Tag your questions with **ibm-cloud** and **sysdig**.
 
 If you don't find answers to your questions, and you experience problems with {{site.data.keyword.cloud_notm}}, you can use support cases to get help with technical, account and access, billing and invoice or sales inquiry issues. 
 
-You can [create](/docs/get-support?topic=get-support-open-case#opentechcase) and [manage](/docs/get-support?topic=get-support-open-case#check-case-status) a support case by using the [Support Center](https://dev.console.cloud.ibm.com/unifiedsupport/supportcenter){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). After you submit a support case, the support team works to investigate and resolve the issue depending on your type of support plan.
+You can [create](/docs/get-support?topic=get-support-open-case#opentechcase) and [manage](/docs/get-support?topic=get-support-open-case#check-case-status) a support case by using the [Support Center](https://dev.console.cloud.ibm.com/unifiedsupport/supportcenter){: external}. After you submit a support case, the support team works to investigate and resolve the issue depending on your type of support plan.
 
 
 
