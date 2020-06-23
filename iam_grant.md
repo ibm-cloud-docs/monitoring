@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, iam, access groups
 
@@ -20,6 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
  
 # Granting permissions to launch the Sysdig UI or to make REST API calls
@@ -30,13 +31,13 @@ subcollection: Monitoring-with-Sysdig
 
 
 ## Prerequisites
-{: #iam_manage_sprereq}
+{: #iam_grant_sprereq}
 
 Your user ID needs **administrator platform permissions** to manage the {{site.data.keyword.mon_full_notm}} service. Contact the account administrator. The account owner can grant another user access to the account for the purposes of managing user access, and managing account resources. [Learn more](/docs/iam?topic=iam-userroles).
 
 
 ## Step 1. Create an access group
-{: #ime_step1}
+{: #iam_grant_step1}
 
 Complete the following steps to create an access group:
 
@@ -58,7 +59,7 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 
 
 ## Step 2. Add permissions to manage data
-{: #ime_step2}
+{: #iam_grant_step2}
 
 After you set up your group, you can assign a common access policy to the group. 
 
@@ -93,12 +94,12 @@ Complete the following steps to assign a policy to an access group through the U
 
 
 ## Step 3. Add a user or service ID to the access group
-{: #ime_step3}
+{: #iam_grant_step3}
 
 Continue to set up your group by adding users or service IDs.
 
 ### Add a user to the access group
-{: #ime_step3_user}
+{: #iam_grant_step3_user}
 
 Complete the following steps to add a user:
 
@@ -109,7 +110,7 @@ Complete the following steps to add a user:
 
 
 ### Add a service ID to the access group
-{: #ime_step3_svcid}
+{: #iam_grant_step3_svcid}
 
 Complete the following steps to add a service ID:
 

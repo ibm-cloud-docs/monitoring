@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-05-22"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, kubernetes, analyze metrics
 
@@ -20,6 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 
 # Monitorting a Kubernetes cluster
@@ -28,7 +29,7 @@ subcollection: Monitoring-with-Sysdig
 Use this tutorial to learn how to configure an {{site.data.keyword.containerlong}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.
 {:shortdesc}
 
-To configure a cluster to forward metrics, you must install a Sysdig agent onto each worker node in your Kubernetes cluster by using a [DaemonSet ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/). The Sysdig agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The Sysdig agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade. 
+To configure a cluster to forward metrics, you must install a Sysdig agent onto each worker node in your Kubernetes cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The Sysdig agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The Sysdig agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade. 
 
 You view metrics via Sysdig's web-based user interface.
 
@@ -48,9 +49,9 @@ In this tutorial, you configure metrics with Sysdig in your {{site.data.keyword.
 
 1. Read about {{site.data.keyword.mon_full_notm}}. For more information, see [About](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-about#about).
 
-2. Have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+2. Have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration](https://cloud.ibm.com/login){: external}.
 
-3. Install the {{site.data.keyword.cloud_notm}} CLI and the Kubernetes CLI plugin. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
+3. Install the {{site.data.keyword.cloud_notm}} CLI and the Kubernetes CLI plugin. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
 4. [Create a cluster](/docs/containers?topic=containers-clusters#clusters) or use an existing {{site.data.keyword.containerlong_notm}} cluster.
     *  The cluster must run Kubernetes version 1.10 or above.
@@ -76,7 +77,7 @@ In this getting tutorial, instructions are provided to provision an instance of 
 
 To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
-1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 
@@ -183,11 +184,11 @@ To launch the Sysdig web UI through the {{site.data.keyword.cloud_notm}} console
 You can only have one Web UI session open per browser.
 {: imp}
 
-1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
-2. From the menu ![External link icon](../../../icons/icon_hamburger.svg "Menu icon"), select **Observability**. 
+2. From the menu ![Menu icon](../../icons/icon_hamburger.svg), select **Observability**. 
 
 3. Select **Monitoring**. The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
@@ -249,7 +250,7 @@ To view more details about a particular worker node, click on the infrastructure
 To return to the full _Explore table_, click the **X (Back to Explore Table)** button.
 
 
-For more information, check out the [Sysdig docs](https://sysdigdocs.atlassian.net/wiki/spaces/Monitor/pages/222822446/The+Explore+Table).
+For more information, check out the [Sysdig docs](https://docs.sysdig.com/en/sysdig-monitor.html){: externak}.
 
 
 
