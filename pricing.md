@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-28"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, pricing
 
@@ -20,6 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 
 # Pricing
@@ -54,15 +55,12 @@ Each measure is priced independently when there is an overage.
 {: note}
 
 
-There is no time-series allotment for platform metrics. These time-series are priced based on the tiers.
+Platform metrics are an additional source of time-series. They are priced based on the tiers.
 {: important}
 
-**Note:** A host can be a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent.
+A host can be a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent.
 
-
-
-
-Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-about#overview_collection) and [data retention](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-about#overview_retention).
+Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mng-data#data-collection) and [data retention](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mng-data#data-storage_retention).
 
 
 ## Checking your usage
@@ -99,7 +97,7 @@ The billing calculation for the month is calculated as follows:
 
 * `Additional time-series cost`
 
-    Each host has a 1000 time-series allotment. The remaining time-series are priced based on the tiers.
+    Each host has a 1000 time-series allotment that are included in the base cost per host of 35 USD. If you have 3 hosts, you have included 3000 time-series. The remaining time-series are priced based on the tiers.
   
     ```
     1200 + 1000 + 1500 - ( 3*1000 ) = 700 additional time-series
