@@ -270,7 +270,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Load Balancer                          | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | VPN                                    | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 {: caption="VPC events in America's locations" caption-side="top"}
-{: #cs-vpc-table-1}
+{: #cs-vpc-loc-table-1}
 {: tab-title="America"}
 {: tab-group="cs_vpc"}
 {: class="simple-tab-table"}
@@ -281,7 +281,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Load Balancer           | `NO`   | `NO`  |
 | VPN                     | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 {: caption="VPC events in AP locations" caption-side="top"}
-{: #cs-vpc-table-2}
+{: #cs-vpc-loc-table-2}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_vpc"}
 {: class="simple-tab-table"}
@@ -290,9 +290,9 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
 | Load Balancer              | `NO`  | `NO`  |
-| VPN                    |  ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |    
+| VPN                        |  ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |    
 {: caption="VPC events in Europe locations" caption-side="top"}
-{: #cs-vpc-table-3}
+{: #cs-vpc-loc-table-3}
 {: tab-title="Europe"}
 {: tab-group="cs_vpc"}
 {: class="simple-tab-table"}

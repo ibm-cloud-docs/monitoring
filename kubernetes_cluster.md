@@ -51,7 +51,7 @@ In this tutorial, you configure metrics with Sysdig in your {{site.data.keyword.
 
 2. Have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration](https://cloud.ibm.com/login){: external}.
 
-3. Install the {{site.data.keyword.cloud_notm}} CLI and the Kubernetes CLI plugin. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
+3. [Install the {{site.data.keyword.cloud_notm}} CLI and the Kubernetes CLI plugin](/docs/cli?topic=cli-install-ibmcloud-cli).
 
 4. [Create a cluster](/docs/containers?topic=containers-clusters#clusters) or use an existing {{site.data.keyword.containerlong_notm}} cluster.
     *  The cluster must run Kubernetes version 1.10 or above.
@@ -181,9 +181,6 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
 
 To launch the Sysdig web UI through the {{site.data.keyword.cloud_notm}} console, complete the following steps.
 
-You can only have one Web UI session open per browser.
-{: imp}
-
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
@@ -224,7 +221,8 @@ In the section *Host and containers*, you can see the you see the *Explore table
 
 Click **Host and containers** ![Host and containers](../images/switch_hosts.png) to switch data sources. Then, select a worker. The data that is displayed corresponds to the worker that you have selected. If you click ** Back to Explore Table**, the *Explore table* is displayed. 
 
-**Customizing the _Explore table_**
+### Customizing the Explore table
+{: #kubernetes_cluster_step4-1}
 
 You can customize the *Explore table*. 
 
@@ -243,7 +241,8 @@ For example, to configure color-coding for a column, complete the following step
 3. Set values for the different thresholds.
 
 
-**Customizing dashboards**
+### Customizing dashboards
+{: #kubernetes_cluster_step4-2}
 
 To view more details about a particular worker node, click on the infrastructure entry and the *Overview by Host* dashboard opens in the table. You can explore different dashboards and metrics by clicking on the ![switch dashboard](../images/switch_dashboards_1.png) icon. Notice that you can only select metrics and dashboards that are relevant to the selected worker node.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, teams
 
@@ -20,11 +20,12 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Working with teams
 {: #teams}
 
-You can use teams to add another dimension of control on the data that is available through a Sysdig instance on top of platform and service access controls. A user with the **Manager** service access role of an {{site.data.keyword.mon_full_notm}} instance can create, delete, add members, and change the scope of teams in that instance. Once a team is created, an admin can add a user to it through {{site.data.keyword.iamlong}} (IAM).
+You can use teams to add another dimension of control on the data that is available through a Sysdig instance on top of platform and service access controls. A user with the **manager** service access role for an {{site.data.keyword.mon_full_notm}} instance can create, delete, add members, and change the scope of teams in that instance. Once a team is created, an admin can add a user to it through {{site.data.keyword.iamlong}} (IAM).
 {:shortdesc} 
 
 In the world of microservices, it is becoming harder to track down valuable metrics and ensure that no sensitive data is exposed. By using teams, administrators can apply a fine grain control on resources. Consider the following information when you work with teams:
@@ -56,7 +57,7 @@ An administrator or a manager of an {{site.data.keyword.mon_full_notm}} instance
 
 Complete the following steps to create a team:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
+1. [Launch the web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
 
@@ -78,11 +79,21 @@ Complete the following steps to create a team:
 
 6. Configure the team scope. 
 
-    * [Optional] Set **Scope by** to specify the level of data that members of the team have access to. Valid values are *host* and *container*. If the parameter is set to *Host*, members can see all Host-level and Container-level information. If the parameter is set to *Container*, members can see only Container-level information.
+    * [Optional] Set **Scope by** to specify the level of data that members of the team have access to. Valid values are *host* and *container*. 
+    
+        If the parameter is set to *Host*, members can see all Host-level and Container-level information. 
+        
+        If the parameter is set to *Container*, members can see only Container-level information.
 
-    * Set the **Scope** to limit what data users can see. You can set one or more conditions by specifying expressions for metrics. By default, the scope is set to *everywhere*.
+    * Set the **Scope** to limit what data users can see. You can set one or more conditions by specifying expressions for metrics. 
+    
+        By default, the scope is set to *everywhere*.
 	
-    * [Optional] Enable or disable **Sysdig captures**. Check this box to allow this team to take Sysdig Captures. Capture files will only be visible to members of this team. **Note:** Captures include detailed information from every container on a host, regardless of the team’s scope.
+    * [Optional] Enable or disable **Sysdig captures**. Check this box to allow this team to take Sysdig Captures. 
+    
+        Capture files will only be visible to members of this team. 
+        
+        Captures include detailed information from every container on a host, regardless of the team’s scope.
 
     * [Optional] Enable or disable **Infrastructure Events**. Check this box to allow members to view all custom infrastructure events from every user and Sysdig agent. When is not checked, users can see infrastructure events that are sent specifically to this team. 
 
@@ -96,7 +107,7 @@ You must have **manager** role to change the scope of a team in a Sysdig instanc
 
 To change the scope of the data that is visible to members of a team, complete the following steps: 
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
+1. [Launch the web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
 

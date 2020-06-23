@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, customize, kubernetes agent
 
@@ -20,6 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Customizing Kubernetes Sysdig agents
 {: #change_kube_agent}
@@ -43,15 +44,9 @@ Complete the following steps to edit a Kubernetes Sysdig agent configuration:
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
-
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
 
 2. Edit the *sysdig-agent-configmap.yaml* file. 
 
@@ -94,7 +89,7 @@ Complete the following steps to edit a Kubernetes Sysdig agent configuration:
 Running agents will automatically pick the new configuration after Kubernetes pushes the changes across all the nodes in the cluster.
 
 
-## Adding more tags to data collected from a Kubernetes Sysdig agent
+## Adding more tags to data that is collected from a Kubernetes Sysdig agent
 {: #change_kube_agent_add_tags}
 
 Complete the following steps to add more tags to a Kubernetes Sysdig agent configuration that you have already deployed:
@@ -104,15 +99,9 @@ Complete the following steps to add more tags to a Kubernetes Sysdig agent confi
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
-
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
 
 2. Edit the *sysdig-agent-configmap.yaml* file. 
 
@@ -153,7 +142,7 @@ For the sample provided, you would get the tags **agent.tag.cluster_version** an
 
 {{site.data.keyword.mon_full_notm}} supports event integrations with Kubernetes. Sysdig agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
 
-By default, only a limited set of events is collected. For more information about the events that are collected by default, see [Kubernetes events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/event-types.html){:new_window}.
+By default, only a limited set of events is collected. For more information about the events that are collected by default, see [Kubernetes events](https://docs.sysdig.com/en/event-types.html){: external}.
 
 To add or remove events, you must customize the *sysdig-agent-configmap.yaml* file and specify what events to include and which ones to filter out. **Note:** An entry in a section in *sysdig-agent-configmap.yaml* overrides the entire section in the default configuration.
 {: tip}
@@ -165,15 +154,9 @@ To filter events from Kubernetes pods, complete the following steps:
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
-
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
 
 2. Edit the *sysdig-agent-configmap.yaml* file. 
 
@@ -226,7 +209,7 @@ Another example where you can see how to collect a subset of Kubernetes events: 
     ```
     {: codeblock}
 
-For more information on how to work with custom events, see [Working with custom events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/event-types.html){:new_window}.
+For more information on how to work with custom events, see [Working with custom events](https://docs.sysdig.com/en/event-types.html){: external}.
 
 
 ## Disabling collection of events
@@ -241,15 +224,9 @@ Complete the following steps:
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
-
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
 
 2. Edit the *sysdig-agent-configmap.yaml* file. 
 
@@ -291,15 +268,9 @@ Complete the following steps:
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
-
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
 
 2. Edit the *sysdig-agent-configmap.yaml* file. 
 
@@ -378,15 +349,9 @@ Complete the following steps to filter out containers that a Sysdig agent monito
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
-
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
 
 2. Edit the *sysdig-agent-configmap.yaml* file. 
 
@@ -426,7 +391,8 @@ Changes are applied automatically.
 
 To block network traffic and metrics from network ports, you must customize the **blacklisted_ports** section in the *sysdig-agent-configmap.yaml* file. You must list the ports from which you want to filter out any data.
 
-**Note:** Port 53 (DNS) is always blacklisted. 
+Port 53 (DNS) is always blacklisted. 
+{: note}
 
 Complete the following steps:
 
@@ -435,15 +401,9 @@ Complete the following steps:
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
-
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
 
 2. Edit the *sysdig-agent-configmap.yaml* file. 
 
@@ -521,10 +481,14 @@ The following table lists some common scenarios and the value that you must set 
     ```
     {: screen}
 
-    * *+/-* is a symbol that indicates if the metric is included or excluded. Plus (*+*) indicates that a metric is included. Minus (*-*) indicates that a metric is excluded. 
+    * *+/-* is a symbol that indicates if the metric is included or excluded. Plus (*+*) indicates that a metric is included. Minus (*-*) indicates that a metric is excluded.  
+
     * *[type]* specifies the metric type, for example, *statsd*.
+
     * *[metric included/excluded]* indicates in a human readable way whether the metric is included or excluded.
+
     *  *metric.name* indicates the metric name.
+
     * *(filter: +/-[metric.filter])* provides information about any filters that are defined in the **metrics_filter** section in the *sysdig-agent-configmap.yaml* file.
 
 A sample log entry looks as follows:
@@ -543,15 +507,9 @@ Complete the following steps to configure the log settings:
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
-
-    **Note:** Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
 
 2. Edit the *sysdig-agent-configmap.yaml* file.
 
@@ -586,7 +544,7 @@ Changes are applied automatically.
 ## Sample configmap yaml file
 {: #change_kube_agent_sample_configmap}
 
-```
+```yaml
 apiVersion: v1
 data:
   dragent.yaml: | 

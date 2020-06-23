@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, panels
 
@@ -20,6 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 
 # Managing panels
@@ -83,7 +84,7 @@ Complete the following steps to change the scope of a panel:
 
 
 
-## Duplicate panel
+## Duplicate a panel
 {: #panels_duplicate}
 
 Complete the following steps to duplicate a panel in the current dashboard:
@@ -93,7 +94,7 @@ Complete the following steps to duplicate a panel in the current dashboard:
 2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Duplicate panel** ![Copy icon](images/duplicate.png).
 
 
-## Delete panel
+## Delete a panel
 {: #panels_delete}
 
 Complete the following steps to delete a panel in the current dashboard:
