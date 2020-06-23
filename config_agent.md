@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-03"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -20,6 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Configuring a Sysdig agent
 {: #config_agent}
@@ -35,7 +36,7 @@ You can associate one or more tags to each Sysdig agent. Tags are comma-separate
 
 Complete the following steps to configure a Sysdig agent on Linux to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
 
-1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+1. [Obtain the Sysdig access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
 2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
@@ -60,19 +61,19 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
 If the Sysdig agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the Sysdig agent.
 
-* **For Debian and Ubuntu Linux distributions**, run the following command:
+For Debian and Ubuntu Linux distributions, run the following command:
 
-    ```
-    apt-get -y install linux-headers-$(uname -r)
-    ```
-    {: codeblock}
+```
+apt-get -y install linux-headers-$(uname -r)
+```
+{: codeblock}
 
-* **For RHEL, CentOS, and Fedora Linux distributions**, run the following command:
+For RHEL, CentOS, and Fedora Linux distributions, run the following command:
 
-    ```
-    yum -y install kernel-devel-$(uname -r)
-    ```
-    {: codeblock}
+```
+yum -y install kernel-devel-$(uname -r)
+```
+{: codeblock}
 
 
 ## Configuring a Sysdig agent on a Docker container
@@ -257,7 +258,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     An example Yaml file looks as follows:
 
-    ```
+    ```yaml
      apiVersion: v1
      kind: ConfigMap
      metadata:

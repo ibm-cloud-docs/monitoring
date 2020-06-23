@@ -23,6 +23,7 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
 
+
 # Working with dashboards
 {: #dashboards}
 
@@ -32,14 +33,18 @@ Use dashboards to monitor your infrastructure, applications, and services. You c
 A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers.
 
 In the **DASHBOARDS** section of the Web UI, dashboards are organized into three main groups:
-
-* *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
-* *My Shared Dashboards*: These are the dashboards that are created by the user who is currently logged in, and that are shared with other users.
-* *Dashboards Shared With Me*: These are the dashboards that are created by other users, and shared with the current user.
+* *My Dashboards* are dashboards that are created by the user who is currently logged in.
+* *My Shared Dashboards are dashboards that are created by the user who is currently logged in, and that are shared with other users.
+* *Dashboards Shared With Me* are dashboards that are created by other users, and shared with the current user.
 
 In the **EXPLORE** section of the Web UI, dashboards are organized into two groups:
-* *Default dashboards*: These are the pre-defined dashboards.
-* *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
+* *Default dashboards* 
+
+    These are the pre-defined dashboards.
+
+* *My Dashboards*
+
+    These are the dashboards that are created by the user who is currently logged in.
 
 You can copy and share dashboards through the Web UI. 
 

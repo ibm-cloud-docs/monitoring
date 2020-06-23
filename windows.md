@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-05-12"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, windows
 
@@ -20,6 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 
 # Monitoring a Windows environment
@@ -54,7 +55,7 @@ Complete the following steps to configure the Prometheus WMI exporter in your Wi
 
 1. Login to your Windows system, for example, you can connect via remote desktop (RDP).
 
-2. [Download the Prometheus exporter ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/martinlindhe/wmi_exporter/releases){:new_window}.
+2. [Download the Prometheus exporter](https://github.com/martinlindhe/wmi_exporter/releases){: external}.
 
 3. Identify the collectors that include data for the metric data that you want to send to Sysdig.  
 
@@ -93,8 +94,10 @@ Complete the following steps:
 {: #windows_step3}
 
 
-### Option 1: Run a Sysdig agent on a Linux system and remotely scrape the Windows endpoint
+### Option 1. Collect metrics by running a Sysdig agent on a Linux system
 {: #windows_step3_1}
+
+Run a Sysdig agent on a Linux system and remotely scrape the Windows endpoint.
 
 Complete the following steps:
 
@@ -103,7 +106,7 @@ Complete the following steps:
     You can collect a maximum of 3000 time series per Sysdig Linux agent. If you need to collect more than 3000 time series for all your Windows systems, you need more than one Linux agent.
     {: important}
     
-2. Update the `/opt/draios/etc/dragent.yml` to [enable remote scraping ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){:new_window}. 
+2. Update the `/opt/draios/etc/dragent.yml` to [enable remote scraping ](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){: external}. 
 
     ```yaml
     prometheus:
@@ -175,12 +178,14 @@ Complete the following steps:
     ```
     {: pre}
 
-### Option 2: Use the Prometheus remote-write capabilities to push the metrics from the Windows system by running Prometheus as a client collector on Windows
+### Option 2. Collect metrics by running Prometheus as a client collector on Windows
 {: #windows_step3_2}
+
+Use the Prometheus remote-write capabilities to push the metrics from the Windows system by running Prometheus as a client collector on Windows.
 
 Complete the following steps:
 
-1. Download the Prometheus monitoring system and time series database. [Download prometheus-2.15.2.windows-amd64.tar.gz](https://prometheus.io/download/) 
+1. Download the Prometheus monitoring system and time series database. [Download prometheus-2.15.2.windows-amd64.tar.gz](https://prometheus.io/download/){: external} 
 
 2. Unzip the file `prometheus-2.15.2.windows-amd64.tar.gz`. 
 
@@ -302,11 +307,11 @@ The Prometheus Blackbox exporter can be run as an application or a docker contai
 
 The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
 
-The exporters are available as [binary releases ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/prometheus/blackbox_exporter/releases){:new_window}, as a [docker container ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://hub.docker.com/r/prom/blackbox-exporter/){:new_window} or the [code is available in github ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/prometheus/blackbox_exporter){:new_window}.
+The exporters are available as [binary releases](https://github.com/prometheus/blackbox_exporter/releases){: external}, as a [docker container](https://hub.docker.com/r/prom/blackbox-exporter/){: external} or the [code is available in github](https://github.com/prometheus/blackbox_exporter){: external}.
 
 For example, complete the following instructions when the container approach is used:
 
-1. Download the [blackbox.yml file ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/prometheus/blackbox_exporter/blob/master/blackbox.yml){:new_window} from Github.
+1. Download the [blackbox.yml file](https://github.com/prometheus/blackbox_exporter/blob/master/blackbox.yml){: external} from Github.
 
 2. Start the blackbox exporter.
 
@@ -317,7 +322,7 @@ For example, complete the following instructions when the container approach is 
 
 3. Test the blackbox exporter is working by manually running the probe to test your Windows system.  
 
-    For example, you can do a simple `icmp` check to see if the system is responding. See the [documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/prometheus/blackbox_exporter/blob/master/README.md){:new_window} for other options. 
+    For example, you can do a simple `icmp` check to see if the system is responding. See the [documentation](https://github.com/prometheus/blackbox_exporter/blob/master/README.md){: external} for other options. 
 
     ```
     curl 'http://localhost:9115/probe?module=icmp&target=<system ip>'

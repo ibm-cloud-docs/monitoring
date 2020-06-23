@@ -30,7 +30,7 @@ subcollection: Monitoring-with-Sysdig
 
 
 
-## Applications
+## Application dashboards
 {: #default_dashboards_applications}
 
 The following table lists the pre-defined dashboards that you can select to monitor your applications and infrastructure components:
@@ -66,7 +66,7 @@ The following table lists the pre-defined dashboards that you can use to monitor
 | `Top Server Processes` | Use this dashboard to view resource consumption for processes identified to be server-oriented only (httpd, java, ntpd, etc.). | Find the resource usage for server processes. |
 {: caption="Table 2. List of host and container pre-defined dashboards" caption-side="top"} 
 
-## Network
+## Network dashboards
 {: #default_dashboards_network}
 
 The following table lists the pre-defined dashboards that you can select to monitor your network connections and activity:
@@ -81,7 +81,7 @@ The following table lists the pre-defined dashboards that you can select to moni
 
 
 
-## Service
+## Service dashboards
 {: #default_dashboards_service}
 
 
@@ -95,7 +95,7 @@ The following table lists the pre-defined dashboards that you can use to monitor
 
 
 
-## Topology
+## Topology dashboards
 {: #default_dashboards_topology}
 
 The following table lists the pre-defined dashboards that you can use to monitor the logical dependencies of your application tiers:
@@ -107,7 +107,8 @@ The following table lists the pre-defined dashboards that you can use to monitor
 | `Response Times`        | Use this dashboard to monitor the communication and network response metrics between all processes on the selected hosts. </br>Response counts and times are shown in averages down to 1-second granularity.  |
 {: caption="Table 5. List of topology pre-defined dashboards" caption-side="top"} 
 
-**Note:** Any of these dashboards show dashed lines and grey boxes for instances without a Sysdig agent and for which communication is detected.
+Any of these dashboards show dashed lines and grey boxes for instances without a Sysdig agent and for which communication is detected.
+{: note}
 
 
 
