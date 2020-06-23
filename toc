@@ -118,7 +118,7 @@ IBM Cloud Monitoring with Sysdig
 
     [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
-    [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started.html)
+    [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
     [Sysdig Blog](https://sysdig.com/blog/)
     deprecated.md
     {: .navgroup-end}

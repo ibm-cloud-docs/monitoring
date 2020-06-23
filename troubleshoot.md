@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, troubleshooting
 
@@ -53,7 +53,7 @@ The host has the TCP port 6443 disabled.
 {: tsCauses}
 
 
-Check that port 6443 is opened. For more information, see [Managing network traffic](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-network#network_send)
+Check that port 6443 is opened. For more information, see [Managing network traffic](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-service-connection)
 {: tsResolve}
 
 

@@ -226,9 +226,9 @@ When you use the API from your custom scripts or programs, you must use a Sysdig
 
 | Task                    | Using REST API                |
 |-------------------------|-------------------------------|
-| Create a dashboard      | [Creating a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_create_dashboard) |
-| Delete a dashboard      | [Deleting a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_delete_dashboard) |
-| Saving dashboards       | [Saving the dashboards of a team by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_save_dashboard) |
+| Create a dashboard      | [Creating a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard-api-operations#create-a-new-dashboard) |
+| Delete a dashboard      | [Deleting a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard-api-operations#delete-a-user-s-dashboard) |
+| Saving dashboards       | [Saving the dashboards of a team by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard-api-operations#fetch-a-user-s-dashboard) |
 {: caption="Table 4. Tasks to manage dashboards programmatically" caption-side="top"} 
 
 
