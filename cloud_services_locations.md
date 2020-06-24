@@ -298,7 +298,38 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {: class="simple-tab-table"}
 {: row-headers}
 
+### VPC Gen 2
+{: #cloud_services_locations_vpc_infrastructure_gen2}
 
+| Service                                | `Dallas (us-south)`                                | `Washington (us-east)`               |
+|----------------------------------------|----------------------------------------------------|--------------------------------------|
+| VPN                                    | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+{: caption="VPC events in America's locations" caption-side="top"}
+{: #cs-vpc-loc-table-1}
+{: tab-title="America"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
+|-----------------------------------------------------------------|------------------|----------------------------|
+| VPN                     | `NO`  | `NO` |
+{: caption="VPC events in AP locations" caption-side="top"}
+{: #cs-vpc-loc-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------|------------------|
+| VPN                        |  ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |    
+{: caption="VPC events in Europe locations" caption-side="top"}
+{: #cs-vpc-loc-table-3}
+{: tab-title="Europe"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
 
 
 
