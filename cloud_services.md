@@ -144,7 +144,7 @@ The following table lists VPC infrastructure services that send events to {{site
 | [Compute resources](/docs/vpc?topic=vpc-about-advanced-virtual-servers) | Use this service to provision scalable compute resources in the IBM Cloud. |  |
 | [Network resources](/docs/vpc?topic=vpc-about-networking-for-vpc) | Use this service to add network resources to your VPC infrastructure. |  |
 | [Load Balancer](/docs/vpc?topic=vpc-load-balancers)| Use this service to distribute traffic among multiple server instances within the same region of your VPC.  | |
-| [VPN](/docs/vpc?topic=vpc-using-vpn)| Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. |  |
+| [VPN](/docs/vpc?topic=vpc-using-vpn)| Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. | [Monitoring VPC VPN metrics](/docs/vpc?topic=vpc-sysdig-monitoring-metrics) |
 | [Images](/docs/vpc?topic=vpc-about-images) | When you provision {{site.data.keyword.vsi_is_full_notm}}, you can select from the supported stock images or a custom image that you import from {{site.data.keyword.cos_full_notm}}. |  |
 {: caption="List of VPC infrastructure services (generation 2)" caption-side="top"} 
 
