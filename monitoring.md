@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring
 
@@ -20,8 +20,9 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
-# Monitoring your environment
+# Concepts
 {: #monitoring}
 
 You can monitor your infrastructure, and the applications that run on it with the {{site.data.keyword.mon_full_notm}} service. You can request a capture to analyze what happens in a node during a time frame.
@@ -214,7 +215,7 @@ You can enable predefined alerts, modify alerts, and create custom alerts in the
 
 You manage alerts in the *Alerts* view of the web UI. You can configure the table columns that are displayed in the *Alerts* view. Valid column options are *Name*, *Scope*, *Alert When*, *Segment By*, *Notifications*, *Enabled*, *Modified*, *Captures*, *Channels*, *Created*, *Description*, *Email recipients*, *For at least*, *OpsGenie*, *PagerDuty*, *Severity*, *Slack*, *WebHook*, *SNS topics*, *Type*, and *VictorOps*.
 
-See the [Alerts documentation at docs.sysdig.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/alerts.html) for details on these and other topics related to alerting :
+See the [Alerts documentation at docs.sysdig.com](https://docs.sysdig.com/en/alerts.html){: external} for details on these and other topics related to alerting :
 
 * Configure an alert
 * Enable or disable an alert

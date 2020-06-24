@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, dashboards
 
@@ -20,6 +20,8 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
+
 
 
 # Working with dashboards
@@ -31,14 +33,18 @@ Use dashboards to monitor your infrastructure, applications, and services. You c
 A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers.
 
 In the **DASHBOARDS** section of the Web UI, dashboards are organized into three main groups:
-
-* *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
-* *My Shared Dashboards*: These are the dashboards that are created by the user who is currently logged in, and that are shared with other users.
-* *Dashboards Shared With Me*: These are the dashboards that are created by other users, and shared with the current user.
+* *My Dashboards* are dashboards that are created by the user who is currently logged in.
+* *My Shared Dashboards are dashboards that are created by the user who is currently logged in, and that are shared with other users.
+* *Dashboards Shared With Me* are dashboards that are created by other users, and shared with the current user.
 
 In the **EXPLORE** section of the Web UI, dashboards are organized into two groups:
-* *Default dashboards*: These are the pre-defined dashboards.
-* *My Dashboards*: These are the dashboards that are created by the user who is currently logged in.
+* *Default dashboards* 
+
+    These are the pre-defined dashboards.
+
+* *My Dashboards*
+
+    These are the dashboards that are created by the user who is currently logged in.
 
 You can copy and share dashboards through the Web UI. 
 
@@ -225,9 +231,9 @@ When you use the API from your custom scripts or programs, you must use a Sysdig
 
 | Task                    | Using REST API                |
 |-------------------------|-------------------------------|
-| Create a dashboard      | [Creating a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_create_dashboard) |
-| Delete a dashboard      | [Deleting a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_delete_dashboard) |
-| Saving dashboards       | [Saving the dashboards of a team by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_save_dashboard) |
+| Create a dashboard      | [Creating a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard-api-operations#create-a-new-dashboard) |
+| Delete a dashboard      | [Deleting a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard-api-operations#delete-a-user-s-dashboard) |
+| Saving dashboards       | [Saving the dashboards of a team by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard-api-operations#fetch-a-user-s-dashboard) |
 {: caption="Table 4. Tasks to manage dashboards programmatically" caption-side="top"} 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, metrics
 
@@ -20,11 +20,12 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Working with metrics
 {: #metrics}
 
-After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for a metrics source, you can view, monitor, and manage metrics through the {{site.data.keyword.mon_full_notm}} Web UI. Use metrics to analyze statistically data that has numerical values. 
+After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, and configure a Sysdig agent for a metrics source, you can view, monitor, and manage metrics through the {{site.data.keyword.mon_full_notm}} Web UI. Use metrics to analyze statistically data that has numerical values. 
 {:shortdesc}
 
 

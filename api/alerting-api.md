@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years:  2018, 2019, 2020
-lastupdated: "2020-05-13"
+  years:  2018, 2020
+lastupdated: "2020-06-18"
 
 keywords: Sysdig, IBM Cloud, monitoring, alerting, api
 
-subcollection: Sysdig
+subcollection: Monitoring-with-Sysdig
 
 ---
 
@@ -21,77 +21,471 @@ subcollection: Sysdig
 {:important: .important}
 {:note: .note}
 
-# Alerting API Operations
+# Managing alerts (Alerts REST API)
+{: #alerting-api}
 
-## Working with cURL
-{: #curl-guide}
+You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance through REST API operations that you can run by using a Python client or by using a cURL command.
+{:shortdesc}
 
-```shell
-curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
-```
 
-An example being:
-```shell
-curl -X POST \
-  https://us-south.monitoring.test.cloud.ibm.com/api/alerts \
-  -H 'Authorization: Bearer eyJraW...' \
-  -H 'IBMInstanceID: fc8ceb8a-...' \
-  -H 'Content-Type: application/json' \
-  -d @alert.json
-```
+## Create an alert (POST)
+{: #alerting-api-create-alert}
 
-* [Sysdig endpoints](https://test.cloud.ibm.com/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_sysdig)
 
-**Headers for IAM Tokens (Recommended)**:
-```shell
--H "Authorization: Bearer $AUTH_TOKEN"
--H "IBMInstanceID: $GUID"
-```
-* `AUTH_TOKEN=$(ibmcloud iam oauth-tokens | awk '{print $4}')`
-* `GUID=$(ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid')`
+### Creating an alert by using a Python client
+{: #alerting-api-create-alert-python}
 
-**Headers for Sysdig Token**:
-```shell
--H "Authorization: Bearer $SYSDIG_TOKEN"
-```
-* `SYSDIG_TOKEN` can be found in the Sysdig dashboard settings under Sysdig Monitor API
+To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
 
-## Fetch all user alerts
-
-### Using python client
+The following code shows the structure of a Python script that you can use to create an alert:
 
 ```python
+# Reference the Python client
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
-URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
+# Add the monitoring instance information that is required for authentication
+URL = <SYSDIG-ENDPOINT> 
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
+
+# Instantiate the Python client 
+sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
+
+# Add the notification channels to send an alert when the alert is triggered
+notify_channels = [
+  {
+    'type': 'SLACK',
+    'channel': '<SLACK_CHANNEL_NAME>'
+  },
+  {
+    'type': 'EMAIL',
+    'emailRecipients': [
+      'user1@ibm.com', 'user2@ibm.com'
+    ]
+  }
+]
+
+# Get the IDs of the notification channels that you have configured
+res = sdclient.get_notification_ids(notify_channels)
+if not res[0]:
+    print("Failed to fetch notification channel ID's")
+
+notification_channel_ids = res
+
+# Create and define the alert details
+res = sdclient.create_alert(
+    name=<ALERT_NAME>,
+    description=<ALERT_DESCRIPTION>,
+    severity=<SEVERITY>,
+    for_atleast_s=<FOR_ATLEAST_S>,
+    condition=<CONDITION>,
+    segmentby=<SEGMENTBY>,
+    segment_condition=<SEGMENT_CONDITION>,
+    user_filter=<USER_FILTER>,
+    notify=<NOTIFICATION_CHANNEL_IDS>,
+    enabled=<ENABLED>,
+    annotations=<ANNOTATIONS>,
+    alert_obj=<ALERT_OBJ>
+)
+
+if not res[0]:
+    print("Alert creation failed")
+```
+{: codeblock}
+
+Consider the following information when you create a Python script:
+
+* You must include the following information: `<SYSDIG-ENDPOINT>`, `<IAM_APIKEY>`, and `<GUID>` These data is required to authenticate the request with the monitoring instance. To get the monitoring instance information, see [Authenticate your user or service ID by using IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client#python-client-iam-auth).
+
+* You must define the notification channels through which you want to be notified when the alert is triggered.
+
+    Valid notification channel types are `SLACK`, `PAGER_DUTY`, `VICTOROPS`, `WEBHOOK`, and `EMAIL`.
+
+    When you define the notification channels, the channels must be configured in the monitoring instance.
+
+    When you add an email notification channel, you can add multiple recipients. You separate values by using a comma.
+
+    When you define a Slack channel, replace `<SLACK_CHANNEL_NAME>` with the name of your channel. You must include the symbol `#` with the name of the channel, for example, `#my_sysdig_alert_channel`.
+
+
+When you configure the alert, complete the following sections:
+
+* [`name` and `description`]: You must define a unique name for the alert name by replacing `<ALERT_NAME>`, and optionally, add a description by replacing `<ALERT_DESCRIPTION>`.
+
+* [`severity`]: You must define the severity of the alert by replacing `<SEVERITY>` with a number. Valid values are `0`, `1`, `2`, `3`, `4`, `5`, `6`, and `7`.
+
+* [`for_atleast_s`]: You must define the number of consecutive seconds that the condition is met before the alert is triggered. Replace `<FOR_ATLEAST_S>` with the number of seconds.
+
+* [`condition`]: You must define the condition that defines when the alert is triggered. For example, you can set this parameter to `['host.mac', 'proc.name']` to check a CPU alert for every process on every machine.
+
+    For more information, see [Multi-Condition Alerts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/alerts.html#al_UUID-21e3bcab-eaf2-993b-96e5-bdbc631504bc_UUID-9177b0b6-2f26-ea2f-1f3c-8b9a36192bfc){:new_window}.
+
+* [`segmentby`]: You can define the scope of an alert by configuring the `segmentedby` section. The default value is `ANY`.
+
+* [`segment_condition`]: When the parameter *segmentby* is specified, set this field to determine when the alert will be triggered. Valid values are **ANY** and **ALL**. [Learn more]().
+            
+* [`user_filter`]: You can define a filter that indicates when a notification is sent. For example, you could define this entry if you want to receive a notification only if the name of the process meets the condition.
+
+* [`notify`]: You can define the type of notifications that you want the alert to generate. Set this entry to the notification IDs of the channels that you have defined.
+
+* [`enabled`]: You can configure the status of the alert when it is created. By default, alerts are enabled and the entry is set to `true`. Set to `false` if you do not want it enabled when you create it.
+
+* [`annotations`]: You can add custom properties that you can associate with the alert.
+
+* [`alert_obj`]: You can attach an alert object instead of specifying the individual parameters.
+
+
+### Create an alert by using a cURL command
+{: #alerting-api-create-alert-curl}
+
+
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to create an alert:
+
+
+```shell
+curl -X POST <SYSDIG_REST_API_ENDPOINT>/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d @alert.json
+```
+{: codeblock}
+
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* You can pass data to create the alert in the `alert.json` file by using `-d`. 
+
+    When you create an alert, include the following parameters: *type*, *name*,  *severity*, *timespan*, *condition*, *segmentby*, *segmentConditionn*, *filter*, *notificationChannelIds*, *enabled*
+
+    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alerting-api-schema-req).
+
+
+The following sample shows the request body parameters that you can set to create an alert: 
+
+```json
+{
+  "alert": {
+    "version": null,
+    "name": "My Alert!",
+    "description": null,
+    "teamId": null,
+    "enabled": false,
+    "filter": null,
+    "type": "MANUAL",
+    "condition": "avg(timeAvg(uptime)) <= 0",
+    "timespan": 600000000,
+    "notificationChannelIds": [],
+    "reNotify": false,
+    "reNotifyMinutes": 30,
+    "segmentBy": [
+      "host.hostName"
+    ],
+    "segmentCondition": {
+      "type": "ANY"
+    },
+    "severityLabel": "LOW"
+  }
+}
+```
+{: screen}
+
+The following table show common error response codes:
+
+| RC    | Description  |
+|-------|--------------|
+| `400` |	The alert configuration is not valid. |
+| `401` | Unauthorized access. |
+| `422` | The alert name is not valid. The name is already used. |
+{: caption="Table 1. RC" caption-side="top"} 
+
+
+
+## Updating an alert (PUT)
+{: #alerting-api-update-alert}
+
+To update an existing alert, you need the ID of that alert.
+{: note}
+
+### Updating an alert by using a Python client
+{: #alerting-api-update-alert-python}
+
+To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
+
+The following code shows the structure of a Python script that you can use to update an alert:
+
+```python
+# Reference the Python client
+from sdcclient import IbmAuthHelper, SdMonitorClient
+
+# Add the monitoring instance information that is required for authentication
+URL = <SYSDIG-ENDPOINT> 
+APIKEY = <IAM_APIKEY>
+GUID = <GUID>
+ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
+
+# Instantiate the Python client 
+sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
+
+res = sdclient.get_alerts()
+if not res[0]:
+    print("Failed to fetch existing alerts")
+
+alert_found = False
+
+for alert in res['alerts']:
+    if alert['name'] == alert_name:
+        alert_found = True
+        if 'notificationChannelIds' in alert:
+            alert['notificationChannelIds'] = alert['notificationChannelIds'][0:-1]
+        update_txt = '(changed by update_alert)'
+        if alert['description'][-len(update_txt):] != update_txt:
+            alert['description'] = alert['description'] + update_txt
+        alert['timespan'] = alert['timespan'] * 2  # Note: Expressed in seconds * 1000000
+        res_update = sdclient.update_alert(alert)
+
+        if not res_update:
+            print("Alert update failed")
+
+if not alert_found:
+    print('Alert to be updated not found')
+```
+{: codeblock}
+
+### Updating an alert by using cURL
+{: #alerting-api-update-alert-curl}
+
+
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to update an alert:
+
+
+```shell
+curl -X PUT <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d '"alertId": "<ALERT_ID>"' -d @alert.json
+```
+{: codeblock}
+
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* `<ALERT_ID>` defines the ID of the alert that you want to modify.
+
+* You can pass data to create the alert in the `alert.json` file by using `-d`. 
+
+    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alerting-api-schema-req).
+
+
+The following sample shows the request body parameters that you can set to update an alert: 
+
+```json
+{
+  "alert": {
+      "type": "MANUAL",
+      "id": 23212,
+      "version": 10,
+      "name": "CheckNginxConnections",
+      "description": "Active connections of nginx server",
+      "enabled": false,
+      "severity": 2,
+      "timespan": 1000000,
+      "condition": "avg(avg(nginx.net.connections)) > 1000",
+      "segmentBy": [
+          "host.hostName"
+      ],
+      "segmentCondition": {
+          "type": "ANY"
+      },
+      "notificationChannelIds": [
+          2
+      ]
+    }
+}
+```
+{: codeblock}
+
+The following table show common error response codes:
+
+| RC    | Description  |
+|-------|--------------|
+| `400` |	The alert configuration is not valid. |
+| `401` | Unauthorized access. |
+| `404` | The alert ID is not recognized. |
+| `409` | There is a version mismatch. |
+| `422` | The alert name is not valid. The name is already used. |
+{: caption="Table 2. RC" caption-side="top"} 
+
+
+
+## Deleting an alert (DELETE)
+{: #alerting-api-delete-alert}
+
+To delete an existing alert, you need the ID of that alert.
+{: note}
+
+### Deleting an alert by using the python client
+{: #alerting-api-delete-alert-python}
+
+To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
+
+The following code shows the structure of a Python script that you can use to delete an alert:
+
+```python
+# Reference the Python client
+from sdcclient import IbmAuthHelper, SdMonitorClient
+
+# Add the monitoring instance information that is required for authentication
+URL = <SYSDIG-ENDPOINT> 
+APIKEY = <IAM_APIKEY>
+GUID = <GUID>
+ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
+
+# Instantiate the Python client 
+sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
+
+res = sdclient.get_alerts()
+if not res[0]:
+    print("Failed to fetch existing alerts")
+
+for alert in res['alerts']:
+    if alert['name'] == alert_name:
+        print("Deleting alert")
+        res = sdclient.delete_alert(alert)
+        if not res:
+            print("Alert deletion failed")
+```
+{: codeblock}
+
+### Deleting an alert by using cURL
+{: #alerting-api-delete-alert-curl}
+
+
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to delete an alert:
+
+
+```shell
+curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" 
+```
+{: codeblock}
+
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* `<ALERT_ID>` defines the ID of the alert that you want to modify.
+
+
+The following table show common error response codes:
+
+| RC    | Description  |
+|-------|--------------|
+| `401` | Unauthorized access. |
+| `404` | The alert ID is not recognized. |
+{: caption="Table 3. RC" caption-side="top"} 
+
+
+## Get all user alerts (GET)
+{: #alerting-api-fetch-user-alerts}
+
+### Get all alerts by using the python client
+{: #alerting-api-fetch-user-alerts-python}
+
+To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
+
+The following code shows the structure of a Python script that you can use to get information about all the alerts:
+
+```python
+# Reference the Python client
+from sdcclient import IbmAuthHelper, SdMonitorClient
+
+# Add the monitoring instance information that is required for authentication
+URL = <SYSDIG-ENDPOINT> 
+APIKEY = <IAM_APIKEY>
+GUID = <GUID>
+ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
+
+# Instantiate the Python client 
 sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 
 json_res = sdclient.get_alerts()
 print(json_res)
 ```
+{: codeblock}
 
-### Using curl
+### Get all alerts by using cURL
+{: #alerting-api-fetch-user-alerts-curl}
 
-Check out [Working with cURL](#curl-guide)
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to get information about all the alerts:
 
-| Method | API_URL | Data File |
-|----|---|----|
-| GET | `api/alerts` | |
 
-## Fetch specific user alert
+```shell
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d '"to": <START_TIMESTAMP>' -d '"from": <END_TIMESTAMP>'
+```
+{: codeblock}
 
-### Using curl
+Where 
 
-Check out [Working with cURL](#curl-guide)
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-| Method | API_URL | Data File |
-|----|---|----|
-| GET | `api/alerts/<ID>` | |
+* You can pass multiple headers by using `-H`. 
 
-#### Sample response body for alert
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the alerts. 
+
+| RC    | Description  |
+|-------|--------------|
+| `401` | Unauthorized access. |
+{: caption="Table 4. RC" caption-side="top"} 
+
+
+For more information about the response format, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alerting-api-schema).
+
+## Get a specific user alert (GET)
+{: #alerting-api-fetch-user-alert}
+
+
+### Get a specific user alert by using cURL
+{: #alerting-api-fetch-user-alert-curl}
+
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to get information about all the alerts:
+
+
+```shell
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" 
+```
+{: codeblock}
+
+Where 
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+* You can pass multiple headers by using `-H`. 
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* `<ALERT_ID>` defines the ID of the alert that you want to modify.
+
+
+The following table show common error response codes:
+
+| RC    | Description  |
+|-------|--------------|
+| `401` | Unauthorized access. |
+| `404` | The alert ID is not recognized. |
+{: caption="Table 5. RC" caption-side="top"} 
+
+
+For example, the response body for an alert looks as follows:
 
 ```json
 {
@@ -125,253 +519,351 @@ Check out [Working with cURL](#curl-guide)
   }
 }
 ```
+{: screen}
 
-#### Response body parameters
 
-- **id**: Alert ID
-- **type**: Type of alert; Valid values are:
-  - `MANUAL` for manual alerts
-  - `BASELINE` for baseline alerts
-  - `HOST_COMPARISON` for host comparison alerts
-- **name**: Name of the alert. Note that alert names must be unique
-- **enabled**: true if the alert is being processed and events can fire; false otherwise
-- **filter**: String-encoded filter of the alert. The filter can be used to select nodes and/or entities
-- **condition**: Valid for manual alerts only. Configures the threshold for the alert
-- **segmentBy**: Segmentation to apply to condition, if needed
-- **segmentCondition**: If segmentBy is set, it configures whether alert events will be triggered when all segments reach  
-  the threshold or at least one does. The format is an object with a type property with ALL or ANY respectively (e.g. { "type": "ANY" }
-- **timespan**: Number of microseconds. Minimum time interval for which the alert condition must be met before the alert
-  will fire a event; Minimum value is 60000000 (1 minute) and values must be multiple of 60000000 (1 minute)
-- **severity**: null to instruct the alert to set event severity automatically, a number from 0 (emergency) to 7 (debug) to set a manual severity
-- **notificationChannelIds**: List of notification channel identifiers
-- **version**: Revision version of the alert configuration
-- **createdOn**: Unix-timestamp of time when the alert was created
-- **modifiedOn**: Unix-timestamp of time when the alert was last modified
-- **notificationCount**: Number of events fired for the alert during the past 2 weeks
 
-## Create an alert
-
-### Using the python client to create new alert
-
-```python
-from sdcclient import IbmAuthHelper, SdMonitorClient
-
-URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
-APIKEY = <IAM_APIKEY>
-GUID = <GUID>
-ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
-sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
-
-# Find notification channels (you need IDs to create an alert).
-notify_channels = [
-  {
-    'type': 'SLACK',
-    'channel': '#python-sdc-test-alert'
-  },
-  {
-    'type': 'EMAIL',
-    'emailRecipients': [
-      'python-sdc-testing@draios.com', 'test@sysdig.com'
-    ]
-  }
-]
-
-res = sdclient.get_notification_ids(notify_channels)
-if not res[0]:
-    print("Failed to fetch notification channel ID's")
-
-notification_channel_ids = res
-res = sdclient.create_alert(
-    name=<ALERT_NAME>,
-    description=<ALERT_DESCRIPTION>,
-    # Number from 0 to 7 where 0 means 'emergency' and 7 is 'debug'
-    severity=<SEVERITY>,
-    # The alert will fire if the condition is met for at least number of consecutive seconds
-    for_atleast_s=<FOR_ATLEAST_S>,
-    # The alert condition
-    condition=<CONDITION>,
-    # For example, segmenting a CPU alert by ['host.mac', 'proc.name'] we want to check this metric for every process on every machine
-    segmentby=<SEGMENTBY>,
-    # Optional Default value `ANY`
-    segment_condition=<SEGMENT_CONDITION>,
-    # Filter. We want to receive a notification only if the name of the process meets the condition
-    user_filter=<USER_FILTER>,
-    # Type of notification you want this alert to generate, Mention Notification channel ID's
-    notify=<NOTIFICATION_CHANNEL_IDS>,
-    # If the alert will be enabled when created. True by default
-    enabled=<ENABLED>,
-    # Custom properties to associate with the alert
-    annotations=<ANNOTATIONS>,
-    # Use an Alert object instead of specifying the individual parameters
-    alert_obj=<ALERT_OBJ>
-)
-
-if not res[0]:
-    print("Alert creation failed")
-```
-
-### Using curl to create a new alert from a json
-
-Check out [Working with cURL](#curl-guide)
-
-| Method | API_URL | Data File |
-|----|---|----|
-| POST | `api/alerts` | alert.json |
-
-Example alert.json:
+## Alerts schema: Request body
+{: #alerting-api-schema-req}
 
 ```json
 {
-  "alert": {
-    "version": null,
-    "name": "My Exciting Alert!",
-    "description": null,
-    "teamId": null,
-    "enabled": false,
-    "filter": null,
-    "type": "MANUAL",
-    "condition": "avg(timeAvg(uptime)) <= 0",
-    "timespan": 600000000,
-    "notificationChannelIds": [],
-    "reNotify": false,
-    "reNotifyMinutes": 30,
-    "segmentBy": [
-      "host.hostName"
-    ],
-    "segmentCondition": {
-      "type": "ANY"
-    },
-    "severityLabel": "LOW"
-  }
-}
-```
-
-#### Request body parameters
-
-- **type**: Type of alert; Valid values are:
-  - `MANUAL` for manual alerts
-  - `BASELINE` for baseline alerts
-  - `HOST_COMPARISON` for host comparison alerts
-- **name**: Name of the alert. This will appear in the Sysdig Monitor UI and in notification emails.
-- **description**: The alert description. This will appear in the Sysdig Monitor UI and in notification emails.
-- **severity**: syslog-encoded alert severity. This is a number from 0 to 7 where 0 means 'emergency' and 7 is 'debug'.
-- **timespan**: The number of consecutive seconds the condition must be satisfied for the alert to fire.
-- **condition**: The alert condition, as described here [post_api_alerts](https://app.sysdigcloud.com/apidocs/#!/Alerts/post_api_alerts)
-- **segmentby**: A list of Sysdig Monitor segmentation criteria that can be used to apply the alert to multiple entities. For
-  example, segmenting a CPU alert by ['host.mac', 'proc.name'] allows to apply it to any process in any machine.
-- **segmentConditionn**: When *segmentby* is specified (and therefore the alert will cover multiple entities) this field is used to determine when it will fire. In particular, you have two options for *segment_condition*: **ANY** (the alert will fire when at least one of the monitored entities satisfies the condition) and **ALL** (the alert will fire when all of the monitored entities satisfy the condition).
-- **filter**: A boolean expression combining Sysdig Monitor segmentation criteria that makes it possible to reduce the
-  scope of the alert. For example: *kubernetes.namespace.name='production' and container.image='nginx'*.
-- **notificationChannelIds**: the type of notification you want this alert to generate. Options are *EMAIL*,*PAGER_DUTY*, *WEBHOOK*. To fetch channelID's, Please refer to section `Fetch specific user notification` under [notificationChannelIds](observability-monitoring?topic=observability-monitoring-notification-api-operations#fetch-specific-user-notification)
-- **enabled**: if True, the alert will be enabled when created.
-
-## Update an alert
-
-Updating an existing alerts requires the user to know the ID of that alert.
-
-### Using the python client to update existing alerts
-
-```python
-from sdcclient import IbmAuthHelper, SdMonitorClient
-
-URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
-APIKEY = <IAM_APIKEY>
-GUID = <GUID>
-ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
-sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
-
-res = sdclient.get_alerts()
-if not res[0]:
-    print("Failed to fetch existing alerts")
-
-alert_found = False
-
-for alert in res['alerts']:
-    if alert['name'] == alert_name:
-        alert_found = True
-        if 'notificationChannelIds' in alert:
-            alert['notificationChannelIds'] = alert['notificationChannelIds'][0:-1]
-        update_txt = '(changed by update_alert)'
-        if alert['description'][-len(update_txt):] != update_txt:
-            alert['description'] = alert['description'] + update_txt
-        alert['timespan'] = alert['timespan'] * 2  # Note: Expressed in seconds * 1000000
-        res_update = sdclient.update_alert(alert)
-
-        if not res_update:
-            print("Alert update failed")
-
-if not alert_found:
-    print('Alert to be updated not found')
-```
-
-### Using curl to update an existing alert from a json
-
-Check out [Working with cURL](#curl-guide)
-
-| Method | API_URL | Data File |
-|----|---|----|
-| PUT | `api/alerts/<ID>` | alert.json |
-
-Example alert.json:
-
-```json
-{
-  "alert": {
-      "type": "MANUAL",
-      "id": 23212,
-      "version": 10,
-      "name": "CheckNginxConnections",
-      "description": "Active connections of nginx server",
+  "alerts": [
+    {
+    "alert": {
+      "version": null,
+      "name": "",
+      "description": null,
+      "teamId": null,
       "enabled": false,
-      "severity": 2,
-      "timespan": 1000000,
-      "condition": "avg(avg(nginx.net.connections)) > 1000",
-      "segmentBy": [
-          "host.hostName"
-      ],
+      "filter": null,
+      "type": "",
+      "condition": "",
+      "timespan": 600000000,
+      "notificationChannelIds": [],
+      "reNotify": false,
+      "reNotifyMinutes": 30,
+      "segmentBy": [],
       "segmentCondition": {
-          "type": "ANY"
+        "type": ""
       },
-      "notificationChannelIds": [
-          2
-      ]
+      "severityLabel": ""
     }
+  }
+  ]
 }
 ```
+{: codeblock}
 
-**Note:** alert version can be retrieved through the response body of [alerts api](#fetch-specific-user-alert).
+## Alerts schema: Response body
+{: #alerting-api-schema-res}
 
-## Delete an alert
-
-Deletion of an existing alerts requires the user to know the ID of that alert.
-
-### Using the python client
-
-```python
-from sdcclient import IbmAuthHelper, SdMonitorClient
-
-URL = <SYSDIG-ENDPOINT> # ex: "https://us-south.monitoring.cloud.ibm.com"
-APIKEY = <IAM_APIKEY>
-GUID = <GUID>
-ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
-sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
-
-res = sdclient.get_alerts()
-if not res[0]:
-    print("Failed to fetch existing alerts")
-
-for alert in res['alerts']:
-    if alert['name'] == alert_name:
-        print("Deleting alert")
-        res = sdclient.delete_alert(alert)
-        if not res:
-            print("Alert deletion failed")
+```json
+{
+  "alerts": [
+    {
+    "alert": {
+      "autoCreated": false,
+      "condition": "",
+      "createdOn": 1551358413000,
+      "enabled": false,
+      "id": 23211,
+      "modifiedOn": 1551634372000,
+      "name": "",
+      "filter": "",
+      "notificationChannelIds": [],
+      "segmentBy": [],
+      "segmentCondition": {
+        "type": "ANY"
+      },
+      "notificationCount": 60,
+      "rateOfChange": false,
+      "reNotify": false,
+      "severity": 0,
+      "severityLabel": "",
+      "teamId": 493,
+      "timespan": 60000000,
+      "type": "",
+      "version": 9
+      }
+    }
+  ]
+}
 ```
+{: screen}
 
-### Using curl to delete an existing alert
 
-Check out [Working with cURL](#curl-guide)
 
-| Method | API_URL | Data File |
-|----|---|----|
-| DELETE | `api/alerts/<ID>` | |
+
+## Body parameters
+{: #alerting-api-parm}
+
+
+### id (integer)
+{: #alerting-api-parm-id}
+
+ID of an alert.
+{: note}
+
+
+
+### condition (string)
+{: #alerting-api-parm-condition}
+
+Defines the threshold that is configured for the alert. This parameter is required for `MANUAL` alerts only.
+{: note}
+
+For example, you can defines a consition as follows: `avg(timeAvg(uptime)) <= 0`
+
+
+### createdOn (integer)
+{: #alerting-api-parm-created}
+
+Defines the creation time of an alert in milliseconds.
+{: note}
+
+This parameter returns the Unix-timestamp when the alert was created.
+
+
+### description (string)
+{: #alerting-api-parm-desc}
+
+This parameter descrines the alert. 
+
+The description is available when you view an alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
+
+
+
+### enabled (boolean)
+{: #alerting-api-req-parm-enabled}
+
+Defines the status of an alert.
+{: note}
+
+By default, this parameter is set to `true` and the alert is enabled when it is created.
+
+
+
+### filter (string)
+{: #alerting-api-parm-filter}
+
+Defines the scope of the alert by configuring segments.
+{: note} 
+
+When this field is empty, all the metric sources are included. The scope is set to *Everything*.
+
+For example, you can define filters like the following ones:
+
+```
+kubernetes.namespace.name='production'
+```
+{: screen}
+
+```
+container.image='nginx'*.
+```
+{: screen}
+
+```
+kubernetes.namespace.name='production' and container.image='nginx'*.
+```
+{: screen}
+
+### name (string)
+{: #alerting-api-parm-name}
+
+Name of the alert. Must be unique.
+{: note}
+
+The name is used to identify the alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
+
+
+
+
+
+### modifiedOn (integer)
+{: #alerting-api-parm-modified}
+
+Defines when an alert was last modified in milliseconds.
+{: note}
+
+This parameter defines the Unix-timestamp when the alert was last modified.
+
+
+
+
+
+### notificationChannelIds (array)
+{: #alerting-api-parm-not}
+
+Lists the notification channels that are configured to notify when an alert is triggered.
+{: note}
+
+Valid options are `EMAIL`, `PAGER_DUTY`, `WEBHOOK`, `VICTOROPS`, and `SLACK`. 
+
+```json
+"notificationChannelIds": [
+      "EMAIL", 
+      "WEBHOOK"
+    ]
+```
+{: codeblock}
+
+
+### notificationCount (integer)
+{: #alerting-api-res-parm-not-count}
+
+Defines the number of notifications that are sent for the alert during the past 2 weeks.
+{: note}
+
+
+### reNotify (boolean)
+{: #alerting-api-parm-renotify}
+
+Defines whether you want to get follow up notifications until the alert condition is acknoeldged and resolved.
+{: note}
+
+By default, follow up notifications are not enabled and the field is set to `false`.
+
+
+### reNotifyMinutes (integer)
+{: #alerting-api-parm-renotmin}
+
+Defines how often do you want to receive notifications on an alert that is not resolved.
+{: note}
+
+You specify the number of minutes before a reminder is sent.
+
+
+### severity (integer)
+{: #alerting-api-parm-severity}
+
+Defines the syslog-encoded alert severity.
+{: note}
+
+The following table lists the values that you can set:
+
+| Severity | Info        |
+|----------|-------------|
+| `0`      | `emergency` |
+| `1`      | `alert`     |
+| `2`      | `critical`  |
+| `3`      | `error`     |
+| `4`      | `warning`   |
+| `5`      | `notice`    |
+| `6`      | `informational`|
+| `7`      | `debug` |
+{: caption="Table 1. Severity values" caption-side="top"} 
+
+### severityLabel (string)
+{: #alerting-api-parm-sevlevel}
+
+Defines the criticality of an alert. Valid values are `HIGH`, `MEDIUM`, `LOW`, and `INFO`. A lower value indicates a higher severity.
+{: note} 
+
+The following table shows the severity status that must be set depending on the severity parameter value:
+
+| Severity | Severity status   |
+|----------|------------------|
+| `0`      | `HIGH`           |
+| `1`      | `HIGH`           |
+| `2`      | `MEDIUM`         |
+| `3`      | `MEDIUM`         |
+| `4`      | `LOW`            |
+| `5`      | `LOW`            |
+| `6`      | `INFO`           |
+| `7`      | `INFO`           |
+{: caption="Table 2. Severity level values" caption-side="top"} 
+
+### segmentBy (array of strings)
+{: #alerting-api-parm-segmentedby}
+
+Defines additional segmentation criteria.
+{: note} 
+
+For example, you can segment a CPU alert by `['host.mac', 'proc.name']` so the alert can report on any process in any machine for which you get data in the monitoring instance.
+
+
+
+### segmentCondition (string)
+{: #alerting-api-parm-segmentcondition}
+
+Defines when the alert is triggered for each monitored entity that is specified in the *segmentBy* parameter. This parameter is required for `MANUAL` alerts only.
+{: note}
+
+Valid values are the following:
+* **ANY**: The alert is triggered when at least one of the monitored entities satisfies the condition.
+* **ALL**: The alert is triggered when all of the monitored entities satisfy the condition.
+
+
+
+
+### teamId (string)
+{: #alerting-api-parm-teamid}
+
+Defines the GUID of the team that owns the alert.
+{: note}
+
+
+### type (string)
+{: #alerting-api-parm-type}
+
+Defines the type of alert. Valid values are *MANUAL*, *BASELINE*, and *HOST_COMPARISON*.
+{: note}
+
+Set to `MANUAL` for alerts that you want to control when a notification is sent. You must define the threshold that determines when the alert is triggered.
+
+Set to `BASELINE` for alerts that you want to notify when unexpected metric values are detected. New metric data is compared with metric values that are collected over time.
+
+Set to `HOST_COMPARISON` for alerts that you want to notify when 1 host in a group reports metrics values that are different from the other hosts in the group.
+
+
+
+### timespan (integer)
+{: #alerting-api-parm-timespan}
+
+Minimum time interval, in microseconds, for which the alert condition must be met before the alert is triggered.
+{: note}
+
+The minimum value is 60000000 microseconds, that is, 1 minute.
+
+The value of this parameter must be a multiple of 60000000 microseconds.
+
+
+### version (integer)
+{: #alerting-api-parm-version}
+
+Version of an alert.
+{: note}
+
+The version changes every time you update an alert.
+
+The version is used for optimistic locking.
+
+
+
+## Query parameters
+{: #alerting-api-parm-query}
+
+
+### alertId (integer)
+{: #alerting-api-parm-alertid}
+
+ID of an alert.
+{: note}
+
+### from (long)
+{: #alerting-api-parm-from}
+
+Defines the start timestamp, in microseconds, that is used when you request information about alerts that are defined.
+{: note}
+
+### to (long)
+{: #alerting-api-parm-to}
+
+Defines the end timestamp, in microseconds, that is used when you request information about alerts that are defined.
+{: note}
+
+
+
+

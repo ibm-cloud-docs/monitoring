@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-05-22"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -20,6 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 
 # Monitoring a Linux host
@@ -41,9 +42,9 @@ You view metrics via Sysdig's web-based user interface.
 
 Work in the US-South region. 
 
-Read about {{site.data.keyword.mon_full_notm}}. For more information, see [About](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-about#about).
+[Read about {{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started).
 
-Use a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to [Registration ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+Use a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to [Registration](https://cloud.ibm.com/login){: external}.
 
 Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each of the following resources: 
 
@@ -53,7 +54,7 @@ Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each o
 | {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | `Us-south`  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the Default resource group.   |
 {: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"} 
 
-Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
+Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
 
 ## Step 1. Provision an {{site.data.keyword.mon_full_notm}} instance
@@ -61,7 +62,7 @@ Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Ins
 
 To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
-1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 
@@ -153,7 +154,7 @@ If the Sysdig agent fails to install correctly, install the kernel headers manua
 
 Complete the following steps to launch the web UI:
 
-1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 

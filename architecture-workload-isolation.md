@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-06-02"
 
 keywords: Sysdig, IBM Cloud, monitoring, security, connection
 
@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Learning about {{site.data.keyword.mon_full_notm}} architecture and workload isolation
 {: #compute-isolation}
 
-Review the following sample architecture for {{site.data.keyword.mon_full_notm}}, and learn more about different isolation levels so that you can choose the solution that best meets the requirements of the workloads that you want to run in the cloud.
+Review the following sample architecture for {{site.data.keyword.mon_full_notm}}, and learn more about the workload isolation level that the service offers in the cloud.
 {: shortdesc}
 
 
@@ -41,7 +41,7 @@ Review the following sample architecture for {{site.data.keyword.mon_full_notm}}
 
 The API server component provides a web and an API interface to the Sysdig service.
 
-The collector component ingest data that sysdig agents forward to the Sysdig service.
+The collector component ingests data that sysdig agents forward to the Sysdig service.
 
 The datastore component stores all metrics, metadata, events, instance credentials, and environmental data.
 
@@ -58,11 +58,10 @@ The Sysdig web UI is the front-end component where users can monitor and manage 
 
 Each regional deployment of the {{site.data.keyword.mon_full_notm}} service serves multiple tenants that are identified by the {{site.data.keyword.IBM_notm}} service instance.
 
-* There is 1 instance of the {{site.data.keyword.mon_full_notm}} service per region that is responsible for running user workloads in the region.
-* Each instance of the {{site.data.keyword.mon_full_notm}} service in a region is highly available. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ha-dr).
+* There is 1 deployment of the {{site.data.keyword.mon_full_notm}} service per region that is responsible for running user workloads in the region.
+* The {{site.data.keyword.mon_full_notm}} service in a region is highly available. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ha-dr).
 * The monitoring data that is collected and processed by the {{site.data.keyword.mon_full_notm}} service is associated with the Sysdig instance and not visible to the other service instances by virtue of this association.
-* Within a service instance, monitoring data is isolated per Sysdig instance within a region. 
-* The {{site.data.keyword.mon_full_notm}} service offers soft isolation for data storage. Data is mixed together in the same data stores and segmented by tags that are associated with each of the metrics to enforce  access control policies.
+* Data for all tenants is co-located in the same data stores and segmented by the tenant-specific metric tags that are associated with each metric to enforce access control policies.
 
 You can use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) to control which users see, create, use, and manage resources in your service instance. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam).
 * To grant access to manage the {{site.data.keyword.mon_full_notm}} in {{site.data.keyword.cloud_notm}}, you can assign platform roles that define users levels of access for completing platform management tasks and accessing account resources. 

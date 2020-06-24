@@ -21,77 +21,19 @@ subcollection: Monitoring-with-Sysdig
 {:important: .important}
 {:note: .note}
 
-# Extracting metrics from a Sysdig instance (DATA API)
-{: #metrics-query-api}
+# Extracting metrics from a Sysdig instance by using the Sysdig API
+{: #metrics_api}
 
-You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance through REST API operations that you can run by using a Python client or by using a cURL command.
+You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance by using the Sysdig API.
 {:shortdesc}
 
 For more information about the Sysdig Meric Query API, see [Data APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){:new_window}.
 
 
-## Get metrics by using a Python client
-{: #metrics-query-api-python}
-
-To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
-
-The following code shows the structure of a Python script that you can use to retrieve metrics from a Sysdig instance:
-
-
-```python
-# Reference the Python client
-from sdcclient import IbmAuthHelper, SdMonitorClient
-
-# Add the monitoring instance information that is required for authentication
-URL = <SYSDIG-ENDPOINT> 
-APIKEY = <IAM_APIKEY>
-GUID = <GUID>
-ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
-
-# Instantiate the Python client 
-sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
-
-# Specify the ID for keys, and ID with aggregation for values
-metrics = [
-    {"id": "cpu.used.percent", "aggregations": {"time": "timeAvg", "group": "avg"}}
-]
-
-# Add a data filter or set to None if you want to see "everything"
-filter = None
-
-# Time window:
-#   - for "from A to B": start is equal to A, end is equal to B (expressed in seconds)
-#   - for "last X seconds": start is equal to -X, end is equal to 0
-start = -600
-end = 0
-
-# Sampling time:
-#   - for time series: sampling is equal to the "width" of each data point (expressed in seconds)
-#   - for aggregated data (similar to bar charts, pie charts, tables, etc.): sampling is equal to 0
-sampling = 60
-
-# Load data
-ok, res = sdclient.get_data(metrics, start, end, sampling, filter=filter)
-if ok:
-    print(res)
-```
-{: codeblock}
-
-
-You must include the following information: `<SYSDIG-ENDPOINT>`, `<IAM_APIKEY>`, and `<GUID>` These data is required to authenticate the request with the monitoring instance. To get the monitoring instance information, see [Authenticate your user or service ID by using IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client#python-client-iam-auth).
-
-
-For Python examples, see any of the following examples:
-* [Example 1 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client/blob/master/examples/get_data_simple.py){:new_window}: This  sample script  shows how to get data by creating a request that has no filter and no segmentation.
-* [Example 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client/blob/master/examples/get_data_advanced.py){:new_window}: This sample script shows how to get data by creating a request that has a filter and segmentation.
-* [Example 3 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client/blob/master/examples/get_data_datasource.py){:new_window}: This sample script shows how to get data by creating a request where you specify the datasource.
-
-
-
 ## Get metrics by using cURL
-{: #metrics-query-api-curl}
+{: #metrics_api-curl}
 
-You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to create an alert:
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to get metrics:
 
 ```shell
 curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d DATA
@@ -138,7 +80,7 @@ The following sample shows a template for the `metrics.json` file:
 
 
 ## Metrics dictionary
-{: #metrics-query-dictionary}
+{: #metrics_api-dictionary}
 
 To see the pre-defefined metrics by Sysdig, see [Metrics dictionary ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/metrics-dictionary.html){:new_window}.
 
@@ -146,7 +88,7 @@ To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_not
 
 
 ## Data aggregation
-{: #metrics-query-aggregation}
+{: #metrics_api-aggregation}
 
 
 To learn about data aggregation, see [Data Aggregation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/data-aggregation.html){:new_window}.
@@ -154,7 +96,7 @@ To learn about data aggregation, see [Data Aggregation ![External link icon](../
 
 
 ## Sample: Extract platform metrics
-{: #metrics-query-api-sample-platform}
+{: #metrics_api-sample-platform}
 
 This example shows how to extract platform metrics from Cloud Foundry in *us-south* for the last 24 hours.
 
@@ -209,7 +151,7 @@ The result for extracting data returns the following information:
 {: screen}
 
 ## Sample: Extract CPU data
-{: #metrics-query-api-sample-cpu}
+{: #metrics_api-sample-cpu}
 
 This example shows how to extract CPU data by host with start, end, and, sampling limit.
 

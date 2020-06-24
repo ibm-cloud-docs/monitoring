@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Monitoring-with-Sysdig" audience="service" category="dev_ops" href="/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#getting-started" path="Monitoring-with-Sysdig"}
+{: .toc subcollection="Monitoring-with-Sysdig" audience="service" category="logging_monitoring" href="/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#getting-started" path="Monitoring-with-Sysdig"}
 IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="learn"}
@@ -19,6 +19,15 @@ IBM Cloud Monitoring with Sysdig
         platform_metrics_enabling.md
         cloud_services.md
         cloud_services_locations.md
+
+    {: .topicgroup}
+    Security and compliance
+        at_events.md
+        data-security.md
+        iam.md
+        ha-dr.md
+        service-connection.md
+        architecture-workload-isolation.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -43,12 +52,13 @@ IBM Cloud Monitoring with Sysdig
         iam_grant_team.md
 
     manage.md
-    network.md
 
     {: .topicgroup}
     Metrics
         metrics.md
         groups.md
+        api/metrics_api.md
+        api/metrics_python.md
 
     {: .topicgroup}
     Dashboards
@@ -59,7 +69,10 @@ IBM Cloud Monitoring with Sysdig
     {: .topicgroup}
     Alerts
         [Working with alerts](https://docs.sysdig.com/en/alerts.html)
+        api/alert_api.md
+        api/alert_python.md
         notifications.md
+        api/notifications_api.md
 
     {: .topicgroup}
     Events
@@ -73,16 +86,14 @@ IBM Cloud Monitoring with Sysdig
     Teams
         teams.md
 
+
     {: .topicgroup}
-    REST API
-        api/api.md
-        api/dashboard-api.md
+    WIP
         api/alerting-api.md
+        api/dashboard-api.md
+        api/downtimes-api.md
         api/notifications-api.md
         api/metrics-query-api.md
-        api/downtimes-api.md
-        
-    api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -93,21 +104,21 @@ IBM Cloud Monitoring with Sysdig
     monitoring.md
 
     {: .topicgroup}
+    Sysdig API
+        api/rest_apis.md
+        api/mon-curl.md
+
+    {: .topicgroup}
+    Sysdig Python client
+        api/python-client.md
+
+    {: .topicgroup}
     Cloud services metrics
         metrics/cloudfoundry-docs.md
 
-    {: .topicgroup}
-    Enhancing security for IBM Cloud Monitoring with Sysdig
-        at_events.md
-        data-security.md
-        iam.md
-        ha-dr.md
-        service-connection.md
-        architecture-workload-isolation.md
-
     [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
     [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
-    [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started.html)
+    [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
     [Sysdig Blog](https://sysdig.com/blog/)
     deprecated.md
     {: .navgroup-end}

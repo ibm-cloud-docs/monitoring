@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2020
-lastupdated: "2020-05-13"
+  years:  2018, 2020
+lastupdated: "2020-06-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, downtimes, api
 
@@ -25,38 +25,6 @@ subcollection: Monitoring-with-Sysdig
 
 The downtimes API allows you to determine whether there is a downtime event in progress.  You may only setup a single downtime event at a time.
 
-## Working with cURL
-{: #curl-guide}
-
-```shell
-curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
-```
-
-An example being:
-```shell
-curl -X POST \
-  https://us-south.monitoring.cloud.ibm.com/api/downtimes \
-  -H 'Authorization: Bearer eyJraW...' \
-  -H 'IBMInstanceID: fc8ceb8a-...' \
-  -H 'Content-Type: application/json' \
-  -d @downtimes.json
-```
-
-* [Sysdig endpoints](https://test.cloud.ibm.com/docs/services/Monitoring-with-Sysdig?topic=Sysdig-endpoints#endpoints_sysdig)
-
-**Headers for IAM Tokens (Recommended)**:
-```shell
--H "Authorization: Bearer $AUTH_TOKEN"
--H "IBMInstanceID: $GUID"
-```
-* `AUTH_TOKEN=$(ibmcloud iam oauth-tokens | awk '{print $4}')`
-* `GUID=$(ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid')`
-
-**Headers for Sysdig Token**:
-```shell
--H "Authorization: Bearer $SYSDIG_TOKEN"
-```
-* `SYSDIG_TOKEN` can be found in the Sysdig dashboard settings under Sysdig Monitor API
 
 ## Fetch active downtime event
 

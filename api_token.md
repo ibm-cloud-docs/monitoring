@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-06-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, api token
 
@@ -50,6 +50,9 @@ After you get the token, you can run API calls and use this token in the `Author
 When you copy the token include the `Bearer` keyword: `Authorization: Bearer IAM_TOKEN`
 {: note}
 
+To get the token without the `Bearer` word, you can run the following command: `ibmcloud iam oauth-tokens | awk '{print $4}'`
+{: tip}
+
 
 ## Getting the Sysdig API token
 {: #api_token_get}
@@ -58,6 +61,9 @@ Consider the following information for each instance of the {{site.data.keyword.
 
 * There is an API token per team.
 * If the token is compromised or your organization's security policies require resetting the token after certain conditions, a user with administration permissions can reset the API token.
+
+### Getting the Sysdig API token from the {{site.data.keyword.cloud_notm}} console
+{: #api_token_get_ui}
 
 Complete the following steps to get the token:
 
@@ -69,12 +75,20 @@ After you get the token, you can run API calls and use this token in the `Author
 When you copy the token include the `Bearer` keyword: `Authorization: Bearer SYSDIG_TOKEN`
 {: note}
 
+### Getting the Sysdig API token programmatically
+{: #api_token_get_cmd}
 
+To get the Sysdig API token, run the followinmg command:
+
+```
+ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid'
+```
+{: pre}
 
 ## Resetting the Sysdig API token
 {: #api_token_reset}
 
-Complete the following steps to get the token:
+Complete the following steps to reset the token:
 
 1. From the *Selector* button in the navigation bar, choose **Settings**.
 2. In the *Sysdig Monitor API* section, click **Reset Token** to reset the API token.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-05-22"
+lastupdated: "2020-06-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -20,7 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
-
+{:external: target="_blank" .external}
 
 # Monitoring a Linux bare metal server
 {: #baremetal_linux}
@@ -35,7 +35,7 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
 1. [Read about {{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started).
 
-2. Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
+2. Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
 3. [Provision an {{site.data.keyword.mon_full_notm}} instance from the catalog](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_ui).
 
@@ -51,7 +51,7 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
     1. [Enable VPN access on each account that needs VPN access](/docs/iaas-vpn?topic=iaas-vpn-getting-started#enable-user-vpn-access).
     
-    2. Depending on your operating system, download the latest `MotionPro` 32-bit or 64-bit files from the Array Networks [Clients and Tools](https://support.arraynetworks.net/prx/001/http/supportportal.arraynetworks.net/downloads/downloads.html) download site. [Learn more](/docs/iaas-vpn?topic=iaas-vpn-standalone-vpn-clients).
+    2. Depending on your operating system, download the latest `MotionPro` 32-bit or 64-bit files from the Array Networks [Clients and Tools](https://support.arraynetworks.net/prx/001/http/supportportal.arraynetworks.net/downloads/downloads.html) download site. [Learn more](/docs/iaas-vpn?topic=iaas-vpn-standalone-vpn-clients){: external}.
     
     3. Configure a standalone SSL VPN client and open a connection:
 
@@ -71,7 +71,7 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
     For example, you can complete the following steps to get the bare metal information that you need to SSH into the server:
 
-    1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+    1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
     2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Classic Infrastructure** &gt; **Device List**.
 
@@ -140,7 +140,7 @@ Complete the following steps from the command line to install a Sysdig agent:
 
 Complete the following steps to launch the web UI:
 
-1. [Log in to your {{site.data.keyword.cloud_notm}} account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} console opens.
 
@@ -169,7 +169,7 @@ You only can monitor one instance per browser. You could have multiple tabs for 
 ## Step 3. [Optional] Configure the Prometheus IPMI Exporter to monitor sensor metrics
 {: #baremetal_linux_step3}
 
-In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server. For more information, see [Sysdig integration with Prometheus![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/integrate-prometheus-metrics.html){: new_window}. 
+In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server. For more information, see [Sysdig integration with Prometheus](https://docs.sysdig.com/en/integrate-prometheus-metrics.html){: external}. 
 
 * The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP). 
 * When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter. 
@@ -211,7 +211,7 @@ You can collect the following metrics when you configure the IPMI exporter in a 
 
     The metric ipmi_bmc_info includes information about the firmware revision and manufacturer in labels and has a value of `1`.
 
-For more information, see [Prometheus IPMI Exporter ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/soundcloud/ipmi_exporter){:new_window}.
+For more information, see [Prometheus IPMI Exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
  
 Complete the following steps to configure the Prometheus IPMI Exporter:
@@ -221,7 +221,7 @@ Complete the following steps to configure the Prometheus IPMI Exporter:
 
 Complete the following steps:
 
-1. From a local terminal,[download the Prometheus IPMI exporter ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/soundcloud/ipmi_exporter){:new_window}.
+1. From a local terminal,[download the Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
 2. In the bare metal server, from the `shh` session, create the directory `/usr/sysdig`. Run the following commands:
 
@@ -326,7 +326,7 @@ The Sysdig agent automatically collects metrics from Prometheus exporters. There
 
 Complete the following steps to run the Prometheus exporter:
 
-1. From a local terminal,[download the Prometheus exporter ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/martinlindhe/wmi_exporter/releases){:new_window}.
+1. From a local terminal,[download the Prometheus exporter](https://github.com/martinlindhe/wmi_exporter/releases){: external}.
 
 2. In the bare metal server, from the `shh` session, change to the directory `/usr/sysdig/`. Run the following command:
 
@@ -439,7 +439,7 @@ Complete the following steps:
     ```
     {: pre}
 
-2. Update the `/opt/draios/etc/dragent.yaml` to [enable remote scraping ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){:new_window}. 
+2. Update the `/opt/draios/etc/dragent.yaml` to [enable remote scraping](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){: external}. 
 
     Append the following section to the `dragent.yaml` file:
 
