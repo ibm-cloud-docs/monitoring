@@ -166,7 +166,8 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 
     * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 
-
+Use kubectl version 1.14 or higher.
+{: tip}
 
 ### Configuring a Sysdig agent on a standard Kubernetes cluster manually
 {: #config_agent_kube_manually}

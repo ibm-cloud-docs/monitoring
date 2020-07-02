@@ -31,8 +31,10 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    {: .topicgroup}
     provision.md
     remove.md
+    upgrade-plan.md
 
     {: .topicgroup}
     Sysdig Agent
@@ -46,24 +48,31 @@ IBM Cloud Monitoring with Sysdig
     launch.md
 
     {: .topicgroup}
-    IAM integration
+    IAM integration Monitor
         api_token.md
         iam_grant.md
         iam_grant_team.md
 
+    {: .topicgroup} 
+    IAM integration Secure
+
     manage.md
 
     {: .topicgroup}
-    Metrics
+    Sysdig Secure - policies
+
+    {: .topicgroup}
+    Sysdig Monitor - Metrics
         metrics.md
         groups.md
         api/metrics_api.md
         api/metrics_python.md
 
     {: .topicgroup}
-    Dashboards
+    Sysdig Monitor - Dashboards
         dashboards.md
         panels.md
+        default_dashboards.md
 
     {: .topicgroup}
     Alerts
