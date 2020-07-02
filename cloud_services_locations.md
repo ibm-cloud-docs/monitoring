@@ -37,7 +37,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
-| {{site.data.keyword.BluVirtServers}}                          | `NO`                | ![Checkmark icon](../../icons/checkmark-icon.svg)  |          
+| {{site.data.keyword.BluVirtServers}}                          | `NO`                | ![Checkmark icon](images/checkmark-icon.svg)  |          
 {: caption="Infrastructure services integration in Europe locations" caption-side="top"}
 {: #cs_infra-table-1}
 {: tab-title="Europe"}
@@ -47,7 +47,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
-| {{site.data.keyword.BluVirtServers}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)   | ![Checkmark icon](../../icons/checkmark-icon.svg)    |          
+| {{site.data.keyword.BluVirtServers}}           | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |          
 {: caption="Infrastructure services integration in America's locations" caption-side="top"}
 {: #cs_infra-table-2}
 {: tab-title="America"}
@@ -71,7 +71,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
-| Cloud Foundry                                                 | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg)  |          
+| Cloud Foundry                                                 | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg)  |          
 {: caption="CF integration in Europe locations" caption-side="top"}
 {: #cs_cf-table-1}
 {: tab-title="Europe"}
@@ -81,7 +81,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
-| Cloud Foundry                                  | ![Checkmark icon](../../icons/checkmark-icon.svg)   | ![Checkmark icon](../../icons/checkmark-icon.svg)    |          
+| Cloud Foundry                                  | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |          
 {: caption="CF integration in America's locations" caption-side="top"}
 {: #cs_cf-table-2}
 {: tab-title="America"}
@@ -91,7 +91,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
 |------------------------------------------------|------------------|----------------------------|
-| Cloud Foundry                                  |                  | ![Checkmark icon](../../icons/checkmark-icon.svg) |      
+| Cloud Foundry                                  |                  | ![Checkmark icon](images/checkmark-icon.svg) |      
 {: caption="CF integration in AP locations" caption-side="top"}
 {: #cs_cf-table-3}
 {: tab-title="Asia Pacific"}
@@ -106,13 +106,13 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                         | `Frankfurt (eu-de)`                                | `London (eu-gb)`                                   |
 |-----------------------------------------------------------------|----------------------------------------------------|----------------------------------------------------|
-| {{site.data.keyword.cloudant_short_notm}}                        | `NO`  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
+| {{site.data.keyword.cloudant_short_notm}}                        | `NO`  | ![Checkmark icon](images/checkmark-icon.svg) |
+| {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 {: caption="Database services integration in Europe locations" caption-side="top"}
 {: #cs_db-table-1}
 {: tab-title="Europe"}
@@ -122,13 +122,13 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                         | `Dallas (us-south)`                                | `Washington (us-east)`                             |
 |-----------------------------------------------------------------|----------------------------------------------------|----------------------------------------------------|
-| {{site.data.keyword.cloudant_short_notm}}                       | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](../../icons/checkmark-icon.svg)` | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
+| {{site.data.keyword.cloudant_short_notm}}                       | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](images/checkmark-icon.svg)` | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 {: caption="Database services integration in America's locations" caption-side="top"}
 {: #cs_db-table-2}
 {: tab-title="America"}
@@ -138,13 +138,13 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                         | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
 |-----------------------------------------------------------------|------------------|----------------------------|
-| {{site.data.keyword.cloudant_short_notm}}                        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
-| {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | 
-| {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
-| {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |
+| {{site.data.keyword.cloudant_short_notm}}                        | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) | 
+| {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  | 
+| {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 {: caption="Database services integration in AP locations" caption-side="top"}
 {: #cs_db-table-3}
 {: tab-title="Asia Pacific"}
@@ -159,7 +159,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
-| {{site.data.keyword.messagehub}}                              | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |          
+| {{site.data.keyword.messagehub}}                              | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |          
 {: caption="Integration services integration in Europe locations" caption-side="top"}
 {: #cs_integration-table-1}
 {: tab-title="Europe"}
@@ -169,7 +169,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
-| {{site.data.keyword.messagehub}}               | ![Checkmark icon](../../icons/checkmark-icon.svg)   | ![Checkmark icon](../../icons/checkmark-icon.svg)    |          
+| {{site.data.keyword.messagehub}}               | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |          
 {: caption="Integration services integration in America's locations" caption-side="top"}
 {: #cs_integration-table-2}
 {: tab-title="America"}
@@ -179,7 +179,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
 |------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
-| {{site.data.keyword.messagehub}}               | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |  `Metrics are available through the platform metrics Sysdig instance in Tokyo` | `Metrics are available through the platform metrics Sysdig instance in Tokyo` |       
+| {{site.data.keyword.messagehub}}               | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |  `Metrics are available through the platform metrics Sysdig instance in Tokyo` | `Metrics are available through the platform metrics Sysdig instance in Tokyo` |       
 {: caption="Integration services integration in AP locations" caption-side="top"}
 {: #cs_integration-table-3}
 {: tab-title="Asia Pacific"}
@@ -195,7 +195,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                         | `Dallas (us-south)` | `Washington (us-east)`                   |
 |-----------------------------------------------------------------|---------------------|--------------------------------------|
-| {{site.data.keyword.loadbalancer_full}}                 | ![Checkmark icon](../../icons/checkmark-icon.svg)               | `NO`                                 |            
+| {{site.data.keyword.loadbalancer_full}}                 | ![Checkmark icon](images/checkmark-icon.svg)               | `NO`                                 |            
 {: caption="Table 10. Security services integration in America's locations" caption-side="top"}
 {: #cs-int-table-1}
 {: tab-title="America"}
@@ -229,7 +229,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Dallas (us-south)`                                | `Washington (us-east)`               |
 |------------------------------------------------|----------------------------------------------------|--------------------------------------|
-| {{site.data.keyword.cos_full_notm}}            | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  |          
+| {{site.data.keyword.cos_full_notm}}            | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |          
 {: caption="Storage services integration in America's locations" caption-side="top"}
 {: #cs_storage-table-1}
 {: tab-title="America"}
@@ -239,7 +239,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                  | `Tokyo (jp-tok)`                                  |`Sydney (au-syd)`           |
 |----------------------------------------------------------|---------------------------------------------------|----------------------------|
-| {{site.data.keyword.cos_full_notm}}                      | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |     
+| {{site.data.keyword.cos_full_notm}}                      | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |     
 {: caption="Storage services integration in AP locations" caption-side="top"}
 {: #cs_storage-table-2}
 {: tab-title="Asia Pacific"}
@@ -249,7 +249,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       |`Frankfurt (eu-de)`                                | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------------------------------------|------------------|
-| {{site.data.keyword.cos_full_notm}}                           | ![Checkmark icon](../../icons/checkmark-icon.svg) |  ![Checkmark icon](../../icons/checkmark-icon.svg)  |     
+| {{site.data.keyword.cos_full_notm}}                           | ![Checkmark icon](images/checkmark-icon.svg) |  ![Checkmark icon](images/checkmark-icon.svg)  |     
 {: caption="Storage services integration in Europe locations" caption-side="top"}
 {: #cs_storage-table-3}
 {: tab-title="Europe"}
@@ -267,8 +267,8 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                | `Dallas (us-south)`                                | `Washington (us-east)`               |
 |----------------------------------------|----------------------------------------------------|--------------------------------------|
-| Load Balancer                          | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| VPN                                    | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| Load Balancer                          | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
+| VPN                                    | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
 {: caption="VPC events in America's locations" caption-side="top"}
 {: #cs-vpc-loc-table-1}
 {: tab-title="America"}
@@ -279,7 +279,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
 |-----------------------------------------------------------------|------------------|----------------------------|
 | Load Balancer           | `NO`   | `NO`  |
-| VPN                     | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| VPN                     | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
 {: caption="VPC events in AP locations" caption-side="top"}
 {: #cs-vpc-loc-table-2}
 {: tab-title="Asia Pacific"}
@@ -290,7 +290,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
 | Load Balancer              | `NO`  | `NO`  |
-| VPN                        |  ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |    
+| VPN                        |  ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |    
 {: caption="VPC events in Europe locations" caption-side="top"}
 {: #cs-vpc-loc-table-3}
 {: tab-title="Europe"}

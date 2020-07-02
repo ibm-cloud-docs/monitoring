@@ -144,14 +144,6 @@ The following table outlines tasks that you can run to work with dashboards from
 | [Share a dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_share) | Share dashboards between users in a team, and externally, by configuring a public URL for the dashboard. |
 {: caption="Table 3. Dashboard tasks that you can run in the web UI" caption-side="top"} 
 
-The following table outlines tasks that you can run programmatically to work with dashboards:
-
-| Task                    |	Using REST API                |
-|-------------------------|-------------------------------|
-| Create a dashboard      | [Creating a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_create_dashboard) |
-| Delete a dashboard      | [Deleting a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_delete_dashboard) |
-| Saving dashboards       | [Saving the dashboards of a team by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api#api_save_dashboard) |
-{: caption="Table 4. Tasks to manage dashboards programmatically" caption-side="top"} 
 
 
 

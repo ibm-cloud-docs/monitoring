@@ -71,7 +71,7 @@ Complete the following steps to configure the Prometheus WMI exporter in your Wi
     For example, to collect computer system metrics (cs), CPU metrics, disk metrics and network interface I/O metrics, see the following example:
 
     ```
-    .\wmi_exporter-0.10.2-amd64.exe --collectors.enabled "cpu,cs,logical_disk,net"
+    .\wmi_exporter-0.10.2-amd64.exe --collectors.enabled "os,cpu,logical_disk,net,system"
     ```
     {: codeblock}
 

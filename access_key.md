@@ -40,7 +40,7 @@ To get the access key for an {{site.data.keyword.mon_full_notm}} instance throug
 
 3. Select **Monitoring**. The {{site.data.keyword.mon_full_notm}} dashboard opens. You can see the list of monitoring instances that are available on {{site.data.keyword.cloud_notm}}.
 
-3. Identify the instance for which you want to get the access key, and click **View access key**.
+3. Identify the instance for which you want to get the access key. Select actions, then click **View key**.
 
 4. A pop up window opens where you can click **Show** to view the access key.
 
@@ -59,7 +59,7 @@ To get the access key for a Sysdig instance through the command line, complete t
 
     By default, the `default` resource group is set.
 
-4. Get the instance name. Run the following command: [ibmcloud resource service-instances](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances)
+4. Get the instance name. Run the following command: [ibmcloud resource service-instances](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_resource_service_instances)
 
     ```
     ibmcloud resource service-instances
