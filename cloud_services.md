@@ -84,7 +84,7 @@ The following table lists integration services that are Sysdig-enabled:
 ## Networking services
 {: #networking}
 
-The following table lists Cloud services that send logs to {{site.data.keyword.la_full_notm}}:
+The following table lists Cloud services that are Sysdig-enabled: 
 
 
 | Service     | Description | Metrics |
@@ -119,32 +119,13 @@ There are 2 types of VPC infrastructure that you can provision in your account:
 ### VPC Gen 1 (Classic)
 {: #vpc_infrastructure_classic}
 
-The following table lists VPC infrastructure services that send events to {{site.data.keyword.at_full_notm}}:
+The following table lists VPC infrastructure services that are Sysdig-enabled:
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
-| [Storage resources](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-getting-started)| Use this service to provide hypervisor-mounted, high-performance data storage for virtual server instances (instances) in your VPC. |  |
-| [Compute resources](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-getting-started)| Use this service to provision scalable compute resources in the IBM Cloud. |  |
-| [Network resources](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-getting-started)| Use this service to add network resources to your VPC infrastructure. |  |
 | [Load Balancer](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-load-balancers-in-ibm-cloud-vpc)| Use this service to distribute traffic among multiple server instances within the same region of your VPC.  | [Monitoring metrics using IBM Load Balancer for VPC with Sysdig](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-monitoring-metrics-sysdig) |
 | [VPN](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc)| Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. | [Monitoring VPC VPN metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-sysdig-monitoring-metrics) |
-| [Images](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-images) | When you provision {{site.data.keyword.vsi_is_short}}, you can select from the supported stock images or a custom image that you import from {{site.data.keyword.cos_full_notm}}. |  |
 {: caption="List of VPC infrastructure services (generation 1)" caption-side="top"} 
 
 
-
-### VPC Gen 2
-{: #vpc_infrastructure_gen2}
-
-The following table lists VPC infrastructure services that send events to {{site.data.keyword.at_full_notm}}:
-
-| Service     | Description | Metrics             |
-|-------------|-------------|-------------------|
-| [Storage resources](/docs/vpc?topic=vpc-block-storage-about) | Use this service to provide hypervisor-mounted, high-performance data storage for virtual server instances (instances) in your VPC. |  |
-| [Compute resources](/docs/vpc?topic=vpc-about-advanced-virtual-servers) | Use this service to provision scalable compute resources in the IBM Cloud. |  |
-| [Network resources](/docs/vpc?topic=vpc-about-networking-for-vpc) | Use this service to add network resources to your VPC infrastructure. |  |
-| [Load Balancer](/docs/vpc?topic=vpc-load-balancers)| Use this service to distribute traffic among multiple server instances within the same region of your VPC.  | |
-| [VPN](/docs/vpc?topic=vpc-using-vpn)| Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. |  |
-| [Images](/docs/vpc?topic=vpc-about-images) | When you provision {{site.data.keyword.vsi_vsi_is_short}}, you can select from the supported stock images or a custom image that you import from {{site.data.keyword.cos_full_notm}}. |  |
-{: caption="List of VPC infrastructure services (generation 2)" caption-side="top"} 
 

@@ -217,23 +217,3 @@ Complete the following steps to share a dashboard in the Web UI:
 Share a dashboard externally to allow external users to view the dashboard metrics, while restricting access to changing panels and configurations.
 {: tip}
 
-
-## Managing dashboards programmatically
-{: #dashboards_programmatically}
-
-Use the Sysdig REST API to automate routine tasks and monitor notifications. You can also use the Sysdig Python library. 
-
-**Note:** The Python library exposes part of the Sysdig REST API functionality. 
-
-
-When you use the API from your custom scripts or programs, you must use a Sysdig token to authenticate with the {{site.data.keyword.mon_full_notm}} instance. For more information, see [Working with API tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token).
-
-
-| Task                    | Using REST API                |
-|-------------------------|-------------------------------|
-| Create a dashboard      | [Creating a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard-api-operations#create-a-new-dashboard) |
-| Delete a dashboard      | [Deleting a dashboard by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard-api-operations#delete-a-user-s-dashboard) |
-| Saving dashboards       | [Saving the dashboards of a team by using the API](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard-api-operations#fetch-a-user-s-dashboard) |
-{: caption="Table 4. Tasks to manage dashboards programmatically" caption-side="top"} 
-
-
