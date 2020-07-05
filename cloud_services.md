@@ -84,7 +84,7 @@ The following table lists integration services that are Sysdig-enabled:
 ## Networking services
 {: #networking}
 
-The following table lists Cloud services that send logs to {{site.data.keyword.la_full_notm}}:
+The following table lists Cloud services that are Sysdig-enabled:
 
 
 | Service     | Description | Metrics |
@@ -119,7 +119,7 @@ There are 2 types of VPC infrastructure that you can provision in your account:
 ### VPC Gen 1 (Classic)
 {: #vpc_infrastructure_classic}
 
-The following table lists VPC infrastructure services that send events to {{site.data.keyword.at_full_notm}}:
+The following table lists VPC infrastructure services that are Sysdig-enabled:
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
@@ -136,7 +136,7 @@ The following table lists VPC infrastructure services that send events to {{site
 ### VPC Gen 2
 {: #vpc_infrastructure_gen2}
 
-The following table lists VPC infrastructure services that send events to {{site.data.keyword.at_full_notm}}:
+The following table lists VPC infrastructure services that are Sysdig-enabled:
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
@@ -145,6 +145,6 @@ The following table lists VPC infrastructure services that send events to {{site
 | [Network resources](/docs/vpc?topic=vpc-about-networking-for-vpc) | Use this service to add network resources to your VPC infrastructure. |  |
 | [Load Balancer](/docs/vpc?topic=vpc-load-balancers)| Use this service to distribute traffic among multiple server instances within the same region of your VPC.  | |
 | [VPN](/docs/vpc?topic=vpc-using-vpn)| Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. | [Monitoring VPC VPN metrics](/docs/vpc?topic=vpc-sysdig-monitoring-metrics) |
-| [Images](/docs/vpc?topic=vpc-about-images) | When you provision {{site.data.keyword.vsi_is_full_notm}}, you can select from the supported stock images or a custom image that you import from {{site.data.keyword.cos_full_notm}}. |  |
+| [Images](/docs/vpc?topic=vpc-about-images) | When you provision {{site.data.keyword.vsi_is_short}}, you can select from the supported stock images or a custom image that you import from {{site.data.keyword.cos_full_notm}}. |  |
 {: caption="List of VPC infrastructure services (generation 2)" caption-side="top"} 
 

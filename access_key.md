@@ -59,14 +59,14 @@ To get the access key for a Sysdig instance through the command line, complete t
 
     By default, the `default` resource group is set.
 
-4. Get the instance name. Run the following command: [ibmcloud resource service-instances](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances)
+4. Get the instance name. Run the following command: [ibmcloud resource service-instances]( 	/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_resource_service_instances)
 
     ```
     ibmcloud resource service-instances
     ```
     {: pre}
 
-5. Get the name of the API key that is associated with the Sysdig instance. Run the [`ibmcloud resource service-keys`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances) command:
+5. Get the name of the API key that is associated with the Sysdig instance. Run the [`ibmcloud resource service-keys`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_keys) command:
 
     ```
     ibmcloud resource service-keys --instance-name INSTANCE_NAME
