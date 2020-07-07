@@ -79,6 +79,7 @@ IBM Cloud Monitoring with Sysdig
     pricing.md
     default_dashboards.md
     monitoring.md
+    shared-responsibilities.md
 
     {: .topicgroup}
     Enhancing security for IBM Cloud Monitoring with Sysdig
