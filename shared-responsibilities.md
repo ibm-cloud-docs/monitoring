@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2020
-lastupdated: "2020-06-02"
+lastupdated: "2020-07-08"
 
 keywords: Sysdig, IBM Cloud, monitoring, customer responsibilities, IBM responsibilities, terms and conditions
 
