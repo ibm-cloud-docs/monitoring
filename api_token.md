@@ -20,18 +20,41 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 
 # Working with API tokens
 {: #api_token}
 
-You can use IAM tokens or Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications.
+You can use IAM tokens or Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 
 {:shortdesc}
 
-## Getting the IAM API token
-{: #api_iam_token_get}
+## Getting an IAM API key
+{: #api_iam_apikey_get}
 
-The Sysdig APIs are fully integrated with {{site.data.keyword.IBM_notm}} IAM. 
+An application programming interface key (API key) is a unique code that is passed in to an API to identify the calling application or user. [Learn more](/docs/account?topic=account-manapikey).
+ 
+You can use a user API key or an API key that is associated with a service ID that you create.
+
+* A user API key is associated with a user's identity, and each API key that is created by the user has the same access that the user is assigned. [Learn more](/docs/account?topic=account-userapikey).
+
+    To view your API keys, go to **Manage** &gt; **Access (IAM)** &gt; **API keys**. 
+
+    To create an API key, see [Creating an API key](/docs/account?topic=account-userapikey#create_user_key).
+
+* API keys, that are associated with service IDs that you create, are used to connect an application inside or outside of {{site.data.keyword.cloud_notm}}
+ to an {{site.data.keyword.cloud_notm}} service. [Learn more](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys).
+
+    To view the API keys, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**. 
+
+    Service ID API keys inherit all access that is assigned to the specific service ID.
+    
+    To create an API key, see [Creating an API key for a service ID](/docs/account?topic=account-serviceidapikeys#create_service_key).
+
+
+
+## Getting an IAM API token
+{: #api_iam_token_get}
 
 Complete the following steps to get an IAM token:
 
@@ -59,10 +82,10 @@ To get the token without the `Bearer` word, you can run the following command: `
 
 Consider the following information for each instance of the {{site.data.keyword.mon_full_notm}} service:
 
-* There is an API token per team.
+* There is a Sysdig API token per team.
 * If the token is compromised or your organization's security policies require resetting the token after certain conditions, a user with administration permissions can reset the API token.
 
-### Getting the Sysdig API token from the {{site.data.keyword.cloud_notm}} console
+### Getting the Sysdig API token from the Sysdig web UI
 {: #api_token_get_ui}
 
 Complete the following steps to get the token:
@@ -78,7 +101,7 @@ When you copy the token include the `Bearer` keyword: `Authorization: Bearer SYS
 ### Getting the Sysdig API token programmatically
 {: #api_token_get_cmd}
 
-To get the Sysdig API token, run the followinmg command:
+To get the Sysdig API token, run the following command:
 
 ```
 ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid'

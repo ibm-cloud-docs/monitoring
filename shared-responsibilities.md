@@ -102,7 +102,9 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | Task                                                            | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-----------------------------------------------------------------|-------------------------------------------------|-----------------------|
 | `Service`         | Automatically recover and restart service components after any disaster event. |   |
-| `Data`            |   |Extract and save data, dashboards definitions, and alert definitions if you cannot afford for it to be lost in the event of an un-recoverable event. | 
-| `Sysdig agent`    |   |  Recovery of the Sysdig agents running in your environment should they be impacted by a disaster. |
+| `Data`            |   | Extract and save data, dashboards definitions, and alert definitions if you cannot afford for it to be lost in the event of an un-recoverable event.  | 
+| `Sysdig agent`    |   | Recovery of the Sysdig agents running in your environment should they be impacted by a disaster. |
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
+
+
 

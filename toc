@@ -110,6 +110,7 @@ IBM Cloud Monitoring with Sysdig
     {: .topicgroup}
     Sysdig Python client
         api/python-client.md
+        [Sysdig Cloud Python Script Library](https://python-sdc-client.readthedocs.io/en/latest/)
 
     {: .topicgroup}
     Cloud services metrics
