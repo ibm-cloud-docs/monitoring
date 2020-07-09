@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Using the Python client
 {: #python-client}
 
-You can use the [Python Client](https://github.com/draios/python-sdc-client){: external} to manage the {{site.data.keyword.mon_full_notm}} service. The client is also known as the **sdcclient**.
+You can use the Python Client to manage the {{site.data.keyword.mon_full_notm}} service. The client is also known as the **sdcclient**.
 {:shortdesc}
 
 These instructions apply to Python version 3.x.
@@ -35,7 +35,7 @@ These instructions apply to Python version 3.x.
 To manage resources that are associated with the default team, use IAM as your authentication method.
 {: important}
 
-To manage resources that are associated with a team, you must use the Sysdig token that is assigned to you in that team.
+To manage resources that are associated with a team, you must use the Sysdig token that is active for the team.
 {: important}
 
 ## Step 1. Installing the Python client
@@ -298,7 +298,7 @@ def usage():
    print('SYSDIG_TOKEN: Sysdig token that is associated to a team.')
    sys.exit(1)
 
-if len(sys.argv) != 4:
+if len(sys.argv) != 3:
    usage()
 
 URL = sys.argv[1]
@@ -309,4 +309,10 @@ sdclient = SdMonitorClient(token=SYSDIG_TOKEN,sdc_url=URL)
 ```
 {: codeblock}
 
+
+## References
+{: #python-client_references}
+
+* [Python Client](https://github.com/draios/python-sdc-client){: external}
+* [Sysdig Python samples](https://github.com/draios/python-sdc-client/tree/master/examples){: external}
 

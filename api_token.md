@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-12"
+lastupdated: "2020-07-09"
 
 keywords: Sysdig, IBM Cloud, monitoring, api token
 
@@ -85,9 +85,6 @@ Consider the following information for each instance of the {{site.data.keyword.
 * There is a Sysdig API token per team.
 * If the token is compromised or your organization's security policies require resetting the token after certain conditions, a user with administration permissions can reset the API token.
 
-### Getting the Sysdig API token from the Sysdig web UI
-{: #api_token_get_ui}
-
 Complete the following steps to get the token:
 
 1. From the *Selector* button in the navigation bar, choose **Settings**
@@ -98,15 +95,7 @@ After you get the token, you can run API calls and use this token in the `Author
 When you copy the token include the `Bearer` keyword: `Authorization: Bearer SYSDIG_TOKEN`
 {: note}
 
-### Getting the Sysdig API token programmatically
-{: #api_token_get_cmd}
 
-To get the Sysdig API token, run the following command:
-
-```
-ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid'
-```
-{: pre}
 
 ## Resetting the Sysdig API token
 {: #api_token_reset}

@@ -20,6 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Extracting metrics from a Sysdig instance by using the Sysdig Python client
 {: #metrics_python}
@@ -27,7 +28,7 @@ subcollection: Monitoring-with-Sysdig
 You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance through REST API operations that you can run by using a Python client or by using a cURL command.
 {:shortdesc}
 
-For more information about the Sysdig Meric Query API, see [Data APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){:new_window}.
+For more information about the Sysdig Meric Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
 
 
 ## Get metrics by using a Python client
@@ -86,11 +87,11 @@ You must include the following information: `<SYSDIG-ENDPOINT>`, `<IAM_APIKEY>`,
 {: #metrics_python-samples}
 
 For Python examples, see any of the following examples:
-* [Example 1 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client/blob/master/examples/get_data_simple.py){:new_window}: This  sample script  shows how to get data by creating a request that has no filter and no segmentation.
+* [Example 1](https://github.com/draios/python-sdc-client/blob/master/examples/get_data_simple.py){: external}: This  sample script  shows how to get data by creating a request that has no filter and no segmentation.
 
-* [Example 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client/blob/master/examples/get_data_advanced.py){:new_window}: This sample script shows how to get data by creating a request that has a filter and segmentation.
+* [Example 2](https://github.com/draios/python-sdc-client/blob/master/examples/get_data_advanced.py){: external}: This sample script shows how to get data by creating a request that has a filter and segmentation.
 
-* [Example 3 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/draios/python-sdc-client/blob/master/examples/get_data_datasource.py){:new_window}: This sample script shows how to get data by creating a request where you specify the datasource.
+* [Example 3](https://github.com/draios/python-sdc-client/blob/master/examples/get_data_datasource.py){: external}: This sample script shows how to get data by creating a request where you specify the datasource.
 
 
 
@@ -98,7 +99,7 @@ For Python examples, see any of the following examples:
 ## Metrics dictionary
 {: #metrics_python-dictionary}
 
-To see the pre-defefined metrics by Sysdig, see [Metrics dictionary ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/metrics-dictionary.html){:new_window}.
+To see the pre-defefined metrics by Sysdig, see [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html){: external}.
 
 To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_notm}} services that are Sysdig-enabled, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services). 
 
@@ -107,5 +108,5 @@ To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_not
 {: #metrics_python-aggregation}
 
 
-To learn about data aggregation, see [Data Aggregation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/data-aggregation.html){:new_window}.
+To learn about data aggregation, see [Data Aggregation](https://docs.sysdig.com/en/data-aggregation.html){: external}.
 
