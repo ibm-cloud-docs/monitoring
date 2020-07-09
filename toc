@@ -65,8 +65,8 @@ IBM Cloud Monitoring with Sysdig
     Dashboards
         dashboards.md
         panels.md
-        dashboard_api.md
-        dashboard_python.md
+        api/dashboard_api.md
+        api/dashboard_python.md
 
     {: .topicgroup}
     Alerts
