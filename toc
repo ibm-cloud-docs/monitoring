@@ -24,6 +24,7 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="howto"}
     provision.md
     remove.md
+    upgrade.md
 
     {: .topicgroup}
     Sysdig Agent
