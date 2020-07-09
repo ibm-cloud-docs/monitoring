@@ -35,7 +35,7 @@ The costs that are provided in this topic are guidelines and do not represent ac
 
 | Plans            | Base tier | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Plan ID |
 |------------------|---------------------------------------------------|--------|--------|--------|--------|
-| `Lite`           | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | | `367a3918-9efc-43c5-bef9-20553051b7af` |
+| `Lite`           | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | | | `367a3918-9efc-43c5-bef9-20553051b7af` |
 | `Graduated tier` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | `231bb072-1b2f-4d7e-ae9e-9574d382be32` |
 {: caption="Table 1. Time-series tiers per service plans" caption-side="top"} 
 
