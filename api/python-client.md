@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-10"
 
 keywords: Sysdig, IBM Cloud, monitoring, alerting, api, python
 
@@ -313,6 +313,9 @@ sdclient = SdMonitorClient(token=SYSDIG_TOKEN,sdc_url=URL)
 ## References
 {: #python-client_references}
 
+* [Extracting metrics from a Sysdig instance by using the Sysdig Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics_python)
+* [Managing dashboards by using the Sysdig Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard_python)
+* [Managing alerts by using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alert_python)
 * [Python Client](https://github.com/draios/python-sdc-client){: external}
 * [Sysdig Python samples](https://github.com/draios/python-sdc-client/tree/master/examples){: external}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-12"
+lastupdated: "2020-07-10"
 
 keywords: Sysdig, IBM Cloud, monitoring, alerting, api, curl
 
@@ -45,7 +45,7 @@ Use this API to manage alerts.
 | Fetch all user alerts      | `GET`            | `<ENDPOINT>/api/alerts`             |
 {: caption="Table 1. Alerting REST API" caption-side="top"}
 
-For more information, see [Managing alerts (Alerts REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api).
+For more information, see [Managing alerts (Alerts REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alert_api).
 
 
 
@@ -64,7 +64,6 @@ Use this API to manage dashboards.
 | Fetch all user dashboards   | `GET`            | `<ENDPOINT>/api/v2/dashboards`                 |
 {: caption="Table 2. Dashboards REST API" caption-side="top"}
 
-For more information, see [Managing dashboards (Dashboards REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard-api-operations).
 
 
 
@@ -79,9 +78,9 @@ Use this API to extract data from a Sysdig instance.
 | Extract metrics             | `POST`           | `<ENDPOINT>/api/data`                          |
 {: caption="Table 4. Data REST API" caption-side="top"}
 
-For more information, see [Extracting metrics from a Sysdig instance (DATA API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metric-query-api-operations).
+For more information, see [Extracting metrics from a Sysdig instance (DATA API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics_api).
 
-For more information about the Sysdig Meric Query API, see [Data APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){:new_window}.
+For more information about the Sysdig Meric Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
 
 
 
@@ -97,10 +96,6 @@ Use this API to manage downtime events.
 | Schedule a downtime event          | `POST`           | `<ENDPOINT>/api/downtimes`                     |
 | Remove a scheduled downtime event  | `DELETE`         | `<ENDPOINT>/api/downtimes/<DOWNTIME_EVENT_ID>` |
 {: caption="Table 3. Downtime REST API" caption-side="top"}
-
-For more information, see [Managing downtime events (Downtime REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-downtimes-api-operations).
-
-
 
 
 
@@ -119,7 +114,7 @@ Use this API to manage notification channels.
 | Fetch all user notification channels    | `GET`            | `<ENDPOINT>/api/notificationChannels`                 |
 {: caption="Table 2. Notifications REST API" caption-side="top"}
 
-For more information, see [Managing notification channels (Notifications REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-notification-api-operations).
+For more information, see [Managing notification channels (Notifications REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-notifications_api).
 
 
 

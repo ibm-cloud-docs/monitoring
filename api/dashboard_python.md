@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-12"
+lastupdated: "2020-07-10"
 
 keywords: Sysdig, IBM Cloud, monitoring, dashboard, api
 
@@ -36,17 +36,17 @@ The following table lists some of the Python functions that you can use to manag
 
 | Action | Function |
 |--------|----------|
-| Create a dashboard |  `sdclient.create_dashboard(dashboard_name)` |
-| Create a dashboard from a file | `sdclient.create_dashboard_from_file('dashboard_name', 'dashboard_name.json', dashboardFilter)` |
+| Create a dashboard | `sdclient.create_dashboard(dashboard_name)` |
+| Create a dashboard from a file | `sdclient.create_dashboard_from_file('dashboard_name', 'dashboard_name.json', scope_filter, shared=False, public=True)` |
+| Copy a dashboard | `sdclient.create_dashboard_from_dashboard(dashboard_name, existing_dashboard_name, scope_filter, shared=False, public=True)` |
 | Download a dashboard | `sdclient.get_dashboards()` |
-| Update a dashboard |  `sdclient.update_dashboard(dashboard_name)` |
+| Update a dashboard | `sdclient.update_dashboard(dashboard_name)` |
 | Delete a dashboard | `sdclient.delete_dashboard(dashboard_name)` |
 | Find a dashboard | `sdclient.find_dashboard_by(dashboard_name)` |
 | Add a time series | `sdclient.add_dashboard_panel(dashboard_name, panel_name, panel_type, metrics, scope=scope)` |
 | Add dashboard panel | `sdclient.add_dashboard_panel(dashboard_name, panel_name, panel_type, metrics, sort_direction=sort_direction, limit=limit, layout=layout)` |
-| Remove a panel |  `sdclient.remove_dashboard_panel(dashboard_name, 'CPU Over Time')` |
-| Save a dashboard to a file |  `sdclient.save_dashboard_to_file('dashboard_name', 'dashboard_name.json')` |
-| Create a dashboard from a file |  `sdclient.create_dashboard_from_file('dashboard_name', 'dashboard_name.json', scope_filter, shared=False, public=True ) |
+| Remove a panel | `sdclient.remove_dashboard_panel(dashboard_name, 'CPU Over Time')` |
+| Save a dashboard to a file | `sdclient.save_dashboard_to_file('dashboard_name', 'dashboard_name.json')` |
 {: caption="Table 1. Dashboard Python functions" caption-side="top"} 
 
 
@@ -288,12 +288,9 @@ else:
 {: #dashboard_python_copy}
 
 
-## Copy a custom dashboard in the default team
+### Copy a custom dashboard in the default team
 {: #dashboard_python_copy_default}
 
-The following code shows the structure of a Python script:
-
-```python
 The following code shows the structure of a Python script:
 
 ```python
@@ -343,12 +340,9 @@ else:
 ```
 {: codeblock}
 
-## Copy a pre-defined dashboard in the default team
+### Copy a pre-defined dashboard in the default team
 {: #dashboard_python_copy_pre_default}
 
-The following code shows the structure of a Python script:
-
-```python
 The following code shows the structure of a Python script:
 
 ```python
@@ -399,7 +393,7 @@ else:
 {: codeblock}
 
 
-## Copy a dashboard in a team
+### Copy a dashboard in a team
 {: #dashboard_python_copy_team}
 
 The following code shows the structure of a Python script:
@@ -473,7 +467,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), 
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Parse arguments.
- def usage():
+def usage():
     print('usage: %s <endpoint-url> <apikey> <instance-guid>' % sys.argv[0])
     print('endpoint-url: The endpoint URL that should point to IBM Cloud')
     print('apikey: IBM Cloud IAM apikey that will be used to retrieve an access token')

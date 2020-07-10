@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-19"
+lastupdated: "2020-07-10"
 
 keywords: Sysdig, IBM Cloud, monitoring, alerting, api
 
@@ -43,7 +43,7 @@ curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: 
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<SYSDIG_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -102,7 +102,7 @@ curl -X POST <SYSDIG_REST_API_ENDPOINT>/api/alerts -H "Authorization: Bearer $AU
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<SYSDIG_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -162,7 +162,7 @@ curl -X PUT <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: 
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<SYSDIG_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -221,7 +221,7 @@ curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorizatio
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<SYSDIG_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -237,13 +237,13 @@ You can use the following cURL command to get information about all the alerts:
 
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d '"to": <START_TIMESTAMP>' -d '"from": <END_TIMESTAMP>'
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts?from=1234<START_TIMESTAMP>1&to=<END_TIMESTAMP> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID"
 ```
 {: codeblock}
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<SYSDIG_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -263,26 +263,26 @@ For more information about the response format, see [Alert schema](/docs/Monitor
 {
   "alerts": [
     {
-    "alert": {
-      "version": null,
-      "name": "",
-      "description": null,
-      "teamId": null,
-      "enabled": false,
-      "filter": null,
-      "type": "",
-      "condition": "",
-      "timespan": 600000000,
-      "notificationChannelIds": [],
-      "reNotify": false,
-      "reNotifyMinutes": 30,
-      "segmentBy": [],
-      "segmentCondition": {
-        "type": ""
-      },
-      "severityLabel": ""
+      "alert": {
+        "version": null,
+        "name": "",
+        "description": null,
+        "teamId": null,
+        "enabled": false,
+        "filter": null,
+        "type": "",
+        "condition": "",
+        "timespan": 600000000,
+        "notificationChannelIds": [],
+        "reNotify": false,
+        "reNotifyMinutes": 30,
+        "segmentBy": [],
+        "segmentCondition": {
+          "type": ""
+        },
+        "severityLabel": ""
+      }
     }
-  }
   ]
 }
 ```
