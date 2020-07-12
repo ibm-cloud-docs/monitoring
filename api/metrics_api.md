@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-18"
+lastupdated: "2020-07-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, query, api
 
@@ -20,6 +20,7 @@ subcollection: Monitoring-with-Sysdig
 {:download: .download}
 {:important: .important}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Extracting metrics from a Sysdig instance by using the Sysdig API
 {: #metrics_api}
@@ -27,7 +28,7 @@ subcollection: Monitoring-with-Sysdig
 You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance by using the Sysdig API.
 {:shortdesc}
 
-For more information about the Sysdig Meric Query API, see [Data APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){:new_window}.
+For more information about the Sysdig Meric Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
 
 
 ## Get metrics by using cURL

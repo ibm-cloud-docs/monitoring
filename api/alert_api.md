@@ -112,7 +112,7 @@ Where
 
     When you create an alert, include the following parameters: *type*, *name*,  *severity*, *timespan*, *condition*, *segmentby*, *segmentConditionn*, *filter*, *notificationChannelIds*, *enabled*
 
-    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alert_api-schema-req).
+    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alert_api#alert_api-schema-req).
 
 
 The following sample shows the request body parameters that you can set to create an alert: 
@@ -172,7 +172,7 @@ Where
 
 * You can pass data to create the alert in the `alert.json` file by using `-d`. 
 
-    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alert_api-schema-req).
+    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alert_api#alert_api-schema-req).
 
 
 The following sample shows the request body parameters that you can set to update an alert: 
@@ -237,7 +237,7 @@ You can use the following cURL command to get information about all the alerts:
 
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts?from=1234<START_TIMESTAMP>1&to=<END_TIMESTAMP> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID"
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts?from=<START_TIMESTAMP>&to=<END_TIMESTAMP> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID"
 ```
 {: codeblock}
 

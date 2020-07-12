@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-12"
+lastupdated: "2020-07-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, notifications, api
 
@@ -37,7 +37,7 @@ You can use the following cURL command to get information about all the notifica
 
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d '"to": <START_TIMESTAMP>' -d '"from": <END_TIMESTAMP>'
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels?from=<START_TIMESTAMP>&to=<END_TIMESTAMP> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID"
 ```
 {: codeblock}
 
@@ -51,7 +51,7 @@ Where
 
 * `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the notifications. 
 
-For more information about the response format, see [notification schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-notificationing-api#notification_api-schema).
+For more information about the response format, see [notification schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-notifications_api#notifications_api-parm-req-schema).
 
 
 ## Fetch specific user notification
