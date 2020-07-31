@@ -49,24 +49,6 @@ For more information, see [Managing alerts (Alerts REST API)](/docs/Monitoring-w
 
 
 
-## Dashboards REST API
-{: #rest_apis_dashboards}
-
-Use this API to manage dashboards.
-{: note}
-
-| Action                      | REST API Method  | API_URL                                        | 
-|-----------------------------|------------------|------------------------------------------------|
-| Create a dashboard          | `POST`           | `<ENDPOINT>/api/v2/dashboards`                 |
-| Update a dashboard          | `PUT`            | `<ENDPOINT>/api/v2/dashboards/<DASHBOARD_ID>`  |
-| Delete a dashboard          | `DELETE`         | `<ENDPOINT>/api/v2/dashboards/<DASHBOARD_ID>`  |
-| Fetch a specific dashboard  | `GET`            | `<ENDPOINT>/api/v2/dashboards/<DASHBOARD_ID>`  |
-| Fetch all user dashboards   | `GET`            | `<ENDPOINT>/api/v2/dashboards`                 |
-{: caption="Table 2. Dashboards REST API" caption-side="top"}
-
-
-
-
 ## Data REST API
 {: #rest_apis_data}
 
@@ -76,7 +58,7 @@ Use this API to extract data from a Sysdig instance.
 | Action                      | REST API Method  | API_URL                                        | 
 |-----------------------------|------------------|------------------------------------------------|
 | Extract metrics             | `POST`           | `<ENDPOINT>/api/data`                          |
-{: caption="Table 4. Data REST API" caption-side="top"}
+{: caption="Table 2. Data REST API" caption-side="top"}
 
 For more information, see [Extracting metrics from a Sysdig instance (DATA API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics_api).
 
@@ -112,7 +94,7 @@ Use this API to manage notification channels.
 | Delete a notification channel           | `DELETE`         | `<ENDPOINT>/api/notificationChannels/<NOTIFICATION_CHANNEL_ID>`  |
 | Fetch a specific notification channel   | `GET`            | `<ENDPOINT>/api/notificationChannels/<NOTIFICATION_CHANNEL_ID>`  |
 | Fetch all user notification channels    | `GET`            | `<ENDPOINT>/api/notificationChannels`                 |
-{: caption="Table 2. Notifications REST API" caption-side="top"}
+{: caption="Table 4. Notifications REST API" caption-side="top"}
 
 For more information, see [Managing notification channels (Notifications REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-notifications_api).
 
