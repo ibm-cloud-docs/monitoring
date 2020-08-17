@@ -9,7 +9,6 @@ IBM Cloud Monitoring with Sysdig
 
     {: .topicgroup}
     Monitor
-
         monitor/getting-started-monitor.md
 
         {: .topicgroup}
@@ -46,6 +45,7 @@ IBM Cloud Monitoring with Sysdig
         monitor/provision.md
         monitor/remove.md
         monitor/upgrade.md
+        monitor/launch.md
 
         {: .topicgroup}
         Metrics
@@ -89,8 +89,6 @@ IBM Cloud Monitoring with Sysdig
         change_kube_agent.md
         change_linux_agent.md
         change_container_agent.md
-
-    launch.md
 
     {: .topicgroup}
     IAM integration
