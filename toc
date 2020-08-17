@@ -9,6 +9,7 @@ IBM Cloud Monitoring with Sysdig
 
     {: .topicgroup}
     Monitor
+
         monitor/getting-started-monitor.md
 
         {: .topicgroup}
@@ -40,7 +41,6 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-
     {: .topicgroup}
     Monitor
         monitor/provision.md
@@ -109,6 +109,7 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="reference"}
     {: .topicgroup}
     Monitor
+
         monitor/endpoints.md
         monitor/pricing.md
         monitor/shared-responsibilities.md
@@ -146,13 +147,13 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="help"}
     gettinghelp.md
 
-        {: .topicgroup}
-        Monitor
-            monitor/troubleshoot.md
-            monitor/faq.md
+    {: .topicgroup}
+    Monitor
+        monitor/troubleshoot.md
+        monitor/faq.md
 
-        {: .topicgroup}
-        Secure
+    {: .topicgroup}
+    Secure
     {: .navgroup-end}
 
 
