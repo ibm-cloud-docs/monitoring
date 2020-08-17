@@ -8,33 +8,45 @@ IBM Cloud Monitoring with Sysdig
     getting-started.md
 
     {: .topicgroup}
-    Monitoring infrastructure
-        windows.md
-        baremetal_linux.md
-        kubernetes_cluster.md
-        ubuntu.md
-        [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
+    Monitor
+
+        monitor/getting-started-monitor.md
+
+        {: .topicgroup}
+        Monitoring infrastructure
+            monitor/windows.md
+            monitor/baremetal_linux.md
+            monitor/kubernetes_cluster.md
+            monitor/ubuntu.md
+            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
+
+        {: .topicgroup}
+        Monitoring IBM Cloud services
+            monitor/platform_metrics_enabling.md
+            monitor/cloud_services.md
+            monitor/cloud_services_locations.md
+
+        {: .topicgroup}
+        Security and compliance
+            monitor/at_events.md
+            monitor/data-security.md
+            monitor/iam.md
+            monitor/ha-dr.md
+            monitor/service-connection.md
+            monitor/architecture-workload-isolation.md
 
     {: .topicgroup}
-    Monitoring IBM Cloud services
-        platform_metrics_enabling.md
-        cloud_services.md
-        cloud_services_locations.md
-
-    {: .topicgroup}
-    Security and compliance
-        at_events.md
-        data-security.md
-        iam.md
-        ha-dr.md
-        service-connection.md
-        architecture-workload-isolation.md
+    Secure
+        secure/getting-started-secure.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    provision.md
-    remove.md
-    upgrade.md
+
+    {: .topicgroup}
+    Monitor
+    monitor/provision.md
+    monitor/remove.md
+    monitor/upgrade.md
 
     {: .topicgroup}
     Sysdig Agent
@@ -97,37 +109,53 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    endpoints.md
-    pricing.md
-    shared-responsibilities.md
-    default_dashboards.md
-    monitoring.md
 
     {: .topicgroup}
-    Sysdig API
-        api/rest_apis.md
-        api/mon-curl.md
+    Monitor
+        monitor/endpoints.md
+        monitor/pricing.md
+        monitor/shared-responsibilities.md
+        monitor/default_dashboards.md
+        monitor/monitoring.md
+
+        {: .topicgroup}
+        Sysdig API
+            monitor/api/rest_apis.md
+            monitor/api/mon-curl.md
+
+        {: .topicgroup}
+        Sysdig Python client
+             api/python-client.md
+            [Sysdig Cloud Python Script Library](https://python-sdc-client.readthedocs.io/en/latest/)
+
+        {: .topicgroup}
+        Cloud services metrics
+            metrics/cloudfoundry-docs.md
+
+        [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
+        [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
+        [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
+        deprecated.md
 
     {: .topicgroup}
-    Sysdig Python client
-        api/python-client.md
-        [Sysdig Cloud Python Script Library](https://python-sdc-client.readthedocs.io/en/latest/)
+    Secure
+        [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
+        [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
 
-    {: .topicgroup}
-    Cloud services metrics
-        metrics/cloudfoundry-docs.md
-
-    [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
-    [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
-    [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
+    [Secure DevOps Platform](https://sysdig.com/secure-devops-platform/)
     [Sysdig Blog](https://sysdig.com/blog/)
-    deprecated.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     gettinghelp.md
-    troubleshoot.md
-    faq.md
+
+    {: .topicgroup}
+    Monitor
+        monitor/troubleshoot.md
+        monitor/faq.md
+
+    {: .topicgroup}
+    Secure
     {: .navgroup-end}
 
 
