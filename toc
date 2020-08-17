@@ -134,10 +134,10 @@ IBM Cloud Monitoring with Sysdig
         [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
         deprecated.md
 
-        {: .topicgroup}
-        Secure
-            [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
-            [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
+    {: .topicgroup}
+    Secure
+        [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
+        [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
 
     [Secure DevOps Platform](https://sysdig.com/secure-devops-platform/)
     [Sysdig Blog](https://sysdig.com/blog/)
