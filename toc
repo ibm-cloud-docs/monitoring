@@ -9,7 +9,6 @@ IBM Cloud Monitoring with Sysdig
 
     {: .topicgroup}
     Monitor
-
         monitor/getting-started-monitor.md
 
         {: .topicgroup}
@@ -44,9 +43,43 @@ IBM Cloud Monitoring with Sysdig
 
     {: .topicgroup}
     Monitor
-    monitor/provision.md
-    monitor/remove.md
-    monitor/upgrade.md
+        monitor/provision.md
+        monitor/remove.md
+        monitor/upgrade.md
+
+        {: .topicgroup}
+        Metrics
+            monitor/metrics.md
+            monitor/groups.md
+            monitor/api/metrics_api.md
+            monitor/api/metrics_python.md
+
+        {: .topicgroup}
+        Dashboards
+            monitor/dashboards.md
+            monitor/panels.md
+            monitor/api/dashboard_api.md
+            monitor/api/dashboard_python.md
+
+        {: .topicgroup}
+        Alerts
+            [Working with alerts](https://docs.sysdig.com/en/alerts.html)
+            monitor/api/alert_api.md
+            monitor/api/alert_python.md
+            monitor/notifications.md
+            monitor/api/notifications_api.md
+
+        {: .topicgroup}
+        Events
+            [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
+
+        {: .topicgroup}
+        Captures
+            monitor/captures.md
+
+        {: .topicgroup}
+        Teams
+            monitor/teams.md
 
     {: .topicgroup}
     Sysdig Agent
@@ -68,48 +101,12 @@ IBM Cloud Monitoring with Sysdig
     manage.md
 
     {: .topicgroup}
-    Metrics
-        metrics.md
-        groups.md
-        api/metrics_api.md
-        api/metrics_python.md
-
-    {: .topicgroup}
-    Dashboards
-        dashboards.md
-        panels.md
-        api/dashboard_api.md
-        api/dashboard_python.md
-
-    {: .topicgroup}
-    Alerts
-        [Working with alerts](https://docs.sysdig.com/en/alerts.html)
-        api/alert_api.md
-        api/alert_python.md
-        notifications.md
-        api/notifications_api.md
-
-    {: .topicgroup}
-    Events
-        [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
-
-    {: .topicgroup}
-    Captures
-        captures.md
-
-    {: .topicgroup}
-    Teams
-        teams.md
-
-
-    {: .topicgroup}
     WIP
         api/dashboard-api.md
         api/downtimes-api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-
     {: .topicgroup}
     Monitor
         monitor/endpoints.md
@@ -125,22 +122,22 @@ IBM Cloud Monitoring with Sysdig
 
         {: .topicgroup}
         Sysdig Python client
-             api/python-client.md
+            monitor/api/python-client.md
             [Sysdig Cloud Python Script Library](https://python-sdc-client.readthedocs.io/en/latest/)
 
         {: .topicgroup}
         Cloud services metrics
-            metrics/cloudfoundry-docs.md
+            monitor/metrics/cloudfoundry-docs.md
 
         [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
         [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
         [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
         deprecated.md
 
-    {: .topicgroup}
-    Secure
-        [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
-        [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
+        {: .topicgroup}
+        Secure
+            [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
+            [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
 
     [Secure DevOps Platform](https://sysdig.com/secure-devops-platform/)
     [Sysdig Blog](https://sysdig.com/blog/)
@@ -149,13 +146,13 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="help"}
     gettinghelp.md
 
-    {: .topicgroup}
-    Monitor
-        monitor/troubleshoot.md
-        monitor/faq.md
+        {: .topicgroup}
+        Monitor
+            monitor/troubleshoot.md
+            monitor/faq.md
 
-    {: .topicgroup}
-    Secure
+        {: .topicgroup}
+        Secure
     {: .navgroup-end}
 
 
