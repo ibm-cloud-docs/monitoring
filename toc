@@ -30,6 +30,11 @@ Monitoring with Sysdig
     Secure
         secure/getting-started-secure.md
 
+        {: .topicgroup}
+        Integration with IBM
+            [Integrate IBM Cloud Pak for Multicloud Management](https://docs.sysdig.com/en/integrate-ibm-cloud-pak-for-multicloud-management.html)
+
+
     {: .topicgroup}
     Security and compliance
         monitor/at_events.md
@@ -89,7 +94,7 @@ Monitoring with Sysdig
 
         {: .topicgroup}
         Explore views
-           [Monitoring the infrastructure through the Explore section](https://docs.sysdig.com/en/explore.html)
+            [Monitoring the infrastructure through the Explore section](https://docs.sysdig.com/en/explore.html)
 
         {: .topicgroup}
         Alerts
@@ -158,7 +163,7 @@ Monitoring with Sysdig
     {: .navgroup id="reference"}
 
     [Secure DevOps Platform](https://sysdig.com/secure-devops-platform/)
-    
+
     {: .topicgroup}
     Monitor
         monitor/endpoints.md
