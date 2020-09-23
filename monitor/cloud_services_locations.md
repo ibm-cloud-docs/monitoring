@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-09-15"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -113,6 +113,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
 {: caption="Database services integration in Europe locations" caption-side="top"}
 {: #cs_db-table-1}
 {: tab-title="Europe"}
@@ -129,6 +130,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](images/checkmark-icon.svg)` | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
 {: caption="Database services integration in America's locations" caption-side="top"}
 {: #cs_db-table-2}
 {: tab-title="America"}
@@ -145,6 +147,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.sqlquery_full}}                             | `NO`  | `NO`  |
 {: caption="Database services integration in AP locations" caption-side="top"}
 {: #cs_db-table-3}
 {: tab-title="Asia Pacific"}
