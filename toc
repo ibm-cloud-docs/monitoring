@@ -26,18 +26,18 @@ Monitoring with Sysdig
             monitor/cloud_services.md
             monitor/cloud_services_locations.md
 
-        {: .topicgroup}
-        Security and compliance
-            monitor/at_events.md
-            monitor/data-security.md
-            monitor/iam.md
-            monitor/ha-dr.md
-            monitor/service-connection.md
-            monitor/architecture-workload-isolation.md
-
     {: .topicgroup}
     Secure
         secure/getting-started-secure.md
+
+    {: .topicgroup}
+    Security and compliance
+        monitor/at_events.md
+        monitor/data-security.md
+        monitor/iam.md
+        monitor/ha-dr.md
+        monitor/service-connection.md
+        monitor/architecture-workload-isolation.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -68,6 +68,7 @@ Monitoring with Sysdig
 
     {: .topicgroup}
     Monitor
+
         {: .topicgroup}
         Metrics
             [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
@@ -88,7 +89,7 @@ Monitoring with Sysdig
 
         {: .topicgroup}
         Explore views
-           [Monitoring thwe infrastructure through the Explore section](https://docs.sysdig.com/en/explore.html)
+           [Monitoring the infrastructure through the Explore section](https://docs.sysdig.com/en/explore.html)
 
         {: .topicgroup}
         Alerts
@@ -118,6 +119,7 @@ Monitoring with Sysdig
 
     {: .topicgroup}
     Secure
+
         {: .topicgroup}
         Image scanning
             [Working with image scanning](https://docs.sysdig.com/en/image-scanning.html)
@@ -154,6 +156,9 @@ Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+
+    [Secure DevOps Platform](https://sysdig.com/secure-devops-platform/)
+    
     {: .topicgroup}
     Monitor
         monitor/endpoints.md
@@ -183,7 +188,6 @@ Monitoring with Sysdig
     Secure
         [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
         [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
-        [Secure DevOps Platform](https://sysdig.com/secure-devops-platform/)
     
     [Sysdig Blog](https://sysdig.com/blog/)
     {: .navgroup-end}
