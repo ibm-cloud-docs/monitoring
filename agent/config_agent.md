@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-09-15"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -22,7 +22,7 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 {:external: target="_blank" .external}
 
-# Configuring a Sysdig agent
+# Deploying a Sysdig agent
 {: #config_agent}
 
 After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you must configure a Sysdig agent in each environment that you want to monitor. The Sysdig agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in each environment.
@@ -31,7 +31,12 @@ After you provision an instance of the {{site.data.keyword.mon_full_notm}} servi
 You can associate one or more tags to each Sysdig agent. Tags are comma-separated values that are formatted as **TAG_NAME:TAG_VALUE**. When you monitor your environment, you can use these tags to identify metrics that are available from an agent. For example, you can include information about the service name and location with all of the metrics that are collected by this agent.
 {: tip}
 
-## Configuring a Sysdig agent on Linux
+## Prereqs
+{: #config_agent_prereqs}
+
+Check the Sysdig topic [Host Requirements for Agent Installation](https://docs.sysdig.com/en/host-requirements-for-agent-installation.html){: external}
+
+## Deploying a Sysdig agent on Linux manually
 {: #config_agent_linux}
 
 Complete the following steps to configure a Sysdig agent on Linux to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
@@ -59,6 +64,22 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
     * Set **secure** to *true* to use SSL with the communication.
 
+4. Check that the Sysdig agent is running. Run the following command:
+
+    ```
+    ps -ef | grep sysdig
+    ```
+    {: codeblock}
+
+    To see the latest Sysdig agent logs, go to the directory `/opt/draios/logs` and check the log file `draios.log`.
+
+    To look for erros, you can run the following command:
+
+    ```
+    grep error /opt/draios/logs/draios.log
+    ```
+    {: codeblock}
+
 If the Sysdig agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the Sysdig agent.
 
 For Debian and Ubuntu Linux distributions, run the following command:
@@ -76,10 +97,10 @@ yum -y install kernel-devel-$(uname -r)
 {: codeblock}
 
 
-## Configuring a Sysdig agent on a Docker container
+## Deploying a Sysdig agent as a Docker container
 {: #config_agent_docker}
 
-When you configure a Sysdig agent on a Docker container, you may need to install external linux headers to launch the Sysdig agent correctly. 
+When you configure a Sysdig agent directly on a Linux host as a standard Docker container, you may need to install external linux headers to launch the Sysdig agent correctly. 
 
 For example, you might need to run the following command to install external linux headers:
 
@@ -118,11 +139,35 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
     The container runs in detached mode. To see the container’s output, remove *-d*.
     {: note}
 
+4. Check that the Sysdig agent is running. Run the following command:
 
-## Configuring a Sysdig agent on a standard Kubernetes cluster
+    ```
+    docker ps -a
+    ```
+    {: codeblock}
+
+    The list of running containers is displayed. Check that a container with name `sysdig-agent` is listed.
+
+    To see the Sysdig agent logs, you can run the following command:
+
+    ```
+    docker logs sysdig-agent
+    ```
+    {: codeblock}
+
+    To look for erros, you can run the following command:
+
+    ```
+    docker logs sysdig-agent 2>&1 | grep "error"
+    ```
+    {: codeblock}
+
+
+
+## Deploying a Sysdig agent in a standard Kubernetes environment
 {: #config_agent_kube_std}
 
-### Configuring a Sysdig agent on a standard Kubernetes cluster by using a script
+### Deploying a Sysdig agent in a standard Kubernetes cluster by using a script
 {: #config_agent_kube_script}
 
 In order to use this script, you must have a minimum of `Viewer` and `Manager` IAM permissions assigned for the Kubernetes cluster.
@@ -145,10 +190,6 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     ```
     {: codeblock}
 
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
-
 4. Deploy the Sysdig agent. Run the following command:
 
     ```
@@ -169,7 +210,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 Use kubectl version 1.14 or higher.
 {: tip}
 
-### Configuring a Sysdig agent on a standard Kubernetes cluster manually
+### Deploying a Sysdig agent in a standard Kubernetes cluster manually
 {: #config_agent_kube_manually}
 
 In order to execute all of the commands that follow, you must have a minimum of `Viewer` and `Manager` IAM permissions assigned for the Kubernetes cluster.
@@ -189,10 +230,6 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
 
 4. Create the **ibm-observe** namespace.
 
@@ -318,7 +355,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     {: codeblock}
     
    
-## Configuring a Sysdig agent on an OpenShift cluster
+## Deploying a Sysdig agent in an OpenShift cluster
 {: #config_agent_kube_os}
 
 ### Pre-reqs
@@ -331,26 +368,35 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 3. Log in to the OpenShift cluster. Choose a method to login to an OpenShift cluster. [Learn more about the methods to login](/docs/openshift?topic=openshift-access_cluster#access_automation).
 
 
-### Configuring a Sysdig agent on an OpenShift cluster by using a script
+### Deploying a Sysdig agent in an OpenShift cluster by using a script
 {: #config_agent_kube_os_script}
 
 In order to use this script, you must have a minimum of `Viewer` and `Manager` IAM permissions assigned for the Kubernetes cluster.
 {: tip}
 
-To deploy the Sysdig agent, run the following command:
+To deploy the Sysdig agent, complete the following steps:
 
-```
-curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --openshift
-```
-{: codeblock}
+1. Set the cluster context by using the `ibmcloud ks` commands. Run the following command:
 
-Where
+    ```
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ```
+    {: codeblock}
 
-* SYSDIG_ACCESS_KEY is the ingestion key for the instance.
+2. Install the agent. Run the following command:
 
-* COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+    ```
+    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --openshift
+    ```
+    {: codeblock}
 
-* TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. 
+    Where
 
-* Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+    * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
+
+    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. 
+
+    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 

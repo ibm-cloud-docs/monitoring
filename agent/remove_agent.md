@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-09-15"
 
 keywords: Sysdig, IBM Cloud, monitoring, delete agent
 
@@ -24,11 +24,11 @@ subcollection: Monitoring-with-Sysdig
 # Removing a Sysdig agent
 {: #remove_agent}
 
-When you delete an {{site.data.keyword.mon_full_notm}} instance, or if you want to stop collecting metrics from a source, you must uninstall the Sysdig agent.
+When you delete an {{site.data.keyword.mon_full_notm}} instance, or if you want to stop collecting metrics from a source, you must uninstall the Sysdig agent from sources where it was installed as a service. If you deployed a Sysdig agent as a container, you must run docker commands to remove the agent.
 {:shortdesc}
 
 
-## Removing a Sysdig agent from a Kubernetes cluster
+## Removing a Sysdig agent from a standard Kubernetes cluster
 {: #remove_agent_kube}
 
 Complete the following steps to remove a Sysdig agent from a Kubernetes cluster:
@@ -41,10 +41,6 @@ Complete the following steps to remove a Sysdig agent from a Kubernetes cluster:
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-    When the download of the configuration files is finished, a command is displayed that you can use to set the path to the local Kubernetes configuration file as an environment variable.
-
-    Then, copy and paste the command that is displayed in your terminal to set the KUBECONFIG environment variable.
 
 2. Remove the cluster role binding. Run the following command:
 
@@ -75,9 +71,31 @@ Complete the following steps to remove a Sysdig agent from a Kubernetes cluster:
     {: codeblock}
 
 
+## Removing a Sysdig agent that is deployed as a container in a Linux system
+{: #remove_agent_docker}
+
+Complete the following steps to remove the Sysdig agent that is deployed as a conatiner in a Linux system:
+
+1. Terminate the Sysdig agent container. 
+
+    Run the following command:
+
+    ```
+    docker kill sysdig-agent
+    ```
+    {: codeblock}
+
+2. Remove references to the Sysdig agent container.
+
+    ```
+    docker rm sysdig-agent
+    ```
+    {: codeblock}
 
 
-## Removing a Sysdig agent on Linux
+
+
+## Removing a Sysdig agent that has been deployed as a service in a Linux system 
 {: #remove_agent_linux}
 
 Complete the following steps to remove a Sysdig agent on Linux:
