@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-15"
+lastupdated: "2020-10-06"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -41,7 +41,6 @@ The following table lists infrastructure services that are Sysdig-enabled:
 | [{{site.data.keyword.BluVirtServers}}](/docs/vsi?topic=virtual-servers-getting-started-tutorial) | {{site.data.keyword.BluVirtServers}} are scalable virtual servers that are purchased with dedicated cores and memory allocations. They are a great option if you are looking for compute resources, that can be added in minutes, with access to features like image templates. | [Metrics collected by {{site.data.keyword.BluVirtServers}}](/docs/vsi?topic=virtual-servers-sysdig-monitoring-metrics)|
 {: caption="List of integration Cloud services" caption-side="top"} 
 
-
 ## Compute Cloud Foundry resources
 {: #platform_cfapps}
 
@@ -52,6 +51,15 @@ The following table lists CF resources that are Sysdig-enabled:
 | [Cloud Foundry (CF)](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) | CF is the premier industry standard Platform-as-a-Service (PaaS), that ensures the fastest, easiest, and most reliable deployment of cloud-native applications.  | [Metrics collected by CF](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitor-cf-sysdig)|
 {: caption="List of CF resources" caption-side="top"} 
 
+## Container services
+{: #container}
+
+The following table lists container services that are Sysdig-enabled:
+
+| Service     | Description | Metrics | 
+|-------------|-------------|-------------------|
+| [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) | {{site.data.keyword.registrylong_notm}} provides a multi-tenant, highly available, scalable, and encrypted private image registry that is hosted and managed by {{site.data.keyword.IBM}}. You can use {{site.data.keyword.registrylong_notm}} by setting up your own image namespace and pushing container images to your namespace. | [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor_sysdig)|
+{: caption="List of {{site.data.keyword.cloud_notm}} container services" caption-side="top"} 
 
 ## Platform database services
 {: #database}
