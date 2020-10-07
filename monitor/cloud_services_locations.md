@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-15"
+lastupdated: "2020-10-07"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -92,6 +92,39 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
 |------------------------------------------------|------------------|----------------------------|
 | Cloud Foundry                                  |                  | ![Checkmark icon](images/checkmark-icon.svg) |      
+{: caption="CF integration in AP locations" caption-side="top"}
+{: #cs_cf-table-3}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_cf"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+## Containers resources
+{: #cloud_services_locations_platform_containers}
+
+| Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------|------------------|
+| {{site.data.keyword.registrylong_notm}}                                                | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg)  |          
+{: caption="CF integration in Europe locations" caption-side="top"}
+{: #cs_cf-table-1}
+{: tab-title="Europe"}
+{: tab-group="cs_cf"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
+|------------------------------------------------|---------------------|------------------------------------|
+| {{site.data.keyword.registrylong_notm}}                                  | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |          
+{: caption="CF integration in America's locations" caption-side="top"}
+{: #cs_cf-table-2}
+{: tab-title="America"}
+{: tab-group="cs_cf"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
+|------------------------------------------------|------------------|----------------------------|
+| {{site.data.keyword.registrylong_notm}}                                  |                  | ![Checkmark icon](images/checkmark-icon.svg) |      
 {: caption="CF integration in AP locations" caption-side="top"}
 {: #cs_cf-table-3}
 {: tab-title="Asia Pacific"}
