@@ -105,30 +105,30 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
 | {{site.data.keyword.registrylong_notm}}                                                | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg)  |          
-{: caption="CF integration in Europe locations" caption-side="top"}
-{: #cs_cf-table-1}
+{: caption="Containers integration in Europe locations" caption-side="top"}
+{: #cs_cont-table-1}
 {: tab-title="Europe"}
-{: tab-group="cs_cf"}
+{: tab-group="cs_cont"}
 {: class="simple-tab-table"}
 {: row-headers}
 
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
 | {{site.data.keyword.registrylong_notm}}                                  | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |          
-{: caption="CF integration in America's locations" caption-side="top"}
-{: #cs_cf-table-2}
+{: caption="Containers integration in America's locations" caption-side="top"}
+{: #cs_cont-table-2}
 {: tab-title="America"}
-{: tab-group="cs_cf"}
+{: tab-group="cs_cont"}
 {: class="simple-tab-table"}
 {: row-headers}
 
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
 |------------------------------------------------|------------------|----------------------------|
 | {{site.data.keyword.registrylong_notm}}                                  |                  | ![Checkmark icon](images/checkmark-icon.svg) |      
-{: caption="CF integration in AP locations" caption-side="top"}
-{: #cs_cf-table-3}
+{: caption="Containers integration in AP locations" caption-side="top"}
+{: #cs_cont-table-3}
 {: tab-title="Asia Pacific"}
-{: tab-group="cs_cf"}
+{: tab-group="cs_cont"}
 {: class="simple-tab-table"}
 {: row-headers}
 
