@@ -124,7 +124,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
 |------------------------------------------------|------------------|----------------------------|
-| {{site.data.keyword.registrylong_notm}}                                  |                  | ![Checkmark icon](images/checkmark-icon.svg) |      
+| {{site.data.keyword.registrylong_notm}}                                  | ![Checkmark icon](images/checkmark-icon.svg)                 | ![Checkmark icon](images/checkmark-icon.svg) |      
 {: caption="Containers integration in AP locations" caption-side="top"}
 {: #cs_cont-table-3}
 {: tab-title="Asia Pacific"}
