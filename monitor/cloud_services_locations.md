@@ -99,7 +99,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {: class="simple-tab-table"}
 {: row-headers}
 
-## Containers resources
+## Container services
 {: #cloud_services_locations_platform_container}
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
