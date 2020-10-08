@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-10-06"
+lastupdated: "2020-10-08"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -58,7 +58,7 @@ The following table lists container services that are Sysdig-enabled:
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) | {{site.data.keyword.registrylong_notm}} provides a multi-tenant, highly available, scalable, and encrypted private image registry that is hosted and managed by {{site.data.keyword.IBM}}. You can use {{site.data.keyword.registrylong_notm}} by setting up your own image namespace and pushing container images to your namespace. | [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor_sysdig)|
+| [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) | {{site.data.keyword.registrylong_notm}} provides a multi-tenant, highly available, scalable, and encrypted private image registry that is hosted and managed by {{site.data.keyword.IBM}}. | [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor_sysdig)|
 {: caption="List of {{site.data.keyword.cloud_notm}} container services" caption-side="top"} 
 
 ## Platform database services
