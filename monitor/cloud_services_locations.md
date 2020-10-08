@@ -114,7 +114,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
-| {{site.data.keyword.registrylong_notm}}        | ![Checkmark icon](images/checkmark-icon.svg)   | `No` `[*]` |          
+| {{site.data.keyword.registrylong_notm}}        | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg) `[*]` |          
 {: caption="Containers integration in America's locations" caption-side="top"}
 {: #cs_cont-table-2}
 {: tab-title="America"}
