@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-10-07"
+lastupdated: "2020-10-08"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -104,7 +104,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
-| {{site.data.keyword.registrylong_notm}}                                                | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg)  |          
+| {{site.data.keyword.registrylong_notm}}          | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg)  |          
 {: caption="Containers integration in Europe locations" caption-side="top"}
 {: #cs_cont-table-1}
 {: tab-title="Europe"}
@@ -114,7 +114,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
-| {{site.data.keyword.registrylong_notm}}                                  | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |          
+| {{site.data.keyword.registrylong_notm}}        | ![Checkmark icon](images/checkmark-icon.svg)   | `No` `[*]` |          
 {: caption="Containers integration in America's locations" caption-side="top"}
 {: #cs_cont-table-2}
 {: tab-title="America"}
@@ -124,13 +124,16 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
 |------------------------------------------------|------------------|----------------------------|
-| {{site.data.keyword.registrylong_notm}}                                  | ![Checkmark icon](images/checkmark-icon.svg)                 | ![Checkmark icon](images/checkmark-icon.svg) |      
+| {{site.data.keyword.registrylong_notm}}        | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg) |      
 {: caption="Containers integration in AP locations" caption-side="top"}
 {: #cs_cont-table-3}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_cont"}
 {: class="simple-tab-table"}
 {: row-headers}
+
+
+`[*]` {{site.data.keyword.registrylong_notm}} global registry events are available through the Sysdig Washington (us-east) instance.
 
 
 ## Platform database services
