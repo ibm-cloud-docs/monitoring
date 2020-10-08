@@ -133,7 +133,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {: row-headers}
 
 
-`[*]` {{site.data.keyword.registrylong_notm}} global registry events are available through the Sysdig Washington (us-east) instance.
+`[*]` {{site.data.keyword.registrylong_notm}} global registry metrics are available through the Sysdig Washington (us-east) instance.
 
 
 ## Platform database services
