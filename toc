@@ -195,7 +195,7 @@ Monitoring with Sysdig
     {: .topicgroup}
     Monitor
         monitor/troubleshoot.md
-        monitor/faq.md
+        faq.md
     {: .navgroup-end}
 
 
