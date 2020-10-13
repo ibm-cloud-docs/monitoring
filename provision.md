@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-10-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
