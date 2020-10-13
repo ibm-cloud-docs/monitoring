@@ -46,6 +46,7 @@ Sysdig has identified an issue with a subset of agent versions:
 - Sysdig agent 10.3.1
 - Sysdig agent 10.4.0
 - Sysdig agent 10.4.1 
+
 Where connectivity between your infrastructure and Sysdig’s hosted service may fail.
 
 You must upgrade all Sysdig agents to `10.5`. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-troubleshoot#troubleshoot-entry-3).
