@@ -24,12 +24,18 @@ subcollection: Monitoring-with-Sysdig
 # Troubleshooting problems with a Sysdig agent
 {: #agent_log_level}
 
-You can view and analyze the Sysdig agent log file to troubleshoot problems. You can configure the log level of a Sysdig agent to configure the level of detail that is written to the Sysdig agent log file.  
+You can view and analyze the Sysdig agent log file to troubleshoot problems. 
 {:shortdesc}
 
 By default, when you deploy a Sysdig agent, the log level is set to `info`. 
 
 Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+
+You can configure the log level of a Sysdig agent to configure the level of detail that is written to the Sysdig agent log file.  
+* Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*
+* The *info* level reports an entry for each aggregated metrics transmission to the backend servers, once per second. It also reports entries for any warnings and errors.
+* To get the least number of log entries, set the log level to *error*.
+* To get the full set of available logs, set the log level to *trace*. 
 
 You should set the log level to *info*, *debug*, or *trace* to troubleshoot agent-related issues.
 {: tip}
@@ -38,16 +44,6 @@ The Sysdig agent writes log entries into the `draios.log` file.
 * The log file rotates when it reaches 10MB in size.
 * The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
 * The log files are located in the directory `/opt/draios/logs/`. 
-
-
-The Sysdig agent generates log entries in /opt/draios/logs/draios.log. The agent will rotate out the log file when it reaches 10MB in size, keeping the 10 most recent log files archived with a date-stamp appended to the filename.
-  
-
-You can configure the log level of a Sysdig agent to increase the level of detail that an agent reports through its logs.
-* Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*
-* The *info* level reports an entry for each aggregated metrics transmission to the backend servers, once per second. It also reports entries for any warnings and errors.
-* To get the least number of log entries, set the log level to *error*.
-* To get the full set of available logs, set the log level to *trace*. 
 
 
 

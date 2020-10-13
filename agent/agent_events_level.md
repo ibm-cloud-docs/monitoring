@@ -55,3 +55,15 @@ log:
   event_priority: none
 ```
 {: codeblock}
+
+
+
+
+### Filtering Kubernetes events by severity
+{: #change_kube_agent_filterby_severity}
+
+* The **event_priority** in the **log** section controls the type of events that are sent from the agent
+* The default log level is *information*. This means that only information and higher severity events are transmitted.
+* Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *information*, *debug* and *none*. **Note**: The values are listed from high priority to low priority.
+* Setting the level to `none` will block all event collection.
+
