@@ -151,13 +151,6 @@ Monitoring with Sysdig
         {: .topicgroup}
         Integrations
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-secure.html)
-
-    manage.md
-
-    {: .topicgroup}
-    WIP
-        api/dashboard-api.md
-        api/downtimes-api.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

@@ -37,11 +37,16 @@ Frequently asked questions about {{site.data.keyword.mon_full_notm}}.
 You can find information about the services that generate metrics in the following documentation topic: [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
 
 
-## Where can I find the list of Cloud services that generate Activity Tracker events?
+## Are you noticing connection problems between your infrastructure and Sysdig’s hosted service?
 {: #faq_2}
 {: faq}
 
+Sysdig has identified an issue with a subset of agent versions:
+- Sysdig agent 10.3.0
+- Sysdig agent 10.3.1
+- Sysdig agent 10.4.0
+- Sysdig agent 10.4.1 
+Where connectivity between your infrastructure and Sysdig’s hosted service may fail.
 
-
-
+You must upgrade all Sysdig agents to `10.5`. [Learn more]().
 
