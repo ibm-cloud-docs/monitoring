@@ -161,7 +161,6 @@ Monitoring with Sysdig
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-
     [Secure DevOps Platform](https://sysdig.com/secure-devops-platform/)
 
     {: .topicgroup}
@@ -204,9 +203,6 @@ Monitoring with Sysdig
     Monitor
         monitor/troubleshoot.md
         monitor/faq.md
-
-    {: .topicgroup}
-    Secure
     {: .navgroup-end}
 
 

@@ -66,7 +66,7 @@ Sysdig has identified an issue with a subset of agent versions:
 - Sysdig agent 10.4.0
 - Sysdig agent 10.4.1 
 
-Where connectivity between your infrastructure and Sysdig’s hosted service may fail.
+Where connectivity between your infrastructure and Sysdig’s hosted service may fail. For more information, see [Sysdig Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html).
 
 If you are experiencing connectivity issues, complete the following steps:
 
@@ -74,6 +74,7 @@ If you are experiencing connectivity issues, complete the following steps:
 
     You can view the dashboard template **Sysdig Agent Health & Status** that is available in **Host Infrastructure** to check the version of your Sysdig agents.
 
-2. Upgrade your Sysdig agent to version 10.5 as soon as possible to ensure a reliable flow of metrics and data into our systems.
+2. [Upgrade your Sysdig agent](https://docs.sysdig.com/en/agent-upgrade.html) to version 10.5 as soon as possible to ensure a reliable flow of metrics and data into our systems.
+
 
 
