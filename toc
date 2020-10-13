@@ -118,6 +118,7 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="help"}
     gettinghelp.md
     troubleshoot.md
+    faq.md
     {: .navgroup-end}
 
 

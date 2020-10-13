@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-10-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -85,19 +85,19 @@ To provision an instance of Sysdig through the command line, complete the follow
     ```
     ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false}'
     ```
-    {: codeblock}
+    {: pre}
 
     Where
 
-    * `NAME` is the name of the Sysdig instance.
+    `NAME` is the name of the Sysdig instance.
     
-    * `sysdig-monitor` is the name of the {{site.data.keyword.mon_full_notm}} service name in the {{site.data.keyword.cloud_notm}}.
+    `sysdig-monitor` is the name of the {{site.data.keyword.mon_full_notm}} service name in the {{site.data.keyword.cloud_notm}}.
     
-    * `SERVICE_PLAN_NAME` is the type of plan. Valid values are *lite*, and *graduated-tier*.
+    `SERVICE_PLAN_NAME` is the type of plan. Valid values are *lite*, and *graduated-tier*.
     
-    * `LOCATION` is the region where the instance is created.
+    `LOCATION` is the region where the instance is created.
 
-    * `default_receiver` is set to `false` by default. Set to `true` to collect platform metrics automatically through this instance in a region.
+    `default_receiver` is set to `false` by default. Set to `true` to collect platform metrics automatically through this instance in a region.
 
     For example, to provision an instance with the paid plan, run the following command:
 
@@ -111,15 +111,15 @@ To provision an instance of Sysdig through the command line, complete the follow
     ```
     ibmcloud resource service-key-create NAME ROLE_NAME --instance-name SERVICE_INSTANCE_NAME
     ```
-    {: codeblock}
+    {: pre}
 
     Where
 
-    * `NAME` is the name of your new service key
+    `NAME` is the name of your new service key
 
-    * `ROLE_NAME` is either `Administrator`, `Manager`, `Writer`, or `Reader`
+    `ROLE_NAME` is either `Administrator`, `Manager`, `Writer`, or `Reader`
 
-    * `SERVICE_INSTANCE_NAME` is the name of the instance you created
+    `SERVICE_INSTANCE_NAME` is the name of the instance you created
 
     This will gain you access to the instance's Sysdig access key.
 
