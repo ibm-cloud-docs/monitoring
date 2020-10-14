@@ -35,8 +35,7 @@ The following service plans are available:
 |--------------------------------------------|----------------------------------------|-----------------------------|
 | `Lite`                                     | `367a3918-9efc-43c5-bef9-20553051b7af` | `lite`                      | 
 | `Graduated tier`                           | `231bb072-1b2f-4d7e-ae9e-9574d382be32` | `graduated-tier`            |
-| `Graduated Tier - Sysdig Secure + Monitor` | `35784193-e918-42d9-9598-4e842ed75192` | |
-| `Standard Tier`                            | `xxxxxxx`                              | |
+| `Graduated Tier - Sysdig Secure + Monitor` | `35784193-e918-42d9-9598-4e842ed75192` | `graduated-tier-sysdig-secure-plus-monitor` |
 {: caption="Table 1. Service plans" caption-side="top"} 
 
 The costs that are provided in this topic are guidelines and do not represent actual costs. They represent a starting point for estimates of costs that would be incurred in environments with a similar configuration. Actual costs can vary by geography. The prices that are used are based on actual prices as of March 1, 2020 and it is possible they can change.
@@ -48,7 +47,6 @@ The costs that are provided in this topic are guidelines and do not represent ac
 | `Lite`           | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | | |
 | `Graduated tier` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Graduated Tier - Sysdig Secure + Monitor` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Standard Tier` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
 {: caption="Table 2. Time-series tiers per service plans" caption-side="top"} 
 
 
