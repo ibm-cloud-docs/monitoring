@@ -28,7 +28,6 @@ subcollection: Monitoring-with-Sysdig
 {{site.data.keyword.mon_full_notm}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. In architectures that are focused on container and microservices, you can use *Sysdig Secure* to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
 {:shortdesc}
 
-
 The following figure shows the components overview for the {{site.data.keyword.mon_full_notm}} service that is running on {{site.data.keyword.cloud_notm}}:
 
 ![{{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}](images/components.png "{{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}")
@@ -85,7 +84,7 @@ Notice that there is a delay showing metric data for new time series. Data is no
 ## Before you begin
 {: #getting-started-prereqs}
 
-You must have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
+You must have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration](https://cloud.ibm.com/login){: external}.
 
 Check the regions where the service is available. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_regions).
 
@@ -147,7 +146,7 @@ To provision an instance of through the {{site.data.keyword.cloud_notm}} UI, com
 
 5. Select the region. 
 
-6. Select a service plan. By default, the **Trial** plan is set.
+6. Select a service plan. By default, the **Lite** plan is set.
 
     For more information about the service plans, see [Service plans](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans#pricing_plans).
 
@@ -185,7 +184,7 @@ Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 |Linux Ubuntu/Debian | [Analyze metrics for an Ubuntu server](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ubuntu#ubuntu) | On-premises | ![Ubuntu and {{site.data.keyword.mon_full_notm}}](images/kube.png "Ubuntu and {{site.data.keyword.mon_full_notm}}") |
 {: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"} 
 
-For more information, see [Configuring a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent#config_agent) and [Removing a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove#remove).
+For more information, see [Configuring a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and [Removing a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove_agent).
 
 After the Sysdig agent is deployed, collection and forwarding of metrics to the instance is automatic. The Sysdig agent automatically collects and reports on pre-defined metrics. You can also configure which metrics to monitor in an environment. Data for custom metrics is also automatically collected.
 

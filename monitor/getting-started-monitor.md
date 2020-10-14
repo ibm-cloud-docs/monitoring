@@ -76,17 +76,17 @@ See [Manage user access](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysd
 ## Step2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
 {: #getting-started-monitor_step2}
 
-See [Provision an instance of the IBM Cloud Monitoring with Sysdig service](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#step2).
+See [Provision an instance of the IBM Cloud Monitoring with Sysdig service](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision).
 
 ## Step3. Configure a Sysdig agent
 {: #getting-started-monitor_step3}
 
-See [Configure a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#step3).
+See [Configure a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
 
 ## Step 4. Launch the web UI
 {: #getting-started-monitor_step4}
 
-See [Launch the web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#step4).
+See [Launch the web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 
 ## Step 5. Monitor your environment
 {: #getting-started-monitor_step5}
@@ -97,11 +97,9 @@ You can analyze data in the *Explore* tab and in the *Dashboard* tab of the web 
 * Use dashboards to get a specialized insight into network data, application data, topology, services, hosts, and containers by monitoring data through panels. A panel displays a metric or group of metrics in a dashboard.
 {: tip}
 
-In the *Explore* tab, you can monitor data by using default metrics and default dashboards. You can use labels to define new infrastructure groups that you can then use to aggregate data differently and monitor your environment. You can also use custom dashboards that you define through the *Dashboard* tab.
+In the *Explore* tab, you can monitor data by using default metrics and default dashboards. You can use labels to define new infrastructure groups that you can then use to aggregate data differently and monitor your environment. [Learn more](https://docs.sysdig.com/en/explore-interface.html){: external}.
 
-In the *Dashboards* tab, you can monitor data by using any of the default dashboards or by creating new ones.
-
-For more information, see [Monitoring your environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitoring#monitoring)
+In the *Dashboards* tab, you can monitor data by using any of the default dashboards or by creating new ones. [Learn more](https://docs.sysdig.com/en/dashboards.html){: external}.
 
 
 

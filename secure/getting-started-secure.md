@@ -47,19 +47,19 @@ See [Manage user access](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysd
 ## Step2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
 {: #getting-started-secure_step2}
 
-See [Provision an instance of the IBM Cloud Monitoring with Sysdig service](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#step2).
+See [Provision an instance of the IBM Cloud Monitoring with Sysdig service](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision).
 
 ## Step3. Connect a data source by configuring a Sysdig agent
 {: #getting-started-secure_step3}
 
 Complete the following steps:
-1. [Configure a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#step3).
+1. [Configure a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
 2. [Optional] [Enable Kubernetes Audit Logging](https://docs.sysdig.com/en/kubernetes-audit-logging.html){: external} to track kubectl exec and other Kubernetes commands.
 
 ## Step 4. Launch the web UI
 {: #getting-started-secure_step4}
 
-See [Launch the web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#step4).
+See [Launch the web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 
 
 ## Step 5. Secure your environment
