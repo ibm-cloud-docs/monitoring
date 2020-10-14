@@ -121,7 +121,7 @@ Complete the following steps to assign a user administrator role to the {{site.d
 7. Select the platform role **Administrator**.
 8. Click **Assign**.
 
-## Step2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
+## Step 2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
 {: #getting-started-step2}
 
 To add monitoring features with {{site.data.keyword.mon_full_notm}} in the {{site.data.keyword.cloud_notm}}, you must provision an instance of the {{site.data.keyword.mon_full_notm}} service. 
@@ -140,13 +140,17 @@ To provision an instance of through the {{site.data.keyword.cloud_notm}} UI, com
 
 2. Click **Catalog**. The list of the services that are available in {{site.data.keyword.cloud_notm}} opens.
 
-3. To filter the list of services that is displayed, select the **Developer Tools** category.
+3. To filter the list of services that is displayed, select the **Logging and Monitorings** category.
 
 4. Click the **{{site.data.keyword.mon_full_notm}}** tile.
 
 5. Select the region. 
 
-6. Select a service plan. By default, the **Lite** plan is set.
+6. Select a service plan. 
+
+    To provision an instance that only includes the *Monitor* component, select the plan **Graduated Tier**.
+
+    To provision an instance that include the *Monitor* and the *Secure* components, select the plan **Graduated Tier - Sysdig Secure + Monitor**.
 
     For more information about the service plans, see [Service plans](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans#pricing_plans).
 
@@ -163,11 +167,33 @@ The service UI opens.
 To provision an instance of Sysdig through the CLI, see [Provisioning Sysdig through the {{site.data.keyword.cloud_notm}} CLI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_cli).
 {: tip}
 
-
-## Step3. Configure a Sysdig agent
+## Step 3. Configure platform metrics
 {: #getting-started-step3}
 
-After you provision an instance, you must configure a Sysdig agent for each metric source that you want to monitor. A metric source is a cloud resource that you want to monitor and control its performance and health. For example, a metric source can be a Kubernetes cluster.  
+Platform metrics are metrics that are exposed by enabled-Sysdig services and the platform in {{site.data.keyword.cloud_notm}}. You must configure a Sysdig instance in a region to monitor these metrics. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
+
+To see the list of enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
+
+For example, to configure platform metrics in a region, complete the following steps:
+1. From the{{site.data.keyword.cloud_notm}} dashboard, go to the menu icon ![menu icon](../../icons/icon_hamburger.svg) &gt; **Observability** to access the *Observability* dashboard.
+
+2. Select **Monitoring** &gt; **Configure platform metrics**. 
+
+3. Select a [region](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_regions). 
+
+4. Choose the Sysdig instance that will collect metrics from enabled services on that location. 
+
+5. Click **Save**. 
+
+The main *Observability* page opens.
+
+The instance that you choose to receive metrics shows the flag **Platform metrics**.
+
+
+## Step 4. Configure a Sysdig agent
+{: #getting-started-step4}
+
+After you provision an instance, you must configure a Sysdig agent for each host that you want to monitor. For example, a host can be a cloud resource that you want to monitor and control its performance and health such as a Kubernetes cluster. You may also monitor hosts outside the {{site.data.keyword.cloud_notm}}.
 
 The Sysdig agent automatically collects and reports on pre-defined metrics. You use the *Sysdig access key* to configure the Sysdig agent that is responsible for collecting and forwarding metric data to your instance. For more information, see [Working with access keys](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
 
@@ -178,18 +204,20 @@ You can configure a Sysdig agent for different environments. For example, to con
 
 Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 
-| Resource                |	Tutorial                        | Environment                | Scenario   |
-|-------------------------|---------------------------------|----------------------------|------------|
-| Containers running on the {{site.data.keyword.containershort}} |[Analyze metrics for an app that is deployed in a Kubernetes cluster](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-kubernetes_cluster#kubernetes_cluster) | {{site.data.keyword.cloud_notm}} Public | ![{{site.data.keyword.containershort}} and {{site.data.keyword.mon_full_notm}}](images/kube.png "{{site.data.keyword.containershort}} and {{site.data.keyword.mon_full_notm}}") |
-|Linux Ubuntu/Debian | [Analyze metrics for an Ubuntu server](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ubuntu#ubuntu) | On-premises | ![Ubuntu and {{site.data.keyword.mon_full_notm}}](images/kube.png "Ubuntu and {{site.data.keyword.mon_full_notm}}") |
+|	Tutorial                        | Environment                | Scenario   |
+|---------------------------------|----------------------------|------------|
+| [Monitoring a Linux host](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ubuntu#ubuntu) | On-premises | ![Ubuntu and {{site.data.keyword.mon_full_notm}}](images/kube.png "Ubuntu and {{site.data.keyword.mon_full_notm}}") |
+| [Monitoring a Linux bare metal server](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux) | {{site.data.keyword.cloud_notm}} Public |  |
+| [Monitoring a Windows environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-windows) | Windows |  |
+| [Monitorting a Kubernetes cluster](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-kubernetes_cluster) | {{site.data.keyword.cloud_notm}} Public | ![{{site.data.keyword.containershort}} and {{site.data.keyword.mon_full_notm}}](images/kube.png "{{site.data.keyword.containershort}} and {{site.data.keyword.mon_full_notm}}") |
 {: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"} 
 
 For more information, see [Configuring a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and [Removing a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove_agent).
 
 After the Sysdig agent is deployed, collection and forwarding of metrics to the instance is automatic. The Sysdig agent automatically collects and reports on pre-defined metrics. You can also configure which metrics to monitor in an environment. Data for custom metrics is also automatically collected.
 
-## Step 4. Launch the web UI
-{: #getting-started-step4}
+## Step 5. Launch the web UI
+{: #getting-started-step5}
 
 After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for your node, you can view, monitor, and manage data through the service's web UI.
 
@@ -216,8 +244,14 @@ The {{site.data.keyword.mon_full_notm}} Web UI opens. By default, the *Explore* 
 By default, users are automatically added as members of the **Monitor Operations** team that is predefined for each {{site.data.keyword.mon_full_notm}} instance. Users have full permissions to see all the data in the web UI. **Note:** An administrator can restrict access to data by managing users in teams and controlling what data is visible. For example, to restrict users viewing permissions, an administrator can create a default team with limited scope and visibility. Then, manually assign users to other teams. For more information, see [Working with teams](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams#teams).
 
 
-## Step 5. Monitor usage
-{: #getting-startedstep5}
+## Step 6. Get started with Monitor and Secure
+{: #getting-started-step6}
+
+- See [Getting sarted with Monitor](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started-monitor).
+- See [Getting started with Secure](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started-secure).
+
+## Step 7. Monitor usage
+{: #getting-started-step7}
 
 To monitor the usage and costs of your service, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
 

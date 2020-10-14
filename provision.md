@@ -38,7 +38,7 @@ To provision an instance of Sysdig from the {{site.data.keyword.cloud_notm}} cat
 
 2. Click **Catalog**. The list of the services that are available on {{site.data.keyword.cloud_notm}} opens.
 
-3. To filter the list of services that is displayed, select the **Developer Tools** category.
+3. To filter the list of services that is displayed, select the **Logging and Monitoring** category.
 
 4. Click the **{{site.data.keyword.mon_full_notm}}** tile. The *Observability* dashboard opens.
 
@@ -48,9 +48,9 @@ To provision an instance of Sysdig from the {{site.data.keyword.cloud_notm}} cat
 
 7. Select a service plan. By default, the **Lite** plan is set.
 
-    To provision an instance that only includes the Monitor component, select the plan **Graduated Tier**.
+    To provision an instance that only includes the *Monitor* component, select the plan **Graduated Tier**.
 
-    To provision an instance that include the Monitor and the Secure components, select the plan **Graduated Tier - Sysdig Secure + Monitor**.
+    To provision an instance that include the *Monitor* and the *Secure* components, select the plan **Graduated Tier - Sysdig Secure + Monitor**.
 
     For more information about the service plans, see [Service plans](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans#pricing_plans).
 

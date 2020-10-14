@@ -130,9 +130,6 @@ log_level = INFO
 
 The log level determines the type and amount of logging of an agent. You can configure the log level by adding parameters and log level arguments.
 
-
-
-
 ### Linux Sysdig agent
 {: #agent_log_level_configure_linux}
 
