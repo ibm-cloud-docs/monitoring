@@ -238,14 +238,14 @@ To change the log level of a docker Sysdig agent, complete the following steps:
     ```
     {: pre}
 
-6. Verify the levels have been set. Run the following commands:
+6. Verify the level have been set. Run the following commands:
 
     ```
      docker exec -ti sysdig-agent  more /opt/draios/etc/statsite.ini | grep log_level
     ```
     {: pre}
 
-    You should see `log_level = ERROR`.
+    You should see the log level that you specified in the `dragent.yaml` file.
 
 
 
@@ -259,7 +259,7 @@ To change the log level of a docker Sysdig agent, complete the following steps:
 - name: ADDITIONAL_CONF #OPTIONAL pass additional parameters to the agent
   value: "log:\n file_priority: debug\n console_priority: error"
 
-  
+
 * The **file_priority** in the **log** section controls the type of log entries written to the file `/opt/draios/logs/draios.log`.
 * The **console_priority** in the **log** section controls the type of log entries written to the container console output when running the containerized agent.
 * The default log level is **info**, where a log entry is created for each aggregated metrics transmission to the backend servers, once per second, in addition to entries for any warnings and errors.

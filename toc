@@ -60,16 +60,16 @@ Monitoring with Sysdig
         agent/config_agent.md
         [Upgrading a Sysdig agent](https://docs.sysdig.com/en/agent-upgrade.html)
         agent/remove_agent.md
-        agent/agent_ts.md
         [Configuring Agent Modes](https://docs.sysdig.com/en/configure-agent-modes.html)
         agent/agent_log_level.md
         agent/agent_events_level.md
         agent/agent_mng_metrics.md
         agent/access_key.md
         agent/change_kube_agent.md
-        [Enabling Kubernetes Audit Logging](https://docs.sysdig.com/en/kubernetes-audit-logging.html)
         agent/change_linux_agent.md
         agent/change_container_agent.md
+        agent/agent_ts.md
+        [Enabling Kubernetes Audit Logging](https://docs.sysdig.com/en/kubernetes-audit-logging.html)
 
     {: .topicgroup}
     IAM integration
