@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-09-15"
+lastupdated: "2020-10-14"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
 
@@ -36,7 +36,7 @@ You can associate one or more tags to each Sysdig agent. Tags are comma-separate
 
 Check the Sysdig topic [Host Requirements for Agent Installation](https://docs.sysdig.com/en/host-requirements-for-agent-installation.html){: external}
 
-## Deploying a Sysdig agent on Linux manually
+## Deploying a Sysdig agent on Linux
 {: #config_agent_linux}
 
 Complete the following steps to configure a Sysdig agent on Linux to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
@@ -45,7 +45,27 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
 2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
-3. Deploy the Sysdig agent. Run the following command from a terminal.
+3. Install kernel headers manually. 
+
+    When you install a Sysdig agent, the agent uses kernel header files. [Learn more](https://docs.sysdig.com/en/agent-install--non-orchestrated.html){: external}
+
+    Choose a distribution and run the following command for that distribution.
+
+    For Debian and Ubuntu Linux distributions, run the following command:
+
+    ```
+    apt-get -y install linux-headers-$(uname -r)
+    ```
+    {: codeblock}
+
+    For RHEL, CentOS, and Fedora Linux distributions, run the following command:
+
+    ```
+    yum -y install kernel-devel-$(uname -r)
+    ```
+    {: codeblock}
+
+4. Deploy the Sysdig agent. Run the following command from a terminal.
 
     ```
     curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure true --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
@@ -64,7 +84,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
     * Set **secure** to *true* to use SSL with the communication.
 
-4. Check that the Sysdig agent is running. Run the following command:
+5. Check that the Sysdig agent is running. Run the following command:
 
     ```
     ps -ef | grep sysdig
@@ -79,22 +99,9 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
     grep error /opt/draios/logs/draios.log
     ```
     {: codeblock}
+    
 
-If the Sysdig agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the Sysdig agent.
 
-For Debian and Ubuntu Linux distributions, run the following command:
-
-```
-apt-get -y install linux-headers-$(uname -r)
-```
-{: codeblock}
-
-For RHEL, CentOS, and Fedora Linux distributions, run the following command:
-
-```
-yum -y install kernel-devel-$(uname -r)
-```
-{: codeblock}
 
 
 ## Deploying a Sysdig agent as a Docker container
@@ -120,7 +127,7 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
 3. Deploy the Sysdig agent. Run the following command:
 
     ```
-    docker run -d --name sysdig-agent --restart always --privileged --net host --pid host -e ACCESS_KEY=SYSDIG_ACCESS_KEY -e COLLECTOR=COLLECTOR_ENDPOINT -e COLLECTOR_PORT=6443 -e SECURE=true -e ADDITIONAL_CONF="sysdig_capture_enabled: false" -e TAGS=TAG_DATA  -v /var/run/docker.sock:/host/var/run/docker.sock -v /dev:/host/dev -v /proc:/host/proc:ro -v /boot:/host/boot:ro -v /lib/modules:/host/lib/modules:ro -v /usr:/host/usr:ro --shm-size=350m sysdig/agent
+    docker run -d --name sysdig-agent --restart always --privileged --net host --pid host -e ACCESS_KEY=SYSDIG_ACCESS_KEY -e COLLECTOR=COLLECTOR_ENDPOINT -e COLLECTOR_PORT=6443 -e SECURE=true -e ADDITIONAL_CONF="sysdig_capture_enabled: false" -e TAGS=TAG_DATA -e ADDITIONAL_CONF=“log:  { file_priority: error, console_priority: none }” -v /var/run/docker.sock:/host/var/run/docker.sock -v /dev:/host/dev -v /proc:/host/proc:ro -v /boot:/host/boot:ro -v /lib/modules:/host/lib/modules:ro -v /usr:/host/usr:ro --shm-size=350m sysdig/agent
     ```
     {: codeblock}
 
@@ -135,6 +142,8 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
     * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 
     * Set **SECURE** to *true* to use SSL with the communication.
+
+    * Set **log** to define the log level for the agent. By default, the log level that is configired through `file_priority` is set to `info`. Set the `console_priority` to `none` to reduce the container console output. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-agent_log_level).
 
     The container runs in detached mode. To see the container’s output, remove *-d*.
     {: note}
@@ -193,7 +202,7 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
 4. Deploy the Sysdig agent. Run the following command:
 
     ```
-    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false'
+    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --imageanalyzer
     ```
     {: codeblock}
 
@@ -206,6 +215,8 @@ Complete the following steps to configure a Sysdig agent on a Kubernetes cluster
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. 
 
     * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+
+    * Add `--imageanalyzer`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.
 
 Use kubectl version 1.14 or higher.
 {: tip}
@@ -386,7 +397,7 @@ To deploy the Sysdig agent, complete the following steps:
 2. Install the agent. Run the following command:
 
     ```
-    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --openshift
+    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --openshift --imageanalyzer
     ```
     {: codeblock}
 
@@ -399,4 +410,7 @@ To deploy the Sysdig agent, complete the following steps:
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. 
 
     * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+
+    * Add `--imageanalyzer`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  
+
 

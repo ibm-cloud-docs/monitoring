@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-09-15"
+lastupdated: "2020-10-14"
 
 keywords: Sysdig, IBM Cloud, monitoring, Sysdig agent, log level
 
@@ -21,45 +21,40 @@ subcollection: Monitoring-with-Sysdig
 {:important: .important}
 {:note: .note}
 
-# Troubleshooting problems with a Sysdig agent
+# Configuring the log level of a Sysdig agent
 {: #agent_log_level}
 
-You can view and analyze the Sysdig agent log file to troubleshoot problems. 
+The log level determines the type and amount of logging of an agent. You can configure the log level by adding parameters and log level arguments.
 {:shortdesc}
-
-By default, when you deploy a Sysdig agent, the log level is set to `info`. 
-
-Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
-
-You can configure the log level of a Sysdig agent to configure the level of detail that is written to the Sysdig agent log file.  
-* Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*
-* The *info* level reports an entry for each aggregated metrics transmission to the backend servers, once per second. It also reports entries for any warnings and errors.
-* To get the least number of log entries, set the log level to *error*.
-* To get the full set of available logs, set the log level to *trace*. 
-
-You should set the log level to *info*, *debug*, or *trace* to troubleshoot agent-related issues.
-{: tip}
 
 The Sysdig agent writes log entries into the `draios.log` file. 
 * The log file rotates when it reaches 10MB in size.
 * The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
 * The log files are located in the directory `/opt/draios/logs/`. 
 
+By default, when you deploy a Sysdig agent, the log level is set to `info`.
+{: note}
+
+Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+
+You can configure the level of detail that is written by a Sysdig agent to its log file:
+
+| Log level       | Detail                               |
+|-----------------|--------------------------------------|
+| `none`          | No errors are reported.              |
+| `info`          | Reports an entry for each aggregated metrics transmission to the backend servers, once per second. </br>Reports entries for any warnings and errors. |
+| `error`         | Reports error logs only.             |
+| `trace`         | Reports all logs that are available. |
+{: caption="Table 1. Log levels" caption-side="top"} 
+
+* To get the least number of log entries, set the log level to *error*.
+* To get the full set of available logs, set the log level to *trace*. 
+
+You should set the log level to *info*, *debug*, or *trace* to troubleshoot agent-related issues.
+{: tip}
 
 
-
-The Sysdig agent generates log entries in /opt/draios/logs/draios.log. The agent will rotate out the log file when it reaches 10MB in size, keeping the 10 most recent log files archived with a date-stamp appended to the filename.
-
-The type and amount of logging can be changed by adding parameters and log level arguments shown below to the agent's user settings configuration file here:
-
-/opt/draios/etc/dragent.yaml
-
-After editing the dragent.yaml file, restart the agent at the shell with: service dragent restart to affect changes.
-
-Note that dragent.yaml code can be written in both YAML and JSON. The examples below use YAML.
-
-
-The following table lists the location of the Sysdig agent configuration file that sets the log level of an agent:
+The following table lists the locations of the Sysdig agent's logs per type of agent:
 
 | Agent Type                                                    | Agent configuration file                  |
 |---------------------------------------------------------------|-------------------------------------------|
@@ -67,11 +62,10 @@ The following table lists the location of the Sysdig agent configuration file th
 | Sysdig agent as a Docker container in a Linux system          | `/opt/draios/logs/draios.log`             |
 | Sysdig agent as a pod in a standard Kubernetes environment    | `sysdig-agent-configmap.yaml`             |
 | Sysdig agent as a pod in an Openshift Kubernetes environment  | `sysdig-agent-configmap.yaml`             |
-{: caption="Table 1. Log configuration files" caption-side="top"} 
+{: caption="Table 2. Log locations per type of agent" caption-side="top"} 
 
 
-
-* You can customize the type of log and the entries that are collected by configuring the Sysdig agent configuration file **/opt/draios/etc/dragent.yaml**. After you edit the file, you must restart the agent at the shell with `docker restart sysdig-agent` to activate the changes.
+For example, consider the following use cases and the log section that you can configure to indicate the data that you want to log for an agent:
 
 | Use cases                                     | Log section entry           |
 |-----------------------------------------------|-----------------------------|
@@ -82,98 +76,196 @@ The following table lists the location of the Sysdig agent configuration file th
 {: caption="Table 2. Log section entries" caption-side="top"} 
 
 
+## Checking the log level of an agent
+{: #agent_log_level_check}
+
+### Linux Sysdig agent
+{: #agent_log_level_check_linux}
+
+To get the log level of a Linux Sysdig agent, run the following command from a terminal:
+
+```
+more /opt/draios/etc/statsite.ini | grep log_level
+```
+{: pre}
+
+For example, you can get the following result:
+
+```
+# more /opt/draios/etc/statsite.ini | grep log_level
+log_level = INFO
+```
+{: screen}
 
 
-When troubleshooting agent behavior, increase the logging to debug for full detail:
+### Docker Sysdig agent
+{: #agent_log_level_check_docker}
 
-Container Console Logging
-If you are running the containerized agent, you can also reduce container console output by adding the additional parameter console_priority:with the same arguments [ none | error | warning | info | debug | trace ]
 
+To get the log level of a docker Sysdig agent, run the following command:
+
+```
+docker exec -ti sysdig-agent  more /opt/draios/etc/statsite.ini | grep log_level
+```
+{: pre}
+
+For example, you can get the following result:
+
+```
+# docker exec -ti sysdig-agent  more /opt/draios/etc/statsite.ini | grep log_level
+log_level = INFO
+```
+{: screen}
+
+
+### Kubernetes Sysdig agent
+{: #agent_log_level_check_kube}
+
+
+
+
+
+## Configuring the log level
+{: #agent_log_level_configure}
+
+The log level determines the type and amount of logging of an agent. You can configure the log level by adding parameters and log level arguments.
+
+
+
+
+### Linux Sysdig agent
+{: #agent_log_level_configure_linux}
+
+To configure the log level, you must customize the **log** section in the `/opt/draios/etc/dragent.yaml` file. 
+
+By default, a `dragent.yaml` file includes the following information:
+
+```
+customerid: xxxxxxxxxxxxxxxxx
+collector: ingest.us-south.monitoring.cloud.ibm.com
+collector_port: 6443
+ssl: true
+sysdig_capture_enabled: false
+```
+{: codeblock}
+
+To configure a log level, you must edit the file and add information about the log. 
+- To set the log level, you must set **file_priority**. 
+- Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+
+The following configuration sample shows a log level set to *error*:
+
+```
+customerid: xxxxxxxxxxxxxxxxx
+collector: ingest.us-south.monitoring.cloud.ibm.com
+collector_port: 6443
+ssl: true
+sysdig_capture_enabled: false
 log:
-  console_priority: warning
-Note that troubleshooting a host with less than the default 'info' level will be more difficult or not possible. You should revert to 'info' when you are done troubleshooting the agent.
+  file_priority: error
+```
+{: codeblock}
+
+After you edit the dragent.yaml file, you must restart the agent to activate the changes. Run the following command:
+
+```
+service dragent restart
+```
+{: pre}
+
+
+
+### Docker Sysdig agent
+{: #agent_log_level_configure_docker}
+
+
+To change the log level of a docker Sysdig agent, complete the following steps:
+
+1. Open a shell in the running container:
+
+    ```
+    docker exec –it sysdig-agent /bin/bash
+    ```
+    {: pre}
+
+2. Copy to your local machine the `dragent.yaml` file:
+
+    ```
+    docker cp sysdig-agent:/opt/draios/etc/dragent.yaml <local directory>/dragent.yaml
+    ```
+    {: pre}
+
+3. Modify the configuration file. Include information about the log level and the console log level that you want to set. Add the following section if it is not included:
+
+    ```
+    log:
+      file_priority: error
+      console_priority: warning
+    ```
+    {: codeblock}
+
+    The *file_priority* controls the log level. Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+
+    The *console_priority* controls the console output. Valid console log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+
+    The following configuration sample shows a log level set to *error*, and a console log level set to *warning*:
+
+    ```
+    customerid: xxxxxxxxxxxxxxxx
+    tags: location:us-east
+    collector: ingest.us-east.monitoring.cloud.ibm.com
+    collector_port: 6443
+    ssl: true
+    sysdig_capture_enabled: false
+    use_promscrape: true
+    log:
+      file_priority: error
+      console_priority: warning
+    ```
+    {: codeblock}
+
+4. Update the configuration file of the agent. Run the following command:
+
+    ```
+    docker cp <local directory>/dragent.yaml sysdig-agent:/opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+5. Restart the agent. Run the following command:
+
+    ```
+    docker restart sysdig-agent
+    ```
+    {: pre}
+
+6. Verify the levels have been set. Run the following commands:
+
+    ```
+     docker exec -ti sysdig-agent  more /opt/draios/etc/statsite.ini | grep log_level
+    ```
+    {: pre}
+
+    You should see `log_level = ERROR`.
 
 
 
 
-## Changing the log level
-{: #log_level}
-
-To configure the log level, you must customize the **log** section in the *dragent.yaml* file. 
+### Kubernetes Sysdig agent
+{: #agent_log_level_configure_kube}
 
 
 
 
-## Changing the log configurations
-{: #change_kube_agent_log_configurations}
+- name: ADDITIONAL_CONF #OPTIONAL pass additional parameters to the agent
+  value: "log:\n file_priority: debug\n console_priority: error"
 
-To configure the log configurations, you must customize the **log** section in the *sysdig-agent-configmap.yaml* file.
-
-The Sysdig agent generates log entries in */opt/draios/logs/draios.log*. 
-* The log file rotates when it reaches 10MB in size.
-* The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
-
-The following table lists some common scenarios and the value that you must set in each one of them:
-
-| Use cases                                     | Log section entry           | Default Value |
-|-----------------------------------------------|-----------------------------|---------------|
-| Troubleshoot agent behavior                   | `file_priority: debug`      | `info`        |
-| Reduce container console output               | `console_priority: warning` | `info`        |
-| Filtering events by severity                  | `event_priority: warning`   | `information` |
-| Verify what metrics are included or excluded  | `metrics_excess_log: true`  | `false`       |
-{: caption="Table 2. Log section entries" caption-side="top"} 
-
-### Changing the log level
-{: #change_kube_agent_log_level}
-
+  
 * The **file_priority** in the **log** section controls the type of log entries written to the file `/opt/draios/logs/draios.log`.
 * The **console_priority** in the **log** section controls the type of log entries written to the container console output when running the containerized agent.
 * The default log level is **info**, where a log entry is created for each aggregated metrics transmission to the backend servers, once per second, in addition to entries for any warnings and errors.
 * Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*
 
-### Filtering Kubernetes events by severity
-{: #change_kube_agent_filterby_severity}
-
-* The **event_priority** in the **log** section controls the type of events that are sent from the agent
-* The default log level is *information*. This means that only information and higher severity events are transmitted.
-* Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *information*, *debug* and *none*. **Note**: The values are listed from high priority to low priority.
-* Setting the level to `none` will block all event collection.
-
-
-### Logging into a file what metrics are included or excluded
-{: #change_kube_agent_log_metrics}
-
-* Setting **metrics_excess_log** to **true** in the **log** section will enable logging of the custom metrics that are included or excluded.
-* Metric logging is disabled by default.
-* Logging occurs at INFO-level every 30 seconds and lasts for 10 seconds.
-* The **metricsfile** setting is required to specify the location for the metrics to be written by the agent.  The `metricsfile.location` value is a relative path under the /opt/draios directory.  *Note:* The `metricsfile` entry is specified at the same level as `log`( not as a child in the yaml)
-* Logging data is formatted as follows:
-
-    ```
-    +/-[type] [metric included/excluded]: metric.name (filter: +/-[metric.filter])
-    ```
-    {: screen}
-
-    * *+/-* is a symbol that indicates if the metric is included or excluded. Plus (*+*) indicates that a metric is included. Minus (*-*) indicates that a metric is excluded.  
-
-    * *[type]* specifies the metric type, for example, *statsd*.
-
-    * *[metric included/excluded]* indicates in a human readable way whether the metric is included or excluded.
-
-    *  *metric.name* indicates the metric name.
-
-    * *(filter: +/-[metric.filter])* provides information about any filters that are defined in the **metrics_filter** section in the *sysdig-agent-configmap.yaml* file.
-
-A sample log entry looks as follows:
-
-```
--[statsd] metric excluded: mongo.statsd.vsize (filter: -[mongo.statsd.*])
-+[statsd] metric included: mongo.statsd.netIn (filter: +[mongo.statsd.net*])
-```
-{: screen}
-
-
-Complete the following steps to configure the log settings:
+Complete the following steps:
 
 1. Set up the cluster environment. Run the following commands:
 
@@ -184,7 +276,7 @@ Complete the following steps to configure the log settings:
     ```
     {: codeblock}
 
-2. Edit the *sysdig-agent-configmap.yaml* file.
+2. Edit the *sysdig-agent-configmap.yaml* file. 
 
     Run the following command:
 
@@ -193,83 +285,39 @@ Complete the following steps to configure the log settings:
     ```
     {: codeblock}
 
-3. Make changes. Add the *log* section or update the section and include the configurations that you wish to modify based on the descriptions above.
+3. Make changes. Add the *metrics_filter* section or update the section.
 
-    For example:
+    For example, if the *metrics_filter* section of a Sysdig agent looks as follows:
 
     ```
-    log:
-      file_priority: warning
-      console_priority: info
-      event_priority: warning
-      metrics_excess_log: true
-    metricsfile: { location : metrics }
+    metrics_filter:
+      - include: metricA.*
+      - exclude: metricA.*
+      - include: metricB.*
+      - include: haproxy.backend.*
+      - exclude: haproxy.*
+      - exclude: metricC.*
     ```
-    {: codeblock}
+    {: screen}
 
-6. Save the changes. 
+    * You are configuring the Sysdig agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*. 
+
+    * You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*. 
+
+    * The entry `exclude: metricA.*` is ignored.
+
+4. Save the changes. 
 
 Changes are applied automatically. 
 
 
 
+### Filtering Kubernetes events by severity
+{: #change_kube_agent_filterby_severity}
 
-## Sample configmap yaml file
-{: #change_kube_agent_sample_configmap}
-
-```yaml
-apiVersion: v1
-data:
-  dragent.yaml: | 
-    ### Agent tags
-    # tags: linux:ubuntu,dept:dev,local:nyc
-    #### Sysdig Software related config 
-    ####
-    # Sysdig collector address
-    # collector: 192.168.1.1
-    # Collector TCP port
-    # collector_port: 6666
-    # Whether collector accepts ssl
-    # ssl: true
-    # collector certificate validation
-    # ssl_verify_certificate: true
-    #######################################
-    #
-    k8s_cluster_name: cluster12
-    collector: ingest.us-south.monitoring.cloud.ibm.com
-    collector_port: 6443
-    ssl: true
-    ssl_verify_certificate: true
-    sysdig_capture_enabled: false
-    new_k8s: true
-    tags: type:mycluster,region:us-south
-    blacklisted_ports:
-      - 6666
-      - 6379
-    events:    
-      kubernetes:
-        node: 
-          - Rebooted
-    metrics_filter:
-      - include: metricA.*
-      - exclude: metricA.*
-      - include: metricB.*
-    use_container_filter: true
-    container_filter:
-      - exclude:
-        kubernetes.namespace.name: kube-system
-    log:
-      file_priority: warning
-      console_priority: info
-      event_priority: warning
-      metrics_excess_log: true
-    metricsfile: { location : metrics }
-kind: ConfigMap
-metadata:
-  annotations:
-...
-```
-{: codeblock}
-
+* The **event_priority** in the **log** section controls the type of events that are sent from the agent
+* The default log level is *information*. This means that only information and higher severity events are transmitted.
+* Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *information*, *debug* and *none*. **Note**: The values are listed from high priority to low priority.
+* Setting the level to `none` will block all event collection.
 
 

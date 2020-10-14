@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-10-14"
 
 keywords: Sysdig, IBM Cloud, monitoring, pricing
 
@@ -29,15 +29,27 @@ subcollection: Monitoring-with-Sysdig
 This topic includes information about pricing for the {{site.data.keyword.mon_full_notm}}. You can also review the sample scenarios to learn more about the costs of a Sysdig instance
 {: shortdesc}
 
+The following service plans are available:
+
+| Plans                                      | Plan ID                                | Plan Name                   |
+|--------------------------------------------|----------------------------------------|-----------------------------|
+| `Lite`                                     | `367a3918-9efc-43c5-bef9-20553051b7af` | `lite`                      | 
+| `Graduated tier`                           | `231bb072-1b2f-4d7e-ae9e-9574d382be32` | `graduated-tier`            |
+| `Graduated Tier - Sysdig Secure + Monitor` | `35784193-e918-42d9-9598-4e842ed75192` | |
+| `Standard Tier`                            | `xxxxxxx`                              | |
+{: caption="Table 1. Service plans" caption-side="top"} 
+
 The costs that are provided in this topic are guidelines and do not represent actual costs. They represent a starting point for estimates of costs that would be incurred in environments with a similar configuration. Actual costs can vary by geography. The prices that are used are based on actual prices as of March 1, 2020 and it is possible they can change.
 {: important}
 
 
-| Plans            | Base tier | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Plan ID |
-|------------------|---------------------------------------------------|--------|--------|--------|--------|
-| `Lite`           | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | | | `367a3918-9efc-43c5-bef9-20553051b7af` |
-| `Graduated tier` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | `231bb072-1b2f-4d7e-ae9e-9574d382be32` |
-{: caption="Table 1. Time-series tiers per service plans" caption-side="top"} 
+| Plans            | Base tier | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
+|------------------|---------------------------------------------------|--------|--------|--------|
+| `Lite`           | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | | |
+| `Graduated tier` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Graduated Tier - Sysdig Secure + Monitor` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Standard Tier` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
+{: caption="Table 2. Time-series tiers per service plans" caption-side="top"} 
 
 
 The *graduated tier* plan is billed based on the following measurements and pricing:
@@ -61,6 +73,13 @@ Platform metrics are an additional source of time-series. They are priced based 
 A host can be a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent.
 
 Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mng-data#data-collection) and [data retention](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mng-data#data-storage_retention).
+
+
+## Checking the metrics that are collected per agent
+{: #pricing_agent_metrics}
+
+In Sysdig, you can monitor your Sysdig agent by using the dashboard template **Sysdig Agent Health & Status** that is available in **Host Infrastructure**. In this dashboard, you can see the number of Sysdig agents that are deployed and connected to the Sysdig instance, check the version of the Sysdig agents, and find out how many metrics per host the agent is collecting.
+
 
 
 ## Checking your usage
