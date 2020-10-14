@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-07-16"
+lastupdated: "2020-10-14"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -23,11 +23,10 @@ subcollection: Monitoring-with-Sysdig
 
 
 # Getting started tutorial
-{: #getting-started}
+{: #getting-started-monitor}
 
-{{site.data.keyword.mon_full_notm}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. In architectures that are focused on container and microservices, you can use *Sysdig Secure* to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.mon_full_notm}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
 {:shortdesc}
-
 
 The following figure shows the components overview for the {{site.data.keyword.mon_full_notm}} service that is running on {{site.data.keyword.cloud_notm}}:
 
@@ -59,7 +58,7 @@ Notice that there is a delay showing metric data for new time series. Data is no
 {: note}
 
 ## Features
-{: #getting-started-features}
+{: #getting-started-monitor_features}
 
 **Accelerate the diagnosis and resolution of performance incidents.**
 
@@ -83,7 +82,7 @@ Notice that there is a delay showing metric data for new time series. Data is no
 
 
 ## Before you begin
-{: #getting-started-prereqs}
+{: #getting-started-monitor_prereqs}
 
 You must have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window}.
 
@@ -93,7 +92,7 @@ You can complete the getting started steps in any of the supported regions.
 
 
 ## Step 1. Manage user access
-{: #getting-started-step1}
+{: #step1}
 
 Every user that accesses the {{site.data.keyword.mon_full_notm}} service in your account must be assigned an access policy with an IAM user role defined. The policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.cloud_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam#iam).
 
@@ -123,7 +122,7 @@ Complete the following steps to assign a user administrator role to the {{site.d
 8. Click **Assign**.
 
 ## Step2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
-{: #getting-started-step2}
+{: #getting-started-monitor_step2}
 
 To add monitoring features with {{site.data.keyword.mon_full_notm}} in the {{site.data.keyword.cloud_notm}}, you must provision an instance of the {{site.data.keyword.mon_full_notm}} service. 
 
@@ -135,7 +134,7 @@ To provision an instance of through the {{site.data.keyword.cloud_notm}} UI, com
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
-    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
+    Click [{{site.data.keyword.cloud_notm}} dashboard](https://cloud.ibm.com/login){: external} to launch the {{site.data.keyword.cloud_notm}} dashboard.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 
@@ -147,7 +146,7 @@ To provision an instance of through the {{site.data.keyword.cloud_notm}} UI, com
 
 5. Select the region. 
 
-6. Select a service plan. By default, the **Trial** plan is set.
+6. Select a service plan. By default, the **Lite** plan is set.
 
     For more information about the service plans, see [Service plans](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans#pricing_plans).
 
@@ -166,7 +165,7 @@ To provision an instance of Sysdig through the CLI, see [Provisioning Sysdig thr
 
 
 ## Step3. Configure a Sysdig agent
-{: #getting-started-step3}
+{: #getting-started-monitor_step3}
 
 After you provision an instance, you must configure a Sysdig agent for each metric source that you want to monitor. A metric source is a cloud resource that you want to monitor and control its performance and health. For example, a metric source can be a Kubernetes cluster.  
 
@@ -190,7 +189,7 @@ For more information, see [Configuring a Sysdig agent](/docs/Monitoring-with-Sys
 After the Sysdig agent is deployed, collection and forwarding of metrics to the instance is automatic. The Sysdig agent automatically collects and reports on pre-defined metrics. You can also configure which metrics to monitor in an environment. Data for custom metrics is also automatically collected.
 
 ## Step 4. Launch the web UI
-{: #getting-started-step4}
+{: #getting-started-monitor_step4}
 
 After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for your node, you can view, monitor, and manage data through the service's web UI.
 
@@ -217,8 +216,56 @@ The {{site.data.keyword.mon_full_notm}} Web UI opens. By default, the *Explore* 
 By default, users are automatically added as members of the **Monitor Operations** team that is predefined for each {{site.data.keyword.mon_full_notm}} instance. Users have full permissions to see all the data in the web UI. **Note:** An administrator can restrict access to data by managing users in teams and controlling what data is visible. For example, to restrict users viewing permissions, an administrator can create a default team with limited scope and visibility. Then, manually assign users to other teams. For more information, see [Working with teams](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams#teams).
 
 
-## Step 5. Monitor usage
-{: #getting-startedstep5}
+## Step 5. Monitor your environment
+{: #getting-started-monitor_step5}
+
+You can analyze data in the *Explore* tab and in the *Dashboard* tab of the web UI. You monitor the data through metric views and dashboards. 
+
+* Use a metric view to monitor an individual metric.
+* Use dashboards to get a specialized insight into network data, application data, topology, services, hosts, and containers by monitoring data through panels. A panel displays a metric or group of metrics in a dashboard.
+{: tip}
+
+In the *Explore* tab, you can monitor data by using default metrics and default dashboards. You can use labels to define new infrastructure groups that you can then use to aggregate data differently and monitor your environment. You can also use custom dashboards that you define through the *Dashboard* tab.
+
+In the *Dashboards* tab, you can monitor data by using any of the default dashboards or by creating new ones.
+
+For more information, see [Monitoring your environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitoring#monitoring)
+
+
+
+## Step 6. Manage data
+{: #getting-started-monitor_step6}
+
+You can use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. Customize how data is aggregated when you configure a graph or create an alert for a metric. Set the scope of a dashboard, a panel, or an alert to filter out data points. Restrict access to data by managing users' data access through teams. 
+
+For example, for a metric view, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. 
+
+For more information, see [Managing data](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-manage#manage).
+
+
+
+## Step 7. Configure alerts and explore events
+{: #getting-started-monitor_step7}
+
+You can use events to review, track, and resolve issues. An event is a notification that informs about something that has occurred in any of the nodes that forward data to your {{site.data.keyword.mon_full_notm}} instance. 
+
+There are different types of events: 
+
+* *Alert events* are events that are triggered by user-configured alerts. For example, configure alerts to be notified of problems that require attention. For more information, see [Working with alerts](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitoring#monitoring_alerts).
+* *Infrastructure-based events* are events that are collected from Docker and Kubernetes nodes. By default, the Sysdig agent automatically discovers and collects data from a select group of events. You can edit the agent configuration file to enable more events.
+* *Custom events* that you configure through any of the following integrations: Slackbot, pre-built Python scripts, custom user-created Python scripts, or cURL requests.
+
+When you define an alert, you must define the condition that triggers the notification, one or more notification channels through which you want to be notified, the severity of the alert, and the type of alert. 
+
+You configure one or more notification channels in the *Settings* section in the web UI. Valid notification channels are: *email*, *slack*, *PagerDuty*, *Webhooks*, *OpsGenie*, and *VictorOps*. For more information, see [Working with notification channels](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-notifications#notifications).
+
+The *Alerts* section in the web UI shows the list of pre-defined alerts. From this view, you can enable and disable pre-defined alerts; you can modify existing alerts; and you can create new alerts. For more information, see [Working with alerts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/alerts.html){:new_window}.
+
+Next, explore [Working with custom events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/events.html){:new_window}.
+
+
+## Step 8. Monitor usage
+{: #getting-started-monitor_step8}
 
 To monitor the usage and costs of your service, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-10-14"
 
 keywords: Sysdig, IBM Cloud, monitoring, launch web UI
 
