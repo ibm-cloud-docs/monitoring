@@ -204,12 +204,12 @@ You can configure a Sysdig agent for different environments. For example, to con
 
 Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 
-|	Tutorial                        | Environment                | Scenario   |
-|---------------------------------|----------------------------|------------|
-| [Monitoring a Linux host](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ubuntu#ubuntu) | On-premises | ![Ubuntu and {{site.data.keyword.mon_full_notm}}](images/kube.png "Ubuntu and {{site.data.keyword.mon_full_notm}}") |
-| [Monitoring a Linux bare metal server](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux) | {{site.data.keyword.cloud_notm}} Public |  |
-| [Monitoring a Windows environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-windows) | Windows |  |
-| [Monitorting a Kubernetes cluster](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-kubernetes_cluster) | {{site.data.keyword.cloud_notm}} Public | ![{{site.data.keyword.containershort}} and {{site.data.keyword.mon_full_notm}}](images/kube.png "{{site.data.keyword.containershort}} and {{site.data.keyword.mon_full_notm}}") |
+|	Tutorial                        | Environment                | 
+|---------------------------------|----------------------------|
+| [Monitoring a Linux host](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ubuntu#ubuntu) | On-premises | 
+| [Monitoring a Linux bare metal server](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux) | {{site.data.keyword.cloud_notm}} Public |
+| [Monitoring a Windows environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-windows) | Windows |
+| [Monitorting a Kubernetes cluster](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-kubernetes_cluster) | 
 {: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"} 
 
 For more information, see [Configuring a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and [Removing a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove_agent).

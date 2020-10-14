@@ -33,7 +33,7 @@ To configure a cluster to forward metrics, you must install a Sysdig agent onto 
 
 You view metrics via Sysdig's web-based user interface.
 
-![Components overview on the {{site.data.keyword.cloud_notm}}](../images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}")
+![Components overview on the {{site.data.keyword.cloud_notm}}](images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}")
 
 ## Objectives
 {: #kubernetes_cluster_objectives}
