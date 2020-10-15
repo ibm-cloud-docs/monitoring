@@ -57,7 +57,7 @@ Check that port 6443 is opened. For more information, see [Managing network traf
 {: tsResolve}
 
 
-## Are you noticing connection problems between your infrastructure and Sysdig’s hosted service?
+## Are you observing Sysdig agent connection errors or receiving uptime alerts reporting an host is down when there are no problems?
 {: #troubleshoot-entry-3}
 
 Sysdig has identified an issue with a subset of agent versions:
