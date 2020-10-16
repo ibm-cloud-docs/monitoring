@@ -45,7 +45,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
 2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
-3. Install kernel headers manually. 
+3. Install the kernel headers. 
 
     When you install a Sysdig agent, the agent uses kernel header files. [Learn more](https://docs.sysdig.com/en/agent-install--non-orchestrated.html){: external}
 
@@ -56,21 +56,21 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
     ```
     apt-get -y install linux-headers-$(uname -r)
     ```
-    {: codeblock}
+    {: pre}
 
     For RHEL, CentOS, and Fedora Linux distributions, run the following command:
 
     ```
     yum -y install kernel-devel-$(uname -r)
     ```
-    {: codeblock}
+    {: pre}
 
 4. Deploy the Sysdig agent. Run the following command from a terminal.
 
     ```
     curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure true --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
     ```
-    {: codeblock}
+    {: pre}
 
     Where
 
@@ -89,7 +89,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
     ```
     ps -ef | grep sysdig
     ```
-    {: codeblock}
+    {: pre}
 
     To see the latest Sysdig agent logs, go to the directory `/opt/draios/logs` and check the log file `draios.log`.
 
@@ -98,7 +98,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
     ```
     grep error /opt/draios/logs/draios.log
     ```
-    {: codeblock}
+    {: pre}
     
 
 
@@ -114,7 +114,7 @@ For example, you might need to run the following command to install external lin
 ```
 apt-get -y install linux-headers-$(uname -r)
 ```
-{: codeblock}
+{: pre}
 
 Notice that when you use a MacOS with a container that returns *...-linuxkit* with the command `uname -r`, it is most likely not compatible.
 
@@ -151,9 +151,11 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
 4. Check that the Sysdig agent is running. Run the following command:
 
     ```
-    docker ps -a
+    docker ps | grep sysdig-agent
     ```
     {: codeblock}
+
+    You can run `docker ps -a` to see all the containers that are running.
 
     The list of running containers is displayed. Check that a container with name `sysdig-agent` is listed.
 

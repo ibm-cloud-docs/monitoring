@@ -21,17 +21,17 @@ subcollection: Monitoring-with-Sysdig
 {:important: .important}
 {:note: .note}
 
-# Removing a Sysdig agent
-{: #remove_agent}
+# Upgrading a Sysdig agent
+{: #upgrade_agent}
 
-When you delete an {{site.data.keyword.mon_full_notm}} instance, or if you want to stop collecting metrics from a source, you must uninstall the Sysdig agent from sources where it was installed as a service. If you deployed a Sysdig agent as a container, you must run docker commands to remove the agent.
+{{site.data.keyword.mon_full_notm}} instance
 {:shortdesc}
 
 
-## Removing a Sysdig agent from a standard Kubernetes cluster
-{: #remove_agent_kube}
+## Upgrading a Sysdig agent for a standard Kubernetes cluster
+{: #update_agent_kube}
 
-Complete the following steps to remove a Sysdig agent from a Kubernetes cluster:
+Complete the following steps to update a Sysdig agent for a Kubernetes cluster:
 
 1. Set up the cluster environment. Run the following commands:
 
@@ -71,47 +71,62 @@ Complete the following steps to remove a Sysdig agent from a Kubernetes cluster:
     {: codeblock}
 
 
-## Removing a Sysdig agent that is deployed as a container in a Linux system
-{: #remove_agent_docker}
+## Updating a Sysdig agent that is deployed as a container in a Linux system
+{: #update_agent_docker}
 
 Complete the following steps to remove the Sysdig agent that is deployed as a conatiner in a Linux system:
 
-1. Stop the Sysdig agent container. 
-
-    Run the following command:
+1. Stop the Sysdig agent container. Run the following command:
 
     ```
     docker stop sysdig-agent
     ```
-    {: codeblock}
+    {: pre}
 
-2. Remove references to the Sysdig agent container.
+2. Remove the Sysdig agent container. Run the following command:
 
     ```
     docker rm sysdig-agent
     ```
-    {: codeblock}
+    {: pre}
 
-
-
-
-## Removing a Sysdig agent that has been deployed as a service in a Linux system 
-{: #remove_agent_linux}
-
-Complete the following steps to remove a Sysdig agent on Linux:
-
-* To uninstall the agent from **Debian and Ubuntu Linux distributions**, run the following command as the **sudo** user from a terminal:
+3. Get the latest version of the Sysdig agent. Run the following command:
 
     ```
-    sudo apt-get remove draios-agent
+    docker pull sysdig/agent
     ```
-    {: codeblock}
+    {: pre}
 
-* To uninstall the agent from **RHEL, CentOS, and Fedora Linux distributions**, run the following command as the **sudo** user from a terminal:
+4. Install the agent. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent#config_agent_docker).
+
+
+
+## Updating a Sysdig agent that has been deployed as a service in a Linux system 
+{: #update_agent_linux}
+
+Complete the following steps to update a Sysdig agent on Linux:
+
+* To update the agent from **Debian and Ubuntu Linux distributions**, run the following commands as the **sudo** user from a terminal:
 
     ```
-    sudo yum erase draios-agent
+    sudo apt-get update
     ```
-    {: codeblock}
+    {: pre}
 
+    ```
+    sudo apt-get -y install draios-agent
+    ```
+    {: pre}
+
+* To update the agent from **RHEL, CentOS, and Fedora Linux distributions**, run the following commands as the **sudo** user from a terminal:
+
+    ```
+    yum clean expire-cache
+    ```
+    {: pre}
+
+    ```
+    sudo yum -y install draios-agent
+    ```
+    {: pre}
 

@@ -73,11 +73,42 @@ You can also customize the type of log and the entries that are collected by con
 
 
 
-## Checking the status of an agent
-{: #agent_log_level_status}
+## Checking the version of an agent by using the CLI
+{: #agent_ts_version}
 
 ### Linux Sysdig agent
-{: #agent_log_level_status_linux}
+{: #agent_ts_version_linux}
+
+To check the version of an agent, run the following command:
+
+```
+/opt/draios/bin/dragent --version
+```
+{: pre}
+
+
+
+### Docker Sysdig agent
+{: #agent_ts_version_docker}
+
+To check the version of an agent, run the following command:
+
+```
+docker exec sysdig-agent /opt/draios/bin/dragent --version
+```
+{: pre}
+
+
+### Kubernetes Sysdig agent
+{: #agent_ts_version_kube}
+
+
+
+## Checking the status of an agent by using the CLI
+{: #agent_ts_status}
+
+### Linux Sysdig agent
+{: #agent_ts_status_linux}
 
 To check the status of an agent, run the following command:
 
@@ -89,7 +120,7 @@ service dragent status
 
 
 ### Docker Sysdig agent
-{: #agent_log_level_status_docker}
+{: #agent_ts_status_docker}
 
 To check the status of an agent, run the following command:
 
@@ -100,7 +131,7 @@ docker ps | grep sysdig-agent
 
 
 ### Kubernetes Sysdig agent
-{: #agent_log_level_status_kube}
+{: #agent_ts_status_kube}
 
 
 
