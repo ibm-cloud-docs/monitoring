@@ -59,7 +59,7 @@ Monitoring with Sysdig
     Sysdig Agent
         agent/config_agent.md
         [Upgrading a Sysdig agent](https://docs.sysdig.com/en/agent-upgrade.html)
-        upgrade_agent.md
+        agent/upgrade_agent.md
         agent/remove_agent.md
         [Configuring Agent Modes](https://docs.sysdig.com/en/configure-agent-modes.html)
         agent/agent_log_level.md
