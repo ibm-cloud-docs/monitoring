@@ -74,7 +74,7 @@ If you are experiencing connectivity issues, complete the following steps:
 
     You can view the dashboard template **Sysdig Agent Health & Status** that is available in **Host Infrastructure** to check the version of your Sysdig agents.
 
-2. [Upgrade your Sysdig agent](https://docs.sysdig.com/en/agent-upgrade.html) to version 10.5 as soon as possible to ensure a reliable flow of metrics and data into our systems.
+2. [Upgrade your Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-upgrade_agent) to version 10.5 as soon as possible to ensure a reliable flow of metrics and data into our systems.
 
 
 
