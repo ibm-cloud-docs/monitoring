@@ -257,19 +257,7 @@ To change the log level of a docker Sysdig agent, complete the following steps:
 ### Kubernetes Sysdig agent
 {: #agent_log_level_configure_kube}
 
-
-
-
-- name: ADDITIONAL_CONF #OPTIONAL pass additional parameters to the agent
-  value: "log:\n file_priority: debug\n console_priority: error"
-
-
-* The **file_priority** in the **log** section controls the type of log entries written to the file `/opt/draios/logs/draios.log`.
-* The **console_priority** in the **log** section controls the type of log entries written to the container console output when running the containerized agent.
-* The default log level is **info**, where a log entry is created for each aggregated metrics transmission to the backend servers, once per second, in addition to entries for any warnings and errors.
-* Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*
-
-Complete the following steps:
+Complete the following steps to change the log level of a Kubernetes Sysdig agent:
 
 1. Set up the cluster environment. Run the following commands:
 
@@ -280,101 +268,53 @@ Complete the following steps:
     ```
     {: codeblock}
 
-2. Edit the *sysdig-agent-configmap.yaml* file. 
+2. Modify the configuration file by editing the *sysdig-agent-configmap.yaml* file. Include information about the log level and the console log level that you want to set. Add the following section if it is not included:
 
-    Run the following command:
+    Run the following command to edit the config map:
 
     ```
     kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
-3. Make changes. Add the *metrics_filter* section or update the section.
-
-    For example, if the *metrics_filter* section of a Sysdig agent looks as follows:
+    Then, add or modify the log entries:
 
     ```
-    metrics_filter:
-      - include: metricA.*
-      - exclude: metricA.*
-      - include: metricB.*
-      - include: haproxy.backend.*
-      - exclude: haproxy.*
-      - exclude: metricC.*
-    ```
-    {: screen}
-
-    * You are configuring the Sysdig agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*. 
-
-    * You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*. 
-
-    * The entry `exclude: metricA.*` is ignored.
-
-4. Save the changes. 
-
-Changes are applied automatically. 
-
-
-
-### Filtering Kubernetes events by severity
-{: #change_kube_agent_filterby_severity}
-
-* The **event_priority** in the **log** section controls the type of events that are sent from the agent
-* The default log level is *information*. This means that only information and higher severity events are transmitted.
-* Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *information*, *debug* and *none*. **Note**: The values are listed from high priority to low priority.
-* Setting the level to `none` will block all event collection.
-
-
-1. Set up the cluster environment. Run the following command:
-
-    First, get the command to set the environment variable and download the Kubernetes configuration files.
-
-    ```
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    log:
+      file_priority: error
+      console_priority: warning
     ```
     {: codeblock}
 
-2. Get the details of the current log level that is configured:
+    The *file_priority* controls the log level. Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+
+    The *console_priority* controls the console output. Valid console log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+
+    The following configuration sample shows a log level set to *error*, and a console log level set to *warning*:
 
     ```
-    kubectl describe configmap sysdig-agent -n ibm-observe | file_priority
+    apiVersion: v1
+    data:
+      dragent.yaml: |
+      configmap: true
+      ...
+      collector: ingest.us-east.monitoring.cloud.ibm.com
+      collector_port: 6443
+      ssl: true
+      ssl_verify_certificate: true
+      sysdig_capture_enabled: false
+      new_k8s: true
+      log:
+        file_priority: error
+        console_priority: warning
+      prometheus:
+        enabled: true
     ```
-    {: pre}
+    {: codeblock}
 
-    kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:latest -n ibm-observe
+4. Save the changes. 
+ 
 
-    
+Note, you can also download the configmap by running: `kubectl get configmap sysdig-agent -o yaml -n ibm-observe > sysdig-agent-cm.yaml`. To apply the changes, you can run `kubectl apply -f sysdig-agent-cm.yaml -n ibm-observe`.
+{: note}
 
-    Verify the Sysdig agent is running.
-
-3. Check the DaemonSet update strategy:
-
-    ```
-    kubectl get ds/sysdig-agent -o go-template='{{.spec.updateStrategy.type}}{{"\n"}}' -n ibm-observe
-    ```
-    {: pre}
-
-    Verify that is set to `RollingUpdate`.
-
-4. Check the image version that is deployed:
-
-    ```
-    kubectl describe ds sysdig-agent -n ibm-observe | grep Image
-    ```
-    {: pre}
-
-5. Update the image that is configured in the DaemonSet template to the Sysdig agent image that you want to use:
-
-    ```
-    kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:latest -n ibm-observe
-    ```
-    {: pre}
-
-    This step will initiate the update request.
-
-6. Chech the update completes.
-
-    ```
-    kubectl rollout status ds/sysdig-agent
-    ```
-    {: pre}
