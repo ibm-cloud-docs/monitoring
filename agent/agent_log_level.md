@@ -268,12 +268,12 @@ Complete the following steps to change the log level of a Kubernetes Sysdig agen
     ```
     {: codeblock}
 
-2. Modify the configuration file by editing the *sysdig-agent-configmap.yaml* file. Include information about the log level and the console log level that you want to set. Add the following section if it is not included:
+2. Modify the agent's DaemonSet file. Include information about the log level and the console log level that you want to set.
 
     Run the following command to edit the config map:
 
     ```
-    kubectl edit configmap sysdig-agent -n ibm-observe
+    kubectl edit daemonset sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
@@ -290,33 +290,28 @@ Complete the following steps to change the log level of a Kubernetes Sysdig agen
 
     The *console_priority* controls the console output. Valid console log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
 
-    The following configuration sample shows a log level set to *error*, and a console log level set to *warning*:
+    The following configuration sample shows a log level set to *info*, and a console log level set to *error*:
 
     ```
-    apiVersion: v1
-    data:
-      dragent.yaml: |
-      configmap: true
-      ...
-      collector: ingest.us-east.monitoring.cloud.ibm.com
-      collector_port: 6443
-      ssl: true
-      ssl_verify_certificate: true
-      sysdig_capture_enabled: false
-      new_k8s: true
-      log:
-        file_priority: error
-        console_priority: warning
-      prometheus:
-        enabled: true
+    ...
+    spec:
+      containers:
+      - env:
+        - name: ADDITIONAL_CONF
+          value: |-
+            log:
+             file_priority: info 
+             console_priority: error
+        image: icr.io/ext/sysdig/agent:latest
+        imagePullPolicy: Always
+    ...
     ```
     {: codeblock}
 
-4. Save the changes. 
+The log level changes are applied when you save the changes. 
  
 
-Note, you can also download the configmap by running: `kubectl get configmap sysdig-agent -o yaml -n ibm-observe > sysdig-agent-cm.yaml`. To apply the changes, you can run `kubectl apply -f sysdig-agent-cm.yaml -n ibm-observe`.
+Note, you can also download the configmap by running: `kubectl get daemonset sysdig-agent -o yaml -n ibm-observe > sysdig-agent-ds.yaml`. To apply the changes, you can run `kubectl apply -f sysdig-agent-ds.yaml -n ibm-observe`.
 {: note}
-
 
 
