@@ -318,3 +318,5 @@ Complete the following steps to change the log level of a Kubernetes Sysdig agen
 Note, you can also download the configmap by running: `kubectl get configmap sysdig-agent -o yaml -n ibm-observe > sysdig-agent-cm.yaml`. To apply the changes, you can run `kubectl apply -f sysdig-agent-cm.yaml -n ibm-observe`.
 {: note}
 
+
+
