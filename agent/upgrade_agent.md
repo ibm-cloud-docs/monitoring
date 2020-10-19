@@ -92,7 +92,16 @@ Complete the following steps to update a Sysdig agent with a `RollingUpdate` upd
 5. Update the image that is configured in the DaemonSet template to the Sysdig agent image that you want to use:
 
     ```
-    kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:latest -n ibm-observe
+    kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:IMAGE_VERSION -n ibm-observe
+    ```
+    {: pre}
+
+    Where `IMAGE_VERSION` is the version of the agent that you want to deploy. To see the the agent versions that are available, see [Sysdig Agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html){: external}.
+    
+    For example, to update the agent to version `10.5.1`, you can run the following command:
+
+    ```
+    kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:10.5.1 -n ibm-observe
     ```
     {: pre}
 
@@ -101,7 +110,7 @@ Complete the following steps to update a Sysdig agent with a `RollingUpdate` upd
 6. Chech the update completes.
 
     ```
-    kubectl rollout status ds/sysdig-agent
+    kubectl rollout status ds/sysdig-agent -n ibm-observe
     ```
     {: pre}
 
