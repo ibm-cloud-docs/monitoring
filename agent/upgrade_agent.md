@@ -24,16 +24,38 @@ subcollection: Monitoring-with-Sysdig
 # Upgrading a Sysdig agent
 {: #upgrade_agent}
 
-{{site.data.keyword.mon_full_notm}} instance
+Choose any of the following options to update the a Sysdig agent:
 {:shortdesc}
 
 
 ## Upgrading a Sysdig agent for a standard Kubernetes cluster
 {: #update_agent_kube}
 
-Complete the following steps to update a Sysdig agent for a Kubernetes cluster:
+By default, the Sysdig agent has a `RollingUpdate` update strategy. 
 
-1. Set up the cluster environment. Run the following commands:
+```
+updateStrategy:
+    rollingUpdate:
+      maxUnavailable: 1
+    type: RollingUpdate
+```
+{: screen}
+
+When you update the agent's DaemonSet template, old DaemonSet pods are killed, and new DaemonSet pods are created automatically.
+
+The image that is used to create the new pods is the one that is specified in the DaemonSet template. By default, the Sysdig agent's image pull policy is configured to always so that it pulls the latest image. The `imagePullPolicy` of the container is set to `Always`. 
+
+```
+containers:
+    - image: icr.io/ext/sysdig/agent
+      imagePullPolicy: Always
+      name: sysdig-agent
+```
+{: screen}
+
+Complete the following steps to update a Sysdig agent with a `RollingUpdate` update strategy:
+
+1. Set up the cluster environment. Run the following command:
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
@@ -42,33 +64,49 @@ Complete the following steps to update a Sysdig agent for a Kubernetes cluster:
     ```
     {: codeblock}
 
-2. Remove the cluster role binding. Run the following command:
+2. List the DaemonSets that are running in the `ibm-observe` namespace, and verify that the Sysdig agent is running in this namespace:
 
     ```
-    kubectl delete clusterrolebinding sysdig-agent
+    kubectl get daemonsets -n ibm-observe
     ```
-    {: codeblock}
+    {: pre}
 
-3. Remove the service account. Run the following command:
+    Verify the Sysdig agent is running.
 
-    ```
-    kubectl delete serviceaccount -n ibm-observe sysdig-agent
-    ```
-    {: codeblock}
-
-4. Remove the `daemonset`. Run the following command:
+3. Check the DaemonSet update strategy:
 
     ```
-    kubectl delete daemonset sysdig-agent -n ibm-observe
+    kubectl get ds/sysdig-agent -o go-template='{{.spec.updateStrategy.type}}{{"\n"}}' -n ibm-observe
     ```
-    {: codeblock}
+    {: pre}
 
-5. Remove the secret. Run the following command:
+    Verify that is set to `RollingUpdate`.
+
+4. Check the image version that is deployed:
 
     ```
-    kubectl delete secret sysdig-agent -n ibm-observe
+    kubectl describe ds sysdig-agent -n ibm-observe | grep Image
     ```
-    {: codeblock}
+    {: pre}
+
+5. Update the image that is configured in the DaemonSet template to the Sysdig agent image that you want to use:
+
+    ```
+    kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:latest -n ibm-observe
+    ```
+    {: pre}
+
+    This step will initiate the update request.
+
+6. Chech the update completes.
+
+    ```
+    kubectl rollout status ds/sysdig-agent
+    ```
+    {: pre}
+
+
+
 
 
 ## Updating a Sysdig agent that is deployed as a container in a Linux system
