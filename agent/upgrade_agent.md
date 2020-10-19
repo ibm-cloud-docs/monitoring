@@ -24,7 +24,7 @@ subcollection: Monitoring-with-Sysdig
 # Upgrading a Sysdig agent
 {: #upgrade_agent}
 
-Choose any of the following options to update the a Sysdig agent:
+Choose any of the following options to update a Sysdig agent:
 {:shortdesc}
 
 
@@ -107,7 +107,7 @@ Complete the following steps to update a Sysdig agent with a `RollingUpdate` upd
 
     This step will initiate the update request.
 
-6. Chech the update completes.
+6. Check the update completes.
 
     ```
     kubectl rollout status ds/sysdig-agent -n ibm-observe

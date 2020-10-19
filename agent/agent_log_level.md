@@ -54,17 +54,6 @@ You should set the log level to *info*, *debug*, or *trace* to troubleshoot agen
 {: tip}
 
 
-The following table lists the locations of the Sysdig agent's logs per type of agent:
-
-| Agent Type                                                    | Agent configuration file                  |
-|---------------------------------------------------------------|-------------------------------------------|
-| Sysdig agent as a service in a Linux system                   | `/opt/draios/logs/draios.log`             |
-| Sysdig agent as a Docker container in a Linux system          | `/opt/draios/logs/draios.log`             |
-| Sysdig agent as a pod in a standard Kubernetes environment    | `sysdig-agent-configmap.yaml`             |
-| Sysdig agent as a pod in an Openshift Kubernetes environment  | `sysdig-agent-configmap.yaml`             |
-{: caption="Table 2. Log locations per type of agent" caption-side="top"} 
-
-
 For example, consider the following use cases and the log section that you can configure to indicate the data that you want to log for an agent:
 
 | Use cases                                     | Log section entry           |
@@ -121,7 +110,25 @@ log_level = INFO
 ### Kubernetes Sysdig agent
 {: #agent_log_level_check_kube}
 
+To get the log level of a Kubernetes Sysdig agent, complete the following steps:
 
+1. Set up the cluster environment. Run the following command:
+
+    First, get the command to set the environment variable and download the Kubernetes configuration files.
+
+    ```
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ```
+    {: codeblock}
+
+2. Get the agent log level. Run the following command:
+
+    ```
+    kubectl describe configmap sysdig-agent -n ibm-observe | grep file_priority
+    ```
+    {: pre}
+
+    If the command does not return any value, the log level is set to the default value `info`.
 
 
 
@@ -318,3 +325,56 @@ Changes are applied automatically.
 * Setting the level to `none` will block all event collection.
 
 
+1. Set up the cluster environment. Run the following command:
+
+    First, get the command to set the environment variable and download the Kubernetes configuration files.
+
+    ```
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ```
+    {: codeblock}
+
+2. Get the details of the current log level that is configured:
+
+    ```
+    kubectl describe configmap sysdig-agent -n ibm-observe | file_priority
+    ```
+    {: pre}
+
+    kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:latest -n ibm-observe
+
+    
+
+    Verify the Sysdig agent is running.
+
+3. Check the DaemonSet update strategy:
+
+    ```
+    kubectl get ds/sysdig-agent -o go-template='{{.spec.updateStrategy.type}}{{"\n"}}' -n ibm-observe
+    ```
+    {: pre}
+
+    Verify that is set to `RollingUpdate`.
+
+4. Check the image version that is deployed:
+
+    ```
+    kubectl describe ds sysdig-agent -n ibm-observe | grep Image
+    ```
+    {: pre}
+
+5. Update the image that is configured in the DaemonSet template to the Sysdig agent image that you want to use:
+
+    ```
+    kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:latest -n ibm-observe
+    ```
+    {: pre}
+
+    This step will initiate the update request.
+
+6. Chech the update completes.
+
+    ```
+    kubectl rollout status ds/sysdig-agent
+    ```
+    {: pre}
