@@ -8,18 +8,29 @@ IBM Cloud Monitoring with Sysdig
     getting-started.md
 
     {: .topicgroup}
-    Monitoring infrastructure
-        windows.md
-        baremetal_linux.md
-        kubernetes_cluster.md
-        ubuntu.md
-        [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
+    Monitor
 
-    {: .topicgroup}
-    Monitoring IBM Cloud services
-        platform_metrics_enabling.md
-        cloud_services.md
-        cloud_services_locations.md
+        {: .topicgroup}
+        Monitoring infrastructure
+            monitor/windows.md
+            monitor/baremetal_linux.md
+            monitor/kubernetes_cluster.md
+            monitor/ubuntu.md
+            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
+
+        {: .topicgroup}
+        Monitoring IBM Cloud services
+            monitor/platform_metrics_enabling.md
+            monitor/cloud_services.md
+            monitor/cloud_services_locations.md
+
+        {: .topicgroup}
+    Security and compliance
+        monitor/data-security.md
+        monitor/iam.md
+        monitor/ha-dr.md
+        monitor/service-connection.md
+        monitor/architecture-workload-isolation.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -28,82 +39,101 @@ IBM Cloud Monitoring with Sysdig
     upgrade.md
 
     {: .topicgroup}
+    Sysdig web UI
+        launch.md
+        get_sysdig_web_url.md
+
+    {: .topicgroup}
     Sysdig Agent
-        config_agent.md
-        remove_agent.md
-        access_key.md
-        change_kube_agent.md
-        change_linux_agent.md
-        change_container_agent.md
-
-    launch.md
-
+        agent/config_agent.md
+        agent/upgrade_agent.md
+        agent/remove_agent.md
+        [Configuring Agent Modes](https://docs.sysdig.com/en/configure-agent-modes.html)
+        agent/agent_log_level.md
+        agent/access_key.md
+        agent/change_kube_agent.md
+        agent/change_linux_agent.md
+        agent/change_container_agent.md
+    
     {: .topicgroup}
     IAM integration
         api_token.md
         iam_grant.md
         iam_grant_team.md
 
-    manage.md
-
     {: .topicgroup}
-    Metrics
-        metrics.md
-        groups.md
-        api/metrics_api.md
-        api/metrics_python.md
+    Monitor
 
-    {: .topicgroup}
-    Dashboards
-        dashboards.md
-        panels.md
-        api/dashboard_python.md
+        {: .topicgroup}
+        Metrics
+            [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
+            [Working with metrics](https://docs.sysdig.com/en/metrics.html)
+            monitor/groups.md
+            monitor/api/metrics_api.md
+            monitor/api/metrics_python.md
 
-    {: .topicgroup}
-    Alerts
-        [Working with alerts](https://docs.sysdig.com/en/alerts.html)
-        api/alert_api.md
-        api/alert_python.md
-        notifications.md
-        api/notifications_api.md
+        {: .topicgroup}
+        Dashboards
+            [Dashboard templates](https://docs.sysdig.com/en/dashboard-templates-209032.html)
+            [Working with dashboards](https://docs.sysdig.com/en/dashboards.html)
+            monitor/panels.md
+            monitor/api/dashboard_python.md
 
-    {: .topicgroup}
-    Events
-        [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
+        {: .topicgroup}
+        Explore views
+            [Monitoring the infrastructure through the Explore section](https://docs.sysdig.com/en/explore.html)
 
-    {: .topicgroup}
-    Captures
-        captures.md
+        {: .topicgroup}
+        Alerts
+            [Working with alerts](https://docs.sysdig.com/en/alerts.html)
+            monitor/api/alert_api.md
+            monitor/api/alert_python.md
+            monitor/notifications.md
+            monitor/api/notifications_api.md
 
-    {: .topicgroup}
-    Teams
-        teams.md
+        {: .topicgroup}
+        Events
+            [Working with custom events](https://docs.sysdig.com/en/custom-events.html)
+
+        {: .topicgroup}
+        Captures
+            [Working with captures](https://docs.sysdig.com/en/captures.html)
+
+        {: .topicgroup}
+        Teams
+            monitor/teams.md
+        
+        {: .topicgroup}
+        Integrations
+            [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    endpoints.md
     pricing.md
-    default_dashboards.md
-    monitoring.md
-    shared-responsibilities.md
 
     {: .topicgroup}
-    Sysdig API
-        api/rest_apis.md
-        api/mon-curl.md
+    Monitor
+        monitor/endpoints.md
+        monitor/shared-responsibilities.md
+        monitor/monitoring.md
 
-    {: .topicgroup}
-    Sysdig Python client
-        api/python-client.md
-        [Sysdig Cloud Python Script Library](https://python-sdc-client.readthedocs.io/en/latest/)
+        {: .topicgroup}
+        Sysdig API
+            monitor/api/rest_apis.md
+            monitor/api/mon-curl.md
 
-    {: .topicgroup}
-    Enhancing security for IBM Cloud Monitoring with Sysdig
-        data-security.md
-        iam.md
-        ha-dr.md
-        service-connection.md
-        architecture-workload-isolation.md
+        {: .topicgroup}
+        Sysdig Python client
+            monitor/api/python-client.md
+            [Sysdig Cloud Python Script Library](https://python-sdc-client.readthedocs.io/en/latest/)
+
+        {: .topicgroup}
+        Cloud services metrics
+            monitor/metrics/cloudfoundry-docs.md
+
+        [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
+        [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
+        deprecated.md
 
     {: .topicgroup}
     Cloud services metrics
@@ -118,7 +148,7 @@ IBM Cloud Monitoring with Sysdig
     {: .navgroup id="help"}
     gettinghelp.md
     troubleshoot.md
-    faq.md
+    monitor/faq.md
     {: .navgroup-end}
 
 

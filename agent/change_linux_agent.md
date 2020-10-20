@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-09-15"
 
 keywords: Sysdig, IBM Cloud, monitoring, customize, linux agent
 
@@ -53,7 +53,7 @@ files:
 ## Editing the dragent yaml file
 {: #change_linux_agent_edit_agent}
 
-The yaml file is loacated in */opt/draios/etc/*.
+The yaml file is loacated in `/opt/draios/etc/`.
 
 Complete the following steps to edit the file and apply the changes:
 
