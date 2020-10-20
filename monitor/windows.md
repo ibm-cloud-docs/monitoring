@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-10-20"
 
 keywords: Sysdig, IBM Cloud, monitoring, windows
 
@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Monitoring a Windows environment
 {: #windows}
 
-The standard Sysdig agent cannot be installed on a Windows platform. In order to monitor a Windows system with {{site.data.keyword.mon_full_notm}}, you can leverage the Prometheus WMI Exporter to perform the collection of the metrics on the system.
+The standard Sysdig agent cannot be installed on a Windows platform. In order to monitor a Windows system with {{site.data.keyword.mon_full_notm}}, you can leverage the [Prometheus WMI Exporter](https://promcat.io/apps/windows){: external} to perform the collection of the metrics on the system.
 {:shortdesc}
 
 Once the metrics are collected you have two options for publishing the metrics to Sysdig, remotely scraping the metrics with a Linux Sysdig agent,or pushing from a local instance of Prometheus using remote write. Step 3 will cover these two options, but step 1 and 2 are the same regardless of how the metrics are sent.
@@ -34,21 +34,26 @@ Once the metrics are collected you have two options for publishing the metrics t
 Complete the following steps to configure the following Windows images to send metrics to a Sysdig instance:
 * Windows Server 2019 Standard Edition (64 bit)
 * Windows Server 2016 Standard Edition (64 bit)
-* Windows Server 2012 Standard Edition (64 bit)
-* Windows Server 2012 R2 Standard Edition (64 bit)
 
 ## Step 1. Configure the Prometheus WMI exporter
 {: #windows_step1}
 
-Configure the Prometheus WMI exporter to collect Windows system metrics.
+Configure the [Prometheus WMI exporter](https://github.com/prometheus-community/windows_exporter){: external} to collect Windows system metrics.
 
 The Prometheus WMI exporter runs as a Windows service. You configure the metrics that you want to monitor by enabling collectors. 
 
 The following collectors are supported:
-* CPU
-* Computer system metrics (cs)
-* Disk metrics
-* Network interface metrics
+
+| Collector name | Information about metrics collected per collector | 
+|----------------|---------------------------------------------------|
+| `cpu`          | [CPU metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.cpu.md){: external} |
+| `cs`           | [Computer system metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.cs.md){: external} |
+| `logical_disk` | [Disk metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.logical_disk.md){: external} |
+| `os`           | [Operating System metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.os.md){: external} |
+| `system`       | [System metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.system.md){: external} |
+| `net`          | [Network interface metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.net.md){: external} |
+| `memory`       | [Memory metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.memory.md){: external} |
+{: caption="Table 1. Collectors" caption-side="top"} 
 
 
 Complete the following steps to configure the Prometheus WMI exporter in your Windows system:
