@@ -124,7 +124,7 @@ To get the log level of a Kubernetes Sysdig agent, complete the following steps:
 2. Get the agent log level. Run the following command:
 
     ```
-    kubectl describe configmap sysdig-agent -n ibm-observe | grep file_priority
+    kubectl describe daemonset sysdig-agent -n ibm-observe | grep file_priority
     ```
     {: pre}
 
@@ -290,26 +290,63 @@ Complete the following steps to change the log level of a Kubernetes Sysdig agen
 
     The *console_priority* controls the console output. Valid console log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
 
-    The following configuration sample shows a log level set to *info*, and a console log level set to *error*:
+    The following configuration sample shows a log level set to *debug*, and a console log level set to *error*:
 
     ```
     ...
+    spec:
+      revisionHistoryLimit: 10
+      selector:
+        matchLabels:
+          app: sysdig-agent
+      template:
+        metadata:
+          creationTimestamp: null
+          labels:
+             app: sysdig-agent
+        spec:
+          containers:
+          - image: icr.io/ext/sysdig/agent:latest
+            imagePullPolicy: Always
+            name: sysdig-agent
+            env:
+            - name: ADDITIONAL_CONF
+              value: "log:\n  file_priority: debug\n  console_priority: error"
+            readinessProbe:
+    ...
+    ```
+    {: codeblock}
+
+The log level changes are applied when you save the changes. 
+
+
+If you have changed previously the log level, the DaemonSet section looks like:
+
+```
+...
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: sysdig-agent
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: sysdig-agent
     spec:
       containers:
       - env:
         - name: ADDITIONAL_CONF
           value: |-
             log:
-             file_priority: info 
-             console_priority: error
+              file_priority: debug
+              console_priority: error
         image: icr.io/ext/sysdig/agent:latest
         imagePullPolicy: Always
-    ...
-    ```
-    {: codeblock}
-
-The log level changes are applied when you save the changes. 
- 
+...
+```
+{: codeblock}
 
 Note, you can also download the configmap by running: `kubectl get daemonset sysdig-agent -o yaml -n ibm-observe > sysdig-agent-ds.yaml`. To apply the changes, you can run `kubectl apply -f sysdig-agent-ds.yaml -n ibm-observe`.
 {: note}
