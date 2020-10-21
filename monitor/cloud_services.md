@@ -80,7 +80,7 @@ The following table lists infrastructure services that are Sysdig-enabled:
 | [{{site.data.keyword.BluVirtServers}}](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) | Scalable virtual servers that are purchased with cores and memory allocations. | [Metrics collected by {{site.data.keyword.BluVirtServers}}](/docs/cloud-infrastructure?topic=cloud-infrastructure-classic-sysdig-metrics)|
 {: caption="List of VPC classic infrastructure services (generation 1)" caption-side="top"} 
 
-## Containers
+## Container services
 {: #container}
 
 The following table lists container services that are Sysdig-enabled:
