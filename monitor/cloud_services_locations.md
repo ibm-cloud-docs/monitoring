@@ -170,7 +170,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 {: class="simple-tab-table"}
 {: row-headers}
 
-## Containers
+## Container services
 {: #cloud_services_locations_container}
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
