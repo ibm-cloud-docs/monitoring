@@ -17,8 +17,9 @@ Monitoring with Sysdig
             monitor/baremetal_linux.md
             monitor/kubernetes_cluster.md
             monitor/ubuntu.md
-            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
+            monitor/prometheus.md
             monitor/availability_metrics.md
+            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
 
         {: .topicgroup}
         Monitoring IBM Cloud services
