@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-10-08"
+lastupdated: "2020-10-20"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -31,17 +31,7 @@ List of {{site.data.keyword.cloud}} services that send metrics to {{site.data.ke
 {:shortdesc}
 
 
-## Compute infrastructure services
-{: #infrastructure}
-
-The following table lists infrastructure services that are Sysdig-enabled:
-
-| Service     | Description | Metrics | 
-|-------------|-------------|-------------------|
-| [{{site.data.keyword.BluVirtServers}}](/docs/vsi?topic=virtual-servers-getting-started-tutorial) | {{site.data.keyword.BluVirtServers}} are scalable virtual servers that are purchased with dedicated cores and memory allocations. They are a great option if you are looking for compute resources, that can be added in minutes, with access to features like image templates. | [Metrics collected by {{site.data.keyword.BluVirtServers}}](/docs/vsi?topic=virtual-servers-sysdig-monitoring-metrics)|
-{: caption="List of integration Cloud services" caption-side="top"} 
-
-## Compute Cloud Foundry resources
+## Cloud Foundry
 {: #platform_cfapps}
 
 The following table lists CF resources that are Sysdig-enabled:
@@ -51,17 +41,80 @@ The following table lists CF resources that are Sysdig-enabled:
 | [Cloud Foundry (CF)](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) | CF is the premier industry standard Platform-as-a-Service (PaaS), that ensures the fastest, easiest, and most reliable deployment of cloud-native applications.  | [Metrics collected by CF](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitor-cf-sysdig)|
 {: caption="List of CF resources" caption-side="top"} 
 
-## Container services
-{: #container}
+
+## Compute services
+{: #compute}
+
+For more information, see [Compute services](/docs/cloud-infrastructure?topic=cloud-infrastructure-compute).
+
+### Serverless
+{: #compute_serverless}
 
 The following table lists container services that are Sysdig-enabled:
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) | {{site.data.keyword.registrylong_notm}} provides a multi-tenant, highly available, scalable, and encrypted private image registry that is hosted and managed by {{site.data.keyword.IBM}}. | [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor_sysdig)|
+| [{{site.data.keyword.openwhisk}}](/docs/openwhisk?topic=openwhisk-getting-started) | A Functions-as-a-Service (FaaS) programming platform based on Apache OpenWhisk. | [Monitoring metrics for {{site.data.keyword.openwhisk}}](/docs/openwhisk?topic=openwhisk-monitor-sysdig)|
 {: caption="List of {{site.data.keyword.cloud_notm}} container services" caption-side="top"} 
 
-## Platform database services
+### VPC
+{: #compute_vpc}
+
+With {{site.data.keyword.vpc_full}} (VPC), you can provision a VPC in the {{site.data.keyword.cloud_notm}} to run an isolated environment within the public cloud. VPC gives you the security of a private cloud, with the agility and ease of a public cloud. The VPC infrastructure contains a number of Infrastructure-as-a-Service (IaaS) offerings, including Virtual Servers for VPC. [Learn more](/docs/vpc?topic=vpc-getting-started).
+
+The following table lists VPC infrastructure services that are Sysdig-enabled:
+
+| Service     | Description | Metrics             |
+|-------------|-------------|-------------------|
+| [VPC virtual server instances](/docs/vpc?topic=vpc-about-advanced-virtual-servers) | Virtual servers for VPC is an Infrastructure-as-a-Service (IaaS) offering that you can use to quickly provision instances with high network performance. | [Metrics collected by {{site.data.keyword.BluVirtServers}}](/docs/cloud-infrastructure?topic=cloud-infrastructure-vpc-sysdig-metrics)|
+{: caption="List of VPC infrastructure services (generation 2)" caption-side="top"} 
+
+
+### Classic
+{: #compute_classic}
+
+The following table lists infrastructure services that are Sysdig-enabled:
+
+| Service     | Description | Metrics             |
+|-------------|-------------|-------------------|
+| [{{site.data.keyword.BluVirtServers}}](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) | Scalable virtual servers that are purchased with cores and memory allocations. | [Metrics collected by {{site.data.keyword.BluVirtServers}}](/docs/cloud-infrastructure?topic=cloud-infrastructure-classic-sysdig-metrics)|
+{: caption="List of VPC classic infrastructure services (generation 1)" caption-side="top"} 
+
+
+
+
+## Networking services
+{: #networking}
+
+For more information, see [Networking services](/docs/cloud-infrastructure?topic=cloud-infrastructure-network).
+
+
+### VPC
+{: #networking_vpc}
+
+The following table lists VPC infrastructure services that are Sysdig-enabled:
+
+| Service     | Description | Metrics             |
+|-------------|-------------|-------------------|
+| [Load Balancer for VPC](/docs/vpc?topic=vpc-network-load-balancers)| Distributes traffic among multiple server instances within the same region of your VPC.  | [Monitoring metrics using IBM Load Balancer for VPC with Sysdig](/docs/vpc?topic=vpc-nlb_monitoring-metrics-sysdig) |
+| [VPN for VPC](/docs/vpc?topic=vpc-using-vpn)| Securely connect your VPC to another private network. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premises private network or another VPC. | [Monitoring VPC VPN metrics](/docs/vpc?topic=vpc-sysdig-monitoring-metrics) |
+{: caption="List of VPC services (generation 2)" caption-side="top"} 
+
+
+### Classic
+{: #networking_classic}
+
+The following table lists infrastructure services that are Sysdig-enabled:
+
+| Service     | Description | Metrics             |
+|-------------|-------------|-------------------|
+| [{{site.data.keyword.loadbalancer_full}}](/docs/loadbalancer-service?topic=loadbalancer-service-getting-started) | Distributes processing and communications evenly across multiple servers within a data center so that a single device does not carry an entire load. | [Metrics collected by {{site.data.keyword.loadbalancer_full}}](/docs/loadbalancer-service?topic=loadbalancer-service-monitoring-metrics) |
+| [{{site.data.keyword.cloud}} Load Balancer for VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-load-balancers-in-ibm-cloud-vpc)| Use this service to distribute traffic among multiple server instances within the same region of your VPC.  | [Monitoring metrics using IBM Load Balancer for VPC with Sysdig](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-monitoring-metrics-sysdig) |
+| [{{site.data.keyword.cloud}} VPN for VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc)| Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. | [Monitoring VPC VPN metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-sysdig-monitoring-metrics) |
+{: caption="List of VPC classic services (generation 1)" caption-side="top"} 
+
+
+## Database services
 {: #database}
 
 The following table lists database services that are Sysdig-enabled:
@@ -78,7 +131,10 @@ The following table lists database services that are Sysdig-enabled:
 | [{{site.data.keyword.sqlquery_full}}](/docs/services/sql-query?topic=sql-query-gettingstarted)| {{site.data.keyword.sqlquery_full}} is a fully-managed service that lets you run SQL queries (that is, SELECT statements) to analyze, transform, or clean up rectangular data. | [Metrics that are generated by {{site.data.keyword.sqlquery_full}}](/docs/services/sql-query?topic=sql-query-metrics) |
 {: caption="List of database services" caption-side="top"} 
 
-## Platform integration services
+
+
+
+## Integration services
 {: #integration}
 
 The following table lists integration services that are Sysdig-enabled:
@@ -90,52 +146,31 @@ The following table lists integration services that are Sysdig-enabled:
 {: caption="List of integration Cloud services" caption-side="top"} 
 
 
-
-## Networking services
-{: #networking}
-
-The following table lists Cloud services that are Sysdig-enabled: 
-
-
-| Service     | Description | Metrics |
-|-------------|-------------|-------------------------------------------------------------------------|
-| [{{site.data.keyword.loadbalancer_full}}](/docs/loadbalancer-service?topic=loadbalancer-service-getting-started) | Use this service to improve availability of business-critical applications by distributing traffic among multiple application server instances, and by forwarding traffic to healthy instances only. | [Metrics collected by {{site.data.keyword.loadbalancer_full}}](/docs/loadbalancer-service?topic=loadbalancer-service-monitoring-metrics) |
-{: caption="List of security networking services" caption-side="top"} 
-
-
-
-## Platform storage services
-{: #storage}
-
+## Platform
+{: #platform}
 
 The following table lists integration services that are Sysdig-enabled:
 
-| Service     | Description | Metrics |
+| Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)| You can use {{site.data.keyword.cos_full_notm}} to store unstructured data in the {{site.data.keyword.cloud_notm}}.  | [Metrics that are collected by {{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-mm-cos-integration&programming_language=Console) |
-{: caption="List of integration Cloud services" caption-side="top"} 
+| [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started) | {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC).  |  |
+{: caption="List of platform services" caption-side="top"} 
 
 
-## VPC infrastructure
-{: #vpc_infrastructure}
+## Storage services
+{: #storage}
 
-You can provision a Virtual Private Cloud (VPC) in the {{site.data.keyword.cloud_notm}} to run an isolated environment within the public cloud. VPC gives you the security of a private cloud, with the agility and ease of a public cloud. For more information, see [About Virtual Private Cloud](/docs/vpc-on-classic?topic=vpc-on-classic-about).
-
-There are 2 types of VPC infrastructure that you can provision in your account:
-* [Virtual Private Cloud classic Gen 1](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started)
-* [{{site.data.keyword.vpc_full}} Gen 2](/docs/vpc?topic=vpc-getting-started)
+For more information, see [Storage services](/docs/cloud-infrastructure?topic=cloud-infrastructure-compute).
 
 
-### VPC Gen 1 (Classic)
-{: #vpc_infrastructure_classic}
+### VPC
+{: #storage_vpc}
 
 The following table lists VPC infrastructure services that are Sysdig-enabled:
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
-| [Load Balancer](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-load-balancers-in-ibm-cloud-vpc)| Use this service to distribute traffic among multiple server instances within the same region of your VPC.  | [Monitoring metrics using IBM Load Balancer for VPC with Sysdig](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-monitoring-metrics-sysdig) |
-| [VPN](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc)| Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. | [Monitoring VPC VPN metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-sysdig-monitoring-metrics) |
-{: caption="List of VPC infrastructure services (generation 1)" caption-side="top"} 
-
+| [{{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)| You can use {{site.data.keyword.cos_full_notm}} to store unstructured data in the {{site.data.keyword.cloud_notm}}.  | [Metrics that are collected by {{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-mm-cos-integration&programming_language=Console) |
+{: caption="List of VPC services (generation 2)" caption-side="top"} 
 
 
