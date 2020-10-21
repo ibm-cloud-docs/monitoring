@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-10-08"
+lastupdated: "2020-10-20"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -31,43 +31,8 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {:shortdesc}
 
 
-
-## Compute infrastructure services
-{: #cloud_services_locations_infrastructure}
-
-| Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
-|---------------------------------------------------------------|---------------------|------------------|
-| {{site.data.keyword.BluVirtServers}}                          | `NO`                | ![Checkmark icon](images/checkmark-icon.svg)  |          
-{: caption="Infrastructure services integration in Europe locations" caption-side="top"}
-{: #cs_infra-table-1}
-{: tab-title="Europe"}
-{: tab-group="cs_infra"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
-|------------------------------------------------|---------------------|------------------------------------|
-| {{site.data.keyword.BluVirtServers}}           | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |          
-{: caption="Infrastructure services integration in America's locations" caption-side="top"}
-{: #cs_infra-table-2}
-{: tab-title="America"}
-{: tab-group="cs_infra"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | 
-|------------------------------------------------|------------------|----------------------------|
-| {{site.data.keyword.BluVirtServers}}           | `NO` | `NO` |     
-{: caption="Infrastructure services integration in AP locations" caption-side="top"}
-{: #cs_infra-table-3}
-{: tab-title="Asia Pacific"}
-{: tab-group="cs_infra"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-
-## Compute Cloud Foundry resources
-{: #cloud_services_locations_platform_cfapps}
+## Cloud Foundry
+{: #cloud_services_locations_cf}
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
@@ -99,8 +64,14 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {: class="simple-tab-table"}
 {: row-headers}
 
-## Container services
-{: #cloud_services_locations_container}
+
+## Compute services
+{: #cloud_services_locations_compute}
+
+For more information, see [Compute services](/docs/cloud-infrastructure?topic=cloud-infrastructure-compute).
+
+### Containers
+{: #cloud_services_locations_compute_container}
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
@@ -135,13 +106,203 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 `[*]` {{site.data.keyword.registrylong_notm}} global registry metrics are available through the Sysdig Washington (us-east) instance.
 
+### Serverless
+{: #cloud_services_locations_compute_serverless}
 
-## Platform database services
+| Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------|------------------|
+| {{site.data.keyword.openwhisk}}          | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg)  |          
+{: caption="Serverless integration in Europe locations" caption-side="top"}
+{: #cs_sv-table-1}
+{: tab-title="Europe"}
+{: tab-group="cs_sv"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
+|------------------------------------------------|---------------------|------------------------------------|
+| {{site.data.keyword.openwhisk}}        | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg) `[*]` |          
+{: caption="Serverless integration in America's locations" caption-side="top"}
+{: #cs_sv-table-2}
+{: tab-title="America"}
+{: tab-group="cs_sv"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
+|------------------------------------------------|------------------|----------------------------|
+| {{site.data.keyword.openwhisk}}        | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg) |      
+{: caption="Serverless integration in AP locations" caption-side="top"}
+{: #cs_sv-table-3}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_sv"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+### VPC
+{: #cloud_services_locations_compute_vpc}
+
+| Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------|------------------|
+| VPC virtual server instances                          | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg)  |          
+{: caption="Infrastructure services integration in Europe locations" caption-side="top"}
+{: #cs_vpcinfra-table-1}
+{: tab-title="Europe"}
+{: tab-group="cs_vpcinfra"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
+|------------------------------------------------|---------------------|------------------------------------|
+| VPC virtual server instances           | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |          
+{: caption="Infrastructure services integration in America's locations" caption-side="top"}
+{: #cs_vpcinfra-table-2}
+{: tab-title="America"}
+{: tab-group="cs_vpcinfra"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | 
+|------------------------------------------------|------------------|----------------------------|
+| VPC virtual server instances           | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |     
+{: caption="Infrastructure services integration in AP locations" caption-side="top"}
+{: #cs_vpcinfra-table-3}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_vpcinfra"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+### Classic
+{: #cloud_services_locations_compute_classic}
+
+
+| Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------|------------------|
+| {{site.data.keyword.BluVirtServers}}                          | `NO`                | ![Checkmark icon](images/checkmark-icon.svg)  |          
+{: caption="Infrastructure services integration in Europe locations" caption-side="top"}
+{: #cs_infra-table-1}
+{: tab-title="Europe"}
+{: tab-group="cs_infra"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
+|------------------------------------------------|---------------------|------------------------------------|
+| {{site.data.keyword.BluVirtServers}}           | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |          
+{: caption="Infrastructure services integration in America's locations" caption-side="top"}
+{: #cs_infra-table-2}
+{: tab-title="America"}
+{: tab-group="cs_infra"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | 
+|------------------------------------------------|------------------|----------------------------|
+| {{site.data.keyword.BluVirtServers}}           | `NO` | `NO` |     
+{: caption="Infrastructure services integration in AP locations" caption-side="top"}
+{: #cs_infra-table-3}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_infra"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+
+
+## Networking services
+{: #cloud_services_locations_networking}
+
+For more information, see [Networking services](/docs/cloud-infrastructure?topic=cloud-infrastructure-network).
+
+### VPC
+{: #cloud_services_locations_networking_vpc}
+
+| Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------|------------------|
+| Load Balancer for VPC   | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
+| VPN for VPC             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |    
+{: caption="VPC events in Europe locations" caption-side="top"}
+{: #cs-vpc-loc-table-3}
+{: tab-title="Europe"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                | `Dallas (us-south)`                                | `Washington (us-east)`               |
+|----------------------------------------|----------------------------------------------------|--------------------------------------|
+| Load Balancer for VPC                  | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
+| VPN for VPC                            | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
+{: caption="VPC events in America's locations" caption-side="top"}
+{: #cs-vpc-loc-table-1}
+{: tab-title="America"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
+|-----------------------------------------------------------------|------------------|----------------------------|
+| Load Balancer for VPC           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
+| VPN for VPC                     | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
+{: caption="VPC events in AP locations" caption-side="top"}
+{: #cs-vpc-loc-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_vpc"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+
+
+
+
+### Classic
+{: #cloud_services_locations_networking_classic}
+
+| Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
+|---------------------------------------------------------------|-------------------|----------------|
+| {{site.data.keyword.loadbalancer_full}}                |  `NO`              | `NO`  |
+| Load Balancer for VPC              | `NO`  | `NO`  |
+| VPN for VPC                       |  ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |    
+{: caption="Table 12. Security services  integration in Europe locations" caption-side="top"}
+{: #cs-csint-table-3}
+{: tab-title="Europe"}
+{: tab-group="cs_csint"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                         | `Dallas (us-south)` | `Washington (us-east)`               |
+|-----------------------------------------------------------------|---------------------|--------------------------------------|
+| {{site.data.keyword.loadbalancer_full}}         | ![Checkmark icon](images/checkmark-icon.svg)               | `NO`          |          
+| Load Balancer for VPC                          | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
+| VPN for VPC                                    | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |  
+{: caption="Table 10. Security services integration in America's locations" caption-side="top"}
+{: #cs-csint-table-1}
+{: tab-title="America"}
+{: tab-group="cs_csint"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
+|-----------------------------------------------------------------|----------------|---------------------------|
+| {{site.data.keyword.loadbalancer_full}}                   | `NO`    | `NO`  |
+| Load Balancer for VPC          | `NO`   | `NO`  |
+| VPN for VPC                    | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
+{: caption="Table 11. Security services integration in AP locations" caption-side="top"}
+{: #cs-csint-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_csint"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+
+
+
+
+
+## Database services
 {: #cloud_services_locations_database}
 
 
-| Service                                                         | `Frankfurt (eu-de)`                                | `London (eu-gb)`                                   |
-|-----------------------------------------------------------------|----------------------------------------------------|----------------------------------------------------|
+| Service        | `Frankfurt (eu-de)`           | `London (eu-gb)`                                   |
+|----------------|-------------------------------|----------------------------------------------------|
 | {{site.data.keyword.cloudant_short_notm}}                        | `NO`  | ![Checkmark icon](images/checkmark-icon.svg) |
 | {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
@@ -157,8 +318,8 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                                         | `Dallas (us-south)`                                | `Washington (us-east)`                             |
-|-----------------------------------------------------------------|----------------------------------------------------|----------------------------------------------------|
+| Service               | `Dallas (us-south)`             | `Washington (us-east)`                             |
+|-----------------------|---------------------------------|----------------------------------------------------|
 | {{site.data.keyword.cloudant_short_notm}}                       | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
@@ -193,12 +354,13 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 
 
-## Platform integration services
+## Integration services
 {: #cloud_services_locations_integration}
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
-| {{site.data.keyword.messagehub}}                              | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |          
+| {{site.data.keyword.messagehub}}             | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg)|
+| {{site.data.keyword.mobilepushshort}}        |  |   |        
 {: caption="Integration services integration in Europe locations" caption-side="top"}
 {: #cs_integration-table-1}
 {: tab-title="Europe"}
@@ -208,7 +370,8 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
-| {{site.data.keyword.messagehub}}               | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |          
+| {{site.data.keyword.messagehub}}               | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |  
+| {{site.data.keyword.mobilepushshort}}        |  |   |           
 {: caption="Integration services integration in America's locations" caption-side="top"}
 {: #cs_integration-table-2}
 {: tab-title="America"}
@@ -218,7 +381,8 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
 |------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
-| {{site.data.keyword.messagehub}}               | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |  `Metrics are available through the platform metrics Sysdig instance in Tokyo` | `Metrics are available through the platform metrics Sysdig instance in Tokyo` |       
+| {{site.data.keyword.messagehub}}               | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |  `Metrics are available through the platform metrics Sysdig instance in Tokyo` | `Metrics are available through the platform metrics Sysdig instance in Tokyo` |  
+| {{site.data.keyword.mobilepushshort}}        |  |   |        
 {: caption="Integration services integration in AP locations" caption-side="top"}
 {: #cs_integration-table-3}
 {: tab-title="Asia Pacific"}
@@ -228,43 +392,25 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 
 
-
-## Networking services
-{: #cs_locations_networking}
-
-| Service                                                         | `Dallas (us-south)` | `Washington (us-east)`                   |
-|-----------------------------------------------------------------|---------------------|--------------------------------------|
-| {{site.data.keyword.loadbalancer_full}}                 | ![Checkmark icon](images/checkmark-icon.svg)               | `NO`                                 |            
-{: caption="Table 10. Security services integration in America's locations" caption-side="top"}
-{: #cs-int-table-1}
-{: tab-title="America"}
-{: tab-group="cs_int"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
-|-----------------------------------------------------------------|----------------|---------------------------|
-| {{site.data.keyword.loadbalancer_full}}                   | `NO`    | `NO`  |
-{: caption="Table 11. Security services integration in AP locations" caption-side="top"}
-{: #cs-int-table-2}
-{: tab-title="Asia Pacific"}
-{: tab-group="cs_int"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
-|---------------------------------------------------------------|-------------------|----------------|
-| {{site.data.keyword.loadbalancer_full}}                |  `NO`              | `NO`  |
-{: caption="Table 12. Security services  integration in Europe locations" caption-side="top"}
-{: #cs-int-table-3}
-{: tab-title="Europe"}
-{: tab-group="cs_int"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-
-## Platform storage services
+## Storage services
 {: #cloud_services_locations_storage}
+
+For more information, see [Storage services](/docs/cloud-infrastructure?topic=cloud-infrastructure-compute).
+
+
+### VPC
+{: #cloud_services_locations_storage_vpc}
+
+
+| Service                                                       |`Frankfurt (eu-de)`                                | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------------------------------------|------------------|
+| {{site.data.keyword.cos_full_notm}}                    | ![Checkmark icon](images/checkmark-icon.svg) |  ![Checkmark icon](images/checkmark-icon.svg)  |     
+{: caption="Storage services integration in Europe locations" caption-side="top"}
+{: #cs_storage-table-3}
+{: tab-title="Europe"}
+{: tab-group="cs_storage"}
+{: class="simple-tab-table"}
+{: row-headers}
 
 | Service                                        | `Dallas (us-south)`                                | `Washington (us-east)`               |
 |------------------------------------------------|----------------------------------------------------|--------------------------------------|
@@ -286,56 +432,9 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                                       |`Frankfurt (eu-de)`                                | `London (eu-gb)` |
-|---------------------------------------------------------------|---------------------------------------------------|------------------|
-| {{site.data.keyword.cos_full_notm}}                           | ![Checkmark icon](images/checkmark-icon.svg) |  ![Checkmark icon](images/checkmark-icon.svg)  |     
-{: caption="Storage services integration in Europe locations" caption-side="top"}
-{: #cs_storage-table-3}
-{: tab-title="Europe"}
-{: tab-group="cs_storage"}
-{: class="simple-tab-table"}
-{: row-headers}
 
 
 
-## VPC infrastructure services
-{: #cloud_services_locations_vpc_infrastructure}
-
-### VPC Gen 1 (Classic)
-{: #cloud_services_locations_vpc_infrastructure_gen1}
-
-| Service                                | `Dallas (us-south)`                                | `Washington (us-east)`               |
-|----------------------------------------|----------------------------------------------------|--------------------------------------|
-| Load Balancer                          | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
-| VPN                                    | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
-{: caption="VPC events in America's locations" caption-side="top"}
-{: #cs-vpc-loc-table-1}
-{: tab-title="America"}
-{: tab-group="cs_vpc"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
-|-----------------------------------------------------------------|------------------|----------------------------|
-| Load Balancer           | `NO`   | `NO`  |
-| VPN                     | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
-{: caption="VPC events in AP locations" caption-side="top"}
-{: #cs-vpc-loc-table-2}
-{: tab-title="Asia Pacific"}
-{: tab-group="cs_vpc"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` |
-|---------------------------------------------------------------|---------------------|------------------|
-| Load Balancer              | `NO`  | `NO`  |
-| VPN                        |  ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |    
-{: caption="VPC events in Europe locations" caption-side="top"}
-{: #cs-vpc-loc-table-3}
-{: tab-title="Europe"}
-{: tab-group="cs_vpc"}
-{: class="simple-tab-table"}
-{: row-headers}
 
 
 
