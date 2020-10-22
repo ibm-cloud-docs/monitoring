@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-10-20"
+lastupdated: "2020-10-21"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -55,7 +55,7 @@ The following table lists container services that are Sysdig-enabled:
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.openwhisk}}](/docs/openwhisk?topic=openwhisk-getting-started) | A Functions-as-a-Service (FaaS) programming platform based on Apache OpenWhisk. | [Monitoring metrics for {{site.data.keyword.openwhisk}}](/docs/openwhisk?topic=openwhisk-monitor-sysdig)|
-{: caption="List of {{site.data.keyword.cloud_notm}} container services" caption-side="top"} 
+{: caption="List of {{site.data.keyword.cloud_notm}} serverless services" caption-side="top"} 
 
 ### VPC
 {: #compute_vpc}
@@ -80,7 +80,15 @@ The following table lists infrastructure services that are Sysdig-enabled:
 | [{{site.data.keyword.BluVirtServers}}](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) | Scalable virtual servers that are purchased with cores and memory allocations. | [Metrics collected by {{site.data.keyword.BluVirtServers}}](/docs/cloud-infrastructure?topic=cloud-infrastructure-classic-sysdig-metrics)|
 {: caption="List of VPC classic infrastructure services (generation 1)" caption-side="top"} 
 
+## Container services
+{: #container}
 
+The following table lists container services that are Sysdig-enabled:
+
+| Service     | Description | Metrics | 
+|-------------|-------------|-------------------|
+| [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) | {{site.data.keyword.registrylong}} provides a multi-tenant, highly available, scalable, and encrypted private image registry that is hosted and managed by {{site.data.keyword.IBM}}. | [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor_sysdig)|
+{: caption="List of {{site.data.keyword.cloud_notm}} container services" caption-side="top"}
 
 
 ## Networking services

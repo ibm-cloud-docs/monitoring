@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-10-08"
+lastupdated: "2020-10-21"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -131,7 +131,6 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {: tab-group="cs_cont"}
 {: class="simple-tab-table"}
 {: row-headers}
-
 
 `[*]` {{site.data.keyword.registrylong_notm}} global registry metrics are available through the Sysdig Washington (us-east) instance.
 
