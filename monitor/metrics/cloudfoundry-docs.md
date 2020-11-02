@@ -69,19 +69,16 @@ You cannot customize a pre-defined CF dashboard. To be able to monitor CF apps, 
 ## Metrics dictionary
 {: #metrics_dictionary}
 
-| Metric Name |
-|-----------|
-| [CPU entitlement of the CF application](#ibm_cloudfoundry_app_cpu_entitlement) | 
-| [CPU usage of the CF application](#ibm_cloudfoundry_app_cpu_usage) | 
-| [CPU utilization of the CF application](#ibm_cloudfoundry_app_cpu_utilization) | 
-| [Container age of the CF application](#ibm_cloudfoundry_app_container_age) | 
-| [Disk usage of the CF application](#ibm_cloudfoundry_app_disk_bytes_used) | 
-| [Memory usage of the CF application](#ibm_cloudfoundry_app_memory_bytes_used) | 
-| [Total disk size of the CF application](#ibm_cloudfoundry_app_disk_bytes_total) | 
-| [Total memory of the CF application](#ibm_cloudfoundry_app_memory_bytes_total) | 
-{: caption="Table 1: Metrics dictionary" caption-side="top"}
+* [CPU entitlement of the CF application](#ibm_cloudfoundry_app_cpu_entitlement)  
+* [CPU usage of the CF application](#ibm_cloudfoundry_app_cpu_usage)  
+* [CPU utilization of the CF application](#ibm_cloudfoundry_app_cpu_utilization)  
+* [Container age of the CF application](#ibm_cloudfoundry_app_container_age)  
+* [Disk usage of the CF application](#ibm_cloudfoundry_app_disk_bytes_used)  
+* [Memory usage of the CF application](#ibm_cloudfoundry_app_memory_bytes_used)  
+* [Total disk size of the CF application](#ibm_cloudfoundry_app_disk_bytes_total)  
+* [Total memory of the CF application](#ibm_cloudfoundry_app_memory_bytes_total)  
 
-For more information, see [the official Cloud Foundry documentation: Container metrics](https://docs.cloudfoundry.org/loggregator/container-metrics.html)
+For more information, see [the Cloud Foundry documentation: Container metrics](https://docs.cloudfoundry.org/loggregator/container-metrics.html){: external}.
 
 
 ### CPU entitlement of the CF application
@@ -95,7 +92,7 @@ Indicates the CPU entitlement of a CF application.
 | `Metric Type` | `gauge` |
 | `Value Type`  | `second` |
 | `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 2: CPU entitlement of the CF application metric metadata" caption-side="top"}
+{: caption="Table 1: CPU entitlement of the CF application metric metadata" caption-side="top"}
 
 ### CPU usage of the CF application
 {: #ibm_cloudfoundry_app_cpu_usage}
@@ -108,7 +105,7 @@ Indicates the CPU usage of the CF application.
 | `Metric Type` | `gauge` |
 | `Value Type`  | `second` |
 | `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 3: CPU usage of the CF application metric metadata" caption-side="top"}
+{: caption="Table 2: CPU usage of the CF application metric metadata" caption-side="top"}
 
 
 ### CPU utilization of the CF application
@@ -122,7 +119,7 @@ Indicates the CPU utilization of a CF application.
 | `Metric Type` | `gauge` |
 | `Value Type`  | `percent` |
 | `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 4: CPU utilization of the CF application metric metadata" caption-side="top"}
+{: caption="Table 3: CPU utilization of the CF application metric metadata" caption-side="top"}
 
 ### Container age of the CF application
 {: #ibm_cloudfoundry_app_container_age}
@@ -135,7 +132,7 @@ Indicates the container age of the CF application.
 | `Metric Type` | `gauge` |
 | `Value Type`  | `second` |
 | `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 5: Container age of the CF application metric metadata" caption-side="top"}
+{: caption="Table 4: Container age of the CF application metric metadata" caption-side="top"}
 
 ### Disk usage of the CF application
 {: #ibm_cloudfoundry_app_disk_bytes_used}
@@ -148,7 +145,7 @@ Indicates the disk usage of the CF application.
 | `Metric Type` | `gauge` |
 | `Value Type`  | `bytes` |
 | `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 6: Disk usage of the CF application metric metadata" caption-side="top"}
+{: caption="Table 5: Disk usage of the CF application metric metadata" caption-side="top"}
 
 ### Memory usage of the CF application
 {: #ibm_cloudfoundry_app_memory_bytes_used}
@@ -161,7 +158,7 @@ Indicates the memory usage of the CF application.
 | `Metric Type` | `gauge` |
 | `Value Type`  | `bytes` |
 | `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 7: Memory usage of the CF application metric metadata" caption-side="top"}
+{: caption="Table 6: Memory usage of the CF application metric metadata" caption-side="top"}
 
 ### Total disk size of the CF application
 {: #ibm_cloudfoundry_app_disk_bytes_total}
@@ -174,7 +171,7 @@ Indicates the total disk size of the CF application.
 | `Metric Type` | `gauge` |
 | `Value Type`  | `bytes` |
 | `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 8: Total disk size of the CF application metric metadata" caption-side="top"}
+{: caption="Table 7: Total disk size of the CF application metric metadata" caption-side="top"}
 
 ### Total memory of the CF application
 {: #ibm_cloudfoundry_app_memory_bytes_total}
@@ -187,7 +184,7 @@ Indicates the total memory of the CF application.
 | `Metric Type` | `gauge` |
 | `Value Type`  | `bytes` |
 | `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 9: Total memory of the CF application metric metadata" caption-side="top"}
+{: caption="Table 8: Total memory of the CF application metric metadata" caption-side="top"}
 
 
 
@@ -208,7 +205,7 @@ The following attributes are available for segmenting all of the metrics:
 | `Resource group` | `ibm_resource_group_name` | Resource group that is associated to the service instance. | Choose a resource group from the ones that are available in your account. |
 | `Scope` | `ibm_scope` | The extent of the data samples that are considered </br>Use this attribute to set the scope to be your account | Valid value is your account.  |
 | `Service name` | `ibm_service_name` | Name of the service that generates this metric | `cloud-foundry` | 
-{: caption="Global segmentation attributes" caption-side="top"}
+{: caption="Table 9: Global segmentation attributes" caption-side="top"}
 
 
 
@@ -225,7 +222,7 @@ The following attributes are available for segmenting one or more attributes. Ch
 | `IBM CF organization name` | `ibm_cloudfoundry_org_name` | IBM Cloud Foundry organization name |
 | `IBM CF space GUID` | `ibm_cloudfoundry_space_guid` | IBM Cloud Foundry space GUID |
 | `IBM CF space name` | `ibm_cloudfoundry_space_name` | IBM Cloud Foundry space name |
-{: caption="Additional segmentation attributes" caption-side="top"}
+{: caption="Table 10: Additional segmentation attributes" caption-side="top"}
 
 
 
@@ -237,7 +234,7 @@ The following table outlines the pre-defined dashboards that you can use to moni
 | Dashboard name                  | Description    |
 |---------------------------------|----------------|
 | `Overview CF apps`   | Default dashboard when you launch the Sysdig web UI from your service instance UI. |
-{: caption="Pre-defined dashboards" caption-side="top"}
+{: caption="Table 11: Pre-defined dashboards" caption-side="top"}
 
 These dashboards cannot be changed.
 {: important}
