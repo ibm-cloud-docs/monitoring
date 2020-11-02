@@ -52,7 +52,7 @@ Complete the following steps to copy a panel:
 
 1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Copy panel** ![Copy icon](images/actions.png).
+2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Copy to Dashboard** ![Copy to Dashboard icon](images/copy.png).
 
 3. Select one of the dashboards that are listed, or enter a name for a new dashboard. 
 
@@ -91,7 +91,7 @@ Complete the following steps to duplicate a panel in the current dashboard:
 
 1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Duplicate panel** ![Copy icon](images/duplicate.png).
+2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Duplicate Panel** ![Duplicate Panel icon](images/duplicatepanel.png).
 
 
 ## Delete a panel
@@ -101,7 +101,7 @@ Complete the following steps to delete a panel in the current dashboard:
 
 1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Delete panel** ![Copy icon](images/delete.png).
+2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Delete** ![Delete icon](images/delete.png).
 
 3. Click **Yes, delete panel** to confirm the deletion of the panel.
 
