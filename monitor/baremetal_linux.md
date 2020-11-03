@@ -63,17 +63,17 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
 6. Connect to a bare metal server by using SSH
 
-    You may require a VPN to access your system depending on your security setup and `ssh` configuration on the bare metal host.
+    You might require a VPN to access your system depending on your security setup and `ssh` configuration on the bare metal host.
 
     You must `ssh` to the host by using your credentials, or the root credentials that are available from the {{site.data.keyword.cloud_notm}} Console.  
     
     You will require root permissions in order to install the Sysdig agent.
 
-    For example, you can complete the following steps to get the bare metal information that you need to SSH into the server:
+    For example, you can complete the following steps to get the bare metal information that you need to `ssh` into the server:
 
     1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
-    2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Classic Infrastructure** &gt; **Device List**.
+    2. Click the **Menu** icon ![Menu icon](/images/icon_hamburger.svg) &gt; **Classic Infrastructure** &gt; **Device List**.
 
     3. Identify the bare metal server that you want to monitor. Copy the **Public IP**.
 
@@ -81,20 +81,20 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
     5. Select **Passwords**. Copy the password for the **root** user.
 
-    Then, from a terminal, run the following command:
+       Then, from a terminal, run the following command:
+  
+       ```
+       ssh <USER_ID>@<IP_ADDRESS>
+       ```
+       {: pre}
 
-    ```
-    ssh <USER_ID>@<IP_ADDRESS>
-    ```
-    {: pre}
+       Where:
 
-    Where
+       `<USER_ID>` is the user ID that you use to log in to the bare metal server. For example, use `root`.
 
-    `<USER_ID>` is the user ID that you use to log in to the bare metal server. For example, use `root`.
+       `<IP_ADDRESS>` is the public IP address of the bare metal server.
 
-    `<IP_ADDRESS>` is the public IP address of the bare metal server.
-
-    For example, you can use the following ssh command: `root@45.123.122.12`
+       For example: `ssh root@45.123.122.12`
 
 
 ## Step 1. Configure a Sysdig agent to collect metrics from the bare metal server
