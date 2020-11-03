@@ -192,6 +192,7 @@ Monitoring with Sysdig
 
         [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
         [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
+        [PromCat](https://promcat.io/)
         deprecated.md
 
     {: .topicgroup}

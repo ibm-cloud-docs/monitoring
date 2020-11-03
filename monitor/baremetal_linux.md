@@ -169,7 +169,7 @@ You only can monitor one instance per browser. You could have multiple tabs for 
 ## Step 3. [Optional] Configure the Prometheus IPMI Exporter to monitor sensor metrics
 {: #baremetal_linux_step3}
 
-In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server. For more information, see [Sysdig integration with Prometheus](https://docs.sysdig.com/en/integrate-prometheus-metrics.html){: external}. 
+In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server. 
 
 * The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP). 
 * When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter. 
