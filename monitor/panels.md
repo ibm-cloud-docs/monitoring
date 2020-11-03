@@ -91,7 +91,7 @@ Complete the following steps to duplicate a panel in the current dashboard:
 
 1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Duplicate Panel** ![Duplicate Panel icon](images/duplicatepanel.png).
+2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Duplicate Panel** ![Duplicate Panel icon](images/duplicate.png).
 
 
 ## Delete a panel
