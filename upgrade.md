@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-10-14"
 
 keywords: Sysdig, IBM Cloud, monitoring, upgrade
 
@@ -40,7 +40,7 @@ To change the service plan of an instance from the Observability dashboard in th
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 
-2. Go to the menu icon ![Menu icon](images/icon_hamburger.svg). Then, select **Observability** to access the *Observability* dashboard.
+2. Go to the menu icon ![Menu icon](../../icons/icon_hamburger.svg). Then, select **Observability** to access the *Observability* dashboard.
 
 3. Select **Monitoring**.
 
