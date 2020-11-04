@@ -115,7 +115,7 @@ Metric data is deleted automatically after 15 months.
 
 User metadata, such as alerts, dashboards, teams, and users, is never deleted. 
 
-You must open a case through support to request the metadata to be deleted. For more information, see [Open a support ticket](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support).
+You must open a case through support to request the metadata to be deleted. For more information, see [Open a support ticket](/docs/get-support?topic=get-support-open-case).
 
 
 ### Deleting a subset of data 

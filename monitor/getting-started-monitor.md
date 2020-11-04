@@ -43,7 +43,7 @@ You can complete the getting started steps in any of the supported regions.
 ## Step 1. Manage user access
 {: #step1}
 
-See [Manage user access](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#step1).
+See [Manage user access](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#getting-started-step1).
 
 ## Step2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
 {: #getting-started-monitor_step2}
