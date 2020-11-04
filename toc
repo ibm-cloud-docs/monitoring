@@ -9,6 +9,7 @@ IBM Cloud Monitoring with Sysdig
 
     {: .topicgroup}
     Monitor
+        monitor/getting-started-monitor.md
 
         {: .topicgroup}
         Monitoring infrastructure
@@ -24,7 +25,15 @@ IBM Cloud Monitoring with Sysdig
             monitor/cloud_services.md
             monitor/cloud_services_locations.md
 
+    {: .topicgroup}
+    Secure
+        secure/getting-started-secure.md
+
         {: .topicgroup}
+        Integration with IBM
+            [Integrate IBM Cloud Pak for Multicloud Management](https://docs.sysdig.com/en/integrate-ibm-cloud-pak-for-multicloud-management.html)
+
+    {: .topicgroup}
     Security and compliance
         monitor/data-security.md
         monitor/iam.md
@@ -54,6 +63,8 @@ IBM Cloud Monitoring with Sysdig
         agent/change_kube_agent.md
         agent/change_linux_agent.md
         agent/change_container_agent.md
+        [Enabling Kubernetes Audit Logging](https://docs.sysdig.com/en/kubernetes-audit-logging.html)
+        [Sysdig Agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)
     
     {: .topicgroup}
     IAM integration
@@ -111,6 +122,36 @@ IBM Cloud Monitoring with Sysdig
         {: .topicgroup}
         Integrations
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
+
+    {: .topicgroup}
+    Secure
+
+        {: .topicgroup}
+        Image scanning
+            [Working with image scanning](https://docs.sysdig.com/en/image-scanning.html)
+            [Managing scanning alerts](https://docs.sysdig.com/en/manage-scanning-alerts.html)
+            [Reviewing scan results](https://docs.sysdig.com/en/review-scan-results.html)
+            [Working with the Admission Controller](https://docs.sysdig.com/en/admission-controller--cli-based-.html)
+        
+        {: .topicgroup}
+        Benchmarks
+            [Working with benchmarks](https://docs.sysdig.com/en/benchmarks.html)
+            [Configuring a benchmark task](https://docs.sysdig.com/en/configure-benchmark-tasks.html)
+            [Reviewing benchmark test results](https://docs.sysdig.com/en/review-benchmark-test-results.html)
+            [Monitoring compliance through dashboards and metrics](https://docs.sysdig.com/en/use-compliance-dashboards-and-metrics.html)
+
+        {: .topicgroup}
+        Policies
+            [Working with rules](https://docs.sysdig.com/en/manage-rules.html)
+            [Working with Polices](https://docs.sysdig.com/en/policies.html)
+
+        {: .topicgroup}
+        Events
+            [Managing events](https://docs.sysdig.com/en/secure-events.html)
+
+        {: .topicgroup}
+        Integrations
+            [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-secure.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -138,22 +179,24 @@ IBM Cloud Monitoring with Sysdig
 
         [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
         [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
+        [PromCat](https://promcat.io/)
         deprecated.md
 
     {: .topicgroup}
-    Cloud services metrics
-        metrics/cloudfoundry-docs.md
+    Secure
+        [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
+        [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
 
-    [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
-    [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
-    [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
     [Sysdig Blog](https://sysdig.com/blog/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     gettinghelp.md
-    troubleshoot.md
-    monitor/faq.md
+
+    {: .topicgroup}
+    Monitor
+        monitor/troubleshoot.md
+        faq.md
     {: .navgroup-end}
 
 

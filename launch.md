@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-10-14"
 
 keywords: Sysdig, IBM Cloud, monitoring, launch web UI
 
@@ -45,7 +45,7 @@ The following table lists the minimum policies that a user must have to be able 
 For more information on how to configure these policies for a user, see [Granting permissions to launch the Sysdig UI or to make REST API calls](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant).
 
 
-## Launch the web UI through the {{site.data.keyword.cloud_notm}} UI
+## Launch the Monitor web UI through the {{site.data.keyword.cloud_notm}} UI
 {: #launch_step2}
 
 You launch the Web UI within the context of an {{site.data.keyword.mon_full_notm}} instance, from the {{site.data.keyword.cloud_notm}} UI. 
@@ -66,6 +66,25 @@ Complete the following steps to launch the web UI:
 
 4. Select one instance. Then, click **View Sysdig**.
 
-The Web UI opens.
+    The Web UI opens.
 
+
+## Launch the Secure web UI
+{: #launch_step3}
+
+By default, the *Monitor* view opens when you launch the Sysdig web UI.
+
+To access the *Secure* web UI, complete the following steps:
+
+1. Select the **Monitor** icon.
+
+    ![Monitor icon](images/monitor.png)
+
+    The *Sysdig Platform* selection box opens.
+
+    ![Sysdig Platform icon](images/platform.png)
+
+2. Select the **Secure** icon.
+
+    ![Secure icon](images/secure.png)
 

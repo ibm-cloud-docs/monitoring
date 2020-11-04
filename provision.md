@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-10-12"
+lastupdated: "2020-10-14"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -38,7 +38,7 @@ To provision an instance of Sysdig from the {{site.data.keyword.cloud_notm}} cat
 
 2. Click **Catalog**. The list of the services that are available on {{site.data.keyword.cloud_notm}} opens.
 
-3. To filter the list of services that is displayed, select the **Developer Tools** category.
+3. To filter the list of services that is displayed, select the **Logging and Monitoring** category.
 
 4. Click the **{{site.data.keyword.mon_full_notm}}** tile. The *Observability* dashboard opens.
 
@@ -46,7 +46,11 @@ To provision an instance of Sysdig from the {{site.data.keyword.cloud_notm}} cat
 
 6. Select the region. 
 
-7. Select a service plan. By default, the **Trial** plan is set.
+7. Select a service plan. By default, the **Lite** plan is set.
+
+    To provision an instance that only includes the *Monitor* component, select the plan **Graduated Tier**.
+
+    To provision an instance that include the *Monitor* and the *Secure* components, select the plan **Graduated Tier - Sysdig Secure + Monitor**.
 
     For more information about the service plans, see [Service plans](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans#pricing_plans).
 
@@ -93,7 +97,7 @@ To provision an instance of Sysdig through the command line, complete the follow
     
     `sysdig-monitor` is the name of the {{site.data.keyword.mon_full_notm}} service name in the {{site.data.keyword.cloud_notm}}.
     
-    `SERVICE_PLAN_NAME` is the type of plan. Valid values are *lite*, and *graduated-tier*.
+    `SERVICE_PLAN_NAME` is the type of plan. See [Service plans](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans) to get the plan name.
     
     `LOCATION` is the region where the instance is created.
 
