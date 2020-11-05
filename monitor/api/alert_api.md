@@ -251,7 +251,7 @@ Where
 
 * `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the alerts. 
 
-For more information about the response format, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerting-api#alert_api-schema).
+For more information about the response format, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alert_api#alert_api-schema-res).
 
 
 
