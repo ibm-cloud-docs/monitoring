@@ -144,7 +144,7 @@ Complete the following steps to launch the web UI:
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} console opens.
 
-2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**. 
+2. Click the **Menu** icon ![Menu icon](/images/icon_hamburger.svg) &gt; **Observability**. 
 
 3. Select **Monitoring**. 
 
@@ -482,7 +482,7 @@ Complete the following steps:
 
 Cpmplete the following steps:
 
-1. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**. 
+1. Click the **Menu** icon ![Menu icon](/images/icon_hamburger.svg) &gt; **Observability**. 
 
 2. Select **Monitoring**. 
 
