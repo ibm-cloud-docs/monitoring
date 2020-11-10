@@ -62,18 +62,7 @@ Pre-defined dashboards are designed around various supported applications, netwo
 
 Pre-defined dashboards include a series of panels that are already configured.
 
-The following table lists the different types of pre-defined dashboards:
-
-| Type | Description | More information | 
-|------|-------------|------------------|
-| Applications | Dashboards that you can use to monitor your applications and infrastructure components.  | [Application dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-default_dashboards#default_dashboards_applications) |
-| Host and containers | Dashboards that you can use to monitor resource utilization and system activity on your hosts and in your containers. | [Host and container dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-default_dashboards#default_dashboards_host_container) |
-| Network | Dashboards that you can use to monitor your network connections and activity. | [Network dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-default_dashboards#default_dashboards_network) |
-| Service | Dashboards that you can use to monitor the performance of your services, even if those services are deployed in orchestrated containers. | [Service dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-default_dashboards#default_dashboards_service) |
-| Topology | Dashboards that you can use to monitor the logical dependencies of your application tiers and overlay metrics. | [Topology dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-default_dashboards#default_dashboards_topology) |
-{: caption="Table 1. List of pre-defined dashboards" caption-side="top"} 
-
-
+For more information on pre-defined dashboards, see [Dashboard Templates](https://docs.sysdig.com/en/dashboard-templates-209032.html).
 
 ## Creating custom dashboards in the Web UI
 {: #dashboards_create}
