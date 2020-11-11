@@ -65,7 +65,7 @@ The following global attributes are available for segmenting metrics:
 
 Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services) topic, identify the service tha you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
 
-You can control the data that is visible for analysis per team, per dashboard, and per panel. 
+You can control the data that is visible for analysis per team, per dashboard, and per panel in a dashboard. 
 
 ### Dashboards
 {: global-attributes-1}
@@ -90,7 +90,7 @@ You can use global attributes to define the data that is visible and available f
 
 
  
-## Monitoring platform metrics by using dashboards
+## Monitoring platform metrics through dashboards
 {: #platform_metrics_working_dash}
 
 Each {{site.data.keyword.cloud_notm}} provides 1 or more dashboard templates that you can use to monitor that service. 
@@ -115,7 +115,7 @@ Complete the following steps to create a custom dashboard:
 4. Select **Create Custom Dashboard**. The window *Create Dashboard from Template* opens. 
 5. Enter a name for your dashboard, and click **Create and Open**. The dashboard opens.
 
-You can locate the dashboard tha you have copied in the section **DASHBOARDS** &gt **My Dashboads**.
+You can locate the dashboard that you have copied in the section **DASHBOARDS** &gt **My Dashboads**.
 
 Next, customize the scope and panels in the dashboard.
 
@@ -123,7 +123,7 @@ Next, customize the scope and panels in the dashboard.
 ### Defining the scope of a dashboard
 {: #platform_metrics_working_dash-2}
 
-Complete the following steps:
+Complete the following steps to define the scope of the data that is displayed through the dashboard:
 
 1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 2. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboard.png)) in the Web UI.
@@ -132,11 +132,9 @@ Complete the following steps:
 
     ![Dashboard scope section](images/sysdig-platform-2.png "Dashboard scope section")
 
-    The following page opens:
+5. In the drop-down box, enter **ibm** and select an attribute. 
 
     ![Dashboard scope page](images/sysdig-platform-3.png "Dashboard scope page")
-
-5. In the drop-down box, enter **ibm** and select an attribute. 
 
 6. Select an operator.
 
@@ -146,7 +144,7 @@ Complete the following steps:
 
     ![Dashboard scope page operators](images/sysdig-platform-5.png "Dashboard scope page operators")
 
-    You can also define the value empty, and select **var** (![Var icon](images/var.png))to define a variable so users can choose 1 value when they analyze data through the dashboard.
+    You can also leave the value empty, and select **var** to define a variable so that users can choose 1 or more values when they analyze data through the dashboard.
     {: note}
 
 8. Continue adding more attributes. When you have the scope defined, click **Save**.
@@ -155,7 +153,7 @@ Complete the following steps:
 ### Defining the scope of a panel
 {: #platform_metrics_working_dash-3}
 
-Complete the following steps:
+Complete the following steps to define the scope of the data that is displayed through a panel in a dashboard:
 
 1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 2. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboard.png)) in the Web UI.
@@ -165,13 +163,13 @@ Complete the following steps:
 
     ![Panel scope](images/sysdig-platform-6.png "Panel scope")
 
-6. By default, **Inherit Dashboard Scope* is selected. To specify a custom scope, you must deselect this option.
+6. By default, *Inherit Dashboard Scope* is selected. To specify a custom scope, you must de-select this option.
 
-    1. In the drop-down box, enter **ibm** and select an attribute. 
+    In the drop-down box, enter **ibm** and select an attribute. 
 
-    2. Select an operator.
+    Select an operator.
 
-    3. Select 1 or more values.
+    Select 1 or more values.
 
 7. In a panel, you can configure 1 or more metrics. Select **Apply to All Queries** if you want the scope to apply to all the metrics that are configured for the panel.
 
@@ -179,13 +177,108 @@ Complete the following steps:
 To save the scope, you must click **Save** at the panel level.
 
 
-## Monitoring platform metrics by defining alerts
+## Configuring an alert on a platform metric
+{: #platform_metrics_working_alert}
+
+### Configuring an alert from a panel
+{: #platform_metrics_working_alert-1}
+
+Complete the following steps to define an alert on a metric:
+
+1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+2. Verify that you have a notification channel that defines how you want to be notified.
+
+    You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
+
+3. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboard.png)) in the Web UI.
+4. Select a custom dashboard in the **My Dashboards** section.
+5. Select the panel for which you want to define the alert.
+
+    Before you create the alert, check the scope of the metric that is configured in the panel. This scope is automatically included in the alert definition.
+    {: note}
+
+6. Select the *More options* icon ![Three dots icon](images/actions.png) and  select **Create Alert**.
+
+    ![Panel options](images/sysdig-platform-5.png "Panel options")
+
+    If you have multiple queries defined in a panel, you are prompted to select the metric for which you want to create an alert.
+    {: note}
+
+7. Configure the alert. Set the following fields:
+
+    **Name**: Enter a name for the alert. 
+
+    **Description**: Add a description that other users can read to get more context. This field is optional.
+
+    **Priority**: Set the level of criticality of the alert. Valid values are `High`, `Medium`, `Low`, and `Info`.
+
+    **Metric**: This field is set to the metric that you have selected from the panel. Check that the metric and aggregation are the ones that you need.
+
+    **Scope**: This field is set to the scope that you have defined for the metric in the panel. Check that the scope is the one that you need.
+
+    **Trigger**: Define the condition and threshold value that must be evaluated. It also defines whether the alert sends a single alert or multiple alerts. 
+    
+        Valid time scales are `minute`, `hour`, or `day`.
+
+        A single alert fires an alert for the entire scope.
+
+        Multiple Alerts are sent if 1 or more segments breach the threshold at once. An alert is sent for each segment that you specify.
+
+    **Notification Channel**: Enable 1 or more notification channels. 
+
+
+## Configuring an alert from the Alerts section
+{: #platform_metrics_working_alert-2}
+
+You can define a `metric` alert directly from the *Alerts* section.
+
+Complete the following steps to define an alert on a metric:
+
+1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+2. Verify that you have a notification channel that defines how you want to be notified.
+
+    You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
+
+3. Navigate to the **Alerts** section ![Alerts module](images/alerts.png)) in the Web UI.
+
+4. Select **Add Alert**.
+
+    ![Choose alert type](images/sysdig-platform-7.png "Choose alert type")
+
+5. Configure the alert. Set the following fields:
+
+    **Name**: Enter a name for the alert. 
+
+    **Description**: Add a description that other users can read to get more context. This field is optional.
+
+    **Priority**: Set the level of criticality of the alert. Valid values are `High`, `Medium`, `Low`, and `Info`.
+
+    **Metric**: Configure the metric.
+
+    **Scope**: Configure the scope
+
+    **Trigger**: Define the condition and threshold value that must be evaluated. It also defines whether the alert sends a single alert or multiple alerts. 
+    
+        Valid time scales are `minute`, `hour`, or `day`.
+
+        A single alert fires an alert for the entire scope.
+
+        Multiple Alerts are sent if 1 or more segments breach the threshold at once. An alert is sent for each segment that you specify.
+
+    **Notification Channel**: Enable 1 or more notification channels.
+
+
+## Configuring the data that is visible for a team
+{: #platform_metrics_working_team}
 
 
 
-## Limiting access to platform metrics through teams
 
-### Configuring the data that is visible for a team
+
+
+
+## Limiting access to platform metrics through resource groups
+{: #platform_metrics_working_rg}
 
 
 
