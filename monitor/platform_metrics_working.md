@@ -115,7 +115,7 @@ Complete the following steps to create a custom dashboard:
 4. Select **Create Custom Dashboard**. The window *Create Dashboard from Template* opens. 
 5. Enter a name for your dashboard, and click **Create and Open**. The dashboard opens.
 
-You can locate the dashboard that you have copied in the section **DASHBOARDS** &gt **My Dashboads**.
+You can locate the dashboard that you have copied in the section **DASHBOARDS** &gt; **My Dashboads**.
 
 Next, customize the scope and panels in the dashboard.
 
@@ -216,13 +216,7 @@ Complete the following steps to define an alert on a metric:
 
     **Scope**: This field is set to the scope that you have defined for the metric in the panel. Check that the scope is the one that you need.
 
-    **Trigger**: Define the condition and threshold value that must be evaluated. It also defines whether the alert sends a single alert or multiple alerts. 
-    
-        Valid time scales are `minute`, `hour`, or `day`.
-
-        A single alert fires an alert for the entire scope.
-
-        Multiple Alerts are sent if 1 or more segments breach the threshold at once. An alert is sent for each segment that you specify.
+    **Trigger**: Define the condition and threshold value that must be evaluated. It also defines whether the alert sends a single alert or multiple alerts. Valid time scales are `minute`, `hour`, or `day`. A single alert fires an alert for the entire scope. Multiple Alerts are sent if 1 or more segments breach the threshold at once. An alert is sent for each segment that you specify.
 
     **Notification Channel**: Enable 1 or more notification channels. 
 
@@ -235,6 +229,7 @@ You can define a `metric` alert directly from the *Alerts* section.
 Complete the following steps to define an alert on a metric:
 
 1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+
 2. Verify that you have a notification channel that defines how you want to be notified.
 
     You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
@@ -257,18 +252,12 @@ Complete the following steps to define an alert on a metric:
 
     **Scope**: Configure the scope
 
-    **Trigger**: Define the condition and threshold value that must be evaluated. It also defines whether the alert sends a single alert or multiple alerts. 
-    
-        Valid time scales are `minute`, `hour`, or `day`.
-
-        A single alert fires an alert for the entire scope.
-
-        Multiple Alerts are sent if 1 or more segments breach the threshold at once. An alert is sent for each segment that you specify.
+    **Trigger**: Define the condition and threshold value that must be evaluated. It also defines whether the alert sends a single alert or multiple alerts. Valid time scales are `minute`, `hour`, or `day`. A single alert fires an alert for the entire scope. Multiple Alerts are sent if 1 or more segments breach the threshold at once. An alert is sent for each segment that you specify.
 
     **Notification Channel**: Enable 1 or more notification channels.
 
 
-## Controlling the access to platform metrics fort a team
+## Controlling the access to platform metrics for a team
 {: #platform_metrics_working_team}
 
 You can control the data that is visible to all the users that are members of a team.
@@ -285,25 +274,53 @@ Enabling platform metrics, grants access to all platform metrics. However, you c
 
 
 
-### Limiting access to platform metrics through resource groups
+### Limiting access to platform metrics by resource group
 {: #platform_metrics_working_team-rg}
+
+Complete the following steps to limit the data to metrics collected for services that are created in that resource group:
+
+1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+
+2. Navigate to the **Settings** section.
+
+    ![Settings section](images/sysdig-platform-12.png "Settings section")
+
+3. Select **Teams**. Then, select a team where you want to restrict access to platform metrics.
+
+4. In the *Visibility* section, select **Platform metrics**.
+
+5. Select the attribute **ibm_resource_group_id** to segment data  by resource group. 
+
+    ![Resource group segmentation](images/sysdig-platform-14.png "Resource group segmentation")
+
+6. Select 1 or more resource groups for which you want the data to be visible to users that are members of this team.
+
+7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services) topic, identify the service tha you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
+
+8. Click **Save**.
+
+
+
+
+### Limiting access to platform metrics by instance
+{: #platform_metrics_working_team-1}
 
 Complete the following steps:
 
 1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
-2. Verify that you have a notification channel that defines how you want to be notified.
 
-    You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
+2. Navigate to the **Settings** section.
 
-3. Navigate to the **Alerts** section ![Alerts module](images/alerts.png)) in the Web UI.
+3. Select **Teams**. Then, select a team where you want to restrict access to platform metrics.
 
+4. In the *Visibility* section, select **Platform metrics**.
 
+5. Select the attribute **ibm_service_instance** to segment data by instance ID. 
 
+6. Select 1 or more instance IDs for which you want the data to be visible to users that are members of this team.
 
-`Scope`                 | `ibm_scope`                 | Scope of the metric. </br> This field can be set to the account GUID, an organization GUID, or a space GUID. |
-| `Service name`          | `ibm_service_name`          | Name of the service generating this metric. |
-| `Service instance`      | `ibm_service_instance`      | Service instance GUID that identifies the instance the metric is associated with. |
-| `Service instance name` | `ibm_service_instance_name` | Service instance name. </br>This field provides the user-provided name of the service instance which isn't necessarily a unique value depending on the name provided by the user. |
-| `Resource group name`   | `ibm_resource_group_name`   | The resource group name where the service instance is created. |
-| `Resource group ID`     | `ibm_resource_group_id`     | The resource group GUID where the service instance is created. |
+7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services) topic, identify the service tha you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
+
+8. Click **Save**.
+
 
