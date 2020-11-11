@@ -22,6 +22,7 @@ IBM Cloud Monitoring with Sysdig
         {: .topicgroup}
         Monitoring IBM Cloud services
             monitor/platform_metrics_enabling.md
+            monitor/platform_metrics_working.md
             monitor/cloud_services.md
             monitor/cloud_services_locations.md
 
