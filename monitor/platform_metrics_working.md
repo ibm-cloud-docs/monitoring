@@ -268,21 +268,42 @@ Complete the following steps to define an alert on a metric:
     **Notification Channel**: Enable 1 or more notification channels.
 
 
-## Configuring the data that is visible for a team
+## Controlling the access to platform metrics fort a team
 {: #platform_metrics_working_team}
 
+You can control the data that is visible to all the users that are members of a team.
+
+As an administrator of the service, you can create, modify, and delete teams. When you configure a team, you can define the scope of the data in the **Visibility** section.
+
+To allow a team to view platform metrics, you must select **Platform metrics**.
+
+![Team platform metrics option](images/sysdig-platform-10.png "Team platform metrics option")
+
+Enabling platform metrics, grants access to all platform metrics. However, you can reduce the scope by configuring 1 or more segments. Notice that the order of the segments is applied top down.
+
+![Team platform metrics segments](images/sysdig-platform-11.png "Team platform metrics segments")
+
+
+
+### Limiting access to platform metrics through resource groups
+{: #platform_metrics_working_team-rg}
+
+Complete the following steps:
+
+1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+2. Verify that you have a notification channel that defines how you want to be notified.
+
+    You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
+
+3. Navigate to the **Alerts** section ![Alerts module](images/alerts.png)) in the Web UI.
 
 
 
 
-
-
-## Limiting access to platform metrics through resource groups
-{: #platform_metrics_working_rg}
-
-
-
-
-
-
+`Scope`                 | `ibm_scope`                 | Scope of the metric. </br> This field can be set to the account GUID, an organization GUID, or a space GUID. |
+| `Service name`          | `ibm_service_name`          | Name of the service generating this metric. |
+| `Service instance`      | `ibm_service_instance`      | Service instance GUID that identifies the instance the metric is associated with. |
+| `Service instance name` | `ibm_service_instance_name` | Service instance name. </br>This field provides the user-provided name of the service instance which isn't necessarily a unique value depending on the name provided by the user. |
+| `Resource group name`   | `ibm_resource_group_name`   | The resource group name where the service instance is created. |
+| `Resource group ID`     | `ibm_resource_group_id`     | The resource group GUID where the service instance is created. |
 
