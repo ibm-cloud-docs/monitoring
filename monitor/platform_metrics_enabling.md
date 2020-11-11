@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-11-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -26,22 +26,13 @@ subcollection: Monitoring-with-Sysdig
 # Enabling Platform Metrics
 {: #platform_metrics_enabling}
 
-Platform metrics are metrics that are exposed by enabled-Sysdig services and the platform in {{site.data.keyword.cloud_notm}}. You must configure a Sysdig instance in a region to monitor these metrics.
+ You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location. 
 {:shortdesc}
 
-* Platform metrics are regional. 
+- Platform metrics are metrics that are exposed by enabled-Sysdig services and the platform in {{site.data.keyword.cloud_notm}}.
+- To monitor platform metrics for a service instance, provision the {{site.data.keyword.mon_full_notm}} instance in the same region where the {{site.data.keyword.cloud_notm}} service instance that you want to monitor is provisioned. 
 
-    You can monitor metrics from enabled-Sysdig services on the {{site.data.keyword.cloud_notm}} in the region where the service is available. 
-
-* You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location. 
-
-    To configure a Sysdig instance, you must set on the *platform metrics* configuration setting. 
-
-* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
-
-* You must be assigned the IAM Editor role or higher for the IBM Cloud Monitoring with Sysdig service to configure platform metrics.
-
-To monitor platform metrics for a service instance, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the service instance that you want to monitor is provisioned.
+Before you configure a monitoring instance in a region to collect platform metrics, check with the account or service administrator if another monitoring instance has already been configured. It might be that you do not have permissions to see all monitoring instances.
 {: important}
 
 ## Enabling a Sysdig instance through the UI
