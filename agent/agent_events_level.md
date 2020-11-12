@@ -60,7 +60,7 @@ log:
 
 
 ### Filtering Kubernetes events by severity
-{: #change_kube_agent_filterby_severity}
+{: #change_kube_agent_event_filterby_severity}
 
 * The **event_priority** in the **log** section controls the type of events that are sent from the agent
 * The default log level is *information*. This means that only information and higher severity events are transmitted.

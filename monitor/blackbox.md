@@ -35,7 +35,7 @@ The Blackbox exporter provides metrics about HTTP latencies, DNS lookups latenci
 The Blackbox exporter is mainly used to measure response times. 
 Blackbox exporter is going to expose a HTTP endpoint that can be used in order to monitor targets over the network. By default, the Blackbox exporter exposes the /probe endpoint that is used to retrieve those metrics.
 
-http://localhost:9115/probe?target=https://google.com&module=https_2xx
+`http://localhost:9115/probe?target=https://google.com&module=https_2xx`
 
 You are going to define ‘targets’ in a dedicated Blackbox configuration section, and Prometheus will issue requests to the probe endpoint we saw earlier.
 
@@ -125,8 +125,9 @@ For now the Blackbox exporter is not configured to scrape any targets, but we ar
 
 If your service is correctly running, you can check the metrics gathered by issuing a request to the HTTP API.
 
+```
 $ curl http://localhost:9115/metrics
-
+```
 
 Binding the Blackbox exporter with Prometheus
 
@@ -262,8 +263,11 @@ Edit this configuration file, and amend the following changes
 
 `/etc/prometheus/`
 
+```
 $ sudo nano /etc/prometheus/prometheus.yml
+```
 
+```
 global:
   scrape_interval:     15s
   evaluation_interval: 15s
@@ -272,6 +276,7 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
     - targets: ['localhost:9090', 'localhost:9115']
+```
 
 With Prometheus, you don’t need to restart the systemd service for Prometheus to update.
 
@@ -286,7 +291,7 @@ The PID of my Prometheus process is 4431. Send a SIGHUP signal to this process f
 
 $ sudo kill -HUP 4431
 
-Head over to your Prometheus target configuration (http://localhost:9090/targets), and check that you are correctly scrapping your Blackbox exporter.
+Head over to your Prometheus target configuration (`http://localhost:9090/targets`), and check that you are correctly scrapping your Blackbox exporter.
 Binding the Blackbox Exporter to Prometheus
 
 
@@ -301,7 +306,7 @@ root@baremetal01:/etc/prometheus# cd /opt/draios/etc/
 root@baremetal01:/opt/draios/etc# nano dragent.yaml 
 
 
-
+```
 customerid: 7ac04746-1104-4f82-8445-f71427dd2a1d
 collector: ingest.us-south.monitoring.cloud.ibm.com
 collector_port: 6443
@@ -330,7 +335,7 @@ prometheus:
                 tags:
                     service: passport-advantage-dallas-uptime
                     hostname: baremetal01
-
+```
 
 
 
@@ -343,7 +348,7 @@ Module sysdig/0.27.0 already installed on kernel 4.15.0-99-generic/x86_64
 sysdig-probe found and loaded in dkms
 
 
-
+```
 remote_services:
          - blackbox_bm_01:
              always:
@@ -353,5 +358,5 @@ remote_services:
                  service: passport_advantage_uptime
                  service_hostname: baremetal01
                  service_region: us-south
-
+```
 

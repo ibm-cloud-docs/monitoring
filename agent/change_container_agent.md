@@ -116,7 +116,7 @@ events:
 
 
 ## Filtering events by severity
-{: #severity}
+{: #filter_by_severity}
 
 To filter events by severity, you can also change the log entry type for events in the *dragent.yaml* file. 
 

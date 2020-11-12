@@ -441,7 +441,7 @@ The container approach is used for this example.
 
 
 ## Step 5. [Optional] Verifying uptime for Windows with Prometheus Blackbox exporter
-{: #windows_step5}
+{: #availability_metrics_windows_step5}
 
 
 
