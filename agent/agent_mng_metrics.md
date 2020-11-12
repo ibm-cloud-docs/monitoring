@@ -29,7 +29,7 @@ When you delete an {{site.data.keyword.mon_full_notm}} instance, or if you want 
 
 
 ## Including and excluding metrics
-{: #change_linux_agent_inc_exc_metrics}
+{: #change_linux_agent_mng_inc_exc_metrics}
 
 To filter custom metrics, you must customize the **metrics_filter** section in the *dragent.yaml* file. You can specify which metrics to include and which ones to filter out by configuring the **include** and **exclude** filtering parameters.
 
@@ -84,7 +84,7 @@ metrics_filter:
 
 
 ### Logging into a file what metrics are included or excluded
-{: #change_kube_agent_log_metrics}
+{: #logging_including_metrics}
 
 * Setting **metrics_excess_log** to **true** in the **log** section will enable logging of the custom metrics that are included or excluded.
 * Metric logging is disabled by default.
@@ -158,7 +158,7 @@ Changes are applied automatically.
 
 
 ## Sample configmap yaml file
-{: #change_kube_agent_sample_configmap}
+{: #change_kube_agent_mng_sample_configmap}
 
 ```yaml
 apiVersion: v1
