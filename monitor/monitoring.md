@@ -37,7 +37,7 @@ You can analyze data in the *Explore* tab and in the *Dashboard* tab of the web 
 * Use a metric view to monitor an individual metric.
 * Use dashboards to get a specialized insight into network data, application data, topology, services, hosts, and containers by monitoring data through panels. A panel displays a metric or group of metrics in a dashboard.
 
-For each metric view and dashboard, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. For more information, see [Managing data](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-manage#manage).
+For each metric view and dashboard, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. For more information, see [Managing panels](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-panels).
 
 In the *Explore* tab, you can monitor data by using default metrics and default dashboards. You can use labels to define new infrastructure groups that you can then use to aggregate data differently and monitor your environment. You can also use custom dashboards that you define through the *Dashboard* tab.
 
