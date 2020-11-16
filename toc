@@ -17,9 +17,6 @@ Monitoring with Sysdig
             monitor/baremetal_linux.md
             monitor/kubernetes_cluster.md
             monitor/ubuntu.md
-            monitor/prometheus.md
-            monitor/availability_metrics.md
-            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
 
         {: .topicgroup}
         Monitoring IBM Cloud services
@@ -27,6 +24,14 @@ Monitoring with Sysdig
             monitor/platform_metrics_working.md
             monitor/cloud_services.md
             monitor/cloud_services_locations.md
+
+        {: .topicgroup}
+        Monitoring infrastructure
+            monitor/prometheus.md
+            monitor/availability_metrics.md
+            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
+            [Prometheus metrics / OpenMetrics code instrumentation.](https://sysdig.com/blog/prometheus-metrics/)
+
 
     {: .topicgroup}
     Secure
@@ -87,8 +92,11 @@ Monitoring with Sysdig
         Metrics
             [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html)
             [Working with metrics](https://docs.sysdig.com/en/metrics.html)
-            monitor/metrics.md
-            monitor/groups.md
+            [Grouping, Scoping, and Segmenting Metrics](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html)
+            [Understanding Default, Custom, and Missing Metrics](https://docs.sysdig.com/en/understanding-default,-custom,-and-missing-metrics.html)
+            [Managing the Metric Scale](https://docs.sysdig.com/en/manage-metric-scale.html)
+            [Data Aggregation](https://docs.sysdig.com/en/data-aggregation.html)
+            [Metric Limits](https://docs.sysdig.com/en/metric-limits.html)
             monitor/api/metrics_api.md
             monitor/api/metrics_python.md
 
