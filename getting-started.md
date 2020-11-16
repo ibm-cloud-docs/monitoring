@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-07-16"
+lastupdated: "2020-11-16"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -52,7 +52,7 @@ After you provision an instance, you must configure metric sources, enable platf
 
 * You can enable platform metrics to monitor {{site.data.keyword.cloud_notm}} services. You can only configure 1 Sysdig instance in a region to collect automatically platform metrics. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
 
-You can [monitor](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitoring#monitoring), and [manage](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-manage#manage) data through the {{site.data.keyword.mon_full_notm}} Web UI.  
+You can [monitor](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitoring#monitoring), and [manage](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-panels) data through the {{site.data.keyword.mon_full_notm}} Web UI.  
 
 Notice that there is a delay showing metric data for new time series. Data is not ready until the initial indexing of a new metric source is completed.  Therefore, new sources such as clusters, platform metrics, or systems that you configure, all take some time to become visible through the Sysdig UI.
 {: note}
@@ -204,11 +204,11 @@ You can configure a Sysdig agent for different environments. For example, to con
 
 Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 
-|	Tutorial                        | Environment                | 
-|---------------------------------|----------------------------|
-| [Monitoring a Linux host](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ubuntu#ubuntu) | On-premises | 
-| [Monitoring a Linux bare metal server](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux) | {{site.data.keyword.cloud_notm}} Public |
-| [Monitoring a Windows environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-windows) | Windows |
+|	Tutorial                        | 
+|---------------------------------|
+| [Monitoring an Ubuntu Linux VPC server instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ubuntu#ubuntu) |
+| [Monitoring a Linux bare metal server](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux) | 
+| [Monitoring a Windows environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-windows) |
 | [Monitorting a Kubernetes cluster](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-kubernetes_cluster) | 
 {: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"} 
 
