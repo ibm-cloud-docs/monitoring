@@ -38,6 +38,9 @@ The following service plans are available:
 | `Graduated Tier - Sysdig Secure + Monitor` | `35784193-e918-42d9-9598-4e842ed75192` | `graduated-tier-sysdig-secure-plus-monitor` |
 {: caption="Table 1. Service plans" caption-side="top"} 
 
+A `Lite` monitoring instance expires after 30 days.
+{: note}
+
 The costs that are provided in this topic are guidelines and do not represent actual costs. They represent a starting point for estimates of costs that would be incurred in environments with a similar configuration. Actual costs can vary by geography. The prices that are used are based on actual prices as of March 1, 2020 and it is possible they can change.
 {: important}
 
