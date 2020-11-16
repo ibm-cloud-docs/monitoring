@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-07-16"
+lastupdated: "2020-11-16"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -204,11 +204,11 @@ You can configure a Sysdig agent for different environments. For example, to con
 
 Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 
-|	Tutorial                        | Environment                | 
-|---------------------------------|----------------------------|
-| [Monitoring a Linux host](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ubuntu#ubuntu) | On-premises | 
-| [Monitoring a Linux bare metal server](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux) | {{site.data.keyword.cloud_notm}} Public |
-| [Monitoring a Windows environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-windows) | Windows |
+|	Tutorial                        | 
+|---------------------------------|
+| [Monitoring an Ubuntu Linux VPC server instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ubuntu#ubuntu) |
+| [Monitoring a Linux bare metal server](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux) | 
+| [Monitoring a Windows environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-windows) |
 | [Monitorting a Kubernetes cluster](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-kubernetes_cluster) | 
 {: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"} 
 
