@@ -26,10 +26,11 @@ Monitoring with Sysdig
             monitor/cloud_services_locations.md
 
         {: .topicgroup}
-        Monitoring infrastructure
+        Adding more metrics
+            [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
+            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
             monitor/prometheus.md
             monitor/availability_metrics.md
-            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
             [Prometheus metrics / OpenMetrics code instrumentation.](https://sysdig.com/blog/prometheus-metrics/)
 
 
