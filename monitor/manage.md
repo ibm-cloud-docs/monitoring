@@ -48,11 +48,11 @@ In the *Explore* view of the Web UI, you can run any of the following actions:
 
 | Task                                                                                        | Description     |
 |---------------------------------------------------------------------------------------------|-----------------|
-| [Copy a group](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-groups#copy_group)                | Copy a group to other teams. |
-| [Create a group](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-groups#create_group)            | Create a group. |
-| [Delete a group](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-groups#delete_group)            | Delete a group. |
-| [Rename a group](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-groups#rename_group)            | Rename a group. |
-| [Share a group](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-groups#share_group)              | Share a group with other members in the team. |
+| [Copy a group](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-eaf7c796-4b20-d618-2176-2718ca70affc){: external}                | Copy a group to other teams. |
+| [Create a group](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-54cf5358-4f52-15b7-3738-e5dd7d230437){: external}            | Create a group. |
+| [Delete a group](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-4d71d247-73bf-db60-aa0d-74fe3b045b68){: external}            | Delete a group. |
+| [Rename a group](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-3bfd69e4-cadd-efc0-d8a3-1b5f507a6e86){: external}            | Rename a group. |
+| [Share a group](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-68f6f9a0-6a50-6076-2a33-f1f026b02eac){: external}              | Share a group with other members in the team. |
 {: caption="Table 1. Tasks grouping labels" caption-side="top"} 
 
 
