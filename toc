@@ -8,7 +8,7 @@ IBM Cloud Monitoring with Sysdig
     getting-started.md
 
     {: .topicgroup}
-    Monitor
+    Sysdig Monitor
         monitor/getting-started-monitor.md
 
         {: .topicgroup}
@@ -31,12 +31,10 @@ IBM Cloud Monitoring with Sysdig
             [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
 
     {: .topicgroup}
-    Secure
+    Sysdig Secure
         secure/getting-started-secure.md
-
-        {: .topicgroup}
-        Integration with IBM
-            [Integrate IBM Cloud Pak for Multicloud Management](https://docs.sysdig.com/en/integrate-ibm-cloud-pak-for-multicloud-management.html)
+        [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
+        [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
 
     {: .topicgroup}
     Security and compliance
@@ -78,7 +76,7 @@ IBM Cloud Monitoring with Sysdig
         iam_grant_team.md
 
     {: .topicgroup}
-    Monitor
+    Sysdig Monitor
 
         {: .topicgroup}
         Metrics
@@ -133,7 +131,7 @@ IBM Cloud Monitoring with Sysdig
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
 
     {: .topicgroup}
-    Secure
+    Sysdig Secure
 
         {: .topicgroup}
         Image scanning
@@ -190,11 +188,6 @@ IBM Cloud Monitoring with Sysdig
         [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
         [PromCat](https://promcat.io/)
         deprecated.md
-
-    {: .topicgroup}
-    Secure
-        [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
-        [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
 
     [Sysdig Blog](https://sysdig.com/blog/)
     {: .navgroup-end}
