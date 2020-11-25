@@ -28,11 +28,7 @@ Monitoring with Sysdig
         {: .topicgroup}
         Adding more metrics
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
-            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
             monitor/exporters/prometheus.md
-            monitor/exporters/availability_metrics.md
-            [Prometheus metrics / OpenMetrics code instrumentation.](https://sysdig.com/blog/prometheus-metrics/)
-
 
     {: .topicgroup}
     Sysdig Secure
@@ -143,6 +139,8 @@ Monitoring with Sysdig
             monitor/exporters/ipmi.md
             monitor/exporters/blackbox.md
             monitor/exporters/wmi.md
+            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
+            [Prometheus metrics / OpenMetrics code instrumentation.](https://sysdig.com/blog/prometheus-metrics/)
         
         {: .topicgroup}
         Integrations
