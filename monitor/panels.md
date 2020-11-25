@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-11-12"
 
 keywords: Sysdig, IBM Cloud, monitoring, panels
 
@@ -50,7 +50,7 @@ You can use any of the following panel types:
 
 Complete the following steps to copy a panel:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
+1. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboard.png)) in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
 2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Copy to Dashboard** ![Copy to Dashboard icon](images/copy.png).
 

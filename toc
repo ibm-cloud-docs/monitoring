@@ -51,6 +51,12 @@ IBM Cloud Monitoring with Sysdig
     upgrade.md
 
     {: .topicgroup}
+    IAM integration
+        api_token.md
+        iam_grant.md
+        iam_grant_team.md
+
+    {: .topicgroup}
     Sysdig web UI
         launch.md
         get_sysdig_web_url.md
@@ -68,12 +74,6 @@ IBM Cloud Monitoring with Sysdig
         agent/change_container_agent.md
         [Enabling Kubernetes Audit Logging](https://docs.sysdig.com/en/kubernetes-audit-logging.html)
         [Sysdig Agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)
-    
-    {: .topicgroup}
-    IAM integration
-        api_token.md
-        iam_grant.md
-        iam_grant_team.md
 
     {: .topicgroup}
     Sysdig Monitor

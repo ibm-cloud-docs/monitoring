@@ -37,7 +37,7 @@ Frequently asked questions about {{site.data.keyword.mon_full_notm}}.
 You can find information about the services that generate metrics in the following documentation topic: [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
 
 
-## Are you noticing connection problems between your infrastructure and Sysdig’s hosted service?
+## Are you observing Sysdig agent connection errors or receiving uptime alerts reporting an host is down when there are no problems?
 {: #faq_2}
 {: faq}
 

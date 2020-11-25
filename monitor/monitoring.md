@@ -37,7 +37,7 @@ You can analyze data in the *Explore* tab and in the *Dashboard* tab of the web 
 * Use a metric view to monitor an individual metric.
 * Use dashboards to get a specialized insight into network data, application data, topology, services, hosts, and containers by monitoring data through panels. A panel displays a metric or group of metrics in a dashboard.
 
-For each metric view and dashboard, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. For more information, see [Managing data](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-manage#manage).
+For each metric view and dashboard, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. For more information, see [Managing panels](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-panels).
 
 In the *Explore* tab, you can monitor data by using default metrics and default dashboards. You can use labels to define new infrastructure groups that you can then use to aggregate data differently and monitor your environment. You can also use custom dashboards that you define through the *Dashboard* tab.
 
@@ -61,8 +61,8 @@ A metric is represented by time series. A time series is a set of numeric data p
 
 Metrics are classified into two groups: 
 
-* [Default metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics#metrics_default) 
-* [Custom metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics#metrics_custom)
+* [Default metrics](https://docs.sysdig.com/en/understanding-default,-custom,-and-missing-metrics.html){: external} 
+* [Custom metrics](https://docs.sysdig.com/en/understanding-default,-custom,-and-missing-metrics.html){: external}
 
 Labels are classified as infrastructure labels and metric descriptor labels. Each metric has a set of pre-defined labels. For custom metrics, you can configure more labels. 
 
@@ -71,7 +71,7 @@ You can use labels to identify and differentiate characteristics of a metric, fo
 * You can filter out data. 
 * You can split aggregated data into segments. 
 
-For more information, see [Labels](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics#metrics_labels).
+For more information, see [Labels](https://docs.sysdig.com/en/integrate-statsd-metrics.html#UUID-06ed33e5-fd4c-e3cb-1715-7278fd7f8cc1_UUID-9968b3e5-927f-b3f8-37ef-55edfd3663b8){: external}.
 
 ## Panels
 {: #monitoring_panels}
