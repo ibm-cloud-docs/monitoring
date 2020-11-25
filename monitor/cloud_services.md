@@ -150,7 +150,6 @@ The following table lists integration services that are Sysdig-enabled:
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.messagehub}}](/docs/EventStreams?topic=EventStreams-getting_started)| {{site.data.keyword.messagehub}} is a high-throughput message bus that is built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.IBM_notm}} and event stream distribution between your services and applications. | [Metrics collected by {{site.data.keyword.messagehub}}](/docs/EventStreams?topic=EventStreams-metrics) |
-| [{{site.data.keyword.mobilepushshort}}](/docs/mobilepush?topic=mobilepush-getting-started)| {{site.data.keyword.mobilepushshort}} is available as an IBM Cloud catalog service in the **Mobile** category and helps you to send and manage mobile and web push notifications. A push notification is an alert to indicate a change or update on a mobile device or browser.| [Metrics collected by {{site.data.keyword.mobilepushshort}}](/docs/mobilepush?topic=mobilepush-push_sysdig#pn_metrics_details) |
 {: caption="List of integration Cloud services" caption-side="top"} 
 
 
