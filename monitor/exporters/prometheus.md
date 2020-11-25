@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-07-16"
+lastupdated: "2020-11-26"
 
 keywords: Sysdig, IBM Cloud, monitoring, prometheus, exporters, promcat
 
@@ -41,13 +41,30 @@ The following table lists some Prometheus exporters that you can use to monitor 
 | `Windows WMI exporter`   | Collects Windows system metrics. | [PromCat: Windows Exporter](https://promcat.io/apps/windows){: external} |
 {: caption="Table 1. Collectors" caption-side="top"} 
 
+The following table outlines for each exporter the Sysdig agents that you can configure to add more metrics:
 
 | Exporters                | Service agent | Docker agent | Kubernetes agent |
 |--------------------------|---------------|--------------|------------------|
 | `Blackbox exporter`      |  |  | ![Checkmark icon](images/checkmark-icon.svg) (Promscrap v2) |
-| `IPMI exporter`          |  |  |  |
-| `Windows WMI exporter`   |  |  |  |
-{: caption="Table 1. Collectors" caption-side="top"} 
+| `IPMI exporter`          |  |  | ![Checkmark icon](images/checkmark-icon.svg) (Promscrap v2) |
+| `Windows WMI exporter`   |  | ![Checkmark icon](images/checkmark-icon.svg) (Promscrap v2) | ![Checkmark icon](images/checkmark-icon.svg) (Promscrap v2) |
+{: caption="Table 1. Exporters" caption-side="top"} 
+
+
+## Installing dashboards and alerts for exporters that are hosted in PromCat
+{: #prometheus_exporter-ui-promcat}
+
+To add the default dashboards and alerts that are available for an exporter that is hosted in PromCat, run the following command:
+
+```
+docker run -it --rm sysdiglabs/promcat-connect:0.1 install rancher:2.5.0 -t <SYSDIG_TOKEN>  -u <ENDPOINT>
+```
+{: codeblock}
+
+Where
+
+* `<SYSDIG_TOKEN>` is the Sysdig token. See [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+* `<ENDPOINT>` is the Sysdig instance endpoint. See [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 
 
 ## WMI exporter
@@ -71,7 +88,30 @@ The following collectors are supported:
 | `memory`       | [Memory metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.memory.md){: external} |
 {: caption="Table 1. Collectors" caption-side="top"} 
 
-For example, to learn how to configure the WMI exporter, see [Monitoring a Windows environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-windows).
+
+### Configure the exporter
+{: #prometheus_wmi-config}
+
+To learn how to configure the WMI exporter, see [Monitoring a Windows environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-windows).
+
+
+### Install the default dashboards and alerts
+{: #prometheus_wmi-ui}
+
+Run the following command:
+
+```
+docker run -it --rm sysdiglabs/promcat-connect:0.1 install windows:2019 -t <SYSDIG_TOKEN>  -u <ENDPOINT>
+```
+{: codeblock}
+
+Where
+
+* `<SYSDIG_TOKEN>` is the Sysdig token. See [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+* `<ENDPOINT>` is the Sysdig instance endpoint. See [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
+
+
+
 
 ## IPMI exporter
 {: #prometheus_ipmi}
@@ -124,8 +164,26 @@ You can collect the following metrics when you configure the IPMI exporter:
 For more information, see [Prometheus IPMI Exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
 
-For example, to learn how to configure the IPMI exporter, see [Configure the Prometheus IPMI Exporter to monitor sensor metrics in a Bare metal](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux#baremetal_linux_step3).
+### Configure the exporter
+{: #prometheus_ipmi-config}
 
+To learn how to configure the IPMI exporter, see [Configure the Prometheus IPMI Exporter to monitor sensor metrics in a Bare metal](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux#baremetal_linux_step3).
+
+
+### Install the default dashboards and alerts
+{: #prometheus_ipmi-ui}
+
+Run the following command:
+
+```
+docker run -it --rm sysdiglabs/promcat-connect:0.1 install ipmi:2.5.0 -t <SYSDIG_TOKEN>  -u <ENDPOINT>
+```
+{: codeblock}
+
+Where
+
+* `<SYSDIG_TOKEN>` is the Sysdig token. See [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+* `<ENDPOINT>` is the Sysdig instance endpoint. See [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 
 
 ## Blackbox exporter
@@ -135,6 +193,98 @@ Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The Sy
 
 
 
+## Sample. Kubernetes Sysdig agent sample configmap with 2 exporters
+{: premetheus-sample}
 
+The following configmap sample shows how 2 exporters are configured in a Kubernetes Sysdig agent:
+
+```
+Name:         sysdig-agent
+Namespace:    ibm-observe
+Labels:       <none>
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"v1","data":{"dragent.yaml":"log:\n  file_priority: debug\nconfigmap: true\n### Agent tags\n# tags: linux:ubuntu,dept:dev,lo...
+
+Data
+====
+dragent.yaml:
+----
+log:
+  file_priority: debug
+configmap: true
+### Agent tags
+# tags: linux:ubuntu,dept:dev,local:nyc
+
+#### Sysdig Software related config ####
+
+# Sysdig collector address
+# collector: 192.168.1.1
+
+# Collector TCP port
+# collector_port: 6666
+
+# Whether collector accepts ssl
+# ssl: true
+
+# collector certificate validation
+# ssl_verify_certificate: true
+
+#######################################
+# new_k8s: true
+# k8s_cluster_name: production
+security:
+  k8s_audit_server_url: 0.0.0.0
+  k8s_audit_server_port: 7765
+k8s_cluster_name: mycluster/xxxxxxxxxxxxxxxxxx
+tags: ibm.containers-kubernetes.cluster.id:xxxxxxxxxxxxxxxxxx
+collector: ingest.us-south.monitoring.cloud.ibm.com
+collector_port: 6443
+ssl: true
+ssl_verify_certificate: true
+sysdig_capture_enabled: false
+promscrape_fastproto: true
+use_promscrape: true
+prometheus:
+  enabled: true
+  prom_service_discovery: true
+  log_errors: true
+  max_metrics: 200000
+  max_metrics_per_process: 200000
+  max_tags_per_metric: 100
+  ingest_raw: true
+  ingest_calculated: false
+prometheus.yaml:
+----
+global:
+  scrape_interval: 10s
+scrape_configs:
+- job_name: blackbox
+  metrics_path: /probe
+  params:
+    module: [http_2xx]
+  static_configs:
+  - targets:
+    - https://prometheus.io/
+    - https://promcat.io/
+    - https://api.promcat.io/apps
+    - https://www.google.com/search?q=promcat
+    - https://promcat.io/apps/harbor
+    - https://www.ibm.com/software/passportadvantage
+  relabel_configs:
+  - source_labels: [__address__]
+    target_label: __param_target
+  - source_labels: [__param_target]
+    target_label: instance
+  - source_labels: [__param_target]
+    target_label: blackbox_instance
+  - target_label: __address__
+    replacement: blackbox-exporter.ibm-observe:9115
+- job_name: ipmi
+  metrics_path: /metrics
+  static_configs:
+  - targets:
+    - 'xxx.xxx.xxx.xxx:9290'
+```
+{: screen}
 
 

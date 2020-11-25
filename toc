@@ -13,24 +13,24 @@ Monitoring with Sysdig
 
         {: .topicgroup}
         Monitoring infrastructure
-            monitor/windows.md
-            monitor/baremetal_linux.md
-            monitor/kubernetes_cluster.md
-            monitor/ubuntu.md
+            monitor/infrastructure/windows.md
+            monitor/infrastructure/baremetal_linux.md
+            monitor/infrastructure/kubernetes_cluster.md
+            monitor/infrastructure/ubuntu.md
 
         {: .topicgroup}
         Monitoring IBM Cloud services
-            monitor/platform_metrics_enabling.md
-            monitor/platform_metrics_working.md
-            monitor/cloud_services.md
-            monitor/cloud_services_locations.md
+            monitor/platform/platform_metrics_enabling.md
+            monitor/platform/platform_metrics_working.md
+            monitor/platform/cloud_services.md
+            monitor/platform/cloud_services_locations.md
 
         {: .topicgroup}
         Adding more metrics
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
             [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
-            monitor/prometheus.md
-            monitor/availability_metrics.md
+            monitor/exporters/prometheus.md
+            monitor/exporters/availability_metrics.md
             [Prometheus metrics / OpenMetrics code instrumentation.](https://sysdig.com/blog/prometheus-metrics/)
 
 
@@ -42,12 +42,12 @@ Monitoring with Sysdig
 
     {: .topicgroup}
     Security and compliance
-        monitor/at_events.md
-        monitor/data-security.md
-        monitor/iam.md
-        monitor/ha-dr.md
-        monitor/service-connection.md
-        monitor/architecture-workload-isolation.md
+        monitor/core/at_events.md
+        monitor/core/data-security.md
+        monitor/core/iam.md
+        monitor/core/ha-dr.md
+        monitor/core/service-connection.md
+        monitor/core/architecture-workload-isolation.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -139,6 +139,12 @@ Monitoring with Sysdig
             monitor/teams.md
         
         {: .topicgroup}
+        Prometheus exporters
+            monitor/exporters/ipmi.md
+            monitor/exporters/blackbox.md
+            monitor/exporters/wmi.md
+        
+        {: .topicgroup}
         Integrations
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
 
@@ -211,7 +217,7 @@ Monitoring with Sysdig
     {: .topicgroup}
     Monitor
         monitor/troubleshoot.md
-        faq.md
+        monitor/faq.md
     {: .navgroup-end}
 
 
