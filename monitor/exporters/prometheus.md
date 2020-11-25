@@ -36,38 +36,16 @@ The following table lists some Prometheus exporters that you can use to monitor 
 
 | Exporters                | Use case                               | Source |
 |--------------------------|----------------------------------------|---------|
-| `Blackbox exporter`       | Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics.  | [Prometheus Blackbox exporter](){: external} |
+| `Blackbox exporter`       | Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics.  | [Prometheus Blackbox exporter](https://github.com/prometheus/blackbox_exporter){: external} |
 | `IPMI exporter`          | Collects Intelligent Platform Management Interface (IPMI) device sensor metrics.  | [Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}  |
 | `Windows WMI exporter`   | Collects Windows system metrics. | [PromCat: Windows Exporter](https://promcat.io/apps/windows){: external} |
-{: caption="Table 1. Collectors" caption-side="top"} 
-
-The following table outlines for each exporter the Sysdig agents that you can configure to add more metrics:
-
-| Exporters                | Service agent | Docker agent | Kubernetes agent |
-|--------------------------|---------------|--------------|------------------|
-| `Blackbox exporter`      |  |  | ![Checkmark icon](images/checkmark-icon.svg) (Promscrap v2) |
-| `IPMI exporter`          |  |  | ![Checkmark icon](images/checkmark-icon.svg) (Promscrap v2) |
-| `Windows WMI exporter`   |  | ![Checkmark icon](images/checkmark-icon.svg) (Promscrap v2) | ![Checkmark icon](images/checkmark-icon.svg) (Promscrap v2) |
 {: caption="Table 1. Exporters" caption-side="top"} 
 
 
-## Installing dashboards and alerts for exporters that are hosted in PromCat
-{: #prometheus_exporter-ui-promcat}
+## Exporters
+{: #prometheus-exporters}
 
-To add the default dashboards and alerts that are available for an exporter that is hosted in PromCat, run the following command:
-
-```
-docker run -it --rm sysdiglabs/promcat-connect:0.1 install rancher:2.5.0 -t <SYSDIG_TOKEN>  -u <ENDPOINT>
-```
-{: codeblock}
-
-Where
-
-* `<SYSDIG_TOKEN>` is the Sysdig token. See [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
-* `<ENDPOINT>` is the Sysdig instance endpoint. See [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
-
-
-## WMI exporter
+### WMI exporter
 {: #prometheus_wmi}
 
 Configure the [Prometheus WMI exporter](https://github.com/prometheus-community/windows_exporter){: external} to collect Windows system metrics.
@@ -89,31 +67,12 @@ The following collectors are supported:
 {: caption="Table 1. Collectors" caption-side="top"} 
 
 
-### Configure the exporter
-{: #prometheus_wmi-config}
-
 To learn how to configure the WMI exporter, see [Monitoring a Windows environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-windows).
 
 
-### Install the default dashboards and alerts
-{: #prometheus_wmi-ui}
-
-Run the following command:
-
-```
-docker run -it --rm sysdiglabs/promcat-connect:0.1 install windows:2019 -t <SYSDIG_TOKEN>  -u <ENDPOINT>
-```
-{: codeblock}
-
-Where
-
-* `<SYSDIG_TOKEN>` is the Sysdig token. See [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
-* `<ENDPOINT>` is the Sysdig instance endpoint. See [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 
 
-
-
-## IPMI exporter
+### IPMI exporter
 {: #prometheus_ipmi}
 
 In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. 
@@ -163,20 +122,23 @@ You can collect the following metrics when you configure the IPMI exporter:
 
 For more information, see [Prometheus IPMI Exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
-
-### Configure the exporter
-{: #prometheus_ipmi-config}
-
 To learn how to configure the IPMI exporter, see [Configure the Prometheus IPMI Exporter to monitor sensor metrics in a Bare metal](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux#baremetal_linux_step3).
 
 
-### Install the default dashboards and alerts
-{: #prometheus_ipmi-ui}
+### Blackbox exporter
+{: #prometheus_blackbox}
 
-Run the following command:
+Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics.
+
+
+
+## Installing dashboards and alerts for exporters that are hosted in PromCat
+{: #prometheus_exporter-ui-promcat}
+
+To add the default dashboards and alerts that are available for an exporter that is hosted in PromCat, run the following command:
 
 ```
-docker run -it --rm sysdiglabs/promcat-connect:0.1 install ipmi:2.5.0 -t <SYSDIG_TOKEN>  -u <ENDPOINT>
+docker run -it --rm sysdiglabs/promcat-connect:0.1 install rancher:2.5.0 -t <SYSDIG_TOKEN>  -u <ENDPOINT>
 ```
 {: codeblock}
 
@@ -186,19 +148,13 @@ Where
 * `<ENDPOINT>` is the Sysdig instance endpoint. See [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 
 
-## Blackbox exporter
-{: #prometheus_blackbox}
 
-Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics.
-
-
-
-## Sample. Kubernetes Sysdig agent sample configmap with 2 exporters
+## Sample. Kubernetes Sysdig agent configmap with 2 exporters
 {: premetheus-sample}
 
 The following configmap sample shows how 2 exporters are configured in a Kubernetes Sysdig agent:
 
-```
+```yaml
 Name:         sysdig-agent
 Namespace:    ibm-observe
 Labels:       <none>
