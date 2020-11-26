@@ -30,10 +30,11 @@ In addition to the set of metrics that are automatically collected by the Sysdig
 
 For example, you can monitor a server with {{site.data.keyword.mon_full_notm}} by configuring a Sysdig agent in your server and configure the IPMI exporter to collect sensor metrics.
 
-
 * The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP). 
 * When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter. 
 * The IPMI exporter relies on tools from the FreeIPMI suite.
+
+![IPMI components](images/ipmi.svg "IPMI components")
 
 You can collect the following metrics when you configure the IPMI exporter in a server:
 
