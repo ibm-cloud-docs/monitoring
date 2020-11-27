@@ -341,6 +341,8 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
+| {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
+| {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
 {: caption="Database services integration in Europe locations" caption-side="top"}
 {: #cs_db-table-1}
 {: tab-title="Europe"}
@@ -358,6 +360,8 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
+| {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
+| {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
 {: caption="Database services integration in America's locations" caption-side="top"}
 {: #cs_db-table-2}
 {: tab-title="America"}
@@ -375,6 +379,8 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.sqlquery_full}}                             | `NO`  | `NO`  |
+| {{site.data.keyword.ihsdbaas_mongodb_full}}|  `NO` | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.ihsdbaas_postgresql_full}}|  `NO` | ![Checkmark icon](images/checkmark-icon.svg)  |
 {: caption="Database services integration in AP locations" caption-side="top"}
 {: #cs_db-table-3}
 {: tab-title="Asia Pacific"}

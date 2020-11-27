@@ -125,7 +125,9 @@ You can collect the following metrics when you configure the IPMI exporter:
 
 For more information, see [Prometheus IPMI Exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
-To learn how to configure the IPMI exporter, see [Configure the Prometheus IPMI Exporter to monitor sensor metrics in a Bare metal](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux#baremetal_linux_step3).
+To learn how to configure the IPMI exporter, see [Configuring the Prometheus IPMI Exporter to monitor sensor metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ipmi).
+
+You can also check the tutorial: [Configure the Prometheus IPMI Exporter to monitor sensor metrics in a Bare metal](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux#baremetal_linux_step3).
 
 
 ### Blackbox exporter
@@ -133,6 +135,8 @@ To learn how to configure the IPMI exporter, see [Configure the Prometheus IPMI 
 
 Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics.
 
+Configure the [Prometheus Blackbox exporter](https://github.com/prometheus/blackbox_exporter){: external} to monitor host availability, such as URL sites.
+{: note}
 
 
 ## Installing dashboards and alerts for exporters that are hosted in PromCat

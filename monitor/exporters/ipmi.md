@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-11-26"
+lastupdated: "2020-11-27"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -22,23 +22,22 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 {:external: target="_blank" .external}
 
-# Configuring the Prometheus IPMI Exporter to monitor sensor metrics
+# Configuring the Prometheus IPMI Exporter to monitor IPMI metrics
 {: #ipmi}
 
 In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics. 
 {:shortdesc}
 
-For example, you can monitor a server with {{site.data.keyword.mon_full_notm}} by configuring a Sysdig agent in your server and configure the IPMI exporter to collect sensor metrics. The IPMI exporter can run in the same host as the Sysdig agent, or in any other host from which you want to collect sensor metrics of different hosts.
-
 * The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP). 
 * When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter. 
 * The IPMI exporter relies on tools from the FreeIPMI suite.
 
-The following figures shows different configurations that you can configure when using the IPMI exporter to monitor sensor metrics from hosts that can be available in IBM Cloud or outside the IBM Cloud:
+The following figures shows different configurations that you can use to monitor sensor metrics from hosts that can be available in IBM Cloud or outside the IBM Cloud:
 
 ![IPMI components](images/ipmi-kube1.svg "IPMI components: IPMI exporter and Kubernetes agent in different hosts")
 
 ![IPMI components](images/ipmi-kube2.svg "IPMI components: IPMI exporter and Kubernetes agent in the same host")
+
 
 You can collect the following metrics when you configure the IPMI exporter in a server:
 
@@ -79,27 +78,27 @@ You can collect the following metrics when you configure the IPMI exporter in a 
 For more information, see [Prometheus IPMI Exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
 
-
- 
-Complete the following steps to configure the Prometheus IPMI Exporter:
+Complete the following steps to configure a Sysdig agent to collect IPMI metrics from 1 or more hosts:
 
 
-## Step 1. Configure a Sysdig agent to collect metrics
+## Step 1. Configure a Sysdig agent
 {: #ipmi_step1}
 
-[Install a Sysdig agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
+To monitor 1 or more hosts, you must configure a Sysdig agent. The agent collects automatically a set of metrics that you can monitor through the Sysdig web UI.
+
+See [Install a Sysdig agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and choose the Sysdig agent that you want to configure to monitor a host.
 
 
-
-## Step 2. Install the Prometheus IPMI exporter
+## Step 2. Install the Prometheus IPMI exporter in a host that you want to monitor
 {: #ipmi_step2}
 
-To collect sensor metrics from remote hosts, choose one of the following options to configure the IPMI exporter:
-- You can install the IPMI exporter in the same host as the Sysdig agent.
-- You can install the IPMI exporter in a different host from where you are running the Sysdig agent.
+### Configuring the Prometheus IPMI Exporter to monitor IPMI metrics from hosts where the exporter is running
+{: #ipmi_step2-1}
 
+You can install the IPMI exporer in 1 or more hosts to collect IPMI metrics.
+{: note}
 
-Complete the following steps to install the IPMI exporter on a Linux-based host:
+For each host that you want to collect IPMI metrics, complete the following steps to install the IPMI exporter. For eaxample, complete the following steps for a Linux-based host:
 
 1. From a local terminal,[download the Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
@@ -150,7 +149,9 @@ Complete the following steps to install the IPMI exporter on a Linux-based host:
     ```
     {: pre}
 
-6. If the IPMI exporter is installed in the same host that you want to collect sensor metrics, configure the `ipmi_local.yml` file. You can update the file to exclude sensors that you do not want to monitor.
+6. Configure the `ipmi_local.yml` file. 
+
+    - You can update the file to exclude sensors that you do not want to monitor.
 
     Change to the directory where you have extracted the IPMI exporter:
 
@@ -200,6 +201,13 @@ Complete the following steps to install the IPMI exporter on a Linux-based host:
     You should see the IPMI exporter running.
 
 
+### Configuring the Prometheus IPMI Exporter to monitor IPMI metrics from hosts where the exporter is running
+{: #ipmi_step2-2}
+
+Supports an /ipmi endpoint that supports IPMI over RMCP - one exporter running on one host can be used to monitor a large number of IPMI interfaces by passing the target parameter to a scrape.
+
+
+
 ## Step 3. Configure network settings
 {: #ipmi_step3}
 
@@ -216,6 +224,9 @@ If you want to collect metrics from remote servers, complete the following steps
 ## Step 4. Update the Sysdig agent to collect IPMI metrics
 {: #ipmi_step4}
 
+You must configure the Sysdig agent to enable collection of IPMI metrics.
+
+Choose one of the following options based on the type of Sysdig agent that you configured:
 
 ### Kubernetes Sysdig agent
 {: #ipmi_step4-1}
@@ -358,7 +369,7 @@ Complete the following steps to update the Sysdig agent to collect IPMI metrics:
 
 
 
-## Step 5. Configure the default dashboard and alerts to analyze the IPMI status of your server
+## Configuring the default dashboard and alerts to analyze the IPMI status of your server
 {: #ipmi_step5}
 
 
