@@ -302,16 +302,16 @@ When you save the file, changes are applied.
 ### Linux service Sysdig agent
 {: #ipmi_step4-3}
 
-Complete the following steps:
+Complete the following steps to update the Sysdig agent to collect IPMI metrics:
 
-1. SSH into the server. Then, change to the directory `/opt/draios/etc/` and run the following command:
+1. SSH into the host where the Sysdig agent is running. Then, change to the directory `/opt/draios/etc/` and run the following command:
 
     ```
     cd /opt/draios/etc/
     ```
     {: pre}
 
-2. Update the `/opt/draios/etc/dragent.yaml` to [enable remote scraping](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){: external}. 
+2. Update the `/opt/draios/etc/dragent.yaml` to enable remote scraping. 
 
     Append the following section to the `dragent.yaml` file:
 
