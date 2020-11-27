@@ -42,6 +42,9 @@ The following table lists some Prometheus exporters that you can use to monitor 
 {: caption="Table 1. Exporters" caption-side="top"} 
 
 
+You can collect metrics from different exporters. However, exporters that are hosted in PromCat are supported by Sysdig.
+{: important}
+
 ## Exporters
 {: #prometheus-exporters}
 

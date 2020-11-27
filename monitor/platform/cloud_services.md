@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-10-21"
+lastupdated: "2020-11-26"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -89,6 +89,17 @@ The following table lists container services that are Sysdig-enabled:
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) | {{site.data.keyword.registrylong}} provides a multi-tenant, highly available, scalable, and encrypted private image registry that is hosted and managed by {{site.data.keyword.IBM}}. | [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor_sysdig)|
 {: caption="List of {{site.data.keyword.cloud_notm}} container services" caption-side="top"} 
+
+
+## Developer tools
+{: #devops}
+
+The following table lists developer tools and DevOps services that are Sysdig-enabled:
+
+| Service     | Description | Metrics | 
+|-------------|-------------|-------------------|
+| [{{site.data.keyword.contdelivery_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started)| With {{site.data.keyword.contdelivery_short}}, you can build, test, and deliver applications by using DevOps practices and industry-leading tools. | [Metrics collected by {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-monitor-sysdig) |
+{: caption="List of developer tools and DevOps services" caption-side="top"} 
 
 
 ## Networking services

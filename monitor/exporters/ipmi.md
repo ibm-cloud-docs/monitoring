@@ -28,13 +28,17 @@ subcollection: Monitoring-with-Sysdig
 In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics. 
 {:shortdesc}
 
-For example, you can monitor a server with {{site.data.keyword.mon_full_notm}} by configuring a Sysdig agent in your server and configure the IPMI exporter to collect sensor metrics.
+For example, you can monitor a server with {{site.data.keyword.mon_full_notm}} by configuring a Sysdig agent in your server and configure the IPMI exporter to collect sensor metrics. The IPMI exporter can run in the same host as the Sysdig agent, or in any other host from which you want to collect sensor metrics of different hosts.
 
 * The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP). 
 * When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter. 
 * The IPMI exporter relies on tools from the FreeIPMI suite.
 
-![IPMI components](images/ipmi.svg "IPMI components")
+The following figures shows different configurations that you can configure when using the IPMI exporter to monitor sensor metrics from hosts that can be available in IBM Cloud or outside the IBM Cloud:
+
+![IPMI components](images/ipmi-kube1.svg "IPMI components: IPMI exporter and Kubernetes agent in different hosts")
+
+![IPMI components](images/ipmi-kube2.svg "IPMI components: IPMI exporter and Kubernetes agent in the same host")
 
 You can collect the following metrics when you configure the IPMI exporter in a server:
 
@@ -87,10 +91,15 @@ Complete the following steps to configure the Prometheus IPMI Exporter:
 
 
 
-## Step 2. Install the Prometheus IPMI exporter in the server that you want to monitor
+## Step 2. Install the Prometheus IPMI exporter
 {: #ipmi_step2}
 
-Complete the following steps:
+To collect sensor metrics from remote hosts, choose one of the following options to configure the IPMI exporter:
+- You can install the IPMI exporter in the same host as the Sysdig agent.
+- You can install the IPMI exporter in a different host from where you are running the Sysdig agent.
+
+
+Complete the following steps to install the IPMI exporter on a Linux-based host:
 
 1. From a local terminal,[download the Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
@@ -141,7 +150,7 @@ Complete the following steps:
     ```
     {: pre}
 
-6. Check the `ipmi_local.yml` file. Optionally, you can update the file to exclude sensors that you do not want to monitor.
+6. If the IPMI exporter is installed in the same host that you want to collect sensor metrics, configure the `ipmi_local.yml` file. You can update the file to exclude sensors that you do not want to monitor.
 
     Change to the directory where you have extracted the IPMI exporter:
 
@@ -172,14 +181,16 @@ Complete the following steps:
     ```
     {: codeblock}
 
-7. Run the IPMI exporter.
+7. If the IPMI exporter is installed in a host from which you plan to collect sensor metrics from multiple hosts, configure the `ipmi_remote.yml` file. See[IPMI remote sample file](https://github.com/soundcloud/ipmi_exporter/blob/master/ipmi_remote.yml){: external}.
+
+8. Run the IPMI exporter.
 
     ```
     ./ipmi_exporter --config.file=ipmi_local.yml &
     ```
     {: pre}
 
-8. Check the IPMI exporter is running. Run the command:
+9. Check the IPMI exporter is running. Run the command:
 
     ```
     ps -aux | grep ipmi
@@ -202,14 +213,8 @@ If you want to collect metrics from remote servers, complete the following steps
 
 
 
-## Step 4. Update the Sysdig agent that is running in the server
+## Step 4. Update the Sysdig agent to collect IPMI metrics
 {: #ipmi_step4}
-
-Choose one of the following Sysdig agents:
-
-### Kubernetes Sysdig agent
-{: #ipmi_step4-1}
-
 
 Run the following command to edit the configmap and add information about the IPMI targets that you want to monitor:
 
@@ -275,6 +280,7 @@ scrape_configs:
     - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
     - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
     - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
+    - '169.45.51.254:9290'
 ```
 {: codeblock}
 
@@ -309,19 +315,36 @@ Complete the following steps:
     Append the following section to the `dragent.yaml` file:
 
     ```yaml
+    customerid: xxxxxxxxxx 
+    collector: ingest.us-south.monitoring.cloud.ibm.com
+    collector_port: 6443
+    ssl: true
+    sysdig_capture_enabled: false
+    use_promscrape: true
+    promscrape_fastproto: true
+    tags: resourceType:baremetal,region:montreal
+    prom_service_discovery: true
     prometheus:
-     enabled: true
-     interval: 30
-     log_errors: true
-     max_metrics: 3000
-     max_metrics_per_process: 3000
-     max_tags_per_metric: 20
-     process_filter:
-       - include:
-           port: 9290 
-           conf:
-             port: 9290 
-             path: "/metrics"
+      enabled: true
+      prom_service_discovery: true
+      log_errors: true
+      max_metrics: 200000
+      max_metrics_per_process: 200000
+      max_tags_per_metric: 100
+      ingest_raw: true
+      ingest_calculated: false
+    prometheus.yaml:
+    ----
+    global:
+      scrape_interval: 10s
+    scrape_configs:
+    - job_name: ipmi
+      metrics_path: /metrics
+      static_configs:
+      - targets:
+        - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
+        - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
+        - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
     ```
     {: codeblock}
 

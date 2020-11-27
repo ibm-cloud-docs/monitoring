@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-10-21"
+lastupdated: "2020-11-26"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -204,6 +204,39 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 {: row-headers}
 
 `[*]` {{site.data.keyword.registrylong_notm}} global registry metrics are available through the Sysdig Washington (us-east) instance.
+
+
+## Developer tools
+{: #cloud_services_locations_devops}
+| Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------|------------------|
+| {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |
+{: caption="Developer tools and DevOps services in Europe locations" caption-side="top"}
+{: #cs_devops-table-1}
+{: tab-title="Europe"}
+{: tab-group="cs_devops"}
+{: class="simple-tab-table"}
+{: row-headers}
+| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
+|------------------------------------------------|---------------------|------------------------------------|
+| {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |
+{: caption="Developer tools and DevOps services in America's locations" caption-side="top"}
+{: #cs_devops-table-2}
+{: tab-title="America"}
+{: tab-group="cs_devops"}
+{: class="simple-tab-table"}
+{: row-headers}
+| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
+|------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
+| {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](images/checkmark-icon.svg) | `NO` | `NO` | `NO` |  
+{: caption="Developer tools and DevOps services in AP locations" caption-side="top"}
+{: #cs_devops-table-3}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_devops"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+
 
 ## Networking services
 {: #cloud_services_locations_networking}

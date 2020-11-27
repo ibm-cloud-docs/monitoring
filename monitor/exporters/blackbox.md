@@ -25,15 +25,18 @@ subcollection: Monitoring-with-Sysdig
 # Collecting availability metrics by using the Prometheus Blackbox exporter
 {: #blackbox}
 
-The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
+The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
 {:shortdesc}
 
-For example, you can monitor a server with {{site.data.keyword.mon_full_notm}} by configuring a Sysdig agent in your server and configure the IPMI exporter to collect sensor metrics.
+The following figure shows different configurations that you can configure when using the Blackbox exporter to monitor availability of remote hosts:
+
+![Blackbox components](images/blackbox.svg "Blackbox components")
+
 
 [Blackbox exporter configuration](https://github.com/prometheus/blackbox_exporter/blob/master/CONFIGURATION.md)
 
  
-Complete the following steps to configure the Prometheus IPMI Exporter:
+Complete the following steps to configure the Prometheus Blackbox Exporter:
 
 
 ## Step 1. Configure a Sysdig agent to collect metrics
@@ -45,6 +48,8 @@ Complete the following steps to configure the Prometheus IPMI Exporter:
 
 ## Step 2. Install the Prometheus Blackbox exporter in the server that you want to monitor
 {: #blackbox_step2}
+
+Blackbox exporter is configured via a configuration file and command-line flags 
 
 ### Run the Blackbox exporter as a docker container
 {: #blackbox_step2-1}
@@ -92,7 +97,7 @@ Complete the following steps:
 
 
 ## Step 3. Configure network settings
-{: #ipmi_step3}
+{: #Blackbox_step3}
 
 If you want to collect metrics from remote servers, complete the following steps:
 
@@ -105,15 +110,15 @@ If you want to collect metrics from remote servers, complete the following steps
 
 
 ## Step 4. Update the Sysdig agent that is running in the server
-{: #ipmi_step4}
+{: #Blackbox_step4}
 
 Choose one of the following Sysdig agents:
 
 ### Kubernetes Sysdig agent
-{: #ipmi_step4-1}
+{: #Blackbox_step4-1}
 
 
-Run the following command to edit the configmap and add information about the IPMI targets that you want to monitor:
+Run the following command to edit the configmap and add information about the Blackbox targets that you want to monitor:
 
 ```
 kubectl edit configmap sysdig-agent -n ibm-observe
@@ -205,11 +210,11 @@ When you save the file, changes are applied.
 
 
 ### Docker Sysdig agent
-{: #ipmi_step4-2}
+{: #Blackbox_step4-2}
 
 
 ### Linux service Sysdig agent
-{: #ipmi_step4-3}
+{: #Blackbox_step4-3}
 
 Complete the following steps:
 
@@ -250,14 +255,14 @@ Complete the following steps:
 
 
 
-## Step 5. Configure the default dashboard and alerts to analyze the IPMI status of your server
-{: #ipmi_step5}
+## Step 5. Configure the default dashboard and alerts to analyze the Blackbox status of your server
+{: #Blackbox_step5}
 
 
-To configure the default dashboard and alerts to analyze the IPMI status of your server, run the following command:
+To configure the default dashboard and alerts to analyze the Blackbox status of your server, run the following command:
 
 ```
-docker run -it --rm sysdiglabs/promcat-connect:0.1 install ipmi:2.5.0 -t <SYSDIG_TOKEN>  -u <ENDPOINT>
+docker run -it --rm sysdiglabs/promcat-connect:0.1 install Blackbox:2.5.0 -t <SYSDIG_TOKEN>  -u <ENDPOINT>
 ```
 {: codeblock}
 
