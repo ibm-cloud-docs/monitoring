@@ -216,12 +216,18 @@ If you want to collect metrics from remote servers, complete the following steps
 ## Step 4. Update the Sysdig agent to collect IPMI metrics
 {: #ipmi_step4}
 
-Run the following command to edit the configmap and add information about the IPMI targets that you want to monitor:
+
+### Kubernetes Sysdig agent
+{: #ipmi_step4-1}
+
+Run the following command to edit the configmap and add information about the hosts where the IPMI exporter is configured:
 
 ```
 kubectl edit configmap sysdig-agent -n ibm-observe
 ```
 {: pre}
+
+Modify the yaml file to add the prometheus configuration of the IPMI exporter:
 
 ```yaml
 log:
@@ -277,10 +283,9 @@ scrape_configs:
   metrics_path: /metrics
   static_configs:
   - targets:
-    - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
-    - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
-    - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
-    - '169.45.51.254:9290'
+    - '<IP_ADDRESS_OF_REMOTE_SERVER_WHERE_IPMI_EXPORTER_IS_RUNNING>:9290'
+    - '<IP_ADDRESS_OF_REMOTE_SERVER_WHERE_IPMI_EXPORTER_IS_RUNNING>:9290'
+    - '<IP_ADDRESS_OF_REMOTE_SERVER_WHERE_IPMI_EXPORTER_IS_RUNNING>:9290'
 ```
 {: codeblock}
 
@@ -292,10 +297,6 @@ Where
 
 When you save the file, changes are applied.
 
-
-
-### Docker Sysdig agent
-{: #ipmi_step4-2}
 
 
 ### Linux service Sysdig agent
@@ -342,9 +343,9 @@ Complete the following steps:
       metrics_path: /metrics
       static_configs:
       - targets:
-        - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
-        - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
-        - '<IP_ADDRESS_OF_REMOTE_SERVER>:9290'
+        - '<IP_ADDRESS_OF_REMOTE_SERVER_WHERE_IPMI_EXPORTER_IS_RUNNING>:9290'
+        - '<IP_ADDRESS_OF_REMOTE_SERVER_WHERE_IPMI_EXPORTER_IS_RUNNING>:9290'
+        - '<IP_ADDRESS_OF_REMOTE_SERVER_WHERE_IPMI_EXPORTER_IS_RUNNING>:9290'
     ```
     {: codeblock}
 
