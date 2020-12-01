@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-10-21"
+lastupdated: "2020-11-26"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -205,6 +205,39 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 
 `[*]` {{site.data.keyword.registrylong_notm}} global registry metrics are available through the Sysdig Washington (us-east) instance.
 
+
+## Developer tools
+{: #cloud_services_locations_devops}
+| Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
+|---------------------------------------------------------------|---------------------|------------------|
+| {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |
+{: caption="Developer tools and DevOps services in Europe locations" caption-side="top"}
+{: #cs_devops-table-1}
+{: tab-title="Europe"}
+{: tab-group="cs_devops"}
+{: class="simple-tab-table"}
+{: row-headers}
+| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
+|------------------------------------------------|---------------------|------------------------------------|
+| {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |
+{: caption="Developer tools and DevOps services in America's locations" caption-side="top"}
+{: #cs_devops-table-2}
+{: tab-title="America"}
+{: tab-group="cs_devops"}
+{: class="simple-tab-table"}
+{: row-headers}
+| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
+|------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
+| {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](images/checkmark-icon.svg) | `NO` | `NO` | `NO` |  
+{: caption="Developer tools and DevOps services in AP locations" caption-side="top"}
+{: #cs_devops-table-3}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_devops"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+
+
 ## Networking services
 {: #cloud_services_locations_networking}
 
@@ -308,6 +341,8 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
+| {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
+| {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
 {: caption="Database services integration in Europe locations" caption-side="top"}
 {: #cs_db-table-1}
 {: tab-title="Europe"}
@@ -325,6 +360,8 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
+| {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
+| {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](images/checkmark-icon.svg)  | `NO`  |
 {: caption="Database services integration in America's locations" caption-side="top"}
 {: #cs_db-table-2}
 {: tab-title="America"}
@@ -342,6 +379,8 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg)  |
 | {{site.data.keyword.sqlquery_full}}                             | `NO`  | `NO`  |
+| {{site.data.keyword.ihsdbaas_mongodb_full}}|  `NO` | ![Checkmark icon](images/checkmark-icon.svg)  |
+| {{site.data.keyword.ihsdbaas_postgresql_full}}|  `NO` | ![Checkmark icon](images/checkmark-icon.svg)  |
 {: caption="Database services integration in AP locations" caption-side="top"}
 {: #cs_db-table-3}
 {: tab-title="Asia Pacific"}
@@ -356,7 +395,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
-| {{site.data.keyword.messagehub}}             | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg)|
+| {{site.data.keyword.messagehub}}             | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg)|    
 {: caption="Integration services integration in Europe locations" caption-side="top"}
 {: #cs_integration-table-1}
 {: tab-title="Europe"}
@@ -366,7 +405,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
-| {{site.data.keyword.messagehub}}               | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |           
+| {{site.data.keyword.messagehub}}               | ![Checkmark icon](images/checkmark-icon.svg)   | ![Checkmark icon](images/checkmark-icon.svg)    |         
 {: caption="Integration services integration in America's locations" caption-side="top"}
 {: #cs_integration-table-2}
 {: tab-title="America"}
@@ -376,7 +415,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
 |------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
-| {{site.data.keyword.messagehub}}               | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |  `Metrics are available through the platform metrics Sysdig instance in Tokyo` | `Metrics are available through the platform metrics Sysdig instance in Tokyo` |     
+| {{site.data.keyword.messagehub}}               | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |  `Metrics are available through the platform metrics Sysdig instance in Tokyo` | `Metrics are available through the platform metrics Sysdig instance in Tokyo` |  
 {: caption="Integration services integration in AP locations" caption-side="top"}
 {: #cs_integration-table-3}
 {: tab-title="Asia Pacific"}
