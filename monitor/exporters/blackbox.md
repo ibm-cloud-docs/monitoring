@@ -46,7 +46,7 @@ Complete the following steps to configure the Prometheus Blackbox Exporter:
 
 
 
-## Step 2. Install the Prometheus Blackbox exporter in the server that you want to monitor
+## Step 2. Install the Prometheus Blackbox exporter
 {: #blackbox_step2}
 
 Blackbox exporter is configured via a configuration file and command-line flags 
