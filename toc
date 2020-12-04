@@ -35,16 +35,7 @@ Monitoring with Sysdig
         secure/getting-started-secure.md
         [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
         [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
-
-    {: .topicgroup}
-    Security and compliance
-        monitor/core/at_events.md
-        monitor/core/data-security.md
-        monitor/core/iam.md
-        monitor/core/ha-dr.md
-        monitor/core/service-connection.md
-        monitor/core/architecture-workload-isolation.md
-    {: .navgroup-end}
+   {: .navgroup-end}
 
     {: .navgroup id="howto"}
     provision.md
@@ -53,9 +44,21 @@ Monitoring with Sysdig
 
     {: .topicgroup}
     IAM integration
+        monitor/core/iam.md
         api_token.md
         iam_grant.md
         iam_grant_team.md
+
+    {: .topicgroup}
+    Logging and monitoring
+        monitor/core/at_events.md
+
+    {: .topicgroup}
+    Enhancing security
+        monitor/core/data-security.md
+        monitor/core/service-connection.md
+        monitor/core/architecture-workload-isolation.md
+        monitor/core/ha-dr.md
 
     {: .topicgroup}
     Sysdig web UI
