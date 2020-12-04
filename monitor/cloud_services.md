@@ -195,3 +195,16 @@ The following table lists VPC infrastructure services that are Sysdig-enabled:
 {: caption="List of VPC services (generation 2)" caption-side="top"} 
 
 
+## AI
+{: #ai_machine_learning}
+
+The following table lists AI / Machine Learning services that are Sysdig-enabled:
+
+| Service     | Description | Metrics             |
+|-------------|-------------|-------------------|
+| [{{site.data.keyword.wh-acd_short}}](/docs/wh-acd)| You can use {{site.data.keyword.wh-acd_short}} to analyze text and extract medical codes and concepts. | [Metrics that are collected by {{site.data.keyword.wh-acd_short}}](/docs/wh-acd?topic=wh-acd-monitor-sysdig-pm#metrics-available-by-service-plan) |
+{: caption="List of AI / Machine Learning services" caption-side="top"}
+
+
+
+

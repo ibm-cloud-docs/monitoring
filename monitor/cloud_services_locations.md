@@ -473,6 +473,18 @@ For more information, see [Storage services](/docs/cloud-infrastructure?topic=cl
 
 
 
+## AI
+{: #cloud_services_locations_ai}
+
+| Service                             | `Dallas (us-south)`                            | `Washington (us-east)`                     |
+|-------------------------------------|------------------------------------------------|--------------------------------------------|
+| {{site.data.keyword.wh-acd_short}}  | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |          
+{: caption="AI / Machine Learning services integration in America's locations" caption-side="top"}
+{: #ai-table-1}
+{: tab-title="America"}
+{: tab-group="cs_ai"}
+{: class="simple-tab-table"}
+{: row-headers}
 
 
 
