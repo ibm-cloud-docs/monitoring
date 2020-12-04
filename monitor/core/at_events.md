@@ -40,6 +40,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.alert.read`           | An event is created when you read an alert definition |
 | `sysdig-monitor.alert.update`         | An event is created when you update an alert definition |
 | `sysdig-monitor.alert.delete`         | An event is created when you delete an alert definition |
+| `sysdig-monitor.alert.list`           | An event is created when you view the alerts in the Sysdig instance  |
 {: caption="Table 1. Alerts: List of activity tracker actions" caption-side="top"} 
 
 ## Captures: List of management events
@@ -65,6 +66,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.dashboard.read`       | An event is created when you load a dashboard |
 | `sysdig-monitor.dashboard.update`     | An event is created when you update a dashboard |
 | `sysdig-monitor.dashboard.delete`     | An event is created when you delete a dashboard |
+| `sysdig-monitor.dashboard.list`       | An event is created when you view the dashboards in the Sysdig instance |
 {: caption="Table 3. Dashboards: List of activity tracker actions" caption-side="top"} 
 
 
@@ -79,6 +81,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.team.read`            | An event is created when you view a Sysdig team definition |
 | `sysdig-monitor.team.update`          | An event is created when you update a Sysdig team definition |
 | `sysdig-monitor.team.delete`          | An event is created when you delete a Sysdig team |
+| `sysdig-monitor.team.list`            | An event is created when you view the Sysdig teams |
 {: caption="Table 4. Captures: List of activity tracker actions" caption-side="top"} 
 
 
