@@ -471,7 +471,7 @@ For more information, see [Storage services](/docs/cloud-infrastructure?topic=cl
 {: class="simple-tab-table"}
 {: row-headers}
 
-## AI / Machine Learning
+## AI
 {: #cloud_services_locations_ai}
 
 | Service                             | `Dallas (us-south)`                            | `Washington (us-east)`                     |

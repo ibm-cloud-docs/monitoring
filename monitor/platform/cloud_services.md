@@ -194,7 +194,7 @@ The following table lists VPC infrastructure services that are Sysdig-enabled:
 | [{{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)| You can use {{site.data.keyword.cos_full_notm}} to store unstructured data in the {{site.data.keyword.cloud_notm}}.  | [Metrics that are collected by {{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-mm-cos-integration&programming_language=Console) |
 {: caption="List of VPC services (generation 2)" caption-side="top"} 
 
-## AI / Machine Learning
+## AI
 {: #ai_machine_learning}
 
 The following table lists AI / Machine Learning services that are Sysdig-enabled:
@@ -203,3 +203,6 @@ The following table lists AI / Machine Learning services that are Sysdig-enabled
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.wh-acd_short}}](/docs/wh-acd)| You can use {{site.data.keyword.wh-acd_short}} to analyze text and extract medical codes and concepts. | [Metrics that are collected by {{site.data.keyword.wh-acd_short}}](/docs/wh-acd?topic=wh-acd-monitor-sysdig-pm#metrics-available-by-service-plan) |
 {: caption="List of AI / Machine Learning services" caption-side="top"}
+
+
+
