@@ -183,6 +183,7 @@ Monitoring with Sysdig
     {: .navgroup id="reference"}
     [Secure DevOps Platform](https://sysdig.com/secure-devops-platform/)
     pricing.md
+    releasenotes.md
 
     {: .topicgroup}
     Monitor
