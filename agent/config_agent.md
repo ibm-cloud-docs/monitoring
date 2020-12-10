@@ -93,7 +93,7 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
     To see the latest Sysdig agent logs, go to the directory `/opt/draios/logs` and check the log file `draios.log`.
 
-    To look for erros, you can run the following command:
+    To look for errors, you can run the following command:
 
     ```
     grep error /opt/draios/logs/draios.log
@@ -166,7 +166,7 @@ Complete the following steps to configure a Sysdig agent on a Docker container t
     ```
     {: codeblock}
 
-    To look for erros, you can run the following command:
+    To look for errors, you can run the following command:
 
     ```
     docker logs sysdig-agent 2>&1 | grep "error"

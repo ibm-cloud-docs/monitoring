@@ -23,7 +23,7 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
  
-# Enabling Platform Metrics
+# Enabling platform metrics
 {: #platform_metrics_enabling}
 
  You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location. 
@@ -50,7 +50,7 @@ For example, if you are monitoring an {{site.data.keyword.messagehub}} instance 
 ### Step 2. Set on the platform metrics flag 
 {: #platform_metrics_enabling_step2}
 
-1. From the{{site.data.keyword.cloud_notm}} dashboard, go to the menu icon ![menu icon](../../icons/icon_hamburger.svg) &gt; **Observability** to access the *Observability* dashboard.
+1. From the{{site.data.keyword.cloud_notm}} dashboard, go to the menu icon ![menu icon](../../../icons/icon_hamburger.svg) &gt; **Observability** to access the *Observability* dashboard.
 
 2. Select **Monitoring** &gt; **Configure platform metrics**. 
 

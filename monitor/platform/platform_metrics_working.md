@@ -110,7 +110,7 @@ You can create a copy of a dashboard template. You can customize the copy of the
 Complete the following steps to create a custom dashboard:
 
 1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
-2. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboards.png)) in the Web UI.
+2. Navigate to the **DASHBOARD** section (![dashboard section](../images/dashboards.png)) in the Web UI.
 3. In the **DASHBOARD TEMPLATES** section, expand **IBM**, and select a dashboard template for a service that you want to monitor.
 4. Select **Create Custom Dashboard**. The window *Create Dashboard from Template* opens. 
 5. Enter a name for your dashboard, and click **Create and Open**. The dashboard opens.
@@ -126,7 +126,7 @@ Next, customize the scope and panels in the dashboard.
 Complete the following steps to define the scope of the data that is displayed through the dashboard:
 
 1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
-2. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboards.png)) in the Web UI.
+2. Navigate to the **DASHBOARD** section (![dashboard section](../images/dashboards.png)) in the Web UI.
 3. Select a custom dashboard in the **My Dashboards** section.
 4. To modify the scope, click **Edit scope**.
 
@@ -156,10 +156,10 @@ Complete the following steps to define the scope of the data that is displayed t
 Complete the following steps to define the scope of the data that is displayed through a panel in a dashboard:
 
 1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
-2. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboards.png)) in the Web UI.
+2. Navigate to the **DASHBOARD** section (![dashboard section](../images/dashboards.png)) in the Web UI.
 3. Select a custom dashboard in the **My Dashboards** section.
 4. Select a panel where you want to change the scope of the data.
-5. Select the *Pencil* icon ![Pencil icon](images/pencil.png). Then, in the *Scope* section, click **Dashboard scope**.
+5. Select the *Pencil* icon ![Pencil icon](../images/pencil.png). Then, in the *Scope* section, click **Dashboard scope**.
 
     ![Panel scope](images/sysdig-platform-6.png "Panel scope")
 
@@ -190,14 +190,14 @@ Complete the following steps to define an alert on a metric:
 
     You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
 
-3. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboards.png)) in the Web UI.
+3. Navigate to the **DASHBOARD** section (![dashboard section](../images/dashboards.png)) in the Web UI.
 4. Select a custom dashboard in the **My Dashboards** section.
 5. Select the panel for which you want to define the alert.
 
     Before you create the alert, check the scope of the metric that is configured in the panel. This scope is automatically included in the alert definition.
     {: note}
 
-6. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Create Alert**.
+6. Select the *More options* icon ![Three dots icon](../images/actions.png) and select **Create Alert**.
 
     ![Panel options](images/sysdig-platform-5.png "Panel options")
 
@@ -234,7 +234,7 @@ Complete the following steps to define an alert on a metric:
 
     You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
 
-3. Navigate to the **Alerts** section ![Alerts module](images/alerts.png)) in the Web UI.
+3. Navigate to the **Alerts** section ![Alerts module](../images/alerts.png)) in the Web UI.
 
 4. Select **Add Alert**.
 

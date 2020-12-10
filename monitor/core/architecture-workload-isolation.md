@@ -37,7 +37,7 @@ Review the following sample architecture for {{site.data.keyword.mon_full_notm}}
 {{site.data.keyword.mon_full_notm}} is a highly available, multi-tenant, regional service that is available in {{site.data.keyword.cloud_notm}}. You can use it to monitor your applications, platform resources, and infrastructure.
 
 
-![{{site.data.keyword.mon_full_notm}}](images/Monitoring-arch.png "{{site.data.keyword.mon_full_notm}} high level architecture")
+![{{site.data.keyword.mon_full_notm}}](../images/Monitoring-arch.png "{{site.data.keyword.mon_full_notm}} high level architecture")
 
 The API server component provides a web and an API interface to the Sysdig service.
 

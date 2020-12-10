@@ -82,12 +82,12 @@ Use the following table to identify the platform role that you can grant a user 
 
 | Platform actions                                                        | Administrator                                     | Editor | Operator | Viewer  |
 |-------------------------------------------------------------------------|:-------------------------------------------------:|:-------:|:--------:|:------:|
-| `Grant other account members access to work with the service`           | ![Checkmark icon](../../icons/checkmark-icon.svg) |         |          |        |
-| `Provision a service instance`                                          | ![Checkmark icon](../../icons/checkmark-icon.svg) |![Checkmark icon](../../icons/checkmark-icon.svg)         |          |        |
-| `Delete a service instance`                                             | ![Checkmark icon](../../icons/checkmark-icon.svg) |![Checkmark icon](../../icons/checkmark-icon.svg)         |          |        |
-| `Create a service ID`                                                   | ![Checkmark icon](../../icons/checkmark-icon.svg) |![Checkmark icon](../../icons/checkmark-icon.svg)         |          |        |
-| `View details of a service instance`                                    | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)    | ![Checkmark icon](../../icons/checkmark-icon.svg)      | ![Checkmark icon](../../icons/checkmark-icon.svg)    |
-| `View service instances in the Observability Monitoring dashboard`      | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)    | ![Checkmark icon](../../icons/checkmark-icon.svg)      | ![Checkmark icon](../../icons/checkmark-icon.svg)    |
+| `Grant other account members access to work with the service`           | ![Checkmark icon](../images/checkmark-icon.svg) |         |          |        |
+| `Provision a service instance`                                          | ![Checkmark icon](../images/checkmark-icon.svg) |![Checkmark icon](../images/checkmark-icon.svg)         |          |        |
+| `Delete a service instance`                                             | ![Checkmark icon](../images/checkmark-icon.svg) |![Checkmark icon](../images/checkmark-icon.svg)         |          |        |
+| `Create a service ID`                                                   | ![Checkmark icon](../images/checkmark-icon.svg) |![Checkmark icon](../images/checkmark-icon.svg)         |          |        |
+| `View details of a service instance`                                    | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)    | ![Checkmark icon](../images/checkmark-icon.svg)      | ![Checkmark icon](../images/checkmark-icon.svg)    |
+| `View service instances in the Observability Monitoring dashboard`      | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)    | ![Checkmark icon](../images/checkmark-icon.svg)      | ![Checkmark icon](../images/checkmark-icon.svg)    |
 {: caption="Table 1. IAM user roles and actions" caption-side="top"}
 
 
@@ -99,17 +99,17 @@ Use the following table to identify the service role that you can grant a user i
 
 | Actions                                       | Manager                                           | Writer                         | Reader |
 |-----------------------------------------------|---------------------------------------------------|--------------------------------|--------|
-| `Reset the Sysdig access key`                    | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
-| `Create, configure, and delete teams`            | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
-| `Configure and remove notifications channels`    | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
-| `Configure and remove Sysdig agents`             | ![Checkmark icon](../../icons/checkmark-icon.svg) |   |   |
-| `Create, delete, and edit content in the Sysdig web UI`| ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
-| `Create and delete dashboards`                   | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
-| `Create and delete alerts`                       | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
-| `Create and delete events`                   | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | | 
-| `Create and delete captures`                     | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | | 
-| `Modify the scope of dashboards/panels`        | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
-| `View metrics, dashboards, alerts, events, and captures through the Sysdig Web UI`  | ![Checkmark icon](../../icons/checkmark-icon.svg)      | ![Checkmark icon](../../icons/checkmark-icon.svg)                    | ![Checkmark icon](../../icons/checkmark-icon.svg)    | 
+| `Reset the Sysdig access key`                    | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
+| `Create, configure, and delete teams`            | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
+| `Configure and remove notifications channels`    | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
+| `Configure and remove Sysdig agents`             | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
+| `Create, delete, and edit content in the Sysdig web UI`| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
+| `Create and delete dashboards`                   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
+| `Create and delete alerts`                       | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | |
+| `Create and delete events`                   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | | 
+| `Create and delete captures`                     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | | 
+| `Modify the scope of dashboards/panels`        | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
+| `View metrics, dashboards, alerts, events, and captures through the Sysdig Web UI`  | ![Checkmark icon](../images/checkmark-icon.svg)      | ![Checkmark icon](../images/checkmark-icon.svg)                    | ![Checkmark icon](../images/checkmark-icon.svg)    | 
 {: caption="Table 2. Sysdig roles and actions" caption-side="top"}
 
 
@@ -120,12 +120,12 @@ Use the following table to identify the platform role that you must grant a user
 
 | DevOps role               | Platform scope  | Platform role  | See Sysdig instance in {{site.data.keyword.cloud_notm}}  |
 |--------------------------|-----------------|-----------------|----------------------------------------------------------|
-| `Service administrator`  | `All instances` | `Administrator` | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Sysdig instance manager`| `Instance`      | `Editor`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Sysdig instance writer` | `Instance`      | `Viewer`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Team writer`            | `Instance`      | `Viewer`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Instance viewer (user)` | `Instance`      | `Viewer`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Team viewer (user)`     | `Instance`      | `Viewer`        | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
+| `Service administrator`  | `All instances` | `Administrator` | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `Sysdig instance manager`| `Instance`      | `Editor`        | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `Sysdig instance writer` | `Instance`      | `Viewer`        | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `Team writer`            | `Instance`      | `Viewer`        | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `Instance viewer (user)` | `Instance`      | `Viewer`        | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `Team viewer (user)`     | `Instance`      | `Viewer`        | ![Checkmark icon](../images/checkmark-icon.svg) | 
 {: caption="Table 3. Roles and actions" caption-side="top"}
 
 An instance viewer is a user that can see dashboards, alerts, and notifications in a Sysdig instance for all teams.
@@ -145,10 +145,10 @@ Use the following table to identify the platform role and the service role that 
 
 | DevOps role              | Platform scope  | Platform role  | Service role      | Team scope   | Launch Sysdig UI and make REST API calls |
 |--------------------------|-----------------|----------------|-------------------|--------------|-------------------------------------------|
-| `Service administrator`  | `All instances` | `Administrator`| `Manager`         | `(*)`        | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Sysdig instance manager`| `Instance`      | `Editor`       | `Manager`         | `(**)`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Sysdig instance writer` | `Instance`      | `Viewer`       | `Writer`          | `(**)`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Instance viewer (user)` | `Instance`      | `Viewer`       | `Reader`          | `(**)`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| `Service administrator`  | `All instances` | `Administrator`| `Manager`         | `(*)`        | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `Sysdig instance manager`| `Instance`      | `Editor`       | `Manager`         | `(**)`       | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `Sysdig instance writer` | `Instance`      | `Viewer`       | `Writer`          | `(**)`       | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `Instance viewer (user)` | `Instance`      | `Viewer`       | `Reader`          | `(**)`       | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Table 4. Roles and actions" caption-side="top"}
 
 `(*)`The user gets permissions to manage all teams across all Sysdig instances.
@@ -176,8 +176,8 @@ Use the following table to identify the service role that you must grant a user 
 
 | DevOps role              | Platform scope  | Service role      | Team scope   | Launch Sysdig UI and make REST API calls |
 |--------------------------|-----------------|-------------------|--------------|-------------------------------------------|
-| `Team writer`            | `Instance`      | `Writer`          | `{Team}`       | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Team viewer`            | `Instance`      | `Reader`          | `{Team}`       | ![Checkmark icon](../../icons/checkmark-icon.svg) | 
+| `Team writer`            | `Instance`      | `Writer`          | `{Team}`       | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `Team viewer`            | `Instance`      | `Reader`          | `{Team}`       | ![Checkmark icon](../images/checkmark-icon.svg) | 
 {: caption="Table 5. Roles and actions" caption-side="top"}
 
 Where `{Team}` is a team that is configured in the Sysdig instance.

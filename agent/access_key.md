@@ -36,7 +36,7 @@ To get the access key for an {{site.data.keyword.mon_full_notm}} instance throug
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 
-2. Go to the Menu icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**. 
+2. Go to the Menu icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Observability**. 
 
 3. Select **Monitoring**. The {{site.data.keyword.mon_full_notm}} dashboard opens. You can see the list of monitoring instances that are available on {{site.data.keyword.cloud_notm}}.
 
