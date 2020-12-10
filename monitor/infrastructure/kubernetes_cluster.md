@@ -33,7 +33,7 @@ To configure a cluster to forward metrics, you must install a Sysdig agent onto 
 
 You view metrics via Sysdig's web-based user interface.
 
-![Components overview on the {{site.data.keyword.cloud_notm}}](images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}")
+![Components overview on the {{site.data.keyword.cloud_notm}}](../images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}")
 
 ## Objectives
 {: #kubernetes_cluster_objectives}
@@ -185,7 +185,7 @@ To launch the Sysdig web UI through the {{site.data.keyword.cloud_notm}} console
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
-2. From the menu ![Menu icon](../../icons/icon_hamburger.svg), select **Observability**. 
+2. From the menu ![Menu icon](../../../icons/icon_hamburger.svg), select **Observability**. 
 
 3. Select **Monitoring**. The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 

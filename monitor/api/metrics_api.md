@@ -83,7 +83,7 @@ The following sample shows a template for the `metrics.json` file:
 ## Metrics dictionary
 {: #metrics_api-dictionary}
 
-To see the pre-defefined metrics by Sysdig, see [Metrics dictionary ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/metrics-dictionary.html){:new_window}.
+To see the pre-defefined metrics by Sysdig, see [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html){: external}.
 
 To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_notm}} services that are Sysdig-enabled, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services). 
 
@@ -92,7 +92,7 @@ To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_not
 {: #metrics_api-aggregation}
 
 
-To learn about data aggregation, see [Data Aggregation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/data-aggregation.html){:new_window}.
+To learn about data aggregation, see [Data Aggregation](https://docs.sysdig.com/en/data-aggregation.html){: external}.
 
 
 

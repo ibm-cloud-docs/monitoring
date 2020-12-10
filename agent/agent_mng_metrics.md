@@ -52,37 +52,6 @@ metrics_filter:
 * You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*. 
 * The entry `exclude: metricA.*` is ignored.
 
-
-
-
-## Including and excluding metrics
-{: #params}  docker
-
-To filter custom metrics, you must customize the **metrics_filter** section in the *dragent.yaml* file. You can specify which metrics to include and which ones to filter out by configuring the **include** and **exclude** filtering parameters.
-
-**Note:** The filtering rule order is set as follows: the first rule that matches a metric is applied.
-
-For example, if the *metrics_filter* section of a Sysdig agent looks as follows:
-
-```
-metrics_filter:
-  - include: metricA.*
-  - exclude: metricA.*
-  - include: metricB.*
-  - include: haproxy.backend.*
-  - exclude: haproxy.*
-  - exclude: metricC.*
-```
-{: screen}
-
-* You are configuring the Sysdig agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*. 
-* You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*. 
-* The entry `exclude: metricA.*` is ignored.
-
-
-
-
-
 ### Logging into a file what metrics are included or excluded
 {: #logging_including_metrics}
 

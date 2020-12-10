@@ -73,7 +73,7 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
     1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
-    2. Click the **Menu** icon ![Menu icon](/images/icon_hamburger.svg) &gt; **Classic Infrastructure** &gt; **Device List**.
+    2. Click the **Menu** icon ![Menu icon](../../images/icon_hamburger.svg) &gt; **Classic Infrastructure** &gt; **Device List**.
 
     3. Identify the bare metal server that you want to monitor. Copy the **Public IP**.
 
@@ -144,7 +144,7 @@ Complete the following steps to launch the web UI:
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} console opens.
 
-2. Click the **Menu** icon ![Menu icon](/images/icon_hamburger.svg) &gt; **Observability**. 
+2. Click the **Menu** icon ![Menu icon](../../images/icon_hamburger.svg) &gt; **Observability**. 
 
 3. Select **Monitoring**. 
 
@@ -482,7 +482,7 @@ Complete the following steps:
 
 Cpmplete the following steps:
 
-1. Click the **Menu** icon ![Menu icon](/images/icon_hamburger.svg) &gt; **Observability**. 
+1. Click the **Menu** icon ![Menu icon](../../images/icon_hamburger.svg) &gt; **Observability**. 
 
 2. Select **Monitoring**. 
 
