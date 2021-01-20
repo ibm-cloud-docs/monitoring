@@ -402,17 +402,17 @@ The following JSON shows the schema model:
 
 | Option   | `EMAIL`  | `PAGER_DUTY` | `SLACK` | `VICTOROPS` | `WEBHOOK` | `OPSGENIE` |
 |----------|----------|--------------|---------|-------------|-----------|------------|
-| `name` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)|
-| `notifyOnOk` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `notifyOnResolve` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `resolveOnOk` |  ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg)  | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `emailRecipients` | ![Checkmark icon](../../icons/checkmark-icon.svg) |  | | | | |
-| `url` | | | ![Checkmark icon](../../icons/checkmark-icon.svg) | | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
-| `apiKey` | | | | ![Checkmark icon](../../icons/checkmark-icon.svg) | | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `routingKey` | | | | ![Checkmark icon](../../icons/checkmark-icon.svg) | |
-| `account` |  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |  |  |  |
-| `serviceKey` |  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |  |  |  |
-| `serviceName` |  | ![Checkmark icon](../../icons/checkmark-icon.svg) | |  |  |  |
+| `name` | ![Checkmark icon](../../images/checkmark-icon.svg) | ![Checkmark icon](../../images/checkmark-icon.svg) | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg)|
+| `notifyOnOk` | ![Checkmark icon](../../images/checkmark-icon.svg) | ![Checkmark icon](../../images/checkmark-icon.svg) | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg) |
+| `notifyOnResolve` | ![Checkmark icon](../../images/checkmark-icon.svg) | ![Checkmark icon](../../images/checkmark-icon.svg) | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg) |
+| `resolveOnOk` |  ![Checkmark icon](../../images/checkmark-icon.svg) | ![Checkmark icon](../../images/checkmark-icon.svg) | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg)  | ![Checkmark icon](../../images/checkmark-icon.svg) |
+| `emailRecipients` | ![Checkmark icon](../../images/checkmark-icon.svg) |  | | | | |
+| `url` | | | ![Checkmark icon](../../images/checkmark-icon.svg) | | ![Checkmark icon](../../images/checkmark-icon.svg) | |
+| `apiKey` | | | | ![Checkmark icon](../../images/checkmark-icon.svg) | | ![Checkmark icon](../../images/checkmark-icon.svg) |
+| `routingKey` | | | | ![Checkmark icon](../../images/checkmark-icon.svg) | |
+| `account` |  | ![Checkmark icon](../../images/checkmark-icon.svg) | |  |  |  |
+| `serviceKey` |  | ![Checkmark icon](../../images/checkmark-icon.svg) | |  |  |  |
+| `serviceName` |  | ![Checkmark icon](../../images/checkmark-icon.svg) | |  |  |  |
 {: caption="Table 3. Types of notification channels" caption-side="top"} 
 
 

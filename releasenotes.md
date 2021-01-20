@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-10-14"
+  years:  2018, 2021
+lastupdated: "2021-01-20"
 
-keywords: Sysdig, IBM Cloud, monitoring, release notes
+keywords: Monitoring with Sysdig release notes, Monitoring with Sysdig updates
 
 subcollection: Monitoring-with-Sysdig
 

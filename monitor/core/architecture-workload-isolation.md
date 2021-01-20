@@ -37,7 +37,7 @@ Review the following sample architecture for {{site.data.keyword.mon_full_notm}}
 {{site.data.keyword.mon_full_notm}} is a highly available, multi-tenant, regional service that is available in {{site.data.keyword.cloud_notm}}. You can use it to monitor your applications, platform resources, and infrastructure.
 
 
-![{{site.data.keyword.mon_full_notm}}](images/Monitoring-arch.png "{{site.data.keyword.mon_full_notm}} high level architecture")
+![{{site.data.keyword.mon_full_notm}}](../images/Monitoring-arch.png "{{site.data.keyword.mon_full_notm}} high level architecture")
 
 The API server component provides a web and an API interface to the Sysdig service.
 
@@ -59,7 +59,7 @@ The Sysdig web UI is the front-end component where users can monitor and manage 
 Each regional deployment of the {{site.data.keyword.mon_full_notm}} service serves multiple tenants that are identified by the {{site.data.keyword.IBM_notm}} service instance.
 
 * There is 1 deployment of the {{site.data.keyword.mon_full_notm}} service per region that is responsible for running user workloads in the region.
-* The {{site.data.keyword.mon_full_notm}} service in a region is highly available. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ha-dr).
+* The {{site.data.keyword.mon_full_notm}} service in a region is [highly available](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 * The monitoring data that is collected and processed by the {{site.data.keyword.mon_full_notm}} service is associated with the Sysdig instance and not visible to the other service instances by virtue of this association.
 * Data for all tenants is co-located in the same data stores and segmented by the tenant-specific metric tags that are associated with each metric to enforce access control policies.
 
