@@ -136,6 +136,7 @@ Monitoring with Sysdig
         Teams
             [Working with teams](https://docs.sysdig.com/en/manage-teams-and-roles.html)
             monitor/teams.md
+            team_id.md
         
         {: .topicgroup}
         Prometheus exporters
@@ -194,6 +195,7 @@ Monitoring with Sysdig
         Sysdig API
             monitor/api/rest_apis.md
             monitor/api/mon-curl.md
+            api_sysdig_token.md
 
         {: .topicgroup}
         Sysdig Python client
