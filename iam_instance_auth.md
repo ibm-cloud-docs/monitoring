@@ -67,9 +67,13 @@ The `external_api_auth` field indicates the types of tokens that are allowed to 
 
 Check the `external_api_auth` to find out what tokens are allowed for authentication.
 
-
-## Step 2. Configure the Sysdig instance to only allow IAM tokens 
+## Step 2. Reset the Sysdig token for each team
 {: #iam_instance_auth_step2}
+
+For each team in the Sysdig instance, [reset the Sysdig token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_sysdig_token#api_token_reset). 
+
+## Step 3. Configure the Sysdig instance to only allow IAM tokens 
+{: #iam_instance_auth_step3}
 
 Run the following command to update a Sysdig instance so that only IAM tokens are allowed when you use Python scripts or the Sysdig REST API to manage resources:
 
@@ -90,6 +94,7 @@ For example, to modify an instance, run the following command:
 ibmcloud resource service-instance-create sysdig-instance-01 -p '{"external_api_auth": "IAM_ONLY"}'
 ```
 {: pre}
+
 
 
 

@@ -37,7 +37,7 @@ For more information about the Sysdig Meric Query API, see [Data APIs](https://s
 You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to get metrics:
 
 ```shell
-curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d DATA
+curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d DATA
 ```
 {: codeblock}
 

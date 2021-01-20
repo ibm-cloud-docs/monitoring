@@ -37,7 +37,7 @@ You can use the following cURL command to get information about all the notifica
 
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels?from=<START_TIMESTAMP>&to=<END_TIMESTAMP> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels?from=<START_TIMESTAMP>&to=<END_TIMESTAMP> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -65,7 +65,7 @@ You can use the following cURL command to get information about a notification c
 
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -116,7 +116,7 @@ You can use the following cURL command to create an notification:
 
 
 ```shell
-curl -X POST <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @notification.json
+curl -X POST <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @notification.json
 ```
 {: codeblock}
 
@@ -134,17 +134,20 @@ Where
 
 * You can pass data to create the notification in the `notification.json` file by using `-d`. 
 
+    Valid types are `EMAIL`, `PAGER_DUTY`, `SLACK`, `SNS`, and `VICTOROPS`.
+
 The following sample shows the request body parameters that you can set to create an notification: 
 
 ```json
 {
   "notificationChannel": {
-      "type": "WEBHOOK",
-      "enabled": false,
-      "name": "test-webhook",
+      "type": "SLACK",
+      "enabled": true,
+      "name": "my-slack-channel",
       "options": {
         "notifyOnOk": true,
-        "url": "https://test.endpoint.com",
+        "url": "https://hooks.slack.com/services/xxx",
+        "channel": "myslack"
         "notifyOnResolve": true,
       }
     }
@@ -165,7 +168,7 @@ You can use the following cURL command to delete a notification:
 
 
 ```shell
-curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
+curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -195,7 +198,7 @@ You can use the following cURL command to update an notification:
 
 
 ```shell
-curl -X PUT <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @notification.json
+curl -X PUT <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @notification.json
 ```
 {: codeblock}
 
