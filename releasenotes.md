@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-01-20"
+lastupdated: "2021-01-18"
 
 keywords: Monitoring with Sysdig release notes, Monitoring with Sysdig updates
 
@@ -34,13 +34,6 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 This release includes the following functional enhancements:
 
-* General availability of PromQL functionality and Prometheus metrics native ingestion
-* Migration of Prometheus calculated metrics to Prometheus raw metrics
-* Increase of metric limits to 20K time series per agent
-
-## December 2020
-{: #AT-dec2020-for-update}
-
-This release includes the following functional enhancements:
+* You can configure the authentication token that is allowed in a Sysdig instance when you use Python scripts or the Sysdig REST API to manage resources. By default, you can use an IAM token or a Sysdig token. However, you can restrict the Sysdig instance to only allow IAM tokens. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_instance_auth). 
 
 
