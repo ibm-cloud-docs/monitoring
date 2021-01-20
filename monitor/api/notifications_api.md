@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-07-12"
+  years:  2018, 2021
+lastupdated: "2021-01-18"
 
 keywords: Sysdig, IBM Cloud, monitoring, notifications, api
 
@@ -37,7 +37,7 @@ You can use the following cURL command to get information about all the notifica
 
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels?from=<START_TIMESTAMP>&to=<END_TIMESTAMP> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID"
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels?from=<START_TIMESTAMP>&to=<END_TIMESTAMP> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -47,7 +47,11 @@ Where
 
 * You can pass multiple headers by using `-H`. 
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+
+    `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
+    
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
 * `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the notifications. 
 
@@ -61,7 +65,7 @@ You can use the following cURL command to get information about a notification c
 
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" 
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -71,7 +75,11 @@ Where
 
 * You can pass multiple headers by using `-H`. 
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+
+    `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
+    
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
 * `<NOTIFICATION_ID>` defines the ID of the notification that you want to modify.
 
@@ -108,7 +116,7 @@ You can use the following cURL command to create an notification:
 
 
 ```shell
-curl -X POST <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d @notification.json
+curl -X POST <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @notification.json
 ```
 {: codeblock}
 
@@ -118,7 +126,11 @@ Where
 
 * You can pass multiple headers by using `-H`. 
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+
+    `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
+    
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
 * You can pass data to create the notification in the `notification.json` file by using `-d`. 
 
@@ -153,7 +165,7 @@ You can use the following cURL command to delete a notification:
 
 
 ```shell
-curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" 
+curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -163,7 +175,11 @@ Where
 
 * You can pass multiple headers by using `-H`. 
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+
+    `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
+    
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
 * `<NOTIFICATION_ID>` defines the ID of the notification that you want to modify.
 
@@ -179,7 +195,7 @@ You can use the following cURL command to update an notification:
 
 
 ```shell
-curl -X PUT <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d @notification.json
+curl -X PUT <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @notification.json
 ```
 {: codeblock}
 
@@ -189,7 +205,11 @@ Where
 
 * You can pass multiple headers by using `-H`. 
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+
+    `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
+    
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
 * `<NOTIFICATION_ID>` defines the ID of the notification that you want to modify.
 

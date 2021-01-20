@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-07-10"
+  years:  2018, 2021
+lastupdated: "2021-01-18"
 
 keywords: Sysdig, IBM Cloud, monitoring, alerting, api, curl
 
@@ -28,7 +28,7 @@ subcollection: Monitoring-with-Sysdig
 You can use cURL, a command line tool, to make API calls to the {{site.data.keyword.mon_full_notm}} service by using URL syntax. You can also use the Python client, `sdcclient`, to automate routine tasks and monitor notifications.
 {:shortdesc}
 
-You can use public or private endpoints to make REST API calls. For more information, see [REST API endpoints]().
+You can use public or private endpoints to make REST API calls. For more information, see [REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api).
 
 ## Alerts REST API
 {: #rest_apis_alerts}

@@ -23,7 +23,7 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
 
-# Getting the Sysdig team ID
+# Getting the ID of a Sysdig team
 {: #team_id}
 
 You can use the Sysdig teams REST API to get the ID of a Sysdig team.
@@ -68,7 +68,7 @@ Where
 For example, to get the ID of a team that is available in a Sysdig instance in US-South, you can run the following command:
 
 ```  
-curl -v  https://us-south.monitoring.cloud.ibm.com/api/teams  -H "Authorization:  $ACCESS_TOKEN"   -H "content-type: application/json"  -H "IBMInstanceID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+curl -v  https://us-south.monitoring.cloud.ibm.com/api/teams  -H "Authorization:  $AUTH_TOKEN"   -H "content-type: application/json"  -H "IBMInstanceID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 ```
 {: codeblock}
 
