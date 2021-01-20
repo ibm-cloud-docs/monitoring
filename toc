@@ -39,6 +39,7 @@ Monitoring with Sysdig
 
     {: .navgroup id="howto"}
     provision.md
+    iam_instance_auth.md
     remove.md
     upgrade.md
 

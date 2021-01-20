@@ -26,10 +26,10 @@ subcollection: Monitoring-with-Sysdig
 # Working with IAM tokens
 {: #api_token}
 
-You can use IAM tokens or Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 
+You can use IAM tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 
 {:shortdesc}
 
-## Getting an IAM API key
+## Getting an IAM API key through the {{site.data.keyword.cloud_notm}} UI
 {: #api_iam_apikey_get}
 
 An application programming interface key (API key) is a unique code that is passed in to an API to identify the calling application or user. [Learn more](/docs/account?topic=account-manapikey).
@@ -53,7 +53,7 @@ You can use a user API key or an API key that is associated with a service ID th
 
 
 
-## Getting an IAM API token
+## Getting an IAM API token programmatically
 {: #api_iam_token_get}
 
 Complete the following steps to get an IAM token:

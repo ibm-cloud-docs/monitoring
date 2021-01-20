@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Working with Sysdig tokens
 {: #api_sysdig_token}
 
-You can use IAM tokens or Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 
+You can use Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 
 {:shortdesc}
 
 
