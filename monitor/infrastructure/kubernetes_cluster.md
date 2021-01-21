@@ -23,7 +23,7 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
 
-# Monitorting a Kubernetes cluster
+# Monitoring a Kubernetes cluster
 {: #kubernetes_cluster}
 
 Use this tutorial to learn how to configure an {{site.data.keyword.containerlong}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.

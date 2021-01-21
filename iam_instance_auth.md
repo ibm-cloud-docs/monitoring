@@ -70,6 +70,11 @@ Check the `external_api_auth` to find out what tokens are allowed for authentica
 ## Step 2. Reset the Sysdig token for each team
 {: #iam_instance_auth_step2}
 
+Complete this step if you are configuring your Sysdig instance to authenticate with IAM tokens only.
+{: note}
+
+When you reset a Sysdig token, you disable the current Sysdig token that users might be using. There is 1 Sysdig token per team.
+
 For each team in the Sysdig instance, [reset the Sysdig token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_sysdig_token#api_token_reset). 
 
 ## Step 3. Configure the Sysdig instance to only allow IAM tokens 
