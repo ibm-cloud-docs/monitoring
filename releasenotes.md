@@ -22,7 +22,7 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 {:external: target="_blank" .external}
 
-# Release notes for {{site.data.keyword.at_full_notm}}
+# Release notes for {{site.data.keyword.mon_full_notm}}
 {: #sysdig-release-notes}
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}} that are grouped by date.

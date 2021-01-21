@@ -6,6 +6,7 @@ Monitoring with Sysdig
 
     {: .navgroup id="learn"}
     getting-started.md
+    releasenotes.md
 
     {: .topicgroup}
     Sysdig Monitor
