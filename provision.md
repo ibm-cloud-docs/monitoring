@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-10-14"
+  years:  2018, 2021
+lastupdated: "2021-01-18"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -87,7 +87,7 @@ To provision an instance of Sysdig through the command line, complete the follow
 4. Create the Sysdig instance. Run the [ibmcloud resource service-instance-create](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
 
     ```
-    ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false}'
+    ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false,"external_api_auth": "API_AUTH"}'
     ```
     {: pre}
 
@@ -103,10 +103,19 @@ To provision an instance of Sysdig through the command line, complete the follow
 
     `default_receiver` is set to `false` by default. Set to `true` to collect platform metrics automatically through this instance in a region.
 
+    `API_AUTH` is set to the authorization model that is enabled to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API. Valid values are: `ANY`, and `IAM_ONLY`.
+
     For example, to provision an instance with the paid plan, run the following command:
 
     ```
     ibmcloud resource service-instance-create sysdig-instance-01 sysdig-monitor graduated-tier us-south -p '{"default_receiver": false}'
+    ```
+    {: pre}
+
+    To provision an instance with the paid plan that only allows IAM tokens, run the following command:
+
+    ```
+    ibmcloud resource service-instance-create sysdig-instance-01 sysdig-monitor graduated-tier us-south -p '{"default_receiver": false,"external_api_auth": "IAM_ONLY"}'
     ```
     {: pre}
 

@@ -6,6 +6,7 @@ IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="learn"}
     getting-started.md
+    releasenotes.md
 
     {: .topicgroup}
     Sysdig Monitor
@@ -47,6 +48,7 @@ IBM Cloud Monitoring with Sysdig
 
     {: .navgroup id="howto"}
     provision.md
+    iam_instance_auth.md
     remove.md
     upgrade.md
 
@@ -125,6 +127,7 @@ IBM Cloud Monitoring with Sysdig
         {: .topicgroup}
         Teams
             monitor/teams.md
+            team_id.md
         
         {: .topicgroup}
         Integrations
@@ -174,6 +177,7 @@ IBM Cloud Monitoring with Sysdig
         Sysdig API
             monitor/api/rest_apis.md
             monitor/api/mon-curl.md
+            api_sysdig_token.md
 
         {: .topicgroup}
         Sysdig Python client

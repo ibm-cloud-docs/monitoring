@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-07-10"
+  years:  2018, 2021
+lastupdated: "2021-01-18"
 
 keywords: Sysdig, IBM Cloud, monitoring, alerting, api
 
@@ -37,7 +37,7 @@ You can use the following cURL command to get information about an alert:
 
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" 
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -47,7 +47,11 @@ Where
 
 * You can pass multiple headers by using `-H`. 
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+
+    `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
+    
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
 * `<ALERT_ID>` defines the ID of the alert that you want to modify.
 
@@ -96,7 +100,7 @@ You can use the following cURL command to create an alert:
 
 
 ```shell
-curl -X POST <SYSDIG_REST_API_ENDPOINT>/api/alerts -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d @alert.json
+curl -X POST <SYSDIG_REST_API_ENDPOINT>/api/alerts -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @alert.json
 ```
 {: codeblock}
 
@@ -106,7 +110,11 @@ Where
 
 * You can pass multiple headers by using `-H`. 
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+
+    `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
+    
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
 * You can pass data to create the alert in the `alert.json` file by using `-d`. 
 
@@ -156,7 +164,7 @@ You can use the following cURL command to update an alert:
 
 
 ```shell
-curl -X PUT <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -d @alert.json
+curl -X PUT <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @alert.json
 ```
 {: codeblock}
 
@@ -166,7 +174,11 @@ Where
 
 * You can pass multiple headers by using `-H`. 
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+
+    `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
+    
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
 * `<ALERT_ID>` defines the ID of the alert that you want to modify.
 
@@ -215,7 +227,7 @@ You can use the following cURL command to delete an alert:
 
 
 ```shell
-curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" 
+curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -225,9 +237,13 @@ Where
 
 * You can pass multiple headers by using `-H`. 
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
 
-* `<ALERT_ID>` defines the ID of the alert that you want to modify.
+    `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
+    
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+
+* `<ALERT_ID>` defines the ID of the alert that you want to delete.
 
 
 ## Get all user alerts

@@ -114,7 +114,7 @@ When you configure the alert, complete the following sections:
 
 * [`condition`]: You must define the condition that defines when the alert is triggered. For example, you can set this parameter to `['host.mac', 'proc.name']` to check a CPU alert for every process on every machine.
 
-    For more information, see [Multi-Condition Alerts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/alerts.html#al_UUID-21e3bcab-eaf2-993b-96e5-bdbc631504bc_UUID-9177b0b6-2f26-ea2f-1f3c-8b9a36192bfc){:new_window}.
+    For more information, see [Multi-Condition Alerts](https://docs.sysdig.com/en/alerts.html#al_UUID-21e3bcab-eaf2-993b-96e5-bdbc631504bc_UUID-9177b0b6-2f26-ea2f-1f3c-8b9a36192bfc){: exernal}.
 
 * [`segmentby`]: You can define the scope of an alert by configuring the `segmentedby` section. The default value is `ANY`.
 

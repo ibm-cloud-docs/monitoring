@@ -58,8 +58,9 @@ Use IAM tokens to authenticate with the {{site.data.keyword.mon_full_notm}} serv
 In a cURL command, add the following options to authenticate with the {{site.data.keyword.mon_full_notm}} service by using an IAM token:
 
 ```shell
--H "Authorization: Bearer $AUTH_TOKEN"
+-H "Authorization: $AUTH_TOKEN"
 -H "IBMInstanceID: $GUID"
+-H "SysdigTeamID: $TEAM_ID"
 ```
 {: codeblock}
 
@@ -75,6 +76,9 @@ Where
     
     For more information, see [Getting the IAM API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_iam_token_get). 
 
+* `SysdigTeamID` indicates the GUID of a team.
+
+    To get the GUID, see [Getting the ID of a Sysdig team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-team_id).
 
 
 ### Headers for Sysdig Token
@@ -115,7 +119,7 @@ To run a cURL API query and authrnticat by using the IAM token, complete the fol
 3. Run the cURL API query.
 
     ```
-    curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID"
+    curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "content-type: application/json"
     ```
     {: codeblock}
 
