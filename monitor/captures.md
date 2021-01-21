@@ -39,7 +39,7 @@ Complete the following steps to create a capture file:
 
 1. Navigate to the *EXPLORE* section in the web UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch).
 
-2. Click the switch host icon ![Switch host icon](images/switch_hosts.png).
+2. Click the switch host icon ![Switch host icon](../images/switch_hosts.png).
 
 3. Select a host or a container.
 

@@ -123,6 +123,7 @@ IBM Cloud Monitoring with Sysdig
         {: .topicgroup}
         Captures
             [Working with captures](https://docs.sysdig.com/en/captures.html)
+            monitor/captures.md
 
         {: .topicgroup}
         Teams
