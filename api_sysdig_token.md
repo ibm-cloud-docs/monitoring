@@ -64,6 +64,14 @@ Complete the following steps to reset the Sysdig token:
 
 You can use the Token API to get the Sysdig token.
 
+For example, you can use the following cURL command to get the Sysdig token:
+
+```shell
+curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
+```
+{: codeblock}
+
+
 ```
 GET <SYSDIG_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
@@ -84,16 +92,6 @@ Where
 
 When the authorization that is allowed in a Sysdig instance is set to `IAM_ONLY`, you get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}` when you try to get the Sysdig token.
 {: note}
-
-### Sample cURL
-{: #api_token_get_api_curl}
-
-You can use the following cURL command to get the Sysdig token:
-
-```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
-```
-{: codeblock}
 
 
 ### Sample JSON code
