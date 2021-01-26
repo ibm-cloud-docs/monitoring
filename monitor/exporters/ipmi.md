@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-11-27"
+  years:  2018, 2021
+lastupdated: "2021-01-26"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -98,7 +98,7 @@ See [Install a Sysdig agent to collect and forward metrics from a server to an {
 You can install the IPMI exporer in 1 or more hosts to collect IPMI metrics.
 {: note}
 
-For each host that you want to collect IPMI metrics, complete the following steps to install the IPMI exporter. For eaxample, complete the following steps for a Linux-based host:
+For each host that you want to collect IPMI metrics, complete the following steps to install the IPMI exporter. For example, complete the following steps for a Linux-based host:
 
 1. From a local terminal,[download the Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
