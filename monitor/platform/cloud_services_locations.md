@@ -173,6 +173,14 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 ## Container services
 {: #cloud_services_locations_container}
 
+You can choose the Sysdig instance where you want to collect {{site.data.keyword.containerlong}} service metrics.
+
+You can choose the Sysdig instance where you want to collect {{site.data.keyword.openshiftlong}} service metrics.
+
+You can monitor {{site.data.keyword.satellitelong}} through the Sysdig instance that is configured with **service platform logs** in the same region that your {{site.data.keyword.satelliteshort}} location is managed from.
+
+The following tables list the locations where automatic collection of registry service metrics is enabled.
+
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
 | {{site.data.keyword.registrylong_notm}}          | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |          
