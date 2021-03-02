@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-06-02"
+  years:  2018, 2021
+lastupdated: "2021-02-10"
 
 keywords: Sysdig, IBM Cloud, monitoring, regions, endpoints
 
@@ -44,6 +44,7 @@ The following table lists the locations where the service is available:
 | Geography             | Region                   | EU-Supported | HA Status |
 |-----------------------|--------------------------|--------------|-----------|
 | `Asia Pacific`        | `Sydney (au-syd)`        | `N/A`        | `MZR`     |
+| `Asia Pacific`        ! `Osaka (jp-osa)`         | `N/A`        | `N/A`     |
 | `Asia Pacific`        | `Tokyo (jp-tok)`         | `N/A`        | `MZR`     |
 | `Europe`              | `Frankfurt (eu-de) (*)`  | `YES`        | `MZR`     |
 | `Europe`              | `London (eu-gb)`         | `NO`         | `MZR`     |
@@ -76,9 +77,10 @@ The following table lists the **Private Sysdig Collector endpoints** that are av
 
 | Region      | Private ingestion endpoint                           | Private IP addresses                              |   Ports   |
 |-------------|------------------------------------------------------|---------------------------------------------------|-----------|
-| `US South`  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170 </br>166.9.13.52 </br>166.9.17.11   | TCP 6443  | 
+| `US South`  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170 </br>166.9.48.41 </br>166.9.17.11   | TCP 6443  | 
 | `EU DE`     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51 </br>166.9.30.53 </br>166.9.28.71     | TCP 6443  | 
 | `EU GB`     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56 </br>166.9.36.71                       |  TCP 6443 |
+| `JP OSA`    | `ingest.private.jp-osa.monitoring.cloud.ibm.com`     | 166.9.72.14 </br>166.9.71.15 </br>166.9.70.14 | TCP 6443| 
 | `JP TOK`    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38 </br>166.9.40.35 </br>166.9.42.48       | TCP 6443  | 
 | `US East`   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50 </br>166.9.24.43 </br>166.9.20.53      | TCP 6443  | 
 | `AU SYD`    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32 </br>166.9.52.27  </br>166.9.54.27     |  TCP 6443 |
@@ -95,6 +97,7 @@ The following table lists the **Public Sysdig Collector endpoints** that are ava
 | `US South`  | `ingest.us-south.monitoring.cloud.ibm.com`          | 169.60.151.174 </br>169.46.0.70 </br>169.48.214.70      | TCP 6443 | 
 | `EU DE`     | `ingest.eu-de.monitoring.cloud.ibm.com`             | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38   | TCP 6443 | 
 | `EU GB`     | `ingest.eu-gb.monitoring.cloud.ibm.com`             | 158.175.98.206 </br>141.125.73.118 </br>159.122.210.174 | TCP 6443 | 
+| `JP OSA`    | `ingest.jp-osa.monitoring.cloud.ibm.com`            | 163.68.67.98 </br>163.69.66.170 </br>163.73.67.180 | TCP 6443 |
 | `JP TOK`    | `ingest.jp-tok.monitoring.cloud.ibm.com`            | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238     | TCP 6443 | 
 | `US East`   | `ingest.us-east.monitoring.cloud.ibm.com`           | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82      | TCP 6443 |
 | `AU SYD`    | `ingest.au-syd.monitoring.cloud.ibm.com`            | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78     | TCP 6443 | 
@@ -116,6 +119,7 @@ The following table lists the **Sysdig endpoints** that are available per region
 | `US South`  | `https://us-south.monitoring.cloud.ibm.com`      | 169.60.151.174 </br>169.46.0.70 </br>169.48.214.70        | https (TLS) 443 | 
 | `EU DE`     | `https://eu-de.monitoring.cloud.ibm.com`         | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38     | https (TLS) 443 | 
 | `EU GB`     | `https://eu-gb.monitoring.cloud.ibm.com`         | 158.175.98.206 </br>141.125.73.118 </br>159.122.210.174   | https (TLS) 443 | 
+| `JP OSA`    | `https://jp-osa.monitoring.cloud.ibm.com`        | 163.68.67.98 </br>163.69.66.170 </br>163.73.67.180 | https (TLS) 443 |
 | `JP TOK`    | `https://jp-tok.monitoring.cloud.ibm.com`        | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238       | https (TLS) 443 |
 | `US East`   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82        | https (TLS) 443 | 
 | `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78       | https (TLS) 443 | 
@@ -135,6 +139,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `US South` | 169.61.248.224/28 </br>169.46.0.64/29 </br>169.48.214.64/29 </br>169.48.235.16/28 </br>169.62.221.32/28 </br>169.60.151.168/29      |
 | `EU DE`    | 169.50.9.0/28 </br>159.122.102.32/29 </br>161.156.102.200/29 </br>161.156.69.144/28 </br>149.81.99.192/28 </br>149.81.77.72/29      |
 | `EU GB`    | 159.8.149.208/28 </br>159.122.210.168/29 </br>158.175.75.160/28 </br>158.175.98.200/29 </br>141.125.73.112/29 </br>141.125.73.80/28 |
+| `JP OSA`   | 163.68.67.128/28 </br>163.68.67.96/29 </br>163.69.66.168/29 </br>163.69.67.112/28 </br>163.73.67.176/29 </br>163.73.67.192/28 |
 | `JP TOK`   | 169.56.51.232/29 </br>169.56.11.208/28 </br>128.168.75.32/28 </br>128.168.75.8/29 </br>165.192.84.8/29 </br>165.192.83.144/28       |
 | `US East`  | 169.55.109.112/29 </br>169.55.122.192/28 </br>169.60.82.240/28 </br>169.60.112.72/29 </br>169.62.28.160/28 </br>169.62.3.80/29      | 
 | `AU SYD`   | 168.1.213.72/29 </br>168.1.41.96/28 </br>130.198.80.152/29 </br>130.198.66.144/28 </br>135.90.73.96/29 </br>135.90.78.192/28        |
@@ -154,6 +159,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `US South`  | `https://private.us-south.monitoring.cloud.ibm.com/api`      | 
 | `EU DE`     | `https://private.eu-de.monitoring.cloud.ibm.com/api`         |
 | `EU GB`     | `https://private.eu-gb.monitoring.cloud.ibm.com/api`         |
+| `EU OSA`    | `https://private.eu-osa.monitoring.cloud.ibm.com/api`         |
 | `JP TOK`    | `https://private.jp-tok.monitoring.cloud.ibm.com/api`        |
 | `US East`   | `https://private.us-east.monitoring.cloud.ibm.com/api`       |
 | `AU SYD`    | `https://private.au-syd.monitoring.cloud.ibm.com/api`        |
@@ -169,6 +175,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `US South`  | `https://us-south.monitoring.cloud.ibm.com/api`      | 
 | `EU DE`     | `https://eu-de.monitoring.cloud.ibm.com/api`         |
 | `EU GB`     | `https://eu-gb.monitoring.cloud.ibm.com/api`         |
+| `JP OSA`    | `https://jp-osa.monitoring.cloud.ibm.com/api`        |
 | `JP TOK`    | `https://jp-tok.monitoring.cloud.ibm.com/api`        |
 | `US East`   | `https://us-east.monitoring.cloud.ibm.com/api`       |
 | `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com/api`        |

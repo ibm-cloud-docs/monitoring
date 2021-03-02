@@ -88,6 +88,9 @@ The following table lists container services that are Sysdig-enabled:
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) | {{site.data.keyword.registrylong}} provides a multi-tenant, highly available, scalable, and encrypted private image registry that is hosted and managed by {{site.data.keyword.IBM}}. | [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor_sysdig)|
+| [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-getting-started) | You can use the {{site.data.keyword.containerlong_notm}} service to deploy highly available apps in Docker containers that run in Kubernetes clusters. | [More info](/docs/containers?topic=containers-health#sysdig) | 
+| [{{site.data.keyword.openshiftlong}}](/docs/openshift?topic=openshift-getting-started) | With {{site.data.keyword.openshiftlong_notm}}, you can deploy apps on highly available clusters that come installed with the Red Hat OpenShift on IBM Cloud Container Platform software installed on Red Hat Enterprise Linux. | [More info](/docs/openshift?topic=openshift-health#openshift_sysdig) |
+| [{{site.data.keyword.satellitelong}}](/docs/satellite?topic=satellite-getting-started) | With {{site.data.keyword.satellitelong_notm}}, you can bring your own compute infrastructure to run {{site.data.keyword.cloud_notm}} services and consistently deploy, manage, and control your app workloads. | [More info](/docs/satellite?topic=satellite-health#setup-sysdig) |
 {: caption="List of {{site.data.keyword.cloud_notm}} container services" caption-side="top"} 
 
 
@@ -194,7 +197,6 @@ The following table lists VPC infrastructure services that are Sysdig-enabled:
 | [{{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)| You can use {{site.data.keyword.cos_full_notm}} to store unstructured data in the {{site.data.keyword.cloud_notm}}.  | [Metrics that are collected by {{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-mm-cos-integration&programming_language=Console) |
 {: caption="List of VPC services (generation 2)" caption-side="top"} 
 
-
 ## AI
 {: #ai_machine_learning}
 
@@ -204,7 +206,6 @@ The following table lists AI / Machine Learning services that are Sysdig-enabled
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.wh-acd_short}}](/docs/wh-acd)| You can use {{site.data.keyword.wh-acd_short}} to analyze text and extract medical codes and concepts. | [Metrics that are collected by {{site.data.keyword.wh-acd_short}}](/docs/wh-acd?topic=wh-acd-monitor-sysdig-pm#metrics-available-by-service-plan) |
 {: caption="List of AI / Machine Learning services" caption-side="top"}
-
 
 
 
