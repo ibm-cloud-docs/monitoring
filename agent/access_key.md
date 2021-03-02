@@ -102,7 +102,7 @@ To create a new access key for an {{site.data.keyword.mon_full_notm}} instance, 
 2. Issue a curl POST request against the Sysdig endpoint to generate a new access key.
 
     ```
-    curl -XPOST -H'Bearer: API_TOKEN' https:ENDPOINT/api/customer/accessKeys
+    curl -XPOST -H 'Authorization: Bearer API_TOKEN' https:ENDPOINT/api/customer/accessKeys
     ```
     {: pre}
 
@@ -137,7 +137,7 @@ To disable an existing access key for an {{site.data.keyword.mon_full_notm}} ins
 2. Issue a curl POST request against the Sysdig endpoint to disable the given access key.
 
     ```
-    curl -XPOST -H'Bearer: API_TOKEN' https:ENDPOINT/api/customer/accessKeys/ACCESS_KEY/disable
+    curl -XPOST -H 'Authorization: Bearer API_TOKEN' https:ENDPOINT/api/customer/accessKeys/ACCESS_KEY/disable
     ```
     {: pre}
 
@@ -162,7 +162,7 @@ To enable an existing access key for an {{site.data.keyword.mon_full_notm}} inst
 2. Issue a curl POST request against the Sysdig endpoint to enable the given access key.
 
     ```
-    curl -XPOST -H'Bearer: API_TOKEN' https://ENDPOINT/api/customer/accessKeys/ACCESS_KEY/enable
+    curl -XPOST -H 'Authorization: Bearer API_TOKEN' https://ENDPOINT/api/customer/accessKeys/ACCESS_KEY/enable
     ```
     {: pre}
 
@@ -186,7 +186,7 @@ To view all of the access keys for an {{site.data.keyword.mon_full_notm}} instan
 2. Issue a curl GET request against the regional monitoring endpoint to cause Sysdig to enable the given access key.
 
     ```
-    curl -XGET -H'Bearer: API_TOKEN' https://ENDPOINT/api/customer/accessKeys
+    curl -XGET -H 'Authorization: Bearer API_TOKEN' https://ENDPOINT/api/customer/accessKeys
     ```
     {: pre}
 
