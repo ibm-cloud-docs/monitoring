@@ -145,7 +145,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `AU SYD`   | 168.1.213.72/29 </br>168.1.41.96/28 </br>130.198.80.152/29 </br>130.198.66.144/28 </br>135.90.73.96/29 </br>135.90.78.192/28        |
 {: caption="Table 5. Source Subnets for Webhook notifications from {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
-The following subnet is not available from March 4, 2021 in the US South region: `169.61.248.224/28`.
+
 
 
 
