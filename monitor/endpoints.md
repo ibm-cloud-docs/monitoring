@@ -44,7 +44,7 @@ The following table lists the locations where the service is available:
 | Geography             | Region                   | EU-Supported | HA Status |
 |-----------------------|--------------------------|--------------|-----------|
 | `Asia Pacific`        | `Sydney (au-syd)`        | `N/A`        | `MZR`     |
-| `Asia Pacific`        ! `Osaka (jp-osa)`         | `N/A`        | `N/A`     |
+| `Asia Pacific`        | `Osaka (jp-osa)`         | `N/A`        | `N/A`     |
 | `Asia Pacific`        | `Tokyo (jp-tok)`         | `N/A`        | `MZR`     |
 | `Europe`              | `Frankfurt (eu-de) (*)`  | `YES`        | `MZR`     |
 | `Europe`              | `London (eu-gb)`         | `NO`         | `MZR`     |
