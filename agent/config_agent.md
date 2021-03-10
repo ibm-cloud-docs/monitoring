@@ -84,6 +84,176 @@ Complete the following steps to configure a Sysdig agent on Linux to collect and
 
     * Set **secure** to *true* to use SSL with the communication.
 
+    To install cURL, run `yum -q -y install curl` for RHEL, CentOS, and Fedora Linux distributions.
+    {: tip}
+
+
+5. Check that the Sysdig agent is running. Run the following command:
+
+    ```
+    ps -ef | grep sysdig
+    ```
+    {: pre}
+
+    To see the latest Sysdig agent logs, go to the directory `/opt/draios/logs` and check the log file `draios.log`.
+
+    To look for errors, you can run the following command:
+
+    ```
+    grep error /opt/draios/logs/draios.log
+    ```
+    {: pre}
+    
+
+
+## Deploying a Sysdig agent on a Linux host with no public access
+{: #config_agent_linux_1}
+
+Follow these steps if your bare metal or VM is running on the {{site.data.keyword.cloud_notm}} private network and does not have access to the public sites.
+
+Complete the following steps to configure a Sysdig agent on Linux to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
+
+1. [Obtain the Sysdig access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+
+2. Obtain the private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+
+3. Install the kernel headers. 
+
+    When you install a Sysdig agent, the agent uses kernel header files. [Learn more](https://docs.sysdig.com/en/agent-install--non-orchestrated.html){: external}
+
+    Choose a distribution and run the following command for that distribution.
+
+    For Debian and Ubuntu Linux distributions, run the following command:
+
+    ```
+    apt-get -y install linux-headers-$(uname -r)
+    ```
+    {: pre}
+
+    For RHEL, CentOS, and Fedora Linux distributions, run the following command:
+
+    ```
+    yum -y install kernel-devel-$(uname -r)
+    ```
+    {: pre}
+
+4. Configure the repository.
+
+    For Debian and Ubuntu Linux distributions, run the following commands:
+
+    ```
+    curl -s http://mirrors.service.networklayer.com/sysdig/DRAIOS-GPG-KEY.public | apt-key add -
+    ```
+    {: pre}    
+
+    ```
+    curl -s -o /etc/apt/sources.list.d/draios.list http://mirrors.service.networklayer.com/sysdig/stable/deb/draios.list
+    ```
+    {: pre}
+
+    ```
+    apt-get update
+    ```
+    {: pre}
+
+    For RHEL, CentOS, and Fedora Linux distributions, run the following command:
+
+    ```
+    rpm --import http://mirrors.service.networklayer.com/sysdig/DRAIOS-GPG-KEY.public
+    ```
+    {: pre}
+
+    ```
+    curl -s -o /etc/yum.repos.d/draios.repo  http://mirrors.service.networklayer.com/sysdig/stable/rpm/draios.repo
+    ```
+    {: pre}
+
+5. Install the EPEL repository ofr RHEL, CentOS, and Fedora Linux distributions.
+
+    Go to the next step if DKMS is available in the distribution.
+    {: note}
+
+    To verify if DKMS is available, run the following command:
+
+    For RHEL, CentOS, and Fedora Linux distributions, run the following command:
+
+    ```
+    yum list dkms
+    ```
+    {: pre}
+
+    To install the EPEL repository, run the following command. Update the command with the correct release.
+
+    ```
+    rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    ```
+    {: pre}
+
+6. Deploy the Sysdig agent. 
+
+    For Debian and Ubuntu Linux distributions, run the following commands:
+
+    ```
+    apt-get -y install draios-agent
+    ```
+    {: pre}
+
+    ```
+    echo customerid: SYSDIG_ACCESS_KEY >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+    ```
+    echo tags: TAG_DATA >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+    ```
+    service dragent restart
+    ```
+    {: pre}
+
+    For RHEL, CentOS, and Fedora Linux distributions, run the following commands from a terminal:
+
+    ```
+    yum -y install draios-agent
+    ```
+    {: pre}
+
+    ```
+    echo customerid: SYSDIG_ACCESS_KEY >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+    ```
+    echo tags: TAG_DATA >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+    ```
+    sudo systemctl enable dragent
+    ```
+    {: pre}
+
+    ```
+    sudo systemctl start dragent
+    ```
+    {: pre}
+
+    Where
+
+    * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
+
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example, *role:serviceX,location:us-south*. 
+
+    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+
+    * Set **secure** to *true* to use SSL with the communication.
+
+    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+
+ 
+
 5. Check that the Sysdig agent is running. Run the following command:
 
     ```

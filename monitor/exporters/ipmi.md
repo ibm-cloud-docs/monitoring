@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-01-26"
+lastupdated: "2021-03-08"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -89,11 +89,8 @@ To monitor 1 or more hosts, you must configure a Sysdig agent. The agent collect
 See [Install a Sysdig agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and choose the Sysdig agent that you want to configure to monitor a host.
 
 
-## Step 2. Install the Prometheus IPMI exporter in a host that you want to monitor
+## Step 2. Configuring the Prometheus IPMI Exporter
 {: #ipmi_step2}
-
-### Configuring the Prometheus IPMI Exporter to monitor IPMI metrics from hosts where the exporter is running
-{: #ipmi_step2-1}
 
 You can install the IPMI exporer in 1 or more hosts to collect IPMI metrics.
 {: note}
@@ -201,17 +198,11 @@ For each host that you want to collect IPMI metrics, complete the following step
     You should see the IPMI exporter running.
 
 
-### Configuring the Prometheus IPMI Exporter to monitor IPMI metrics from hosts where the exporter is running
-{: #ipmi_step2-2}
-
-Supports an /ipmi endpoint that supports IPMI over RMCP - one exporter running on one host can be used to monitor a large number of IPMI interfaces by passing the target parameter to a scrape.
-
-
 
 ## Step 3. Configure network settings
 {: #ipmi_step3}
 
-If you want to collect metrics from remote servers, complete the following steps:
+If you want to collect IPMI metrics from remote servers, complete the following steps:
 
 1. Enable the firewall to allow access to the `ipmi_exporter`.
 
@@ -276,9 +267,9 @@ ssl_verify_certificate: true
 sysdig_capture_enabled: false
 promscrape_fastproto: true
 use_promscrape: true
+prom_service_discovery: true
 prometheus:
   enabled: true
-  prom_service_discovery: true
   log_errors: true
   max_metrics: 200000
   max_metrics_per_process: 200000
@@ -304,7 +295,7 @@ Where
 
 * `<IP_ADDRESS_OF_REMOTE_SERVER>` is the IP address of a server that you want to monitor.
 * `<INGESTION_ENDPOINT>` is the Sysdig instance ingestion endpoint, for example, `ingest.us-south.monitoring.cloud.ibm.com`. See [Sysdig Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion). 
-* `<IP_ADDRESS_OF_REMOTE_SERVER>:9290' is the IP address of the server that you want to monitor.
+* `<IP_ADDRESS_OF_REMOTE_SERVER>:9290` is the IP address of the server that you want to monitor.
 
 When you save the file, changes are applied.
 
@@ -333,30 +324,16 @@ Complete the following steps to update the Sysdig agent to collect IPMI metrics:
     ssl: true
     sysdig_capture_enabled: false
     use_promscrape: true
-    promscrape_fastproto: true
-    tags: resourceType:baremetal,region:montreal
+    promscrape_fastproto: false
     prom_service_discovery: true
     prometheus:
       enabled: true
-      prom_service_discovery: true
-      log_errors: true
-      max_metrics: 200000
-      max_metrics_per_process: 200000
-      max_tags_per_metric: 100
-      ingest_raw: true
-      ingest_calculated: false
-    prometheus.yaml:
-    ----
-    global:
-      scrape_interval: 10s
-    scrape_configs:
-    - job_name: ipmi
-      metrics_path: /metrics
-      static_configs:
-      - targets:
-        - '<IP_ADDRESS_OF_REMOTE_SERVER_WHERE_IPMI_EXPORTER_IS_RUNNING>:9290'
-        - '<IP_ADDRESS_OF_REMOTE_SERVER_WHERE_IPMI_EXPORTER_IS_RUNNING>:9290'
-        - '<IP_ADDRESS_OF_REMOTE_SERVER_WHERE_IPMI_EXPORTER_IS_RUNNING>:9290'
+      process_filter:
+        - include:
+            port: 9290
+            conf:
+              port: 9290
+              path: "/metrics"
     ```
     {: codeblock}
 
@@ -369,7 +346,7 @@ Complete the following steps to update the Sysdig agent to collect IPMI metrics:
 
 
 
-## Configuring the default dashboard and alerts to analyze the IPMI status of your server
+## Step 5. Configuring the default dashboard and alerts to analyze the IPMI status of your server
 {: #ipmi_step5}
 
 
