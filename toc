@@ -187,7 +187,8 @@ Monitoring with Sysdig
     [Secure DevOps Platform](https://sysdig.com/secure-devops-platform/)
     pricing.md
     releasenotes.md
-    
+    sysdig-monitor-cli.md
+
     {: topicgroup}
     Monitoring CLI
         /sysdig-monitor-cli-plugin/sysdig-monitor-cli
