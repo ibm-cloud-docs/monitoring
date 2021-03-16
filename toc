@@ -186,6 +186,7 @@ Monitoring with Sysdig
     {: .navgroup id="reference"}
     [Secure DevOps Platform](https://sysdig.com/secure-devops-platform/)
     pricing.md
+    /sysdig-monitor-cli-plugin/sysdig-monitor-cli
     releasenotes.md
 
     {: .topicgroup}
