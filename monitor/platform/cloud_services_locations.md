@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-11-26"
+  years: 2018, 2021
+lastupdated: "2021-03-17"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -179,7 +179,7 @@ You can choose the Sysdig instance where you want to collect {{site.data.keyword
 
 You can monitor {{site.data.keyword.satellitelong}} through the Sysdig instance that is configured with **service platform logs** in the same region that your {{site.data.keyword.satelliteshort}} location is managed from.
 
-The following tables list the locations where automatic collection of registry service metrics is enabled.
+The following tables list the locations where automatic collection of registry service metrics is enabled. For more information, see [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor_sysdig).
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
@@ -201,9 +201,9 @@ The following tables list the locations where automatic collection of registry s
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
-|------------------------------------------------|------------------|----------------------------|
-| {{site.data.keyword.registrylong_notm}}        | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg) |      
+| Service                                        | `Tokyo (jp-tok)` | `Osaka (jp-osa)`  | `Sydney (au-syd)`   |
+|------------------------------------------------|------------------|----------------------------|----------------------------|
+| {{site.data.keyword.registrylong_notm}}        | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |      
 {: caption="Containers integration in AP locations" caption-side="top"}
 {: #cs_cont-table-3}
 {: tab-title="Asia Pacific"}
