@@ -192,7 +192,6 @@ Monitoring with Sysdig
     Monitoring CLI
         /sysdig-monitor-cli-plugin/sysdig-monitor-cli
    
-
     {: .topicgroup}
     Monitor
         monitor/endpoints.md
