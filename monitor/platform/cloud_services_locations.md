@@ -8,7 +8,6 @@ keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
 subcollection: Monitoring-with-Sysdig
 
-
 ---
 
 {:new_window: target="_blank"}
@@ -29,7 +28,6 @@ subcollection: Monitoring-with-Sysdig
 
 List of locations where {{site.data.keyword.cloud_notm}} services are enabled to send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the Sysdig instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
 {:shortdesc}
-
 
 ## Cloud Foundry
 {: #cloud_services_locations_cf}
