@@ -188,7 +188,7 @@ Monitoring with Sysdig
     pricing.md
     releasenotes.md
 
-    {: topicgroup}
+    {: .topicgroup}
     Monitoring CLI
         /sysdig-monitor-cli-plugin/sysdig-monitor-cli
    
