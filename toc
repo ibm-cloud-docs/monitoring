@@ -190,7 +190,7 @@ Monitoring with Sysdig
 
     {: .topicgroup}
     Monitoring CLI
-        /sysdig-monitor-cli-plugin/sysdig-monitor-cli
+        /sysdig-monitor-cli-plugin/sysdig-monitor-cli-plugin-sysdig-monitor-cli
    
     {: .topicgroup}
     Monitor
