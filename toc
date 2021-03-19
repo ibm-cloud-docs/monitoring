@@ -189,6 +189,10 @@ Monitoring
     releasenotes.md
 
     {: .topicgroup}
+    Monitoring CLI
+        /sysdig-monitor-cli-plugin/sysdig-monitor-cli-plugin-sysdig-monitor-cli
+   
+    {: .topicgroup}
     Monitor
         monitor/endpoints.md
         monitor/shared-responsibilities.md
