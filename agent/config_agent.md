@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2020
+  years:  2018, 2021
 lastupdated: "2020-10-14"
 
 keywords: Sysdig, IBM Cloud, monitoring, config sysdig agent
