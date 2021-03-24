@@ -194,7 +194,7 @@ Monitoring
 
     {: .topicgroup}
     Monitoring API
-        apidocs/sysdig-monitor
+        /apidocs/sysdig-monitor
 
         {: .topicgroup}
         REST API
