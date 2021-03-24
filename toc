@@ -46,7 +46,7 @@ Monitoring
 
     {: .topicgroup}
     IAM integration
-        monitor/core/iam.md
+        core/iam.md
         api_token.md
         iam_grant.md
         iam_grant_team.md
