@@ -14,22 +14,22 @@ Monitoring
 
         {: .topicgroup}
         Monitoring infrastructure
-            monitor/infrastructure/windows.md
-            monitor/infrastructure/baremetal_linux.md
-            monitor/infrastructure/kubernetes_cluster.md
-            monitor/infrastructure/ubuntu.md
+            infrastructure/windows.md
+            infrastructure/baremetal_linux.md
+            infrastructure/kubernetes_cluster.md
+            infrastructure/ubuntu.md
 
         {: .topicgroup}
         Monitoring IBM Cloud services
-            monitor/platform/platform_metrics_enabling.md
-            monitor/platform/platform_metrics_working.md
-            monitor/platform/cloud_services.md
-            monitor/platform/cloud_services_locations.md
+            platform/platform_metrics_enabling.md
+            platform/platform_metrics_working.md
+            platform/cloud_services.md
+            platform/cloud_services_locations.md
 
         {: .topicgroup}
         Adding more metrics
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
-            monitor/exporters/prometheus.md
+            exporters/prometheus.md
 
     {: .topicgroup}
     Sysdig Secure
@@ -57,10 +57,10 @@ Monitoring
 
     {: .topicgroup}
     Enhancing security
-        monitor/core/data-security.md
-        monitor/core/service-connection.md
-        monitor/core/architecture-workload-isolation.md
-        monitor/core/ha-dr.md
+        core/data-security.md
+        core/service-connection.md
+        core/architecture-workload-isolation.md
+        core/ha-dr.md
 
     {: .topicgroup}
     Sysdig web UI
@@ -96,8 +96,8 @@ Monitoring
             [Managing the Metric Scale](https://docs.sysdig.com/en/manage-metric-scale.html)
             [Data Aggregation](https://docs.sysdig.com/en/data-aggregation.html)
             [Metric Limits](https://docs.sysdig.com/en/metric-limits.html)
-            monitor/api/metrics_api.md
-            monitor/api/metrics_python.md
+            api/metrics_api.md
+            api/metrics_python.md
 
         {: .topicgroup}
         Dashboards
@@ -105,8 +105,8 @@ Monitoring
             [Working with dashboards](https://docs.sysdig.com/en/dashboards.html)
             monitor/dashboards.md
             monitor/panels.md
-            monitor/api/dashboard_api.md
-            monitor/api/dashboard_python.md
+            api/dashboard_api.md
+            api/dashboard_python.md
 
         {: .topicgroup}
         Explore views
@@ -120,10 +120,10 @@ Monitoring
             [Event alerts](https://docs.sysdig.com/en/event-alerts.html)
             [Anomaly detection alerts](https://docs.sysdig.com/en/anomaly-detection-alerts.html)
             [Group outlier alerts](https://docs.sysdig.com/en/group-outlier-alerts.html)
-            monitor/api/alert_api.md
-            monitor/api/alert_python.md
-            monitor/notifications.md
-            monitor/api/notifications_api.md
+            api/alert_api.md
+            api/alert_python.md
+            notifications.md
+            api/notifications_api.md
 
         {: .topicgroup}
         Events
@@ -142,9 +142,9 @@ Monitoring
         
         {: .topicgroup}
         Prometheus exporters
-            monitor/exporters/ipmi.md
-            monitor/exporters/blackbox.md
-            monitor/exporters/wmi.md
+            exporters/ipmi.md
+            exporters/blackbox.md
+            exporters/wmi.md
             [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
             [Prometheus metrics / OpenMetrics code instrumentation.](https://sysdig.com/blog/prometheus-metrics/)
         
@@ -191,34 +191,30 @@ Monitoring
     {: .topicgroup}
     Monitoring CLI
         /sysdig-monitor-cli-plugin/sysdig-monitor-cli-plugin-sysdig-monitor-cli
-   
+
     {: .topicgroup}
-    Monitor
-        monitor/endpoints.md
-        monitor/shared-responsibilities.md
-        monitor/monitoring.md
+    Monitoring API
+        apidocs/sysdig-monitor
 
         {: .topicgroup}
-        Sysdig API
-            monitor/api/rest_apis.md
-            monitor/api/mon-curl.md
+        REST API
+            api/rest_apis.md
+            api/mon-curl.md
             api_sysdig_token.md
 
         {: .topicgroup}
-        Sysdig Python client
-            monitor/api/python-client.md
-            [Sysdig Cloud Python Script Library](https://python-sdc-client.readthedocs.io/en/latest/)
+        Python client
+            api/python-client.md
+   
+    endpoints.md
+    core/shared-responsibilities.md
+    monitor/monitoring.md
 
-        {: .topicgroup}
-        Cloud services metrics
-            monitor/metrics/cloudfoundry-docs.md
+    {: .topicgroup}
+    Cloud services metrics
+        monitor/metrics/cloudfoundry-docs.md
 
-        [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
-        [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
-        [PromCat](https://promcat.io/)
-        deprecated.md
-    
-    [Sysdig Blog](https://sysdig.com/blog/)
+    deprecated.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

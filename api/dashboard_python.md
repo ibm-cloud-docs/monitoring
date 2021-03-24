@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-07-10"
+  years:  2018, 2021
+lastupdated: "2021-04-26"
 
 keywords: Sysdig, IBM Cloud, monitoring, dashboard, api
 
@@ -21,11 +21,11 @@ subcollection: Monitoring-with-Sysdig
 {:important: .important}
 {:note: .note}
 
-# Managing dashboards by using the Sysdig Python client
+# Managing dashboards by using the Python client
 {: #dashboard_python}
 
-For dashboard operations, see [Working with Dashboards](https://docs.sysdig.com/en/working-with-dashboards.html).
-For saving and backing up dashboards, see [Save and Restore Dashboards](https://docs.sysdig.com/en/save-and-restore-dashboards-with-scripts.html).
+Use the Python Client to manage dashboards programmatically.
+{: shortdesc}
 
 To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
 
