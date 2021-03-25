@@ -26,9 +26,25 @@ subcollection: Monitoring-with-Sysdig
 # Granting permissions to work within the context of a team
 {: #iam_grant_team}
 
-{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Complete the following steps to grant a user or service ID administration permissions to work with the {{site.data.keyword.mon_full_notm}} service within the context of a team:
+{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Teams provide an isolated workspace for a user or group of users to have access to metrics for a defined scope. 
 {:shortdesc}
 
+Teams
+	Teams provide an isolated workspace for a user or group of users to have access to metrics for a defined scope.
+	Each team has their own set of dashboards/alerts
+	This provides additional security by only allowing users to see metrics related to the infrastructure they deploy their apps to vs. all the infrastructure in the account.
+	Example - A group of developers can only see metrics from the kubernestes.namespace - store-frontend
+
+
+Roles
+	Within a team a user can have multiple roles
+	<Description of roles here>
+
+
+IBM IAM
+	IAM can be mapped to a combination of  teams and roles so that a user can only have access to a specific set of metrics, and take a defined set of actions within the product
+
+Complete the following steps to grant a user or service ID administration permissions to work with the {{site.data.keyword.mon_full_notm}} service within the context of a team:
 
 
 ## Prerequisites

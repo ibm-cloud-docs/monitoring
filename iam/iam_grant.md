@@ -26,9 +26,10 @@ subcollection: Monitoring-with-Sysdig
 # Granting permissions to work with the {{site.data.keyword.mon_short}} service
 {: #iam_grant}
 
-{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Complete the following steps to grant a user or service ID permissions to work with the {{site.data.keyword.mon_full_notm}} service:
+{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. 
 {:shortdesc}
 
+Complete the following steps to grant a user or service ID permissions to work with the {{site.data.keyword.mon_full_notm}} service:
 
 ## Prerequisites
 {: #iam_grant_sprereq}
