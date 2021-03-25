@@ -23,28 +23,48 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
  
-# Granting permissions to work within the context of a team
+# Teams and IAM integration
 {: #iam_grant_team}
 
-{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Teams provide an isolated workspace for a user or group of users to have access to metrics for a defined scope. 
+{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Teams provide an isolated workspace in a {{site.data.keyword.mon_short}} instance for a user or group of users to have access to metrics for a defined scope. 
 {:shortdesc}
 
-Teams
-	Teams provide an isolated workspace for a user or group of users to have access to metrics for a defined scope.
-	Each team has their own set of dashboards/alerts
-	This provides additional security by only allowing users to see metrics related to the infrastructure they deploy their apps to vs. all the infrastructure in the account.
-	Example - A group of developers can only see metrics from the kubernestes.namespace - store-frontend
+IAM can be mapped to a combination of teams and roles so that a user can only have access to a specific set of metrics, and take a defined set of actions within the product.
+{: note}
+
+Teams provide additional security by only allowing users to see metrics that are related to the infrastructure where they deploy their apps to versus all the infrastructure in the account. For example, in a Kubernetes cluster, you could grant a group of developers access to only see metrics from 1 kubernestes.namespace where their application is deployed.
+
+In a {{site.data.keyword.mon_short}} instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics for a defined scope.
+
+A {{site.data.keyword.mon_short}} instance includes the following teams:
+- Monitor operations 
+- Secure operations
+
+By default, users are granted access to the `monitor operations` team or to the team that is configured as the default one by an administrator of the instance. 
+- An admin of the service can configure multiple teams, and change the default team. 
+- Each team has their own set of custom dashboards and alerts that they can use to monitor the data in scope of the team.
+- Users in a team have access to the data that is included when the administrator defines the scope of the team.
+[Learn more about teams](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams).
+
+For a user to monitor data within the context of a team, you must grant the user a policy for the {{site.data.keyword.mon_full_notm}} service. The policy specifies the team and the service permissions that the user has to work with the data in scope for that team. 
+
+You can grant any of the following service roles:
+- Writer: A writer role allows a user to monitor data through dashboards, alerts, and notifications, and to manage resources such as dashboards, alerts, and notifications that are in scope of the team only.
+- Reader: A reader role allows a user to monitor data through dashboards, alerts, and notifications that are in scope of the team only.
+
+Notice that the manager role is an instance level role that grants administrative permissions. If you grant this role in a policy for a team, you are granting admin permissions over the instance to the users that belong to that team.
+{: important}
+
+To grant a user access to 1 or more teams, an administrator must grant the user a policy for each team that the user needs access to. By using individual policies per team, administrators can define different service access and permissions levels to work with data in the monitoring instance.
+
+For example, a user that needs to work in a team requires the following policies:
+* 1 policy with a platform role **viewer** to allow the user to see monitoring instances in the {{site.data.keyword.cloud_notm}}. 
+* 1 policy to grant the user access to 1 team. The service role determines the permissions of that user to work with data that is in scope of the team.
+
+To configure a policy for a user or service ID, see [Granting permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team).
 
 
-Roles
-	Within a team a user can have multiple roles
-	<Description of roles here>
-
-
-IBM IAM
-	IAM can be mapped to a combination of  teams and roles so that a user can only have access to a specific set of metrics, and take a defined set of actions within the product
-
-Complete the following steps to grant a user or service ID administration permissions to work with the {{site.data.keyword.mon_full_notm}} service within the context of a team:
+Complete the following steps to grant a user or service ID permissions to work with the {{site.data.keyword.mon_full_notm}} service within the context of a team:
 
 
 ## Prerequisites

@@ -135,28 +135,6 @@ Use the following table to identify the IAM actions that are assigned to the pla
 
 
 
-## Permissions to view and manage data within the scope of a team
-{: #iam_policies_team}
-
-In a {{site.data.keyword.mon_short}} instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics for a defined scope.
-
-A {{site.data.keyword.mon_short}} instance includes the following teams:
-- Monitor operations 
-- Secure operations
-
-By default, users are granted access to the `monitor operations` team or to the team that is configured as the default one by an administrator of the instance. An admin of the service can configure more teams, and change the default team. 
-
-For a user to work within the context of a team, you must grant the user a policy for the {{site.data.keyword.mon_full_notm}} service. The policy specifies the team and the service permissions that the user has to work with the data in scope for that team.
-
-To grant a user access to 1 or more teams, an administrator must grant the user a policy for each team that the user needs access to.
-
-For example, a user that needs to work in a team requires the following policies:
-* 1 policy with a platform role **viewer** to allow the user to see instances in the {{site.data.keyword.cloud_notm}}.
-* 1 policy to grant the user access to 1 team. The service role determines the permissions of that user to work with data that is in scope of the team.
-
-To configure a policy for a user or service ID, see [Granting permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team).
-
-
 ## How do I know which access policies are set for me?
 {: #iam_accesspolicy}
 
