@@ -77,8 +77,11 @@ Choose any of the following actions to manage IAM policies in the {{site.data.ke
 ## {{site.data.keyword.cloud_notm}} platform roles
 {: #iam_platform}
 
-Use the following table to identify the platform role that you can grant a user in the {{site.data.keyword.cloud_notm}} to run any of the following platform actions:
+You must grant users a platform role to allow them to view and manage the {{site.data.keyword.mon_full_notm}} service in your account. 
+- You can grant permissions to work with all the instances in the {{site.data.keyword.cloud_notm}} account. 
+- You can restrict access to individual instances.
 
+Use the following table to identify the platform role that you can grant a user in the {{site.data.keyword.cloud_notm}} to run any of the following platform actions:
 
 | Platform actions                                                        | Administrator                                     | Editor | Operator | Viewer  |
 |-------------------------------------------------------------------------|:-------------------------------------------------:|:-------:|:--------:|:------:|
@@ -89,6 +92,10 @@ Use the following table to identify the platform role that you can grant a user 
 | `View details of a service instance`                                    | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)    | ![Checkmark icon](../images/checkmark-icon.svg)      | ![Checkmark icon](../images/checkmark-icon.svg)    |
 | `View service instances in the Observability Monitoring dashboard`      | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)    | ![Checkmark icon](../images/checkmark-icon.svg)      | ![Checkmark icon](../images/checkmark-icon.svg)    |
 {: caption="Table 1. IAM user roles and actions" caption-side="top"}
+
+
+A user with an **administrator** role automatically gets the service **manager** role permissions.
+{: note}
 
 
 
@@ -127,89 +134,26 @@ Use the following table to identify the IAM actions that are assigned to the pla
 {: caption="Table 3. IAM actions assigned to platform and service roles" caption-side="top"}
 
 
-## Permissions to manage the {{site.data.keyword.mon_full_notm}} service
-{: #iam_policies_cloud}
-
-You must grant users a platform role to allow them to manage the {{site.data.keyword.mon_full_notm}} service in your account. 
-- You can grant permissions to work with all the instances in the {{site.data.keyword.cloud_notm}} account. 
-- You can restrict access to individual instances.
-
-The following table outlines the roles that you can grant users when you define an IAM policy to work with the {{site.data.keyword.mon_full_notm}} service:
-
-| Platform scope | Platform role |
-|----------------|---------------|
-| `All instances`  | `Administrator` |
-| `1 Instance`     | `Editor` </br>`Viewer` |
-{: caption="Table 4. Roles and actions" caption-side="top"}
-
-The *platform scope* controls the number of instances that the policy is applied to in your account.
-
-Notice that the `operator` role is not supported.
-
- 
-
-
-## Permissions to view and manage data
-{: #iam_policies}
-
-You can use the UI or the REST API to view and manage data that is available through a {{site.data.keyword.mon_short}} instance.
-
-Use the following table to identify the platform role and the service role that you must grant a user in your account to work in the UI or to make REST API calls:
-
-Each row indicates the roles that you must select when you configure a policy.
-{: note}
-
-
-| Platform scope   | Platform role   | Service role | More info |
-|------------------|-----------------|--------------|-----------|
-| `All instances`  | `Administrator` | `Manager`    | The user gets permissions to manage all teams across all monitoring instances. |
-| `1 Instance`     | `Administrator` | `Manager`    | The user gets permissions to manage all teams in 1 instance. |
-| `1 Instance`     | `Editor`        | `Manager`    | The user gets permissions to work across all teams in 1 monitoring instance. |
-{: caption="Table 5. Roles and actions" caption-side="top"}
-{: #iam-table-1}
-{: tab-title="Administrators/Operators"}
-{: tab-group="iam-1"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Platform scope   | Platform role   | Service role |More info |
-|------------------|-----------------|--------------|-----------|
-| `1 Instance`     | `Viewer`        | `Reader`     | The user gets permissions to work across all teams in 1 monitoring instance. |
-| `1 Instance`     | `Viewer`        | `Writer`     | The user gets permissions to work across all teams in 1 monitoring instance. |
-{: caption="Table 6. Roles and actions" caption-side="top"}
-{: #iam-table-2}
-{: tab-title="Users"}
-{: tab-group="iam-1"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-Where 
-* The **platform scope** controls the number of instances that the policy is applied to.
-* The **platform role** determines if the user can see monitoring instances in the {{site.data.keyword.cloud_notm}}. 
-* The **service role** determines the permissions a user has to manage data through the UI or API
-
-To configure a policy for a user or service ID, see [Granting permissions to launch the UI or to make REST API calls](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant).
-
-
 
 ## Permissions to view and manage data within the scope of a team
 {: #iam_policies_team}
 
 In a {{site.data.keyword.mon_short}} instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics for a defined scope.
 
-By default, each {{site.data.keyword.mon_short}} instance includes the following teams:
+A {{site.data.keyword.mon_short}} instance includes the following teams:
 - Monitor operations 
 - Secure operations
 
 By default, users are granted access to the `monitor operations` team or to the team that is configured as the default one by an administrator of the instance. An admin of the service can configure more teams, and change the default team. 
 
-For a user to work within the context of a team, you must grant the user an additional policy for the {{site.data.keyword.mon_full_notm}} service. The policy specifies  the team and the service permissions that the user has to work with the data in scope for that team.
+For a user to work within the context of a team, you must grant the user a policy for the {{site.data.keyword.mon_full_notm}} service. The policy specifies the team and the service permissions that the user has to work with the data in scope for that team.
 
-To grant access to a user to 1 or more teams, an administrator must grant the user an extra policy for each team that the user needs access to.
+To grant a user access to 1 or more teams, an administrator must grant the user a policy for each team that the user needs access to.
 
 For example, a user that needs to work in a team requires the following policies:
-* 1 policy with a platform role to allow the user to see instances in the {{site.data.keyword.cloud_notm}}.
-* 1 policy to grant the service role that determines the permissions of that user to work with data that is in scope of the team.
+* 1 policy with a platform role **viewer** to allow the user to see instances in the {{site.data.keyword.cloud_notm}}.
+* 1 policy to grant the user access to 1 team. The service role determines the permissions of that user to work with data that is in scope of the team.
+
 To configure a policy for a user or service ID, see [Granting permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team).
 
 
