@@ -173,6 +173,10 @@ Monitoring
     pricing.md
     endpoints.md
     core/shared-responsibilities.md
+    
+    {: .topicgroup}
+    Monitoring CLI
+        /sysdig-monitor-cli-plugin/sysdig-monitor-cli-plugin-sysdig-monitor-cli
 
     {: .topicgroup}
     Monitor
