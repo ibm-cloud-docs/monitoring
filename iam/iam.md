@@ -113,7 +113,7 @@ Use the following table to identify the service role that you can grant a user i
 {: caption="Table 2. Service roles and actions" caption-side="top"}
 
 
-## {{site.data.keyword.cloud_notm}} service roles
+## IAM actions
 {: #iam_actions}
 
 Use the following table to identify the IAM actions that are assigned to the platform and service roles for the {{site.data.keyword.mon_full_notm}} service:
@@ -130,7 +130,7 @@ Use the following table to identify the IAM actions that are assigned to the pla
 ## Permissions to manage the {{site.data.keyword.mon_full_notm}} service
 {: #iam_policies_cloud}
 
-You must grant users a platform role to allow them to manage the {{site.data.keyword.mon_full_notm}} service in your {{site.data.keyword.cloud_notm}} account. 
+You must grant users a platform role to allow them to manage the {{site.data.keyword.mon_full_notm}} service in your account. 
 - You can grant permissions to work with all the instances in the {{site.data.keyword.cloud_notm}} account. 
 - You can restrict access to individual instances.
 
@@ -142,17 +142,17 @@ The following table outlines the roles that you can grant users when you define 
 | `1 Instance`     | `Editor` </br>`Viewer` |
 {: caption="Table 4. Roles and actions" caption-side="top"}
 
-The *platform scope* controls the number of instances that the policy is applied to in your {{site.data.keyword.cloud_notm}} account.
+The *platform scope* controls the number of instances that the policy is applied to in your account.
 
 Notice that the `operator` role is not supported.
 
  
 
 
-## Permissions to manage data through the UI or API
+## Permissions to view and manage data
 {: #iam_policies}
 
-In a {{site.data.keyword.mon_short_notm}} instance, you can use the UI or the REST API to view and manage data.
+You can use the UI or the REST API to view and manage data that is available through a {{site.data.keyword.mon_short}} instance.
 
 Use the following table to identify the platform role and the service role that you must grant a user in your account to work in the UI or to make REST API calls:
 
@@ -163,6 +163,7 @@ Each row indicates the roles that you must select when you configure a policy.
 | Platform scope   | Platform role   | Service role | More info |
 |------------------|-----------------|--------------|-----------|
 | `All instances`  | `Administrator` | `Manager`    | The user gets permissions to manage all teams across all monitoring instances. |
+| `1 Instance`     | `Administrator` | `Manager`    | The user gets permissions to manage all teams in 1 instance. |
 | `1 Instance`     | `Editor`        | `Manager`    | The user gets permissions to work across all teams in 1 monitoring instance. |
 {: caption="Table 5. Roles and actions" caption-side="top"}
 {: #iam-table-1}
@@ -191,12 +192,12 @@ To configure a policy for a user or service ID, see [Granting permissions to lau
 
 
 
-## Permissions to work within the scope of a team
+## Permissions to view and manage data within the scope of a team
 {: #iam_policies_team}
 
-In a {{site.data.keyword.mon_short_notm}} instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics for a defined scope.
+In a {{site.data.keyword.mon_short}} instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics for a defined scope.
 
-By default, each {{site.data.keyword.mon_short_notm}} instance includes the following teams:
+By default, each {{site.data.keyword.mon_short}} instance includes the following teams:
 - Monitor operations 
 - Secure operations
 
@@ -218,11 +219,12 @@ To configure a policy for a user or service ID, see [Granting permissions to wor
 ## How do I know which access policies are set for me?
 {: #iam_accesspolicy}
 
-You can see which access policies are set for you in the [{{site.data.keyword.cloud}} catalog](https://cloud.ibm.com/catalog){: external} console.
+You can see which access policies are set for you in the [{{site.data.keyword.cloud_notm}} UI](https://cloud.ibm.com/){: external} console.
 
 1. Go to [Access IAM users](https://cloud.ibm.com/iam/users){: external}.
 2. Click your name in the user table.
 3. Click the **Access policies** tab to see your access policies.
+4. Click the **Access groups** tab to see the access groups where you are a member. Check the policies for each group.
 
 
 
