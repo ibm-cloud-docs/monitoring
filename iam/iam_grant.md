@@ -23,7 +23,7 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
  
-# Granting permissions to launch the Sysdig UI or to make REST API calls
+# Granting permissions to launch the UI or to make REST API calls
 {: #iam_grant}
 
 {{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Complete the following steps to grant a user or service ID permissions to work with the {{site.data.keyword.mon_full_notm}} service:
@@ -68,6 +68,9 @@ Any policy that you set for an access group applies to all entities, users, and 
 
 You can assign the policy by using the UI or through the command line.
 
+### Add permissions to manage data through the CLI
+{: #iam_grant_step2_1}
+
 To create an access group policy by using the CLI, you can use the [ibmcloud iam access-group-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create) command.
 
 ```
@@ -78,6 +81,9 @@ ibmcloud iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --ro
 When you define the policy, you need to select a platform role and a service role:
 * Platform management roles cover a range of actions, including the ability to create and delete instances, manage aliases, bindings, and credentials, and manage access. The platform roles are administrator, editor, operator, viewer. Platform management roles also apply to account management services that enable users to invite users, manage service IDs, access policies, catalog entries, and track billing and usage depending on their assigned role on an account management service.
 * Service access roles define a user or service’s ability to perform actions on a service instance. The service access roles are manager, writer, and reader.
+
+### Add permissions to manage data through the UI
+{: #iam_grant_step2_2}
 
 Complete the following steps to assign a policy to an access group through the UI:
 
