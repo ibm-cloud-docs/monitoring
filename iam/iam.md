@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-11-12"
+  years:  2018, 2021
+lastupdated: "2021-03-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, iam
 
@@ -109,82 +109,120 @@ Use the following table to identify the service role that you can grant a user i
 | `Create and delete events`                   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | | 
 | `Create and delete captures`                     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | | 
 | `Modify the scope of dashboards/panels`        | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
-| `View metrics, dashboards, alerts, events, and captures through the Sysdig Web UI`  | ![Checkmark icon](../images/checkmark-icon.svg)      | ![Checkmark icon](../images/checkmark-icon.svg)                    | ![Checkmark icon](../images/checkmark-icon.svg)    | 
-{: caption="Table 2. Sysdig roles and actions" caption-side="top"}
+| `View metrics, dashboards, alerts, events, and captures`  | ![Checkmark icon](../images/checkmark-icon.svg)      | ![Checkmark icon](../images/checkmark-icon.svg)                    | ![Checkmark icon](../images/checkmark-icon.svg)    | 
+{: caption="Table 2. Service roles and actions" caption-side="top"}
 
 
-## Policy that is required to be able to see the Sysdig instance in the {{site.data.keyword.cloud_notm}}
+## {{site.data.keyword.cloud_notm}} service roles
+{: #iam_actions}
+
+Use the following table to identify the IAM actions that are assigned to the platform and service roles for the {{site.data.keyword.mon_full_notm}} service:
+
+| Role type         | Role              | IAM actions |
+|-------------------|-------------------|--------------|
+| Platform          | `adminsitrator`   | `sysdig-monitor.launch.admin` </br>`sysdig-monitor.launch.user` </br>`sysdig-monitor.launch.viewer` |
+| Service           | `manager`         | `sysdig-monitor.launch.admin` </br>`sysdig-monitor.launch.user` </br>`sysdig-monitor.launch.viewer` |
+| Service           | `writer`          | `sysdig-monitor.launch.user` </br>`sysdig-monitor.launch.viewer` |
+| Service           | `reader`          | `sysdig-monitor.launch.viewer` |
+{: caption="Table 3. IAM actions assigned to platform and service roles" caption-side="top"}
+
+
+## Permissions to manage the {{site.data.keyword.mon_full_notm}} service
 {: #iam_policies_cloud}
 
-Use the following table to identify the platform role that you must grant a user in the {{site.data.keyword.cloud_notm}} to see the Sysdig instance in the {{site.data.keyword.cloud_notm}}:
+You must grant users a platform role to allow them to manage the {{site.data.keyword.mon_full_notm}} service in your {{site.data.keyword.cloud_notm}} account. 
+- You can grant permissions to work with all the instances in the {{site.data.keyword.cloud_notm}} account. 
+- You can restrict access to individual instances.
 
-| DevOps role               | Platform scope  | Platform role  | See Sysdig instance in {{site.data.keyword.cloud_notm}}  |
-|--------------------------|-----------------|-----------------|----------------------------------------------------------|
-| `Service administrator`  | `All instances` | `Administrator` | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `Sysdig instance manager`| `Instance`      | `Editor`        | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `Sysdig instance writer` | `Instance`      | `Viewer`        | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `Team writer`            | `Instance`      | `Viewer`        | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `Instance viewer (user)` | `Instance`      | `Viewer`        | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `Team viewer (user)`     | `Instance`      | `Viewer`        | ![Checkmark icon](../images/checkmark-icon.svg) | 
-{: caption="Table 3. Roles and actions" caption-side="top"}
+The following table outlines the roles that you can grant users when you define an IAM policy to work with the {{site.data.keyword.mon_full_notm}} service:
 
-An instance viewer is a user that can see dashboards, alerts, and notifications in a Sysdig instance for all teams.
-An instance writer is a user that can see and manage dashboards, alerts, and notifications in a Sysdig instance for all teams.  
-
-
-## Policy that is required to work with data through the Sysdig UI or API
-{: #iam_policies}
-
-Use the following table to identify the platform role and the service role that you must grant a user in the {{site.data.keyword.cloud_notm}} to work in the Sysdig UI or to make REST API calls:
-
-* The **platform scope** controls the number of instances that the policy is applied to.
-* The **platform role** determines if the user can see Sysdig instances in the {{site.data.keyword.cloud_notm}}. 
-* The **service role** determines the permissions a user have to work Sysdig.
-* The **team scope** determines whether the policy applies to a team or not. When you configure a policy, you have an option to select a team or leave it empty so the policy applies to all teams. *When you define this policy, ensure that a team is not selected.*
-
-
-| DevOps role              | Platform scope  | Platform role  | Service role      | Team scope   | Launch Sysdig UI and make REST API calls |
-|--------------------------|-----------------|----------------|-------------------|--------------|-------------------------------------------|
-| `Service administrator`  | `All instances` | `Administrator`| `Manager`         | `(*)`        | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `Sysdig instance manager`| `Instance`      | `Editor`       | `Manager`         | `(**)`       | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `Sysdig instance writer` | `Instance`      | `Viewer`       | `Writer`          | `(**)`       | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `Instance viewer (user)` | `Instance`      | `Viewer`       | `Reader`          | `(**)`       | ![Checkmark icon](../images/checkmark-icon.svg) |
+| Platform scope | Platform role |
+|----------------|---------------|
+| `All instances`  | `Administrator` |
+| `1 Instance`     | `Editor` </br>`Viewer` |
 {: caption="Table 4. Roles and actions" caption-side="top"}
 
-`(*)`The user gets permissions to manage all teams across all Sysdig instances.
+The *platform scope* controls the number of instances that the policy is applied to in your {{site.data.keyword.cloud_notm}} account.
 
-`(**)` The user gets permissions to work across all teams in 1 Sysdig instance.
+Notice that the `operator` role is not supported.
 
-
-To configure a policy for a user or service ID, see [Granting permissions to launch the Sysdig UI or to make REST API calls](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant).
-
+ 
 
 
-## Policy that is required to grant permissions to work in a team in a Sysdig instance
+## Permissions to manage data through the UI or API
+{: #iam_policies}
+
+In a {{site.data.keyword.mon_short_notm}} instance, you can use the UI or the REST API to view and manage data.
+
+Use the following table to identify the platform role and the service role that you must grant a user in your account to work in the UI or to make REST API calls:
+
+Each row indicates the roles that you must select when you configure a policy.
+{: note}
+
+
+| Platform scope   | Platform role   | Service role | More info |
+|------------------|-----------------|--------------|-----------|
+| `All instances`  | `Administrator` | `Manager`    | The user gets permissions to manage all teams across all monitoring instances. |
+| `1 Instance`     | `Editor`        | `Manager`    | The user gets permissions to work across all teams in 1 monitoring instance. |
+{: caption="Table 5. Roles and actions" caption-side="top"}
+{: #iam-table-1}
+{: tab-title="Administrators/Operators"}
+{: tab-group="iam-1"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Platform scope   | Platform role   | Service role |More info |
+|------------------|-----------------|--------------|-----------|
+| `1 Instance`     | `Viewer`        | `Reader`     | The user gets permissions to work across all teams in 1 monitoring instance. |
+| `1 Instance`     | `Viewer`        | `Writer`     | The user gets permissions to work across all teams in 1 monitoring instance. |
+{: caption="Table 6. Roles and actions" caption-side="top"}
+{: #iam-table-2}
+{: tab-title="Users"}
+{: tab-group="iam-1"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+Where 
+* The **platform scope** controls the number of instances that the policy is applied to.
+* The **platform role** determines if the user can see monitoring instances in the {{site.data.keyword.cloud_notm}}. 
+* The **service role** determines the permissions a user has to manage data through the UI or API
+
+To configure a policy for a user or service ID, see [Granting permissions to launch the UI or to make REST API calls](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant).
+
+
+
+## Permissions to work within the scope of a team
 {: #iam_policies_team}
 
-**Every user that must work in a team must have this policy defined.** 
+In a {{site.data.keyword.mon_short_notm}} instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics for a defined scope.
 
-You cannot define the policy to work with Sysdig with the policy to work in a team. Each one needs its own policy.
-{: important}
+By default, each {{site.data.keyword.mon_short_notm}} instance includes the following teams:
+- Monitor operations 
+- Secure operations
 
-A user that needs to work in a team requires the following policies:
-* 1 policy with a platform role to allow the user to see Sysdig instances in the {{site.data.keyword.cloud_notm}}.
-* 1 policy to grant the service role that determines the permissions of that user to work in a Sysdig team.
+By default, users are granted access to the `monitor operations` team or to the team that is configured as the default one by an administrator of the instance. An admin of the service can configure more teams, and change the default team. 
 
-Use the following table to identify the service role that you must grant a user in the {{site.data.keyword.cloud_notm}} to work in a Sysdig team:
+For a user to work within the context of a team, you must grant the user an additional policy for the {{site.data.keyword.mon_full_notm}} service. The policy specifies  the team and the service permissions that the user has to work with the data in scope for that team.
 
-| DevOps role              | Platform scope  | Service role      | Team scope   | Launch Sysdig UI and make REST API calls |
-|--------------------------|-----------------|-------------------|--------------|-------------------------------------------|
-| `Team writer`            | `Instance`      | `Writer`          | `{Team}`       | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `Team viewer`            | `Instance`      | `Reader`          | `{Team}`       | ![Checkmark icon](../images/checkmark-icon.svg) | 
-{: caption="Table 5. Roles and actions" caption-side="top"}
+To grant access to a user to 1 or more teams, an administrator must grant the user an extra policy for each team that the user needs access to.
 
-Where `{Team}` is a team that is configured in the Sysdig instance.
-
-Team viewer is a user that can see dashboards, alerts, and notifications in a Sysdig instance, and is limited to analyze data that is available thorugh dashboards for the team the user belongs to.
-Team writer is a user that can see and manage dashboards, alerts, and notifications in a Sysdig instance, and is limited to data that is available for the team it belongs to.  
-
+For example, a user that needs to work in a team requires the following policies:
+* 1 policy with a platform role to allow the user to see instances in the {{site.data.keyword.cloud_notm}}.
+* 1 policy to grant the service role that determines the permissions of that user to work with data that is in scope of the team.
 To configure a policy for a user or service ID, see [Granting permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team).
+
+
+
+
+
+## How do I know which access policies are set for me?
+{: #iam_accesspolicy}
+
+You can see which access policies are set for you in the [{{site.data.keyword.cloud}} catalog](https://cloud.ibm.com/catalog){: external} console.
+
+1. Go to [Access IAM users](https://cloud.ibm.com/iam/users){: external}.
+2. Click your name in the user table.
+3. Click the **Access policies** tab to see your access policies.
+
 
 
