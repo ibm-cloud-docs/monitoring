@@ -9,7 +9,7 @@ Monitoring
     releasenotes.md
 
     {: .topicgroup}
-    Sysdig Monitor
+    Monitor
         monitor/getting-started-monitor.md
 
         {: .topicgroup}
@@ -32,7 +32,7 @@ Monitoring
             exporters/prometheus.md
 
     {: .topicgroup}
-    Sysdig Secure
+    Secure
         secure/getting-started-secure.md
         [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
         [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
@@ -63,12 +63,12 @@ Monitoring
         core/ha-dr.md
 
     {: .topicgroup}
-    Sysdig web UI
+    Web UI
         launch.md
         get_sysdig_web_url.md
 
     {: .topicgroup}
-    Sysdig Agent
+    Agent
         agent/config_agent.md
         agent/upgrade_agent.md
         agent/remove_agent.md
@@ -85,7 +85,7 @@ Monitoring
         [Sysdig Agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)
 
     {: .topicgroup}
-    Sysdig Monitor
+    Monitor
 
         {: .topicgroup}
         Metrics
@@ -153,7 +153,7 @@ Monitoring
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
 
     {: .topicgroup}
-    Sysdig Secure
+    Secure
 
         {: .topicgroup}
         Image scanning

@@ -127,7 +127,7 @@ Use the following table to identify the IAM actions that are assigned to the pla
 
 | Role type         | Role              | IAM actions |
 |-------------------|-------------------|--------------|
-| Platform          | `adminsitrator`   | `sysdig-monitor.launch.admin` </br>`sysdig-monitor.launch.user` </br>`sysdig-monitor.launch.viewer` |
+| Platform          | `administrator`   | `sysdig-monitor.launch.admin` </br>`sysdig-monitor.launch.user` </br>`sysdig-monitor.launch.viewer` |
 | Service           | `manager`         | `sysdig-monitor.launch.admin` </br>`sysdig-monitor.launch.user` </br>`sysdig-monitor.launch.viewer` |
 | Service           | `writer`          | `sysdig-monitor.launch.user` </br>`sysdig-monitor.launch.viewer` |
 | Service           | `reader`          | `sysdig-monitor.launch.viewer` |
