@@ -23,11 +23,12 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
  
-# Granting permissions to work in a team
+# Granting permissions to work within the context of a team
 {: #iam_grant_team}
 
-{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Complete the following steps to grant a user or service ID administration permissions to work with the {{site.data.keyword.mon_full_notm}} service:
+{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Complete the following steps to grant a user or service ID administration permissions to work with the {{site.data.keyword.mon_full_notm}} service within the context of a team:
 {:shortdesc}
+
 
 
 ## Prerequisites
@@ -58,36 +59,87 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 
 
 
-## Step 2. Add team policy to manage data
+## Step 2. Add permissions to view {{site.data.keyword.mon_short}} instances in the Observability UI
 {: #iam_grant_team_step2}
 
-After you set up your group, you can assign a common access policy to the group. 
+After you set up your group, you can assign a common access policy to the group. You must add permissions to view {{site.data.keyword.mon_short}} instances in the Observability UI. 
 
 Any policy that you set for an access group applies to all entities, users, and service IDs, within the group. 
 {: note}
 
-You can assign the policy by using the UI or through the command line.
+You can assign the policy by using the UI or through the command line. 
+
+When you define the policy, you need to select a platform role. Platform management roles cover a range of actions, including the ability to create and delete instances, manage aliases, bindings, and credentials, and manage access. Valid platform roles are administrator, editor, operator, viewer. 
 
 
-### Add team policy to manage data through the {{site.data.keyword.cloud_notm}} UI
-{: #iam_grant_team_step2_ui}
+### Add permissions through the CLI
+{: #iam_grant_team_step2_1}
+
+To create an access group policy by using the CLI, you can use the [ibmcloud iam access-group-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create) command with the **viewer** role.
+
+```
+ibmcloud iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+```
+{: codeblock}
+
+For example, you can run the following command to grant a user viewer permissions:
+
+```
+ibmcloud iam access-group-policy-create my-access-group --roles Viewer --service-name my-monitoring-instance --service-instance 99999999-9999-9999-999999
+```
+{: codeblock}
+
+
+### Add permissions through the UI
+{: #iam_grant_team_step2_2}
 
 Complete the following steps to assign a policy to an access group through the UI:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
-2. Select the name of the group that you want to assign access to. 
-3. Click **Access policies**.
-4. Click **Assign access**.
-5. Select **Assign access to resources**.
-6. In the *Service Instance* section, select 1 instance.
-7. In the *Sysdig Team* section, choose 1 team.
-5. Select a service role. [Learn more about the roles that you need](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam).
-6. Click **Assign**.
+2. Select the name of the group  &gt;that you want to assign access to. 
+3. Click **Access policies**  &gt; **Assign access**  &gt; **Assign access to resources**.
+4. Select **IAM services**.
+5. In the section *What type of access do you want to assign?*, select **{{site.data.keyword.mon_full_notm}}**.
+6. In the section *Which services do you want to assign access to?*, choose one of the following options:
 
-### Add team policy to manage data through the CLI
-{: #iam_grant_team_step2_cli}
+    Select **All services** to define the scope of the policy to include all instances.
+
+    Select **Services based on attributes** to refine the scope of the policy. Choose 1 of the following options:
+    
+    Option1: The scope is set to a resource group. Select **Resource group** to choose 1 resource group and define the scope of the policy to include all instances that are associated with that resource group. 
+
+    Option 2: The scope is set to 1 instance in a resource group. Select **Resource group** to choose the resource group. Then select **Service Instance** to choose the instance within the resource group.
+    
+    Option 3: The scope is set to 1 instance. Select **Service Instance** to choose the instance.
+
+    Skip configuring a value in the *Sysdig Team* section.
+    {: important}
+
+7. Select the **viewer** platform role.
+
+8. Click **Assign**.
+
+
+
+## Step 3. Add permissions to work in a team
+{: #iam_grant_team_step3}
+
+Next, you must add a policy that grant the user permissions to work with data in the {{site.data.keyword.mon_short}} service within the context of a team.
+
+When you define the policy, you need to select a service role. Service access roles define a user or service’s ability to perform actions on a service instance. The service access roles are manager, writer, and reader.
+
+
+### Add permissions through the CLI
+{: #iam_grant_team_step3_1}
 
 To create an access group policy by using the CLI, you can use the [ibmcloud iam access-group-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create) command.
+
+```
+ibmcloud iam access-group-policy-create GROUP_NAME {-f, --file @JSON_FILE | --roles ROLE_NAME1,ROLE_NAME2... [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
+```
+{: codeblock}
+
+Where valid roles are `Reader`, `Writer`, and `Manager`.
 
 You must use a JSON file to create the team policy.
 {: important}
@@ -101,7 +153,7 @@ ibmcloud iam access-group-policy-create accessGroupName accessGroupGUID --file p
 
 Where 
 
-* `accessGroupName` is the acces group name.
+* `accessGroupName` is the access group name.
 * `accessGroupGUID` is the GUID of the access group.
 
 You can run the command `ibmcloud iam access-groups` to get the list of names and corresponding GUIDs in the account.
@@ -154,13 +206,46 @@ And use the following JSON file.
 {: codeblock}
 
 
-## Step 3. Add a user or service ID to the access group
-{: #iam_grant_team_step3}
+### Add permissions through the UI
+{: #iam_grant_team_step3_2}
+
+Complete the following steps to assign a policy to an access group through the UI:
+
+1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
+2. Select the name of the group  &gt;that you want to assign access to. 
+3. Click **Access policies**  &gt; **Assign access**  &gt; **Assign access to resources**.
+4. Select **IAM services**.
+5. In the section *What type of access do you want to assign?*, select **{{site.data.keyword.mon_full_notm}}**.
+6. In the section *Which services do you want to assign access to?*, complete the following steps:
+
+    First, select **Services based on attributes** to refine the scope of the policy. Choose 1 of the following options:
+
+    Option 1: Set the scope to 1 instance in a resource group. Select **Resource group** to choose the resource group. Then select **Service Instance** to choose the instance within the resource group.
+    
+    Option 2: Set the scope to 1 instance. Select **Service Instance** to choose the instance.
+
+    Next, select a **Sysdig team**.
+
+7. Select a service role. The service role defines the permissions a user has to view and manage resources in that team.
+
+    Select **manager** to grant admin permissions for the service.
+
+    Select **reader** to grant permissions to view data only.
+
+    [Learn more about the roles that you need](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam).
+
+8. Click **Assign**.
+
+
+
+
+## Step 4. Add a user or service ID to the access group
+{: #iam_grant_team_step4}
 
 Continue to set up your group by adding users or service IDs.
 
 ### Add a user to the access group
-{: #iam_grant_team_step3_user}
+{: #iam_grant_team_step4_user}
 
 Complete the following steps to add a user:
 
@@ -171,7 +256,7 @@ Complete the following steps to add a user:
 
 
 ### Add a service ID to the access group
-{: #iam_grant_team_step3_svcid}
+{: #iam_grant_team_step4_svcid}
 
 Complete the following steps to add a service ID:
 

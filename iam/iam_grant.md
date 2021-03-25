@@ -67,7 +67,7 @@ Any policy that you set for an access group applies to all entities, users, and 
 
 You can assign the policy by using the UI or through the command line. 
 
-When you define the policy, you need to select a platform role. Platform management roles cover a range of actions, including the ability to create and delete instances, manage aliases, bindings, and credentials, and manage access. The platform roles are administrator, editor, operator, viewer. 
+When you define the policy, you need to select a platform role. Platform management roles cover a range of actions, including the ability to create and delete instances, manage aliases, bindings, and credentials, and manage access. Valid platform roles are administrator, editor, operator, viewer. 
 
 
 ### Add permissions through the CLI
