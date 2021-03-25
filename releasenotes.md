@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-01-18"
+lastupdated: "2021-03-24"
 
 keywords: Monitoring with Sysdig release notes, Monitoring with Sysdig updates
 
@@ -27,6 +27,13 @@ subcollection: Monitoring-with-Sysdig
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}} that are grouped by date.
 {:shortdesc}
+
+
+## March 2021
+{: #sysdig-march2021-for-update}
+
+The service name has changed from **IBM Cloud Monitoring with Sysdig** to **IBM Cloud Monitoring**.
+
 
 
 ## January 2021

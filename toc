@@ -40,7 +40,7 @@ Monitoring
 
     {: .navgroup id="howto"}
     provision.md
-    iam_instance_auth.md
+    iam/iam_instance_auth.md
     remove.md
     upgrade.md
 
