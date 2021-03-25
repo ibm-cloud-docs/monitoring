@@ -9,7 +9,7 @@ Monitoring
     releasenotes.md
 
     {: .topicgroup}
-    Sysdig Monitor
+    Monitor
         monitor/getting-started-monitor.md
 
         {: .topicgroup}
@@ -32,7 +32,7 @@ Monitoring
             [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
 
     {: .topicgroup}
-    Sysdig Secure
+    Secure
         secure/getting-started-secure.md
         [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
         [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
@@ -63,12 +63,12 @@ Monitoring
         core/ha-dr.md
 
     {: .topicgroup}
-    Sysdig web UI
+    Web UI
         launch.md
         get_sysdig_web_url.md
 
     {: .topicgroup}
-    Sysdig Agent
+    Agent
         agent/config_agent.md
         agent/upgrade_agent.md
         agent/remove_agent.md
@@ -82,7 +82,7 @@ Monitoring
         [Sysdig Agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)
 
     {: .topicgroup}
-    Sysdig Monitor
+    Monitor
 
         {: .topicgroup}
         Metrics
@@ -139,7 +139,7 @@ Monitoring
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
 
     {: .topicgroup}
-    Sysdig Secure
+    Secure
 
         {: .topicgroup}
         Image scanning
@@ -179,13 +179,13 @@ Monitoring
         monitor/monitoring.md
 
         {: .topicgroup}
-        Sysdig API
+        REST API
             api/rest_apis.md
             api/mon-curl.md
             iam/api_sysdig_token.md
 
         {: .topicgroup}
-        Sysdig Python client
+        Python client
             api/python-client.md
 
         {: .topicgroup}
