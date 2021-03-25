@@ -46,10 +46,10 @@ Monitoring
 
     {: .topicgroup}
     IAM integration
-        core/iam.md
-        api_token.md
-        iam_grant.md
-        iam_grant_team.md
+        iam/iam.md
+        iam/api_token.md
+        iam/iam_grant.md
+        iam/iam_grant_team.md
 
     {: .topicgroup}
     Logging and monitoring
@@ -122,7 +122,7 @@ Monitoring
             [Group outlier alerts](https://docs.sysdig.com/en/group-outlier-alerts.html)
             api/alert_api.md
             api/alert_python.md
-            notifications.md
+            monitor/notifications.md
             api/notifications_api.md
 
         {: .topicgroup}
@@ -137,8 +137,8 @@ Monitoring
         {: .topicgroup}
         Teams
             [Working with teams](https://docs.sysdig.com/en/manage-teams-and-roles.html)
-            monitor/teams.md
-            team_id.md
+            teams/teams.md
+            teams/team_id.md
         
         {: .topicgroup}
         Prometheus exporters
@@ -200,7 +200,7 @@ Monitoring
         REST API
             api/rest_apis.md
             api/mon-curl.md
-            api_sysdig_token.md
+            iam/api_sysdig_token.md
 
         {: .topicgroup}
         Python client
