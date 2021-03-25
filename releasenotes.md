@@ -34,7 +34,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 The service name has changed from **IBM Cloud Monitoring with Sysdig** to **IBM Cloud Monitoring**.
 
-
+New CLI added that you can use to access information in {{site.data.keyword.mon_full_notm}}.
 
 ## January 2021
 {: #sysdig-jan2021-for-update}
