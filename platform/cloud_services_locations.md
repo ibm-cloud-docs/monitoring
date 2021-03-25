@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-17"
+lastupdated: "2021-04-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -436,6 +436,48 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 {: row-headers}
 
 
+
+## Security services
+{: #cloud_services_locations_security}
+
+The following tables list the locations where automatic collection of security service logs is enabled. You can monitor logs through the instance that is available in the same location as your security resources, if you enable 1 instance in this location to host service platform logs. For locations where you can provision a service instance but the {{site.data.keyword.at_full_notm}} service is not available, specific detail about the location where you can monitor those logs is provided in each case.
+
+
+| Service                                                         | `Dallas (us-south)`                               | `Washington (us-east)`                |
+|-----------------------------------------------------------------|---------------------------------------------------|---------------------------------------|
+| {{site.data.keyword.keymanagementservicelong}}                  | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |
+| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |
+| {{site.data.keyword.security-advisor_long}}                     | ![Checkmark icon](images/checkmark-icon.svg) |    |   
+{: caption="Security services integration in America's locations" caption-side="top"}
+{: #cs-sec-table-1}
+{: tab-title="America"}
+{: tab-group="cs_sec"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                         | `Tokyo (jp-tok)`                                   |`Sydney (au-syd)`           |
+|-----------------------------------------------------------------|----------------------------------------------------|----------------------------|
+| {{site.data.keyword.keymanagementservicelong}}                  | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
+| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} |      | ![Checkmark icon](images/checkmark-icon.svg) |
+| {{site.data.keyword.security-advisor_long}}                     |      |     |         
+{: caption="Security services integration in AP locations" caption-side="top"}
+{: #cs-sec-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_sec"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                       |`Frankfurt (eu-de)`                                 | `London (eu-gb)` |
+|---------------------------------------------------------------|----------------------------------------------------|------------------|
+| {{site.data.keyword.keymanagementservicelong}}                | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
+| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](images/checkmark-icon.svg) |    |
+| {{site.data.keyword.security-advisor_long}}                     |   | ![Checkmark icon](images/checkmark-icon.svg) |
+{: caption="Security services integration in Europe locations" caption-side="top"}
+{: #cs-sec-table-3}
+{: tab-title="Europe"}
+{: tab-group="cs_sec"}
+{: class="simple-tab-table"}
+{: row-headers}
 
 ## Storage services
 {: #cloud_services_locations_storage}

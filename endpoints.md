@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-04"
+lastupdated: "2021-03-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, regions, endpoints
 
@@ -161,7 +161,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `US South`  | `https://private.us-south.monitoring.cloud.ibm.com/api`      | 
 | `EU DE`     | `https://private.eu-de.monitoring.cloud.ibm.com/api`         |
 | `EU GB`     | `https://private.eu-gb.monitoring.cloud.ibm.com/api`         |
-| `EU OSA`    | `https://private.eu-osa.monitoring.cloud.ibm.com/api`         |
+| `JP OSA`    | `https://private.jp-osa.monitoring.cloud.ibm.com/api`         |
 | `JP TOK`    | `https://private.jp-tok.monitoring.cloud.ibm.com/api`        |
 | `US East`   | `https://private.us-east.monitoring.cloud.ibm.com/api`       |
 | `AU SYD`    | `https://private.au-syd.monitoring.cloud.ibm.com/api`        |

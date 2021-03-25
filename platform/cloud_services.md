@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-11-26"
+  years: 2018, 2021
+lastupdated: "2021-04-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -169,6 +169,17 @@ The following table lists integration services that are Sysdig-enabled:
 | [{{site.data.keyword.mobilepushshort}}](/docs/mobilepush?topic=mobilepush-getting-started)| {{site.data.keyword.mobilepushshort}} is available as an IBM Cloud catalog service in the **Mobile** category and helps you to send and manage mobile and web push notifications. A push notification is an alert to indicate a change or update on a mobile device or browser.| [Metrics collected by {{site.data.keyword.mobilepushshort}}](/docs/mobilepush?topic=mobilepush-push_sysdig#pn_metrics_details) |
 {: caption="List of integration Cloud services" caption-side="top"} 
 
+## Security services
+{: #security}
+
+The following table lists Cloud services that are Sysdig-enabled:
+
+
+| Service     | Description | More info |
+|-------------|-------------|-------------------------------------------------------------------------|
+| [{{site.data.keyword.keymanagementservicelong}}](/docs/key-protect?topic=key-protect-getting-started-tutorial#getting-started-tutorial) | You can use the {{site.data.keyword.keymanagementserviceshort}} service to provision encrypted keys for apps across the {{site.data.keyword.cloud_notm}}. | [Enabling metrics for your Key Protect instance](/docs/key-protect?topic=key-protect-manage-sysdig-metrics) </br>[Metrics](/docs/key-protect?topic=key-protect-operational-metrics) |
+| [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started) | You can use the {{site.data.keyword.hscrypto}} to control your cloud data encryption keys in cloud hardware security modules for apps across the {{site.data.keyword.cloud_notm}}. | [Enabling metrics for your Key Protect instance](docs/hs-crypto?topic=hs-crypto-manage-sysdig-metrics) </br>[Metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics) |
+{: caption="List of security Cloud services" caption-side="top"} 
 
 ## Platform
 {: #platform}

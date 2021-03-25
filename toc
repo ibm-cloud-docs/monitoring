@@ -14,17 +14,17 @@ Monitoring
 
         {: .topicgroup}
         Monitoring infrastructure
-            monitor/windows.md
-            monitor/baremetal_linux.md
-            monitor/kubernetes_cluster.md
-            monitor/ubuntu.md
+            infrastructure/windows.md
+            infrastructure/baremetal_linux.md
+            infrastructure/kubernetes_cluster.md
+            infrastructure/ubuntu.md
 
         {: .topicgroup}
         Monitoring IBM Cloud services
-            monitor/platform_metrics_enabling.md
-            monitor/platform_metrics_working.md
-            monitor/cloud_services.md
-            monitor/cloud_services_locations.md
+            platform/platform_metrics_enabling.md
+            platform/platform_metrics_working.md
+            platform/cloud_services.md
+            platform/cloud_services_locations.md
 
         {: .topicgroup}
         Adding more metrics
@@ -36,14 +36,6 @@ Monitoring
         secure/getting-started-secure.md
         [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
         [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
-
-    {: .topicgroup}
-    Security and compliance
-        monitor/data-security.md
-        monitor/iam.md
-        monitor/ha-dr.md
-        monitor/service-connection.md
-        monitor/architecture-workload-isolation.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -54,9 +46,21 @@ Monitoring
 
     {: .topicgroup}
     IAM integration
+        core/iam.md
         api_token.md
         iam_grant.md
         iam_grant_team.md
+
+    {: .topicgroup}
+    Logging and monitoring
+        monitor/core/at_events.md
+
+    {: .topicgroup}
+    Enhancing security
+        core/data-security.md
+        core/service-connection.md
+        core/architecture-workload-isolation.md
+        core/ha-dr.md
 
     {: .topicgroup}
     Sysdig web UI
@@ -89,15 +93,15 @@ Monitoring
             [Managing the Metric Scale](https://docs.sysdig.com/en/manage-metric-scale.html)
             [Data Aggregation](https://docs.sysdig.com/en/data-aggregation.html)
             [Metric Limits](https://docs.sysdig.com/en/metric-limits.html)
-            monitor/api/metrics_api.md
-            monitor/api/metrics_python.md
+            api/metrics_api.md
+            api/metrics_python.md
 
         {: .topicgroup}
         Dashboards
             [Dashboard templates](https://docs.sysdig.com/en/dashboard-templates-209032.html)
             [Working with dashboards](https://docs.sysdig.com/en/dashboards.html)
             monitor/panels.md
-            monitor/api/dashboard_python.md
+            api/dashboard_python.md
 
         {: .topicgroup}
         Explore views
@@ -111,10 +115,10 @@ Monitoring
             [Event alerts](https://docs.sysdig.com/en/event-alerts.html)
             [Anomaly detection alerts](https://docs.sysdig.com/en/anomaly-detection-alerts.html)
             [Group outlier alerts](https://docs.sysdig.com/en/group-outlier-alerts.html)
-            monitor/api/alert_api.md
-            monitor/api/alert_python.md
+            api/alert_api.md
+            api/alert_python.md
             monitor/notifications.md
-            monitor/api/notifications_api.md
+            api/notifications_api.md
 
         {: .topicgroup}
         Events
@@ -167,23 +171,22 @@ Monitoring
 
     {: .navgroup id="reference"}
     pricing.md
+    endpoints.md
+    core/shared-responsibilities.md
 
     {: .topicgroup}
     Monitor
-        monitor/endpoints.md
-        monitor/shared-responsibilities.md
         monitor/monitoring.md
 
         {: .topicgroup}
         Sysdig API
-            monitor/api/rest_apis.md
-            monitor/api/mon-curl.md
+            api/rest_apis.md
+            api/mon-curl.md
             api_sysdig_token.md
 
         {: .topicgroup}
         Sysdig Python client
-            monitor/api/python-client.md
-            [Sysdig Cloud Python Script Library](https://python-sdc-client.readthedocs.io/en/latest/)
+            api/python-client.md
 
         {: .topicgroup}
         Cloud services metrics
@@ -193,8 +196,6 @@ Monitoring
         [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
         [PromCat](https://promcat.io/)
         deprecated.md
-
-    [Sysdig Blog](https://sysdig.com/blog/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -203,7 +204,7 @@ Monitoring
     {: .topicgroup}
     Monitor
         monitor/troubleshoot.md
-        faq.md
+        monitor/faq.md
     {: .navgroup-end}
 
 
