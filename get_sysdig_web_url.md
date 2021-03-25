@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-10-14"
+  years:  2018, 2021
+lastupdated: "2021-03-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, web UI
 
@@ -22,13 +22,13 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 {:external: target="_blank" .external}
 
-# Getting the Sysdig web UI URL
+# Getting the web UI URL
 {: #get_sysdig_web_url}
 
-After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you can monitor metrics through the {{site.data.keyword.mon_full_notm}} web UI. You can launch the Sysdig web UI from the {{site.data.keyword.cloud_notm}} UI.
+After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you can monitor metrics through the {{site.data.keyword.mon_full_notm}} web UI. You can launch the web UI from the {{site.data.keyword.cloud_notm}} UI.
 {:shortdesc}
 
-To get the Sysdig web UI URL, complete the following steps from a terminal:
+To get the web UI URL, complete the following steps from a terminal:
 
 1. [Pre-requisite] Installation of the {{site.data.keyword.cloud_notm}} CLI. [Learn more](/docs/cli?topic=cli-getting-started).
 

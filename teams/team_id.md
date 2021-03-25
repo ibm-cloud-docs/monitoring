@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Getting the ID of a Sysdig team
 {: #team_id}
 
-You can use the Sysdig teams REST API to get the ID of a Sysdig team.
+You can use the Teams REST API to get the ID of a Sysdig team.
 {:shortdesc}
 
 
@@ -41,20 +41,20 @@ export AUTH_TOKEN=`ibmcloud iam oauth-tokens | grep IAM | cut -d \: -f 2 | sed '
 {: pre}
 
 
-## Step 2. List teams in a Sysdig instance by using cURL
+## Step 2. List teams by using cURL
 {: #team_id_step2}
 
 
-You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to list the teams that are available in a Sysdig instance and identify the ID of a specific team:
+You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to list the teams that are available in a monitoring instance and identify the ID of a specific team:
 
 ```shell
-curl <SYSDIG_REST_API_ENDPOINT>/teams -H "Authorization: $AUTH_TOKEN" -H "content-type: application/json" -H "IBMInstanceID: $GUID" 
+curl <REST_API_ENDPOINT>/teams -H "Authorization: $AUTH_TOKEN" -H "content-type: application/json" -H "IBMInstanceID: $GUID" 
 ```
 {: codeblock}
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -65,7 +65,7 @@ Where
 ## Sample
 {: #team_id_sample}
 
-For example, to get the ID of a team that is available in a Sysdig instance in US-South, you can run the following command:
+For example, to get the ID of a team that is available in a monitoring instance in US-South, you can run the following command:
 
 ```  
 curl -v  https://us-south.monitoring.cloud.ibm.com/api/teams  -H "Authorization:  $AUTH_TOKEN"   -H "content-type: application/json"  -H "IBMInstanceID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"

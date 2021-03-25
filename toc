@@ -136,7 +136,6 @@ Monitoring
 
         {: .topicgroup}
         Teams
-            [Working with teams](https://docs.sysdig.com/en/manage-teams-and-roles.html)
             teams/teams.md
             teams/team_id.md
         
