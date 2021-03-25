@@ -50,19 +50,19 @@ See [Manage user access](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysd
 
 See [Provision an instance of the IBM Cloud Monitoring with Sysdig service](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision).
 
-## Step3. Configure a Sysdig agent
+## Step3. Configure a monitoring agent
 {: #getting-started-monitor_step3}
 
-After you provision an instance, you must configure a Sysdig agent for each host that you want to monitor. For example, a host can be a cloud resource that you want to monitor and control its performance and health such as a Kubernetes cluster. You may also monitor hosts outside the {{site.data.keyword.cloud_notm}}. For more information, see [Configure a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
+After you provision an instance, you must configure a monitoring agent for each host that you want to monitor. For example, a host can be a cloud resource that you want to monitor and control its performance and health such as a Kubernetes cluster. You may also monitor hosts outside the {{site.data.keyword.cloud_notm}}. For more information, see [Configure a monitoring agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
 
-The Sysdig agent automatically collects and reports on pre-defined metrics. You use the *Sysdig access key* to configure the Sysdig agent that is responsible for collecting and forwarding metric data to your instance. For more information, see [Working with access keys](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
+The monitoring agent automatically collects and reports on pre-defined metrics. You use the *Sysdig access key* to configure the monitoring agent that is responsible for collecting and forwarding metric data to your instance. For more information, see [Working with access keys](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
 
 Data is stored in {{site.data.keyword.cloud_notm}}.
 {: important}
 
-You can configure a Sysdig agent for different environments. For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The Sysdig agent collects data from the pod where it is installed, and forwards it to your Sysdig instance.
+You can configure a monitoring agent for different environments. For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The monitoring agent collects data from the pod where it is installed, and forwards it to your Sysdig instance.
 
-Complete one of the following tutorials to learn how to deploy a Sysdig agent:
+Complete one of the following tutorials to learn how to deploy a monitoring agent:
 
 |	Tutorial                        | 
 |---------------------------------|
@@ -72,9 +72,9 @@ Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 | [Monitoring a Kubernetes cluster](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-kubernetes_cluster) | 
 {: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"} 
 
-For more information, see [Configuring a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and [Removing a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove_agent).
+For more information, see [Configuring a monitoring agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and [Removing a monitoring agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove_agent).
 
-After the Sysdig agent is deployed, collection and forwarding of metrics to the instance is automatic. The Sysdig agent automatically collects and reports on pre-defined metrics. You can also configure which metrics to monitor in an environment. Data for custom metrics is also automatically collected.
+After the monitoring agent is deployed, collection and forwarding of metrics to the instance is automatic. The monitoring agent automatically collects and reports on pre-defined metrics. You can also configure which metrics to monitor in an environment. Data for custom metrics is also automatically collected.
 
 
 ## Step 4. Launch the web UI
@@ -116,7 +116,7 @@ You can use events to review, track, and resolve issues. An event is a notificat
 There are different types of events: 
 
 * *Alert events* are events that are triggered by user-configured alerts. For example, configure alerts to be notified of problems that require attention. 
-* *Infrastructure-based events* are events that are collected from Docker and Kubernetes nodes. By default, the Sysdig agent automatically discovers and collects data from a select group of events. You can edit the agent configuration file to enable more events.
+* *Infrastructure-based events* are events that are collected from Docker and Kubernetes nodes. By default, the monitoring agent automatically discovers and collects data from a select group of events. You can edit the agent configuration file to enable more events.
 * *Custom events* that you configure through any of the following integrations: Slackbot, pre-built Python scripts, custom user-created Python scripts, or cURL requests.
 
 When you define an alert, you must define the condition that triggers the notification, one or more notification channels through which you want to be notified, the severity of the alert, and the type of alert. The *Alerts* section in the web UI shows the list of pre-defined alerts. From this view, you can enable and disable pre-defined alerts; you can modify existing alerts; and you can create new alerts. For more information, see [Working with alerts](https://docs.sysdig.com/en/alerts.html){: external}.

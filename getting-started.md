@@ -44,9 +44,9 @@ When you [provision an instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-w
 
 After you provision an instance, you must configure metric sources, enable platform metrics, or both. 
 * A metric source is any resource that you want to monitor and control its performance and health through a Sysdig instance. 
-* You can configure a Sysdig agent to collect metrics from a source. For example, you can configure a Sysdig agent for a Kubernetes cluster. You use the access key to configure the Sysdig agent that is responsible for collecting and forwarding metric data to your instance.
+* You can configure a monitoring agent to collect metrics from a source. For example, you can configure a monitoring agent for a Kubernetes cluster. You use the access key to configure the monitoring agent that is responsible for collecting and forwarding metric data to your instance.
 
-    The Sysdig agent can be configured to push metrics to Sysdig via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints) section.
+    The monitoring agent can be configured to push metrics to Sysdig via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints) section.
 
     After the {{site.data.keyword.mon_full_notm}} agent is deployed in a metric source, collection and forwarding of metrics to the instance is automatic. The {{site.data.keyword.mon_full_notm}} agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in an environment.
 
@@ -190,19 +190,19 @@ The main *Observability* page opens.
 The instance that you choose to receive metrics shows the flag **Platform metrics**.
 
 
-## Step 4. Configure a Sysdig agent
+## Step 4. Configure a monitoring agent
 {: #getting-started-step4}
 
-After you provision an instance, you must configure a Sysdig agent for each host that you want to monitor. For example, a host can be a cloud resource that you want to monitor and control its performance and health such as a Kubernetes cluster. You may also monitor hosts outside the {{site.data.keyword.cloud_notm}}.
+After you provision an instance, you must configure a monitoring agent for each host that you want to monitor. For example, a host can be a cloud resource that you want to monitor and control its performance and health such as a Kubernetes cluster. You may also monitor hosts outside the {{site.data.keyword.cloud_notm}}.
 
-The Sysdig agent automatically collects and reports on pre-defined metrics. You use the *Sysdig access key* to configure the Sysdig agent that is responsible for collecting and forwarding metric data to your instance. For more information, see [Working with access keys](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
+The monitoring agent automatically collects and reports on pre-defined metrics. You use the *Sysdig access key* to configure the monitoring agent that is responsible for collecting and forwarding metric data to your instance. For more information, see [Working with access keys](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
 
 Data is stored in {{site.data.keyword.cloud_notm}}.
 {: important}
 
-You can configure a Sysdig agent for different environments. For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The Sysdig agent collects data from the pod where it is installed, and forwards it to your Sysdig instance.
+You can configure a monitoring agent for different environments. For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The monitoring agent collects data from the pod where it is installed, and forwards it to your Sysdig instance.
 
-Complete one of the following tutorials to learn how to deploy a Sysdig agent:
+Complete one of the following tutorials to learn how to deploy a monitoring agent:
 
 |	Tutorial                        | 
 |---------------------------------|
@@ -212,18 +212,18 @@ Complete one of the following tutorials to learn how to deploy a Sysdig agent:
 | [Monitoring a Kubernetes cluster](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-kubernetes_cluster) | 
 {: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"} 
 
-For more information, see [Configuring a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and [Removing a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove_agent).
+For more information, see [Configuring a monitoring agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and [Removing a monitoring agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove_agent).
 
-After the Sysdig agent is deployed, collection and forwarding of metrics to the instance is automatic. The Sysdig agent automatically collects and reports on pre-defined metrics. You can also configure which metrics to monitor in an environment. Data for custom metrics is also automatically collected.
+After the monitoring agent is deployed, collection and forwarding of metrics to the instance is automatic. The monitoring agent automatically collects and reports on pre-defined metrics. You can also configure which metrics to monitor in an environment. Data for custom metrics is also automatically collected.
 
 ## Step 5. Launch the web UI
 {: #getting-started-step5}
 
-After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.Bluemix}}, and configure a Sysdig agent for your node, you can view, monitor, and manage data through the service's web UI.
+After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.Bluemix}}, and configure a monitoring agent for your node, you can view, monitor, and manage data through the service's web UI.
 
 You launch the web UI within the context of the Sysdig instance, from the {{site.data.keyword.cloud_notm}} UI. 
 
-Complete the following steps to launch the Sysdig web UI:
+Complete the following steps to launch the monitoring UI:
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 

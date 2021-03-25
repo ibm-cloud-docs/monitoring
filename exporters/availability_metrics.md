@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Testing endpoints with Blackbox exporter
 {: #availability_metrics}
 
-You can use the Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
+You can use the Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
 {:shortdesc}
 
 For example, you can configure the Prometheus Blackbox exporter to get information about the availability of a Windows system, or to get the availability of a URL.
@@ -34,7 +34,7 @@ For example, you can configure the Prometheus Blackbox exporter to get informati
 ## Step 1. Configuring the Blackbox exporter
 {: #availability_metrics_step1}
 
-You can run the Prometheus Blackbox exporter as an application or as a docker container from a Linux system in conjunction with the Sysdig agent.
+You can run the Prometheus Blackbox exporter as an application or as a docker container from a Linux system in conjunction with the monitoring agent.
 
 The exporter is available as a [binary release](https://github.com/prometheus/blackbox_exporter/releases){: external}, as a [docker container](https://hub.docker.com/r/prom/blackbox-exporter/){: external}, or the [code is available in github](https://github.com/prometheus/blackbox_exporter){: external}.
 
@@ -83,7 +83,7 @@ default dragent.yaml
 
     You can customize the configuration file. See [Blackbox exporter configuration](https://github.com/prometheus/blackbox_exporter/blob/master/CONFIGURATION.md){: external} to see the different options to configure the Blackbox exporter.
 
-2. Copy the configuration YAML file to the host where you run the Sysdig agent.
+2. Copy the configuration YAML file to the host where you run the monitoring agent.
 
     For example, in a bare metal, from the `shh` session, create the directory `/usr/sysdig`. Run the following commands:
 
@@ -219,7 +219,7 @@ default dragent.yaml
 
     When you enable this option, you can segment data by `windows_hostname` and build alerts upon this metric.
 
-4. Restart the Sysdig agent. Run the following command:
+4. Restart the monitoring agent. Run the following command:
 
     ```
     service dragent restart
@@ -395,7 +395,7 @@ $ sudo touch blackbox.service
 
 
 
-The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics.  The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
+The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics.  The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
 
 The exporters are available as [binary releases](https://github.com/prometheus/blackbox_exporter/releases), as a [docker containers](https://hub.docker.com/r/prom/blackbox-exporter/) or the [code is available in github](https://github.com/prometheus/blackbox_exporter).
 
@@ -415,7 +415,7 @@ The container approach is used for this example.
 
 4. You should get a payload back with `probe_success 1` as the last line to indicate that the system at `<system ip>` is up.
 
-5. Update the Sysdig agent to scrape the blackbox exporter - you need to provide the details of the check you want to run on the call ( hint: you can copy the one from above ).  We can add to the original prometheus configuration from above and indicate that we wish to scrape the local endpoint and provide it with the targets from above.
+5. Update the monitoring agent to scrape the blackbox exporter - you need to provide the details of the check you want to run on the call ( hint: you can copy the one from above ).  We can add to the original prometheus configuration from above and indicate that we wish to scrape the local endpoint and provide it with the targets from above.
 
     ```
     prometheus:
@@ -448,7 +448,7 @@ The container approach is used for this example.
 
 ## Sysdig uptime alerts
 
-The Sysdig agent provides a liveliness probe that can be used in conjunction with the Sysdig uptime alerts.  The details provided in this document explain how to perform endpoint testing for systems where the agent is not installed ( for example Windows hosts ) or potentially other service dependencies where you do not have a Sysdig agent running.
+The monitoring agent provides a liveliness probe that can be used in conjunction with the Sysdig uptime alerts.  The details provided in this document explain how to perform endpoint testing for systems where the agent is not installed ( for example Windows hosts ) or potentially other service dependencies where you do not have a monitoring agent running.
 
 
 

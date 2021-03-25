@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2020
 lastupdated: "2020-09-15"
 
-keywords: Sysdig, IBM Cloud, monitoring, Sysdig agent, log level
+keywords: Sysdig, IBM Cloud, monitoring, monitoring agent, log level
 
 subcollection: Monitoring-with-Sysdig
 
@@ -24,7 +24,7 @@ subcollection: Monitoring-with-Sysdig
 # Baremetals overview
 {: #baremetal_ov}
 
-You can view and analyze the Sysdig agent log file to troubleshoot problems. 
+You can view and analyze the monitoring agent log file to troubleshoot problems. 
 {:shortdesc}
 
 In the *Overview module*, you can check the health, risk, and capacity of your bare metal through metrics that are prioritized by event count and severity and refreshed every 10 minutes.
@@ -39,7 +39,7 @@ Hosts Infrastructure Dashboards
 | `Disk and File System` | This table view shows directory mount points, file system devices, and capacity and usage information for the file systems mounted on the instance. When groups are selected, metrics are averages for similar filesystem mount points. | Identify which file systems are filling up or being underutilized. |
 | `Memory Usage` | Displays the memory and swap usage and page faults. |  |
 | `Network Traffic & Bandwidth` | Provides an overview of network traffic in the host, including throughput, queue length, and errors |  |
-| `Sysdig Agent Health and Status` | This view reports the number of Sysdig agents deployed in your environment and their versions. | 
+| `monitoring agent Health and Status` | This view reports the number of monitoring agents deployed in your environment and their versions. | 
 
 Remotely mounted file systems are not listed by default. To enable, add the remotefs = true entry to the /opt/draios/bin/dragent.properties file on each instance.
 {: note}

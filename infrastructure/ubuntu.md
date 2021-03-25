@@ -29,7 +29,7 @@ subcollection: Monitoring-with-Sysdig
 Use this tutorial to learn how to configure an Ubuntu host to forward metrics to the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-To configure an Ubuntu server to forward metrics, you must install a Sysdig agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The Sysdig agent acts as a data collector. It automatically collects metrics.
+To configure an Ubuntu server to forward metrics, you must install a monitoring agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics.
 
 You then view the metrics using the Sysdig web-based user interface.
 
@@ -107,7 +107,7 @@ After you provision an instance, the **Monitoring** dashboard opens.
 ## Step 3. Configure your Ubuntu server to send metrics to your instance
 {: #ubuntu_step3}
 
-To configure your Ubuntu server to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a Sysdig agent. 
+To configure your Ubuntu server to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a monitoring agent. 
 
 Complete the following steps from a command line:
 
@@ -126,7 +126,7 @@ Complete the following steps from a command line:
 
 4. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
-5. Deploy the Sysdig agent. Run the following command:
+5. Deploy the monitoring agent. Run the following command:
 
    ```
    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key <SYSDIG_ACCESS_KEY> --collector <COLLECTOR_ENDPOINT> --collector_port 6443 --secure false --check_certificate false --tags <TAG_DATA> --additional_conf 'sysdig_capture_enabled: false'
@@ -139,11 +139,11 @@ Complete the following steps from a command line:
 
    * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.  To determine the endpoint, see [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
-   * TAG_DATA are comma-separated tags that are formatted as `TAG_NAME:TAG_VALUE`. You can associate one or more tags to your Sysdig agent. For example, `role:serviceX,location:us-south`. Later on, you can use these tags to identify metrics from the environment where the agent is running.
+   * TAG_DATA are comma-separated tags that are formatted as `TAG_NAME:TAG_VALUE`. You can associate one or more tags to your monitoring agent. For example, `role:serviceX,location:us-south`. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
    * The `sysdig_capture_enabled` is set to *false* to disable the Sysdig capture feature. By default this is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 
-   If the Sysdig agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the Sysdig agent.
+   If the monitoring agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the monitoring agent.
 
    * **For Debian and Ubuntu Linux distributions**, run the following command:
 
@@ -160,7 +160,7 @@ Complete the following steps from a command line:
       {: pre}
 
 
-## Step 4. Launch the Sysdig Web UI
+## Step 4. Launch the monitoring UI
 {: #ubuntu_step4}
 
 Complete the following steps to launch the web UI:
@@ -177,9 +177,9 @@ Complete the following steps to launch the web UI:
 
 4. Select your instance. Then, click **View Sysdig**.
 
-If the Sysdig agent is configured successfully, the **Overview** view opens.
+If the monitoring agent is configured successfully, the **Overview** view opens.
 
-However, if the Sysdig agent is not installed successfully, points to the wrong ingestion endpoint, or the access key is incorrect, the page that opens informs you about what to do next.
+However, if the monitoring agent is not installed successfully, points to the wrong ingestion endpoint, or the access key is incorrect, the page that opens informs you about what to do next.
 
 You only can have one web UI session open per instance per browser.
 {: tip}

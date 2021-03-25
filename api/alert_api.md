@@ -393,7 +393,7 @@ This parameter returns the Unix-timestamp when the alert was created.
 
 This parameter describes the alert. 
 
-The description is available when you view an alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
+The description is available when you view an alert in the *Alerts* section of the monitoring UI, and it is included in notification emails.
 
 
 
@@ -438,7 +438,7 @@ kubernetes.namespace.name='production' and container.image='nginx'*.
 Name of the alert. Must be unique.
 {: note}
 
-The name is used to identify the alert in the *Alerts* section of the Sysdig web UI, and it is included in notification emails.
+The name is used to identify the alert in the *Alerts* section of the monitoring UI, and it is included in notification emails.
 
 
 

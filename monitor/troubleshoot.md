@@ -34,10 +34,10 @@ You are failing to create a [capture file](/docs/Monitoring-with-Sysdig?topic=Mo
 In the *Captures* section of the web UI, you get an error when you try to create a capture file for a host.
 {: tsSymptoms}
 
-The Sysdig agent that runs on the host has the feature **sysdig_capture_enabled** set to *false*.
+The monitoring agent that runs on the host has the feature **sysdig_capture_enabled** set to *false*.
 {: tsCauses}
 
-Enable the **sysdig_capture_enabled** feature in the Sysdig agent that runs on the host.
+Enable the **sysdig_capture_enabled** feature in the monitoring agent that runs on the host.
 {: tsResolve}
 
 
@@ -57,24 +57,24 @@ Check that port 6443 is opened. For more information, see [Managing network traf
 {: tsResolve}
 
 
-## Are you observing Sysdig agent connection errors or receiving uptime alerts reporting an host is down when there are no problems?
+## Are you observing monitoring agent connection errors or receiving uptime alerts reporting an host is down when there are no problems?
 {: #troubleshoot-entry-3}
 
 Sysdig has identified an issue with a subset of agent versions:
-- Sysdig agent 10.3.0
-- Sysdig agent 10.3.1
-- Sysdig agent 10.4.0
-- Sysdig agent 10.4.1 
+- monitoring agent 10.3.0
+- monitoring agent 10.3.1
+- monitoring agent 10.4.0
+- monitoring agent 10.4.1 
 
 Where connectivity between your infrastructure and Sysdig’s hosted service may fail. For more information, see [Sysdig Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html).
 
 If you are experiencing connectivity issues, complete the following steps:
 
-1. Check the version of the Sysdig agent.
+1. Check the version of the monitoring agent.
 
-    You can view the dashboard template **Sysdig Agent Health & Status** that is available in **Host Infrastructure** to check the version of your Sysdig agents.
+    You can view the dashboard template **monitoring agent Health & Status** that is available in **Host Infrastructure** to check the version of your monitoring agents.
 
-2. [Upgrade your Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-upgrade_agent) to version 10.5 as soon as possible to ensure a reliable flow of metrics and data into our systems.
+2. [Upgrade your monitoring agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-upgrade_agent) to version 10.5 as soon as possible to ensure a reliable flow of metrics and data into our systems.
 
 
 ## Are you getting access denied when running API calls?

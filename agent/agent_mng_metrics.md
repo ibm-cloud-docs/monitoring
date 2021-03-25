@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2020
 lastupdated: "2020-09-15"
 
-keywords: Sysdig, IBM Cloud, monitoring, Sysdig agent, event filters
+keywords: Sysdig, IBM Cloud, monitoring, monitoring agent, event filters
 
 subcollection: Monitoring-with-Sysdig
 
@@ -24,7 +24,7 @@ subcollection: Monitoring-with-Sysdig
 # Including and excluding metrics
 {: #agent_mng_metrics}
 
-When you delete an {{site.data.keyword.mon_full_notm}} instance, or if you want to stop collecting metrics from a source, you must uninstall the Sysdig agent from sources where it was installed as a service. If you deployed a Sysdig agent as a container, you must run docker commands to remove the agent.
+When you delete an {{site.data.keyword.mon_full_notm}} instance, or if you want to stop collecting metrics from a source, you must uninstall the monitoring agent from sources where it was installed as a service. If you deployed a monitoring agent as a container, you must run docker commands to remove the agent.
 {:shortdesc}
 
 
@@ -35,7 +35,7 @@ To filter custom metrics, you must customize the **metrics_filter** section in t
 
 **Note:** The filtering rule order is set as follows: the first rule that matches a metric is applied.
 
-For example, if the *metrics_filter* section of a Sysdig agent looks as follows:
+For example, if the *metrics_filter* section of a monitoring agent looks as follows:
 
 ```
 metrics_filter:
@@ -48,7 +48,7 @@ metrics_filter:
 ```
 {: screen}
 
-* You are configuring the Sysdig agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*. 
+* You are configuring the monitoring agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*. 
 * You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*. 
 * The entry `exclude: metricA.*` is ignored.
 

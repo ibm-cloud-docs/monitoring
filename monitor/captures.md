@@ -55,7 +55,7 @@ Complete the following steps to create a capture file:
 
     3. (Optional) Add a filter to restrict the amount of trace information that is collected. 
 
-6. Click **Start capture**. The Sysdig agent is signaled to start a capture, and send back the resulting trace file. 
+6. Click **Start capture**. The monitoring agent is signaled to start a capture, and send back the resulting trace file. 
 
 7. Click **Go to captures page** to display the list of captures in the *Captures* section of the web UI. 
 

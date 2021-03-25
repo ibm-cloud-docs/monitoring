@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Navigating to the web UI
 {: #launch}
 
-After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, and configure a Sysdig agent for a metrics source, you can view, monitor, and manage metrics through the {{site.data.keyword.mon_full_notm}} web UI.
+After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, and configure a monitoring agent for a metrics source, you can view, monitor, and manage metrics through the {{site.data.keyword.mon_full_notm}} web UI.
 {:shortdesc}
 
 
@@ -72,7 +72,7 @@ Complete the following steps to launch the web UI:
 ## Launch the Secure web UI
 {: #launch_step3}
 
-By default, the *Monitor* view opens when you launch the Sysdig web UI.
+By default, the *Monitor* view opens when you launch the monitoring UI.
 
 To access the *Secure* web UI, complete the following steps:
 

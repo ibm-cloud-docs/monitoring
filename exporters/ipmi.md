@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Configuring the Prometheus IPMI Exporter to monitor IPMI metrics
 {: #ipmi}
 
-In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics. 
+In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics. 
 {:shortdesc}
 
 * The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP). 
@@ -78,15 +78,15 @@ You can collect the following metrics when you configure the IPMI exporter in a 
 For more information, see [Prometheus IPMI Exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
 
-Complete the following steps to configure a Sysdig agent to collect IPMI metrics from 1 or more hosts:
+Complete the following steps to configure a monitoring agent to collect IPMI metrics from 1 or more hosts:
 
 
-## Step 1. Configure a Sysdig agent
+## Step 1. Configure a monitoring agent
 {: #ipmi_step1}
 
-To monitor 1 or more hosts, you must configure a Sysdig agent. The agent collects automatically a set of metrics that you can monitor through the Sysdig web UI.
+To monitor 1 or more hosts, you must configure a monitoring agent. The agent collects automatically a set of metrics that you can monitor through the monitoring UI.
 
-See [Install a Sysdig agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and choose the Sysdig agent that you want to configure to monitor a host.
+See [Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and choose the monitoring agent that you want to configure to monitor a host.
 
 
 ## Step 2. Configuring the Prometheus IPMI Exporter
@@ -212,14 +212,14 @@ If you want to collect IPMI metrics from remote servers, complete the following 
 
 
 
-## Step 4. Update the Sysdig agent to collect IPMI metrics
+## Step 4. Update the monitoring agent to collect IPMI metrics
 {: #ipmi_step4}
 
-You must configure the Sysdig agent to enable collection of IPMI metrics.
+You must configure the monitoring agent to enable collection of IPMI metrics.
 
-Choose one of the following options based on the type of Sysdig agent that you configured:
+Choose one of the following options based on the type of monitoring agent that you configured:
 
-### Kubernetes Sysdig agent
+### Kubernetes monitoring agent
 {: #ipmi_step4-1}
 
 Run the following command to edit the configmap and add information about the hosts where the IPMI exporter is configured:
@@ -301,12 +301,12 @@ When you save the file, changes are applied.
 
 
 
-### Linux service Sysdig agent
+### Linux service monitoring agent
 {: #ipmi_step4-3}
 
-Complete the following steps to update the Sysdig agent to collect IPMI metrics:
+Complete the following steps to update the monitoring agent to collect IPMI metrics:
 
-1. SSH into the host where the Sysdig agent is running. Then, change to the directory `/opt/draios/etc/` and run the following command:
+1. SSH into the host where the monitoring agent is running. Then, change to the directory `/opt/draios/etc/` and run the following command:
 
     ```
     cd /opt/draios/etc/
@@ -337,7 +337,7 @@ Complete the following steps to update the Sysdig agent to collect IPMI metrics:
     ```
     {: codeblock}
 
-3. Restart the Sysdig agent. Run the following command:
+3. Restart the monitoring agent. Run the following command:
 
     ```
     service dragent restart
@@ -363,7 +363,7 @@ Where
 * `<ENDPOINT>` is the Sysdig instance endpoint. See [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 
 
-Then, [launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch), and go to the *Dashboards* section.
+Then, [launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch), and go to the *Dashboards* section.
 
 
 

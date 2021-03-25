@@ -80,7 +80,7 @@ You can customize how data is aggregated when you configure a graph or create an
 ### Time aggregation
 {: #manage_time_aggregation}
 
-**By default, a Sysdig agent collects and reports metrics at a 10-second resolution.**
+**By default, a monitoring agent collects and reports metrics at a 10-second resolution.**
 
 In Time series charts that include data for 5-minutes or less, 
 * Data points are drawn at 10-second resolution
@@ -104,7 +104,7 @@ The following table lists different aggregation types for time series charts:
 
 **Note:** By default, average is used to display data points for a time interval.
 
-Rate and average are similar aggregation types. They often provide the same result. However, the calculation of each is different. If time aggregation is set to 1-minute, the Sysdig agent is set to retrieve six samples, one every 10 seconds. Notice that in some cases, samples might not be there due to disconnections or other circumstances.
+Rate and average are similar aggregation types. They often provide the same result. However, the calculation of each is different. If time aggregation is set to 1-minute, the monitoring agent is set to retrieve six samples, one every 10 seconds. Notice that in some cases, samples might not be there due to disconnections or other circumstances.
 
 
 ### Group aggregation
@@ -153,7 +153,7 @@ A Sysdig administrator can define any number of teams. For each team, an admin c
 * `The default team`: You can set this team to be the team that any user that logs in to the web UI for the first time. 
 * `The default entrypoint`: You can specify the view in the web UI that opens every time that a user logs in. Valid entrypoints are *Explore* view, *Dashboards* view, *Events* view, *Alerts* view, and *Settings* view.
 * `The scope`: You can limit what data users can see. You can choose *Host* or *Container* to define the level of data that is visible. Then, you can add one or more conditions. If the scope is set to *Host*, users can see all host-level and container-level information. If the scope is set to *Container*, users can see only container-level information.
-* `Permissions`: You can enable or disable the following features: *Sysdig captures*, and *infrastructure events*. Capture files are visible to members of the team. **Note:** Captures include detailed information from every container on a host, regardless of the team’s scope. When infrastructure events are enabled, users can view all custom infrastructure events from every user and Sysdig agent in the instance.
+* `Permissions`: You can enable or disable the following features: *Sysdig captures*, and *infrastructure events*. Capture files are visible to members of the team. **Note:** Captures include detailed information from every container on a host, regardless of the team’s scope. When infrastructure events are enabled, users can view all custom infrastructure events from every user and monitoring agent in the instance.
 
 By default, a **Monitor Operations** team is predefined for each {{site.data.keyword.mon_full_notm}} instance.
 * This team cannot be deleted.

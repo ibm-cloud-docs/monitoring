@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2020
 lastupdated: "2020-10-14"
 
-keywords: Sysdig, IBM Cloud, monitoring, Sysdig agent, log level
+keywords: Sysdig, IBM Cloud, monitoring, monitoring agent, log level
 
 subcollection: Monitoring-with-Sysdig
 
@@ -21,10 +21,10 @@ subcollection: Monitoring-with-Sysdig
 {:important: .important}
 {:note: .note}
 
-# Troubleshooting problems with a Sysdig agent
+# Troubleshooting problems with a monitoring agent
 {: #agent_ts}
 
-You can view and analyze the Sysdig agent log file to troubleshoot problems. You can also monitor the agent through the Sysdig web UI.
+You can view and analyze the monitoring agent log file to troubleshoot problems. You can also monitor the agent through the monitoring UI.
 {:shortdesc}
 
 
@@ -33,14 +33,14 @@ You should set the log level to *info*, *debug*, or *trace* to troubleshoot agen
 {: tip}
 
 
-The following table lists the locations of the Sysdig agent's logs per type of agent:
+The following table lists the locations of the monitoring agent's logs per type of agent:
 
 | Agent Type                                                    | Agent configuration file                  |
 |---------------------------------------------------------------|-------------------------------------------|
-| Sysdig agent as a service in a Linux system                   | `/opt/draios/logs/draios.log`             |
-| Sysdig agent as a Docker container in a Linux system          | `/opt/draios/logs/draios.log`             |
-| Sysdig agent as a pod in a standard Kubernetes environment    | ``             |
-| Sysdig agent as a pod in an Openshift Kubernetes environment  | `l`             |
+| monitoring agent as a service in a Linux system                   | `/opt/draios/logs/draios.log`             |
+| monitoring agent as a Docker container in a Linux system          | `/opt/draios/logs/draios.log`             |
+| monitoring agent as a pod in a standard Kubernetes environment    | ``             |
+| monitoring agent as a pod in an Openshift Kubernetes environment  | `l`             |
 {: caption="Table 2. Log locations per type of agent" caption-side="top"} 
 
 
@@ -69,14 +69,14 @@ Note that troubleshooting a host with less than the default 'info' level will be
 
 
 
-You can also customize the type of log and the entries that are collected by configuring the Sysdig agent configuration file **/opt/draios/etc/dragent.yaml**. After you edit the file, you must restart the agent at the shell with `docker restart sysdig-agent` to activate the changes.
+You can also customize the type of log and the entries that are collected by configuring the monitoring agent configuration file **/opt/draios/etc/dragent.yaml**. After you edit the file, you must restart the agent at the shell with `docker restart sysdig-agent` to activate the changes.
 
 
 
 ## Checking the version of an agent by using the CLI
 {: #agent_ts_version}
 
-### Linux Sysdig agent
+### Linux monitoring agent
 {: #agent_ts_version_linux}
 
 To check the version of an agent, run the following command:
@@ -88,7 +88,7 @@ To check the version of an agent, run the following command:
 
 
 
-### Docker Sysdig agent
+### Docker monitoring agent
 {: #agent_ts_version_docker}
 
 To check the version of an agent, run the following command:
@@ -99,7 +99,7 @@ docker exec sysdig-agent /opt/draios/bin/dragent --version
 {: pre}
 
 
-### Kubernetes Sysdig agent
+### Kubernetes monitoring agent
 {: #agent_ts_version_kube}
 
 
@@ -107,7 +107,7 @@ docker exec sysdig-agent /opt/draios/bin/dragent --version
 ## Checking the status of an agent by using the CLI
 {: #agent_ts_status}
 
-### Linux Sysdig agent
+### Linux monitoring agent
 {: #agent_ts_status_linux}
 
 To check the status of an agent, run the following command:
@@ -119,7 +119,7 @@ service dragent status
 
 
 
-### Docker Sysdig agent
+### Docker monitoring agent
 {: #agent_ts_status_docker}
 
 To check the status of an agent, run the following command:
@@ -130,7 +130,7 @@ docker ps | grep sysdig-agent
 {: pre}
 
 
-### Kubernetes Sysdig agent
+### Kubernetes monitoring agent
 {: #agent_ts_status_kube}
 
 

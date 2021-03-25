@@ -22,22 +22,22 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 {:external: target="_blank" .external}
 
-# Customizing Kubernetes Sysdig agents
+# Customizing Kubernetes monitoring agents
 {: #change_kube_agent}
 
-In {{site.data.keyword.mon_full_notm}}, you can customize the Sysdig agent configuration to set a log level, block ports, include or exclude metric data, add or remove events, and filter out containers. 
+In {{site.data.keyword.mon_full_notm}}, you can customize the monitoring agent configuration to set a log level, block ports, include or exclude metric data, add or remove events, and filter out containers. 
 {:shortdesc}
 
-To customize a Kubernetes Sysdig agent, you need to configure the `sysdig-agent-configmap.yaml` file.
+To customize a Kubernetes monitoring agent, you need to configure the `sysdig-agent-configmap.yaml` file.
 
 There are two methods that you can use to modify a configuration file:
 * Method 1: Modify the file directly on the cluster where the agent is running.
 * Method 2: Modify the file locally and apply the changes to the cluster.
 
-## Editing the Kubernetes Sysdig agent configuration by using kubectl edit
+## Editing the Kubernetes monitoring agent configuration by using kubectl edit
 {: #change_kube_agent_edit_kube_agent_method1}
 
-Complete the following steps to edit a Kubernetes Sysdig agent configuration:
+Complete the following steps to edit a Kubernetes monitoring agent configuration:
 
 1. Set up the cluster environment. Run the following commands:
 
@@ -61,12 +61,12 @@ Complete the following steps to edit a Kubernetes Sysdig agent configuration:
 
     Save the changes. Changes are applied automatically. 
 
-## Editing the Kubernetes Sysdig agent configuration by using kubectl apply
+## Editing the Kubernetes monitoring agent configuration by using kubectl apply
 {: #change_kube_agent_edit_kube_agent_method2}
 
 Use this method if you have the configuration yaml files stored and managed in a source control system.
 
-Complete the following steps to edit a Kubernetes Sysdig agent configuration:
+Complete the following steps to edit a Kubernetes monitoring agent configuration:
 
 1. Get the latest copy of each file from the source controller. 
 
@@ -89,10 +89,10 @@ Complete the following steps to edit a Kubernetes Sysdig agent configuration:
 Running agents will automatically pick the new configuration after Kubernetes pushes the changes across all the nodes in the cluster.
 
 
-## Adding more tags to data that is collected from a Kubernetes Sysdig agent
+## Adding more tags to data that is collected from a Kubernetes monitoring agent
 {: #change_kube_agent_add_tags}
 
-Complete the following steps to add more tags to a Kubernetes Sysdig agent configuration that you have already deployed:
+Complete the following steps to add more tags to a Kubernetes monitoring agent configuration that you have already deployed:
 
 1. Set up the cluster environment. Run the following commands:
 
@@ -140,7 +140,7 @@ For the sample provided, you would get the tags **agent.tag.cluster_version** an
 ## Collecting a set of Kubernetes events
 {: #change_kube_agent_collect_events}
 
-{{site.data.keyword.mon_full_notm}} supports event integrations with Kubernetes. Sysdig agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
+{{site.data.keyword.mon_full_notm}} supports event integrations with Kubernetes. monitoring agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
 
 By default, only a limited set of events is collected. For more information about the events that are collected by default, see [Kubernetes events](https://docs.sysdig.com/en/event-types.html){: external}.
 
@@ -215,7 +215,7 @@ For more information on how to work with custom events, see [Working with custom
 ## Disabling collection of events
 {: #change_kube_agent_disable_events}
 
-To disable a Sysdig agent from collecting Kubernetes events, you must modify the *sysdig-agent-configmap.yaml* file. Set the **Kubernetes** entry in the **events** section to *none*. 
+To disable a monitoring agent from collecting Kubernetes events, you must modify the *sysdig-agent-configmap.yaml* file. Set the **Kubernetes** entry in the **events** section to *none*. 
 
 Complete the following steps:
 
@@ -283,7 +283,7 @@ Complete the following steps:
 
 3. Make changes. Add the *metrics_filter* section or update the section.
 
-    For example, if the *metrics_filter* section of a Sysdig agent looks as follows:
+    For example, if the *metrics_filter* section of a monitoring agent looks as follows:
 
     ```
     metrics_filter:
@@ -296,7 +296,7 @@ Complete the following steps:
     ```
     {: screen}
 
-    * You are configuring the Sysdig agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*. 
+    * You are configuring the monitoring agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*. 
 
     * You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*. 
 
@@ -312,16 +312,16 @@ Changes are applied automatically.
 ## Filtering kubernetes objects and containers from which data is collected
 {: #change_kube_agent_filter_data}
 
-A Kubernetes Sysdig agent automatically collects metrics from *all containers* that it detects in a cluster, including Prometheus, StatsD, JMX, app-checks, and built-in metrics.
+A Kubernetes monitoring agent automatically collects metrics from *all containers* that it detects in a cluster, including Prometheus, StatsD, JMX, app-checks, and built-in metrics.
  
-You can customize the Sysdig agent to exclude containers from metrics collection. 
+You can customize the monitoring agent to exclude containers from metrics collection. 
 
 When you exclude containers, consider the following information:
 * You reduce agent and backend load.
 * You only collect data from containers that you want to monitor.
 * You can control costs by reporting on important containers, and filtering out unnecessary or not critical containers.
 
-To enable the feature where a Sysdig agent filters containers, you must customize the *sysdig-agent-configmap.yaml* file. Set the **use_container_filter** entry in the **containers** section to *true*. **Note:** By default, this feature is turned off. Then, define the rules that include one or more conditions and that you want to apply.
+To enable the feature where a monitoring agent filters containers, you must customize the *sysdig-agent-configmap.yaml* file. Set the **use_container_filter** entry in the **containers** section to *true*. **Note:** By default, this feature is turned off. Then, define the rules that include one or more conditions and that you want to apply.
 
 The following table outlines the parameters that you can define to set the filtering rules in a cluster:
 
@@ -336,13 +336,13 @@ The following table outlines the parameters that you can define to set the filte
 | `all`                              | Default rule to specify all objects            |
 {: caption="Table 1. Parameters to define conditions on containers" caption-side="top"} 
 
-Consider the following information on how the Sysdig agent applies the rules that you define in the **container_filter** section:
+Consider the following information on how the monitoring agent applies the rules that you define in the **container_filter** section:
 * You define conditions by configuring them with the **include** and **exclude** filtering parameters. 
 * The first matching rule in the list determines if the container is included or excluded.
 * The conditions consist of a key name and a value. If the given key for a container matches the value, the rule is applied.
 * When a rule contains multiple conditions, `all the conditions` need to match for the rule to be applied.
 
-Complete the following steps to filter out containers that a Sysdig agent monitors in a cluster:
+Complete the following steps to filter out containers that a monitoring agent monitors in a cluster:
 
 1. Set up the cluster environment. Run the following commands:
 
@@ -416,7 +416,7 @@ Complete the following steps:
 
 3. Make changes. Add the *metrics_filter* section or update the section.
 
-    For example, the following sample shows how to set the *blacklisted_ports* section of a Sysdig agent to exclude data coming from ports 6666 and 6379:
+    For example, the following sample shows how to set the *blacklisted_ports* section of a monitoring agent to exclude data coming from ports 6666 and 6379:
 
     ```
     blacklisted_ports:
@@ -436,7 +436,7 @@ Changes are applied automatically.
 
 To configure the log configurations, you must customize the **log** section in the *sysdig-agent-configmap.yaml* file.
 
-The Sysdig agent generates log entries in */opt/draios/logs/draios.log*. 
+The monitoring agent generates log entries in */opt/draios/logs/draios.log*. 
 * The log file rotates when it reaches 10MB in size.
 * The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
 

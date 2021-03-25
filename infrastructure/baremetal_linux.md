@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Monitoring a Linux bare metal server
 {: #baremetal_linux}
 
-You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by configuring a Sysdig agent in your server. The Sysdig agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The Sysdig agent acts as a data collector. It automatically collects metrics. You view metrics via Sysdig's web-based user interface.
+You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by configuring a monitoring agent in your server. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics. You view metrics via Sysdig's web-based user interface.
 {:shortdesc}
 
 
@@ -41,7 +41,7 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
 4. [Provision a bare metal server](/docs/bare-metal?topic=bare-metal-getting-started). 
 
-    To complete the steps in this topic, ensure you have internet access from the bare metal. This is needed for configuring the Sysdig agent.
+    To complete the steps in this topic, ensure you have internet access from the bare metal. This is needed for configuring the monitoring agent.
 
 5. Configure a VPN connection between your terminal and the bare metal server  
 
@@ -67,7 +67,7 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
     You must `ssh` to the host by using your credentials, or the root credentials that are available from the {{site.data.keyword.cloud_notm}} Console.  
     
-    You will require root permissions in order to install the Sysdig agent.
+    You will require root permissions in order to install the monitoring agent.
 
     For example, you can complete the following steps to get the bare metal information that you need to `ssh` into the server:
 
@@ -97,18 +97,18 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
        For example: `ssh root@45.123.122.12`
 
 
-## Step 1. Configure a Sysdig agent to collect metrics from the bare metal server
+## Step 1. Configure a monitoring agent to collect metrics from the bare metal server
 {: #baremetal_linux_step1}
 
-You must install a Sysdig agent to collect and forward metrics from a bare metal server to an {{site.data.keyword.mon_full_notm}} instance. 
+You must install a monitoring agent to collect and forward metrics from a bare metal server to an {{site.data.keyword.mon_full_notm}} instance. 
 
-Complete the following steps from the command line to install a Sysdig agent:
+Complete the following steps from the command line to install a monitoring agent:
 
 1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
 2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
-3. Deploy the Sysdig agent. Run the following command:
+3. Deploy the monitoring agent. Run the following command:
 
     ```
     curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure false --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
@@ -121,13 +121,13 @@ Complete the following steps from the command line to install a Sysdig agent:
 
     * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
 
-    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example, *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
     * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 
     If `cURL` is not available, you must install it. For example, for an Ubuntu bare metal, run the following command: `sudo apt-get update`. Then, run the install command: `sudo apt-get install curl`.
 
-    For example, see the following sample command to install a Sysdig agent that forwards metrics to a Sysdig instance in US South (Dallas):
+    For example, see the following sample command to install a monitoring agent that forwards metrics to a Sysdig instance in US South (Dallas):
 
     ```
     curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a xxxxxxxxxxxxx -c ingest.us-south.monitoring.cloud.ibm.com --collector_port 6443 --secure false -ac "sysdig_capture_enabled: false" --tags sourceType:baremetal,location:dallas
@@ -135,7 +135,7 @@ Complete the following steps from the command line to install a Sysdig agent:
     {: screen}
 
 
-## Step 2. Launch the Sysdig Web UI to verify that you are getting data to monitor the bare metal server
+## Step 2. Launch the monitoring UI to verify that you are getting data to monitor the bare metal server
 {: #baremetal_linux_step2}
 
 Complete the following steps to launch the web UI:
@@ -152,13 +152,13 @@ Complete the following steps to launch the web UI:
 
 4. Select your instance. Then, click **View Sysdig**.
 
-The first time that you launch the Sysdig web UI, you might get a set of screens. Click **Next**, and **Complete Onboarding**.
+The first time that you launch the monitoring UI, you might get a set of screens. Click **Next**, and **Complete Onboarding**.
 
-If the Sysdig agent is configured successfully, in the **EXPLORE** view you can see your bare metal server in the **Hosts and Containers** section.
+If the monitoring agent is configured successfully, in the **EXPLORE** view you can see your bare metal server in the **Hosts and Containers** section.
 
 ![Sysdig Explore view](images/sysdig-baremetal-img1.png "Sysdig Explore view")
 
-It may take some time before you see the bare metal entry while the information is initally collected and processed by the Sysdig agent.
+It may take some time before you see the bare metal entry while the information is initally collected and processed by the monitoring agent.
 {: note}
 
 You only can monitor one instance per browser. You could have multiple tabs for the same instance.
@@ -169,7 +169,7 @@ You only can monitor one instance per browser. You could have multiple tabs for 
 ## Step 3. [Optional] Configure the Prometheus IPMI Exporter to monitor sensor metrics
 {: #baremetal_linux_step3}
 
-In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server. 
+In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server. 
 
 * The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP). 
 * When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter. 
@@ -322,7 +322,7 @@ Complete the following steps:
 ### Step 3.2. Install the Prometheus exporter
 {: #baremetal_linux_step3-2}
 
-The Sysdig agent automatically collects metrics from Prometheus exporters. Therefore, to collect metrics from your IPMI exporter, you must also configure the Prometheus exporter.
+The monitoring agent automatically collects metrics from Prometheus exporters. Therefore, to collect metrics from your IPMI exporter, you must also configure the Prometheus exporter.
 
 Complete the following steps to run the Prometheus exporter:
 
@@ -427,7 +427,7 @@ If you want to collect metrics from remote servers, complete the following steps
 
 
 
-### Step 3.4. Update the Sysdig agent that is running in the bare metal server
+### Step 3.4. Update the monitoring agent that is running in the bare metal server
 {: #baremetal_linux_step3-4}
     
 Complete the following steps:
@@ -465,7 +465,7 @@ Complete the following steps:
     ```
     {: codeblock}
 
-3. Restart the Sysdig agent. Run the following command:
+3. Restart the monitoring agent. Run the following command:
 
     ```
     service dragent restart

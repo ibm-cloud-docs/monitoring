@@ -91,7 +91,7 @@ Disaster recovery is about surviving a catastrophic failure or loss of availabil
 
 If a regional disaster occurs, consider the following information:
 * The estimated recovery time for rebuilding the regional site and restoring the service at another location is 24 hours.
-* You will have to update the endpoints of applications and Sysdig agents to point to the ingestion endpoint in the new location. 
+* You will have to update the endpoints of applications and monitoring agents to point to the ingestion endpoint in the new location. 
 * You will have to restore the service instance's metadata, that is, dashboards and alerts definitions, from your backups.
 
 Historical data may be lost during a disaster. If you require historical metrics for auditing purposes, backup the metrics regularly by querying the metrics from the service and storing them at a remote backup site.
@@ -106,9 +106,9 @@ How to continue working while a DR site is rebuilt?
 
 If the applications and services that you are monitoring through a monitoring instance are all co-located in the same region, then you must wait for the region to be available again for business.
 
-If you have deployed Sysdig agents on your systems, and those systems are not impacted by the regional failure, you may choose to redirect metrics to other instances of Sysdig in a different region. To redirect metric data, complete the following steps:
+If you have deployed monitoring agents on your systems, and those systems are not impacted by the regional failure, you may choose to redirect metrics to other instances of Sysdig in a different region. To redirect metric data, complete the following steps:
 1. [Provision a Sysdig instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision)
-2. Reconfigure the Sysdig agent of each system: Change the access key and ingestion endpoints in the agent configuration. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
+2. Reconfigure the monitoring agent of each system: Change the access key and ingestion endpoints in the agent configuration. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
 3. Define IAM permissions to work with the new monitoring instance.
 
     Using access groups to manage permissions to work with a Sysdig monitoring instance, reduces the amount of work that you might have to do to set the correct policies and users to work with a new instance. Information about access groups is global and not region based.

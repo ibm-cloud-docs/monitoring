@@ -29,30 +29,30 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 ## How your data is collected in {{site.data.keyword.mon_full_notm}}
 {: #data-collection}
 
-When you configure a Sysdig agent to collect and forward data to an {{site.data.keyword.mon_full_notm}} instance, data is automatically collected and available for analysis through the web UI. You can configure the Sysdig agent to connect to the monitoring instance via the public network or the private network. 
+When you configure a monitoring agent to collect and forward data to an {{site.data.keyword.mon_full_notm}} instance, data is automatically collected and available for analysis through the web UI. You can configure the monitoring agent to connect to the monitoring instance via the public network or the private network. 
 
 To connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network, you can configure an agent to send metrics by using a public endpoint. The environment where the agent is running requires internet access to use the public endpoint.
 
-You can enable virtual routing and forwarding (VRF) to move IP routing for your account and all of its resources into a separate routing table. If VRF is enabled, you can then enable {{site.data.keyword.cloud_notm}} service endpoints to connect directly to resources without using the public network. To configure an agent to send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. Once the account is VRF enabled, the Sysdig agent can be configured to use the private network by using the [Private Endpoint](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion) as the ingestion URL.
+You can enable virtual routing and forwarding (VRF) to move IP routing for your account and all of its resources into a separate routing table. If VRF is enabled, you can then enable {{site.data.keyword.cloud_notm}} service endpoints to connect directly to resources without using the public network. To configure an agent to send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. Once the account is VRF enabled, the monitoring agent can be configured to use the private network by using the [Private Endpoint](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion) as the ingestion URL.
 * Private endpoints are not accessible from the public internet. 
 * All traffic is routed to the {{site.data.keyword.cloud_notm}} private network. 
 
 
-Sysdig agent data is collected at 10-seconds frequency. Data that is published by platform metrics is collected on a 1-minute frequency.
+monitoring agent data is collected at 10-seconds frequency. Data that is published by platform metrics is collected on a 1-minute frequency.
 {: note}
 
 
 ### Captures
 {: #capture}
 
-In Sysdig, you can also enable captures when you configure a Sysdig agent. A capture is a trace file that you can use to analyze what happens in a host during a time frame. 
+In Sysdig, you can also enable captures when you configure a monitoring agent. A capture is a trace file that you can use to analyze what happens in a host during a time frame. 
 * Captures contain system calls, and other OS events. 
-* You can enable or disable this feature per node when you configure the Sysdig agent that collects metrics from that node. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent.
+* You can enable or disable this feature per node when you configure the monitoring agent that collects metrics from that node. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a monitoring agent.
 
-By default, the IBM instructions for configuring the Sysdig agents disables the capture feature. If you choose to follow other instructions, IBM recommends disabling capture by setting the `sysdig_capture_enabled: false` in your dragent.yaml for Linux installations or the Kubernetes sysdig-agent Deployment custom resource.
+By default, the IBM instructions for configuring the monitoring agents disables the capture feature. If you choose to follow other instructions, IBM recommends disabling capture by setting the `sysdig_capture_enabled: false` in your dragent.yaml for Linux installations or the Kubernetes sysdig-agent Deployment custom resource.
 {: note}
 
-When Captures are enabled, notice that Sysdig will have deep visibility into your operations. To avoid a security incident and potentially exposing data outside of your organization, check your organization's security policies before you enable captures on a node. Consider disabling the *Capture* feature for all your Sysdig agents.
+When Captures are enabled, notice that Sysdig will have deep visibility into your operations. To avoid a security incident and potentially exposing data outside of your organization, check your organization's security policies before you enable captures on a node. Consider disabling the *Capture* feature for all your monitoring agents.
 {: important}
 
 
@@ -94,7 +94,7 @@ Data is available for a maximum of 15 months.
 
 User metadata is always available.
 
-After you remove a Sysdig agent from a host or container, historical data is not deleted. 
+After you remove a monitoring agent from a host or container, historical data is not deleted. 
 * Data is available for a maximum of 15 months. 
 * Data is available for analysis through the web UI for the time period that the agent was installed and reporting.
 
@@ -123,7 +123,7 @@ You must open a case through support to request the metadata to be deleted. For 
 
 Deletion of a subset of data is not supported.
 
-For example, deletion of data that is collected from 1 Sysdig agent in a {{site.data.keyword.mon_short}} instance is not supported.
+For example, deletion of data that is collected from 1 monitoring agent in a {{site.data.keyword.mon_short}} instance is not supported.
 
 
 ### Deleting captures

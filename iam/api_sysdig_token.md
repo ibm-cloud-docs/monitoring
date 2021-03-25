@@ -35,7 +35,7 @@ Consider the following information for each instance of the {{site.data.keyword.
 * If the token is compromised or your organization's security policies require resetting the token after certain conditions, a user with administration permissions can reset the API token.
 
 
-## Getting the Sysdig API token through the Sysdig web UI
+## Getting the Sysdig API token through the monitoring UI
 {: #api_token_get}
 
 Complete the following steps to get the Sysdig token:
@@ -49,7 +49,7 @@ When you copy the token include the `Bearer` keyword: `Authorization: Bearer SYS
 {: note}
 
 
-## Resetting the Sysdig API token through the Sysdig web UI
+## Resetting the Sysdig API token through the monitoring UI
 {: #api_token_reset}
 
 Complete the following steps to reset the Sysdig token:

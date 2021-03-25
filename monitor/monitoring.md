@@ -28,7 +28,7 @@ subcollection: Monitoring-with-Sysdig
 You can monitor your infrastructure, and the applications that run on it with the {{site.data.keyword.mon_full_notm}} service. You can request a capture to analyze what happens in a node during a time frame.
 {:shortdesc}
 
-First, you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}. Then, you configure Sysdig agents for your metrics sources. After the sources are configured, you can view, monitor, and manage data through the service's web UI.
+First, you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}. Then, you configure monitoring agents for your metrics sources. After the sources are configured, you can view, monitor, and manage data through the service's web UI.
 
 Data for default metrics is automatically collected. You can configure custom metrics and add labels to those metrics to describe their characteristics. Data for these custom metrics is also automatically collected.
 
@@ -155,7 +155,7 @@ An event is a notification that informs about something that occurs in any of th
 The following list outlines different types of events: 
 
 * *Alert events* are events that are triggered by user-configured alerts. For more information, see [Working with alerts](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitoring#monitoring_alerts).
-* *Infrastructure-based events* are events that are collected from Docker and Kubernetes nodes. By default, the Sysdig agent automatically discovers and collects data from a select group of events. You can edit the agent configuration file to enable more events.
+* *Infrastructure-based events* are events that are collected from Docker and Kubernetes nodes. By default, the monitoring agent automatically discovers and collects data from a select group of events. You can edit the agent configuration file to enable more events.
 * *Custom events* that you configure through any of the following integrations: Slackbot, pre-built Python scripts, custom user-created Python scripts, or cURL requests.
 
 By default, an event has a state: 
@@ -225,10 +225,10 @@ A capture is a trace file that you can generate to analyze what happens in a nod
 
 Captures contain system calls, and other OS events such as system-level latencies, batch jobs duration, deployments interruption times, autoscaling latencies, container startup times, or application transaction time. Captures include detailed information from every container on a node. 
 
-Depending on your organization’s guidelines, consider disabling captures. By default, captures are enabled when you configure a Sysdig agent in a node.
+Depending on your organization’s guidelines, consider disabling captures. By default, captures are enabled when you configure a monitoring agent in a node.
 {: tip}
 
-You can create, explore, download, and delete *captures* for individual nodes. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent. 
+You can create, explore, download, and delete *captures* for individual nodes. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a monitoring agent. 
 
 * In the web UI, you create captures in the *Explore* section and manage capture files through the *Captures* section.
 * You can visualize data from a capture by using *Csysdig* (the curses-based command-line UI for sysdig) or the open source Sysdig utilities to analyze the data in a capture.

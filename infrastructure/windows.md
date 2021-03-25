@@ -26,10 +26,10 @@ subcollection: Monitoring-with-Sysdig
 # Monitoring a Windows environment
 {: #windows}
 
-The standard Sysdig agent cannot be installed on a Windows platform. In order to monitor a Windows system with {{site.data.keyword.mon_full_notm}}, you can leverage the [Prometheus WMI Exporter](https://promcat.io/apps/windows){: external} to perform the collection of the metrics on the system.
+The standard monitoring agent cannot be installed on a Windows platform. In order to monitor a Windows system with {{site.data.keyword.mon_full_notm}}, you can leverage the [Prometheus WMI Exporter](https://promcat.io/apps/windows){: external} to perform the collection of the metrics on the system.
 {:shortdesc}
 
-Once the metrics are collected you have two options for publishing the metrics to Sysdig, remotely scraping the metrics with a Linux Sysdig agent,or pushing from a local instance of Prometheus using remote write. Step 3 will cover these two options, but step 1 and 2 are the same regardless of how the metrics are sent.
+Once the metrics are collected you have two options for publishing the metrics to Sysdig, remotely scraping the metrics with a Linux monitoring agent,or pushing from a local instance of Prometheus using remote write. Step 3 will cover these two options, but step 1 and 2 are the same regardless of how the metrics are sent.
 
 Complete the following steps to configure the following Windows images to send metrics to a Sysdig instance:
 * Windows Server 2019 Standard Edition (64 bit)
@@ -99,14 +99,14 @@ Complete the following steps:
 {: #windows_step3}
 
 
-### Option 1. Collect metrics by running a Sysdig agent on a Linux system
+### Option 1. Collect metrics by running a monitoring agent on a Linux system
 {: #windows_step3_1}
 
-Run a Sysdig agent on a Linux system and remotely scrape the Windows endpoint.
+Run a monitoring agent on a Linux system and remotely scrape the Windows endpoint.
 
 Complete the following steps:
 
-1. [Install the Sysdig agent on a Linux node](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent#config_agent_linux).
+1. [Install the monitoring agent on a Linux node](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent#config_agent_linux).
 
     You can collect a maximum of 3000 time series per Sysdig Linux agent. If you need to collect more than 3000 time series for all your Windows systems, you need more than one Linux agent.
     {: important}
@@ -163,7 +163,7 @@ Complete the following steps:
     ```
     {: screen}
 
-3. Configure the Sysdig agent to reduce the number of metrics that are collected by the Windows wmi_exporter. 
+3. Configure the monitoring agent to reduce the number of metrics that are collected by the Windows wmi_exporter. 
 
     You can configure the `metrics_filter` section to remove metrics. For example, you can remove collector metrics. You can also remove specific metrics that you do not wish to collect.
 
@@ -176,7 +176,7 @@ Complete the following steps:
     ```
     {: codeblock}
 
-4. Restart the Sysdig agent. Run the following command:
+4. Restart the monitoring agent. Run the following command:
 
     ```
     service dragent restart
@@ -308,9 +308,9 @@ To monitor Windows systems metrics, you can use the default dashboard `Windows N
 
 You can configure the Prometheus Blackbox exporter to get information about the availability of a Windows system.
 
-The Prometheus Blackbox exporter can be run as an application or a docker container from a Linux system in conjunction with the Sysdig agent.
+The Prometheus Blackbox exporter can be run as an application or a docker container from a Linux system in conjunction with the monitoring agent.
 
-The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
+The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
 
 The exporters are available as [binary releases](https://github.com/prometheus/blackbox_exporter/releases){: external}, as a [docker container](https://hub.docker.com/r/prom/blackbox-exporter/){: external} or the [code is available in github](https://github.com/prometheus/blackbox_exporter){: external}.
 
@@ -363,7 +363,7 @@ For example, complete the following instructions when the container approach is 
 
     When you enable this option, you can segment data by `windows_hostname` and build alerts upon this metric.
 
-4. Restart the Sysdig agent. Run the following command:
+4. Restart the monitoring agent. Run the following command:
 
     ```
     service dragent restart

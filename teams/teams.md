@@ -95,7 +95,7 @@ Complete the following steps to create a team:
         
         Captures include detailed information from every container on a host, regardless of the team’s scope.
 
-    * [Optional] Enable or disable **Infrastructure Events**. Check this box to allow members to view all custom infrastructure events from every user and Sysdig agent. When is not checked, users can see infrastructure events that are sent specifically to this team. 
+    * [Optional] Enable or disable **Infrastructure Events**. Check this box to allow members to view all custom infrastructure events from every user and monitoring agent. When is not checked, users can see infrastructure events that are sent specifically to this team. 
 
 <img src="images/team-configuration.png" alt="Team Configuration" width="800" />
 

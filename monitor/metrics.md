@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Working with metrics
 {: #metrics}
 
-After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, and configure a Sysdig agent for a metrics source, you can view, monitor, and manage metrics through the {{site.data.keyword.mon_full_notm}} Web UI. Use metrics to analyze statistically data that has numerical values. 
+After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, and configure a monitoring agent for a metrics source, you can view, monitor, and manage metrics through the {{site.data.keyword.mon_full_notm}} Web UI. Use metrics to analyze statistically data that has numerical values. 
 {:shortdesc}
 
 

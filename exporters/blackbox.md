@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Collecting availability metrics by using the Prometheus Blackbox exporter
 {: #blackbox}
 
-The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
+The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
 {:shortdesc}
 
 The following figure shows different configurations that you can configure when using the Blackbox exporter to monitor availability of remote hosts:
@@ -39,10 +39,10 @@ The following figure shows different configurations that you can configure when 
 Complete the following steps to configure the Prometheus Blackbox Exporter:
 
 
-## Step 1. Configure a Sysdig agent to collect metrics
+## Step 1. Configure a monitoring agent to collect metrics
 {: #blackbox_step1}
 
-[Install a Sysdig agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
+[Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
 
 
 
@@ -109,12 +109,12 @@ If you want to collect metrics from remote servers, complete the following steps
 
 
 
-## Step 4. Update the Sysdig agent that is running in the server
+## Step 4. Update the monitoring agent that is running in the server
 {: #Blackbox_step4}
 
-Choose one of the following Sysdig agents:
+Choose one of the following monitoring agents:
 
-### Kubernetes Sysdig agent
+### Kubernetes monitoring agent
 {: #Blackbox_step4-1}
 
 
@@ -209,11 +209,11 @@ When you save the file, changes are applied.
 
 
 
-### Docker Sysdig agent
+### Docker monitoring agent
 {: #Blackbox_step4-2}
 
 
-### Linux service Sysdig agent
+### Linux service monitoring agent
 {: #Blackbox_step4-3}
 
 Complete the following steps:
@@ -246,7 +246,7 @@ Complete the following steps:
     ```
     {: codeblock}
 
-3. Restart the Sysdig agent. Run the following command:
+3. Restart the monitoring agent. Run the following command:
 
     ```
     service dragent restart
@@ -272,7 +272,7 @@ Where
 * `<ENDPOINT>` is the Sysdig instance endpoint. See [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 
 
-Then, [launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch), and go to the *Dashboards* section.
+Then, [launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch), and go to the *Dashboards* section.
 
 
 

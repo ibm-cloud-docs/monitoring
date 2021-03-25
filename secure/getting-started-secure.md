@@ -49,11 +49,11 @@ See [Manage user access](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysd
 
 See [Provision an instance of the IBM Cloud Monitoring with Sysdig service](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision).
 
-## Step3. Connect a data source by configuring a Sysdig agent
+## Step3. Connect a data source by configuring a monitoring agent
 {: #getting-started-secure_step3}
 
 Complete the following steps:
-1. [Configure a Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
+1. [Configure a monitoring agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
 2. [Optional] [Enable Kubernetes Audit Logging](https://docs.sysdig.com/en/kubernetes-audit-logging.html){: external} to track kubectl exec and other Kubernetes commands.
 
 ## Step 4. Launch the web UI

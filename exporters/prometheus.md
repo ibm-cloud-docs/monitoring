@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Collecting metrics by using Prometheus exporters
 {: #prometheus}
 
-You can use Prometheus exporters with {{site.data.keyword.mon_full_notm}} to collect metrics from hosts for which a Sysdig agent is not available. You can also use exporters to collect metrics that the Sysdig agent does not collect automatically.
+You can use Prometheus exporters with {{site.data.keyword.mon_full_notm}} to collect metrics from hosts for which a monitoring agent is not available. You can also use exporters to collect metrics that the monitoring agent does not collect automatically.
 {:shortdesc}
 
 Sysdig curates and maintains [PromCat](https://promcat.io/){: external}. PromCat is an enterprise resource catalog where you can find supported monitoring integrations for Kubernetes platforms and cloud-native services.
@@ -36,7 +36,7 @@ The following table lists some Prometheus exporters that you can use to monitor 
 
 | Exporters                | Use case                               | Source |
 |--------------------------|----------------------------------------|---------|
-| `Blackbox exporter`       | Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics.  | [Prometheus Blackbox exporter](https://github.com/prometheus/blackbox_exporter){: external} |
+| `Blackbox exporter`       | Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics.  | [Prometheus Blackbox exporter](https://github.com/prometheus/blackbox_exporter){: external} |
 | `IPMI exporter`          | Collects Intelligent Platform Management Interface (IPMI) device sensor metrics.  | [Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}  |
 | `Windows WMI exporter`   | Collects Windows system metrics. | [PromCat: Windows Exporter](https://promcat.io/apps/windows){: external} |
 {: caption="Table 1. Exporters" caption-side="top"} 
@@ -78,7 +78,7 @@ To learn how to configure the WMI exporter, see [Monitoring a Windows environmen
 ### IPMI exporter
 {: #prometheus_ipmi}
 
-In addition to the set of metrics that are automatically collected by the Sysdig agent, you might want to collect other metrics such as sensor metrics. 
+In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics. 
 
 Configure the [Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external} to collect Intelligent Platform Management Interface (IPMI) device sensor metrics.
 {: note}
@@ -133,7 +133,7 @@ You can also check the tutorial: [Configure the Prometheus IPMI Exporter to moni
 ### Blackbox exporter
 {: #prometheus_blackbox}
 
-Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The Sysdig agent can be used in conjunction with the Blackbox exporter to collect availability metrics.
+Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics.
 
 Configure the [Prometheus Blackbox exporter](https://github.com/prometheus/blackbox_exporter){: external} to monitor host availability, such as URL sites.
 {: note}
@@ -156,10 +156,10 @@ Where
 
 
 
-## Sample. Kubernetes Sysdig agent configmap with 2 exporters
+## Sample. Kubernetes monitoring agent configmap with 2 exporters
 {: premetheus-sample}
 
-The following configmap sample shows how 2 exporters are configured in a Kubernetes Sysdig agent:
+The following configmap sample shows how 2 exporters are configured in a Kubernetes monitoring agent:
 
 ```yaml
 Name:         sysdig-agent
