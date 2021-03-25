@@ -157,9 +157,6 @@ For example, a user that needs to work in a team requires the following policies
 To configure a policy for a user or service ID, see [Granting permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team).
 
 
-
-
-
 ## How do I know which access policies are set for me?
 {: #iam_accesspolicy}
 
