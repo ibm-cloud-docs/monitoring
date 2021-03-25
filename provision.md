@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-01-18"
+lastupdated: "2021-03-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, provision instance
 
@@ -25,14 +25,14 @@ subcollection: Monitoring-with-Sysdig
 # Provisioning an instance
 {: #provision}
 
-Before you can monitor and manage metrics with Sysdig, you must provision an instance of the service in {{site.data.keyword.cloud_notm}}.
+Before you can monitor and manage metrics, you must provision an instance of the service in {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
 
-## Provisioning a Sysdig instance from the catalog
+## Provisioning an instance from the catalog
 {: #provision_ui}
 
-To provision an instance of Sysdig from the {{site.data.keyword.cloud_notm}} catalog, complete the following steps:
+To provision an instance from the {{site.data.keyword.cloud_notm}} catalog, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 
@@ -65,16 +65,16 @@ To provision an instance of Sysdig from the {{site.data.keyword.cloud_notm}} cat
 After you provision an instance, 
 
 * The *Observability* dashboard opens. 
-* A service ID is automatically created. You can use this service ID to get the Sysdig access key for your instance. The name of the service ID has the following format: `{InstanceName}-key-admin`.
+* A service ID is automatically created. You can use this service ID to get the access key for your instance. The name of the service ID has the following format: `{InstanceName}-key-admin`.
 
-Next, configure a metric source by adding a Sysdig agent. This agent is responsible for collecting and forwarding metrics to Sysdig. 
+Next, configure a metric source by adding an agent. This agent is responsible for collecting and forwarding metrics to the monitoring instance. 
 
 
 
-## Provisioning a Sysdig instance through the CLI
+## Provisioning an instance through the CLI
 {: #provision_cli}
 
-To provision an instance of Sysdig through the command line, complete the following steps:
+To provision an instance through the command line, complete the following steps:
 
 1. [Pre-requisite] [Installion of the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli). If the CLI is installed, continue with the next step.
 
@@ -84,7 +84,7 @@ To provision an instance of Sysdig through the command line, complete the follow
 
     By default, the `default` resource group is set.
 
-4. Create the Sysdig instance. Run the [ibmcloud resource service-instance-create](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
+4. Create the instance. Run the [ibmcloud resource service-instance-create](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
 
     ```
     ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false,"external_api_auth": "API_AUTH"}'
@@ -93,7 +93,7 @@ To provision an instance of Sysdig through the command line, complete the follow
 
     Where
 
-    `NAME` is the name of the Sysdig instance.
+    `NAME` is the name of the instance.
     
     `sysdig-monitor` is the name of the {{site.data.keyword.mon_full_notm}} service name in the {{site.data.keyword.cloud_notm}}.
     
@@ -103,7 +103,7 @@ To provision an instance of Sysdig through the command line, complete the follow
 
     `default_receiver` is set to `false` by default. Set to `true` to collect platform metrics automatically through this instance in a region.
 
-    `API_AUTH` is set to the authorization model that is enabled to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API. Valid values are: `ANY`, and `IAM_ONLY`.
+    `API_AUTH` is set to the authorization model that is enabled to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the REST API. Valid values are: `ANY`, and `IAM_ONLY`.
 
     For example, to provision an instance with the paid plan, run the following command:
 
@@ -134,6 +134,6 @@ To provision an instance of Sysdig through the command line, complete the follow
 
     `SERVICE_INSTANCE_NAME` is the name of the instance you created
 
-    This will gain you access to the instance's Sysdig access key.
+    This will gain you access to the instance's access key.
 
 

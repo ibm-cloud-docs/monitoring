@@ -30,7 +30,7 @@ You can remove an instance of the {{site.data.keyword.mon_full_notm}} service fr
 
 When you remove an instance from the {{site.data.keyword.cloud_notm}}, consider the following information to tidy up:
 
-1. Write down the list of sources that forward metrics to the {{site.data.keyword.mon_full_notm}} instance that you want to remove. You must remove the Sysdig agent from each source.
+1. Write down the list of sources that forward metrics to the {{site.data.keyword.mon_full_notm}} instance that you want to remove. You must remove the agent from each source.
 2. Remove permissions that are granted to users to work with the instance. 
 
     If you use an access group to manage permissions to access the instance, you must remove the access group.
@@ -88,7 +88,7 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} through the command
     ```
     {: codeblock}
 
-    The `--recursive` option is used to delete the service keys that were associated with the Sysdig instance.
+    The `--recursive` option is used to delete the service keys that were associated with the monitoring instance.
     {: note}
     
 
