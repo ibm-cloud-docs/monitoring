@@ -40,20 +40,20 @@ Monitoring
 
     {: .navgroup id="howto"}
     provision.md
-    iam_instance_auth.md
+    iam/iam_instance_auth.md
     remove.md
     upgrade.md
 
     {: .topicgroup}
     IAM integration
-        core/iam.md
-        api_token.md
-        iam_grant.md
-        iam_grant_team.md
+        iam/iam.md
+        iam/api_token.md
+        iam/iam_grant.md
+        iam/iam_grant_team.md
 
     {: .topicgroup}
     Logging and monitoring
-        monitor/core/at_events.md
+        core/at_events.md
 
     {: .topicgroup}
     Enhancing security
@@ -131,8 +131,8 @@ Monitoring
 
         {: .topicgroup}
         Teams
-            monitor/teams.md
-            team_id.md
+            teams/teams.md
+            teams/team_id.md
         
         {: .topicgroup}
         Integrations
@@ -182,7 +182,7 @@ Monitoring
         Sysdig API
             api/rest_apis.md
             api/mon-curl.md
-            api_sysdig_token.md
+            iam/api_sysdig_token.md
 
         {: .topicgroup}
         Sysdig Python client
