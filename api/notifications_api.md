@@ -365,7 +365,7 @@ This parameter returns the Unix-timestamp when the notification was created.
 
 This parameter describes the notification. 
 
-The description is available when you view an notification in the *notifications* section of the Sysdig web UI, and it is included in notification emails.
+The description is available when you view an notification in the *notifications* section of the monitoring UI, and it is included in notification emails.
 
 
 

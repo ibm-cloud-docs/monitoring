@@ -21,17 +21,17 @@ subcollection: Monitoring-with-Sysdig
 {:important: .important}
 {:note: .note}
 
-# Removing a Sysdig agent
+# Removing a monitoring agent
 {: #remove_agent}
 
-When you delete an {{site.data.keyword.mon_full_notm}} instance, or if you want to stop collecting metrics from a source, you must uninstall the Sysdig agent from sources where it was installed as a service. If you deployed a Sysdig agent as a container, you must run docker commands to remove the agent.
+When you delete an {{site.data.keyword.mon_full_notm}} instance, or if you want to stop collecting metrics from a source, you must uninstall the monitoring agent from sources where it was installed as a service. If you deployed a monitoring agent as a container, you must run docker commands to remove the agent.
 {:shortdesc}
 
 
-## Removing a Sysdig agent from a standard Kubernetes cluster
+## Removing a monitoring agent from a standard Kubernetes cluster
 {: #remove_agent_kube}
 
-Complete the following steps to remove a Sysdig agent from a Kubernetes cluster:
+Complete the following steps to remove a monitoring agent from a Kubernetes cluster:
 
 1. Set up the cluster environment. Run the following commands:
 
@@ -71,12 +71,12 @@ Complete the following steps to remove a Sysdig agent from a Kubernetes cluster:
     {: codeblock}
 
 
-## Removing a Sysdig agent that is deployed as a container in a Linux system
+## Removing a monitoring agent that is deployed as a container in a Linux system
 {: #remove_agent_docker}
 
-Complete the following steps to remove the Sysdig agent that is deployed as a conatiner in a Linux system:
+Complete the following steps to remove the monitoring agent that is deployed as a conatiner in a Linux system:
 
-1. Stop the Sysdig agent container. 
+1. Stop the monitoring agent container. 
 
     Run the following command:
 
@@ -85,7 +85,7 @@ Complete the following steps to remove the Sysdig agent that is deployed as a co
     ```
     {: codeblock}
 
-2. Remove references to the Sysdig agent container.
+2. Remove references to the monitoring agent container.
 
     ```
     docker rm sysdig-agent
@@ -95,10 +95,10 @@ Complete the following steps to remove the Sysdig agent that is deployed as a co
 
 
 
-## Removing a Sysdig agent that has been deployed as a service in a Linux system 
+## Removing a monitoring agent that has been deployed as a service in a Linux system 
 {: #remove_agent_linux}
 
-Complete the following steps to remove a Sysdig agent on Linux:
+Complete the following steps to remove a monitoring agent on Linux:
 
 * To uninstall the agent from **Debian and Ubuntu Linux distributions**, run the following command as the **sudo** user from a terminal:
 

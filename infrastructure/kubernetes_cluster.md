@@ -29,7 +29,7 @@ subcollection: Monitoring-with-Sysdig
 Use this tutorial to learn how to configure an {{site.data.keyword.containerlong}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.
 {:shortdesc}
 
-To configure a cluster to forward metrics, you must install a Sysdig agent onto each worker node in your Kubernetes cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The Sysdig agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The Sysdig agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade. 
+To configure a cluster to forward metrics, you must install a monitoring agent onto each worker node in your Kubernetes cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade. 
 
 You view metrics via Sysdig's web-based user interface.
 
@@ -40,8 +40,8 @@ You view metrics via Sysdig's web-based user interface.
 
 In this tutorial, you configure metrics with Sysdig in your {{site.data.keyword.containerlong}} cluster. In particular, you:
 *  Provision an {{site.data.keyword.mon_full_notm}} instance.
-*  Configure the Sysdig agent in your cluster to sent metrics to Sysdig.
-*  Use the Sysdig web UI to analyze your cluster metrics.
+*  Configure the monitoring agent in your cluster to sent metrics to Sysdig.
+*  Use the monitoring UI to analyze your cluster metrics.
 
 
 ## Before you begin
@@ -63,7 +63,7 @@ In this tutorial, you configure metrics with Sysdig in your {{site.data.keyword.
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
 | Resource group **default**           |  Resource group            | Viewer  | Us-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
 | {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | Us-south  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the default resource group.   |
-| Kubernetes cluster instance          |  Resource                 | Editor  | Us-south  | This policy is required to configure the secret and the Sysdig agent in the Kubernetes cluster. |
+| Kubernetes cluster instance          |  Resource                 | Editor  | Us-south  | This policy is required to configure the secret and the monitoring agent in the Kubernetes cluster. |
 {: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"}
 
 For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
@@ -115,9 +115,9 @@ To provision an instance through the CLI, see [Provisioning an instance through 
 ## Step 2. Configure your Kubernetes cluster to send metrics to your instance
 {: #kubernetes_cluster_step2}
 
-To configure your Kubernetes cluster to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a Sysdig agent pod on each node of your cluster. The Sysdig agent is installed via a DaemonSet which ensures an instance of the agent is running on every worker node. The Sysdig agent collects metrics from the pod where it is installed, and forwards the data to your instance.
+To configure your Kubernetes cluster to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a monitoring agent pod on each node of your cluster. The monitoring agent is installed via a DaemonSet which ensures an instance of the agent is running on every worker node. The monitoring agent collects metrics from the pod where it is installed, and forwards the data to your instance.
 
-In order to provide the full suite of system metrics, the Sysdig agent needs to have a privileged status.
+In order to provide the full suite of system metrics, the monitoring agent needs to have a privileged status.
 {: note}
 
 To configure your Kubernetes cluster to forward metrics to your {{site.data.keyword.mon_full_notm}} instance, complete the following steps from the command-line:
@@ -149,7 +149,7 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
 
 4. Obtain the ingestion URL from the [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
-5. Deploy the Sysdig agent. Run the following command:
+5. Deploy the monitoring agent. Run the following command:
 
     ```
     curl -sL https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/IBMCloud-Kubernetes-Service/install-agent-k8s.sh | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false'
@@ -162,11 +162,11 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
 
     * **COLLECTOR_ENDPOINT** is the ingestion URL for the region where the monitoring instance is available that you previously retrieved.
 
-    * **TAG_DATA** are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your Sysdig agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
+    * **TAG_DATA** are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
     * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 
-6. Verify that the Sysdig agent is created successfully and its status. Run the following command:
+6. Verify that the monitoring agent is created successfully and its status. Run the following command:
 
     ```
     kubectl get pods -n ibm-observe
@@ -176,10 +176,10 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
     The deployment is successful when you see one or more `sysdig-agent` pods. The number of `sysdig-agent` pods equals the number of worker nodes in your cluster. All pods must be in a `Running` state.
 
 
-## Step 3. Launch the Sysdig web UI
+## Step 3. Launch the monitoring UI
 {: #kubernetes_cluster_step3}
 
-To launch the Sysdig web UI through the {{site.data.keyword.cloud_notm}} console, complete the following steps.
+To launch the monitoring UI through the {{site.data.keyword.cloud_notm}} console, complete the following steps.
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
@@ -191,14 +191,14 @@ To launch the Sysdig web UI through the {{site.data.keyword.cloud_notm}} console
 
 4. Find your instance and click **View Sysdig**.
 
-    * **First time**: Because you already installed the Sysdig agent, you can skip through the installation wizard, get started, and complete the onboarding.
+    * **First time**: Because you already installed the monitoring agent, you can skip through the installation wizard, get started, and complete the onboarding.
     
     * **Subsequent times**: The **Explore** view opens.
 
 
-If the Sysdig agent is not installed successfully, points to the wrong ingestion endpoint, or the access key is incorrect, the page that opens informs you about what to do next.
+If the monitoring agent is not installed successfully, points to the wrong ingestion endpoint, or the access key is incorrect, the page that opens informs you about what to do next.
 
-For example, if the Sysdig agent is not installed successfully, you cannot skip through the installation wizard., You might see a message similar to the following:
+For example, if the monitoring agent is not installed successfully, you cannot skip through the installation wizard., You might see a message similar to the following:
     
 ```
 Waiting for the first node to connect... Go ahead and follow the instructions below.
@@ -215,7 +215,7 @@ You can try the following actions:
 ## Step 4. Monitor your cluster
 {: #kubernetes_cluster_step4}
 
-You can monitor your cluster in the **EXPLORE** view that is available through the Sysdig web UI. This view is the default homepage and your starting point to troubleshoot and monitor your cluster infrastructure and resources.
+You can monitor your cluster in the **EXPLORE** view that is available through the monitoring UI. This view is the default homepage and your starting point to troubleshoot and monitor your cluster infrastructure and resources.
 
 In the section *Host and containers*, you can see the you see the *Explore table*, a list of workers in your cluster that are forwarding metrics to the monitoring instance. Each worker entry represents a group of related infrastructure objects for that worker.
 

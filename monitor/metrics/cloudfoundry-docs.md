@@ -41,15 +41,15 @@ To monitor Cloud Foundry (CF) apps, check that the {{site.data.keyword.mon_full_
 {: important}
 
 
-## Navigating to the Sysdig web UI
+## Navigating to the monitoring UI
 {: #launch_sysdig_ui}
 
-To monitor CF apps, you must launch the Sysdig web UI in the region where your CF apps are running.
+To monitor CF apps, you must launch the monitoring UI in the region where your CF apps are running.
 {: important}
 
-Complete the following steps to launch the Sysdig web UI from the *Observability* page and open the pre-defined CF dashboard:
+Complete the following steps to launch the monitoring UI from the *Observability* page and open the pre-defined CF dashboard:
 
-1.[Launch the Sysdig web UI](/docs/services/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1.[Launch the monitoring UI](/docs/services/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 2. Select **DASHBOARDS**.
 3. In the **Default Dashboards** section, expand **IBM**.
 4. Choose the pre-defined CF dashboard **Overview CF apps** from the list.
@@ -233,7 +233,7 @@ The following table outlines the pre-defined dashboards that you can use to moni
 
 | Dashboard name                  | Description    |
 |---------------------------------|----------------|
-| `Overview CF apps`   | Default dashboard when you launch the Sysdig web UI from your service instance UI. |
+| `Overview CF apps`   | Default dashboard when you launch the monitoring UI from your service instance UI. |
 {: caption="Table 11: Pre-defined dashboards" caption-side="top"}
 
 These dashboards cannot be changed.

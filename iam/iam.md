@@ -109,8 +109,8 @@ Use the following table to identify the service role that you can grant a user i
 | `Reset the Sysdig access key`                    | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
 | `Create, configure, and delete teams`            | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
 | `Configure and remove notifications channels`    | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
-| `Configure and remove Sysdig agents`             | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
-| `Create, delete, and edit content in the Sysdig web UI`| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
+| `Configure and remove monitoring agents`             | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
+| `Create, delete, and edit content in the monitoring UI`| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
 | `Create and delete dashboards`                   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
 | `Create and delete alerts`                       | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | |
 | `Create and delete events`                   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | | 

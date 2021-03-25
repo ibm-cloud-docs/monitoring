@@ -44,10 +44,10 @@ For example, you might have the following requirements when you are working in t
 
 When you have these requirements, you should move from the public network to the private network.
 
-You can configure a Sysdig agent to connect to an {{site.data.keyword.mon_full_notm}} instance through the public network or through the private network. By default, the agent connects through the public network.
+You can configure a monitoring agent to connect to an {{site.data.keyword.mon_full_notm}} instance through the public network or through the private network. By default, the agent connects through the public network.
 {: note}
 
-The type of network defines the level of isolation and security that is configured to move workloads between cloud-based resources in your account. Consider connecting the Sysdig agent over the private network.
+The type of network defines the level of isolation and security that is configured to move workloads between cloud-based resources in your account. Consider connecting the monitoring agent over the private network.
 
 
 
@@ -70,14 +70,14 @@ You must first enable virtual routing and forwarding in your account, and then y
 ### Step 2: Setting a private endpoint
 {: #endpoint-setup-step2}
 
-After your account is enabled for VRF and service endpoints, you can configure a Sysdig agent to connect to an {{site.data.keyword.mon_full_notm}} instance through the private network. 
+After your account is enabled for VRF and service endpoints, you can configure a monitoring agent to connect to an {{site.data.keyword.mon_full_notm}} instance through the private network. 
 
 The monitoring service is available on both private and public endpoints. The monitoring service currently does not support only-public or only-private configurations.
 {: note}
 
-You can [configure the Sysdig agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) to use the private network by using a private endpoint as the ingestion URL. To get information about private endpoints, see [Private endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion_private).
+You can [configure the monitoring agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) to use the private network by using a private endpoint as the ingestion URL. To get information about private endpoints, see [Private endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion_private).
 
-What happens when you configure the Sysdig agent to use a private endpoint?
+What happens when you configure the monitoring agent to use a private endpoint?
 * Private endpoints are not accessible from the public internet. 
 * All traffic is routed to the {{site.data.keyword.cloud_notm}} private network. 
 
@@ -101,7 +101,7 @@ To send metric data to the {{site.data.keyword.mon_full_notm}} service, you may 
 ### Access to the web UI through a public endpoint
 {: #network_ui}
 
-To access the {{site.data.keyword.mon_full_notm}} web UI, you may need to define a firewall rule in your host. To get information about the endpoints, see [Sysdig web UI endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig).
+To access the {{site.data.keyword.mon_full_notm}} web UI, you may need to define a firewall rule in your host. To get information about the endpoints, see [monitoring UI endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig).
 
 
 

@@ -95,11 +95,11 @@ You can use global attributes to define the data that is visible and available f
 
 Each {{site.data.keyword.cloud_notm}} provides 1 or more dashboard templates that you can use to monitor that service. 
 
-- Dashboard templates are available in the **Dashboards** section of the Sysdig web UI, under the **IBM** section. 
+- Dashboard templates are available in the **Dashboards** section of the monitoring UI, under the **IBM** section. 
 
     ![{{site.data.keyword.cloud_notm}} services default dashboards](images/sysdig-platform-1.png "Services default dashboards")
 
-- Dashboard templates are only visible in the Sysdig web UI if you have an instance of the service running in that region.
+- Dashboard templates are only visible in the monitoring UI if you have an instance of the service running in that region.
 - Dashboard templates cannot be customized. 
 
 You can create a copy of a dashboard template. You can customize the copy of the dashboard.
@@ -109,7 +109,7 @@ You can create a copy of a dashboard template. You can customize the copy of the
 
 Complete the following steps to create a custom dashboard:
 
-1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 2. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboards.png)) in the Web UI.
 3. In the **DASHBOARD TEMPLATES** section, expand **IBM**, and select a dashboard template for a service that you want to monitor.
 4. Select **Create Custom Dashboard**. The window *Create Dashboard from Template* opens. 
@@ -125,7 +125,7 @@ Next, customize the scope and panels in the dashboard.
 
 Complete the following steps to define the scope of the data that is displayed through the dashboard:
 
-1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 2. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboards.png)) in the Web UI.
 3. Select a custom dashboard in the **My Dashboards** section.
 4. To modify the scope, click **Edit scope**.
@@ -155,7 +155,7 @@ Complete the following steps to define the scope of the data that is displayed t
 
 Complete the following steps to define the scope of the data that is displayed through a panel in a dashboard:
 
-1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 2. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboards.png)) in the Web UI.
 3. Select a custom dashboard in the **My Dashboards** section.
 4. Select a panel where you want to change the scope of the data.
@@ -185,7 +185,7 @@ To save the scope, you must click **Save** at the panel level.
 
 Complete the following steps to define an alert on a metric:
 
-1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 2. Verify that you have a notification channel that defines how you want to be notified.
 
     You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
@@ -228,7 +228,7 @@ You can define a `metric` alert directly from the *Alerts* section.
 
 Complete the following steps to define an alert on a metric:
 
-1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 
 2. Verify that you have a notification channel that defines how you want to be notified.
 
@@ -279,7 +279,7 @@ Enabling platform metrics, grants access to all platform metrics. However, you c
 
 Complete the following steps to limit the data to metrics collected for services that are created in that resource group:
 
-1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 
 2. Navigate to the **Settings** section.
 
@@ -307,7 +307,7 @@ Complete the following steps to limit the data to metrics collected for services
 
 Complete the following steps:
 
-1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 
 2. Navigate to the **Settings** section.
 

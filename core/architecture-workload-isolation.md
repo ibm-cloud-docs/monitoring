@@ -41,15 +41,15 @@ Review the following sample architecture for {{site.data.keyword.mon_full_notm}}
 
 The API server component provides a web and an API interface to the Sysdig service.
 
-The collector component ingests data that sysdig agents forward to the Sysdig service.
+The collector component ingests data that monitoring agents forward to the Sysdig service.
 
 The datastore component stores all metrics, metadata, events, instance credentials, and environmental data.
 
-You can use Sysdig agents to monitor and collect metrics and events from hosts such as a Kubernetes cluster or a Linux system. A Sysdig agent connects to 1 Sysdig instance. The agent forwards data to the instance that is connected. 
+You can use monitoring agents to monitor and collect metrics and events from hosts such as a Kubernetes cluster or a Linux system. A monitoring agent connects to 1 Sysdig instance. The agent forwards data to the instance that is connected. 
 
 Platform metrics are collected automatically for Sysdig-enabled services in each region. The data is forwarded to the {{site.data.keyword.mon_full_notm}} service instance that is enabled to collect and monitor platform metrics in a region.
 
-The Sysdig web UI is the front-end component where users can monitor and manage hosts through dashboards, alerts, and events.
+The monitoring UI is the front-end component where users can monitor and manage hosts through dashboards, alerts, and events.
 
 
 

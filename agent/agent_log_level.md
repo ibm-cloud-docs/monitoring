@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2020
 lastupdated: "2020-10-14"
 
-keywords: Sysdig, IBM Cloud, monitoring, Sysdig agent, log level
+keywords: Sysdig, IBM Cloud, monitoring, monitoring agent, log level
 
 subcollection: Monitoring-with-Sysdig
 
@@ -21,23 +21,23 @@ subcollection: Monitoring-with-Sysdig
 {:important: .important}
 {:note: .note}
 
-# Configuring the log level of a Sysdig agent
+# Configuring the log level of a monitoring agent
 {: #agent_log_level}
 
 The log level determines the type and amount of logging of an agent. You can configure the log level by adding parameters and log level arguments.
 {:shortdesc}
 
-The Sysdig agent writes log entries into the `draios.log` file. 
+The monitoring agent writes log entries into the `draios.log` file. 
 * The log file rotates when it reaches 10MB in size.
 * The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
 * The log files are located in the directory `/opt/draios/logs/`. 
 
-By default, when you deploy a Sysdig agent, the log level is set to `info`.
+By default, when you deploy a monitoring agent, the log level is set to `info`.
 {: note}
 
 Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
 
-You can configure the level of detail that is written by a Sysdig agent to its log file:
+You can configure the level of detail that is written by a monitoring agent to its log file:
 
 | Log level       | Detail                               |
 |-----------------|--------------------------------------|
@@ -68,10 +68,10 @@ For example, consider the following use cases and the log section that you can c
 ## Checking the log level of an agent
 {: #agent_log_level_check}
 
-### Linux Sysdig agent
+### Linux monitoring agent
 {: #agent_log_level_check_linux}
 
-To get the log level of a Linux Sysdig agent, run the following command from a terminal:
+To get the log level of a Linux monitoring agent, run the following command from a terminal:
 
 ```
 more /opt/draios/etc/statsite.ini | grep log_level
@@ -87,11 +87,11 @@ log_level = INFO
 {: screen}
 
 
-### Docker Sysdig agent
+### Docker monitoring agent
 {: #agent_log_level_check_docker}
 
 
-To get the log level of a docker Sysdig agent, run the following command:
+To get the log level of a docker monitoring agent, run the following command:
 
 ```
 docker exec -ti sysdig-agent  more /opt/draios/etc/statsite.ini | grep log_level
@@ -107,10 +107,10 @@ log_level = INFO
 {: screen}
 
 
-### Kubernetes Sysdig agent
+### Kubernetes monitoring agent
 {: #agent_log_level_check_kube}
 
-To get the log level of a Kubernetes Sysdig agent, complete the following steps:
+To get the log level of a Kubernetes monitoring agent, complete the following steps:
 
 1. Set up the cluster environment. Run the following command:
 
@@ -137,7 +137,7 @@ To get the log level of a Kubernetes Sysdig agent, complete the following steps:
 
 The log level determines the type and amount of logging of an agent. You can configure the log level by adding parameters and log level arguments.
 
-### Linux Sysdig agent
+### Linux monitoring agent
 {: #agent_log_level_configure_linux}
 
 To configure the log level, you must customize the **log** section in the `/opt/draios/etc/dragent.yaml` file. 
@@ -179,11 +179,11 @@ service dragent restart
 
 
 
-### Docker Sysdig agent
+### Docker monitoring agent
 {: #agent_log_level_configure_docker}
 
 
-To change the log level of a docker Sysdig agent, complete the following steps:
+To change the log level of a docker monitoring agent, complete the following steps:
 
 1. Open a shell in the running container:
 
@@ -254,10 +254,10 @@ To change the log level of a docker Sysdig agent, complete the following steps:
 
 
 
-### Kubernetes Sysdig agent
+### Kubernetes monitoring agent
 {: #agent_log_level_configure_kube}
 
-Complete the following steps to change the log level of a Kubernetes Sysdig agent:
+Complete the following steps to change the log level of a Kubernetes monitoring agent:
 
 1. Set up the cluster environment. Run the following commands:
 

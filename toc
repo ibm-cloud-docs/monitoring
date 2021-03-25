@@ -79,7 +79,7 @@ Monitoring
         agent/change_linux_agent.md
         agent/change_container_agent.md
         [Enabling Kubernetes Audit Logging](https://docs.sysdig.com/en/kubernetes-audit-logging.html)
-        [Sysdig Agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)
+        [monitoring agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)
 
     {: .topicgroup}
     Monitor

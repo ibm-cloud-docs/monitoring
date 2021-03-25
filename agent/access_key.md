@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Managing access keys
 {: #access_key}
 
-The **Access Key** is a token that you must use to configure Sysdig agents to successfully forward data to your {{site.data.keyword.mon_full_notm}} instance in {{site.data.keyword.cloud_notm}}.   
+The **Access Key** is a token that you must use to configure monitoring agents to successfully forward data to your {{site.data.keyword.mon_full_notm}} instance in {{site.data.keyword.cloud_notm}}.   
 {:shortdesc}
 
 
@@ -125,7 +125,7 @@ To create a new access key for an {{site.data.keyword.mon_full_notm}} instance, 
     ```
     {: screen}
 
-3. The access key can now be used in the Sysdig agent configuration files.
+3. The access key can now be used in the monitoring agent configuration files.
 
 ## Disabling an access key
 {: #access_key_disable}

@@ -71,7 +71,7 @@ Each measure is priced independently when there is an overage.
 Platform metrics are an additional source of time-series. They are priced based on the tiers.
 {: important}
 
-A host can be a container, a virtual machine, a bare metal, or any metrics source where you install a Sysdig agent.
+A host can be a container, a virtual machine, a bare metal, or any metrics source where you install a monitoring agent.
 
 Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mng-data#data-collection) and [data retention](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mng-data#data-storage_retention).
 
@@ -79,7 +79,7 @@ Data is collected and retained per the standard guidelines across all plans. For
 ## Checking the metrics that are collected per agent
 {: #pricing_agent_metrics}
 
-In Sysdig, you can monitor your Sysdig agent by using the dashboard template **Sysdig Agent Health & Status** that is available in **Host Infrastructure**. In this dashboard, you can see the number of Sysdig agents that are deployed and connected to the Sysdig instance, check the version of the Sysdig agents, and find out how many metrics per host the agent is collecting.
+In Sysdig, you can monitor your monitoring agent by using the dashboard template **monitoring agent Health & Status** that is available in **Host Infrastructure**. In this dashboard, you can see the number of monitoring agents that are deployed and connected to the Sysdig instance, check the version of the monitoring agents, and find out how many metrics per host the agent is collecting.
 
 
 
