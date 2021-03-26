@@ -26,57 +26,57 @@ subcollection: Monitoring-with-Sysdig
 # Teams and IAM integration
 {: #iam_grant_team}
 
-{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and control access to all cloud resources consistently in the {{site.data.keyword.cloud_notm}}. Teams provide an isolated workspace in a {{site.data.keyword.mon_short}} instance for a user or group of users to have access to metrics for a defined scope. 
+{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and consistently control access to all cloud resources in the {{site.data.keyword.cloud_notm}}. Teams provide an isolated workspace in a {{site.data.keyword.mon_short}} instance for a user or group of users to have access to metrics in a defined scope. 
 {:shortdesc}
 
-IAM can be mapped to a combination of teams and roles so that a user can only have access to a specific set of metrics, and take a defined set of actions within the product.
+IAM can map a combination of teams and roles so that a user only has access to a specific set of metrics and can take a defined set of actions within the product.
 {: note}
 
-Teams provide additional security by only allowing users to see metrics that are related to the infrastructure where they deploy their apps to versus all the infrastructure in the account. For example, in a Kubernetes cluster, you could grant a group of developers access to only see metrics from 1 kubernestes.namespace where their application is deployed.
+Teams provide additional security by only allowing users to see metrics that are related to the infrastructure where their apps are deployed, as opposed to the entire infrastructure of the account. For example, in a Kubernetes cluster, you could grant a group of developers access to only see metrics from 1 `kubernestes.namespace` where their application is deployed.
 
-In a {{site.data.keyword.mon_short}} instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics for a defined scope.
+In a {{site.data.keyword.mon_short}} instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics with a defined scope.
 
 A {{site.data.keyword.mon_short}} instance includes the following teams:
 - Monitor operations 
 - Secure operations
 
-By default, users are granted access to the `monitor operations` team or to the team that is configured as the default one by an administrator of the instance. 
+By default, users are granted access to the `monitor operations` team or to the team that is configured as the default team by the instance administrator. 
 - An admin of the service can configure multiple teams, and change the default team. 
-- Each team has their own set of custom dashboards and alerts that they can use to monitor the data in scope of the team.
-- Users in a team have access to the data that is included when the administrator defines the scope of the team.
+- Each team has their own set of custom dashboards and alerts that they can use to monitor the data in scope for the team.
+- Users in a team have access to the data that is included in the scope defined by the team administrator.
 [Learn more about teams](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams).
 
-For a user to monitor data within the context of a team, you must grant the user a policy for the {{site.data.keyword.mon_full_notm}} service. The policy specifies the team and the service permissions that the user has to work with the data in scope for that team. 
+For a user to monitor data within the context of a team, you must grant the user a policy for the {{site.data.keyword.mon_full_notm}} service. The policy specifies the team and the service permissions for the user so the user can work with the data in scope for that team. 
 
 You can grant any of the following service roles:
-- Writer: A writer role allows a user to monitor data through dashboards, alerts, and notifications, and to manage resources such as dashboards, alerts, and notifications that are in scope of the team only.
-- Reader: A reader role allows a user to monitor data through dashboards, alerts, and notifications that are in scope of the team only.
+- Writer: A writer role allows a user to monitor data through dashboards, alerts, and notifications, and to manage resources such as dashboards, alerts, and notifications that are in scope for the team.
+- Reader: A reader role allows a user to monitor data through dashboards, alerts, and notifications that are in scope for the team.
 
-Notice that the manager role is an instance level role that grants administrative permissions. If you grant this role in a policy for a team, you are granting admin permissions over the instance to the users that belong to that team.
+The manager role is an instance level role that grants administrative permissions. If you grant this role in a policy for a team, you are granting admin permissions over the instance to the users that belong to that team.
 {: important}
 
-To grant a user access to 1 or more teams, an administrator must grant the user a policy for each team that the user needs access to. By using individual policies per team, administrators can define different service access and permissions levels to work with data in the monitoring instance.
+To grant a user access to 1 or more teams, an administrator must grant the user a policy for each team that the user needs access to. By using individual policies for each team, administrators can define different service access and permissions levels to work with data in the monitoring instance.
 
 For example, a user that needs to work in a team requires the following policies:
-* 1 policy with a platform role **viewer** to allow the user to see monitoring instances in the {{site.data.keyword.cloud_notm}}. 
-* 1 policy to grant the user access to 1 team. The service role determines the permissions of that user to work with data that is in scope of the team.
+* A policy with a platform role **viewer** to allow the user to see monitoring instances in the {{site.data.keyword.cloud_notm}}. 
+* A policy to grant the user access to 1 team. The service role determines the permissions of the user to work with data that is in scope for the team.
 
 To configure a policy for a user or service ID, see [Granting permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team).
 
 
-Complete the following steps to grant a user or service ID permissions to work with the {{site.data.keyword.mon_full_notm}} service within the context of a team:
+Complete the following steps to grant a user or service ID permissions to work with the {{site.data.keyword.mon_full_notm}} service within the context of a team.
 
 
 ## Prerequisites
 {: #iam_grant_team_prereq}
 
-Your user ID needs **administrator platform permissions** to manage the {{site.data.keyword.mon_full_notm}} service. Contact the account administrator. The account owner can grant another user access to the account for the purposes of managing user access, and managing account resources. [Learn more](/docs/account?topic=account-userroles).
+Your user ID needs **administrator platform permissions** to manage the {{site.data.keyword.mon_full_notm}} service. The account owner can grant user access to the account for the purposes of managing user access and managing account resources. [Learn more](/docs/account?topic=account-userroles).
 
 
 ## Step 1. Create an access group
 {: #iam_grant_team_step1}
 
-Complete the following steps to create an access group:
+Do the following to create an access group:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
 2. Click **Create**.
@@ -100,7 +100,7 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 
 After you set up your group, you can assign a common access policy to the group. You must add permissions to view {{site.data.keyword.mon_short}} instances in the Observability UI. 
 
-Any policy that you set for an access group applies to all entities, users, and service IDs, within the group. 
+Any policy that you set for an access group applies to all entities, users, and service IDs within the group. 
 {: note}
 
 You can assign the policy by using the UI or through the command line. 
@@ -123,7 +123,7 @@ For example, you can run the following command to grant a user viewer permission
 ```
 ibmcloud iam access-group-policy-create my-access-group --roles Viewer --service-name my-monitoring-instance --service-instance 99999999-9999-9999-999999
 ```
-{: codeblock}
+{: pre}
 
 
 ### Add permissions through the UI
@@ -132,7 +132,7 @@ ibmcloud iam access-group-policy-create my-access-group --roles Viewer --service
 Complete the following steps to assign a policy to an access group through the UI:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
-2. Select the name of the group  &gt;that you want to assign access to. 
+2. Select the name of the group that you want to assign access to. 
 3. Click **Access policies**  &gt; **Assign access**  &gt; **Assign access to resources**.
 4. Select **IAM services**.
 5. In the section *What type of access do you want to assign?*, select **{{site.data.keyword.mon_full_notm}}**.
@@ -142,13 +142,13 @@ Complete the following steps to assign a policy to an access group through the U
 
     Select **Services based on attributes** to refine the scope of the policy. Choose 1 of the following options:
     
-    Option1: The scope is set to a resource group. Select **Resource group** to choose 1 resource group and define the scope of the policy to include all instances that are associated with that resource group. 
+    Option 1: The scope is set to a resource group. Select **Resource group** to choose 1 resource group and define the scope of the policy to include all instances that are associated with that resource group. 
 
     Option 2: The scope is set to 1 instance in a resource group. Select **Resource group** to choose the resource group. Then select **Service Instance** to choose the instance within the resource group.
     
     Option 3: The scope is set to 1 instance. Select **Service Instance** to choose the instance.
 
-    Skip configuring a value in the *Sysdig Team* section.
+    Do not specify a value in the *Sysdig Team* section.
     {: important}
 
 7. Select the **viewer** platform role.
@@ -160,9 +160,9 @@ Complete the following steps to assign a policy to an access group through the U
 ## Step 3. Add permissions to work in a team
 {: #iam_grant_team_step3}
 
-Next, you must add a policy that grant the user permissions to work with data in the {{site.data.keyword.mon_short}} service within the context of a team.
+Next, you must add a policy that grants the user permissions to work with data in the {{site.data.keyword.mon_short}} service within the context of a team.
 
-When you define the policy, you need to select a service role. Service access roles define a user or service’s ability to perform actions on a service instance. The service access roles are manager, writer, and reader.
+When you define the policy, you need to select a service role. Service access roles define a user's or service’s ability to perform actions on a service instance. The service access roles are manager, writer, and reader.
 
 
 ### Add permissions through the CLI
@@ -248,25 +248,25 @@ And use the following JSON file.
 Complete the following steps to assign a policy to an access group through the UI:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
-2. Select the name of the group  &gt;that you want to assign access to. 
+2. Select the name of the group that you want to assign access to. 
 3. Click **Access policies**  &gt; **Assign access**  &gt; **Assign access to resources**.
 4. Select **IAM services**.
 5. In the section *What type of access do you want to assign?*, select **{{site.data.keyword.mon_full_notm}}**.
 6. In the section *Which services do you want to assign access to?*, complete the following steps:
 
-    First, select **Services based on attributes** to refine the scope of the policy. Choose 1 of the following options:
+    1. Select **Services based on attributes** to refine the scope of the policy. Choose 1 of the following options:
 
-    Option 1: Set the scope to 1 instance in a resource group. Select **Resource group** to choose the resource group. Then select **Service Instance** to choose the instance within the resource group.
+        Option 1: Set the scope to 1 instance in a resource group. Select **Resource group** to choose the resource group. Then select **Service Instance** to choose the instance within the resource group.
     
-    Option 2: Set the scope to 1 instance. Select **Service Instance** to choose the instance.
+        Option 2: Set the scope to 1 instance. Select **Service Instance** to choose the instance.
 
-    Next, select a **Sysdig team**.
+    2. Select a **Sysdig team**.
 
 7. Select a service role. The service role defines the permissions a user has to view and manage resources in that team.
 
-    Select **manager** to grant admin permissions for the service.
+    * Select **manager** to grant admin permissions for the service.
 
-    Select **reader** to grant permissions to view data only.
+    * Select **reader** to grant permissions to view data only.
 
     [Learn more about the roles that you need](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam).
 
@@ -278,7 +278,7 @@ Complete the following steps to assign a policy to an access group through the U
 ## Step 4. Add a user or service ID to the access group
 {: #iam_grant_team_step4}
 
-Continue to set up your group by adding users or service IDs.
+You can add users or service IDs to an existing access group.
 
 ### Add a user to the access group
 {: #iam_grant_team_step4_user}
