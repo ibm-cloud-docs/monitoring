@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2020-10-14"
+lastupdated: "2021-03-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, config monitoring agent
 
@@ -117,7 +117,13 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
 2. Obtain the private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
-3. Install the kernel headers. 
+3. Check that you can reach the repo `http://mirrors.service.networklayer.com/sysdig/`.
+
+    Whether you have a Bare metal or a Classic VSI, by default you get access to the repo. However, if you have attached a firewall such as vyatta to your server, you must allow traffic through to the subnets listed for your data center in [SSL VPN network (on backend/private network)](/hardware-firewall-dedicated?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges#back-end-private-network). 
+
+    Make sure that you allow all ports, both directions for UDP/TCP/ICMP in your data center.
+
+4. Install the kernel headers. 
 
     When you install a monitoring agent, the agent uses kernel header files. [Learn more](https://docs.sysdig.com/en/agent-install--non-orchestrated.html){: external}
 
@@ -137,7 +143,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     ```
     {: pre}
 
-4. Configure the repository.
+5. Configure the repository.
 
     For Debian and Ubuntu Linux distributions, run the following commands:
 
@@ -168,7 +174,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     ```
     {: pre}
 
-5. Install the EPEL repository ofr RHEL, CentOS, and Fedora Linux distributions.
+6. Install the EPEL repository ofr RHEL, CentOS, and Fedora Linux distributions.
 
     Go to the next step if DKMS is available in the distribution.
     {: note}
@@ -189,7 +195,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     ```
     {: pre}
 
-6. Deploy the monitoring agent. 
+7. Deploy the monitoring agent. 
 
     For Debian and Ubuntu Linux distributions, run the following commands:
 
@@ -252,9 +258,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
     * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
- 
-
-5. Check that the monitoring agent is running. Run the following command:
+8. Check that the monitoring agent is running. Run the following command:
 
     ```
     ps -ef | grep sysdig

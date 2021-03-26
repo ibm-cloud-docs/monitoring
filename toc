@@ -63,12 +63,12 @@ Monitoring
         core/ha-dr.md
 
     {: .topicgroup}
-    Web UI
+    Monitoring UI
         launch.md
         get_sysdig_web_url.md
 
     {: .topicgroup}
-    Agent
+    Monitoring agent
         agent/config_agent.md
         agent/upgrade_agent.md
         agent/remove_agent.md
