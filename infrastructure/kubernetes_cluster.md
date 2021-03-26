@@ -23,7 +23,7 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
 
-# Monitorting a Kubernetes cluster
+# Monitoring a Kubernetes cluster
 {: #kubernetes_cluster}
 
 Use this tutorial to learn how to configure an {{site.data.keyword.containerlong}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.
@@ -31,16 +31,16 @@ Use this tutorial to learn how to configure an {{site.data.keyword.containerlong
 
 To configure a cluster to forward metrics, you must install a monitoring agent onto each worker node in your Kubernetes cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade. 
 
-You view metrics via Sysdig's web-based user interface.
+You view metrics via the web-based user interface.
 
 ![Components overview on the {{site.data.keyword.cloud_notm}}](../images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}")
 
 ## Objectives
 {: #kubernetes_cluster_objectives}
 
-In this tutorial, you configure metrics with Sysdig in your {{site.data.keyword.containerlong}} cluster. In particular, you:
+In this tutorial, you configure metrics for your {{site.data.keyword.containerlong}} cluster. In particular, you:
 *  Provision an {{site.data.keyword.mon_full_notm}} instance.
-*  Configure the monitoring agent in your cluster to sent metrics to Sysdig.
+*  Configure the monitoring agent in your cluster to sent metrics.
 *  Use the monitoring UI to analyze your cluster metrics.
 
 
@@ -145,20 +145,20 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
     Every time you log in to the {{site.data.keyword.containerlong}} CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in {{site.data.keyword.cloud_notm}}.
     {: tip}
 
-3. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+3. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
 4. Obtain the ingestion URL from the [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 5. Deploy the monitoring agent. Run the following command:
 
     ```
-    curl -sL https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/IBMCloud-Kubernetes-Service/install-agent-k8s.sh | bash -s -- -a SYSDIG_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false'
+    curl -sL https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/IBMCloud-Kubernetes-Service/install-agent-k8s.sh | bash -s -- -a ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false'
     ```
     {: pre}
 
     Where
 
-    * **SYSDIG_ACCESS_KEY** is the ingestion key for the instance that you previously retrieved.
+    * **ACCESS_KEY** is the ingestion key for the instance that you previously retrieved.
 
     * **COLLECTOR_ENDPOINT** is the ingestion URL for the region where the monitoring instance is available that you previously retrieved.
 
@@ -185,7 +185,7 @@ To launch the monitoring UI through the {{site.data.keyword.cloud_notm}} console
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
-2. From the menu ![Menu icon](../../icons/icon_hamburger.svg), select **Observability**. 
+2. From the menu ![Menu icon](../../../icons/icon_hamburger.svg), select **Observability**. 
 
 3. Select **Monitoring**. The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
@@ -249,7 +249,6 @@ To view more details about a particular worker node, click on the infrastructure
 To return to the full _Explore table_, click the **X (Back to Explore Table)** button.
 
 
-For more information, check out the [Sysdig docs](https://docs.sysdig.com/en/sysdig-monitor.html){: externak}.
 
 
 

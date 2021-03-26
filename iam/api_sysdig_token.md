@@ -71,6 +71,7 @@ curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN"
 ```
 {: codeblock}
 
+
 ```
 GET <SYSDIG_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
@@ -91,6 +92,34 @@ Where
 
 When the authorization that is allowed in a Sysdig instance is set to `IAM_ONLY`, you get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}` when you try to get the Sysdig token.
 {: note}
+
+
+### Sample JSON code
+{: #api_token_get_api_json}
+
+You can use the following sample JSON code to get the Sysdig token:
+
+ ```json
+def get_sysdig_api_token(self, sysdig_instance_guid):
+    """ Get the Sysdig token by calling the /api/token endpoint """
+    if self.access_token == None:
+        self.get_iam_token()
+    if self.access_token == None:
+        # If the token is still None we have problems ....
+        return None
+    headers = { "Authorization": self.access_token,
+                "Accept": "application/json",
+                "IBMInstanceID": sysdig_instance_guid }
+    url = self.sysdig_endpoint + "/api/token"
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        data = response.json()
+        return data["token"]["key"]
+    else:
+        print_error("Error getting Sysdig token - {}".format(response.text))
+        return None
+```
+{: codeblock}
 
 
 

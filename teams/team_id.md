@@ -23,10 +23,10 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
 
-# Getting the ID of a Sysdig team
+# Getting the ID of a team
 {: #team_id}
 
-You can use the Teams REST API to get the ID of a Sysdig team.
+You can use the Teams REST API to get the ID of a team.
 {:shortdesc}
 
 

@@ -25,15 +25,15 @@ subcollection: Monitoring-with-Sysdig
 # Working with teams
 {: #teams}
 
-You can use teams to add another dimension of control on the data that is available through a Sysdig instance on top of platform and service access controls. A user with the **manager** service access role for an {{site.data.keyword.mon_full_notm}} instance can create, delete, add members, and change the scope of teams in that instance. Once a team is created, an admin can add a user to it through {{site.data.keyword.iamlong}} (IAM).
+You can use teams to add another dimension of control on the data that is available through a monitoring instance on top of platform and service access controls. A user with the **manager** service access role for an {{site.data.keyword.mon_full_notm}} instance can create, delete, add members, and change the scope of teams in that instance. Once a team is created, an admin can add a user to it through {{site.data.keyword.iamlong}} (IAM).
 {:shortdesc} 
 
 In the world of microservices, it is becoming harder to track down valuable metrics and ensure that no sensitive data is exposed. By using teams, administrators can apply a fine grain control on resources. Consider the following information when you work with teams:
-* You can create 1 or more teams in a Sysdig instance.
+* You can create 1 or more teams in a monitoring instance.
 * You can specify what resources and metrics are visible for users that are granted IAM permissions to work in the team. 
 * You can enhance the users experience by customizing the initial dashboard that users in a team get when they launch the web UI.  
 
-These instructions assume that you have provisioned a Sysdig service instance on {{site.data.keyword.cloud_notm}}.
+These instructions assume that you have provisioned a monitoring service instance on {{site.data.keyword.cloud_notm}}.
 {: note}
 
 
@@ -41,7 +41,7 @@ These instructions assume that you have provisioned a Sysdig service instance on
 {: #teams_assign}
 
 To add a user to a team, complete the following steps:
-1. Check that you have the **administrator** platform role to work with the Sysdig service or with a specific instance. 
+1. Check that you have the **administrator** platform role to work with the monitoring service or with a specific instance. 
 2. Define a team level IAM policy for the user. For more information, see [Granting permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team).
 
 When the policy is defined, the user is added to the list of users that have access to work with resources configured for a team.
@@ -50,7 +50,7 @@ When the policy is defined, the user is added to the list of users that have acc
 ## Creating a team
 {: #teams_create}
 
-You must have **manager** role to create a team in a Sysdig instance.
+You must have **manager** role to create a team in a monitoring instance.
 
 An administrator or a manager of an {{site.data.keyword.mon_full_notm}} instance must switch to the *Monitor Operations* team before he can create teams and manage existing teams.
 {: note}
@@ -103,7 +103,7 @@ Complete the following steps to create a team:
 ## Changing the scope of a team
 {: #teams_scope}
 
-You must have **manager** role to change the scope of a team in a Sysdig instance.
+You must have **manager** role to change the scope of a team in a monitoring instance.
 
 To change the scope of the data that is visible to members of a team, complete the following steps: 
 
@@ -123,7 +123,7 @@ To change the scope of the data that is visible to members of a team, complete t
 ## Deleting a team
 {: #teams_delete}
 
-You must have **manager** role to delete a team in a Sysdig instance.
+You must have **manager** role to delete a team in a monitoring instance.
 
 Complete the following steps to delete a team:
 
