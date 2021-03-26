@@ -31,9 +31,8 @@ Use this tutorial to learn how to configure an Ubuntu host to forward metrics to
 
 To configure an Ubuntu server to forward metrics, you must install a monitoring agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics.
 
-You then view the metrics using the Sysdig web-based user interface.
+You then view the metrics using the web-based user interface.
 
-![Components overview on the {{site.data.keyword.cloud_notm}}](../images/ubuntu.png "Components overview on the {{site.data.keyword.cloud_notm}}")
 
 ## Before you begin
 {: #ubuntu_prereqs}
@@ -129,13 +128,13 @@ Complete the following steps from a command line:
 5. Deploy the monitoring agent. Run the following command:
 
    ```
-   curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key <SYSDIG_ACCESS_KEY> --collector <COLLECTOR_ENDPOINT> --collector_port 6443 --secure false --check_certificate false --tags <TAG_DATA> --additional_conf 'sysdig_capture_enabled: false'
+   curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key <ACCESS_KEY> --collector <COLLECTOR_ENDPOINT> --collector_port 6443 --secure false --check_certificate false --tags <TAG_DATA> --additional_conf 'sysdig_capture_enabled: false'
    ```
    {: pre}
 
    Where
 
-   * SYSDIG_ACCESS_KEY is the [access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key) for the instance.
+   * ACCESS_KEY is the [access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key) for the instance.
 
    * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.  To determine the endpoint, see [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 

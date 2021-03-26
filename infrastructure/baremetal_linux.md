@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-06-24"
+  years:  2018, 2021
+lastupdated: "2021-03-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Monitoring a Linux bare metal server
 {: #baremetal_linux}
 
-You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by configuring a monitoring agent in your server. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics. You view metrics via Sysdig's web-based user interface.
+You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by configuring a monitoring agent in your server. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics. You view metrics via the web-based user interface.
 {:shortdesc}
 
 
@@ -73,7 +73,7 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
     1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
-    2. Click the **Menu** icon ![Menu icon](../../images/icon_hamburger.svg) &gt; **Classic Infrastructure** &gt; **Device List**.
+    2. Click the **Menu** icon ![Menu icon](../images/icon_hamburger.svg) &gt; **Classic Infrastructure** &gt; **Device List**.
 
     3. Identify the bare metal server that you want to monitor. Copy the **Public IP**.
 
@@ -104,30 +104,30 @@ You must install a monitoring agent to collect and forward metrics from a bare m
 
 Complete the following steps from the command line to install a monitoring agent:
 
-1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+1. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
 2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 3. Deploy the monitoring agent. Run the following command:
 
     ```
-    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure false --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
+    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure false --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
     ```
     {: pre}
 
     Where
 
-    * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
+    * ACCESS_KEY is the ingestion key for the instance.
 
     * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
-    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+    * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 
     If `cURL` is not available, you must install it. For example, for an Ubuntu bare metal, run the following command: `sudo apt-get update`. Then, run the install command: `sudo apt-get install curl`.
 
-    For example, see the following sample command to install a monitoring agent that forwards metrics to a Sysdig instance in US South (Dallas):
+    For example, see the following sample command to install a monitoring agent that forwards metrics to a monitoring instance in US South (Dallas):
 
     ```
     curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a xxxxxxxxxxxxx -c ingest.us-south.monitoring.cloud.ibm.com --collector_port 6443 --secure false -ac "sysdig_capture_enabled: false" --tags sourceType:baremetal,location:dallas
@@ -144,7 +144,7 @@ Complete the following steps to launch the web UI:
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} console opens.
 
-2. Click the **Menu** icon ![Menu icon](../../images/icon_hamburger.svg) &gt; **Observability**. 
+2. Click the **Menu** icon ![Menu icon](../images/icon_hamburger.svg) &gt; **Observability**. 
 
 3. Select **Monitoring**. 
 
@@ -156,7 +156,7 @@ The first time that you launch the monitoring UI, you might get a set of screens
 
 If the monitoring agent is configured successfully, in the **EXPLORE** view you can see your bare metal server in the **Hosts and Containers** section.
 
-![Sysdig Explore view](images/sysdig-baremetal-img1.png "Sysdig Explore view")
+![Explore view](images/sysdig-baremetal-img1.png "Explore view")
 
 It may take some time before you see the bare metal entry while the information is initally collected and processed by the monitoring agent.
 {: note}
@@ -482,7 +482,7 @@ Complete the following steps:
 
 Cpmplete the following steps:
 
-1. Click the **Menu** icon ![Menu icon](../../images/icon_hamburger.svg) &gt; **Observability**. 
+1. Click the **Menu** icon ![Menu icon](../images/icon_hamburger.svg) &gt; **Observability**. 
 
 2. Select **Monitoring**. 
 
@@ -490,7 +490,7 @@ Cpmplete the following steps:
 
 4. In the `Explore` view, select **Hosts and Containers**. Then, select the bare metal server that you want to monitor.
 
-    ![Sysdig Hosts and Containers view](images/sysdig-baremetal-img2.png "Sysdig Hosts and Containers view")
+    ![Hosts and Containers view](images/sysdig-baremetal-img2.png "Hosts and Containers view")
 
 5. Select **Overview by Process**. Then, enter in the search bar **ipmi**. The list of IPMI metrics is displayed.
 

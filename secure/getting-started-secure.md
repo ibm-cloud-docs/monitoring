@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Getting started tutorial
 {: #getting-started-secure}
 
-In architectures that are focused on container and microservices, you can use *Sysdig Secure* to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. *Sysdig Secure* is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
+In architectures that are focused on container and microservices, you can use *Secure* to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. *Secure* is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
 {:shortdesc}
 
 
@@ -74,7 +74,7 @@ See the following table for tasks that you can run to secure your environment:
 | `Scan container images`             | You can scan container images for vulnerabilities, and other violations.  | 
 | `Configure an image scanning alert` | You can set up a runtime `Scanning Alert` to detect if an image is impacted by newly discovered vulnerabilities. You can scan a repository that hosts container images for vulnerabilities, secrets, and license violations. Then, you can configure an alert on the repository to receive notifications on issues that need your attention.  |
 | `Configure a rule`                  | You can create a `Detection Rule` to detect and respond to anomalous runtime activity.  </br>You can create a rule to specify which image versions can be used. |
-| `Define policy`                     | You can configure a policy on a resource and define what to do when 1 or more rules that are included in the policy are non-compliant.  </br>Sysdig Secure includes a number of pre-defined policies that you can use. |
+| `Define policy`                     | You can configure a policy on a resource and define what to do when 1 or more rules that are included in the policy are non-compliant.  </br>Secure includes a number of pre-defined policies that you can use. |
 | `Configure a benchmark task`        | You can use `Compliance dashboards and metrics` to monitor the status of your sources based on the benchmark task that you configure.| 
 
 

@@ -29,9 +29,9 @@ subcollection: Monitoring-with-Sysdig
 The standard monitoring agent cannot be installed on a Windows platform. In order to monitor a Windows system with {{site.data.keyword.mon_full_notm}}, you can leverage the [Prometheus WMI Exporter](https://promcat.io/apps/windows){: external} to perform the collection of the metrics on the system.
 {:shortdesc}
 
-Once the metrics are collected you have two options for publishing the metrics to Sysdig, remotely scraping the metrics with a Linux monitoring agent,or pushing from a local instance of Prometheus using remote write. Step 3 will cover these two options, but step 1 and 2 are the same regardless of how the metrics are sent.
+Once the metrics are collected you have two options for publishing the metrics, remotely scraping the metrics with a Linux monitoring agent,or pushing from a local instance of Prometheus using remote write. Step 3 will cover these two options, but step 1 and 2 are the same regardless of how the metrics are sent.
 
-Complete the following steps to configure the following Windows images to send metrics to a Sysdig instance:
+Complete the following steps to configure the following Windows images to send metrics to a monitoring instance:
 * Windows Server 2019 Standard Edition (64 bit)
 * Windows Server 2016 Standard Edition (64 bit)
 
@@ -62,7 +62,7 @@ Complete the following steps to configure the Prometheus WMI exporter in your Wi
 
 2. [Download the Prometheus exporter](https://github.com/martinlindhe/wmi_exporter/releases){: external}.
 
-3. Identify the collectors that include data for the metric data that you want to send to Sysdig.  
+3. Identify the collectors that include data for the metric data that you want to collect.  
 
 4. Run the `wmi_exporter` and configure the collectors that you want to enable.
 
@@ -108,7 +108,7 @@ Complete the following steps:
 
 1. [Install the monitoring agent on a Linux node](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent#config_agent_linux).
 
-    You can collect a maximum of 3000 time series per Sysdig Linux agent. If you need to collect more than 3000 time series for all your Windows systems, you need more than one Linux agent.
+    You can collect a maximum of 3000 time series per Linux agent. If you need to collect more than 3000 time series for all your Windows systems, you need more than one Linux agent.
     {: important}
     
 2. Update the `/opt/draios/etc/dragent.yml` to [enable remote scraping ](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){: external}. 
@@ -139,7 +139,7 @@ Complete the following steps:
 
     `<HOSTNAME>` is the name of the Windows system
 
-    `<JOBNAME>` is a custom attribute that you can set to identify the role of the node that you are scraping, and you can also use to scope the data in Sysdig
+    `<JOBNAME>` is a custom attribute that you can set to identify the role of the node that you are scraping, and you can also use to scope the data
 
     See the following sample configuration that you can set to enable scraping for a Windows system with hostname `my-windows-hostname` in your environment:
  
@@ -240,9 +240,9 @@ Complete the following steps:
 
     Where 
     
-    `ENDPOINT` is the Sysdig collector endpoint. To see the list of endpoints, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+    `ENDPOINT` is the monitoring collector endpoint. To see the list of endpoints, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
-    `sysdig-apikey` is the file that contains the **Sysdig Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+    `monitoring-apikey` is the file that contains the **Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Getting the API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
 
     For example, the completed version of the prometheus.yml could look like :
   
@@ -310,7 +310,7 @@ You can configure the Prometheus Blackbox exporter to get information about the 
 
 The Prometheus Blackbox exporter can be run as an application or a docker container from a Linux system in conjunction with the monitoring agent.
 
-The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
+The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be configured to alert users on the availability of the endpoints.
 
 The exporters are available as [binary releases](https://github.com/prometheus/blackbox_exporter/releases){: external}, as a [docker container](https://hub.docker.com/r/prom/blackbox-exporter/){: external} or the [code is available in github](https://github.com/prometheus/blackbox_exporter){: external}.
 

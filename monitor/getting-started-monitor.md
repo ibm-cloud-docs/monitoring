@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-11-16"
+  years:  2018, 2021
+lastupdated: "2021-03-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -48,7 +48,7 @@ See [Manage user access](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysd
 ## Step2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
 {: #getting-started-monitor_step2}
 
-See [Provision an instance of the IBM Cloud Monitoring with Sysdig service](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision).
+See [Provision an instance of the IBM Cloud Monitoring with monitoring service](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision).
 
 ## Step3. Configure a monitoring agent
 {: #getting-started-monitor_step3}
@@ -60,7 +60,7 @@ The monitoring agent automatically collects and reports on pre-defined metrics. 
 Data is stored in {{site.data.keyword.cloud_notm}}.
 {: important}
 
-You can configure a monitoring agent for different environments. For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The monitoring agent collects data from the pod where it is installed, and forwards it to your Sysdig instance.
+You can configure a monitoring agent for different environments. For example, to configure your Kubernetes cluster to send metrics to your monitoring instance, you must install a `monitoring-agent` pod on each node of your cluster. The monitoring agent collects data from the pod where it is installed, and forwards it to your monitoring instance.
 
 Complete one of the following tutorials to learn how to deploy a monitoring agent:
 

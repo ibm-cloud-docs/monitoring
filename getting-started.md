@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-11-16"
+  years:  2018, 2021
+lastupdated: "2021-03-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -43,14 +43,14 @@ You provision an instance within the context of a resource group. You use a reso
 When you [provision an instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision), you automatically get an ingestion key, known as the [Sysdig access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
 
 After you provision an instance, you must configure metric sources, enable platform metrics, or both. 
-* A metric source is any resource that you want to monitor and control its performance and health through a Sysdig instance. 
+* A metric source is any resource that you want to monitor and control its performance and health through a monitoring. 
 * You can configure a monitoring agent to collect metrics from a source. For example, you can configure a monitoring agent for a Kubernetes cluster. You use the access key to configure the monitoring agent that is responsible for collecting and forwarding metric data to your instance.
 
     The monitoring agent can be configured to push metrics to Sysdig via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints) section.
 
     After the {{site.data.keyword.mon_full_notm}} agent is deployed in a metric source, collection and forwarding of metrics to the instance is automatic. The {{site.data.keyword.mon_full_notm}} agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in an environment.
 
-* You can enable platform metrics to monitor {{site.data.keyword.cloud_notm}} services. You can only configure 1 Sysdig instance in a region to collect automatically platform metrics. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
+* You can enable platform metrics to monitor {{site.data.keyword.cloud_notm}} services. You can only configure 1 monitoring in a region to collect automatically platform metrics. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
 
 You can [monitor](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitoring#monitoring), and [manage](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-panels) data through the {{site.data.keyword.mon_full_notm}} Web UI.  
 
@@ -96,7 +96,7 @@ You can complete the getting started steps in any of the supported regions.
 
 Every user that accesses the {{site.data.keyword.mon_full_notm}} service in your account must be assigned an access policy with an IAM user role defined. The policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles. For more information, see [Managing user access in the {{site.data.keyword.cloud_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam#iam).
 
-When a user is granted permissions in the {{site.data.keyword.cloud_notm}} to work with the {{site.data.keyword.mon_full_notm}} service, the user is automatically granted a Sysdig role. This role determines the actions that a user has permissions to run. Valid roles are *Sysdig admin* and *Sysdig user*. For more information, see [Controlling access through IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam).
+When a user is granted permissions in the {{site.data.keyword.cloud_notm}} to work with the {{site.data.keyword.mon_full_notm}} service, the user is automatically granted a service role. This role determines the actions that a user has permissions to run. For more information, see [Controlling access through IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam).
 
 Before you can provision an instance, consider the following information:
 * The account owner can create, view, and delete an instance of a service in the {{site.data.keyword.cloud_notm}}, and can grant permissions to other users to work with the {{site.data.keyword.mon_full_notm}} service.
@@ -128,9 +128,7 @@ To add monitoring features with {{site.data.keyword.mon_full_notm}} in the {{sit
 
 You provision an instance within the context of a resource group. A resource group lets you organize your services for access control and billing purposes. You can provision the {{site.data.keyword.mon_full_notm}} instance in the *default* resource group or in a custom resource group.
 
-When you provision an instance, you automatically get an ingestion key, known as the *Sysdig access key*.
-
-To provision an instance of through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
+To provision an instance through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
@@ -164,13 +162,13 @@ To provision an instance of through the {{site.data.keyword.cloud_notm}} UI, com
 
 The service UI opens.
 
-To provision an instance of Sysdig through the CLI, see [Provisioning Sysdig through the {{site.data.keyword.cloud_notm}} CLI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_cli).
+To provision an instance through the CLI, see [Provisioning Sysdig through the {{site.data.keyword.cloud_notm}} CLI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_cli).
 {: tip}
 
 ## Step 3. Configure platform metrics
 {: #getting-started-step3}
 
-Platform metrics are metrics that are exposed by enabled-Sysdig services and the platform in {{site.data.keyword.cloud_notm}}. You must configure a Sysdig instance in a region to monitor these metrics. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
+Platform metrics are metrics that are exposed by enabled-Sysdig services and the platform in {{site.data.keyword.cloud_notm}}. You must configure a monitoring in a region to monitor these metrics. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
 
 To see the list of enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
 
@@ -181,7 +179,7 @@ For example, to configure platform metrics in a region, complete the following s
 
 3. Select a [region](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_regions). 
 
-4. Choose the Sysdig instance that will collect metrics from enabled services on that location. 
+4. Choose the monitoring that will collect metrics from enabled services on that location. 
 
 5. Click **Save**. 
 
@@ -200,7 +198,7 @@ The monitoring agent automatically collects and reports on pre-defined metrics. 
 Data is stored in {{site.data.keyword.cloud_notm}}.
 {: important}
 
-You can configure a monitoring agent for different environments. For example, to configure your Kubernetes cluster to send metrics to your Sysdig instance, you must install a `sysdig-agent` pod on each node of your cluster. The monitoring agent collects data from the pod where it is installed, and forwards it to your Sysdig instance.
+You can configure a monitoring agent for different environments. For example, to configure your Kubernetes cluster to send metrics to your monitoring, you must install a `monitoring-agent` pod on each node of your cluster. The monitoring agent collects data from the pod where it is installed, and forwards it to your monitoring.
 
 Complete one of the following tutorials to learn how to deploy a monitoring agent:
 
@@ -219,9 +217,9 @@ After the monitoring agent is deployed, collection and forwarding of metrics to 
 ## Step 5. Launch the web UI
 {: #getting-started-step5}
 
-After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.Bluemix}}, and configure a monitoring agent for your node, you can view, monitor, and manage data through the service's web UI.
+After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, and configure a monitoring agent for your node, you can view, monitor, and manage data through the service's web UI.
 
-You launch the web UI within the context of the Sysdig instance, from the {{site.data.keyword.cloud_notm}} UI. 
+You launch the web UI within the context of the monitoring, from the {{site.data.keyword.cloud_notm}} UI. 
 
 Complete the following steps to launch the monitoring UI:
 
@@ -247,7 +245,7 @@ By default, users are automatically added as members of the **Monitor Operations
 ## Step 6. Get started with Monitor and Secure
 {: #getting-started-step6}
 
-- See [Getting sarted with Monitor](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started-monitor).
+- See [Getting started with Monitor](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started-monitor).
 - See [Getting started with Secure](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started-secure).
 
 ## Step 7. Monitor usage
