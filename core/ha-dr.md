@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2020
-lastupdated: "2020-06-02"
+  years: 2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, disaster recovery, ha, high availability, redundancy
 
@@ -106,15 +106,15 @@ How to continue working while a DR site is rebuilt?
 
 If the applications and services that you are monitoring through a monitoring instance are all co-located in the same region, then you must wait for the region to be available again for business.
 
-If you have deployed monitoring agents on your systems, and those systems are not impacted by the regional failure, you may choose to redirect metrics to other instances of Sysdig in a different region. To redirect metric data, complete the following steps:
-1. [Provision a Sysdig instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision)
+If you have deployed monitoring agents on your systems, and those systems are not impacted by the regional failure, you may choose to redirect metrics to other instances of monitoring in a different region. To redirect metric data, complete the following steps:
+1. [Provision a monitoring instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision)
 2. Reconfigure the monitoring agent of each system: Change the access key and ingestion endpoints in the agent configuration. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
 3. Define IAM permissions to work with the new monitoring instance.
 
-    Using access groups to manage permissions to work with a Sysdig monitoring instance, reduces the amount of work that you might have to do to set the correct policies and users to work with a new instance. Information about access groups is global and not region based.
+    Using access groups to manage permissions to work with a monitoring instance, reduces the amount of work that you might have to do to set the correct policies and users to work with a new instance. Information about access groups is global and not region based.
     {: tip}
 
-4. Launch the Sysdig instance and import the alerts, notifications, teams, and dashboards to monitor your applications and systems.
+4. Launch the monitoring instance and import the alerts, notifications, teams, and dashboards to monitor your applications and systems.
 
 
 

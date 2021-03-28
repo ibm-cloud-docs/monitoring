@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-06-24"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, access key
 
@@ -49,13 +49,13 @@ To get the access key for an {{site.data.keyword.mon_full_notm}} instance throug
 ## Getting the access key through the CLI
 {: #access_key_cli}
 
-To get the access key for a Sysdig instance through the command line, complete the following steps:
+To get the access key for a monitoring instance through the command line, complete the following steps:
 
 1. [Pre-requisite] [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-2. Log in to the region in the {{site.data.keyword.cloud_notm}} where the Sysdig instance is running. Run the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login)
+2. Log in to the region in the {{site.data.keyword.cloud_notm}} where the monitoring instance is running. Run the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login)
 
-3. Set the resource group where the Sysdig instance is running. Run the following command: [ibmcloud target](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target)
+3. Set the resource group where the monitoring instance is running. Run the following command: [ibmcloud target](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target)
 
     By default, the `default` resource group is set.
 
@@ -66,7 +66,7 @@ To get the access key for a Sysdig instance through the command line, complete t
     ```
     {: pre}
 
-5. Get the name of the API key that is associated with the Sysdig instance. Run the [`ibmcloud resource service-keys`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_keys) command:
+5. Get the name of the API key that is associated with the monitoring instance. Run the [`ibmcloud resource service-keys`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_keys) command:
 
     ```
     ibmcloud resource service-keys --instance-name INSTANCE_NAME
@@ -84,7 +84,7 @@ To get the access key for a Sysdig instance through the command line, complete t
 
     where APIKEY_NAME is the name of the API key.
  
-    The output from this command includes the field **Sysdig Access Key** that contains the access key for the instance.
+    The output from this command includes the field **Access Key** that contains the access key for the instance.
 
 
 
@@ -99,7 +99,7 @@ To create a new access key for an {{site.data.keyword.mon_full_notm}} instance, 
 
 1. Obtain the API token from the {{site.data.keyword.mon_full_notm}} UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
 
-2. Issue a curl POST request against the Sysdig endpoint to generate a new access key.
+2. Issue a curl POST request against the monitoring endpoint to generate a new access key.
 
     ```
     curl -XPOST -H 'Authorization: Bearer API_TOKEN' https:ENDPOINT/api/customer/accessKeys
@@ -108,7 +108,7 @@ To create a new access key for an {{site.data.keyword.mon_full_notm}} instance, 
 
     Where
 
-    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints).
+    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [monitoring endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints).
     * `API_TOKEN` is the API token that you get in step 1.
 
     The output will provide the newly generated access key in the response.
@@ -134,7 +134,7 @@ To disable an existing access key for an {{site.data.keyword.mon_full_notm}} ins
 
 1. Obtain the API Token from the {{site.data.keyword.mon_full_notm}} UI ( [see instructions](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get) ).
 
-2. Issue a curl POST request against the Sysdig endpoint to disable the given access key.
+2. Issue a curl POST request against the monitoring endpoint to disable the given access key.
 
     ```
     curl -XPOST -H 'Authorization: Bearer API_TOKEN' https:ENDPOINT/api/customer/accessKeys/ACCESS_KEY/disable
@@ -143,11 +143,11 @@ To disable an existing access key for an {{site.data.keyword.mon_full_notm}} ins
 
     Where
 
-    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints).
+    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [monitoring endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints).
     * `API_TOKEN` is the API Token retrieved in step 1.
     * `ACCESS_KEY` is the access key that you wish to disable.
 
-Once you disable the Sysdig access key, the agents connected with the access key will be immeditely blocked from sending metrics to this {{site.data.keyword.mon_full_notm}} instance.
+Once you disable the access key, the agents connected with the access key will be immeditely blocked from sending metrics to this {{site.data.keyword.mon_full_notm}} instance.
 
 There is no option to delete access keys at this time.
 {: note}
@@ -159,7 +159,7 @@ To enable an existing access key for an {{site.data.keyword.mon_full_notm}} inst
 
 1. Obtain the API Token from the {{site.data.keyword.mon_full_notm}} UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
 
-2. Issue a curl POST request against the Sysdig endpoint to enable the given access key.
+2. Issue a curl POST request against the monitoring endpoint to enable the given access key.
 
     ```
     curl -XPOST -H 'Authorization: Bearer API_TOKEN' https://ENDPOINT/api/customer/accessKeys/ACCESS_KEY/enable
@@ -168,12 +168,12 @@ To enable an existing access key for an {{site.data.keyword.mon_full_notm}} inst
 
     Where
 
-    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints).
+    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [monitoring endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints).
     * `API_TOKEN` is the API Token retrieved in step 1.
     * `ACCESS_KEY` is the access key that you wish to enable.
 
 
-After you enable the Sysdig access key, the agents will need to be manually restarted since an agent that connects with a disabled access key will be terminated.
+After you enable the access key, the agents will need to be manually restarted since an agent that connects with a disabled access key will be terminated.
 {: note}
 
 ## Viewing the available access keys
@@ -183,7 +183,7 @@ To view all of the access keys for an {{site.data.keyword.mon_full_notm}} instan
 
 1. Obtain the API Token from the {{site.data.keyword.mon_full_notm}} UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
 
-2. Issue a curl GET request against the regional monitoring endpoint to cause Sysdig to enable the given access key.
+2. Issue a curl GET request against the regional monitoring endpoint to enable the given access key.
 
     ```
     curl -XGET -H 'Authorization: Bearer API_TOKEN' https://ENDPOINT/api/customer/accessKeys
@@ -192,7 +192,7 @@ To view all of the access keys for an {{site.data.keyword.mon_full_notm}} instan
 
     Where
 
-    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints).
+    * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [monitoring endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints).
     * `API_TOKEN` is the API Token retrieved in Step 1.
 
     The output will provide a list of the access keys in the response and whether they are enabled.

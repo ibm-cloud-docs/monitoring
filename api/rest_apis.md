@@ -22,7 +22,7 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 
 
-# Sysdig REST APIs
+# {{site.data.keyword.mon_short}} REST APIs
 {: #rest_apis}
 
 You can use cURL, a command line tool, to make API calls to the {{site.data.keyword.mon_full_notm}} service by using URL syntax. You can also use the Python client, `sdcclient`, to automate routine tasks and monitor notifications.
@@ -52,7 +52,7 @@ For more information, see [Managing alerts (Alerts REST API)](/docs/Monitoring-w
 ## Data REST API
 {: #rest_apis_data}
 
-Use this API to extract data from a Sysdig instance.
+Use this API to extract data from a {{site.data.keyword.mon_short}} instance.
 {: note}
 
 | Action                      | REST API Method  | API_URL                                        | 
@@ -60,9 +60,9 @@ Use this API to extract data from a Sysdig instance.
 | Extract metrics             | `POST`           | `<ENDPOINT>/api/data`                          |
 {: caption="Table 2. Data REST API" caption-side="top"}
 
-For more information, see [Extracting metrics from a Sysdig instance (DATA API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics_api).
+For more information, see [Extracting metrics from a {{site.data.keyword.mon_short}} instance (DATA API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics_api).
 
-For more information about the Sysdig Meric Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
+For more information about the {{site.data.keyword.mon_short}} Metric Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
 
 
 

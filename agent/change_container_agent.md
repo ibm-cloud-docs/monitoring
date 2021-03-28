@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-05-22"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, change, kubernetes agent
 
@@ -116,7 +116,7 @@ events:
 
 
 ## Filtering events by severity
-{: #severity}
+{: #filter_by_severity}
 
 To filter events by severity, you can also change the log entry type for events in the *dragent.yaml* file. 
 

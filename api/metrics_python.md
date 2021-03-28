@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-06-18"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, query, api
 
@@ -22,13 +22,13 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 {:external: target="_blank" .external}
 
-# Extracting metrics from a Sysdig instance by using the Sysdig Python client
+# Extracting metrics from an instance by using the {{site.data.keyword.mon_short}} Python client
 {: #metrics_python}
 
 You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance through REST API operations that you can run by using a Python client or by using a cURL command.
 {:shortdesc}
 
-For more information about the Sysdig Meric Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
+For more information about the {{site.data.keyword.mon_short}} Metric Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
 
 
 ## Get metrics by using a Python client
@@ -36,7 +36,7 @@ For more information about the Sysdig Meric Query API, see [Data APIs](https://s
 
 To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
 
-The following code shows the structure of a Python script that you can use to retrieve metrics from a Sysdig instance:
+The following code shows the structure of a Python script that you can use to retrieve metrics from a {{site.data.keyword.mon_short}} instance:
 
 
 ```python

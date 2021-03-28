@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-06-02"
+  years: 2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, overview, personal data, data deletion, PHI, data, data security, _service-name_
 
@@ -52,7 +52,7 @@ In Sysdig, you can also enable captures when you configure a monitoring agent. A
 By default, the IBM instructions for configuring the monitoring agents disables the capture feature. If you choose to follow other instructions, IBM recommends disabling capture by setting the `sysdig_capture_enabled: false` in your dragent.yaml for Linux installations or the Kubernetes sysdig-agent Deployment custom resource.
 {: note}
 
-When Captures are enabled, notice that Sysdig will have deep visibility into your operations. To avoid a security incident and potentially exposing data outside of your organization, check your organization's security policies before you enable captures on a node. Consider disabling the *Capture* feature for all your monitoring agents.
+When Captures are enabled, to avoid a security incident and potentially exposing data outside of your organization, check your organization's security policies before you enable captures on a node. Consider disabling the *Capture* feature for all your monitoring agents.
 {: important}
 
 

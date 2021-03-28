@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-06-12"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, alerting, api, curl
 
@@ -42,8 +42,8 @@ curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
 Where
 
 * `<METHOD>` indicates the type of REST API call that you want to make.
-* `<SYSDIG-ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more inforamtion, see [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
-* `<API_URL>` For more information about API URLs, see [Sysdig REST APIs](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-rest_apis).
+* `<SYSDIG-ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more inforamtion, see [{{site.data.keyword.mon_short}} endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
+* `<API_URL>` For more information about API URLs, see [{{site.data.keyword.mon_short}} REST APIs](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-rest_apis).
 * `HEADERS` add additional information such as information to authenticate with the {{site.data.keyword.mon_full_notm}} service.
 * `DATA` allows you to pass additional information that might be required.
 
@@ -52,7 +52,7 @@ Where
 ### Headers for IAM Tokens 
 {: #mon-curl-headers-iam}
 
-Use IAM tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use the Sysdig REST API to automate routine tasks and monitor notifications.
+Use IAM tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use the {{site.data.keyword.mon_short}} REST API to automate routine tasks and monitor notifications.
 {: important}
 
 In a cURL command, add the following options to authenticate with the {{site.data.keyword.mon_full_notm}} service by using an IAM token:
@@ -78,22 +78,22 @@ Where
 
 * `SysdigTeamID` indicates the GUID of a team.
 
-    To get the GUID, see [Getting the ID of a Sysdig team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-team_id).
+    To get the GUID, see [Getting the ID of a {{site.data.keyword.mon_short}} team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-team_id).
 
 
-### Headers for Sysdig Token
+### Headers for {{site.data.keyword.mon_short}} Token
 {: #mon-curl-headers-sysdig}
 
-You can also use Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use the Sysdig REST API to automate routine tasks and monitor notifications.
+You can also use {{site.data.keyword.mon_short}} API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use the {{site.data.keyword.mon_short}} REST API to automate routine tasks and monitor notifications.
 
-In a cURL command, add the following command option to authenticate with the {{site.data.keyword.mon_full_notm}} service by using a Sysdig token:
+In a cURL command, add the following command option to authenticate with the {{site.data.keyword.mon_full_notm}} service by using a {{site.data.keyword.mon_short}} token:
 
 ```shell
 -H "Authorization: Bearer $SYSDIG_TOKEN"
 ```
 {: codeblock}
 
-To get the Sysdig token, see [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+To get the {{site.data.keyword.mon_short}} token, see [Getting the {{site.data.keyword.mon_short}} API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
 
 
 

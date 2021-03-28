@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-10-14"
+  years:  2018, 2021
+lastupdated: "2021-03-24"
 
 keywords: Sysdig, IBM Cloud, monitoring, config monitoring agent
 
@@ -34,16 +34,16 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 ## Prereqs
 {: #config_agent_prereqs}
 
-Check the Sysdig topic [Host Requirements for Agent Installation](https://docs.sysdig.com/en/host-requirements-for-agent-installation.html){: external}
+Check the topic [Host Requirements for Agent Installation](https://docs.sysdig.com/en/host-requirements-for-agent-installation.html){: external}
 
 ## Deploying a monitoring agent on Linux
 {: #config_agent_linux}
 
 Complete the following steps to configure a monitoring agent on Linux to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
 
-1. [Obtain the Sysdig access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+1. [Obtain the access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 3. Install the kernel headers. 
 
@@ -84,6 +84,10 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
     * Set **secure** to *true* to use SSL with the communication.
 
+    To install cURL, run `yum -q -y install curl` for RHEL, CentOS, and Fedora Linux distributions.
+    {: tip}
+
+
 5. Check that the monitoring agent is running. Run the following command:
 
     ```
@@ -93,7 +97,177 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
     To see the latest monitoring agent logs, go to the directory `/opt/draios/logs` and check the log file `draios.log`.
 
-    To look for erros, you can run the following command:
+    To look for errors, you can run the following command:
+
+    ```
+    grep error /opt/draios/logs/draios.log
+    ```
+    {: pre}
+    
+
+
+## Deploying a monitoring agent on a Linux host with no public access
+{: #config_agent_linux_1}
+
+Follow these steps if your bare metal or VM is running on the {{site.data.keyword.cloud_notm}} private network and does not have access to the public sites.
+
+Complete the following steps to configure a monitoring agent on Linux to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
+
+1. [Obtain the access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+
+2. Obtain the private ingestion URL. For more information, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+
+3. Check that you can reach the repo `http://mirrors.service.networklayer.com/sysdig/`.
+
+    Whether you have a Bare metal or a Classic VSI, by default you get access to the repo. However, if you have attached a firewall such as vyatta to your server, you must allow traffic through to the subnets listed for your data center in [SSL VPN network (on backend/private network)](/hardware-firewall-dedicated?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges#back-end-private-network). 
+
+    Make sure that you allow all ports, both directions for UDP/TCP/ICMP in your data center.
+
+4. Install the kernel headers. 
+
+    When you install a monitoring agent, the agent uses kernel header files. [Learn more](https://docs.sysdig.com/en/agent-install--non-orchestrated.html){: external}
+
+    Choose a distribution and run the following command for that distribution.
+
+    For Debian and Ubuntu Linux distributions, run the following command:
+
+    ```
+    apt-get -y install linux-headers-$(uname -r)
+    ```
+    {: pre}
+
+    For RHEL, CentOS, and Fedora Linux distributions, run the following command:
+
+    ```
+    yum -y install kernel-devel-$(uname -r)
+    ```
+    {: pre}
+
+5. Configure the repository.
+
+    For Debian and Ubuntu Linux distributions, run the following commands:
+
+    ```
+    curl -s http://mirrors.service.networklayer.com/sysdig/DRAIOS-GPG-KEY.public | apt-key add -
+    ```
+    {: pre}    
+
+    ```
+    curl -s -o /etc/apt/sources.list.d/draios.list http://mirrors.service.networklayer.com/sysdig/stable/deb/draios.list
+    ```
+    {: pre}
+
+    ```
+    apt-get update
+    ```
+    {: pre}
+
+    For RHEL, CentOS, and Fedora Linux distributions, run the following command:
+
+    ```
+    rpm --import http://mirrors.service.networklayer.com/sysdig/DRAIOS-GPG-KEY.public
+    ```
+    {: pre}
+
+    ```
+    curl -s -o /etc/yum.repos.d/draios.repo  http://mirrors.service.networklayer.com/sysdig/stable/rpm/draios.repo
+    ```
+    {: pre}
+
+6. Install the EPEL repository ofr RHEL, CentOS, and Fedora Linux distributions.
+
+    Go to the next step if DKMS is available in the distribution.
+    {: note}
+
+    To verify if DKMS is available, run the following command:
+
+    For RHEL, CentOS, and Fedora Linux distributions, run the following command:
+
+    ```
+    yum list dkms
+    ```
+    {: pre}
+
+    To install the EPEL repository, run the following command. Update the command with the correct release.
+
+    ```
+    rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    ```
+    {: pre}
+
+7. Deploy the monitoring agent. 
+
+    For Debian and Ubuntu Linux distributions, run the following commands:
+
+    ```
+    apt-get -y install draios-agent
+    ```
+    {: pre}
+
+    ```
+    echo customerid: SYSDIG_ACCESS_KEY >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+    ```
+    echo tags: TAG_DATA >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+    ```
+    service dragent restart
+    ```
+    {: pre}
+
+    For RHEL, CentOS, and Fedora Linux distributions, run the following commands from a terminal:
+
+    ```
+    yum -y install draios-agent
+    ```
+    {: pre}
+
+    ```
+    echo customerid: SYSDIG_ACCESS_KEY >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+    ```
+    echo tags: TAG_DATA >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+    ```
+    sudo systemctl enable dragent
+    ```
+    {: pre}
+
+    ```
+    sudo systemctl start dragent
+    ```
+    {: pre}
+
+    Where
+
+    * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
+
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. 
+
+    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+
+    * Set **secure** to *true* to use SSL with the communication.
+
+    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+
+8. Check that the monitoring agent is running. Run the following command:
+
+    ```
+    ps -ef | grep sysdig
+    ```
+    {: pre}
+
+    To see the latest monitoring agent logs, go to the directory `/opt/draios/logs` and check the log file `draios.log`.
+
+    To look for errors, you can run the following command:
 
     ```
     grep error /opt/draios/logs/draios.log
@@ -120,9 +294,9 @@ Notice that when you use a MacOS with a container that returns *...-linuxkit* wi
 
 Complete the following steps to configure a monitoring agent on a Docker container to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
 
-1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+1. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 3. Deploy the monitoring agent. Run the following command:
 
@@ -166,7 +340,7 @@ Complete the following steps to configure a monitoring agent on a Docker contain
     ```
     {: codeblock}
 
-    To look for erros, you can run the following command:
+    To look for errors, you can run the following command:
 
     ```
     docker logs sysdig-agent 2>&1 | grep "error"
@@ -186,9 +360,9 @@ In order to use this script, you must have a minimum of `Viewer` and `Manager` I
 
 Complete the following steps to configure a monitoring agent on a Kubernetes cluster:
 
-1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+1. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 3. Set up the cluster environment. 
 
@@ -240,9 +414,9 @@ In order to execute all of the commands that follow, you must have a minimum of 
 
 Complete the following steps to configure a monitoring agent on a Kubernetes cluster that runs in the {{site.data.keyword.containerlong_notm}}:
 
-1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+1. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 3. Set up the cluster environment. Run the following commands:
 
@@ -362,7 +536,7 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
     ```
     {: codeblock}
 
-11. At this point, the Sysdig pods should be starting.  You can run the following command to confirm the pods are running:
+11. At this point, the monitoring pods should be starting.  You can run the following command to confirm the pods are running:
 
     ```
     kubectl get pods -n ibm-observe
@@ -383,9 +557,9 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
 ### Pre-reqs
 {: #config_agent_kube_os_prereqs}
 
-1. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+1. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 3. Log in to the OpenShift cluster. Choose a method to login to an OpenShift cluster. [Learn more about the methods to login](/docs/openshift?topic=openshift-access_cluster#access_automation).
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-04"
+  years: 2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: activity tracker for IBM Cloud Monitoring with Sysdig, Sysdig, IBM Cloud, audit, activity tracker, events, audit logs
 
@@ -40,7 +40,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.alert.read`           | An event is created when you read an alert definition |
 | `sysdig-monitor.alert.update`         | An event is created when you update an alert definition |
 | `sysdig-monitor.alert.delete`         | An event is created when you delete an alert definition |
-| `sysdig-monitor.alert.list`           | An event is created when you view the alerts in the Sysdig instance  |
+| `sysdig-monitor.alert.list`           | An event is created when you view the alerts in the monitoring instance  |
 {: caption="Table 1. Alerts: List of activity tracker actions" caption-side="top"} 
 
 ## Captures: List of management events
@@ -66,7 +66,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.dashboard.read`       | An event is created when you load a dashboard |
 | `sysdig-monitor.dashboard.update`     | An event is created when you update a dashboard |
 | `sysdig-monitor.dashboard.delete`     | An event is created when you delete a dashboard |
-| `sysdig-monitor.dashboard.list`       | An event is created when you view the dashboards in the Sysdig instance |
+| `sysdig-monitor.dashboard.list`       | An event is created when you view the dashboards in the monitoring instance |
 {: caption="Table 3. Dashboards: List of activity tracker actions" caption-side="top"} 
 
 

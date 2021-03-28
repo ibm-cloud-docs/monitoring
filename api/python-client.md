@@ -137,14 +137,14 @@ from sdcclient import IbmAuthHelper, SdMonitorClient
 {: codeblock}
 
 
-## Step 3. Instantiate the Sysdig Python client
+## Step 3. Instantiate the {{site.data.keyword.mon_short}} Python client
 {: #python-client-step3}
 
 
 ### Option 1. Authenticate your user or service ID by using IAM
 {: #python-client-iam-auth}
 
-To use {{site.data.keyword.cloud_notm}} IAM authentication with the Python client, you must specify a Sysdig endpoint, an API key, and the GUID from your {{site.data.keyword.mon_full_notm}} instance.
+To use {{site.data.keyword.cloud_notm}} IAM authentication with the Python client, you must specify a {{site.data.keyword.mon_short}} endpoint, an API key, and the GUID from your {{site.data.keyword.mon_full_notm}} instance.
 {: note}
 
 Complete the following steps from a terminal:
@@ -165,7 +165,7 @@ Complete the following steps from a terminal:
 
 3. Get the endpoint for the region where the monitoring instance is available. 
 
-    To see the list of endpoints that are available, see [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). 
+    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). 
     
     For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
 
@@ -207,7 +207,7 @@ If you get the error `400 Client Error: Bad Request for url: https://iam.cloud.i
 {: #python-client-token-auth}
 
 
-You must specify a Sysdig endpoint, and the Sysdig token that is associated to the team that you want to manage with the Python client.
+You must specify a {{site.data.keyword.mon_short}} endpoint, and the Sysdig token that is associated to the team that you want to manage with the Python client.
 {: note}
 
 Complete the following steps from a terminal:
@@ -216,7 +216,7 @@ Complete the following steps from a terminal:
 
 2. Get the endpoint for the region where the monitoring instance is available. 
 
-    To see the list of endpoints that are available, see [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). 
+    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). 
     
     For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
 
@@ -261,7 +261,7 @@ def usage():
    print('usage: %s <ENDPOINT_URL> <API_KEY> <INSTANCE_GUID>' % sys.argv[0])
    print('ENDPOINT_URL: IBM Cloud endpoint URL (e.g. https://us-south.monitoring.cloud.ibm.com')
    print('API_KEY: IBM Cloud IAM API key. This key is used to retrieve an IAM access token.')
-   print('INSTANCE_GUID: GUID of an IBM Cloud Monitoring with Sysdig instance.')
+   print('INSTANCE_GUID: GUID of an IBM Cloud Monitoring with {{site.data.keyword.mon_short}} instance.')
    sys.exit(1)
 
 if len(sys.argv) != 4:
@@ -313,9 +313,9 @@ sdclient = SdMonitorClient(token=SYSDIG_TOKEN,sdc_url=URL)
 ## References
 {: #python-client_references}
 
-* [Extracting metrics from a Sysdig instance by using the Sysdig Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics_python)
-* [Managing dashboards by using the Sysdig Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard_python)
+* [Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the {{site.data.keyword.mon_short}} Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics_python)
+* [Managing dashboards by using the {{site.data.keyword.mon_short}} Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard_python)
 * [Managing alerts by using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alert_python)
 * [Python Client](https://github.com/draios/python-sdc-client){: external}
-* [Sysdig Python samples](https://github.com/draios/python-sdc-client/tree/master/examples){: external}
+* [{{site.data.keyword.mon_short}} Python samples](https://github.com/draios/python-sdc-client/tree/master/examples){: external}
 
