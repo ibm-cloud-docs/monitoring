@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-06-24"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
+
 
 keywords: Sysdig, IBM Cloud, monitoring, support, help
 
@@ -54,7 +55,7 @@ You can access Stack Overflow and IBM Developer Answers from the Support Center,
   * Go to [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to ask technical questions about the {{site.data.keyword.mon_full_notm}} service. 
   * Go to [IBM Developer Answers](https://developer.ibm.com/answers/topics/ibm-cloud/){: external} to ask general questions about the {{site.data.keyword.mon_full_notm}} service and about getting started instructions.
 
-Tag your questions with **ibm-cloud** and **sysdig**.
+Tag your questions with **ibm-cloud** and **monitoring**.
 {: important}
 
 {{site.data.keyword.cloud_notm}} development and support teams actively monitor Stack Overflow and IBM Developer Answers, and follow the questions that are tagged with **ibm-cloud**. When you create a question in either forum, add the **ibm-cloud** tag to your question to ensure that it's seen by the {{site.data.keyword.cloud_notm}} development and support teams.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-04-24"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Cloud services by location
 {: #cloud_services_locations}
 
-List of locations where {{site.data.keyword.cloud_notm}} services are enabled to send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the Sysdig instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
+List of locations where {{site.data.keyword.cloud_notm}} services are enabled to send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the monitoring instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
 {:shortdesc}
 
 ## Cloud Foundry
@@ -171,11 +171,11 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 ## Container services
 {: #cloud_services_locations_container}
 
-You can choose the Sysdig instance where you want to collect {{site.data.keyword.containerlong}} service metrics.
+You can choose the monitoring instance where you want to collect {{site.data.keyword.containerlong}} service metrics.
 
-You can choose the Sysdig instance where you want to collect {{site.data.keyword.openshiftlong}} service metrics.
+You can choose the monitoring instance where you want to collect {{site.data.keyword.openshiftlong}} service metrics.
 
-You can monitor {{site.data.keyword.satellitelong}} through the Sysdig instance that is configured with **service platform logs** in the same region that your {{site.data.keyword.satelliteshort}} location is managed from.
+You can monitor {{site.data.keyword.satellitelong}} through the monitoring instance that is configured with **service platform logs** in the same region that your {{site.data.keyword.satelliteshort}} location is managed from.
 
 The following tables list the locations where automatic collection of registry service metrics is enabled. For more information, see [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor_sysdig).
 
@@ -209,7 +209,7 @@ The following tables list the locations where automatic collection of registry s
 {: class="simple-tab-table"}
 {: row-headers}
 
-`[*]` {{site.data.keyword.registrylong_notm}} global registry metrics are available through the Sysdig Washington (us-east) instance.
+`[*]` {{site.data.keyword.registrylong_notm}} global registry metrics are available through the monitoring Washington (us-east) instance.
 
 
 ## Developer tools
@@ -426,7 +426,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
 |------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
-| {{site.data.keyword.messagehub}}               | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  `Metrics are available through the platform metrics Sysdig instance in Tokyo` | `Metrics are available through the platform metrics Sysdig instance in Tokyo` |  
+| {{site.data.keyword.messagehub}}               | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  `Metrics are available through the platform metrics monitoring instance in Tokyo` | `Metrics are available through the platform metrics monitoring instance in Tokyo` |  
 | {{site.data.keyword.mobilepushshort}}        |  |   |        
 {: caption="Integration services integration in AP locations" caption-side="top"}
 {: #cs_integration-table-3}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-10-20"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, windows
 
@@ -219,7 +219,7 @@ Complete the following steps:
 
     `<JOBNAME>` is a custom attribute that you can set to identify the role of the node that you are scraping, and you can also use to scope the data in Sysdig
 
-    Next, you will add the `remote_write` configuration to the end of the `prometheus.yml` file to configure the target Sysdig instance that will receive the metrics.
+    Next, you will add the `remote_write` configuration to the end of the `prometheus.yml` file to configure the target  monitoring instance that will receive the metrics.
 
     ```yaml
     remote_write:
@@ -278,7 +278,7 @@ Complete the following steps:
             instance: "my-windows-hostname"
             region: "us-south"
 
-    # Connection to sysdig 
+    # Connection
     remote_write:
       - url: "https://ingest.eu-gb.monitoring.cloud.ibm.com/api/prometheus/write"
 
