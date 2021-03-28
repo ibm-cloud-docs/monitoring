@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-06-18"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, alerting, api
 
@@ -24,7 +24,7 @@ subcollection: Monitoring-with-Sysdig
 # Managing alerts by using the Python client
 {: #alert_python}
 
-You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance by using the Sysdig Python client.
+You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} Python client.
 {:shortdesc}
 
 To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).

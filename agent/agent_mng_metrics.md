@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-09-15"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, monitoring agent, event filters
 
@@ -135,9 +135,9 @@ data:
   dragent.yaml: | 
     ### Agent tags
     # tags: linux:ubuntu,dept:dev,local:nyc
-    #### Sysdig Software related config 
+   
     ####
-    # Sysdig collector address
+    # collector address
     # collector: 192.168.1.1
     # Collector TCP port
     # collector_port: 6666

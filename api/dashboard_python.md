@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, dashboard, api
 
@@ -73,7 +73,7 @@ from sdcclient import IbmAuthHelper, SdMonitorClient
     print('usage: %s <endpoint-url> <apikey> <instance-guid>' % sys.argv[0])
     print('endpoint-url: The endpoint URL that should point to IBM Cloud')
     print('apikey: IBM Cloud IAM apikey that will be used to retrieve an access token')
-    print('instance-guid: GUID of an IBM Cloud Monitoring with Sysdig instance')
+    print('instance-guid: GUID of an IBM Cloud Monitoring with monitoring instance')
     sys.exit(1)
 
 if len(sys.argv) != 4:
@@ -170,7 +170,7 @@ from sdcclient import IbmAuthHelper, SdMonitorClient
     print('usage: %s <endpoint-url> <apikey> <instance-guid>' % sys.argv[0])
     print('endpoint-url: The endpoint URL that should point to IBM Cloud')
     print('apikey: IBM Cloud IAM apikey that will be used to retrieve an access token')
-    print('instance-guid: GUID of an IBM Cloud Monitoring with Sysdig instance')
+    print('instance-guid: GUID of an IBM Cloud Monitoring with monitoring instance')
     sys.exit(1)
 
 if len(sys.argv) != 4:
@@ -306,7 +306,7 @@ from sdcclient import IbmAuthHelper, SdMonitorClient
     print('usage: %s <endpoint-url> <apikey> <instance-guid>' % sys.argv[0])
     print('endpoint-url: The endpoint URL that should point to IBM Cloud')
     print('apikey: IBM Cloud IAM apikey that will be used to retrieve an access token')
-    print('instance-guid: GUID of an IBM Cloud Monitoring with Sysdig instance')
+    print('instance-guid: GUID of an IBM Cloud Monitoring with monitoring instance')
     sys.exit(1)
 
 if len(sys.argv) != 4:
@@ -358,7 +358,7 @@ from sdcclient import IbmAuthHelper, SdMonitorClient
     print('usage: %s <endpoint-url> <apikey> <instance-guid>' % sys.argv[0])
     print('endpoint-url: The endpoint URL that should point to IBM Cloud')
     print('apikey: IBM Cloud IAM apikey that will be used to retrieve an access token')
-    print('instance-guid: GUID of an IBM Cloud Monitoring with Sysdig instance')
+    print('instance-guid: GUID of an IBM Cloud Monitoring with monitoring instance')
     sys.exit(1)
 
 if len(sys.argv) != 4:
@@ -471,7 +471,7 @@ def usage():
     print('usage: %s <endpoint-url> <apikey> <instance-guid>' % sys.argv[0])
     print('endpoint-url: The endpoint URL that should point to IBM Cloud')
     print('apikey: IBM Cloud IAM apikey that will be used to retrieve an access token')
-    print('instance-guid: GUID of an IBM Cloud Monitoring with Sysdig instance')
+    print('instance-guid: GUID of an IBM Cloud Monitoring with monitoring instance')
     sys.exit(1)
 
 if len(sys.argv) != 4:
@@ -571,7 +571,7 @@ from sdcclient import IbmAuthHelper, SdMonitorClient
     print('usage: %s <endpoint-url> <apikey> <instance-guid>' % sys.argv[0])
     print('endpoint-url: The endpoint URL that should point to IBM Cloud')
     print('apikey: IBM Cloud IAM apikey that will be used to retrieve an access token')
-    print('instance-guid: GUID of an IBM Cloud Monitoring with Sysdig instance')
+    print('instance-guid: GUID of an IBM Cloud Monitoring with monitoring instance')
     sys.exit(1)
 
 if len(sys.argv) != 4:

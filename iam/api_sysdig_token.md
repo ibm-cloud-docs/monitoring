@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-01-20"
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, api token
 
@@ -79,7 +79,7 @@ GET <SYSDIG_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBM
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<SYSDIG_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -90,7 +90,7 @@ Where
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
 
-When the authorization that is allowed in a Sysdig instance is set to `IAM_ONLY`, you get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}` when you try to get the Sysdig token.
+When the authorization that is allowed in a monitoring instance is set to `IAM_ONLY`, you get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}` when you try to get the Sysdig token.
 {: note}
 
 
