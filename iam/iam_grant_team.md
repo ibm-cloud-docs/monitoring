@@ -23,7 +23,7 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
  
-# Teams and IAM integration
+# RBAC, teams, and IAM integration
 {: #iam_grant_team}
 
 {{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and consistently control access to all cloud resources in the {{site.data.keyword.cloud_notm}}. Teams provide an isolated workspace in a {{site.data.keyword.mon_short}} instance for a user or group of users to have access to metrics in a defined scope. 
@@ -48,12 +48,34 @@ By default, users are granted access to the `monitor operations` team or to the 
 
 For a user to monitor data within the context of a team, you must grant the user a policy for the {{site.data.keyword.mon_full_notm}} service. The policy specifies the team and the service permissions for the user so the user can work with the data in scope for that team. 
 
-You can grant any of the following service roles:
+You can grant any of the following IAM service roles:
 - Writer: A writer role allows a user to monitor data through dashboards, alerts, and notifications, and to manage resources such as dashboards, alerts, and notifications that are in scope for the team.
 - Reader: A reader role allows a user to monitor data through dashboards, alerts, and notifications that are in scope for the team.
+- Manager: The manager role is an instance level role that grants administrative permissions. If you grant this role in a policy for a team, you are granting admin permissions over the instance to the users that belong to that team.
 
-The manager role is an instance level role that grants administrative permissions. If you grant this role in a policy for a team, you are granting admin permissions over the instance to the users that belong to that team.
-{: important}
+
+The following table shows the user roles that you can grant a user to work with the {{site.data.keyword.mon_short}} service:
+
+| User role            | IAM service role |
+|----------------------|------------------|
+| `ROLE_USER`          | `reader`         |
+| `ROLE_ADVANCED_USER` | `writer`         |
+| `ROLE_ADMIN`         | `manager`        | 
+{: caption="Table 1. List of user roles" caption-side="top"} 
+
+
+The following table shows the team roles that you can grant users to work within the context of a team in a {{site.data.keyword.mon_short}} instance:
+
+| Team role            | IAM service role | Team   |
+|----------------------|------------------|--------|
+| `ROLE_TEAM_READ`     | `reader`         | Custom team |
+| `ROLE_TEAM_EDIT`     | `writer`         | Custom team |
+| `ROLE_TEAM_ADMIN`    | `manager`        | Custom team |
+| `ROLE_TEAM_MONITOR_MANAGER` | `manager` | `Monitor operations` |
+| `ROLE_TEAM_SECURE_MANAGER`  | `manager` | `Secure operations`  |
+{: caption="Table 2. List of team roles" caption-side="top"} 
+
+You can define in the {{site.data.keyword.mon_short}} UI more teams to define different levels of access to data per team and set of users.
 
 To grant a user access to 1 or more teams, an administrator must grant the user a policy for each team that the user needs access to. By using individual policies for each team, administrators can define different service access and permissions levels to work with data in the monitoring instance.
 
@@ -61,10 +83,7 @@ For example, a user that needs to work in a team requires the following policies
 * A policy with a platform role **viewer** to allow the user to see monitoring instances in the {{site.data.keyword.cloud_notm}}. 
 * A policy to grant the user access to 1 team. The service role determines the permissions of the user to work with data that is in scope for the team.
 
-To configure a policy for a user or service ID, see [Granting permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team).
-
-
-Complete the following steps to grant a user or service ID permissions to work with the {{site.data.keyword.mon_full_notm}} service within the context of a team.
+Complete the following steps to grant a user or service ID permissions to work with the {{site.data.keyword.mon_full_notm}} service within the context of a team:
 
 
 ## Prerequisites
