@@ -22,13 +22,13 @@ subcollection: Monitoring-with-Sysdig
 {:note: .note}
 {:external: target="_blank" .external}
 
-# Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the Sysdig API
+# Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the Monitoring API
 {: #metrics_api}
 
-You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance by using the Sysdig API.
+You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance by using the Monitoring API.
 {:shortdesc}
 
-For more information about the Sysdig Meric Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
+For more information about the Monitoring Metric  Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
 
 
 ## Get metrics by using cURL
@@ -43,7 +43,7 @@ curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: $AUTH_TOKEN" -H 
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Sysdig REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Monitoring REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 

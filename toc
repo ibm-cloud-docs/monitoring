@@ -91,6 +91,7 @@ Monitoring
             [Managing the Metric Scale](https://docs.sysdig.com/en/manage-metric-scale.html)
             [Data Aggregation](https://docs.sysdig.com/en/data-aggregation.html)
             [Metric Limits](https://docs.sysdig.com/en/metric-limits.html)
+            monitor/mng_metrics.md
             api/metrics_api.md
             api/metrics_python.md
 
@@ -171,14 +172,11 @@ Monitoring
     pricing.md
     endpoints.md
     core/shared-responsibilities.md
+    monitor/monitoring.md
     
     {: .topicgroup}
     Monitoring CLI
         /sysdig-monitor-cli-plugin/sysdig-monitor-cli-plugin-sysdig-monitor-cli
-
-    {: .topicgroup}
-    Monitor
-        monitor/monitoring.md
 
     {: .topicgroup}
     Monitoring API
