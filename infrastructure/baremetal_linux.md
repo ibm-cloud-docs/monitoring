@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -106,7 +106,7 @@ Complete the following steps from the command line to install a monitoring agent
 
 1. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the ingestion URL. For more information, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 3. Deploy the monitoring agent. Run the following command:
 

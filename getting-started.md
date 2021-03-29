@@ -2,7 +2,8 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-03-28"
+
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -25,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Getting started tutorial
 {: #getting-started}
 
-{{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. In architectures that are focused on container and microservices, you can use *Sysdig Secure* to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. In architectures that are focused on container and microservices, you can use Secure to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. {{site.data.keyword.mon_full_notm}} is a service hosted on the {{site.data.keyword.cloud_notm}} that is based on technology from Sysdig.
 {:shortdesc}
 
 The following figure shows the components overview for the {{site.data.keyword.mon_full_notm}} service that is running on {{site.data.keyword.cloud_notm}}:
@@ -40,13 +41,13 @@ Before you provision an instance, consider the following information:
 
 You provision an instance within the context of a resource group. You use a resource group to organize your services for access control and billing purposes. You can provision the {{site.data.keyword.mon_full_notm}} instance in the *default* resource group or in a custom resource group.
 
-When you [provision an instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision), you automatically get an ingestion key, known as the [Sysdig access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
+When you [provision an instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision), you automatically get an ingestion key, known as the [access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
 
 After you provision an instance, you must configure metric sources, enable platform metrics, or both. 
 * A metric source is any resource that you want to monitor and control its performance and health through a monitoring. 
 * You can configure a monitoring agent to collect metrics from a source. For example, you can configure a monitoring agent for a Kubernetes cluster. You use the access key to configure the monitoring agent that is responsible for collecting and forwarding metric data to your instance.
 
-    The monitoring agent can be configured to push metrics to Sysdig via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints) section.
+    The monitoring agent can be configured to push metrics via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints) section.
 
     After the {{site.data.keyword.mon_full_notm}} agent is deployed in a metric source, collection and forwarding of metrics to the instance is automatic. The {{site.data.keyword.mon_full_notm}} agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in an environment.
 
@@ -54,7 +55,7 @@ After you provision an instance, you must configure metric sources, enable platf
 
 You can [monitor](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitoring#monitoring), and [manage](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-panels) data through the {{site.data.keyword.mon_full_notm}} Web UI.  
 
-Notice that there is a delay showing metric data for new time series. Data is not ready until the initial indexing of a new metric source is completed.  Therefore, new sources such as clusters, platform metrics, or systems that you configure, all take some time to become visible through the Sysdig UI.
+Notice that there is a delay showing metric data for new time series. Data is not ready until the initial indexing of a new metric source is completed.  Therefore, new sources such as clusters, platform metrics, or systems that you configure, all take some time to become visible through the monitoring UI.
 {: note}
 
 ## Features
@@ -162,15 +163,15 @@ To provision an instance through the {{site.data.keyword.cloud_notm}} UI, comple
 
 The service UI opens.
 
-To provision an instance through the CLI, see [Provisioning Sysdig through the {{site.data.keyword.cloud_notm}} CLI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_cli).
+To provision an instance through the CLI, see [Provisioning a Monitoring instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_cli).
 {: tip}
 
 ## Step 3. Configure platform metrics
 {: #getting-started-step3}
 
-Platform metrics are metrics that are exposed by enabled-Sysdig services and the platform in {{site.data.keyword.cloud_notm}}. You must configure a monitoring in a region to monitor these metrics. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
+Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in {{site.data.keyword.cloud_notm}}. You must configure a monitoring in a region to monitor these metrics. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
 
-To see the list of enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
+To see the list of enabled-monitoring services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
 
 For example, to configure platform metrics in a region, complete the following steps:
 1. From the{{site.data.keyword.cloud_notm}} dashboard, go to the menu icon ![menu icon](../../icons/icon_hamburger.svg) &gt; **Observability** to access the *Observability* dashboard.
@@ -193,7 +194,7 @@ The instance that you choose to receive metrics shows the flag **Platform metric
 
 After you provision an instance, you must configure a monitoring agent for each host that you want to monitor. For example, a host can be a cloud resource that you want to monitor and control its performance and health such as a Kubernetes cluster. You may also monitor hosts outside the {{site.data.keyword.cloud_notm}}.
 
-The monitoring agent automatically collects and reports on pre-defined metrics. You use the *Sysdig access key* to configure the monitoring agent that is responsible for collecting and forwarding metric data to your instance. For more information, see [Working with access keys](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
+The monitoring agent automatically collects and reports on pre-defined metrics. You use the *access key* to configure the monitoring agent that is responsible for collecting and forwarding metric data to your instance. For more information, see [Working with access keys](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
 
 Data is stored in {{site.data.keyword.cloud_notm}}.
 {: important}

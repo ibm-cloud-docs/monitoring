@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, regions, endpoints
 
@@ -61,10 +61,10 @@ Where
 
 
 
-## Sysdig Collector endpoints
+## Collector endpoints
 {: #endpoints_ingestion}
 
-**Sysdig Collector** endpoints are ingestion endpoints that you can use to send data.
+Collector endpoints are ingestion endpoints that you can use to send data.
 
 
 ### Private Collector endpoints
@@ -73,7 +73,7 @@ Where
 To send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. 
 {: note}
 
-The following table lists the **Private Sysdig Collector endpoints** that are available per region:
+The following table lists the *Private Collector endpoints* that are available per region:
 
 | Region      | Private ingestion endpoint                           | Private IP addresses                              |   Ports   |
 |-------------|------------------------------------------------------|---------------------------------------------------|-----------|
@@ -90,7 +90,7 @@ The following table lists the **Private Sysdig Collector endpoints** that are av
 ### Public Collector endpoints
 {: #endpoints_ingestion_public}
 
-The following table lists the **Public Sysdig Collector endpoints** that are available per region:
+The following table lists the *Public Collector endpoints* that are available per region:
 
 | Region      | Public ingestion endpoint                           | Public IP addresses                                     |   Ports    |
 |-------------|-----------------------------------------------------|---------------------------------------------------------|----------|
@@ -105,14 +105,14 @@ The following table lists the **Public Sysdig Collector endpoints** that are ava
 
 
 
-## Sysdig endpoints
+## Endpoints
 {: #endpoints_sysdig}
 
 To access the {{site.data.keyword.mon_full_notm}} web UI, you might need to define a firewall rule in your host.
 {: note}
 
 
-The following table lists the **Sysdig endpoints** that are available per region:
+The following table lists the endpoints that are available per region:
 
 | Region      | Web UI endpoint                                  | Public IP addresses                                       |  Ports           |
 |-------------|--------------------------------------------------|-----------------------------------------------------------|-----------------|
@@ -123,7 +123,7 @@ The following table lists the **Sysdig endpoints** that are available per region
 | `JP TOK`    | `https://jp-tok.monitoring.cloud.ibm.com`        | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238       | https (TLS) 443 |
 | `US East`   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82        | https (TLS) 443 | 
 | `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78       | https (TLS) 443 | 
-{: caption="Table 4. List of Sysdig endpoints" caption-side="top"} 
+{: caption="Table 4. List of endpoints" caption-side="top"} 
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, api token
 
@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Configuring the authentication method of a {{site.data.keyword.mon_short}} instance
 {: #iam_instance_auth}
 
-You can configure the authentication token that is allowed in a {{site.data.keyword.mon_short}} instance when you use Python scripts or the Sysdig REST API to manage resources. By default, you can use an IAM token or a Sysdig token. However, you can restrict the {{site.data.keyword.mon_short}} instance to only allow IAM tokens.
+You can configure the authentication token that is allowed in a {{site.data.keyword.mon_short}} instance when you use Python scripts or the Monitoring REST API to manage resources. By default, you can use an IAM token or a Sysdig token. However, you can restrict the {{site.data.keyword.mon_short}} instance to only allow IAM tokens.
 {:shortdesc}
 
 
@@ -70,7 +70,7 @@ Check the `external_api_auth` to find out what tokens are allowed for authentica
 ## Step 2. Reset the Sysdig token for each team
 {: #iam_instance_auth_step2}
 
-Complete this step if you are configuring your Sysdig instance to authenticate with IAM tokens only.
+Complete this step if you are configuring your monitoring instance to authenticate with IAM tokens only.
 {: note}
 
 When you reset a Sysdig token, you disable the current Sysdig token that users might be using. There is 1 Sysdig token per team.
@@ -80,7 +80,7 @@ For each team in the {{site.data.keyword.mon_short}} instance, [reset the Sysdig
 ## Step 3. Configure the {{site.data.keyword.mon_short}} instance to only allow IAM tokens 
 {: #iam_instance_auth_step3}
 
-Run the following command to update a {{site.data.keyword.mon_short}} instance so that only IAM tokens are allowed when you use Python scripts or the Sysdig REST API to manage resources:
+Run the following command to update a {{site.data.keyword.mon_short}} instance so that only IAM tokens are allowed when you use Python scripts or the monitoring REST API to manage resources:
 
 ```
 ibmcloud resource service-instance-update NAME  -p '{"external_api_auth": "IAM_ONLY"}'
@@ -91,7 +91,7 @@ Where
 
 `NAME` is the name of the {{site.data.keyword.mon_short}} instance.
 
-`API_AUTH` is set to the authorization model that is enabled to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API. By default, it is set to `ANY`. Valid values are: `ANY` and `IAM_ONLY`.
+`API_AUTH` is set to the authorization model that is enabled to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the monitoring REST API. By default, it is set to `ANY`. Valid values are: `ANY` and `IAM_ONLY`.
 
 For example, to modify an instance, run the following command:
 

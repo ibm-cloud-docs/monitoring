@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-11-16"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -121,9 +121,9 @@ Complete the following steps from a command line:
 
 2. [Access your Ubuntu server](/docs/vpc?topic=vpc-vsi_is_connecting_linux).
 
-3. Obtain the Sysdig access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+3. Obtain the  access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
-4. Obtain the ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+4. Obtain the ingestion URL. For more information, see [ collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 5. Deploy the monitoring agent. Run the following command:
 
@@ -140,7 +140,7 @@ Complete the following steps from a command line:
 
    * TAG_DATA are comma-separated tags that are formatted as `TAG_NAME:TAG_VALUE`. You can associate one or more tags to your monitoring agent. For example, `role:serviceX,location:us-south`. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
-   * The `sysdig_capture_enabled` is set to *false* to disable the Sysdig capture feature. By default this is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+   * The `sysdig_capture_enabled` is set to *false* to disable the  capture feature. By default this is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 
    If the monitoring agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the monitoring agent.
 

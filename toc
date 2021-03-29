@@ -72,14 +72,12 @@ Monitoring
         agent/config_agent.md
         agent/upgrade_agent.md
         agent/remove_agent.md
-        [Configuring Agent Modes](https://docs.sysdig.com/en/configure-agent-modes.html)
         agent/agent_log_level.md
         agent/access_key.md
         agent/change_kube_agent.md
         agent/change_linux_agent.md
         agent/change_container_agent.md
-        [Enabling Kubernetes Audit Logging](https://docs.sysdig.com/en/kubernetes-audit-logging.html)
-        [monitoring agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)
+        [Monitoring agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)
 
     {: .topicgroup}
     Monitor
@@ -182,24 +180,19 @@ Monitoring
     Monitor
         monitor/monitoring.md
 
-        {: .topicgroup}
-        REST API
-            api/rest_apis.md
-            api/mon-curl.md
-            iam/api_sysdig_token.md
+    {: .topicgroup}
+    Monitoring API
+        [Monitoring API](https://cloud.ibm.com/apidocs/sysdig-monitor)
+        api/rest_apis.md
+        api/mon-curl.md
+        iam/api_sysdig_token.md
+        api/python-client.md
 
-        {: .topicgroup}
-        Python client
-            api/python-client.md
+    {: .topicgroup}
+    Cloud services metrics
+        monitor/metrics/cloudfoundry-docs.md
 
-        {: .topicgroup}
-        Cloud services metrics
-            monitor/metrics/cloudfoundry-docs.md
-
-        [Sysdig Monitor Product Page](https://sysdig.com/products/monitor/)
-        [Sysdig Monitor Documentation](https://docs.sysdig.com/en/getting-started-with-sysdig-monitor.html)
-        [PromCat](https://promcat.io/)
-        deprecated.md
+    deprecated.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

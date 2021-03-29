@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, iam
 
@@ -28,7 +28,7 @@ subcollection: Monitoring-with-Sysdig
 {{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and consistently control access to all cloud resources in the {{site.data.keyword.cloud_notm}}. You grant permissions through policies that you define on the {{site.data.keyword.mon_full_notm}} service in the account.
 {:shortdesc}
 
-**Users in an account must be assigned a platform role to manage instances and to launch the Sysdig UI from the {{site.data.keyword.cloud_notm}}. In addition, users must have a service role that defines the permissions to work with {{site.data.keyword.mon_full_notm}}.** 
+**Users in an account must be assigned a platform role to manage instances and to launch the monitoring UI from the {{site.data.keyword.cloud_notm}}. In addition, users must have a service role that defines the permissions to work with {{site.data.keyword.mon_full_notm}}.** 
 {: important}
 
 The policy determines the actions the user can perform within the context of the selected service or instance. The actions are customized and defined with operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles.
@@ -45,7 +45,7 @@ The policy determines the actions the user can perform within the context of the
 *Roles* define the actions that a user or serviceID can run. There are different types of roles in the {{site.data.keyword.cloud_notm}}:
 
 * *Platform management roles* enables users to perform tasks on service resources at the platform level, for example assigning user access for the service, creating or deleting service IDs, creating instances, assigning policies for your service to other users, and binding instances to applications.
-* *Service access roles* enables users to be assigned varying levels of permission when calling the service's API or running actions in the Sysdig UI.
+* *Service access roles* enables users to be assigned varying levels of permission when calling the service's API or running actions in the monitoring UI.
 
 To organize a set of users and service IDs into a single entity that makes it easy for you to manage IAM permissions, use **access groups**. You can assign a single policy to the group instead of assigning the same access multiple times for each individual user or service ID.
 {: tip}
@@ -105,7 +105,7 @@ The following table identifies the service role that you can grant a user in the
 
 | Actions                                       | Manager                                           | Writer                         | Reader |
 |-----------------------------------------------|---------------------------------------------------|--------------------------------|--------|
-| `Reset the Sysdig access key`                    | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
+| `Reset the access key`                    | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
 | `Create, configure, and delete teams`            | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
 | `Configure and remove notifications channels`    | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
 | `Configure and remove monitoring agents`             | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |

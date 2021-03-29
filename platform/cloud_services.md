@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-04-24"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, platform metrics
 
@@ -27,7 +27,7 @@ subcollection: Monitoring-with-Sysdig
 # Cloud services
 {: #cloud_services}
 
-List of {{site.data.keyword.cloud}} services that send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the Sysdig instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
+List of {{site.data.keyword.cloud}} services that send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the monitoring instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
 {:shortdesc}
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-10-14"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, secure, getting started
 
@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Getting started tutorial
 {: #getting-started-secure}
 
-In architectures that are focused on container and microservices, you can use *Secure* to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. *Secure* is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
+In architectures that are focused on container and microservices, you can use *Secure* to protect, monitor, and enhance forensic analysis of your pipeline and runtime components.
 {:shortdesc}
 
 
@@ -47,7 +47,7 @@ See [Manage user access](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysd
 ## Step2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
 {: #getting-started-secure_step2}
 
-See [Provision an instance of the IBM Cloud Monitoring with Sysdig service](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision).
+See [Provision an instance of the IBM Cloud Monitoring service](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision).
 
 ## Step3. Connect a data source by configuring a monitoring agent
 {: #getting-started-secure_step3}

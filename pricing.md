@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-10-14"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, pricing
 
@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Pricing
 {: #pricing_plans}
 
-This topic includes information about pricing for the {{site.data.keyword.mon_full_notm}}. You can also review the sample scenarios to learn more about the costs of a Sysdig instance
+This topic includes information about pricing for the {{site.data.keyword.mon_full_notm}}. You can also review the sample scenarios to learn more about the costs of a monitoring instance
 {: shortdesc}
 
 The following service plans are available:
@@ -62,7 +62,7 @@ The *graduated tier* plan is billed based on the following measurements and pric
     * **Tier 3**: The price per time-series is 0.03 USD for 1M to 10M time-series per month or 0.000042 USD time-series per hour.
     * **Tier 4**: The price per time-series is 0.02 USD for more than 10M time-series per month or 0.000028 USD time-series per hour.
 * **Additional containers**: The price is 5 USD per 10 containers per month.
-* **Additional API calls**: Your Sysdig instance comes with an allotment of 1M API calls regardless of the number of agents.  The price for API calls in excess of this allotment is 0.01 USD per 1000 API calls per month.
+* **Additional API calls**: Your instance comes with an allotment of 1M API calls regardless of the number of agents.  The price for API calls in excess of this allotment is 0.01 USD per 1000 API calls per month.
 
 Each measure is priced independently when there is an overage.
 {: note}
@@ -79,7 +79,7 @@ Data is collected and retained per the standard guidelines across all plans. For
 ## Checking the metrics that are collected per agent
 {: #pricing_agent_metrics}
 
-In Sysdig, you can monitor your monitoring agent by using the dashboard template **monitoring agent Health & Status** that is available in **Host Infrastructure**. In this dashboard, you can see the number of monitoring agents that are deployed and connected to the Sysdig instance, check the version of the monitoring agents, and find out how many metrics per host the agent is collecting.
+In Sysdig, you can monitor your monitoring agent by using the dashboard template **monitoring agent Health & Status** that is available in **Host Infrastructure**. In this dashboard, you can see the number of monitoring agents that are deployed and connected to the instance, check the version of the monitoring agents, and find out how many metrics per host the agent is collecting.
 
 
 
@@ -149,7 +149,7 @@ The billing calculation for the month is calculated as follows:
 
 * `Additional API calls`
 
-    1M API calls are included with the Sysdig instance each month.
+    1M API calls are included with the instance each month.
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
   
@@ -225,7 +225,7 @@ The billing calculation for the month is calculated as follows:
 
 * `Additional API calls`
 
-    1M API calls are included with the Sysdig instance each month.
+    1M API calls are included with the instance each month.
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
   
@@ -261,7 +261,7 @@ The billing calculation for the month is calculated as follows:
 
 * `Additional time-series cost`
 
-    Since there are no agents running in this Sysdig instance, there is no time-series allotment.  All platform metrics time-series are priced based on the tiers.
+    Since there are no agents running in this instance, there is no time-series allotment.  All platform metrics time-series are priced based on the tiers.
 
     ```
     50 + 60 = 110 time-series
@@ -277,7 +277,7 @@ The billing calculation for the month is calculated as follows:
 
 * `Additional API calls`
 
-    1M API calls are included with the Sysdig instance each month.
+    1M API calls are included with the instance each month.
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
   
@@ -365,7 +365,7 @@ The billing calculation for the month would look like:
 
 * `Additional API calls`
 
-    1M API calls are included with the Sysdig instance each month.
+    1M API calls are included with the instance each month.
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
   

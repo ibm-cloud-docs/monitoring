@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-06-24"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, kubernetes, analyze metrics
 
@@ -147,7 +147,7 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
 
 3. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
-4. Obtain the ingestion URL from the [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+4. Obtain the ingestion URL from the [ collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 5. Deploy the monitoring agent. Run the following command:
 
@@ -164,7 +164,7 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
 
     * **TAG_DATA** are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
-    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+    * Set **sysdig_capture_enabled** to *false* to disable the  capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 
 6. Verify that the monitoring agent is created successfully and its status. Run the following command:
 
@@ -206,7 +206,7 @@ Waiting for the first node to connect... Go ahead and follow the instructions be
 {: screen}
     
 You can try the following actions:
-*  Verify that you are using the `ingest` [endpoint](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion), and not the Sysdig endpoint. 
+*  Verify that you are using the `ingest` [endpoint](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion), and not the  endpoint. 
 *  Verify that the [access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key) is correct.
 *  Follow any additional instructions and repeat the steps in this tutorial.
 

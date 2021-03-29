@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-10-12"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring,  faq
 
@@ -57,7 +57,7 @@ You must upgrade all monitoring agents to `10.5`. [Learn more](/docs/Monitoring-
 {: #faq_3}
 {: faq}
 
-In Sysdig, you can monitor your monitoring agent by using the dashboard template **monitoring agent Health & Status** that is available in **Host Infrastructure**. In this dashboard, you can see the number of monitoring agents that are deployed and connected to the Sysdig instance, check the version of the monitoring agents, and find out how many metrics per host the agent is collecting.
+In Sysdig, you can monitor your monitoring agent by using the dashboard template **monitoring agent Health & Status** that is available in **Host Infrastructure**. In this dashboard, you can see the number of monitoring agents that are deployed and connected to the monitoring instance, check the version of the monitoring agents, and find out how many metrics per host the agent is collecting.
 
 
-
+## How can I find out what c

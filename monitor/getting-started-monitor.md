@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-03-28"
 
 keywords: Sysdig, IBM Cloud, monitoring, getting started
 
@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Getting started tutorial
 {: #getting-started-monitor}
 
-{{site.data.keyword.mon_full_notm}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.mon_full_notm}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
 {:shortdesc}
 
 
@@ -55,7 +55,7 @@ See [Provision an instance of the IBM Cloud Monitoring with monitoring service](
 
 After you provision an instance, you must configure a monitoring agent for each host that you want to monitor. For example, a host can be a cloud resource that you want to monitor and control its performance and health such as a Kubernetes cluster. You may also monitor hosts outside the {{site.data.keyword.cloud_notm}}. For more information, see [Configure a monitoring agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
 
-The monitoring agent automatically collects and reports on pre-defined metrics. You use the *Sysdig access key* to configure the monitoring agent that is responsible for collecting and forwarding metric data to your instance. For more information, see [Working with access keys](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
+The monitoring agent automatically collects and reports on pre-defined metrics. You use the *access key* to configure the monitoring agent that is responsible for collecting and forwarding metric data to your instance. For more information, see [Working with access keys](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key).
 
 Data is stored in {{site.data.keyword.cloud_notm}}.
 {: important}
@@ -104,7 +104,7 @@ You can use labels to group infrastructure resources into logical hierarchies, f
 
 For example, for a metric view, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. 
 
-For more information, see [Managing data](https://docs.sysdig.com/en/metrics.html){: external}.
+To ensure that you can securely manage your data when you use {{site.data.keyword.mon_full_notm}}, it is important to know exactly what data is stored and encrypted, and how you can delete any stored personal data. For more information, see [Managing data](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mng-data).
 
 
 

@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-10-14"
+  years:  2018, 2021
+lastupdated: "2021-03-28"
+
 
 keywords: Sysdig, IBM Cloud, monitoring, launch web UI
 
@@ -42,7 +43,7 @@ The following table lists the minimum policies that a user must have to be able 
 | `{{site.data.keyword.mon_full_notm}}` | Service role: Writer      | Allows the user to launch the Web UI and view metrics in the Web UI.  |
 {: caption="Table 1. IAM policies" caption-side="top"} 
 
-For more information on how to configure these policies for a user, see [Granting permissions to launch the Sysdig UI or to make REST API calls](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant).
+For more information on how to configure these policies for a user, see [Granting permissions to launch the monitoring UI or to make REST API calls](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant).
 
 
 ## Launch the Monitor web UI through the {{site.data.keyword.cloud_notm}} UI
@@ -80,9 +81,9 @@ To access the *Secure* web UI, complete the following steps:
 
     ![Monitor icon](images/monitor.png)
 
-    The *Sysdig Platform* selection box opens.
+    The *Platform* selection box opens.
 
-    ![Sysdig Platform icon](images/platform.png)
+    ![Platform icon](images/platform.png)
 
 2. Select the **Secure** icon.
 
