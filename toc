@@ -74,7 +74,6 @@ Monitoring
         agent/remove_agent.md
         agent/agent_log_level.md
         agent/agent_events_level.md
-        agent/agent_mng_metrics.md
         agent/access_key.md
         agent/change_kube_agent.md
         agent/change_linux_agent.md
@@ -94,6 +93,7 @@ Monitoring
             [Managing the Metric Scale](https://docs.sysdig.com/en/manage-metric-scale.html)
             [Data Aggregation](https://docs.sysdig.com/en/data-aggregation.html)
             [Metric Limits](https://docs.sysdig.com/en/metric-limits.html)
+            monitor/mng_metrics.md
             api/metrics_api.md
             api/metrics_python.md
 

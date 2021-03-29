@@ -54,6 +54,7 @@ You can use labels to identify and differentiate characteristics of a metric, fo
 * You can split aggregated data into segments. 
 
 
+
 ## Default metrics 
 {: #metrics_default}
 
@@ -83,6 +84,4 @@ Consider the following information about how the monitoring service manages the 
 * You can use a missing metric or a missing label on data queries and charts. 
 * Your existing artifacts are not affected if they include a missing metric or a missing label.
 * When data is received for a missing metric or label, the metric or label is added back to the index.
-
-
 
