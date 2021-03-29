@@ -104,7 +104,7 @@ You can use labels to group infrastructure resources into logical hierarchies, f
 
 For example, for a metric view, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. 
 
-For more information, see [Managing data](https://docs.sysdig.com/en/metrics.html){: external}.
+To ensure that you can securely manage your data when you use {{site.data.keyword.mon_full_notm}}, it is important to know exactly what data is stored and encrypted, and how you can delete any stored personal data. For more information, see [Managing data](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mng-data).
 
 
 

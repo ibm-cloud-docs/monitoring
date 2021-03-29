@@ -24,12 +24,21 @@ subcollection: Monitoring-with-Sysdig
 # Including and excluding metrics
 {: #agent_mng_metrics}
 
-When you delete an {{site.data.keyword.mon_full_notm}} instance, or if you want to stop collecting metrics from a source, you must uninstall the monitoring agent from sources where it was installed as a service. If you deployed a monitoring agent as a container, you must run docker commands to remove the agent.
+When you configure a monitoring agent, default metrics are collected automatically. In addition, you can configure custom metrics to monitor your sources through the {{site.data.keyword.mon_full_notm}} service. Custom metrics are metrics that are collected by the monitoring agent from some third-party integration. Some examples of custom metrics are Prometheus, JMX, StatsD, App Checks.
 {:shortdesc}
 
 
-## Including and excluding metrics
-{: #change_linux_agent_mng_inc_exc_metrics}
+Each metric comes with a set of custom labels, and additional labels can be user-created. Sysdig Monitor simply collects and reports them with minimal or no internal processing. The limit currently enforced is 3000 metrics per host. Use the metrics_filter option in the dragent.yaml file to remove unwanted metrics or to choose the metrics to report when hosts exceed this limit. For more information on editing the dragent.yaml file, see Understanding the Agent Config Files.
+
+to filter custom metrics in the following ways:
+
+    Ability to include/exclude custom metrics using configurable patterns,
+
+    Ability to log which custom metrics are exceeding limits
+
+After you identify those key custom metrics that must be received, use the new 'include' and 'exclude' filtering parameters to make sure you receive them before the metrics limit is hit.
+
+
 
 To filter custom metrics, you must customize the **metrics_filter** section in the *dragent.yaml* file. You can specify which metrics to include and which ones to filter out by configuring the **include** and **exclude** filtering parameters.
 

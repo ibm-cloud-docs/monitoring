@@ -19,7 +19,7 @@ subcollection: Monitoring-with-Sysdig
 {:tip: .tip}
 
 
-# Securing your data
+# Managing data
 {: #mng-data}
 
 To ensure that you can securely manage your data when you use {{site.data.keyword.mon_full_notm}}, it is important to know exactly what data is stored and encrypted, and how you can delete any stored personal data.
