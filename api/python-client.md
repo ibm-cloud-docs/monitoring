@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2020
 lastupdated: "2020-07-10"
 
-keywords: Sysdig, IBM Cloud, monitoring, alerting, api, python
+keywords: IBM Cloud, monitoring, alerting, api, python
 
 subcollection: Monitoring-with-Sysdig
 

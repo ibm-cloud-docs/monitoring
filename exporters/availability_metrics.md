@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2021
 lastupdated: "2021-03-28"
 
-keywords: Sysdig, IBM Cloud, monitoring, blackbox, prometheus, ping
+keywords: IBM Cloud, monitoring, blackbox, prometheus, ping
 
 subcollection: Monitoring-with-Sysdig
 

@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2021
 lastupdated: "2021-03-28"
 
-keywords: Sysdig, IBM Cloud, monitoring, overview, personal data, data deletion, PHI, data, data security, _service-name_
+keywords: IBM Cloud, monitoring, overview, personal data, data deletion, PHI, data, data security, _service-name_
 
 subcollection: Monitoring-with-Sysdig
 
