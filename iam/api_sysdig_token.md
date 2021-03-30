@@ -41,7 +41,7 @@ Consider the following information for each instance of the {{site.data.keyword.
 Complete the following steps to get the Sysdig token:
 
 1. From the *Selector* button in the navigation bar, choose **Settings**
-2. From the *Sysdig Monitor API* section, copy the **Sysdig Monitor API Token**.
+2. From the *Sysdig Monitor API* section, copy the **Monitor API Token**.
 
 After you get the token, you can run API calls and use this token in the `Authorization` header. 
 
