@@ -71,7 +71,7 @@ When you create a custom dashboard, you can start from a template such as a pre-
 
 Complete the following steps to create a custom dashboard:
 
-1. Navigate to the *DASHBOARD** section in the Web UI, and select **Add Dashboard**. The *Create a New Dashboard* page opens.
+1. Navigate to the **DASHBOARD** section in the Web UI, and select **Add Dashboard**. The *Create a New Dashboard* page opens.
 
     1. Select a pre-defined dashboard or choose the *Blank Dashboard*. 
 

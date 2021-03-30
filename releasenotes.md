@@ -41,6 +41,6 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 This release includes the following functional enhancements:
 
-* You can configure the authentication token that is allowed in a Sysdig instance when you use Python scripts or the Sysdig REST API to manage resources. By default, you can use an IAM token or a Sysdig token. However, you can restrict the Sysdig instance to only allow IAM tokens. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_instance_auth). 
+* You can configure the authentication token that is allowed in a monitoring instance when you use Python scripts or the {{site.data.keyword.mon_short}} REST API to manage resources. By default, you can use an IAM token or a Monitoring API token. However, you can restrict the monitoring instance to only allow IAM tokens. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_instance_auth). 
 
 

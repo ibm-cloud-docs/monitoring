@@ -99,12 +99,11 @@ Monitoring
 
         {: .topicgroup}
         Dashboards
-            [Dashboard templates](https://docs.sysdig.com/en/dashboard-templates-209032.html)
-            [Working with dashboards](https://docs.sysdig.com/en/dashboards.html)
             monitor/dashboards.md
             monitor/panels.md
             api/dashboard_api.md
             api/dashboard_python.md
+            [Dashboard templates](https://docs.sysdig.com/en/dashboard-templates-209032.html)
 
         {: .topicgroup}
         Explore views
@@ -112,12 +111,7 @@ Monitoring
 
         {: .topicgroup}
         Alerts
-            [Working with alerts](https://docs.sysdig.com/en/alerts.html)
-            [Downtime alert](https://docs.sysdig.com/en/downtime-alert.html)
-            [Metric alerts](https://docs.sysdig.com/en/metric-alerts.html)
-            [Event alerts](https://docs.sysdig.com/en/event-alerts.html)
-            [Anomaly detection alerts](https://docs.sysdig.com/en/anomaly-detection-alerts.html)
-            [Group outlier alerts](https://docs.sysdig.com/en/group-outlier-alerts.html)
+            monitor/alerts.md
             api/alert_api.md
             api/alert_python.md
             monitor/notifications.md

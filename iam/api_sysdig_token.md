@@ -23,22 +23,22 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
 
-# Working with Sysdig tokens
+# Working with Monitor API token s
 {: #api_sysdig_token}
 
-You can use Sysdig API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 
+You can use Monitor API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 
 {:shortdesc}
 
 Consider the following information for each instance of the {{site.data.keyword.mon_full_notm}} service:
 
-* There is a Sysdig API token per team.
+* There is a Monitor API token per team.
 * If the token is compromised or your organization's security policies require resetting the token after certain conditions, a user with administration permissions can reset the API token.
 
 
-## Getting the Sysdig API token through the monitoring UI
+## Getting the Monitor API token through the monitoring UI
 {: #api_token_get}
 
-Complete the following steps to get the Sysdig token:
+Complete the following steps to get the Monitor API token :
 
 1. From the *Selector* button in the navigation bar, choose **Settings**
 2. From the *Sysdig Monitor API* section, copy the **Monitor API Token**.
@@ -49,59 +49,59 @@ When you copy the token include the `Bearer` keyword: `Authorization: Bearer SYS
 {: note}
 
 
-## Resetting the Sysdig API token through the monitoring UI
+## Resetting the Monitor API token through the monitoring UI
 {: #api_token_reset}
 
-Complete the following steps to reset the Sysdig token:
+Complete the following steps to reset the Monitor API token :
 
 1. From the *Selector* button in the navigation bar, choose **Settings**.
 2. In the *Sysdig Monitor API* section, click **Reset Token** to reset the API token.
 
 
 
-## Getting the Sysdig API token by using the Sysdig API
+## Getting the Monitor API token by using the Sysdig API
 {: #api_token_get_api}
 
-You can use the Token API to get the Sysdig token.
+You can use the Token API to get the Monitor API token .
 
-For example, you can use the following cURL command to get the Sysdig token:
+For example, you can use the following cURL command to get the Monitor API token :
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
+curl -X GET <MONITORING_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "TeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
 
 ```
-GET <SYSDIG_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
+GET <MONITORING_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "TeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<MONITORING_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
     `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
 
-    `SysdigTeamID` defines the team for which you want to get the Sysdig token.
+    `TeamID` defines the team for which you want to get the Monitor API token .
     
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
 
 
-When the authorization that is allowed in a monitoring instance is set to `IAM_ONLY`, you get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}` when you try to get the Sysdig token.
+When the authorization that is allowed in a monitoring instance is set to `IAM_ONLY`, you get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}` when you try to get the Monitor API token .
 {: note}
 
 
 ### Sample JSON code
 {: #api_token_get_api_json}
 
-You can use the following sample JSON code to get the Sysdig token:
+You can use the following sample JSON code to get the Monitor API token :
 
  ```json
 def get_sysdig_api_token(self, sysdig_instance_guid):
-    """ Get the Sysdig token by calling the /api/token endpoint """
+    """ Get the Monitor API token  by calling the /api/token endpoint """
     if self.access_token == None:
         self.get_iam_token()
     if self.access_token == None:
@@ -116,7 +116,7 @@ def get_sysdig_api_token(self, sysdig_instance_guid):
         data = response.json()
         return data["token"]["key"]
     else:
-        print_error("Error getting Sysdig token - {}".format(response.text))
+        print_error("Error getting Monitor API token  - {}".format(response.text))
         return None
 ```
 {: codeblock}
