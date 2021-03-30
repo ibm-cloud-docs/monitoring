@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Configuring the authentication method of a {{site.data.keyword.mon_short}} instance
 {: #iam_instance_auth}
 
-You can configure the authentication token that is allowed in a {{site.data.keyword.mon_short}} instance when you use Python scripts or the Monitoring REST API to manage resources. By default, you can use an IAM token or a Sysdig token. However, you can restrict the {{site.data.keyword.mon_short}} instance to only allow IAM tokens.
+You can configure the authentication token that is allowed in a {{site.data.keyword.mon_short}} instance when you use Python scripts or the {{site.data.keyword.mon_short}} REST API to manage resources. By default, you can use an IAM token or a Monitor API token . However, you can restrict the {{site.data.keyword.mon_short}} instance to only allow IAM tokens.
 {:shortdesc}
 
 
@@ -47,7 +47,7 @@ Complete the following steps:
 To get information about the {{site.data.keyword.mon_short}} instance, run the following command:
 
 ```
-ibmcloud resource service-instance SYSDIG_INSTANCE_NAME --output JSON
+ibmcloud resource service-instance MONITORING_INSTANCE_NAME --output JSON
 ```
 {: pre}
 
@@ -63,19 +63,19 @@ The output includes a `parameters` section with the following information:
 
 The `external_api_auth` field indicates the types of tokens that are allowed to work with the {{site.data.keyword.mon_short}} instance.
 - When the value is set to `IAM_ONLY`, you can only use IAM tokens to authenticate.
-- When the value is set to `ANY`, you can use IAM tokens and Sysdig tokens to authenticate.
+- When the value is set to `ANY`, you can use IAM tokens and Monitor API token s to authenticate.
 
 Check the `external_api_auth` to find out what tokens are allowed for authentication.
 
-## Step 2. Reset the Sysdig token for each team
+## Step 2. Reset the Monitor API token for each team
 {: #iam_instance_auth_step2}
 
 Complete this step if you are configuring your monitoring instance to authenticate with IAM tokens only.
 {: note}
 
-When you reset a Sysdig token, you disable the current Sysdig token that users might be using. There is 1 Sysdig token per team.
+When you reset a Monitor API token , you disable the current Monitor API token that users might be using. There is 1 Monitor API token per team.
 
-For each team in the {{site.data.keyword.mon_short}} instance, [reset the Sysdig token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_sysdig_token#api_token_reset). 
+For each team in the {{site.data.keyword.mon_short}} instance, [Reset the Monitor API token ](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_sysdig_token#api_token_reset). 
 
 ## Step 3. Configure the {{site.data.keyword.mon_short}} instance to only allow IAM tokens 
 {: #iam_instance_auth_step3}

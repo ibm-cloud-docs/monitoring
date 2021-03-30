@@ -108,12 +108,7 @@ Monitoring
 
         {: .topicgroup}
         Alerts
-            [Working with alerts](https://docs.sysdig.com/en/alerts.html)
-            [Downtime alert](https://docs.sysdig.com/en/downtime-alert.html)
-            [Metric alerts](https://docs.sysdig.com/en/metric-alerts.html)
-            [Event alerts](https://docs.sysdig.com/en/event-alerts.html)
-            [Anomaly detection alerts](https://docs.sysdig.com/en/anomaly-detection-alerts.html)
-            [Group outlier alerts](https://docs.sysdig.com/en/group-outlier-alerts.html)
+            monitor/alerts.md
             api/alert_api.md
             api/alert_python.md
             monitor/notifications.md
