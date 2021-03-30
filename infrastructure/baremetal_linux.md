@@ -150,7 +150,7 @@ Complete the following steps to launch the web UI:
 
     The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
-4. Select your instance. Then, click **View Sysdig**.
+4. Select your instance. Then, click **Open Dashboard**.
 
 The first time that you launch the monitoring UI, you might get a set of screens. Click **Next**, and **Complete Onboarding**.
 
