@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2019, 2020
-lastupdated: "2020-07-16"
+  years:  2019, 2021
+lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, service, CF, cf
 
@@ -24,18 +24,18 @@ subcollection: Monitoring-with-Sysdig
 # Monitoring Cloud Foundry metrics
 {: #monitor-cf-sysdig}
 
-{{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
 {:shortdesc}
 
 
 ## Enabling platform metrics
 {: #platform_metrics}
 
-Platform metrics are metrics that are exposed by enabled-Sysdig resources in {{site.data.keyword.cloud_notm}}. You must configure a Sysdig instance in a region to monitor these metrics.
+Platform metrics are metrics that are exposed by enabled-monitoring resources in {{site.data.keyword.cloud_notm}}. You must configure a {{site.data.keyword.mon_short}} instance in a region to monitor these metrics.
 
 You can configure only 1 instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics. 
-* To configure the Sysdig instance, you must set the *platform metrics* configuration setting. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
-* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig resources are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
+* To configure the {{site.data.keyword.mon_short}} instance, you must set the *platform metrics* configuration setting. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
+* If a {{site.data.keyword.mon_short}} instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring resources are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
 
 To monitor Cloud Foundry (CF) apps, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where your apps are running.
 {: important}
