@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2021
 lastupdated: "2021-01-18"
 
-keywords: Sysdig, IBM Cloud, monitoring, notifications, api
+keywords: IBM Cloud, monitoring, notifications, api
 
 subcollection: Monitoring-with-Sysdig
 

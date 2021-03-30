@@ -5,7 +5,7 @@ copyright:
 lastupdated: "2021-03-28"
 
 
-keywords: Sysdig, IBM Cloud, monitoring, delete instance
+keywords: IBM Cloud, monitoring, delete instance
 
 subcollection: Monitoring-with-Sysdig
 

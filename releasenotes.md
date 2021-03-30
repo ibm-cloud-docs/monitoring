@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2021
 lastupdated: "2021-03-28"
 
-keywords: Monitoring with Sysdig release notes, Monitoring with Sysdig updates
+keywords: Monitoring release notes, Monitoring updates
 
 subcollection: Monitoring-with-Sysdig
 
