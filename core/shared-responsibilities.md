@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2021
 lastupdated: "2021-03-28"
 
-keywords: Sysdig, IBM Cloud, monitoring, customer responsibilities, IBM responsibilities, terms and conditions
+keywords: IBM Cloud, monitoring, customer responsibilities, IBM responsibilities, terms and conditions
 
 subcollection: Monitoring-with-Sysdig
 

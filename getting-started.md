@@ -5,7 +5,7 @@ copyright:
 lastupdated: "2021-03-28"
 
 
-keywords: Sysdig, IBM Cloud, monitoring, getting started
+keywords: IBM Cloud, monitoring, getting started
 
 subcollection: Monitoring-with-Sysdig
 

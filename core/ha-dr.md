@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2021
 lastupdated: "2021-03-28"
 
-keywords: Sysdig, IBM Cloud, monitoring, disaster recovery, ha, high availability, redundancy
+keywords: IBM Cloud, monitoring, disaster recovery, ha, high availability, redundancy
 
 subcollection: Monitoring-with-Sysdig
 

@@ -4,7 +4,7 @@ copyright:
   years:  2019, 2020
 lastupdated: "2020-07-16"
 
-keywords: Sysdig, IBM Cloud, monitoring, service, CF, cf
+keywords: IBM Cloud, monitoring, service, CF, cf
 
 subcollection: Monitoring-with-Sysdig
 
