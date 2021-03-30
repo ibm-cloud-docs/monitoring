@@ -5,7 +5,7 @@ copyright:
 lastupdated: "2021-03-28"
 
 
-keywords: Sysdig, IBM Cloud, monitoring, upgrade
+keywords: IBM Cloud, monitoring, upgrade
 
 subcollection: Monitoring-with-Sysdig
 

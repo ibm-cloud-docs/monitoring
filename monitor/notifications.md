@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2021
 lastupdated: "2021-03-28"
 
-keywords: Sysdig, IBM Cloud, monitoring, notification channel
+keywords: IBM Cloud, monitoring, notification channel
 
 subcollection: Monitoring-with-Sysdig
 

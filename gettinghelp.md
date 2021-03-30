@@ -5,7 +5,7 @@ copyright:
 lastupdated: "2021-03-28"
 
 
-keywords: Sysdig, IBM Cloud, monitoring, support, help
+keywords: IBM Cloud, monitoring, support, help
 
 subcollection: Monitoring-with-Sysdig
 

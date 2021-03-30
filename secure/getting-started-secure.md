@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2021
 lastupdated: "2021-03-28"
 
-keywords: Sysdig, IBM Cloud, secure, getting started
+keywords: IBM Cloud, secure, getting started
 
 subcollection: Monitoring-with-Sysdig
 

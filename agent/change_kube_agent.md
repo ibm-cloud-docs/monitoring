@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2020
 lastupdated: "2020-06-24"
 
-keywords: Sysdig, IBM Cloud, monitoring, customize, kubernetes agent
+keywords: IBM Cloud, monitoring, customize, kubernetes agent
 
 subcollection: Monitoring-with-Sysdig
 
