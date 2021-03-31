@@ -45,7 +45,7 @@ Monitoring
     upgrade.md
 
     {: .topicgroup}
-    IAM integration
+    Controlling access
         iam/iam.md
         iam/api_token.md
         iam/iam_grant.md
