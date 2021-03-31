@@ -171,11 +171,11 @@ Monitoring
     
     {: .topicgroup}
     Monitoring CLI
-        /sysdig-monitor-cli-plugin/sysdig-monitor-cli-plugin-sysdig-monitor-cli
+        /monitor-cli-plugin/monitor-cli-plugin-monitor-cli
 
     {: .topicgroup}
     Monitoring API
-        [Monitoring API](https://cloud.ibm.com/apidocs/sysdig-monitor)
+        [Monitoring API](https://cloud.ibm.com/apidocs/monitor)
         api/rest_apis.md
         api/mon-curl.md
         iam/api_sysdig_token.md
