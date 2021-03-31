@@ -175,7 +175,7 @@ Monitoring
 
     {: .topicgroup}
     Monitoring API
-        [Monitoring API](https://cloud.ibm.com/apidocs/monitor)
+        [Monitoring API](/apidocs/monitor)
         api/rest_apis.md
         api/mon-curl.md
         iam/api_sysdig_token.md
