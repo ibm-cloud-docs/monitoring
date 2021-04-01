@@ -131,21 +131,13 @@ In the **EXPLORE** section of the web UI, dashboards are organized into two grou
 
 You can use pre-defined dashboards. You can also create custom dashboards through the web UI or programmatically. You can back up and restore dashboards by using Python scripts or the {{site.data.keyword.mon_full_notm}} REST API.
 
-You can also copy and share dashboards through the web UI. 
+You can also [manage dashboards through the web UI](https://docs.sysdig.com/en/dashboards.html){: external}. For example, you can:
 
-The following table outlines tasks that you can run to work with dashboards from the UI:
-
-| Task | Description |
-|------|-------------|
-| [Create dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_create) | Create a custom dashboard in the web UI. |
-| [Copy a dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_copy) | Make a copy of a dashboard in the current team where the dashboard is available, or copy a dashboard to another team. |
-| [Changing the scope](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_scope) | Chang the scope of a dashboard.       |
-| [Delete dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_delete) |  Delete a dashboard. |
-| [Share a dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_share) | Share dashboards between users in a team, and externally, by configuring a public URL for the dashboard. |
-{: caption="Table 3. Dashboard tasks that you can run in the web UI" caption-side="top"} 
-
-
-
+* Create a custom dashboard.
+* Make a copy of a dashboard in the current team where the dashboard is available, or copy a dashboard to another team.
+* Change the scope of a dashboard.
+* Delete a dashboard
+* Share dashboards between users in a team, and externally, by configuring a public URL for the dashboard.
 
 ## Events
 {: #monitoring_events}
@@ -188,7 +180,7 @@ You can define alerts for any of the following alert types:
 | Event             | Use to monitor occurrences of specific events, and alert if the total number of occurrences violates a threshold. For example, you can use it to alert on restarts and deployments of containers, orchestrations, and service events.|
 | Group Outlier     | Use to monitor a group of hosts and be notified when one acts differently from the rest. |
 | Metric            | Use to monitor time series metrics, and alert if they violate user-defined thresholds. |
-{: caption="Table 5. Alert types" caption-side="top"} 
+{: caption="Table 3. Alert types" caption-side="top"} 
 
 By default, severity is set to *warning*. You can set the severity of an alert to any of the following values: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *informational*, debug* 
 
@@ -207,7 +199,7 @@ You can enable predefined alerts, modify alerts, and create custom alerts in the
 
 You manage alerts in the *Alerts* view of the web UI. You can configure the table columns that are displayed in the *Alerts* view. Valid column options are *Name*, *Scope*, *Alert When*, *Segment By*, *Notifications*, *Enabled*, *Modified*, *Captures*, *Channels*, *Created*, *Description*, *Email recipients*, *For at least*, *OpsGenie*, *PagerDuty*, *Severity*, *Slack*, *WebHook*, *SNS topics*, *Type*, and *VictorOps*.
 
-See the [Alerts documentation](https://docs.sysdig.com/en/alerts.html){: external} for details on these and other topics related to alerting :
+See the [Alerts documentation](https://docs.sysdig.com/en/alerts.html){: external} for details on these and other topics related to alerting:
 
 * Configure an alert
 * Enable or disable an alert

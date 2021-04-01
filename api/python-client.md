@@ -212,7 +212,8 @@ You must specify a {{site.data.keyword.mon_short}} endpoint, and the Monitoring 
 
 Complete the following steps from a terminal:
 
-1. [Get the Monitoring API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+1. [Get the Monitoring API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_iam_token_get
+).
 
 2. Get the endpoint for the region where the monitoring instance is available. 
 
