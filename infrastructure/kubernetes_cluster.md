@@ -33,7 +33,7 @@ To configure a cluster to forward metrics, you must install a monitoring agent o
 
 You view metrics via the web-based user interface.
 
-![Components overview on the {{site.data.keyword.cloud_notm}}](../images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}")
+![Components overview on the {{site.data.keyword.cloud_notm}}](images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}")
 
 ## Objectives
 {: #kubernetes_cluster_objectives}
@@ -189,7 +189,7 @@ To launch the monitoring UI through the {{site.data.keyword.cloud_notm}} console
 
 3. Select **Monitoring**. The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
-4. Find your instance and click **Open Dashboard**.
+4. Find your instance and click **View {{site.data.keyword.mon_full_notm}}**.
 
     * **First time**: Because you already installed the monitoring agent, you can skip through the installation wizard, get started, and complete the onboarding.
     

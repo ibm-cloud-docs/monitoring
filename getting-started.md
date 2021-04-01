@@ -236,7 +236,7 @@ Complete the following steps to launch the monitoring UI:
 
     The list of monitoring instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
-4. Select one instance. Then, click **Open Dashboard**.
+4. Select one instance. Then, click **View {{site.data.keyword.mon_full_notm}}**.
 
 The {{site.data.keyword.mon_full_notm}} Web UI opens. By default, the *Explore* tab is displayed.
 
