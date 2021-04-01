@@ -268,8 +268,7 @@ docker run -it --rm sysdiglabs/promcat-connect:0.1 install Blackbox:2.5.0 -t <MO
 
 Where
 
-* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_iam_token_get
-).
+* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_iam_token_get).
 * `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 
 
