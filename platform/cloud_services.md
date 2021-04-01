@@ -54,7 +54,7 @@ The following table lists container services that are enabled for {{site.data.ke
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.openwhisk}}](/docs/openwhisk?topic=openwhisk-getting-started) | A Functions-as-a-Service (FaaS) programming platform based on Apache OpenWhisk. | [Metrics](/docs/openwhisk?topic=openwhisk-monitor-sysdig)|
+| [{{site.data.keyword.openwhisk}}](/docs/openwhisk?topic=openwhisk-getting-started) | A Functions-as-a-Service (FaaS) programming platform based on Apache OpenWhisk. | [Metrics](/docs/openwhisk?topic=openwhisk-monitor-functions)|
 {: caption="List of {{site.data.keyword.cloud_notm}} serverless services" caption-side="top"} 
 
 ### VPC
@@ -66,7 +66,7 @@ The following table lists VPC infrastructure services that are enabled for {{sit
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
-| [VPC virtual server instances](/docs/vpc?topic=vpc-about-advanced-virtual-servers) | Virtual servers for VPC is an Infrastructure-as-a-Service (IaaS) offering that you can use to quickly provision instances with high network performance. | [Metrics](/docs/cloud-infrastructure?topic=cloud-infrastructure-vpc-sysdig-metrics)|
+| [VPC virtual server instances](/docs/vpc?topic=vpc-about-advanced-virtual-servers) | Virtual servers for VPC is an Infrastructure-as-a-Service (IaaS) offering that you can use to quickly provision instances with high network performance. | [Metrics](/docs/cloud-infrastructure?topic=cloud-infrastructure-monitoring-iaas)|
 {: caption="List of VPC infrastructure services (generation 2)" caption-side="top"} 
 
 
@@ -77,7 +77,7 @@ The following table lists infrastructure services that are enabled for {{site.da
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.BluVirtServers}}](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) | Scalable virtual servers that are purchased with cores and memory allocations. | [Metrics](/docs/cloud-infrastructure?topic=cloud-infrastructure-classic-sysdig-metrics)|
+| [{{site.data.keyword.BluVirtServers}}](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) | Scalable virtual servers that are purchased with cores and memory allocations. | [Metrics](/docs/cloud-infrastructure?topic=cloud-infrastructure-monitoring-iaas)|
 {: caption="List of VPC classic infrastructure services (generation 1)" caption-side="top"} 
 
 ## Container services
@@ -87,10 +87,10 @@ The following table lists container services that are enabled for {{site.data.ke
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) | {{site.data.keyword.registrylong}} provides a multi-tenant, highly available, scalable, and encrypted private image registry that is hosted and managed by {{site.data.keyword.IBM}}. | [Metrics](/docs/Registry?topic=Registry-registry_monitor_sysdig)|
-| [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-getting-started) | You can use the {{site.data.keyword.containerlong_notm}} service to deploy highly available apps in Docker containers that run in Kubernetes clusters. | [Metrics](/docs/containers?topic=containers-health#sysdig) | 
-| [{{site.data.keyword.openshiftlong}}](/docs/openshift?topic=openshift-getting-started) | With {{site.data.keyword.openshiftlong_notm}}, you can deploy apps on highly available clusters that come installed with the Red Hat OpenShift on IBM Cloud Container Platform software installed on Red Hat Enterprise Linux. | [Metrics](/docs/openshift?topic=openshift-health#openshift_sysdig) |
-| [{{site.data.keyword.satellitelong}}](/docs/satellite?topic=satellite-getting-started) | With {{site.data.keyword.satellitelong_notm}}, you can bring your own compute infrastructure to run {{site.data.keyword.cloud_notm}} services and consistently deploy, manage, and control your app workloads. | [Metrics](/docs/satellite?topic=satellite-health#setup-sysdig) |
+| [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) | {{site.data.keyword.registrylong}} provides a multi-tenant, highly available, scalable, and encrypted private image registry that is hosted and managed by {{site.data.keyword.IBM}}. | [Metrics](/docs/Registry?topic=Registry-registry_monitor)|
+| [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-getting-started) | You can use the {{site.data.keyword.containerlong_notm}} service to deploy highly available apps in Docker containers that run in Kubernetes clusters. | [Metrics](/docs/containers?topic=containers-health#loggin) | 
+| [{{site.data.keyword.openshiftlong}}](/docs/openshift?topic=openshift-getting-started) | With {{site.data.keyword.openshiftlong_notm}}, you can deploy apps on highly available clusters that come installed with the Red Hat OpenShift on IBM Cloud Container Platform software installed on Red Hat Enterprise Linux. | [Metrics](/docs/openshift?topic=openshift-health#openshift_logging) |
+| [{{site.data.keyword.satellitelong}}](/docs/satellite?topic=satellite-getting-started) | With {{site.data.keyword.satellitelong_notm}}, you can bring your own compute infrastructure to run {{site.data.keyword.cloud_notm}} services and consistently deploy, manage, and control your app workloads. | [Metrics](/docs/satellite?topic=satellite-health) |
 {: caption="List of {{site.data.keyword.cloud_notm}} container services" caption-side="top"} 
 
 
@@ -118,8 +118,8 @@ The following table lists VPC infrastructure services that are enabled for {{sit
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
-| [Load Balancer for VPC](/docs/vpc?topic=vpc-network-load-balancers)| Distributes traffic among multiple server instances within the same region of your VPC.  | [Metrics](/docs/vpc?topic=vpc-nlb_monitoring-metrics-sysdig) |
-| [VPN for VPC](/docs/vpc?topic=vpc-using-vpn)| Securely connect your VPC to another private network. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premises private network or another VPC. | [Metrics](/docs/vpc?topic=vpc-sysdig-monitoring-metrics) |
+| [Load Balancer for VPC](/docs/vpc?topic=vpc-network-load-balancers)| Distributes traffic among multiple server instances within the same region of your VPC.  | [Metrics](/docs/vpc?topic=vpc-nlb_monitoring-metrics) |
+| [VPN for VPC](/docs/vpc?topic=vpc-using-vpn)| Securely connect your VPC to another private network. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premises private network or another VPC. | [Metrics](/docs/vpc?topic=vpc-vpn-monitoring-metrics) |
 {: caption="List of VPC services (generation 2)" caption-side="top"} 
 
 
@@ -131,8 +131,8 @@ The following table lists infrastructure services that are enabled for {{site.da
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.loadbalancer_full}}](/docs/loadbalancer-service?topic=loadbalancer-service-getting-started) | Distributes processing and communications evenly across multiple servers within a data center so that a single device does not carry an entire load. | [Metrics](/docs/loadbalancer-service?topic=loadbalancer-service-monitoring-metrics) |
-| [{{site.data.keyword.cloud}} Load Balancer for VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-load-balancers-in-ibm-cloud-vpc)| Use this service to distribute traffic among multiple server instances within the same region of your VPC.  | [Metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-monitoring-metrics-sysdig) |
-| [{{site.data.keyword.cloud}} VPN for VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc)| Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. | [Metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-sysdig-monitoring-metrics) |
+| [{{site.data.keyword.cloud}} Load Balancer for VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-load-balancers-in-ibm-cloud-vpc)| Use this service to distribute traffic among multiple server instances within the same region of your VPC.  | [Metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-monitoring-metrics) |
+| [{{site.data.keyword.cloud}} VPN for VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc)| Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. | [Metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-monitoring-metrics) |
 {: caption="List of VPC classic services (generation 1)" caption-side="top"} 
 
 
@@ -143,14 +143,14 @@ The following table lists database services that are enabled for {{site.data.key
 
 | Service           | Description    | Metrics |
 |-------------------|----------------|---------|
-| [{{site.data.keyword.cloudant_short_notm}}](/docs/Cloudant?topic=Cloudant-getting-started-with-cloudant)    | {{site.data.keyword.cloudant_short_notm}} is a document-oriented database as a service (DBaaS). It stores data as documents in JSON format. | [Metrics](/docs/Cloudant?topic=Cloudant-monitor-sysdig-pm) |
-| [{{site.data.keyword.databases-for-postgresql_full_notm}}](/docs/databases-for-postgresql?topic=databases-for-postgresql-getting-started) | {{site.data.keyword.databases-for-postgresql_full_notm}} is a managed PostgreSQL service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.  | [Metrics](/docs/databases-for-postgresql?topic=databases-for-postgresql-sysdig-monitoring) |
-| [{{site.data.keyword.databases-for-redis_full_notm}}](/docs/databases-for-redis?topic=databases-for-redis-getting-started) | {{site.data.keyword.databases-for-redis_full_notm}} is a managed service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.  | [Metrics](/docs/databases-for-redis?topic=databases-for-redis-sysdig-monitoring) |
-| [{{site.data.keyword.databases-for-etcd_full_notm}}](/docs/databases-for-etcd?topic=databases-for-etcd-getting-started) | {{site.data.keyword.databases-for-etcd_full_notm}} is a managed etcd service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Metrics](/docs/databases-for-etcd?topic=databases-for-etcd-sysdig-monitoring) |
-| [{{site.data.keyword.databases-for-elasticsearch_full_notm}}](/docs/databases-for-elasticsearch?topic=databases-for-elasticsearch-getting-started) | {{site.data.keyword.databases-for-elasticsearch_full_notm}} is a managed Elasticsearch service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Metrics](/docs/databases-for-elasticsearch?topic=databases-for-elasticsearch-sysdig-monitoring) |
-| [{{site.data.keyword.databases-for-mongodb_full_notm}}](/docs/databases-for-mongodb?topic=databases-for-mongodb-getting-started) | {{site.data.keyword.databases-for-mongodb_full_notm}} is a managed MongoDB service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Metrics](/docs/databases-for-mongodb?topic=databases-for-mongodb-sysdig-monitoring) |
-| [{{site.data.keyword.messages-for-rabbitmq_full_notm}}](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-getting-started)  | {{site.data.keyword.messages-for-rabbitmq_full_notm}} is a managed RabbitMQ service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.   | [Metrics](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-sysdig-monitoring) |
-| [{{site.data.keyword.sqlquery_full}}](/docs/services/sql-query?topic=sql-query-gettingstarted)| {{site.data.keyword.sqlquery_full}} is a fully-managed service that lets you run SQL queries (that is, SELECT statements) to analyze, transform, or clean up rectangular data. | [Metrics](/docs/services/sql-query?topic=sql-query-metrics) |
+| [{{site.data.keyword.cloudant_short_notm}}](/docs/Cloudant?topic=Cloudant-getting-started-with-cloudant)    | {{site.data.keyword.cloudant_short_notm}} is a document-oriented database as a service (DBaaS). It stores data as documents in JSON format. | [Metrics](/docs/Cloudant?topic=Cloudant-monitor-ibm-cloud-pm) |
+| [{{site.data.keyword.databases-for-postgresql_full_notm}}](/docs/databases-for-postgresql?topic=databases-for-postgresql-getting-started) | {{site.data.keyword.databases-for-postgresql_full_notm}} is a managed PostgreSQL service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.  | [Metrics](/docs/databases-for-postgresql?topic=databases-for-postgresql-monitoring) |
+| [{{site.data.keyword.databases-for-redis_full_notm}}](/docs/databases-for-redis?topic=databases-for-redis-getting-started) | {{site.data.keyword.databases-for-redis_full_notm}} is a managed service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.  | [Metrics](/docs/databases-for-redis?topic=databases-for-redis-monitoring) |
+| [{{site.data.keyword.databases-for-etcd_full_notm}}](/docs/databases-for-etcd?topic=databases-for-etcd-getting-started) | {{site.data.keyword.databases-for-etcd_full_notm}} is a managed etcd service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Metrics](/docs/databases-for-etcd?topic=databases-for-etcd-monitoring) |
+| [{{site.data.keyword.databases-for-elasticsearch_full_notm}}](/docs/databases-for-elasticsearch?topic=databases-for-elasticsearch-getting-started) | {{site.data.keyword.databases-for-elasticsearch_full_notm}} is a managed Elasticsearch service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Metrics](/docs/databases-for-elasticsearch?topic=databases-for-elasticsearch-monitoring) |
+| [{{site.data.keyword.databases-for-mongodb_full_notm}}](/docs/databases-for-mongodb?topic=databases-for-mongodb-getting-started) | {{site.data.keyword.databases-for-mongodb_full_notm}} is a managed MongoDB service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Metrics](/docs/databases-for-mongodb?topic=databases-for-mongodb-monitoring) |
+| [{{site.data.keyword.messages-for-rabbitmq_full_notm}}](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-getting-started)  | {{site.data.keyword.messages-for-rabbitmq_full_notm}} is a managed RabbitMQ service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.   | [Metrics](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-monitoring) |
+| [{{site.data.keyword.sqlquery_full}}](/docs/sql-query?topic=sql-query-getting-started)| {{site.data.keyword.sqlquery_full}} is a fully-managed service that lets you run SQL queries (that is, SELECT statements) to analyze, transform, or clean up rectangular data. | [Metrics](/docs/services/sql-query?topic=sql-query-metrics) |
 | [{{site.data.keyword.ihsdbaas_mongodb_full}}](/docs/hyper-protect-dbaas-for-mongodb?topic=hyper-protect-dbaas-for-mongodb-gettingstarted) | {{site.data.keyword.ihsdbaas_mongodb_full}} is a highly secure MongoDB service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Metrics](/docs/hyper-protect-dbaas-for-mongodb?topic=hyper-protect-dbaas-for-mongodb-monitor) |
 | [{{site.data.keyword.ihsdbaas_postgresql_full}}](/docs/hyper-protect-dbaas-for-postgresql?topic=hyper-protect-dbaas-for-postgresql-gettingstarted) | {{site.data.keyword.ihsdbaas_postgresql_full}} is a highly secure PostgreSQL service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Metrics](/docs/hyper-protect-dbaas-for-postgresql?topic=hyper-protect-dbaas-for-postgresql-monitor) |
 {: caption="List of database services" caption-side="top"} 
@@ -178,7 +178,7 @@ The following table lists Cloud services that are enabled for {{site.data.keywor
 | Service     | Description | More info |
 |-------------|-------------|-------------------------------------------------------------------------|
 | [{{site.data.keyword.keymanagementservicelong}}](/docs/key-protect?topic=key-protect-getting-started-tutorial#getting-started-tutorial) | You can use the {{site.data.keyword.keymanagementserviceshort}} service to provision encrypted keys for apps across the {{site.data.keyword.cloud_notm}}. | [Enabling metrics](/docs/key-protect?topic=key-protect-manage-sysdig-metrics) </br></br>[Metrics](/docs/key-protect?topic=key-protect-operational-metrics) |
-| [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started) | You can use the {{site.data.keyword.hscrypto}} to control your cloud data encryption keys in cloud hardware security modules for apps across the {{site.data.keyword.cloud_notm}}. | [Enabling metrics](docs/hs-crypto?topic=hs-crypto-manage-sysdig-metrics) </br></br>[Metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics) |
+| [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started) | You can use the {{site.data.keyword.hscrypto}} to control your cloud data encryption keys in cloud hardware security modules for apps across the {{site.data.keyword.cloud_notm}}. | [Enabling metrics](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics) </br></br>[Metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics) |
 {: caption="List of security Cloud services" caption-side="top"} 
 
 ## Platform

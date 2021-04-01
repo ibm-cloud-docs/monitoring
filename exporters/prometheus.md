@@ -151,7 +151,7 @@ docker run -it --rm sysdiglabs/promcat-connect:0.1 install rancher:2.5.0 -t <MON
 
 Where
 
-* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_iam_token_get).
 * `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 
 

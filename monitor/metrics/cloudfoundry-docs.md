@@ -58,8 +58,8 @@ Complete the following steps to launch the monitoring UI from the *Observability
 {: #view_metrics}
 
 You cannot customize a pre-defined Cloud Foundry dashboard. To be able to monitor Cloud Foundry apps, you must complete the following steps:
-1. [Copy the pre-defined dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_copy). 
-2. [Change the scope of the new dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_scope).
+1. [Copy the pre-defined dashboard](https://docs.sysdig.com/en/create-a-new-dashboard.html){: external}. 
+2. [Change the scope of the new dashboard](https://docs.sysdig.com/en/dashboard-scope.html){: external}.
 
     You can change the scope for all the metrics that are included in the dashboard. You can also change the scope of each metric.
 

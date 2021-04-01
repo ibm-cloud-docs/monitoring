@@ -242,7 +242,7 @@ Complete the following steps:
     
     `ENDPOINT` is the monitoring collector endpoint. To see the list of endpoints, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
-    `monitoring-apikey` is the file that contains the **Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Getting the API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+    `monitoring-apikey` is the file that contains the **Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Getting the API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_iam_token_get).
 
     For example, the completed version of the prometheus.yml could look like :
   

@@ -44,18 +44,13 @@ Labels are classified as infrastructure labels and metric descriptor labels. Eac
 
 **Groups** organize infrastructure objects into logical hierarchies. Use groups to structure your infrastructure and ease how you monitor your environment.
 
-In the *Explore* view of the Web UI, you can run any of the following actions:
+In the *Explore* view of the Web UI, you can use the [Groupings Editor](https://docs.sysdig.com/en/groupings-editor.html){: external} to do the following:
 
-| Task                                                                                        | Description     |
-|---------------------------------------------------------------------------------------------|-----------------|
-| [Copy a group](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-eaf7c796-4b20-d618-2176-2718ca70affc){: external}                | Copy a group to other teams. |
-| [Create a group](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-54cf5358-4f52-15b7-3738-e5dd7d230437){: external}            | Create a group. |
-| [Delete a group](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-4d71d247-73bf-db60-aa0d-74fe3b045b68){: external}            | Delete a group. |
-| [Rename a group](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-3bfd69e4-cadd-efc0-d8a3-1b5f507a6e86){: external}            | Rename a group. |
-| [Share a group](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-68f6f9a0-6a50-6076-2a33-f1f026b02eac){: external}              | Share a group with other members in the team. |
-{: caption="Table 1. Tasks grouping labels" caption-side="top"} 
-
-
+* Search for groups
+* Create groups
+* Edit existing groups
+* Rename groups
+* Share groups with other members of the team
 
 ## Aggregation
 {: #manage_aggregation}
@@ -138,7 +133,7 @@ The following table lists the tasks that you can run to change the scope in the 
 
 | Task                                                                                        | Description     |
 |---------------------------------------------------------------------------------------------|-----------------|
-| [Changing the scope of a dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_scope) | Change the scope of a dashboard to filter out data points for all metrics displayed through panels on the dashboard. |
+| [Changing the scope of a dashboard](https://docs.sysdig.com/en/dashboard-scope.html){: external} | Change the scope of a dashboard to filter out data points for all metrics displayed through panels on the dashboard. |
 | [Changing the scope of a panel](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-panels#panels_scope) | Change the scope of a panel to filter out data for a specific metric that is displayed through the panel. |
 | [Changing the scope of a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams#teams_scope) | Change the scope of the data that is visible to users that are members of a team. |
 {: caption="Table 4. Tasks to change the scope" caption-side="top"} 
