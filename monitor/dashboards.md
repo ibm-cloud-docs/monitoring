@@ -62,7 +62,7 @@ Pre-defined dashboards are designed around various supported applications, netwo
 
 Pre-defined dashboards include a series of panels that are already configured.
 
-For more information on pre-defined dashboards, see [Dashboard Templates](https://docs.sysdig.com/en/dashboard-templates-209032.html).
+For more information on pre-defined dashboards, see [Dashboard Templates](https://docs.sysdig.com/en/dashboard-templates-209032.html){: external}.
 
 ## Creating custom dashboards in the Web UI
 {: #dashboards_create}
@@ -71,7 +71,7 @@ When you create a custom dashboard, you can start from a template such as a pre-
 
 Complete the following steps to create a custom dashboard:
 
-1. Navigate to the *DASHBOARD** section in the Web UI, and select **Add Dashboard**. The *Create a New Dashboard* page opens.
+1. Navigate to the **DASHBOARD** section in the Web UI, and select **Add Dashboard**. The *Create a New Dashboard* page opens.
 
     1. Select a pre-defined dashboard or choose the *Blank Dashboard*. 
 

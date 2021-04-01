@@ -55,7 +55,7 @@ When you copy the token include the `Bearer` keyword: `Authorization: Bearer MON
 Complete the following steps to reset the Monitor API token :
 
 1. From the *Selector* button in the navigation bar, choose **Settings**.
-2. In the *Sysdig Monitor API* section, click **Reset Token** to reset the API token.
+2. In the *Monitor API* section, click **Reset Token** to reset the API token.
 
 
 
@@ -100,7 +100,7 @@ When the authorization that is allowed in a monitoring instance is set to `IAM_O
 You can use the following sample JSON code to get the Monitor API token :
 
  ```json
-def get_sysdig_api_token(self, sysdig_instance_guid):
+def get_sysdig_api_token(self, instance_guid):
     """ Get the Monitor API token  by calling the /api/token endpoint """
     if self.access_token == None:
         self.get_iam_token()
@@ -109,7 +109,7 @@ def get_sysdig_api_token(self, sysdig_instance_guid):
         return None
     headers = { "Authorization": self.access_token,
                 "Accept": "application/json",
-                "IBMInstanceID": sysdig_instance_guid }
+                "IBMInstanceID": instance_guid }
     url = self.sysdig_endpoint + "/api/token"
     response = requests.get(url, headers=headers)
     if response.status_code == 200:

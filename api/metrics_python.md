@@ -28,8 +28,6 @@ subcollection: Monitoring-with-Sysdig
 You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance through REST API operations that you can run by using a Python client or by using a cURL command.
 {:shortdesc}
 
-For more information about the {{site.data.keyword.mon_short}} Metric Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
-
 
 ## Get metrics by using a Python client
 {: #metrics_python-py}
@@ -44,7 +42,7 @@ The following code shows the structure of a Python script that you can use to re
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Add the monitoring instance information that is required for authentication
-URL = <SYSDIG-ENDPOINT> 
+URL = <MONITORING-ENDPOINT> 
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
@@ -79,7 +77,7 @@ if ok:
 {: codeblock}
 
 
-You must include the following information: `<SYSDIG-ENDPOINT>`, `<IAM_APIKEY>`, and `<GUID>` These data is required to authenticate the request with the monitoring instance. To get the monitoring instance information, see [Authenticate your user or service ID by using IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client#python-client-iam-auth).
+You must include the following information: `<MONITORING-ENDPOINT>`, `<IAM_APIKEY>`, and `<GUID>` These data is required to authenticate the request with the monitoring instance. To get the monitoring instance information, see [Authenticate your user or service ID by using IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client#python-client-iam-auth).
 
 
 
@@ -99,9 +97,9 @@ For Python examples, see any of the following examples:
 ## Metrics dictionary
 {: #metrics_python-dictionary}
 
-To see the pre-defefined metrics by Sysdig, see [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html){: external}.
+To see the pre-defined metrics, see [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html){: external}.
 
-To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_notm}} services that are Sysdig-enabled, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services). 
+To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_notm}} services that are enabled for Monitoring, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services). 
 
 
 ## Data aggregation

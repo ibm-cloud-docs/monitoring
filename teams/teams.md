@@ -89,7 +89,7 @@ Complete the following steps to create a team:
     
         By default, the scope is set to *everywhere*.
 	
-    * [Optional] Enable or disable **Sysdig captures**. Check this box to allow this team to take Sysdig Captures. 
+    * [Optional] Enable or disable **Sysdig captures**. Check this box to allow this team to take {{site.data.keyword.mon_full_notm}} Captures. 
     
         Capture files will only be visible to members of this team. 
         

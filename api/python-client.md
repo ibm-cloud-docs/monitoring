@@ -295,7 +295,7 @@ from sdcclient import IbmAuthHelper, SdMonitorClient
 def usage():
    print('usage: %s <ENDPOINT_URL> <MONITOR_TOKEN> <INSTANCE_GUID>' % sys.argv[0])
    print('ENDPOINT_URL: IBM Cloud endpoint URL (e.g. https://us-south.monitoring.cloud.ibm.com')
-   print('MONITOR_TOKEN: Sysdig token that is associated to a team.')
+   print('MONITOR_TOKEN: token that is associated to a team.')
    sys.exit(1)
 
 if len(sys.argv) != 3:

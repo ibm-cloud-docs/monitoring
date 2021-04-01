@@ -60,13 +60,13 @@ Check that port 6443 is opened. For more information, see [Managing network traf
 ## Are you observing monitoring agent connection errors or receiving uptime alerts reporting an host is down when there are no problems?
 {: #troubleshoot-entry-3}
 
-Sysdig has identified an issue with a subset of agent versions:
+{{site.data.keyword.mon_full_notm}} has identified an issue with a subset of agent versions:
 - monitoring agent 10.3.0
 - monitoring agent 10.3.1
 - monitoring agent 10.4.0
 - monitoring agent 10.4.1 
 
-Where connectivity between your infrastructure and Sysdig’s hosted service may fail. For more information, see [Sysdig Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html).
+Where connectivity between your infrastructure and the {{site.data.keyword.mon_full_notm}} hosted service may fail. For more information, see [Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html).
 
 If you are experiencing connectivity issues, complete the following steps:
 
@@ -80,9 +80,9 @@ If you are experiencing connectivity issues, complete the following steps:
 ## Are you getting access denied when running API calls?
 {: #troubleshoot-entry-4}
 
-When the authorization method that is allowed in a Sysdig instance is set to `IAM_ONLY`, you can get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}`. 
+When the authorization method that is allowed in a {{site.data.keyword.mon_full_notm}} instance is set to `IAM_ONLY`, you can get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}`. 
 
 First, [check the instance authorization methods that are allowed](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_instance_auth#iam_instance_auth_step1).
 
-Then, review [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam) and [Headers for Sysdig Token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-sysdig) before you retry the request.
+Then, review [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam) and [Token headers](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-sysdig) before you retry the request.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2019, 2021
-lastupdated: "2021-03-28"
+  years:  2019, 2020
+lastupdated: "2020-07-16"
 
 keywords: IBM Cloud, monitoring, service, CF, cf
 
@@ -24,167 +24,167 @@ subcollection: Monitoring-with-Sysdig
 # Monitoring Cloud Foundry metrics
 {: #monitor-cf-sysdig}
 
-{{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
+{{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. {{site.data.keyword.mon_full_notm}} is operated by {{site.data.keyword.mon_full_notm}} in partnership with {{site.data.keyword.IBM_notm}}.
 {:shortdesc}
 
 
 ## Enabling platform metrics
 {: #platform_metrics}
 
-Platform metrics are metrics that are exposed by enabled-monitoring resources in {{site.data.keyword.cloud_notm}}. You must configure a {{site.data.keyword.mon_short}} instance in a region to monitor these metrics.
+Platform metrics are metrics that are exposed by {{site.data.keyword.mon_full_notm}} enabled resources in {{site.data.keyword.cloud_notm}}. You must configure an {{site.data.keyword.mon_full_notm}} instance in a region to monitor these metrics.
 
 You can configure only 1 instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics. 
-* To configure the {{site.data.keyword.mon_short}} instance, you must set the *platform metrics* configuration setting. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
-* If a {{site.data.keyword.mon_short}} instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring resources are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
+* To configure the {{site.data.keyword.mon_full_notm}} instance, you must set the *platform metrics* configuration setting. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
+* If an {{site.data.keyword.mon_full_notm}} instance in a region is already enabled to collect platform metrics, metrics from Monitoring-enabled resources are collected automatically and available for monitoring through this instance. For more information about Monitoring-enabled services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
 
-To monitor Cloud Foundry (CF) apps, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where your apps are running.
+To monitor Cloud Foundry apps, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where your apps are running.
 {: important}
 
 
 ## Navigating to the monitoring UI
-{: #launch_sysdig_ui}
+{: #launch_monitoring_ui}
 
-To monitor CF apps, you must launch the monitoring UI in the region where your CF apps are running.
+To monitor Cloud Foundry apps, you must launch the monitoring UI in the region where your Cloud Foundry apps are running.
 {: important}
 
-Complete the following steps to launch the monitoring UI from the *Observability* page and open the pre-defined CF dashboard:
+Complete the following steps to launch the monitoring UI from the *Observability* page and open the pre-defined Cloud Foundry dashboard:
 
 1.[Launch the monitoring UI](/docs/services/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 2. Select **DASHBOARDS**.
 3. In the **Default Dashboards** section, expand **IBM**.
-4. Choose the pre-defined CF dashboard **Overview CF apps** from the list.
+4. Choose the pre-defined Cloud Foundry dashboard **Overview CF apps** from the list.
 
 ## Viewing metrics
 {: #view_metrics}
 
-You cannot customize a pre-defined CF dashboard. To be able to monitor CF apps, you must complete the following steps:
+You cannot customize a pre-defined Cloud Foundry dashboard. To be able to monitor Cloud Foundry apps, you must complete the following steps:
 1. [Copy the pre-defined dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_copy). 
 2. [Change the scope of the new dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_scope).
 
     You can change the scope for all the metrics that are included in the dashboard. You can also change the scope of each metric.
 
-    When you change the scope, you can change the scope to report on a specific CF app, on a CF app index, on apps running in a CF organization, or on apps running in a CF space.
+    When you change the scope, you can change the scope to report on a specific Cloud Foundry app, on a Cloud Foundry app index, on apps running in a Cloud Foundry organization, or on apps running in a Cloud Foundry space.
 
 
 ## Metrics dictionary
 {: #metrics_dictionary}
 
-* [CPU entitlement of the CF application](#ibm_cloudfoundry_app_cpu_entitlement)  
-* [CPU usage of the CF application](#ibm_cloudfoundry_app_cpu_usage)  
-* [CPU utilization of the CF application](#ibm_cloudfoundry_app_cpu_utilization)  
-* [Container age of the CF application](#ibm_cloudfoundry_app_container_age)  
-* [Disk usage of the CF application](#ibm_cloudfoundry_app_disk_bytes_used)  
-* [Memory usage of the CF application](#ibm_cloudfoundry_app_memory_bytes_used)  
-* [Total disk size of the CF application](#ibm_cloudfoundry_app_disk_bytes_total)  
-* [Total memory of the CF application](#ibm_cloudfoundry_app_memory_bytes_total)  
+* [CPU entitlement of the Cloud Foundry application](#ibm_cloudfoundry_app_cpu_entitlement)  
+* [CPU usage of the Cloud Foundry application](#ibm_cloudfoundry_app_cpu_usage)  
+* [CPU utilization of the Cloud Foundry application](#ibm_cloudfoundry_app_cpu_utilization)  
+* [Container age of the Cloud Foundry application](#ibm_cloudfoundry_app_container_age)  
+* [Disk usage of the Cloud Foundry application](#ibm_cloudfoundry_app_disk_bytes_used)  
+* [Memory usage of the Cloud Foundry application](#ibm_cloudfoundry_app_memory_bytes_used)  
+* [Total disk size of the Cloud Foundry application](#ibm_cloudfoundry_app_disk_bytes_total)  
+* [Total memory of the Cloud Foundry application](#ibm_cloudfoundry_app_memory_bytes_total)  
 
 For more information, see [the Cloud Foundry documentation: Container metrics](https://docs.cloudfoundry.org/loggregator/container-metrics.html){: external}.
 
 
-### CPU entitlement of the CF application
+### CPU entitlement of the Cloud Foundry application
 {: #ibm_cloudfoundry_app_cpu_entitlement}
 
-Indicates the CPU entitlement of a CF application.
+Indicates the CPU entitlement of a Cloud Foundry application.
 
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_cloudfoundry_app_cpu_entitlement`|
 | `Metric Type` | `gauge` |
 | `Value Type`  | `second` |
-| `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 1: CPU entitlement of the CF application metric metadata" caption-side="top"}
+| `Segment By` | `IBM Cloud Foundry organization name`, `IBM Cloud Foundry organization GUID`, `IBM Cloud Foundry space name`, `IBM Cloud Foundry space GUID`, `IBM Cloud Foundry application name`, `IBM Cloud Foundry application index` |
+{: caption="Table 1: CPU entitlement of the Cloud Foundry application metric metadata" caption-side="top"}
 
-### CPU usage of the CF application
+### CPU usage of the Cloud Foundry application
 {: #ibm_cloudfoundry_app_cpu_usage}
 
-Indicates the CPU usage of the CF application.
+Indicates the CPU usage of the Cloud Foundry application.
 
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_cloudfoundry_app_cpu_usage`|
 | `Metric Type` | `gauge` |
 | `Value Type`  | `second` |
-| `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 2: CPU usage of the CF application metric metadata" caption-side="top"}
+| `Segment By` | `IBM Cloud Foundry organization name`, `IBM Cloud Foundry organization GUID`, `IBM Cloud Foundry space name`, `IBM Cloud Foundry space GUID`, `IBM Cloud Foundry application name`, `IBM Cloud Foundry application index` |
+{: caption="Table 2: CPU usage of the Cloud Foundry application metric metadata" caption-side="top"}
 
 
-### CPU utilization of the CF application
+### CPU utilization of the Cloud Foundry application
 {: #ibm_cloudfoundry_app_cpu_utilization}
 
-Indicates the CPU utilization of a CF application.
+Indicates the CPU utilization of a Cloud Foundry application.
 
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_cloudfoundry_app_cpu_utilization`|
 | `Metric Type` | `gauge` |
 | `Value Type`  | `percent` |
-| `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 3: CPU utilization of the CF application metric metadata" caption-side="top"}
+| `Segment By` | `IBM Cloud Foundry organization name`, `IBM Cloud Foundry organization GUID`, `IBM Cloud Foundry space name`, `IBM Cloud Foundry space GUID`, `IBM Cloud Foundry application name`, `IBM Cloud Foundry application index` |
+{: caption="Table 3: CPU utilization of the Cloud Foundry application metric metadata" caption-side="top"}
 
-### Container age of the CF application
+### Container age of the Cloud Foundry application
 {: #ibm_cloudfoundry_app_container_age}
 
-Indicates the container age of the CF application.
+Indicates the container age of the Cloud Foundry application.
 
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_cloudfoundry_app_container_age`|
 | `Metric Type` | `gauge` |
 | `Value Type`  | `second` |
-| `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 4: Container age of the CF application metric metadata" caption-side="top"}
+| `Segment By` | `IBM Cloud Foundry organization name`, `IBM Cloud Foundry organization GUID`, `IBM Cloud Foundry space name`, `IBM Cloud Foundry space GUID`, `IBM Cloud Foundry application name`, `IBM Cloud Foundry application index` |
+{: caption="Table 4: Container age of the Cloud Foundry application metric metadata" caption-side="top"}
 
-### Disk usage of the CF application
+### Disk usage of the Cloud Foundry application
 {: #ibm_cloudfoundry_app_disk_bytes_used}
 
-Indicates the disk usage of the CF application.
+Indicates the disk usage of the Cloud Foundry application.
 
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_cloudfoundry_app_disk_bytes_used`|
 | `Metric Type` | `gauge` |
 | `Value Type`  | `bytes` |
-| `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 5: Disk usage of the CF application metric metadata" caption-side="top"}
+| `Segment By` | `IBM Cloud Foundry organization name`, `IBM Cloud Foundry organization GUID`, `IBM Cloud Foundry space name`, `IBM Cloud Foundry space GUID`, `IBM Cloud Foundry application name`, `IBM Cloud Foundry application index` |
+{: caption="Table 5: Disk usage of the Cloud Foundry application metric metadata" caption-side="top"}
 
-### Memory usage of the CF application
+### Memory usage of the Cloud Foundry application
 {: #ibm_cloudfoundry_app_memory_bytes_used}
 
-Indicates the memory usage of the CF application.
+Indicates the memory usage of the Cloud Foundry application.
 
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_cloudfoundry_app_memory_bytes_used`|
 | `Metric Type` | `gauge` |
 | `Value Type`  | `bytes` |
-| `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 6: Memory usage of the CF application metric metadata" caption-side="top"}
+| `Segment By` | `IBM Cloud Foundry organization name`, `IBM Cloud Foundry organization GUID`, `IBM Cloud Foundry space name`, `IBM Cloud Foundry space GUID`, `IBM Cloud Foundry application name`, `IBM Cloud Foundry application index` |
+{: caption="Table 6: Memory usage of the Cloud Foundry application metric metadata" caption-side="top"}
 
-### Total disk size of the CF application
+### Total disk size of the Cloud Foundry application
 {: #ibm_cloudfoundry_app_disk_bytes_total}
 
-Indicates the total disk size of the CF application.
+Indicates the total disk size of the Cloud Foundry application.
 
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_cloudfoundry_app_disk_bytes_total`|
 | `Metric Type` | `gauge` |
 | `Value Type`  | `bytes` |
-| `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 7: Total disk size of the CF application metric metadata" caption-side="top"}
+| `Segment By` | `IBM Cloud Foundry organization name`, `IBM Cloud Foundry organization GUID`, `IBM Cloud Foundry space name`, `IBM Cloud Foundry space GUID`, `IBM Cloud Foundry application name`, `IBM Cloud Foundry application index` |
+{: caption="Table 7: Total disk size of the Cloud Foundry application metric metadata" caption-side="top"}
 
-### Total memory of the CF application
+### Total memory of the Cloud Foundry application
 {: #ibm_cloudfoundry_app_memory_bytes_total}
 
-Indicates the total memory of the CF application.
+Indicates the total memory of the Cloud Foundry application.
 
 | Metadata | Description |
 |----------|-------------|
 | `Metric Name` | `ibm_cloudfoundry_app_memory_bytes_total`|
 | `Metric Type` | `gauge` |
 | `Value Type`  | `bytes` |
-| `Segment By` | `IBM CF organization name`, `IBM CF organization GUID`, `IBM CF space name`, `IBM CF space GUID`, `IBM CF application name`, `IBM CF application index` |
-{: caption="Table 8: Total memory of the CF application metric metadata" caption-side="top"}
+| `Segment By` | `IBM Cloud Foundry organization name`, `IBM Cloud Foundry organization GUID`, `IBM Cloud Foundry space name`, `IBM Cloud Foundry space GUID`, `IBM Cloud Foundry application name`, `IBM Cloud Foundry application index` |
+{: caption="Table 8: Total memory of the Cloud Foundry application metric metadata" caption-side="top"}
 
 
 
@@ -226,10 +226,10 @@ The following attributes are available for segmenting one or more attributes. Ch
 
 
 
-## CF dashboards dictionary
+## Cloud Foundry dashboards dictionary
 {: #dashboards_dictionary}
 
-The following table outlines the pre-defined dashboards that you can use to monitor CF metrics:
+The following table outlines the pre-defined dashboards that you can use to monitor Cloud Foundry metrics:
 
 | Dashboard name                  | Description    |
 |---------------------------------|----------------|
