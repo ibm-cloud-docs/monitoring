@@ -62,7 +62,7 @@ Complete the following steps to add a notification channel:
 
     * For a **VictorOps** notification channel, add the *API key* and the *Routing key*.
 
-    * For an **OpsGenie** notification channel, add the *OpsGenie API key*. Notice that you must configure in OpsGenie the integration with {{site.data.keyword.mon_full_notm}}. For more information, see [Add {{site.data.keyword.mon_full_notm}} Cloud Integration in Opsgenie](https://docs.opsgenie.com/v1.0/docs/sysdig-cloud-integration){: external}.
+    * For an **OpsGenie** notification channel, add the *OpsGenie API key*. Notice that you must configure in OpsGenie the integration with {{site.data.keyword.mon_full_notm}}. For more information, see [Add {{site.data.keyword.mon_full_notm}} Integration in Opsgenie](https://docs.opsgenie.com/v1.0/docs/sysdig-cloud-integration){: external}.
 
     * For a **PagerDuty** notification channel, first you must authorize {{site.data.keyword.mon_full_notm}}to integrate with your account. When you select PagerDuty, a wizard to configure the integration with {{site.data.keyword.mon_full_notm}}opens. Click either **Authorize Integration** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for {{site.data.keyword.mon_full_notm}}notifications, then click **Finish Integration**. Select the escalation policy to use for {{site.data.keyword.mon_full_notm}}incidents. Then, on the *Notifications* tab, confirm your PagerDuty account, your service name, and the service key. 
 
