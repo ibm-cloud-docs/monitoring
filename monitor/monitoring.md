@@ -129,7 +129,7 @@ In the **EXPLORE** section of the web UI, dashboards are organized into two grou
 * **Default dashboards**: These dashboards are pre-defined dashboards.
 * **My Dashboards**: These dashboards are created by the user who is currently logged in.
 
-You can use pre-defined dashboards. You can also create custom dashboards through the web UI or programmatically. You can back up and restore dashboards by using Python scripts or the Sysdig REST API.
+You can use pre-defined dashboards. You can also create custom dashboards through the web UI or programmatically. You can back up and restore dashboards by using Python scripts or the {{site.data.keyword.mon_full_notm}} REST API.
 
 You can also copy and share dashboards through the web UI. 
 
@@ -203,11 +203,11 @@ You can define one or more notification channels for any of the following notifi
 For more information, see [Configuring a notification channel](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-notifications#notifications_create).
 
 
-You can enable predefined alerts, modify alerts, and create custom alerts in the web UI and by using the Sysdig API.
+You can enable predefined alerts, modify alerts, and create custom alerts in the web UI and by using the {{site.data.keyword.mon_full_notm}} API.
 
 You manage alerts in the *Alerts* view of the web UI. You can configure the table columns that are displayed in the *Alerts* view. Valid column options are *Name*, *Scope*, *Alert When*, *Segment By*, *Notifications*, *Enabled*, *Modified*, *Captures*, *Channels*, *Created*, *Description*, *Email recipients*, *For at least*, *OpsGenie*, *PagerDuty*, *Severity*, *Slack*, *WebHook*, *SNS topics*, *Type*, and *VictorOps*.
 
-See the [Alerts documentation at docs.sysdig.com](https://docs.sysdig.com/en/alerts.html){: external} for details on these and other topics related to alerting :
+See the [Alerts documentation](https://docs.sysdig.com/en/alerts.html){: external} for details on these and other topics related to alerting :
 
 * Configure an alert
 * Enable or disable an alert
@@ -231,7 +231,7 @@ Depending on your organization’s guidelines, consider disabling captures. By d
 You can create, explore, download, and delete *captures* for individual nodes. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a monitoring agent. 
 
 * In the web UI, you create captures in the *Explore* section and manage capture files through the *Captures* section.
-* You can visualize data from a capture by using *Csysdig* (the curses-based command-line UI for sysdig) or the open source Sysdig utilities to analyze the data in a capture.
+* You can visualize data from a capture by using *Csysdig* (the curses-based command-line UI).
 * You can search data in a capture by using filters.
 * You can manipulate data in a capture by using chisels (scripts). 
 

@@ -29,7 +29,7 @@ Use the Python Client to manage dashboards programmatically.
 
 To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
 
-To work with resources in a specific team, you must use the Sysdig token.
+To work with resources in a specific team, you must use the Monitoring (sysdig) token.
 {: important}
 
 The following table lists some of the Python functions that you can use to manage dashboards:

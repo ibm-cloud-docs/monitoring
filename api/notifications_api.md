@@ -37,13 +37,13 @@ You can use the following cURL command to get information about all the notifica
 
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels?from=<START_TIMESTAMP>&to=<END_TIMESTAMP> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
+curl -X GET <REST_API_ENDPOINT>/api/notificationChannels?from=<START_TIMESTAMP>&to=<END_TIMESTAMP> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -65,13 +65,13 @@ You can use the following cURL command to get information about a notification c
 
 
 ```shell
-curl -X GET <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
+curl -X GET <REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -116,13 +116,13 @@ You can use the following cURL command to create an notification:
 
 
 ```shell
-curl -X POST <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @notification.json
+curl -X POST <REST_API_ENDPOINT>/api/notificationChannels -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @notification.json
 ```
 {: codeblock}
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -168,13 +168,13 @@ You can use the following cURL command to delete a notification:
 
 
 ```shell
-curl -X DELETE <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
+curl -X DELETE <REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -198,13 +198,13 @@ You can use the following cURL command to update an notification:
 
 
 ```shell
-curl -X PUT <SYSDIG_REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @notification.json
+curl -X PUT <REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d @notification.json
 ```
 {: codeblock}
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -245,7 +245,7 @@ The following sample shows the request body parameters that you can set to updat
 - modifiedOn
 
 
-**Note:** Notification version can get through response body of [notificationChannels API](#fetch-specific-user-notification). User can also add [customHeaders & customData](https://docs.sysdig.com/en/configure-a-webhook-channel.html#al_UUID-a6715905-0530-a08a-a3ab-cb10b2c5d19b_UUID-f9896786-62e5-c4c3-d2ef-38d3a2f7dfab) to notfications based on their requirements.
+**Note:** Notification version can get through response body of [notificationChannels API](#fetch-specific-user-notification). User can also add [customHeaders & customData](https://docs.sysdig.com/en/configure-a-webhook-channel.html#al_UUID-a6715905-0530-a08a-a3ab-cb10b2c5d19b_UUID-f9896786-62e5-c4c3-d2ef-38d3a2f7dfab){: external} to notfications based on their requirements.
 
 
 

@@ -43,7 +43,7 @@ To enable platform metrics in a region, complete the following steps:
 ### Step 1. Provision a monitoring instance
 {: #platform_metrics_enabling_step1}
 
-[Provision an instance of Sysdig](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision) in the region where the service that you wish to monitor is running.  
+[Provision an instance of {{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision) in the region where the service that you wish to monitor is running.  
 
 For example, if you are monitoring an {{site.data.keyword.messagehub}} instance in the London region, then you must create a monitoring instance in London.
 

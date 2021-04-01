@@ -68,7 +68,7 @@ There are different types of aggregation that are used for metrics:
 
 Time aggregation is always performed before group aggregation.
 
-Sysdig aggregates data over time. Then, take those data points, and groups them to display the data in metrics, dashboards, or calculate alert's thresholds. 
+{{site.data.keyword.mon_full_notm}} aggregates data over time. Then, take those data points, and groups them to display the data in metrics, dashboards, or calculate alert's thresholds. 
 {: tip}
 
 You can customize how data is aggregated when you configure a graph or create an alert for a metric.
@@ -147,13 +147,13 @@ The following table lists the tasks that you can run to change the scope in the 
 ## Teams
 {: #manage_teams}
 
-**Teams** group users and control the data and the permissions to work with Sysdig captures and infrastructure events for those users. 
+**Teams** group users and control the data and the permissions to work with {{site.data.keyword.mon_full_notm}} captures and infrastructure events for those users. 
 
-A Sysdig administrator can define any number of teams. For each team, an admin can configure the following information:
+A {{site.data.keyword.mon_full_notm}} administrator can define any number of teams. For each team, an admin can configure the following information:
 * `The default team`: You can set this team to be the team that any user that logs in to the web UI for the first time. 
 * `The default entrypoint`: You can specify the view in the web UI that opens every time that a user logs in. Valid entrypoints are *Explore* view, *Dashboards* view, *Events* view, *Alerts* view, and *Settings* view.
 * `The scope`: You can limit what data users can see. You can choose *Host* or *Container* to define the level of data that is visible. Then, you can add one or more conditions. If the scope is set to *Host*, users can see all host-level and container-level information. If the scope is set to *Container*, users can see only container-level information.
-* `Permissions`: You can enable or disable the following features: *Sysdig captures*, and *infrastructure events*. Capture files are visible to members of the team. **Note:** Captures include detailed information from every container on a host, regardless of the team’s scope. When infrastructure events are enabled, users can view all custom infrastructure events from every user and monitoring agent in the instance.
+* `Permissions`: You can enable or disable the following features: *captures*, and *infrastructure events*. Capture files are visible to members of the team. **Note:** Captures include detailed information from every container on a host, regardless of the team’s scope. When infrastructure events are enabled, users can view all custom infrastructure events from every user and monitoring agent in the instance.
 
 By default, a **Monitor Operations** team is predefined for each {{site.data.keyword.mon_full_notm}} instance.
 * This team cannot be deleted.

@@ -35,14 +35,14 @@ You can use cURL, a command line tool, from a terminal to manage the {{site.data
 Use the following syntax from a terminal to run a cURL command:
 
 ```shell
-curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
+curl -X <METHOD> <MONITORING_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
 ```
 {: pre}
 
 Where
 
 * `<METHOD>` indicates the type of REST API call that you want to make.
-* `<SYSDIG-ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more inforamtion, see [{{site.data.keyword.mon_short}} endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
+* `<MONITORING-ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more inforamtion, see [{{site.data.keyword.mon_short}} endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
 * `<API_URL>` For more information about API URLs, see [{{site.data.keyword.mon_short}} REST APIs](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-rest_apis).
 * `HEADERS` add additional information such as information to authenticate with the {{site.data.keyword.mon_full_notm}} service.
 * `DATA` allows you to pass additional information that might be required.
@@ -82,7 +82,7 @@ Where
 
 
 ### Headers for {{site.data.keyword.mon_short}} Token
-{: #mon-curl-headers-sysdig}
+{: #mon-curl-headers-monitoring}
 
 You can also use {{site.data.keyword.mon_short}} API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use the {{site.data.keyword.mon_short}} REST API to automate routine tasks and monitor notifications.
 
@@ -119,7 +119,7 @@ To run a cURL API query and authrnticat by using the IAM token, complete the fol
 3. Run the cURL API query.
 
     ```
-    curl -X <METHOD> <SYSDIG_ENDPOINT>/<API_URL> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "content-type: application/json"
+    curl -X <METHOD> <MONITORING_ENDPOINT>/<API_URL> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "content-type: application/json"
     ```
     {: codeblock}
 
