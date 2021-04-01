@@ -23,10 +23,10 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
 
-# Working with Monitor API token s
-{: #api_sysdig_token}
+# Working with Monitor API tokens
+{: #api_monitoring_token}
 
-You can use Monitor API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 
+You can use Monitor API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the {{site.data.keyword.mon_full_notm}} REST API to automate routine tasks and monitor notifications. 
 {:shortdesc}
 
 Consider the following information for each instance of the {{site.data.keyword.mon_full_notm}} service:
@@ -41,11 +41,11 @@ Consider the following information for each instance of the {{site.data.keyword.
 Complete the following steps to get the Monitor API token :
 
 1. From the *Selector* button in the navigation bar, choose **Settings**
-2. From the *Sysdig Monitor API* section, copy the **Monitor API Token**.
+2. From the *Monitor API* section, copy the **Monitor API Token**.
 
 After you get the token, you can run API calls and use this token in the `Authorization` header. 
 
-When you copy the token include the `Bearer` keyword: `Authorization: Bearer SYSDIG_TOKEN`
+When you copy the token include the `Bearer` keyword: `Authorization: Bearer MONITOR_API_TOKEN`
 {: note}
 
 
@@ -59,7 +59,7 @@ Complete the following steps to reset the Monitor API token :
 
 
 
-## Getting the Monitor API token by using the Sysdig API
+## Getting the Monitor API token by using the API
 {: #api_token_get_api}
 
 You can use the Token API to get the Monitor API token .
