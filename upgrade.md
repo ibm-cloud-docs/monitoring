@@ -99,7 +99,7 @@ Complete the following steps to change the service plan:
 For example, to change the service plan of an instance to the graduated plan, run the following command:
 
 ```
-ibmcloud resource service-instance-update sysdig-instance-01 231bb072-1b2f-4d7e-ae9e-9574d382be32
+ibmcloud resource service-instance-update monitoring-instance-01 231bb072-1b2f-4d7e-ae9e-9574d382be32
 ```
 {: codeblock}
 

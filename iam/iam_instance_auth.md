@@ -96,7 +96,7 @@ Where
 For example, to modify an instance, run the following command:
 
 ```
-ibmcloud resource service-instance-create sysdig-instance-01 -p '{"external_api_auth": "IAM_ONLY"}'
+ibmcloud resource service-instance-create monitoring-instance-01 -p '{"external_api_auth": "IAM_ONLY"}'
 ```
 {: pre}
 

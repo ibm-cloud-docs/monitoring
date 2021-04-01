@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2021
 lastupdated: "2021-03-28"
 
-keywords: activity tracker for IBM Cloud Monitoring with Sysdig, Sysdig, IBM Cloud, audit, activity tracker, events, audit logs
+keywords: activity tracker for IBM Cloud Monitoring, IBM Cloud, audit, activity tracker, events, audit logs
 
 subcollection: Monitoring-with-Sysdig
 
