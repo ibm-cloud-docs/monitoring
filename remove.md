@@ -85,7 +85,7 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} through the command
     For example, to remove an instance, run the following command:
 
     ```
-    ibmcloud resource service-instance-delete sysdig-instance-01 --recursive
+    ibmcloud resource service-instance-delete monitoring-instance-01 --recursive
     ```
     {: codeblock}
 

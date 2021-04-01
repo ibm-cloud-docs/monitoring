@@ -106,7 +106,7 @@ The following table lists the *Public Collector endpoints* that are available pe
 
 
 ## Endpoints
-{: #endpoints_sysdig}
+{: #endpoints_monitoring}
 
 To access the {{site.data.keyword.mon_full_notm}} web UI, you might need to define a firewall rule in your host.
 {: note}

@@ -29,7 +29,7 @@ subcollection: Monitoring-with-Sysdig
 You can use Prometheus exporters with {{site.data.keyword.mon_full_notm}} to collect metrics from hosts for which a monitoring agent is not available. You can also use exporters to collect metrics that the monitoring agent does not collect automatically.
 {:shortdesc}
 
-Sysdig curates and maintains [PromCat](https://promcat.io/){: external}. PromCat is an enterprise resource catalog where you can find supported monitoring integrations for Kubernetes platforms and cloud-native services.
+{{site.data.keyword.mon_full_notm}} curates and maintains [PromCat](https://promcat.io/){: external}. PromCat is an enterprise resource catalog where you can find supported monitoring integrations for Kubernetes platforms and cloud-native services.
 {: note}
 
 The following table lists some Prometheus exporters that you can use to monitor your infrastructure:
@@ -42,7 +42,7 @@ The following table lists some Prometheus exporters that you can use to monitor 
 {: caption="Table 1. Exporters" caption-side="top"} 
 
 
-You can collect metrics from different exporters. However, exporters that are hosted in PromCat are supported by Sysdig.
+You can collect metrics from different exporters. However, exporters that are hosted in PromCat are supported by {{site.data.keyword.mon_full_notm}}.
 {: important}
 
 ## Exporters
@@ -145,14 +145,14 @@ Configure the [Prometheus Blackbox exporter](https://github.com/prometheus/black
 To add the default dashboards and alerts that are available for an exporter that is hosted in PromCat, run the following command:
 
 ```
-docker run -it --rm sysdiglabs/promcat-connect:0.1 install rancher:2.5.0 -t <SYSDIG_TOKEN>  -u <ENDPOINT>
+docker run -it --rm sysdiglabs/promcat-connect:0.1 install rancher:2.5.0 -t <MONITORING_TOKEN>  -u <ENDPOINT>
 ```
 {: codeblock}
 
 Where
 
-* `<SYSDIG_TOKEN>` is the Sysdig token. See [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
-* `<ENDPOINT>` is the Sysdig instance endpoint. See [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
+* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+* `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 
 
 
@@ -178,9 +178,9 @@ configmap: true
 ### Agent tags
 # tags: linux:ubuntu,dept:dev,local:nyc
 
-#### Sysdig Software related config ####
+#### Software related config ####
 
-# Sysdig collector address
+# Collector address
 # collector: 192.168.1.1
 
 # Collector TCP port

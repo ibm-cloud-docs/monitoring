@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Collecting availability metrics by using the Prometheus Blackbox exporter
 {: #collect_availability_metrics}
 
-The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
+The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within {{site.data.keyword.mon_full_notm}} to alert users on the availability of the endpoints.
 {:shortdesc}
 
 
@@ -35,28 +35,33 @@ The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP,
 
 Complete the following steps to configure a monitoring agent on Linux to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
 
-1. [Obtain the Sysdig access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+1. [Obtain the access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the public or private ingestion URL. For more information, see [Sysdig collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
 3. Deploy the monitoring agent. Run the following command from a terminal.
 
     ```
-    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key SYSDIG_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure true --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
+    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure true --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
     ```
     {: codeblock}
 
-curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key 7ac04746-1104-4f82-8445-f71427dd2a1d --collector ingest.us-south.monitoring.cloud.ibm.com --collector_port 6443 --secure true --tags resourceType:baremetal01,region:dallas --additional_conf 'sysdig_capture_enabled: false'
+    For example:
+
+    ```
+    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key 7ac04746-1104-4f82-8445-f71427dd2a1d --collector ingest.us-south.monitoring.cloud.ibm.com --collector_port 6443 --secure true --tags resourceType:baremetal01,region:dallas --additional_conf 'sysdig_capture_enabled: false'
+    ```
+    {: codeblock}
 
     Where
 
-    * SYSDIG_ACCESS_KEY is the ingestion key for the instance.
+    * ACCESS_KEY is the ingestion key for the instance.
 
     * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. 
 
-    * Set **sysdig_capture_enabled** to *false* to disable the Sysdig capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+    * Set **sysdig_capture_enabled** to *false* to disable the {{site.data.keyword.mon_full_notm}} capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
 
     * Set **secure** to *true* to use SSL with the communication.
 
@@ -261,4 +266,4 @@ process_filter:
 
 
 
-sudo setcap cap_net_raw+ep blackbox.yml
+

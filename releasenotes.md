@@ -23,20 +23,20 @@ subcollection: Monitoring-with-Sysdig
 {:external: target="_blank" .external}
 
 # Release notes for {{site.data.keyword.mon_full_notm}}
-{: #sysdig-release-notes}
+{: #monitoring-release-notes}
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}} that are grouped by date.
 {:shortdesc}
 
 
 ## March 2021
-{: #sysdig-march2021-for-update}
+{: #monitoring-march2021-for-update}
 
 - New CLI added that you can use to access information in {{site.data.keyword.mon_full_notm}}. [Learn more about the CLI](/docs/Monitoring-with-Sysdig?topic=sysdig-monitor-cli-plugin-sysdig-monitor-cli).
-- New API added that can be used to manage the {{site.data.keyword.mon_full_notm}} service. [Learn more about the API](https://test.cloud.ibm.com/apidocs/sysdig-monitor).
+- New API added that can be used to manage the {{site.data.keyword.mon_full_notm}} service. [Learn more about the API](/apidocs/sysdig-monitor).
 
 ## January 2021
-{: #sysdig-jan2021-for-update}
+{: #monitoring-jan2021-for-update}
 
 This release includes the following functional enhancements:
 

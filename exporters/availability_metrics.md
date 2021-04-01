@@ -26,7 +26,7 @@ subcollection: Monitoring-with-Sysdig
 # Testing endpoints with Blackbox exporter
 {: #availability_metrics}
 
-You can use the Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
+You can use the Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within {{site.data.keyword.mon_full_notm}} to alert users on the availability of the endpoints.
 {:shortdesc}
 
 For example, you can configure the Prometheus Blackbox exporter to get information about the availability of a Windows system, or to get the availability of a URL.
@@ -395,7 +395,7 @@ $ sudo touch blackbox.service
 
 
 
-The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics.  The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
+The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP.  The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics.  The availability metrics can then be alerted upon within {{site.data.keyword.mon_full_notm}} to alert users on the availability of the endpoints.
 
 The exporters are available as [binary releases](https://github.com/prometheus/blackbox_exporter/releases), as a [docker containers](https://hub.docker.com/r/prom/blackbox-exporter/) or the [code is available in github](https://github.com/prometheus/blackbox_exporter).
 
@@ -435,7 +435,7 @@ The container approach is used for this example.
                     windows_hostname: windows-test-01
     ```
 
-6. There will be some new prometheus `probe_success` metrics now available in Sysdig.  These are the blackbox exporter metrics.  You can segment by `windows_hostname` and build alerts upon this metric.
+6. There will be some new prometheus `probe_success` metrics now available in {{site.data.keyword.mon_full_notm}}.  These are the blackbox exporter metrics.  You can segment by `windows_hostname` and build alerts upon this metric.
 
 
 
@@ -446,9 +446,9 @@ The container approach is used for this example.
 
 
 
-## Sysdig uptime alerts
+## {{site.data.keyword.mon_full_notm}} uptime alerts
 
-The monitoring agent provides a liveliness probe that can be used in conjunction with the Sysdig uptime alerts.  The details provided in this document explain how to perform endpoint testing for systems where the agent is not installed ( for example Windows hosts ) or potentially other service dependencies where you do not have a monitoring agent running.
+The monitoring agent provides a liveliness probe that can be used in conjunction with the {{site.data.keyword.mon_full_notm}} uptime alerts.  The details provided in this document explain how to perform endpoint testing for systems where the agent is not installed ( for example Windows hosts ) or potentially other service dependencies where you do not have a monitoring agent running.
 
 
 

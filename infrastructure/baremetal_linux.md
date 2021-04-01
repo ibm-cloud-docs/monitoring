@@ -486,7 +486,7 @@ Cpmplete the following steps:
 
 2. Select **Monitoring**. 
 
-3. Identify the monitoring instance that you created. Then, click **Launch Sysdig**.
+3. Identify the monitoring instance that you created. Then, click **Open Dashboard**.
 
 4. In the `Explore` view, select **Hosts and Containers**. Then, select the bare metal server that you want to monitor.
 

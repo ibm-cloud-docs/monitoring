@@ -24,9 +24,9 @@ subcollection: Monitoring-with-Sysdig
 
 
 # Working with Monitor API token s
-{: #api_sysdig_token}
+{: #api_monitoring_token}
 
-You can use Monitor API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the Sysdig REST API to automate routine tasks and monitor notifications. 
+You can use Monitor API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the {{site.data.keyword.mon_full_notm}} REST API to automate routine tasks and monitor notifications. 
 {:shortdesc}
 
 Consider the following information for each instance of the {{site.data.keyword.mon_full_notm}} service:
@@ -59,7 +59,7 @@ Complete the following steps to reset the Monitor API token :
 
 
 
-## Getting the Monitor API token by using the Sysdig API
+## Getting the Monitor API token by using the API
 {: #api_token_get_api}
 
 You can use the Token API to get the Monitor API token .
