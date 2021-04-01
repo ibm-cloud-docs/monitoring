@@ -103,7 +103,7 @@ Complete the following steps to download a capture file:
 ## Chisels
 {: #captures_chisels}
 
-A Sysdig chisel is a script that is written in Lua, a scripting language. You can use it to analyze data in a capture file. 
+A chisel is a script that is written in Lua, a scripting language. You can use it to analyze data in a capture file. 
 
 For more information, see [Chisels User Guide](https://github.com/draios/sysdig/wiki/Chisels-User-Guide){: external}.
 

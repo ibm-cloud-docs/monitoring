@@ -39,7 +39,7 @@ The following code shows the structure of a Python script that you can use to cr
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Add the monitoring instance information that is required for authentication
-URL = <SYSDIG-ENDPOINT> 
+URL = <MONITORING-ENDPOINT> 
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
@@ -91,7 +91,7 @@ if not res[0]:
 
 Consider the following information when you create a Python script:
 
-* You must include the following information: `<SYSDIG-ENDPOINT>`, `<IAM_APIKEY>`, and `<GUID>` These data is required to authenticate the request with the monitoring instance. To get the monitoring instance information, see [Authenticate your user or service ID by using IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client#python-client-iam-auth).
+* You must include the following information: `<MONITORING-ENDPOINT>`, `<IAM_APIKEY>`, and `<GUID>` These data is required to authenticate the request with the monitoring instance. To get the monitoring instance information, see [Authenticate your user or service ID by using IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client#python-client-iam-auth).
 
 * You must define the notification channels through which you want to be notified when the alert is triggered.
 
@@ -101,7 +101,7 @@ Consider the following information when you create a Python script:
 
     When you add an email notification channel, you can add multiple recipients. You separate values by using a comma.
 
-    When you define a Slack channel, replace `<SLACK_CHANNEL_NAME>` with the name of your channel. You must include the symbol `#` with the name of the channel, for example, `#my_sysdig_alert_channel`.
+    When you define a Slack channel, replace `<SLACK_CHANNEL_NAME>` with the name of your channel. You must include the symbol `#` with the name of the channel, for example, `#my_monitoring_alert_channel`.
 
 
 When you configure the alert, complete the following sections:
@@ -114,7 +114,7 @@ When you configure the alert, complete the following sections:
 
 * [`condition`]: You must define the condition that defines when the alert is triggered. For example, you can set this parameter to `['host.mac', 'proc.name']` to check a CPU alert for every process on every machine.
 
-    For more information, see [Multi-Condition Alerts](https://docs.sysdig.com/en/alerts.html#al_UUID-21e3bcab-eaf2-993b-96e5-bdbc631504bc_UUID-9177b0b6-2f26-ea2f-1f3c-8b9a36192bfc){: exernal}.
+    For more information, see [Multi-Condition Alerts](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerts).
 
 * [`segmentby`]: You can define the scope of an alert by configuring the `segmentedby` section. The default value is `ANY`.
 
@@ -145,7 +145,7 @@ The following code shows the structure of a Python script that you can use to up
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Add the monitoring instance information that is required for authentication
-URL = <SYSDIG-ENDPOINT> 
+URL = <MONITORING-ENDPOINT> 
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
@@ -192,7 +192,7 @@ The following code shows the structure of a Python script that you can use to de
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Add the monitoring instance information that is required for authentication
-URL = <SYSDIG-ENDPOINT> 
+URL = <MONITORING-ENDPOINT> 
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
@@ -225,7 +225,7 @@ The following code shows the structure of a Python script that you can use to ge
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Add the monitoring instance information that is required for authentication
-URL = <SYSDIG-ENDPOINT> 
+URL = <MONITORING-ENDPOINT> 
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
