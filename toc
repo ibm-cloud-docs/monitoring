@@ -188,7 +188,7 @@ Monitoring
         [Monitoring API](https://test.cloud.ibm.com/apidocs/monitor)
         api/rest_apis.md
         api/mon-curl.md
-        iam/api_sysdig_token.md
+        iam/api_monitor_token.md
         api/python-client.md
    
     monitor/monitoring.md

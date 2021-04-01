@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-07-10"
+  years:  2018, 2021
+lastupdated: "2021-03-31"
 
 keywords: IBM Cloud, monitoring, alerting, api, python
 
@@ -35,7 +35,7 @@ These instructions apply to Python version 3.x.
 To manage resources that are associated with the default team, use IAM as your authentication method.
 {: important}
 
-To manage resources that are associated with a team, you must use the Monitoring (sysdig) token that is active for the team.
+To manage resources that are associated with a team, you must use the Monitoring API token that is active for the team.
 {: important}
 
 ## Step 1. Installing the Python client
@@ -174,7 +174,7 @@ Complete the following steps from a terminal:
     ```python
     from sdcclient import IbmAuthHelper, SdMonitorClient
 
-    URL = <SYSDIG-ENDPOINT>
+    URL = <MONITORING_ENDPOINT>
     # For example: URL = 'https://us-south.monitoring.cloud.ibm.com'
 
     APIKEY = <IAM_APIKEY>
@@ -188,7 +188,7 @@ Complete the following steps from a terminal:
 
     Where
 
-    `<SYSDIG-ENDPOINT>` must be replaced with the endpoint where the monitoring instance is available. 
+    `<MONITORING_ENDPOINT>` must be replaced with the endpoint where the monitoring instance is available. 
 
     `<IAM_APIKEY>` must be replaced with a valid IAM API key. [Learn more](/docs/account?topic=account-userapikey).
 
@@ -203,16 +203,16 @@ If you get the error `400 Client Error: Bad Request for url: https://iam.cloud.i
 
 
 
-### Option 2. Authenticate by using the Monitoring (sysdig) token
+### Option 2. Authenticate by using the Monitoring API token
 {: #python-client-token-auth}
 
 
-You must specify a {{site.data.keyword.mon_short}} endpoint, and the Monitoring (sysdig) token that is associated to the team that you want to manage with the Python client.
+You must specify a {{site.data.keyword.mon_short}} endpoint, and the Monitoring API token that is associated to the team that you want to manage with the Python client.
 {: note}
 
 Complete the following steps from a terminal:
 
-1. [Get the Monitoring (sysdig) token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+1. [Get the Monitoring API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
 
 2. Get the endpoint for the region where the monitoring instance is available. 
 
@@ -225,21 +225,21 @@ Complete the following steps from a terminal:
     ```python
     from sdcclient import IbmAuthHelper, SdMonitorClient
 
-    URL = <SYSDIG-ENDPOINT>
+    URL = <MONITORING_ENDPOINT>
     # For example: URL = 'https://us-south.monitoring.cloud.ibm.com'
     
-    SYSDIG_TOKEN = <SYSDIG_TOKEN>
-    # For example: SYSDIG_TOKEN = 'xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+    MONITOR_TOKEN = <MONITOR_TOKEN>
+    # For example: MONITOR_TOKEN = 'xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 
-    sdclient = SdMonitorClient(token=SYSDIG_TOKEN,sdc_url=URL)
+    sdclient = SdMonitorClient(token=MONITOR_TOKEN,sdc_url=URL)
     ```
     {: codeblock}
 
     Where
 
-    `<SYSDIG-ENDPOINT>` must be replaced with the endpoint where the monitoring instance is available. 
+    `<MONITORING_ENDPOINT>` must be replaced with the endpoint where the monitoring instance is available. 
 
-    `<SYSDIG_TOKEN>` must be replaced with the Monitoring (sysdig) token.
+    `<MONITOR_TOKEN>` must be replaced with the Monitoring API token.
 
 
 You can now use the **sdclient** to perform actions that will be authenticated by using IAM.
@@ -279,7 +279,7 @@ sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 {: codeblock}
 
 
-## Sample 2. Python script that uses a Monitoring (sysdig) token
+## Sample 2. Python script that uses a Monitoring API token
 {: #python-client-sample2}
 
 ```python
@@ -293,19 +293,19 @@ from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Parse arguments.
 def usage():
-   print('usage: %s <ENDPOINT_URL> <SYSDIG_TOKEN> <INSTANCE_GUID>' % sys.argv[0])
+   print('usage: %s <ENDPOINT_URL> <MONITOR_TOKEN> <INSTANCE_GUID>' % sys.argv[0])
    print('ENDPOINT_URL: IBM Cloud endpoint URL (e.g. https://us-south.monitoring.cloud.ibm.com')
-   print('SYSDIG_TOKEN: Sysdig token that is associated to a team.')
+   print('MONITOR_TOKEN: token that is associated to a team.')
    sys.exit(1)
 
 if len(sys.argv) != 3:
    usage()
 
 URL = sys.argv[1]
-SYSDIG_TOKEN = sys.argv[2]
+MONITOR_TOKEN = sys.argv[2]
 
 # Instantiate the client
-sdclient = SdMonitorClient(token=SYSDIG_TOKEN,sdc_url=URL)
+sdclient = SdMonitorClient(token=MONITOR_TOKEN,sdc_url=URL)
 ```
 {: codeblock}
 

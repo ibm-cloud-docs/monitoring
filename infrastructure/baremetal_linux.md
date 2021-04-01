@@ -156,7 +156,7 @@ The first time that you launch the monitoring UI, you might get a set of screens
 
 If the monitoring agent is configured successfully, in the **EXPLORE** view you can see your bare metal server in the **Hosts and Containers** section.
 
-![Explore view](images/sysdig-baremetal-img1.png "Explore view")
+![Explore view](images/monitor-baremetal-img1.png "Explore view")
 
 It may take some time before you see the bare metal entry while the information is initally collected and processed by the monitoring agent.
 {: note}
@@ -223,7 +223,7 @@ Complete the following steps:
 
 1. From a local terminal,[download the Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
-2. In the bare metal server, from the `shh` session, create the directory `/usr/sysdig`. Run the following commands:
+2. In the bare metal server, from the `shh` session, create the directory `/usr/monitor`. Run the following commands:
 
     ```
     cd /usr
@@ -231,14 +231,14 @@ Complete the following steps:
     {: pre}
 
     ```
-    mkdir sysdig
+    mkdir monitor
     ```
     {: pre}
 
 3. Copy the file to the bare metal. From the directory where the file is available, run the following command:
 
     ```
-    scp ipmi_exporter-v1.2.0.linux-amd64.tar.gz  root@<IP_ADDRESS>:/usr/sysdig/
+    scp ipmi_exporter-v1.2.0.linux-amd64.tar.gz  root@<IP_ADDRESS>:/usr/monitor/
     ```
     {: pre}
 
@@ -249,7 +249,7 @@ Complete the following steps:
 4. In the bare metal server, from the `shh` session, uncompress the file. Run the following commands:
 
     ```
-    cd /usr/sysdig/
+    cd /usr/monitor/
     ```
     {: pre}
 
@@ -328,17 +328,17 @@ Complete the following steps to run the Prometheus exporter:
 
 1. From a local terminal,[download the Prometheus exporter](https://github.com/martinlindhe/wmi_exporter/releases){: external}.
 
-2. In the bare metal server, from the `shh` session, change to the directory `/usr/sysdig/`. Run the following command:
+2. In the bare metal server, from the `shh` session, change to the directory `/usr/monitor/`. Run the following command:
 
     ```
-    cd /usr/sysdig/
+    cd /usr/monitor/
     ```
     {: pre}
 
 3. Copy the file to the bare metal. From the directory where the file is available, run the following command:
 
     ```
-    scp prometheus-2.18.1.linux-amd64.tar.gz root@<IP_ADDRESS>:/usr/sysdig/
+    scp prometheus-2.18.1.linux-amd64.tar.gz root@<IP_ADDRESS>:/usr/monitor/
     ```
     {: pre}
 
@@ -349,7 +349,7 @@ Complete the following steps to run the Prometheus exporter:
 4. In the bare metal server, from the `shh` session, uncompress the file. Run the following commands:
 
     ```
-    cd /usr/sysdig/
+    cd /usr/monitor/
     ```
     {: pre}
 
@@ -439,7 +439,7 @@ Complete the following steps:
     ```
     {: pre}
 
-2. Update the `/opt/draios/etc/dragent.yaml` to [enable remote scraping](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){: external}. 
+2. Update the `/opt/draios/etc/dragent.yaml`. 
 
     Append the following section to the `dragent.yaml` file:
 
@@ -490,11 +490,11 @@ Cpmplete the following steps:
 
 4. In the `Explore` view, select **Hosts and Containers**. Then, select the bare metal server that you want to monitor.
 
-    ![Hosts and Containers view](images/sysdig-baremetal-img2.png "Hosts and Containers view")
+    ![Hosts and Containers view](images/monitor-baremetal-img2.png "Hosts and Containers view")
 
 5. Select **Overview by Process**. Then, enter in the search bar **ipmi**. The list of IPMI metrics is displayed.
 
-    ![IPMI metrics](images/sysdig-baremetal-img3.png "IPMI metrics")
+    ![IPMI metrics](images/monitor-baremetal-img3.png "IPMI metrics")
 
 
 ## Step 5. Configure a dashboard to analyze the IPMI status of your Bare metal
@@ -504,19 +504,19 @@ To create a dashboard to monitor the IPMI metrics, complete the following steps:
 
 1. Select the `ipmi_up` metric.
 
-    ![ipmi_up metris](images/sysdig-baremetal-img4.png "ipmi_up metric")
+    ![ipmi_up metris](images/monitor-baremetal-img4.png "ipmi_up metric")
 
 2. Select the 3 dots icon. Then, select **Copy to dashboard**.
 
-    ![Copy dashboard](images/sysdig-baremetal-img5.png "Copy dashboard")
+    ![Copy dashboard](images/monitor-baremetal-img5.png "Copy dashboard")
 
 3. Enter the name **[Bare Metal] IPMI monitoring**. Then, click **Copy and Open**.
 
-    ![Copy and open a dashboard](images/sysdig-baremetal-img6.png "Copy and open a dashboard")
+    ![Copy and open a dashboard](images/monitor-baremetal-img6.png "Copy and open a dashboard")
 
     The dashboard opens.
 
-    ![IPMI custom dashboard](images/sysdig-baremetal-img7.png "IPMI custom dashboard")
+    ![IPMI custom dashboard](images/monitor-baremetal-img7.png "IPMI custom dashboard")
 
 4. Add more IPMI metrics to the **[Bare Metal] IPMI monitoring** custom dashboard. Repeat the steps for each of the IPMI metrics that you want to monitor.
 
