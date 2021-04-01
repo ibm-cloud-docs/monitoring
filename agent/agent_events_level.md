@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, monitoring agent, event filters
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 

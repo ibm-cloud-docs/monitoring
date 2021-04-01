@@ -7,7 +7,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, delete instance
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 

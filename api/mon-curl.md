@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, alerting, api, curl
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -42,8 +42,8 @@ curl -X <METHOD> <MONITORING_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
 Where
 
 * `<METHOD>` indicates the type of REST API call that you want to make.
-* `<MONITORING-ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more inforamtion, see [{{site.data.keyword.mon_short}} endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
-* `<API_URL>` For more information about API URLs, see [{{site.data.keyword.mon_short}} REST APIs](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-rest_apis).
+* `<MONITORING-ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more inforamtion, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
+* `<API_URL>` For more information about API URLs, see [{{site.data.keyword.mon_short}} REST APIs](/docs/monitoring?topic=monitoring-rest_apis).
 * `HEADERS` add additional information such as information to authenticate with the {{site.data.keyword.mon_full_notm}} service.
 * `DATA` allows you to pass additional information that might be required.
 
@@ -74,11 +74,11 @@ Where
 
     To get the IAM `AUTH_TOKEN` token, run the following command: `ibmcloud iam oauth-tokens | awk '{print $4}'`
     
-    For more information, see [Getting the IAM API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_iam_token_get). 
+    For more information, see [Getting the IAM API token](/docs/monitoring?topic=monitoring-api_token#api_iam_token_get). 
 
 * `SysdigTeamID` indicates the GUID of a team.
 
-    To get the GUID, see [Getting the ID of a {{site.data.keyword.mon_short}} team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-team_id).
+    To get the GUID, see [Getting the ID of a {{site.data.keyword.mon_short}} team](/docs/monitoring?topic=monitoring-team_id).
 
 
 ### Headers for {{site.data.keyword.mon_short}} Token
@@ -93,7 +93,7 @@ In a cURL command, add the following command option to authenticate with the {{s
 ```
 {: codeblock}
 
-To get the {{site.data.keyword.mon_short}} token, see [Getting the {{site.data.keyword.mon_short}} API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+To get the {{site.data.keyword.mon_short}} token, see [Getting the {{site.data.keyword.mon_short}} API token](/docs/monitoring?topic=monitoring-api_token#api_token_get).
 
 
 

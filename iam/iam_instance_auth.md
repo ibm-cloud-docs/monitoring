@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, api token
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -75,7 +75,7 @@ Complete this step if you are configuring your monitoring instance to authentica
 
 When you reset a Monitor API token , you disable the current Monitor API token that users might be using. There is 1 Monitor API token per team.
 
-For each team in the {{site.data.keyword.mon_short}} instance, [Reset the Monitor API token ](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_sysdig_token#api_token_reset). 
+For each team in the {{site.data.keyword.mon_short}} instance, [Reset the Monitor API token ](/docs/monitoring?topic=monitoring-api_sysdig_token#api_token_reset). 
 
 ## Step 3. Configure the {{site.data.keyword.mon_short}} instance to only allow IAM tokens 
 {: #iam_instance_auth_step3}

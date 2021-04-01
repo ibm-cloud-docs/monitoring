@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, change, kubernetes agent
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 

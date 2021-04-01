@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, monitoring agent, event filters
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -48,9 +48,9 @@ In addition, you can configure custom metrics to monitor your sources through th
 To filter custom metrics, you must customize the agent configuration file. You can specify which metrics to include and which ones to filter out by configuring the include and exclude filtering parameters.
 
 For more information on how to configure the monitoring agent, see:
-- Linux monitoring agent: [Including and excluding metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-change_linux_agent#change_linux_agent_inc_exc_metrics)
-- Kubernetes monitoring agent: [Including and excluding metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-change_kube_agent#change_kube_agent_inc_exc_metrics)
-- Docker container monitoring agent: [Including and excluding metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-change_agent#params)
+- Linux monitoring agent: [Including and excluding metrics](/docs/monitoring?topic=monitoring-change_linux_agent#change_linux_agent_inc_exc_metrics)
+- Kubernetes monitoring agent: [Including and excluding metrics](/docs/monitoring?topic=monitoring-change_kube_agent#change_kube_agent_inc_exc_metrics)
+- Docker container monitoring agent: [Including and excluding metrics](/docs/monitoring?topic=monitoring-change_agent#params)
 
 
 ## Logging into a file what metrics are included or excluded
@@ -59,9 +59,9 @@ For more information on how to configure the monitoring agent, see:
 You can log the custom metrics that are collected by an agent. You must set the **metrics_excess_log** to **true** in the **log** section will enable logging of the custom metrics that are included or excluded.
 
 For more information on how to configure the monitoring agent to report which metrics are collected, see:
-- Linux monitoring agent: [Logging into a file what metrics are included or excluded](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-change_linux_agent#change_linux_agent_log_level)
-- Kubernetes monitoring agent: [Logging into a file what metrics are included or excluded](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-change_kube_agent#change_kube_agent_log_metrics)
-- Docker container monitoring agent: [Logging into a file what metrics are included or excluded](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-change_agent#log_level)
+- Linux monitoring agent: [Logging into a file what metrics are included or excluded](/docs/monitoring?topic=monitoring-change_linux_agent#change_linux_agent_log_level)
+- Kubernetes monitoring agent: [Logging into a file what metrics are included or excluded](/docs/monitoring?topic=monitoring-change_kube_agent#change_kube_agent_log_metrics)
+- Docker container monitoring agent: [Logging into a file what metrics are included or excluded](/docs/monitoring?topic=monitoring-change_agent#log_level)
 
 
 

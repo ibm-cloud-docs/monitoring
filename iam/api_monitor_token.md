@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, api token
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -79,7 +79,7 @@ GET <MONITORING_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H 
 
 Where 
 
-* `<MONITORING_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<MONITORING_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -87,7 +87,7 @@ Where
 
     `TeamID` defines the team for which you want to get the Monitor API token .
     
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 
 When the authorization that is allowed in a monitoring instance is set to `IAM_ONLY`, you get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}` when you try to get the Monitor API token .

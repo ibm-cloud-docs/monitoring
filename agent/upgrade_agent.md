@@ -6,7 +6,7 @@ lastupdated: "2020-09-15"
 
 keywords: IBM Cloud, monitoring, delete agent
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -144,7 +144,7 @@ Complete the following steps to remove the monitoring agent that is deployed as 
     ```
     {: pre}
 
-4. Install the agent. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent#config_agent_docker).
+4. Install the agent. [Learn more](/docs/monitoring?topic=monitoring-config_agent#config_agent_docker).
 
 
 

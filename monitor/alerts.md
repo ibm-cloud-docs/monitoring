@@ -6,7 +6,7 @@ lastupdated: "2021-03-30"
 
 keywords: IBM Cloud, monitoring, alerts
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 

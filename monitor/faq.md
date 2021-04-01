@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring,  faq
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -34,7 +34,7 @@ Frequently asked questions about {{site.data.keyword.mon_full_notm}}.
 {: #faq_1}
 {: faq}
 
-You can find information about the services that generate metrics in the following documentation topic: [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
+You can find information about the services that generate metrics in the following documentation topic: [Cloud services](/docs/monitoring?topic=monitoring-cloud_services).
 
 
 ## Are you observing monitoring agent connection errors or receiving uptime alerts reporting an host is down when there are no problems?
@@ -49,7 +49,7 @@ You can find information about the services that generate metrics in the followi
 
 Where connectivity between your infrastructure and Monitoring's hosted service may fail.
 
-You must upgrade all monitoring agents to `10.5`. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-troubleshoot#troubleshoot-entry-3).
+You must upgrade all monitoring agents to `10.5`. [Learn more](/docs/monitoring?topic=monitoring-troubleshoot#troubleshoot-entry-3).
 
 
 

@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, pricing
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -73,7 +73,7 @@ Platform metrics are an additional source of time-series. They are priced based 
 
 A host can be a container, a virtual machine, a bare metal, or any metrics source where you install a monitoring agent.
 
-Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mng-data#data-collection) and [data retention](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mng-data#data-storage_retention).
+Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/monitoring?topic=monitoring-mng-data#data-collection) and [data retention](/docs/monitoring?topic=monitoring-mng-data#data-storage_retention).
 
 
 ## Checking the metrics that are collected per agent

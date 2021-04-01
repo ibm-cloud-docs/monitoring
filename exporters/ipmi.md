@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -86,7 +86,7 @@ Complete the following steps to configure a monitoring agent to collect IPMI met
 
 To monitor 1 or more hosts, you must configure a monitoring agent. The agent collects automatically a set of metrics that you can monitor through the monitoring UI.
 
-See [Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) and choose the monitoring agent that you want to configure to monitor a host.
+See [Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/monitoring?topic=monitoring-config_agent) and choose the monitoring agent that you want to configure to monitor a host.
 
 
 ## Step 2. Configuring the Prometheus IPMI Exporter
@@ -294,7 +294,7 @@ scrape_configs:
 Where 
 
 * `<IP_ADDRESS_OF_REMOTE_SERVER>` is the IP address of a server that you want to monitor.
-* `<INGESTION_ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance ingestion endpoint, for example, `ingest.us-south.monitoring.cloud.ibm.com`. See [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion). 
+* `<INGESTION_ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance ingestion endpoint, for example, `ingest.us-south.monitoring.cloud.ibm.com`. See [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion). 
 * `<IP_ADDRESS_OF_REMOTE_SERVER>:9290` is the IP address of the server that you want to monitor.
 
 When you save the file, changes are applied.
@@ -359,11 +359,11 @@ docker run -it --rm sysdiglabs/promcat-connect:0.1 install ipmi:2.5.0 -t <MONITO
 
 Where
 
-* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
-* `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
+* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the API token](/docs/monitoring?topic=monitoring-api_token#api_token_get).
+* `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/monitoring?topic=monitoring-endpoints).
 
 
-Then, [launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch), and go to the *Dashboards* section.
+Then, [launch the monitoring UI](/docs/monitoring?topic=monitoring-launch), and go to the *Dashboards* section.
 
 
 

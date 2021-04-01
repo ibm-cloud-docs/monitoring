@@ -6,7 +6,7 @@ lastupdated: "2021-03-31"
 
 keywords: IBM Cloud, monitoring, alerting, api, python
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -165,7 +165,7 @@ Complete the following steps from a terminal:
 
 3. Get the endpoint for the region where the monitoring instance is available. 
 
-    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). 
+    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig). 
     
     For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
 
@@ -212,11 +212,11 @@ You must specify a {{site.data.keyword.mon_short}} endpoint, and the Monitoring 
 
 Complete the following steps from a terminal:
 
-1. [Get the Monitoring API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+1. [Get the Monitoring API token](/docs/monitoring?topic=monitoring-api_token#api_token_get).
 
 2. Get the endpoint for the region where the monitoring instance is available. 
 
-    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig). 
+    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig). 
     
     For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
 
@@ -313,9 +313,9 @@ sdclient = SdMonitorClient(token=MONITOR_TOKEN,sdc_url=URL)
 ## References
 {: #python-client_references}
 
-* [Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the {{site.data.keyword.mon_short}} Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics_python)
-* [Managing dashboards by using the {{site.data.keyword.mon_short}} Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboard_python)
-* [Managing alerts by using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alert_python)
+* [Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the {{site.data.keyword.mon_short}} Python client](/docs/monitoring?topic=monitoring-metrics_python)
+* [Managing dashboards by using the {{site.data.keyword.mon_short}} Python client](/docs/monitoring?topic=monitoring-dashboard_python)
+* [Managing alerts by using the Python client](/docs/monitoring?topic=monitoring-alert_python)
 * [Python Client](https://github.com/draios/python-sdc-client){: external}
 * [{{site.data.keyword.mon_short}} Python samples](https://github.com/draios/python-sdc-client/tree/master/examples){: external}
 

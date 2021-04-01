@@ -12,7 +12,7 @@
 2. One-liner:
 
   ```
-  pushd .. && ./Monitoring-with-Sysdig/node_modules/.bin/marked-it-cli ${PWD}/Monitoring-with-Sysdig --output=${PWD}/Monitoring-with-Sysdig-build --overwrite --verbose; popd
+  pushd .. && ./monitoring/node_modules/.bin/marked-it-cli ${PWD}/monitoring --output=${PWD}/monitoring-build --overwrite --verbose; popd
   ```
 
-3. HTML files will be in `../Monitoring-with-Sysdig-build/`
+3. HTML files will be in `../monitoring-build/`

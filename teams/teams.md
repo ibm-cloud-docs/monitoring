@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, teams
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -42,7 +42,7 @@ These instructions assume that you have provisioned a monitoring service instanc
 
 To add a user to a team, complete the following steps:
 1. Check that you have the **administrator** platform role to work with the monitoring service or with a specific instance. 
-2. Define a team level IAM policy for the user. For more information, see [Granting permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team).
+2. Define a team level IAM policy for the user. For more information, see [Granting permissions to work in a team](/docs/monitoring?topic=monitoring-iam_grant_team).
 
 When the policy is defined, the user is added to the list of users that have access to work with resources configured for a team.
 
@@ -57,7 +57,7 @@ An administrator or a manager of an {{site.data.keyword.mon_full_notm}} instance
 
 Complete the following steps to create a team:
 
-1. [Launch the web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
+1. [Launch the web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
 
@@ -107,7 +107,7 @@ You must have **manager** role to change the scope of a team in a monitoring ins
 
 To change the scope of the data that is visible to members of a team, complete the following steps: 
 
-1. [Launch the web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
+1. [Launch the web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
 
@@ -130,7 +130,7 @@ Complete the following steps to delete a team:
 The default team, **Monitor Operations**, cannot be deleted. 
 {: note}
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
 

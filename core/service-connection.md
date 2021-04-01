@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, security, connection
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -75,7 +75,7 @@ After your account is enabled for VRF and service endpoints, you can configure a
 The monitoring service is available on both private and public endpoints. The monitoring service currently does not support only-public or only-private configurations.
 {: note}
 
-You can [configure the monitoring agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent) to use the private network by using a private endpoint as the ingestion URL. To get information about private endpoints, see [Private endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion_private).
+You can [configure the monitoring agent](/docs/monitoring?topic=monitoring-config_agent) to use the private network by using a private endpoint as the ingestion URL. To get information about private endpoints, see [Private endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion_private).
 
 What happens when you configure the monitoring agent to use a private endpoint?
 * Private endpoints are not accessible from the public internet. 
@@ -94,21 +94,21 @@ When you have an extra firewall set up, or you customize the firewall settings i
 
 To send metric data to the {{site.data.keyword.mon_full_notm}} service, you may need to define a firewall rule in your host:
 
-* To get information about private endpoints, see [Private endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion_private).
-* To get information about public endpoints, see [Public endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion_public).
+* To get information about private endpoints, see [Private endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion_private).
+* To get information about public endpoints, see [Public endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion_public).
 
 
 ### Access to the web UI through a public endpoint
 {: #network_ui}
 
-To access the {{site.data.keyword.mon_full_notm}} web UI, you may need to define a firewall rule in your host. To get information about the endpoints, see [monitoring UI endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_sysdig).
+To access the {{site.data.keyword.mon_full_notm}} web UI, you may need to define a firewall rule in your host. To get information about the endpoints, see [monitoring UI endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig).
 
 
 
 ### Alert Notifications via Webhooks
 {: #network_alert_subnets}
 
-To receive alert notifications using webhooks from the {{site.data.keyword.mon_full_notm}} service, you may need to define firewall rules for the subnets that are invoking your webhooks. To get information about the subnets, see [Subnets for webhook notifications](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_network_alert_subnets).
+To receive alert notifications using webhooks from the {{site.data.keyword.mon_full_notm}} service, you may need to define firewall rules for the subnets that are invoking your webhooks. To get information about the subnets, see [Subnets for webhook notifications](/docs/monitoring?topic=monitoring-endpoints#endpoints_network_alert_subnets).
 
 
 

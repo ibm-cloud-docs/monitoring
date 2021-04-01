@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, web UI
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 

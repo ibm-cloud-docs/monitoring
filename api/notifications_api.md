@@ -6,7 +6,7 @@ lastupdated: "2021-01-18"
 
 keywords: IBM Cloud, monitoring, notifications, api
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -27,7 +27,7 @@ subcollection: Monitoring-with-Sysdig
 You can manage notifications in a {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} API.
 {:shortdesc}
 
-To learn how to use cURL, see [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl).
+To learn how to use cURL, see [cURL command](/docs/monitoring?topic=monitoring-mon-curl).
 
 
 ## Fetch all user notifications
@@ -43,7 +43,7 @@ curl -X GET <REST_API_ENDPOINT>/api/notificationChannels?from=<START_TIMESTAMP>&
 
 Where 
 
-* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -51,11 +51,11 @@ Where
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
     
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the notifications. 
 
-For more information about the response format, see [notification schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-notifications_api#notifications_api-parm-req-schema).
+For more information about the response format, see [notification schema](/docs/monitoring?topic=monitoring-notifications_api#notifications_api-parm-req-schema).
 
 
 ## Fetch specific user notification
@@ -71,7 +71,7 @@ curl -X GET <REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "A
 
 Where 
 
-* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -79,7 +79,7 @@ Where
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
     
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<NOTIFICATION_ID>` defines the ID of the notification that you want to modify.
 
@@ -122,7 +122,7 @@ curl -X POST <REST_API_ENDPOINT>/api/notificationChannels -H "Authorization: $AU
 
 Where 
 
-* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -130,7 +130,7 @@ Where
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
     
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * You can pass data to create the notification in the `notification.json` file by using `-d`. 
 
@@ -174,7 +174,7 @@ curl -X DELETE <REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H
 
 Where 
 
-* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -182,7 +182,7 @@ Where
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
     
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<NOTIFICATION_ID>` defines the ID of the notification that you want to modify.
 
@@ -204,7 +204,7 @@ curl -X PUT <REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "A
 
 Where 
 
-* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -212,7 +212,7 @@ Where
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
     
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<NOTIFICATION_ID>` defines the ID of the notification that you want to modify.
 

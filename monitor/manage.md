@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, manage
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -138,9 +138,9 @@ The following table lists the tasks that you can run to change the scope in the 
 
 | Task                                                                                        | Description     |
 |---------------------------------------------------------------------------------------------|-----------------|
-| [Changing the scope of a dashboard](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_scope) | Change the scope of a dashboard to filter out data points for all metrics displayed through panels on the dashboard. |
-| [Changing the scope of a panel](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-panels#panels_scope) | Change the scope of a panel to filter out data for a specific metric that is displayed through the panel. |
-| [Changing the scope of a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams#teams_scope) | Change the scope of the data that is visible to users that are members of a team. |
+| [Changing the scope of a dashboard](/docs/monitoring?topic=monitoring-dashboards#dashboards_scope) | Change the scope of a dashboard to filter out data points for all metrics displayed through panels on the dashboard. |
+| [Changing the scope of a panel](/docs/monitoring?topic=monitoring-panels#panels_scope) | Change the scope of a panel to filter out data for a specific metric that is displayed through the panel. |
+| [Changing the scope of a team](/docs/monitoring?topic=monitoring-teams#teams_scope) | Change the scope of the data that is visible to users that are members of a team. |
 {: caption="Table 4. Tasks to change the scope" caption-side="top"} 
 
 
@@ -164,16 +164,16 @@ An administrator must switch to the *Monitor Operations* team to create teams or
 
 An administrator can do any of the following actions to restrict the viewing permissions of a user:
 * Change the user's role in the default *Monitor Operations* team to *Read* User. 
-* Create a default team with limited scope and visibility. Then, grant permissions to users to work in other teams. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team).
+* Create a default team with limited scope and visibility. Then, grant permissions to users to work in other teams. [Learn more](/docs/monitoring?topic=monitoring-iam_grant_team).
 
 The following table lists the tasks that you can run when you work with teams:
 
 | Task                                                                            | Description                 |
 |---------------------------------------------------------------------------------|-----------------------------|
-| [Creating a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams#teams_create)      | Create a team to control data visibility.  |
-| [Deleting a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams#teams_delete)      | Delete a team. </br>**Note:** When you delete a team, users that belong only to this team are moved to the default team. |
-| [Grant permissions to work in a team](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant_team) | Grant a user or service ID administration permissions. | 
-| [Edit a team ](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams#teams_scope)          | Change the scope of the data that is visible to users that are members of a team.  |
+| [Creating a team](/docs/monitoring?topic=monitoring-teams#teams_create)      | Create a team to control data visibility.  |
+| [Deleting a team](/docs/monitoring?topic=monitoring-teams#teams_delete)      | Delete a team. </br>**Note:** When you delete a team, users that belong only to this team are moved to the default team. |
+| [Grant permissions to work in a team](/docs/monitoring?topic=monitoring-iam_grant_team) | Grant a user or service ID administration permissions. | 
+| [Edit a team ](/docs/monitoring?topic=monitoring-teams#teams_scope)          | Change the scope of the data that is visible to users that are members of a team.  |
 {: caption="Table 5. Tasks to work with teams" caption-side="top"} 
 
 

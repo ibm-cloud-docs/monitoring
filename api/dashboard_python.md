@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, dashboard, api
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -27,7 +27,7 @@ subcollection: Monitoring-with-Sysdig
 Use the Python Client to manage dashboards programmatically.
 {: shortdesc}
 
-To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
+To learn how to use the Python client, see [Using the Python client](/docs/monitoring?topic=monitoring-python-client).
 
 To work with resources in a specific team, you must use the Monitoring (sysdig) token.
 {: important}

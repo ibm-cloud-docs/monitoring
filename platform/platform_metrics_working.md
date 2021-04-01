@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -39,7 +39,7 @@ Platform metrics are metrics that are exposed by enabled-monitoring services and
 
     To configure platform metrics, you must be assigned the IAM Editor role or higher for the IBM Cloud Monitoring with monitoring service.
 
-* If a monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services).
+* If a monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services).
 
 * To monitor platform metrics for a service instance, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the service instance that you want to monitor is provisioned.
 
@@ -63,7 +63,7 @@ The following global attributes are available for segmenting metrics:
 | `Resource group ID`     | `ibm_resource_group_id`     | The resource group GUID where the service instance is created. |
 {: caption="Table 1. Global attributes" caption-side="top"}
 
-Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
+Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
 
 You can control the data that is visible for analysis per team, per dashboard, and per panel in a dashboard. 
 
@@ -109,7 +109,7 @@ You can create a copy of a dashboard template. You can customize the copy of the
 
 Complete the following steps to create a custom dashboard:
 
-1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 2. Navigate to the **DASHBOARD** section (![dashboard section](../images/dashboards.png)) in the Web UI.
 3. In the **DASHBOARD TEMPLATES** section, expand **IBM**, and select a dashboard template for a service that you want to monitor.
 4. Select **Create Custom Dashboard**. The window *Create Dashboard from Template* opens. 
@@ -125,7 +125,7 @@ Next, customize the scope and panels in the dashboard.
 
 Complete the following steps to define the scope of the data that is displayed through the dashboard:
 
-1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 2. Navigate to the **DASHBOARD** section (![dashboard section](../images/dashboards.png)) in the Web UI.
 3. Select a custom dashboard in the **My Dashboards** section.
 4. To modify the scope, click **Edit scope**.
@@ -155,7 +155,7 @@ Complete the following steps to define the scope of the data that is displayed t
 
 Complete the following steps to define the scope of the data that is displayed through a panel in a dashboard:
 
-1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 2. Navigate to the **DASHBOARD** section (![dashboard section](../images/dashboards.png)) in the Web UI.
 3. Select a custom dashboard in the **My Dashboards** section.
 4. Select a panel where you want to change the scope of the data.
@@ -185,7 +185,7 @@ To save the scope, you must click **Save** at the panel level.
 
 Complete the following steps to define an alert on a metric:
 
-1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 2. Verify that you have a notification channel that defines how you want to be notified.
 
     You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
@@ -228,7 +228,7 @@ You can define a `metric` alert directly from the *Alerts* section.
 
 Complete the following steps to define an alert on a metric:
 
-1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
 2. Verify that you have a notification channel that defines how you want to be notified.
 
@@ -279,7 +279,7 @@ Enabling platform metrics, grants access to all platform metrics. However, you c
 
 Complete the following steps to limit the data to metrics collected for services that are created in that resource group:
 
-1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
 2. Navigate to the **Settings** section.
 
@@ -295,7 +295,7 @@ Complete the following steps to limit the data to metrics collected for services
 
 6. Select 1 or more resource groups for which you want the data to be visible to users that are members of this team.
 
-7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
+7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
 
 8. Click **Save**.
 
@@ -307,7 +307,7 @@ Complete the following steps to limit the data to metrics collected for services
 
 Complete the following steps:
 
-1. [Launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
 2. Navigate to the **Settings** section.
 
@@ -319,7 +319,7 @@ Complete the following steps:
 
 6. Select 1 or more instance IDs for which you want the data to be visible to users that are members of this team.
 
-7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
+7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
 
 8. Click **Save**.
 

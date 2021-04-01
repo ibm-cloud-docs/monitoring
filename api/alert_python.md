@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, alerting, api
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -27,7 +27,7 @@ subcollection: Monitoring-with-Sysdig
 You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} Python client.
 {:shortdesc}
 
-To learn how to use the Python client, see [Using the Python client](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client).
+To learn how to use the Python client, see [Using the Python client](/docs/monitoring?topic=monitoring-python-client).
 
 ## Create an alert (POST)
 {: #alert_python-create-alert}
@@ -91,7 +91,7 @@ if not res[0]:
 
 Consider the following information when you create a Python script:
 
-* You must include the following information: `<MONITORING-ENDPOINT>`, `<IAM_APIKEY>`, and `<GUID>` These data is required to authenticate the request with the monitoring instance. To get the monitoring instance information, see [Authenticate your user or service ID by using IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-python-client#python-client-iam-auth).
+* You must include the following information: `<MONITORING-ENDPOINT>`, `<IAM_APIKEY>`, and `<GUID>` These data is required to authenticate the request with the monitoring instance. To get the monitoring instance information, see [Authenticate your user or service ID by using IAM](/docs/monitoring?topic=monitoring-python-client#python-client-iam-auth).
 
 * You must define the notification channels through which you want to be notified when the alert is triggered.
 
@@ -114,7 +114,7 @@ When you configure the alert, complete the following sections:
 
 * [`condition`]: You must define the condition that defines when the alert is triggered. For example, you can set this parameter to `['host.mac', 'proc.name']` to check a CPU alert for every process on every machine.
 
-    For more information, see [Multi-Condition Alerts](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alerts).
+    For more information, see [Multi-Condition Alerts](/docs/monitoring?topic=monitoring-alerts).
 
 * [`segmentby`]: You can define the scope of an alert by configuring the `segmentedby` section. The default value is `ANY`.
 

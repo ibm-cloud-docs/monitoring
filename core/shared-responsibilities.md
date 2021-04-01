@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, customer responsibilities, IBM responsibilities, terms and conditions
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -41,7 +41,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for the set up and
 |-------------------|-------------------------------------------------|-----------------------|
 | `Monitor incidents`  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | Set preferences to [receive emails about platform notifications](/docs/overview?topic=overview-ui#email-prefsl). </br>Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
 | `Maintain {{site.data.keyword.cloud_notm}} high availability SLA`  | Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview/terms-of-use?topic=overview-slas). |   |
-| `Provide high availability capabilities` | Provide capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions (MZR), to meet local access and low latency requirements for each supported region.  | Use the list of [available regions](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints) to plan for and create new instances of the service. |
+| `Provide high availability capabilities` | Provide capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions (MZR), to meet local access and low latency requirements for each supported region.  | Use the list of [available regions](/docs/monitoring?topic=monitoring-endpoints) to plan for and create new instances of the service. |
 | `Monitor monitoring agents`   | Provide images and instructions for how to install monitoring agents in environments that you want to monitor, such as Kubernetes, Linux, Openshift. | Install and configure monitoring agents. </br>Monitor that the agents are running in your environment, for example, by using monitoring alerts. |
 | `Deliver platform metrics`  | Deliver platform metrics for Monitoring-enabled services to the monitoring instance that collects platform metrics and is located in the region where the platform metrics are generated.  | Configure 1 monitoring instance per region to collect platform metrics in that region. |
 {: caption="Table 1. Responsibilities for incident and operations" caption-side="top"}
@@ -77,7 +77,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | `Control monitoring data access` | Allow administrators to control access to metrics data and metadata through Sysdig teams. | Grant, revoke, and manage access to monitoring data by using IAM. |
 {: caption="Table 3. Responsibilities for identity and access management" caption-side="top"}
 
-[Learn more about controlling access through IAM](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam).
+[Learn more about controlling access through IAM](/docs/monitoring?topic=monitoring-iam).
 
 
 ## Security and regulation compliance

@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, windows
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -106,7 +106,7 @@ Run a monitoring agent on a Linux system and remotely scrape the Windows endpoin
 
 Complete the following steps:
 
-1. [Install the monitoring agent on a Linux node](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent#config_agent_linux).
+1. [Install the monitoring agent on a Linux node](/docs/monitoring?topic=monitoring-config_agent#config_agent_linux).
 
     You can collect a maximum of 3000 time series per Linux agent. If you need to collect more than 3000 time series for all your Windows systems, you need more than one Linux agent.
     {: important}
@@ -240,9 +240,9 @@ Complete the following steps:
 
     Where 
     
-    `ENDPOINT` is the monitoring collector endpoint. To see the list of endpoints, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+    `ENDPOINT` is the monitoring collector endpoint. To see the list of endpoints, see [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
-    `monitoring-apikey` is the file that contains the **Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Getting the API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+    `monitoring-apikey` is the file that contains the **Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Getting the API token](/docs/monitoring?topic=monitoring-api_token#api_token_get).
 
     For example, the completed version of the prometheus.yml could look like :
   

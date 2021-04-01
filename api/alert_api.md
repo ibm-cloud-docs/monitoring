@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, alerting, api
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -27,7 +27,7 @@ subcollection: Monitoring-with-Sysdig
 You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} API.
 {:shortdesc}
 
-To learn how to use cURL, see [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl).
+To learn how to use cURL, see [cURL command](/docs/monitoring?topic=monitoring-mon-curl).
 
 
 ## Get details about a user alert
@@ -43,7 +43,7 @@ curl -X GET <REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUTH_T
 
 Where 
 
-* `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -51,7 +51,7 @@ Where
 
     `TeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
     
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<ALERT_ID>` defines the ID of the alert that you want to modify.
 
@@ -106,7 +106,7 @@ curl -X POST <REST_API_ENDPOINT>/api/alerts -H "Authorization: $AUTH_TOKEN" -H "
 
 Where 
 
-* `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -114,13 +114,13 @@ Where
 
     `TeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
     
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * You can pass data to create the alert in the `alert.json` file by using `-d`. 
 
     When you create an alert, include the following parameters: *type*, *name*,  *severity*, *timespan*, *condition*, *segmentby*, *segmentConditionn*, *filter*, *notificationChannelIds*, *enabled*
 
-    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alert_api#alert_api-schema-req).
+    For more information, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert_api-schema-req).
 
 
 The following sample shows the request body parameters that you can set to create an alert: 
@@ -170,7 +170,7 @@ curl -X PUT <REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUTH_T
 
 Where 
 
-* `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -178,13 +178,13 @@ Where
 
     `TeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
     
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<ALERT_ID>` defines the ID of the alert that you want to modify.
 
 * You can pass data to create the alert in the `alert.json` file by using `-d`. 
 
-    For more information, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alert_api#alert_api-schema-req).
+    For more information, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert_api-schema-req).
 
 
 The following sample shows the request body parameters that you can set to update an alert: 
@@ -233,7 +233,7 @@ curl -X DELETE <REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUT
 
 Where 
 
-* `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -241,7 +241,7 @@ Where
 
     `TeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
     
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<ALERT_ID>` defines the ID of the alert that you want to delete.
 
@@ -259,15 +259,15 @@ curl -X GET <REST_API_ENDPOINT>/api/alerts?from=<START_TIMESTAMP>&to=<END_TIMEST
 
 Where 
 
-* `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the alerts. 
 
-For more information about the response format, see [Alert schema](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alert_api#alert_api-schema-res).
+For more information about the response format, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert_api-schema-res).
 
 
 
