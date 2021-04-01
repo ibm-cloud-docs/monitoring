@@ -29,14 +29,14 @@ Monitoring
         {: .topicgroup}
         Adding more metrics
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
-            exporters/prometheus.md
+            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
 
     {: .topicgroup}
     Secure
         secure/getting-started-secure.md
-        [Sysdig Secure Product Page](https://sysdig.com/products/monitor/)
-        [Sysdig Secure Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
-   {: .navgroup-end}
+        [Product Page](https://sysdig.com/products/monitor/)
+        [Documentation](https://docs.sysdig.com/en/sysdig-secure.html)
+    {: .navgroup-end}
 
     {: .navgroup id="howto"}
     provision.md
@@ -73,12 +73,10 @@ Monitoring
         agent/upgrade_agent.md
         agent/remove_agent.md
         agent/agent_log_level.md
-        agent/agent_events_level.md
         agent/access_key.md
         agent/change_kube_agent.md
         agent/change_linux_agent.md
         agent/change_container_agent.md
-        agent/agent_ts.md
         [Monitoring agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)
 
     {: .topicgroup}
@@ -99,11 +97,10 @@ Monitoring
 
         {: .topicgroup}
         Dashboards
-            monitor/dashboards.md
-            monitor/panels.md
-            api/dashboard_api.md
-            api/dashboard_python.md
             [Dashboard templates](https://docs.sysdig.com/en/dashboard-templates-209032.html)
+            [Working with dashboards](https://docs.sysdig.com/en/dashboards.html)
+            monitor/panels.md
+            api/dashboard_python.md
 
         {: .topicgroup}
         Explore views
@@ -130,14 +127,6 @@ Monitoring
         Teams
             teams/teams.md
             teams/team_id.md
-        
-        {: .topicgroup}
-        Prometheus exporters
-            exporters/ipmi.md
-            exporters/blackbox.md
-            exporters/wmi.md
-            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
-            [Prometheus metrics / OpenMetrics code instrumentation.](https://sysdig.com/blog/prometheus-metrics/)
         
         {: .topicgroup}
         Integrations
@@ -175,23 +164,22 @@ Monitoring
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    endpoints.md
     pricing.md
+    endpoints.md
     core/shared-responsibilities.md
-
+    monitor/monitoring.md
+    
     {: .topicgroup}
     Monitoring CLI
         /monitor-cli-plugin/monitor-cli-plugin-monitor-cli
 
     {: .topicgroup}
     Monitoring API
-        [Monitoring API](https://test.cloud.ibm.com/apidocs/monitor)
+        [Monitoring API](https://cloud.ibm.com/apidocs/monitor)
         api/rest_apis.md
         api/mon-curl.md
         iam/api_monitor_token.md
         api/python-client.md
-   
-    monitor/monitoring.md
 
     {: .topicgroup}
     Cloud services metrics
