@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-28"
+lastupdated: "2021-04-01"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -177,7 +177,7 @@ You can choose the monitoring instance where you want to collect {{site.data.key
 
 You can monitor {{site.data.keyword.satellitelong}} through the monitoring instance that is configured with **service platform logs** in the same region that your {{site.data.keyword.satelliteshort}} location is managed from.
 
-The following tables list the locations where automatic collection of registry service metrics is enabled. For more information, see [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor_sysdig).
+The following tables list the locations where automatic collection of registry service metrics is enabled. For more information, see [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor).
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
