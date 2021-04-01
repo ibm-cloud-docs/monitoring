@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -33,11 +33,11 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 ## Before you begin
 {: #baremetal_linux_prereqs}
 
-1. [Read about {{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started).
+1. [Read about {{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-getting-started).
 
 2. Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-3. [Provision an {{site.data.keyword.mon_full_notm}} instance from the catalog](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_ui).
+3. [Provision an {{site.data.keyword.mon_full_notm}} instance from the catalog](/docs/monitoring?topic=monitoring-provision#provision_ui).
 
 4. [Provision a bare metal server](/docs/bare-metal?topic=bare-metal-getting-started). 
 
@@ -104,9 +104,9 @@ You must install a monitoring agent to collect and forward metrics from a bare m
 
 Complete the following steps from the command line to install a monitoring agent:
 
-1. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+1. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/monitoring?topic=monitoring-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the ingestion URL. For more information, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the ingestion URL. For more information, see [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
 3. Deploy the monitoring agent. Run the following command:
 
@@ -123,7 +123,7 @@ Complete the following steps from the command line to install a monitoring agent
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
-    * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+    * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
     If `cURL` is not available, you must install it. For example, for an Ubuntu bare metal, run the following command: `sudo apt-get update`. Then, run the install command: `sudo apt-get install curl`.
 

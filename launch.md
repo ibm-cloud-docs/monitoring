@@ -7,7 +7,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, launch web UI
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -43,7 +43,7 @@ The following table lists the minimum policies that a user must have to be able 
 | `{{site.data.keyword.mon_full_notm}}` | Service role: Writer      | Allows the user to launch the Web UI and view metrics in the Web UI.  |
 {: caption="Table 1. IAM policies" caption-side="top"} 
 
-For more information on how to configure these policies for a user, see [Granting permissions to launch the monitoring UI or to make REST API calls](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam_grant).
+For more information on how to configure these policies for a user, see [Granting permissions to launch the monitoring UI or to make REST API calls](/docs/monitoring?topic=monitoring-iam_grant).
 
 
 ## Launch the Monitor web UI through the {{site.data.keyword.cloud_notm}} UI

@@ -6,7 +6,7 @@ lastupdated: "2020-09-15"
 
 keywords: IBM Cloud, monitoring, customize, linux agent
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 

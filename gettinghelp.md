@@ -7,7 +7,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, support, help
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 

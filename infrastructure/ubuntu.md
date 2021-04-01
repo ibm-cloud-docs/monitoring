@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -37,7 +37,7 @@ You then view the metrics using the web-based user interface.
 ## Before you begin
 {: #ubuntu_prereqs}
 
-[Read about {{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started).
+[Read about {{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-getting-started).
 
 Work in the `US South` region. 
 
@@ -85,7 +85,7 @@ To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{si
 
    By default, the **Lite** plan is set.
 
-   For more information about other service plans, see [Pricing](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans).
+   For more information about other service plans, see [Pricing](/docs/monitoring?topic=monitoring-pricing_plans).
 
 8. Enter a **Service name** for the service instance.
 
@@ -101,7 +101,7 @@ To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{si
 
 After you provision an instance, the **Monitoring** dashboard opens. 
 
-**Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision#provision_cli).
+**Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/monitoring?topic=monitoring-provision#provision_cli).
 
 ## Step 3. Configure your Ubuntu server to send metrics to your instance
 {: #ubuntu_step3}
@@ -121,9 +121,9 @@ Complete the following steps from a command line:
 
 2. [Access your Ubuntu server](/docs/vpc?topic=vpc-vsi_is_connecting_linux).
 
-3. Obtain the  access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+3. Obtain the  access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/monitoring?topic=monitoring-access_key#access_key_ibm_cloud_ui).
 
-4. Obtain the ingestion URL. For more information, see [ collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+4. Obtain the ingestion URL. For more information, see [ collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
 5. Deploy the monitoring agent. Run the following command:
 
@@ -134,13 +134,13 @@ Complete the following steps from a command line:
 
    Where
 
-   * ACCESS_KEY is the [access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key) for the instance.
+   * ACCESS_KEY is the [access key](/docs/monitoring?topic=monitoring-access_key) for the instance.
 
-   * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.  To determine the endpoint, see [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+   * COLLECTOR_ENDPOINT is the ingestion URL for the region where the monitoring instance is available.  To determine the endpoint, see [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
    * TAG_DATA are comma-separated tags that are formatted as `TAG_NAME:TAG_VALUE`. You can associate one or more tags to your monitoring agent. For example, `role:serviceX,location:us-south`. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
-   * The `sysdig_capture_enabled` is set to *false* to disable the  capture feature. By default this is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+   * The `sysdig_capture_enabled` is set to *false* to disable the  capture feature. By default this is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
    If the monitoring agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the monitoring agent.
 
@@ -201,7 +201,7 @@ To configure color-coding for a column, complete the following steps:
 ## Next steps
 {: #ubuntu_next_steps}
 
-* Create a custom dashboard. For more information, see [Working with dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards).
+* Create a custom dashboard. For more information, see [Working with dashboards](/docs/monitoring?topic=monitoring-dashboards#dashboards).
 
-* Learn about alerts. For more information, see [Working with alerts](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitoring#monitoring_alerts). 
+* Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts). 
 

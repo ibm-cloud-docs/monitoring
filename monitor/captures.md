@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, captures
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -27,7 +27,7 @@ subcollection: Monitoring-with-Sysdig
 A capture is a trace file that you can generate to analyze what happens in a host during a time frame. For example, you can use it to analyze bottlenecks, or component interactions. In the {{site.data.keyword.mon_full_notm}} service, you can create, explore, download, and delete *captures* for individual nodes. 
 {:shortdesc}
 
-For more information, see [Captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+For more information, see [Captures](/docs/monitoring?topic=monitoring-captures#captures).
 
 
 ## Creating a capture
@@ -37,7 +37,7 @@ You create a capture in the *Explore* view.
 
 Complete the following steps to create a capture file:
 
-1. Navigate to the *EXPLORE* section in the web UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch).
+1. Navigate to the *EXPLORE* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 
 2. Click the switch host icon ![Switch host icon](images/switch_hosts.png).
 
@@ -73,7 +73,7 @@ The status of a capture file can be any of the following values:
 
 Complete the following steps to delete a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch).
+1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 2. Identify and select the capture file that you want to delete.
 3. Click **Delete**.
 
@@ -84,7 +84,7 @@ Complete the following steps to delete a capture file:
 
 Complete the following steps to explore a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch).
+1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 2. Identify and select the capture file that contains the data for the host that you want to analyze.
 3. Click **EXPLORE**.
 
@@ -95,7 +95,7 @@ Complete the following steps to explore a capture file:
 
 Complete the following steps to download a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch).
+1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 2. Identify and select the capture file that contains the data that you want to download.
 3. Click **DOWNLOAD**.
 

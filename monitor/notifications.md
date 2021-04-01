@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, notification channel
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -34,7 +34,7 @@ Configure notification channels to be notified when an alert is triggered. You m
 
 Complete the following steps to add a notification channel:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, choose **Settings**.
 
@@ -77,7 +77,7 @@ Complete the following steps to add a notification channel:
 
 Complete the following steps to modify a notification channel:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, choose **Settings**.
 
@@ -94,7 +94,7 @@ Complete the following steps to modify a notification channel:
 
 Complete the following steps to test a notification channel:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, choose **Settings**.
 
@@ -109,7 +109,7 @@ Complete the following steps to test a notification channel:
 
 Complete the following steps to temporarily disable a notification channel:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, choose **Settings**.
 
@@ -122,7 +122,7 @@ Complete the following steps to temporarily disable a notification channel:
 
 Complete the following steps to delete a notification channel:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch#launch). 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
 2. From the *Selector* button in the navigation bar, choose **Settings**.
 

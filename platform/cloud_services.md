@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 
 ---
@@ -27,7 +27,7 @@ subcollection: Monitoring-with-Sysdig
 # Cloud services
 {: #cloud_services}
 
-List of {{site.data.keyword.cloud}} services that send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the monitoring instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-platform_metrics_enabling).
+List of {{site.data.keyword.cloud}} services that send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the monitoring instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 {:shortdesc}
 
 
@@ -38,7 +38,7 @@ The following table lists Cloud Foundry resources that are enabled for {{site.da
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
-| [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) | Cloud Foundry is the premier industry standard Platform-as-a-Service (PaaS), that ensures the fastest, easiest, and most reliable deployment of cloud-native applications.  | [Metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitor-cf-sysdig)|
+| [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) | Cloud Foundry is the premier industry standard Platform-as-a-Service (PaaS), that ensures the fastest, easiest, and most reliable deployment of cloud-native applications.  | [Metrics](/docs/monitoring?topic=monitoring-monitor-cf-sysdig)|
 {: caption="List of Cloud Foundry resources" caption-side="top"} 
 
 

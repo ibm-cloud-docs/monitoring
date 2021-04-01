@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, secure, getting started
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -34,7 +34,7 @@ In architectures that are focused on container and microservices, you can use *S
 
 You must have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration](https://cloud.ibm.com/login){: external}.
 
-Check the regions where the service is available. [Learn more](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_regions).
+Check the regions where the service is available. [Learn more](/docs/monitoring?topic=monitoring-endpoints#endpoints_regions).
 
 You can complete the getting started steps in any of the supported regions.
 
@@ -42,24 +42,24 @@ You can complete the getting started steps in any of the supported regions.
 ## Step 1. Manage user access
 {: #getting-started-secure_step1}
 
-See [Manage user access](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#getting-started-step1).
+See [Manage user access](/docs/monitoring?topic=monitoring-getting-started#getting-started-step1).
 
 ## Step2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
 {: #getting-started-secure_step2}
 
-See [Provision an instance of the IBM Cloud Monitoring service](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision).
+See [Provision an instance of the IBM Cloud Monitoring service](/docs/monitoring?topic=monitoring-provision).
 
 ## Step3. Connect a data source by configuring a monitoring agent
 {: #getting-started-secure_step3}
 
 Complete the following steps:
-1. [Configure a monitoring agent](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
+1. [Configure a monitoring agent](/docs/monitoring?topic=monitoring-config_agent).
 2. [Optional] [Enable Kubernetes Audit Logging](https://docs.sysdig.com/en/kubernetes-audit-logging.html){: external} to track kubectl exec and other Kubernetes commands.
 
 ## Step 4. Launch the web UI
 {: #getting-started-secure_step4}
 
-See [Launch the web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+See [Launch the web UI](/docs/monitoring?topic=monitoring-launch).
 
 
 ## Step 5. Secure your environment

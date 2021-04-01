@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, baremetal, linux, prometheus, remote monitoring
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -35,9 +35,9 @@ The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP,
 
 Complete the following steps to configure a monitoring agent on Linux to collect and forward metrics to an instance of the {{site.data.keyword.mon_full_notm}} service:
 
-1. [Obtain the access key](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-access_key#access_key_ibm_cloud_ui).
+1. [Obtain the access key](/docs/monitoring?topic=monitoring-access_key#access_key_ibm_cloud_ui).
 
-2. Obtain the public or private ingestion URL. For more information, see [collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+2. Obtain the public or private ingestion URL. For more information, see [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
 3. Deploy the monitoring agent. Run the following command from a terminal.
 
@@ -57,11 +57,11 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
     * ACCESS_KEY is the ingestion key for the instance.
 
-    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion).
+    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. 
 
-    * Set **sysdig_capture_enabled** to *false* to disable the {{site.data.keyword.mon_full_notm}} capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-captures#captures).
+    * Set **sysdig_capture_enabled** to *false* to disable the {{site.data.keyword.mon_full_notm}} capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
     * Set **secure** to *true* to use SSL with the communication.
 

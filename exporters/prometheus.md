@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, prometheus, exporters, promcat
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -70,7 +70,7 @@ The following collectors are supported:
 {: caption="Table 1. Collectors" caption-side="top"} 
 
 
-To learn how to configure the WMI exporter, see [Monitoring a Windows environment](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-windows).
+To learn how to configure the WMI exporter, see [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows).
 
 
 
@@ -125,9 +125,9 @@ You can collect the following metrics when you configure the IPMI exporter:
 
 For more information, see [Prometheus IPMI Exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
-To learn how to configure the IPMI exporter, see [Configuring the Prometheus IPMI Exporter to monitor sensor metrics](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-ipmi).
+To learn how to configure the IPMI exporter, see [Configuring the Prometheus IPMI Exporter to monitor sensor metrics](/docs/monitoring?topic=monitoring-ipmi).
 
-You can also check the tutorial: [Configure the Prometheus IPMI Exporter to monitor sensor metrics in a Bare metal](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-baremetal_linux#baremetal_linux_step3).
+You can also check the tutorial: [Configure the Prometheus IPMI Exporter to monitor sensor metrics in a Bare metal](/docs/monitoring?topic=monitoring-baremetal_linux#baremetal_linux_step3).
 
 
 ### Blackbox exporter
@@ -151,8 +151,8 @@ docker run -it --rm sysdiglabs/promcat-connect:0.1 install rancher:2.5.0 -t <MON
 
 Where
 
-* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
-* `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
+* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the API token](/docs/monitoring?topic=monitoring-api_token#api_token_get).
+* `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/monitoring?topic=monitoring-endpoints).
 
 
 

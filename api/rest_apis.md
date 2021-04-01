@@ -6,7 +6,7 @@ lastupdated: "2021-01-18"
 
 keywords: IBM Cloud, monitoring, alerting, api, curl
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -28,7 +28,7 @@ subcollection: Monitoring-with-Sysdig
 You can use cURL, a command line tool, to make API calls to the {{site.data.keyword.mon_full_notm}} service by using URL syntax. You can also use the Python client, `sdcclient`, to automate routine tasks and monitor notifications.
 {:shortdesc}
 
-You can use public or private endpoints to make REST API calls. For more information, see [REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api).
+You can use public or private endpoints to make REST API calls. For more information, see [REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api).
 
 ## Alerts REST API
 {: #rest_apis_alerts}
@@ -45,7 +45,7 @@ Use this API to manage alerts.
 | Fetch all user alerts      | `GET`            | `<ENDPOINT>/api/alerts`             |
 {: caption="Table 1. Alerting REST API" caption-side="top"}
 
-For more information, see [Managing alerts (Alerts REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-alert_api).
+For more information, see [Managing alerts (Alerts REST API)](/docs/monitoring?topic=monitoring-alert_api).
 
 
 
@@ -60,7 +60,7 @@ Use this API to extract data from a {{site.data.keyword.mon_short}} instance.
 | Extract metrics             | `POST`           | `<ENDPOINT>/api/data`                          |
 {: caption="Table 2. Data REST API" caption-side="top"}
 
-For more information, see [Extracting metrics from a {{site.data.keyword.mon_short}} instance (DATA API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-metrics_api).
+For more information, see [Extracting metrics from a {{site.data.keyword.mon_short}} instance (DATA API)](/docs/monitoring?topic=monitoring-metrics_api).
 
 For more information about the {{site.data.keyword.mon_short}} Metric Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
 
@@ -96,7 +96,7 @@ Use this API to manage notification channels.
 | Fetch all user notification channels    | `GET`            | `<ENDPOINT>/api/notificationChannels`                 |
 {: caption="Table 4. Notifications REST API" caption-side="top"}
 
-For more information, see [Managing notification channels (Notifications REST API)](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-notifications_api).
+For more information, see [Managing notification channels (Notifications REST API)](/docs/monitoring?topic=monitoring-notifications_api).
 
 
 

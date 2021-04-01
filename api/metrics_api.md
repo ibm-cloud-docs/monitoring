@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, query, api
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -32,7 +32,7 @@ You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance by 
 ## Get metrics by using cURL
 {: #metrics_api-curl}
 
-You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to get metrics:
+You can use the following [cURL command](/docs/monitoring?topic=monitoring-mon-curl) to get metrics:
 
 ```shell
 curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d DATA
@@ -41,7 +41,7 @@ curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: $AUTH_TOKEN" -H 
 
 Where 
 
-* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Monitoring REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Monitoring REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
@@ -49,7 +49,7 @@ Where
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
     
-    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * You can pass the file `metrics.json` to extract metrics by using `-d`, for example, `-d @metrics.json`.
 
@@ -87,7 +87,7 @@ The following sample shows a template for the `metrics.json` file:
 
 To see the pre-defefined metrics by Sysdig, see [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html){: external}.
 
-To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_notm}} services that are Sysdig-enabled, see [Cloud services](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-cloud_services). 
+To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_notm}} services that are Sysdig-enabled, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services). 
 
 
 ## Data aggregation

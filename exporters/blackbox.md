@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -42,7 +42,7 @@ Complete the following steps to configure the Prometheus Blackbox Exporter:
 ## Step 1. Configure a monitoring agent to collect metrics
 {: #blackbox_step1}
 
-[Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-config_agent).
+[Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/monitoring?topic=monitoring-config_agent).
 
 
 
@@ -202,7 +202,7 @@ scrape_configs:
 Where 
 
 * `<IP_ADDRESS_OF_REMOTE_SERVER>` is the IP address of a server that you want to monitor.
-* `<INGESTION_ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance ingestion endpoint, for example, `ingest.us-south.monitoring.cloud.ibm.com`. See [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion). 
+* `<INGESTION_ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance ingestion endpoint, for example, `ingest.us-south.monitoring.cloud.ibm.com`. See [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion). 
 
 
 When you save the file, changes are applied.
@@ -268,11 +268,11 @@ docker run -it --rm sysdiglabs/promcat-connect:0.1 install Blackbox:2.5.0 -t <MO
 
 Where
 
-* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
-* `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
+* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the Sysdig API token](/docs/monitoring?topic=monitoring-api_token#api_token_get).
+* `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/monitoring?topic=monitoring-endpoints).
 
 
-Then, [launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch), and go to the *Dashboards* section.
+Then, [launch the monitoring UI](/docs/monitoring?topic=monitoring-launch), and go to the *Dashboards* section.
 
 
 

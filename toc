@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Monitoring-with-Sysdig" audience="service" category="logging_monitoring" href="/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#getting-started" path="Monitoring-with-Sysdig"}
+{: .toc subcollection="monitoring" audience="service" category="logging_monitoring" href="/docs/monitoring?topic=monitoring-getting-started#getting-started" path="monitoring"}
 Monitoring
 
     {: .navgroup id="learn"}

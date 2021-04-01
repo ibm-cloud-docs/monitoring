@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, iam, access groups
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -122,7 +122,7 @@ Complete the following steps to assign a policy to an access group through the U
 
     Select **viewer** to grant permissions to view instances in the *Observability* UI.
 
-    [Learn more about the roles that you need](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam).
+    [Learn more about the roles that you need](/docs/monitoring?topic=monitoring-iam).
 
 8. Click **Assign**.
 
@@ -187,7 +187,7 @@ Complete the following steps to assign a policy to an access group through the U
 
     Select **reader** to grant permissions to view data only.
 
-    [Learn more about the roles that you need](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam).
+    [Learn more about the roles that you need](/docs/monitoring?topic=monitoring-iam).
 
 8. Click **Assign**.
 

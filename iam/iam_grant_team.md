@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, iam, access groups
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -44,7 +44,7 @@ By default, users are granted access to the `monitor operations` team or to the 
 - An admin of the service can configure multiple teams, and change the default team. 
 - Each team has their own set of custom dashboards and alerts that they can use to monitor the data in scope for the team.
 - Users in a team have access to the data that is included in the scope defined by the team administrator.
-[Learn more about teams](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-teams).
+[Learn more about teams](/docs/monitoring?topic=monitoring-teams).
 
 For a user to monitor data within the context of a team, you must grant the user a policy for the {{site.data.keyword.mon_full_notm}} service. The policy specifies the team and the service permissions for the user so the user can work with the data in scope for that team. 
 
@@ -287,7 +287,7 @@ Complete the following steps to assign a policy to an access group through the U
 
     * Select **reader** to grant permissions to view data only.
 
-    [Learn more about the roles that you need](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-iam).
+    [Learn more about the roles that you need](/docs/monitoring?topic=monitoring-iam).
 
 8. Click **Assign**.
 

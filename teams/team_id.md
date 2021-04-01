@@ -6,7 +6,7 @@ lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, api token
 
-subcollection: Monitoring-with-Sysdig
+subcollection: monitoring
 
 ---
 
@@ -45,7 +45,7 @@ export AUTH_TOKEN=`ibmcloud iam oauth-tokens | grep IAM | cut -d \: -f 2 | sed '
 {: #team_id_step2}
 
 
-You can use the following [cURL command](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl) to list the teams that are available in a monitoring instance and identify the ID of a specific team:
+You can use the following [cURL command](/docs/monitoring?topic=monitoring-mon-curl) to list the teams that are available in a monitoring instance and identify the ID of a specific team:
 
 ```shell
 curl <REST_API_ENDPOINT>/teams -H "Authorization: $AUTH_TOKEN" -H "content-type: application/json" -H "IBMInstanceID: $GUID" 
@@ -54,11 +54,11 @@ curl <REST_API_ENDPOINT>/teams -H "Authorization: $AUTH_TOKEN" -H "content-type:
 
 Where 
 
-* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [REST API endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+* `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
 * You can pass multiple headers by using `-H`. 
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-mon-curl#mon-curl-headers-iam).
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 
 
