@@ -217,7 +217,7 @@ Complete the following steps:
 
     `<HOSTNAME>` is the name of the Windows system
 
-    `<JOBNAME>` is a custom attribute that you can set to identify the role of the node that you are scraping, and you can also use to scope the data in Sysdig
+    `<JOBNAME>` is a custom attribute that you can set to identify the role of the node that you are scraping, and you can also use to scope the data in {{site.data.keyword.mon_full_notm}}
 
     Next, you will add the `remote_write` configuration to the end of the `prometheus.yml` file to configure the target  monitoring instance that will receive the metrics.
 

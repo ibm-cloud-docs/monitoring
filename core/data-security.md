@@ -45,7 +45,7 @@ monitoring agent data is collected at 10-seconds frequency. Data that is publish
 ### Captures
 {: #capture}
 
-In Sysdig, you can also enable captures when you configure a monitoring agent. A capture is a trace file that you can use to analyze what happens in a host during a time frame. 
+In {{site.data.keyword.mon_full_notm}}, you can also enable captures when you configure a monitoring agent. A capture is a trace file that you can use to analyze what happens in a host during a time frame. 
 * Captures contain system calls, and other OS events. 
 * You can enable or disable this feature per node when you configure the monitoring agent that collects metrics from that node. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a monitoring agent.
 

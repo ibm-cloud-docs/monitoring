@@ -79,7 +79,7 @@ Data is collected and retained per the standard guidelines across all plans. For
 ## Checking the metrics that are collected per agent
 {: #pricing_agent_metrics}
 
-In Sysdig, you can monitor your monitoring agent by using the dashboard template **monitoring agent Health & Status** that is available in **Host Infrastructure**. In this dashboard, you can see the number of monitoring agents that are deployed and connected to the instance, check the version of the monitoring agents, and find out how many metrics per host the agent is collecting.
+In {{site.data.keyword.mon_full_notm}, you can monitor your monitoring agent by using the dashboard template **monitoring agent Health & Status** that is available in **Host Infrastructure**. In this dashboard, you can see the number of monitoring agents that are deployed and connected to the instance, check the version of the monitoring agents, and find out how many metrics per host the agent is collecting.
 
 
 

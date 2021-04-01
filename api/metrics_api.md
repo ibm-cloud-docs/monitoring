@@ -28,8 +28,6 @@ subcollection: Monitoring-with-Sysdig
 You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance by using the Monitoring API.
 {:shortdesc}
 
-For more information about the Monitoring Metric  Query API, see [Data APIs](https://sysdig.gitbooks.io/sysdig-cloud-api/content/rest_api/data.html){: external}.
-
 
 ## Get metrics by using cURL
 {: #metrics_api-curl}

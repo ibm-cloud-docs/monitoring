@@ -49,10 +49,10 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 
 | Action                                | Description                                       |
 |---------------------------------------|---------------------------------------------------|
-| `sysdig-monitor.capture.create`       | An event is created when you create a Sysdig capture |
-| `sysdig-monitor.capture.read`         | An event is created when you load a Sysdig capture in the dashboard |
-| `sysdig-monitor.capture.update`       | An event is created when you update a Sysdig capture |
-| `sysdig-monitor.capture.delete`       | An event is created when you delete a Sysdig capture |
+| `sysdig-monitor.capture.create`       | An event is created when you create a Monitoring capture |
+| `sysdig-monitor.capture.read`         | An event is created when you load a Monitoring capture in the dashboard |
+| `sysdig-monitor.capture.update`       | An event is created when you update a Monitoring capture |
+| `sysdig-monitor.capture.delete`       | An event is created when you delete a Monitoring capture |
 {: caption="Table 2. Captures: List of activity tracker actions" caption-side="top"} 
 
 
@@ -77,11 +77,11 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 
 | Action                                | Description                                       |
 |---------------------------------------|---------------------------------------------------|
-| `sysdig-monitor.team.create`          | An event is created when you create a Sysdig team |
-| `sysdig-monitor.team.read`            | An event is created when you view a Sysdig team definition |
-| `sysdig-monitor.team.update`          | An event is created when you update a Sysdig team definition |
-| `sysdig-monitor.team.delete`          | An event is created when you delete a Sysdig team |
-| `sysdig-monitor.team.list`            | An event is created when you view the Sysdig teams |
+| `sysdig-monitor.team.create`          | An event is created when you create a Monitoring team |
+| `sysdig-monitor.team.read`            | An event is created when you view a Monitoring team definition |
+| `sysdig-monitor.team.update`          | An event is created when you update a Monitoring team definition |
+| `sysdig-monitor.team.delete`          | An event is created when you delete a Monitoring team |
+| `sysdig-monitor.team.list`            | An event is created when you view the Monitoring teams |
 {: caption="Table 4. Captures: List of activity tracker actions" caption-side="top"} 
 
 

@@ -25,7 +25,7 @@ subcollection: Monitoring-with-Sysdig
 # Collecting availability metrics by using the Prometheus Blackbox exporter
 {: #blackbox}
 
-The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within Sysdig to alert users on the availability of the endpoints.
+The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within {{site.data.keyword.mon_full_notm}} to alert users on the availability of the endpoints.
 {:shortdesc}
 
 The following figure shows different configurations that you can configure when using the Blackbox exporter to monitor availability of remote hosts:
@@ -132,9 +132,9 @@ configmap: true
 ### Agent tags
 # tags: linux:ubuntu,dept:dev,local:nyc
 
-#### Sysdig Software related config ####
+#### Monitoring Software related config ####
 
-# Sysdig collector address
+# Monitoring collector address
 # collector: 192.168.1.1
 
 # Collector TCP port
@@ -202,7 +202,7 @@ scrape_configs:
 Where 
 
 * `<IP_ADDRESS_OF_REMOTE_SERVER>` is the IP address of a server that you want to monitor.
-* `<INGESTION_ENDPOINT>` is the Sysdig instance ingestion endpoint, for example, `ingest.us-south.monitoring.cloud.ibm.com`. See [Sysdig Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion). 
+* `<INGESTION_ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance ingestion endpoint, for example, `ingest.us-south.monitoring.cloud.ibm.com`. See [Collector endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints#endpoints_ingestion). 
 
 
 When you save the file, changes are applied.
@@ -262,14 +262,14 @@ Complete the following steps:
 To configure the default dashboard and alerts to analyze the Blackbox status of your server, run the following command:
 
 ```
-docker run -it --rm sysdiglabs/promcat-connect:0.1 install Blackbox:2.5.0 -t <SYSDIG_TOKEN>  -u <ENDPOINT>
+docker run -it --rm sysdiglabs/promcat-connect:0.1 install Blackbox:2.5.0 -t <MONITORING_TOKEN>  -u <ENDPOINT>
 ```
 {: codeblock}
 
 Where
 
-* `<SYSDIG_TOKEN>` is the Sysdig token. See [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
-* `<ENDPOINT>` is the Sysdig instance endpoint. See [Sysdig endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
+* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the Sysdig API token](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-api_token#api_token_get).
+* `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-endpoints).
 
 
 Then, [launch the monitoring UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch), and go to the *Dashboards* section.

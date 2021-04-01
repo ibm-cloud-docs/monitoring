@@ -87,7 +87,7 @@ To provision an instance through the command line, complete the following steps:
 4. Create the instance. Run the [ibmcloud resource service-instance-create](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
 
     ```
-    ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false,"external_api_auth": "API_AUTH"}'
+    ibmcloud resource service-instance-create NAME service-name SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false,"external_api_auth": "API_AUTH"}'
     ```
     {: pre}
 
@@ -95,7 +95,7 @@ To provision an instance through the command line, complete the following steps:
 
     `NAME` is the name of the instance.
     
-    `sysdig-monitor` is the name of the {{site.data.keyword.mon_full_notm}} service name in the {{site.data.keyword.cloud_notm}}.
+    `service-name` is the name of the {{site.data.keyword.mon_full_notm}} service name in the {{site.data.keyword.cloud_notm}}.
     
     `SERVICE_PLAN_NAME` is the type of plan. See [Service plans](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-pricing_plans) to get the plan name.
     
@@ -108,14 +108,14 @@ To provision an instance through the command line, complete the following steps:
     For example, to provision an instance with the paid plan, run the following command:
 
     ```
-    ibmcloud resource service-instance-create sysdig-instance-01 sysdig-monitor graduated-tier us-south -p '{"default_receiver": false}'
+    ibmcloud resource service-instance-create monitoring-instance-01 service-name graduated-tier us-south -p '{"default_receiver": false}'
     ```
     {: pre}
 
     To provision an instance with the paid plan that only allows IAM tokens, run the following command:
 
     ```
-    ibmcloud resource service-instance-create sysdig-instance-01 sysdig-monitor graduated-tier us-south -p '{"default_receiver": false,"external_api_auth": "IAM_ONLY"}'
+    ibmcloud resource service-instance-create monitoring-instance-01 service-name graduated-tier us-south -p '{"default_receiver": false,"external_api_auth": "IAM_ONLY"}'
     ```
     {: pre}
 

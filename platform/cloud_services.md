@@ -34,12 +34,12 @@ List of {{site.data.keyword.cloud}} services that send metrics to {{site.data.ke
 ## Cloud Foundry
 {: #platform_cfapps}
 
-The following table lists CF resources that are Sysdig-enabled:
+The following table lists Cloud Foundry resources that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
-| [Cloud Foundry (CF)](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) | CF is the premier industry standard Platform-as-a-Service (PaaS), that ensures the fastest, easiest, and most reliable deployment of cloud-native applications.  | [Metrics collected by CF](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitor-cf-sysdig)|
-{: caption="List of CF resources" caption-side="top"} 
+| [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) | Cloud Foundry is the premier industry standard Platform-as-a-Service (PaaS), that ensures the fastest, easiest, and most reliable deployment of cloud-native applications.  | [Metrics collected by Cloud Foundry](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-monitor-cf-sysdig)|
+{: caption="List of Cloud Foundry resources" caption-side="top"} 
 
 
 ## Compute services
@@ -50,7 +50,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 ### Serverless
 {: #compute_serverless}
 
-The following table lists container services that are Sysdig-enabled:
+The following table lists container services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
@@ -62,7 +62,7 @@ The following table lists container services that are Sysdig-enabled:
 
 With {{site.data.keyword.vpc_full}} (VPC), you can provision a VPC in the {{site.data.keyword.cloud_notm}} to run an isolated environment within the public cloud. VPC gives you the security of a private cloud, with the agility and ease of a public cloud. The VPC infrastructure contains a number of Infrastructure-as-a-Service (IaaS) offerings, including Virtual Servers for VPC. [Learn more](/docs/vpc?topic=vpc-getting-started).
 
-The following table lists VPC infrastructure services that are Sysdig-enabled:
+The following table lists VPC infrastructure services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
@@ -73,7 +73,7 @@ The following table lists VPC infrastructure services that are Sysdig-enabled:
 ### Classic
 {: #compute_classic}
 
-The following table lists infrastructure services that are Sysdig-enabled:
+The following table lists infrastructure services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
@@ -83,7 +83,7 @@ The following table lists infrastructure services that are Sysdig-enabled:
 ## Container services
 {: #container}
 
-The following table lists container services that are Sysdig-enabled:
+The following table lists container services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
@@ -97,7 +97,7 @@ The following table lists container services that are Sysdig-enabled:
 ## Developer tools
 {: #devops}
 
-The following table lists developer tools and DevOps services that are Sysdig-enabled:
+The following table lists developer tools and DevOps services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
@@ -114,7 +114,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 ### VPC
 {: #networking_vpc}
 
-The following table lists VPC infrastructure services that are Sysdig-enabled:
+The following table lists VPC infrastructure services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
@@ -126,7 +126,7 @@ The following table lists VPC infrastructure services that are Sysdig-enabled:
 ### Classic
 {: #networking_classic}
 
-The following table lists infrastructure services that are Sysdig-enabled:
+The following table lists infrastructure services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
@@ -139,7 +139,7 @@ The following table lists infrastructure services that are Sysdig-enabled:
 ## Database services
 {: #database}
 
-The following table lists database services that are Sysdig-enabled:
+The following table lists database services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service           | Description    | Metrics |
 |-------------------|----------------|---------|
@@ -161,7 +161,7 @@ The following table lists database services that are Sysdig-enabled:
 ## Integration services
 {: #integration}
 
-The following table lists integration services that are Sysdig-enabled:
+The following table lists integration services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
@@ -172,7 +172,7 @@ The following table lists integration services that are Sysdig-enabled:
 ## Security services
 {: #security}
 
-The following table lists Cloud services that are Sysdig-enabled:
+The following table lists Cloud services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 
 | Service     | Description | More info |
@@ -184,7 +184,7 @@ The following table lists Cloud services that are Sysdig-enabled:
 ## Platform
 {: #platform}
 
-The following table lists integration services that are Sysdig-enabled:
+The following table lists integration services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
@@ -201,7 +201,7 @@ For more information, see [Storage services](/docs/cloud-infrastructure?topic=cl
 ### VPC
 {: #storage_vpc}
 
-The following table lists VPC infrastructure services that are Sysdig-enabled:
+The following table lists VPC infrastructure services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
@@ -211,7 +211,7 @@ The following table lists VPC infrastructure services that are Sysdig-enabled:
 ## AI
 {: #ai_machine_learning}
 
-The following table lists AI / Machine Learning services that are Sysdig-enabled:
+The following table lists AI / Machine Learning services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
