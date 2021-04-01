@@ -150,7 +150,7 @@ Complete the following steps to launch the web UI:
 
     The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
-4. Select your instance. Then, click **View {{site.data.keyword.mon_full_notm}}**.
+4. Select your instance. Then, click **Open Dashboard**.
 
 The first time that you launch the monitoring UI, you might get a set of screens. Click **Next**, and **Complete Onboarding**.
 
@@ -486,7 +486,7 @@ Cpmplete the following steps:
 
 2. Select **Monitoring**. 
 
-3. Identify the monitoring instance that you created. Then, click **View {{site.data.keyword.mon_full_notm}}**.
+3. Identify the monitoring instance that you created. Then, click **Open Dashboard**.
 
 4. In the `Explore` view, select **Hosts and Containers**. Then, select the bare metal server that you want to monitor.
 
