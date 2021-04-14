@@ -127,7 +127,18 @@ Monitoring
         Teams
             teams/teams.md
             teams/team_id.md
-        
+
+        {: .topicgroup}
+        Prometheus
+            exporters/ipmi.md
+            exporters/blackbox.md
+            exporters/wmi.md
+            [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
+            [Prometheus metrics / OpenMetrics code instrumentation.](https://sysdig.com/blog/prometheus-metrics/)
+            exporters/promql.md
+            [PromQL Alerts](https://docs.sysdig.com/en/promql-alerts.html)
+            [Configure a Prometheus data source with Grafana](https://docs.sysdig.com/en/configure-sysdig-with-grafana.html)
+
         {: .topicgroup}
         Integrations
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
@@ -141,7 +152,7 @@ Monitoring
             [Managing scanning alerts](https://docs.sysdig.com/en/manage-scanning-alerts.html)
             [Reviewing scan results](https://docs.sysdig.com/en/review-scan-results.html)
             [Working with the Admission Controller](https://docs.sysdig.com/en/admission-controller--cli-based-.html)
-        
+
         {: .topicgroup}
         Benchmarks
             [Working with benchmarks](https://docs.sysdig.com/en/benchmarks.html)
@@ -168,7 +179,7 @@ Monitoring
     endpoints.md
     core/shared-responsibilities.md
     monitor/monitoring.md
-    
+
     {: .topicgroup}
     Monitoring CLI
         /monitor-cli-plugin/monitor-cli-plugin-monitor-cli
@@ -196,7 +207,3 @@ Monitoring
         monitor/troubleshoot.md
         monitor/faq.md
     {: .navgroup-end}
-
-
-
-
