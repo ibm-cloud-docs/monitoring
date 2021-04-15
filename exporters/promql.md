@@ -42,7 +42,7 @@ Create a PromQL query for a metric in an existing dashboard.
 4. Select the **PromQL** query type.
 5. In the query form, enter _Display_ data, such as the query name and the timeseries name.
 6. Enter your PromQL _Query_, such as `avg(avg_over_time(host_cpu_used_percent[$__interval])) by(kubernetes_cluster_name)`. Specify the following fields in your query:
-  * Metric: Specify the metric that you want to query, such as `host_cpu_used_percent`.
+  * Metric: Specify the metric that you want to query, such as `host_cpu_used_percent`. Note: The generated values on the table are the latest metric.
   * Time range: Specify a time range or time interval, such as `5m`. To use the time range that is selected in the UI, specify `$__range`. To use the time interval that is based on the time range that is selected in the UI, specify `$__interval`. The `$__range` and `$__interval` variables in this query automatically update as the time range is changed in the UI. For more information, see [Applying dashboard scopes to PromQL queries](#promql-scope).
   * Segmentation: Choose a value to segment the aggregated PromQL data, such as `kubernetes_cluster_name`.
 8. Click **Run Query**.
@@ -111,3 +111,17 @@ This query:
 * Filters the `sysdig_cloud_provider_info` information metric for only a specific region (`$region`) and account (`$account`) that are set as dashboard variables based on the `region` and `account_id` labels.
 * Matches the `host_cpu_used_percent` non-information metric to the filtered `sysdig_cloud_provider_info` information metric when the `host_mac` label has the same value. The values are multiplied, but because the information metric has a value of 1, the result is unchanged. The region and account labels are added to the resulting data.
 * Calculates the average of the new metrics by account and region.
+
+## cURL sample to extract latest metric
+{: #promql-latest-metric}
+
+To get the latest value of a metric, specify only the metric name. The most recent value that was generated no more than 5 minutes ago is returned.
+
+For instance, to get the latest value of `host_cpu_used_percent`:
+```
+curl https://app.sysdigcloud.com/prometheus/api/v1/query?query=sysdig_host_cpu_used_percent
+```
+{: pre}
+
+All dashboards support the full PromQL API. For more information about what’s possible with PromQL, see the [Prometheus documentation](https://www.prometheus.io/docs/prometheus/latest/querying/api/){:external}.
+{: note}

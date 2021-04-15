@@ -35,7 +35,8 @@ You can define an alert on a single metric or a set of metrics to notify of even
 - You can use boolean logic to define alerts that report on multiple metrics.
 - You get a notification when the alert condition is met.
 - You can configure multiple notification channels per alert.
-- Alerts have a minimum wait time of 1 minute, but you can optionally configure the trigger wait time by hour or day. For PromQL alerts only, you can optionally configure a 0 minute wait time.
+- Alerts are executed in 1 minute or less from receipt, with the option to configure the trigger wait time by hour or day.
+- For PromQL alerts only, you can optionally configure a 0 minute wait time.
 
 ## Types of alerts
 {: #alerts_types}
