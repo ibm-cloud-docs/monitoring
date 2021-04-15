@@ -39,22 +39,22 @@ curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: $AUTH_TOKEN" -H 
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Monitoring REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
-    
+
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * You can pass the file `metrics.json` to extract metrics by using `-d`, for example, `-d @metrics.json`.
 
- 
-    
+
+
 
 The following sample shows a template for the `metrics.json` file:
 
@@ -87,7 +87,7 @@ The following sample shows a template for the `metrics.json` file:
 
 To see the pre-defefined metrics by Sysdig, see [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html){: external}.
 
-To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_notm}} services that are Sysdig-enabled, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services). 
+To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_notm}} services that are Sysdig-enabled, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services).
 
 
 ## Data aggregation
@@ -233,6 +233,20 @@ The result for extracting data returns the following information:
 ```
 {: screen}
 
+## Sample: cURL sample to extract latest metric
+{: #metrics_api-sample-prom}
+
+To get the latest value of a metric, specify only the metric name. The most recent value that was generated no more than 5 minutes ago is returned.
+
+For instance, to get the latest value of `host_cpu_used_percent`:
+```
+curl https://app.sysdigcloud.com/prometheus/api/v1/query?query=sysdig_host_cpu_used_percent
+```
+{: pre}
+
+All dashboards support the full PromQL API. For more information about what’s possible with PromQL, see the [Prometheus documentation](https://www.prometheus.io/docs/prometheus/latest/querying/api/){:external}.
+{: note}
+
 
 ## Sample: cURL sample to extract CPU data for a team
 {: #metrics_api-sample-cpu-1}
@@ -243,4 +257,3 @@ This example shows how to extract CPU data that is avaialable within the context
 curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: 30785" -H "content-type: application/json" -d @metrics.json
 ```
 {: codeblock}
-
