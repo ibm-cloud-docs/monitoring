@@ -261,7 +261,7 @@ curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorizatio
 ## Sample: Code to fetch metrics from {{site.data.keyword.mon_short}}
 {: #sample-metrics-code}
 
-You can use the following code example to fetch metrics your {{site.data.keyword.mon_short}} instance.
+You can use the following code example to fetch metrics from your {{site.data.keyword.mon_short}} instance.
 {: shortdesc}
 
 * Replace `<region>` with the region of your {{site.data.keyword.mon_short}} instance, such as `us-east`.
