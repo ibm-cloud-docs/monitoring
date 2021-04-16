@@ -258,6 +258,39 @@ curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorizatio
 ```
 {: codeblock}
 
+## Sample: Code to fetch metrics from {{site.data.keyword.mon_short}}
+{: #sample-metrics-code}
+
+You can use the following code example to fetch metrics your {{site.data.keyword.mon_short}} instance.
+{: shortdesc}
+
+* Replace `<region>` with the region of your {{site.data.keyword.mon_short}} instance, such as `us-east`.
+* Replace `<token>` with an {{site.data.keyword.cloud_notm}} [IAM token](/docs/monitoring?topic=monitoring-api_token).
+* Replace the `metrics` field with the JSON array of metrics that you want to fetch. The example metric is `cpu.cores.used`.
+
+```
+from sdcclient import SdcClient
+import json
+sdclient = SdcClient(sdc_url="https://<region>.monitoring.cloud.ibm.com",token="<token>")
+metrics = [
+    {
+      "id": "cpu.cores.used",
+      "aggregations": {
+          "time": "avg",
+          "group": "sum"
+      }
+    }
+]
+filter = None
+start = -120
+end = 0
+sampling = 60
+ok, res = sdclient.get_data(metrics, start, end, sampling, filter=filter, datasource_type = "container")
+print(ok)
+print(res)
+```
+{: codeblock}
+
 ## Sample: Extract notifications from {{site.data.keyword.mon_short}} to {{site.data.keyword.messagehub}} with the {{site.data.keyword.messagehub}} REST API
 {: #sample-extract-notifications}
 
