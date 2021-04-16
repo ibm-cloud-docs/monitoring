@@ -265,20 +265,24 @@ You can use the following code example to fetch metrics from your {{site.data.ke
 {: shortdesc}
 
 * Replace `<region>` with the region of your {{site.data.keyword.mon_short}} instance, such as `us-east`.
-* Replace `<token>` with an {{site.data.keyword.cloud_notm}} [IAM token](/docs/monitoring?topic=monitoring-api_token).
+* Replace `<apikey>` with an {{site.data.keyword.cloud_notm}} [IAM API key token](/docs/monitoring?topic=monitoring-api_token).
+* Replace `<instance_id>` with the ID of your {{site.data.keyword.mon_short}} instance.
 * Replace the `metrics` field with the JSON array of metrics that you want to fetch. The example metric is `cpu.cores.used`.
 
 ```
-from sdcclient import SdcClient
-import json
-sdclient = SdcClient(sdc_url="https://<region>.monitoring.cloud.ibm.com",token="<token>")
+from sdcclient import IbmAuthHelper, SdMonitorClient
+endpoint = "https://<region>.monitoring.cloud.ibm.com"
+apikey = "<apikey>"
+instanceID = "<instance_id>"
+ibm_headers = IbmAuthHelper.get_headers(endpoint, apikey, instanceID)
+sdclient = SdMonitorClient(sdc_url=endpoint, custom_headers=ibm_headers)
 metrics = [
     {
-      "id": "cpu.cores.used",
-      "aggregations": {
-          "time": "avg",
-          "group": "sum"
-      }
+    "id": "cpu.cores.used",
+    "aggregations": {
+        "time": "avg",
+        "group": "sum"
+    }
     }
 ]
 filter = None
@@ -288,6 +292,7 @@ sampling = 60
 ok, res = sdclient.get_data(metrics, start, end, sampling, filter=filter, datasource_type = "container")
 print(ok)
 print(res)
+return res
 ```
 {: codeblock}
 
