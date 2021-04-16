@@ -54,7 +54,7 @@ The following table lists container services that are enabled for {{site.data.ke
 
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
-| [{{codeenginefull_notm}}](/docs/codeengine?topic=codeengine-getting-started) | {{codeenginefull_notm}} is a fully managed, serverless platform that runs your containerized workloads. | [Monitoring for {{codeengineshort}}](/docs/codeengine?topic=codeengine-monitor)|
+| [{{site.data.keyword.codeenginefull_notm}}](/docs/codeengine?topic=codeengine-getting-started) | {{codeenginefull_notm}} is a fully managed, serverless platform that runs your containerized workloads. | [Monitoring for {{site.data.keyword.codeengineshort}}](/docs/codeengine?topic=codeengine-monitor)|
 | [{{site.data.keyword.openwhisk}}](/docs/openwhisk?topic=openwhisk-getting-started) | A Functions-as-a-Service (FaaS) programming platform based on Apache OpenWhisk. | [Metrics](/docs/openwhisk?topic=openwhisk-monitor-functions)|
 {: caption="List of {{site.data.keyword.cloud_notm}} serverless services" caption-side="top"} 
 

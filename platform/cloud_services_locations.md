@@ -73,7 +73,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
-| {{codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |
+| {{site.data.keyword.codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |
 | {{site.data.keyword.openwhisk}}          | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |          
 {: caption="Serverless integration in Europe locations" caption-side="top"}
 {: #cs_sv-table-1}
@@ -84,7 +84,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
-| {{codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |
+| {{site.data.keyword.codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |
 | {{site.data.keyword.openwhisk}}        | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg) `[*]` |          
 {: caption="Serverless integration in America's locations" caption-side="top"}
 {: #cs_sv-table-2}
@@ -95,7 +95,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
 |------------------------------------------------|------------------|----------------------------|
-| {{codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |
+| {{site.data.keyword.codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |
 | {{site.data.keyword.openwhisk}}        | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg) |      
 {: caption="Serverless integration in AP locations" caption-side="top"}
 {: #cs_sv-table-3}
