@@ -258,16 +258,16 @@ curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorizatio
 ```
 {: codeblock}
 
-## Sample: Code to fetch metrics from {{site.data.keyword.mon_short}}
+## Sample: Extract metric data from {{site.data.keyword.mon_short}} to {{site.data.keyword.messagehub}}
 {: #sample-metrics-code}
 
-You can use the following code example to fetch metrics from your {{site.data.keyword.mon_short}} instance.
+You can use the following code example to extract metrics from your {{site.data.keyword.mon_short}} instance to {{site.data.keyword.messagehub}}.
 {: shortdesc}
 
 * Replace `<region>` with the region of your {{site.data.keyword.mon_short}} instance, such as `us-east`.
 * Replace `<apikey>` with an {{site.data.keyword.cloud_notm}} [IAM API key token](/docs/monitoring?topic=monitoring-api_token).
 * Replace `<instance_id>` with the ID of your {{site.data.keyword.mon_short}} instance.
-* Replace the `metrics` field with the JSON array of metrics that you want to fetch. The example metric is `cpu.cores.used`.
+* Replace the `metrics` field with the JSON array of metrics that you want to extract. The example metric is `cpu.cores.used`.
 
 ```
 from sdcclient import IbmAuthHelper, SdMonitorClient
