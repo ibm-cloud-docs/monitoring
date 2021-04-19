@@ -111,7 +111,6 @@ Monitoring
             monitor/alerts.md
             api/alert_api.md
             api/alert_python.md
-            api/metrics_sent_eventstreams.md
             monitor/notifications.md
             api/notifications_api.md
 
