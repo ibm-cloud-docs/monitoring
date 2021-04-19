@@ -119,16 +119,25 @@ To get the latest value of a metric, specify only the metric name. The most rece
 
 For instance, to get the latest value of `host_cpu_used_percent`:
 
+```shell
+curl <SYSDIG_REST_API_ENDPOINT>/prometheus/api/v1/query?query=sysdig_host_cpu_used_percent -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
-curl <SYSDIG_REST_API_ENDPOINT>/prometheus/api/v1/query?query=sysdig_host_cpu_used_percent 
-```
-{: pre}
+{: codeblock}
 
 Where
 
 * `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Monitoring REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
+* You can pass multiple headers by using `-H`.
+
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
+
+    `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
+
+    To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
+
 
 All dashboards support the full PromQL API. For more information about what’s possible with PromQL, see the [Prometheus documentation](https://www.prometheus.io/docs/prometheus/latest/querying/api/){:external}.
 {: note}
+
 
