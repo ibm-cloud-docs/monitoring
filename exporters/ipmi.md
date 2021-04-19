@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2021
 lastupdated: "2021-03-28"
 
-keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
+keywords: IBM Cloud, monitoring, ubuntu, analyze metrics, ipmi
 
 subcollection: monitoring
 
@@ -346,24 +346,16 @@ Complete the following steps to update the monitoring agent to collect IPMI metr
 
 
 
-## Step 5. Configuring the default dashboard and alerts to analyze the IPMI status of your server
+## Step 5. Check that you are getting IPMI metrics
 {: #ipmi_step5}
 
+1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
-To configure the default dashboard and alerts to analyze the IPMI status of your server, run the following command:
+2. Create a dashboard. 
 
-```
-docker run -it --rm sysdiglabs/promcat-connect:0.1 install ipmi:2.5.0 -t <MONITORING_TOKEN>  -u <ENDPOINT>
-```
-{: codeblock}
+3. Add a panel.
 
-Where
-
-* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the API token](/docs/monitoring?topic=monitoring-api_token#api_token_get).
-* `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/monitoring?topic=monitoring-endpoints).
-
-
-Then, [launch the monitoring UI](/docs/monitoring?topic=monitoring-launch), and go to the *Dashboards* section.
+4. Search for a metric that starts with `ipmi_`.
 
 
 

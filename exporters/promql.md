@@ -118,10 +118,17 @@ This query:
 To get the latest value of a metric, specify only the metric name. The most recent value that was generated no more than 5 minutes ago is returned.
 
 For instance, to get the latest value of `host_cpu_used_percent`:
+
 ```
-curl https://app.sysdigcloud.com/prometheus/api/v1/query?query=sysdig_host_cpu_used_percent
+curl <SYSDIG_REST_API_ENDPOINT>/prometheus/api/v1/query?query=sysdig_host_cpu_used_percent 
 ```
 {: pre}
 
+Where
+
+* `<SYSDIG_REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [Monitoring REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
+
+
 All dashboards support the full PromQL API. For more information about what’s possible with PromQL, see the [Prometheus documentation](https://www.prometheus.io/docs/prometheus/latest/querying/api/){:external}.
 {: note}
+

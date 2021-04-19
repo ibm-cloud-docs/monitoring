@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2021
 lastupdated: "2021-03-28"
 
-keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
+keywords: IBM Cloud, monitoring, backbox, prometheus
 
 subcollection: monitoring
 
@@ -28,13 +28,6 @@ subcollection: monitoring
 The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within {{site.data.keyword.mon_full_notm}} to alert users on the availability of the endpoints.
 {:shortdesc}
 
-The following figure shows different configurations that you can configure when using the Blackbox exporter to monitor availability of remote hosts:
-
-![Blackbox components](images/blackbox.svg "Blackbox components")
-
-
-[Blackbox exporter configuration](https://github.com/prometheus/blackbox_exporter/blob/master/CONFIGURATION.md)
-
  
 Complete the following steps to configure the Prometheus Blackbox Exporter:
 
@@ -42,19 +35,15 @@ Complete the following steps to configure the Prometheus Blackbox Exporter:
 ## Step 1. Configure a monitoring agent to collect metrics
 {: #blackbox_step1}
 
-[Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/monitoring?topic=monitoring-config_agent).
+To monitor 1 or more hosts, you must configure a monitoring agent. The agent collects automatically a set of metrics that you can monitor through the monitoring UI.
 
+See [Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/monitoring?topic=monitoring-config_agent) and choose the monitoring agent that you want to configure to monitor a host.
 
 
 ## Step 2. Install the Prometheus Blackbox exporter
 {: #blackbox_step2}
 
-Blackbox exporter is configured via a configuration file and command-line flags 
-
-### Run the Blackbox exporter as a docker container
-{: #blackbox_step2-1}
-
-Complete the following steps:
+Complete the following steps to run the Blackbox exporter as a docker container:
 
 1. Download the [blackbox.yml file](https://github.com/prometheus/blackbox_exporter/blob/master/blackbox.yml){: external} from Github.
 
@@ -85,16 +74,6 @@ Complete the following steps:
 
 
 
-### Run the Blackbox exporter as a service in a Linux server
-{: #blackbox_step2-2}
-
-Complete the following steps:
-
-
-
-
-
-
 
 ## Step 3. Configure network settings
 {: #Blackbox_step3}
@@ -112,13 +91,7 @@ If you want to collect metrics from remote servers, complete the following steps
 ## Step 4. Update the monitoring agent that is running in the server
 {: #Blackbox_step4}
 
-Choose one of the following monitoring agents:
-
-### Kubernetes monitoring agent
-{: #Blackbox_step4-1}
-
-
-Run the following command to edit the configmap and add information about the Blackbox targets that you want to monitor:
+Run the following command to edit the configmap and add information about the Blackbox targets that you want to monitor by using the Kubernetes monitoring agent:
 
 ```
 kubectl edit configmap sysdig-agent -n ibm-observe
@@ -209,74 +182,26 @@ When you save the file, changes are applied.
 
 
 
-### Docker monitoring agent
-{: #Blackbox_step4-2}
-
-
-### Linux service monitoring agent
-{: #Blackbox_step4-3}
-
-Complete the following steps:
-
-1. SSH into the server. Then, change to the directory `/opt/draios/etc/` and run the following command:
-
-    ```
-    cd /opt/draios/etc/
-    ```
-    {: pre}
-
-2. Update the `/opt/draios/etc/dragent.yaml` to [enable remote scraping](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){: external}. 
-
-    Append the following section to the `dragent.yaml` file:
-
-    ```yaml
-    prometheus:
-     enabled: true
-     interval: 30
-     log_errors: true
-     max_metrics: 3000
-     max_metrics_per_process: 3000
-     max_tags_per_metric: 20
-     process_filter:
-       - include:
-           port: 9290 
-           conf:
-             port: 9290 
-             path: "/metrics"
-    ```
-    {: codeblock}
-
-3. Restart the monitoring agent. Run the following command:
-
-    ```
-    service dragent restart
-    ```
-    {: pre}
-
-
 
 ## Step 5. Configure the default dashboard and alerts to analyze the Blackbox status of your server
 {: #Blackbox_step5}
 
+Complete the following steps:
 
-To configure the default dashboard and alerts to analyze the Blackbox status of your server, run the following command:
+1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
-```
-docker run -it --rm sysdiglabs/promcat-connect:0.1 install Blackbox:2.5.0 -t <MONITORING_TOKEN>  -u <ENDPOINT>
-```
-{: codeblock}
+2. Create a dashboard. 
 
-Where
-
-* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Getting the Sysdig API token](/docs/monitoring?topic=monitoring-api_token#api_token_get).
-* `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/monitoring?topic=monitoring-endpoints).
+3. Add a panel for each of the following queries:
 
 
-Then, [launch the monitoring UI](/docs/monitoring?topic=monitoring-launch), and go to the *Dashboards* section.
-
-
-
-
+| Metric    | Query     | Options |
+|-----------|-----------|----------|
+| Status code by Instance | `probe_http_status_code{instance=$instance}` | `number (auto)` |
+| SSL Cert Expiry in Days | `probe_ssl_earliest_cert_expiry{instance=$instance}-time()` | `time (auto)` |
+| DNS Lookup | `probe_dns_lookup_time_seconds{instance=$instance}` | `time (auto)` |
+| Probe duration | `probe_duration_seconds{instance=$instance}` | `time (auto)` |
+{: caption="Table 1. Blackbox exporter sample queries" caption-side="top"} 
 
 
 
