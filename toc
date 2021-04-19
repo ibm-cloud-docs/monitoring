@@ -133,7 +133,6 @@ Monitoring
         Prometheus
             exporters/ipmi.md
             exporters/blackbox.md
-            exporters/wmi.md
             [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
             [Prometheus metrics / OpenMetrics code instrumentation.](https://sysdig.com/blog/prometheus-metrics/)
             exporters/promql.md
