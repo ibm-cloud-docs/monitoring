@@ -63,7 +63,7 @@ The output includes a `parameters` section with the following information:
 
 The `external_api_auth` field indicates the types of tokens that are allowed to work with the {{site.data.keyword.mon_short}} instance.
 - When the value is set to `IAM_ONLY`, you can only use IAM tokens to authenticate.
-- When the value is set to `ANY`, you can use IAM tokens and Monitor API token s to authenticate.
+- When the value is set to `ANY`, you can use IAM tokens and Monitor API tokens to authenticate.
 
 Check the `external_api_auth` to find out what tokens are allowed for authentication.
 
