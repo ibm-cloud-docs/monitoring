@@ -351,11 +351,25 @@ Complete the following steps to update the monitoring agent to collect IPMI metr
 
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
-2. Create a dashboard. 
+2. Create a dashboard.
 
-3. Add a panel.
+3. Add a panel for each of the following queries:
 
-4. Search for a metric that starts with `ipmi_`.
+
+| Metric    | PromQL Query     | Options |
+|-----------|------------------|----------|
+| Ipmi Up | `ipmi_up` | `number (auto)` |
+| Voltage | `ipmi_voltage_volts` | `number (auto)` |
+| Temperature Celsius | `ipmi_temperature_celsius` | `number (auto)` |
+| Fan speed RPM | `ipmi_fan_speed_rpm` | `number (auto)` |
+{: caption="Table 1. IPMI exporter sample queries" caption-side="top"} 
+
+
+For example, you can create a dashboard that looks as follows:
+
+![Sample IPMI dashboard](images/ipmi-ui-1.png "Sample IPMI dashboard")
+
+
 
 
 

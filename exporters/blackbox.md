@@ -203,6 +203,8 @@ Complete the following steps:
 | Probe duration | `probe_duration_seconds{instance=$instance}` | `time (auto)` |
 {: caption="Table 1. Blackbox exporter sample queries" caption-side="top"} 
 
+For example, you can create a dashboard that looks as follows:
 
+![Sample Blackbox dashboard](images/blackbox-ui-1.png "Sample Blackbox dashboard")
 
 
