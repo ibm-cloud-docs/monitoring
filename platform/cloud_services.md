@@ -179,7 +179,7 @@ The following table lists Cloud services that are enabled for {{site.data.keywor
 | Service     | Description | More info |
 |-------------|-------------|-------------------------------------------------------------------------|
 | [{{site.data.keyword.keymanagementservicelong}}](/docs/key-protect?topic=key-protect-getting-started-tutorial#getting-started-tutorial) | You can use the {{site.data.keyword.keymanagementserviceshort}} service to provision encrypted keys for apps across the {{site.data.keyword.cloud_notm}}. | [Enabling metrics](/docs/key-protect?topic=key-protect-manage-sysdig-metrics) </br></br>[Metrics](/docs/key-protect?topic=key-protect-operational-metrics) |
-| [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started) | You can use the {{site.data.keyword.hscrypto}} to control your cloud data encryption keys in cloud hardware security modules for apps across the {{site.data.keyword.cloud_notm}}. | [Enabling metrics](docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics) </br></br>[Metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics) |
+| [{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started) | You can use the {{site.data.keyword.hscrypto}} to control your cloud data encryption keys in cloud hardware security modules for apps across the {{site.data.keyword.cloud_notm}}. | [Enabling metrics](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics) </br></br>[Metrics](/docs/hs-crypto?topic=hs-crypto-operational-metrics) |
 {: caption="List of security Cloud services" caption-side="top"} 
 
 ## Platform
