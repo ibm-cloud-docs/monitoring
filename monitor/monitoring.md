@@ -166,7 +166,7 @@ You manage events in the *Events* section of the web UI.
 * You can view alert events through the *Alert Events* tab.
 * You can view infrastructure-based events through the *Custom events* tab.
 * You can view custom events through the *Custom events* tab.
-* You can send custom events to any of your teams by using the [API token for that team](/docs/monitoring?topic=monitoring-api_token#api_token). For more information, see [Custom events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/events.html){:new_window}.
+* You can send custom events to any of your teams by using the [API token for that team](/docs/monitoring?topic=monitoring-api_token#api_token). For more information, see [Custom events](https://docs.sysdig.com/en/events.html){: external}.
 * You can set the event as **Resolved** to notify other users that the issue has been addressed instead of waiting for the status to be set to **OK**.
 {: #tip}
 
