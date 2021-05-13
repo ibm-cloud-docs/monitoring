@@ -28,6 +28,7 @@ Monitoring
 
         {: .topicgroup}
         Adding more metrics
+            prometheus/prometheus_remote_write.md
             [Integrations](https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html)
             [Collecting Prometheus Metrics from Remote Hosts]( https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html)
 
