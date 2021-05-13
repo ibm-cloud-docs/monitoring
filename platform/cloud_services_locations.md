@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-05-10"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -192,9 +192,9 @@ The following tables list the locations where automatic collection of registry s
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
-|------------------------------------------------|---------------------|------------------------------------|
-| {{site.data.keyword.registrylong_notm}}        | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg) `[*]` |          
+| Service                                        | `Dallas (us-south)` | `Washington (us-east)`   | `Toronto (ca-tor)` |
+|------------------------------------------------|---------------------|--------------------------|-------------------|
+| {{site.data.keyword.registrylong_notm}}        | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg) `[*]` |    ![Checkmark icon](../images/checkmark-icon.svg) |      
 {: caption="Containers integration in America's locations" caption-side="top"}
 {: #cs_cont-table-2}
 {: tab-title="America"}

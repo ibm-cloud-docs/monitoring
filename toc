@@ -114,6 +114,8 @@ Monitoring
             api/alert_python.md
             monitor/notifications.md
             api/notifications_api.md
+            monitor/pd_sms.md
+            monitor/cf_sms.md
 
         {: .topicgroup}
         Events
