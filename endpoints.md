@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-28"
+lastupdated: "2021-05-12"
 
 keywords: IBM Cloud, monitoring, regions, endpoints
 
@@ -50,6 +50,7 @@ The following table lists the locations where the service is available:
 | `Europe`              | `London (eu-gb)`         | `NO`         | `MZR`     |
 | `North America`       | `Dallas (us-south)`      | `N/A`        | `MZR`     |
 | `North America`       | `Washington (us-east)`   | `N/A`        | `MZR`     |
+| `North America`       | `Toronto (ca-tor)`       | `N/A`        | `MZR`     |
 {: caption="Table 1. List of locations where the service is available" caption-side="top"} 
 
 Where
@@ -84,6 +85,7 @@ The following table lists the *Private Collector endpoints* that are available p
 | `JP TOK`    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38 </br>166.9.40.35 </br>166.9.42.48       | TCP 6443  | 
 | `US East`   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50 </br>166.9.24.43 </br>166.9.20.53      | TCP 6443  | 
 | `AU SYD`    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32 </br>166.9.52.27  </br>166.9.54.27     |  TCP 6443 |
+| `CA TOR`  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | 166.9.77.20 </br>166.9.76.23 </br>166.9.78.21   | TCP 6443  |
 {: caption="Table 2. List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
@@ -101,6 +103,7 @@ The following table lists the *Public Collector endpoints* that are available pe
 | `JP TOK`    | `ingest.jp-tok.monitoring.cloud.ibm.com`            | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238     | TCP 6443 | 
 | `US East`   | `ingest.us-east.monitoring.cloud.ibm.com`           | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82      | TCP 6443 |
 | `AU SYD`    | `ingest.au-syd.monitoring.cloud.ibm.com`            | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78     | TCP 6443 | 
+| `CA TOR`    | `ingest.ca-tor.monitoring.cloud.ibm.com`            | 163.74.69.186 </br>158.85.94.130 </br>163.75.65.237     | TCP 6443 | 
 {: caption="Table 3. List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
@@ -123,6 +126,7 @@ The following table lists the endpoints that are available per region:
 | `JP TOK`    | `https://jp-tok.monitoring.cloud.ibm.com`        | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238       | https (TLS) 443 |
 | `US East`   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82        | https (TLS) 443 | 
 | `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78       | https (TLS) 443 | 
+| `CA TOR`    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186 </br>158.85.94.130 </br>163.75.65.237       | https (TLS) 443 | 
 {: caption="Table 4. List of endpoints" caption-side="top"} 
 
 
@@ -143,6 +147,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `JP TOK`   | 169.56.51.232/29 </br>169.56.11.208/28 </br>128.168.75.32/28 </br>128.168.75.8/29 </br>165.192.84.8/29 </br>165.192.83.144/28 </br>128.168.98.0/27  </br>161.202.255.64/27  </br>165.192.97.96/27      |
 | `US East`  | 169.55.109.112/29 </br>169.55.122.192/28 </br>169.60.82.240/28 </br>169.60.112.72/29 </br>169.62.28.160/28 </br>169.62.3.80/29 </br>169.47.20.160/27 </br>169.59.131.160/27   </br>169.62.46.192/27     | 
 | `AU SYD`   | 168.1.213.72/29 </br>168.1.41.96/28 </br>130.198.80.152/29 </br>130.198.66.144/28 </br>135.90.73.96/29 </br>135.90.78.192/28        |
+| `CA TOR`   | 163.75.64.128/28 </br>163.74.67.192/28 </br>169.55.129.208/28 </br>163.74.69.184/29 </br>163.75.65.232/29 </br>158.85.94.128/29         |
 {: caption="Table 5. Source Subnets for Webhook notifications from {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
@@ -165,6 +170,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `JP TOK`    | `https://private.jp-tok.monitoring.cloud.ibm.com/api`        |
 | `US East`   | `https://private.us-east.monitoring.cloud.ibm.com/api`       |
 | `AU SYD`    | `https://private.au-syd.monitoring.cloud.ibm.com/api`        |
+| `CA TOR`    | `https://private.ca-tor.monitoring.cloud.ibm.com/api`        |
 {: caption="Table 6. Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
 
@@ -181,5 +187,6 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `JP TOK`    | `https://jp-tok.monitoring.cloud.ibm.com/api`        |
 | `US East`   | `https://us-east.monitoring.cloud.ibm.com/api`       |
 | `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com/api`        |
+| `CA TOR`    | `https://ca-tor.monitoring.cloud.ibm.com/api`        |
 {: caption="Table 7. Public REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 

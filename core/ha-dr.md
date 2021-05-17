@@ -46,10 +46,12 @@ The following table lists the high-availability (HA) status for the regions (loc
 |-----------------------|--------------------------|-----------|
 | `Asia Pacific`        | `Sydney (au-syd)`        | `MZR`     |
 | `Asia Pacific`        | `Tokyo (jp-tok)`         | `MZR`     |
+| `Asia Pacific`        | `Osaka (jp-osa)`         | `MZR`     |
 | `Europe`              | `Frankfurt (eu-de)`      | `MZR`     |
 | `Europe`              | `London (eu-gb)`         | `MZR`     |
 | `North America`       | `Dallas (us-south)`      | `MZR`     |
 | `North America`       | `Washington (us-east)`   | `MZR`     |
+| `North America`       | `Toronto (ca-tor)`       | `MZR`     |
 {: caption="Table 1. List of locations where the service is available" caption-side="top"} 
 
 Where

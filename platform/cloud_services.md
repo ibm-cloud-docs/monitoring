@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-04-29"
+lastupdated: "2021-05-17"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -195,13 +195,7 @@ The following table lists integration services that are enabled for {{site.data.
 ## Storage services
 {: #storage}
 
-For more information, see [Storage services](/docs/cloud-infrastructure?topic=cloud-infrastructure-compute).
-
-
-### VPC
-{: #storage_vpc}
-
-The following table lists VPC infrastructure services that are enabled for {{site.data.keyword.mon_full_notm}}:
+The following table lists Cloud services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
