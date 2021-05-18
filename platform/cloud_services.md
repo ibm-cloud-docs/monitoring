@@ -103,7 +103,11 @@ The following table lists developer tools and DevOps services that are enabled f
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.contdelivery_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started)| With {{site.data.keyword.contdelivery_short}}, you can build, test, and deliver applications by using DevOps practices and industry-leading tools. | [Metrics](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-monitor-sysdig) |
+| [{{site.data.keyword.appconfig_full}}](/docs/app-configuration?topic=app-configuration-getting-started)| Instrument your applications with {{site.data.keyword.appconfig_short}} SDKs, and use the {{site.data.keyword.appconfig_short}} dashboard or {{site.data.keyword.appconfig_short}} administrator API to define features flags or properties. | [Metrics](/docs/app-configuration?topic=app-configuration-ac-monitoring) |
 {: caption="List of developer tools and DevOps services" caption-side="top"} 
+| [{{site.data.keyword.appconfig_notm}}](/docs/app-configuration?topic=app-configuration-getting-started)| Instrument your applications with {{site.data.keyword.appconfig_short}} SDKs, and use the {{site.data.keyword.appconfig_short}} dashboard or {{site.data.keyword.appconfig_short}} administrator API to define features flags or properties. | [Metrics](/docs/app-configuration?topic=app-configuration-ac-monitoring) |
+{: caption="List of developer tools and DevOps services" caption-side="top"}
+
 
 
 ## Networking services
@@ -134,6 +138,7 @@ The following table lists infrastructure services that are enabled for {{site.da
 | [{{site.data.keyword.cloud}} Load Balancer for VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-load-balancers-in-ibm-cloud-vpc)| Use this service to distribute traffic among multiple server instances within the same region of your VPC.  | [Metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-monitoring-metrics-lb) |
 | [{{site.data.keyword.cloud}} VPN for VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc)| Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. | [Metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-monitoring-metrics) |
 {: caption="List of VPC classic services (generation 1)" caption-side="top"} 
+
 
 
 ## Database services
