@@ -61,8 +61,8 @@ A metric is represented by time series. A time series is a set of numeric data p
 
 Metrics are classified into two groups: 
 
-* [Default metrics](https://docs.sysdig.com/en/understanding-default,-custom,-and-missing-metrics.html){: external} 
-* [Custom metrics](https://docs.sysdig.com/en/understanding-default,-custom,-and-missing-metrics.html){: external}
+* [Default metrics](https://docs.sysdig.com/en/understanding-default%2C-custom%2C-and-missing-metrics.html){: external} 
+* [Custom metrics](https://docs.sysdig.com/en/understanding-default%2C-custom%2C-and-missing-metrics.html){: external}
 
 Labels are classified as infrastructure labels and metric descriptor labels. Each metric has a set of pre-defined labels. For custom metrics, you can configure more labels. 
 
