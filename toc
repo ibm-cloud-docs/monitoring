@@ -99,7 +99,7 @@ Monitoring
         {: .topicgroup}
         Dashboards
             [Dashboard templates](https://docs.sysdig.com/en/dashboard-templates-209032.html)
-            [Working with dashboards](https://docs.sysdig.com/en/dashboards.html)
+            monitor/dashboards.md
             monitor/panels.md
             api/dashboard_python.md
 
