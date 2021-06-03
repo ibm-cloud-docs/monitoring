@@ -150,7 +150,7 @@ Monitoring
 
         {: .topicgroup}
         Image scanning
-            [Working with image scanning](https://docs.sysdig.com/en/image-scanning.html)
+            [Working with image scanning](https://docs.sysdig.com/en/scanning.html)
             [Managing scanning alerts](https://docs.sysdig.com/en/manage-scanning-alerts.html)
             [Reviewing scan results](https://docs.sysdig.com/en/review-scan-results.html)
             [Working with the Admission Controller](https://docs.sysdig.com/en/admission-controller--cli-based-.html)
