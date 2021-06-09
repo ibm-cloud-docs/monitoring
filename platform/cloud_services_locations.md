@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-05-10"
+lastupdated: "2021-06-09"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -180,11 +180,11 @@ You can choose the monitoring instance where you want to collect {{site.data.key
 
 You can monitor {{site.data.keyword.satellitelong}} through the monitoring instance that is configured with **service platform logs** in the same region that your {{site.data.keyword.satelliteshort}} location is managed from.
 
-The following tables list the locations where automatic collection of registry service metrics is enabled. For more information, see [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor).
+You can configure one monitoring instance in each region to collect platform metrics for {{site.data.keyword.registrylong_notm}}. The following table lists the locations where the automatic collection of {{site.data.keyword.registryshort_notm}} service metrics is enabled. For more information, see [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor).
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
-| {{site.data.keyword.registrylong_notm}}          | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |          
+| {{site.data.keyword.registrylong_notm}} `[*]`     | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |          
 {: caption="Containers integration in Europe locations" caption-side="top"}
 {: #cs_cont-table-1}
 {: tab-title="Europe"}
@@ -192,9 +192,9 @@ The following tables list the locations where automatic collection of registry s
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Dallas (us-south)` | `Washington (us-east)`   | `Toronto (ca-tor)` |
-|------------------------------------------------|---------------------|--------------------------|-------------------|
-| {{site.data.keyword.registrylong_notm}}        | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg) `[*]` |    ![Checkmark icon](../images/checkmark-icon.svg) |      
+| Service                                        | `Dallas (us-south)` | `Toronto (ca-tor)` | `Washington (us-east)` |
+|------------------------------------------------|----------------|--------------|------------|
+| {{site.data.keyword.registrylong_notm}} `[*]`   | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |      
 {: caption="Containers integration in America's locations" caption-side="top"}
 {: #cs_cont-table-2}
 {: tab-title="America"}
@@ -202,9 +202,9 @@ The following tables list the locations where automatic collection of registry s
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Tokyo (jp-tok)` | `Osaka (jp-osa)`  | `Sydney (au-syd)`   |
+| Service                                        | `Osaka (jp-osa)` | `Sydney (au-syd)` | `Tokyo (jp-tok)` |
 |------------------------------------------------|------------------|----------------------------|----------------------------|
-| {{site.data.keyword.registrylong_notm}}        | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |      
+| {{site.data.keyword.registrylong_notm}} `[*]`   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |      
 {: caption="Containers integration in AP locations" caption-side="top"}
 {: #cs_cont-table-3}
 {: tab-title="Asia Pacific"}
@@ -212,7 +212,7 @@ The following tables list the locations where automatic collection of registry s
 {: class="simple-tab-table"}
 {: row-headers}
 
-`[*]` {{site.data.keyword.registrylong_notm}} global registry metrics are available through the monitoring Washington (us-east) instance.
+`[*]` {{site.data.keyword.registrylong_notm}} global registry metrics are available through the monitoring `Washington (us-east)` instance.
 
 
 ## Developer tools
