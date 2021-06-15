@@ -57,8 +57,10 @@ Check that port 6443 is opened. For more information, see [Managing network traf
 {: tsResolve}
 
 
-## Are you observing monitoring agent connection errors or receiving uptime alerts reporting an host is down when there are no problems?
+## Are you seeing errors when there are no problems? 
 {: #troubleshoot-entry-3}
+
+Are you observing monitoring agent connection errors or receiving uptime alerts reporting an host is down when there are no problems?
 
 {{site.data.keyword.mon_full_notm}} has identified an issue with a subset of agent versions:
 - monitoring agent 10.3.0

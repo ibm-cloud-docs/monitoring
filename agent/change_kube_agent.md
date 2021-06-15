@@ -520,7 +520,7 @@ Complete the following steps to configure the log settings:
     ```
     {: codeblock}
 
-3. Make changes. Add the *log* section or update the section and include the configurations that you wish to modify based on the descriptions above.
+3. Make changes. Add the *log* section or update the section and include the configurations that you wish to modify based on the prior descriptions.
 
     For example:
 

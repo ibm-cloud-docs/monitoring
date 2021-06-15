@@ -61,23 +61,28 @@ Notice that there is a delay showing metric data for new time series. Data is no
 ## Features
 {: #getting-started-features}
 
-**Accelerate the diagnosis and resolution of performance incidents.**
+### Accelerate the diagnosis and resolution of performance incidents
+{: #getting-started-feature1}
 
 {{site.data.keyword.mon_full_notm}} offers deep visibility into your infrastructure and applications with the ability to troubleshoot from service level all the way down to the system level. Pre-defined dashboards and alerts simplify identification of potential threats or problems. By using {{site.data.keyword.mon_full_notm}}, developers and DevOps teams monitor and troubleshoot performance issues in real-time, identify the source of errors, and eliminate problems. 
 
-**Control the cost of your monitoring infrastructure.**
+### Control the cost of your monitoring infrastructure
+{: #getting-started-feature2}
 
 {{site.data.keyword.mon_full_notm}} includes functionality that help you control the cost of your monitoring infrastructure in the {{site.data.keyword.cloud_notm}}. You can configure the metric sources for which you want to monitor their performance. You can enable a pre-defined alert to warn you of usage changes that will impact your billing. 
 
-**Explore and visualize easily your entire environment.**
+### Explore and visualize easily your entire environment
+{: #getting-started-feature3}
 
 {{site.data.keyword.mon_full_notm}} makes it easy to visually explore your environment. Dynamic topology maps provide a view of dependencies between services. Multi-dimensional queries across high churn, high cardinality, high frequency metrics accelerate troubleshooting. Customizable dashboards allow you to visualize what matters most. 
 
-**Get critical Kubernetes and container insights for dynamic microservice monitoring.**
+### Get critical Kubernetes and container insights for dynamic microservice monitoring
+{: #getting-started-feature4}
 
 {{site.data.keyword.mon_full_notm}} auto-discovers Kubernetes environments providing out-of-the-box dashboards and alerts for clusters, nodes, namespaces, services, deployments, pods and more. A single agent per node dynamically discovers all microservices and auto-collects metrics and events from various sources including Kubernetes, hosts, networks, containers, processes, applications and custom metrics like Prometheus, JMX, and StatsD. 
 
-**Mitigate the impact of abnormal situations with proactive notifications.**
+### Mitigate the impact of abnormal situations with proactive notifications
+{: #getting-started-feature5}
 
 {{site.data.keyword.mon_full_notm}} includes alerts and multi-channel notifications that you can use to reduce the impact on your day to day operations and accelerate your reaction and response time to anomalies, downtime, and performance degradation. Notification channels that you can easily configure include *email*, *slack*, *PagerDuty*, *Webhooks*, *OpsGenie*, and *VictorOps*.
 
