@@ -75,7 +75,8 @@ Complete the following steps to change the scope of a panel:
 
 4. Optionally, click **Override the custom panel scopes** to override the scope for all panels with a custom scope defined. 
 
-    **Note: This action cannot be undone.** 
+    This action cannot be undone.
+    {: note} 
 
     To reset the dashboard scope to the entire infrastructure, or to update an existing dashboard's scope to the entire infrastructure, select **Everywhere**.
     {: tip}

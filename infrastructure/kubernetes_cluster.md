@@ -54,7 +54,7 @@ In this tutorial, you configure metrics for your {{site.data.keyword.containerlo
 3. [Install the {{site.data.keyword.cloud_notm}} CLI and the Kubernetes CLI plugin](/docs/cli?topic=cli-install-ibmcloud-cli).
 
 4. [Create a cluster](/docs/containers?topic=containers-clusters#clusters) or use an existing {{site.data.keyword.containerlong_notm}} cluster.
-    *  The cluster must run Kubernetes version 1.10 or above.
+    *  The cluster must run Kubernetes version 1.10 or later.
     *  The cluster does not have to be in the **Dallas** location, but can be in any [{{site.data.keyword.containerlong_notm}} region](/docs/containers?topic=containers-regions-and-zones#regions-and-zones).
 
 5. Make sure that your user ID is assigned the following {{site.data.keyword.iamlong}} policies:

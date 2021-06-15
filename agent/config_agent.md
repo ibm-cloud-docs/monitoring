@@ -516,25 +516,21 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
     ```
     {: codeblock}
 
-10. Apply the daemonset to deploy the monitoring agent to the cluster. Run the following command:
+10. Apply the daemonset to deploy the monitoring agent to the cluster. 
 
-    **Normal Agent:**
+    * To deploy the normal agent, download the [**sysdig-agent-daemonset-v2.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-daemonset-v2.yaml) and run the following command.
 
-    Download the [**sysdig-agent-daemonset-v2.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-daemonset-v2.yaml).
-
-    ```
-    kubectl apply -f sysdig-agent-daemonset-v2.yaml -n ibm-observe
-    ```
-    {: codeblock}
+       ```
+       kubectl apply -f sysdig-agent-daemonset-v2.yaml -n ibm-observe
+       ```
+       {: codeblock}
     
-     **Slim Agent:**
+    * To deploy the slim agent, download the [**sysdig-agent-slim-daemonset-v2.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-slim-daemonset-v2.yaml) and run the following command.
 
-    Download the [**sysdig-agent-slim-daemonset-v2.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-slim-daemonset-v2.yaml).
-
-    ```
-    kubectl apply -f sysdig-agent-slim-daemonset-v2.yaml -n ibm-observe
-    ```
-    {: codeblock}
+       ```
+       kubectl apply -f sysdig-agent-slim-daemonset-v2.yaml -n ibm-observe
+       ```
+       {: codeblock}
 
 11. At this point, the monitoring pods should be starting.  You can run the following command to confirm the pods are running:
 

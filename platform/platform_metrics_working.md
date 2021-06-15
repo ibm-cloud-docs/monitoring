@@ -268,7 +268,7 @@ To allow a team to view platform metrics, you must select **Platform metrics**.
 
 ![Team platform metrics option](images/sysdig-platform-10.png "Team platform metrics option")
 
-Enabling platform metrics, grants access to all platform metrics. However, you can reduce the scope by configuring 1 or more segments. Notice that the order of the segments is applied top down.
+Enabling platform metrics, grants access to all platform metrics. However, you can reduce the scope by configuring 1 or more segments. Notice that the order of the segments is applied from the beginning of the list to the end.
 
 ![Team platform metrics segments](images/sysdig-platform-11.png "Team platform metrics segments")
 

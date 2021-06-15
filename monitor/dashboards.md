@@ -38,13 +38,8 @@ In the **DASHBOARDS** section of the Web UI, dashboards are organized into three
 * *Dashboards Shared With Me* are dashboards that are created by other users, and shared with the current user.
 
 In the **EXPLORE** section of the Web UI, dashboards are organized into two groups:
-* *Default dashboards* 
-
-    These are the pre-defined dashboards.
-
-* *My Dashboards*
-
-    These are the dashboards that are created by the user who is currently logged in.
+* *Default dashboards* are the pre-defined dashboards.
+* *My Dashboards* are the dashboards that are created by the user who is currently logged in.
 
 You can copy and share dashboards through the Web UI. 
 
@@ -83,9 +78,13 @@ Complete the following steps to create a custom dashboard:
     
     1. Select the scope. 
 
-    2. Optionally, click **Override the custom panel scopes** to override the scope for all panels which currently have a custom scope defined. **Note: This action cannot be undone.** 
+    2. Optionally, click **Override the custom panel scopes** to override the scope for all panels which currently have a custom scope defined. 
+    
+       This action cannot be undone.
+       {: note} 
 
-    **Note:** To reset the dashboard scope to the entire infrastructure, or to update an existing dashboard's scope to the entire infrastructure, select **Everywhere**.
+       To reset the dashboard scope to the entire infrastructure, or to update an existing dashboard's scope to the entire infrastructure, select **Everywhere**.
+       {: tip}
 
     3. Click **Save**.
 
@@ -151,7 +150,7 @@ The following table outlines the different actions and user permissions that are
 Complete the following steps to copy a dashboard in the Web UI:
 
 1. Navigate to the *DASHBOARDS* section in the Web UI.
-2. Select the dashboard from the left hand panel.
+2. Select the dashboard in the panel.
 3. Click **Settings** (three dots icon), and select **Copy dashboard**. 
 4. Select where to copy the dashboard.
 
@@ -171,7 +170,7 @@ Complete the following steps to copy a dashboard in the Web UI:
 Complete the following steps to delete a dashboard in the Web UI:
 
 1. Navigate to the *DASHBOARDS* section in the Web UI.
-2. Select the dashboard from the left hand panel.
+2. Select the dashboard in the panel.
 3. Click **Settings** ![three dots icon](images/actions.png), and select **Delete dashboard**. 
 4. Confirm deletion by clicking **Yes, delete dashboard**.
 
@@ -193,7 +192,7 @@ The following table outlines the different actions and user permissions that are
 Complete the following steps to share a dashboard in the Web UI:
 
 1. Navigate to the *DASHBOARDS* section in the Web UI.
-2. Select the dashboard from the left hand panel.
+2. Select the dashboard in the panel.
 3. Click **Settings** ![three dots icon](images/actions.png), and select **Share**.
 4. Choose how you want to share the dashboard:
 

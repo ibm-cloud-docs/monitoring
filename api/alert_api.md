@@ -521,7 +521,7 @@ The following table lists the values that you can set:
 ### severityLabel (string)
 {: #alert_api-parm-sevlevel}
 
-Defines the criticality of an alert. Valid values are `HIGH`, `MEDIUM`, `LOW`, and `INFO`. A lower value indicates a higher severity.
+Defines the criticality of an alert. Valid values are `HIGH`, `MEDIUM`, `LOW`, and `INFO`. A lesser value indicates a higher severity.
 {: note} 
 
 The following table shows the severity status that must be set depending on the severity parameter value:
