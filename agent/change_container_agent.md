@@ -10,7 +10,7 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -69,7 +69,7 @@ blacklisted_ports:
 
 {{site.data.keyword.mon_full_notm}} supports event integration with Docker. monitoring agents automatically discover Docker sources and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
 
-By default, only a limited set of events is collected. The default settings configuration file */opt/draios/etc/dragent.default.yaml* includes the events that are collected. For more information about the events that are collected by default, see [Docker events ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/event-types.html){:new_window}.
+By default, only a limited set of events is collected. The default settings configuration file */opt/draios/etc/dragent.default.yaml* includes the events that are collected. For more information about the events that are collected by default, see [Docker events](https://docs.sysdig.com/en/event-types.html){: external}.
 
 To add or remove events, you must customize the *dragent.yaml* file and specify what events to include and which ones to filter out. **Note:** An entry in a section in *dragent.yaml* overrides the entire section in the default configuration.
 {: tip}
