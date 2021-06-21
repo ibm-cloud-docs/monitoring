@@ -387,8 +387,7 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
     Option 2: Monitor and Secure
 
     ```
-    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a MONITORING_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --imageanalyzer
-    ```
+    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a MONITORING_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector
     {: pre}
 
     Where
@@ -401,7 +400,7 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
 
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
-    * Add `--imageanalyzer`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.
+    * Add `--imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the **Secure** component.
 
 Use kubectl version 1.14 or higher.
 {: tip}
