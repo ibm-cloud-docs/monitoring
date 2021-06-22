@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-28"
+lastupdated: "2021-06-03"
 
 keywords: IBM Cloud, monitoring, captures
 
@@ -26,8 +26,6 @@ subcollection: monitoring
 
 A capture is a trace file that you can generate to analyze what happens in a host during a time frame. For example, you can use it to analyze bottlenecks, or component interactions. In the {{site.data.keyword.mon_full_notm}} service, you can create, explore, download, and delete *captures* for individual nodes. 
 {:shortdesc}
-
-For more information, see [Captures](/docs/monitoring?topic=monitoring-captures#captures).
 
 
 ## Creating a capture

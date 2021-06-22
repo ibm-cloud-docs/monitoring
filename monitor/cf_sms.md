@@ -95,8 +95,8 @@ This example shows how to use [Twilio Programmable SMS Messaging support](https:
 
    Where:
 
-   * `YOUR_ACCOUNT_SID` is your Twilio SID that can be found at [twilio.com/console](twilio.com/console){: external}.
-   * `YOUR_AUTH_TOKEN`  is your Twilio Auth token that can be found at [twilio.com/console](twilio.com/console){: external}.
+   * `YOUR_ACCOUNT_SID` is your Twilio SID that can be found at [twilio.com/console](http://www.twilio.com/console){: external}.
+   * `YOUR_AUTH_TOKEN`  is your Twilio Auth token that can be found at [twilio.com/console](http://www.twilio.com/console){: external}.
    * `TWILIO_NUMBER` is the Twilio trial phone number assigned to you in the second step.
    * `YOUR_DESTINATION_NUMBER` is the number where the SMS message is to be sent.
 

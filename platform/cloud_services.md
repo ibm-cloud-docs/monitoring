@@ -105,10 +105,6 @@ The following table lists developer tools and DevOps services that are enabled f
 | [{{site.data.keyword.contdelivery_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started)| With {{site.data.keyword.contdelivery_short}}, you can build, test, and deliver applications by using DevOps practices and industry-leading tools. | [Metrics](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-monitor-sysdig) |
 | [{{site.data.keyword.appconfig_full}}](/docs/app-configuration?topic=app-configuration-getting-started)| Instrument your applications with {{site.data.keyword.appconfig_short}} SDKs, and use the {{site.data.keyword.appconfig_short}} dashboard or {{site.data.keyword.appconfig_short}} administrator API to define features flags or properties. | [Metrics](/docs/app-configuration?topic=app-configuration-ac-monitoring) |
 {: caption="List of developer tools and DevOps services" caption-side="top"} 
-| [{{site.data.keyword.appconfig_notm}}](/docs/app-configuration?topic=app-configuration-getting-started)| Instrument your applications with {{site.data.keyword.appconfig_short}} SDKs, and use the {{site.data.keyword.appconfig_short}} dashboard or {{site.data.keyword.appconfig_short}} administrator API to define features flags or properties. | [Metrics](/docs/app-configuration?topic=app-configuration-ac-monitoring) |
-{: caption="List of developer tools and DevOps services" caption-side="top"}
-
-
 
 ## Networking services
 {: #networking}

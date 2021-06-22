@@ -44,7 +44,7 @@ To manage resources that are associated with a team, you must use the Monitoring
 ### Prerequisites
 {: #python-client-install-prereqs}
 
-Install the following Python packages that you need when you use Python version 3 or above:
+Install the following Python packages that you need when you use Python version 3 or later:
 
 1. Run the following command to install the `request` package:
 

@@ -37,9 +37,11 @@ Frequently asked questions about {{site.data.keyword.mon_full_notm}}.
 You can find information about the services that generate metrics in the following documentation topic: [Cloud services](/docs/monitoring?topic=monitoring-cloud_services).
 
 
-## Are you observing monitoring agent connection errors or receiving uptime alerts reporting an host is down when there are no problems?
+## Are you seeing errors when there are no problems? 
 {: #faq_2}
 {: faq}
+
+Are you observing monitoring agent connection errors or receiving uptime alerts reporting an host is down when there are no problems?
 
 {{site.data.keyword.mon_full_notm}} has identified an issue with a subset of agent versions:
 - monitoring agent 10.3.0
