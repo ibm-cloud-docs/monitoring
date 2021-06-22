@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-28"
+lastupdated: "2021-06-22"
 
 keywords: IBM Cloud, monitoring, config monitoring agent
 
@@ -387,7 +387,7 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
     Option 2: Monitor and Secure
 
     ```
-    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a MONITORING_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --imageanalyzer
+    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a MONITORING_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector
     ```
     {: pre}
 
@@ -401,7 +401,7 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
 
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
-    * Add `--imageanalyzer`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.
+    * Add `--imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the **Secure** component.
 
 Use kubectl version 1.14 or higher.
 {: tip}
@@ -516,25 +516,21 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
     ```
     {: codeblock}
 
-10. Apply the daemonset to deploy the monitoring agent to the cluster. Run the following command:
+10. Apply the daemonset to deploy the monitoring agent to the cluster. 
 
-    **Normal Agent:**
+    * To deploy the normal agent, download the [**sysdig-agent-daemonset-v2.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-daemonset-v2.yaml) and run the following command.
 
-    Download the [**sysdig-agent-daemonset-v2.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-daemonset-v2.yaml).
-
-    ```
-    kubectl apply -f sysdig-agent-daemonset-v2.yaml -n ibm-observe
-    ```
-    {: codeblock}
+       ```
+       kubectl apply -f sysdig-agent-daemonset-v2.yaml -n ibm-observe
+       ```
+       {: codeblock}
     
-     **Slim Agent:**
+    * To deploy the slim agent, download the [**sysdig-agent-slim-daemonset-v2.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-slim-daemonset-v2.yaml) and run the following command.
 
-    Download the [**sysdig-agent-slim-daemonset-v2.yaml**](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-slim-daemonset-v2.yaml).
-
-    ```
-    kubectl apply -f sysdig-agent-slim-daemonset-v2.yaml -n ibm-observe
-    ```
-    {: codeblock}
+       ```
+       kubectl apply -f sysdig-agent-slim-daemonset-v2.yaml -n ibm-observe
+       ```
+       {: codeblock}
 
 11. At this point, the monitoring pods should be starting.  You can run the following command to confirm the pods are running:
 
@@ -591,7 +587,7 @@ To deploy the monitoring agent, complete the following steps:
     Option 2: Monitor and Secure
 
     ```
-    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a MONITORING_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --openshift --imageanalyzer
+    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a MONITORING_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --openshift --imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector
     ```
     {: pre}
 
@@ -605,6 +601,176 @@ To deploy the monitoring agent, complete the following steps:
 
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
-    * Add `--imageanalyzer`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  
+    * Add `--imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the **Secure** component.
+
+### Deploying a monitoring agent in an OpenShift cluster manually
+{: #config_agent_kube_os_manual}
+
+Complete the following instructions to deploy an agent when you have a Monitor plan only:
+
+1. Create an {{site.data.keyword.openshiftshort}} project where the agent will be deployed and assign the `node-selector` by running the following command.
+
+   ```
+   oc adm new-project <PROJECT_NAME> --node-selector="app=<APP_NAME>"
+   ```
+   {: pre}
+
+Where `<PROJECT_NAME>` is your desired project name, for example, `sysdig-project` and `<APP_NAME>` is your desired app name, for example, `sysdig-agent`.
+
+2. Label the node with the app name you used in the prior step.
+
+   ```
+   oc label node --all "app=<APP_NAME>"
+   ```
+   {: pre}
+
+3. Change to the `<PROJECT_NAME>` you created by running the following command.
+
+   ```
+   oc project <PROJECT_NAME>
+   ```
+   {: pre}
+
+4. Create a service account for the project by running the following command and giving the service account a name (`<SERVICE_ACCOUNT>`).  For example, `sysdig-agent`.
+
+   ```
+   oc create serviceaccount <SERVICE_ACCOUNT>
+   ```
+   {: pre}
+
+5. Add the service account to the **privileged** security context constraints by running the following command:
+
+   ```
+   oc adm policy add-scc-to-user privileged -n <PROJECT_NAME> -z <SERVICE_ACCOUNT>
+   ```
+   {: pre}
+
+6. Add the service account to the `cluster-reader` cluster role by running the following command:
+
+   ```
+   oc adm policy add-cluster-role-to-user cluster-reader -n <PROJECT_NAME> -z <SERVICE_ACCOUNT>
+   ```
+   {: pre}
+
+
+7. Download the sample files you will use to deploy the monitoring agents:
+
+   * [sysdig-agent-daemonset-v2.yaml](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-daemonset-v2.yaml){: external}
+   * [sysdig-agent-configmap.yaml](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-configmap.yaml){: external}
+   * [sysdig-agent-service.yaml](https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/kubernetes/sysdig-agent-service.yaml){: external}
+
+8. Create a secret key using the following command where `<YOUR_ACCESS_KEY>` is the key value you want to define.
+
+   ```
+   oc create secret generic sysdig-agent --from-literal=access-key=<YOUR_ACCESS_KEY> -n sysdig-agent
+   ```
+   {: pre}
+
+9. If you named the service account something other than `sysdig-agent`, edit the `sysdig-agent-daemonset-v2.yaml` file to refer to your service account name.
+
+   ```
+   serviceAccount: <SERVICE_ACCOUNT>
+   ```
+   {: codeblock}
+
+   And change the image information as follows:
+
+   ```
+   containers:
+      - name: sysdig-agent
+        image: quay.io/sysdig/agent
+        imagePullPolicy: Always
+   ```
+   {: codeblock}
+
+10. Edit the `sysdig-agent-configmap.yaml` file and add `collector address`, `port`, and `SSL/TLS` information appropriate for your instance.  The `check_certificate` value should be `false` if a self-signed certificate or a CA-signed certificate is used.
+
+   ```
+   collector: 
+   collector_port: 
+   ssl: #true or false
+   check_certificate: #true or false
+   ```
+   {: codeblock}
+
+   <!-- Is this step needed for us? -->
+
+11. Run the following command to apply the `sysdig-agent-configmap.yaml` file.
+
+   ```
+   oc apply -f sysdig-agent-configmap.yaml -n sysdig-agent
+   ```
+   {: pre}
+
+12. Run the following command to apply the `sysdig-agent-service.yaml` file to receive audit events from the Openshift API server.
+
+   ```
+   oc apply -f sysdig-agent-service.yaml -n sysdig-agent
+   ```
+   {: pre}
+
+13. Run the following command to apply the `daemonset-v2.yaml` file.
+
+   ```
+   oc apply -f sysdig-agent-daemonset-v2.yaml -n sysdig-agent
+   ```
+   {: pre}
+   
+#### Enabling state metrics and the cluster name
+{: #os_enable_metrics_cluster}
+
+These steps are optional, but recommended.
+
+1. Edit the `sysdig-agent-configmap.yaml` file and make the following changes:
+
+   1. Make sure the following line is not commented out:
+
+       ```
+       new_k8s: true
+       ```
+       {: codeblock}
+
+    2. Uncomment the following line and add your cluster name:
+
+       ```
+       k8s_cluster_name
+       ```
+       {: codeblock}
+
+       Setting the cluster name will let you view, scope, and segment metrics by the cluster name.  Alternately you can create a tag with `cluster` in the tag name.
+       {: tip}
+
+       <!-- How does one create a tag?  -->
+
+2. Apply your configuration changes by running the following command:
+
+   ```
+   oc apply -f sysdig-agent-configmap.yaml -n sysdig-agent
+   ```
+   {: pre}
+
+
+### Verifying the agent is running
+{: #os_verify_os_agent_running}
+
+ At this point, the monitoring pods should be starting.  You can run the following command to confirm the pods are running:
+
+```
+oc get pods -n ibm-observe
+```
+{: codeblock}
+
+In the event that the pods are not running, you can run the following command to understand why:
+
+```
+oc get events
+```
+{: codeblock}
+
+   
+
+
+
+
 
 
