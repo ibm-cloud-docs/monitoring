@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-28"
+lastupdated: "2021-06-23"
 
 keywords: IBM Cloud, monitoring, pricing
 
@@ -55,8 +55,8 @@ The costs that are provided in this topic are guidelines and do not represent ac
 
 The *graduated tier* plan is billed based on the following measurements and pricing:
 
-* **Base tier**: The price per host per month is 35 USD which includes host, Kubernetes and container metrics as well as up to 1K additional time-series (includes Prometheus, JMX, appchecks, StatsD and platform metrics) and 50 containers.
-* **Additional time series**: If you exceed your base tier allotment for Prometheus, JMX, appchecks, Statsd and platform metrics, then the additional time series are priced according to the following tiers.
+* **Base tier**: The price per host per month is 35 USD which includes host, Kubernetes and container metrics as well as up to 1K additional time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
+* **Additional time series**: If you exceed your base tier allotment for Prometheus, JMX, appchecks, and Statsd metrics, then the additional time series are priced according to the following tiers.
     * **Tier 1**: The price per time-series is 0.08 USD for up to 100K time-series per month, or 0.00011 USD time-series per hour.
     * **Tier 2**: The price per time-series is 0.05 USD for 100K to 1M time-series per month or 0.000069 USD time-series per hour.
     * **Tier 3**: The price per time-series is 0.03 USD for 1M to 10M time-series per month or 0.000042 USD time-series per hour.
@@ -106,7 +106,7 @@ The billing calculation for the month is calculated as follows:
 
 * `Base cost per host`
 
-    The base price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, StatsD and platform metrics) and 50 containers.
+    The base price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
     For 3 hosts, the total base cost adds to **105 USD**.
   
@@ -186,7 +186,7 @@ The billing calculation for the month is calculated as follows:
 
 * `Base cost per host`
 
-    The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, StatsD and platform metrics) and 50 containers.
+    The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
     For 5 hosts, the total base cost adds to **175 USD**.
   
@@ -321,7 +321,7 @@ The billing calculation for the month would look like:
 
 * `Base cost per host`
 
-    The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, StatsD and platform metrics) and 50 containers.
+    The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
     For 3 hosts, the total cost adds to **105 USD**.
   
