@@ -70,6 +70,7 @@ Monitoring
 
     {: .topicgroup}
     Monitoring agent
+        agent/agent_image.md
         agent/config_agent.md
         agent/upgrade_agent.md
         agent/remove_agent.md
