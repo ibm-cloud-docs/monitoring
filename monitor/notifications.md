@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-28"
+lastupdated: "2021-07-01"
 
 keywords: IBM Cloud, monitoring, notification channel
 
@@ -36,7 +36,7 @@ Complete the following steps to add a notification channel:
 
 1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
-2. From the *Selector* button in the navigation bar, choose **Settings**.
+2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**.
 
 3. Select **Notification Channels**.
 
@@ -64,7 +64,7 @@ Complete the following steps to add a notification channel:
 
     * For an **OpsGenie** notification channel, add the *OpsGenie API key*. Notice that you must configure in OpsGenie the integration with {{site.data.keyword.mon_full_notm}}. For more information, see [Add {{site.data.keyword.mon_full_notm}} Integration in Opsgenie](https://docs.opsgenie.com/v1.0/docs/sysdig-cloud-integration){: external}.
 
-    * For a **PagerDuty** notification channel, first you must authorize {{site.data.keyword.mon_full_notm}}to integrate with your account. When you select PagerDuty, a wizard to configure the integration with {{site.data.keyword.mon_full_notm}}opens. Click either **Authorize Integration** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for {{site.data.keyword.mon_full_notm}}notifications, then click **Finish Integration**. Select the escalation policy to use for {{site.data.keyword.mon_full_notm}}incidents. Then, on the *Notifications* tab, confirm your PagerDuty account, your service name, and the service key. 
+    * For a **PagerDuty** notification channel, first you must authorize {{site.data.keyword.mon_full_notm}} to integrate with your account. When you select PagerDuty, a wizard to configure the integration with {{site.data.keyword.mon_full_notm}} opens. Click either **Authorize Integration** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for {{site.data.keyword.mon_full_notm}} notifications, then click **Finish Integration**. Select the escalation policy to use for {{site.data.keyword.mon_full_notm}}  incidents. Then, on the *Notifications* tab, confirm your PagerDuty account, your service name, and the service key. For more information, see [Add {{site.data.keyword.mon_full_notm}} Integration in PagerDuty](https://www.pagerduty.com/docs/guides/sysdig-integration-guide/).
 
     * Optionally, and for integrations that allow a test, enable the *Test notification* condition to receive a test notification. If you do not receive a test notification in 10 minutes, review your channel configuration. 
 
@@ -79,7 +79,7 @@ Complete the following steps to modify a notification channel:
 
 1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
-2. From the *Selector* button in the navigation bar, choose **Settings**.
+2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**.
 
 3. Select **Notification Channels**.
 
@@ -96,7 +96,7 @@ Complete the following steps to test a notification channel:
 
 1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
-2. From the *Selector* button in the navigation bar, choose **Settings**.
+2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**.
 
 3. Select **Notification Channels**.
 
@@ -111,7 +111,7 @@ Complete the following steps to temporarily disable a notification channel:
 
 1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
-2. From the *Selector* button in the navigation bar, choose **Settings**.
+2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**.
 
 3. Select **Notification Channels**.
 
@@ -124,7 +124,7 @@ Complete the following steps to delete a notification channel:
 
 1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
-2. From the *Selector* button in the navigation bar, choose **Settings**.
+2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**.
 
 3. Select **Notification Channels**.
 
