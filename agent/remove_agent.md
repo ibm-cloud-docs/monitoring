@@ -71,6 +71,33 @@ Complete the following steps to remove a monitoring agent from a Kubernetes clus
     {: codeblock}
 
 
+## Removing a monitoring agent from an OpenShift cluster
+{: #remove_agent_os}
+
+Complete the following steps to remove a monitoring agent from an OpenShift cluster:
+
+1. Delete the `daemonset` by running the following command:
+
+   ```
+   oc delete daemonset sysdig-agent -n ibm-observe
+   ```
+   {: pre}
+
+2. Delete the `secret` by running the following command:
+
+   ```
+   oc delete secret sysdig-agent -n ibm-observe
+   ```
+   {: pre}
+
+3. Delete the `serviceaccount` by running the following command:
+
+   ```
+   oc delete serviceaccount -n ibm-observe sysdig-agent
+   ```
+   {: pre}
+   
+
 ## Removing a monitoring agent that is deployed as a container in a Linux system
 {: #remove_agent_docker}
 
