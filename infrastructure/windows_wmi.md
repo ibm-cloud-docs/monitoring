@@ -23,13 +23,13 @@ subcollection: monitoring
 {:external: target="_blank" .external}
 
 
-# Monitoring a Windows environment
-{: #windows}
+# Monitoring a Windows environment using the legacy WMI Exporter
+{: #windows_wmi}
 
-The standard monitoring agent cannot be installed on a Windows platform. In order to monitor a Windows system with {{site.data.keyword.mon_full_notm}}, you can leverage the [Prometheus Windows Exporter](https://promcat.io/apps/windows){: external} to perform the collection of the metrics on the system.
+The standard monitoring agent cannot be installed on a Windows platform. In order to monitor a Windows system with {{site.data.keyword.mon_full_notm}}, you can leverage the [Prometheus WMI Exporter](https://promcat.io/apps/windows){: external} to perform the collection of the metrics on the system.
 {:shortdesc}
 
-If you need information on the legacy Prometheus WMI Exporter, see [Monitoring a Windows environment using the legacy WMI Exporter](/docs/monitoring?topic=monitoring-windows_wmi).  
+The WMI Exporter has been replaced with the [Windows Exporter](/docs/monitoring?topic=monitoring-windows).  
 {: note}
 
 Once the metrics are collected you have two options for publishing the metrics, remotely scraping the metrics with a Linux monitoring agent,or pushing from a local instance of Prometheus using remote write. Step 3 will cover these two options, but step 1 and 2 are the same regardless of how the metrics are sent.
@@ -38,12 +38,12 @@ Complete the following steps to configure the following Windows images to send m
 * Windows Server 2019 Standard Edition (64 bit)
 * Windows Server 2016 Standard Edition (64 bit)
 
-## Step 1. Configure the Prometheus Windows exporter
-{: #windows_step1}
+## Step 1. Configure the Prometheus WMI exporter
+{: #windows_step1_wmi}
 
-Configure the [Prometheus `windows_exporter`](https://github.com/prometheus-community/windows_exporter){: external} to collect Windows system metrics.
+Configure the [Prometheus WMI exporter](https://github.com/prometheus-community/windows_exporter){: external} to collect Windows system metrics.
 
-The Prometheus Windows exporter runs as a Windows service. You configure the metrics that you want to monitor by enabling collectors. 
+The Prometheus WMI exporter runs as a Windows service. You configure the metrics that you want to monitor by enabling collectors. 
 
 The following collectors are supported:
 
@@ -59,20 +59,18 @@ The following collectors are supported:
 {: caption="Table 1. Collectors" caption-side="top"} 
 
 
-Complete the following steps to configure the Prometheus Windows exporter in your Windows system:
+Complete the following steps to configure the Prometheus WMI exporter in your Windows system:
 
 1. Login to your Windows system, for example, you can connect via remote desktop (RDP).
 
-2. [Download the Prometheus `windows_exporter`](https://github.com/martinlindhe/wmi_exporter/releases){: external} appropriate for your environment.
+2. [Download the Prometheus exporter](https://github.com/martinlindhe/wmi_exporter/releases){: external}.
 
 3. Identify the collectors that include data for the metric data that you want to collect.  
 
-4. Change to the directory where you downloaded the Prometheus Windows exporter.
-
-5. Run the `windows_exporter` and configure the collectors that you want to enable.  For example:
+4. Run the `wmi_exporter` and configure the collectors that you want to enable.
 
     ```
-    .\windows_exporter-0.16.0-amd64.exe --collectors.enabled <COLLECTORS> 
+    .\wmi_exporter-0.10.2-amd64.exe --collectors.enabled <COLLECTORS> 
     ```
     {: codeblock}
 
@@ -81,15 +79,19 @@ Complete the following steps to configure the Prometheus Windows exporter in you
     For example, to collect computer system metrics (cs), CPU metrics, disk metrics and network interface I/O metrics, see the following example:
 
     ```
-    .\windows_exporter-0.16.0-amd64.exe --collectors.enabled "os,cpu,logical_disk,net,system"
+    .\wmi_exporter-0.10.2-amd64.exe --collectors.enabled "os,cpu,logical_disk,net,system"
     ```
     {: codeblock}
 
+
+
+
+
 ## Step 2. Configure network settings
-{: #windows_step2}
+{: #windows_step2_wmi}
 
 Complete the following steps:
-1. Enable the Windows firewall to allow access to `windows_exporter-0.16.0-amd64.exe`.
+1. Enable the Windows firewall to allow access to `wmi_exporter-0.10.2-amd64.exe`.
 
 2. [Optional] Update the VPC rules
 
@@ -97,11 +99,11 @@ Complete the following steps:
 
 
 ## Step 3. Choose the method to collect metrics
-{: #windows_step3}
+{: #windows_step3_wmi}
 
 
 ### Option 1. Collect metrics by running a monitoring agent on a Linux system
-{: #windows_step3_1}
+{: #windows_step3_1_wmi}
 
 Run a monitoring agent on a Linux system and remotely scrape the Windows endpoint.
 
@@ -164,7 +166,7 @@ Complete the following steps:
     ```
     {: screen}
 
-3. Configure the monitoring agent to reduce the number of metrics that are collected by the Windows `windows_exporter`. 
+3. Configure the monitoring agent to reduce the number of metrics that are collected by the Windows wmi_exporter. 
 
     You can configure the `metrics_filter` section to remove metrics. For example, you can remove collector metrics. You can also remove specific metrics that you do not wish to collect.
 
@@ -173,11 +175,9 @@ Complete the following steps:
     ```yaml
     metrics_filter:
       - exclude: go_*
-      - exclude: windows_logical_disk_requests_queued
+      - exclude: wmi_logical_disk_requests_queued
     ```
     {: codeblock}
-
-    The `go_*` metrics are metrics generated by the `Go` programming language, and are collected by default.  The `windows_logical_disk_requests_queued` is the number of requests outstanding on the disk at the time the performance data is collected.
 
 4. Restart the monitoring agent. Run the following command:
 
@@ -187,32 +187,32 @@ Complete the following steps:
     {: pre}
 
 ### Option 2. Collect metrics by running Prometheus as a client collector on Windows
-{: #windows_step3_2}
+{: #windows_step3_2_wmi}
 
 Use the Prometheus remote-write capabilities to push the metrics from the Windows system by running Prometheus as a client collector on Windows.
 
 Complete the following steps:
 
-1. Download the Prometheus monitoring system and time series database. [Download prometheus-2.27.1.windows-amd64.tar.gz](https://prometheus.io/download/){: external} 
+1. Download the Prometheus monitoring system and time series database. [Download prometheus-2.15.2.windows-amd64.tar.gz](https://prometheus.io/download/){: external} 
 
-2. Unzip the file `prometheus-2.27.1.windows-amd64.tar.gz`. 
+2. Unzip the file `prometheus-2.15.2.windows-amd64.tar.gz`. 
 
-3. Edit the `prometheus.yml` file. For example, you can edit it with Notepad. 
+3. Edit the `prometheus.yml` file. For example, you can edit it with notepad. 
 
-4. Configure the `scrape_configs` section of `prometheus.yml` configuration file as follows to have prometheus scrape the `windows_exporter`.
+4. Configure the `scrape_configs` section of `prometheus.yml` configuration file as follows to have prometheus scrape the Windows wmi_exporter.
 
     ```
     scrape_configs:
       # The job name is added as a label `job=<job_name>` to any timeseries scraped from this configuration.
-      - job_name: 'windows_exporter'
+      - job_name: 'wmi_exporter'
 
         static_configs:
          - targets: ['localhost:9182']
 
          labels:
-           region: "us-east"
-           instance: "<HOSTNAME>"
-           job: "<JOBNAME>"
+           region: us-east
+           instance: <HOSTNAME>
+           job: <JOBNAME>
     ```
     {: codeblock}
 
@@ -226,14 +226,14 @@ Complete the following steps:
 
     ```yaml
     remote_write:
-      - url: "<ENDPOINT>/prometheus/remote/write"
+      - url: "ENDPOINT/api/prometheus/write"
   
         bearer_token_file: C:\Users\Administrator\prom\sysdig-apikey
 
         write_relabel_configs:
           # Drop forwarding the metrics generated by the exporter that are not supported
           - source_labels: ["__name__"]
-            regex: "^windows_(.*)"
+            regex: "^wmi_(.*)"
             action: keep
 
           - regex: "(__name__)|(job)|(region)|(instance)|(status)|(core)|(name)|(start_mode)|(nic)|(volume)|(state)|(version)|(mode)|(branch)|(timezone)|(goversion)|(collector)|(revision)"
@@ -245,7 +245,7 @@ Complete the following steps:
     
     `ENDPOINT` is the monitoring collector endpoint. To see the list of endpoints, see [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
-    `monitoring-apikey` is the file that contains the **Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Working with Monitor API tokens](/docs/monitoring?topic=monitoring-api_monitoring_token).
+    `monitoring-apikey` is the file that contains the **Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Getting the API token](/docs/monitoring?topic=monitoring-api_token#api_token_get).
 
     For example, the completed version of the prometheus.yml could look like :
   
@@ -272,7 +272,7 @@ Complete the following steps:
     # Here it's Prometheus itself.
     scrape_configs:
       # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
-      - job_name: 'windows_exporter'
+      - job_name: 'wmi_exporter'
 
         static_configs:
         - targets: ['localhost:9182']
@@ -283,13 +283,13 @@ Complete the following steps:
 
     # Connection
     remote_write:
-      - url: "https://ingest.eu-gb.monitoring.cloud.ibm.com/prometheus/remote/write"
+      - url: "https://ingest.eu-gb.monitoring.cloud.ibm.com/api/prometheus/write"
 
         bearer_token_file: C:\Users\Administrator\prom\sysdig-api
 
         write_relabel_configs:
           - source_labels: ["__name__"]
-            regex: "^windows_(.*)"
+            regex: "^wmi_(.*)"
             action: keep
 
           - regex: "(__name__)|(job)|(region)|(instance)|(status)|(core)|(name)|(start_mode)|(nic)|(volume)|(state)|(version)|(mode)|(branch)|(timezone)|(goversion)|(collector)|(revision)"
@@ -297,39 +297,17 @@ Complete the following steps:
     ```
     {: codeblock}
 
-5. Start the Prometheus executable from the location containing the `prometheus.yml` file.
-
-   ```
-   .\prometheus.exe
-   ```
-   {: pre}
+5. Start the Prometheus executable from the location containing the `prometheus.yml` file. Run `.\prometheus.exe`.
 
 
 ## Step 4. Monitor Windows system metrics
-{: #windows_step4}
+{: #windows_step4_wmi}
 
-To monitor Windows systems metrics, you can use the default dashboard `Windows Node Overview`  to view the Windows metrics. This default dashboard is located in the section **My Dashboards**.
-
-![Example of a Windows metrics dashboard](images/windows_dashboard.png "Example of a Windows metrics dashboard")
-
-Run the following command to install the default dashboard.
-
-```
-docker run -it --rm sysdiglabs/promcat-connect:0.1 install windows:2019 -t <MONITORING_TOKEN>  -u <ENDPOINT>
-```
-{: codeblock}
-
-Where
-
-* `<MONITORING_TOKEN>` is the Monitoring (sysdig) token. See [Working with Monitor API tokens](/docs/monitoring?topic=monitoring-api_monitoring_token).
-* `<ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance endpoint. See [endpoints](/docs/monitoring?topic=monitoring-endpoints).
-
-When the dashboard is installed it is only available to be viewed by the user who installed it.  To make the dashboard available to other users click the **Actions** icon ![Actions icon](../../icons/action-menu-icon.svg "Actions") > **Dashboard Settings** and change **Shared with** to include the desired teams and **Member Permissions**.
-{: important}
+To monitor Windows systems metrics, you can use the default dashboard `Windows Node Overview` to view the Windows metrics. This default dashboard is located in the section **Hosts and Containers.**
 
 
 ## Step 5. [Optional] Verifying uptime for Windows with Prometheus Blackbox exporter
-{: #windows_step5}
+{: #windows_step5_wmi}
 
 You can configure the Prometheus Blackbox exporter to get information about the availability of a Windows system.
 
@@ -394,4 +372,5 @@ For example, complete the following instructions when the container approach is 
     service dragent restart
     ```
     {: pre}
+
 
