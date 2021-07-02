@@ -183,6 +183,8 @@ Monitoring
     core/shared-responsibilities.md
     monitor/monitoring.md
 
+    infrastructure/windows_wmi.md
+    
     {: .topicgroup}
     Monitoring CLI
         /monitor-cli-plugin/monitor-cli-plugin-monitor-cli
