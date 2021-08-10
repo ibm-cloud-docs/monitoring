@@ -29,6 +29,11 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {:shortdesc}
 
 
+## August 2021
+{: #monitoring-august2021-for-update}
+
+- Added support for agent version 11.4.1. To see the the agent versions that are available, see [monitoring agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html){: external}.
+
 ## March 2021
 {: #monitoring-march2021-for-update}
 
