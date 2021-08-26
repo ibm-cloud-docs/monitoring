@@ -151,7 +151,7 @@ The following table lists the default rate limits per instance:
 | Parallel writes | 100 concurrent requests |
 | Data points per minute (DPM) | 1 million | The number of data points that are sent depends on how often metrics are sent. For example, a scrape interval of 10s will submit more DPM than an interval of 60 seconds |
 | Number of writes per minute | 10,000 |
-{: caption="Table 2. Rate limits" caption-side="top"} 
+{: caption="Table 1. Rate limits" caption-side="top"} 
 
 
 ## Ingestion endpoints
@@ -168,7 +168,7 @@ The following table lists the public {{site.data.keyword.mon_short}} ingestion e
 | `JP-TOK`              | `https://ingest.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | `US-EAST`             | `https://ingest.us-east.monitoring.cloud.ibm.com/prometheus/remote/write`  |
 | `AU-SYD`              | `https://ingest.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write`   |
-{: caption="Table 1. Prometheus remote write endpoints" caption-side="top"} 
+{: caption="Table 2. Prometheus remote write endpoints" caption-side="top"} 
 
 
 
@@ -502,13 +502,13 @@ Complete the following steps to check that you can monitor metrics that are coll
 
 1. [Launch the {{site.data.keyword.mon_short}} web UI](/docs/monitoring?topic=monitoring-launch).
 
-2. Navigate to the **DASHBOARD** section ![Dashboard icon](images/dashboards.png "Dashboard icon"), and select **Add Dashboard** ![Add dashboard icon](images/add.png "Add dashboard icon"). The *Create a New Dashboard* page opens.
+2. Navigate to the **Dashboards** section ![Dashboard icon](images/dashboards.png "Dashboard icon"), and select **Add Dashboard** ![Add dashboard icon](images/add.png "Add dashboard icon"). The *Create a New Dashboard* page opens.
 
 3. Select **PromQL**.
 
     ![Dashboard page](images/dashboard-page.png "Dashboard page")    
 
-4. In the *Query* secion, delete the default one and enter **container**, for example. The list of available metrics is displayed.
+4. In the *Query* section, delete the default query and enter **container**, for example. The list of available metrics is displayed.
 
     ![Query](images/query1.png "Query")  
 

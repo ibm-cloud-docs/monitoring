@@ -55,9 +55,7 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} by using the {{site
 
 3. Select **Monitoring**. The list of the instances is displayed.
 
-4. Select the instance that you want to delete.
-
-5. From the *Action* menu, select **Remove**.
+4. Click the *Actions* icon ![Three dots icon](images/actions.png) next to the instance you want to delete and click **Delete**.
 
 
 ## Removing an instance through the CLI

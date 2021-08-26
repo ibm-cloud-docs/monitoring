@@ -50,9 +50,9 @@ You can use any of the following panel types:
 
 Complete the following steps to copy a panel:
 
-1. Navigate to the **DASHBOARD** section (![dashboard section](images/dashboards.png)) in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
+1. Navigate to the **Dashboards** section (![dashboard section](images/dashboards.png)) in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Copy to Dashboard** ![Copy to Dashboard icon](images/copy.png).
+2. Click the *Actions* icon ![Three dots icon](images/actions.png) and select **Copy to Dashboard** ![Copy to Dashboard icon](images/copy.png).
 
 3. Select one of the dashboards that are listed, or enter a name for a new dashboard. 
 
@@ -65,23 +65,14 @@ Complete the following steps to copy a panel:
 
 Complete the following steps to change the scope of a panel:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric for which you want to change the scope.
+1. Navigate to the *Dashboards* section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric for which you want to change the scope.
 
-2. In the panel, click **Edit Scope** to change the default scope. 
+2. In the panel, click the *Pencil* icon ![Pencil icon](../images/pencil.png) to **Edit Dashboard Scope**. 
 
-    By default, **Everywhere** is selected.
-    
-3. Select the scope. 
+  
+3. Define your dashboard scope.
 
-4. Optionally, click **Override the custom panel scopes** to override the scope for all panels with a custom scope defined. 
-
-    This action cannot be undone.
-    {: note} 
-
-    To reset the dashboard scope to the entire infrastructure, or to update an existing dashboard's scope to the entire infrastructure, select **Everywhere**.
-    {: tip}
-
-5. Click **Save**.
+5. Click **Apply**.
 
 
 
@@ -90,9 +81,9 @@ Complete the following steps to change the scope of a panel:
 
 Complete the following steps to duplicate a panel in the current dashboard:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
+1. Navigate to the *Dashboards** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Duplicate Panel** ![Duplicate Panel icon](images/duplicate.png).
+2. Click the *Actions* icon ![Three dots icon](images/actions.png) and select **Duplicate Panel** ![Duplicate Panel icon](images/duplicate.png).
 
 
 ## Delete a panel
@@ -100,35 +91,34 @@ Complete the following steps to duplicate a panel in the current dashboard:
 
 Complete the following steps to delete a panel in the current dashboard:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
+1. Navigate to the *Dashboards** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![Three dots icon](images/actions.png) and select **Delete** ![Delete icon](images/delete.png).
+2. Click the *Actions* icon ![Three dots icon](images/actions.png) and select **Delete** ![Delete icon](images/delete.png).
 
-3. Click **Yes, delete panel** to confirm the deletion of the panel.
+3. Click **Delete Panel** to confirm the deletion of the panel.
 
 
 
 ## Export data from a panel
 {: #panels_export}
 
-Consider the following information when you export data:
-
-* You can export data to a **json file** from a line chart.
-* You can export data to a **csv file** from a table chart or from a line chart.
-
 Complete the following steps to export data from a panel:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
+1. Navigate to the *Dashboards** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![Three dots icon](images/actions.png).
+2. Click the *Actions* icon ![Three dots icon](images/actions.png).
 
-3. Choose one of the following options:
+3. Click **Export Data**.
 
-    * Select **Export JSON** to export data to a json formatted file.
+4. Choose the *Format* of the file to be exported:
 
-    * Select **Export CSV** to export data to a csv formatted file.
+    * Select **JSON** to export data to a `JSON` formatted file.
 
-4. Click **Save the file**.
+    * Select **CSV** to export data to a `CSV` formatted file.
+
+5. Enter a *File name* for the exported file.
+
+4. Click **Export**.
 
 
 
@@ -140,9 +130,9 @@ You can create alerts directly from a panel.
 
 Complete the following steps to create an alert:
 
-1. Navigate to the *DASHBOARD** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
+1. Navigate to the **Dashboards** section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric that you want to copy.
 
-2. Select the *More options* icon ![Three dots icon](images/actions.png).
+2. Click the *Actions* icon ![Three dots icon](images/actions.png).
 
 3. Select **Create Alert**.
 

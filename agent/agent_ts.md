@@ -129,7 +129,7 @@ docker ps | grep sysdig-agent
 ```
 {: pre}
 
-
+<!-->
 ### Kubernetes monitoring agent
 {: #agent_ts_status_kube}
 
@@ -141,5 +141,5 @@ docker ps | grep sysdig-agent
 
 
 ## Defining an alert to notify when an agent is down
-
+-->
 

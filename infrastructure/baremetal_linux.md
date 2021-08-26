@@ -150,11 +150,11 @@ Complete the following steps to launch the web UI:
 
     The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
-4. Select your instance. Then, click **Open Dashboard**.
+4. Select your instance. Then, click **Open dashboard**.
 
 The first time that you launch the monitoring UI, you might get a set of screens. Click **Next**, and **Complete Onboarding**.
 
-If the monitoring agent is configured successfully, in the **EXPLORE** view you can see your bare metal server in the **Hosts and Containers** section.
+If the monitoring agent is configured successfully, in the **Explore** view you can see your bare metal server in the **Hosts and Containers** section.
 
 ![Explore view](images/monitor-baremetal-img1.png "Explore view")
 
@@ -221,7 +221,7 @@ Complete the following steps to configure the Prometheus IPMI Exporter:
 
 Complete the following steps:
 
-1. From a local terminal,[download the Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
+1. From a local terminal, [download the Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
 2. In the bare metal server, from the `shh` session, create the directory `/usr/monitor`. Run the following commands:
 
@@ -486,13 +486,13 @@ Cpmplete the following steps:
 
 2. Select **Monitoring**. 
 
-3. Identify the monitoring instance that you created. Then, click **Open Dashboard**.
+3. Identify the monitoring instance that you created. Then, click **Open dashboard**.
 
 4. In the `Explore` view, select **Hosts and Containers**. Then, select the bare metal server that you want to monitor.
 
     ![Hosts and Containers view](images/monitor-baremetal-img2.png "Hosts and Containers view")
 
-5. Select **Overview by Process**. Then, enter in the search bar **ipmi**. The list of IPMI metrics is displayed.
+5. Open the option to **select more Dashboards and Metrics** . Then, enter in the search bar **ipmi**. The list of IPMI metrics is displayed.
 
     ![IPMI metrics](images/monitor-baremetal-img3.png "IPMI metrics")
 

@@ -378,10 +378,10 @@ Complete the following steps to filter out containers that a monitoring agent mo
             container.name: my-java-app
       - exclude:
             kubernetes.namespace.name: kube-system
-    ```  
+    ```
     {: codeblock}
 
-6. Save the changes. 
+4. Save the changes. 
 
 Changes are applied automatically. 
 
@@ -391,7 +391,7 @@ Changes are applied automatically.
 
 To block network traffic and metrics from network ports, you must customize the **blacklisted_ports** section in the *sysdig-agent-configmap.yaml* file. You must list the ports from which you want to filter out any data.
 
-Port 53 (DNS) is always blacklisted. 
+Port 53 (DNS) is always in the blocklist and does not need to be specified in the **blacklisted_ports**. 
 {: note}
 
 Complete the following steps:

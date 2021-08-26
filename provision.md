@@ -40,11 +40,11 @@ To provision an instance from the {{site.data.keyword.cloud_notm}} catalog, comp
 
 3. To filter the list of services that is displayed, select the **Logging and Monitoring** category.
 
-4. Click the **{{site.data.keyword.mon_full_notm}}** tile. The *Observability* dashboard opens.
+4. Click the **{{site.data.keyword.mon_full_notm}}** tile. 
 
-5. Select **Create instance**. 
+5. Select **Create**. 
 
-6. Select the region. 
+6. Select the location. 
 
 7. Select a service plan. By default, the **Lite** plan is set.
 

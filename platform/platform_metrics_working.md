@@ -95,7 +95,7 @@ You can use global attributes to define the data that is visible and available f
 
 Each {{site.data.keyword.cloud_notm}} provides 1 or more dashboard templates that you can use to monitor that service. 
 
-- Dashboard templates are available in the **Dashboards** section of the monitoring UI, under the **IBM** section. 
+- Dashboard templates are available in the **Dashboards** section of the monitoring UI. 
 
     ![{{site.data.keyword.cloud_notm}} services default dashboards](images/sysdig-platform-1.png "Services default dashboards")
 
@@ -110,12 +110,12 @@ You can create a copy of a dashboard template. You can customize the copy of the
 Complete the following steps to create a custom dashboard:
 
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
-2. Navigate to the **DASHBOARD** section (![dashboard section](../images/dashboards.png)) in the Web UI.
-3. In the **DASHBOARD TEMPLATES** section, expand **IBM**, and select a dashboard template for a service that you want to monitor.
+2. Navigate to the **Dashboards** section (![dashboard section](../images/dashboards.png)) in the Web UI.
+3. In the **DASHBOARD TEMPLATES** section, expand the **IBM** section, and select a dashboard template for a service that you want to monitor.
 4. Select **Create Custom Dashboard**. The window *Create Dashboard from Template* opens. 
 5. Enter a name for your dashboard, and click **Create and Open**. The dashboard opens.
 
-You can locate the dashboard that you have copied in the section **DASHBOARDS** &gt; **My Dashboads**.
+You can locate the dashboard that you have copied in the section **Dashboards** &gt; **My Dashboads**.
 
 Next, customize the scope and panels in the dashboard.
 
@@ -126,9 +126,9 @@ Next, customize the scope and panels in the dashboard.
 Complete the following steps to define the scope of the data that is displayed through the dashboard:
 
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
-2. Navigate to the **DASHBOARD** section (![dashboard section](../images/dashboards.png)) in the Web UI.
+2. Navigate to the **Dashboards** section (![dashboard section](../images/dashboards.png)) in the Web UI.
 3. Select a custom dashboard in the **My Dashboards** section.
-4. To modify the scope, click **Edit scope**.
+4. To modify the scope, click the pencil icon to  **Edit Dashboard Scope**.
 
     ![Dashboard scope section](images/sysdig-platform-2.png "Dashboard scope section")
 
@@ -156,10 +156,10 @@ Complete the following steps to define the scope of the data that is displayed t
 Complete the following steps to define the scope of the data that is displayed through a panel in a dashboard:
 
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
-2. Navigate to the **DASHBOARD** section (![dashboard section](../images/dashboards.png)) in the Web UI.
+2. Navigate to the **Dashboards** section (![dashboard section](../images/dashboards.png)) in the Web UI.
 3. Select a custom dashboard in the **My Dashboards** section.
 4. Select a panel where you want to change the scope of the data.
-5. Select the *Pencil* icon ![Pencil icon](../images/pencil.png). Then, in the *Scope* section, click **Dashboard scope**.
+5. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). Then, in the *Scope* section, click **Dashboard scope**.
 
     ![Panel scope](images/sysdig-platform-6.png "Panel scope")
 
@@ -190,16 +190,16 @@ Complete the following steps to define an alert on a metric:
 
     You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
 
-3. Navigate to the **DASHBOARD** section (![dashboard section](../images/dashboards.png)) in the Web UI.
+3. Navigate to the **Dashboards** section (![dashboard section](../images/dashboards.png)) in the Web UI.
 4. Select a custom dashboard in the **My Dashboards** section.
 5. Select the panel for which you want to define the alert.
 
     Before you create the alert, check the scope of the metric that is configured in the panel. This scope is automatically included in the alert definition.
     {: note}
 
-6. Select the *More options* icon ![Three dots icon](../images/actions.png) and select **Create Alert**.
+6. Click the *Actions* icon ![Three dots icon](../images/actions.png) and select **Create Alert**.
 
-    ![Panel options](images/sysdig-platform-5.png "Panel options")
+    ![Panel options](images/sysdig-platform-15.png "Panel options")
 
     If you have multiple queries defined in a panel, you are prompted to select the metric for which you want to create an alert.
     {: note}
@@ -210,7 +210,9 @@ Complete the following steps to define an alert on a metric:
 
     **Description**: Add a description that other users can read to get more context. This field is optional.
 
-    **Priority**: Set the level of criticality of the alert. Valid values are `High`, `Medium`, `Low`, and `Info`.
+    **Group**: The alert group this alert will be part of.  If not specified, the alert will be part of the default group.
+
+    **Severity**: Set the level of criticality of the alert. Valid values are `High`, `Medium`, `Low`, and `Info`.
 
     **Metric**: This field is set to the metric that you have selected from the panel. Check that the metric and aggregation are the ones that you need.
 
@@ -238,7 +240,11 @@ Complete the following steps to define an alert on a metric:
 
 4. Select **Add Alert**.
 
-    ![Choose alert type](images/sysdig-platform-7.png "Choose alert type")
+    ![Add alert](images/sysdig-platform-7.png "Add alert")
+
+5. Select your desired alert type.
+
+    ![Choose alert type](images/sysdig-platform-16.png "Choose alert type")
 
 5. Configure the alert. Set the following fields:
 
@@ -246,7 +252,9 @@ Complete the following steps to define an alert on a metric:
 
     **Description**: Add a description that other users can read to get more context. This field is optional.
 
-    **Priority**: Set the level of criticality of the alert. Valid values are `High`, `Medium`, `Low`, and `Info`.
+    **Group**: The alert group this alert will be part of.  If not specified, the alert will be part of the default group.
+
+    **Severity**: Set the level of criticality of the alert. Valid values are `High`, `Medium`, `Low`, and `Info`.
 
     **Metric**: Configure the metric.
 
@@ -261,6 +269,10 @@ Complete the following steps to define an alert on a metric:
 {: #platform_metrics_working_team}
 
 You can control the data that is visible to all the users that are members of a team.
+
+First navigate to the **Settings** section.
+
+![Settings section](images/sysdig-platform-12.png "Settings section")
 
 As an administrator of the service, you can create, modify, and delete teams. When you configure a team, you can define the scope of the data in the **Visibility** section.
 
@@ -310,6 +322,8 @@ Complete the following steps:
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
 2. Navigate to the **Settings** section.
+
+    ![Settings section](images/sysdig-platform-12.png "Settings section")
 
 3. Select **Teams**. Then, select a team where you want to restrict access to the platform metrics.
 

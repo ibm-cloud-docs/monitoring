@@ -50,7 +50,7 @@ To monitor Cloud Foundry apps, you must launch the monitoring UI in the region w
 Complete the following steps to launch the monitoring UI from the *Observability* page and open the pre-defined Cloud Foundry dashboard:
 
 1.[Launch the monitoring UI](/docs/services/monitoring?topic=monitoring-launch).
-2. Select **DASHBOARDS**.
+2. Select **Dashboards**.
 3. In the **Default Dashboards** section, expand **IBM**.
 4. Choose the pre-defined Cloud Foundry dashboard **Overview CF apps** from the list.
 

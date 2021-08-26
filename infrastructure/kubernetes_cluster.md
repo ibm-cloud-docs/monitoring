@@ -189,7 +189,7 @@ To launch the monitoring UI through the {{site.data.keyword.cloud_notm}} console
 
 3. Select **Monitoring**. The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
-4. Find your instance and click **Open Dashboard**.
+4. Find your instance and click **Open dashboard**.
 
     * **First time**: Because you already installed the monitoring agent, you can skip through the installation wizard, get started, and complete the onboarding.
     
@@ -215,11 +215,11 @@ You can try the following actions:
 ## Step 4. Monitor your cluster
 {: #kubernetes_cluster_step4}
 
-You can monitor your cluster in the **EXPLORE** view that is available through the monitoring UI. This view is the default homepage and your starting point to troubleshoot and monitor your cluster infrastructure and resources.
+You can monitor your cluster in the **Explore** view that is available through the monitoring UI. This view is the default homepage and your starting point to troubleshoot and monitor your cluster infrastructure and resources.
 
 In the section *Host and containers*, you can see the you see the *Explore table*, a list of workers in your cluster that are forwarding metrics to the monitoring instance. Each worker entry represents a group of related infrastructure objects for that worker.
 
-Click **Host and containers** ![Host and containers](../images/switch_hosts.png) to switch data sources. Then, select a worker. The data that is displayed corresponds to the worker that you have selected. If you click ** Back to Explore Table**, the *Explore table* is displayed. 
+Click **Host and containers** ![Host and containers](/images/switch_hosts.png) to switch data sources. Then, select a worker. The data that is displayed corresponds to the worker that you have selected. 
 
 ### Customizing the Explore table
 {: #kubernetes_cluster_step4-1}

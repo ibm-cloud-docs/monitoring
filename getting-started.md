@@ -148,7 +148,7 @@ To provision an instance through the {{site.data.keyword.cloud_notm}} UI, comple
 
 4. Click the **{{site.data.keyword.mon_full_notm}}** tile.
 
-5. Select the region. 
+5. Select the location. 
 
 6. Select a service plan. 
 
@@ -241,11 +241,14 @@ Complete the following steps to launch the monitoring UI:
 
     The list of monitoring instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
-4. Select one instance. Then, click **Open Dashboard**.
+4. Select one instance. Then, click **Open dashboard**.
 
 The {{site.data.keyword.mon_full_notm}} Web UI opens. By default, the *Explore* tab is displayed.
 
-By default, users are automatically added as members of the **Monitor Operations** team that is predefined for each {{site.data.keyword.mon_full_notm}} instance. Users have full permissions to see all the data in the web UI. **Note:** An administrator can restrict access to data by managing users in teams and controlling what data is visible. For example, to restrict users viewing permissions, an administrator can create a default team with limited scope and visibility. Then, manually assign users to other teams. For more information, see [Working with teams](/docs/monitoring?topic=monitoring-teams#teams).
+By default, users are automatically added as members of the **Monitor Operations** team that is predefined for each {{site.data.keyword.mon_full_notm}} instance. Users have full permissions to see all the data in the web UI. 
+
+An administrator can restrict access to data by managing users in teams and controlling what data is visible. For example, to restrict users viewing permissions, an administrator can create a default team with limited scope and visibility. Then, manually assign users to other teams. For more information, see [Working with teams](/docs/monitoring?topic=monitoring-teams#teams).
+{: note}
 
 
 ## Step 6. Get started with Monitor and Secure

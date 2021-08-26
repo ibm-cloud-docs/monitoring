@@ -74,6 +74,6 @@ When you copy the token include the `Bearer` keyword: `Authorization: Bearer IAM
 {: note}
 
 To get the token without the `Bearer` word, you can run the following command: `ibmcloud iam oauth-tokens | awk '{print $4}'`
-{: tip}
+
 
 
