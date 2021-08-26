@@ -51,7 +51,8 @@ Complete the following steps to edit the file and apply the changes:
 
 To block network traffic and metrics from network ports, you must customize the **blacklisted_ports** section in the *dragent.yaml* file. You must list the ports from which you want to filter out any data.
 
-**Note:** Port 53 (DNS) is always blacklisted. 
+Port 53 (DNS) is always in the blocklist and does not need to be specified in the **blacklisted_ports**. 
+{: note}
 
 For example, the following sample shows how to set the *blacklisted_ports* section of a monitoring agent to exclude data coming from ports 6666 and 6379:
 
@@ -122,7 +123,10 @@ To filter events by severity, you can also change the log entry type for events 
 
 The default log level is **information**. This means that only warning and higher severity events are transmitted.
 
-Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *information*, *debug* and *none*. **Note**: The values are listed from high priority to low priority.
+Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *information*, *debug* and *none*. 
+
+The values are listed from high priority to low priority.
+{: note}
 
 For example, to filter out low severity events (*notice*, *information*, *debug*), you must set the log section **event_priority** to *warning*:
 
@@ -149,7 +153,8 @@ log:
 
 To filter custom metrics, you must customize the **metrics_filter** section in the *dragent.yaml* file. You can specify which metrics to include and which ones to filter out by configuring the **include** and **exclude** filtering parameters.
 
-**Note:** The filtering rule order is set as follows: the first rule that matches a metric is applied.
+The filtering rule order is set as follows: the first rule that matches a metric is applied.
+{: note}
 
 For example, if the *metrics_filter* section of a monitoring agent looks as follows:
 

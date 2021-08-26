@@ -119,13 +119,13 @@ The following table lists the tasks that you can run with panels:
 A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers. Use dashboards to monitor your infrastructure, applications, and services.
 
 
-In the **DASHBOARDS** section of the web UI, dashboards are organized into three main groups:
+In the **Dashboards** section of the web UI, dashboards are organized into three main groups:
 
 * **My Dashboards**: These dashboards are created by the user who is currently logged in.
 * **My Shared Dashboards**: These dashboards are created by the user who is currently logged in, and are shared with other users.
 * **Dashboards Shared With Me**: These dashboards are created by other users, and shared with the current user.
 
-In the **EXPLORE** section of the web UI, dashboards are organized into two groups:
+In the **Explore** section of the web UI, dashboards are organized into two groups:
 * **Default dashboards**: These dashboards are pre-defined dashboards.
 * **My Dashboards**: These dashboards are created by the user who is currently logged in.
 
@@ -166,7 +166,7 @@ You manage events in the *Events* section of the web UI.
 * You can view alert events through the *Alert Events* tab.
 * You can view infrastructure-based events through the *Custom events* tab.
 * You can view custom events through the *Custom events* tab.
-* You can send custom events to any of your teams by using the [API token for that team](/docs/monitoring?topic=monitoring-api_token#api_token). For more information, see [Custom events](https://docs.sysdig.com/en/events.html){: external}.
+* You can send custom events to any of your teams by using the [API token for that team](/docs/monitoring?topic=monitoring-api_token#api_token). For more information, see [Custom events)](https://docs.sysdig.com/en/events.html){: external}.
 * You can set the event as **Resolved** to notify other users that the issue has been addressed instead of waiting for the status to be set to **OK**.
 {: #tip}
 

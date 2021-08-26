@@ -53,12 +53,13 @@ The following table lists some of the Python functions that you can use to manag
 ## List dashboards per team
 {: #dashboard_python_list}
 
+You can use Python to list the dashboards available to teams.
 
 ### List the dashboards that are available in the default team
 {: #dashboard_python_list_default}
 
 
-The following code shows the structure of a Python script:
+The following code shows the structure of a Python script to list the dashboards available in the default team.
 
 ```python
 #!/usr/bin/env python3
@@ -104,7 +105,7 @@ for db in res['dashboards']:
 ### List the dashboards that are available in a team
 {: #dashboard_python_list_team}
 
-The following code shows the structure of a Python script:
+The following code shows the structure of a Python script to list the dashboards available to a specific team.
 
 ```python
 #!/usr/bin/env python3
@@ -148,11 +149,12 @@ for db in res['dashboards']:
 ## Create a dashboard
 {: #dashboard_python_create}
 
+You can use Python to create dashboards.
 
 ## Create a dashboard in the default team
 {: #dashboard_python_create_default}
 
-The following code shows the structure of a Python script to create a dashboard from scratch:
+The following code shows the structure of a Python script to create a new dashboard for the default team.
 
 ```python
 The following code shows the structure of a Python script:
@@ -221,7 +223,7 @@ else:
 ## Create a dashboard in a team
 {: #dashboard_python_create_team}
 
-The following code shows the structure of a Python script:
+The following code shows the structure of a Python script to create a dashboard for a specific team.
 
 ```python
 #!/usr/bin/env python3
@@ -287,11 +289,12 @@ else:
 ## Copy a dashboard
 {: #dashboard_python_copy}
 
+You can use Python to copy dashboards.
 
 ### Copy a custom dashboard in the default team
 {: #dashboard_python_copy_default}
 
-The following code shows the structure of a Python script:
+The following code shows the structure of a Python script to copy a custom dashboard to the default team.
 
 ```python
 #!/usr/bin/env python3
@@ -343,7 +346,7 @@ else:
 ### Copy a pre-defined dashboard in the default team
 {: #dashboard_python_copy_pre_default}
 
-The following code shows the structure of a Python script:
+The following code shows the structure of a Python script to copy a pre-defined dashboard to the default team.
 
 ```python
 #!/usr/bin/env python3
@@ -396,7 +399,7 @@ else:
 ### Copy a dashboard in a team
 {: #dashboard_python_copy_team}
 
-The following code shows the structure of a Python script:
+The following code shows the structure of a Python script to copy a dashboard to a team.
 
 ```python
 #!/usr/bin/env python3
@@ -450,13 +453,15 @@ else:
 ## Delete a dashboard
 {: #dashboard_python_delete}
 
+You can use Python to delete a dashboard.
+
 You must know the ID of a dashboard to delete it.
 {: note}
 
 ## Delete a dashboard from the default team
 {: #dashboard_python_delete_default}
 
-The following code shows the structure of a Python script:
+The following code shows the structure of a Python script to delete a dashboard from the default team.
 
 ```python
 #!/usr/bin/env python3
@@ -505,8 +510,7 @@ for dashboard in res[1]['dashboards']:
 ## Delete a dashboard from a team
 {: #dashboard_python_delete_team}
 
-
-The following code shows the structure of a Python script:
+The following code shows the structure of a Python script to delete a dashboard from a specific team.
 
 ```python
 #!/usr/bin/env python3
@@ -550,13 +554,15 @@ for dashboard in res[1]['dashboards']:
 ## Download custom dashboards
 {: #dashboard_python_download}
 
+You can use Python to download custom dashboards.
+
 When you download dashboards, you only download custom dashboards.
 {: important}
 
 ## Download custom dashboards in the default team
 {: #dashboard_python_download_default}
 
-The following code shows the structure of a Python script:
+The following code shows the structure of a Python script to download a custom dashboard from the default team.
 
 ```python
 #!/usr/bin/env python3
@@ -633,7 +639,7 @@ for db in res['dashboards']:
 ## Download custom dashboards in a team
 {: #dashboard_python_download_team}
 
-The following code shows the structure of a Python script:
+The following code shows the structure of a Python script to download a custom dashboard from a specific team.
 
 ```python
 #!/usr/bin/env python3

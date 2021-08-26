@@ -55,7 +55,7 @@ Complete the following steps to launch the web UI:
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
-    Click [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/login){:new_window} to launch the {{site.data.keyword.cloud_notm}} dashboard.
+    Click [{{site.data.keyword.cloud_notm}} dashboard](https://cloud.ibm.com/login){: external} to launch the {{site.data.keyword.cloud_notm}} dashboard.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
@@ -65,7 +65,7 @@ Complete the following steps to launch the web UI:
 
     The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
-4. Select one instance. Then, click **Open Dashboard**.
+4. Select one instance. Then, click **Open dashboard**.
 
     The Web UI opens.
 
@@ -77,13 +77,32 @@ By default, the *Monitor* view opens when you launch the monitoring UI.
 
 To access the *Secure* web UI, complete the following steps:
 
-1. Select the **Monitor** icon.
+1. Log in to your {{site.data.keyword.cloud_notm}} account.
+
+    Click [{{site.data.keyword.cloud_notm}} dashboard](https://cloud.ibm.com/login){: external} to launch the {{site.data.keyword.cloud_notm}} dashboard.
+
+	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
+
+2. In the navigation menu, select **Observability**. 
+
+3. Select **Monitoring**. 
+
+    The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
+
+4. Select one instance. Then, click **Open dashboard**.
+
+    The Web UI opens.
+
+5. Click the **Monitor** icon.
 
     ![Monitor icon](images/monitor.png)
 
     The *Platform* selection box opens.
 
     ![Platform icon](images/platform.png)
+
+    The selection box is only available for instances with the secure option.
+    {: note}
 
 2. Select the **Secure** icon.
 

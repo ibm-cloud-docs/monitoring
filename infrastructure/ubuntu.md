@@ -174,9 +174,9 @@ Complete the following steps to launch the web UI:
 
    The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
-4. Select your instance. Then, click **Open Dashboard**.
+4. Select your instance. Then, click **Open dashboard**.
 
-If the monitoring agent is configured successfully, the **Overview** view opens.
+If the monitoring agent is configured successfully, the **Explore** view opens.
 
 However, if the monitoring agent is not installed successfully, points to the wrong ingestion endpoint, or the access key is incorrect, the page that opens informs you about what to do next.
 

@@ -34,7 +34,7 @@ Complete the following steps to create a group:
 
 1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch). 
 
-2. Click **EXPLORE** to navigate to the *Explore* section.
+2. Click **Explore** to navigate to the *Explore* section.
 
 3. Select **Back to Explore Table**.
 
@@ -58,7 +58,7 @@ Complete the following steps to rename a group:
 
 1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch). 
 
-2. Click **EXPLORE** to navigate to the *Explore* section.
+2. Click **Explore** to navigate to the *Explore* section.
 
 3. Click the switch host icon ![Switch host icon](images/switch_hosts.png).
 
@@ -82,7 +82,7 @@ Complete the following steps to copy a group to other teams:
 
 1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch). 
 
-2. Click **EXPLORE** to navigate to the *Explore* section.
+2. Click **Explore** to navigate to the *Explore* section.
 
 3. Click the switch host icon ![Switch host icon](images/switch_hosts.png).
 
@@ -107,7 +107,7 @@ Complete the following steps to share a group with other members of the team:
 
 1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch). 
 
-2. Click **EXPLORE** to navigate to the *Explore* section.
+2. Click **Explore** to navigate to the *Explore* section.
 
 3. Click the switch host icon ![Switch host icon](images/switch_hosts.png).
 
@@ -130,7 +130,7 @@ Complete the following steps to delete a group:
 
 1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch). 
 
-2. Click **EXPLORE** to navigate to the *Explore* section.
+2. Click **Explore** to navigate to the *Explore* section.
 
 3. Click the switch host icon ![Switch host icon](images/switch_hosts.png).
 

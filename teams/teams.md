@@ -59,9 +59,9 @@ Complete the following steps to create a team:
 
 1. [Launch the web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
-2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
+2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**. 
 
-3. Select **Teams**. The list of existing teams is displayed.
+3. Click **Teams**. The list of existing teams is displayed.
 
 4. Click **Add Team**. The team configuration page is displayed.
 
@@ -75,11 +75,11 @@ Complete the following steps to create a team:
 
     * [Optional] Set the **Default team** parameter if you want this team to become the default team for new users.
 
-    * Set the **Default Entry Point** to specify the view in the web UI that opens every time a user logs in. Valid entrypoints are: *Explore* view, *Dashboards* view, *Events* view, *Alerts* view, and *Settings* view. By default, the *Explore* view is set.
+    * Set the **Default Entry Point** to specify the view in the web UI that opens every time a user logs in. By default, the *Explore* view is set.
 
 6. Configure the team scope. 
 
-    * [Optional] Set **Scope by** to specify the level of data that members of the team have access to. Valid values are *host* and *container*. 
+    * [Optional] Set **Scope by** to specify the level of data that members of the team have access to. Valid values are *Host* and *Container*. 
     
         If the parameter is set to *Host*, members can see all Host-level and Container-level information. 
         
@@ -89,13 +89,17 @@ Complete the following steps to create a team:
     
         By default, the scope is set to *everywhere*.
 	
-    * [Optional] Enable or disable **Sysdig captures**. Check this box to allow this team to take {{site.data.keyword.mon_full_notm}} Captures. 
+    * [Optional] Enable or disable **Sysdig captures**. Check this box to allow this team to take {{site.data.keyword.mon_full_notm}} captures. 
     
         Capture files will only be visible to members of this team. 
         
         Captures include detailed information from every container on a host, regardless of the team’s scope.
 
     * [Optional] Enable or disable **Infrastructure Events**. Check this box to allow members to view all custom infrastructure events from every user and monitoring agent. When is not checked, users can see infrastructure events that are sent specifically to this team. 
+
+    * [Optional] Enable or disable **Platform Metrics**. Check this box to allow members to view platform metrics.  You can scope the metrics to limit the metrics team members can see.  
+
+7. Click **Save**.
 
 <img src="images/team-configuration.png" alt="Team Configuration" width="800" />
 
@@ -109,7 +113,7 @@ To change the scope of the data that is visible to members of a team, complete t
 
 1. [Launch the web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
-2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
+2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**. 
 
 3. Select **Teams**. The list of existing teams is displayed.
 
@@ -132,7 +136,7 @@ The default team, **Monitor Operations**, cannot be deleted.
 
 1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
     
-2. From the *Selector* button in the navigation bar, select **Monitor Operations**. Then, choose **Settings**.
+2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**. 
 
 3. Select **Teams**. The list of existing teams is displayed.
 

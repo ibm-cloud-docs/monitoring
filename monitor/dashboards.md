@@ -32,16 +32,13 @@ Use dashboards to monitor your infrastructure, applications, and services. You c
 
 A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers.
 
-In the **DASHBOARDS** section of the Web UI, dashboards are organized into three main groups:
-* *My Dashboards* are dashboards that are created by the user who is currently logged in.
-* *My Shared Dashboards are dashboards that are created by the user who is currently logged in, and that are shared with other users.
-* *Dashboards Shared With Me* are dashboards that are created by other users, and shared with the current user.
-
-In the **EXPLORE** section of the Web UI, dashboards are organized into two groups:
-* *Default dashboards* are the pre-defined dashboards.
-* *My Dashboards* are the dashboards that are created by the user who is currently logged in.
+In the **Dashboards** section of the Web UI, dashboards are organized into three main groups:
+* *My Dashboards* are dashboards that are created by the user who is currently logged in.  An icon indicates if the dashboard is shared with other team members.
+* *Dashboards Shared By My Team* are dashboards that are created by other users, and shared with the current user.
 
 You can copy and share dashboards through the Web UI. 
+
+In the **Explore** section allows you to review specific metrics for your environment.  This section also provides support for PromQL queries.
 
 You can run scripts to complete any of the following actions programmatically:
 * Save existing dashboards to a local file.
@@ -66,24 +63,40 @@ When you create a custom dashboard, you can start from a template such as a pre-
 
 Complete the following steps to create a custom dashboard:
 
-1. Navigate to the **DASHBOARD** section in the Web UI, and select **Add Dashboard**. The *Create a New Dashboard* page opens.
+1. Navigate to the **Dashboards** section in the Web UI
 
-    1. Select a pre-defined dashboard or choose the *Blank Dashboard*. 
+2. You can create a dashboard using a template or by creating a dashboard manually.
 
-    2. Enter a name for your dashboard.
+    * To create a dashboard using a template:
+        
+        1. Select a template from the **DASHBOARD TEMPLATES** list.
+        
+        2. Click **Create Custom Dashboard**.
 
-    3. Click **Create Dashboard**.
+        3. Name your dashboard.
 
-2. Set the dashboard scope. Click **Edit Scope** to change the default scope. By default, **Everywhere** is selected.
+        4. Click **Create and Open**
+
+    * To create a dashboard without a template:
+
+        1. Click **Add Dashboard** ![Add dashboard icon](images/add.png "Add dashboard icon"). The *New Dashboard* page opens.
+
+        2. Modify your dashboard as desired.
+
+        3. Click **Save**.
+
+        4. Click *New Dashboard* to rename your dashboard.  Click the check mark to save your name change.
+
+2. Set the dashboard scope. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). The select the desired scope. By default, **Entire infrastructure** is selected.
     
     1. Select the scope. 
 
     2. Optionally, click **Override the custom panel scopes** to override the scope for all panels which currently have a custom scope defined. 
     
        This action cannot be undone.
-       {: note} 
+       {: note}
 
-       To reset the dashboard scope to the entire infrastructure, or to update an existing dashboard's scope to the entire infrastructure, select **Everywhere**.
+       To reset the dashboard scope to the entire infrastructure, or to update an existing dashboard's scope to the entire infrastructure, select **Entire infrastructure**.
        {: tip}
 
     3. Click **Save**.
@@ -92,15 +105,15 @@ Complete the following steps to create a custom dashboard:
 
     1. Identify the panel that you want to modify.
 
-    2. Select **Edit Panel**. This is the pencil icon.
+    2. Select **Edit Panel**. This is the *Pencil* icon ![Pencil icon](../images/pencil.png).
     
     3. Change the a chart type.
 
     4. Change the metric, and rate. Rate defines the type of aggregation that is done to the data.
 
-    5. Change the scope of the panel. Click **Override Dashboard Scope**. Then, change the scope. If you need to restore the dashboard scope to the panel, select **Default to Dashboard Scope**.
+    5. Change the scope of the panel. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). Then, change the scope. If you need to restore the dashboard scope to the panel, delete the custom scope.  Click **Apply**.
 
-    6. In the *Compare to* field, click **Configure**. Set the time range for the comparison.
+    6. In the *Compare to* field set the time range for the comparison.
 
     7. Set the panel background color based on metric thresholds. Click **Override Color Coding**, then, **Enable**. Set values for the different thresholds.
 
@@ -115,20 +128,22 @@ Instead of changing the scope of a pre-defined dashboard, copy the dashboard and
 
 Complete the following steps to change the scope of a dashboard:
 
-1. Navigate to the **DASHBOARD** section in the Web UI, and select a dashboard.
+1. Navigate to the **Dashboards** section in the Web UI, and select a dashboard.
 
-2. Click **Edit Scope** to change the default scope. 
-
-    By default, **Everywhere** is selected.
-    
+2. Click the *Pencil* icon ![Pencil icon](../images/pencil.png) to **Edit Dashboard Scope** to change default scope. 
+   
 3. Select the scope. 
 
+<!--
 4. Optionally, click **Override the custom panel scopes** to override the scope for all panels which currently have a custom scope defined. 
 
-    **Note: This action cannot be undone.** 
+    This action cannot be undone. 
+    {: note}
 
     To reset the dashboard scope to the entire infrastructure, or to update an existing dashboard's scope to the entire infrastructure, select **Everywhere**.
     {: tip}
+
+-->
 
 5. Click **Save**.
 
@@ -149,30 +164,22 @@ The following table outlines the different actions and user permissions that are
 
 Complete the following steps to copy a dashboard in the Web UI:
 
-1. Navigate to the *DASHBOARDS* section in the Web UI.
+1. Navigate to the *Dashboards* section in the Web UI.
 2. Select the dashboard in the panel.
-3. Click **Settings** (three dots icon), and select **Copy dashboard**. 
-4. Select where to copy the dashboard.
-
-    1. Choose **Current Team** to copy the dashboard for the current team.
+3. Click the **Action icon** ![three dots icon](/images/actions.png), and select **Duplicate Dashboard**. 
+4. Enter a name for the dashboard.
+5. Click **Copy and Open**.
     
-    2. Choose **Other Teams** to copy the dashboard to other teams. Select the teams where you want to copy the dashboard.
-
-    3. Enter a name for the dashboard.
-
-    4. Click **Send copy**.
-    
-    5. Check that the scope of the dashboard in the new team is updated based on the permissions of the destination team.
 
 ## Deleting a dashboard
 {: #dashboards_delete}
 
 Complete the following steps to delete a dashboard in the Web UI:
 
-1. Navigate to the *DASHBOARDS* section in the Web UI.
+1. Navigate to the *Dashboards* section in the Web UI.
 2. Select the dashboard in the panel.
-3. Click **Settings** ![three dots icon](images/actions.png), and select **Delete dashboard**. 
-4. Confirm deletion by clicking **Yes, delete dashboard**.
+3. Click the **Actions icon** ![three dots icon](/images/actions.png), and select **Delete**. 
+4. Confirm deletion by clicking **Delete Dashboard**.
 
 
 ## Sharing a dashboard
@@ -191,16 +198,19 @@ The following table outlines the different actions and user permissions that are
 
 Complete the following steps to share a dashboard in the Web UI:
 
-1. Navigate to the *DASHBOARDS* section in the Web UI.
+1. Navigate to the *Dashboards* section in the Web UI.
 2. Select the dashboard in the panel.
-3. Click **Settings** ![three dots icon](images/actions.png), and select **Share**.
+3. Click **Actions icon** ![three dots icon](/images/actions.png), and select **Dashboard Settings**.
 4. Choose how you want to share the dashboard:
 
-    * Toggle the **Share with Team** slider to share the dashboard with the current team. The team where the dashboard is shared is displayed.
+    * For **Share with** select how the dashboard will be shared.
+        * **Not Shared** indicates the dashboard will not be shared with other users
+        * **All My Teams** indicates the dashboard will be shared with all your team members.  You can specify whether other team members can only view the dashboard, or collaborate and make changes to the dashboard.
+        * **Select Teams** indicates the dashboard will only be shared with members of the teams you select.  You can specify whether other team members can only view the dashboard, or collaborate and make changes to the dashboard.  If you add a team and want to remove that team's permissions to the dashboard, click the **X** next to the team member permissions line.
 
-    * Toggle the **Share Public URL** slider to reveal the custom public URL.
+    * Toggle the **Public Dashboard** slider to reveal the custom public URL.
 
-5. Click **Close**.
+5. Click **Save**.
 
 Share a dashboard externally to allow external users to view the dashboard metrics, while restricting access to changing panels and configurations.
 {: tip}

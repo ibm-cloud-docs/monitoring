@@ -45,7 +45,7 @@ To change the service plan of an instance from the Observability dashboard in th
 
 3. Select **Monitoring**.
 
-4. Select the instance. Then, select **Edit plan**. 
+4. Click the *Actions* icon ![Three dots icon](images/actions.png) next to the instance you want to change and click **Edit plan**. 
 
 5. Select a service plan. 
 

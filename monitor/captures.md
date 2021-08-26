@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-06-03"
+lastupdated: "2021-06-02"
 
 keywords: IBM Cloud, monitoring, captures
 
@@ -35,7 +35,7 @@ You create a capture in the *Explore* view.
 
 Complete the following steps to create a capture file:
 
-1. Navigate to the *EXPLORE* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
+1. Navigate to the *Explore* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 
 2. Click the switch host icon ![Switch host icon](images/switch_hosts.png).
 
@@ -53,7 +53,7 @@ Complete the following steps to create a capture file:
 
     3. (Optional) Add a filter to restrict the amount of trace information that is collected. 
 
-6. Click **Start capture**. The monitoring agent is signaled to start a capture, and send back the resulting trace file. 
+6. Click **START CAPTURE**. The monitoring agent is signaled to start a capture, and send back the resulting trace file. 
 
 7. Click **Go to captures page** to display the list of captures in the *Captures* section of the web UI. 
 
@@ -71,7 +71,7 @@ The status of a capture file can be any of the following values:
 
 Complete the following steps to delete a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
+1. Navigate to the *Captures* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 2. Identify and select the capture file that you want to delete.
 3. Click **Delete**.
 
@@ -82,7 +82,7 @@ Complete the following steps to delete a capture file:
 
 Complete the following steps to explore a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
+1. Navigate to the *Captures* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 2. Identify and select the capture file that contains the data for the host that you want to analyze.
 3. Click **EXPLORE**.
 
@@ -93,7 +93,7 @@ Complete the following steps to explore a capture file:
 
 Complete the following steps to download a capture file:
 
-1. Navigate to the *CAPTURES* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
+1. Navigate to the *Captures* section in the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 2. Identify and select the capture file that contains the data that you want to download.
 3. Click **DOWNLOAD**.
 

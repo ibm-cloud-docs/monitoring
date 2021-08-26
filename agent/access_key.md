@@ -40,9 +40,9 @@ To get the access key for an {{site.data.keyword.mon_full_notm}} instance throug
 
 3. Select **Monitoring**. The {{site.data.keyword.mon_full_notm}} dashboard opens. You can see the list of monitoring instances that are available on {{site.data.keyword.cloud_notm}}.
 
-3. Identify the instance for which you want to get the access key. Select actions, then click **View key**.
+3. Identify the instance for which you want to get the access key. Click the *Actions* icon ![Three dots icon](images/actions.png) next to the instance and then click **View key**.
 
-4. A pop up window opens where you can click **Show** to view the access key.
+4. A window opens where you can click **Show key** to view the access key.
 
 
 

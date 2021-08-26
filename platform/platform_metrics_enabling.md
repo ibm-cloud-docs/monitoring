@@ -52,17 +52,17 @@ For example, if you are monitoring an {{site.data.keyword.messagehub}} instance 
 
 1. From the{{site.data.keyword.cloud_notm}} dashboard, go to the menu icon ![menu icon](../../../icons/icon_hamburger.svg) &gt; **Observability** to access the *Observability* dashboard.
 
-2. Select **Monitoring** &gt; **Configure platform metrics**. 
+2. Select **Monitoring** &gt; **Options** &gt; **Edit platform**. 
 
 3. Select a [region](/docs/monitoring?topic=monitoring-endpoints#endpoints_regions). 
 
 4. Choose the monitoring instance that will collect metrics from enabled services on that location. 
 
-5. Click **Save**. 
+5. Click **Select**. 
 
 The main *Observability* page opens.
 
-The instance that you choose to receive metrics shows the flag **Platform metrics**.
+<!-- The instance that you choose to receive metrics shows the flag **Platform metrics**. -->
 
 
 ## Enabling a monitoring instance from the command line
@@ -106,5 +106,3 @@ Complete the following steps:
 
     Where `PlanID` is the resource plan ID of your monitoring instance.
     
-
-

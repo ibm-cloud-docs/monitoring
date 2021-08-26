@@ -70,13 +70,16 @@ When you configure an alert, you can specify 1 or more notification channels.
 By default, when an alert is triggered, you get a notification in the *Events* section.
 
 You can configure any of the following notification channels:
+- Amazon SNS Topic
 - Email
-- IBM Cloud Function
+- IBM Cloud Functions
+- Microsoft Teams
 - OpsGenie
 - PagerDuty
 - Slack
+- Teams Email
 - VictorOps
-- WebHook.
+- WebHook
 
 
 ## Configuring an alert
@@ -94,17 +97,19 @@ From the *Alert* section of the UI, select **Add Alert**. Then, choose the alert
 
 Enter a name for the alert.
 
+You can also add a description for the alert and the name of an alert group if you want to group you alerts.  If an alert group is not specified, the alert will be created in the default group. 
+
 
 ### Step 3. Define the severity
 {: #alerts_configure_step3}
 
-Add a severity level. Valid severity values are `low`, `medium`, and `high`.
+Add a severity level. Valid severity values are `info`, `low`, `medium`, and `high`.
 
 
 ### Step 4. Define the metric section
 {: #alerts_configure_step4}
 
-1. Select a metric that you want to monitor.
+1. Select a metric (entity) that you want to monitor.
 2. Define the alert condition. Choose any of the following options:
 
     Option 1: Choose a metric and a single condition such as `average`, `sum`, `minimum` or `maximum`.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-07-01"
+lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, notification channel
 
@@ -40,35 +40,45 @@ Complete the following steps to add a notification channel:
 
 3. Select **Notification Channels**.
 
-4. Click **MY CHANNELS** ![add icon](../images/add.png). Then, select a channel.
-
-    **Note:** The first time you configure a notification channel, click on any of the channels.
+4. Click **Add Notification Channel**.
 
 5. Configure a notification channel:
 
-    * Enter the name of the channel.
+    1. Select the type of notification, for example, `Webhook`.
 
-    * Enable the *Notify when OK* field to receive a notification when the alert condition is no longer triggered.
+    2. Enter the name of the channel.
 
-    * Enable the *Notify when Resolved* condition to receive a notification when the alert is manually resolved by a user.
+    3. Enable the *Notify when Resolved* condition to receive a notification when the alert is manually resolved by a user.
 
-    * For an **email** notification channel, add the list of recipients, separated by comma.
+    4. Enable the *Notify when Acknowledged* field to receive a notification when the alert is manually acknowledged by the user.
 
-    * For a **slack** notification channel, add the name of the *Slack channel*.
+    5. Configure the notification according to the selected notification type:
+
+        * For an **Email** notification channel, add the list of recipients, separated by commas.
+
+        * For a **Slack** notification channel, add the URL of the *Slack channel*.
     
-    * For **{{site.data.keyword.openwhisk_short}}** notification channel, specify the channel URL when you set up a IBM Cloud Function Channel. For more information, see [Configure IBM Cloud Function Channel ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/configure-ibm-cloud-functions-channel.html).
+        * For **{{site.data.keyword.openwhisk_short}}** notification channel, specify the channel URL when you set up a IBM Cloud Function Channel. For more information, see [Configure IBM Cloud Function Channel ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/configure-ibm-cloud-functions-channel.html).
 
-    * For a **Webhook** notification channel, add the *Webhook URL*. **Note:** When an alert is triggered, the notification is sent as a POST in JSON format to your webhook endpoint. For more information, see [Configuring a Webhook channel](https://docs.sysdig.com/en/configure-a-webhook-channel.html){: external}. For example, {{site.data.keyword.mon_full_notm}}can be integrated with ServiceNow using a custom webhook. To learn about configuring {{site.data.keyword.mon_full_notm}}with ServiceNow, see [Configure ServiceNow](https://docs.sysdig.com/en/configure-servicenow.html){: external}.
+        * For a **Webhook** notification channel, add the *Webhook URL*. **Note:** When an alert is triggered, the notification is sent as a POST in JSON format to your webhook endpoint. For more information, see [Configuring a Webhook channel](https://docs.sysdig.com/en/configure-a-webhook-channel.html){: external}. For example, {{site.data.keyword.mon_full_notm}}can be integrated with ServiceNow using a custom webhook. To learn about configuring {{site.data.keyword.mon_full_notm}} with ServiceNow, see [Configure ServiceNow](https://docs.sysdig.com/en/configure-servicenow.html){: external}.
 
-    * For a **VictorOps** notification channel, add the *API key* and the *Routing key*.
+        * For a **VictorOps** notification channel, add the *API Key* and the *Routing Key*.
 
-    * For an **OpsGenie** notification channel, add the *OpsGenie API key*. Notice that you must configure in OpsGenie the integration with {{site.data.keyword.mon_full_notm}}. For more information, see [Add {{site.data.keyword.mon_full_notm}} Integration in Opsgenie](https://docs.opsgenie.com/v1.0/docs/sysdig-cloud-integration){: external}.
+        * For an **OpsGenie** notification channel, add the *OpsGenie API key*. Notice that you must configure in OpsGenie the integration with {{site.data.keyword.mon_full_notm}}. For more information, see [Add {{site.data.keyword.mon_full_notm}} Integration in Opsgenie](https://docs.opsgenie.com/v1.0/docs/sysdig-cloud-integration){: external}.
 
-    * For a **PagerDuty** notification channel, first you must authorize {{site.data.keyword.mon_full_notm}} to integrate with your account. When you select PagerDuty, a wizard to configure the integration with {{site.data.keyword.mon_full_notm}} opens. Click either **Authorize Integration** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for {{site.data.keyword.mon_full_notm}} notifications, then click **Finish Integration**. Select the escalation policy to use for {{site.data.keyword.mon_full_notm}}  incidents. Then, on the *Notifications* tab, confirm your PagerDuty account, your service name, and the service key. For more information, see [Add {{site.data.keyword.mon_full_notm}} Integration in PagerDuty](https://www.pagerduty.com/docs/guides/sysdig-integration-guide/).
+        * For an **Amazon SNS Topic** notification channel, add the *SNS Topic*.
+        
+        * For a **Microsoft Teams** notification channel, add the *Microsoft Teams* URL.
 
-    * Optionally, and for integrations that allow a test, enable the *Test notification* condition to receive a test notification. If you do not receive a test notification in 10 minutes, review your channel configuration. 
+        * For a **PagerDuty** notification channel, you can automatically retrieve the required permissions or configure the channel manually. If you configure the channel manually you will need the *Account*, *Service Key*, and *Service Name*.
 
-6. Click **CREATE CHANNEL**. 
+        To retrieve the required permissions automatically by clicking **Auto-fetch**, first you must authorize {{site.data.keyword.mon_full_notm}} to integrate with your account. When you select PagerDuty, a wizard to configure the integration with {{site.data.keyword.mon_full_notm}} opens. Click either **Sign in** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for {{site.data.keyword.mon_full_notm}} notifications, then click **Finish Integration**. Select the escalation policy to use for {{site.data.keyword.mon_full_notm}} incidents. Then, on the *Notifications* tab, confirm your PagerDuty *Account*, *Service Key*, and *Service Name*. 
+
+        * For a **Teams Email** notification channel, select the name of the team to receive notifications. 
+
+    6. Optionally, and for integrations that allow a test, enable the *Test notification* condition to receive a test notification. If you do not receive a test notification in 10 minutes, review your channel configuration. 
+
+6. Click **Save**.
 
 
 
@@ -83,9 +93,9 @@ Complete the following steps to modify a notification channel:
 
 3. Select **Notification Channels**.
 
-4. Identify the target channel that you want to modify and click **EDIT**.
+4. Click the channel you want to edit.
 
-5. After you make changes, click **SAVE CHANGES**.
+5. After you make changes, click **Save**.
 
 
 
@@ -100,7 +110,11 @@ Complete the following steps to test a notification channel:
 
 3. Select **Notification Channels**.
 
-4. Identify the target channel that you want to modify and click **TEST**.
+4. Click the channel you want to edit.
+
+5. Enable the **Test notification** option.
+
+5. After you make changes, click **Save**.
 
 
 
@@ -115,7 +129,7 @@ Complete the following steps to temporarily disable a notification channel:
 
 3. Select **Notification Channels**.
 
-4. In the *Notifications* section, enable *Downtime* to disable alerts temporarily and mute all notifications.
+4. For the channel you want to disable, toggle **Enabled** for the channel so it is disabled.  Alerts are temporarily disabled and notifications muted.
 
 ## Deleting a notification channel
 {: #notifications_delete}
@@ -128,11 +142,11 @@ Complete the following steps to delete a notification channel:
 
 3. Select **Notification Channels**.
 
-4. Identify the target channel that you want to modify and click **EDIT**.
+4. Identify the target channel that you want to modify and the **Actions** icon ![Actions icon](../../icons/action-menu-icon.svg "Actions").
 
-5. Click **DELETE CHANNEL**.
+5. Click **Delete Channel**.
 
-6. Confirm the deletion of the channel. Click **SAVE CHANGES**.
+6. Confirm the deletion of the channel by clicking **Yes, delete**.
 
 
 
