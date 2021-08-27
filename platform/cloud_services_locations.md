@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-06-09"
+lastupdated: "2021-08-27"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -192,9 +192,9 @@ You can configure one monitoring instance in each region to collect platform met
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Dallas (us-south)` | `Toronto (ca-tor)` | `Washington (us-east)` |
-|------------------------------------------------|----------------|--------------|------------|
-| {{site.data.keyword.registrylong_notm}} `[*]`   | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |      
+| Service                                        | `Dallas (us-south)` | `Sao Paulo (br-sao)` | `Toronto (ca-tor)` | `Washington (us-east)` |
+|------------------------------------------------|---------------------|----------------------|--------------------|------------------------|
+| {{site.data.keyword.registrylong_notm}} `[*]`   | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |   
 {: caption="Containers integration in America's locations" caption-side="top"}
 {: #cs_cont-table-2}
 {: tab-title="America"}
@@ -203,8 +203,8 @@ You can configure one monitoring instance in each region to collect platform met
 {: row-headers}
 
 | Service                                        | `Osaka (jp-osa)` | `Sydney (au-syd)` | `Tokyo (jp-tok)` |
-|------------------------------------------------|------------------|----------------------------|----------------------------|
-| {{site.data.keyword.registrylong_notm}} `[*]`   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |      
+|------------------------------------------------|------------------|-------------------|------------------|
+| {{site.data.keyword.registrylong_notm}} `[*]` | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |      
 {: caption="Containers integration in AP locations" caption-side="top"}
 {: #cs_cont-table-3}
 {: tab-title="Asia Pacific"}
