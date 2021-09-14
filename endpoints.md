@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-05-12"
+lastupdated: "2021-09-14"
 
 keywords: IBM Cloud, monitoring, regions, endpoints
 
@@ -26,7 +26,7 @@ subcollection: monitoring
 {: #endpoints}
 
 A list of supported regions and public and private endpoints for the {{site.data.keyword.mon_full_notm}} service.
-{:shortdesc}
+{: shortdesc}
 
 ## Regions
 {: #endpoints_regions}
@@ -51,6 +51,7 @@ The following table lists the locations where the service is available:
 | `North America`       | `Dallas (us-south)`      | `N/A`        | `MZR`     |
 | `North America`       | `Washington (us-east)`   | `N/A`        | `MZR`     |
 | `North America`       | `Toronto (ca-tor)`       | `N/A`        | `MZR`     |
+| `South America`       | `Sao Paulo (br-sao)`     | `N/A`        | `MZR`     |
 {: caption="Table 1. List of locations where the service is available" caption-side="top"} 
 
 Where
@@ -86,6 +87,7 @@ The following table lists the *Private Collector endpoints* that are available p
 | `US East`   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50 </br>166.9.24.43 </br>166.9.20.53      | TCP 6443  | 
 | `AU SYD`    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32 </br>166.9.52.27  </br>166.9.54.27     |  TCP 6443 |
 | `CA TOR`  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | 166.9.77.20 </br>166.9.76.23 </br>166.9.78.21   | TCP 6443  |
+| `BR SAO`  | `ingest.private.br-sao.monitoring.cloud.ibm.com`   | 166.9.84.19 </br>166.9.83.18 </br>166.9.82.19   | TCP 6443  |
 {: caption="Table 2. List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
@@ -104,6 +106,7 @@ The following table lists the *Public Collector endpoints* that are available pe
 | `US East`   | `ingest.us-east.monitoring.cloud.ibm.com`           | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82      | TCP 6443 |
 | `AU SYD`    | `ingest.au-syd.monitoring.cloud.ibm.com`            | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78     | TCP 6443 | 
 | `CA TOR`    | `ingest.ca-tor.monitoring.cloud.ibm.com`            | 163.74.69.186 </br>158.85.94.130 </br>163.75.65.237     | TCP 6443 | 
+| `BR SAO`    | `ingest.br-sao.monitoring.cloud.ibm.com`            | 163.107.66.98 </br>163.109.67.242 </br>169.57.141.43     | TCP 6443 | 
 {: caption="Table 3. List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
@@ -127,6 +130,7 @@ The following table lists the endpoints that are available per region:
 | `US East`   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82        | https (TLS) 443 | 
 | `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78       | https (TLS) 443 | 
 | `CA TOR`    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186 </br>158.85.94.130 </br>163.75.65.237       | https (TLS) 443 | 
+| `BR SAO`    | `https://br-sao.monitoring.cloud.ibm.com`        | 163.107.66.98 </br>163.109.67.242 </br>169.57.141.43       | https (TLS) 443 | 
 {: caption="Table 4. List of endpoints" caption-side="top"} 
 
 
@@ -143,6 +147,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `US South` | 150.239.180.0/25 </br>169.46.0.64/29 </br>169.48.214.64/29 </br>169.48.235.16/28 </br>169.60.151.168/29 </br>169.62.221.32/28 </br>174.36.68.96/27 </br>50.22.148.64/26 </br>52.116.222.192/27 </br>52.117.187.192/27 </br>52.118.158.0/25 </br>52.118.7.64/26 </br>67.228.207.64/26 </br>67.228.219.0/25 |
 | `EU DE`    | 149.81.151.128/27 </br>149.81.77.72/29 </br>149.81.99.192/28 </br>159.122.102.32/29 </br>161.156.1.224/27 </br>161.156.102.200/29 </br>161.156.69.144/28 </br>169.50.36.64/27 </br>169.50.9.0/28  |
 | `EU GB`    | 141.125.136.32/27 </br>141.125.73.112/29 </br>141.125.73.80/28 </br>158.175.124.224/27 </br>158.175.75.160/28 </br>158.175.98.200/29 </br>159.122.210.168/29 </br>159.8.149.208/28 </br>5.10.120.32/27  |
+| `EU FR2` | 150.112.66.88/29 </br>150.112.68.128/28 </br>158.231.69.128/29 </br>158.231.69.160/28 </br>163.102.67.232/29 </br>163.102.68.80/28 |
 | `JP OSA`   | 163.68.67.128/28 </br>163.68.67.96/29 </br>163.69.66.168/29 </br>163.69.67.112/28 </br>163.73.67.176/29 </br>163.73.67.192/28  |
 | `JP TOK`   | 128.168.75.32/28 </br>128.168.75.8/29 </br>128.168.98.0/27 </br>161.202.255.64/27 </br>165.192.83.144/28 </br>165.192.84.8/29 </br>165.192.97.96/27 </br>169.56.11.208/28 </br>169.56.51.232/29  |
 | `US East`  | 169.47.20.160/27 </br>169.55.109.112/29 </br>169.55.122.192/28 </br>169.59.131.160/27 </br>169.59.146.192/26 </br>169.60.112.72/29 </br>169.60.82.240/28 </br>169.62.28.160/28 </br>169.62.3.80/29 </br>169.62.46.192/27 </br>52.116.95.64/26 </br>52.117.71.128/26  | 
@@ -172,6 +177,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `US East`   | `https://private.us-east.monitoring.cloud.ibm.com/api`       |
 | `AU SYD`    | `https://private.au-syd.monitoring.cloud.ibm.com/api`        |
 | `CA TOR`    | `https://private.ca-tor.monitoring.cloud.ibm.com/api`        |
+| `BR SAO`    | `https://private.br-sao.monitoring.cloud.ibm.com/api`        |
 {: caption="Table 6. Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
 
@@ -189,6 +195,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `US East`   | `https://us-east.monitoring.cloud.ibm.com/api`       |
 | `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com/api`        |
 | `CA TOR`    | `https://ca-tor.monitoring.cloud.ibm.com/api`        |
+| `BR SAO`    | `https://br-sao.monitoring.cloud.ibm.com/api`        |
 {: caption="Table 7. Public REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
 
