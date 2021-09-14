@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-05-12"
+lastupdated: "2021-09-14"
 
 keywords: IBM Cloud, monitoring, regions, endpoints
 
@@ -26,7 +26,7 @@ subcollection: monitoring
 {: #endpoints}
 
 A list of supported regions and public and private endpoints for the {{site.data.keyword.mon_full_notm}} service.
-{:shortdesc}
+{: shortdesc}
 
 ## Regions
 {: #endpoints_regions}
@@ -51,6 +51,7 @@ The following table lists the locations where the service is available:
 | `North America`       | `Dallas (us-south)`      | `N/A`        | `MZR`     |
 | `North America`       | `Washington (us-east)`   | `N/A`        | `MZR`     |
 | `North America`       | `Toronto (ca-tor)`       | `N/A`        | `MZR`     |
+| `South America`       | `Sao Paulo (br-sao)`     | `N/A`        | `MZR`     |
 {: caption="Table 1. List of locations where the service is available" caption-side="top"} 
 
 Where
@@ -86,6 +87,7 @@ The following table lists the *Private Collector endpoints* that are available p
 | `US East`   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50 </br>166.9.24.43 </br>166.9.20.53      | TCP 6443  | 
 | `AU SYD`    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32 </br>166.9.52.27  </br>166.9.54.27     |  TCP 6443 |
 | `CA TOR`  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | 166.9.77.20 </br>166.9.76.23 </br>166.9.78.21   | TCP 6443  |
+| `BR SAO`  | `ingest.private.br-sao.monitoring.cloud.ibm.com`   | 166.9.84.19 </br>166.9.83.18 </br>166.9.82.19   | TCP 6443  |
 {: caption="Table 2. List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
@@ -104,6 +106,7 @@ The following table lists the *Public Collector endpoints* that are available pe
 | `US East`   | `ingest.us-east.monitoring.cloud.ibm.com`           | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82      | TCP 6443 |
 | `AU SYD`    | `ingest.au-syd.monitoring.cloud.ibm.com`            | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78     | TCP 6443 | 
 | `CA TOR`    | `ingest.ca-tor.monitoring.cloud.ibm.com`            | 163.74.69.186 </br>158.85.94.130 </br>163.75.65.237     | TCP 6443 | 
+| `BR SAO`    | `ingest.br-sao.monitoring.cloud.ibm.com`            | 163.107.66.98 </br>163.109.67.242 </br>169.57.141.43     | TCP 6443 | 
 {: caption="Table 3. List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
@@ -127,6 +130,7 @@ The following table lists the endpoints that are available per region:
 | `US East`   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82        | https (TLS) 443 | 
 | `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78       | https (TLS) 443 | 
 | `CA TOR`    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186 </br>158.85.94.130 </br>163.75.65.237       | https (TLS) 443 | 
+| `BR SAO`    | `https://br-sao.monitoring.cloud.ibm.com`        | 163.107.66.98 </br>163.109.67.242 </br>169.57.141.43       | https (TLS) 443 | 
 {: caption="Table 4. List of endpoints" caption-side="top"} 
 
 
@@ -172,6 +176,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `US East`   | `https://private.us-east.monitoring.cloud.ibm.com/api`       |
 | `AU SYD`    | `https://private.au-syd.monitoring.cloud.ibm.com/api`        |
 | `CA TOR`    | `https://private.ca-tor.monitoring.cloud.ibm.com/api`        |
+| `BR SAO`    | `https://private.br-sao.monitoring.cloud.ibm.com/api`        |
 {: caption="Table 6. Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
 
@@ -189,6 +194,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `US East`   | `https://us-east.monitoring.cloud.ibm.com/api`       |
 | `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com/api`        |
 | `CA TOR`    | `https://ca-tor.monitoring.cloud.ibm.com/api`        |
+| `BR SAO`    | `https://br-sao.monitoring.cloud.ibm.com/api`        |
 {: caption="Table 7. Public REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
 
