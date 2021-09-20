@@ -10,22 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting information about Kubernetes logging agent images 
 {: #monitoring_agent_image}
 
 Kubernetes monitoring agent images are public images that are available in {{site.data.keyword.cloud_notm}} through the [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) service.
-{:shortdesc}
+{: shortdesc}
 
 You can access the images that are provided by {{site.data.keyword.IBM}} by using the command line.
 
@@ -69,3 +60,4 @@ ibmcloud cr images --restrict ext/sysdig
 {: codeblock}
 
 The output of this command is the list of monitoring agent images. It includes information about the repository, `icr.io/ext/sysdig`, the image tag, the image digest, the image namespace, when the image was created, the image size, and the images security status.
+

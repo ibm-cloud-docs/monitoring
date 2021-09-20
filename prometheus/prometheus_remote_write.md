@@ -10,16 +10,7 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 ---
 
@@ -27,7 +18,7 @@ subcollection: monitoring
 {: #prometheus_remote_write}
 
 You can use the built in Prometheus remote write feature to send metrics from environments where the {{site.data.keyword.mon_short}} agent coexists with Prometheus servers. Additionally, you can send metrics from environments where the {{site.data.keyword.mon_short}} agent cannot currently be installed.
-{:shortdesc}
+{: shortdesc}
 
 Use the {{site.data.keyword.mon_short}} agent in environments where an agent is available. However, use the Prometheus remote write feature to send metrics from ephemeral or batch jobs that may not exist long enough to be scraped by the agent.
 
@@ -127,7 +118,7 @@ global:
 remote_write:
 - url: ...
 ```
-[: codeblock]
+{: codeblock}
 
 ```yaml
 # Prometheus server 2
@@ -248,7 +239,7 @@ You can choose any of the following options to configure the Prometheus remote w
 Choose one of the following methods to configure the Prometheus server remote write feature:
  
 #### Prometheus config map
-{: #prometheus_remote_write_kube_step2-1}
+{: #prometheus_remote_write_kube_step2_1}
 
 Complete the following steps to modify the Prometheus config map:
 
@@ -389,7 +380,7 @@ Complete the following steps to modify the Prometheus config map:
 
 
 #### Prometheus Operator
-{: #prometheus_remote_write_kube_step2-2}
+{: #prometheus_remote_write_kube_step2_2}
 
 If you use the Prometheus Operator to configure and manage your Prometheus server, you can configure the Prometheus remote write feature by using the Prometheus Operator that offers Kubernetes native deployment and management of the Prometheus server and related monitoring components. 
 
@@ -435,7 +426,7 @@ The Prometheus Operator will restart the Prometheus StatefulSets.
 
 
 #### Prometheus with Helm
-{: #prometheus_remote_write_kube_step2-3}
+{: #prometheus_remote_write_kube_step2_3}
 
 
 For Prometheus v2.25 and previous versions, follow these instructions:
@@ -527,7 +518,7 @@ Complete the following steps to check that you can monitor metrics that are coll
 {: #prometheus_remote_write_kube_issues}
 
 #### Prom-Beacon service not enabled
-{: #prometheus_remote_write_kube_issue-1}
+{: #prometheus_remote_write_kube_issue_1}
 
 If you find the following log entry in the logs of the Prometheus server that is deployed in your cluster, your {{site.data.keyword.mon_short}} instance does not have the Prom-Beacon service enabled.
 

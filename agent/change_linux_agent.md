@@ -10,22 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Customizing Linux monitoring agents
 {: #change_linux_agent}
 
 By default, the monitoring agent collects data from a range of platforms and applications. You can edit the agent config file to change its default behavior, and include or exclude data. You can customize the monitoring agent configuration file to include custom metrics such as JMX, StatsD, and Prometheus. You also can filter out metrics and containers.
-{:shortdesc}
+{: shortdesc}
 
 The monitoring agent uses two configuration files that specify what data to collect automatically:
 

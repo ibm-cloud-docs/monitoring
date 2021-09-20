@@ -10,22 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Upgrading a monitoring agent
 {: #upgrade_agent}
 
 Choose any of the following options to update a monitoring agent:
-{:shortdesc}
+{: shortdesc}
 
 
 ## Upgrading a monitoring agent for a standard Kubernetes cluster
@@ -39,7 +30,7 @@ updateStrategy:
       maxUnavailable: 1
     type: RollingUpdate
 ```
-{: screen}
+{: codeblock}
 
 When you update the agent's DaemonSet template, old DaemonSet pods are killed, and new DaemonSet pods are created automatically.
 
@@ -51,7 +42,7 @@ containers:
       imagePullPolicy: Always
       name: sysdig-agent
 ```
-{: screen}
+{: codeblock}
 
 Complete the following steps to update a monitoring agent with a `RollingUpdate` update strategy:
 

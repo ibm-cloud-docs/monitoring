@@ -10,23 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Deploying a monitoring agent
 {: #config_agent}
 
 After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you must configure a monitoring agent in each environment that you want to monitor. The monitoring agent automatically collects and reports on pre-defined metrics. You can configure which metrics to monitor in each environment.
-{:shortdesc}
+{: shortdesc}
 
 You can associate one or more tags to each monitoring agent. Tags are comma-separated values that are formatted as **TAG_NAME:TAG_VALUE**. When you monitor your environment, you can use these tags to identify metrics that are available from an agent. For example, you can include information about the service name and location with all of the metrics that are collected by this agent.
 {: tip}
@@ -507,7 +497,7 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
        k8s_cluster_name: my_cluster_name
        sysdig_capture_enabled: false
     ```
-    {: screen}
+    {: codeblock}
 
 9. Apply the config map to the cluster. Run the following command:
 

@@ -10,23 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Sending SMS alerts using {{site.data.keyword.openwhisk_short}}
 {: #cf_sms}
 
 In the {{site.data.keyword.mon_full_notm}} service, you can configure single alerts and multi-condition alerts to notify support staff about problems that might require attention. Using {{site.data.keyword.openwhisk}}, these alerts can trigger SMS (short message service) messages. 
-{:shortdesc}
+{: shortdesc}
 
 This example shows how to use [Twilio Programmable SMS Messaging support](https://www.twilio.com/docs/sms){: external} and {{site.data.keyword.openwhisk}} to send SMS alerts to support staff members.  This example uses the Twilio Python package.  [Other language support is available through Twilio.](https://www.twilio.com/docs/libraries){: external}
 
@@ -43,30 +33,30 @@ This example shows how to use [Twilio Programmable SMS Messaging support](https:
 
 5. On your local computer, create a Python virtual environment to install the requirements.
 
-   If you are running a Windows system, run the following commands:
+    If you are running a Windows system, run the following commands:
 
-   ```
-   pip install virtualenv
-   mkdir twilio
-   virtualenv twilio
-   cd twilio/scripts
-   pip install twilio
-   deactivate
-   ```
-   {: codeblock}
+    ```
+    pip install virtualenv
+    mkdir twilio
+    virtualenv twilio
+    cd twilio/scripts
+    pip install twilio
+    deactivate
+    ```
+    {: codeblock}
 
-  If you are running a Unix or MacOS system, run the following commands:
+    If you are running a Unix or MacOS system, run the following commands:
 
-   ```
-   pip install virtualenv
-   mkdir twilio
-   cd twilio
-   virtualenv virtualenv
-   source virtualenv/bin/activate
-   pip install twilio
-   deactivate
-   ```
-   {: codeblock}
+    ```
+    pip install virtualenv
+    mkdir twilio
+    cd twilio
+    virtualenv virtualenv
+    source virtualenv/bin/activate
+    pip install twilio
+    deactivate
+    ```
+    {: codeblock}
 
 6. Create a new file named `__main__.py` with a new function named `twilio`.
 

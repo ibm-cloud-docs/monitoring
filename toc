@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="monitoring" audience="service" category="logging_monitoring" href="/docs/monitoring?topic=monitoring-getting-started#getting-started" path="monitoring"}
+{: .toc subcollection="monitoring" version="2" audience="service" category="logging_monitoring" href="/docs/monitoring?topic=monitoring-getting-started#getting-started" path="monitoring"}
 Monitoring
 
     {: .navgroup id="learn"}

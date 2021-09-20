@@ -10,23 +10,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Using cURL
 {: #mon-curl}
 
 You can use cURL, a command line tool, from a terminal to manage the {{site.data.keyword.mon_full_notm}} service by using URL syntax.
-{:shortdesc}
+{: shortdesc}
 
 
 ## cURL syntax

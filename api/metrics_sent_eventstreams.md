@@ -10,23 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Extracting notifications from {{site.data.keyword.mon_short}} to IBM Cloud Event Streams
 {: #metrics_sent_eventstreams}
 
 You can extract notifications from {{site.data.keyword.mon_short}} to IBM Cloud Event Streams by using the Event Streams REST API.
-{:shortdesc}
+{: shortdesc}
 
 Complete the following steps:
 
@@ -48,7 +38,7 @@ Obtain the following Event Streams API connection details that you must use when
 Choose 1 of the following methods:
 
 ### Get credentials using the IBM Cloud console
-{: #metrics_sent_eventstreams_step2-1}
+{: #metrics-sent-eventstreams-step2-1}
 
 1. Locate your {{site.data.keyword.messagehub}} service on the dashboard.
 2. Click your service tile.
@@ -60,7 +50,7 @@ Choose 1 of the following methods:
 
 
 ### Get credentials using the IBM Cloud CLI
-{: #metrics_sent_eventstreams_step2-2}
+{: #metrics-sent-eventstreams-step2-2}
 
 Complete the following steps:
 

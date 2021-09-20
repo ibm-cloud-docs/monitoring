@@ -10,27 +10,17 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the Monitoring API
 {: #metrics_api}
 
 You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance by using the {site.data.keyword.mon_short}} API.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Get metrics by using cURL
-{: #metrics_api-curl}
+{: #metrics-api-curl}
 
 You can use the following [cURL command](/docs/monitoring?topic=monitoring-mon-curl) to get metrics:
 
@@ -83,7 +73,7 @@ The following sample shows a template for the `metrics.json` file:
 
 
 ## Metrics dictionary
-{: #metrics_api-dictionary}
+{: #metrics-api-dictionary}
 
 To see the pre-defefined metrics by Sysdig, see [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html){: external}.
 
@@ -91,7 +81,7 @@ To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_not
 
 
 ## Data aggregation
-{: #metrics_api-aggregation}
+{: #metrics-api-aggregation}
 
 
 To learn about data aggregation, see [Data Aggregation](https://docs.sysdig.com/en/data-aggregation.html){: external}.
@@ -99,7 +89,7 @@ To learn about data aggregation, see [Data Aggregation](https://docs.sysdig.com/
 
 
 ## Sample: Extract platform metrics
-{: #metrics_api-sample-platform}
+{: #metrics-api-sample-platform}
 
 This example shows how to extract platform metrics from Cloud Foundry in *us-south* for the last 24 hours.
 
@@ -154,7 +144,7 @@ The result for extracting data returns the following information:
 {: screen}
 
 ## Sample: Extract CPU data
-{: #metrics_api-sample-cpu}
+{: #metrics-api-sample-cpu}
 
 This example shows how to extract CPU data by host with start, end, and, sampling limit.
 
@@ -234,7 +224,7 @@ The result for extracting data returns the following information:
 {: screen}
 
 ## Sample: cURL sample to extract latest metric
-{: #metrics_api-sample-prom}
+{: #metrics-api-sample-prom}
 
 To get the latest value of a metric, specify only the metric name. The most recent value that was generated no more than 5 minutes ago is returned.
 
@@ -258,14 +248,13 @@ Where
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 
-All dashboards support the full PromQL API. For more information about what’s possible with PromQL, see the [Prometheus documentation](https://www.prometheus.io/docs/prometheus/latest/querying/api/){:external}.
+All dashboards support the full PromQL API. For more information about what’s possible with PromQL, see the [Prometheus documentation](https://www.prometheus.io/docs/prometheus/latest/querying/api/){: external}.
 {: note}
 
-
 ## Sample: cURL sample to extract CPU data for a team
-{: #metrics_api-sample-cpu-1}
+{: #metrics-api-sample-cpu-1}
 
-This example shows how to extract CPU data that is avaialable within the context of a team.
+This example shows how to extract CPU data that is available within the context of a team.
 
 ```shell
 curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: 30785" -H "content-type: application/json" -d @metrics.json

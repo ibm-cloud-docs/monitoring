@@ -10,24 +10,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Working with IAM tokens
 {: #api_token}
 
 You can use IAM tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the monitoring REST API to automate routine tasks and monitor notifications. 
-{:shortdesc}
+{: shortdesc}
 
 ## Getting an IAM API key through the {{site.data.keyword.cloud_notm}} UI
 {: #api_iam_apikey_get}

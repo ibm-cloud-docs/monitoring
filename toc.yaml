@@ -1,0 +1,318 @@
+toc:
+  properties:
+    subcollection: monitoring
+    version: 2
+    category: logging_monitoring
+    audience: service
+    href: /docs/monitoring?topic=monitoring-getting-started#getting-started
+    console-page: /observe/monitoring
+    product-page: https://www.ibm.com/cloud/cloud-monitoring
+    path: monitoring
+    label: Monitoring
+
+  entries: 
+  - navgroup: 
+      id: learn
+      topics:
+      - getting-started.md
+      - releasenotes.md
+      
+      - topicgroup: 
+          label: Monitor
+          topics:
+          - monitor/getting-started-monitor.md
+          - topicgroup: 
+              label: Monitoring infrastructure
+              topics:
+              - Monitoring infrastructure 
+              - infrastructure/windows.md
+              - infrastructure/baremetal_linux.md
+              - infrastructure/kubernetes_cluster.md
+              - infrastructure/ubuntu.md
+          - topicgroup: 
+              label: Monitoring IBM Cloud services
+              topics:
+              - platform/platform_metrics_enabling.md
+              - platform/platform_metrics_working.md
+              - platform/cloud_services.md
+              - platform/cloud_services_locations.md      
+          - topicgroup: 
+              label: Adding more metrics
+              links: 
+              - link: 
+                  label: Integrations
+                  href: https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html
+              - link: 
+                  label: Collecting Prometheus Metrics from Remote Hosts
+                  href: https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html
+              topics:
+              - exporters/prometheus.md
+      - topicgroup: 
+          label: Secure
+          topics:
+          - secure/getting-started-secure.md
+          links: 
+          - link: 
+              label: Sysdig Secure Product Page
+              href: https://sysdig.com/products/monitor/
+          - link: 
+              label: Sysdig Secure Documentation
+              href: https://docs.sysdig.com/en/sysdig-secure.html
+
+  - navgroup: 
+      id: howto
+      topics:
+      - provision.md
+      - iam/iam_instance_auth.md
+      - remove.md
+      - upgrade.md
+      
+      - topicgroup: 
+          label: Controlling access
+          topics:
+          - iam/iam.md
+          - iam/api_token.md
+          - iam/iam_grant.md
+          - iam/iam_grant_team.md
+      
+      - topicgroup: 
+          label: Logging and monitoring
+          topics:
+          - core/at_events.md
+      
+      - topicgroup: 
+          label: Enhancing security
+          topics:
+          - core/data-security.md
+          - core/service-connection.md
+          - core/architecture-workload-isolation.md
+          - core/ha-dr.md
+      
+      - topicgroup: 
+          label: Monitoring UI
+          topics:
+          - launch.md
+          - get_sysdig_web_url.md
+      
+      - topicgroup: 
+          label: Monitoring agent
+          topics:
+          - agent/agent_image.md
+          - agent/config_agent.md
+          - agent/upgrade_agent.md
+          - agent/remove_agent.md
+          - agent/agent_log_level.md
+          - agent/agent_events_level.md
+          - agent/access_key.md
+          - agent/change_kube_agent.md
+          - agent/change_linux_agent.md
+          - agent/change_container_agent.md
+          links: 
+            - link: 
+                label: Monitoring agent Release Notes
+                href: https://docs.sysdig.com/en/sysdig-agent-release-notes.html
+      
+      - topicgroup: 
+          label: Monitor
+          topics:
+          - topicgroup: 
+              label: Metrics
+              links: 
+                - link: 
+                    label: Metrics dictionary
+                    href: https://docs.sysdig.com/en/metrics-dictionary.html
+                - link: 
+                    label: Working with metrics
+                    href: https://docs.sysdig.com/en/metrics.html
+                - link: 
+                    label: Grouping, Scoping, and Segmenting Metrics 
+                    href: https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html
+                - link: 
+                    label: Understanding Default, Custom, and Missing Metrics
+                    href: https://docs.sysdig.com/en/understanding-default,-custom,-and-missing-metrics.html
+                - link: 
+                    label: Managing the Metric Scale
+                    href: https://docs.sysdig.com/en/manage-metric-scale.html
+                - link: 
+                    label: Data Aggregation
+                    href: https://docs.sysdig.com/en/data-aggregation.html
+                - link: 
+                    label: Metric Limits
+                    href: https://docs.sysdig.com/en/metric-limits.html
+              topics:
+              - monitor/mng_metrics.md
+              - api/metrics_api.md
+              - api/metrics_python.md
+          - topicgroup: 
+              label: Ingesting metrics by using Prometheus remote write
+              topics:
+              - prometheus/prometheus_remote_write.md
+          - topicgroup: 
+              label: Dashboards
+              topics:
+              - monitor/dashboards.md
+              - monitor/panels.md
+              - api/dashboard_python.md
+              links: 
+                - link: 
+                    label: Dashboard templates
+                    href: https://docs.sysdig.com/en/dashboard-templates-209032.html
+          - topicgroup: 
+              label: Explore views
+              links: 
+                - link: 
+                    label: Monitoring the infrastructure through the Explore section
+                    href: https://docs.sysdig.com/en/explore.html
+          - topicgroup: 
+              label: Alerts
+              topics:
+              - monitor/alerts.md
+              - api/alert_api.md
+              - api/alert_python.md
+              - monitor/notifications.md
+              - api/notifications_api.md
+              - monitor/pd_sms.md
+              - monitor/cf_sms.md
+          - topicgroup: 
+              label: Events
+              links: 
+                - link: 
+                    label: Working with custom events
+                    href: https://docs.sysdig.com/en/custom-events.html
+          - topicgroup: 
+              label: Captures
+              links: 
+                - link: 
+                    label: Working with captures
+                    href: https://docs.sysdig.com/en/captures.html
+              topics: 
+              - monitor/captures.md              
+          - topicgroup: 
+              label: Teams
+              topics: 
+              - teams/teams.md
+              - teams/team_id.md
+          - topicgroup: 
+              label: Prometheus
+              topics: 
+              - exporters/ipmi.md
+              - exporters/blackbox.md
+              - exporters/promql.md
+              links: 
+                - link: 
+                    label: Collecting Prometheus Metrics from Remote Hosts
+                    href: https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html
+                - link: 
+                    label: Prometheus metrics / OpenMetrics code instrumentation
+                    href: https://sysdig.com/blog/prometheus-metrics/
+                - link: 
+                    label: PromQL Alerts
+                    href: https://docs.sysdig.com/en/promql-alerts.html
+                - link: 
+                    label: Configure a Prometheus data source with Grafana
+                    href: https://docs.sysdig.com/en/configure-sysdig-with-grafana.html
+          - topicgroup: 
+              label: Integrations
+              links: 
+                - link: 
+                    label: Integrations
+                    href: https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html
+      - topicgroup: 
+          label: Secure
+          topics: 
+          - topicgroup: 
+              label: Image scanning
+              links: 
+              - link: 
+                  label: Working with image scanning
+                  href: https://docs.sysdig.com/en/scanning.html
+              - link: 
+                  label: Managing scanning alerts
+                  href: https://docs.sysdig.com/en/manage-scanning-alerts.html
+              - link: 
+                  label: Reviewing scan results
+                  href: https://docs.sysdig.com/en/review-scan-results.html
+              - link: 
+                  label: Working with the Admission Controller
+                  href: https://docs.sysdig.com/en/admission-controller--cli-based-.html
+          - topicgroup: 
+              label: Benchmarks
+              links: 
+              - link: 
+                  label: Working with benchmarks
+                  href: https://docs.sysdig.com/en/benchmarks.html
+              - link: 
+                  label: Configuring a benchmark task
+                  href: https://docs.sysdig.com/en/configure-benchmark-tasks.html
+              - link: 
+                  label: Reviewing benchmark test results
+                  href: https://docs.sysdig.com/en/review-benchmark-test-results.html
+              - link: 
+                  label: Monitoring compliance through dashboards and metrics
+                  href: https://docs.sysdig.com/en/use-compliance-dashboards-and-metrics.html
+          - topicgroup: 
+              label: Policies
+              links: 
+              - link: 
+                  label: Working with rules
+                  href: https://docs.sysdig.com/en/manage-rules.html
+              - link: 
+                  label: Working with Polices
+                  href: https://docs.sysdig.com/en/policies.html
+          - topicgroup: 
+              label: Events
+              links: 
+              - link: 
+                  label: Managing events
+                  href: https://docs.sysdig.com/en/secure-events.html
+          - topicgroup: 
+              label: Integrations
+              links: 
+              - link: 
+                  label: Integrations
+                  href: https://docs.sysdig.com/en/integrations-for-sysdig-secure.html
+
+  - navgroup: 
+      id: reference
+      topics: 
+      - endpoints.md
+      - pricing.md
+      - core/shared-responsibilities.md
+      - infrastructure/windows_wmi.md
+      
+      - topicgroup: 
+          label: Monitoring CLI
+          topics:
+          - /monitor-cli-plugin/monitor-cli-plugin-monitor-cli
+
+      - topicgroup: 
+          label: Monitoring API
+          links: 
+              - link: 
+                  label: Monitoring API
+                  href: {DomainName}/apidocs/monitor
+          topics: 
+          - api/rest_apis.md
+          - api/mon-curl.md
+          - iam/api_monitor_token.md
+          - api/python-client.md         
+
+      - monitor/monitoring.md
+
+      - topicgroup: 
+          label: Cloud services metrics
+          topics:     
+          - monitor/metrics/cloudfoundry-docs.md
+
+      - deprecated.md
+  
+  - navgroup: 
+        id: help
+        topics: 
+        - gettinghelp.md
+        - topicgroup: 
+            label: Monitor
+            topics:  
+            - monitor/troubleshoot.md
+            - monitor/faq.md
+

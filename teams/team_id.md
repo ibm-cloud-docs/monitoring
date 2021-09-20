@@ -10,24 +10,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Getting the ID of a team
 {: #team_id}
 
 You can use the Teams REST API to get the ID of a team.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Step 1. Get the IAM token

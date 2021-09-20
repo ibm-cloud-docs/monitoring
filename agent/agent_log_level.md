@@ -10,22 +10,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Configuring the log level of a monitoring agent
 {: #agent_log_level}
 
 The log level determines the type and amount of logging of an agent. You can configure the log level by adding parameters and log level arguments.
-{:shortdesc}
+{: shortdesc}
 
 The monitoring agent writes log entries into the `draios.log` file. 
 * The log file rotates when it reaches 10MB in size.

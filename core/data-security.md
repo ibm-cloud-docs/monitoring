@@ -10,13 +10,7 @@ subcollection: monitoring
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Managing data
@@ -63,7 +57,7 @@ When Captures are enabled, to avoid a security incident and potentially exposing
 {{site.data.keyword.mon_full_notm}} collects and aggregates metrics. 
 
 ### Data location
-{: #data-storage_location}
+{: #data_storage_location}
 
 Metric data is hosted on the {{site.data.keyword.cloud_notm}}.
 * Each multi-zone region (MZR) location collects and aggregates metrics for each instance of the {{site.data.keyword.mon_full_notm}} that runs in that location.
@@ -71,7 +65,7 @@ Metric data is hosted on the {{site.data.keyword.cloud_notm}}.
 
 
 ### Data retention
-{: #data-storage_retention}
+{: #data_storage_retention}
 
 Data is retained for each instance based on a *roll-up* policy.
 

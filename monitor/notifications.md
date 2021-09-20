@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-28"
+lastupdated: "2021-09-09"
 
 keywords: IBM Cloud, monitoring, notification channel
 
@@ -10,23 +10,14 @@ subcollection: monitoring
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Working with notification channels
 {: #notifications}
 
 Configure notification channels to be notified when an alert is triggered. You manage notification channels through the *Settings* panel in the web UI.
-{:shortdesc}
+{: shortdesc}
  
 
 ## Configuring a notification channel
@@ -70,7 +61,7 @@ Complete the following steps to add a notification channel:
         
         * For a **Microsoft Teams** notification channel, add the *Microsoft Teams* URL.
 
-        * For a **PagerDuty** notification channel, you can automatically retrieve the required permissions or configure the channel manually. If you configure the channel manually you will need the *Account*, *Service Key*, and *Service Name*.
+    * For a **PagerDuty** notification channel, first you must authorize {{site.data.keyword.mon_full_notm}} to integrate with your account. When you select PagerDuty, a wizard to configure the integration with {{site.data.keyword.mon_full_notm}} opens. Click either **Authorize Integration** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for {{site.data.keyword.mon_full_notm}} notifications, then click **Finish Integration**. Select the escalation policy to use for {{site.data.keyword.mon_full_notm}}  incidents. Then, on the *Notifications* tab, confirm your PagerDuty account, your service name, and the service key. For more information, see [Add {{site.data.keyword.mon_full_notm}} Integration in PagerDuty](https://www.pagerduty.com/docs/guides/sysdig-integration-guide/).
 
         To retrieve the required permissions automatically by clicking **Auto-fetch**, first you must authorize {{site.data.keyword.mon_full_notm}} to integrate with your account. When you select PagerDuty, a wizard to configure the integration with {{site.data.keyword.mon_full_notm}} opens. Click either **Sign in** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for {{site.data.keyword.mon_full_notm}} notifications, then click **Finish Integration**. Select the escalation policy to use for {{site.data.keyword.mon_full_notm}} incidents. Then, on the *Notifications* tab, confirm your PagerDuty *Account*, *Service Key*, and *Service Name*. 
 

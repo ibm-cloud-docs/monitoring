@@ -10,24 +10,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
  
 # Working with platform metrics
 {: #platform_metrics_working}
 
 Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in {{site.data.keyword.cloud_notm}}. 
-{:shortdesc}
+{: shortdesc}
 
 * Platform metrics are regional. 
 
@@ -105,7 +95,7 @@ Each {{site.data.keyword.cloud_notm}} provides 1 or more dashboard templates tha
 You can create a copy of a dashboard template. You can customize the copy of the dashboard.
 
 ### Creating a custom dashboard
-{: #platform_metrics_working_dash-1}
+{: #platform_metrics_working_dash_1}
 
 Complete the following steps to create a custom dashboard:
 
@@ -121,7 +111,7 @@ Next, customize the scope and panels in the dashboard.
 
 
 ### Defining the scope of a dashboard
-{: #platform_metrics_working_dash-2}
+{: #platform_metrics_working_dash_2}
 
 Complete the following steps to define the scope of the data that is displayed through the dashboard:
 
@@ -151,7 +141,7 @@ Complete the following steps to define the scope of the data that is displayed t
 
 
 ### Defining the scope of a panel
-{: #platform_metrics_working_dash-3}
+{: #platform_metrics_working_dash_3}
 
 Complete the following steps to define the scope of the data that is displayed through a panel in a dashboard:
 
@@ -181,7 +171,7 @@ To save the scope, you must click **Save** at the panel level.
 {: #platform_metrics_working_alert}
 
 ### Configuring an alert from a panel
-{: #platform_metrics_working_alert-1}
+{: #platform_metrics_working_alert_1}
 
 Complete the following steps to define an alert on a metric:
 
@@ -224,7 +214,7 @@ Complete the following steps to define an alert on a metric:
 
 
 ## Configuring an alert from the Alerts section
-{: #platform_metrics_working_alert-2}
+{: #platform_metrics_working_alert_2}
 
 You can define a `metric` alert directly from the *Alerts* section.
 
@@ -287,7 +277,7 @@ Enabling platform metrics, grants access to all platform metrics. However, you c
 
 
 ### Limiting access to platform metrics by resource group
-{: #platform_metrics_working_team-rg}
+{: #platform_metrics_working_team_rg}
 
 Complete the following steps to limit the data to metrics collected for services that are created in that resource group:
 
@@ -315,7 +305,7 @@ Complete the following steps to limit the data to metrics collected for services
 
 
 ### Limiting access to platform metrics by instance
-{: #platform_metrics_working_team-1}
+{: #platform_metrics_working_team_1}
 
 Complete the following steps:
 

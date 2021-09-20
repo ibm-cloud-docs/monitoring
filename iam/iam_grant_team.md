@@ -10,24 +10,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
  
 # RBAC, teams, and IAM integration
 {: #iam_grant_team}
 
 {{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and consistently control access to all cloud resources in the {{site.data.keyword.cloud_notm}}. Teams provide an isolated workspace in a {{site.data.keyword.mon_short}} instance for a user or group of users to have access to metrics in a defined scope. 
-{:shortdesc}
+{: shortdesc}
 
 IAM can map a combination of teams and roles so that a user only has access to a specific set of metrics and can take a defined set of actions within the product.
 {: note}

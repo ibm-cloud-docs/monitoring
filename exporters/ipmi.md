@@ -10,23 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring the Prometheus IPMI Exporter to monitor IPMI metrics
 {: #ipmi}
 
 In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics. 
-{:shortdesc}
+{: shortdesc}
 
 * The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP). 
 * When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter. 
@@ -220,7 +210,7 @@ You must configure the monitoring agent to enable collection of IPMI metrics.
 Choose one of the following options based on the type of monitoring agent that you configured:
 
 ### Kubernetes monitoring agent
-{: #ipmi_step4-1}
+{: #ipmi_step4_1}
 
 Run the following command to edit the configmap and add information about the hosts where the IPMI exporter is configured:
 
@@ -302,7 +292,7 @@ When you save the file, changes are applied.
 
 
 ### Linux service monitoring agent
-{: #ipmi_step4-3}
+{: #ipmi_step4_3}
 
 Complete the following steps to update the monitoring agent to collect IPMI metrics:
 

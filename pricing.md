@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-06-23"
+lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, pricing
 
@@ -10,17 +10,7 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Pricing
@@ -33,7 +23,7 @@ The following service plans are available:
 
 | Plans                                      | Plan ID                                | Plan Name                   |
 |--------------------------------------------|----------------------------------------|-----------------------------|
-| `Lite`                                     | `367a3918-9efc-43c5-bef9-20553051b7af` | `lite`                      | 
+| `Lite`                                     | `367a3918-9efc-43c5-bef9-20553051b7af` | `lite`                      |
 | `Graduated tier`                           | `231bb072-1b2f-4d7e-ae9e-9574d382be32` | `graduated-tier`            |
 | `Graduated Tier - Sysdig Secure + Monitor` | `35784193-e918-42d9-9598-4e842ed75192` | `graduated-tier-sysdig-secure-plus-monitor` |
 {: caption="Table 1. Service plans" caption-side="top"} 
@@ -46,7 +36,7 @@ The costs that are provided in this topic are guidelines and do not represent ac
 
 
 | Plans            | Base tier | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
-|------------------|---------------------------------------------------|--------|--------|--------|
+|------------------|--------------------------------------|--------|--------|--------|--------|
 | `Lite`           | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | | |
 | `Graduated tier` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Graduated Tier - Sysdig Secure + Monitor` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
@@ -73,7 +63,7 @@ Platform metrics are an additional source of time-series. They are priced based 
 
 A host can be a container, a virtual machine, a bare metal, or any metrics source where you install a monitoring agent.
 
-Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/monitoring?topic=monitoring-mng-data#data-collection) and [data retention](/docs/monitoring?topic=monitoring-mng-data#data-storage_retention).
+Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/monitoring?topic=monitoring-mng-data#data-collection) and [data retention](/docs/monitoring?topic=monitoring-mng-data#data_storage_retention).
 
 
 ## Checking the metrics that are collected per agent

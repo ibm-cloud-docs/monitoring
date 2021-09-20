@@ -10,22 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Removing a monitoring agent
 {: #remove_agent}
 
 When you delete an {{site.data.keyword.mon_full_notm}} instance, or if you want to stop collecting metrics from a source, you must uninstall the monitoring agent from sources where it was installed as a service. If you deployed a monitoring agent as a container, you must run docker commands to remove the agent.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Removing a monitoring agent from a standard Kubernetes cluster
@@ -70,7 +61,6 @@ Complete the following steps to remove a monitoring agent from a Kubernetes clus
     ```
     {: codeblock}
 
-
 ## Removing a monitoring agent from an OpenShift cluster
 {: #remove_agent_os}
 
@@ -96,7 +86,8 @@ Complete the following steps to remove a monitoring agent from an OpenShift clus
    oc delete serviceaccount -n ibm-observe sysdig-agent
    ```
    {: pre}
-   
+
+
 
 ## Removing a monitoring agent that is deployed as a container in a Linux system
 {: #remove_agent_docker}

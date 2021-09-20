@@ -10,24 +10,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Cloud services by location
 {: #cloud_services_locations}
 
 List of locations where {{site.data.keyword.cloud_notm}} services are enabled to send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the monitoring instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
-{:shortdesc}
+{: shortdesc}
 
 ## Cloud Foundry
 {: #cloud_services_locations_cf}
@@ -36,7 +26,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 |---------------------------------------------------------------|---------------------|------------------|
 | Cloud Foundry                                                 | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |          
 {: caption="CF integration in Europe locations" caption-side="top"}
-{: #cs_cf-table-1}
+{: #cs-cf-table-1}
 {: tab-title="Europe"}
 {: tab-group="cs_cf"}
 {: class="simple-tab-table"}
@@ -46,7 +36,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 |------------------------------------------------|---------------------|------------------------------------|
 | Cloud Foundry                                  | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg)    |          
 {: caption="CF integration in America's locations" caption-side="top"}
-{: #cs_cf-table-2}
+{: #cs-cf-table-2}
 {: tab-title="America"}
 {: tab-group="cs_cf"}
 {: class="simple-tab-table"}
@@ -56,7 +46,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 |------------------------------------------------|------------------|----------------------------|
 | Cloud Foundry                                  |                  | ![Checkmark icon](../images/checkmark-icon.svg) |      
 {: caption="CF integration in AP locations" caption-side="top"}
-{: #cs_cf-table-3}
+{: #cs-cf-table-3}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_cf"}
 {: class="simple-tab-table"}
@@ -76,7 +66,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 | {{site.data.keyword.codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |
 | {{site.data.keyword.openwhisk}}          | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |          
 {: caption="Serverless integration in Europe locations" caption-side="top"}
-{: #cs_sv-table-1}
+{: #cs-sv-table-1}
 {: tab-title="Europe"}
 {: tab-group="cs_sv"}
 {: class="simple-tab-table"}
@@ -87,7 +77,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 | {{site.data.keyword.codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |
 | {{site.data.keyword.openwhisk}}        | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg) `[*]` |          
 {: caption="Serverless integration in America's locations" caption-side="top"}
-{: #cs_sv-table-2}
+{: #cs-sv-table-2}
 {: tab-title="America"}
 {: tab-group="cs_sv"}
 {: class="simple-tab-table"}
@@ -98,7 +88,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 | {{site.data.keyword.codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |
 | {{site.data.keyword.openwhisk}}        | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg) |      
 {: caption="Serverless integration in AP locations" caption-side="top"}
-{: #cs_sv-table-3}
+{: #cs-sv-table-3}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_sv"}
 {: class="simple-tab-table"}
@@ -111,7 +101,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 |---------------------------------------------------------------|---------------------|------------------|
 | VPC virtual server instances                          | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |          
 {: caption="Infrastructure services integration in Europe locations" caption-side="top"}
-{: #cs_vpcinfra-table-1}
+{: #cs-vpcinfra-table-1}
 {: tab-title="Europe"}
 {: tab-group="cs_vpcinfra"}
 {: class="simple-tab-table"}
@@ -121,7 +111,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 |------------------------------------------------|---------------------|------------------------------------|
 | VPC virtual server instances           | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg)    |          
 {: caption="Infrastructure services integration in America's locations" caption-side="top"}
-{: #cs_vpcinfra-table-2}
+{: #cs-vpcinfra-table-2}
 {: tab-title="America"}
 {: tab-group="cs_vpcinfra"}
 {: class="simple-tab-table"}
@@ -131,7 +121,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 |------------------------------------------------|------------------|----------------------------|
 | VPC virtual server instances           | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |     
 {: caption="Infrastructure services integration in AP locations" caption-side="top"}
-{: #cs_vpcinfra-table-3}
+{: #cs-vpcinfra-table-3}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_vpcinfra"}
 {: class="simple-tab-table"}
@@ -145,7 +135,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 |---------------------------------------------------------------|---------------------|------------------|
 | {{site.data.keyword.BluVirtServers}}                          |                  | ![Checkmark icon](../images/checkmark-icon.svg)  |          
 {: caption="Infrastructure services integration in Europe locations" caption-side="top"}
-{: #cs_infra-table-1}
+{: #cs-infra-table-1}
 {: tab-title="Europe"}
 {: tab-group="cs_infra"}
 {: class="simple-tab-table"}
@@ -155,7 +145,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 |------------------------------------------------|---------------------|------------------------------------|
 | {{site.data.keyword.BluVirtServers}}           | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg)    |          
 {: caption="Infrastructure services integration in America's locations" caption-side="top"}
-{: #cs_infra-table-2}
+{: #cs-infra-table-2}
 {: tab-title="America"}
 {: tab-group="cs_infra"}
 {: class="simple-tab-table"}
@@ -165,7 +155,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 |------------------------------------------------|------------------|----------------------------|
 | {{site.data.keyword.BluVirtServers}}           |   |   |     
 {: caption="Infrastructure services integration in AP locations" caption-side="top"}
-{: #cs_infra-table-3}
+{: #cs-infra-table-3}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_infra"}
 {: class="simple-tab-table"}
@@ -186,7 +176,7 @@ You can configure one monitoring instance in each region to collect platform met
 |---------------------------------------------------------------|---------------------|------------------|
 | {{site.data.keyword.registrylong_notm}} `[*]`     | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |          
 {: caption="Containers integration in Europe locations" caption-side="top"}
-{: #cs_cont-table-1}
+{: #cs-cont-table-1}
 {: tab-title="Europe"}
 {: tab-group="cs_cont"}
 {: class="simple-tab-table"}
@@ -196,7 +186,7 @@ You can configure one monitoring instance in each region to collect platform met
 |------------------------------------------------|---------------------|----------------------|--------------------|------------------------|
 | {{site.data.keyword.registrylong_notm}} `[*]`   | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |   
 {: caption="Containers integration in America's locations" caption-side="top"}
-{: #cs_cont-table-2}
+{: #cs-cont-table-2}
 {: tab-title="America"}
 {: tab-group="cs_cont"}
 {: class="simple-tab-table"}
@@ -206,7 +196,7 @@ You can configure one monitoring instance in each region to collect platform met
 |------------------------------------------------|------------------|-------------------|------------------|
 | {{site.data.keyword.registrylong_notm}} `[*]` | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |      
 {: caption="Containers integration in AP locations" caption-side="top"}
-{: #cs_cont-table-3}
+{: #cs-cont-table-3}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_cont"}
 {: class="simple-tab-table"}
@@ -221,8 +211,9 @@ You can configure one monitoring instance in each region to collect platform met
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
 | {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.appconfig_full}}    |                                                 |![Checkmark icon](../images/checkmark-icon.svg) |  
 {: caption="Developer tools and DevOps services in Europe locations" caption-side="top"}
-{: #cs_devops-table-1}
+{: #cs-devops-table-1}
 {: tab-title="Europe"}
 {: tab-group="cs_devops"}
 {: class="simple-tab-table"}
@@ -231,8 +222,9 @@ You can configure one monitoring instance in each region to collect platform met
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
 | {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.appconfig_full}}    | ![Checkmark icon](../images/checkmark-icon.svg) |                             | 
 {: caption="Developer tools and DevOps services in America's locations" caption-side="top"}
-{: #cs_devops-table-2}
+{: #cs-devops-table-2}
 {: tab-title="America"}
 {: tab-group="cs_devops"}
 {: class="simple-tab-table"}
@@ -240,14 +232,14 @@ You can configure one monitoring instance in each region to collect platform met
 
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
 |------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
-| {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |   |  
+| {{site.data.keyword.contdelivery_full}}        |![Checkmark icon](../images/checkmark-icon.svg) |     |  |  |                                                                       
+| {{site.data.keyword.appconfig_full}}           |                                               | ![Checkmark icon](../images/checkmark-icon.svg) |    |  |  
 {: caption="Developer tools and DevOps services in AP locations" caption-side="top"}
-{: #cs_devops-table-3}
+{: #cs-devops-table-3}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_devops"}
 {: class="simple-tab-table"}
 {: row-headers}
-
 
 
 ## Networking services
@@ -355,8 +347,9 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  |    |
+| {{site.data.keyword.data-virtualization_full_notm}}                        |    | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Database services integration in Europe locations" caption-side="top"}
-{: #cs_db-table-1}
+{: #cs-db-table-1}
 {: tab-title="Europe"}
 {: tab-group="cs_db"}
 {: class="simple-tab-table"}
@@ -374,8 +367,9 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.data-virtualization_full_notm}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 {: caption="Database services integration in America's locations" caption-side="top"}
-{: #cs_db-table-2}
+{: #cs-db-table-2}
 {: tab-title="America"}
 {: tab-group="cs_db"}
 {: class="simple-tab-table"}
@@ -394,7 +388,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.ihsdbaas_mongodb_full}}|    | ![Checkmark icon](../images/checkmark-icon.svg)  |
 | {{site.data.keyword.ihsdbaas_postgresql_full}}|    | ![Checkmark icon](../images/checkmark-icon.svg)  |
 {: caption="Database services integration in AP locations" caption-side="top"}
-{: #cs_db-table-3}
+{: #cs-db-table-3}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_db"}
 {: class="simple-tab-table"}
@@ -410,7 +404,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.messagehub}}             | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)|
 | {{site.data.keyword.mobilepushshort}}        |  |   |        
 {: caption="Integration services integration in Europe locations" caption-side="top"}
-{: #cs_integration-table-1}
+{: #cs-integration-table-1}
 {: tab-title="Europe"}
 {: tab-group="cs_integration"}
 {: class="simple-tab-table"}
@@ -421,7 +415,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.messagehub}}               | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg)    |  
 | {{site.data.keyword.mobilepushshort}}        |  |   |           
 {: caption="Integration services integration in America's locations" caption-side="top"}
-{: #cs_integration-table-2}
+{: #cs-integration-table-2}
 {: tab-title="America"}
 {: tab-group="cs_integration"}
 {: class="simple-tab-table"}
@@ -432,7 +426,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.messagehub}}               | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  `Metrics are available through the platform metrics monitoring instance in Tokyo` | `Metrics are available through the platform metrics monitoring instance in Tokyo` |  
 | {{site.data.keyword.mobilepushshort}}        |  |   |        
 {: caption="Integration services integration in AP locations" caption-side="top"}
-{: #cs_integration-table-3}
+{: #cs-integration-table-3}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_integration"}
 {: class="simple-tab-table"}
@@ -448,9 +442,9 @@ The following tables list the locations where automatic collection of security s
 
 | Service                                                         | `Dallas (us-south)`                               | `Washington (us-east)`                |
 |-----------------------------------------------------------------|---------------------------------------------------|---------------------------------------|
-| {{site.data.keyword.keymanagementservicelong}}                  | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |
-| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) |
-| {{site.data.keyword.security-advisor_long}}                     | ![Checkmark icon](images/checkmark-icon.svg) |    |   
+| {{site.data.keyword.keymanagementservicelong}}                  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.security-advisor_long}}                     | ![Checkmark icon](../images/checkmark-icon.svg) |    |   
 {: caption="Security services integration in America's locations" caption-side="top"}
 {: #cs-sec-table-1}
 {: tab-title="America"}
@@ -460,8 +454,8 @@ The following tables list the locations where automatic collection of security s
 
 | Service                                                         | `Tokyo (jp-tok)`                                   |`Sydney (au-syd)`           |
 |-----------------------------------------------------------------|----------------------------------------------------|----------------------------|
-| {{site.data.keyword.keymanagementservicelong}}                  | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
-| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} |      | ![Checkmark icon](images/checkmark-icon.svg) |
+| {{site.data.keyword.keymanagementservicelong}}                  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} |      | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.security-advisor_long}}                     |      |     |         
 {: caption="Security services integration in AP locations" caption-side="top"}
 {: #cs-sec-table-2}
@@ -472,9 +466,9 @@ The following tables list the locations where automatic collection of security s
 
 | Service                                                       |`Frankfurt (eu-de)`                                 | `London (eu-gb)` |
 |---------------------------------------------------------------|----------------------------------------------------|------------------|
-| {{site.data.keyword.keymanagementservicelong}}                | ![Checkmark icon](images/checkmark-icon.svg)  | ![Checkmark icon](images/checkmark-icon.svg) |
-| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](images/checkmark-icon.svg) |    |
-| {{site.data.keyword.security-advisor_long}}                     |   | ![Checkmark icon](images/checkmark-icon.svg) |
+| {{site.data.keyword.keymanagementservicelong}}                | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](../images/checkmark-icon.svg) |    |
+| {{site.data.keyword.security-advisor_long}}                     |   | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Security services integration in Europe locations" caption-side="top"}
 {: #cs-sec-table-3}
 {: tab-title="Europe"}
@@ -496,7 +490,7 @@ For more information, see [Storage services](/docs/cloud-infrastructure?topic=cl
 |---------------------------------------------------------------|---------------------------------------------------|------------------|
 | {{site.data.keyword.cos_full_notm}}                    | ![Checkmark icon](../images/checkmark-icon.svg) |  ![Checkmark icon](../images/checkmark-icon.svg)  |     
 {: caption="Storage services integration in Europe locations" caption-side="top"}
-{: #cs_storage-table-3}
+{: #cs-storage-table-3}
 {: tab-title="Europe"}
 {: tab-group="cs_storage"}
 {: class="simple-tab-table"}
@@ -506,7 +500,7 @@ For more information, see [Storage services](/docs/cloud-infrastructure?topic=cl
 |------------------------------------------------|----------------------------------------------------|--------------------------------------|
 | {{site.data.keyword.cos_full_notm}}            | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |          
 {: caption="Storage services integration in America's locations" caption-side="top"}
-{: #cs_storage-table-1}
+{: #cs-storage-table-1}
 {: tab-title="America"}
 {: tab-group="cs_storage"}
 {: class="simple-tab-table"}
@@ -516,7 +510,7 @@ For more information, see [Storage services](/docs/cloud-infrastructure?topic=cl
 |----------------------------------------------------------|---------------------------------------------------|----------------------------|
 | {{site.data.keyword.cos_full_notm}}                      | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |     
 {: caption="Storage services integration in AP locations" caption-side="top"}
-{: #cs_storage-table-2}
+{: #cs-storage-table-2}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_storage"}
 {: class="simple-tab-table"}

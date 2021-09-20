@@ -10,22 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Organizing metric data
 {: #manage}
 
 Use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. Customize how data is aggregated when you configure a graph or create an alert for a metric. Set the scope of a dashboard, a panel, or an alert to filter out data points. Restrict access to data by managing users' data access through teams. 
-{:shortdesc}
+{: shortdesc}
 
 
 
@@ -46,14 +37,13 @@ Labels are classified as infrastructure labels and metric descriptor labels. Eac
 
 In the *Explore* view of the Web UI, you can run any of the following actions:
 
-|| Task                                                                                        |
+| Task                                                                                        |
 |---------------------------------------------------------------------------------------------|
 | [Create a group](https://docs.sysdig.com/en/groupings-editor.html#UUID-08496372-f14f-0aaf-f2a6-8bbd8be259e2_section-idm232111411977818){: external}  |
 | Delete a group. |
 | [Rename a group](https://docs.sysdig.com/en/groupings-editor.html#UUID-08496372-f14f-0aaf-f2a6-8bbd8be259e2_section-idm232111412708997){: external}            |
 | [Share a group with other members in the team](https://docs.sysdig.com/en/groupings-editor.html#UUID-08496372-f14f-0aaf-f2a6-8bbd8be259e2_section-idm232113126392123){: external} |
 {: caption="Table 1. Tasks grouping labels" caption-side="top"} 
-
 
 
 

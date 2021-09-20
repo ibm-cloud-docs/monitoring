@@ -10,27 +10,18 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Getting started tutorial
 {: #getting-started-secure}
 
 In architectures that are focused on container and microservices, you can use *Secure* to protect, monitor, and enhance forensic analysis of your pipeline and runtime components.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
-{: #getting-started-secure_prereqs}
+{: #getting-started-secure-prereqs}
 
 You must have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration](https://cloud.ibm.com/login){: external}.
 
@@ -40,30 +31,30 @@ You can complete the getting started steps in any of the supported regions.
 
 
 ## Step 1. Manage user access
-{: #getting-started-secure_step1}
+{: #getting-started-secure-step1}
 
 See [Manage user access](/docs/monitoring?topic=monitoring-getting-started#getting-started-step1).
 
 ## Step2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
-{: #getting-started-secure_step2}
+{: #getting-started-secure-step2}
 
 See [Provision an instance of the IBM Cloud Monitoring service](/docs/monitoring?topic=monitoring-provision).
 
 ## Step3. Connect a data source by configuring a monitoring agent
-{: #getting-started-secure_step3}
+{: #getting-started-secure-step3}
 
 Complete the following steps:
 1. [Configure a monitoring agent](/docs/monitoring?topic=monitoring-config_agent).
 2. [Optional] [Enable Kubernetes Audit Logging](https://docs.sysdig.com/en/kubernetes-audit-logging.html){: external} to track kubectl exec and other Kubernetes commands.
 
 ## Step 4. Launch the web UI
-{: #getting-started-secure_step4}
+{: #getting-started-secure-step4}
 
 See [Launch the web UI](/docs/monitoring?topic=monitoring-launch).
 
 
 ## Step 5. Secure your environment
-{: #getting-started-secure_step5}
+{: #getting-started-secure-step5}
 
 See the following table for tasks that you can run to secure your environment:
 

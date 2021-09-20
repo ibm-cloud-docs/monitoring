@@ -10,24 +10,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Using the Python client
 {: #python-client}
 
 You can use the Python Client to manage the {{site.data.keyword.mon_full_notm}} service. The client is also known as the **sdcclient**.
-{:shortdesc}
+{: shortdesc}
 
 These instructions apply to Python version 3.x.
 {: note}
@@ -311,7 +301,7 @@ sdclient = SdMonitorClient(token=MONITOR_TOKEN,sdc_url=URL)
 
 
 ## References
-{: #python-client_references}
+{: #python_client_references}
 
 * [Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the {{site.data.keyword.mon_short}} Python client](/docs/monitoring?topic=monitoring-metrics_python)
 * [Managing dashboards by using the {{site.data.keyword.mon_short}} Python client](/docs/monitoring?topic=monitoring-dashboard_python)

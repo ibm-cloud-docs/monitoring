@@ -10,23 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Provisioning an instance
 {: #provision}
 
 Before you can monitor and manage metrics, you must provision an instance of the service in {{site.data.keyword.cloud_notm}}.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Provisioning an instance from the catalog

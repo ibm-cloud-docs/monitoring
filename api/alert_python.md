@@ -10,27 +10,18 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing alerts by using the Python client
 {: #alert_python}
 
 You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} Python client.
-{:shortdesc}
+{: shortdesc}
 
 To learn how to use the Python client, see [Using the Python client](/docs/monitoring?topic=monitoring-python-client).
 
 ## Create an alert (POST)
-{: #alert_python-create-alert}
+{: #alert-python-create-alert}
 
 The following code shows the structure of a Python script that you can use to create an alert:
 
@@ -133,7 +124,7 @@ When you configure the alert, complete the following sections:
 
 
 ## Updating an alert (PUT)
-{: #alert_python-update-alert}
+{: #alert-python-update-alert}
 
 To update an existing alert, you need the ID of that alert.
 {: note}
@@ -180,7 +171,7 @@ if not alert_found:
 
 
 ## Deleting an alert (DELETE)
-{: #alert_python-delete-alert}
+{: #alert-python-delete-alert}
 
 To delete an existing alert, you need the ID of that alert.
 {: note}
@@ -215,7 +206,7 @@ for alert in res['alerts']:
 
 
 ## Get all user alerts (GET)
-{: #alert_python-fetch-user-alerts}
+{: #alert-python-fetch-user-alerts}
 
 
 The following code shows the structure of a Python script that you can use to get information about all the alerts:

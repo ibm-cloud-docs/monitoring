@@ -10,28 +10,19 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Getting started tutorial
 {: #getting-started-monitor}
 
 {{site.data.keyword.mon_full_notm}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
-{:shortdesc}
+{: shortdesc}
 
 
 
 ## Before you begin
-{: #getting-started-monitor_prereqs}
+{: #getting-started-monitor-prereqs}
 
 You must have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration](https://cloud.ibm.com/login){: external}.
 
@@ -46,12 +37,12 @@ You can complete the getting started steps in any of the supported regions.
 See [Manage user access](/docs/monitoring?topic=monitoring-getting-started#getting-started-step1).
 
 ## Step2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
-{: #getting-started-monitor_step2}
+{: #getting-started-monitor-step2}
 
 See [Provision an instance of the IBM Cloud Monitoring with monitoring service](/docs/monitoring?topic=monitoring-provision).
 
 ## Step3. Configure a monitoring agent
-{: #getting-started-monitor_step3}
+{: #getting-started-monitor-step3}
 
 After you provision an instance, you must configure a monitoring agent for each host that you want to monitor. For example, a host can be a cloud resource that you want to monitor and control its performance and health such as a Kubernetes cluster. You may also monitor hosts outside the {{site.data.keyword.cloud_notm}}. For more information, see [Configure a monitoring agent](/docs/monitoring?topic=monitoring-config_agent).
 
@@ -78,12 +69,12 @@ After the monitoring agent is deployed, collection and forwarding of metrics to 
 
 
 ## Step 4. Launch the web UI
-{: #getting-started-monitor_step4}
+{: #getting-started-monitor-step4}
 
 See [Launch the web UI](/docs/monitoring?topic=monitoring-launch).
 
 ## Step 5. Monitor your environment
-{: #getting-started-monitor_step5}
+{: #getting-started-monitor-step5}
 
 You can analyze data in the *Explore* tab and in the *Dashboard* tab of the web UI. You monitor the data through metric views and dashboards. 
 
@@ -98,7 +89,7 @@ In the *Dashboards* tab, you can monitor data by using any of the default dashbo
 
 
 ## Step 6. Manage data
-{: #getting-started-monitor_step6}
+{: #getting-started-monitor-step6}
 
 You can use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. Customize how data is aggregated when you configure a graph or create an alert for a metric. Set the scope of a dashboard, a panel, or an alert to filter out data points. Restrict access to data by managing users' data access through teams. 
 
@@ -109,7 +100,7 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 
 
 ## Step 7. Configure alerts and explore events
-{: #getting-started-monitor_step7}
+{: #getting-started-monitor-step7}
 
 You can use events to review, track, and resolve issues. An event is a notification that informs about something that has occurred in any of the nodes that forward data to your {{site.data.keyword.mon_full_notm}} instance. 
 

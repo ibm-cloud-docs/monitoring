@@ -10,24 +10,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Working with Monitor API tokens
 {: #api_monitoring_token}
 
 You can use Monitor API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the {{site.data.keyword.mon_full_notm}} REST API to automate routine tasks and monitor notifications. 
-{:shortdesc}
+{: shortdesc}
 
 Consider the following information for each instance of the {{site.data.keyword.mon_full_notm}} service:
 

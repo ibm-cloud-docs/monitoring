@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-03-28"
+lastupdated: "2021-09-20"
 
 
 keywords: IBM Cloud, monitoring, getting started
@@ -11,23 +11,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Getting started tutorial
 {: #getting-started}
 
 {{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. In architectures that are focused on container and microservices, you can use Secure to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. 
-{:shortdesc}
+{: shortdesc}
 
 The following figure shows the components overview for the {{site.data.keyword.mon_full_notm}} service that is running on {{site.data.keyword.cloud_notm}}:
 
@@ -44,7 +35,7 @@ You provision an instance within the context of a resource group. You use a reso
 When you [provision an instance](/docs/monitoring?topic=monitoring-provision#provision), you automatically get an ingestion key, known as the [access key](/docs/monitoring?topic=monitoring-access_key#access_key).
 
 After you provision an instance, you must configure metric sources, enable platform metrics, or both. 
-* A metric source is any resource that you want to monitor and control its performance and health through a monitoring. 
+* A metric source is any resource that you want to monitor and control its performance and health. 
 * You can configure a monitoring agent to collect metrics from a source. For example, you can configure a monitoring agent for a Kubernetes cluster. You use the access key to configure the monitoring agent that is responsible for collecting and forwarding metric data to your instance.
 
     The monitoring agent can be configured to push metrics via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints) section.
@@ -138,7 +129,7 @@ To provision an instance through the {{site.data.keyword.cloud_notm}} UI, comple
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
-    Click [{{site.data.keyword.cloud_notm}} dashboard](https://cloud.ibm.com/login){:external} to launch the {{site.data.keyword.cloud_notm}} dashboard.
+    Click [{{site.data.keyword.cloud_notm}} dashboard](https://cloud.ibm.com/login){: external} to launch the {{site.data.keyword.cloud_notm}} dashboard.
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
 

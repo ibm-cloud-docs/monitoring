@@ -10,28 +10,19 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing alerts by using the Alerts API
 {: #alert_api}
 
 You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} API.
-{:shortdesc}
+{: shortdesc}
 
 To learn how to use cURL, see [cURL command](/docs/monitoring?topic=monitoring-mon-curl).
 
 
 ## Get details about a user alert
-{: #alert_api-fetch-user-alert}
+{: #alert-api-fetch-user-alert}
 
 You can use the following cURL command to get information about an alert:
 
@@ -94,7 +85,7 @@ For example, the response body for an alert looks as follows:
 
 
 ## Create an alert
-{: #alert_api-create-alert}
+{: #alert-api-create-alert}
 
 You can use the following cURL command to create an alert:
 
@@ -120,7 +111,7 @@ Where
 
     When you create an alert, include the following parameters: *type*, *name*,  *severity*, *timespan*, *condition*, *segmentby*, *segmentConditionn*, *filter*, *notificationChannelIds*, *enabled*
 
-    For more information, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert_api-schema-req).
+    For more information, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert-api-schema-req).
 
 
 The following sample shows the request body parameters that you can set to create an alert: 
@@ -155,7 +146,7 @@ The following sample shows the request body parameters that you can set to creat
 
 
 ## Update an alert
-{: #alert_api-update-alert}
+{: #alert-api-update-alert}
 
 To update an existing alert, you need the ID of that alert.
 {: note}
@@ -184,7 +175,7 @@ Where
 
 * You can pass data to create the alert in the `alert.json` file by using `-d`. 
 
-    For more information, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert_api-schema-req).
+    For more information, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert-api-schema-req).
 
 
 The following sample shows the request body parameters that you can set to update an alert: 
@@ -217,7 +208,7 @@ The following sample shows the request body parameters that you can set to updat
 
 
 ## Delete an alert
-{: #alert_api-delete-alert}
+{: #alert-api-delete-alert}
 
 To delete an existing alert, you need the ID of that alert.
 {: note}
@@ -247,7 +238,7 @@ Where
 
 
 ## Get all user alerts
-{: #alert_api-fetch-user-alerts}
+{: #alert-api-fetch-user-alerts}
 
 You can use the following cURL command to get information about all the alerts:
 
@@ -267,13 +258,13 @@ Where
 
 * `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the alerts. 
 
-For more information about the response format, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert_api-schema-res).
+For more information about the response format, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert-api-schema-res).
 
 
 
 
 ## Alerts schema: Request body
-{: #alert_api-schema-req}
+{: #alert-api-schema-req}
 
 ```json
 {
@@ -305,7 +296,7 @@ For more information about the response format, see [Alert schema](/docs/monitor
 {: screen}
 
 ## Alerts schema: Response body
-{: #alert_api-schema-res}
+{: #alert-api-schema-res}
 
 ```json
 {
@@ -343,7 +334,7 @@ For more information about the response format, see [Alert schema](/docs/monitor
 
 
 ## Error response codes
-{: #alert_api-rc}
+{: #alert-api-rc}
 
 The following table show common error response codes:
 
@@ -359,11 +350,11 @@ The following table show common error response codes:
 
 
 ## Body parameters
-{: #alert_api-parm}
+{: #alert-api-parm}
 
 
 ### id (integer)
-{: #alert_api-parm-id}
+{: #alert-api-parm-id}
 
 ID of an alert.
 {: note}
@@ -371,7 +362,7 @@ ID of an alert.
 
 
 ### condition (string)
-{: #alert_api-parm-condition}
+{: #alert-api-parm-condition}
 
 Defines the threshold that is configured for the alert. This parameter is required for `MANUAL` alerts only.
 {: note}
@@ -380,7 +371,7 @@ For example, you can defines a consition as follows: `avg(timeAvg(uptime)) <= 0`
 
 
 ### createdOn (integer)
-{: #alert_api-parm-created}
+{: #alert-api-parm-created}
 
 Defines the creation time of an alert in milliseconds.
 {: note}
@@ -389,7 +380,7 @@ This parameter returns the Unix-timestamp when the alert was created.
 
 
 ### description (string)
-{: #alert_api-parm-desc}
+{: #alert-api-parm-desc}
 
 This parameter describes the alert. 
 
@@ -398,7 +389,7 @@ The description is available when you view an alert in the *Alerts* section of t
 
 
 ### enabled (boolean)
-{: #alert_api-req-parm-enabled}
+{: #alert-api-req-parm-enabled}
 
 Defines the status of an alert.
 {: note}
@@ -408,7 +399,7 @@ By default, this parameter is set to `true` and the alert is enabled when it is 
 
 
 ### filter (string)
-{: #alert_api-parm-filter}
+{: #alert-api-parm-filter}
 
 Defines the scope of the alert by configuring segments.
 {: note} 
@@ -433,7 +424,7 @@ kubernetes.namespace.name='production' and container.image='nginx'*.
 {: screen}
 
 ### name (string)
-{: #alert_api-parm-name}
+{: #alert-api-parm-name}
 
 Name of the alert. Must be unique.
 {: note}
@@ -445,7 +436,7 @@ The name is used to identify the alert in the *Alerts* section of the monitoring
 
 
 ### modifiedOn (integer)
-{: #alert_api-parm-modified}
+{: #alert-api-parm-modified}
 
 Defines when an alert was last modified in milliseconds.
 {: note}
@@ -457,7 +448,7 @@ This parameter defines the Unix-timestamp when the alert was last modified.
 
 
 ### notificationChannelIds (array)
-{: #alert_api-parm-not}
+{: #alert-api-parm-not}
 
 Lists the notification channels that are configured to notify when an alert is triggered.
 {: note}
@@ -474,14 +465,14 @@ Valid options are `EMAIL`, `PAGER_DUTY`, `WEBHOOK`, `VICTOROPS`, and `SLACK`.
 
 
 ### notificationCount (integer)
-{: #alert_api-res-parm-not-count}
+{: #alert-api-res-parm-not-count}
 
 Defines the number of notifications that are sent for the alert during the past 2 weeks.
 {: note}
 
 
 ### reNotify (boolean)
-{: #alert_api-parm-renotify}
+{: #alert-api-parm-renotify}
 
 Defines whether you want to get follow up notifications until the alert condition is acknoeldged and resolved.
 {: note}
@@ -490,7 +481,7 @@ By default, follow up notifications are not enabled and the field is set to `fal
 
 
 ### reNotifyMinutes (integer)
-{: #alert_api-parm-renotmin}
+{: #alert-api-parm-renotmin}
 
 Defines how often do you want to receive notifications on an alert that is not resolved.
 {: note}
@@ -499,7 +490,7 @@ You specify the number of minutes before a reminder is sent.
 
 
 ### severity (integer)
-{: #alert_api-parm-severity}
+{: #alert-api-parm-severity}
 
 Defines the syslog-encoded alert severity.
 {: note}
@@ -519,7 +510,7 @@ The following table lists the values that you can set:
 {: caption="Table 2. Severity values" caption-side="top"} 
 
 ### severityLabel (string)
-{: #alert_api-parm-sevlevel}
+{: #alert-api-parm-sevlevel}
 
 Defines the criticality of an alert. Valid values are `HIGH`, `MEDIUM`, `LOW`, and `INFO`. A lesser value indicates a higher severity.
 {: note} 
@@ -539,7 +530,7 @@ The following table shows the severity status that must be set depending on the 
 {: caption="Table 3. Severity level values" caption-side="top"} 
 
 ### segmentBy (array of strings)
-{: #alert_api-parm-segmentedby}
+{: #alert-api-parm-segmentedby}
 
 Defines additional segmentation criteria.
 {: note} 
@@ -549,7 +540,7 @@ For example, you can segment a CPU alert by `['host.mac', 'proc.name']` so the a
 
 
 ### segmentCondition (string)
-{: #alert_api-parm-segmentcondition}
+{: #alert-api-parm-segmentcondition}
 
 Defines when the alert is triggered for each monitored entity that is specified in the *segmentBy* parameter. This parameter is required for `MANUAL` alerts only.
 {: note}
@@ -562,14 +553,14 @@ Valid values are the following:
 
 
 ### teamId (string)
-{: #alert_api-parm-teamid}
+{: #alert-api-parm-teamid}
 
 Defines the GUID of the team that owns the alert.
 {: note}
 
 
 ### type (string)
-{: #alert_api-parm-type}
+{: #alert-api-parm-type}
 
 Defines the type of alert. Valid values are *MANUAL*, *BASELINE*, and *HOST_COMPARISON*.
 {: note}
@@ -583,7 +574,7 @@ Set to `HOST_COMPARISON` for alerts that you want to notify when 1 host in a gro
 
 
 ### timespan (integer)
-{: #alert_api-parm-timespan}
+{: #alert-api-parm-timespan}
 
 Minimum time interval, in microseconds, for which the alert condition must be met before the alert is triggered.
 {: note}
@@ -594,7 +585,7 @@ The value of this parameter must be a multiple of 60000000 microseconds.
 
 
 ### version (integer)
-{: #alert_api-parm-version}
+{: #alert-api-parm-version}
 
 Version of an alert.
 {: note}
@@ -606,23 +597,23 @@ The version is used for optimistic locking.
 
 
 ## Query parameters
-{: #alert_api-parm-query}
+{: #alert-api-parm-query}
 
 
 ### alertId (integer)
-{: #alert_api-parm-alertid}
+{: #alert-api-parm-alertid}
 
 ID of an alert.
 {: note}
 
 ### from (long)
-{: #alert_api-parm-from}
+{: #alert-api-parm-from}
 
 Defines the start timestamp, in microseconds, that is used when you request information about alerts that are defined.
 {: note}
 
 ### to (long)
-{: #alert_api-parm-to}
+{: #alert-api-parm-to}
 
 Defines the end timestamp, in microseconds, that is used when you request information about alerts that are defined.
 {: note}

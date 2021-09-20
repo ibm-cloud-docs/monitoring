@@ -10,27 +10,17 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Extracting metrics from an instance by using the {{site.data.keyword.mon_short}} Python client
 {: #metrics_python}
 
 You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance through REST API operations that you can run by using a Python client or by using a cURL command.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Get metrics by using a Python client
-{: #metrics_python-py}
+{: #metrics-python-py}
 
 To learn how to use the Python client, see [Using the Python client](/docs/monitoring?topic=monitoring-python-client).
 
@@ -82,7 +72,7 @@ You must include the following information: `<MONITORING-ENDPOINT>`, `<IAM_APIKE
 
 
 ## Samples
-{: #metrics_python-samples}
+{: #metrics-python-samples}
 
 For Python examples, see any of the following examples:
 * [Example 1](https://github.com/draios/python-sdc-client/blob/master/examples/get_data_simple.py){: external}: This  sample script  shows how to get data by creating a request that has no filter and no segmentation.
@@ -95,7 +85,7 @@ For Python examples, see any of the following examples:
 
 
 ## Metrics dictionary
-{: #metrics_python-dictionary}
+{: #metrics-python-dictionary}
 
 To see the pre-defined metrics, see [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html){: external}.
 
@@ -103,7 +93,7 @@ To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_not
 
 
 ## Data aggregation
-{: #metrics_python-aggregation}
+{: #metrics-python-aggregation}
 
 
 To learn about data aggregation, see [Data Aggregation](https://docs.sysdig.com/en/data-aggregation.html){: external}.

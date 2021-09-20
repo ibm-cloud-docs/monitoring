@@ -10,23 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Monitoring a Linux bare metal server
 {: #baremetal_linux}
 
 You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by configuring a monitoring agent in your server. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics. You view metrics via the web-based user interface.
-{:shortdesc}
+{: shortdesc}
 
 
 
@@ -217,7 +207,7 @@ For more information, see [Prometheus IPMI Exporter](https://github.com/soundclo
 Complete the following steps to configure the Prometheus IPMI Exporter:
 
 ### Step 3.1. Install the Prometheus IPMI exporter
-{: #baremetal_linux_step3-1}
+{: #baremetal_linux_step3_1}
 
 Complete the following steps:
 
@@ -320,7 +310,7 @@ Complete the following steps:
 
 
 ### Step 3.2. Install the Prometheus exporter
-{: #baremetal_linux_step3-2}
+{: #baremetal_linux_step3_2}
 
 The monitoring agent automatically collects metrics from Prometheus exporters. Therefore, to collect metrics from your IPMI exporter, you must also configure the Prometheus exporter.
 
@@ -415,7 +405,7 @@ Complete the following steps to run the Prometheus exporter:
 
 
 ### Step 3.3. Configure network settings
-{: #baremetal_linux_step3-3}
+{: #baremetal_linux_step3_3}
 
 If you want to collect metrics from remote servers, complete the following steps:
 
@@ -428,7 +418,7 @@ If you want to collect metrics from remote servers, complete the following steps
 
 
 ### Step 3.4. Update the monitoring agent that is running in the bare metal server
-{: #baremetal_linux_step3-4}
+{: #baremetal_linux_step3_4}
     
 Complete the following steps:
 

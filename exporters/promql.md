@@ -10,17 +10,7 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Using PromQL
 {: #promql}
@@ -42,9 +32,9 @@ Create a PromQL query for a metric in an existing dashboard.
 4. Select the **PromQL** query type.
 5. In the query form, enter _Display_ data, such as the query name and the timeseries name.
 6. Enter your PromQL _Query_, such as `avg(avg_over_time(host_cpu_used_percent[$__interval])) by(kubernetes_cluster_name)`. Specify the following fields in your query:
-  * Metric: Specify the metric that you want to query, such as `host_cpu_used_percent`. Note: The generated values on the table are the latest metric.
-  * Time range: Specify a time range or time interval, such as `5m`. To use the time range that is selected in the UI, specify `$__range`. To use the time interval that is based on the time range that is selected in the UI, specify `$__interval`. The `$__range` and `$__interval` variables in this query automatically update as the time range is changed in the UI. For more information, see [Applying dashboard scopes to PromQL queries](#promql-scope).
-  * Segmentation: Choose a value to segment the aggregated PromQL data, such as `kubernetes_cluster_name`.
+    * Metric: Specify the metric that you want to query, such as `host_cpu_used_percent`. Note: The generated values on the table are the latest metric.
+    * Time range: Specify a time range or time interval, such as `5m`. To use the time range that is selected in the UI, specify `$__range`. To use the time interval that is based on the time range that is selected in the UI, specify `$__interval`. The `$__range` and `$__interval` variables in this query automatically update as the time range is changed in the UI. For more information, see [Applying dashboard scopes to PromQL queries](#promql-scope).
+    * Segmentation: Choose a value to segment the aggregated PromQL data, such as `kubernetes_cluster_name`.
 8. Click **Run Query**.
 7. Fine tune the results by configuring any additional _Options_, such as the units in which the data is returned and how the data is displayed.
 
@@ -66,7 +56,7 @@ avg_over_time(host_cpu_used_percent[$__interval])
 
 This query uses the `$__interval` variable, which scopes data to the dynamic time interval based on the time range that is selected in the dashboard UI.
 
-You can also specify your own variables in the query to scope its output. For example, to further scope the above query to a specific label such as `hostname`, you must first [define a scope variable at the dashboard level](https://docs.sysdig.com/en/about-the-dashboard-ui.html#UUID-7a55e06a-7e2a-8dcb-7dd3-6d7eb39c9784_section-idm23184387629055){: external}. Then, you can specify that variable in the query:
+You can also specify your own variables in the query to scope its output. For example, to further scope the previous query to a specific label such as `hostname`, you must first [define a scope variable at the dashboard level](https://docs.sysdig.com/en/about-the-dashboard-ui.html#UUID-7a55e06a-7e2a-8dcb-7dd3-6d7eb39c9784_section-idm23184387629055){: external}. Then, you can specify that variable in the query:
 ```
 avg_over_time(host_cpu_used_percent{host_name=$hostname}[$__interval])
 ```
@@ -137,7 +127,6 @@ Where
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 
-All dashboards support the full PromQL API. For more information about what’s possible with PromQL, see the [Prometheus documentation](https://www.prometheus.io/docs/prometheus/latest/querying/api/){:external}.
+All dashboards support the full PromQL API. For more information about what’s possible with PromQL, see the [Prometheus documentation](https://www.prometheus.io/docs/prometheus/latest/querying/api/){: external}.
 {: note}
-
 

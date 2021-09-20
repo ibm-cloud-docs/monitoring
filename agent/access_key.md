@@ -10,23 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing access keys
 {: #access_key}
 
 The **Access Key** is a token that you must use to configure monitoring agents to successfully forward data to your {{site.data.keyword.mon_full_notm}} instance in {{site.data.keyword.cloud_notm}}.   
-{:shortdesc}
+{: shortdesc}
 
 
 ## Getting the access key through the {{site.data.keyword.cloud_notm}} UI
@@ -40,7 +30,7 @@ To get the access key for an {{site.data.keyword.mon_full_notm}} instance throug
 
 3. Select **Monitoring**. The {{site.data.keyword.mon_full_notm}} dashboard opens. You can see the list of monitoring instances that are available on {{site.data.keyword.cloud_notm}}.
 
-3. Identify the instance for which you want to get the access key. Click the *Actions* icon ![Three dots icon](images/actions.png) next to the instance and then click **View key**.
+3. Identify the instance for which you want to get the access key. Click the *Actions* icon ![Actions icon](../../icons/action-menu-icon.svg "Actions") next to the instance and then click **View key**.
 
 4. A window opens where you can click **Show key** to view the access key.
 

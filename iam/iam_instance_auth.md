@@ -10,24 +10,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Configuring the authentication method of a {{site.data.keyword.mon_short}} instance
 {: #iam_instance_auth}
 
 You can configure the authentication token that is allowed in a {{site.data.keyword.mon_short}} instance when you use Python scripts or the {{site.data.keyword.mon_short}} REST API to manage resources. By default, you can use an IAM token or a Monitor API token . However, you can restrict the {{site.data.keyword.mon_short}} instance to only allow IAM tokens.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Prereqs
@@ -59,7 +49,7 @@ The output includes a `parameters` section with the following information:
     "external_api_auth": "IAM_ONLY"
 }
 ```
-{: screen}
+{: codeblock}
 
 The `external_api_auth` field indicates the types of tokens that are allowed to work with the {{site.data.keyword.mon_short}} instance.
 - When the value is set to `IAM_ONLY`, you can only use IAM tokens to authenticate.

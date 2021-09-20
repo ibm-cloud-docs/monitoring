@@ -10,21 +10,13 @@ subcollection: monitoring
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:note:.deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Troubleshooting for {{site.data.keyword.mon_full_notm}}
 {: #troubleshoot}
 
 Learn more about some general problems that you might encounter when you use the {{site.data.keyword.mon_full_notm}} service. In many cases, you can recover from these problems by following a few easy steps.
-{:shortdesc}
+{: shortdesc}
 
 ## Are you getting an error when you create a capture?
 {: #troubleshoot-entry-1}

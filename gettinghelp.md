@@ -11,24 +11,14 @@ subcollection: monitoring
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-{:important: .important}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Getting help and support
 {: #gettinghelp}
 
 If you have problems or questions when using the {{site.data.keyword.mon_full_notm}} service, you have several options to get help with determining the cause of the problem and finding a solution. If you're logged in, you can go directly to the [Support center](https://{DomainName}/unifiedsupport/supportcenter) to review common FAQs, open a support case, or search community content. 
-{:shortdesc}
+{: shortdesc}
 
 
 ## Using the Support Center search field
@@ -52,8 +42,8 @@ If you don't find an existing answer to a question, ask a new one.
 
 You can access Stack Overflow and IBM Developer Answers from the Support Center, or use the following links:
 
-  * Go to [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to ask technical questions about the {{site.data.keyword.mon_full_notm}} service. 
-  * Go to [IBM Developer Answers](https://developer.ibm.com/answers/topics/ibm-cloud/){: external} to ask general questions about the {{site.data.keyword.mon_full_notm}} service and about getting started instructions.
+* Go to [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to ask technical questions about the {{site.data.keyword.mon_full_notm}} service. 
+* Go to [IBM Developer Answers](https://developer.ibm.com/answers/topics/ibm-cloud/){: external} to ask general questions about the {{site.data.keyword.mon_full_notm}} service and about getting started instructions.
 
 Tag your questions with **ibm-cloud** and **monitoring**.
 {: important}
