@@ -234,9 +234,15 @@ toc:
                   href: https://docs.sysdig.com/en/review-scan-results.html
               - link: 
                   label: Working with the Admission Controller
-                  href: https://docs.sysdig.com/en/admission-controller--cli-based-.html
+                  href: https://docs.sysdig.com/en/docs/sysdig-secure/scanning/admission-controller/
+              - link: 
+                  label: Integrating with CI/CD Tools
+                  href: https://docs.sysdig.com/en/docs/sysdig-secure/scanning/integrate-with-cicd-tools/
+              - link: 
+                  label: Scheduled Reports
+                  href: https://docs.sysdig.com/en/docs/sysdig-secure/scanning/scheduled-reports/
           - topicgroup: 
-              label: Benchmarks
+              label: Compliance
               links: 
               - link: 
                   label: Working with benchmarks
@@ -247,9 +253,6 @@ toc:
               - link: 
                   label: Reviewing benchmark test results
                   href: https://docs.sysdig.com/en/review-benchmark-test-results.html
-              - link: 
-                  label: Monitoring compliance through dashboards and metrics
-                  href: https://docs.sysdig.com/en/use-compliance-dashboards-and-metrics.html
           - topicgroup: 
               label: Policies
               links: 
@@ -265,6 +268,21 @@ toc:
               - link: 
                   label: Managing events
                   href: https://docs.sysdig.com/en/secure-events.html
+              - link: 
+                  label: Kubernetes Audit Logging with Admission Controller
+                  href: https://docs.sysdig.com/en/docs/sysdig-secure/secure-events/kubernetes-audit-logging/
+          - topicgroup: 
+              label: Investigate
+              links: 
+              - link: 
+                  label: Activity Audit
+                  href: https://docs.sysdig.com/en/docs/sysdig-secure/investigate/activity-audit/ 
+              - link: 
+                  label: Captures
+                  href: https://docs.sysdig.com/en/docs/sysdig-secure/investigate/captures/
+              - link: 
+                  label: Rapid Response
+                  href: https://docs.sysdig.com/en/docs/sysdig-secure/investigate/rapid-response/
           - topicgroup: 
               label: Integrations
               links: 
