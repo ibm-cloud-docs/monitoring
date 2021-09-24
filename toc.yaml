@@ -290,7 +290,7 @@ toc:
           links: 
               - link: 
                   label: Monitoring API
-                  href: https://{DomainName}/apidocs/apidocs/monitor
+                  href: https://{DomainName}/apidocs/monitor
           topics: 
           - api/rest_apis.md
           - api/mon-curl.md
