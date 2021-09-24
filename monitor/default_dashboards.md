@@ -15,6 +15,7 @@ subcollection: monitoring
 
 # Predefined dashboards
 {: #default_dashboards}
+
 {{site.data.keyword.mon_full}} offers pre-defined dashboards to monitor your infrastructure. This topic outlines some of the pre-defined dashboards. [Learn more](https://docs.sysdig.com/en/dashboard-templates.html){: external}.
 {: shortdesc}
 

@@ -73,7 +73,7 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
        Then, from a terminal, run the following command:
   
-       ```
+       ```text
        ssh <USER_ID>@<IP_ADDRESS>
        ```
        {: pre}
@@ -100,7 +100,7 @@ Complete the following steps from the command line to install a monitoring agent
 
 3. Deploy the monitoring agent. Run the following command:
 
-    ```
+    ```text
     curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure false --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
     ```
     {: pre}
@@ -119,7 +119,7 @@ Complete the following steps from the command line to install a monitoring agent
 
     For example, see the following sample command to install a monitoring agent that forwards metrics to a monitoring instance in US South (Dallas):
 
-    ```
+    ```text
     curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a xxxxxxxxxxxxx -c ingest.us-south.monitoring.cloud.ibm.com --collector_port 6443 --secure false -ac "sysdig_capture_enabled: false" --tags sourceType:baremetal,location:dallas
     ```
     {: screen}
@@ -215,19 +215,19 @@ Complete the following steps:
 
 2. In the bare metal server, from the `shh` session, create the directory `/usr/monitor`. Run the following commands:
 
-    ```
+    ```text
     cd /usr
     ```
     {: pre}
 
-    ```
+    ```text
     mkdir monitor
     ```
     {: pre}
 
 3. Copy the file to the bare metal. From the directory where the file is available, run the following command:
 
-    ```
+    ```text
     scp ipmi_exporter-v1.2.0.linux-amd64.tar.gz  root@<IP_ADDRESS>:/usr/monitor/
     ```
     {: pre}
@@ -238,24 +238,24 @@ Complete the following steps:
 
 4. In the bare metal server, from the `shh` session, uncompress the file. Run the following commands:
 
-    ```
+    ```text
     cd /usr/monitor/
     ```
     {: pre}
 
-    ```
+    ```text
     tar -xvf ipmi_exporter-v1.2.0.linux-amd64.tar.gz 
     ```
     {: pre}
 
 5. In the bare metal server, from the `shh` session, install the FreeIPMI suite. Run the following commands:
 
-    ```
+    ```text
     sudo apt-get update
     ```
     {: pre}
 
-    ```
+    ```text
     sudo apt-get install freeipmi
     ```
     {: pre}
@@ -264,7 +264,7 @@ Complete the following steps:
 
     Change to the directory where you have extracted the IPMI exporter:
 
-    ```
+    ```text
     cd ipmi_exporter-v1.2.0.linux-amd64/
     ```
     {: pre}
@@ -293,14 +293,14 @@ Complete the following steps:
 
 7. In the bare metal server, from the `shh` session, run the IPMI exporter.
 
-    ```
+    ```text
     ./ipmi_exporter --config.file=ipmi_local.yml &
     ```
     {: pre}
 
 8. Check the IPMI exporter is running. Run the command:
 
-    ```
+    ```text
     ps -aux | grep ipmi
     ```
     {: pre}
@@ -320,14 +320,14 @@ Complete the following steps to run the Prometheus exporter:
 
 2. In the bare metal server, from the `shh` session, change to the directory `/usr/monitor/`. Run the following command:
 
-    ```
+    ```text
     cd /usr/monitor/
     ```
     {: pre}
 
 3. Copy the file to the bare metal. From the directory where the file is available, run the following command:
 
-    ```
+    ```text
     scp prometheus-2.18.1.linux-amd64.tar.gz root@<IP_ADDRESS>:/usr/monitor/
     ```
     {: pre}
@@ -338,21 +338,21 @@ Complete the following steps to run the Prometheus exporter:
 
 4. In the bare metal server, from the `shh` session, uncompress the file. Run the following commands:
 
-    ```
+    ```text
     cd /usr/monitor/
     ```
     {: pre}
 
-    ```
+    ```text
     tar -xvf prometheus-2.18.1.linux-amd64.tar.gz
     ```
     {: pre}
 
-4. Modify the `prometheus.yml` file to include information about the scrape_configuration for the IPMI exporter.
+5. Modify the `prometheus.yml` file to include information about the scrape_configuration for the IPMI exporter.
 
     Change to the Prometheus directory:
 
-    ```
+    ```text
     cd prometheus-2.18.1.linux-amd64/
     ```
     {: pre}
@@ -395,9 +395,9 @@ Complete the following steps to run the Prometheus exporter:
     ```
     {: codeblock}
 
-5. Run the Prometheus exporter:
+6. Run the Prometheus exporter:
 
-    ```
+    ```text
     ./prometheus &
     ```
     {: pre}
@@ -424,7 +424,7 @@ Complete the following steps:
 
 1. In the bare metal server, from the `shh` session, change to the directory `/opt/draios/etc/`. Run the following command:
 
-    ```
+    ```text
     cd /opt/draios/etc/
     ```
     {: pre}
@@ -457,7 +457,7 @@ Complete the following steps:
 
 3. Restart the monitoring agent. Run the following command:
 
-    ```
+    ```text
     service dragent restart
     ```
     {: pre}

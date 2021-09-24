@@ -25,7 +25,7 @@ You can use cURL, a command line tool, from a terminal to manage the {{site.data
 
 Use the following syntax from a terminal to run a cURL command:
 
-```shell
+```text
 curl -X <METHOD> <MONITORING_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
 ```
 {: pre}
@@ -48,7 +48,7 @@ Use IAM tokens to authenticate with the {{site.data.keyword.mon_full_notm}} serv
 
 In a cURL command, add the following options to authenticate with the {{site.data.keyword.mon_full_notm}} service by using an IAM token:
 
-```shell
+```text
 -H "Authorization: $AUTH_TOKEN"
 -H "IBMInstanceID: $GUID"
 -H "SysdigTeamID: $TEAM_ID"
@@ -79,7 +79,7 @@ You can also use {{site.data.keyword.mon_short}} API tokens to authenticate with
 
 In a cURL command, add the following command option to authenticate with the {{site.data.keyword.mon_full_notm}} service by using a {{site.data.keyword.mon_short}} token:
 
-```shell
+```text
 -H "Authorization: Bearer $SYSDIG_TOKEN"
 ```
 {: codeblock}
@@ -95,21 +95,21 @@ To run a cURL API query and authrnticat by using the IAM token, complete the fol
 
 1. Set the IAM token.
 
-    ```
+    ```text
     AUTH_TOKEN=$(ibmcloud iam oauth-tokens | awk '{print $4}')
     ```
     {: codeblock}
 
 2. Set the {{site.data.keyword.mon_full_notm}} instance GUID.
 
-    ```
+    ```text
     GUID=$(ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid')
     ```
     {: codeblock}
 
 3. Run the cURL API query.
 
-    ```
+    ```text
     curl -X <METHOD> <MONITORING_ENDPOINT>/<API_URL> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "content-type: application/json"
     ```
     {: codeblock}
@@ -117,7 +117,7 @@ To run a cURL API query and authrnticat by using the IAM token, complete the fol
 
 For example, to create an alert where the alert definition and notification channel is defined through a JSON file, you can run the following command:
 
-```shell
+```text
 curl -X POST \
   https://us-south.monitoring.cloud.ibm.com/api/alerts \
   -H 'Authorization: Bearer eyJraW...' \

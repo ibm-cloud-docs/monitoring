@@ -76,7 +76,7 @@ To provision an instance through the command line, complete the following steps:
 
 4. Create the instance. Run the [ibmcloud resource service-instance-create](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
 
-    ```
+    ```text
     ibmcloud resource service-instance-create NAME service-name SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false,"external_api_auth": "API_AUTH"}'
     ```
     {: pre}
@@ -97,21 +97,21 @@ To provision an instance through the command line, complete the following steps:
 
     For example, to provision an instance with the paid plan, run the following command:
 
-    ```
+    ```text
     ibmcloud resource service-instance-create monitoring-instance-01 service-name graduated-tier us-south -p '{"default_receiver": false}'
     ```
     {: pre}
 
     To provision an instance with the paid plan that only allows IAM tokens, run the following command:
 
-    ```
+    ```text
     ibmcloud resource service-instance-create monitoring-instance-01 service-name graduated-tier us-south -p '{"default_receiver": false,"external_api_auth": "IAM_ONLY"}'
     ```
     {: pre}
 
 5. Create the service key that connects to the instance [ibmcloud resource service-key-create](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_key_create)
 
-    ```
+    ```text
     ibmcloud resource service-key-create NAME ROLE_NAME --instance-name SERVICE_INSTANCE_NAME
     ```
     {: pre}

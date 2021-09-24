@@ -73,7 +73,7 @@ Complete the following steps:
 
 4. Get the instance name. Run the following command: [ibmcloud resource service-instances](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances)
 
-    ```
+    ```text
     ibmcloud resource service-instances
     ```
     {: pre}
@@ -82,14 +82,14 @@ Complete the following steps:
 
     Run the following command. Look for the entry for the monitoring instance. Then, copy the value of the field `resource_plan_id`. This value is needed to update the instance.
 
-    ```
+    ```text
     ibmcloud resource service-instances --long --output JSON
     ```
     {: pre}
 
-5. Set on the **default_receiver** property. Run the following command:
+6. Set on the **default_receiver** property. Run the following command:
 
-    ```
+    ```text
     ibmcloud resource service-instance-update InstanceName --service-plan-id PlanID -p '{"default_receiver": true}'
     ```
     {: codeblock}

@@ -62,7 +62,7 @@ Complete the following steps to change the scope of a panel:
   
 3. Define your dashboard scope.
 
-5. Click **Apply**.
+4. Click **Apply**.
 
 
 
@@ -108,7 +108,7 @@ Complete the following steps to export data from a panel:
 
 5. Enter a *File name* for the exported file.
 
-4. Click **Export**.
+6. Click **Export**.
 
 
 

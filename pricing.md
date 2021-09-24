@@ -100,7 +100,7 @@ The billing calculation for the month is calculated as follows:
 
     For 3 hosts, the total base cost adds to **105 USD**.
   
-    ```
+    ```text
     3 * 35 USD = 105 USD
     ```
     {: screen}
@@ -109,7 +109,7 @@ The billing calculation for the month is calculated as follows:
 
     Each host has a 1000 time-series allotment that are included in the base cost per host of 35 USD. If you have 3 hosts, you have included 3000 time-series. The remaining time-series are priced based on the tiers.
   
-    ```
+    ```text
     1200 + 1000 + 1500 - ( 3*1000 ) = 700 additional time-series
     ```
     {: screen}
@@ -118,7 +118,7 @@ The billing calculation for the month is calculated as follows:
     
     700 additional time-series corresponds to tier 1. The price per host is 0.08 USD for up to 100K time-series per month.
     
-    ``` 
+    ```text
     700 additional time-series * 0.08 USD (Tier-1) = 56 USD
     ```
     {: screen}
@@ -129,7 +129,7 @@ The billing calculation for the month is calculated as follows:
 
     Each host has a 50 containers allotment. The remaining containers are priced 5 USD per 10 containers per month.
 
-    ```
+    ```text
     170 - (3x50) = 20 
     (20 additional containers/10) * 5 USD = 10 USD
     ```
@@ -143,7 +143,7 @@ The billing calculation for the month is calculated as follows:
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
   
-    ```
+    ```text
     1.2M - 1M = 200k 
     200k * 0.01 USD/1k = 2 USD
     ```
@@ -153,7 +153,7 @@ The billing calculation for the month is calculated as follows:
 
 The total monitoring cost per month adds to **173 USD**.
 
-```
+```text
 105 USD + 56 USD + 10 USD + 2 USD = 173 USD
 ```
 {: screen}
@@ -180,7 +180,7 @@ The billing calculation for the month is calculated as follows:
 
     For 5 hosts, the total base cost adds to **175 USD**.
   
-    ```
+    ```text
     5 * 35 USD = 175 USD
     ```
     {: screen}
@@ -189,7 +189,7 @@ The billing calculation for the month is calculated as follows:
 
     Each host has a 1000 time-series allotment. The remaining time-series are priced based on the tiers.
   
-    ```
+    ```text
     2000 + 100 + 500 + 100 + 200 - ( 5*1000 ) = -1100 
     ```
     {: screen}
@@ -204,7 +204,7 @@ The billing calculation for the month is calculated as follows:
 
     Each host has a 50 containers allotment. The remaining containers are priced 5 USD per 10 containers per month.
 
-    ```
+    ```text
     100 - 5x50 = -150
     ```
     {: screen}
@@ -219,7 +219,7 @@ The billing calculation for the month is calculated as follows:
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
   
-    ```
+    ```text
     700k - 1M = -300k
     ```
     {: screen}
@@ -231,7 +231,7 @@ The billing calculation for the month is calculated as follows:
 
 The total monitoring cost per month adds to **175 USD**.
 
-```
+```text
 175 USD + 0 USD + 0 USD + 0 USD = 175 USD
 ```
 {: screen}
@@ -253,14 +253,14 @@ The billing calculation for the month is calculated as follows:
 
     Since there are no agents running in this instance, there is no time-series allotment.  All platform metrics time-series are priced based on the tiers.
 
-    ```
+    ```text
     50 + 60 = 110 time-series
     ```
     {: screen}
 
     For tier 1, the price per time-series is 0.08 USD for up to 100K time-series per month.
 
-    ```
+    ```text
     110 * 0.08 USD (Tier-1) = 8.80 USD
     ```
     {: screen}
@@ -271,7 +271,7 @@ The billing calculation for the month is calculated as follows:
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
   
-    ```
+    ```text
     0.03M - 1M = -970k
     0 * 0.01 USD/1k = 0 USD
     ```
@@ -281,7 +281,7 @@ The billing calculation for the month is calculated as follows:
 
 The total monitoring cost per month adds to **8.80 USD**.
 
-```
+```text
 8.80 USD + 0 USD = 8.80 USD
 ```
 {: screen}
@@ -315,7 +315,7 @@ The billing calculation for the month would look like:
 
     For 3 hosts, the total cost adds to **105 USD**.
   
-    ```
+    ```text
     3 * 35 USD = 105 USD
     ```
     {: screen}
@@ -324,7 +324,7 @@ The billing calculation for the month would look like:
 
     Each host has a 1000 time-series allotment. The remaining time-series are priced based on the tiers.
   
-    ```
+    ```text
     1000 + 850 + 800 + 200 + 200 + 100 - ( 3*1000 ) = 150 time-series
     ```
     {: screen}
@@ -333,7 +333,7 @@ The billing calculation for the month would look like:
 
     Notice that since the `Base cost per host` time-series allotment was not completely used by the agents, 350 of the 500 platform metrics time-series were covered by the base tier.
     
-    ```
+    ```text
     150 additional time-series * 0.08 USD (Tier-1) = 12 USD
     ```
     {: screen}
@@ -344,7 +344,7 @@ The billing calculation for the month would look like:
 
     Each host has a 50 containers allotment. The remaining containers are priced 5 USD per 10 containers per month.
 
-    ```
+    ```text
     100 - 3x50 = -50 containers
     ```
     {: screen}
@@ -359,7 +359,7 @@ The billing calculation for the month would look like:
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
   
-    ```
+    ```text
     300k - 1M = -700k
     ```
     {: screen}
@@ -371,7 +371,7 @@ The billing calculation for the month would look like:
 
 The total monitoring cost per month adds to **117 USD**.
 
-```
+```text
 105 USD + 12 USD + 0 USD + 0 USD = 117 USD
 ```
 {: screen}

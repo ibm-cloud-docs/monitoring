@@ -114,7 +114,7 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
 
 1. Open a terminal. Then, log in to the {{site.data.keyword.cloud_notm}}. Run the following command and follow the prompts:
 
-    ```
+    ```text
     ibmcloud login -a cloud.ibm.com
     ```
     {: codeblock}
@@ -125,7 +125,7 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
@@ -137,11 +137,11 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
 
 3. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/monitoring?topic=monitoring-access_key#access_key_ibm_cloud_ui).
 
-4. Obtain the ingestion URL from the [ collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
+4. Obtain the ingestion URL from the [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
 5. Deploy the monitoring agent. Run the following command:
 
-    ```
+    ```text
     curl -sL https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/IBMCloud-Kubernetes-Service/install-agent-k8s.sh | bash -s -- -a ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false'
     ```
     {: pre}
@@ -158,7 +158,7 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
 
 6. Verify that the monitoring agent is created successfully and its status. Run the following command:
 
-    ```
+    ```text
     kubectl get pods -n ibm-observe
     ```
     {: codeblock}
@@ -190,7 +190,7 @@ If the monitoring agent is not installed successfully, points to the wrong inges
 
 For example, if the monitoring agent is not installed successfully, you cannot skip through the installation wizard., You might see a message similar to the following:
     
-```
+```text
 Waiting for the first node to connect... Go ahead and follow the instructions below.
 ```
 {: screen}

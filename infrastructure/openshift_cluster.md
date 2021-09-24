@@ -119,7 +119,7 @@ Complete the following steps:
 
 1. Open a terminal to log in to {{site.data.keyword.cloud_notm}}.
 
-   ```
+   ```text
    ibmcloud login -a cloud.ibm.com
    ```
    {: pre}
@@ -128,14 +128,14 @@ Complete the following steps:
 
 2. List the clusters to find out in which region and resource group the cluster is available.
 
-    ```
+    ```text
     ibmcloud oc clusters
     ```
     {: pre}
 
 3. Set the resource group and region.
 
-    ```
+    ```text
     ibmcloud target -g RESOURCE_GROUP -r REGION
     ```
     {: pre}
@@ -148,7 +148,7 @@ Complete the following steps:
 
 4. Set the cluster context in your session.
 
-    ```
+    ```text
     ibmcloud oc cluster config --cluster <cluster_name_or_ID>
     ```
     {: pre}
@@ -161,14 +161,14 @@ Complete the following steps:
 
    Private endpoints
 
-   ```
+   ```text
    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a <MONITORING_ACCESS_KEY> -c ingest.private.us-south.monitoring.cloud.ibm.com -ac 'sysdig_capture_enabled: false' --openshift
    ```
    {: pre}
 
    Public endpoints
 
-   ```
+   ```text
    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a <MONITORING_ACCESS_KEY> -c ingest.us-south.monitoring.cloud.ibm.com -ac 'sysdig_capture_enabled: false' --openshift
    ```
    {: pre}
@@ -181,7 +181,7 @@ Complete the following steps:
 
 2. Verify that the monitoring agent is created successfully and its status. Run the following command:
 
-    ```
+    ```text
     oc get pods -n ibm-observe
     ```
     {: codeblock}
@@ -213,7 +213,7 @@ If the monitoring agent is not installed successfully, points to the wrong inges
 
 For example, if the monitoring agent is not installed successfully, you cannot skip through the installation wizard. You might see a message similar to the following:
     
-```
+```text
 Waiting for the first node to connect... Go ahead and follow the instructions below.
 ```
 {: screen}

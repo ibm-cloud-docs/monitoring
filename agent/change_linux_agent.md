@@ -30,7 +30,7 @@ You can edit the *dragent.yaml* file to customize the data that is collected. Ch
 
 For example, a *dragent.default.yaml* includes the following information:
 
-```
+```yaml
 check_frequency_s: 5
 files:
 - /opt/draios/etc/dragent.yaml
@@ -52,7 +52,7 @@ Complete the following steps to edit the file and apply the changes:
 2. Edit the file. Use valid YAML syntax.
 3. Restart the agent. Run the following command:
 
-    ```
+    ```text
     service dragent restart
     ```
     {: codeblock}
@@ -67,7 +67,7 @@ To block network traffic and metrics from network ports, you must customize the 
 
 For example, the following sample shows how to set the *blacklisted_ports* section of a monitoring agent to exclude data coming from ports 6666 and 6379:
 
-```
+```yaml
 blacklisted_ports:
     - 6666
     - 6379
@@ -83,7 +83,7 @@ To filter custom metrics, you must customize the **metrics_filter** section in t
 
 For example, if the *metrics_filter* section of a monitoring agent looks as follows:
 
-```
+```yaml
 metrics_filter:
   - include: metricA.*
   - exclude: metricA.*

@@ -91,19 +91,19 @@ For each host that you want to collect IPMI metrics, complete the following step
 
 2. In the server, from the `ssh` session, create the directory `/usr/sysdig`. Run the following commands:
 
-    ```
+    ```text
     cd /usr
     ```
     {: pre}
 
-    ```
+    ```text
     mkdir sysdig
     ```
     {: pre}
 
 3. Copy the file to the server. From the directory where the file is available, run the following command:
 
-    ```
+    ```text
     scp ipmi_exporter-v1.2.0.linux-amd64.tar.gz  root@<IP_ADDRESS>:/usr/sysdig/
     ```
     {: pre}
@@ -114,24 +114,24 @@ For each host that you want to collect IPMI metrics, complete the following step
 
 4. Uncompress the file. Run the following commands:
 
-    ```
+    ```text
     cd /usr/sysdig/
     ```
     {: pre}
 
-    ```
+    ```text
     tar -xvf ipmi_exporter-v1.2.0.linux-amd64.tar.gz 
     ```
     {: pre}
 
 5. Install the FreeIPMI suite. Run the following commands:
 
-    ```
+    ```text
     sudo apt-get update
     ```
     {: pre}
 
-    ```
+    ```text
     sudo apt-get install freeipmi
     ```
     {: pre}
@@ -142,7 +142,7 @@ For each host that you want to collect IPMI metrics, complete the following step
 
     Change to the directory where you have extracted the IPMI exporter:
 
-    ```
+    ```text
     cd ipmi_exporter-v1.2.0.linux-amd64/
     ```
     {: pre}
@@ -173,14 +173,14 @@ For each host that you want to collect IPMI metrics, complete the following step
 
 8. Run the IPMI exporter.
 
-    ```
+    ```text
     ./ipmi_exporter --config.file=ipmi_local.yml &
     ```
     {: pre}
 
 9. Check the IPMI exporter is running. Run the command:
 
-    ```
+    ```text
     ps -aux | grep ipmi
     ```
     {: pre}
@@ -214,7 +214,7 @@ Choose one of the following options based on the type of monitoring agent that y
 
 Run the following command to edit the configmap and add information about the hosts where the IPMI exporter is configured:
 
-```
+```text
 kubectl edit configmap sysdig-agent -n ibm-observe
 ```
 {: pre}
@@ -298,7 +298,7 @@ Complete the following steps to update the monitoring agent to collect IPMI metr
 
 1. SSH into the host where the monitoring agent is running. Then, change to the directory `/opt/draios/etc/` and run the following command:
 
-    ```
+    ```text
     cd /opt/draios/etc/
     ```
     {: pre}
@@ -329,7 +329,7 @@ Complete the following steps to update the monitoring agent to collect IPMI metr
 
 3. Restart the monitoring agent. Run the following command:
 
-    ```
+    ```text
     service dragent restart
     ```
     {: pre}

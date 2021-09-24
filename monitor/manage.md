@@ -163,7 +163,7 @@ The following table lists the tasks that you can run when you work with teams:
 | [Creating a team](/docs/monitoring?topic=monitoring-teams#teams_create)      | Create a team to control data visibility.  |
 | [Deleting a team](/docs/monitoring?topic=monitoring-teams#teams_delete)      | Delete a team. </br>**Note:** When you delete a team, users that belong only to this team are moved to the default team. |
 | [Grant permissions to work in a team](/docs/monitoring?topic=monitoring-iam_grant_team) | Grant a user or service ID administration permissions. | 
-| [Edit a team ](/docs/monitoring?topic=monitoring-teams#teams_scope)          | Change the scope of the data that is visible to users that are members of a team.  |
+| [Edit a team](/docs/monitoring?topic=monitoring-teams#teams_scope)          | Change the scope of the data that is visible to users that are members of a team.  |
 {: caption="Table 5. Tasks to work with teams" caption-side="top"} 
 
 

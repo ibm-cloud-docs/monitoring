@@ -41,20 +41,21 @@ Complete the following steps to run the Blackbox exporter as a docker container:
 
 2. Run the Blackbox exporter as a docker container:
 
-    ```
+    ```text
     docker run --rm -d -p 9115:9115 -l io.prometheus.scrape=true -l io.prometheus.port=9115 -l io.prometheus.path=/probe --name blackbox_exporter -v `pwd`:/config/prometheus/blackbox prom/blackbox-exporter:master --config.file=/config/prometheus/blackbox/blackbox.yml        
     ```
     {: pre}
 
 3. Check the exporter is up. Run the following command:
 
-    ```
+    ```text
     docker container ls
     ```
     {: pre}
 
     You can see an output like the following one:
-    ```
+    
+    ```text
     CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS              PORTS                    NAMES
     2480a0034bb4        prom/blackbox-exporter:master   "/bin/blackbox_expor…"   36 minutes ago      Up 36 minutes       0.0.0.0:9115->9115/tcp   blackbox_exporter
     ```
@@ -83,7 +84,7 @@ If you want to collect metrics from remote servers, complete the following steps
 
 Run the following command to edit the configmap and add information about the Blackbox targets that you want to monitor by using the Kubernetes monitoring agent:
 
-```
+```text
 kubectl edit configmap sysdig-agent -n ibm-observe
 ```
 {: pre}
