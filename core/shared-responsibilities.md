@@ -48,7 +48,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 |---------------------------------------------------------|-----------------------|--------|
 | `Update the {{site.data.keyword.mon_full_notm}} service` | Provide regular updates to the service with new features, fixes for defects, and security fixes. |   |
 | `Update the monitoring agent image that is hosted in {{site.data.keyword.cloud_notm}}` | Provide regular updates to the monitoring agent image with new features, fixes to defects, and security fixes. Document changes in the [Agent release notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)  | Update the agent to keep it up to date as new versions are made available. |
-| `Update default dashboards `                            | Update the default dashboards as requirements change. | Update custom dashboards and track changes by using your own change management process. |
+| `Update default dashboards`                            | Update the default dashboards as requirements change. | Update custom dashboards and track changes by using your own change management process. |
 | `Update pre-defined alert definitions`                  | Update the default alert definitions as requirements change. | Update custom alert definitions and track changes by using your own change management process. |
 | `Track versions of custom dashboards, alerts, notifications, and teams`    |   | Use your own change management process to control versions of monitoring resources such as dashboards, alert definitions, teams, and notifications. | 
 {: caption="Table 2. Responsibilities for change management" caption-side="top"}

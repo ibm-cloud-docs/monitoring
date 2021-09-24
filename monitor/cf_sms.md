@@ -35,7 +35,7 @@ This example shows how to use [Twilio Programmable SMS Messaging support](https:
 
     If you are running a Windows system, run the following commands:
 
-    ```
+    ```text
     pip install virtualenv
     mkdir twilio
     virtualenv twilio
@@ -47,7 +47,7 @@ This example shows how to use [Twilio Programmable SMS Messaging support](https:
 
     If you are running a Unix or MacOS system, run the following commands:
 
-    ```
+    ```text
     pip install virtualenv
     mkdir twilio
     cd twilio
@@ -60,7 +60,7 @@ This example shows how to use [Twilio Programmable SMS Messaging support](https:
 
 6. Create a new file named `__main__.py` with a new function named `twilio`.
 
-   ```
+   ```python
    # Download the helper library from https://www.twilio.com/docs/python/install
    import os
    from twilio.rest import Client
@@ -94,7 +94,7 @@ This example shows how to use [Twilio Programmable SMS Messaging support](https:
 
 8. Create an {{site.data.keyword.cloud_notm}} function to run your code using the following command.
 
-   ```
+   ```text
    ibmcloud fn action create sms-twilio twilio.zip --kind python:3.7 --main twilio
    ```
    {: pre}
@@ -103,7 +103,7 @@ This example shows how to use [Twilio Programmable SMS Messaging support](https:
 
 9. Get your {{site.data.keyword.cloud_notm}} API key by running the following command.  The API key will be required to integrate {{site.data.keyword.mon_full_notm}} with your {{site.data.keyword.cloud_notm}} function.
 
-   ```
+   ```text
    ibmcloud iam api-key-create ibm-cloud
    ```
    {: pre}
@@ -123,7 +123,7 @@ This example shows how to use [Twilio Programmable SMS Messaging support](https:
 
 For example, if you want to include the alert name, the affected entity, and the status of the alert, you can change your function code as follows:
 
-```
+```python
 # Download the helper library from https://www.twilio.com/docs/python/install
 import os
 from twilio.rest import Client
@@ -149,14 +149,14 @@ def twilio(args):
 
 An SMS message similar to the following would be sent when an issue is alerted:
 
-```
+```text
 Sent from your Twilio trial acount - Alert example in agent_tag_Tag = 'test=1' and agent_tag_sysdig_secure_enabled = 'true' and host = 'myhost' and host_name ='myhost' and host_mac = '00:00:00:00:00:00' is ACTIVE
 ```
 {: screen}
 
 When the alert is resolved an SMS similar to the following will be sent:
 
-```
+```text
 Sent from your Twilio trial acount - Alert example in agent_tag_Tag = 'test=1' and agent_tag_sysdig_secure_enabled = 'true' and host = 'myhost' and host_name ='myhost' and host_mac = '00:00:00:00:00:00' is OK
 ```
 {: screen}

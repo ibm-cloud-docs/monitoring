@@ -30,7 +30,7 @@ To get the web UI URL, complete the following steps from a terminal:
 
 4. Get the dashboard URL. Run the following command:
 
-    ```
+    ```text
     ic resource service-instance INSTANCE_NAME --output JSON | grep dashboard_url
     ```
     {: codeblock}

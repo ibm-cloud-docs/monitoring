@@ -61,7 +61,7 @@ Complete the following steps to configure the Prometheus Windows exporter in you
 
 5. Run the `windows_exporter` and configure the collectors that you want to enable.  For example:
 
-    ```
+    ```text
     .\windows_exporter-0.16.0-amd64.exe --collectors.enabled <COLLECTORS> 
     ```
     {: codeblock}
@@ -70,7 +70,7 @@ Complete the following steps to configure the Prometheus Windows exporter in you
 
     For example, to collect computer system metrics (cs), CPU metrics, disk metrics and network interface I/O metrics, see the following example:
 
-    ```
+    ```text
     .\windows_exporter-0.16.0-amd64.exe --collectors.enabled "os,cpu,logical_disk,net,system"
     ```
     {: codeblock}
@@ -102,7 +102,7 @@ Complete the following steps:
     You can collect a maximum of 3000 time series per Linux agent. If you need to collect more than 3000 time series for all your Windows systems, you need more than one Linux agent.
     {: important}
     
-2. Update the `/opt/draios/etc/dragent.yml` to [enable remote scraping ](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){: external}. 
+2. Update the `/opt/draios/etc/dragent.yml` to [enable remote scraping](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){: external}. 
 
     ```yaml
     prometheus:
@@ -171,7 +171,7 @@ Complete the following steps:
 
 4. Restart the monitoring agent. Run the following command:
 
-    ```
+    ```text
     service dragent restart
     ```
     {: pre}
@@ -191,7 +191,7 @@ Complete the following steps:
 
 4. Configure the `scrape_configs` section of `prometheus.yml` configuration file as follows to have prometheus scrape the `windows_exporter`.
 
-    ```
+    ```yaml
     scrape_configs:
       # The job name is added as a label `job=<job_name>` to any timeseries scraped from this configuration.
       - job_name: 'windows_exporter'
@@ -289,7 +289,7 @@ Complete the following steps:
 
 5. Start the Prometheus executable from the location containing the `prometheus.yml` file.
 
-   ```
+   ```text
    .\prometheus.exe
    ```
    {: pre}
@@ -304,7 +304,7 @@ To monitor Windows systems metrics, you can use the default dashboard `Windows N
 
 Run the following command to install the default dashboard.
 
-```
+```text
 docker run -it --rm sysdiglabs/promcat-connect:0.1 install windows:2019 -t <MONITORING_TOKEN>  -u <ENDPOINT>
 ```
 {: codeblock}
@@ -335,7 +335,7 @@ For example, complete the following instructions when the container approach is 
 
 2. Start the blackbox exporter.
 
-    ```
+    ```text
     docker run --rm -d -p 9115:9115 --name blackbox_exporter -v `pwd`:/config/ prom/blackbox-exporter:master --config.file=/config/blackbox.yml
     ```
     {: codeblock}
@@ -344,7 +344,7 @@ For example, complete the following instructions when the container approach is 
 
     For example, you can do a simple `icmp` check to see if the system is responding. See the [documentation](https://github.com/prometheus/blackbox_exporter/blob/master/README.md){: external} for other options. 
 
-    ```
+    ```text
     curl 'http://localhost:9115/probe?module=icmp&target=<system ip>'
     ```
     {: codeblock}
@@ -353,7 +353,7 @@ For example, complete the following instructions when the container approach is 
 
     You should get a payload back with `probe_success 1` as the last line to indicate that the system at `<system ip>` is up.
 
-3. Update the `/opt/draios/etc/dragent.yaml` to enable `probe_success` metrics.
+4. Update the `/opt/draios/etc/dragent.yaml` to enable `probe_success` metrics.
 
     You must add details about the check that you want to run on the call. 
 
@@ -378,9 +378,9 @@ For example, complete the following instructions when the container approach is 
 
     When you enable this option, you can segment data by `windows_hostname` and build alerts upon this metric.
 
-4. Restart the monitoring agent. Run the following command:
+5. Restart the monitoring agent. Run the following command:
 
-    ```
+    ```text
     service dragent restart
     ```
     {: pre}

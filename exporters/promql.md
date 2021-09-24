@@ -35,8 +35,8 @@ Create a PromQL query for a metric in an existing dashboard.
     * Metric: Specify the metric that you want to query, such as `host_cpu_used_percent`. Note: The generated values on the table are the latest metric.
     * Time range: Specify a time range or time interval, such as `5m`. To use the time range that is selected in the UI, specify `$__range`. To use the time interval that is based on the time range that is selected in the UI, specify `$__interval`. The `$__range` and `$__interval` variables in this query automatically update as the time range is changed in the UI. For more information, see [Applying dashboard scopes to PromQL queries](#promql-scope).
     * Segmentation: Choose a value to segment the aggregated PromQL data, such as `kubernetes_cluster_name`.
-8. Click **Run Query**.
-7. Fine tune the results by configuring any additional _Options_, such as the units in which the data is returned and how the data is displayed.
+7. Click **Run Query**.
+8. Fine tune the results by configuring any additional _Options_, such as the units in which the data is returned and how the data is displayed.
 
 ## Applying dashboard scopes
 {: #promql-scope}
@@ -49,7 +49,8 @@ Two pre-defined variables exist for time-based scopes that you can specify in th
 * `$__interval`: Represents the interval that is based on the time range that is selected in the dashboard UI. For example, you might use this variable to adapt the time range for different operations, such as the rate or average over time.
 
 For example, say you use the following query to return the CPU used percent for all the hosts:
-```
+
+```text
 avg_over_time(host_cpu_used_percent[$__interval])
 ```
 {: codeblock}
@@ -57,7 +58,8 @@ avg_over_time(host_cpu_used_percent[$__interval])
 This query uses the `$__interval` variable, which scopes data to the dynamic time interval based on the time range that is selected in the dashboard UI.
 
 You can also specify your own variables in the query to scope its output. For example, to further scope the previous query to a specific label such as `hostname`, you must first [define a scope variable at the dashboard level](https://docs.sysdig.com/en/about-the-dashboard-ui.html#UUID-7a55e06a-7e2a-8dcb-7dd3-6d7eb39c9784_section-idm23184387629055){: external}. Then, you can specify that variable in the query:
-```
+
+```text
 avg_over_time(host_cpu_used_percent{host_name=$hostname}[$__interval])
 ```
 {: codeblock}
@@ -76,7 +78,7 @@ Prometheus returns [information metrics](https://docs.sysdig.com/en/mapping-betw
 In this example, a metric that is returned by an application is filtered by cluster. The PromQL aggregates a value of that metric for a cluster by having only one cluster selected in the scope.
 {: shortdesc}
 
-```
+```text
 sum (myapp_metric * on (container_id) kube_pod_container_info{cluster=$cluster})
 ```
 {: codeblock}
@@ -92,7 +94,7 @@ This query:
 In this example, the average CPU used (percent) is calculated for a specific {{site.data.keyword.cloud_notm}} account and region.
 {: shortdesc}
 
-```
+```text
 avg by(region,account_id) (host_cpu_used_percent * on (host_mac) group_left(region,account_id) sysdig_cloud_provider_info{account_id=~$account, region=~$region})
 ```
 {: codeblock}

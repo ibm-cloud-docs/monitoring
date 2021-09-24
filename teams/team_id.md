@@ -25,7 +25,7 @@ You can use the Teams REST API to get the ID of a team.
 
 Get the IAM access token:
 
-```
+```text
 export AUTH_TOKEN=`ibmcloud iam oauth-tokens | grep IAM | cut -d \: -f 2 | sed 's/^ *//'`
 ```
 {: pre}
@@ -57,7 +57,7 @@ Where
 
 For example, to get the ID of a team that is available in a monitoring instance in US-South, you can run the following command:
 
-```  
+```text
 curl -v  https://us-south.monitoring.cloud.ibm.com/api/teams  -H "Authorization:  $AUTH_TOKEN"   -H "content-type: application/json"  -H "IBMInstanceID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 ```
 {: codeblock}
@@ -67,7 +67,7 @@ The response includes information about all the teams where the user is a member
 
 For example, a sample response looks as follows:
 
-```
+```json
 {
     "teams": [
         {

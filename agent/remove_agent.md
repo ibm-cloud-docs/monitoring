@@ -28,35 +28,35 @@ Complete the following steps to remove a monitoring agent from a Kubernetes clus
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
 
 2. Remove the cluster role binding. Run the following command:
 
-    ```
+    ```text
     kubectl delete clusterrolebinding sysdig-agent
     ```
     {: codeblock}
 
 3. Remove the service account. Run the following command:
 
-    ```
+    ```text
     kubectl delete serviceaccount -n ibm-observe sysdig-agent
     ```
     {: codeblock}
 
 4. Remove the `daemonset`. Run the following command:
 
-    ```
+    ```text
     kubectl delete daemonset sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
 5. Remove the secret. Run the following command:
 
-    ```
+    ```text
     kubectl delete secret sysdig-agent -n ibm-observe
     ```
     {: codeblock}
@@ -68,21 +68,21 @@ Complete the following steps to remove a monitoring agent from an OpenShift clus
 
 1. Delete the `daemonset` by running the following command:
 
-   ```
+   ```text
    oc delete daemonset sysdig-agent -n ibm-observe
    ```
    {: pre}
 
 2. Delete the `secret` by running the following command:
 
-   ```
+   ```text
    oc delete secret sysdig-agent -n ibm-observe
    ```
    {: pre}
 
 3. Delete the `serviceaccount` by running the following command:
 
-   ```
+   ```text
    oc delete serviceaccount -n ibm-observe sysdig-agent
    ```
    {: pre}
@@ -98,14 +98,14 @@ Complete the following steps to remove the monitoring agent that is deployed as 
 
     Run the following command:
 
-    ```
+    ```text
     docker stop sysdig-agent
     ```
     {: codeblock}
 
 2. Remove references to the monitoring agent container.
 
-    ```
+    ```text
     docker rm sysdig-agent
     ```
     {: codeblock}
@@ -120,14 +120,14 @@ Complete the following steps to remove a monitoring agent on Linux:
 
 * To uninstall the agent from **Debian and Ubuntu Linux distributions**, run the following command as the **sudo** user from a terminal:
 
-    ```
+    ```text
     sudo apt-get remove draios-agent
     ```
     {: codeblock}
 
 * To uninstall the agent from **RHEL, CentOS, and Fedora Linux distributions**, run the following command as the **sudo** user from a terminal:
 
-    ```
+    ```text
     sudo yum erase draios-agent
     ```
     {: codeblock}

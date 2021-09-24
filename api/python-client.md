@@ -38,14 +38,14 @@ Install the following Python packages that you need when you use Python version 
 
 1. Run the following command to install the `request` package:
 
-    ```shell
+    ```text
     pip3 install requests
     ```
     {: pre}
 
 2. Run the following command to install the `pyyaml` package:
 
-    ```
+    ```text
     python3 -m pip install pyyaml
     ```
     {: pre}
@@ -58,7 +58,7 @@ From a terminal, run the following comnmnand:
 The **sddclient** version must be at least 0.9.x.
 {: important}
 
-```shell
+```text
 # sddclient version must be at least 0.9.0
 pip3 install sdcclient
 ```
@@ -72,28 +72,28 @@ Complete the following steps:
 
 1. Make a folder to copy the client code.
 
-    ```shell
+    ```text
     mkdir python-client && cd python-client
     ```
     {: pre}
 
 2. Clone the repository.
 
-    ```shell
+    ```text
     git clone https://github.com/draios/python-sdc-client.git
     ```
     {: pre}
 
 3. Create an empty Python script.
 
-    ```shell
+    ```text
     touch script.py
     ```
     {: pre}
 
-4. Confirm `python-sdc-client/script.py is listed when you verify the contents of the folder `python-client`.
+4. Confirm `python-sdc-client/script.py` is listed when you verify the contents of the folder `python-client`.
 
-    ```shell
+    ```text
     ls
     ```
     {: pre}
@@ -141,14 +141,14 @@ Complete the following steps from a terminal:
 
 1. Get the GUID of your {{site.data.keyword.mon_full_notm}} instance. Run the following command:
 
-    ```
+    ```text
     ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid'
     ```
     {: pre}
 
 2. Get the API key. Run the following command to generate a user API key:
 
-    ```
+    ```text
     ibmcloud iam api-key-create KEY_NAME
     ```
     {: pre}

@@ -30,9 +30,9 @@ To get the access key for an {{site.data.keyword.mon_full_notm}} instance throug
 
 3. Select **Monitoring**. The {{site.data.keyword.mon_full_notm}} dashboard opens. You can see the list of monitoring instances that are available on {{site.data.keyword.cloud_notm}}.
 
-3. Identify the instance for which you want to get the access key. Click the *Actions* icon ![Actions icon](../../icons/action-menu-icon.svg "Actions") next to the instance and then click **View key**.
+4. Identify the instance for which you want to get the access key. Click the *Actions* icon ![Actions icon](../../icons/action-menu-icon.svg "Actions") next to the instance and then click **View key**.
 
-4. A window opens where you can click **Show key** to view the access key.
+5. A window opens where you can click **Show key** to view the access key.
 
 
 
@@ -51,14 +51,14 @@ To get the access key for a monitoring instance through the command line, comple
 
 4. Get the instance name. Run the following command: [ibmcloud resource service-instances](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances)
 
-    ```
+    ```text
     ibmcloud resource service-instances
     ```
     {: pre}
 
 5. Get the name of the API key that is associated with the monitoring instance. Run the [`ibmcloud resource service-keys`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_keys) command:
 
-    ```
+    ```text
     ibmcloud resource service-keys --instance-name INSTANCE_NAME
     ```
     {: pre}
@@ -67,7 +67,7 @@ To get the access key for a monitoring instance through the command line, comple
 
 6. Get the access key. Run the [ibmcloud resource service-key](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_key) command:
 
-    ```
+    ```text
     ibmcloud resource service-key APIKEY_NAME
     ```
     {: pre}
@@ -91,7 +91,7 @@ To create a new access key for an {{site.data.keyword.mon_full_notm}} instance, 
 
 2. Issue a curl POST request against the monitoring endpoint to generate a new access key.
 
-    ```
+    ```text
     curl -XPOST -H 'Authorization: Bearer API_TOKEN' https:ENDPOINT/api/customer/accessKeys
     ```
     {: pre}
@@ -103,7 +103,7 @@ To create a new access key for an {{site.data.keyword.mon_full_notm}} instance, 
 
     The output will provide the newly generated access key in the response.
 
-    ```
+    ```json
     {
         "customerAccessKey": {
             "enabled": true,
@@ -126,7 +126,7 @@ To disable an existing access key for an {{site.data.keyword.mon_full_notm}} ins
 
 2. Issue a curl POST request against the monitoring endpoint to disable the given access key.
 
-    ```
+    ```text
     curl -XPOST -H 'Authorization: Bearer API_TOKEN' https:ENDPOINT/api/customer/accessKeys/ACCESS_KEY/disable
     ```
     {: pre}
@@ -151,7 +151,7 @@ To enable an existing access key for an {{site.data.keyword.mon_full_notm}} inst
 
 2. Issue a curl POST request against the monitoring endpoint to enable the given access key.
 
-    ```
+    ```text
     curl -XPOST -H 'Authorization: Bearer API_TOKEN' https://ENDPOINT/api/customer/accessKeys/ACCESS_KEY/enable
     ```
     {: pre}
@@ -175,7 +175,7 @@ To view all of the access keys for an {{site.data.keyword.mon_full_notm}} instan
 
 2. Issue a curl GET request against the regional monitoring endpoint to enable the given access key.
 
-    ```
+    ```text
     curl -XGET -H 'Authorization: Bearer API_TOKEN' https://ENDPOINT/api/customer/accessKeys
     ```
     {: pre}
@@ -187,7 +187,7 @@ To view all of the access keys for an {{site.data.keyword.mon_full_notm}} instan
 
     The output will provide a list of the access keys in the response and whether they are enabled.
 
-    ```
+    ```json
     {
         "customerAccessKeys": [
             {

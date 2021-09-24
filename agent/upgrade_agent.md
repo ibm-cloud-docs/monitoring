@@ -24,7 +24,7 @@ Choose any of the following options to update a monitoring agent:
 
 By default, the monitoring agent has a `RollingUpdate` update strategy. 
 
-```
+```yaml
 updateStrategy:
     rollingUpdate:
       maxUnavailable: 1
@@ -36,7 +36,7 @@ When you update the agent's DaemonSet template, old DaemonSet pods are killed, a
 
 The image that is used to create the new pods is the one that is specified in the DaemonSet template. By default, the monitoring agent's image pull policy is configured to always so that it pulls the latest image. The `imagePullPolicy` of the container is set to `Always`. 
 
-```
+```yaml
 containers:
     - image: icr.io/ext/sysdig/agent
       imagePullPolicy: Always
@@ -50,14 +50,14 @@ Complete the following steps to update a monitoring agent with a `RollingUpdate`
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
 
 2. List the DaemonSets that are running in the `ibm-observe` namespace, and verify that the monitoring agent is running in this namespace:
 
-    ```
+    ```text
     kubectl get daemonsets -n ibm-observe
     ```
     {: pre}
@@ -66,7 +66,7 @@ Complete the following steps to update a monitoring agent with a `RollingUpdate`
 
 3. Check the DaemonSet update strategy:
 
-    ```
+    ```text
     kubectl get ds/sysdig-agent -o go-template='{{.spec.updateStrategy.type}}{{"\n"}}' -n ibm-observe
     ```
     {: pre}
@@ -75,14 +75,14 @@ Complete the following steps to update a monitoring agent with a `RollingUpdate`
 
 4. Check the image version that is deployed:
 
-    ```
+    ```text
     kubectl describe ds sysdig-agent -n ibm-observe | grep Image
     ```
     {: pre}
 
 5. Update the image that is configured in the DaemonSet template to the monitoring agent image that you want to use:
 
-    ```
+    ```text
     kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:IMAGE_VERSION -n ibm-observe
     ```
     {: pre}
@@ -91,7 +91,7 @@ Complete the following steps to update a monitoring agent with a `RollingUpdate`
     
     For example, to update the agent to version `10.5.1`, you can run the following command:
 
-    ```
+    ```text
     kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:10.5.1 -n ibm-observe
     ```
     {: pre}
@@ -100,7 +100,7 @@ Complete the following steps to update a monitoring agent with a `RollingUpdate`
 
 6. Check the update completes.
 
-    ```
+    ```text
     kubectl rollout status ds/sysdig-agent -n ibm-observe
     ```
     {: pre}
@@ -116,21 +116,21 @@ Complete the following steps to remove the monitoring agent that is deployed as 
 
 1. Stop the monitoring agent container. Run the following command:
 
-    ```
+    ```text
     docker stop sysdig-agent
     ```
     {: pre}
 
 2. Remove the monitoring agent container. Run the following command:
 
-    ```
+    ```text
     docker rm sysdig-agent
     ```
     {: pre}
 
 3. Get the latest version of the monitoring agent. Run the following command:
 
-    ```
+    ```text
     docker pull sysdig/agent
     ```
     {: pre}
@@ -146,24 +146,24 @@ Complete the following steps to update a monitoring agent on Linux:
 
 * To update the agent from **Debian and Ubuntu Linux distributions**, run the following commands as the **sudo** user from a terminal:
 
-    ```
+    ```text
     sudo apt-get update
     ```
     {: pre}
 
-    ```
+    ```text
     sudo apt-get -y install draios-agent
     ```
     {: pre}
 
 * To update the agent from **RHEL, CentOS, and Fedora Linux distributions**, run the following commands as the **sudo** user from a terminal:
 
-    ```
+    ```text
     yum clean expire-cache
     ```
     {: pre}
 
-    ```
+    ```text
     sudo yum -y install draios-agent
     ```
     {: pre}

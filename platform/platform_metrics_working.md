@@ -236,7 +236,7 @@ Complete the following steps to define an alert on a metric:
 
     ![Choose alert type](images/sysdig-platform-16.png "Choose alert type")
 
-5. Configure the alert. Set the following fields:
+6. Configure the alert. Set the following fields:
 
     **Name**: Enter a name for the alert. 
 

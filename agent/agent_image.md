@@ -31,7 +31,7 @@ Before you begin, complete the following tasks:
 
 2. Log in to [{{site.data.keyword.cloud_notm}}](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login):
 
-    ```
+    ```text
     ibmcloud login
     ```
     {: pre}
@@ -42,7 +42,7 @@ Before you begin, complete the following tasks:
 
 Run the following command:
 
-```
+```text
 ibmcloud cr region-set global
 ```
 {: pre}
@@ -54,7 +54,7 @@ ibmcloud cr region-set global
 
 Run the following command:
 
-```
+```text
 ibmcloud cr images --restrict ext/sysdig
 ```
 {: codeblock}

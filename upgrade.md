@@ -65,14 +65,14 @@ Complete the following steps to change the service plan:
 
     To get the current service plan of an instance, you can run the following command and check the value of the **resource_plan_id** field:
 
-    ```
+    ```text
     ibmcloud resource service-instance INSTANCE_NAME --output JSON
     ```
     {: codeblock}
 
-4. Change the service plan. Run the [ibmcloud resource service-instance-update](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
+5. Change the service plan. Run the [ibmcloud resource service-instance-update](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
 
-    ```
+    ```text
     ibmcloud resource service-instance-update NAME --service-plan-id RESOURCE_PLAN_ID
     ```
     {: codeblock}
@@ -88,7 +88,7 @@ Complete the following steps to change the service plan:
 
 For example, to change the service plan of an instance to the graduated plan, run the following command:
 
-```
+```text
 ibmcloud resource service-instance-update monitoring-instance-01 231bb072-1b2f-4d7e-ae9e-9574d382be32
 ```
 {: codeblock}

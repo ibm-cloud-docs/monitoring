@@ -109,7 +109,7 @@ When you configure the alert, complete the following sections:
 
 * [`segmentby`]: You can define the scope of an alert by configuring the `segmentedby` section. The default value is `ANY`.
 
-* [`segment_condition`]: When the parameter *segmentby* is specified, set this field to determine when the alert will be triggered. Valid values are **ANY** and **ALL**. [Learn more]().
+* [`segment_condition`]: When the parameter *segmentby* is specified, set this field to determine when the alert will be triggered. Valid values are **ANY** and **ALL**.
             
 * [`user_filter`]: You can define a filter that indicates when a notification is sent. For example, you could define this entry if you want to receive a notification only if the name of the process meets the condition.
 

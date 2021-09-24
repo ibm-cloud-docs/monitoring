@@ -56,14 +56,14 @@ Complete the following steps:
 
 1. Locate your service instance.
 
-    ```
+    ```text
     ibmcloud resource service-instances
     ```
     {: codeblock}
 
 2. Create a service key via the command line.
 
-    ```
+    ```text
     ibmcloud resource service-key-create KEY_NAME Writer --instance-name INSTANCE_NAME --service-endpoint private
     ```
     {: codeblock}
@@ -101,7 +101,7 @@ Complete the following steps to add a notification channel:
 
     5. For a webhook notification, enter the webhook *URL*. The format is the following: `<kafka_http_url>/topics/<topic>/records?apikey=<api_key>`
 
-        Where <topic> is the name of your topic.
+        Where `<topic>` is the name of your topic.
 
         For example, the URL field can be `https://y545tf67898h.svc01.eu-gb.eventstreams.cloud.ibm.com/topics/my-sample-topic/records?apikey=27836238765487558695`
     
@@ -120,7 +120,7 @@ Currently additionalHeaders cannot be created on the original create. However, y
 
 2. Run the following command:
 
-    ```
+    ```text
     curl -X PUT ’https://us-east.monitoring.cloud.ibm.com/api/notificationChannels/<CHANNEL_ID>' \
     --header ‘Content-Type: application/json’ 
     --header ‘Authorization: Bearer <token>’ -d @/tmp/notification.json
