@@ -77,7 +77,7 @@ To provision an instance through the command line, complete the following steps:
 4. Create the instance. Run the [ibmcloud resource service-instance-create](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
 
     ```text
-    ibmcloud resource service-instance-create NAME service-name SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false,"external_api_auth": "API_AUTH"}'
+    ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false,"external_api_auth": "API_AUTH"}'
     ```
     {: pre}
 
