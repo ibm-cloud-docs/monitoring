@@ -69,7 +69,7 @@ Metric data is hosted on the {{site.data.keyword.cloud_notm}}.
 
 Data is retained for each instance based on a *roll-up* policy.
 
-As time progresses, the data is rolled up from a fine granularity to a coarser one by the end 3 months.
+As time progresses, the data is rolled up from a fine granularity to a coarser one by the end 2 months.
 
 The roll-up policy describes the granularity of the data over time:
 
