@@ -105,7 +105,7 @@ Complete the following steps to create a custom dashboard:
 
     6. In the *Compare to* field set the time range for the comparison.
 
-    7. Set the panel background color based on metric thresholds. Click **Override Color Coding**, then, **Enable**. Set values for the different thresholds.
+    7. For **Number** and **Threshold** chart types you can set the panel color based on metric thresholds. Click **Override Color Coding**, then, **Enable**. Set values for the different thresholds.
 
     8. Click **Save**.
 
