@@ -63,6 +63,7 @@ toc:
       id: howto
       topics:
       - provision.md
+      - terraform/terraform-setup.md
       - iam/iam_instance_auth.md
       - remove.md
       - upgrade.md
