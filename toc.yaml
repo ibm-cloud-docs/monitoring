@@ -143,6 +143,7 @@ toc:
               - monitor/mng_metrics.md
               - api/metrics_api.md
               - api/metrics_python.md
+              - monitor/data_streaming.md
           - topicgroup: 
               label: Ingesting metrics by using Prometheus remote write
               topics:
