@@ -72,7 +72,7 @@ For example, you can configure the Prometheus server that runs in a Kubernetes c
 - Configure a Prometheus server that is managed by Prometheus Operator 
 - Configure a Prometheus server by using Helm
 - Configure a Prometheus server through a Kubernetes ConfigMap
-For more information, see [Collecting metrics from a Kubernetes cluster by using Prometheus remote write]().
+For more information, see [Collecting metrics from a Kubernetes cluster by using Prometheus remote write](/docs/monitoring?topic=monitoring-prometheus_remote_write).
 
 
 
@@ -209,7 +209,7 @@ To avoid including sensitive information directly in the Prometheus ConfigMap, y
 
 Run the following command to create the secret:
 
-```
+```text
 kubectl create secret generic <SECRET_NAME> --from-literal=monitor-api-token="<MONITOR_API_TOKEN>" -n <PROMETHEUS_NAMESPACE>
 ```
 {: pre}
@@ -222,7 +222,7 @@ Where
 
 For example, run the following command to create the secret `monitor-api-token` in the namespace `prometheus`. This command assumes Prometheus server is running in the `proemtheus` namespace:
 
-```
+```text
 kubectl create secret generic monitor-api-token --from-literal=monitor-api-token="<MONITOR_API_TOKEN>" -n <PROMETHEUS_NAMESPACE>
 ```
 {: pre}
@@ -247,14 +247,14 @@ Complete the following steps to modify the Prometheus config map:
 
     For example, get the name of the deployment by running the following command: 
     
-    ```
+    ```text
     kubectl get deployment -n <PROMETHEUS_NAMESPACE>
     ```
     {: pre}
     
     Configure a Prometheus deployment: 
     
-    ```
+    ```text
     kubectl edit deployment prometheus-deployment -n <PROMETHEUS_NAMESPACE>
     ```
     {: pre}
@@ -287,7 +287,7 @@ Complete the following steps to modify the Prometheus config map:
 
     Get the name of the configMap by running the following command: 
     
-    ```
+    ```text
     kubectl get cm -n <PROMETHEUS_NAMESPACE>
     ```
     {: pre}
@@ -296,7 +296,7 @@ Complete the following steps to modify the Prometheus config map:
 
     Edit the configMap:
 
-    ```
+    ```text
     kubectl edit cm <PROMETHEUS_CONFIG_MAP> -n <PROMETHEUS_NAMESPACE> 
     ```
     {: pre}
@@ -327,7 +327,7 @@ Complete the following steps to modify the Prometheus config map:
 
     Edit the configMap:
 
-    ```
+    ```text
     kubectl edit cm <PROMETHEUS_CONFIG_MAP> -n <PROMETHEUS_NAMESPACE> 
     ```
     {: codeblock}
@@ -415,7 +415,7 @@ Complete the following steps to configure the Prometheus remote write feature:
 
 2. Apply the changes. Run the following command:
 
-    ```
+    ```text
     kubectl apply -f prometheus-prometheus.yaml -n <PROMETHEUS_NAMESPACE>
     ```
     {: pre}
@@ -433,7 +433,7 @@ For Prometheus v2.25 and previous versions, follow these instructions:
 
 1. Configure the Helm Prometheus values file `values.yml` and include the `remote_write` block inside the `server` section:
 
-    ```
+    ```yaml
     ... server:
     extraSecretMounts:
     - name: secret-file
@@ -454,7 +454,7 @@ For Prometheus v2.25 and previous versions, follow these instructions:
     
 2. Upgrade the Prometheus Helm release.
 
-    ```
+    ```text
     helm upgrade -f prometheus-values.yml <release name> prometheus-community/prometheus -n <PROMETHEUS_NAMESPACE>
     ```
     {: pre}
@@ -463,7 +463,7 @@ For Prometheus version 2.26 and later versions, follow these instructions:
 
 1. Configure the Helm Prometheus values file `values.yml` and include the `remote_write` block inside the `server` section:
 
-    ```
+    ```yaml
     ... server:
     remoteWrite:
     - url: "https://<INGESTION_URL>/prometheus/remote/write"
@@ -481,7 +481,7 @@ For Prometheus version 2.26 and later versions, follow these instructions:
     
 2. Upgrade the Prometheus Helm release.
 
-    ```
+    ```text
     helm upgrade -f prometheus-values.yml <release name> prometheus-community/prometheus -n <PROMETHEUS_NAMESPACE>
     ```
     {: pre}
@@ -493,23 +493,23 @@ Complete the following steps to check that you can monitor metrics that are coll
 
 1. [Launch the {{site.data.keyword.mon_short}} web UI](/docs/monitoring?topic=monitoring-launch).
 
-2. Navigate to the **Dashboards** section ![Dashboard icon](images/dashboards.png "Dashboard icon"), and select **Add Dashboard** ![Add dashboard icon](images/add.png "Add dashboard icon"). The *Create a New Dashboard* page opens.
+2. Navigate to the **Dashboards** section ![Dashboard icon](/images/dashboards.png "Dashboard icon"), and select **Add Dashboard** ![Add dashboard icon](/images/add.png "Add dashboard icon"). The *Create a New Dashboard* page opens.
 
 3. Select **PromQL**.
 
-    ![Dashboard page](images/dashboard-page.png "Dashboard page")    
+    ![Dashboard page](/images/dashboard-page.png "Dashboard page")    
 
 4. In the *Query* section, delete the default query and enter **container**, for example. The list of available metrics is displayed.
 
-    ![Query](images/query1.png "Query")  
+    ![Query](/images/query1.png "Query")  
 
 5. Choose a metric and click **Run Query**. 
 
-    ![Query](images/query.png "Query")  
+    ![Query](/images/query.png "Query")  
 
     You can see a metric that is collected by using the Prometheus remote write feature.
 
-    ![Metric](images/metric.png "<etrics")    
+    ![Metric](/images/metric.png "<etrics")    
 
 6. Click **Save** to create the panel that monitors the metric in the dashboard.
 
@@ -522,7 +522,7 @@ Complete the following steps to check that you can monitor metrics that are coll
 
 If you find the following log entry in the logs of the Prometheus server that is deployed in your cluster, your {{site.data.keyword.mon_short}} instance does not have the Prom-Beacon service enabled.
 
-```
+```text
 ts=2021-05-05T13:32:16.975Z caller=dedupe.go:112 component=remote level=warn remote_name=2e147e url=https://ingest.us-south.monitoring.cloud.ibm.com/prometheus/remote/write msg="Failed to send batch, retrying" err="server returned HTTP status 503 Service Unavailable: {\"errors\":[{\"reason\":\"Customer settings error\",\"message\":\"Prom-Beacon service not enabled\"}]}"
 ```
 {: screen}

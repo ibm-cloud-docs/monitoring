@@ -33,7 +33,7 @@ Complete the following steps to edit a Kubernetes monitoring agent configuration
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
@@ -42,7 +42,7 @@ Complete the following steps to edit a Kubernetes monitoring agent configuration
 
     Run the following command:
 
-    ```
+    ```text
     kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
@@ -62,7 +62,7 @@ Complete the following steps to edit a Kubernetes monitoring agent configuration
 
     To create a local file with the configuration that is deployed in a cluster, you can also run the command:
     
-    ```
+    ```text
     kubectl get configmap sysdig-agent -n=ibm-observe -o=yaml > prod-sysdig-agent-configmap.yaml
     ```
     {: codeblock} 
@@ -71,7 +71,7 @@ Complete the following steps to edit a Kubernetes monitoring agent configuration
 
 3. Apply the changes by using the following commands:
 
-    ```
+    ```text
     kubectl apply -f sysdig-agent-configmap.yaml
     ```
     {: codeblock}
@@ -88,7 +88,7 @@ Complete the following steps to add more tags to a Kubernetes monitoring agent c
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
@@ -97,14 +97,14 @@ Complete the following steps to add more tags to a Kubernetes monitoring agent c
 
     Run the following command:
 
-    ```
+    ```text
     kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
 3. Make changes. **Note:** Refer to `vi` editor instructions to learn how to make changes.
 
-    ```
+    ```yaml
     apiVersion: v1
       data:
         dragent.yaml: |
@@ -143,7 +143,7 @@ To filter events from Kubernetes pods, complete the following steps:
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
@@ -152,7 +152,7 @@ To filter events from Kubernetes pods, complete the following steps:
 
     Run the following command:
 
-    ```
+    ```text
     kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
@@ -163,7 +163,7 @@ To filter events from Kubernetes pods, complete the following steps:
 
     For example, you might want to collect Kubernetes pod pulling events and filter out other pod events that are collected by default. You still want to collect default Kubernetes events for nodes and replicationControllers.
 
-    ```
+    ```yaml
     events:
       kubernetes:
         pod:
@@ -180,7 +180,7 @@ Another example where you can see how to collect a subset of Kubernetes events: 
 
 * Option 1: Define the sequence on entries as a bulleted list:
 
-    ```
+    ```yaml
     events:
       kubernetes:
         pod: 
@@ -192,7 +192,7 @@ Another example where you can see how to collect a subset of Kubernetes events: 
 
 * Option 2: Define the sequence on entries in a bracketed single line:
 
-    ```
+    ```yaml
     events:
       kubernetes:
         pod: [Pulling, Pulled, Failed]
@@ -213,7 +213,7 @@ Complete the following steps:
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
@@ -222,20 +222,20 @@ Complete the following steps:
 
     Run the following command:
 
-    ```
+    ```text
     kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
 3. Make changes. Add the *events* section or update the section.
 
-    ```
+    ```yaml
     events:
       kubernetes: none
     ```
     {: codeblock}
 
-6. Save the changes. 
+4. Save the changes. 
 
 Changes are applied automatically. 
 
@@ -249,7 +249,8 @@ Changes are applied automatically.
 
 To filter custom metrics, you must customize the **metrics_filter** section in the *sysdig-agent-configmap.yaml* file. You can specify which metrics to include and which ones to filter out by configuring the **include** and **exclude** filtering parameters.
 
-<p class="important">The filtering rule order is set as follows: the first rule that matches a metric is applied. Follow up rules for that metric are ignored.</p>
+The filtering rule order is set as follows: the first rule that matches a metric is applied. Follow up rules for that metric are ignored.
+{: important}
 
 Complete the following steps:
 
@@ -257,7 +258,7 @@ Complete the following steps:
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
@@ -266,7 +267,7 @@ Complete the following steps:
 
     Run the following command:
 
-    ```
+    ```text
     kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
@@ -275,7 +276,7 @@ Complete the following steps:
 
     For example, if the *metrics_filter* section of a monitoring agent looks as follows:
 
-    ```
+    ```yaml
     metrics_filter:
       - include: metricA.*
       - exclude: metricA.*
@@ -338,7 +339,7 @@ Complete the following steps to filter out containers that a monitoring agent mo
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
@@ -347,7 +348,7 @@ Complete the following steps to filter out containers that a monitoring agent mo
 
     Run the following command:
 
-    ```
+    ```text
     kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
@@ -356,7 +357,7 @@ Complete the following steps to filter out containers that a monitoring agent mo
 
     For example, see the following extract of a config map:
 
-    ```
+    ```yaml
     # Enable the feature
     use_container_filter: true
     #
@@ -390,7 +391,7 @@ Complete the following steps:
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
@@ -399,7 +400,7 @@ Complete the following steps:
 
     Run the following command:
 
-    ```
+    ```text
     kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
@@ -408,14 +409,14 @@ Complete the following steps:
 
     For example, the following sample shows how to set the *blacklisted_ports* section of a monitoring agent to exclude data coming from ports 6666 and 6379:
 
-    ```
+    ```yaml
     blacklisted_ports:
       - 6666
       - 6379
     ```
     {: screen}
 
-6. Save the changes. 
+4. Save the changes. 
 
 Changes are applied automatically. 
 
@@ -466,7 +467,7 @@ The following table lists some common scenarios and the value that you must set 
 * The **metricsfile** setting is required to specify the location for the metrics to be written by the agent.  The `metricsfile.location` value is a relative path under the /opt/draios directory.  *Note:* The `metricsfile` entry is specified at the same level as `log`( not as a child in the yaml)
 * Logging data is formatted as follows:
 
-    ```
+    ```yaml
     +/-[type] [metric included/excluded]: metric.name (filter: +/-[metric.filter])
     ```
     {: screen}
@@ -483,7 +484,7 @@ The following table lists some common scenarios and the value that you must set 
 
 A sample log entry looks as follows:
 
-```
+```yaml
 -[statsd] metric excluded: mongo.statsd.vsize (filter: -[mongo.statsd.*])
 +[statsd] metric included: mongo.statsd.netIn (filter: +[mongo.statsd.net*])
 ```
@@ -496,7 +497,7 @@ Complete the following steps to configure the log settings:
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
@@ -505,7 +506,7 @@ Complete the following steps to configure the log settings:
 
     Run the following command:
 
-    ```
+    ```text
     kubectl edit configmap sysdig-agent -n ibm-observe
     ```
     {: codeblock}
@@ -514,7 +515,7 @@ Complete the following steps to configure the log settings:
 
     For example:
 
-    ```
+    ```yaml
     log:
       file_priority: warning
       console_priority: info
@@ -524,7 +525,7 @@ Complete the following steps to configure the log settings:
     ```
     {: codeblock}
 
-6. Save the changes. 
+4. Save the changes. 
 
 Changes are applied automatically. 
 

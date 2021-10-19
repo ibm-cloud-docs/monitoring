@@ -65,14 +65,14 @@ For example, consider the following use cases and the log section that you can c
 
 To get the log level of a Linux monitoring agent, run the following command from a terminal:
 
-```
+```text
 more /opt/draios/etc/statsite.ini | grep log_level
 ```
 {: pre}
 
 For example, you can get the following result:
 
-```
+```text
 # more /opt/draios/etc/statsite.ini | grep log_level
 log_level = INFO
 ```
@@ -85,14 +85,14 @@ log_level = INFO
 
 To get the log level of a docker monitoring agent, run the following command:
 
-```
+```text
 docker exec -ti sysdig-agent  more /opt/draios/etc/statsite.ini | grep log_level
 ```
 {: pre}
 
 For example, you can get the following result:
 
-```
+```text
 # docker exec -ti sysdig-agent  more /opt/draios/etc/statsite.ini | grep log_level
 log_level = INFO
 ```
@@ -108,14 +108,14 @@ To get the log level of a Kubernetes monitoring agent, complete the following st
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
 
 2. Get the agent log level. Run the following command:
 
-    ```
+    ```text
     kubectl describe daemonset sysdig-agent -n ibm-observe | grep file_priority
     ```
     {: pre}
@@ -136,7 +136,7 @@ To configure the log level, you must customize the **log** section in the `/opt/
 
 By default, a `dragent.yaml` file includes the following information:
 
-```
+```text
 customerid: xxxxxxxxxxxxxxxxx
 collector: ingest.us-south.monitoring.cloud.ibm.com
 collector_port: 6443
@@ -151,7 +151,7 @@ To configure a log level, you must edit the file and add information about the l
 
 The following configuration sample shows a log level set to *error*:
 
-```
+```text
 customerid: xxxxxxxxxxxxxxxxx
 collector: ingest.us-south.monitoring.cloud.ibm.com
 collector_port: 6443
@@ -164,7 +164,7 @@ log:
 
 After you edit the dragent.yaml file, you must restart the agent to activate the changes. Run the following command:
 
-```
+```text
 service dragent restart
 ```
 {: pre}
@@ -179,21 +179,21 @@ To change the log level of a docker monitoring agent, complete the following ste
 
 1. Open a shell in the running container:
 
-    ```
+    ```text
     docker exec –it sysdig-agent /bin/bash
     ```
     {: pre}
 
 2. Copy to your local machine the `dragent.yaml` file:
 
-    ```
+    ```text
     docker cp sysdig-agent:/opt/draios/etc/dragent.yaml <local directory>/dragent.yaml
     ```
     {: pre}
 
 3. Modify the configuration file. Include information about the log level and the console log level that you want to set. Add the following section if it is not included:
 
-    ```
+    ```yaml
     log:
       file_priority: error
       console_priority: warning
@@ -206,7 +206,7 @@ To change the log level of a docker monitoring agent, complete the following ste
 
     The following configuration sample shows a log level set to *error*, and a console log level set to *warning*:
 
-    ```
+    ```yaml
     customerid: xxxxxxxxxxxxxxxx
     tags: location:us-east
     collector: ingest.us-east.monitoring.cloud.ibm.com
@@ -222,22 +222,22 @@ To change the log level of a docker monitoring agent, complete the following ste
 
 4. Update the configuration file of the agent. Run the following command:
 
-    ```
+    ```text
     docker cp <local directory>/dragent.yaml sysdig-agent:/opt/draios/etc/dragent.yaml
     ```
     {: pre}
 
 5. Restart the agent. Run the following command:
 
-    ```
+    ```text
     docker restart sysdig-agent
     ```
     {: pre}
 
 6. Verify the level have been set. Run the following commands:
 
-    ```
-     docker exec -ti sysdig-agent  more /opt/draios/etc/statsite.ini | grep log_level
+    ```text
+    docker exec -ti sysdig-agent  more /opt/draios/etc/statsite.ini | grep log_level
     ```
     {: pre}
 
@@ -255,7 +255,7 @@ Complete the following steps to change the log level of a Kubernetes monitoring 
 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
-    ```
+    ```text
     ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
@@ -264,14 +264,14 @@ Complete the following steps to change the log level of a Kubernetes monitoring 
 
     Run the following command to edit the config map:
 
-    ```
+    ```text
     kubectl edit daemonset sysdig-agent -n ibm-observe
     ```
     {: codeblock}
 
     Then, add or modify the log entries:
 
-    ```
+    ```yaml
     log:
       file_priority: error
       console_priority: warning
@@ -284,7 +284,7 @@ Complete the following steps to change the log level of a Kubernetes monitoring 
 
     The following configuration sample shows a log level set to *debug*, and a console log level set to *error*:
 
-    ```
+    ```yaml
     ...
     spec:
       revisionHistoryLimit: 10
@@ -314,7 +314,7 @@ The log level changes are applied when you save the changes.
 
 If you have changed previously the log level, the DaemonSet section looks like:
 
-```
+```yaml
 ...
 spec:
   revisionHistoryLimit: 10

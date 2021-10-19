@@ -24,10 +24,8 @@ You can use any of the following panel types:
 | Type | Description |
 |------|-------------|
 | `Line` | Use this panel to view trends over time for one or more metrics.  |
-| `Area` | Use this panel to view trends over time for one or more metrics.  |
 | `Top list` | Use this panel to compare a metric across groups of entities. The bar chart is sorted in descending order.  |
 | `Histogram` | Use this panel to view the frequency distribution of a metric in buckets.  |
-| `Topology` | Use this panel to visualize the infrastructure as a topology map, and the relations between entities in the map.  |
 | `Number` | Use this panel to view a single number that represents the value of an aggregated metric over time for one or more entities.  |
 | `Table` | Use this panel to display numerical data for your infrastructure based on metrics and segments.  |
 | `Text` | Use this panel to add text. Use markdown to add your text.  |
@@ -62,7 +60,7 @@ Complete the following steps to change the scope of a panel:
   
 3. Define your dashboard scope.
 
-5. Click **Apply**.
+4. Click **Apply**.
 
 
 
@@ -108,7 +106,7 @@ Complete the following steps to export data from a panel:
 
 5. Enter a *File name* for the exported file.
 
-4. Click **Export**.
+6. Click **Export**.
 
 
 

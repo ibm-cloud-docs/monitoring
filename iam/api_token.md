@@ -52,7 +52,7 @@ Complete the following steps to get an IAM token:
 
 2. Run the following command to get a token:
 
-    ```
+    ```text
     ibmcloud iam oauth-tokens | grep IAM | cut -d \: -f 2 | sed 's/^ *//'
     ```
     {: pre}

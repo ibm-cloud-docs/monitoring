@@ -27,7 +27,7 @@ To learn how to use cURL, see [cURL command](/docs/monitoring?topic=monitoring-m
 You can use the following cURL command to get information about an alert:
 
 
-```shell
+```text
 curl -X GET <REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "TeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
@@ -90,7 +90,7 @@ For example, the response body for an alert looks as follows:
 You can use the following cURL command to create an alert:
 
 
-```shell
+```text
 curl -X POST <REST_API_ENDPOINT>/api/alerts -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "TeamID: $TEAM_ID" -H "content-type: application/json" -d @alert.json
 ```
 {: codeblock}
@@ -154,7 +154,7 @@ To update an existing alert, you need the ID of that alert.
 You can use the following cURL command to update an alert:
 
 
-```shell
+```text
 curl -X PUT <REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "TeamID: $TEAM_ID" -H "content-type: application/json" -d @alert.json
 ```
 {: codeblock}
@@ -217,7 +217,7 @@ To delete an existing alert, you need the ID of that alert.
 You can use the following cURL command to delete an alert:
 
 
-```shell
+```text
 curl -X DELETE <REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "TeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
@@ -243,7 +243,7 @@ Where
 You can use the following cURL command to get information about all the alerts:
 
 
-```shell
+```text
 curl -X GET <REST_API_ENDPOINT>/api/alerts?from=<START_TIMESTAMP>&to=<END_TIMESTAMP> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID"
 ```
 {: codeblock}
@@ -408,17 +408,17 @@ When this field is empty, all the metric sources are included. The scope is set 
 
 For example, you can define filters like the following ones:
 
-```
+```text
 kubernetes.namespace.name='production'
 ```
 {: screen}
 
-```
+```text
 container.image='nginx'*.
 ```
 {: screen}
 
-```
+```text
 kubernetes.namespace.name='production' and container.image='nginx'*.
 ```
 {: screen}
@@ -474,7 +474,7 @@ Defines the number of notifications that are sent for the alert during the past 
 ### reNotify (boolean)
 {: #alert-api-parm-renotify}
 
-Defines whether you want to get follow up notifications until the alert condition is acknoeldged and resolved.
+Defines whether you want to get follow up notifications until the alert condition is acknowledged and resolved.
 {: note}
 
 By default, follow up notifications are not enabled and the field is set to `false`.

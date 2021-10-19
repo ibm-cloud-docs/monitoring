@@ -94,7 +94,7 @@ To access the *Secure* web UI, complete the following steps:
     The selection box is only available for instances with the secure option.
     {: note}
 
-2. Select the **Secure** icon.
+6. Select the **Secure** icon.
 
     ![Secure icon](images/secure.png)
 

@@ -102,7 +102,7 @@ Complete the following steps from a command line:
 
 1. Open a terminal. Then, log in to the {{site.data.keyword.cloud_notm}}. Run the following command and follow the prompts:
 
-   ```
+   ```text
    ibmcloud login -a cloud.ibm.com
    ```
    {: pre}
@@ -111,13 +111,13 @@ Complete the following steps from a command line:
 
 2. [Access your Ubuntu server](/docs/vpc?topic=vpc-vsi_is_connecting_linux).
 
-3. Obtain the  access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/monitoring?topic=monitoring-access_key#access_key_ibm_cloud_ui).
+3. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/monitoring?topic=monitoring-access_key#access_key_ibm_cloud_ui).
 
-4. Obtain the ingestion URL. For more information, see [ collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
+4. Obtain the ingestion URL. For more information, see [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
 5. Deploy the monitoring agent. Run the following command:
 
-   ```
+   ```text
    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key <ACCESS_KEY> --collector <COLLECTOR_ENDPOINT> --collector_port 6443 --secure false --check_certificate false --tags <TAG_DATA> --additional_conf 'sysdig_capture_enabled: false'
    ```
    {: pre}
@@ -130,20 +130,23 @@ Complete the following steps from a command line:
 
    * TAG_DATA are comma-separated tags that are formatted as `TAG_NAME:TAG_VALUE`. You can associate one or more tags to your monitoring agent. For example, `role:serviceX,location:us-south`. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
-   * The `sysdig_capture_enabled` is set to *false* to disable the  capture feature. By default this is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
+   * The `sysdig_capture_enabled` is set to *false* to disable the capture feature. By default this is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
+   * The `secure` flag must be set to *true* when running a "Graduated Monitor+Secure" plan.  If you are running a "Monitor only" plan, you can set the `secure` flag to *false* if desired.
+   
    If the monitoring agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the monitoring agent.
 
+   
    * **For Debian and Ubuntu Linux distributions**, run the following command:
 
-      ```
+      ```text
       apt-get -y install linux-headers-$(uname -r)
       ```
       {: pre}
 
    * **For RHEL, CentOS, and Fedora Linux distributions**, run the following command:
 
-      ```
+      ```text
       yum -y install kernel-devel-$(uname -r)
       ```
       {: pre}

@@ -77,7 +77,7 @@ Complete the following steps to create a custom dashboard:
 
         4. Click *New Dashboard* to rename your dashboard.  Click the check mark to save your name change.
 
-2. Set the dashboard scope. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). The select the desired scope. By default, **Entire infrastructure** is selected.
+3. Set the dashboard scope. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). The select the desired scope. By default, **Entire infrastructure** is selected.
     
     1. Select the scope. 
 
@@ -91,7 +91,7 @@ Complete the following steps to create a custom dashboard:
 
     3. Click **Save**.
 
-3. Configure panels. Repeat this step for any of the panels in the dashboard that you want to modify.
+4. Configure panels. Repeat this step for any of the panels in the dashboard that you want to modify.
 
     1. Identify the panel that you want to modify.
 
@@ -105,7 +105,7 @@ Complete the following steps to create a custom dashboard:
 
     6. In the *Compare to* field set the time range for the comparison.
 
-    7. Set the panel background color based on metric thresholds. Click **Override Color Coding**, then, **Enable**. Set values for the different thresholds.
+    7. For **Number** and **Threshold** chart types you can set the panel color based on metric thresholds. Click **Override Color Coding**, then, **Enable**. Set values for the different thresholds.
 
     8. Click **Save**.
 
@@ -124,18 +124,16 @@ Complete the following steps to change the scope of a dashboard:
    
 3. Select the scope. 
 
-<!--
-4. Optionally, click **Override the custom panel scopes** to override the scope for all panels which currently have a custom scope defined. 
+    <!--
+    4. Optionally, click **Override the custom panel scopes** to override the scope for all panels which currently have a custom scope defined. 
 
     This action cannot be undone. 
     {: note}
 
     To reset the dashboard scope to the entire infrastructure, or to update an existing dashboard's scope to the entire infrastructure, select **Everywhere**.
-    {: tip}
+    {: tip} -->
 
--->
-
-5. Click **Save**.
+4. Click **Save**.
 
 
 

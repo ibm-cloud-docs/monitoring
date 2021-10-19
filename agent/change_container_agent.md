@@ -32,7 +32,7 @@ Complete the following steps to edit the file and apply the changes:
 2. Edit the file. Use valid YAML syntax.
 3. Restart the agent. Run the following command:
 
-    ```
+    ```text
     docker restart sysdig-agent
     ```
     {: codeblock}
@@ -49,7 +49,7 @@ Port 53 (DNS) is always in the blocklist and does not need to be specified in th
 
 For example, the following sample shows how to set the *blacklisted_ports* section of a monitoring agent to exclude data coming from ports 6666 and 6379:
 
-```
+```yaml
 blacklisted_ports:
     - 6666
     - 6379
@@ -72,7 +72,7 @@ For example, to filter out Docker image events and collect only events for attac
 
 * Option 1: Define the sequence on entries as a bulleted list:
 
-    ```
+    ```yaml
     events:
       docker:
         image: none
@@ -85,7 +85,7 @@ For example, to filter out Docker image events and collect only events for attac
 
 * Option 2: Define the sequence on entries in a bracketed single line:
 
-    ```
+    ```yaml
     events:
       docker:
         image: none
@@ -101,7 +101,7 @@ To disable a monitoring agent from collecting events, modify the *dragent.defaul
 
 For example, to filter out Docker events, you must set the *events* section in the *dragent.yaml* file as follows:
 
-```
+```yaml
 events:
   docker: none
 ```
@@ -123,7 +123,7 @@ The values are listed from high priority to low priority.
 
 For example, to filter out low severity events (*notice*, *information*, *debug*), you must set the log section **event_priority** to *warning*:
 
-```
+```yaml
 log:
   event_priority: warning
 ```
@@ -132,7 +132,7 @@ log:
 
 To block collection of events, you must set the log section **event_priority** to *none*:
 
-```
+```yaml
 log:
   event_priority: none
 ```
@@ -151,7 +151,7 @@ The filtering rule order is set as follows: the first rule that matches a metric
 
 For example, if the *metrics_filter* section of a monitoring agent looks as follows:
 
-```
+```yaml
 metrics_filter:
   - include: metricA.*
   - exclude: metricA.*

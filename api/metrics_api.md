@@ -24,7 +24,7 @@ You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance by 
 
 You can use the following [cURL command](/docs/monitoring?topic=monitoring-mon-curl) to get metrics:
 
-```shell
+```text
 curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d DATA
 ```
 {: codeblock}
@@ -93,7 +93,7 @@ To learn about data aggregation, see [Data Aggregation](https://docs.sysdig.com/
 
 This example shows how to extract platform metrics from Cloud Foundry in *us-south* for the last 24 hours.
 
-```shell
+```text
 curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "content-type: application/json" -d @metrics.json
 ```
 {: codeblock}
@@ -230,7 +230,7 @@ To get the latest value of a metric, specify only the metric name. The most rece
 
 For instance, to get the latest value of `host_cpu_used_percent`:
 
-```shell
+```text
 curl <SYSDIG_REST_API_ENDPOINT>/prometheus/api/v1/query?query=sysdig_host_cpu_used_percent -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
@@ -256,7 +256,7 @@ All dashboards support the full PromQL API. For more information about what’s 
 
 This example shows how to extract CPU data that is available within the context of a team.
 
-```shell
+```text
 curl -X POST https://us-south.monitoring.cloud.ibm.com/api/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: 30785" -H "content-type: application/json" -d @metrics.json
 ```
 {: codeblock}
@@ -272,7 +272,7 @@ You can use the following code example to extract metrics from your {{site.data.
 * Replace `<instance_id>` with the ID of your {{site.data.keyword.mon_short}} instance.
 * Replace the `metrics` field with the JSON array of metrics that you want to extract. The example metric is `cpu.cores.used`.
 
-```
+```text
 from sdcclient import IbmAuthHelper, SdMonitorClient
 endpoint = "https://<region>.monitoring.cloud.ibm.com"
 apikey = "<apikey>"
@@ -302,38 +302,38 @@ return res
 ## Sample: Extract notifications from {{site.data.keyword.mon_short}} to {{site.data.keyword.messagehub}} with the {{site.data.keyword.messagehub}} REST API
 {: #sample-extract-notifications}
 
-1.  [Create an {{site.data.keyword.messagehub}} instance](/docs/EventStreams?topic=EventStreams-getting_started).
+1. [Create an {{site.data.keyword.messagehub}} instance](/docs/EventStreams?topic=EventStreams-getting_started).
     * From the pricing plans, select an **Enterprise Plan**.
     * If necessary, set up an [Authorization in IAM](https://cloud.ibm.com/iam/authorizations){: external} for {{site.data.keyword.messagehub}} to target a KMS provider such as {{site.data.keyword.keymanagementserviceshort}}, and refresh the page.
     * For the **Service Endpoint**, select an option with a **Private** network.
-2.  Wait a few minutes for your {{site.data.keyword.messagehub}} instance to provision.
-3.  In your {{site.data.keyword.messagehub}} instance, [create a topic](/docs/EventStreams?topic=EventStreams-getting_started#getting_started_steps), such as `kafka-java-console-sample-topic`.
-4.  Create a service key for credentials to your {{site.data.keyword.messagehub}} instance on the private cloud service endpoint.
+2. Wait a few minutes for your {{site.data.keyword.messagehub}} instance to provision.
+3. In your {{site.data.keyword.messagehub}} instance, [create a topic](/docs/EventStreams?topic=EventStreams-getting_started#getting_started_steps), such as `kafka-java-console-sample-topic`.
+4. Create a service key for credentials to your {{site.data.keyword.messagehub}} instance on the private cloud service endpoint.
 
     * `<name>`: Enter a name for the service key.
     * `<event_streams_instance>`: Replace with the name of your {{site.data.keyword.messagehub}} instance.
 
-    ```
+    ```text
     ibmcloud resource service-key-create <name> Writer --instance-name <event_streams_instance> --service-endpoint private
     ```
     {: pre}
 
-5.  In the output of the previous command, get the details that you need to make a REST call.
+5. In the output of the previous command, get the details that you need to make a REST call.
     * `api_key`
     * `kafka_http_url`
 
     Example output:
 
-    ```
+    ```text
     api_key:      123465123456123465123465123465123465
     kafka_http_url:           https://mh-<id>.private.us-south.messagehub.appdomain.cloud
     ```
     {: screen}
 
-6.  From the [{{site.data.keyword.mon_short}} dashboard](https://cloud.ibm.com/observe/monitoring){: external}, click **Open dashboard** for the {{site.data.keyword.mon_short}} instance that you want to use. 
-7.  Click **Get Started > Configure a notification channel > Configure Notification Channel**. The **Settings** page opens.
-8.  Click **+ Add Notification Channel** and select the **Webhook** option.
-9.  Configure the webhook notification channel. After you create the webhook notification channel, you must continue to set up authentication for the channel.
+6. From the [{{site.data.keyword.mon_short}} dashboard](https://cloud.ibm.com/observe/monitoring){: external}, click **Open dashboard** for the {{site.data.keyword.mon_short}} instance that you want to use. 
+7. Click **Get Started > Configure a notification channel > Configure Notification Channel**. The **Settings** page opens.
+8. Click **+ Add Notification Channel** and select the **Webhook** option.
+9. Configure the webhook notification channel. After you create the webhook notification channel, you must continue to set up authentication for the channel.
     * For **URL**, enter the `kafka_http_url` from the service key, and append the `/topics/<topic>/records` route to the URL. The `<topic>` is the name of the topic that you created in your {{site.data.keyword.messagehub}} instance.
     * For **Name**, enter a name for the webhook notification channel.
     * Leave the other fields at the default settings.
@@ -343,14 +343,14 @@ return res
     * Replace `<region>` with the region of your {{site.data.keyword.mon_short}} instance, such as `us-east`.
     * Replace `<token>` with the IAM token that you previously retrieved. 
     
-    ```
+    ```text
     curl ’https://<region>.monitoring.cloud.ibm.com/api/notificationChannels' --header ‘Authorization: Bearer <token>’ | jq 
     ```
     {: pre}
 
     In the output, note the `id` of the notification channel where the `options.url` field matches the **URL** that you previously created.
 
-    ```
+    ```json
      {
          "id": 123,
          "version": 6,
@@ -369,25 +369,25 @@ return res
     * Replace `<id>` with the ID of the notification channel that you previously retrieved.
     * Replace `<token>` with the IAM token that you previously retrieved.
 
-    ```
+    ```text
     curl -X PUT ’https://<region>.monitoring.cloud.ibm.com/api/notificationChannels/<id>' \
     --header ‘Content-Type: application/json’ 
     --header ‘Authorization: Bearer <token>’ -d @/tmp/notification.json
     ```
     {: pre}
 
-11. Curl the {{site.data.keyword.mon_short}} API again to confirm that the notification channel is updated with the authentication header. 
+13. Curl the {{site.data.keyword.mon_short}} API again to confirm that the notification channel is updated with the authentication header. 
     * Replace `<region>` with the region of your {{site.data.keyword.mon_short}} instance, such as `us-east`.
     * Replace `<token>` with the IAM token that you previously retrieved. 
     
-    ```
+    ```text
     curl ’https://<region>.monitoring.cloud.ibm.com/api/notificationChannels' --header ‘Authorization: Bearer <token>’ | jq 
     ```
     {: pre}
 
     In the output, note the `additionalHeaders.X-Auth-Token` field is added to the notification channel.
 
-    ```
+    ```json
     {
     "notificationChannel":
         {
@@ -403,6 +403,6 @@ return res
     ```
     {: screen}
     
-10. [Set up an alert](/docs/monitoring?topic=monitoring-alerts) that uses the webhook notification channel that you created for {{site.data.keyword.messagehub}}. 
+14. [Set up an alert](/docs/monitoring?topic=monitoring-alerts) that uses the webhook notification channel that you created for {{site.data.keyword.messagehub}}. 
 
 Now, when an alert is triggered from {{site.data.keyword.messagehub}}, you can review the details in your {{site.data.keyword.mon_short}} instance.

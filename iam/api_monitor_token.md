@@ -62,7 +62,7 @@ curl -X GET <MONITORING_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TO
 {: codeblock}
 
 
-```
+```text
 GET <MONITORING_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "TeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}

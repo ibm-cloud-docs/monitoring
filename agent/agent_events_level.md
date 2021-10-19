@@ -33,7 +33,7 @@ Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*
 
 For example, to filter out low severity events (*notice*, *information*, *debug*), you must set the log section **event_priority** to *warning*:
 
-```
+```text
 log:
   event_priority: warning
 ```
@@ -42,7 +42,7 @@ log:
 
 To block collection of events, you must set the log section **event_priority** to *none*:
 
-```
+```text
 log:
   event_priority: none
 ```
