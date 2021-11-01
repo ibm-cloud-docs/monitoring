@@ -399,7 +399,7 @@ Where
 ## Monitoring streaming by using {{site.data.keyword.mon_full_notm}}
 {: #data_streaming_mon}
 
-{{site.data.keyword.messagehub}} is integrated with the {{site.data.keyword.mon_short}} service. {{site.data.keyword.mon_short}} provides a default template that you can customize to monitor the {{site.data.keyword.messagehub}} instance, how data is streamed out of {{site.data.keyword.la_short}} and consumed by any application or service that is subscribed to {{site.data.keyword.messagehub}}.
+{{site.data.keyword.messagehub}} is integrated with the {{site.data.keyword.mon_short}} service. {{site.data.keyword.mon_short}} provides a default template that you can customize to monitor the {{site.data.keyword.messagehub}} instance, how data is streamed out of {{site.data.keyword.mon_short}} and consumed by any application or service that is subscribed to {{site.data.keyword.messagehub}}.
 
 
 Complete the following steps to monitor the {{site.data.keyword.messagehub}} instance:
@@ -409,7 +409,7 @@ Complete the following steps to monitor the {{site.data.keyword.messagehub}} ins
 3. In the **Dashboards** section, go to **Dashboard templates** and select the template **IBM Event Streams (Enterprise)**.
 4. Create a copy of the temnplate by clicking **Create custom dashboard**.
 
-    You can use the metric *Topic bytes in per second* to see how data is sent by {{site.data.keyword.la_short}} to {{site.data.keyword.messagehub}}.
+    You can use the metric *Topic bytes in per second* to see how data is sent by {{site.data.keyword.mon_short}} to {{site.data.keyword.messagehub}}.
 
     You can use the metric *Topic bytes out per second* to see how data is consumed by any application or service that is subscribed to {{site.data.keyword.messagehub}}.
 
