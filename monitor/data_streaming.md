@@ -68,18 +68,18 @@ Complete the following steps to create an Event Streams topic:
 
 5. Click **Create a topic**. 
 
-    ![Create a topic.](images/streaming-topic.png "Create a topic") 
+    ![Create a topic.](../images/streaming-topic.png "Create a topic") 
 
 6. Enter a topic name and click **Next**.
 
-    ![Create a topic part 2.](images/streaming-topic-1.png "Create a topic part 2") 
+    ![Create a topic part 2.](../images/streaming-topic-1.png "Create a topic part 2") 
 
 7. Enter the number of partitions and click **Next**. 
 
     One or more partitions make up a topic. A partition is an ordered list of messages. Partitions are distributed across the brokers in order to increase the scalability of your topic. You can also use them to distribute messages across the members of a consumer group.
     {: note}
 
-    ![Create a topic part 3.](images/streaming-topic-2.png "Create a topic part 3") 
+    ![Create a topic part 3.](../images/streaming-topic-2.png "Create a topic part 3") 
 
 8.  Select a **Message retention** and click **Create Topic**.
 
@@ -106,7 +106,7 @@ Complete the following steps to create service credentials that the {{site.data.
 
 5. Enter a name and select the **writer** role.
 
-    ![Create a credential.](images/streaming-credentials.png "Create a credential") 
+    ![Create a credential.](../images/streaming-credentials.png "Create a credential") 
 
 6. Click **Add**.
 
@@ -114,15 +114,15 @@ To restrict access to 1 topic, complete the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDS**.
 
-    ![Service IDs](images/streaming-credentials2.png "Service IDs") 
+    ![Service IDs](../images/streaming-credentials2.png "Service IDs") 
 
 2. Select the service ID.
 3. Select **Access policies**.
 4. Select the policy and modify it to specify the topic.
 
-    ![Edit policy](images/streaming-credentials-2.png "Edit policy") 
+    ![Edit policy](../images/streaming-credentials-2.png "Edit policy") 
 
-    ![Modify policy](images/streaming-credentials-3.png "Modify policy") 
+    ![Modify policy](../images/streaming-credentials-3.png "Modify policy") 
 
 5. [Get credentials using the IBM Cloud CLI](/docs/EventStreams?topic=EventStreams-connecting#connect_enterprise_external_cli) and make note of the api key and broker URL values.
 
@@ -140,7 +140,7 @@ To configure {{site.data.keyword.mon_full_notm}} metric data streaming, do the f
 
 4. Click **Add Integration**. The **New Metric Streaming Integration** panel is displayed.
 
-    ![Metric Streaming Integration panel](images/streaming1.png "Metric Streaming Integration panel")
+    ![Metric Streaming Integration panel](../images/streaming1.png "Metric Streaming Integration panel")
 
 5. Specify the following information:
 
@@ -159,7 +159,7 @@ To configure {{site.data.keyword.mon_full_notm}} metric data streaming, do the f
     Credentials
     :   The credentials used by {{site.data.keyword.mon_short}} to to export the data from the {{site.data.keyword.mon_short}} instance to the Kafka server. You can choose user and password, or a base64 encoded certificate.
 
-    ![Credential options](images/streaming2.png "Credential options")
+    ![Credential options](../images/streaming2.png "Credential options")
 
     Compression
     :   Choose the type of compression. Valid options are: `LZ4`, `Snappy`, `Gzip`, and `Zstandard`. For more information, see [Message compression in Apache Kafka](https://developer.ibm.com/articles/benefits-compression-kafka-messaging/){: external}.
@@ -192,7 +192,7 @@ You can start and stop streaming of metrics from the *Metric Data Streaming* pag
 
 3. Select **Metric Data Streaming**. The list of streaming configurations is displayed.
 
-    ![List of streaming configurations](images/streaming3.png "List of streaming configurations")
+    ![List of streaming configurations](../images/streaming3.png "List of streaming configurations")
 
 4. Enable or disable a streaming configuration through the toggle.
 
@@ -415,11 +415,11 @@ Complete the following steps to monitor the {{site.data.keyword.messagehub}} ins
 
 5. (Optional) Edit the panel *Topic bytes in per second*. 
 
-    ![Edit panel.](images/streaming-topic-metric.png "Edit panel") 
+    ![Edit panel.](../images/streaming-topic-metric.png "Edit panel") 
 
     Then, customize the metric to see data per topic.
 
-    ![Customize metric.](images/streaming-topic-metric-1.png "Customize metric") 
+    ![Customize metric.](../images/streaming-topic-metric-1.png "Customize metric") 
 
     Check that the resolution is set to **10M**.
 
