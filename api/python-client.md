@@ -251,7 +251,7 @@ def usage():
    print('usage: %s <ENDPOINT_URL> <API_KEY> <INSTANCE_GUID>' % sys.argv[0])
    print('ENDPOINT_URL: IBM Cloud endpoint URL (e.g. https://us-south.monitoring.cloud.ibm.com')
    print('API_KEY: IBM Cloud IAM API key. This key is used to retrieve an IAM access token.')
-   print('INSTANCE_GUID: GUID of an IBM Cloud Monitoring with {{site.data.keyword.mon_short}} instance.')
+   print('INSTANCE_GUID: GUID of an IBM Cloud Monitoring instance.')
    sys.exit(1)
 
 if len(sys.argv) != 4:
