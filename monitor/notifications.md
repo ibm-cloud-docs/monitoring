@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-09-09"
+lastupdated: "2021-11-15"
 
 keywords: IBM Cloud, monitoring, notification channel
 
@@ -49,7 +49,7 @@ Complete the following steps to add a notification channel:
 
         * For a **Slack** notification channel, add the URL of the *Slack channel*.
     
-        * For **{{site.data.keyword.openwhisk_short}}** notification channel, specify the channel URL when you set up a IBM Cloud Function Channel. For more information, see [Configure IBM Cloud Function Channel ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.sysdig.com/en/configure-ibm-cloud-functions-channel.html).
+        * For **{{site.data.keyword.openwhisk_short}}** notification channel, specify the channel URL when you set up a IBM Cloud Function Channel. For more information, see [Configure IBM Cloud Function Channel](https://docs.sysdig.com/en/configure-ibm-cloud-functions-channel.html){: external}.
 
         * For a **Webhook** notification channel, add the *Webhook URL*. **Note:** When an alert is triggered, the notification is sent as a POST in JSON format to your webhook endpoint. For more information, see [Configuring a Webhook channel](https://docs.sysdig.com/en/configure-a-webhook-channel.html){: external}. For example, {{site.data.keyword.mon_full_notm}}can be integrated with ServiceNow using a custom webhook. To learn about configuring {{site.data.keyword.mon_full_notm}} with ServiceNow, see [Configure ServiceNow](https://docs.sysdig.com/en/configure-servicenow.html){: external}.
 
@@ -63,9 +63,17 @@ Complete the following steps to add a notification channel:
 
         * For a **PagerDuty** notification channel, first you must authorize {{site.data.keyword.mon_full_notm}} to integrate with your account. When you select PagerDuty, a wizard to configure the integration with {{site.data.keyword.mon_full_notm}} opens. Click either **Authorize Integration** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for {{site.data.keyword.mon_full_notm}} notifications, then click **Finish Integration**. Select the escalation policy to use for {{site.data.keyword.mon_full_notm}}  incidents. Then, on the *Notifications* tab, confirm your PagerDuty account, your service name, and the service key. For more information, see [Add {{site.data.keyword.mon_full_notm}} Integration in PagerDuty](https://www.pagerduty.com/docs/guides/sysdig-integration-guide/).
 
-        To retrieve the required permissions automatically by clicking **Auto-fetch**, first you must authorize {{site.data.keyword.mon_full_notm}} to integrate with your account. When you select PagerDuty, a wizard to configure the integration with {{site.data.keyword.mon_full_notm}} opens. Click either **Sign in** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for {{site.data.keyword.mon_full_notm}} notifications, then click **Finish Integration**. Select the escalation policy to use for {{site.data.keyword.mon_full_notm}} incidents. Then, on the *Notifications* tab, confirm your PagerDuty *Account*, *Service Key*, and *Service Name*. 
+            To retrieve the required permissions automatically by clicking **Auto-fetch**, first you must authorize {{site.data.keyword.mon_full_notm}} to integrate with your account. When you select PagerDuty, a wizard to configure the integration with {{site.data.keyword.mon_full_notm}} opens. Click either **Sign in** or **Sign In Using Your Identity Provider** to authorize PagerDuty. Choose an existing service or set up a new service for {{site.data.keyword.mon_full_notm}} notifications, then click **Finish Integration**. Select the escalation policy to use for {{site.data.keyword.mon_full_notm}} incidents. Then, on the *Notifications* tab, confirm your PagerDuty *Account*, *Service Key*, and *Service Name*. 
 
         * For a **Teams Email** notification channel, select the name of the team to receive notifications. 
+
+        * For an **IBM Event Notifications** channel you must first have an [{{site.data.keyword.en_full_notm}} instance configured.](/docs/event-notifications?topic=event-notifications-en-create-en-instance) 
+
+            To configure the notification channel you need to specify the {{site.data.keyword.en_full_notm}} instance name and specify your choice of a channel name.  You will also indicate if the notification channel is enabled and when notifications should be sent, for example, when an alert is resolved. Notifications can be shared with one or all teams.
+
+            [{{site.data.keyword.en_full_notm}} is available in a limited number of regions](/docs/event-notifications?topic=event-notifications-en-regions-endpoints). Your {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.en_full_notm}} instances must be in the same region to communicate with one another.  Because of this, support for integration with {{site.data.keyword.en_full_notm}} is limited to the regions where {{site.data.keyword.en_full_notm}} is supported and where {{site.data.keyword.mon_full_notm}} is also installed.
+            {: important}
+
 
     6. Optionally, and for integrations that allow a test, enable the *Test notification* condition to receive a test notification. If you do not receive a test notification in 10 minutes, review your channel configuration. 
 

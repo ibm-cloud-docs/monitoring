@@ -175,6 +175,8 @@ toc:
               - api/notifications_api.md
               - monitor/pd_sms.md
               - monitor/cf_sms.md
+              - monitor/eventnotif.md
+              
           - topicgroup: 
               label: Events
               links: 

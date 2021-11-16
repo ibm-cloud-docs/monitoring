@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-04-14"
+lastupdated: "2021-11-15"
 
 keywords: IBM Cloud, monitoring, alerts
 
@@ -63,6 +63,7 @@ You can configure any of the following notification channels:
 - Amazon SNS Topic
 - Email
 - IBM Cloud Functions
+- IBM Event Notifications
 - Microsoft Teams
 - OpsGenie
 - PagerDuty
