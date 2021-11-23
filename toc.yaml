@@ -29,6 +29,7 @@ toc:
               - infrastructure/baremetal_linux.md
               - infrastructure/kubernetes_cluster.md
               - infrastructure/ubuntu.md
+              - monitor/data_streaming.md
           - topicgroup: 
               label: Monitoring IBM Cloud services
               topics:
@@ -144,7 +145,6 @@ toc:
               - monitor/mng_metrics.md
               - api/metrics_api.md
               - api/metrics_python.md
-              - monitor/data_streaming.md
           - topicgroup: 
               label: Ingesting metrics by using Prometheus remote write
               topics:
