@@ -347,7 +347,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  |    |
-| {{site.data.keyword.data-virtualization_full_notm}}                        |    | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.dv_full_notm}}                        |    | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Database services integration in Europe locations" caption-side="top"}
 {: #cs-db-table-1}
 {: tab-title="Europe"}
@@ -367,7 +367,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
-| {{site.data.keyword.data-virtualization_full_notm}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
+| {{site.data.keyword.dv_full_notm}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 {: caption="Database services integration in America's locations" caption-side="top"}
 {: #cs-db-table-2}
 {: tab-title="America"}
