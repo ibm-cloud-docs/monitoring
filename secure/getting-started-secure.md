@@ -13,7 +13,7 @@ subcollection: monitoring
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Getting started tutorial
+# Getting started with Secure
 {: #getting-started-secure}
 
 In architectures that are focused on container and microservices, you can use *Secure* to protect, monitor, and enhance forensic analysis of your pipeline and runtime components.
