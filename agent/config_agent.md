@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2021
-lastupdated: "2021-06-22"
+lastupdated: "2021-10-15"
 
 keywords: IBM Cloud, monitoring, config monitoring agent
 
@@ -164,7 +164,20 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     ```
     {: pre}
 
-6. Install the EPEL repository ofr RHEL, CentOS, and Fedora Linux distributions.
+6. Edit the `draios.repo` file and change the file contents to the following:
+
+   ```text
+   [draios]
+   name=Draios
+   baseurl=http://mirrors.service.networklayer.com/sysdig/stable/rpm/$basearch
+   enabled=1
+   gpgcheck=1
+   gpgkey=http://mirrors.service.networklayer.com/sysdig/DRAIOS-GPG-KEY.public
+   #repo_gpgcheck=1
+   ```
+   {: codeblock}
+
+7. Configure the EPEL repository for RHEL, CentOS, and Fedora Linux distributions.
 
     Go to the next step if DKMS is available in the distribution.
     {: note}
@@ -178,14 +191,32 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     ```
     {: pre}
 
-    To install the EPEL repository, run the following command. Update the command with the correct release.
+    To configure the EPEL repository, create a file named `/etc/yum.repos.d/epel.repo` with the following content:
 
     ```text
-    rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    [epel]
+    name=Extra Packages for Enterprise Linux 7 - $basearch
+    #baseurl=http://download.fedoraproject.org/pub/epel/7/$basearch
+    #baseurl=http://mirrors.service.softlayer.com/fedora-epel/7Server/$basearch
+    baseurl=http://mirrors.service.softlayer.com/fedora-epel/7/$basearch
+    #metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
+    failovermethod=priority
+    enabled=1
+    gpgcheck=0
+    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+    ```
+    {: codeblock}
+
+8. Deploy the monitoring agent. 
+
+    This command must be run from a [private endpoint](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion_private).
+    
+    For example:
+
+    ```text
+    echo collector: ingest.private.jp-tok.monitoring.cloud.ibm.com >> /opt/draios/etc/dragent.yaml
     ```
     {: pre}
-
-7. Deploy the monitoring agent. 
 
     For Debian and Ubuntu Linux distributions, run the following commands:
 
@@ -246,9 +277,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
     * Set **secure** to *true* to use SSL with the communication.
 
-    * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
-
-8. Check that the monitoring agent is running. Run the following command:
+9. Check that the monitoring agent is running. Run the following command:
 
     ```text
     ps -ef | grep sysdig
@@ -377,7 +406,7 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
     Option 2: Monitor and Secure
 
     ```text
-    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a MONITORING_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector
+    curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a MONITORING_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --API_ENDPOINT <API-ENDPOINT>
     ```
     {: pre}
 
@@ -391,7 +420,10 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
 
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
-    * Add `--imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the **Secure** component.
+    * Add `--imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the image analyzer **Secure** component only.
+
+    * Add `--nodeanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --API_ENDPOINT <API-ENDPOINT>`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the **Secure** components: image-analyzer, host-analyzer, and benchmark runner. The `API_ENDPOINT` is needed by the benchmark runner. The `COLLECTOR_ENDPOINT` is needed by the image analyzer.
+
 
 Use kubectl version 1.14 or higher.
 {: tip}
