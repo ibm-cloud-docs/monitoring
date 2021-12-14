@@ -57,7 +57,7 @@ The following table lists VPC infrastructure services that are enabled for {{sit
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
-| [VPC virtual server instances](/docs/vpc?topic=vpc-about-advanced-virtual-servers) | Virtual servers for VPC is an Infrastructure-as-a-Service (IaaS) offering that you can use to quickly provision instances with high network performance. | [Metrics](/docs/vpc?topic=vpc-vpc-monitoring-metrics)|
+| [Virtual Servers for VPC](/docs/vpc?topic=vpc-about-advanced-virtual-servers) | Virtual Servers for VPC is an Infrastructure-as-a-Service (IaaS) offering that you can use to quickly provision instances with high network performance. | [Metrics](/docs/vpc?topic=vpc-vpc-monitoring-metrics)|
 {: caption="List of VPC infrastructure services (generation 2)" caption-side="top"} 
 
 

@@ -173,7 +173,7 @@ To configure {{site.data.keyword.mon_full_notm}} metric data streaming, do the f
 
     For **Scope**, select one or more labels to filter the defined metrics.  
     
-    **Metrics** must specify the complete metric name using PromQL.  See [Mapping Between Classic Metrics and PromQL Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics-dictionary/metrics-and-label-mapping/mapping-between-classic-metrics-and-promql-metrics/){: external} for more information on specifying metric names.  
+    **Metrics** must specify the complete metric name using PromQL.  <!-- See [Mapping Between Classic Metrics and PromQL Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics-dictionary/metrics-and-label-mapping/mapping-between-classic-metrics-and-promql-metrics/){: external} for more information on specifying metric names.  -->
 
 8. Click **Save**.
 

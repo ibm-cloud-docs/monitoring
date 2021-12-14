@@ -29,7 +29,7 @@ You then view the metrics using the web-based user interface.
 
 [Read about {{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-getting-started).
 
-Work in the `US South` region. 
+Work in a supported region, for example the `US South` region. 
 
 Use a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} {{site.data.keyword.IBM_notm}}ID, go to [Create an account](https://cloud.ibm.com/login){: external}.
 
