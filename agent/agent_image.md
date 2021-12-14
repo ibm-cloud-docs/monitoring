@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021
-lastupdated: "2021-06-24"
+lastupdated: "2021-11-29"
 
 keywords: IBM Cloud, monitoring, monitoring, agent image, container registry, icr
 
@@ -60,4 +60,13 @@ ibmcloud cr images --restrict ext/sysdig
 {: codeblock}
 
 The output of this command is the list of monitoring agent images. It includes information about the repository, `icr.io/ext/sysdig`, the image tag, the image digest, the image namespace, when the image was created, the image size, and the images security status.
+
+You can find the following images in the registry:
+
+- `icr.io/ext/sysdig/agent`: You can use this image, that includes the kernel module, to deploy the full agent.
+- `icr.io/ext/sysdig/agent-slim`: You can use this image to deploy the slim agent. This image also requires the initContainer agent-kmodule image `icr.io/ext/sysdig/agent-kmodule-thin` to pre-build the kernel module.
+- `icr.io/ext/sysdig/agent-kmodule`: Image for the initContainer that is used for building the kernel module from the headers or by downloading a precompiled version.
+- `icr.io/ext/sysdig/agent-kmodule-thin`: Image for the initContainer that is used for building the kernel module when you deploy the slim agent. It is a smaller version of the agent-kmodule image, it has less dependencies, and it removes unused packages.
+
+
 

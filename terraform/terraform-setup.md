@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2021
 lastupdated: "2021-09-30"
 
-keywords: IBM Cloud, monitoring, regions, endpoints
+keywords: IBM Cloud, monitoring, regions, terraform
 
 subcollection: monitoring
 
@@ -37,9 +37,11 @@ Complete the following steps to install the Terraform CLI:
     ```
     {: pre}
 
-2. Download the Terraform version that you want. For example, you can download `terraform_0.15.5_darwin_amd64.zip` for a MacOS.
-    
-    The IBM Cloud Provider plug-in for Terraform currently supports Terraform version 0.12.x, 0.13.x, and 0.14.x only. Make sure to select a supported Terraform version.
+2. Download the Terraform version that you want. 
+
+    For more information about the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform supported versions, see [Installing the Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli). 
+
+    For example, you can download `terraform_0.15.5_darwin_amd64.zip` for a MacOS.
 
 3. Extract the Terraform zip file and copy the files to your terraform directory.
 

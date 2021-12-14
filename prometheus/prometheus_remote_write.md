@@ -159,9 +159,24 @@ The following table lists the public {{site.data.keyword.mon_short}} ingestion e
 | `JP-TOK`              | `https://ingest.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | `US-EAST`             | `https://ingest.us-east.monitoring.cloud.ibm.com/prometheus/remote/write`  |
 | `AU-SYD`              | `https://ingest.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write`   |
-{: caption="Table 2. Prometheus remote write endpoints" caption-side="top"} 
+| `CA TOR`              | `https://ingest.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write`   |
+| `BR SAO`              | `https://ingest.br-sao.monitoring.cloud.ibm.com/prometheus/remote/write`   |
+{: caption="Table 2. Prometheus remote write public endpoints" caption-side="top"} 
 
-
+The following table lists the private {{site.data.keyword.mon_short}} ingestion endpoints that you can configure to collect metrics via Prometheus Remote Write:
+ 
+| Region                | Endpoint                            | 
+|-----------------------|-------------------------------------|
+| `US South`            | `https://ingest.private.us-south.monitoring.cloud.ibm.com/prometheus/remote/write` |
+| `EU-DE`               | `https://ingest.private.eu-de.monitoring.cloud.ibm.com/prometheus/remote/write`    |
+| `EU-GB`               | `https://ingest.private.eu-gb.monitoring.cloud.ibm.com/prometheus/remote/write`    |
+| `JP-OSA`              | `https://ingest.private.jp-osa.monitoring.cloud.ibm.com/prometheus/remote/write`   |
+| `JP-TOK`              | `https://ingest.private.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write`   |
+| `US-EAST`             | `https://ingest.private.us-east.monitoring.cloud.ibm.com/prometheus/remote/write`  |
+| `AU-SYD`              | `https://ingest.private.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write`   |
+| `CA TOR`              | `https://ingest.private.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write`   |
+| `BR SAO`              | `https://ingest.private.br-sao.monitoring.cloud.ibm.com/prometheus/remote/write`   |
+{: caption="Table 3. Prometheus remote write private endpoints" caption-side="top"} 
 
 ## Limitations 
 {: #prometheus_remote_write_limitations}
@@ -199,7 +214,7 @@ Complete the following steps:
 
 4. Check that you have access to a {{site.data.keyword.mon_short}} instance.
 
-5. If you use a firewall, check the firewall rules are opened for accessing the {{site.data.keyword.mon_short}} ingestion endpoint port 6443.
+5. If you use a firewall, check the firewall rules are opened for accessing the {{site.data.keyword.mon_short}} ingestion endpoint port TCP 443.
 
 
 ### Step 1. Create a Kubernetes Secret 
