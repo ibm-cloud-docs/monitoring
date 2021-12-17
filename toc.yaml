@@ -176,7 +176,7 @@ toc:
               - monitor/pd_sms.md
               - monitor/cf_sms.md
               - monitor/eventnotif.md
-              
+              - monitor/eventnotif_sms.md
           - topicgroup: 
               label: Events
               links: 
@@ -293,6 +293,12 @@ toc:
               - link: 
                   label: Integrations
                   href: https://docs.sysdig.com/en/integrations-for-sysdig-secure.html
+
+  - navgroup: 
+      id: tutorial
+      topics:
+      - tutorials/eventnotif_tutorial.md
+      - tutorials/eventnotif_sms_tutorial.md
 
   - navgroup: 
       id: reference
