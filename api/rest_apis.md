@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2021
+  years:  2018, 2022
 lastupdated: "2021-01-18"
 
 keywords: IBM Cloud, monitoring, alerting, api, curl
