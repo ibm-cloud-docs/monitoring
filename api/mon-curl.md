@@ -91,7 +91,7 @@ To get the {{site.data.keyword.mon_short}} token, see [Getting the {{site.data.k
 ## Running a cURL API query
 {: #mon-curl-query}
 
-To run a cURL API query and authrnticat by using the IAM token, complete the following steps:
+To run a cURL API query and authenticate by using the IAM token, complete the following steps:
 
 1. Set the IAM token.
 
