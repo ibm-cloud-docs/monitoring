@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2021-10-26"
+lastupdated: "2022-01-12"
 
 keywords: Monitoring release notes, Monitoring updates
 
@@ -19,6 +19,20 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 14 December 2021
+{: #monitoring-dec1421}
+{: release-note}
+
+SMS event notification support
+:   {{site.data.keyword.mon_full_notm}} now supports SMS notifications based on events.
+
+## 2 November 2021
+{: #monitoring-nov0221}
+{: release-note}
+
+Email event notification support
+:   {{site.data.keyword.mon_full_notm}} now supports email notifications based on events.
 
 ## 30 September 2021
 {: #monitoring-sep3021}
