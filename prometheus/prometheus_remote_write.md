@@ -512,19 +512,19 @@ Complete the following steps to check that you can monitor metrics that are coll
 
 3. Select **PromQL**.
 
-    ![Dashboard page](/images/dashboard-page.png "Dashboard page")    
+    ![Dashboard page](../images/dashboard-page.png "Dashboard page")    
 
 4. In the *Query* section, delete the default query and enter **container**, for example. The list of available metrics is displayed.
 
-    ![Query](/images/query1.png "Query")  
+    ![Query](../images/query1.png "Query")  
 
 5. Choose a metric and click **Run Query**. 
 
-    ![Query](/images/query.png "Query")  
+    ![Query](../images/query.png "Query")  
 
     You can see a metric that is collected by using the Prometheus remote write feature.
 
-    ![Metric](/images/metric.png "<etrics")    
+    ![Metric](../images/metric.png "<etrics")    
 
 6. Click **Save** to create the panel that monitors the metric in the dashboard.
 
