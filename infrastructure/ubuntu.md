@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2021-03-28"
+lastupdated: "2022-02-09"
 
 keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
 
@@ -18,6 +18,9 @@ subcollection: monitoring
 
 Use this tutorial to learn how to configure an Ubuntu host to forward metrics to the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
+
+These instructions are for Ubuntu systems but can be used for other Linux systems.
+{: note}
 
 To configure an Ubuntu server to forward metrics, you must install a monitoring agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics.
 

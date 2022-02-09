@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2021-03-28"
+lastupdated: "2022-02-09"
 
 keywords: IBM Cloud, monitoring, getting started
 
@@ -57,7 +57,7 @@ Complete one of the following tutorials to learn how to deploy a monitoring agen
 
 |	Tutorial                        | 
 |---------------------------------|
-| [Monitoring an Ubuntu Linux VPC server instance](/docs/monitoring?topic=monitoring-ubuntu#ubuntu) |
+| [Monitoring a Linux VPC server instance](/docs/monitoring?topic=monitoring-ubuntu#ubuntu) |
 | [Monitoring a Linux bare metal server](/docs/monitoring?topic=monitoring-baremetal_linux) | 
 | [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows) |
 | [Monitoring a Kubernetes cluster](/docs/monitoring?topic=monitoring-kubernetes_cluster) | 
