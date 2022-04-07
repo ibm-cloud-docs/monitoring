@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2021-08-27"
+lastupdated: "2022-04-07"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -164,46 +164,17 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 ## Container services
 {: #cloud_services_locations_container}
 
-You can choose the monitoring instance where you want to collect {{site.data.keyword.containerlong}} service metrics.
+{{site.data.keyword.registrylong_notm}}
+:   You can configure one monitoring instance in each region to collect platform metrics for {{site.data.keyword.registrylong}}. For information about the locations where the automatic collection of {{site.data.keyword.registryshort_notm}} service metrics is enabled, see [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor#registry_monitor_locations).
 
-You can choose the monitoring instance where you want to collect {{site.data.keyword.openshiftlong}} service metrics.
+{{site.data.keyword.containerlong_notm}}
+:   You can choose the monitoring instance where you want to collect {{site.data.keyword.containerlong}} service metrics.
 
-You can monitor {{site.data.keyword.satellitelong}} through the monitoring instance that is configured with **service platform logs** in the same region that your {{site.data.keyword.satelliteshort}} location is managed from.
+{{site.data.keyword.satellitelong_notm}}
+:   You can monitor {{site.data.keyword.satellitelong}} through the monitoring instance that is configured with **service platform metrics** in the same region that your {{site.data.keyword.satelliteshort}} location is managed from.
 
-You can configure one monitoring instance in each region to collect platform metrics for {{site.data.keyword.registrylong_notm}}. The following table lists the locations where the automatic collection of {{site.data.keyword.registryshort_notm}} service metrics is enabled. For more information, see [Monitoring metrics for {{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_monitor).
-
-| Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
-|---------------------------------------------------------------|---------------------|------------------|
-| {{site.data.keyword.registrylong_notm}} `[*]`     | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |          
-{: caption="Containers integration in Europe locations" caption-side="top"}
-{: #cs-cont-table-1}
-{: tab-title="Europe"}
-{: tab-group="cs_cont"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                        | `Dallas (us-south)` | `Sao Paulo (br-sao)` | `Toronto (ca-tor)` | `Washington (us-east)` |
-|------------------------------------------------|---------------------|----------------------|--------------------|------------------------|
-| {{site.data.keyword.registrylong_notm}} `[*]`   | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |   
-{: caption="Containers integration in America's locations" caption-side="top"}
-{: #cs-cont-table-2}
-{: tab-title="America"}
-{: tab-group="cs_cont"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                        | `Osaka (jp-osa)` | `Sydney (au-syd)` | `Tokyo (jp-tok)` |
-|------------------------------------------------|------------------|-------------------|------------------|
-| {{site.data.keyword.registrylong_notm}} `[*]` | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |      
-{: caption="Containers integration in AP locations" caption-side="top"}
-{: #cs-cont-table-3}
-{: tab-title="Asia Pacific"}
-{: tab-group="cs_cont"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-`[*]` {{site.data.keyword.registrylong_notm}} global registry metrics are available through the monitoring `Washington (us-east)` instance.
-
+{{site.data.keyword.openshiftlong_notm}}
+:   You can choose the monitoring instance where you want to collect {{site.data.keyword.openshiftlong}} service metrics.
 
 ## Developer tools
 {: #cloud_services_locations_devops}
