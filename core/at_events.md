@@ -97,6 +97,9 @@ The following table lists the {{site.data.keyword.cloud}} locations and the {{si
 | `Sydney (au-syd)`           | `Sydney (au-syd)` |
 | `Frankfurt (eu-de)`         | `Frankfurt (eu-de)` |
 | `London (eu-gb)`            | `London (eu-gb)` |
+| `Osaka (jp-osa)`            | `Osaka (jp-osa)` |
+| `Toronto (ca-tor)`          | `Toronto (ca-tor)` |
+| `Sao Paulo (br-sao)`        | `Sao Paulo (br-sao)` |
 {: caption="Corresponding {{site.data.keyword.at_short}} instance and {{site.data.keyword.mon_full_notm}} location." caption-side="top"}
 
 
