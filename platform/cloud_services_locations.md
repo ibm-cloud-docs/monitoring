@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2022-04-07"
+lastupdated: "2022-05-17"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -13,7 +13,7 @@ subcollection: monitoring
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Cloud services by location
+# Services generating metrics by location
 {: #cloud_services_locations}
 
 List of locations where {{site.data.keyword.cloud_notm}} services are enabled to send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the monitoring instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
@@ -182,7 +182,8 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
 | {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
-| {{site.data.keyword.appconfig_full}}    |                                                 |![Checkmark icon](../images/checkmark-icon.svg) |  
+| {{site.data.keyword.appconfig_full}}    |                                                 |![Checkmark icon](../images/checkmark-icon.svg) | 
+| {{site.data.keyword.en_full}}    |                                                 |![Checkmark icon](../images/checkmark-icon.svg) | 
 {: caption="Developer tools and DevOps services in Europe locations" caption-side="top"}
 {: #cs-devops-table-1}
 {: tab-title="Europe"}
@@ -193,7 +194,8 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
 | {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
-| {{site.data.keyword.appconfig_full}}    | ![Checkmark icon](../images/checkmark-icon.svg) |                             | 
+| {{site.data.keyword.appconfig_full}}    | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |                       
+| {{site.data.keyword.en_full}}    | ![Checkmark icon](../images/checkmark-icon.svg) |                             | 
 {: caption="Developer tools and DevOps services in America's locations" caption-side="top"}
 {: #cs-devops-table-2}
 {: tab-title="America"}
@@ -205,6 +207,7 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 |------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
 | {{site.data.keyword.contdelivery_full}}        |![Checkmark icon](../images/checkmark-icon.svg) |     |  |  |                                                                       
 | {{site.data.keyword.appconfig_full}}           |                                               | ![Checkmark icon](../images/checkmark-icon.svg) |    |  |  
+| {{site.data.keyword.en_full}}           |                                               | ![Checkmark icon](../images/checkmark-icon.svg) |    |  | 
 {: caption="Developer tools and DevOps services in AP locations" caption-side="top"}
 {: #cs-devops-table-3}
 {: tab-title="Asia Pacific"}
