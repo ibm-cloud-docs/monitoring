@@ -24,7 +24,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #monitoring-may1822}
 {: release-note}
 
-{{site.data.keyword.mon_full}} has released Advisor to help and simplify how you monitor and troubleshoot the health, risk, and capacity of hosts and Kubernetes clusters.  [Learn more](/docs/monitoring?topic=monitoring-monitoring#monitoring_advisor).
+{{site.data.keyword.mon_full_notm}} has released Advisor to help and simplify how you monitor and troubleshoot the health, risk, and capacity of hosts and Kubernetes clusters.  [Learn more](/docs/monitoring?topic=monitoring-monitoring#monitoring_advisor).
 
 
 ## 14 December 2021
