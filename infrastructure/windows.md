@@ -8,6 +8,11 @@ keywords: IBM Cloud, monitoring, windows
 
 subcollection: monitoring
 
+content-type: tutorial
+services: monitoring
+account-plan: lite
+completion-time: 1h
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -15,6 +20,9 @@ subcollection: monitoring
 
 # Monitoring a Windows environment
 {: #windows}
+{: toc-content-type="tutorial"}
+{: toc-services="monitoring"}
+{: toc-completion-time="1h"}
 
 The standard monitoring agent cannot be installed on a Windows platform. In order to monitor a Windows system with {{site.data.keyword.mon_full_notm}}, you can leverage the [Prometheus Windows Exporter](https://promcat.io/apps/windows){: external} to perform the collection of the metrics on the system.
 {: shortdesc}
@@ -28,8 +36,9 @@ Complete the following steps to configure the following Windows images to send m
 * Windows Server 2019 Standard Edition (64 bit)
 * Windows Server 2016 Standard Edition (64 bit)
 
-## Step 1. Configure the Prometheus Windows exporter
+## Configure the Prometheus Windows exporter
 {: #windows_step1}
+{: step}
 
 Configure the [Prometheus `windows_exporter`](https://github.com/prometheus-community/windows_exporter){: external} to collect Windows system metrics.
 
@@ -75,8 +84,9 @@ Complete the following steps to configure the Prometheus Windows exporter in you
     ```
     {: codeblock}
 
-## Step 2. Configure network settings
+## Configure network settings
 {: #windows_step2}
+{: step}
 
 Complete the following steps:
 1. Enable the Windows firewall to allow access to `windows_exporter-0.16.0-amd64.exe`.
@@ -86,8 +96,9 @@ Complete the following steps:
     If you use private endpoints, add an inbound rule to the security group for port `9182` with `source type = Security Group` and choose the security group for the Windows system.
 
 
-## Step 3. Choose the method to collect metrics
+## Choose the method to collect metrics
 {: #windows_step3}
+{: step}
 
 
 ### Option 1. Collect metrics by running a monitoring agent on a Linux system
@@ -295,12 +306,13 @@ Complete the following steps:
    {: pre}
 
 
-## Step 4. Monitor Windows system metrics
+## Monitor Windows system metrics
 {: #windows_step4}
+{: step}
 
 To monitor Windows systems metrics, you can use the default dashboard `Windows Node Overview`  to view the Windows metrics. This default dashboard is located in the section **My Dashboards**.
 
-![Example of a Windows metrics dashboard](images/windows_dashboard.png "Example of a Windows metrics dashboard")
+![Example of a Windows metrics dashboard](images/windows_dashboard.png "Example of a Windows metrics dashboard"){: caption="Figure 1. Example of a Windows metrics dashboard" caption-side="bottom"}
 
 Run the following command to install the default dashboard.
 
@@ -318,8 +330,9 @@ When the dashboard is installed it is only available to be viewed by the user wh
 {: important}
 
 
-## Step 5. [Optional] Verifying uptime for Windows with Prometheus Blackbox exporter
+## [Optional] Verifying uptime for Windows with Prometheus Blackbox exporter
 {: #windows_step5}
+{: step}
 
 You can configure the Prometheus Blackbox exporter to get information about the availability of a Windows system.
 

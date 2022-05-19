@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2021-03-28"
+lastupdated: "2022-04-19"
 
 keywords: IBM Cloud, monitoring, troubleshooting
 
@@ -79,4 +79,14 @@ When the authorization method that is allowed in a {{site.data.keyword.mon_full_
 First, [check the instance authorization methods that are allowed](/docs/monitoring?topic=monitoring-iam_instance_auth#iam_instance_auth_step1).
 
 Then, review [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam) and [Token headers](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-sysdig) before you retry the request.
+
+## Are your dashboards, alerts, and scripts no longer returning what you intended?
+{: #troubleshoot-entry-5}
+
+{{site.data.keyword.mon_full_notm}} has changed its metrics store. This change has deprecated and changed a number of metrics and labels and has changed metric behavior.  See [Enhanced metric store](/docs/monitoring?topic=monitoring-metrics_store) for details on the new metric store.
+
+## Where is the topology map?
+{: #troubleshoot-entry-6}
+
+With the {{site.data.keyword.mon_full_notm}} change the metrics store, the topology map has been deprecated. See [Enhanced metric store](/docs/monitoring?topic=monitoring-metrics_store) for details on the new metric store.
 

@@ -2,18 +2,26 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2021-03-28"
+lastupdated: "2022-01-20"
 
 keywords: IBM Cloud, monitoring, ubuntu, analyze metrics, ipmi
 
 subcollection: monitoring
 
+content-type: tutorial
+services: monitoring
+account-plan: lite
+completion-time: 1h
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring the Prometheus IPMI Exporter to monitor IPMI metrics
+# Collecting IPMI device sensor metrics
 {: #ipmi}
+{: toc-content-type="tutorial"}
+{: toc-services="monitoring"}
+{: toc-completion-time="1h"}
 
 In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics. 
 {: shortdesc}
@@ -24,10 +32,7 @@ In addition to the set of metrics that are automatically collected by the monito
 
 The following figures shows different configurations that you can use to monitor sensor metrics from hosts that can be available in IBM Cloud or outside the IBM Cloud:
 
-![IPMI components](images/ipmi-kube1.svg "IPMI components: IPMI exporter and Kubernetes agent in different hosts")
-
-![IPMI components](images/ipmi-kube2.svg "IPMI components: IPMI exporter and Kubernetes agent in the same host")
-
+![IPMI components](images/ipmi-kube1.svg "IPMI components: IPMI exporter and Kubernetes agent in different hosts"){: caption="Figure 1. IPMI components: IPMI exporter and Kubernetes agent in different hosts" caption-side="bottom"}
 
 You can collect the following metrics when you configure the IPMI exporter in a server:
 
@@ -71,16 +76,18 @@ For more information, see [Prometheus IPMI Exporter](https://github.com/soundclo
 Complete the following steps to configure a monitoring agent to collect IPMI metrics from 1 or more hosts:
 
 
-## Step 1. Configure a monitoring agent
+## Configure a monitoring agent
 {: #ipmi_step1}
+{: step}
 
 To monitor 1 or more hosts, you must configure a monitoring agent. The agent collects automatically a set of metrics that you can monitor through the monitoring UI.
 
 See [Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/monitoring?topic=monitoring-config_agent) and choose the monitoring agent that you want to configure to monitor a host.
 
 
-## Step 2. Configuring the Prometheus IPMI Exporter
+## Configuring the Prometheus IPMI Exporter
 {: #ipmi_step2}
+{: step}
 
 You can install the IPMI exporer in 1 or more hosts to collect IPMI metrics.
 {: note}
@@ -189,8 +196,9 @@ For each host that you want to collect IPMI metrics, complete the following step
 
 
 
-## Step 3. Configure network settings
+## Configure network settings
 {: #ipmi_step3}
+{: step}
 
 If you want to collect IPMI metrics from remote servers, complete the following steps:
 
@@ -202,8 +210,9 @@ If you want to collect IPMI metrics from remote servers, complete the following 
 
 
 
-## Step 4. Update the monitoring agent to collect IPMI metrics
+## Update the monitoring agent to collect IPMI metrics
 {: #ipmi_step4}
+{: step}
 
 You must configure the monitoring agent to enable collection of IPMI metrics.
 
@@ -336,8 +345,9 @@ Complete the following steps to update the monitoring agent to collect IPMI metr
 
 
 
-## Step 5. Check that you are getting IPMI metrics
+## Check that you are getting IPMI metrics
 {: #ipmi_step5}
+{: step}
 
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
@@ -357,8 +367,7 @@ Complete the following steps to update the monitoring agent to collect IPMI metr
 
 For example, you can create a dashboard that looks as follows:
 
-![Sample IPMI dashboard](images/ipmi-ui-1.png "Sample IPMI dashboard")
-
+![Sample IPMI dashboard](images/ipmi-ui-1.png "Sample IPMI dashboard"){: caption="Figure 2. Sample IPMI dashboard" caption-side="bottom"}
 
 
 

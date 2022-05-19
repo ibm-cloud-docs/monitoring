@@ -8,6 +8,11 @@ keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
 
 subcollection: monitoring
 
+content-type: tutorial
+services: monitoring
+account-plan: lite
+completion-time: 1h
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -15,6 +20,9 @@ subcollection: monitoring
 
 # Monitoring an Ubuntu Linux VPC server instance
 {: #ubuntu}
+{: toc-content-type="tutorial"}
+{: toc-services="monitoring"}
+{: toc-completion-time="1h"}
 
 Use this tutorial to learn how to configure an Ubuntu host to forward metrics to the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
@@ -46,8 +54,9 @@ Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each o
 
 The {{site.data.keyword.cloud_notm}} CLI must be installed. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-## Step 1. Provision an Ubuntu Linux VPC server instance
+## Provision an Ubuntu Linux VPC server instance
 {: #ubuntu_step1}
+{: step}
 
 If you have an existing Ubuntu Linux virtual server instance you want to monitor, you can skip this step.
 
@@ -55,8 +64,9 @@ If you have an existing Ubuntu Linux virtual server instance you want to monitor
 
 2. If you don't have an Ubuntu Linux virtual server instance, [create an Umbuntu Linux virtual server instance by using the UI and selecting **Ubuntu Linux** as the **Operating System**](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-virtual-servers).
 
-## Step 2. Provision an {{site.data.keyword.mon_full_notm}} instance
+## Provision an {{site.data.keyword.mon_full_notm}} instance
 {: #ubuntu_step2}
+{: step}
 
 To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
 
@@ -96,8 +106,9 @@ After you provision an instance, the **Monitoring** dashboard opens.
 
 **Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/monitoring?topic=monitoring-provision#provision_cli).
 
-## Step 3. Configure your Ubuntu server to send metrics to your instance
+## Configure your Ubuntu server to send metrics to your instance
 {: #ubuntu_step3}
+{: step}
 
 To configure your Ubuntu server to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a monitoring agent. 
 
@@ -155,8 +166,9 @@ Complete the following steps from a command line:
       {: pre}
 
 
-## Step 4. Launch the monitoring UI
+## Launch the monitoring UI
 {: #ubuntu_step4}
+{: step}
 
 Complete the following steps to launch the web UI:
 
@@ -179,8 +191,9 @@ However, if the monitoring agent is not installed successfully, points to the wr
 You only can have one web UI session open per instance per browser.
 {: tip}
 
-## Step 5. Monitor your Ubuntu server
+## Monitor your Ubuntu server
 {: #ubuntu_step5}
+{: step}
 
 You can monitor your Ubuntu server in the **Overview** view that is available through the Web UI. This view is your starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI.
 

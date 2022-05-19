@@ -8,12 +8,20 @@ keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
 
 subcollection: monitoring
 
+content-type: tutorial
+services: monitoring
+account-plan: lite
+completion-time: 1h
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
 # Monitoring a Linux bare metal server
 {: #baremetal_linux}
+{: toc-content-type="tutorial"}
+{: toc-services="monitoring"}
+{: toc-completion-time="1h"}
 
 You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by configuring a monitoring agent in your server. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics. You view metrics via the web-based user interface.
 {: shortdesc}
@@ -87,8 +95,9 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
        For example: `ssh root@45.123.122.12`
 
 
-## Step 1. Configure a monitoring agent to collect metrics from the bare metal server
+## Configure a monitoring agent to collect metrics from the bare metal server
 {: #baremetal_linux_step1}
+{: step}
 
 You must install a monitoring agent to collect and forward metrics from a bare metal server to an {{site.data.keyword.mon_full_notm}} instance. 
 
@@ -125,8 +134,9 @@ Complete the following steps from the command line to install a monitoring agent
     {: screen}
 
 
-## Step 2. Launch the monitoring UI to verify that you are getting data to monitor the bare metal server
+## Launch the monitoring UI to verify that you are getting data to monitor the bare metal server
 {: #baremetal_linux_step2}
+{: step}
 
 Complete the following steps to launch the web UI:
 
@@ -146,7 +156,7 @@ The first time that you launch the monitoring UI, you might get a set of screens
 
 If the monitoring agent is configured successfully, in the **Explore** view you can see your bare metal server in the **Hosts and Containers** section.
 
-![Explore view](images/monitor-baremetal-img1.png "Explore view")
+![Explore view](images/monitor-baremetal-img1.png "Explore view"){: caption="Explore view" caption-side="bottom"}
 
 It may take some time before you see the bare metal entry while the information is initally collected and processed by the monitoring agent.
 {: note}
@@ -156,8 +166,9 @@ You only can monitor one instance per browser. You could have multiple tabs for 
 
 
 
-## Step 3. [Optional] Configure the Prometheus IPMI Exporter to monitor sensor metrics
+## [Optional] Configure the Prometheus IPMI Exporter to monitor sensor metrics
 {: #baremetal_linux_step3}
+{: step}
 
 In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server. 
 
@@ -206,7 +217,7 @@ For more information, see [Prometheus IPMI Exporter](https://github.com/soundclo
  
 Complete the following steps to configure the Prometheus IPMI Exporter:
 
-### Step 3.1. Install the Prometheus IPMI exporter
+### Install the Prometheus IPMI exporter
 {: #baremetal_linux_step3_1}
 
 Complete the following steps:
@@ -309,7 +320,7 @@ Complete the following steps:
 
 
 
-### Step 3.2. Install the Prometheus exporter
+### Install the Prometheus exporter
 {: #baremetal_linux_step3_2}
 
 The monitoring agent automatically collects metrics from Prometheus exporters. Therefore, to collect metrics from your IPMI exporter, you must also configure the Prometheus exporter.
@@ -404,7 +415,7 @@ Complete the following steps to run the Prometheus exporter:
     
 
 
-### Step 3.3. Configure network settings
+### Configure network settings
 {: #baremetal_linux_step3_3}
 
 If you want to collect metrics from remote servers, complete the following steps:
@@ -417,7 +428,7 @@ If you want to collect metrics from remote servers, complete the following steps
 
 
 
-### Step 3.4. Update the monitoring agent that is running in the bare metal server
+### Update the monitoring agent that is running in the bare metal server
 {: #baremetal_linux_step3_4}
     
 Complete the following steps:
@@ -467,10 +478,11 @@ Complete the following steps:
 
 
 
-## Step 4. Verify that you can see the prometheus ipmi metrics
+## Verify that you can see the prometheus ipmi metrics
 {: #baremetal_linux_step4}
+{: step}
 
-Cpmplete the following steps:
+Complete the following steps:
 
 1. Click the **Menu** icon ![Menu icon](../images/icon_hamburger.svg) &gt; **Observability**. 
 
@@ -480,33 +492,34 @@ Cpmplete the following steps:
 
 4. In the `Explore` view, select **Hosts and Containers**. Then, select the bare metal server that you want to monitor.
 
-    ![Hosts and Containers view](images/monitor-baremetal-img2.png "Hosts and Containers view")
+    ![Hosts and Containers view](images/monitor-baremetal-img2.png "Hosts and Containers view"){: caption="Hosts and Containers view" caption-side="bottom"}
 
 5. Open the option to **select more Dashboards and Metrics** . Then, enter in the search bar **ipmi**. The list of IPMI metrics is displayed.
 
-    ![IPMI metrics](images/monitor-baremetal-img3.png "IPMI metrics")
+    ![IPMI metrics](images/monitor-baremetal-img3.png "IPMI metrics"){: caption="IPMI metrics" caption-side="bottom"}
 
 
-## Step 5. Configure a dashboard to analyze the IPMI status of your Bare metal
+## Configure a dashboard to analyze the IPMI status of your Bare metal
 {: #baremetal_linux_step5}
+{: step}
 
 To create a dashboard to monitor the IPMI metrics, complete the following steps:
 
 1. Select the `ipmi_up` metric.
 
-    ![ipmi_up metris](images/monitor-baremetal-img4.png "ipmi_up metric")
+    ![ipmi_up metrics](images/monitor-baremetal-img4.png "ipmi_up metrics"){: caption="ipmi_up metrics" caption-side="bottom"}
 
 2. Select the 3 dots icon. Then, select **Copy to dashboard**.
 
-    ![Copy dashboard](images/monitor-baremetal-img5.png "Copy dashboard")
+    ![Copy dashboard](images/monitor-baremetal-img5.png "Copy dashboard"){: caption="Copy dashboard" caption-side="bottom"}
 
 3. Enter the name **[Bare Metal] IPMI monitoring**. Then, click **Copy and Open**.
 
-    ![Copy and open a dashboard](images/monitor-baremetal-img6.png "Copy and open a dashboard")
+    ![Copy and open a dashboard](images/monitor-baremetal-img6.png "Copy and open a dashboard"){: caption="Copy and open a dashboard" caption-side="bottom"}
 
     The dashboard opens.
 
-    ![IPMI custom dashboard](images/monitor-baremetal-img7.png "IPMI custom dashboard")
+    ![IPMI custom dashboard](images/monitor-baremetal-img7.png "IPMI custom dashboard"){: caption="IPMI custom dashboard" caption-side="bottom"}
 
 4. Add more IPMI metrics to the **[Bare Metal] IPMI monitoring** custom dashboard. Repeat the steps for each of the IPMI metrics that you want to monitor.
 

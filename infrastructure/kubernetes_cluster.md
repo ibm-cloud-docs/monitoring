@@ -8,6 +8,11 @@ keywords: IBM Cloud, monitoring, kubernetes, analyze metrics
 
 subcollection: monitoring
 
+content-type: tutorial
+services: monitoring
+account-plan: lite
+completion-time: 1h
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -15,6 +20,9 @@ subcollection: monitoring
 
 # Monitoring a Kubernetes cluster
 {: #kubernetes_cluster}
+{: toc-content-type="tutorial"}
+{: toc-services="monitoring"}
+{: toc-completion-time="1h"}
 
 Use this tutorial to learn how to configure an {{site.data.keyword.containerlong}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.
 {: shortdesc}
@@ -23,7 +31,7 @@ To configure a cluster to forward metrics, you must install a monitoring agent o
 
 You view metrics via the web-based user interface.
 
-![Components overview on the {{site.data.keyword.cloud_notm}}](images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}")
+![Components overview on the {{site.data.keyword.cloud_notm}}](images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}"){: caption="Figure 1. Components overview on the {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
 ## Objectives
 {: #kubernetes_cluster_objectives}
@@ -60,8 +68,9 @@ For more information about the {{site.data.keyword.containerlong}} IAM roles, se
 
 
 
-## Step 1. Provision an {{site.data.keyword.mon_full_notm}} instance
+## Provision an {{site.data.keyword.mon_full_notm}} instance
 {: #kubernetes_cluster_step1}
+{: step}
 
 In this getting tutorial, instructions are provided to provision an instance of the {{site.data.keyword.mon_full_notm}} in the US-South region. For more information about supported regions, see [Regions](/docs/monitoring?topic=monitoring-endpoints).
 
@@ -102,8 +111,9 @@ To provision an instance through the CLI, see [Provisioning an instance through 
 {: note}
 
 
-## Step 2. Configure your Kubernetes cluster to send metrics to your instance
+## Configure your Kubernetes cluster to send metrics to your instance
 {: #kubernetes_cluster_step2}
+{: step}
 
 To configure your Kubernetes cluster to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a monitoring agent pod on each node of your cluster. The monitoring agent is installed via a DaemonSet which ensures an instance of the agent is running on every worker node. The monitoring agent collects metrics from the pod where it is installed, and forwards the data to your instance.
 
@@ -166,8 +176,9 @@ To configure your Kubernetes cluster to forward metrics to your {{site.data.keyw
     The deployment is successful when you see one or more `sysdig-agent` pods. The number of `sysdig-agent` pods equals the number of worker nodes in your cluster. All pods must be in a `Running` state.
 
 
-## Step 3. Launch the monitoring UI
+## Launch the monitoring UI
 {: #kubernetes_cluster_step3}
+{: step}
 
 To launch the monitoring UI through the {{site.data.keyword.cloud_notm}} console, complete the following steps.
 
@@ -202,8 +213,9 @@ You can try the following actions:
 
 
 
-## Step 4. Monitor your cluster
+## Monitor your cluster
 {: #kubernetes_cluster_step4}
+{: step}
 
 You can monitor your cluster in the **Explore** view that is available through the monitoring UI. This view is the default homepage and your starting point to troubleshoot and monitor your cluster infrastructure and resources.
 
@@ -236,7 +248,7 @@ For example, to configure color-coding for a column, complete the following step
 
 To view more details about a particular worker node, click on the infrastructure entry and the *Overview by Host* dashboard opens in the table. You can explore different dashboards and metrics by clicking on the ![switch dashboard](../images/switch_dashboards_1.png) icon. Notice that you can only select metrics and dashboards that are relevant to the selected worker node.
 
-To return to the full _Explore table_, click the **X (Back to Explore Table)** button.
+To return to the full *Explore table*, click the **X (Back to Explore Table)** button.
 
 
 

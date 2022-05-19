@@ -38,6 +38,24 @@ You will need to configure:
 Check the following prereqs before managing streaming:
 * [Create an {{site.data.keyword.messagehub}} instance.](/docs/EventStreams?topic=EventStreams-connecting#provision_instance).
 * Check the limitations of the service plans. For more information, see [Limits and quotas](https://cloud.ibm.com/docs/EventStreams?topic=EventStreams-kafka_quotas).
+* Make sure you have the appropriate permissions.
+
+    * You must have the **manager** role to configure streaming.
+    * When you configure streaming, the {{site.data.keyword.mon_full_notm}} instance and the {{site.data.keyword.messagehub}} instance must be provisioned in the same account.
+    * To connect the {{site.data.keyword.mon_full_notm}} instance to the {{site.data.keyword.messagehub}} instance, you need the following information:
+
+        * You must have the **manager** role to configure streaming in the {{site.data.keyword.mon_full_notm}} instance. This role includes the **logdna.dashboard.manage** IAM action role that allows a user to perform admin tasks such as configure streaming.
+        * When you configure streaming, the {{site.data.keyword.mon_short}} instance and the {{site.data.keyword.messagehub}} instance must be provisioned in the same account.
+        * To connect the {{site.data.keyword.mon_short}} instance to the {{site.data.keyword.messagehub}} instance, you need the following information:
+
+            * Endpoint URLs to call the APIs
+
+            * Credentials for authentication
+
+    * To create a topic in {{site.data.keyword.messagehub}}, you must have the **manager** role. This role includes the **messagehub.topic.manage** IAM action role that allows an app or user to create or delete topic.
+
+    * The credential that {{site.data.keyword.mon_short}} uses to publish data in {{site.data.keyword.messagehub}} must have the **writer** role. This role includes the **messagehub.topic.write** IAM action role that allows an app or service to write data to 1 or more topics.
+
 
 The instructions on this topic are based on using an Enterprise plan.
 {: note}
@@ -173,7 +191,7 @@ To configure {{site.data.keyword.mon_full_notm}} metric data streaming, do the f
 
     For **Scope**, select one or more labels to filter the defined metrics.  
     
-    **Metrics** must specify the complete metric name using PromQL.  <!-- See [Mapping Between Classic Metrics and PromQL Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics-dictionary/metrics-and-label-mapping/mapping-between-classic-metrics-and-promql-metrics/){: external} for more information on specifying metric names.  -->
+    **Metrics** must specify the complete metric name using PromQL.  <!-- See [Mapping Between Classic Metrics and PromQL Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics-dictionary/metrics-and-label-mapping/mapping-between-classic-metrics-and-promql-metrics/){: external} for more information on specifying metric names. -->
 
 8. Click **Save**.
 

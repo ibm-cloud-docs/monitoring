@@ -8,12 +8,20 @@ keywords: IBM Cloud, monitoring, backbox, prometheus
 
 subcollection: monitoring
 
+content-type: tutorial
+services: monitoring
+account-plan: lite
+completion-time: 1h
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
 # Collecting availability metrics by using the Prometheus Blackbox exporter
 {: #blackbox}
+{: toc-content-type="tutorial"}
+{: toc-services="monitoring"}
+{: toc-completion-time="1h"}
 
 The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within {{site.data.keyword.mon_full_notm}} to alert users on the availability of the endpoints.
 {: shortdesc}
@@ -22,16 +30,18 @@ The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP,
 Complete the following steps to configure the Prometheus Blackbox Exporter:
 
 
-## Step 1. Configure a monitoring agent to collect metrics
+## Configure a monitoring agent to collect metrics
 {: #blackbox_step1}
+{: step}
 
 To monitor 1 or more hosts, you must configure a monitoring agent. The agent collects automatically a set of metrics that you can monitor through the monitoring UI.
 
 See [Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/monitoring?topic=monitoring-config_agent) and choose the monitoring agent that you want to configure to monitor a host.
 
 
-## Step 2. Install the Prometheus Blackbox exporter
+## Install the Prometheus Blackbox exporter
 {: #blackbox_step2}
+{: step}
 
 Complete the following steps to run the Blackbox exporter as a docker container:
 
@@ -66,8 +76,9 @@ Complete the following steps to run the Blackbox exporter as a docker container:
 
 
 
-## Step 3. Configure network settings
+## Configure network settings
 {: #Blackbox_step3}
+{: step}
 
 If you want to collect metrics from remote servers, complete the following steps:
 
@@ -79,8 +90,9 @@ If you want to collect metrics from remote servers, complete the following steps
 
 
 
-## Step 4. Update the monitoring agent that is running in the server
+## Update the monitoring agent that is running in the server
 {: #Blackbox_step4}
+{: step}
 
 Run the following command to edit the configmap and add information about the Blackbox targets that you want to monitor by using the Kubernetes monitoring agent:
 
@@ -174,8 +186,9 @@ When you save the file, changes are applied.
 
 
 
-## Step 5. Configure the default dashboard and alerts to analyze the Blackbox status of your server
+## Configure the default dashboard and alerts to analyze the Blackbox status of your server
 {: #Blackbox_step5}
+{: step}
 
 Complete the following steps:
 
@@ -196,6 +209,6 @@ Complete the following steps:
 
 For example, you can create a dashboard that looks as follows:
 
-![Sample Blackbox dashboard](images/blackbox-ui-1.png "Sample Blackbox dashboard")
+![Sample Blackbox dashboard](images/blackbox-ui-1.png "Sample Blackbox dashboard"){: caption="Figure 1. Sample Blackbox dashboard" caption-side="bottom"}
 
 

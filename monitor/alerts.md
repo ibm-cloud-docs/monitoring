@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2021-11-15"
+lastupdated: "2022-03-12"
 
 keywords: IBM Cloud, monitoring, alerts
 
@@ -12,11 +12,17 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Working with alerts
+# Working with alerts and events
 {: #alerts}
 
 In the {{site.data.keyword.mon_full_notm}} service, you can configure single alerts and multi-condition alerts to notify about problems that may require attention. When an alert is triggered, you can be notified through 1 or more notification channels. An alert definition can generate multi-channel notifications.
 {: shortdesc}
+
+An alert is a notification event that you can use to warn about situations that require attention. Each alert has a severity status. This status informs you about the criticality of the information it reports on. 
+
+When you define an alert, you must define the condition that triggers the notification, and one or more notification channels through which you want to be notified. You must also define the severity of the alert, and the type of alert. For more information about how to configure an alert, see [Configuring an alert](/docs/monitoring?topic=monitoring-alert-config).
+
+By default, severity is set to *warning*. You can set the severity of an alert to any of the following values: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *informational*, debug* 
 
 You can define an alert on a single metric or a set of metrics to notify of events or issues that you want to monitor.
 - You can define a single condition alert.
@@ -27,6 +33,11 @@ You can define an alert on a single metric or a set of metrics to notify of even
 - You can configure multiple notification channels per alert.
 - Alerts are executed in 1 minute or less from receipt, with the option to configure the trigger wait time by hour or day.
 - For PromQL alerts only, you can optionally configure a 0 minute wait time.
+
+
+You can enable predefined alerts, modify alerts, and create custom alerts in the web UI and by using the {{site.data.keyword.mon_full_notm}} API.
+
+You manage alerts in the *Alerts* view of the web UI. You can configure the table columns that are displayed in the *Alerts* view. Valid column options are *Name*, *Scope*, *Alert When*, *Segment By*, *Notifications*, *Enabled*, *Modified*, *Captures*, *Channels*, *Created*, *Description*, *Email recipients*, *For at least*, *OpsGenie*, *PagerDuty*, *Severity*, *Slack*, *WebHook*, *SNS topics*, *Type*, and *VictorOps*.
 
 ## Types of alerts
 {: #alerts_types}
@@ -73,64 +84,30 @@ You can configure any of the following notification channels:
 - WebHook
 
 
-## Configuring an alert
-{: #alerts_configure}
-
-Complete the following steps to configure an alert:
-
-### Step 1.  Select the alert type
-{: #alerts_configure_step1}
-
-From the *Alert* section of the UI, select **Add Alert**. Then, choose the alert type.
-
-### Step 2. Name the alert
-{: #alerts_configure_step2}
-
-Enter a name for the alert.
-
-You can also add a description for the alert and the name of an alert group if you want to group you alerts.  If an alert group is not specified, the alert will be created in the default group. 
 
 
-### Step 3. Define the severity
-{: #alerts_configure_step3}
 
-Add a severity level. Valid severity values are `info`, `low`, `medium`, and `high`.
+## Events
+{: #alerts_events}
 
+An event is a notification that informs about something that occurs in any of the nodes that forward data to your {{site.data.keyword.mon_short}} instance. Use events to review, track, and resolve issues.
+{: note}
 
-### Step 4. Define the metric section
-{: #alerts_configure_step4}
+The following list outlines different types of events: 
 
-1. Select a metric (entity) that you want to monitor.
-2. Define the alert condition. Choose any of the following options:
+* *Alert events* are events that are triggered by user-configured alerts.
+* *Infrastructure-based events* are events that are collected from Docker and Kubernetes nodes. By default, the monitoring agent automatically discovers and collects data from a select group of events. You can edit the agent configuration file to enable more events.
+* *Custom events* that you configure through any of the following integrations: Slackbot, pre-built Python scripts, custom user-created Python scripts, or cURL requests.
 
-    Option 1: Choose a metric and a single condition such as `average`, `sum`, `minimum` or `maximum`.
+By default, an event has a state: 
+* **Active**: This state indicates that the circumstances that triggered the event remain in place, for example, a node continues to be down.
+* **OK**: This state indicates that the situation is back to normal, for example, a node is up and running.
 
-    Option 2: Choose **Create multi-condition alerts**. Enter the condition, for example, `min(min(cpu.used.percent)) < = 50 OR max(max(cpu.used.percent)) >= 80`.
+You manage events in the *Events* section of the web UI. 
+* You can view alert events through the *Alert Events* tab.
+* You can view infrastructure-based events through the *Custom events* tab.
+* You can view custom events through the *Custom events* tab.
+* You can send custom events to any of your teams by using the [API token for that team](/docs/monitoring?topic=monitoring-api_token#api_token). For more information, see [Custom events)](https://docs.sysdig.com/en/events.html){: external}.
+* You can set the event as **Resolved** to notify other users that the issue has been addressed instead of waiting for the status to be set to **OK**.
+{: #tip}
 
-    ![Multi-condition alert](images/multi-condition-alerts.png "Multi-condition alert")
-
-### Step 5. Define the scope
-{: #alerts_configure_step5}
-
-Indicate the scope of the alert. By default, the scope is set to `everywhere`. However, you can limit the scope, for example, you can limit the scope to a specific component of the infrastructure.
-
-### Step 6. Define the trigger condition
-{: #alerts_configure_step6}
-
-Choose any of the following options:
-
-- Choose **Single Alert** when you want this alert to be triggered when the condition is met for your entire scope.
-
-- Choose **Multiple Alert** and configure 1 or more segments when you want this alert to be triggered when the condition is met for in any or every segment.
-
-
-### Step 7. Configure the notify section
-{: #alerts_configure_step7}
-
-Select 1 or more notification channels.
-
-By default, you get a notification in the *Events* section.
-
-You can enable multi-channel notifications by enabling 1 or more notification channels.
-
-Optionally, you can customize the information that is included in a notification to provide more context for the alert.

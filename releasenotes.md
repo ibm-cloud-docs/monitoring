@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2022-01-12"
+lastupdated: "2022-05-16"
 
 keywords: Monitoring release notes, Monitoring updates
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 18 May 2022
+{: #monitoring-may1822}
+{: release-note}
+
+{{site.data.keyword.mon_full}} has released Advisor to help and simplify how you monitor and troubleshoot the health, risk, and capacity of hosts and Kubernetes clusters.  [Learn more](/docs/monitoring?topic=monitoring-monitoring#monitoring_advisor).
+
 
 ## 14 December 2021
 {: #monitoring-dec1421}
@@ -39,7 +46,7 @@ Email event notification support
 {: release-note}
 
 Metrics streaming support
-: You can use {{site.data.keyword.mon_full_notm}} to push a set of selected metrics to a Kafka service such as Event Streams. [Learn more about metric streaming](/docs/monitoring?topic=monitoring-data_streaming)
+:   You can use {{site.data.keyword.mon_full_notm}} to push a set of selected metrics to a Kafka service such as Event Streams. [Learn more about metric streaming](/docs/monitoring?topic=monitoring-data_streaming)
 
 ## 8 September 2021
 {: #monitoring-sep0821}
@@ -543,6 +550,13 @@ Major functional changes
 
 Dashboard support for Istio 1.5
 :   Addition of dashboard support for Istio 1.5, in addition to Istio 1.0.
+
+## 8 April 2020
+{: #monitoring-apr0820}
+{: release-note}
+
+Global support
+:   Worldwide support for {{site.data.keyword.mon_full_notm}}.
 
 ## 21 November 2019
 {: #monitoring-nov2119}

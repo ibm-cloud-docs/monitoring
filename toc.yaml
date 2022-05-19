@@ -16,39 +16,56 @@ toc:
       id: learn
       topics:
       - getting-started.md
-      - releasenotes.md
-      
+      - topic: releasenotes.md
+        navtitle: Release notes
+
       - topicgroup: 
-          label: Monitor
+          label: About
           topics:
+          - topic: about-monitor.md
+            navtitle: Monitoring in IBM Cloud
+          - topic: about-collect-metrics.md
+            navtitle: Collecting metrics
+          - topic: monitor/monitoring.md
+            navtitle: Viewing metrics
+          - topic: monitor/alerts.md
+            navtitle: Working with alerts and events
+          - topic: features.md
+            navtitle: Features
           - monitor/getting-started-monitor.md
+
+      - topicgroup: 
+          label: Collecting metrics
+          topics:
           - topicgroup: 
-              label: Monitoring infrastructure
+              label: Custom metrics
               topics:
-              - Monitoring infrastructure 
-              - infrastructure/windows.md
-              - infrastructure/baremetal_linux.md
-              - infrastructure/kubernetes_cluster.md
-              - infrastructure/ubuntu.md
-              - monitor/data_streaming.md
+              - topic: prometheus/prometheus_remote_write.md
+                navtitle: Metrics via Prometheus remote-write
+              - topic: exporters/prometheus-exporters.md
+                navtitle: Metrics via Prometheus exporters
+              links: 
+              - link: 
+                  label: Prometheus native metrics
+                  href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/collect-prometheus-metrics/
+              - link: 
+                  label: StatsD metrics
+                  href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-statsd-metrics/
+              - link: 
+                  label: JMX metrics
+                  href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-jmx-metrics-from-java-virtual-machines/
+              - link: 
+                  label: Node.js application metrics
+                  href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-node.js-application-metrics/ 
           - topicgroup: 
-              label: Monitoring IBM Cloud services
+              label: IBM Cloud service metrics
               topics:
               - platform/platform_metrics_enabling.md
               - platform/platform_metrics_working.md
               - platform/cloud_services.md
-              - platform/cloud_services_locations.md      
-          - topicgroup: 
-              label: Adding more metrics
-              links: 
-              - link: 
-                  label: Integrations
-                  href: https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html
-              - link: 
-                  label: Collecting Prometheus Metrics from Remote Hosts
-                  href: https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html
-              topics:
-              - exporters/prometheus.md
+              - platform/cloud_services_locations.md  
+          - monitor/data_streaming.md
+        
       - topicgroup: 
           label: Secure
           topics:
@@ -64,19 +81,29 @@ toc:
   - navgroup: 
       id: howto
       topics:
-      - provision.md
-      - terraform/terraform-setup.md
-      - iam/iam_instance_auth.md
-      - remove.md
-      - upgrade.md
-      
+      - topicgroup: 
+          label: Managing instances
+          topics:
+             - provision.md
+             - terraform/terraform-setup.md
+             - iam/iam_instance_auth.md
+             - remove.md
+             - upgrade.md
+      - topicgroup: 
+          label: Managing keys
+          topics:
+             - iam/access_key.md
+             - iam/api_token.md
+             - iam/api_monitor_token.md
+
       - topicgroup: 
           label: Controlling access
           topics:
           - iam/iam.md
-          - iam/api_token.md
           - iam/iam_grant.md
-          - iam/iam_grant_team.md
+          - iam/iam_grant_team.md 
+          - teams/teams.md
+          - teams/team_id.md
       
       - topicgroup: 
           label: Logging and monitoring
@@ -116,82 +143,103 @@ toc:
                 href: https://docs.sysdig.com/en/sysdig-agent-release-notes.html
       
       - topicgroup: 
-          label: Monitor
+          label: Working with metrics
+          links: 
+            - link: 
+                label: Metrics dictionary
+                href: https://docs.sysdig.com/en/metrics-dictionary.html
+            - link: 
+                label: Working with metrics
+                href: https://docs.sysdig.com/en/metrics.html
+            - link: 
+                label: Grouping, Scoping, and Segmenting Metrics 
+                href: https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html
+            - link: 
+                label: Understanding Default, Custom, and Missing Metrics
+                href: https://docs.sysdig.com/en/understanding-default,-custom,-and-missing-metrics.html
+            - link: 
+                label: Managing the Metric Scale
+                href: https://docs.sysdig.com/en/manage-metric-scale.html
+            - link: 
+                label: Data Aggregation
+                href: https://docs.sysdig.com/en/data-aggregation.html
+            - link: 
+                label: Metric Limits
+                href: https://docs.sysdig.com/en/metric-limits.html
+            - link: 
+                label: Prometheus metrics / OpenMetrics code instrumentation
+                href: https://sysdig.com/blog/prometheus-metrics/
           topics:
-          - topicgroup: 
-              label: Metrics
-              links: 
-                - link: 
-                    label: Metrics dictionary
-                    href: https://docs.sysdig.com/en/metrics-dictionary.html
-                - link: 
-                    label: Working with metrics
-                    href: https://docs.sysdig.com/en/metrics.html
-                - link: 
-                    label: Grouping, Scoping, and Segmenting Metrics 
-                    href: https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html
-                - link: 
-                    label: Understanding Default, Custom, and Missing Metrics
-                    href: https://docs.sysdig.com/en/understanding-default,-custom,-and-missing-metrics.html
-                - link: 
-                    label: Managing the Metric Scale
-                    href: https://docs.sysdig.com/en/manage-metric-scale.html
-                - link: 
-                    label: Data Aggregation
-                    href: https://docs.sysdig.com/en/data-aggregation.html
-                - link: 
-                    label: Metric Limits
-                    href: https://docs.sysdig.com/en/metric-limits.html
-              topics:
-              - monitor/mng_metrics.md
-              - api/metrics_api.md
-              - api/metrics_python.md
-          - topicgroup: 
-              label: Ingesting metrics by using Prometheus remote write
-              topics:
-              - prometheus/prometheus_remote_write.md
-          - topicgroup: 
-              label: Dashboards
-              topics:
-              - monitor/dashboards.md
-              - monitor/panels.md
-              - api/dashboard_python.md
-              links: 
-                - link: 
-                    label: Dashboard templates
-                    href: https://docs.sysdig.com/en/dashboard-templates-209032.html
-          - topicgroup: 
-              label: Explore views
-              links: 
-                - link: 
-                    label: Monitoring the infrastructure through the Explore section
-                    href: https://docs.sysdig.com/en/explore.html
-          - topicgroup: 
-              label: Alerts
-              topics:
-              - monitor/alerts.md
-              - api/alert_api.md
-              - api/alert_python.md
-              - monitor/notifications.md
-              - api/notifications_api.md
-              - monitor/pd_sms.md
-              - monitor/cf_sms.md
-              - monitor/eventnotif.md
-              - monitor/eventnotif_sms.md
-          - topicgroup: 
-              label: Events
-              links: 
-                - link: 
-                    label: Working with custom events
-                    href: https://docs.sysdig.com/en/custom-events.html
-          - topicgroup: 
-              label: Captures
-              links: 
-                - link: 
-                    label: Working with captures
-                    href: https://docs.sysdig.com/en/captures.html
-              topics: 
-              - monitor/captures.md              
+          - monitor/mng_metrics.md
+          - api/metrics_api.md
+          - api/metrics_python.md
+          - exporters/promql.md
+          - monitor/metrics_store.md
+
+      - topicgroup: 
+          label: Integrations
+          links: 
+            - link: 
+                label: Integrations
+                href: https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html
+            - link: 
+                label: Configure a Prometheus data source with Grafana
+                href: https://docs.sysdig.com/en/configure-sysdig-with-grafana.html
+
+     - topicgroup: 
+          label: Dashboards
+          topics:
+          - monitor/dashboards.md
+          - monitor/panels.md
+          - api/dashboard_api.md
+          - api/dashboard_python.md
+          links: 
+            - link: 
+                label: Dashboard templates
+                href: https://docs.sysdig.com/en/dashboard-templates-209032.html
+
+
+       - topicgroup: 
+          label: Explore views
+          links: 
+            - link: 
+                label: Monitoring the infrastructure through the Explore section
+                href: https://docs.sysdig.com/en/explore.html
+
+      - topicgroup: 
+          label: Working with alerts
+          links: 
+            - link: 
+                label: PromQL Alerts
+                href: https://docs.sysdig.com/en/promql-alerts.html
+          topics:
+          - monitor/alert-config.md
+          - api/alert_api.md
+          - api/alert_python.md
+          - api/metrics_sent_eventstreams.md
+          - monitor/notifications.md
+          - api/notifications_api.md
+          - monitor/pd_sms.md
+          - monitor/cf_sms.md
+          - monitor/eventnotif.md
+          - monitor/eventnotif_sms.md
+
+      - topicgroup: 
+          label: Events
+          links: 
+            - link: 
+                label: Working with custom events
+                href: https://docs.sysdig.com/en/custom-events.html
+
+      - topicgroup: 
+          label: Captures
+          links: 
+            - link: 
+                label: Working with captures
+                href: https://docs.sysdig.com/en/captures.html
+          topics: 
+          - monitor/captures.md
+
           - topicgroup: 
               label: Teams
               topics: 
@@ -216,12 +264,7 @@ toc:
                 - link: 
                     label: Configure a Prometheus data source with Grafana
                     href: https://docs.sysdig.com/en/configure-sysdig-with-grafana.html
-          - topicgroup: 
-              label: Integrations
-              links: 
-                - link: 
-                    label: Integrations
-                    href: https://docs.sysdig.com/en/integrations-for-sysdig-monitor.html
+
       - topicgroup: 
           label: Secure
           topics: 
@@ -298,16 +341,34 @@ toc:
   - navgroup: 
       id: tutorial
       topics:
-      - tutorials/eventnotif_tutorial.md
-      - tutorials/eventnotif_sms_tutorial.md
+      - topicgroup: 
+          label: Monitoring infrastrucure
+          topics: 
+          - infrastructure/kubernetes_cluster.md
+          - infrastructure/windows.md
+          - infrastructure/ubuntu.md
+          - infrastructure/baremetal_linux.md
+      - topicgroup: 
+          label: Collecting custom metrics
+          topics:
+          - exporters/blackbox.md
+          - exporters/ipmi.md
+          - prometheus/prometheus_remote_write_kube.md
+          - prometheus/prometheus_remote_write_linux.md
+      - topicgroup: 
+          label: Sending notifications
+          topics:
+          - tutorials/eventnotif_tutorial.md
+          - tutorials/eventnotif_sms_tutorial.md
+
 
   - navgroup: 
       id: reference
       topics: 
+      - regions.md
       - endpoints.md
       - pricing.md
       - core/shared-responsibilities.md
-      - infrastructure/windows_wmi.md
       
       - topicgroup: 
           label: Monitoring CLI
@@ -323,13 +384,16 @@ toc:
           topics: 
           - api/rest_apis.md
           - api/mon-curl.md
-          - iam/api_monitor_token.md
           - api/python-client.md         
 
-      - monitor/monitoring.md
+      - infrastructure/windows_wmi.md
 
       - topicgroup: 
-          label: Cloud services metrics
+          label: Metrics
+          links:
+              - link: 
+                  label: Metrics dictionary
+                  href: https://docs.sysdig.com/en/metrics-dictionary.html
           topics:     
           - monitor/metrics/cloudfoundry-docs.md
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2021-06-02"
+lastupdated: "2022-03-12"
 
 keywords: IBM Cloud, monitoring, captures
 
@@ -17,6 +17,31 @@ subcollection: monitoring
 
 A capture is a trace file that you can generate to analyze what happens in a host during a time frame. For example, you can use it to analyze bottlenecks, or component interactions. In the {{site.data.keyword.mon_full_notm}} service, you can create, explore, download, and delete *captures* for individual nodes. 
 {: shortdesc}
+
+The capture file size limit is 100 MB.
+{: note}
+
+Captures contain system calls, and other OS events such as system-level latencies, batch jobs duration, deployments interruption times, autoscaling latencies, container startup times, or application transaction time. Captures include detailed information from every container on a node. 
+
+Depending on your organization’s guidelines, consider disabling captures. By default, captures are enabled when you configure a monitoring agent in a node.
+{: tip}
+
+You can create, explore, download, and delete *captures* for individual nodes. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a monitoring agent. 
+
+* In the web UI, you create captures in the *Explore* section and manage capture files through the *Captures* section.
+* You can visualize data from a capture by using *Csysdig* (the curses-based command-line UI).
+* You can search data in a capture by using filters.
+* You can manipulate data in a capture by using chisels (scripts). 
+
+When you enable the capture feature for a team, capture files are only visible to members of that team.
+
+The following list outlines the main tasks when you work with captures:
+* [Creating a capture](/docs/monitoring?topic=monitoring-captures#captures_create)
+* [Deleting a capture](/docs/monitoring?topic=monitoring-captures#captures_delete)
+* [Explore a capture](/docs/monitoring?topic=monitoring-captures#captures_explore)
+* [Download a capture](/docs/monitoring?topic=monitoring-captures#captures_download)
+
+
 
 
 ## Creating a capture
