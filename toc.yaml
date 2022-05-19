@@ -186,7 +186,7 @@ toc:
                 label: Configure a Prometheus data source with Grafana
                 href: https://docs.sysdig.com/en/configure-sysdig-with-grafana.html
 
-     - topicgroup: 
+      - topicgroup: 
           label: Dashboards
           topics:
           - monitor/dashboards.md
@@ -198,8 +198,7 @@ toc:
                 label: Dashboard templates
                 href: https://docs.sysdig.com/en/dashboard-templates-209032.html
 
-
-       - topicgroup: 
+      - topicgroup: 
           label: Explore views
           links: 
             - link: 
