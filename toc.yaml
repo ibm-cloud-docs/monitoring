@@ -341,7 +341,7 @@ toc:
       id: tutorial
       topics:
       - topicgroup: 
-          label: Monitoring infrastrucure
+          label: Monitoring infrastructure
           topics: 
           - infrastructure/kubernetes_cluster.md
           - infrastructure/windows.md
