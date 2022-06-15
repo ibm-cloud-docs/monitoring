@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2022-05-16"
+lastupdated: "2022-06-15"
 
 keywords: Monitoring release notes, Monitoring updates
 
@@ -20,12 +20,60 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
+## 15 June 2022
+{: #monitoring-jun1522}
+{: release-note}
+
+{{site.data.keyword.mon_full}} has made available a proprietary time series database that is designed for storing and serving metrics at scale. [Learn more](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/){: external}
+:   The following changes have been made:
+    
+    - [Metrics and labels are stored and displayed in a Prometheus compatible naming convention](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#prometheus-compatible-naming-conventions-for-metrics--labels){: external}.
+
+    - Some metrics and labels have been deprecated. Deprecated metrics and labels will no longer be available 30 days after this release. See [Discontinued Metrics and Labels](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#discontinued-metrics-and-labels){: external}.
+
+    - Classic metrics have been replaced with context-explicit metrics. See [Mapping Classic Metrics with Context-Specific PromQL Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics-dictionary/metrics-and-label-mapping/mapping-classic-metrics-with-context-specific-promql-metrics/#mapping-classic-metrics-with-context-specific-promql-metrics){: external}.
+
+    - Troubleshooting metrics are collected at 10s intervals and stored for 4 days for program metrics, connection-level network metrics, and Kubernetes troubleshooting metrics. See [Troubleshooting Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics/troubleshooting-metrics/#troubleshooting-metrics){: external}.
+
+    - You can use PromQL to query the metrics in the time series database.
+
+       - You can run queries that handle larger volumes of data and perform faster.
+
+       - You can reference the scope of a dashboard in PromQL queries by using `$__scope`. See [Scope Variable in PromQL Dashboard](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#scope-variable-in-promql-dashboard){: external}.
+
+    - You can view the latest value of an entity in number panels, tables, histograms, and toplist panels. See [Single Stat Panels Displays Latest Value](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#single-stat-panels-displays-latest-value){: external}
+
+    - In the *Overview* section, you can view the latest data as opposed to an aggregated value for widgets over the time window that is selected.
+
+    - You can display metrics that are scraped at different intervals on the same graph. See [Mixed-Metric Granularity](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#mixed-metric-granularity){: external} and [Improved Granularity for PromQL panels](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#improved-granularity-for-promql-panels){: external}.
+
+    - Realignment of time selections has been removed. See [Removed Re-Alignment](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#removed-re-alignment){: external}.
+
+    The following are known limitations in this release:
+
+    - Querying labels as metrics is limited to Infrastructure labels in Table panels. 
+    - Panels that are not timecharts, such as Number panels, might not display aggregated data for the full requested time range.
+
+    Deprecated features:
+
+    - Topology Maps are deprecated due to their incompatibility with the new data store.
+    - Agent derived percentiles are deprecated.
+
+    For more information, see [Removed features](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#removed-featurees){: external}.
+
+    Impact to your environment:
+
+    - Your existing dashboards, alerts and notifications will be automatically migrated to the new metric naming convention.
+    - Notifications that are sent by alerts (webhooks, PagerDuty, and so on) will use the new metric and label convention.  If you are doing further processing to parse metrics or labels, you will need to update your scripts accordingly.
+    - Terraform or configuration scripts that are used for dashboards, alerts and notifications might need updating.
+
+    For more information, see [Enhanced metric store](/docs/monitoring?topic=monitoring-metrics_store).
+
 ## 18 May 2022
 {: #monitoring-may1822}
 {: release-note}
 
-{{site.data.keyword.mon_full_notm}} has released Advisor to help and simplify how you monitor and troubleshoot the health, risk, and capacity of hosts and Kubernetes clusters.  [Learn more](/docs/monitoring?topic=monitoring-monitoring#monitoring_advisor).
-
+{{site.data.keyword.mon_full}} has released Advisor to help and simplify how you monitor and troubleshoot the health, risk, and capacity of hosts and Kubernetes clusters.  [Learn more](/docs/monitoring?topic=monitoring-monitoring#monitoring_advisor).
 
 ## 14 December 2021
 {: #monitoring-dec1421}
