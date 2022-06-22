@@ -322,6 +322,8 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.dv_full_notm}}                        |    | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.Db2_on_Cloud_long_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
+
 {: caption="Database services integration in Europe locations" caption-side="top"}
 {: #cs-db-table-1}
 {: tab-title="Europe"}
@@ -329,8 +331,8 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service               | `Dallas (us-south)`             | `Washington (us-east)`                             |
-|-----------------------|---------------------------------|----------------------------------------------------|
+| Service               | `Dallas (us-south)`             | `Washington (us-east)`                             | `São-Paulo (br-sao)`                       | `Toronto (ca-tor)`         |         
+|-----------------------|---------------------------------|----------------------------------------------------|--------------------------------------------|----------------------------|
 | {{site.data.keyword.cloudant_short_notm}}                       | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
@@ -342,6 +344,8 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.dv_full_notm}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
+| {{site.data.keyword.Db2_on_Cloud_long_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
+
 {: caption="Database services integration in America's locations" caption-side="top"}
 {: #cs-db-table-2}
 {: tab-title="America"}
@@ -361,6 +365,8 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.sqlquery_full}}                             |    |    |
 | {{site.data.keyword.ihsdbaas_mongodb_full}}|    | ![Checkmark icon](../images/checkmark-icon.svg)  |
 | {{site.data.keyword.ihsdbaas_postgresql_full}}|    | ![Checkmark icon](../images/checkmark-icon.svg)  |
+| {{site.data.keyword.Db2_on_Cloud_long_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
+
 {: caption="Database services integration in AP locations" caption-side="top"}
 {: #cs-db-table-3}
 {: tab-title="Asia Pacific"}

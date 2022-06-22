@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2021-05-17"
+lastupdated: "2022-05-25"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -14,7 +14,7 @@ subcollection: monitoring
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Cloud services
+# Services generating metrics
 {: #cloud_services}
 
 List of {{site.data.keyword.cloud}} services that send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the monitoring instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
@@ -57,7 +57,7 @@ The following table lists VPC infrastructure services that are enabled for {{sit
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
-| [Virtual Servers for VPC](/docs/vpc?topic=vpc-about-advanced-virtual-servers) | Virtual Servers for VPC is an Infrastructure-as-a-Service (IaaS) offering that you can use to quickly provision instances with high network performance. | [Metrics](/docs/vpc?topic=vpc-vpc-monitoring-metrics)|
+| [Virtual Servers for VPC](/docs/vpc?topic=vpc-about-advanced-virtual-servers) | Virtual Servers for VPC is an Infrastructure-as-a-Service (IaaS) offering that you can use to quickly provision instances with high network performance. | [Metrics](/docs/vpc?topic=vpc-vpc-quota-metrics)|
 {: caption="List of VPC infrastructure services (generation 2)" caption-side="top"} 
 
 
@@ -94,6 +94,7 @@ The following table lists developer tools and DevOps services that are enabled f
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.contdelivery_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started)| With {{site.data.keyword.contdelivery_short}}, you can build, test, and deliver applications by using DevOps practices and industry-leading tools. | [Metrics](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-monitor-sysdig) |
 | [{{site.data.keyword.appconfig_full}}](/docs/app-configuration?topic=app-configuration-getting-started)| Instrument your applications with {{site.data.keyword.appconfig_short}} SDKs, and use the {{site.data.keyword.appconfig_short}} dashboard or {{site.data.keyword.appconfig_short}} administrator API to define features flags or properties. | [Metrics](/docs/app-configuration?topic=app-configuration-ac-monitoring) |
+| [{{site.data.keyword.en_full}}](/docs/event-notifications?topic=event-notifications-getting-started)|  A centralized alerts management service that notifies and alerts you to events occurring in your {{site.data.keyword.Bluemix_notm}} account.| [Metrics](/docs/event-notifications?topic=event-notifications-en-monitoring) |
 {: caption="List of developer tools and DevOps services" caption-side="top"} 
 
 ## Networking services
@@ -144,7 +145,8 @@ The following table lists database services that are enabled for {{site.data.key
 | [{{site.data.keyword.sqlquery_full}}](/docs/services/sql-query?topic=sql-query-gettingstarted)| {{site.data.keyword.sqlquery_full}} is a fully-managed service that lets you run SQL queries (that is, SELECT statements) to analyze, transform, or clean up rectangular data. | [Metrics](/docs/services/sql-query?topic=sql-query-metrics) |
 | [{{site.data.keyword.ihsdbaas_mongodb_full}}](/docs/hyper-protect-dbaas-for-mongodb?topic=hyper-protect-dbaas-for-mongodb-gettingstarted) | {{site.data.keyword.ihsdbaas_mongodb_full}} is a highly secure MongoDB service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Metrics](/docs/hyper-protect-dbaas-for-mongodb?topic=hyper-protect-dbaas-for-mongodb-monitor) |
 | [{{site.data.keyword.ihsdbaas_postgresql_full}}](/docs/hyper-protect-dbaas-for-postgresql?topic=hyper-protect-dbaas-for-postgresql-gettingstarted) | {{site.data.keyword.ihsdbaas_postgresql_full}} is a highly secure PostgreSQL service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Metrics](/docs/hyper-protect-dbaas-for-postgresql?topic=hyper-protect-dbaas-for-postgresql-monitor) |
-| [{{site.data.keyword.dv_full_notm}}](/docs/data-virtualization?topic=data-virtualization-getting-started) | {{site.data.keyword.dv_full_notm}} is a fully managed service on {{site.data.keyword.cloud_notm}} that you can use to easily and securely access data across many data sources. | [Metrics](/docs/data-virtualization?topic=data-virtualization-monitor) |
+| [{{site.data.keyword.dv_full}}](/docs/data-virtualization?topic=data-virtualization-getting-started) | {{site.data.keyword.dv_full}} is a fully managed service on {{site.data.keyword.cloud_notm}} that you can use to easily and securely access data across many data sources. | [Metrics](/docs/data-virtualization?topic=data-virtualization-monitor) |
+| [{{site.data.keyword.Db2_on_Cloud_long}}](/docs/Db2onCloud?topic=Db2onCloud-about) | {{site.data.keyword.db2_on_cloud}} is a fully managed public cloud service on IBM Cloud. As a relational database, it delivers fast query processing with enterprise-level performance and capabilities for online transactional processing (OLTP). | [Metrics](/docs/Db2onCloud?topic=Db2onCloud-monitor) |
 {: caption="List of database services" caption-side="top"} 
 
 
