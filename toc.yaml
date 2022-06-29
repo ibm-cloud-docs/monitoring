@@ -101,7 +101,8 @@ toc:
           topics:
           - iam/iam.md
           - iam/iam_grant.md
-          - iam/iam_grant_team.md 
+          - iam/iam_grant_team.md
+          - iam/iam_grant_team_secure.md 
           - teams/teams.md
           - teams/team_id.md
       
