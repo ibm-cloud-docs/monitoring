@@ -210,6 +210,9 @@ toc:
           label: Working with alerts
           links: 
             - link: 
+                label: Configuring alerts
+                href: https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/configure-alerts/
+            - link: 
                 label: PromQL Alerts
                 href: https://docs.sysdig.com/en/promql-alerts.html
           topics:

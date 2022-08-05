@@ -12,7 +12,7 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring an alert
+# Configuring an alert by using the legacy alert editor
 {: #alert-config}
 
 In the {{site.data.keyword.mon_full_notm}} service, you can configure single alerts and multi-condition alerts to notify about problems that may require attention. When an alert is triggered, you can be notified through 1 or more notification channels. An alert definition can generate multi-channel notifications.
@@ -26,6 +26,7 @@ Complete the following steps to configure an alert:
 {: #alert-config-step1}
 
 From the *Alert* section of the UI, select **Add Alert**. Then, choose the alert type.
+
 
 ## Step 2. Name the alert
 {: #alert-config-step2}

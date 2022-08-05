@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2022-03-12"
+lastupdated: "2022-08-05"
 
 keywords: IBM Cloud, monitoring, alerts
 
@@ -57,7 +57,13 @@ In the {{site.data.keyword.mon_full_notm}} service, you can define any of the fo
 
 - Anomaly Detection: Use this type of alert to monitor hosts based on historical behaviors and alert when they deviate from the expected pattern.
 
+    This type of alert is deprecated. You can only manage existing alerts of this type.
+    {: note}
+
 - Group Outlier: Use this type of alert to monitor hosts and be notified when 1 acts differently from the rest.
+
+    This type of alert is deprecated. You can only manage existing alerts of this type.
+    {: note}
 
 
 ## Notification channels

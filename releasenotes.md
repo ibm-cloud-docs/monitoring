@@ -20,6 +20,25 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
+## 06 July 2022
+{: #monitoring-july0622}
+{: release-note}
+
+{{site.data.keyword.mon_full}} has released a new *Alert Editor* interface.
+:   The following changes have been made:
+
+    - New user interface to manage alerts. 
+    
+        You can still manage alerts by using the legacy editor. However, notice that new features are only available through the new editor.
+
+    - New configuration settings to help you troubleshoot issues. You can configure a dashboard and a runbook with an alert.
+
+    Deprecated features:
+
+    - Deprecation of the Anomaly Detection and Group Outlier alert types. You can view and manage existing alerts but you cannot define new ones. 
+
+    For more information, see [Configure alerts](https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/configure-alerts/){: external}.
+
 ## 15 June 2022
 {: #monitoring-jun1522}
 {: release-note}
