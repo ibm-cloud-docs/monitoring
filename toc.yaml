@@ -128,16 +128,17 @@ toc:
       - topicgroup: 
           label: Monitoring agent
           topics:
+          - agent/agent_version.md
           - agent/agent_image.md
-          - agent/config_agent.md
-          - agent/upgrade_agent.md
-          - agent/remove_agent.md
-          - agent/agent_log_level.md
-          - agent/agent_events_level.md
-          - agent/access_key.md
+          - agent/agent_kube.md
+          - agent/agent_openshift.md
+          - agent/agent_linux.md
+          - agent/agent_docker.md
           - agent/change_kube_agent.md
           - agent/change_linux_agent.md
           - agent/change_container_agent.md
+          - agent/upgrade_agent.md
+          - agent/agent_log_level.md
           links: 
             - link: 
                 label: Monitoring agent Release Notes

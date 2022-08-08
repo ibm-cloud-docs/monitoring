@@ -107,8 +107,8 @@ Complete the following steps to add more tags to a Kubernetes monitoring agent c
     ```yaml
     apiVersion: v1
       data:
-        dragent.yaml: |
-            k8s_cluster_name: marisa-production
+        dragent.yaml: 
+            k8s_cluster_name: mycluster
             collector: ingest.us-south.monitoring.cloud.ibm.com
             collector_port: 6443
             ssl: true
@@ -123,14 +123,14 @@ Complete the following steps to add more tags to a Kubernetes monitoring agent c
 
 Changes are applied automatically. 
 
-For the sample provided, you would get the tags **agent.tag.cluster_version** and **agent.tag.region**. You could use them to define alerts, customize scopes and more.
+For the sample provided, you would get the tags **agent.tag.department** and **agent.tag.region**. You could use them to define alerts, customize scopes and more.
 
 
 
 ## Collecting a set of Kubernetes events
 {: #change_kube_agent_collect_events}
 
-{{site.data.keyword.mon_full_notm}} supports event integrations with Kubernetes. monitoring agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
+{{site.data.keyword.mon_short}} supports event integrations with Kubernetes. {site.data.keyword.mon_short}} agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
 
 By default, only a limited set of events is collected. For more information about the events that are collected by default, see [Kubernetes events](https://docs.sysdig.com/en/event-types.html){: external}.
 

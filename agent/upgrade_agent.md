@@ -12,14 +12,14 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Upgrading a monitoring agent
+# Updating a monitoring agent
 {: #upgrade_agent}
 
 Choose any of the following options to update a monitoring agent:
 {: shortdesc}
 
 
-## Upgrading a monitoring agent for a standard Kubernetes cluster
+## Updating a Kubernetes agent
 {: #update_agent_kube}
 
 By default, the monitoring agent has a `RollingUpdate` update strategy. 
@@ -109,10 +109,10 @@ Complete the following steps to update a monitoring agent with a `RollingUpdate`
 
 
 
-## Updating a monitoring agent that is deployed as a container in a Linux system
+## Updating a Docker agent
 {: #update_agent_docker}
 
-Complete the following steps to remove the monitoring agent that is deployed as a conatiner in a Linux system:
+Complete the following steps to remove the monitoring agent that is deployed as a container in a Linux system:
 
 1. Stop the monitoring agent container. Run the following command:
 
@@ -139,7 +139,7 @@ Complete the following steps to remove the monitoring agent that is deployed as 
 
 
 
-## Updating a monitoring agent that has been deployed as a service in a Linux system 
+## Updating a Linux agent
 {: #update_agent_linux}
 
 Complete the following steps to update a monitoring agent on Linux:
