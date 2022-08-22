@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2022-06-15"
+lastupdated: "2022-08-22"
 
 keywords: Monitoring release notes, Monitoring updates
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 05 August 2022
+{: #monitoring-august0522}
+{: release-note}
+
+{{site.data.keyword.mon_full}} has released support for trusted profiles.
+:   For more information, see [Trusted Profiles](/docs/monitoring?topic=monitoring-trusted_profiles).
 
 ## 06 July 2022
 {: #monitoring-july0622}
