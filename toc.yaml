@@ -103,6 +103,7 @@ toc:
           - iam/iam_grant.md
           - iam/iam_grant_team.md
           - iam/iam_grant_team_secure.md 
+          - iam/trusted_profiles.md
           - teams/teams.md
           - teams/team_id.md
       
