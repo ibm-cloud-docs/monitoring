@@ -50,7 +50,7 @@ Complete the following steps to configure a monitoring agent on a Docker contain
 3. Deploy the monitoring agent. Run the following command:
 
     ```text
-    docker run -d --name sysdig-agent --restart always --privileged --net host --pid host -e ACCESS_KEY=MONITORING_ACCESS_KEY -e COLLECTOR=COLLECTOR_ENDPOINT -e COLLECTOR_PORT=6443 -e SECURE=true -e ADDITIONAL_CONF="sysdig_capture_enabled: false" -e TAGS=TAG_DATA -e ADDITIONAL_CONF=“log:  { file_priority: error, console_priority: none }” -v /var/run/docker.sock:/host/var/run/docker.sock -v /dev:/host/dev -v /proc:/host/proc:ro -v /boot:/host/boot:ro -v /lib/modules:/host/lib/modules:ro -v /usr:/host/usr:ro --shm-size=350m sysdig/agent
+    docker run -d --name sysdig-agent --restart always --privileged --net host --pid host -e ACCESS_KEY=MONITORING_ACCESS_KEY -e COLLECTOR=COLLECTOR_ENDPOINT -e COLLECTOR_PORT=6443  -e ADDITIONAL_CONF="sysdig_capture_enabled: false" -e TAGS=TAG_DATA -e ADDITIONAL_CONF=“log:  { file_priority: error, console_priority: none }” -v /var/run/docker.sock:/host/var/run/docker.sock -v /dev:/host/dev -v /proc:/host/proc:ro -v /boot:/host/boot:ro -v /lib/modules:/host/lib/modules:ro -v /usr:/host/usr:ro --shm-size=350m sysdig/agent
     ```
     {: codeblock}
 
@@ -63,8 +63,6 @@ Complete the following steps to configure a monitoring agent on a Docker contain
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. 
 
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
-
-    * Set **SECURE** to *true* to use SSL with the communication.
 
     * Set **log** to define the log level for the agent. By default, the log level that is configired through `file_priority` is set to `info`. Set the `console_priority` to `none` to reduce the container console output. [Learn more](/docs/monitoring?topic=monitoring-agent_log_level).
 

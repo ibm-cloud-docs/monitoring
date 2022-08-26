@@ -58,7 +58,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 4. Deploy the monitoring agent. Run the following command from a terminal.
 
     ```text
-    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key MONITORING_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure true --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
+    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key MONITORING_ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443  --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
     ```
     {: pre}
 
@@ -71,8 +71,6 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. 
 
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
-
-    * Set **secure** to *true* to use SSL with the communication.
 
     To install cURL, run `yum -q -y install curl` for RHEL, CentOS, and Fedora Linux distributions.
     {: tip}
