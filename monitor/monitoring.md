@@ -44,7 +44,7 @@ In the *Advisor* tab, you can monitor and troubleshoot the health, risk, and cap
 
 - Data is refreshed every 10 minutes.
 - Metrics are prioritized by event count and severity.
-- For more information, see [Advisor](https://docs.sysdig.com/en/docs/sysdig-monitor/overview/){: external}. 
+- For more information, see [Advisor](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/){: external}. 
 
 In the *Advisor* section, you can choose to monitor your Kubernetes clusters by cluster, by node, by namespace, or by workload. Each option offers a set of predefined dashboards that you can use to monitor the health of your resources. You can also select to monitor by host.
 
@@ -63,7 +63,7 @@ When you choose to monitor your Kubernetes clusters by cluster, you can select m
 
 ![Advisor predefined dashboards by cluster](../images/overview-tab-clusters.png "Advisor prefedined dashboards by cluster")
 
-For more information on how to interpret this view, see [About Clusters Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/overview/clusters-data/){: external}.
+For more information on how to interpret this view, see [About Clusters Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/overview/clusters-data/){: external}.
 
 ### Monitoring Kubernetes clusters by node
 {: #monitoring_advisor_2}
@@ -76,7 +76,7 @@ When you choose to monitor your Kubernetes clusters by node, you can choose any 
 - Memory Allocation Optimization
 
 
-For more information on how to interpret this view, see [About Nodes Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/overview/nodes-data/){: external}.
+For more information on how to interpret this view, see [About Nodes Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/overview/nodes-data/){: external}.
 
 ### Monitoring Kubernetes clusters by namespace
 {: #monitoring_advisor_3}
@@ -89,7 +89,7 @@ When you choose to monitor your Kubernetes clusters by namespace, you can select
 - Workloads CPU Usage and Allocation
 - Workloads Memory Usage and Allocation
 
-For more information on how to interpret this view, see [About Namespaces Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/overview/namespaces-data/){: external}.
+For more information on how to interpret this view, see [About Namespaces Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/overview/namespaces-data/){: external}.
 
 ### Monitoring Kubernetes clusters by workloads
 {: #monitoring_advisor_4}
@@ -105,7 +105,7 @@ When you choose to monitor your Kubernetes clusters by workloads, you can choose
 - Workloads Memory Usage and Allocation
 
 
-For more information on how to interpret this view, see [About Workloads Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/overview/workloads-data/){: external}.
+For more information on how to interpret this view, see [About Workloads Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/overview/workloads-data/){: external}.
 
 ### Monitoring hosts
 {: #monitoring_advisor_5}

@@ -22,7 +22,7 @@ After you provision an instance of the {{site.data.keyword.mon_full_notm}} servi
 ## Pre-reqs
 {: #agent_openshift_prereqs}
 
-- Check the topic [Host Requirements for Agent Installation](https://docs.sysdig.com/en/host-requirements-for-agent-installation.html){: external}
+- Check the topic [Tuning Sysdig Agent](https://docs.sysdig.com/en/docs/installation/sysdig-agent/troubleshooting-agent-installation/tuning-sysdig-agent/){: external}
 
 - Obtain the access key. For more information, see [Getting the access key](/docs/monitoring?topic=monitoring-access_key).
 

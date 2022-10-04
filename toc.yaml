@@ -259,7 +259,7 @@ toc:
               links: 
                 - link: 
                     label: Collecting Prometheus Metrics from Remote Hosts
-                    href: https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html
+                    href: https://docs.sysdig.com/en/docs/installation/prometheus-remote-write/
                 - link: 
                     label: Prometheus metrics / OpenMetrics code instrumentation
                     href: https://sysdig.com/blog/prometheus-metrics/

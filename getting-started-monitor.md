@@ -87,7 +87,7 @@ You can analyze data in the *Explore* tab and in the *Dashboard* tab of the web 
 * Use dashboards to get a specialized insight into network data, application data, topology, services, hosts, and containers by monitoring data through panels. A panel displays a metric or group of metrics in a dashboard.
 {: tip}
 
-In the *Explore* tab, you can monitor data by using default metrics and default dashboards. You can use labels to define new infrastructure groups that you can then use to aggregate data differently and monitor your environment. [Learn more](https://docs.sysdig.com/en/explore-interface.html){: external}.
+In the *Explore* tab, you can monitor data by using default metrics and default dashboards. You can use labels to define new infrastructure groups that you can then use to aggregate data differently and monitor your environment. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/explore/deprecatedexplore/){: external}.
 
 In the *Dashboards* tab, you can monitor data by using any of the default dashboards or by creating new ones. [Learn more](https://docs.sysdig.com/en/dashboards.html){: external}.
 

@@ -48,7 +48,7 @@ To start collecting default metrics, you must configure a {{site.data.keyword.mo
 
 - The agent is supported on different hosts and orchestration platforms such as a Kubernetes. 
 
-   For more information about supported hosts, see [Host Requirements for Agent Installation](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-installation/host-requirements-for-agent-installation/#host-requirements-for-agent-installation){: external}
+   For more information about supported hosts, see [Tuning Sysdig Agent](https://docs.sysdig.com/en/docs/installation/sysdig-agent/troubleshooting-agent-installation/tuning-sysdig-agent/){: external}
 
 - The agent automatically collects pre-defined metrics,and auto-labels them. 
 
@@ -77,7 +77,7 @@ The {{site.data.keyword.mon_short}} agent automatically collects the following t
 
 The {{site.data.keyword.mon_short}} agent automatically collects the following types of metrics per Kubernetes cluster:
 
-- `State metrics`: Kube state metrics report on the health and state of the various objects that run inside Kubernetes components, such as deployments, nodes and pods. To see the list of metrics that are collected by default, see [Kubernetes State](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics-dictionary/kubernetes/kubernetes-state/){: external}.
+- `State metrics`: Kube state metrics report on the health and state of the various objects that run inside Kubernetes components, such as deployments, nodes and pods. To see the list of metrics that are collected by default, see [Kubernetes State](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics/metrics-library/sysdig-legacy-format/kubernetes/kubernetes-state/){: external}.
 
 - `Resource usage metrics`: Resource usage metrics reports on the health and state of CPU and memory for workers (nodes) and pods that are running in the cluster. The data can be analyzed by namespace, by worker, by pod, by workload object such as deployments, daemonSets, and more. 
 
@@ -94,7 +94,7 @@ The {{site.data.keyword.mon_short}} agent includes components that collect metri
 You must configure the {{site.data.keyword.mon_short}} agent by using Prometheus syntax to configure the `scrape_config` settings and define the targets, instances and jobs. 
 - Promscrape is based on the open-source Prometheus server. 
 - Different {{site.data.keyword.mon_short}} agent versions include different levels of support for collection of Prometheus metrics For example, {{site.data.keyword.mon_short}} agent v10.5.0 and above, includes Promscrape v2 and supports Prometheus native service discovery. For more information on the {{site.data.keyword.mon_short}} agent, see [{{site.data.keyword.mon_short}} agent release notes](https://docs.sysdig.com/en/docs/release-notes/sysdig-agent-release-notes/). 
-- For more information about Promscrape versions, see [Migrating from Promscrape V1 to V2](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/configure-monitoring-integrations/migrating-from-promscrape-v1-to-v2/){: external}.
+- For more information about Promscrape versions, see [Migrating from Promscrape V1 to V2](https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/custom-integrations/collect-prometheus-metrics/migrating-from-promscrape-v1-to-v2/){: external}.
     
 ## Collecting custom metrics by using Prometheus remote write
 {: #about-collect-metrics-4}
