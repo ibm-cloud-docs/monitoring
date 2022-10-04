@@ -24,7 +24,7 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 ## Prereqs
 {: #agent_linux_prereqs}
 
-Check the topic [Host Requirements for Agent Installation](https://docs.sysdig.com/en/host-requirements-for-agent-installation.html){: external}
+Check the topic [Tuning Sysdig Agent](https://docs.sysdig.com/en/docs/installation/sysdig-agent/troubleshooting-agent-installation/tuning-sysdig-agent/){: external}
 
 ## Deploying the Linux agent by using a script
 {: #agent_linux_deploy}
