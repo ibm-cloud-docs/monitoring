@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2022-05-25"
+lastupdated: "2022-10-07"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -160,7 +160,6 @@ The following table lists integration services that are enabled for {{site.data.
 | Service     | Description | Metrics | 
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.messagehub}}](/docs/EventStreams?topic=EventStreams-getting_started)| {{site.data.keyword.messagehub}} is a high-throughput message bus that is built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.IBM_notm}} and event stream distribution between your services and applications. | [Metrics](/docs/EventStreams?topic=EventStreams-metrics) |
-| [{{site.data.keyword.mobilepushshort}}](/docs/mobilepush?topic=mobilepush-getting-started)| {{site.data.keyword.mobilepushshort}} is a service that helps you to send and manage mobile and web push notifications. A push notification is an alert to indicate a change or update on a mobile device or browser.| [Metrics](/docs/mobilepush?topic=mobilepush-push_sysdig) |
 {: caption="List of integration Cloud services" caption-side="top"} 
 
 ## Security services

@@ -104,7 +104,7 @@ Complete the following steps:
     You can collect a maximum of 3000 time series per Linux agent. If you need to collect more than 3000 time series for all your Windows systems, you need more than one Linux agent.
     {: important}
     
-2. Update the `/opt/draios/etc/dragent.yml` to [enable remote scraping](https://docs.sysdig.com/en/collecting-prometheus-metrics-from-remote-hosts.html){: external}. 
+2. Update the `/opt/draios/etc/dragent.yml` to [enable remote scraping](https://docs.sysdig.com/en/docs/installation/prometheus-remote-write/){: external}. 
 
     ```yaml
     prometheus:

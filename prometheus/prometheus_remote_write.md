@@ -542,7 +542,7 @@ ts=2021-05-05T13:32:16.975Z caller=dedupe.go:112 component=remote level=warn rem
 ```
 {: screen}
 
-To solve the problem, open a support ticket. You can [create](/docs/get-support?topic=get-support-open-case) and [manage](/docs/get-support?topic=get-support-managing-support-cases) a support case by using the [Support Center](https://dev.console.cloud.ibm.com/unifiedsupport/supportcenter){: external}.
+To solve the problem, open a support ticket. You can [create](/docs/get-support?topic=get-support-open-case) and [manage](/docs/get-support?topic=get-support-managing-support-cases) a support case by using the [Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}.
 
 
 

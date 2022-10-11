@@ -55,7 +55,7 @@ Tag your questions with **ibm-cloud** and **monitoring**.
 
 If you don't find answers to your questions, and you experience problems with {{site.data.keyword.cloud_notm}}, you can use support cases to get help with technical, account and access, billing and invoice or sales inquiry issues. 
 
-You can [create](/docs/get-support?topic=get-support-open-case) and [manage](/docs/get-support?topic=get-support-managing-support-cases) a support case by using the [Support Center](https://dev.console.cloud.ibm.com/unifiedsupport/supportcenter){: external}. After you submit a support case, the support team works to investigate and resolve the issue depending on your type of support plan.
+You can [create](/docs/get-support?topic=get-support-open-case) and [manage](/docs/get-support?topic=get-support-managing-support-cases) a support case by using the [Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}. After you submit a support case, the support team works to investigate and resolve the issue depending on your type of support plan.
 
 
 
