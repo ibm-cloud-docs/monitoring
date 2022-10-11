@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2022
 lastupdated: "2022-08-08"
 
-keywords: IBM Cloud, monitoring, config monitoring agent
+keywords: 
 
 subcollection: monitoring
 
@@ -15,7 +15,7 @@ subcollection: monitoring
 # Working with the Kubernetes agent
 {: #agent_Kube}
 
-After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.mon_short}} agent on your cluster to collect data and metrics automatically. You can configure which metrics to monitor in each environment.
+After you provision an instance of the {{site.data.keyword.mon_full}} service in the {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.mon_short}} agent on your cluster to collect data and metrics automatically. You can configure which metrics to monitor in each environment.
 {: shortdesc}
 
 You can associate one or more tags to each monitoring agent. Tags are comma-separated values that are formatted as **TAG_NAME:TAG_VALUE**. When you monitor your environment, you can use these tags to identify metrics that are available from an agent. For example, you can include information about the service name and location with all of the metrics that are collected by this agent.
@@ -25,7 +25,7 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 ## Prereqs
 {: #agent_Kube_prereqs}
 
-- Check the topic [Host Requirements for Agent Installation](https://docs.sysdig.com/en/host-requirements-for-agent-installation.html){: external}
+- Check the topic [Tuning Sysdig Agent](https://docs.sysdig.com/en/docs/installation/sysdig-agent/troubleshooting-agent-installation/tuning-sysdig-agent/){: external}
 
 - [Get information about Kubernetes monitoring agent images](/docs/monitoring?topic=monitoring-monitoring_agent_image).
 
@@ -54,7 +54,7 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 
 - Log in to the Kubernetes cluster. Choose a method to login to an Kubernetes cluster. [Learn more about the methods to login](/docs/containers?topic=containers-access_cluster).
 
-
+- Check public endpoints are enabled if you plan to install image-analyzer, host-analyzer, and benchmark runner. For example, to deploy these components in a cluster in your Virtual Private Cloud (VPC), check that a public gateway is attached to the subnet configured for the cluster.
 
 ### Deploying an agent by using a script
 {: #agent_Kube_script}
@@ -65,7 +65,7 @@ In order to use this script, you must have a minimum of `Viewer` and `Manager` I
 To deploy the agent, run the following command:
 
 ```
-curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer  --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --collector_port 6443 --API_ENDPOINT <API-ENDPOINT> [-as] [-af]
+curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer  --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --collector_port 6443 --api_endpoint <API-ENDPOINT> [-as] [-af]
 ```
 {: codeblock}
 
@@ -81,11 +81,11 @@ Where
 
 * Add `--imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector` to install the image analyzer component. Configure this component when you have images that are hosted in the {{site.data.keyword.registryshort_notm}}.
 
-* Add `--nodeanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --API_ENDPOINT <API-ENDPOINT>`to install image-analyzer, host-analyzer, and benchmark runner. The `API_ENDPOINT` is needed by the benchmark runner. The `COLLECTOR_ENDPOINT` is needed by the image analyzer.
+* Add `--nodeanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --api_endpoint <API-ENDPOINT>`to install image-analyzer, host-analyzer, and benchmark runner. The `API_ENDPOINT` is needed by the benchmark runner. The `COLLECTOR_ENDPOINT` is needed by the image analyzer.
 
 * Add the option that defines the type of agent that you want to deploy:
 
-    - `-as` to deploy a slim agent. This is the default option. Use this option to reduce the surface area of attack for potential vulnerabilities. When you deploy the agent, you install the agent package as two containers, one running the agent-kmodule and the other ruuning the agent-slim. 
+    - `-as` to deploy a slim agent. This is the default option. Use this option to reduce the surface area of attack for potential vulnerabilities. When you deploy the agent, you install the agent package as two containers, one running the agent-kmodule and the other running the agent-slim. 
 
     - `-af` to deploy the full agent. When you deploy the agent, the agent runs as a single container or a service.
 
@@ -93,14 +93,14 @@ Where
 To deploy the agent by using a public endpoint, run the following command:
 
 ```
-curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a ACCESS_KEY -c ingest.<REGION>.monitoring.cloud.ibm.com -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer --analysismanager https://ingest.<REGION>.monitoring.cloud.ibm.com/internal/scanning/scanning-analysis-collector --collector_port 6443 --API_ENDPOINT <REGION>.monitoring.cloud.ibm.com [-as] [-af]
+curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a ACCESS_KEY -c ingest.<REGION>.monitoring.cloud.ibm.com -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer --analysismanager https://ingest.<REGION>.monitoring.cloud.ibm.com/internal/scanning/scanning-analysis-collector --collector_port 6443 --api_endpoint <REGION>.monitoring.cloud.ibm.com [-as] [-af]
 ```
-{: codeblock}
+{: codeblock}api
 
 To deploy the agent by using a private endpoint, run the following command:
 
 ```
-curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a ACCESS_KEY -c ingest.private.<REGION>.monitoring.cloud.ibm.com -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer --analysismanager https://ingest.private.<REGION>.monitoring.cloud.ibm.com/internal/scanning/scanning-analysis-collector --collector_port 6443 --API_ENDPOINT private.<REGION>.monitoring.cloud.ibm.com [-as] [-af]
+curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a ACCESS_KEY -c ingest.private.<REGION>.monitoring.cloud.ibm.com -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer --analysismanager https://ingest.private.<REGION>.monitoring.cloud.ibm.com/internal/scanning/scanning-analysis-collector --collector_port 6443 --api_endpoint private.<REGION>.monitoring.cloud.ibm.com [-as] [-af]
 ```
 {: codeblock}
 
@@ -147,7 +147,7 @@ If no pods are listed, the agent is not running.
 In the event that the pods are not running but you expect the agent to be running, you can run the following command to understand why:
 
 ```text
-kubectl get events
+kubectl get events -n ibm-observe
 ```
 {: codeblock}
 

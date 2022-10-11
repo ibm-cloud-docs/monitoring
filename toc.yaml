@@ -131,6 +131,7 @@ toc:
           topics:
           - agent/agent_version.md
           - agent/agent_image.md
+          - agent/resource_requirements.md
           - agent/agent_kube.md
           - agent/agent_openshift.md
           - agent/agent_linux.md
