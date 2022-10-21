@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2022-10-07"
+lastupdated: "2022-10-20"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -68,7 +68,7 @@ The following table lists infrastructure services that are enabled for {{site.da
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.BluVirtServers}}](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) | Scalable virtual servers that are purchased with cores and memory allocations. | [Metrics](/docs/cloud-infrastructure?topic=cloud-infrastructure-classic-sysdig-metrics)|
+| [{{site.data.keyword.BluVirtServers}}](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) | Scalable virtual servers that are purchased with cores and memory allocations. | [Metrics](/docs/virtual-servers?topic=cloud-infrastructure-monitoring-iaas)|
 {: caption="List of VPC classic infrastructure services (generation 1)" caption-side="top"} 
 
 ## Container services
@@ -110,7 +110,7 @@ The following table lists VPC infrastructure services that are enabled for {{sit
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
-| [Load Balancer for VPC](/docs/vpc?topic=vpc-network-load-balancers)| Distributes traffic among multiple server instances within the same region of your VPC.  | [Metrics](/docs/vpc?topic=vpc-nlb_monitoring-metrics) |
+| [Load Balancer for VPC](/docs/vpc?topic=vpc-network-load-balancers)| Distributes traffic among multiple server instances within the same region of your VPC.  | [Metrics](/docs/vpc?topic=vpc-ibm-cloud-vpc-monitoring-dashboards) |
 | [VPN for VPC](/docs/vpc?topic=vpc-using-vpn)| Securely connect your VPC to another private network. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premises private network or another VPC. | [Metrics](/docs/vpc?topic=vpc-vpn-monitoring-metrics) |
 {: caption="List of VPC services (generation 2)" caption-side="top"} 
 
@@ -122,11 +122,8 @@ The following table lists infrastructure services that are enabled for {{site.da
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.cloud}} Load Balancer for VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-load-balancers-in-ibm-cloud-vpc)| Use this service to distribute traffic among multiple server instances within the same region of your VPC.  | [Metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-monitoring-metrics-lb) |
-| [{{site.data.keyword.cloud}} VPN for VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc)| Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. | [Metrics](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-monitoring-metrics) |
-{: caption="List of VPC classic services (generation 1)" caption-side="top"} 
-
-
+| [{{site.data.keyword.cloud}} Load Balancer for VPC](/docs/vpc?topic=vpc-nlb-vs-elb)| Use this service to distribute traffic among multiple server instances within the same region of your VPC.  | [Metrics](/docs/vpc?topic=vpc-ibm-cloud-vpc-monitoring-dashboards) |
+{: caption="List of VPC services (classic)" caption-side="top"} 
 
 ## Database services
 {: #database}
@@ -194,16 +191,5 @@ The following table lists Cloud services that are enabled for {{site.data.keywor
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)| You can use {{site.data.keyword.cos_full_notm}} to store unstructured data in the {{site.data.keyword.cloud_notm}}.  | [Metrics](/docs/cloud-object-storage?topic=cloud-object-storage-mm-cos-integration&programming_language=Console) |
 {: caption="List of VPC services (generation 2)" caption-side="top"} 
-
-## AI
-{: #ai_machine_learning}
-
-The following table lists AI / Machine Learning services that are enabled for {{site.data.keyword.mon_full_notm}}:
-
-| Service     | Description | Metrics             |
-|-------------|-------------|-------------------|
-| [{{site.data.keyword.wh-acd_short}}](/docs/wh-acd)| You can use {{site.data.keyword.wh-acd_short}} to analyze text and extract medical codes and concepts. | [Metrics](/docs/wh-acd?topic=wh-acd-monitor-pm) |
-{: caption="List of AI / Machine Learning services" caption-side="top"}
-
 
 
