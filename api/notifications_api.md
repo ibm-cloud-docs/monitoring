@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2021-01-18"
+lastupdated: "2022-11-01"
 
 keywords: IBM Cloud, monitoring, notifications, api
 
@@ -125,7 +125,7 @@ Where
 
 * You can pass data to create the notification in the `notification.json` file by using `-d`. 
 
-    Valid types are `EMAIL`, `PAGER_DUTY`, `SLACK`, `SNS`, and `VICTOROPS`.
+    Valid types are `EMAIL`, `PAGER_DUTY`, `SLACK`, and `VICTOROPS`.
 
 The following sample shows the request body parameters that you can set to create an notification: 
 

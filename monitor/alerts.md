@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2022
-lastupdated: "2022-08-05"
+lastupdated: "2022-11-01"
 
 keywords: IBM Cloud, monitoring, alerts
 
@@ -37,7 +37,7 @@ You can define an alert on a single metric or a set of metrics to notify of even
 
 You can enable predefined alerts, modify alerts, and create custom alerts in the web UI and by using the {{site.data.keyword.mon_full_notm}} API.
 
-You manage alerts in the *Alerts* view of the web UI. You can configure the table columns that are displayed in the *Alerts* view. Valid column options are *Name*, *Scope*, *Alert When*, *Segment By*, *Notifications*, *Enabled*, *Modified*, *Captures*, *Channels*, *Created*, *Description*, *Email recipients*, *For at least*, *OpsGenie*, *PagerDuty*, *Severity*, *Slack*, *WebHook*, *SNS topics*, *Type*, and *VictorOps*.
+You manage alerts in the *Alerts* view of the web UI. You can configure the table columns that are displayed in the *Alerts* view. Valid column options are *Name*, *Scope*, *Alert When*, *Segment By*, *Notifications*, *Enabled*, *Modified*, *Captures*, *Channels*, *Created*, *Description*, *Email recipients*, *For at least*, *OpsGenie*, *PagerDuty*, *Severity*, *Slack*, *WebHook*, *Type*, and *VictorOps*.
 
 ## Types of alerts
 {: #alerts_types}
@@ -77,7 +77,6 @@ When you configure an alert, you can specify 1 or more notification channels.
 By default, when an alert is triggered, you get a notification in the *Events* section.
 
 You can configure any of the following notification channels:
-- Amazon SNS Topic
 - Email
 - IBM Cloud Functions
 - IBM Event Notifications
