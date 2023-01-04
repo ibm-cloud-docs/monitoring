@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-07-01"
 
 keywords: IBM Cloud, monitoring, windows
@@ -27,7 +27,7 @@ completion-time: 1h
 The standard monitoring agent cannot be installed on a Windows platform. In order to monitor a Windows system with {{site.data.keyword.mon_full_notm}}, you can leverage the [Prometheus Windows Exporter](https://promcat.io/apps/windows){: external} to perform the collection of the metrics on the system.
 {: shortdesc}
 
-If you need information on the legacy Prometheus WMI Exporter, see [Monitoring a Windows environment using the legacy WMI Exporter](/docs/monitoring?topic=monitoring-windows_wmi).  
+If you need information on the legacy Prometheus WMI Exporter, see [Monitoring a Windows environment using the legacy WMI Exporter](/docs/monitoring?topic=monitoring-windows_wmi).
 {: note}
 
 Once the metrics are collected you have two options for publishing the metrics, remotely scraping the metrics with a Linux monitoring agent,or pushing from a local instance of Prometheus using remote write. Step 3 will cover these two options, but step 1 and 2 are the same regardless of how the metrics are sent.
@@ -42,11 +42,11 @@ Complete the following steps to configure the following Windows images to send m
 
 Configure the [Prometheus `windows_exporter`](https://github.com/prometheus-community/windows_exporter){: external} to collect Windows system metrics.
 
-The Prometheus Windows exporter runs as a Windows service. You configure the metrics that you want to monitor by enabling collectors. 
+The Prometheus Windows exporter runs as a Windows service. You configure the metrics that you want to monitor by enabling collectors.
 
 The following collectors are supported:
 
-| Collector name | Information about metrics collected per collector | 
+| Collector name | Information about metrics collected per collector |
 |----------------|---------------------------------------------------|
 | `cpu`          | [CPU metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.cpu.md){: external} |
 | `cs`           | [Computer system metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.cs.md){: external} |
@@ -55,7 +55,7 @@ The following collectors are supported:
 | `system`       | [System metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.system.md){: external} |
 | `net`          | [Network interface metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.net.md){: external} |
 | `memory`       | [Memory metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.memory.md){: external} |
-{: caption="Table 1. Collectors" caption-side="top"} 
+{: caption="Table 1. Collectors" caption-side="top"}
 
 
 Complete the following steps to configure the Prometheus Windows exporter in your Windows system:
@@ -64,14 +64,14 @@ Complete the following steps to configure the Prometheus Windows exporter in you
 
 2. [Download the Prometheus `windows_exporter`](https://github.com/martinlindhe/wmi_exporter/releases){: external} appropriate for your environment.
 
-3. Identify the collectors that include data for the metric data that you want to collect.  
+3. Identify the collectors that include data for the metric data that you want to collect.
 
 4. Change to the directory where you downloaded the Prometheus Windows exporter.
 
 5. Run the `windows_exporter` and configure the collectors that you want to enable.  For example:
 
     ```text
-    .\windows_exporter-0.16.0-amd64.exe --collectors.enabled <COLLECTORS> 
+    .\windows_exporter-0.16.0-amd64.exe --collectors.enabled <COLLECTORS>
     ```
     {: codeblock}
 
@@ -112,8 +112,8 @@ Complete the following steps:
 
     You can collect a maximum of 3000 time series per Linux agent. If you need to collect more than 3000 time series for all your Windows systems, you need more than one Linux agent.
     {: important}
-    
-2. Update the `/opt/draios/etc/dragent.yml` to [enable remote scraping](https://docs.sysdig.com/en/docs/installation/prometheus-remote-write/){: external}. 
+
+2. Update the `/opt/draios/etc/dragent.yml` to [enable remote scraping](https://docs.sysdig.com/en/docs/installation/prometheus-remote-write/){: external}.
 
     ```yaml
     prometheus:
@@ -144,7 +144,7 @@ Complete the following steps:
     `<JOBNAME>` is a custom attribute that you can set to identify the role of the node that you are scraping, and you can also use to scope the data
 
     See the following sample configuration that you can set to enable scraping for a Windows system with hostname `my-windows-hostname` in your environment:
- 
+
     ```yaml
     prometheus:
         enabled: true
@@ -165,7 +165,7 @@ Complete the following steps:
     ```
     {: screen}
 
-3. Configure the monitoring agent to reduce the number of metrics that are collected by the Windows `windows_exporter`. 
+3. Configure the monitoring agent to reduce the number of metrics that are collected by the Windows `windows_exporter`.
 
     You can configure the `metrics_filter` section to remove metrics. For example, you can remove collector metrics. You can also remove specific metrics that you do not wish to collect.
 
@@ -194,11 +194,11 @@ Use the Prometheus remote-write capabilities to push the metrics from the Window
 
 Complete the following steps:
 
-1. Download the Prometheus monitoring system and time series database. [Download prometheus-2.27.1.windows-amd64.tar.gz](https://prometheus.io/download/){: external} 
+1. Download the Prometheus monitoring system and time series database. [Download prometheus-2.27.1.windows-amd64.tar.gz](https://prometheus.io/download/){: external}
 
-2. Unzip the file `prometheus-2.27.1.windows-amd64.tar.gz`. 
+2. Unzip the file `prometheus-2.27.1.windows-amd64.tar.gz`.
 
-3. Edit the `prometheus.yml` file. For example, you can edit it with Notepad. 
+3. Edit the `prometheus.yml` file. For example, you can edit it with Notepad.
 
 4. Configure the `scrape_configs` section of `prometheus.yml` configuration file as follows to have prometheus scrape the `windows_exporter`.
 
@@ -228,7 +228,7 @@ Complete the following steps:
     ```yaml
     remote_write:
       - url: "<ENDPOINT>/prometheus/remote/write"
-  
+
         bearer_token_file: C:\Users\Administrator\prom\sysdig-apikey
 
         write_relabel_configs:
@@ -242,14 +242,14 @@ Complete the following steps:
     ```
     {: codeblock}
 
-    Where 
-    
+    Where
+
     `ENDPOINT` is the monitoring collector endpoint. To see the list of endpoints, see [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
     `monitoring-apikey` is the file that contains the **Monitor API Token**. Notice that the file name does not have an extension.  For more information about how to get the API token, see [Working with Monitor API tokens](/docs/monitoring?topic=monitoring-api_monitoring_token).
 
     For example, the completed version of the prometheus.yml could look like :
-  
+
     ```yaml
     # my global config
     global:
@@ -353,9 +353,9 @@ For example, complete the following instructions when the container approach is 
     ```
     {: codeblock}
 
-3. Test the blackbox exporter is working by manually running the probe to test your Windows system.  
+3. Test the blackbox exporter is working by manually running the probe to test your Windows system.
 
-    For example, you can do a simple `icmp` check to see if the system is responding. See the [documentation](https://github.com/prometheus/blackbox_exporter/blob/master/README.md){: external} for other options. 
+    For example, you can do a simple `icmp` check to see if the system is responding. See the [documentation](https://github.com/prometheus/blackbox_exporter/blob/master/README.md){: external} for other options.
 
     ```text
     curl 'http://localhost:9115/probe?module=icmp&target=<system ip>'
@@ -368,7 +368,7 @@ For example, complete the following instructions when the container approach is 
 
 4. Update the `/opt/draios/etc/dragent.yaml` to enable `probe_success` metrics.
 
-    You must add details about the check that you want to run on the call. 
+    You must add details about the check that you want to run on the call.
 
     ```yaml
     prometheus:
@@ -397,4 +397,3 @@ For example, complete the following instructions when the container approach is 
     service dragent restart
     ```
     {: pre}
-

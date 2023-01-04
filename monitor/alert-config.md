@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-05-05"
 
 keywords: IBM Cloud, monitoring, alerts
@@ -33,7 +33,7 @@ From the *Alert* section of the UI, select **Add Alert**. Then, choose the alert
 
 Enter a name for the alert.
 
-You can also add a description for the alert and the name of an alert group if you want to group you alerts.  If an alert group is not specified, the alert will be created in the default group. 
+You can also add a description for the alert and the name of an alert group if you want to group you alerts.  If an alert group is not specified, the alert will be created in the default group.
 
 
 ## Step 3. Define the severity
@@ -79,6 +79,3 @@ By default, you get a notification in the *Events* section.
 You can enable multi-channel notifications by enabling 1 or more notification channels.
 
 Optionally, you can customize the information that is included in a notification to provide more context for the alert.
-
-
-

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, pricing
@@ -26,7 +26,7 @@ The following service plans are available:
 | `Lite`                                     | `367a3918-9efc-43c5-bef9-20553051b7af` | `lite`                      |
 | `Graduated tier`                           | `231bb072-1b2f-4d7e-ae9e-9574d382be32` | `graduated-tier`            |
 | `Graduated Tier - Sysdig Secure + Monitor` | `35784193-e918-42d9-9598-4e842ed75192` | `graduated-tier-sysdig-secure-plus-monitor` |
-{: caption="Table 1. Service plans" caption-side="top"} 
+{: caption="Table 1. Service plans" caption-side="top"}
 
 A `Lite` monitoring instance expires after 30 days.
 {: note}
@@ -40,7 +40,7 @@ The costs that are provided in this topic are guidelines and do not represent ac
 | `Lite`           | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | | |
 | `Graduated tier` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | `Graduated Tier - Sysdig Secure + Monitor` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-{: caption="Table 2. Time-series tiers per service plans" caption-side="top"} 
+{: caption="Table 2. Time-series tiers per service plans" caption-side="top"}
 
 
 The *graduated tier* plan is billed based on the following measurements and pricing:
@@ -84,7 +84,7 @@ To monitor how the {{site.data.keyword.mon_full_notm}} service is used and the c
 {: #pricing_example1}
 
 
-Consider the following example where you have the following configuration: 
+Consider the following example where you have the following configuration:
 * 3 hosts
     * Host-1 generates 1200 time-series
     * Host-2 generates 1000 time-series
@@ -99,7 +99,7 @@ The billing calculation for the month is calculated as follows:
     The base price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
     For 3 hosts, the total base cost adds to **105 USD**.
-  
+
     ```text
     3 * 35 USD = 105 USD
     ```
@@ -108,21 +108,21 @@ The billing calculation for the month is calculated as follows:
 * `Additional time-series cost`
 
     Each host has a 1000 time-series allotment that are included in the base cost per host of 35 USD. If you have 3 hosts, you have included 3000 time-series. The remaining time-series are priced based on the tiers.
-  
+
     ```text
     1200 + 1000 + 1500 - ( 3*1000 ) = 700 additional time-series
     ```
     {: screen}
-    
-    The result from adding the time series per host minus the allotment defines the tier that is applied for pricing. 
-    
+
+    The result from adding the time series per host minus the allotment defines the tier that is applied for pricing.
+
     700 additional time-series corresponds to tier 1. The price per host is 0.08 USD for up to 100K time-series per month.
-    
+
     ```text
     700 additional time-series * 0.08 USD (Tier-1) = 56 USD
     ```
     {: screen}
-    
+
     The total cost for additional time-series adds to **56 USD**.
 
 * `Additional containers cost`
@@ -130,7 +130,7 @@ The billing calculation for the month is calculated as follows:
     Each host has a 50 containers allotment. The remaining containers are priced 5 USD per 10 containers per month.
 
     ```text
-    170 - (3x50) = 20 
+    170 - (3x50) = 20
     (20 additional containers/10) * 5 USD = 10 USD
     ```
     {: screen}
@@ -142,9 +142,9 @@ The billing calculation for the month is calculated as follows:
     1M API calls are included with the instance each month.
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
-  
+
     ```text
-    1.2M - 1M = 200k 
+    1.2M - 1M = 200k
     200k * 0.01 USD/1k = 2 USD
     ```
     {: screen}
@@ -162,7 +162,7 @@ The total monitoring cost per month adds to **173 USD**.
 {: #pricing_example2}
 
 
-Consider the following example where you have the following configuration: 
+Consider the following example where you have the following configuration:
 * 5 hosts
     * Host-1 generates 2000 time-series
     * Host-2 generates 100 time-series
@@ -179,7 +179,7 @@ The billing calculation for the month is calculated as follows:
     The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
     For 5 hosts, the total base cost adds to **175 USD**.
-  
+
     ```text
     5 * 35 USD = 175 USD
     ```
@@ -188,16 +188,16 @@ The billing calculation for the month is calculated as follows:
 * `Additional time-series cost`
 
     Each host has a 1000 time-series allotment. The remaining time-series are priced based on the tiers.
-  
+
     ```text
-    2000 + 100 + 500 + 100 + 200 - ( 5*1000 ) = -1100 
+    2000 + 100 + 500 + 100 + 200 - ( 5*1000 ) = -1100
     ```
     {: screen}
-    
-    The result from adding the time series per host minus the allotment defines the tier that is applied for pricing. 
-    
+
+    The result from adding the time series per host minus the allotment defines the tier that is applied for pricing.
+
     You have 1100 more time-series available per your configuration.
-    
+
     The total cost for additional time-series adds to **0 USD**.
 
 * `Additional containers cost`
@@ -218,7 +218,7 @@ The billing calculation for the month is calculated as follows:
     1M API calls are included with the instance each month.
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
-  
+
     ```text
     700k - 1M = -300k
     ```
@@ -242,7 +242,7 @@ The total monitoring cost per month adds to **175 USD**.
 ## Billing sample 3: Platform metrics only
 {: #pricing_example3}
 
-Consider the following example where you have the following configuration for platform metrics: 
+Consider the following example where you have the following configuration for platform metrics:
 * Event-stream generates 50 time-series per month
 * IBM Cloud Databases generates 60 time-series per month
 * 30k API calls
@@ -270,7 +270,7 @@ The billing calculation for the month is calculated as follows:
     1M API calls are included with the instance each month.
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
-  
+
     ```text
     0.03M - 1M = -970k
     0 * 0.01 USD/1k = 0 USD
@@ -294,7 +294,7 @@ Since there were no agents running in this example, the base price and additiona
 
 The following configuration demonstrates billing for a combination of host time-series allotment as well as platform metrics.
 
-Consider the following example where you have the following configuration: 
+Consider the following example where you have the following configuration:
 * 3 hosts
     * Host-1 generates 1000 time-series
     * Host-2 generates 850 time-series
@@ -314,7 +314,7 @@ The billing calculation for the month would look like:
     The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
     For 3 hosts, the total cost adds to **105 USD**.
-  
+
     ```text
     3 * 35 USD = 105 USD
     ```
@@ -323,7 +323,7 @@ The billing calculation for the month would look like:
 * `Additional time-series cost`
 
     Each host has a 1000 time-series allotment. The remaining time-series are priced based on the tiers.
-  
+
     ```text
     1000 + 850 + 800 + 200 + 200 + 100 - ( 3*1000 ) = 150 time-series
     ```
@@ -332,7 +332,7 @@ The billing calculation for the month would look like:
     The result from adding the time series per host, plus the platform metrics minus the allotment defines the tier that is applied for pricing.
 
     Notice that since the `Base cost per host` time-series allotment was not completely used by the agents, 350 of the 500 platform metrics time-series were covered by the base tier.
-    
+
     ```text
     150 additional time-series * 0.08 USD (Tier-1) = 12 USD
     ```
@@ -358,7 +358,7 @@ The billing calculation for the month would look like:
     1M API calls are included with the instance each month.
 
     The price for additional API calls is 0.01 USD per 1000 API calls.
-  
+
     ```text
     300k - 1M = -700k
     ```
@@ -375,6 +375,3 @@ The total monitoring cost per month adds to **117 USD**.
 105 USD + 12 USD + 0 USD + 0 USD = 117 USD
 ```
 {: screen}
-
-
-

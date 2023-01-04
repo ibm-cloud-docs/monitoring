@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, alerting, api, curl
@@ -40,7 +40,7 @@ Where
 
 
 
-### Headers for IAM Tokens 
+### Headers for IAM Tokens
 {: #mon-curl-headers-iam}
 
 Use IAM tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use the {{site.data.keyword.mon_short}} REST API to automate routine tasks and monitor notifications.
@@ -57,15 +57,15 @@ In a cURL command, add the following options to authenticate with the {{site.dat
 
 Where
 
-* `IBMInstanceID` indicates the GUID of the {{site.data.keyword.mon_full_notm}} instance that you want to target with the cURL command. 
+* `IBMInstanceID` indicates the GUID of the {{site.data.keyword.mon_full_notm}} instance that you want to target with the cURL command.
 
     To get the GUID of the monitoring instance, run the following command: `ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid'`
 
 * `Authorization` indicates the IAM token that is used to authenticate with the {{site.data.keyword.mon_full_notm}} service instance.
 
     To get the IAM `AUTH_TOKEN` token, run the following command: `ibmcloud iam oauth-tokens | awk '{print $4}'`
-    
-    For more information, see [Getting the IAM API token](/docs/monitoring?topic=monitoring-api_token#api_iam_token_get). 
+
+    For more information, see [Getting the IAM API token](/docs/monitoring?topic=monitoring-api_token#api_iam_token_get).
 
 * `SysdigTeamID` indicates the GUID of a team.
 
@@ -126,4 +126,3 @@ curl -X POST \
   -d @alert.json
 ```
 {: screen}
-

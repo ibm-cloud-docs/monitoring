@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2018, 2022
+  years: 2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, security, connection
@@ -35,7 +35,7 @@ The collector component ingests data that monitoring agents forward to the monit
 
 The datastore component stores all metrics, metadata, events, instance credentials, and environmental data.
 
-You can use monitoring agents to monitor and collect metrics and events from hosts such as a Kubernetes cluster or a Linux system. A monitoring agent connects to 1 monitoring instance. The agent forwards data to the instance that is connected. 
+You can use monitoring agents to monitor and collect metrics and events from hosts such as a Kubernetes cluster or a Linux system. A monitoring agent connects to 1 monitoring instance. The agent forwards data to the instance that is connected.
 
 Platform metrics are collected automatically for monitoring-enabled services in each region. The data is forwarded to the {{site.data.keyword.mon_full_notm}} service instance that is enabled to collect and monitor platform metrics in a region.
 
@@ -54,11 +54,9 @@ Each regional deployment of the {{site.data.keyword.mon_full_notm}} service serv
 * Data for all tenants is co-located in the same data stores and segmented by the tenant-specific metric tags that are associated with each metric to enforce access control policies.
 
 You can use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) to control which users see, create, use, and manage resources in your service instance. [Learn more](/docs/monitoring?topic=Monitoring-with-monitoring-iam).
-* To grant access to manage the {{site.data.keyword.mon_full_notm}} in {{site.data.keyword.cloud_notm}}, you can assign platform roles that define users levels of access for completing platform management tasks and accessing account resources. 
+* To grant access to manage the {{site.data.keyword.mon_full_notm}} in {{site.data.keyword.cloud_notm}}, you can assign platform roles that define users levels of access for completing platform management tasks and accessing account resources.
 * To grant access to manage the monitoring instance and its resources, you can assign service roles that define users levels of access for viewing data and managing features such as dashboards, teams, and alerts.
 
-Within a monitoring instance, you can define teams to group users and control what data and resources are available for members of a team. 
+Within a monitoring instance, you can define teams to group users and control what data and resources are available for members of a team.
 * Adding users to a team is managed through IAM policies. [Learn more](/docs/monitoring?topic=Monitoring-with-monitoring-iam#iam_policies_team).
 * User access to view, manage, and monitor data is granted through IAM policies.
-
-

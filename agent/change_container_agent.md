@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, change, kubernetes agent
@@ -15,7 +15,7 @@ subcollection: monitoring
 # Customizing container monitoring agents
 {: #change_agent}
 
-In {{site.data.keyword.mon_full_notm}}, you can customize the monitoring agent configuration to set a log level, block ports, include or exclude metric data, add or remove events, and filter out containers. 
+In {{site.data.keyword.mon_full_notm}}, you can customize the monitoring agent configuration to set a log level, block ports, include or exclude metric data, add or remove events, and filter out containers.
 {: shortdesc}
 
 
@@ -44,7 +44,7 @@ Complete the following steps to edit the file and apply the changes:
 
 To block network traffic and metrics from network ports, you must customize the **blacklisted_ports** section in the *dragent.yaml* file. You must list the ports from which you want to filter out any data.
 
-Port 53 (DNS) is always in the blocklist and does not need to be specified in the **blacklisted_ports**. 
+Port 53 (DNS) is always in the blocklist and does not need to be specified in the **blacklisted_ports**.
 {: note}
 
 For example, the following sample shows how to set the *blacklisted_ports* section of a monitoring agent to exclude data coming from ports 6666 and 6379:
@@ -61,7 +61,7 @@ blacklisted_ports:
 ## Collecting a set of Docker events
 {: #docker}
 
-{{site.data.keyword.mon_full_notm}} supports event integration with Docker. monitoring agents automatically discover Docker sources and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
+{{site.data.keyword.mon_full_notm}} supports event integration with Docker. monitoring agents automatically discover Docker sources and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data.
 
 By default, only a limited set of events is collected. The default settings configuration file */opt/draios/etc/dragent.default.yaml* includes the events that are collected. For more information about the events that are collected by default, see [Docker events](https://docs.sysdig.com/en/event-types.html){: external}.
 
@@ -112,11 +112,11 @@ events:
 ## Filtering events by severity
 {: #filter_by_severity}
 
-To filter events by severity, you can also change the log entry type for events in the *dragent.yaml* file. 
+To filter events by severity, you can also change the log entry type for events in the *dragent.yaml* file.
 
 The default log level is **information**. This means that only warning and higher severity events are transmitted.
 
-Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *information*, *debug* and *none*. 
+Valid levels are: *emergency*, *alert*, *critical*, *error*, *warning*, *notice*, *information*, *debug* and *none*.
 
 The values are listed from high priority to low priority.
 {: note}
@@ -162,17 +162,17 @@ metrics_filter:
 ```
 {: screen}
 
-* You are configuring the monitoring agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*. 
-* You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*. 
+* You are configuring the monitoring agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*.
+* You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*.
 * The entry `exclude: metricA.*` is ignored.
 
 
 ## Changing the log level
 {: #log_level}
 
-To configure the log level, you must customize the **log** section in the *dragent.yaml* file. 
+To configure the log level, you must customize the **log** section in the *dragent.yaml* file.
 
-The monitoring agent generates log entries in */opt/draios/logs/draios.log*. 
+The monitoring agent generates log entries in */opt/draios/logs/draios.log*.
 * The log file rotates when it reaches 10MB in size.
 * The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
 * Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*
@@ -185,6 +185,4 @@ The monitoring agent generates log entries in */opt/draios/logs/draios.log*.
 | Reduce container console output               | `console_priority: warning` |
 | Filtering events by severity                  | `event_priority: warning`   |
 | Verify what metrics are included or excluded  | `metrics_excess_log: true`  |
-{: caption="Table 2. Log section entries" caption-side="top"} 
-
-
+{: caption="Table 2. Log section entries" caption-side="top"}

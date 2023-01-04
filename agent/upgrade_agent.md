@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2020-09-15"
 
 keywords: IBM Cloud, monitoring, delete agent
@@ -22,7 +22,7 @@ Choose any of the following options to update a monitoring agent:
 ## Updating a Kubernetes agent
 {: #update_agent_kube}
 
-By default, the monitoring agent has a `RollingUpdate` update strategy. 
+By default, the monitoring agent has a `RollingUpdate` update strategy.
 
 ```yaml
 updateStrategy:
@@ -34,7 +34,7 @@ updateStrategy:
 
 When you update the agent's DaemonSet template, old DaemonSet pods are killed, and new DaemonSet pods are created automatically.
 
-The image that is used to create the new pods is the one that is specified in the DaemonSet template. By default, the monitoring agent's image pull policy is configured to always so that it pulls the latest image. The `imagePullPolicy` of the container is set to `Always`. 
+The image that is used to create the new pods is the one that is specified in the DaemonSet template. By default, the monitoring agent's image pull policy is configured to always so that it pulls the latest image. The `imagePullPolicy` of the container is set to `Always`.
 
 ```yaml
 containers:
@@ -88,7 +88,7 @@ Complete the following steps to update a monitoring agent with a `RollingUpdate`
     {: pre}
 
     Where `IMAGE_VERSION` is the version of the agent that you want to deploy. To see the the agent versions that are available, see [monitoring agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html){: external}.
-    
+
     For example, to update the agent to version `10.5.1`, you can run the following command:
 
     ```text
@@ -167,4 +167,3 @@ Complete the following steps to update a monitoring agent on Linux:
     sudo yum -y install draios-agent
     ```
     {: pre}
-

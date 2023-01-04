@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2022
+  years:  2022, 2023
 lastupdated: "2022-10-12"
 
 keywords: IBM, release notes
@@ -46,4 +46,3 @@ You will need an RSS reader browser extension or app installed to configure an R
 3. Click **Release notes**.
 
 4. Click **RSS Feed** and follow the instructions for your RSS reader app or browser extension to configure notification of changes to the Release Notes page.
-

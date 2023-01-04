@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-09-20"
 
 
@@ -17,7 +17,7 @@ subcollection: monitoring
 # Getting started tutorial
 {: #getting-started}
 
-{{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. In architectures that are focused on container and microservices, you can use Secure to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. 
+{{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. In architectures that are focused on container and microservices, you can use Secure to protect, monitor, and enhance forensic analysis of your pipeline and runtime components.
 {: shortdesc}
 
 The following figure shows the components overview for the {{site.data.keyword.mon_full_notm}} service that is running on {{site.data.keyword.cloud_notm}}:
@@ -34,8 +34,8 @@ You provision an instance within the context of a resource group. You use a reso
 
 When you [provision an instance](/docs/monitoring?topic=monitoring-provision#provision), you automatically get an ingestion key, known as the [access key](/docs/monitoring?topic=monitoring-access_key#access_key).
 
-After you provision an instance, you must configure metric sources, enable platform metrics, or both. 
-* A metric source is any resource that you want to monitor and control its performance and health. 
+After you provision an instance, you must configure metric sources, enable platform metrics, or both.
+* A metric source is any resource that you want to monitor and control its performance and health.
 * You can configure a monitoring agent to collect metrics from a source. For example, you can configure a monitoring agent for a Kubernetes cluster. You use the access key to configure the monitoring agent that is responsible for collecting and forwarding metric data to your instance.
 
     The monitoring agent can be configured to push metrics via the public or private endpoints by using the appropriate ingestion URL. Details can found in the [endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints) section.
@@ -44,7 +44,7 @@ After you provision an instance, you must configure metric sources, enable platf
 
 * You can enable platform metrics to monitor {{site.data.keyword.cloud_notm}} services. You can only configure 1 monitoring in a region to collect automatically platform metrics. [Learn more](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 
-You can [monitor](/docs/monitoring?topic=monitoring-monitoring#monitoring), and [manage](/docs/monitoring?topic=monitoring-panels) data through the {{site.data.keyword.mon_full_notm}} Web UI.  
+You can [monitor](/docs/monitoring?topic=monitoring-monitoring#monitoring), and [manage](/docs/monitoring?topic=monitoring-panels) data through the {{site.data.keyword.mon_full_notm}} Web UI.
 
 Notice that there is a delay showing metric data for new time series. Data is not ready until the initial indexing of a new metric source is completed.  Therefore, new sources such as clusters, platform metrics, or systems that you configure, all take some time to become visible through the monitoring UI.
 {: note}
@@ -55,22 +55,22 @@ Notice that there is a delay showing metric data for new time series. Data is no
 ### Accelerate the diagnosis and resolution of performance incidents
 {: #getting-started-feature1}
 
-{{site.data.keyword.mon_full_notm}} offers deep visibility into your infrastructure and applications with the ability to troubleshoot from service level all the way down to the system level. Pre-defined dashboards and alerts simplify identification of potential threats or problems. By using {{site.data.keyword.mon_full_notm}}, developers and DevOps teams monitor and troubleshoot performance issues in real-time, identify the source of errors, and eliminate problems. 
+{{site.data.keyword.mon_full_notm}} offers deep visibility into your infrastructure and applications with the ability to troubleshoot from service level all the way down to the system level. Pre-defined dashboards and alerts simplify identification of potential threats or problems. By using {{site.data.keyword.mon_full_notm}}, developers and DevOps teams monitor and troubleshoot performance issues in real-time, identify the source of errors, and eliminate problems.
 
 ### Control the cost of your monitoring infrastructure
 {: #getting-started-feature2}
 
-{{site.data.keyword.mon_full_notm}} includes functionality that help you control the cost of your monitoring infrastructure in the {{site.data.keyword.cloud_notm}}. You can configure the metric sources for which you want to monitor their performance. You can enable a pre-defined alert to warn you of usage changes that will impact your billing. 
+{{site.data.keyword.mon_full_notm}} includes functionality that help you control the cost of your monitoring infrastructure in the {{site.data.keyword.cloud_notm}}. You can configure the metric sources for which you want to monitor their performance. You can enable a pre-defined alert to warn you of usage changes that will impact your billing.
 
 ### Explore and visualize easily your entire environment
 {: #getting-started-feature3}
 
-{{site.data.keyword.mon_full_notm}} makes it easy to visually explore your environment. Dynamic topology maps provide a view of dependencies between services. Multi-dimensional queries across high churn, high cardinality, high frequency metrics accelerate troubleshooting. Customizable dashboards allow you to visualize what matters most. 
+{{site.data.keyword.mon_full_notm}} makes it easy to visually explore your environment. Dynamic topology maps provide a view of dependencies between services. Multi-dimensional queries across high churn, high cardinality, high frequency metrics accelerate troubleshooting. Customizable dashboards allow you to visualize what matters most.
 
 ### Get critical Kubernetes and container insights for dynamic microservice monitoring
 {: #getting-started-feature4}
 
-{{site.data.keyword.mon_full_notm}} auto-discovers Kubernetes environments providing out-of-the-box dashboards and alerts for clusters, nodes, namespaces, services, deployments, pods and more. A single agent per node dynamically discovers all microservices and auto-collects metrics and events from various sources including Kubernetes, hosts, networks, containers, processes, applications and custom metrics like Prometheus, JMX, and StatsD. 
+{{site.data.keyword.mon_full_notm}} auto-discovers Kubernetes environments providing out-of-the-box dashboards and alerts for clusters, nodes, namespaces, services, deployments, pods and more. A single agent per node dynamically discovers all microservices and auto-collects metrics and events from various sources including Kubernetes, hosts, networks, containers, processes, applications and custom metrics like Prometheus, JMX, and StatsD.
 
 ### Mitigate the impact of abnormal situations with proactive notifications
 {: #getting-started-feature5}
@@ -100,18 +100,18 @@ Before you can provision an instance, consider the following information:
 * You must have permissions to create resources in the *Default* resource group.
 * Other {{site.data.keyword.cloud_notm}} users with `administrator` or `editor` permissions can manage the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}. These users must also have platform permissions to create resources within the context of the resource group where they plan to provision the instance.
 
-To grant a user administrator role for the service and to manage instances within a resource group in the account, the user must have an IAM policy for the {{site.data.keyword.mon_full_notm}} service with the platform role **Administrator** within the context of the resource group. 
+To grant a user administrator role for the service and to manage instances within a resource group in the account, the user must have an IAM policy for the {{site.data.keyword.mon_full_notm}} service with the platform role **Administrator** within the context of the resource group.
 
-Complete the following steps to assign a user administrator role to the {{site.data.keyword.mon_full_notm}} service within the context of a resource group: 
+Complete the following steps to assign a user administrator role to the {{site.data.keyword.mon_full_notm}} service within the context of a resource group:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and then select **Users**.
 2. From the row for the user that you want to assign access, select the **Actions** menu, and then click **Assign access**.
 3. Select **Assign access within a resource group**.
 4. Select a resource group.
-5. If the user does not have a role already granted for the selected resource group, choose a role for the **Assign access to a resource group** field. 
+5. If the user does not have a role already granted for the selected resource group, choose a role for the **Assign access to a resource group** field.
 
-    Depending on the role that you select, the user can view the resource group on their dashboard, edit the resource group name, or manage user access to the group. 
-    
+    Depending on the role that you select, the user can view the resource group on their dashboard, edit the resource group name, or manage user access to the group.
+
     You can select **No access**, if you want the user to only have access to the {{site.data.keyword.mon_full_notm}} service in the resource group.
 
 6. Select **{{site.data.keyword.mon_full_notm}}**.
@@ -121,7 +121,7 @@ Complete the following steps to assign a user administrator role to the {{site.d
 ## Step 2. Provision an instance of the {{site.data.keyword.mon_full_notm}} service
 {: #getting-started-step2}
 
-To add monitoring features with {{site.data.keyword.mon_full_notm}} in the {{site.data.keyword.cloud_notm}}, you must provision an instance of the {{site.data.keyword.mon_full_notm}} service. 
+To add monitoring features with {{site.data.keyword.mon_full_notm}} in the {{site.data.keyword.cloud_notm}}, you must provision an instance of the {{site.data.keyword.mon_full_notm}} service.
 
 You provision an instance within the context of a resource group. A resource group lets you organize your services for access control and billing purposes. You can provision the {{site.data.keyword.mon_full_notm}} instance in the *default* resource group or in a custom resource group.
 
@@ -139,9 +139,9 @@ To provision an instance through the {{site.data.keyword.cloud_notm}} UI, comple
 
 4. Click the **{{site.data.keyword.mon_full_notm}}** tile.
 
-5. Select the location. 
+5. Select the location.
 
-6. Select a service plan. 
+6. Select a service plan.
 
     To provision an instance that only includes the *Monitor* component, select the plan **Graduated Tier**.
 
@@ -172,13 +172,13 @@ To see the list of enabled-monitoring services, see [Cloud services](/docs/monit
 For example, to configure platform metrics in a region, complete the following steps:
 1. From the{{site.data.keyword.cloud_notm}} dashboard, go to the menu icon ![menu icon](../../icons/icon_hamburger.svg) &gt; **Observability** to access the *Observability* dashboard.
 
-2. Select **Monitoring** &gt; **Configure platform metrics**. 
+2. Select **Monitoring** &gt; **Configure platform metrics**.
 
-3. Select a [region](/docs/monitoring?topic=monitoring-endpoints#endpoints_regions). 
+3. Select a [region](/docs/monitoring?topic=monitoring-endpoints#endpoints_regions).
 
-4. Choose the monitoring that will collect metrics from enabled services on that location. 
+4. Choose the monitoring that will collect metrics from enabled services on that location.
 
-5. Click **Save**. 
+5. Click **Save**.
 
 The main *Observability* page opens.
 
@@ -199,13 +199,13 @@ You can configure a monitoring agent for different environments. For example, to
 
 Complete one of the following tutorials to learn how to deploy a monitoring agent:
 
-|	Tutorial                        | 
+|	Tutorial                        |
 |---------------------------------|
 | [Monitoring an Ubuntu Linux VPC server instance](/docs/monitoring?topic=monitoring-ubuntu#ubuntu) |
-| [Monitoring a Linux bare metal server](/docs/monitoring?topic=monitoring-baremetal_linux) | 
+| [Monitoring a Linux bare metal server](/docs/monitoring?topic=monitoring-baremetal_linux) |
 | [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows) |
-| [Monitoring a Kubernetes cluster](/docs/monitoring?topic=monitoring-kubernetes_cluster) | 
-{: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"} 
+| [Monitoring a Kubernetes cluster](/docs/monitoring?topic=monitoring-kubernetes_cluster) |
+{: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 For more information, see [Configuring a monitoring agent](/docs/monitoring?topic=monitoring-config_agent) and [Removing a monitoring agent](/docs/monitoring?topic=monitoring-remove_agent).
 
@@ -216,7 +216,7 @@ After the monitoring agent is deployed, collection and forwarding of metrics to 
 
 After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, and configure a monitoring agent for your node, you can view, monitor, and manage data through the service's web UI.
 
-You launch the web UI within the context of the monitoring, from the {{site.data.keyword.cloud_notm}} UI. 
+You launch the web UI within the context of the monitoring, from the {{site.data.keyword.cloud_notm}} UI.
 
 Complete the following steps to launch the monitoring UI:
 
@@ -226,9 +226,9 @@ Complete the following steps to launch the monitoring UI:
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
-2. In the navigation menu, select **Observability**. 
+2. In the navigation menu, select **Observability**.
 
-3. Select **Monitoring**. 
+3. Select **Monitoring**.
 
     The list of monitoring instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
@@ -236,7 +236,7 @@ Complete the following steps to launch the monitoring UI:
 
 The {{site.data.keyword.mon_full_notm}} Web UI opens. By default, the *Explore* tab is displayed.
 
-By default, users are automatically added as members of the **Monitor Operations** team that is predefined for each {{site.data.keyword.mon_full_notm}} instance. Users have full permissions to see all the data in the web UI. 
+By default, users are automatically added as members of the **Monitor Operations** team that is predefined for each {{site.data.keyword.mon_full_notm}} instance. Users have full permissions to see all the data in the web UI.
 
 An administrator can restrict access to data by managing users in teams and controlling what data is visible. For example, to restrict users viewing permissions, an administrator can create a default team with limited scope and visibility. Then, manually assign users to other teams. For more information, see [Working with teams](/docs/monitoring?topic=monitoring-teams#teams).
 {: note}
@@ -252,6 +252,3 @@ An administrator can restrict access to data by managing users in teams and cont
 {: #getting-started-step7}
 
 To monitor the usage and costs of your service, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
-
-
-

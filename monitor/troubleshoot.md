@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-04-19"
 
 keywords: IBM Cloud, monitoring, troubleshooting
@@ -21,7 +21,7 @@ Learn more about some general problems that you might encounter when you use the
 ## Are you getting an error when you create a capture?
 {: #troubleshoot-entry-1}
 
-You are failing to create a [capture file](/docs/monitoring?topic=monitoring-captures#captures) for a host in your infrastructure. 
+You are failing to create a [capture file](/docs/monitoring?topic=monitoring-captures#captures) for a host in your infrastructure.
 
 In the *Captures* section of the web UI, you get an error when you try to create a capture file for a host.
 {: tsSymptoms}
@@ -49,7 +49,7 @@ Check that port 6443 is opened. For more information, see [Managing network traf
 {: tsResolve}
 
 
-## Are you seeing errors when there are no problems? 
+## Are you seeing errors when there are no problems?
 {: #troubleshoot-entry-3}
 
 Are you observing monitoring agent connection errors or receiving uptime alerts reporting an host is down when there are no problems?
@@ -58,7 +58,7 @@ Are you observing monitoring agent connection errors or receiving uptime alerts 
 - monitoring agent 10.3.0
 - monitoring agent 10.3.1
 - monitoring agent 10.4.0
-- monitoring agent 10.4.1 
+- monitoring agent 10.4.1
 
 Where connectivity between your infrastructure and the {{site.data.keyword.mon_full_notm}} hosted service may fail. For more information, see [Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html).
 
@@ -74,7 +74,7 @@ If you are experiencing connectivity issues, complete the following steps:
 ## Are you getting access denied when running API calls?
 {: #troubleshoot-entry-4}
 
-When the authorization method that is allowed in a {{site.data.keyword.mon_full_notm}} instance is set to `IAM_ONLY`, you can get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}`. 
+When the authorization method that is allowed in a {{site.data.keyword.mon_full_notm}} instance is set to `IAM_ONLY`, you can get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}`.
 
 First, [check the instance authorization methods that are allowed](/docs/monitoring?topic=monitoring-iam_instance_auth#iam_instance_auth_step1).
 
@@ -89,4 +89,3 @@ Then, review [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl
 {: #troubleshoot-entry-6}
 
 With the {{site.data.keyword.mon_full_notm}} change the metrics store, the topology map has been deprecated. See [Enhanced metric store](/docs/monitoring?topic=monitoring-metrics_store) for details on the new metric store.
-

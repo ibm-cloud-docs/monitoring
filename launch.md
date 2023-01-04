@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 
@@ -20,7 +20,7 @@ After you provision an instance of the {{site.data.keyword.mon_full_notm}} servi
 {: shortdesc}
 
 
-## Grant IAM policies to a user to view data 
+## Grant IAM policies to a user to view data
 {: #launch_step1}
 
 **Note:** You must be an administrator of the {{site.data.keyword.mon_full_notm}} service, an administrator of the {{site.data.keyword.mon_full_notm}} instance, or have account IAM permissions to grant other users policies.
@@ -31,7 +31,7 @@ The following table lists the minimum policies that a user must have to be able 
 |--------------------------------|---------------------------|------------------------|
 | `{{site.data.keyword.mon_full_notm}}` | Platform role: Viewer     | Allows the user to view the list of service instances in the Observability Monitoring dashboard. |
 | `{{site.data.keyword.mon_full_notm}}` | Service role: Writer      | Allows the user to launch the Web UI and view metrics in the Web UI.  |
-{: caption="Table 1. IAM policies" caption-side="top"} 
+{: caption="Table 1. IAM policies" caption-side="top"}
 
 For more information on how to configure these policies for a user, see [Granting permissions to launch the monitoring UI or to make REST API calls](/docs/monitoring?topic=monitoring-iam_grant).
 
@@ -39,7 +39,7 @@ For more information on how to configure these policies for a user, see [Grantin
 ## Launch the Monitor web UI through the {{site.data.keyword.cloud_notm}} UI
 {: #launch_step2}
 
-You launch the Web UI within the context of an {{site.data.keyword.mon_full_notm}} instance, from the {{site.data.keyword.cloud_notm}} UI. 
+You launch the Web UI within the context of an {{site.data.keyword.mon_full_notm}} instance, from the {{site.data.keyword.cloud_notm}} UI.
 
 Complete the following steps to launch the web UI:
 
@@ -49,9 +49,9 @@ Complete the following steps to launch the web UI:
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
-2. In the navigation menu, select **Observability**. 
+2. In the navigation menu, select **Observability**.
 
-3. Select **Monitoring**. 
+3. Select **Monitoring**.
 
     The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
@@ -73,9 +73,9 @@ To access the *Secure* web UI, complete the following steps:
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
-2. In the navigation menu, select **Observability**. 
+2. In the navigation menu, select **Observability**.
 
-3. Select **Monitoring**. 
+3. Select **Monitoring**.
 
     The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
@@ -97,4 +97,3 @@ To access the *Secure* web UI, complete the following steps:
 6. Select the **Secure** icon.
 
     ![Secure icon](images/secure.png)
-

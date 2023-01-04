@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
@@ -37,24 +37,24 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
 3. [Provision an {{site.data.keyword.mon_full_notm}} instance from the catalog](/docs/monitoring?topic=monitoring-provision#provision_ui).
 
-4. [Provision a bare metal server](/docs/bare-metal?topic=bare-metal-getting-started). 
+4. [Provision a bare metal server](/docs/bare-metal?topic=bare-metal-getting-started).
 
     To complete the steps in this topic, ensure you have internet access from the bare metal. This is needed for configuring the monitoring agent.
 
-5. Configure a VPN connection between your terminal and the bare metal server  
+5. Configure a VPN connection between your terminal and the bare metal server
 
-    Virtual Private Networking (VPN) access enables users to manage all servers remotely and securely over the {{site.data.keyword.cloud}} private network. A VPN connection from your location to the private network allows out-of-band management and server rescue through an encrypted VPN tunnel. VPN tunnels can be initiated to any IBM Cloud data center or PoP allowing you geographic redundancy. 
+    Virtual Private Networking (VPN) access enables users to manage all servers remotely and securely over the {{site.data.keyword.cloud}} private network. A VPN connection from your location to the private network allows out-of-band management and server rescue through an encrypted VPN tunnel. VPN tunnels can be initiated to any IBM Cloud data center or PoP allowing you geographic redundancy.
 
     Complete the following steps to configure a VPN connection between your terminal and the bare metal server:
 
     1. [Enable VPN access on each account that needs VPN access](/docs/iaas-vpn?topic=iaas-vpn-getting-started#enable-user-vpn-access).
-    
+
     2. Depending on your operating system, download the latest `MotionPro` 32-bit or 64-bit files from the Array Networks [Clients and Tools](https://support.arraynetworks.net/prx/001/http/supportportal.arraynetworks.net/downloads/downloads.html){: external} download site. [Learn more](/docs/iaas-vpn?topic=iaas-vpn-standalone-vpn-clients){: external}.
-    
+
     3. Configure a standalone SSL VPN client and open a connection:
 
-    For example, if you use the MotionPro Plus client for MacOS, to add a profile, click **Add**. 
-    
+    For example, if you use the MotionPro Plus client for MacOS, to add a profile, click **Add**.
+
     In the `Basic` section, enter a `Title`. Enter a `Gateway`, for example, for a bare metal in Dallas 10, enter `vpn.dal10.softlayer.com`. Enter your VPN user name. Check that the `Port` is set to `443`. Then, click **OK**.
 
     To open a secure connection, click **Login**.
@@ -63,8 +63,8 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
     You might require a VPN to access your system depending on your security setup and `ssh` configuration on the bare metal host.
 
-    You must `ssh` to the host by using your credentials, or the root credentials that are available from the {{site.data.keyword.cloud_notm}} Console.  
-    
+    You must `ssh` to the host by using your credentials, or the root credentials that are available from the {{site.data.keyword.cloud_notm}} Console.
+
     You will require root permissions in order to install the monitoring agent.
 
     For example, you can complete the following steps to get the bare metal information that you need to `ssh` into the server:
@@ -75,12 +75,12 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 
     3. Identify the bare metal server that you want to monitor. Copy the **Public IP**.
 
-    4. Click the bare metal server device name. 
+    4. Click the bare metal server device name.
 
     5. Select **Passwords**. Copy the password for the **root** user.
 
        Then, from a terminal, run the following command:
-  
+
        ```text
        ssh <USER_ID>@<IP_ADDRESS>
        ```
@@ -99,7 +99,7 @@ You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by 
 {: #baremetal_linux_step1}
 {: step}
 
-You must install a monitoring agent to collect and forward metrics from a bare metal server to an {{site.data.keyword.mon_full_notm}} instance. 
+You must install a monitoring agent to collect and forward metrics from a bare metal server to an {{site.data.keyword.mon_full_notm}} instance.
 
 Complete the following steps from the command line to install a monitoring agent:
 
@@ -144,9 +144,9 @@ Complete the following steps to launch the web UI:
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} console opens.
 
-2. Click the **Menu** icon ![Menu icon](../images/icon_hamburger.svg) &gt; **Observability**. 
+2. Click the **Menu** icon ![Menu icon](../images/icon_hamburger.svg) &gt; **Observability**.
 
-3. Select **Monitoring**. 
+3. Select **Monitoring**.
 
     The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
@@ -170,23 +170,23 @@ You only can monitor one instance per browser. You could have multiple tabs for 
 {: #baremetal_linux_step3}
 {: step}
 
-In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server. 
+In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server.
 
-* The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP). 
-* When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter. 
+* The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP).
+* When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter.
 * The IPMI exporter relies on tools from the FreeIPMI suite.
 
 You can collect the following metrics when you configure the IPMI exporter in a bare metal server:
 
 * IPMI admin metrics
 
-    The metric `ipmi_up {collector="<NAME>"}` reports `1` when data from a remote host is collected successfully. It reports `0` for collection of data in a local host. 
-    
+    The metric `ipmi_up {collector="<NAME>"}` reports `1` when data from a remote host is collected successfully. It reports `0` for collection of data in a local host.
+
     The metric `ipmi_scrape_duration_seconds` reports the amount of time that it takes the collector to retrieve the data.
 
 * IPMI System event log (SEL) metrics
 
-    The metric `ipmi_sel_entries_count` reports the number of entries in the system event log. 
+    The metric `ipmi_sel_entries_count` reports the number of entries in the system event log.
 
     The metric `ipmi_sel_free_space_bytes` reports the number of free bytes for new ystem event log entries.
 
@@ -195,9 +195,9 @@ You can collect the following metrics when you configure the IPMI exporter in a 
     The IPMI exporter collects 2 metrics per sensor type: state and value. A value of `0` reports a normal state. A value of `1` reports a warning state. A value of `2` reports a critical state. A value of `NaN` reports information not available. For example, see the metrics for different sensors:
 
     Temperature sensor metrics: `ipmi_temperature_celsius`, `ipmi_temperature_state`
-    
+
     Fan speed sensor metrics: `ipmi_fan_speed_rpm`, `ipmi_fan_speed_state`
-    
+
     Voltage sensor metrics: `ipmi_voltage_state`, `ipmi_voltage_volts`
 
 * IPMI chassis power state of the machine
@@ -206,7 +206,7 @@ You can collect the following metrics when you configure the IPMI exporter in a 
 
 * DCMI data
 
-    The metric `ipmi_dcmi_power_consumption_current_watts` informs about the live power consumption of the machine in Watts. 
+    The metric `ipmi_dcmi_power_consumption_current_watts` informs about the live power consumption of the machine in Watts.
 
 * BMC details
 
@@ -214,7 +214,7 @@ You can collect the following metrics when you configure the IPMI exporter in a 
 
 For more information, see [Prometheus IPMI Exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
 
- 
+
 Complete the following steps to configure the Prometheus IPMI Exporter:
 
 ### Install the Prometheus IPMI exporter
@@ -255,7 +255,7 @@ Complete the following steps:
     {: pre}
 
     ```text
-    tar -xvf ipmi_exporter-v1.2.0.linux-amd64.tar.gz 
+    tar -xvf ipmi_exporter-v1.2.0.linux-amd64.tar.gz
     ```
     {: pre}
 
@@ -315,7 +315,7 @@ Complete the following steps:
     ps -aux | grep ipmi
     ```
     {: pre}
- 
+
     You should see the IPMI exporter running.
 
 
@@ -412,7 +412,7 @@ Complete the following steps to run the Prometheus exporter:
     ./prometheus &
     ```
     {: pre}
-    
+
 
 
 ### Configure network settings
@@ -430,7 +430,7 @@ If you want to collect metrics from remote servers, complete the following steps
 
 ### Update the monitoring agent that is running in the bare metal server
 {: #baremetal_linux_step3_4}
-    
+
 Complete the following steps:
 
 1. In the bare metal server, from the `shh` session, change to the directory `/opt/draios/etc/`. Run the following command:
@@ -440,7 +440,7 @@ Complete the following steps:
     ```
     {: pre}
 
-2. Update the `/opt/draios/etc/dragent.yaml`. 
+2. Update the `/opt/draios/etc/dragent.yaml`.
 
     Append the following section to the `dragent.yaml` file:
 
@@ -454,14 +454,14 @@ Complete the following steps:
      max_tags_per_metric: 20
      process_filter:
        - include:
-           port: 9090 
+           port: 9090
            conf:
-             port: 9090 
+             port: 9090
              path: "/metrics"
        - include:
-           port: 9290 
+           port: 9290
            conf:
-             port: 9290 
+             port: 9290
              path: "/metrics"
     ```
     {: codeblock}
@@ -484,9 +484,9 @@ Complete the following steps:
 
 Complete the following steps:
 
-1. Click the **Menu** icon ![Menu icon](../images/icon_hamburger.svg) &gt; **Observability**. 
+1. Click the **Menu** icon ![Menu icon](../images/icon_hamburger.svg) &gt; **Observability**.
 
-2. Select **Monitoring**. 
+2. Select **Monitoring**.
 
 3. Identify the monitoring instance that you created. Then, click **Open dashboard**.
 
@@ -524,14 +524,3 @@ To create a dashboard to monitor the IPMI metrics, complete the following steps:
 4. Add more IPMI metrics to the **[Bare Metal] IPMI monitoring** custom dashboard. Repeat the steps for each of the IPMI metrics that you want to monitor.
 
 5. Drag and drop, and resize panels to get the dashboard layout that you want. Save the layout.
-
-
-
-
-
-
-
-
-
-
-

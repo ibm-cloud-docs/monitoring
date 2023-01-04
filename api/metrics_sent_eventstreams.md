@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, query, api
@@ -43,7 +43,7 @@ Choose 1 of the following methods:
 1. Locate your {{site.data.keyword.messagehub}} service on the dashboard.
 2. Click your service tile.
 3. Click **Service Credentials**.
-4. Click **New Credential**. 
+4. Click **New Credential**.
 5. Complete the details for your new credential like a name and role and click **Add**. A new credential appears in the credentials list.
 6. Click this credential by using **View Credentials** to reveal the details in JSON format.
 
@@ -70,7 +70,7 @@ Complete the following steps:
 
     Where `KEY_NAME` is the name of the key, and `INSTANCE_NAME` is the name of the Event Streams instance.
 
-    The output of this command includes the details that are needed to make a REST call to send notifications to the Event Streams instance. 
+    The output of this command includes the details that are needed to make a REST call to send notifications to the Event Streams instance.
 
 
 
@@ -81,8 +81,8 @@ From the {{site.data.keyword.mon_short}} UI, setup a Webhook notification channe
 
 Complete the following steps to add a notification channel:
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
-    
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch).
+
 2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**.
 
 3. Select **Notification Channels**.
@@ -104,17 +104,17 @@ Complete the following steps to add a notification channel:
         Where `<topic>` is the name of your topic.
 
         For example, the URL field can be `https://y545tf67898h.svc01.eu-gb.eventstreams.cloud.ibm.com/topics/my-sample-topic/records?apikey=27836238765487558695`
-    
-        When an alert is triggered, the notification is sent as a POST in JSON format to your webhook endpoint. 
+
+        When an alert is triggered, the notification is sent as a POST in JSON format to your webhook endpoint.
 
     6. For other notification types, configure the appropriate fields for the notification.
 
-    7. Optionally, and for integrations that allow a test, enable the *Test notification* condition to receive a test notification. If you do not receive a test notification in 10 minutes, review your channel configuration. 
+    7. Optionally, and for integrations that allow a test, enable the *Test notification* condition to receive a test notification. If you do not receive a test notification in 10 minutes, review your channel configuration.
 
-6. Click **Save**. 
+6. Click **Save**.
 
 
-Currently additionalHeaders cannot be created on the original create. However, you can patch the notification channel. For example, you can use cURL to modify a notification channel: 
+Currently additionalHeaders cannot be created on the original create. However, you can patch the notification channel. For example, you can use cURL to modify a notification channel:
 
 1. [Get the notification channel ID](/docs/monitoring?topic=monitoring-notifications_api#notifications_api_get_all).
 
@@ -122,7 +122,7 @@ Currently additionalHeaders cannot be created on the original create. However, y
 
     ```text
     curl -X PUT ’https://us-east.monitoring.cloud.ibm.com/api/notificationChannels/<CHANNEL_ID>' \
-    --header ‘Content-Type: application/json’ 
+    --header ‘Content-Type: application/json’
     --header ‘Authorization: Bearer <token>’ -d @/tmp/notification.json
     ```
     {: codeblock}
@@ -132,9 +132,4 @@ Currently additionalHeaders cannot be created on the original create. However, y
 ## Next. Setup alerts
 {: #metrics_sent_eventstreams_next_steps}
 
-Next setup alerts in {{site.data.keyword.mon_short}} by using this notification channel. 
-
-
-
-
-
+Next setup alerts in {{site.data.keyword.mon_short}} by using this notification channel.

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, alerting, api
@@ -30,12 +30,12 @@ The following code shows the structure of a Python script that you can use to cr
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Add the monitoring instance information that is required for authentication
-URL = <MONITORING-ENDPOINT> 
+URL = <MONITORING-ENDPOINT>
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
 
-# Instantiate the Python client 
+# Instantiate the Python client
 sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 
 # Add the notification channels to send an alert when the alert is triggered
@@ -110,7 +110,7 @@ When you configure the alert, complete the following sections:
 * [`segmentby`]: You can define the scope of an alert by configuring the `segmentedby` section. The default value is `ANY`.
 
 * [`segment_condition`]: When the parameter *segmentby* is specified, set this field to determine when the alert will be triggered. Valid values are **ANY** and **ALL**.
-            
+
 * [`user_filter`]: You can define a filter that indicates when a notification is sent. For example, you could define this entry if you want to receive a notification only if the name of the process meets the condition.
 
 * [`notify`]: You can define the type of notifications that you want the alert to generate. Set this entry to the notification IDs of the channels that you have defined.
@@ -136,12 +136,12 @@ The following code shows the structure of a Python script that you can use to up
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Add the monitoring instance information that is required for authentication
-URL = <MONITORING-ENDPOINT> 
+URL = <MONITORING-ENDPOINT>
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
 
-# Instantiate the Python client 
+# Instantiate the Python client
 sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 
 res = sdclient.get_alerts()
@@ -183,12 +183,12 @@ The following code shows the structure of a Python script that you can use to de
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Add the monitoring instance information that is required for authentication
-URL = <MONITORING-ENDPOINT> 
+URL = <MONITORING-ENDPOINT>
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
 
-# Instantiate the Python client 
+# Instantiate the Python client
 sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 
 res = sdclient.get_alerts()
@@ -216,12 +216,12 @@ The following code shows the structure of a Python script that you can use to ge
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Add the monitoring instance information that is required for authentication
-URL = <MONITORING-ENDPOINT> 
+URL = <MONITORING-ENDPOINT>
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
 
-# Instantiate the Python client 
+# Instantiate the Python client
 sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 
 json_res = sdclient.get_alerts()

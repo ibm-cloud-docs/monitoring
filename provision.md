@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, provision instance
@@ -30,11 +30,11 @@ To provision an instance from the {{site.data.keyword.cloud_notm}} catalog, comp
 
 3. To filter the list of services that is displayed, select the **Logging and Monitoring** category.
 
-4. Click the **{{site.data.keyword.mon_full_notm}}** tile. 
+4. Click the **{{site.data.keyword.mon_full_notm}}** tile.
 
-5. Select **Create**. 
+5. Select **Create**.
 
-6. Select the location. 
+6. Select the location.
 
 7. Select a service plan. By default, the **Lite** plan is set.
 
@@ -52,12 +52,12 @@ To provision an instance from the {{site.data.keyword.cloud_notm}} catalog, comp
 
 11. Click **Create**.
 
-After you provision an instance, 
+After you provision an instance,
 
-* The *Observability* dashboard opens. 
+* The *Observability* dashboard opens.
 * A service ID is automatically created. You can use this service ID to get the access key for your instance. The name of the service ID has the following format: `{InstanceName}-key-admin`.
 
-Next, configure a metric source by adding an agent. This agent is responsible for collecting and forwarding metrics to the monitoring instance. 
+Next, configure a metric source by adding an agent. This agent is responsible for collecting and forwarding metrics to the monitoring instance.
 
 
 
@@ -84,11 +84,11 @@ To provision an instance through the command line, complete the following steps:
     Where
 
     `NAME` is the name of the instance.
-    
+
     `service-name` is the name of the {{site.data.keyword.mon_full_notm}} service name in the {{site.data.keyword.cloud_notm}}.
-    
+
     `SERVICE_PLAN_NAME` is the type of plan. See [Service plans](/docs/monitoring?topic=monitoring-pricing_plans) to get the plan name.
-    
+
     `LOCATION` is the region where the instance is created.
 
     `default_receiver` is set to `false` by default. Set to `true` to collect platform metrics automatically through this instance in a region.
@@ -125,5 +125,3 @@ To provision an instance through the command line, complete the following steps:
     `SERVICE_INSTANCE_NAME` is the name of the instance you created
 
     This will gain you access to the instance's access key.
-
-

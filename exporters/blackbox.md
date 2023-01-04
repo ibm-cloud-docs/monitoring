@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, backbox, prometheus
@@ -26,7 +26,7 @@ completion-time: 1h
 The Prometheus Blackbox exporter allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics. The availability metrics can then be alerted upon within {{site.data.keyword.mon_full_notm}} to alert users on the availability of the endpoints.
 {: shortdesc}
 
- 
+
 Complete the following steps to configure the Prometheus Blackbox Exporter:
 
 
@@ -52,7 +52,7 @@ Complete the following steps to run the Blackbox exporter as a docker container:
 2. Run the Blackbox exporter as a docker container:
 
     ```text
-    docker run --rm -d -p 9115:9115 -l io.prometheus.scrape=true -l io.prometheus.port=9115 -l io.prometheus.path=/probe --name blackbox_exporter -v `pwd`:/config/prometheus/blackbox prom/blackbox-exporter:master --config.file=/config/prometheus/blackbox/blackbox.yml        
+    docker run --rm -d -p 9115:9115 -l io.prometheus.scrape=true -l io.prometheus.port=9115 -l io.prometheus.path=/probe --name blackbox_exporter -v `pwd`:/config/prometheus/blackbox prom/blackbox-exporter:master --config.file=/config/prometheus/blackbox/blackbox.yml
     ```
     {: pre}
 
@@ -64,7 +64,7 @@ Complete the following steps to run the Blackbox exporter as a docker container:
     {: pre}
 
     You can see an output like the following one:
-    
+
     ```text
     CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS              PORTS                    NAMES
     2480a0034bb4        prom/blackbox-exporter:master   "/bin/blackbox_expor…"   36 minutes ago      Up 36 minutes       0.0.0.0:9115->9115/tcp   blackbox_exporter
@@ -175,10 +175,10 @@ scrape_configs:
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<IP_ADDRESS_OF_REMOTE_SERVER>` is the IP address of a server that you want to monitor.
-* `<INGESTION_ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance ingestion endpoint, for example, `ingest.us-south.monitoring.cloud.ibm.com`. See [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion). 
+* `<INGESTION_ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance ingestion endpoint, for example, `ingest.us-south.monitoring.cloud.ibm.com`. See [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
 
 When you save the file, changes are applied.
@@ -194,7 +194,7 @@ Complete the following steps:
 
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
-2. Create a dashboard. 
+2. Create a dashboard.
 
 3. Add a panel for each of the following queries:
 
@@ -205,10 +205,8 @@ Complete the following steps:
 | SSL Cert Expiry in Days | `probe_ssl_earliest_cert_expiry{instance=$instance}-time()` | `time (auto)` |
 | DNS Lookup | `probe_dns_lookup_time_seconds{instance=$instance}` | `time (auto)` |
 | Probe duration | `probe_duration_seconds{instance=$instance}` | `time (auto)` |
-{: caption="Table 1. Blackbox exporter sample queries" caption-side="top"} 
+{: caption="Table 1. Blackbox exporter sample queries" caption-side="top"}
 
 For example, you can create a dashboard that looks as follows:
 
 ![Sample Blackbox dashboard](images/blackbox-ui-1.png "Sample Blackbox dashboard"){: caption="Figure 1. Sample Blackbox dashboard" caption-side="bottom"}
-
-

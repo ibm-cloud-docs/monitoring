@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-02-09"
 
 keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
@@ -40,17 +40,17 @@ You then view the metrics using the web-based user interface.
 
 [Read about {{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-getting-started).
 
-Work in a supported region, for example the `US South` region. 
+Work in a supported region, for example the `US South` region.
 
 Use a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} {{site.data.keyword.IBM_notm}}ID, go to [Create an account](https://cloud.ibm.com/login){: external}.
 
-Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each of the following resources: 
+Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each of the following resources:
 
 | Resource                             | Scope of the access policy | Role    | Region    | Information                  |
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
 | Resource group **default**           |  Resource group            | Viewer  | `US South`  | This policy is required to allow the user to see service instances in the **default** resource group.    |
 | {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | `US South`  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the **default** resource group.   |
-{: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"} 
+{: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"}
 
 The {{site.data.keyword.cloud_notm}} CLI must be installed. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
@@ -80,11 +80,11 @@ To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{si
 
 4. Click the **{{site.data.keyword.mon_full_notm}}** tile. The *Observability* dashboard opens.
 
-5. Select the **Create** tab. 
+5. Select the **Create** tab.
 
 6. Select a region for the service instance.
 
-7. Select the **Lite** service plan. 
+7. Select the **Lite** service plan.
 
    By default, the **Lite** plan is set.
 
@@ -92,7 +92,7 @@ To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{si
 
 8. Enter a **Service name** for the service instance.
 
-9. Select the **default** resource group. 
+9. Select the **default** resource group.
 
    By default, the **default** resource group is set.
 
@@ -102,7 +102,7 @@ To provision an instance of {{site.data.keyword.mon_full_notm}} through the {{si
 
 12. To provision the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}} resource group where you are logged in, click **Create**.
 
-After you provision an instance, the **Monitoring** dashboard opens. 
+After you provision an instance, the **Monitoring** dashboard opens.
 
 **Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/monitoring?topic=monitoring-provision#provision_cli).
 
@@ -110,7 +110,7 @@ After you provision an instance, the **Monitoring** dashboard opens.
 {: #ubuntu_step3}
 {: step}
 
-To configure your Ubuntu server to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a monitoring agent. 
+To configure your Ubuntu server to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a monitoring agent.
 
 Complete the following steps from a command line:
 
@@ -147,10 +147,10 @@ Complete the following steps from a command line:
    * The `sysdig_capture_enabled` is set to *false* to disable the capture feature. By default this is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
    * The `secure` flag must be set to *true* when running a "Graduated Monitor+Secure" plan.  If you are running a "Monitor only" plan, you can set the `secure` flag to *false* if desired.
-   
+
    If the monitoring agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the monitoring agent.
 
-   
+
    * **For Debian and Ubuntu Linux distributions**, run the following command:
 
       ```text
@@ -176,9 +176,9 @@ Complete the following steps to launch the web UI:
 
    After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
-2. In the navigation menu, select **Observability**. 
+2. In the navigation menu, select **Observability**.
 
-3. Select **Monitoring**. 
+3. Select **Monitoring**.
 
    The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
@@ -212,5 +212,4 @@ To configure color-coding for a column, complete the following steps:
 
 * Create a custom dashboard. For more information, see [Working with dashboards](/docs/monitoring?topic=monitoring-dashboards#dashboards).
 
-* Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts). 
-
+* Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).

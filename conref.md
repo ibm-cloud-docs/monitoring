@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2015, 2022
+  years: 2015, 2023
 
 lastupdated: "2021-12-13"
 
-keywords: 
+keywords:
 
 subcollection: monitoring
 
@@ -85,7 +85,7 @@ For more information on how to define authorizations, see [Using authorizations 
 
 To create a notification source in {{site.data.keyword.en_full_notm}} you will make the configuration change in {{site.data.keyword.mon_full_notm}}.  When you create the notification channel in {{site.data.keyword.mon_full_notm}} it will be available automatically in {{site.data.keyword.en_full_notm}}.
 
-1. Click the menu icon ![Menu icon](../../icons/icon_hamburger.svg) 
+1. Click the menu icon ![Menu icon](../../icons/icon_hamburger.svg)
 2. In the navigation menu, select **Observability**.
 3. Select **Monitoring**.
 
@@ -110,7 +110,7 @@ To create a notification source in {{site.data.keyword.en_full_notm}} you will m
 14. Click the menu icon ![Menu icon](../../icons/icon_hamburger.svg) > **Resource list**.
 15. Open **Services and software**.
 16. Open the [{{site.data.keyword.en_full_notm}} instance you created.](#en-create-instance)  For example, `my_event_notifications`.
-17. Click **Sources**. 
+17. Click **Sources**.
 
     When you configure the channel in {{site.data.keyword.mon_short}}, a source, with the same name as your {{site.data.keyword.mon_short}} instance name, is automatically added to your {{site.data.keyword.en_full_notm}} **Sources** list.
 
@@ -163,10 +163,7 @@ Now, create an [{{site.data.keyword.mon_full_notm}} alert](/docs/monitoring?topi
 
        * For **Name** specify `MyEventNotificationAlert`.
        * For **Severity** specify `Info`.
-       * Define a metric for you system that you know will trigger an alert. 
+       * Define a metric for you system that you know will trigger an alert.
        * Enable the `myEventNotificationChannel` for the alert.
-    
+
    3. Click **Create**.
-
-
-

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-08-22"
 
 keywords: Monitoring release notes, Monitoring updates
@@ -34,15 +34,15 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {{site.data.keyword.mon_full}} has released a new *Alert Editor* interface.
 :   The following changes have been made:
 
-    - New user interface to manage alerts. 
-    
+    - New user interface to manage alerts.
+
         You can still manage alerts by using the legacy editor. However, notice that new features are only available through the new editor.
 
     - New configuration settings to help you troubleshoot issues. You can configure a dashboard and a runbook with an alert.
 
     Deprecated features:
 
-    - Deprecation of the Anomaly Detection and Group Outlier alert types. You can view and manage existing alerts but you cannot define new ones. 
+    - Deprecation of the Anomaly Detection and Group Outlier alert types. You can view and manage existing alerts but you cannot define new ones.
 
     For more information, see [Configure alerts](https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/configure-alerts/){: external}.
 
@@ -52,7 +52,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 {{site.data.keyword.mon_full}} has made available a proprietary time series database that is designed for storing and serving metrics at scale. [Learn more](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/){: external}
 :   The following changes have been made:
-    
+
     - [Metrics and labels are stored and displayed in a Prometheus compatible naming convention](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#prometheus-compatible-naming-conventions-for-metrics--labels){: external}.
 
     - Some metrics and labels have been deprecated. Deprecated metrics and labels will no longer be available 30 days after this release. See [Discontinued Metrics and Labels](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#discontinued-metrics-and-labels){: external}.
@@ -77,7 +77,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
     The following are known limitations in this release:
 
-    - Querying labels as metrics is limited to Infrastructure labels in Table panels. 
+    - Querying labels as metrics is limited to Infrastructure labels in Table panels.
     - Panels that are not timecharts, such as Number panels, might not display aggregated data for the full requested time range.
 
     Deprecated features:
@@ -193,8 +193,8 @@ Secure support for Inline Scanner
 {: #monitoring-jul2721}
 {: release-note}
 
-Secure support for Kubernetes Audit functionality 
-:   General available support of Kubernetes Audit functionality as part of the Admission Controller. 
+Secure support for Kubernetes Audit functionality
+:   General available support of Kubernetes Audit functionality as part of the Admission Controller.
 
 ## 2 July 2021
 {: #monitoring-jul0221}
@@ -261,14 +261,14 @@ Improved dashboard templates
 {: #monitoring-may2721}
 {: release-note}
 
-Secure beta support for Falco policy tuner 
+Secure beta support for Falco policy tuner
 :   A managed version of the Falco policy tuner is new available.
 
 ## 19 May 2021
 {: #monitoring-may1921}
 {: release-note}
 
-Secure compliance support 
+Secure compliance support
 :   New compliance features for ISO27001:2013 and HIPAA are available.
 
 Secure support for Inline Scanner
@@ -318,7 +318,7 @@ Extended label set
 Microsoft Teams integration
 :   You can use Microsoft Teams as a notification channel.
 
-Capture files 
+Capture files
 :   S3 compatible storage can be used for capture files.
 
 Webhook channel integration
@@ -376,7 +376,7 @@ Secure UI enhancements and additional functionality
 :   The following changes have been made:
 
     * Updates have been made to the scan results list.
-    * New table design for the vulnerabilities list.  
+    * New table design for the vulnerabilities list.
     * Ability to open individual vulnerabilities and display additional information.
 
 ## 12 March 2021
@@ -407,7 +407,7 @@ Persistence of dashboard scope
 {: release-note}
 
 Secure support for SOC 2, NIST 800-53 rev4 and rev5 regulatory compliance
-:   SOC2, NIST 800-53 rev4 and NIST 800-53 rev5 standards have been added to the compliance feature.  New checks have also been added to the admission controller, network security policies, and node analyzer. 
+:   SOC2, NIST 800-53 rev4 and NIST 800-53 rev5 standards have been added to the compliance feature.  New checks have also been added to the admission controller, network security policies, and node analyzer.
 
 ## 23 February 2021
 {: #monitoring-feb2321}
@@ -445,7 +445,7 @@ Secure support for Inline Scanner
     * Improved version detection for Logback, SpringFramework, and Tomcat Java.
     * Allows setting `openssl` using the `OPENSSL_SECLEVEL` environment variable to support old certificates.
     * Creation of a more robust image ID to avoid unnecessary image rescans.
-    * Added malware detection. 
+    * Added malware detection.
 
 ## 5 February 2021
 {: #monitoring-feb0521}
@@ -472,7 +472,7 @@ Secure support for enhanced activity audit filters
 {: release-note}
 
 Authentication token configuration
-:   You can configure the authentication token that is allowed in a monitoring instance when you use Python scripts or the {{site.data.keyword.mon_short}} REST API to manage resources. By default, you can use an IAM token or a Monitoring API token. However, you can restrict the monitoring instance to only allow IAM tokens. [Learn more](/docs/monitoring?topic=monitoring-iam_instance_auth). 
+:   You can configure the authentication token that is allowed in a monitoring instance when you use Python scripts or the {{site.data.keyword.mon_short}} REST API to manage resources. By default, you can use an IAM token or a Monitoring API token. However, you can restrict the monitoring instance to only allow IAM tokens. [Learn more](/docs/monitoring?topic=monitoring-iam_instance_auth).
 
 ## 28 January 2021
 {: #monitoring-jan2821}
@@ -545,7 +545,7 @@ Secure support for inline scanner
 
     * Vulnerability report added to the container output.
     * Scanned images using the digest pullstring is stored using the truncated digest as a tag.
-    * Users running other than as root have a permission issue resolved. 
+    * Users running other than as root have a permission issue resolved.
 
 ## 23 November 2020
 {: #monitoring-nov2320}
@@ -555,7 +555,7 @@ Secure support for inline scanner
 :   V2.1 is available with the following changes:
 
     * The ability to analyze scratch-based images.
-    * Fixes for retrieved PDF output for previously scanned images. 
+    * Fixes for retrieved PDF output for previously scanned images.
     * Fixes for container vulnerabilities.
 
 ## 20 November 2020
@@ -577,7 +577,7 @@ Dashboard ownership
 
 Dashboard enhancements
 :   The following dashboard enhancements are now available:
-  
+
     * The ability the dashboard menu to the sidebar.
     * The ability to specify your preference for open or closed categories.
 
@@ -605,7 +605,7 @@ General availability of new dashboards
 
 Limited availability of PromQL support
 :   PromQL support for querying Prometheus metrics has been added for a subset of users.
-    
+
 Major functional changes
 :   The following major changes are made in this release:
 
@@ -715,4 +715,4 @@ Additional enhancements
 {: release-note}
 
 Introducing {{site.data.keyword.mon_full_notm}}
-:   {{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. In architectures that are focused on container and microservices, you can use Secure to protect, monitor, and enhance forensic analysis of your pipeline and runtime components.  [Learn more](/docs/monitoring?topic=monitoring-getting-started) 
+:   {{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. In architectures that are focused on container and microservices, you can use Secure to protect, monitor, and enhance forensic analysis of your pipeline and runtime components.  [Learn more](/docs/monitoring?topic=monitoring-getting-started)

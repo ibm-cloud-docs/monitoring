@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2018, 2022
+  years: 2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: activity tracker for IBM Cloud Monitoring, IBM Cloud, audit, activity tracker, events, audit logs
@@ -34,7 +34,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.alert.update`         | An event is created when you update an alert definition |
 | `sysdig-monitor.alert.delete`         | An event is created when you delete an alert definition |
 | `sysdig-monitor.alert.list`           | An event is created when you view the alerts in the monitoring instance  |
-{: caption="Table 1. Alerts: List of activity tracker actions" caption-side="top"} 
+{: caption="Table 1. Alerts: List of activity tracker actions" caption-side="top"}
 
 ## Captures: List of management events
 {: #at_events_captures}
@@ -46,7 +46,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.capture.read`         | An event is created when you load a Monitoring capture in the dashboard |
 | `sysdig-monitor.capture.update`       | An event is created when you update a Monitoring capture |
 | `sysdig-monitor.capture.delete`       | An event is created when you delete a Monitoring capture |
-{: caption="Table 2. Captures: List of activity tracker actions" caption-side="top"} 
+{: caption="Table 2. Captures: List of activity tracker actions" caption-side="top"}
 
 
 ## Dashboards: List of management events
@@ -60,7 +60,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.dashboard.update`     | An event is created when you update a dashboard |
 | `sysdig-monitor.dashboard.delete`     | An event is created when you delete a dashboard |
 | `sysdig-monitor.dashboard.list`       | An event is created when you view the dashboards in the monitoring instance |
-{: caption="Table 3. Dashboards: List of activity tracker actions" caption-side="top"} 
+{: caption="Table 3. Dashboards: List of activity tracker actions" caption-side="top"}
 
 
 
@@ -75,7 +75,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.team.update`          | An event is created when you update a Monitoring team definition |
 | `sysdig-monitor.team.delete`          | An event is created when you delete a Monitoring team |
 | `sysdig-monitor.team.list`            | An event is created when you view the Monitoring teams |
-{: caption="Table 4. Captures: List of activity tracker actions" caption-side="top"} 
+{: caption="Table 4. Captures: List of activity tracker actions" caption-side="top"}
 
 
 
@@ -93,7 +93,7 @@ The following table lists the {{site.data.keyword.cloud}} locations and the {{si
 |-----------------------------|---------------------|
 | `Dallas (us-south)`         | `Dallas (us-south)` |
 | `Washington (us-east)`      | `Washington (us-east)` |
-| `Tokyo (jp-tok)`            | `Tokyo (jp-tok)` |   
+| `Tokyo (jp-tok)`            | `Tokyo (jp-tok)` |
 | `Sydney (au-syd)`           | `Sydney (au-syd)` |
 | `Frankfurt (eu-de)`         | `Frankfurt (eu-de)` |
 | `London (eu-gb)`            | `London (eu-gb)` |
@@ -101,7 +101,3 @@ The following table lists the {{site.data.keyword.cloud}} locations and the {{si
 | `Toronto (ca-tor)`          | `Toronto (ca-tor)` |
 | `Sao Paulo (br-sao)`        | `Sao Paulo (br-sao)` |
 {: caption="Corresponding {{site.data.keyword.at_short}} instance and {{site.data.keyword.mon_full_notm}} location." caption-side="top"}
-
-
-
-

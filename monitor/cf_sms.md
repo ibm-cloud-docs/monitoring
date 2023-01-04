@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2021, 2022
+  years:  2021, 2023
 lastupdated: "2021-05-11"
 
 keywords: IBM Cloud, monitoring, alerts, sms, SMS
@@ -15,7 +15,7 @@ subcollection: monitoring
 # Sending SMS alerts using {{site.data.keyword.openwhisk_short}}
 {: #cf_sms}
 
-In the {{site.data.keyword.mon_full_notm}} service, you can configure single alerts and multi-condition alerts to notify support staff about problems that might require attention. Using {{site.data.keyword.openwhisk}}, these alerts can trigger SMS (short message service) messages. 
+In the {{site.data.keyword.mon_full_notm}} service, you can configure single alerts and multi-condition alerts to notify support staff about problems that might require attention. Using {{site.data.keyword.openwhisk}}, these alerts can trigger SMS (short message service) messages.
 {: shortdesc}
 
 This example shows how to use [Twilio Programmable SMS Messaging support](https://www.twilio.com/docs/sms){: external} and {{site.data.keyword.openwhisk}} to send SMS alerts to support staff members.  This example uses the Twilio Python package.  [Other language support is available through Twilio.](https://www.twilio.com/docs/libraries){: external}
@@ -25,7 +25,7 @@ This example shows how to use [Twilio Programmable SMS Messaging support](https:
 2. [Create a Twilio phone number that will be used to send your SMS messages.](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account#get-your-first-twilio-phone-number){: external}
 
    After you click **Get a trial phone number** make note of the phone number you are assigned.  You will need this phone number in later steps.
-   {: important}   
+   {: important}
 
 3. [Install the {{site.data.keyword.openwhisk}} CLI and plug-in.](https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-cli_install)
 
@@ -111,9 +111,9 @@ This example shows how to use [Twilio Programmable SMS Messaging support](https:
 10. [Access the {{site.data.keyword.mon_full_notm}} console.](/docs/monitoring?topic=monitoring-launch#launch_step2).
 
 
-11. [Configure an {{site.data.keyword.mon_full_notm}} notification channel that will send the desired alerts to {{site.data.keyword.openwhisk}}.](/docs/monitoring?topic=monitoring-notifications#notifications_create)  
+11. [Configure an {{site.data.keyword.mon_full_notm}} notification channel that will send the desired alerts to {{site.data.keyword.openwhisk}}.](/docs/monitoring?topic=monitoring-notifications#notifications_create)
 
-   
+
 12. [Configure an {{site.data.keyword.mon_full_notm}} alert to send to the configured notification channel.](/docs/monitoring?topic=monitoring-alerts)
 
 ## Customizing the alert message
@@ -160,5 +160,3 @@ When the alert is resolved an SMS similar to the following will be sent:
 Sent from your Twilio trial acount - Alert example in agent_tag_Tag = 'test=1' and agent_tag_sysdig_secure_enabled = 'true' and host = 'myhost' and host_name ='myhost' and host_mac = '00:00:00:00:00:00' is OK
 ```
 {: screen}
-
-

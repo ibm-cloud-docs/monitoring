@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, panels
@@ -29,7 +29,7 @@ You can use any of the following panel types:
 | `Number` | Use this panel to view a single number that represents the value of an aggregated metric over time for one or more entities.  |
 | `Table` | Use this panel to display numerical data for your infrastructure based on metrics and segments.  |
 | `Text` | Use this panel to add text. Use markdown to add your text.  |
-{: caption="Table 1. Panel types" caption-side="top"} 
+{: caption="Table 1. Panel types" caption-side="top"}
 
 
 
@@ -42,7 +42,7 @@ Complete the following steps to copy a panel:
 
 2. Click the *Actions* icon ![Three dots icon](images/actions.png) and select **Copy to Dashboard** ![Copy to Dashboard icon](images/copy.png).
 
-3. Select one of the dashboards that are listed, or enter a name for a new dashboard. 
+3. Select one of the dashboards that are listed, or enter a name for a new dashboard.
 
 4. Click **Copy and Open**.
 
@@ -55,9 +55,9 @@ Complete the following steps to change the scope of a panel:
 
 1. Navigate to the *Dashboards* section in the Web UI. Select a dashboard. Then, identify the panel that displays the metric for which you want to change the scope.
 
-2. In the panel, click the *Pencil* icon ![Pencil icon](../images/pencil.png) to **Edit Dashboard Scope**. 
+2. In the panel, click the *Pencil* icon ![Pencil icon](../images/pencil.png) to **Edit Dashboard Scope**.
 
-  
+
 3. Define your dashboard scope.
 
 4. Click **Apply**.
@@ -127,5 +127,3 @@ Complete the following steps to create an alert:
 4. Configure the alert.
 
 5. Click **Create**.
-
-

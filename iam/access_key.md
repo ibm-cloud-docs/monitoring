@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-03-15"
 
 keywords: IBM Cloud, monitoring, access key
@@ -15,7 +15,7 @@ subcollection: monitoring
 # Managing access keys
 {: #access_key}
 
-The **Access Key** is a token that you must use to configure monitoring agents to successfully forward data to your {{site.data.keyword.mon_full_notm}} instance in {{site.data.keyword.cloud_notm}}.   
+The **Access Key** is a token that you must use to configure monitoring agents to successfully forward data to your {{site.data.keyword.mon_full_notm}} instance in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 
@@ -26,7 +26,7 @@ To get the access key for an {{site.data.keyword.mon_full_notm}} instance throug
 
 1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 
-2. Go to the Menu icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Observability**. 
+2. Go to the Menu icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Observability**.
 
 3. Select **Monitoring**. The {{site.data.keyword.mon_full_notm}} dashboard opens. You can see the list of monitoring instances that are available on {{site.data.keyword.cloud_notm}}.
 
@@ -73,7 +73,7 @@ To get the access key for a monitoring instance through the command line, comple
     {: pre}
 
     where APIKEY_NAME is the name of the API key.
- 
+
     The output from this command includes the field **Access Key** that contains the access key for the instance.
 
 
@@ -225,8 +225,5 @@ To delete an access keys for an {{site.data.keyword.mon_full_notm}} instance, co
 
     * `ENDPOINT` is the URL for the region where the monitoring instance is available. For more information, see [monitoring endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints).
     * `API_TOKEN` is the API Token retrieved in Step 1.
-    * `GUID` is the GUID of the monitoring instance associated with the access key. See [headers for IAM tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam). 
+    * `GUID` is the GUID of the monitoring instance associated with the access key. See [headers for IAM tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
     * `ACCESS_KEY` is the access key to be deleted.  You can [view a list of all access keys](#access_key_view) to obtain the access key values.
-
-    
-

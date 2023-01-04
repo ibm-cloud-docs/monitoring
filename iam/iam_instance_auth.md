@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, api token
@@ -65,9 +65,9 @@ Complete this step if you are configuring your monitoring instance to authentica
 
 When you reset a Monitor API token , you disable the current Monitor API token that users might be using. There is 1 Monitor API token per team.
 
-For each team in the {{site.data.keyword.mon_short}} instance, [Reset the Monitor API token](/docs/monitoring?topic=monitoring-api_monitoring_token#api_token_reset). 
+For each team in the {{site.data.keyword.mon_short}} instance, [Reset the Monitor API token](/docs/monitoring?topic=monitoring-api_monitoring_token#api_token_reset).
 
-## Step 3. Configure the {{site.data.keyword.mon_short}} instance to only allow IAM tokens 
+## Step 3. Configure the {{site.data.keyword.mon_short}} instance to only allow IAM tokens
 {: #iam_instance_auth_step3}
 
 Run the following command to update a {{site.data.keyword.mon_short}} instance so that only IAM tokens are allowed when you use Python scripts or the monitoring REST API to manage resources:
@@ -89,9 +89,3 @@ For example, to modify an instance, run the following command:
 ibmcloud resource service-instance-create monitoring-instance-01 -p '{"external_api_auth": "IAM_ONLY"}'
 ```
 {: pre}
-
-
-
-
-
-

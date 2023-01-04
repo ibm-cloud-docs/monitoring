@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 
@@ -35,9 +35,9 @@ To change the service plan of an instance from the Observability dashboard in th
 
 3. Select **Monitoring**.
 
-4. Click the *Actions* icon ![Three dots icon](images/actions.png) next to the instance you want to change and click **Edit plan**. 
+4. Click the *Actions* icon ![Three dots icon](images/actions.png) next to the instance you want to change and click **Edit plan**.
 
-5. Select a service plan. 
+5. Select a service plan.
 
 6. Click **Save**.
 
@@ -84,7 +84,7 @@ Complete the following steps to change the service plan:
     * `service-plan-id` indicates the type of plan.
 
     * `RESOURCE_PLAN_ID` is the ID of the plan that you want to set. To get the service plan IDs, see [Service plans](/docs/monitoring?topic=monitoring-pricing_plans).
-    
+
 
 For example, to change the service plan of an instance to the graduated plan, run the following command:
 
@@ -92,5 +92,3 @@ For example, to change the service plan of an instance to the graduated plan, ru
 ibmcloud resource service-instance-update monitoring-instance-01 231bb072-1b2f-4d7e-ae9e-9574d382be32
 ```
 {: codeblock}
-
-

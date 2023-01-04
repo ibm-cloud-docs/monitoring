@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-08-08"
 
 keywords: IBM Cloud, monitoring, config monitoring agent
@@ -30,7 +30,7 @@ Check the topic [Tuning Sysdig Agent](https://docs.sysdig.com/en/docs/installati
 ## Deploying a monitoring agent as a Docker container
 {: #agent_docker_deploy}
 
-When you configure a monitoring agent directly on a Linux host as a standard Docker container, you may need to install external linux headers to launch the monitoring agent correctly. 
+When you configure a monitoring agent directly on a Linux host as a standard Docker container, you may need to install external linux headers to launch the monitoring agent correctly.
 
 For example, you might need to run the following command to install external linux headers:
 
@@ -60,7 +60,7 @@ Complete the following steps to configure a monitoring agent on a Docker contain
 
     * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
-    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. 
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*.
 
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
@@ -126,7 +126,7 @@ docker logs sysdig-agent 2>&1 | grep "error"
 
 Complete the following steps to remove the monitoring agent that is deployed as a container in a Linux system:
 
-1. Stop the monitoring agent container. 
+1. Stop the monitoring agent container.
 
     Run the following command:
 
@@ -141,4 +141,3 @@ Complete the following steps to remove the monitoring agent that is deployed as 
     docker rm sysdig-agent
     ```
     {: codeblock}
-

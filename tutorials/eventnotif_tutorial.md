@@ -1,7 +1,7 @@
 ---
 
 copyright:
-   years: 2020, 2022
+   years: 2020, 2023
 lastupdated: "2021-12-17"
 
 keywords: IBM Cloud, monitoring, alerts, event notification
@@ -52,7 +52,7 @@ In this tutorial you will configure the following flow:
 
 In this step you will make sure that an email destination exists where notifications will be forwarded.
 
-1. Click **Destinations**. 
+1. Click **Destinations**.
 2. Notice in the **Destinations** list that, by default, there is an *IBM Cloud Email service* defined.  You do not need to do anything else to configure an email destination.
 
    If you wanted to add a webhook as a destination, you would click **Add** and provide the appropriate information in the **Add a destination** panel.
@@ -68,7 +68,7 @@ In this step you will configure who will receive an email when a notification is
 1. Click **Subscriptions**.
 2. Click **Create**. The **Create a subscription** panel opens.
 3. In the **Create a subscription** panel enter the following:
-    
+
     * Enter the **Name** for your subscription.  For example, `MyMonitoringSubscription`.
     * For **Topic** select the topic you created.  For example, `MyMonitoringTopic`.
     * For **Destination** select `IBM Cloud Email service`.
@@ -86,4 +86,3 @@ In this step you will configure who will receive an email when a notification is
 {: #en-next-steps}
 
 You should start receiving email notifications at the email address that you configured whenever the criteria defined in both {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.en_full_notm}} match.
-

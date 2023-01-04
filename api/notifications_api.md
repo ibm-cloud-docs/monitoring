@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-11-01"
 
 keywords: IBM Cloud, monitoring, notifications, api
@@ -32,19 +32,19 @@ curl -X GET <REST_API_ENDPOINT>/api/notificationChannels?from=<START_TIMESTAMP>&
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
-    
+
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
-* `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the notifications. 
+* `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the notifications.
 
 For more information about the response format, see [notification schema](/docs/monitoring?topic=monitoring-notifications_api#notifications-api-parm-req-schema).
 
@@ -60,16 +60,16 @@ curl -X GET <REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "A
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
-    
+
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<NOTIFICATION_ID>` defines the ID of the notification that you want to modify.
@@ -111,23 +111,23 @@ curl -X POST <REST_API_ENDPOINT>/api/notificationChannels -H "Authorization: $AU
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
-    
+
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
-* You can pass data to create the notification in the `notification.json` file by using `-d`. 
+* You can pass data to create the notification in the `notification.json` file by using `-d`.
 
     Valid types are `EMAIL`, `PAGER_DUTY`, `SLACK`, and `VICTOROPS`.
 
-The following sample shows the request body parameters that you can set to create an notification: 
+The following sample shows the request body parameters that you can set to create an notification:
 
 ```json
 {
@@ -163,16 +163,16 @@ curl -X DELETE <REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
-    
+
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<NOTIFICATION_ID>` defines the ID of the notification that you want to modify.
@@ -193,24 +193,24 @@ curl -X PUT <REST_API_ENDPOINT>/api/notificationChannels/<NOTIFICATION_ID> -H "A
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<REST_API_ENDPOINT>`indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
     `SysdigTeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
-    
+
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<NOTIFICATION_ID>` defines the ID of the notification that you want to modify.
 
-* You can pass data to create the notification in the `notification.json` file by using `-d`. 
+* You can pass data to create the notification in the `notification.json` file by using `-d`.
 
 
-The following sample shows the request body parameters that you can set to update an notification: 
+The following sample shows the request body parameters that you can set to update an notification:
 
 ```json
 {
@@ -354,7 +354,7 @@ This parameter returns the Unix-timestamp when the notification was created.
 ### description (string)
 {: #notifications-api-parm-desc}
 
-This parameter describes the notification. 
+This parameter describes the notification.
 
 The description is available when you view an notification in the *notifications* section of the monitoring UI, and it is included in notification emails.
 
@@ -427,7 +427,7 @@ The following JSON shows the schema model:
 | `account` |  | ![Checkmark icon](../images/checkmark-icon.svg) | |  |  |  |
 | `serviceKey` |  | ![Checkmark icon](../images/checkmark-icon.svg) | |  |  |  |
 | `serviceName` |  | ![Checkmark icon](../images/checkmark-icon.svg) | |  |  |  |
-{: caption="Table 3. Types of notification channels" caption-side="top"} 
+{: caption="Table 3. Types of notification channels" caption-side="top"}
 
 
 #### apiKey (string)
@@ -502,7 +502,7 @@ Defines the notification channel.
 | VictorOps                     | `VICTOROPS`        |
 | Webhook                       | `WEBHOOK`          |
 | OpsGenie                      | `OPSGENIE`         |
-{: caption="Table 3. Types of notification channels" caption-side="top"} 
+{: caption="Table 3. Types of notification channels" caption-side="top"}
 
 
 ### version (integer)
@@ -538,8 +538,3 @@ Defines the start timestamp, in microseconds, that is used when you request info
 
 Defines the end timestamp, in microseconds, that is used when you request information about notifications that are defined.
 {: note}
-
-
-
-
-

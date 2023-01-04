@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-04-05"
 
 keywords: IBM Cloud, monitoring, prometheus, exporters, promcat
@@ -36,7 +36,7 @@ All communication between your Prometheus servers and {{site.data.keyword.mon_sh
 ## Configuring Prometheus remote write
 {: #prometheus_remote_write_configure}
 
-You can configure your Prometheus server to remote write to a {{site.data.keyword.mon_short}} instance. 
+You can configure your Prometheus server to remote write to a {{site.data.keyword.mon_short}} instance.
 
 For Prometheus v2.25 and previous versions, you must configure the `remote_write` section in your `prometheus.yml` configuration file as follows:
 
@@ -69,7 +69,7 @@ remote_write:
 {: codeblock}
 
 For example, you can configure the Prometheus server that runs in a Kubernetes cluster in different ways. Depending on how you installed it, you can choose any of the following options to configure the remote write feature in Prometheus to send metrics to an {{site.data.keyword.mon_full_notm}} instance:
-- Configure a Prometheus server that is managed by Prometheus Operator 
+- Configure a Prometheus server that is managed by Prometheus Operator
 - Configure a Prometheus server by using Helm
 - Configure a Prometheus server through a Kubernetes ConfigMap
 For more information, see [Collecting metrics from a Kubernetes cluster by using Prometheus remote write](/docs/monitoring?topic=monitoring-prometheus_remote_write).
@@ -96,15 +96,15 @@ remote_write:
       write_relabel_configs:
         - action: keep
           regex: my-namespace
-          source_labels: 
+          source_labels:
           - namespace
 ```
-{: codeblock}   
+{: codeblock}
 
 ### Labeling metrics by Prometheus server
 {: #prometheus_remote_write_label}
 
-You can specify custom labels that are sent along with each time series that is collected by a Prometheus server by using the `external_labels` block within `global`. 
+You can specify custom labels that are sent along with each time series that is collected by a Prometheus server by using the `external_labels` block within `global`.
 
 You can use these labels to filter and define the scope of the metrics that you monitor through dashboards in the {{site.data.keyword.mon_short}} UI.
 
@@ -142,15 +142,15 @@ The following table lists the default rate limits per instance:
 | Parallel writes | 100 concurrent requests |
 | Data points per minute (DPM) | 1 million | The number of data points that are sent depends on how often metrics are sent. For example, a scrape interval of 10s will submit more DPM than an interval of 60 seconds |
 | Number of writes per minute | 10,000 |
-{: caption="Table 1. Rate limits" caption-side="top"} 
+{: caption="Table 1. Rate limits" caption-side="top"}
 
 
 ## Ingestion endpoints
 {: #prometheus_remote_write_endpoints}
 
 The following table lists the public {{site.data.keyword.mon_short}} ingestion endpoints that you can configure to collect metrics via Prometheus Remote Write:
- 
-| Region                | Endpoint                            | 
+
+| Region                | Endpoint                            |
 |-----------------------|-------------------------------------|
 | `US South`            | `https://ingest.us-south.monitoring.cloud.ibm.com/prometheus/remote/write` |
 | `EU-DE`               | `https://ingest.eu-de.monitoring.cloud.ibm.com/prometheus/remote/write`    |
@@ -161,11 +161,11 @@ The following table lists the public {{site.data.keyword.mon_short}} ingestion e
 | `AU-SYD`              | `https://ingest.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | `CA TOR`              | `https://ingest.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | `BR SAO`              | `https://ingest.br-sao.monitoring.cloud.ibm.com/prometheus/remote/write`   |
-{: caption="Table 2. Prometheus remote write public endpoints" caption-side="top"} 
+{: caption="Table 2. Prometheus remote write public endpoints" caption-side="top"}
 
 The following table lists the private {{site.data.keyword.mon_short}} ingestion endpoints that you can configure to collect metrics via Prometheus Remote Write:
- 
-| Region                | Endpoint                            | 
+
+| Region                | Endpoint                            |
 |-----------------------|-------------------------------------|
 | `US South`            | `https://ingest.private.us-south.monitoring.cloud.ibm.com/prometheus/remote/write` |
 | `EU-DE`               | `https://ingest.private.eu-de.monitoring.cloud.ibm.com/prometheus/remote/write`    |
@@ -176,9 +176,9 @@ The following table lists the private {{site.data.keyword.mon_short}} ingestion 
 | `AU-SYD`              | `https://ingest.private.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | `CA TOR`              | `https://ingest.private.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | `BR SAO`              | `https://ingest.private.br-sao.monitoring.cloud.ibm.com/prometheus/remote/write`   |
-{: caption="Table 3. Prometheus remote write private endpoints" caption-side="top"} 
+{: caption="Table 3. Prometheus remote write private endpoints" caption-side="top"}
 
-## Limitations 
+## Limitations
 {: #prometheus_remote_write_limitations}
 
 The {{site.data.keyword.mon_full_notm}} Prometheus Remote Write feature has the following limitations:
@@ -188,7 +188,7 @@ The {{site.data.keyword.mon_full_notm}} Prometheus Remote Write feature has the 
 - The metadata of a metric is not sent via remote write.
 - Metrics that have a name that ends with `_total`, `_sum`, or `_count` are stored as a counters, otherwise they are managed as gauge.
 - You can set units in Dashboards manually.
-- You cannot mix metrics with different sampling in a dashboard, for example, 10s and 1min. 
+- You cannot mix metrics with different sampling in a dashboard, for example, 10s and 1min.
 
     Consider configuring the scrape interval to be 10s so that you can combine Prometheus Remote Write metrics with {{site.data.keyword.mon_short}} agent metrics.
     {: tip}
@@ -208,16 +208,16 @@ Complete the following steps:
 
 2. Check that you have permissions to manage the cluster. You need administrator permissions to add secrets to the cluster and manage the Prometheus deployment.
 
-3. Check that Prometheus in running in your cluster. 
+3. Check that Prometheus in running in your cluster.
 
-    For example, you can run `kubectl get pods --all-namespaces`. Look for Prometheus and the namespace where the Prometheus server is running. 
+    For example, you can run `kubectl get pods --all-namespaces`. Look for Prometheus and the namespace where the Prometheus server is running.
 
 4. Check that you have access to a {{site.data.keyword.mon_short}} instance.
 
 5. If you use a firewall, check the firewall rules are opened for accessing the {{site.data.keyword.mon_short}} ingestion endpoint port TCP 443.
 
 
-### Step 1. Create a Kubernetes Secret 
+### Step 1. Create a Kubernetes Secret
 {: #prometheus_remote_write_kube_step1}
 
 To avoid including sensitive information directly in the Prometheus ConfigMap, you must create a Kubernetes secret to store your instance's Monitor API Token that will be referenced in the Remote Write configuration.. For more information on how to get the token, see  [Monitor API token](/docs/monitoring?topic=monitoring-api_monitoring_token).
@@ -243,16 +243,16 @@ kubectl create secret generic monitor-api-token --from-literal=monitor-api-token
 {: pre}
 
 
-### Step 2. Configure the Prometheus server remote write feature 
+### Step 2. Configure the Prometheus server remote write feature
 {: #prometheus_remote_write_kube_step2}
 
 You can choose any of the following options to configure the Prometheus remote write feature to send metrics to an {{site.data.keyword.mon_full_notm}} instance:
 - Configure the Prometheus server by updating the Kubernetes ConfigMap
-- Configure the Prometheus server that is managed by Prometheus Operator 
+- Configure the Prometheus server that is managed by Prometheus Operator
 - Configure the Prometheus server by using Helm
 
 Choose one of the following methods to configure the Prometheus server remote write feature:
- 
+
 #### Prometheus config map
 {: #prometheus_remote_write_kube_step2_1}
 
@@ -260,15 +260,15 @@ Complete the following steps to modify the Prometheus config map:
 
 1. Configure your Prometheus deployment or statefulSet to mount the Kubernetes Secret that you have created in step 1.
 
-    For example, get the name of the deployment by running the following command: 
-    
+    For example, get the name of the deployment by running the following command:
+
     ```text
     kubectl get deployment -n <PROMETHEUS_NAMESPACE>
     ```
     {: pre}
-    
-    Configure a Prometheus deployment: 
-    
+
+    Configure a Prometheus deployment:
+
     ```text
     kubectl edit deployment prometheus-deployment -n <PROMETHEUS_NAMESPACE>
     ```
@@ -300,19 +300,19 @@ Complete the following steps to modify the Prometheus config map:
 
 2. Modify the Prometheus configMap to include the Prometheus `remote_write` block.
 
-    Get the name of the configMap by running the following command: 
-    
+    Get the name of the configMap by running the following command:
+
     ```text
     kubectl get cm -n <PROMETHEUS_NAMESPACE>
     ```
     {: pre}
-    
+
     For Prometheus v2.25 and previous versions, follow these instructions:
 
     Edit the configMap:
 
     ```text
-    kubectl edit cm <PROMETHEUS_CONFIG_MAP> -n <PROMETHEUS_NAMESPACE> 
+    kubectl edit cm <PROMETHEUS_CONFIG_MAP> -n <PROMETHEUS_NAMESPACE>
     ```
     {: pre}
 
@@ -343,7 +343,7 @@ Complete the following steps to modify the Prometheus config map:
     Edit the configMap:
 
     ```text
-    kubectl edit cm <PROMETHEUS_CONFIG_MAP> -n <PROMETHEUS_NAMESPACE> 
+    kubectl edit cm <PROMETHEUS_CONFIG_MAP> -n <PROMETHEUS_NAMESPACE>
     ```
     {: codeblock}
 
@@ -369,7 +369,7 @@ Complete the following steps to modify the Prometheus config map:
     `<SECRET_NAME>` is the name of the secret.
 
     `<INGESTION_URL>` indicates the ingestion endpoint. You must set this value to the ingestion endpoint for the region where the {{site.data.keyword.mon_short}} instance is available.
-    
+
 3. Manage the metrics that you want to collect and send to the {{site.data.keyword.mon_short}} instance.
 
     To select which series and labels to collect, and reduce the number of active series that are sent to the {{site.data.keyword.mon_short}} instance, you can set up relabel configurations by using the `write_relabel_configs` block within your remote_write section.
@@ -384,10 +384,10 @@ Complete the following steps to modify the Prometheus config map:
           write_relabel_configs:
             - action: keep
               regex: my-namespace
-              source_labels: 
+              source_labels:
               - namespace
     ```
-    {: codeblock}   
+    {: codeblock}
 
 4. Restart your Prometheus server to reload the configuration.
 
@@ -397,14 +397,14 @@ Complete the following steps to modify the Prometheus config map:
 #### Prometheus Operator
 {: #prometheus_remote_write_kube_step2_2}
 
-If you use the Prometheus Operator to configure and manage your Prometheus server, you can configure the Prometheus remote write feature by using the Prometheus Operator that offers Kubernetes native deployment and management of the Prometheus server and related monitoring components. 
+If you use the Prometheus Operator to configure and manage your Prometheus server, you can configure the Prometheus remote write feature by using the Prometheus Operator that offers Kubernetes native deployment and management of the Prometheus server and related monitoring components.
 
 Complete the following steps to configure the Prometheus remote write feature:
- 
-1. Modify your Prometheus instance to mount the secret and configure the Prometheus `remote_write` block. 
 
-    Edit the `prometheus-prometheus.yml` file. If you have used the kube-prometheus GitHub repository, the `prometheus-prometheus.yml` file is located in the manifests directory. 
-    
+1. Modify your Prometheus instance to mount the secret and configure the Prometheus `remote_write` block.
+
+    Edit the `prometheus-prometheus.yml` file. If you have used the kube-prometheus GitHub repository, the `prometheus-prometheus.yml` file is located in the manifests directory.
+
     Add the following entries:
 
     ```yaml
@@ -466,7 +466,7 @@ For Prometheus v2.25 and previous versions, follow these instructions:
     `<SECRET_NAME>` is the name of the secret.
 
     `<INGESTION_URL>` indicates the ingestion endpoint. You must set this value to the ingestion endpoint for the region where the {{site.data.keyword.mon_short}} instance is available.
-    
+
 2. Upgrade the Prometheus Helm release.
 
     ```text
@@ -493,7 +493,7 @@ For Prometheus version 2.26 and later versions, follow these instructions:
     `<SECRET_NAME>` is the name of the secret.
 
     `<INGESTION_URL>` indicates the ingestion endpoint. You must set this value to the ingestion endpoint for the region where the {{site.data.keyword.mon_short}} instance is available.
-    
+
 2. Upgrade the Prometheus Helm release.
 
     ```text
@@ -512,19 +512,19 @@ Complete the following steps to check that you can monitor metrics that are coll
 
 3. Select **PromQL**.
 
-    ![Dashboard page](../images/dashboard-page.png "Dashboard page")    
+    ![Dashboard page](../images/dashboard-page.png "Dashboard page")
 
 4. In the *Query* section, delete the default query and enter **container**, for example. The list of available metrics is displayed.
 
-    ![Query](../images/query1.png "Query")  
+    ![Query](../images/query1.png "Query")
 
-5. Choose a metric and click **Run Query**. 
+5. Choose a metric and click **Run Query**.
 
-    ![Query](../images/query.png "Query")  
+    ![Query](../images/query.png "Query")
 
     You can see a metric that is collected by using the Prometheus remote write feature.
 
-    ![Metric](../images/metric.png "<etrics")    
+    ![Metric](../images/metric.png "<etrics")
 
 6. Click **Save** to create the panel that monitors the metric in the dashboard.
 
@@ -543,6 +543,3 @@ ts=2021-05-05T13:32:16.975Z caller=dedupe.go:112 component=remote level=warn rem
 {: screen}
 
 To solve the problem, open a support ticket. You can [create](/docs/get-support?topic=get-support-open-case) and [manage](/docs/get-support?topic=get-support-managing-support-cases) a support case by using the [Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external}.
-
-
-

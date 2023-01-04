@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2021, 2022
+  years:  2021, 2023
 lastupdated: "2021-05-07"
 
 keywords: IBM Cloud, monitoring, openshift, analyze metrics
@@ -19,7 +19,7 @@ subcollection: monitoring
 Use this tutorial to learn how to configure an {{site.data.keyword.openshiftshort}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.
 {: shortdesc}
 
-To configure a cluster to forward metrics, you must install a monitoring agent onto each worker node in your Kubernetes cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade. 
+To configure a cluster to forward metrics, you must install a monitoring agent onto each worker node in your Kubernetes cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade.
 
 You view metrics using the web-based user interface.
 
@@ -74,11 +74,11 @@ To provision an instance of {{site.data.keyword.mon_full_notm}}, complete the fo
 
 3. To filter the list of services that is displayed, select the **Developer Tools** category.
 
-4. Click the **{{site.data.keyword.mon_full_notm}}** tile. 
+4. Click the **{{site.data.keyword.mon_full_notm}}** tile.
 
 5. For **Select a location** select `Dallas (us-south)`,
 
-6. Select the **Lite** service plan. 
+6. Select the **Lite** service plan.
 
     By default, the **Lite** plan is set.
 
@@ -86,7 +86,7 @@ To provision an instance of {{site.data.keyword.mon_full_notm}}, complete the fo
 
 7. Enter a **Service name** for the service instance.
 
-8. Select the **default** resource group. 
+8. Select the **default** resource group.
 
     You can provision the instance in any resource group where you have permissions to create resources.
 
@@ -95,7 +95,7 @@ To provision an instance of {{site.data.keyword.mon_full_notm}}, complete the fo
 
 9. Click **Create**.
 
-    After you provision an instance, the *Observability* dashboard opens and shows details for your **Monitoring** instances. 
+    After you provision an instance, the *Observability* dashboard opens and shows details for your **Monitoring** instances.
 
 
 To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/monitoring?topic=monitoring-provision#provision_cli).
@@ -140,10 +140,10 @@ Complete the following steps:
     ```
     {: pre}
 
-    Where 
-    
+    Where
+
     `RESOURCE_GROUP` is the name of the resource group where the cluster is available, for example, `default`.
-    
+
     `REGION` is the region where the cluster is available, for example, `us-south`.
 
 4. Set the cluster context in your session.
@@ -175,7 +175,7 @@ Complete the following steps:
 
    Where MONITORING_ACCESS_KEY is the ingestion key for the instance.
 
-   By default the slim agent is installed.  The slim agent reduces the possible are of attack for potential vulnerabilities and, as a result, is more secure.  If installing the full agent is desired, add the `-af` option to the `curl` command.  
+   By default the slim agent is installed.  The slim agent reduces the possible are of attack for potential vulnerabilities and, as a result, is more secure.  If installing the full agent is desired, add the `-af` option to the `curl` command.
    {: note}
 
 
@@ -198,28 +198,28 @@ To launch the monitoring UI through the {{site.data.keyword.cloud_notm}} console
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
 
-2. From the menu ![Menu icon](../../../icons/icon_hamburger.svg), select **Observability**. 
+2. From the menu ![Menu icon](../../../icons/icon_hamburger.svg), select **Observability**.
 
 3. Select **Monitoring**. The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
 4. Find your instance and click **Open dashboard**.
 
     * **First time**: Because you already installed the monitoring agent, you can skip through the installation wizard, get started, and complete the onboarding.
-    
+
     * **Subsequent times**: The **Explore** view opens.
 
 
 If the monitoring agent is not installed successfully, points to the wrong ingestion endpoint, or the access key is incorrect, a page opens that tells you what to do next.
 
 For example, if the monitoring agent is not installed successfully, you cannot skip through the installation wizard. You might see a message similar to the following:
-    
+
 ```text
 Waiting for the first node to connect... Go ahead and follow the instructions below.
 ```
 {: screen}
-    
+
 You can try the following actions:
-*  Verify that you are using the `ingest` [endpoint](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion), and not the  endpoint. 
+*  Verify that you are using the `ingest` [endpoint](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion), and not the  endpoint.
 *  Verify that the [access key](/docs/monitoring?topic=monitoring-access_key) is correct.
 *  Follow any additional instructions and repeat the steps in this tutorial.
 
@@ -231,20 +231,20 @@ You can monitor your cluster in the **Explore** view that is available through t
 
 In the section *Host and containers*, you can see the *Explore table*, a list of workers in your cluster that are forwarding metrics to the monitoring instance. Each worker entry represents a group of related infrastructure objects for that worker.
 
-Click **Host and containers** ![Host and containers](../images/switch_hosts.png) to switch data sources. Then, select a worker. The data that is displayed corresponds to the worker that you have selected. If you click **Back to Explore Table**, the *Explore table* is displayed. 
+Click **Host and containers** ![Host and containers](../images/switch_hosts.png) to switch data sources. Then, select a worker. The data that is displayed corresponds to the worker that you have selected. If you click **Back to Explore Table**, the *Explore table* is displayed.
 
 ### Customizing the Explore table
 {: #openshift_explore_table}
 
-You can customize the *Explore table*. 
+You can customize the *Explore table*.
 
-* Each column shows a different metric. 
-* You can configure each metric individually. 
-* You can change the order of the columns. 
+* Each column shows a different metric.
+* You can configure each metric individually.
+* You can change the order of the columns.
 
-    Notice that when you make changes to the order of existing columns, the change is persistent across different groupings while you are logged in. If you add or remove a column, the change is persistent. 
+    Notice that when you make changes to the order of existing columns, the change is persistent across different groupings while you are logged in. If you add or remove a column, the change is persistent.
 
-* You can also configure colors to highlight values and improve readability. 
+* You can also configure colors to highlight values and improve readability.
 
 For example, to configure color-coding for a column, complete the following steps:
 
@@ -266,9 +266,4 @@ To return to the full _Explore table_, click the **X (Back to Explore Table)** b
 
 Create a custom dashboard. For more information, see [Working with dashboards](/docs/monitoring?topic=monitoring-dashboards#dashboards).
 
-You can also learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts). 
-
-
-
-
-
+You can also learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).

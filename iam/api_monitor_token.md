@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, api token
@@ -16,7 +16,7 @@ subcollection: monitoring
 # Working with Monitor API tokens
 {: #api_monitoring_token}
 
-You can use Monitor API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the {{site.data.keyword.mon_full_notm}} REST API to automate routine tasks and monitor notifications. 
+You can use Monitor API tokens to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the {{site.data.keyword.mon_full_notm}} REST API to automate routine tasks and monitor notifications.
 {: shortdesc}
 
 Consider the following information for each instance of the {{site.data.keyword.mon_full_notm}} service:
@@ -33,7 +33,7 @@ Complete the following steps to get the Monitor API token :
 1. From the *Selector* button in the navigation bar, choose **Settings**
 2. From the *Monitor API* section, copy the **Monitor API Token**.
 
-After you get the token, you can run API calls and use this token in the `Authorization` header. 
+After you get the token, you can run API calls and use this token in the `Authorization` header.
 
 When you copy the token include the `Bearer` keyword: `Authorization: Bearer MONITOR_API_TOKEN`
 {: note}
@@ -67,16 +67,16 @@ GET <MONITORING_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H 
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<MONITORING_REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
     `TeamID` defines the team for which you want to get the Monitor API token .
-    
+
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 
@@ -110,7 +110,3 @@ def get_sysdig_api_token(self, instance_guid):
         return None
 ```
 {: codeblock}
-
-
-
-
