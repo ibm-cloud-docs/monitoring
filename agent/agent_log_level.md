@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, monitoring agent, log level
@@ -19,15 +19,15 @@ subcollection: monitoring
 The log level determines the type and amount of logging of an agent. You can configure the log level by adding parameters and log level arguments.
 {: shortdesc}
 
-The monitoring agent writes log entries into the `draios.log` file. 
+The monitoring agent writes log entries into the `draios.log` file.
 * The log file rotates when it reaches 10MB in size.
 * The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
-* The log files are located in the directory `/opt/draios/logs/`. 
+* The log files are located in the directory `/opt/draios/logs/`.
 
 By default, when you deploy a monitoring agent, the log level is set to `info`.
 {: note}
 
-Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*.
 
 You can configure the level of detail that is written by a monitoring agent to its log file:
 
@@ -37,10 +37,10 @@ You can configure the level of detail that is written by a monitoring agent to i
 | `info`          | Reports an entry for each aggregated metrics transmission to the backend servers, once per second. </br>Reports entries for any warnings and errors. |
 | `error`         | Reports error logs only.             |
 | `trace`         | Reports all logs that are available. |
-{: caption="Table 1. Log levels" caption-side="top"} 
+{: caption="Table 1. Log levels" caption-side="top"}
 
 * To get the least number of log entries, set the log level to *error*.
-* To get the full set of available logs, set the log level to *trace*. 
+* To get the full set of available logs, set the log level to *trace*.
 
 You should set the log level to *info*, *debug*, or *trace* to troubleshoot agent-related issues.
 {: tip}
@@ -54,7 +54,7 @@ For example, consider the following use cases and the log section that you can c
 | Reduce container console output               | `console_priority: warning` |
 | Filtering events by severity                  | `event_priority: warning`   |
 | Verify what metrics are included or excluded  | `metrics_excess_log: true`  |
-{: caption="Table 2. Log section entries" caption-side="top"} 
+{: caption="Table 2. Log section entries" caption-side="top"}
 
 
 ## Checking the log level of an agent
@@ -132,7 +132,7 @@ The log level determines the type and amount of logging of an agent. You can con
 ### Linux monitoring agent
 {: #agent_log_level_configure_linux}
 
-To configure the log level, you must customize the **log** section in the `/opt/draios/etc/dragent.yaml` file. 
+To configure the log level, you must customize the **log** section in the `/opt/draios/etc/dragent.yaml` file.
 
 By default, a `dragent.yaml` file includes the following information:
 
@@ -145,9 +145,9 @@ sysdig_capture_enabled: false
 ```
 {: codeblock}
 
-To configure a log level, you must edit the file and add information about the log. 
-- To set the log level, you must set **file_priority**. 
-- Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+To configure a log level, you must edit the file and add information about the log.
+- To set the log level, you must set **file_priority**.
+- Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*.
 
 The following configuration sample shows a log level set to *error*:
 
@@ -200,9 +200,9 @@ To change the log level of a docker monitoring agent, complete the following ste
     ```
     {: codeblock}
 
-    The *file_priority* controls the log level. Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+    The *file_priority* controls the log level. Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*.
 
-    The *console_priority* controls the console output. Valid console log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+    The *console_priority* controls the console output. Valid console log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*.
 
     The following configuration sample shows a log level set to *error*, and a console log level set to *warning*:
 
@@ -278,9 +278,9 @@ Complete the following steps to change the log level of a Kubernetes monitoring 
     ```
     {: codeblock}
 
-    The *file_priority* controls the log level. Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+    The *file_priority* controls the log level. Valid log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*.
 
-    The *console_priority* controls the console output. Valid console log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*. 
+    The *console_priority* controls the console output. Valid console log levels are: *none*, *error*, *warning*, *info*, *debug*, *trace*.
 
     The following configuration sample shows a log level set to *debug*, and a console log level set to *error*:
 
@@ -309,7 +309,7 @@ Complete the following steps to change the log level of a Kubernetes monitoring 
     ```
     {: codeblock}
 
-The log level changes are applied when you save the changes. 
+The log level changes are applied when you save the changes.
 
 
 If you have changed previously the log level, the DaemonSet section looks like:
@@ -342,5 +342,3 @@ spec:
 
 Note, you can also download the configmap by running: `kubectl get daemonset sysdig-agent -o yaml -n ibm-observe > sysdig-agent-ds.yaml`. To apply the changes, you can run `kubectl apply -f sysdig-agent-ds.yaml -n ibm-observe`.
 {: note}
-
-

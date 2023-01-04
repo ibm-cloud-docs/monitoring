@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, query, api
@@ -330,7 +330,7 @@ return res
     ```
     {: screen}
 
-6. From the [{{site.data.keyword.mon_short}} dashboard](https://cloud.ibm.com/observe/monitoring){: external}, click **Open dashboard** for the {{site.data.keyword.mon_short}} instance that you want to use. 
+6. From the [{{site.data.keyword.mon_short}} dashboard](https://cloud.ibm.com/observe/monitoring){: external}, click **Open dashboard** for the {{site.data.keyword.mon_short}} instance that you want to use.
 7. Click **Get Started > Configure a notification channel > Configure Notification Channel**. The **Settings** page opens.
 8. Click **+ Add Notification Channel** and select the **Webhook** option.
 9. Configure the webhook notification channel. After you create the webhook notification channel, you must continue to set up authentication for the channel.
@@ -339,12 +339,12 @@ return res
     * Leave the other fields at the default settings.
     * Click **Save** to create the channel.
 10. [Get an IAM token](/docs/monitoring?topic=monitoring-api_token) to authenticate your requests to the {{site.data.keyword.mon_short}} API.
-11. Curl the {{site.data.keyword.mon_short}} API to list the notification channels. 
+11. Curl the {{site.data.keyword.mon_short}} API to list the notification channels.
     * Replace `<region>` with the region of your {{site.data.keyword.mon_short}} instance, such as `us-east`.
-    * Replace `<token>` with the IAM token that you previously retrieved. 
-    
+    * Replace `<token>` with the IAM token that you previously retrieved.
+
     ```text
-    curl ’https://<region>.monitoring.cloud.ibm.com/api/notificationChannels' --header ‘Authorization: Bearer <token>’ | jq 
+    curl ’https://<region>.monitoring.cloud.ibm.com/api/notificationChannels' --header ‘Authorization: Bearer <token>’ | jq
     ```
     {: pre}
 
@@ -371,17 +371,17 @@ return res
 
     ```text
     curl -X PUT ’https://<region>.monitoring.cloud.ibm.com/api/notificationChannels/<id>' \
-    --header ‘Content-Type: application/json’ 
+    --header ‘Content-Type: application/json’
     --header ‘Authorization: Bearer <token>’ -d @/tmp/notification.json
     ```
     {: pre}
 
-13. Curl the {{site.data.keyword.mon_short}} API again to confirm that the notification channel is updated with the authentication header. 
+13. Curl the {{site.data.keyword.mon_short}} API again to confirm that the notification channel is updated with the authentication header.
     * Replace `<region>` with the region of your {{site.data.keyword.mon_short}} instance, such as `us-east`.
-    * Replace `<token>` with the IAM token that you previously retrieved. 
-    
+    * Replace `<token>` with the IAM token that you previously retrieved.
+
     ```text
-    curl ’https://<region>.monitoring.cloud.ibm.com/api/notificationChannels' --header ‘Authorization: Bearer <token>’ | jq 
+    curl ’https://<region>.monitoring.cloud.ibm.com/api/notificationChannels' --header ‘Authorization: Bearer <token>’ | jq
     ```
     {: pre}
 
@@ -402,7 +402,7 @@ return res
         ...
     ```
     {: screen}
-    
-14. [Set up an alert](/docs/monitoring?topic=monitoring-alerts) that uses the webhook notification channel that you created for {{site.data.keyword.messagehub}}. 
+
+14. [Set up an alert](/docs/monitoring?topic=monitoring-alerts) that uses the webhook notification channel that you created for {{site.data.keyword.messagehub}}.
 
 Now, when an alert is triggered from {{site.data.keyword.messagehub}}, you can review the details in your {{site.data.keyword.mon_short}} instance.

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-08-08"
 
 keywords: IBM Cloud, monitoring, monitoring agent, versions
@@ -42,7 +42,7 @@ The {{site.data.keyword.mon_full_notm}} service supports `n-3` versions back bas
 
 When an agent version becomes unsupported, the agent version is maintained for vulnerabilities for 3 years. After 3 years, the image is deprecated and unavailable.
 
-Unsupported versions of the {{site.data.keyword.mon_full_notm}} agent have a 3-year deprecation policy. 
+Unsupported versions of the {{site.data.keyword.mon_full_notm}} agent have a 3-year deprecation policy.
 {: note}
 
 
@@ -62,4 +62,3 @@ Complete the following steps:
 The dashboard displays the agent versions corresponding to each host in the instance.
 
 ![Sysdig Agent Health & Status dashboard showing agent versions](../images/agent_version.png "Sysdig Agent Health & Status dashboard showing agent versions"){: caption="Figure 1. Sysdig Agent Health & Status dashboard showing agent versions" caption-side="bottom"}
-

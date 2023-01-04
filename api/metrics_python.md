@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, query, api
@@ -32,12 +32,12 @@ The following code shows the structure of a Python script that you can use to re
 from sdcclient import IbmAuthHelper, SdMonitorClient
 
 # Add the monitoring instance information that is required for authentication
-URL = <MONITORING-ENDPOINT> 
+URL = <MONITORING-ENDPOINT>
 APIKEY = <IAM_APIKEY>
 GUID = <GUID>
 ibm_headers = IbmAuthHelper.get_headers(URL, APIKEY, GUID)
 
-# Instantiate the Python client 
+# Instantiate the Python client
 sdclient = SdMonitorClient(sdc_url=URL, custom_headers=ibm_headers)
 
 # Specify the ID for keys, and ID with aggregation for values
@@ -89,7 +89,7 @@ For Python examples, see any of the following examples:
 
 To see the pre-defined metrics, see [Metrics dictionary](https://docs.sysdig.com/en/metrics-dictionary.html){: external}.
 
-To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_notm}} services that are enabled for Monitoring, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services). 
+To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_notm}} services that are enabled for Monitoring, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services).
 
 
 ## Data aggregation
@@ -97,4 +97,3 @@ To see the pre-defined metrics that are defined by {{site.data.keyword.cloud_not
 
 
 To learn about data aggregation, see [Data Aggregation](https://docs.sysdig.com/en/data-aggregation.html){: external}.
-

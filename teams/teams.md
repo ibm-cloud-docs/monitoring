@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, teams
@@ -16,12 +16,12 @@ subcollection: monitoring
 {: #teams}
 
 You can use teams to add another dimension of control on the data that is available through a monitoring instance in addition to platform and service access controls. A user with the **manager** service access role for an {{site.data.keyword.mon_full_notm}} instance can create, delete, add members, and change the scope of teams in that instance. Once a team is created, an admin can add a user to it through {{site.data.keyword.iamlong}} (IAM).
-{: shortdesc} 
+{: shortdesc}
 
 In the world of microservices, it is becoming harder to track down valuable metrics and ensure that no sensitive data is exposed. By using teams, administrators can apply a fine grain control on resources. Consider the following information when you work with teams:
 * You can create 1 or more teams in a monitoring instance.
-* You can specify what resources and metrics are visible for users that are granted IAM permissions to work in the team. 
-* You can enhance the users experience by customizing the initial dashboard that users in a team get when they launch the web UI.  
+* You can specify what resources and metrics are visible for users that are granted IAM permissions to work in the team.
+* You can enhance the users experience by customizing the initial dashboard that users in a team get when they launch the web UI.
 
 These instructions assume that you have provisioned a monitoring service instance on {{site.data.keyword.cloud_notm}}.
 {: note}
@@ -31,7 +31,7 @@ These instructions assume that you have provisioned a monitoring service instanc
 {: #teams_assign}
 
 To add a user to a team, complete the following steps:
-1. Check that you have the **administrator** platform role to work with the monitoring service or with a specific instance. 
+1. Check that you have the **administrator** platform role to work with the monitoring service or with a specific instance.
 2. Define a team level IAM policy for the user. For more information, see [Granting permissions to work in a team](/docs/monitoring?topic=monitoring-iam_grant_team).
 
 When the policy is defined, the user is added to the list of users that have access to work with resources configured for a team.
@@ -47,15 +47,15 @@ An administrator or a manager of an {{site.data.keyword.mon_full_notm}} instance
 
 Complete the following steps to create a team:
 
-1. [Launch the web UI](/docs/monitoring?topic=monitoring-launch#launch). 
-    
-2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**. 
+1. [Launch the web UI](/docs/monitoring?topic=monitoring-launch#launch).
+
+2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**.
 
 3. Click **Teams**. The list of existing teams is displayed.
 
 4. Click **Add Team**. The team configuration page is displayed.
 
-5. Configure the team details. 
+5. Configure the team details.
 
     * Choose a color.
 
@@ -67,27 +67,27 @@ Complete the following steps to create a team:
 
     * Set the **Default Entry Point** to specify the view in the web UI that opens every time a user logs in. By default, the *Explore* view is set.
 
-6. Configure the team scope. 
+6. Configure the team scope.
 
-    * [Optional] Set **Scope by** to specify the level of data that members of the team have access to. Valid values are *Host* and *Container*. 
-    
-        If the parameter is set to *Host*, members can see all Host-level and Container-level information. 
-        
+    * [Optional] Set **Scope by** to specify the level of data that members of the team have access to. Valid values are *Host* and *Container*.
+
+        If the parameter is set to *Host*, members can see all Host-level and Container-level information.
+
         If the parameter is set to *Container*, members can see only Container-level information.
 
-    * Set the **Scope** to limit what data users can see. You can set one or more conditions by specifying expressions for metrics. 
-    
+    * Set the **Scope** to limit what data users can see. You can set one or more conditions by specifying expressions for metrics.
+
         By default, the scope is set to *everywhere*.
-	
-    * [Optional] Enable or disable **Sysdig captures**. Check this box to allow this team to take {{site.data.keyword.mon_full_notm}} captures. 
-    
-        Capture files will only be visible to members of this team. 
-        
+
+    * [Optional] Enable or disable **Sysdig captures**. Check this box to allow this team to take {{site.data.keyword.mon_full_notm}} captures.
+
+        Capture files will only be visible to members of this team.
+
         Captures include detailed information from every container on a host, regardless of the team’s scope.
 
-    * [Optional] Enable or disable **Infrastructure Events**. Check this box to allow members to view all custom infrastructure events from every user and monitoring agent. When is not checked, users can see infrastructure events that are sent specifically to this team. 
+    * [Optional] Enable or disable **Infrastructure Events**. Check this box to allow members to view all custom infrastructure events from every user and monitoring agent. When is not checked, users can see infrastructure events that are sent specifically to this team.
 
-    * [Optional] Enable or disable **Platform Metrics**. Check this box to allow members to view platform metrics.  You can scope the metrics to limit the metrics team members can see.  
+    * [Optional] Enable or disable **Platform Metrics**. Check this box to allow members to view platform metrics.  You can scope the metrics to limit the metrics team members can see.
 
 7. Click **Save**.
 
@@ -98,11 +98,11 @@ Complete the following steps to create a team:
 
 You must have **manager** role to change the scope of a team in a monitoring instance.
 
-To change the scope of the data that is visible to members of a team, complete the following steps: 
+To change the scope of the data that is visible to members of a team, complete the following steps:
 
-1. [Launch the web UI](/docs/monitoring?topic=monitoring-launch#launch). 
-    
-2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**. 
+1. [Launch the web UI](/docs/monitoring?topic=monitoring-launch#launch).
+
+2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**.
 
 3. Select **Teams**. The list of existing teams is displayed.
 
@@ -110,7 +110,7 @@ To change the scope of the data that is visible to members of a team, complete t
 
 5. Change configuration details in the *Visibility* section.
 
-6. Click **Save**. 
+6. Click **Save**.
 
 
 ## Deleting a team
@@ -120,12 +120,12 @@ You must have **manager** role to delete a team in a monitoring instance.
 
 Complete the following steps to delete a team:
 
-The default team, **Monitor Operations**, cannot be deleted. 
+The default team, **Monitor Operations**, cannot be deleted.
 {: note}
 
-1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
-    
-2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**. 
+1. Launch the web UI. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch).
+
+2. Click the **user icon**.  This is the icon with the initials of the logged on user.  Then click **Settings**.
 
 3. Select **Teams**. The list of existing teams is displayed.
 
@@ -135,4 +135,3 @@ The default team, **Monitor Operations**, cannot be deleted.
 
 When you delete a team, users that only belong to this team will be moved to the default team.
 {: important}
-

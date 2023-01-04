@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-09-14"
 
 keywords: IBM Cloud, monitoring, endpoints
@@ -29,7 +29,7 @@ Collector endpoints are ingestion endpoints that you can use to send data.
 ### Private Collector endpoints
 {: #endpoints_ingestion_private}
 
-To send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. 
+To send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account.
 {: note}
 
 The following table lists the *Private Collector endpoints* that are available per region:
@@ -39,7 +39,7 @@ The following table lists the *Private Collector endpoints* that are available p
 | `US South`  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170 </br>166.9.48.41 </br>166.9.17.11   | TCP 6443  | TCP 443  |
 | `EU DE`     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51 </br>166.9.30.53 </br>166.9.28.71     | TCP 6443  | TCP 443  |
 | `EU GB`     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56 </br>166.9.36.71                       |  TCP 6443 | TCP 443  |
-| `JP OSA`    | `ingest.private.jp-osa.monitoring.cloud.ibm.com`     | 166.9.72.14 </br>166.9.71.15 </br>166.9.70.14 | TCP 6443 |  TCP 443  | 
+| `JP OSA`    | `ingest.private.jp-osa.monitoring.cloud.ibm.com`     | 166.9.72.14 </br>166.9.71.15 </br>166.9.70.14 | TCP 6443 |  TCP 443  |
 | `JP TOK`    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38 </br>166.9.40.35 </br>166.9.42.48       | TCP 6443  |  TCP 443  |
 | `US East`   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50 </br>166.9.24.43 </br>166.9.20.53      | TCP 6443  |  TCP 443  |
 | `AU SYD`    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32 </br>166.9.52.27  </br>166.9.54.27     |  TCP 6443 |  TCP 443  |
@@ -56,10 +56,10 @@ The following table lists the *Public Collector endpoints* that are available pe
 | Region      | Public ingestion endpoint                           | Public IP addresses                                     | {{site.data.keyword.mon_short}} agent ports   | Prometheus Remote Write Ports|
 |-------------|-----------------------------------------------------|---------------------------------------------------------|----------|--------|
 | `US South`  | `ingest.us-south.monitoring.cloud.ibm.com`          | 169.60.151.174 </br>169.46.0.70 </br>169.48.214.70      | TCP 6443 | TCP 443  |
-| `EU DE`     | `ingest.eu-de.monitoring.cloud.ibm.com`             | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38   | TCP 6443 | TCP 443  | 
+| `EU DE`     | `ingest.eu-de.monitoring.cloud.ibm.com`             | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38   | TCP 6443 | TCP 443  |
 | `EU GB`     | `ingest.eu-gb.monitoring.cloud.ibm.com`             | 158.175.98.206 </br>141.125.73.118 </br>159.122.210.174 | TCP 6443 | TCP 443  |
 | `JP OSA`    | `ingest.jp-osa.monitoring.cloud.ibm.com`            | 163.68.67.98 </br>163.69.66.170 </br>163.73.67.180 | TCP 6443 | TCP 443  |
-| `JP TOK`    | `ingest.jp-tok.monitoring.cloud.ibm.com`            | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238     | TCP 6443 | TCP 443  | 
+| `JP TOK`    | `ingest.jp-tok.monitoring.cloud.ibm.com`            | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238     | TCP 6443 | TCP 443  |
 | `US East`   | `ingest.us-east.monitoring.cloud.ibm.com`           | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82      | TCP 6443 | TCP 443  |
 | `AU SYD`    | `ingest.au-syd.monitoring.cloud.ibm.com`            | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78     | TCP 6443 | TCP 443  |
 | `CA TOR`    | `ingest.ca-tor.monitoring.cloud.ibm.com`            | 163.74.69.186 </br>158.85.94.130 </br>163.75.65.237     | TCP 6443 | TCP 443  |
@@ -79,16 +79,16 @@ The following table lists the endpoints that are available per region:
 
 | Region      | Web UI endpoint                                  | Public IP addresses                                       |  Ports           |
 |-------------|--------------------------------------------------|-----------------------------------------------------------|-----------------|
-| `US South`  | `https://us-south.monitoring.cloud.ibm.com`      | 169.60.151.174 </br>169.46.0.70 </br>169.48.214.70        | https (TLS) 443 | 
-| `EU DE`     | `https://eu-de.monitoring.cloud.ibm.com`         | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38     | https (TLS) 443 | 
-| `EU GB`     | `https://eu-gb.monitoring.cloud.ibm.com`         | 158.175.98.206 </br>141.125.73.118 </br>159.122.210.174   | https (TLS) 443 | 
+| `US South`  | `https://us-south.monitoring.cloud.ibm.com`      | 169.60.151.174 </br>169.46.0.70 </br>169.48.214.70        | https (TLS) 443 |
+| `EU DE`     | `https://eu-de.monitoring.cloud.ibm.com`         | 149.81.77.78 </br>161.156.102.206 </br>159.122.102.38     | https (TLS) 443 |
+| `EU GB`     | `https://eu-gb.monitoring.cloud.ibm.com`         | 158.175.98.206 </br>141.125.73.118 </br>159.122.210.174   | https (TLS) 443 |
 | `JP OSA`    | `https://jp-osa.monitoring.cloud.ibm.com`        | 163.68.67.98 </br>163.69.66.170 </br>163.73.67.180 | https (TLS) 443 |
 | `JP TOK`    | `https://jp-tok.monitoring.cloud.ibm.com`        | 165.192.84.14 </br>128.168.75.14 </br>169.56.51.238       | https (TLS) 443 |
-| `US East`   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82        | https (TLS) 443 | 
-| `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78       | https (TLS) 443 | 
-| `CA TOR`    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186 </br>158.85.94.130 </br>163.75.65.237       | https (TLS) 443 | 
-| `BR SAO`    | `https://br-sao.monitoring.cloud.ibm.com`        | 163.107.66.98 </br>163.109.67.242 </br>169.57.141.43       | https (TLS) 443 | 
-{: caption="Table 4. List of endpoints" caption-side="top"} 
+| `US East`   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74 </br>169.55.109.114 </br>169.62.3.82        | https (TLS) 443 |
+| `AU SYD`    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100 </br>130.198.80.155 </br>168.1.213.78       | https (TLS) 443 |
+| `CA TOR`    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186 </br>158.85.94.130 </br>163.75.65.237       | https (TLS) 443 |
+| `BR SAO`    | `https://br-sao.monitoring.cloud.ibm.com`        | 163.107.66.98 </br>163.109.67.242 </br>169.57.141.43       | https (TLS) 443 |
+{: caption="Table 4. List of endpoints" caption-side="top"}
 
 
 
@@ -107,7 +107,7 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `EU FR2` | 150.112.66.88/29 </br>150.112.68.128/28 </br>158.231.69.128/29 </br>158.231.69.160/28 </br>163.102.67.232/29 </br>163.102.68.80/28 |
 | `JP OSA`   | 163.68.67.128/28 </br>163.68.67.96/29 </br>163.69.66.168/29 </br>163.69.67.112/28 </br>163.73.67.176/29 </br>163.73.67.192/28  |
 | `JP TOK`   | 128.168.75.32/28 </br>128.168.75.8/29 </br>128.168.98.0/27 </br>161.202.255.64/27 </br>165.192.83.144/28 </br>165.192.84.8/29 </br>165.192.97.96/27 </br>169.56.11.208/28 </br>169.56.51.232/29  |
-| `US East`  | 169.47.20.160/27 </br>169.55.109.112/29 </br>169.55.122.192/28 </br>169.59.131.160/27 </br>169.59.146.192/26 </br>169.60.112.72/29 </br>169.60.82.240/28 </br>169.62.28.160/28 </br>169.62.3.80/29 </br>169.62.46.192/27 </br>52.116.95.64/26 </br>52.117.71.128/26  | 
+| `US East`  | 169.47.20.160/27 </br>169.55.109.112/29 </br>169.55.122.192/28 </br>169.59.131.160/27 </br>169.59.146.192/26 </br>169.60.112.72/29 </br>169.60.82.240/28 </br>169.62.28.160/28 </br>169.62.3.80/29 </br>169.62.46.192/27 </br>52.116.95.64/26 </br>52.117.71.128/26  |
 | `AU SYD`   | 130.198.66.144/28 </br>130.198.80.152/29 </br>135.90.73.96/29 </br>135.90.78.192/28 </br>135.90.94.96/27 </br>168.1.115.192/27 </br>168.1.213.32/27 </br>168.1.213.72/29 </br>168.1.41.96/28  |
 | `CA TOR`   | 158.85.94.128/29 </br>163.74.67.192/28 </br>163.74.69.184/29 </br>163.75.64.128/28 </br>163.75.65.232/29 </br>169.55.129.208/28  |
 | `BR SAO` | 163.107.66.96/29 </br>163.107.68.128/28 </br>163.109.66.48/28 </br>163.109.67.240/29 </br>169.57.141.40/29 </br>169.57.195.0/28 |
@@ -124,9 +124,9 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 ### Private REST API endpoints
 {: #endpoints_rest_api_private}
 
-| Region      | Private REST API endpoint                                     | 
+| Region      | Private REST API endpoint                                     |
 |-------------|---------------------------------------------------------------|
-| `US South`  | `https://private.us-south.monitoring.cloud.ibm.com/api`      | 
+| `US South`  | `https://private.us-south.monitoring.cloud.ibm.com/api`      |
 | `EU DE`     | `https://private.eu-de.monitoring.cloud.ibm.com/api`         |
 | `EU GB`     | `https://private.eu-gb.monitoring.cloud.ibm.com/api`         |
 | `JP OSA`    | `https://private.jp-osa.monitoring.cloud.ibm.com/api`         |
@@ -142,9 +142,9 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 {: #endpoints_rest_api_public}
 
 
-| Region      | Public REST API endpoint                                      | 
+| Region      | Public REST API endpoint                                      |
 |-------------|---------------------------------------------------------------|
-| `US South`  | `https://us-south.monitoring.cloud.ibm.com/api`      | 
+| `US South`  | `https://us-south.monitoring.cloud.ibm.com/api`      |
 | `EU DE`     | `https://eu-de.monitoring.cloud.ibm.com/api`         |
 | `EU GB`     | `https://eu-gb.monitoring.cloud.ibm.com/api`         |
 | `JP OSA`    | `https://jp-osa.monitoring.cloud.ibm.com/api`        |
@@ -154,5 +154,3 @@ To receive alert notifications using webhooks from the {{site.data.keyword.mon_f
 | `CA TOR`    | `https://ca-tor.monitoring.cloud.ibm.com/api`        |
 | `BR SAO`    | `https://br-sao.monitoring.cloud.ibm.com/api`        |
 {: caption="Table 7. Public REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
-
-

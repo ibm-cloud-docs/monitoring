@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, dashboard, api
@@ -38,7 +38,7 @@ The following table lists some of the Python functions that you can use to manag
 | Add dashboard panel | `sdclient.add_dashboard_panel(dashboard_name, panel_name, panel_type, metrics, sort_direction=sort_direction, limit=limit, layout=layout)` |
 | Remove a panel | `sdclient.remove_dashboard_panel(dashboard_name, 'CPU Over Time')` |
 | Save a dashboard to a file | `sdclient.save_dashboard_to_file('dashboard_name', 'dashboard_name.json')` |
-{: caption="Table 1. Dashboard Python functions" caption-side="top"} 
+{: caption="Table 1. Dashboard Python functions" caption-side="top"}
 
 
 ## List dashboards per team
@@ -701,6 +701,3 @@ for db in res['dashboards']:
     print("Name: %s, # Charts: %d" % (db['name'], len(db['widgets'])))
 ```
 {: codeblock}
-
-
-

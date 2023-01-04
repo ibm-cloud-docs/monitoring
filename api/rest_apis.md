@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-01-18"
 
 keywords: IBM Cloud, monitoring, alerting, api, curl
@@ -26,7 +26,7 @@ You can use public or private endpoints to make REST API calls. For more informa
 Use this API to manage alerts.
 {: note}
 
-| Action                     | REST API Method  | API_URL                             | 
+| Action                     | REST API Method  | API_URL                             |
 |----------------------------|------------------|-------------------------------------|
 | Create an alert            | `POST`           | `<ENDPOINT>/api/alerts`             |
 | Update an alert            | `PUT`            | `<ENDPOINT>/api/alerts/<ALERT_ID>`  |
@@ -45,7 +45,7 @@ For more information, see [Managing alerts (Alerts REST API)](/docs/monitoring?t
 Use this API to extract data from a {{site.data.keyword.mon_short}} instance.
 {: note}
 
-| Action                      | REST API Method  | API_URL                                        | 
+| Action                      | REST API Method  | API_URL                                        |
 |-----------------------------|------------------|------------------------------------------------|
 | Extract metrics             | `POST`           | `<ENDPOINT>/api/data`                          |
 {: caption="Table 2. Data REST API" caption-side="top"}
@@ -62,7 +62,7 @@ For more information about the {{site.data.keyword.mon_short}} Metric Query API,
 Use this API to manage downtime events.
 {: note}
 
-| Action                             | REST API Method  | API_URL                                        | 
+| Action                             | REST API Method  | API_URL                                        |
 |------------------------------------|------------------|------------------------------------------------|
 | Fetch an active downtime event     | `GET`            | `<ENDPOINT>/api/downtimes`                     |
 | Schedule a downtime event          | `POST`           | `<ENDPOINT>/api/downtimes`                     |
@@ -77,7 +77,7 @@ Use this API to manage downtime events.
 Use this API to manage notification channels.
 {: note}
 
-| Action                                  | REST API Method  | API_URL                                        | 
+| Action                                  | REST API Method  | API_URL                                        |
 |-----------------------------------------|------------------|------------------------------------------------|
 | Create a notification channel           | `POST`           | `<ENDPOINT>/api/notificationChannels`                 |
 | Update a notification channel           | `PUT`            | `<ENDPOINT>/api/notificationChannels/<NOTIFICATION_CHANNEL_ID>`  |
@@ -87,9 +87,3 @@ Use this API to manage notification channels.
 {: caption="Table 4. Notifications REST API" caption-side="top"}
 
 For more information, see [Managing notification channels (Notifications REST API)](/docs/monitoring?topic=monitoring-notifications_api).
-
-
-
-
-
-

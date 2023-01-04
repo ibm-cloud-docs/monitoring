@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, alerting, api
@@ -32,16 +32,16 @@ curl -X GET <REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUTH_T
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
     `TeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
-    
+
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<ALERT_ID>` defines the ID of the alert that you want to modify.
@@ -95,26 +95,26 @@ curl -X POST <REST_API_ENDPOINT>/api/alerts -H "Authorization: $AUTH_TOKEN" -H "
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
     `TeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
-    
+
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
-* You can pass data to create the alert in the `alert.json` file by using `-d`. 
+* You can pass data to create the alert in the `alert.json` file by using `-d`.
 
     When you create an alert, include the following parameters: *type*, *name*,  *severity*, *timespan*, *condition*, *segmentby*, *segmentConditionn*, *filter*, *notificationChannelIds*, *enabled*
 
     For more information, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert-api-schema-req).
 
 
-The following sample shows the request body parameters that you can set to create an alert: 
+The following sample shows the request body parameters that you can set to create an alert:
 
 ```json
 {
@@ -159,26 +159,26 @@ curl -X PUT <REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUTH_T
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
     `TeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
-    
+
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<ALERT_ID>` defines the ID of the alert that you want to modify.
 
-* You can pass data to create the alert in the `alert.json` file by using `-d`. 
+* You can pass data to create the alert in the `alert.json` file by using `-d`.
 
     For more information, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert-api-schema-req).
 
 
-The following sample shows the request body parameters that you can set to update an alert: 
+The following sample shows the request body parameters that you can set to update an alert:
 
 ```json
 {
@@ -222,16 +222,16 @@ curl -X DELETE <REST_API_ENDPOINT>/api/alerts/<ALERT_ID> -H "Authorization: $AUT
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
-    `Authorization` and `IBMInstanceID` are headers that are required for authentication. 
+    `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
     `TeamID` is optional. When you specify this header, you limit the request to the data and resources available for the team specified.
-    
+
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
 * `<ALERT_ID>` defines the ID of the alert that you want to delete.
@@ -248,15 +248,15 @@ curl -X GET <REST_API_ENDPOINT>/api/alerts?from=<START_TIMESTAMP>&to=<END_TIMEST
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<REST_API_ENDPOINT>` indicates the endpoint targetted by the REST API call. For more information, see [{{site.data.keyword.mon_short}} REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api). For example, the public endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com/api`
 
-* You can pass multiple headers by using `-H`. 
+* You can pass multiple headers by using `-H`.
 
     `Authorization` and `IBMInstanceID` are headers that are required for authentication. To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
-* `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the alerts. 
+* `to` and `from` are query parameters that you must define to configure the period of time for which you want information on the alerts.
 
 For more information about the response format, see [Alert schema](/docs/monitoring?topic=monitoring-alert_api#alert-api-schema-res).
 
@@ -345,7 +345,7 @@ The following table show common error response codes:
 | `404` | The alert ID is not recognized. |
 | `409` | There is a version mismatch. |
 | `422` | The alert name is not valid. The name is already used. |
-{: caption="Table 1. RC" caption-side="top"} 
+{: caption="Table 1. RC" caption-side="top"}
 
 
 
@@ -382,7 +382,7 @@ This parameter returns the Unix-timestamp when the alert was created.
 ### description (string)
 {: #alert-api-parm-desc}
 
-This parameter describes the alert. 
+This parameter describes the alert.
 
 The description is available when you view an alert in the *Alerts* section of the monitoring UI, and it is included in notification emails.
 
@@ -402,7 +402,7 @@ By default, this parameter is set to `true` and the alert is enabled when it is 
 {: #alert-api-parm-filter}
 
 Defines the scope of the alert by configuring segments.
-{: note} 
+{: note}
 
 When this field is empty, all the metric sources are included. The scope is set to *Everything*.
 
@@ -453,11 +453,11 @@ This parameter defines the Unix-timestamp when the alert was last modified.
 Lists the notification channels that are configured to notify when an alert is triggered.
 {: note}
 
-Valid options are `EMAIL`, `PAGER_DUTY`, `WEBHOOK`, `VICTOROPS`, and `SLACK`. 
+Valid options are `EMAIL`, `PAGER_DUTY`, `WEBHOOK`, `VICTOROPS`, and `SLACK`.
 
 ```json
 "notificationChannelIds": [
-      "EMAIL", 
+      "EMAIL",
       "WEBHOOK"
     ]
 ```
@@ -507,13 +507,13 @@ The following table lists the values that you can set:
 | `5`      | `notice`    |
 | `6`      | `informational`|
 | `7`      | `debug` |
-{: caption="Table 2. Severity values" caption-side="top"} 
+{: caption="Table 2. Severity values" caption-side="top"}
 
 ### severityLabel (string)
 {: #alert-api-parm-sevlevel}
 
 Defines the criticality of an alert. Valid values are `HIGH`, `MEDIUM`, `LOW`, and `INFO`. A lesser value indicates a higher severity.
-{: note} 
+{: note}
 
 The following table shows the severity status that must be set depending on the severity parameter value:
 
@@ -527,13 +527,13 @@ The following table shows the severity status that must be set depending on the 
 | `5`      | `LOW`            |
 | `6`      | `INFO`           |
 | `7`      | `INFO`           |
-{: caption="Table 3. Severity level values" caption-side="top"} 
+{: caption="Table 3. Severity level values" caption-side="top"}
 
 ### segmentBy (array of strings)
 {: #alert-api-parm-segmentedby}
 
 Defines additional segmentation criteria.
-{: note} 
+{: note}
 
 For example, you can segment a CPU alert by `['host.mac', 'proc.name']` so the alert can report on any process in any machine for which you get data in the monitoring instance.
 
@@ -617,7 +617,3 @@ Defines the start timestamp, in microseconds, that is used when you request info
 
 Defines the end timestamp, in microseconds, that is used when you request information about alerts that are defined.
 {: note}
-
-
-
-

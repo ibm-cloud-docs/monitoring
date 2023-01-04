@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2019, 2022
+  years:  2019, 2023
 lastupdated: "2020-07-16"
 
 keywords: IBM Cloud, monitoring, service, CF, cf
@@ -24,7 +24,7 @@ subcollection: monitoring
 
 Platform metrics are metrics that are exposed by {{site.data.keyword.mon_full_notm}} enabled resources in {{site.data.keyword.cloud_notm}}. You must configure an {{site.data.keyword.mon_full_notm}} instance in a region to monitor these metrics.
 
-You can configure only 1 instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics. 
+You can configure only 1 instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics.
 * To configure the {{site.data.keyword.mon_full_notm}} instance, you must set the *platform metrics* configuration setting. [Learn more](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 * If an {{site.data.keyword.mon_full_notm}} instance in a region is already enabled to collect platform metrics, metrics from Monitoring-enabled resources are collected automatically and available for monitoring through this instance. For more information about Monitoring-enabled services, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services).
 
@@ -49,7 +49,7 @@ Complete the following steps to launch the monitoring UI from the *Observability
 {: #view_metrics}
 
 You cannot customize a pre-defined Cloud Foundry dashboard. To be able to monitor Cloud Foundry apps, you must complete the following steps:
-1. [Copy the pre-defined dashboard](/docs/monitoring?topic=monitoring-dashboards#dashboards_copy). 
+1. [Copy the pre-defined dashboard](/docs/monitoring?topic=monitoring-dashboards#dashboards_copy).
 2. [Change the scope of the new dashboard](/docs/monitoring?topic=monitoring-dashboards#dashboards_scope).
 
     You can change the scope for all the metrics that are included in the dashboard. You can also change the scope of each metric.
@@ -60,14 +60,14 @@ You cannot customize a pre-defined Cloud Foundry dashboard. To be able to monito
 ## Metrics dictionary
 {: #metrics_dictionary}
 
-* [CPU entitlement of the Cloud Foundry application](#ibm_cloudfoundry_app_cpu_entitlement)  
-* [CPU usage of the Cloud Foundry application](#ibm_cloudfoundry_app_cpu_usage)  
-* [CPU utilization of the Cloud Foundry application](#ibm_cloudfoundry_app_cpu_utilization)  
-* [Container age of the Cloud Foundry application](#ibm_cloudfoundry_app_container_age)  
-* [Disk usage of the Cloud Foundry application](#ibm_cloudfoundry_app_disk_bytes_used)  
-* [Memory usage of the Cloud Foundry application](#ibm_cloudfoundry_app_memory_bytes_used)  
-* [Total disk size of the Cloud Foundry application](#ibm_cloudfoundry_app_disk_bytes_total)  
-* [Total memory of the Cloud Foundry application](#ibm_cloudfoundry_app_memory_bytes_total)  
+* [CPU entitlement of the Cloud Foundry application](#ibm_cloudfoundry_app_cpu_entitlement)
+* [CPU usage of the Cloud Foundry application](#ibm_cloudfoundry_app_cpu_usage)
+* [CPU utilization of the Cloud Foundry application](#ibm_cloudfoundry_app_cpu_utilization)
+* [Container age of the Cloud Foundry application](#ibm_cloudfoundry_app_container_age)
+* [Disk usage of the Cloud Foundry application](#ibm_cloudfoundry_app_disk_bytes_used)
+* [Memory usage of the Cloud Foundry application](#ibm_cloudfoundry_app_memory_bytes_used)
+* [Total disk size of the Cloud Foundry application](#ibm_cloudfoundry_app_disk_bytes_total)
+* [Total memory of the Cloud Foundry application](#ibm_cloudfoundry_app_memory_bytes_total)
 
 For more information, see [the Cloud Foundry documentation: Container metrics](https://docs.cloudfoundry.org/loggregator/container-metrics.html){: external}.
 
@@ -195,7 +195,7 @@ The following attributes are available for segmenting all of the metrics:
 | `Resource Type` | `ibm_resource_type` | Type of the resource that is measured | Valid value is `cf-application` |
 | `Resource group` | `ibm_resource_group_name` | Resource group that is associated to the service instance. | Choose a resource group from the ones that are available in your account. |
 | `Scope` | `ibm_scope` | The extent of the data samples that are considered </br>Use this attribute to set the scope to be your account | Valid value is your account.  |
-| `Service name` | `ibm_service_name` | Name of the service that generates this metric | `cloud-foundry` | 
+| `Service name` | `ibm_service_name` | Name of the service that generates this metric | `cloud-foundry` |
 {: caption="Table 9: Global segmentation attributes" caption-side="top"}
 
 
@@ -229,5 +229,3 @@ The following table outlines the pre-defined dashboards that you can use to moni
 
 These dashboards cannot be changed.
 {: important}
-
-

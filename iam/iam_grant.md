@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, iam, access groups
@@ -12,11 +12,11 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
- 
+
 # Granting permissions to work with the {{site.data.keyword.mon_short}} service
 {: #iam_grant}
 
-{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and consistently control access to all cloud resources in the {{site.data.keyword.cloud_notm}}. 
+{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users and consistently control access to all cloud resources in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 Complete the following steps to grant a user or service ID permissions to work with the {{site.data.keyword.mon_full_notm}} service:
@@ -51,14 +51,14 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 ## Step 2. Add permissions to view {{site.data.keyword.mon_short}} instances in the Observability UI
 {: #iam_grant_step2}
 
-After you set up your group, you can assign a common access policy to the group. You must add permissions to view {{site.data.keyword.mon_short}} instances in the Observability UI, to manage the instance in the {{site.data.keyword.cloud_notm}}, or both. 
+After you set up your group, you can assign a common access policy to the group. You must add permissions to view {{site.data.keyword.mon_short}} instances in the Observability UI, to manage the instance in the {{site.data.keyword.cloud_notm}}, or both.
 
-Any policy that you set for an access group applies to all entities, users, and service IDs, within the group. 
+Any policy that you set for an access group applies to all entities, users, and service IDs, within the group.
 {: note}
 
-You can assign the policy by using the UI or through the command line. 
+You can assign the policy by using the UI or through the command line.
 
-When you define the policy, you need to select a platform role. Platform management roles cover a range of actions, including the ability to create and delete instances, manage aliases, bindings, and credentials, and manage access. Valid platform roles are administrator, editor, operator, and viewer. 
+When you define the policy, you need to select a platform role. Platform management roles cover a range of actions, including the ability to create and delete instances, manage aliases, bindings, and credentials, and manage access. Valid platform roles are administrator, editor, operator, and viewer.
 
 
 ### Add permissions through the CLI
@@ -87,7 +87,7 @@ ibmcloud iam access-group-policy-create my-access-group --roles Viewer --service
 Complete the following steps to assign a policy to an access group through the UI:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
-2. Select the name of the group that you want to assign access to. 
+2. Select the name of the group that you want to assign access to.
 3. Click **Access policies**  &gt; **Assign access**  &gt; **Assign access to resources**.
 4. Select **IAM services**.
 5. In the section *What type of access do you want to assign?*, select **{{site.data.keyword.mon_full_notm}}**.
@@ -96,17 +96,17 @@ Complete the following steps to assign a policy to an access group through the U
     Select **All services** to define the scope of the policy to include all instances.
 
     Select **Services based on attributes** to refine the scope of the policy. Choose 1 of the following options:
-    
-    Option 1: The scope is set to a resource group. Select **Resource group** to choose 1 resource group and define the scope of the policy to include all instances that are associated with that resource group. 
+
+    Option 1: The scope is set to a resource group. Select **Resource group** to choose 1 resource group and define the scope of the policy to include all instances that are associated with that resource group.
 
     Option 2: The scope is set to 1 instance in a resource group. Select **Resource group** to choose the resource group. Then select **Service Instance** to choose the instance within the resource group.
-    
+
     Option 3: The scope is set to 1 instance. Select **Service Instance** to choose the instance.
 
     Do not specify a value in the *Sysdig Team* section.
     {: important}
 
-7. Select a platform role. 
+7. Select a platform role.
 
     Select **administrator** to grant admin permissions for the service.
 
@@ -152,7 +152,7 @@ ibmcloud iam access-group-policy-create my-access-group --roles Reader --service
 Complete the following steps to assign a policy to an access group through the UI:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
-2. Select the name of the group that you want to assign access to. 
+2. Select the name of the group that you want to assign access to.
 3. Click **Access policies**  &gt; **Assign access**  &gt; **Assign access to resources**.
 4. Select **IAM services**.
 5. In the section *What type of access do you want to assign?*, select **{{site.data.keyword.mon_full_notm}}**.
@@ -161,17 +161,17 @@ Complete the following steps to assign a policy to an access group through the U
     Select **All services** to define the scope of the policy to include all instances.
 
     Select **Services based on attributes** to refine the scope of the policy. Choose 1 of the following options:
-    
-    Option 1: The scope is set to a resource group. Select **Resource group** to choose 1 resource group and define the scope of the policy to include all instances that are associated with that resource group. 
+
+    Option 1: The scope is set to a resource group. Select **Resource group** to choose 1 resource group and define the scope of the policy to include all instances that are associated with that resource group.
 
     Option 2: The scope is set to 1 instance in a resource group. Select **Resource group** to choose the resource group. Then select **Service Instance** to choose the instance within the resource group.
-    
+
     Option 3: The scope is set to 1 instance. Select **Service Instance** to choose the instance.
 
     Do not specify a value in the *Sysdig Team* section.
     {: important}
 
-7. Select a service role. 
+7. Select a service role.
 
     Select **manager** to grant admin permissions for the service.
 
@@ -193,7 +193,7 @@ You can add users or service IDs to an existing group.
 Complete the following steps to add a user:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
-2. Select the name of the group that you want to assign access to. 
+2. Select the name of the group that you want to assign access to.
 3. Click **Add users** on the **Users** tab.
 4. Select the users that you want to add from the list, and click **Add to group**.
 
@@ -204,10 +204,6 @@ Complete the following steps to add a user:
 Complete the following steps to add a service ID:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
-2. Select the name of the group that you want to assign access to. 
+2. Select the name of the group that you want to assign access to.
 3. Click the **Service IDs** tab, and click **Add service ID**.
 4. Select the IDs that you want to add from the list, and click **Add to group**.
-
-
-
-

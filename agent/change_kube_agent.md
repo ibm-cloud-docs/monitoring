@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2020-06-24"
 
 keywords: IBM Cloud, monitoring, customize, kubernetes agent
@@ -15,7 +15,7 @@ subcollection: monitoring
 # Customizing Kubernetes monitoring agents
 {: #change_kube_agent}
 
-In {{site.data.keyword.mon_full_notm}}, you can customize the monitoring agent configuration to set a log level, block ports, include or exclude metric data, add or remove events, and filter out containers. 
+In {{site.data.keyword.mon_full_notm}}, you can customize the monitoring agent configuration to set a log level, block ports, include or exclude metric data, add or remove events, and filter out containers.
 {: shortdesc}
 
 To customize a Kubernetes monitoring agent, you need to configure the `sysdig-agent-configmap.yaml` file.
@@ -38,7 +38,7 @@ Complete the following steps to edit a Kubernetes monitoring agent configuration
     ```
     {: codeblock}
 
-2. Edit the *sysdig-agent-configmap.yaml* file. 
+2. Edit the *sysdig-agent-configmap.yaml* file.
 
     Run the following command:
 
@@ -49,7 +49,7 @@ Complete the following steps to edit a Kubernetes monitoring agent configuration
 
     Make changes. **Note:** Refer to `vi` editor instructions to learn how to make changes.
 
-    Save the changes. Changes are applied automatically. 
+    Save the changes. Changes are applied automatically.
 
 ## Editing the Kubernetes monitoring agent configuration by using kubectl apply
 {: #change_kube_agent_edit_kube_agent_method2}
@@ -58,15 +58,15 @@ Use this method if you have the configuration yaml files stored and managed in a
 
 Complete the following steps to edit a Kubernetes monitoring agent configuration:
 
-1. Get the latest copy of each file from the source controller. 
+1. Get the latest copy of each file from the source controller.
 
     To create a local file with the configuration that is deployed in a cluster, you can also run the command:
-    
+
     ```text
     kubectl get configmap sysdig-agent -n=ibm-observe -o=yaml > prod-sysdig-agent-configmap.yaml
     ```
-    {: codeblock} 
-    
+    {: codeblock}
+
 2. Edit the configuration.
 
 3. Apply the changes by using the following commands:
@@ -75,7 +75,7 @@ Complete the following steps to edit a Kubernetes monitoring agent configuration
     kubectl apply -f sysdig-agent-configmap.yaml
     ```
     {: codeblock}
-    
+
 Running agents will automatically pick the new configuration after Kubernetes pushes the changes across all the nodes in the cluster.
 
 
@@ -93,7 +93,7 @@ Complete the following steps to add more tags to a Kubernetes monitoring agent c
     ```
     {: codeblock}
 
-2. Edit the *sysdig-agent-configmap.yaml* file. 
+2. Edit the *sysdig-agent-configmap.yaml* file.
 
     Run the following command:
 
@@ -107,7 +107,7 @@ Complete the following steps to add more tags to a Kubernetes monitoring agent c
     ```yaml
     apiVersion: v1
       data:
-        dragent.yaml: 
+        dragent.yaml:
             k8s_cluster_name: mycluster
             collector: ingest.us-south.monitoring.cloud.ibm.com
             collector_port: 6443
@@ -119,9 +119,9 @@ Complete the following steps to add more tags to a Kubernetes monitoring agent c
     ```
     {: codeblock}
 
-4. Save the changes. 
+4. Save the changes.
 
-Changes are applied automatically. 
+Changes are applied automatically.
 
 For the sample provided, you would get the tags **agent.tag.department** and **agent.tag.region**. You could use them to define alerts, customize scopes and more.
 
@@ -130,7 +130,7 @@ For the sample provided, you would get the tags **agent.tag.department** and **a
 ## Collecting a set of Kubernetes events
 {: #change_kube_agent_collect_events}
 
-{{site.data.keyword.mon_short}} supports event integrations with Kubernetes. {site.data.keyword.mon_short}} agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data. 
+{{site.data.keyword.mon_short}} supports event integrations with Kubernetes. {site.data.keyword.mon_short}} agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data.
 
 By default, only a limited set of events is collected. For more information about the events that are collected by default, see [Kubernetes events](https://docs.sysdig.com/en/event-types.html){: external}.
 
@@ -148,7 +148,7 @@ To filter events from Kubernetes pods, complete the following steps:
     ```
     {: codeblock}
 
-2. Edit the *sysdig-agent-configmap.yaml* file. 
+2. Edit the *sysdig-agent-configmap.yaml* file.
 
     Run the following command:
 
@@ -171,9 +171,9 @@ To filter events from Kubernetes pods, complete the following steps:
     ```
     {: codeblock}
 
-4. Save the changes. 
+4. Save the changes.
 
-Changes are applied automatically. 
+Changes are applied automatically.
 
 
 Another example where you can see how to collect a subset of Kubernetes events: You only want to monitor pulling, pulled, and failed events for pods.
@@ -183,7 +183,7 @@ Another example where you can see how to collect a subset of Kubernetes events: 
     ```yaml
     events:
       kubernetes:
-        pod: 
+        pod:
           - Pulling
           - Pulled
           - Failed
@@ -205,7 +205,7 @@ For more information on how to work with custom events, see [Working with custom
 ## Disabling collection of events
 {: #change_kube_agent_disable_events}
 
-To disable a monitoring agent from collecting Kubernetes events, you must modify the *sysdig-agent-configmap.yaml* file. Set the **Kubernetes** entry in the **events** section to *none*. 
+To disable a monitoring agent from collecting Kubernetes events, you must modify the *sysdig-agent-configmap.yaml* file. Set the **Kubernetes** entry in the **events** section to *none*.
 
 Complete the following steps:
 
@@ -218,7 +218,7 @@ Complete the following steps:
     ```
     {: codeblock}
 
-2. Edit the *sysdig-agent-configmap.yaml* file. 
+2. Edit the *sysdig-agent-configmap.yaml* file.
 
     Run the following command:
 
@@ -235,9 +235,9 @@ Complete the following steps:
     ```
     {: codeblock}
 
-4. Save the changes. 
+4. Save the changes.
 
-Changes are applied automatically. 
+Changes are applied automatically.
 
 
 
@@ -263,7 +263,7 @@ Complete the following steps:
     ```
     {: codeblock}
 
-2. Edit the *sysdig-agent-configmap.yaml* file. 
+2. Edit the *sysdig-agent-configmap.yaml* file.
 
     Run the following command:
 
@@ -287,15 +287,15 @@ Complete the following steps:
     ```
     {: screen}
 
-    * You are configuring the monitoring agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*. 
+    * You are configuring the monitoring agent to collect all data from metrics that start with *metricA*, *metricB*, and *haproxy.backend*.
 
-    * You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*. 
+    * You are filtering out metrics that start with *metricC* and other metrics that start with *haproxy*.
 
     * The entry `exclude: metricA.*` is ignored.
 
-4. Save the changes. 
+4. Save the changes.
 
-Changes are applied automatically. 
+Changes are applied automatically.
 
 
 
@@ -304,8 +304,8 @@ Changes are applied automatically.
 {: #change_kube_agent_filter_data}
 
 A Kubernetes monitoring agent automatically collects metrics from *all containers* that it detects in a cluster, including Prometheus, StatsD, JMX, app-checks, and built-in metrics.
- 
-You can customize the monitoring agent to exclude containers from metrics collection. 
+
+You can customize the monitoring agent to exclude containers from metrics collection.
 
 When you exclude containers, consider the following information:
 * You reduce agent and backend load.
@@ -325,10 +325,10 @@ The following table outlines the parameters that you can define to set the filte
 | `kubernetes.object.annotation.*`  | Kubernetes object annotation                   |
 | `kubernetes.object.label.*`       | Kubernetes object label                        |
 | `all`                              | Default rule to specify all objects            |
-{: caption="Table 1. Parameters to define conditions on containers" caption-side="top"} 
+{: caption="Table 1. Parameters to define conditions on containers" caption-side="top"}
 
 Consider the following information on how the monitoring agent applies the rules that you define in the **container_filter** section:
-* You define conditions by configuring them with the **include** and **exclude** filtering parameters. 
+* You define conditions by configuring them with the **include** and **exclude** filtering parameters.
 * The first matching rule in the list determines if the container is included or excluded.
 * The conditions consist of a key name and a value. If the given key for a container matches the value, the rule is applied.
 * When a rule contains multiple conditions, `all the conditions` need to match for the rule to be applied.
@@ -344,7 +344,7 @@ Complete the following steps to filter out containers that a monitoring agent mo
     ```
     {: codeblock}
 
-2. Edit the *sysdig-agent-configmap.yaml* file. 
+2. Edit the *sysdig-agent-configmap.yaml* file.
 
     Run the following command:
 
@@ -372,9 +372,9 @@ Complete the following steps to filter out containers that a monitoring agent mo
     ```
     {: codeblock}
 
-4. Save the changes. 
+4. Save the changes.
 
-Changes are applied automatically. 
+Changes are applied automatically.
 
 
 ## Blocking ports
@@ -382,7 +382,7 @@ Changes are applied automatically.
 
 To block network traffic and metrics from network ports, you must customize the **blacklisted_ports** section in the *sysdig-agent-configmap.yaml* file. You must list the ports from which you want to filter out any data.
 
-Port 53 (DNS) is always in the blocklist and does not need to be specified in the **blacklisted_ports**. 
+Port 53 (DNS) is always in the blocklist and does not need to be specified in the **blacklisted_ports**.
 {: note}
 
 Complete the following steps:
@@ -396,7 +396,7 @@ Complete the following steps:
     ```
     {: codeblock}
 
-2. Edit the *sysdig-agent-configmap.yaml* file. 
+2. Edit the *sysdig-agent-configmap.yaml* file.
 
     Run the following command:
 
@@ -416,9 +416,9 @@ Complete the following steps:
     ```
     {: screen}
 
-4. Save the changes. 
+4. Save the changes.
 
-Changes are applied automatically. 
+Changes are applied automatically.
 
 
 
@@ -427,7 +427,7 @@ Changes are applied automatically.
 
 To configure the log configurations, you must customize the **log** section in the *sysdig-agent-configmap.yaml* file.
 
-The monitoring agent generates log entries in */opt/draios/logs/draios.log*. 
+The monitoring agent generates log entries in */opt/draios/logs/draios.log*.
 * The log file rotates when it reaches 10MB in size.
 * The 10 most recent log files are kept. The date-stamp that is appended to the filename is used to determine which files to keep.
 
@@ -439,7 +439,7 @@ The following table lists some common scenarios and the value that you must set 
 | Reduce container console output               | `console_priority: warning` | `info`        |
 | Filtering events by severity                  | `event_priority: warning`   | `information` |
 | Verify what metrics are included or excluded  | `metrics_excess_log: true`  | `false`       |
-{: caption="Table 2. Log section entries" caption-side="top"} 
+{: caption="Table 2. Log section entries" caption-side="top"}
 
 ### Changing the log level
 {: #change_kube_agent_log_level}
@@ -472,7 +472,7 @@ The following table lists some common scenarios and the value that you must set 
     ```
     {: screen}
 
-    * *+/-* is a symbol that indicates if the metric is included or excluded. Plus (*+*) indicates that a metric is included. Minus (*-*) indicates that a metric is excluded.  
+    * *+/-* is a symbol that indicates if the metric is included or excluded. Plus (*+*) indicates that a metric is included. Minus (*-*) indicates that a metric is excluded.
 
     * *[type]* specifies the metric type, for example, *statsd*.
 
@@ -525,9 +525,9 @@ Complete the following steps to configure the log settings:
     ```
     {: codeblock}
 
-4. Save the changes. 
+4. Save the changes.
 
-Changes are applied automatically. 
+Changes are applied automatically.
 
 
 
@@ -538,10 +538,10 @@ Changes are applied automatically.
 ```yaml
 apiVersion: v1
 data:
-  dragent.yaml: | 
+  dragent.yaml: |
     ### Agent tags
     # tags: linux:ubuntu,dept:dev,local:nyc
-     
+
     ####
     # collector address
     # collector: 192.168.1.1
@@ -564,9 +564,9 @@ data:
     blacklisted_ports:
       - 6666
       - 6379
-    events:    
+    events:
       kubernetes:
-        node: 
+        node:
           - Rebooted
     metrics_filter:
       - include: metricA.*

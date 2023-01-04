@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2022
+  years:  2022, 2023
 lastupdated: "2022-10-06"
 
 keywords: IBM Cloud, monitoring, monitoring agent, agent requirements
@@ -92,6 +92,3 @@ watchdog:
 
 The value for `promscape` depends on the amount of timeseries and label data to be scraped on a particular node. The cluster size does not affect `promscape` memory usage.
 {: note}
-
-
-

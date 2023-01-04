@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-11-29"
 
 keywords: IBM Cloud, monitoring, config monitoring agent
@@ -31,11 +31,11 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 - [Install the {{site.data.keyword.cloud_notm}} CLI and plug-ins](/docs/containers?topic=containers-cs_cli_install#cs_cli_install_steps):
 
     * {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`)
-    
+
     * {{site.data.keyword.containerlong_notm}} plug-in (`ibmcloud ks`)
-    
+
     * {{site.data.keyword.registrylong_notm}} plug-in (`ibmcloud cr`)
-    
+
     * {{site.data.keyword.containerlong_notm}} observability plug-in (`ibmcloud ob`)
 
 - [Install the Kubernetes CLI (kubectl)](/docs/containers?topic=containers-cs_cli_install#kubectl)
@@ -65,7 +65,7 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
 
 2. Obtain the public or private ingestion URL. For more information, see [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
-3. Set up the cluster environment. 
+3. Set up the cluster environment.
 
     If the cluster runs in the {{site.data.keyword.containerlong_notm}}, run the following commands:
 
@@ -98,9 +98,9 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
 
     * `COLLECTOR_ENDPOINT` is the public or private ingestion URL for the region where the {{site.data.keyword.mon_short}} instance is available. To get an endpoint, see [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
-    * `TAG_DATA` are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example: *role:serviceX,location:us-south*. 
+    * `TAG_DATA` are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example: *role:serviceX,location:us-south*.
 
-    * `MONITORING_INSTANCE_NAME` is the name of the {{site.data.keyword.mon_short}} instance where you can monitor your cluster. This information is available as a label: `sysdig-instance`. 
+    * `MONITORING_INSTANCE_NAME` is the name of the {{site.data.keyword.mon_short}} instance where you can monitor your cluster. This information is available as a label: `sysdig-instance`.
 
         Use the command `kubectl describe ds sysdig-agent -n ibm-observe` to see the label and identify the instance where you can monitor the cluster.
         {: tip}
@@ -135,7 +135,7 @@ Complete the following steps to remove a monitoring agent from a Kubernetes clus
 
 2. Obtain the public or private ingestion URL. For more information, see [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
-3. Set up the cluster environment. 
+3. Set up the cluster environment.
 
     If the cluster runs in the {{site.data.keyword.containerlong_notm}}, run the following commands:
 
@@ -146,7 +146,7 @@ Complete the following steps to remove a monitoring agent from a Kubernetes clus
     ```
     {: codeblock}
 
-4. Remove the monitoring agent. 
+4. Remove the monitoring agent.
 
     ```text
     curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a MONITORING_ACCESS_KEY -c COLLECTOR_ENDPOINT -r
@@ -158,12 +158,3 @@ Complete the following steps to remove a monitoring agent from a Kubernetes clus
     * MONITORING_ACCESS_KEY is the ingestion key for the instance.
 
     * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
-
-
-
-
-
-
-
-
-

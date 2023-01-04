@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, {{site.data.keyword.mon_short}} agent, event filters
@@ -38,10 +38,3 @@ For more information on how to configure the {{site.data.keyword.mon_short}} age
 - Linux {{site.data.keyword.mon_short}} agent: [Logging into a file what metrics are included or excluded](/docs/monitoring?topic=monitoring-change_linux_agent#change_linux_agent_log_level)
 - Kubernetes {{site.data.keyword.mon_short}} agent: [Logging into a file what metrics are included or excluded](/docs/monitoring?topic=monitoring-change_kube_agent#change_kube_agent_log_metrics)
 - Docker container {{site.data.keyword.mon_short}} agent: [Logging into a file what metrics are included or excluded](/docs/monitoring?topic=monitoring-change_agent#log_level)
-
-
-
-
-
-
-

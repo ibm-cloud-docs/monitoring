@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 
@@ -22,12 +22,12 @@ You can remove an instance of the {{site.data.keyword.mon_full_notm}} service fr
 When you remove an instance from the {{site.data.keyword.cloud_notm}}, consider the following information to tidy up:
 
 1. Write down the list of sources that forward metrics to the {{site.data.keyword.mon_full_notm}} instance that you want to remove. You must remove the agent from each source.
-2. Remove permissions that are granted to users to work with the instance. 
+2. Remove permissions that are granted to users to work with the instance.
 
     If you use an access group to manage permissions to access the instance, you must remove the access group.
 
     If you use an access group to manage permissions to access different service instances, you must remove the policies that grant permissions to the instance that you want to remove.
-    
+
     If you grant individual policies to users, you must gather the information of each user that has access to the instance. Then, you must remove one by one the policies that relate to the instance that you want to delete.
 
 
@@ -41,7 +41,7 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} by using the {{site
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
-2. Click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Observability**. 
+2. Click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Observability**.
 
 3. Select **Monitoring**. The list of the instances is displayed.
 
@@ -79,5 +79,3 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} through the command
 
     The `--recursive` option is used to delete the service keys that were associated with the monitoring instance.
     {: note}
-    
-

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-08-08"
 
 keywords: IBM Cloud, Monitoring, agent, sysdig, Openshift
@@ -18,7 +18,7 @@ subcollection: monitoring
 After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.mon_short}} agent on your Openshift cluster to collect data and metrics automatically. You can configure which metrics to monitor in each environment.
 {: shortdesc}
 
-   
+
 ## Pre-reqs
 {: #agent_openshift_prereqs}
 
@@ -49,7 +49,7 @@ Where
 
 * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the instance is available. To get an endpoint, see [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
-* TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your agent. For example: *role:serviceX,location:us-south*. 
+* TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your agent. For example: *role:serviceX,location:us-south*.
 
 * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
@@ -59,7 +59,7 @@ Where
 
 * Add the option that defines the type of agent that you want to deploy:
 
-    - `-as` to deploy a slim agent. This is the default option. Use this option to reduce the surface area of attack for potential vulnerabilities. When you deploy the agent, you install the agent package as two containers, one running the agent-kmodule and the other ruuning the agent-slim. 
+    - `-as` to deploy a slim agent. This is the default option. Use this option to reduce the surface area of attack for potential vulnerabilities. When you deploy the agent, you install the agent package as two containers, one running the agent-kmodule and the other ruuning the agent-slim.
 
     - `-af` to deploy the full agent. When you deploy the agent, the agent runs as a single container or a service.
 
@@ -125,11 +125,3 @@ In the event that the pods are not running but you expect the agent to be runnin
 oc get events
 ```
 {: codeblock}
-
-   
-
-
-
-
-
-

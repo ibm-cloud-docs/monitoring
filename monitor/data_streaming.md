@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-10-19"
 
 keywords: IBM Cloud, monitoring, data streaming
@@ -20,12 +20,12 @@ You can use {{site.data.keyword.mon_full}} to push a set of selected metrics to 
 
 You will need to configure:
 
-* The metrics to export within a defined scope.  
+* The metrics to export within a defined scope.
 
     The metric names and scope are specified in PromQL format.
     {: important}
 
-* The granularity of the data.  
+* The granularity of the data.
 
     For example, 10 seconds (10s) or 1 minute (1m).  The recommended aggregation is 1m.
 
@@ -78,26 +78,26 @@ Complete the following steps to create an Event Streams topic:
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} dashboard opens.
 
-2. Click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Resource list**. 
+2. Click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Resource list**.
 
 3. Look for the {{site.data.keyword.messagehub}} instance that you plan to use, and select it.
 
 4. In the {{site.data.keyword.messagehub}} instance console, click **Manage** &gt; **Launch Dashboard**.
 
-5. Click **Create a topic**. 
+5. Click **Create a topic**.
 
-    ![Create a topic.](../images/streaming-topic.png "Create a topic") 
+    ![Create a topic.](../images/streaming-topic.png "Create a topic")
 
 6. Enter a topic name and click **Next**.
 
-    ![Create a topic part 2.](../images/streaming-topic-1.png "Create a topic part 2") 
+    ![Create a topic part 2.](../images/streaming-topic-1.png "Create a topic part 2")
 
-7. Enter the number of partitions and click **Next**. 
+7. Enter the number of partitions and click **Next**.
 
     One or more partitions make up a topic. A partition is an ordered list of messages. Partitions are distributed across the brokers in order to increase the scalability of your topic. You can also use them to distribute messages across the members of a consumer group.
     {: note}
 
-    ![Create a topic part 3.](../images/streaming-topic-2.png "Create a topic part 3") 
+    ![Create a topic part 3.](../images/streaming-topic-2.png "Create a topic part 3")
 
 8.  Select a **Message retention** and click **Create Topic**.
 
@@ -114,7 +114,7 @@ You need the following information to connect the {{site.data.keyword.mon_short}
 
 Complete the following steps to create service credentials that the {{site.data.keyword.mon_short}} instance needs to communicate with the {{site.data.keyword.messagehub}} instance:
 
-1. In the {{site.data.keyword.cloud_notm}}, click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Resource list**. 
+1. In the {{site.data.keyword.cloud_notm}}, click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) &gt; **Resource list**.
 
 2. Look for the {{site.data.keyword.messagehub}} instance that you plan to use, and select it.
 
@@ -124,7 +124,7 @@ Complete the following steps to create service credentials that the {{site.data.
 
 5. Enter a name and select the **writer** role.
 
-    ![Create a credential.](../images/streaming-credentials.png "Create a credential") 
+    ![Create a credential.](../images/streaming-credentials.png "Create a credential")
 
 6. Click **Add**.
 
@@ -132,15 +132,15 @@ To restrict access to 1 topic, complete the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDS**.
 
-    ![Service IDs](../images/streaming-credentials2.png "Service IDs") 
+    ![Service IDs](../images/streaming-credentials2.png "Service IDs")
 
 2. Select the service ID.
 3. Select **Access policies**.
 4. Select the policy and modify it to specify the topic.
 
-    ![Edit policy](../images/streaming-credentials-2.png "Edit policy") 
+    ![Edit policy](../images/streaming-credentials-2.png "Edit policy")
 
-    ![Modify policy](../images/streaming-credentials-3.png "Modify policy") 
+    ![Modify policy](../images/streaming-credentials-3.png "Modify policy")
 
 5. [Get credentials using the IBM Cloud CLI](/docs/EventStreams?topic=EventStreams-connecting#connect_enterprise_external_cli) and make note of the api key and broker URL values.
 
@@ -150,11 +150,11 @@ To restrict access to 1 topic, complete the following steps:
 
 To configure {{site.data.keyword.mon_full_notm}} metric data streaming, do the following:
 
-1. Launch the web UI as a user with administrator authority. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
+1. Launch the web UI as a user with administrator authority. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch).
 
-2. Click the **user icon**. This is the icon with the initials of the logged on user. Then click **Settings**. 
+2. Click the **user icon**. This is the icon with the initials of the logged on user. Then click **Settings**.
 
-3. Select **Metric Data Streaming**. 
+3. Select **Metric Data Streaming**.
 
 4. Click **Add Integration**. The **New Metric Streaming Integration** panel is displayed.
 
@@ -164,7 +164,7 @@ To configure {{site.data.keyword.mon_full_notm}} metric data streaming, do the f
 
     Integration Name
     :   The name of the streaming configuration.
-    
+
     Topic
     :   The name of the Kafka topic to receive the metrics.
 
@@ -172,7 +172,7 @@ To configure {{site.data.keyword.mon_full_notm}} metric data streaming, do the f
     :   A list of Kafka brokers separated by commas, for example `kafka-2.mh-svc.eu-de.containers.appdomain.cloud:9093,kafka-1.mh-svc.eu-de.containers.appdomain.cloud:9093,kafka-0.mh-svc.eu-de.containers.appdomain.cloud:9093`. Notice that you must not enclose within `"` the URLs.
 
     TLS
-    :   The Transport Layer Security (TLS) method. Enable TLS to encrypt and protect the transfer of data. 
+    :   The Transport Layer Security (TLS) method. Enable TLS to encrypt and protect the transfer of data.
 
     Credentials
     :   The credentials used by {{site.data.keyword.mon_short}} to to export the data from the {{site.data.keyword.mon_short}} instance to the Kafka server. You can choose user and password, or a base64 encoded certificate.
@@ -187,10 +187,10 @@ To configure {{site.data.keyword.mon_full_notm}} metric data streaming, do the f
     You must test the connection before saving and enable the configuration.
     {: important}
 
-7. Select the **Scope** and define the **Metrics** to be exported.  
+7. Select the **Scope** and define the **Metrics** to be exported.
 
-    For **Scope**, select one or more labels to filter the defined metrics.  
-    
+    For **Scope**, select one or more labels to filter the defined metrics.
+
     **Metrics** must specify the complete metric name using PromQL.  <!-- See [Mapping Between Classic Metrics and PromQL Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics-dictionary/metrics-and-label-mapping/mapping-between-classic-metrics-and-promql-metrics/){: external} for more information on specifying metric names. -->
 
 8. Click **Save**.
@@ -204,9 +204,9 @@ After you save the confuguration, you must wait at least 30 minutes before the s
 
 You can start and stop streaming of metrics from the *Metric Data Streaming* page:
 
-1. Launch the web UI as a user with administrator authority. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch). 
+1. Launch the web UI as a user with administrator authority. For more information on how to launch the Web UI, see [Navigating to the Web UI](/docs/monitoring?topic=monitoring-launch#launch).
 
-2. Click the **user icon**. This is the icon with the initials of the logged on user. Then click **Settings**. 
+2. Click the **user icon**. This is the icon with the initials of the logged on user. Then click **Settings**.
 
 3. Select **Metric Data Streaming**. The list of streaming configurations is displayed.
 
@@ -228,9 +228,9 @@ Complete the following steps to manage streaming through the UI:
 Use this method to get the details for all the existing streaming configurations.
 
 ```text
-curl --request GET https://<ENDPOINT>/api/v1/dataStream/configs 
- -H "content-type: application/json"  
- -H "Authorization: <TOKEN>"  
+curl --request GET https://<ENDPOINT>/api/v1/dataStream/configs
+ -H "content-type: application/json"
+ -H "Authorization: <TOKEN>"
 ```
 {: pre}
 
@@ -254,9 +254,9 @@ The response will be similar to the following:
 Use this method to get the details for 1 streaming configuration.
 
 ```text
-curl --request GET https://<ENDPOINT>/api/v1/dataStream/configs/<STREAMING_CONFIG_ID> 
- -H "content-type: application/json"  
- -H "Authorization: <TOKEN>"  
+curl --request GET https://<ENDPOINT>/api/v1/dataStream/configs/<STREAMING_CONFIG_ID>
+ -H "content-type: application/json"
+ -H "Authorization: <TOKEN>"
 ```
 {: pre}
 
@@ -299,8 +299,8 @@ Use this method to configure 1 streaming configuration that forwards a set of me
 
 ```text
 curl --request POST https://<ENDPOINT>/api/v1/dataStream/configs
- -H "content-type: application/json"  
- -H "Authorization: <TOKEN>"  
+ -H "content-type: application/json"
+ -H "Authorization: <TOKEN>"
  -d @streaming-config.json
 ```
 {: pre}
@@ -359,8 +359,8 @@ Use this method to update 1 streaming configuration that forwards a set of metri
 
 ```text
 curl --request PUT https://<ENDPOINT>/api/v1/dataStream/configs/<STREAMING_CONFIG_ID>
- -H "content-type: application/json"  
- -H "Authorization: <TOKEN>"  
+ -H "content-type: application/json"
+ -H "Authorization: <TOKEN>"
  -d @streaming-config.json
 ```
 {: pre}
@@ -402,8 +402,8 @@ Use this method to delete 1 streaming configuration that forwards a set of metri
 
 ```text
 curl --request DELETE https://<ENDPOINT>/api/v1/dataStream/configs/<STREAMING_CONFIG_ID>
- -H "content-type: application/json"  
- -H "Authorization: <TOKEN>"  
+ -H "content-type: application/json"
+ -H "Authorization: <TOKEN>"
 ```
 {: pre}
 
@@ -431,15 +431,12 @@ Complete the following steps to monitor the {{site.data.keyword.messagehub}} ins
 
     You can use the metric *Topic bytes out per second* to see how data is consumed by any application or service that is subscribed to {{site.data.keyword.messagehub}}.
 
-5. (Optional) Edit the panel *Topic bytes in per second*. 
+5. (Optional) Edit the panel *Topic bytes in per second*.
 
-    ![Edit panel.](../images/streaming-topic-metric.png "Edit panel") 
+    ![Edit panel.](../images/streaming-topic-metric.png "Edit panel")
 
     Then, customize the metric to see data per topic.
 
-    ![Customize metric.](../images/streaming-topic-metric-1.png "Customize metric") 
+    ![Customize metric.](../images/streaming-topic-metric-1.png "Customize metric")
 
     Check that the resolution is set to **10M**.
-
-
-

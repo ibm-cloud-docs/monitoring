@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2018, 2022
+  years: 2018, 2023
 lastupdated: "2022-01-20"
 
 keywords: IBM Cloud, monitoring, security, connection
@@ -19,7 +19,7 @@ subcollection: monitoring
 To ensure that you have enhanced control and security over your data when you use {{site.data.keyword.mon_full_notm}}, you have the option of using private routes to {{site.data.keyword.cloud_notm}} service endpoints. Private routes are not accessible or reachable over the internet. By using the {{site.data.keyword.cloud_notm}} private service endpoints feature, you can protect your data from threats from the public network and logically extend your private network.
 {: shortdesc}
 
-- You can configure the {{site.data.keyword.mon_short}} agent to only use private endpoints. 
+- You can configure the {{site.data.keyword.mon_short}} agent to only use private endpoints.
 - You can configure the {{site.data.keyword.mon_short}} instance to only allow API calls through the private endpoints.
 
 The {{site.data.keyword.mon_short}} service can be configured to send and receive data on either public-only or private-only endpoints. The web UI is available only on the public endpoint.
@@ -60,8 +60,8 @@ If you want to use connections over the public internet, you do not have to enab
 
 To use private network endpoints, you must enable the Virtual routing and forwarding (VRF) account feature.
 
-You must first enable virtual routing and forwarding in your account, and then you can enable the use of {{site.data.keyword.cloud_notm}} private service endpoints. 
-* To enable VRF, you create a support case. 
+You must first enable virtual routing and forwarding in your account, and then you can enable the use of {{site.data.keyword.cloud_notm}} private service endpoints.
+* To enable VRF, you create a support case.
 * To enable service endpoints, you use the {{site.data.keyword.cloud_notm}} CLI. For more information about how to enable your account, see [Enabling VRF and service endpoints](/docs/account?topic=account-vrf-service-endpoint).
 
 
@@ -85,20 +85,20 @@ After you enable private endpoints, the API calls that are made through a public
 ### Step 3: Configuring a {{site.data.keyword.mon_short}} agent to connect through private endpoints
 {: #endpoint-setup-step3}
 
-After your account is enabled for VRF and service endpoints, you can configure a {{site.data.keyword.mon_short}} agent to connect to an {{site.data.keyword.mon_full_notm}} instance through the private network. 
+After your account is enabled for VRF and service endpoints, you can configure a {{site.data.keyword.mon_short}} agent to connect to an {{site.data.keyword.mon_full_notm}} instance through the private network.
 
 
 You can [configure the {{site.data.keyword.mon_short}} agent](/docs/monitoring?topic=monitoring-config_agent) to use the private network by using a private endpoint as the ingestion URL. To get information about private endpoints, see [Private endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion_private).
 
 What happens when you configure the {{site.data.keyword.mon_short}} agent to use a private endpoint?
-* Private endpoints are not accessible from the public internet. 
-* All traffic is routed to the {{site.data.keyword.cloud_notm}} private network. 
+* Private endpoints are not accessible from the public internet.
+* All traffic is routed to the {{site.data.keyword.cloud_notm}} private network.
 
 
 ## Allowing network traffic
 {: #network_outgoing_traffic}
 
-When you have an extra firewall set up, or you customize the firewall settings in your {{site.data.keyword.cloud_notm}} infrastructure, you need to allow network traffic to the {{site.data.keyword.mon_short}} service. 
+When you have an extra firewall set up, or you customize the firewall settings in your {{site.data.keyword.cloud_notm}} infrastructure, you need to allow network traffic to the {{site.data.keyword.mon_short}} service.
 
 
 ### Ingestion through an endpoint
@@ -120,11 +120,3 @@ To access the {{site.data.keyword.mon_full_notm}} web UI, you may need to define
 {: #network_alert_subnets}
 
 To receive alert notifications by using webhooks from the {{site.data.keyword.mon_short}} service, you may need to define firewall rules for the subnets that are invoking your webhooks. To get information about the subnets, see [Subnets for webhook notifications](/docs/monitoring?topic=monitoring-endpoints#endpoints_network_alert_subnets).
-
-
-
-
-
-
-
-

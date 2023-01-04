@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, platform metrics
@@ -12,20 +12,20 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
- 
+
 # Working with platform metrics
 {: #platform_metrics_working}
 
-Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in {{site.data.keyword.cloud_notm}}. 
+Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-* Platform metrics are regional. 
+* Platform metrics are regional.
 
-    You can monitor metrics from enabled-monitoring services on the {{site.data.keyword.cloud_notm}} in the region where the service is available. 
+    You can monitor metrics from enabled-monitoring services on the {{site.data.keyword.cloud_notm}} in the region where the service is available.
 
-* You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location. 
+* You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location.
 
-    To configure a monitoring instance, you must set the *platform metrics* configuration setting. 
+    To configure a monitoring instance, you must set the *platform metrics* configuration setting.
 
     To configure platform metrics, you must be assigned the IAM Editor role or higher for the IBM Cloud Monitoring with monitoring service.
 
@@ -34,7 +34,7 @@ Platform metrics are metrics that are exposed by enabled-monitoring services and
 * To monitor platform metrics for a service instance, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the service instance that you want to monitor is provisioned.
 
 
-## Controlling what data is visible 
+## Controlling what data is visible
 {: global-attributes}
 
 You can use attributes to segment metrics so that you can define what data is visible to users.
@@ -53,16 +53,16 @@ The following global attributes are available for segmenting metrics:
 | `Resource group ID`     | `ibm_resource_group_id`     | The resource group GUID where the service instance is created. |
 {: caption="Table 1. Global attributes" caption-side="top"}
 
-Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
+Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service.
 
-You can control the data that is visible for analysis per team, per dashboard, and per panel in a dashboard. 
+You can control the data that is visible for analysis per team, per dashboard, and per panel in a dashboard.
 
 ### Dashboards
 {: global-attributes-1}
 
 You can use global attributes to set the scope of dashboards:
-- The scope defines the data that is valid for aggregation. 
-- Only the data that is in scope is displayed. 
+- The scope defines the data that is valid for aggregation.
+- Only the data that is in scope is displayed.
 - The scope that is set at the dashboard level applies to all panels in the dashboard.
 - You can override the main dashboard scope and specify a specific scope for a panel.
 
@@ -70,8 +70,8 @@ You can use global attributes to set the scope of dashboards:
 {: global-attributes-2}
 
 You can use global attributes to set the scope of a panel:
-- The scope defines the data that is valid for aggregation. 
-- Only the data that is in scope is displayed. 
+- The scope defines the data that is valid for aggregation.
+- Only the data that is in scope is displayed.
 
 ### Teams
 {: global-attributes-3}
@@ -79,18 +79,18 @@ You can use global attributes to set the scope of a panel:
 You can use global attributes to define the data that is visible and available for analysis in a team.
 
 
- 
+
 ## Monitoring platform metrics through dashboards
 {: #platform_metrics_working_dash}
 
-Each {{site.data.keyword.cloud_notm}} provides 1 or more dashboard templates that you can use to monitor that service. 
+Each {{site.data.keyword.cloud_notm}} provides 1 or more dashboard templates that you can use to monitor that service.
 
-- Dashboard templates are available in the **Dashboards** section of the monitoring UI. 
+- Dashboard templates are available in the **Dashboards** section of the monitoring UI.
 
     ![{{site.data.keyword.cloud_notm}} services default dashboards](images/sysdig-platform-1.png "Services default dashboards")
 
 - Dashboard templates are only visible in the monitoring UI if you have an instance of the service running in that region.
-- Dashboard templates cannot be customized. 
+- Dashboard templates cannot be customized.
 
 You can create a copy of a dashboard template. You can customize the copy of the dashboard.
 
@@ -102,7 +102,7 @@ Complete the following steps to create a custom dashboard:
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 2. Navigate to the **Dashboards** section (![dashboard section](../images/dashboards.png)) in the Web UI.
 3. In the **DASHBOARD TEMPLATES** section, expand the **IBM** section, and select a dashboard template for a service that you want to monitor.
-4. Select **Create Custom Dashboard**. The window *Create Dashboard from Template* opens. 
+4. Select **Create Custom Dashboard**. The window *Create Dashboard from Template* opens.
 5. Enter a name for your dashboard, and click **Create and Open**. The dashboard opens.
 
 You can locate the dashboard that you have copied in the section **Dashboards** &gt; **My Dashboads**.
@@ -122,7 +122,7 @@ Complete the following steps to define the scope of the data that is displayed t
 
     ![Dashboard scope section](images/sysdig-platform-2.png "Dashboard scope section")
 
-5. In the drop-down box, enter **ibm** and select an attribute. 
+5. In the drop-down box, enter **ibm** and select an attribute.
 
     ![Dashboard scope page](images/sysdig-platform-3.png "Dashboard scope page")
 
@@ -155,7 +155,7 @@ Complete the following steps to define the scope of the data that is displayed t
 
 6. By default, *Inherit Dashboard Scope* is selected. To specify a custom scope, you must de-select this option.
 
-    In the drop-down box, enter **ibm** and select an attribute. 
+    In the drop-down box, enter **ibm** and select an attribute.
 
     Select an operator.
 
@@ -196,7 +196,7 @@ Complete the following steps to define an alert on a metric:
 
 7. Configure the alert. Set the following fields:
 
-    **Name**: Enter a name for the alert. 
+    **Name**: Enter a name for the alert.
 
     **Description**: Add a description that other users can read to get more context. This field is optional.
 
@@ -210,7 +210,7 @@ Complete the following steps to define an alert on a metric:
 
     **Trigger**: Define the condition and threshold value that must be evaluated. It also defines whether the alert sends a single alert or multiple alerts. Valid time scales are `minute`, `hour`, or `day`. A single alert fires an alert for the entire scope. Multiple Alerts are sent if 1 or more segments breach the threshold at once. An alert is sent for each segment that you specify.
 
-    **Notification Channel**: Enable 1 or more notification channels. 
+    **Notification Channel**: Enable 1 or more notification channels.
 
 
 ## Configuring an alert from the Alerts section
@@ -238,7 +238,7 @@ Complete the following steps to define an alert on a metric:
 
 6. Configure the alert. Set the following fields:
 
-    **Name**: Enter a name for the alert. 
+    **Name**: Enter a name for the alert.
 
     **Description**: Add a description that other users can read to get more context. This field is optional.
 
@@ -291,13 +291,13 @@ Complete the following steps to limit the data to metrics collected for services
 
 4. In the *Visibility* section, select **Platform metrics**.
 
-5. Select the attribute **ibm_resource_group_id** to segment data by resource group. 
+5. Select the attribute **ibm_resource_group_id** to segment data by resource group.
 
     ![Resource group segmentation](images/sysdig-platform-14.png "Resource group segmentation")
 
 6. Select 1 or more resource groups for which you want the data to be visible to users that are members of this team.
 
-7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
+7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service.
 
 8. Click **Save**.
 
@@ -319,12 +319,10 @@ Complete the following steps:
 
 4. In the *Visibility* section, select **Platform metrics**.
 
-5. Select the attribute **ibm_service_instance** to segment data by instance ID. 
+5. Select the attribute **ibm_service_instance** to segment data by instance ID.
 
 6. Select 1 or more instance IDs for which you want the data to be visible to users that are members of this team.
 
-7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service. 
+7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service.
 
 8. Click **Save**.
-
-

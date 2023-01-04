@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-08-08"
 
-keywords: 
+keywords:
 
 subcollection: monitoring
 
@@ -32,11 +32,11 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 - [Install the {{site.data.keyword.cloud_notm}} CLI and plug-ins](/docs/containers?topic=containers-cs_cli_install#cs_cli_install_steps):
 
     * {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`)
-    
+
     * {{site.data.keyword.containerlong_notm}} plug-in (`ibmcloud ks`)
-    
+
     * {{site.data.keyword.registrylong_notm}} plug-in (`ibmcloud cr`)
-    
+
     * {{site.data.keyword.containerlong_notm}} observability plug-in (`ibmcloud ob`)
 
 - [Install the Kubernetes CLI (kubectl)](/docs/containers?topic=containers-cs_cli_install#kubectl)
@@ -75,7 +75,7 @@ Where
 
 * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the instance is available. To get an endpoint, see [Collector endpoints](/docs/sysdig-secure?topic=sysdig-secure-endpoints#endpoints_ingestion).
 
-* TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your agent. For example: *role:serviceX,location:us-south*. 
+* TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your agent. For example: *role:serviceX,location:us-south*.
 
 * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
@@ -85,7 +85,7 @@ Where
 
 * Add the option that defines the type of agent that you want to deploy:
 
-    - `-as` to deploy a slim agent. This is the default option. Use this option to reduce the surface area of attack for potential vulnerabilities. When you deploy the agent, you install the agent package as two containers, one running the agent-kmodule and the other running the agent-slim. 
+    - `-as` to deploy a slim agent. This is the default option. Use this option to reduce the surface area of attack for potential vulnerabilities. When you deploy the agent, you install the agent package as two containers, one running the agent-kmodule and the other running the agent-slim.
 
     - `-af` to deploy the full agent. When you deploy the agent, the agent runs as a single container or a service.
 
@@ -150,11 +150,3 @@ In the event that the pods are not running but you expect the agent to be runnin
 kubectl get events -n ibm-observe
 ```
 {: codeblock}
-
-   
-
- 
-
-
-
-

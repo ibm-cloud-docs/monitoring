@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-08-22"
 
 keywords: IBM Cloud, monitoring, iam, trusted profile
@@ -12,7 +12,7 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
- 
+
 # Trusted profiles
 {: #trusted_profiles}
 
@@ -23,5 +23,3 @@ If you are using a trusted profile, the email address associated with the truste
 {: note}
 
 See [Creating trusted profiles](/docs/account?topic=account-create-trusted-profile) for information on setting up trusted profiles that can be used with {{site.data.keyword.mon_full_notm}}.
-
-

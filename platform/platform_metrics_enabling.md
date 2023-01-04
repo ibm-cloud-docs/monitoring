@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, platform metrics
@@ -12,15 +12,15 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
- 
+
 # Enabling platform metrics
 {: #platform_metrics_enabling}
 
- You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location. 
+ You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location.
 {: shortdesc}
 
 - Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in {{site.data.keyword.cloud_notm}}.
-- To monitor platform metrics for a service instance, provision the {{site.data.keyword.mon_full_notm}} instance in the same region where the {{site.data.keyword.cloud_notm}} service instance that you want to monitor is provisioned. 
+- To monitor platform metrics for a service instance, provision the {{site.data.keyword.mon_full_notm}} instance in the same region where the {{site.data.keyword.cloud_notm}} service instance that you want to monitor is provisioned.
 
 In a region, before you configure a monitoring instance to collect platform metrics, check with the account or service administrator if another monitoring instance has already been configured. You may not have permissions to see all monitoring instances in the region.
 {: important}
@@ -33,22 +33,22 @@ To enable platform metrics in a region, complete the following steps:
 ### Step 1. Provision a monitoring instance
 {: #platform_metrics_enabling_step1}
 
-[Provision an instance of {{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-provision) in the region where the service that you wish to monitor is running.  
+[Provision an instance of {{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-provision) in the region where the service that you wish to monitor is running.
 
 For example, if you are monitoring an {{site.data.keyword.messagehub}} instance in the London region, then you must create a monitoring instance in London.
 
-### Step 2. Set on the platform metrics flag 
+### Step 2. Set on the platform metrics flag
 {: #platform_metrics_enabling_step2}
 
 1. From the {{site.data.keyword.cloud_notm}} dashboard, go to the menu icon ![menu icon](../../../icons/icon_hamburger.svg) &gt; **Observability** to access the *Observability* dashboard.
 
-2. Select **Monitoring** &gt; **Options** &gt; **Edit platform**. 
+2. Select **Monitoring** &gt; **Options** &gt; **Edit platform**.
 
-3. Select a [region](/docs/monitoring?topic=monitoring-endpoints#endpoints_regions). 
+3. Select a [region](/docs/monitoring?topic=monitoring-endpoints#endpoints_regions).
 
-4. Choose the monitoring instance that will collect metrics from enabled services on that location. 
+4. Choose the monitoring instance that will collect metrics from enabled services on that location.
 
-5. Click **Select**. 
+5. Click **Select**.
 
 The main *Observability* page opens.
 
@@ -78,7 +78,7 @@ Complete the following steps:
     ```
     {: pre}
 
-5. Get the plan ID of the instance. 
+5. Get the plan ID of the instance.
 
     Run the following command. Look for the entry for the monitoring instance. Then, copy the value of the field `resource_plan_id`. This value is needed to update the instance.
 
@@ -95,4 +95,3 @@ Complete the following steps:
     {: codeblock}
 
     Where `PlanID` is the resource plan ID of your monitoring instance.
-    

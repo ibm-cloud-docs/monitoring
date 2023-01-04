@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-08-08"
 
 keywords: IBM Cloud, monitoring, config monitoring agent
@@ -35,7 +35,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
 2. Obtain the public or private ingestion URL. For more information, see [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
-3. Install the kernel headers. 
+3. Install the kernel headers.
 
     When you install a monitoring agent, the agent uses kernel header files. [Learn more](https://docs.sysdig.com/en/agent-install--non-orchestrated.html){: external}
 
@@ -68,7 +68,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
     * COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the monitoring instance is available. To get an endpoint, see [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
-    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. 
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*.
 
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
@@ -91,7 +91,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     grep error /opt/draios/logs/draios.log
     ```
     {: pre}
-    
+
 
 
 ## Deploying the agent on a Linux host with no public access
@@ -107,11 +107,11 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
 3. Check that you can reach the repo `http://mirrors.service.networklayer.com/sysdig/`.
 
-    Whether you have a Bare metal or a Classic VSI, by default you get access to the repo. However, if you have attached a firewall such as vyatta to your server, you must allow traffic through to the subnets listed for your data center in [SSL VPN network (on backend/private network)](/hardware-firewall-dedicated?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges#back-end-private-network). 
+    Whether you have a Bare metal or a Classic VSI, by default you get access to the repo. However, if you have attached a firewall such as vyatta to your server, you must allow traffic through to the subnets listed for your data center in [SSL VPN network (on backend/private network)](/hardware-firewall-dedicated?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges#back-end-private-network).
 
     Make sure that you allow all ports, both directions for UDP/TCP/ICMP in your data center.
 
-4. Install the kernel headers. 
+4. Install the kernel headers.
 
     When you install a monitoring agent, the agent uses kernel header files. [Learn more](https://docs.sysdig.com/en/agent-install--non-orchestrated.html){: external}
 
@@ -138,7 +138,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     ```text
     curl -s http://mirrors.service.networklayer.com/sysdig/DRAIOS-GPG-KEY.public | apt-key add -
     ```
-    {: pre}    
+    {: pre}
 
     ```text
     curl -s -o /etc/apt/sources.list.d/draios.list http://mirrors.service.networklayer.com/sysdig/stable/deb/draios.list
@@ -205,10 +205,10 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     ```
     {: codeblock}
 
-8. Deploy the monitoring agent. 
+8. Deploy the monitoring agent.
 
     This command must be run from a [private endpoint](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion_private).
-    
+
     For example:
 
     ```text
@@ -269,7 +269,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
     * MONITORING_ACCESS_KEY is the ingestion key for the instance.
 
-    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. 
+    * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*.
 
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
@@ -290,7 +290,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     grep error /opt/draios/logs/draios.log
     ```
     {: pre}
-    
+
 
 
 
@@ -318,7 +318,7 @@ To check the version of an agent, run the following command:
 
 
 
-## Removing a monitoring agent that has been deployed as a service in a Linux system 
+## Removing a monitoring agent that has been deployed as a service in a Linux system
 {: #agent_linux_remove}
 
 Complete the following steps to remove a monitoring agent on Linux:
@@ -361,6 +361,3 @@ Check that the monitoring agent is running. Run the following command:
 ps -ef | grep sysdig
 ```
 {: pre}
-
-
-

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, web UI
@@ -34,9 +34,8 @@ To get the web UI URL, complete the following steps from a terminal:
     ic resource service-instance INSTANCE_NAME --output JSON | grep dashboard_url
     ```
     {: codeblock}
-    
+
 Where *INSTANCE_NAME* is the name of the instance.
 
 To get the name of the instances that are available in a resource group, you can run `ibmcloud resource service-instances`.
 {: tip}
-

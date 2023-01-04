@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, secure, getting started
@@ -62,15 +62,8 @@ See the following table for tasks that you can run to secure your environment:
 |-------------------------------------|------------------------------|
 | `Integrate scanning into your CI/CD Pipeline` | You can integrate scanning into your CI/CD Pipeline to analyze images that are available on the CI/CD worker nodes. |
 | `Configure a notification channel` | You can configure a notification channel to get notified about events, anomalies, or security incidents that require attention. |
-| `Scan container images`             | You can scan container images for vulnerabilities, and other violations.  | 
+| `Scan container images`             | You can scan container images for vulnerabilities, and other violations.  |
 | `Configure an image scanning alert` | You can set up a runtime `Scanning Alert` to detect if an image is impacted by newly discovered vulnerabilities. You can scan a repository that hosts container images for vulnerabilities, secrets, and license violations. Then, you can configure an alert on the repository to receive notifications on issues that need your attention.  |
 | `Configure a rule`                  | You can create a `Detection Rule` to detect and respond to anomalous runtime activity.  </br>You can create a rule to specify which image versions can be used. |
 | `Define policy`                     | You can configure a policy on a resource and define what to do when 1 or more rules that are included in the policy are non-compliant.  </br>Secure includes a number of pre-defined policies that you can use. |
-| `Configure a benchmark task`        | You can use `Compliance dashboards and metrics` to monitor the status of your sources based on the benchmark task that you configure.| 
-
-
-
-
-
-
-
+| `Configure a benchmark task`        | You can use `Compliance dashboards and metrics` to monitor the status of your sources based on the benchmark task that you configure.|

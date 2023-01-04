@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-08-08"
 
 keywords: IBM Cloud, monitoring, getting started
@@ -55,13 +55,13 @@ You can configure a monitoring agent for different environments. For example, to
 
 Complete one of the following tutorials to learn how to deploy a monitoring agent:
 
-|	Tutorial                        | 
+|	Tutorial                        |
 |---------------------------------|
 | [Monitoring a Linux VPC server instance](/docs/monitoring?topic=monitoring-ubuntu#ubuntu) |
-| [Monitoring a Linux bare metal server](/docs/monitoring?topic=monitoring-baremetal_linux) | 
+| [Monitoring a Linux bare metal server](/docs/monitoring?topic=monitoring-baremetal_linux) |
 | [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows) |
-| [Monitoring a Kubernetes cluster](/docs/monitoring?topic=monitoring-kubernetes_cluster) | 
-{: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"} 
+| [Monitoring a Kubernetes cluster](/docs/monitoring?topic=monitoring-kubernetes_cluster) |
+{: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 For more information, see:
 - [Working with the Kubernetes agent](/docs/monitoring?topic=monitoring-agent_Kube)
@@ -81,7 +81,7 @@ See [Launch the web UI](/docs/monitoring?topic=monitoring-launch).
 ## Step 5. Monitor your environment
 {: #getting-started-monitor-step5}
 
-You can analyze data in the *Explore* tab and in the *Dashboard* tab of the web UI. You monitor the data through metric views and dashboards. 
+You can analyze data in the *Explore* tab and in the *Dashboard* tab of the web UI. You monitor the data through metric views and dashboards.
 
 * Use a metric view to monitor an individual metric.
 * Use dashboards to get a specialized insight into network data, application data, topology, services, hosts, and containers by monitoring data through panels. A panel displays a metric or group of metrics in a dashboard.
@@ -96,9 +96,9 @@ In the *Dashboards* tab, you can monitor data by using any of the default dashbo
 ## Step 6. Manage data
 {: #getting-started-monitor-step6}
 
-You can use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. Customize how data is aggregated when you configure a graph or create an alert for a metric. Set the scope of a dashboard, a panel, or an alert to filter out data points. Restrict access to data by managing users' data access through teams. 
+You can use labels to group infrastructure resources into logical hierarchies, filter out data, and split aggregated data into segments. Customize how data is aggregated when you configure a graph or create an alert for a metric. Set the scope of a dashboard, a panel, or an alert to filter out data points. Restrict access to data by managing users' data access through teams.
 
-For example, for a metric view, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. 
+For example, for a metric view, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data.
 
 To ensure that you can securely manage your data when you use {{site.data.keyword.mon_full_notm}}, it is important to know exactly what data is stored and encrypted, and how you can delete any stored personal data. For more information, see [Managing data](/docs/monitoring?topic=monitoring-mng-data).
 
@@ -107,11 +107,11 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 ## Step 7. Configure alerts and explore events
 {: #getting-started-monitor-step7}
 
-You can use events to review, track, and resolve issues. An event is a notification that informs about something that has occurred in any of the nodes that forward data to your {{site.data.keyword.mon_full_notm}} instance. 
+You can use events to review, track, and resolve issues. An event is a notification that informs about something that has occurred in any of the nodes that forward data to your {{site.data.keyword.mon_full_notm}} instance.
 
-There are different types of events: 
+There are different types of events:
 
-* *Alert events* are events that are triggered by user-configured alerts. For example, configure alerts to be notified of problems that require attention. 
+* *Alert events* are events that are triggered by user-configured alerts. For example, configure alerts to be notified of problems that require attention.
 * *Infrastructure-based events* are events that are collected from Docker and Kubernetes nodes. By default, the monitoring agent automatically discovers and collects data from a select group of events. You can edit the agent configuration file to enable more events.
 * *Custom events* that you configure through any of the following integrations: Slackbot, pre-built Python scripts, custom user-created Python scripts, or cURL requests.
 
@@ -120,5 +120,3 @@ When you define an alert, you must define the condition that triggers the notifi
 You configure one or more notification channels in the *Settings* section in the web UI. Valid notification channels are: *email*, *slack*, *PagerDuty*, *Webhooks*, *OpsGenie*, and *VictorOps*. For more information, see [Working with notification channels](/docs/monitoring?topic=monitoring-notifications).
 
 Next, explore [Working with custom events](https://docs.sysdig.com/en/events.html){: external}.
-
-

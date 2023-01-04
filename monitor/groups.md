@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, groups
@@ -23,7 +23,7 @@ You can use labels to group infrastructure objects into logical hierarchies.
 
 Complete the following steps to create a group:
 
-1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch). 
+1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 
 2. Click **Explore** to navigate to the *Explore* section.
 
@@ -47,7 +47,7 @@ Complete the following steps to create a group:
 
 Complete the following steps to rename a group:
 
-1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch). 
+1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 
 2. Click **Explore** to navigate to the *Explore* section.
 
@@ -71,7 +71,7 @@ Complete the following steps to rename a group:
 
 Complete the following steps to copy a group to other teams:
 
-1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch). 
+1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 
 2. Click **Explore** to navigate to the *Explore* section.
 
@@ -96,7 +96,7 @@ Complete the following steps to copy a group to other teams:
 
 Complete the following steps to share a group with other members of the team:
 
-1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch). 
+1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 
 2. Click **Explore** to navigate to the *Explore* section.
 
@@ -119,7 +119,7 @@ Complete the following steps to share a group with other members of the team:
 
 Complete the following steps to delete a group:
 
-1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch). 
+1. Launch the web UI. [Learn more](/docs/monitoring?topic=monitoring-launch#launch).
 
 2. Click **Explore** to navigate to the *Explore* section.
 
@@ -132,8 +132,3 @@ Complete the following steps to delete a group:
 6. Select the delete group icon ![Delete icon](images/delete.png).
 
 7. Click **Yes, delete grouping** to confirm deletion of the group.
-
-
-
-
-

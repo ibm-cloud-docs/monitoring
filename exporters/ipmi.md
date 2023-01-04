@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2022-01-20"
 
 keywords: IBM Cloud, monitoring, ubuntu, analyze metrics, ipmi
@@ -23,11 +23,11 @@ completion-time: 1h
 {: toc-services="monitoring"}
 {: toc-completion-time="1h"}
 
-In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics. 
+In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics.
 {: shortdesc}
 
-* The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP). 
-* When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter. 
+* The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP).
+* When you use RMCP to access remote devices, you can use an IPMI exporter to monitor multiple IPMI devices. You identify each device by passing the target hostname as a parameter.
 * The IPMI exporter relies on tools from the FreeIPMI suite.
 
 The following figures shows different configurations that you can use to monitor sensor metrics from hosts that can be available in IBM Cloud or outside the IBM Cloud:
@@ -38,13 +38,13 @@ You can collect the following metrics when you configure the IPMI exporter in a 
 
 * IPMI admin metrics
 
-    The metric `ipmi_up {collector="<NAME>"}` reports `1` when data from a remote host is collected successfully. It reports `0` for collection of data in a local host. 
-    
+    The metric `ipmi_up {collector="<NAME>"}` reports `1` when data from a remote host is collected successfully. It reports `0` for collection of data in a local host.
+
     The metric `ipmi_scrape_duration_seconds` reports the amount of time that it takes the collector to retrieve the data.
 
 * IPMI System event log (SEL) metrics
 
-    The metric `ipmi_sel_entries_count` reports the number of entries in the system event log. 
+    The metric `ipmi_sel_entries_count` reports the number of entries in the system event log.
 
     The metric `ipmi_sel_free_space_bytes` reports the number of free bytes for new ystem event log entries.
 
@@ -53,9 +53,9 @@ You can collect the following metrics when you configure the IPMI exporter in a 
     The IPMI exporter collects 2 metrics per sensor type: state and value. A value of `0` reports a normal state. A value of `1` reports a warning state. A value of `2` reports a critical state. A value of `NaN` reports information not available. For example, see the metrics for different sensors:
 
     Temperature sensor metrics: `ipmi_temperature_celsius`, `ipmi_temperature_state`
-    
+
     Fan speed sensor metrics: `ipmi_fan_speed_rpm`, `ipmi_fan_speed_state`
-    
+
     Voltage sensor metrics: `ipmi_voltage_state`, `ipmi_voltage_volts`
 
 * IPMI chassis power state of the machine
@@ -64,7 +64,7 @@ You can collect the following metrics when you configure the IPMI exporter in a 
 
 * DCMI data
 
-    The metric `ipmi_dcmi_power_consumption_current_watts` informs about the live power consumption of the machine in Watts. 
+    The metric `ipmi_dcmi_power_consumption_current_watts` informs about the live power consumption of the machine in Watts.
 
 * BMC details
 
@@ -127,7 +127,7 @@ For each host that you want to collect IPMI metrics, complete the following step
     {: pre}
 
     ```text
-    tar -xvf ipmi_exporter-v1.2.0.linux-amd64.tar.gz 
+    tar -xvf ipmi_exporter-v1.2.0.linux-amd64.tar.gz
     ```
     {: pre}
 
@@ -143,7 +143,7 @@ For each host that you want to collect IPMI metrics, complete the following step
     ```
     {: pre}
 
-6. Configure the `ipmi_local.yml` file. 
+6. Configure the `ipmi_local.yml` file.
 
     - You can update the file to exclude sensors that you do not want to monitor.
 
@@ -191,7 +191,7 @@ For each host that you want to collect IPMI metrics, complete the following step
     ps -aux | grep ipmi
     ```
     {: pre}
- 
+
     You should see the IPMI exporter running.
 
 
@@ -290,10 +290,10 @@ scrape_configs:
 ```
 {: codeblock}
 
-Where 
+Where
 
 * `<IP_ADDRESS_OF_REMOTE_SERVER>` is the IP address of a server that you want to monitor.
-* `<INGESTION_ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance ingestion endpoint, for example, `ingest.us-south.monitoring.cloud.ibm.com`. See [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion). 
+* `<INGESTION_ENDPOINT>` is the {{site.data.keyword.mon_full_notm}} instance ingestion endpoint, for example, `ingest.us-south.monitoring.cloud.ibm.com`. See [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 * `<IP_ADDRESS_OF_REMOTE_SERVER>:9290` is the IP address of the server that you want to monitor.
 
 When you save the file, changes are applied.
@@ -312,12 +312,12 @@ Complete the following steps to update the monitoring agent to collect IPMI metr
     ```
     {: pre}
 
-2. Update the `/opt/draios/etc/dragent.yaml` to enable remote scraping. 
+2. Update the `/opt/draios/etc/dragent.yaml` to enable remote scraping.
 
     Append the following section to the `dragent.yaml` file:
 
     ```yaml
-    customerid: xxxxxxxxxx 
+    customerid: xxxxxxxxxx
     collector: ingest.us-south.monitoring.cloud.ibm.com
     collector_port: 6443
     ssl: true
@@ -362,18 +362,9 @@ Complete the following steps to update the monitoring agent to collect IPMI metr
 | Voltage | `ipmi_voltage_volts` | `number (auto)` |
 | Temperature Celsius | `ipmi_temperature_celsius` | `number (auto)` |
 | Fan speed RPM | `ipmi_fan_speed_rpm` | `number (auto)` |
-{: caption="Table 1. IPMI exporter sample queries" caption-side="top"} 
+{: caption="Table 1. IPMI exporter sample queries" caption-side="top"}
 
 
 For example, you can create a dashboard that looks as follows:
 
 ![Sample IPMI dashboard](images/ipmi-ui-1.png "Sample IPMI dashboard"){: caption="Figure 2. Sample IPMI dashboard" caption-side="bottom"}
-
-
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2021, 2022
+  years:  2021, 2023
 lastupdated: "2021-11-29"
 
 keywords: IBM Cloud, monitoring, agent, container registry, icr, kubernetes, image
@@ -12,7 +12,7 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting information about Kubernetes monitoring agent images 
+# Getting information about Kubernetes monitoring agent images
 {: #monitoring_agent_image}
 
 Kubernetes monitoring agent images are public images that are available in {{site.data.keyword.cloud_notm}} through the [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) service.
@@ -60,4 +60,3 @@ ibmcloud cr images --restrict ext/sysdig
 {: codeblock}
 
 The output of this command is the list of monitoring agent images. It includes information about the repository, `icr.io/ext/sysdig`, the image tag, the image digest, the image namespace, when the image was created, the image size, and the images security status.
-

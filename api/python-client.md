@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years:  2018, 2022
+  years:  2018, 2023
 lastupdated: "2021-03-31"
 
 keywords: IBM Cloud, monitoring, alerting, api, python
@@ -102,7 +102,7 @@ Complete the following steps:
 
 ## Step 2. Reference the Python client in your Python script
 {: #python-client-reference-client}
-    
+
 ### Reference the Python client that is installed by using pip
 {: #python-client-reference-pip-client}
 
@@ -153,10 +153,10 @@ Complete the following steps from a terminal:
     ```
     {: pre}
 
-3. Get the endpoint for the region where the monitoring instance is available. 
+3. Get the endpoint for the region where the monitoring instance is available.
 
-    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig). 
-    
+    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig).
+
     For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
 
 4. Add the following entries to your Python script:
@@ -178,11 +178,11 @@ Complete the following steps from a terminal:
 
     Where
 
-    `<MONITORING_ENDPOINT>` must be replaced with the endpoint where the monitoring instance is available. 
+    `<MONITORING_ENDPOINT>` must be replaced with the endpoint where the monitoring instance is available.
 
     `<IAM_APIKEY>` must be replaced with a valid IAM API key. [Learn more](/docs/account?topic=account-userapikey).
 
-    `<GUID>` must be replaced with the GUID of the monitoring instance that you obtain in the previous step. 
+    `<GUID>` must be replaced with the GUID of the monitoring instance that you obtain in the previous step.
 
 
 You can now use the **sdclient** to perform actions that will be authenticated by using IAM.
@@ -204,10 +204,10 @@ Complete the following steps from a terminal:
 
 1. [Get the Monitoring API token](/docs/monitoring?topic=monitoring-api_token#api_token_get).
 
-2. Get the endpoint for the region where the monitoring instance is available. 
+2. Get the endpoint for the region where the monitoring instance is available.
 
-    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig). 
-    
+    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig).
+
     For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
 
 3. Add the following entries to your Python script:
@@ -217,7 +217,7 @@ Complete the following steps from a terminal:
 
     URL = <MONITORING_ENDPOINT>
     # For example: URL = 'https://us-south.monitoring.cloud.ibm.com'
-    
+
     MONITOR_TOKEN = <MONITOR_TOKEN>
     # For example: MONITOR_TOKEN = 'xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
 
@@ -227,7 +227,7 @@ Complete the following steps from a terminal:
 
     Where
 
-    `<MONITORING_ENDPOINT>` must be replaced with the endpoint where the monitoring instance is available. 
+    `<MONITORING_ENDPOINT>` must be replaced with the endpoint where the monitoring instance is available.
 
     `<MONITOR_TOKEN>` must be replaced with the Monitoring API token.
 
@@ -308,4 +308,3 @@ sdclient = SdMonitorClient(token=MONITOR_TOKEN,sdc_url=URL)
 * [Managing alerts by using the Python client](/docs/monitoring?topic=monitoring-alert_python)
 * [Python Client](https://github.com/draios/python-sdc-client){: external}
 * [{{site.data.keyword.mon_short}} Python samples](https://github.com/draios/python-sdc-client/tree/master/examples){: external}
-

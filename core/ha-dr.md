@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2018, 2022
+  years: 2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, disaster recovery, ha, high availability, redundancy
@@ -23,11 +23,11 @@ subcollection: monitoring
 ## Availability zones
 {: #ha-dr-locations}
 
-An availability zone is a logically and physically isolated location within an {{site.data.keyword.cloud_notm}} region where your data is processed and hosted. 
+An availability zone is a logically and physically isolated location within an {{site.data.keyword.cloud_notm}} region where your data is processed and hosted.
 * An availability zone has independent power, cooling, and network infrastructures that are isolated from other zones to strengthen fault tolerance by avoiding single points of failure between zones.
 * An availability zone offers high bandwidth and low inter-zone latency within a region.
 
-A region (location) is a geographically and physically separate group of one or more availability zones with independent electrical and network infrastructures isolated from other regions. 
+A region (location) is a geographically and physically separate group of one or more availability zones with independent electrical and network infrastructures isolated from other regions.
 * Regions are designed to remove shared single points of failure with other regions and guarantee low inter-zone latency within the region.
 * Each region has 3 different data centers (DC) for redundancy.
 
@@ -43,32 +43,32 @@ The following table lists the high-availability (HA) status for the regions (loc
 | `North America`       | `Dallas (us-south)`      | `MZR`     |
 | `North America`       | `Washington (us-east)`   | `MZR`     |
 | `North America`       | `Toronto (ca-tor)`       | `MZR`     |
-{: caption="Table 1. List of locations where the service is available" caption-side="top"} 
+{: caption="Table 1. List of locations where the service is available" caption-side="top"}
 
 Where
 * A *geography* is a geographic area or larger political body that contains one or more regions.
-* A *region* is a defined geographic territory. 
+* A *region* is a defined geographic territory.
 
-    A region could be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries. 
+    A region could be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
 
     A region contains [multiple availability zones](https://www.ibm.com/cloud/data-centers/) to meet local access, low latency, and security requirements for the region.
 
 * `N/A` means feature that is not applicable to that geography.
 * `MZR` means multi-zone region. [Learn more](/docs/overview?topic=overview-locations#mzr-table).
 
- 
+
 
 ## Availability of a monitoring instance
 {: #ha-dr-region}
 
-When you provision a monitoring instance, you select the MZR (location) where the instance is created. The region determines where the monitoring data is processed and the data is hosted. 
+When you provision a monitoring instance, you select the MZR (location) where the instance is created. The region determines where the monitoring data is processed and the data is hosted.
 
 A multizone region (MZR) consist of 3 or more availability zones that are independent from each other to ensure that single failure events affect only a single zone.
 
-By default, each monitoring instance consist of 3 zones, one primary zone and two secondary zones: 
+By default, each monitoring instance consist of 3 zones, one primary zone and two secondary zones:
 * Each zone is located in a different data center in the region.
-* The data in your primary zone is automatically replicated to the secondary zones with low latency. You don't need to do anything to enable the replication. 
-* When the primary zone fails, a secondary zone is elected as the primary to prevent your service instance from being affected. 
+* The data in your primary zone is automatically replicated to the secondary zones with low latency. You don't need to do anything to enable the replication.
+* When the primary zone fails, a secondary zone is elected as the primary to prevent your service instance from being affected.
 * If 2 zones fail at the same time, the service is down.
 
 The MZR architecture offers automatic failover between 2 zones, and high availability for a monitoring instance withing a region.
@@ -78,13 +78,13 @@ The MZR architecture offers automatic failover between 2 zones, and high availab
 ## Disaster recovery (DR) of the monitoring service in a region
 {: #dr}
 
-Disaster recovery is about surviving a catastrophic failure or loss of availability in a single location. 
+Disaster recovery is about surviving a catastrophic failure or loss of availability in a single location.
 
 {{site.data.keyword.mon_full_notm}} follows {{site.data.keyword.cloud_notm}} requirements for [planning and recovering from disaster events](/docs/overview?topic=overview-zero-downtime#disaster-recovery).
 
 If a regional disaster occurs, consider the following information:
 * The estimated recovery time for rebuilding the regional site and restoring the service at another location is 24 hours.
-* You will have to update the endpoints of applications and monitoring agents to point to the ingestion endpoint in the new location. 
+* You will have to update the endpoints of applications and monitoring agents to point to the ingestion endpoint in the new location.
 * You will have to restore the service instance's metadata, that is, dashboards and alerts definitions, from your backups.
 
 Historical data may be lost during a disaster. If you require historical metrics for auditing purposes, backup the metrics regularly by querying the metrics from the service and storing them at a remote backup site.
@@ -108,9 +108,3 @@ If you have deployed monitoring agents on your systems, and those systems are no
     {: tip}
 
 4. Launch the monitoring instance and import the alerts, notifications, teams, and dashboards to monitor your applications and systems.
-
-
-
-
-
-

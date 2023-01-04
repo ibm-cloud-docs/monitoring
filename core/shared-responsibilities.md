@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2018, 2022
+  years: 2018, 2023
 lastupdated: "2021-03-28"
 
 keywords: IBM Cloud, monitoring, customer responsibilities, IBM responsibilities, terms and conditions
@@ -20,7 +20,7 @@ Learn about the management responsibilities and terms and conditions that you ha
 
 Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.mon_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms).
 
-  
+
 ## Incident and operations management
 {: #incident-and-ops}
 
@@ -50,7 +50,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | `Update the monitoring agent image that is hosted in {{site.data.keyword.cloud_notm}}` | Provide regular updates to the monitoring agent image with new features, fixes to defects, and security fixes. Document changes in the [Agent release notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html)  | Update the agent to keep it up to date as new versions are made available. |
 | `Update default dashboards`                            | Update the default dashboards as requirements change. | Update custom dashboards and track changes by using your own change management process. |
 | `Update pre-defined alert definitions`                  | Update the default alert definitions as requirements change. | Update custom alert definitions and track changes by using your own change management process. |
-| `Track versions of custom dashboards, alerts, notifications, and teams`    |   | Use your own change management process to control versions of monitoring resources such as dashboards, alert definitions, teams, and notifications. | 
+| `Track versions of custom dashboards, alerts, notifications, and teams`    |   | Use your own change management process to control versions of monitoring resources such as dashboards, alert definitions, teams, and notifications. |
 {: caption="Table 2. Responsibilities for change management" caption-side="top"}
 
 
@@ -62,7 +62,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 
 | Task                           | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |--------------------------------|-------------------------------------------------|-----------------------|
-| `Manage platform permissions`  | Allow administrators to control access to manage resources in the {{site.data.keyword.cloud_notm}}. | Grant, revoke, and manage access to service instances by using IAM. | 
+| `Manage platform permissions`  | Allow administrators to control access to manage resources in the {{site.data.keyword.cloud_notm}}. | Grant, revoke, and manage access to service instances by using IAM. |
 | `Manage service permissions`   | Allow administrators to control access to work with the {{site.data.keyword.mon_full_notm}}. | Grant, revoke, and manage access to monitoring features by using IAM. |
 | `Control monitoring data access` | Allow administrators to control access to metrics data and metadata through Sysdig teams. | Grant, revoke, and manage access to monitoring data by using IAM. |
 {: caption="Table 3. Responsibilities for identity and access management" caption-side="top"}
@@ -92,7 +92,6 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | Task                                                            | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-----------------------------------------------------------------|-------------------------------------------------|-----------------------|
 | `Service`         | Automatically recover and restart service components after any disaster event. |   |
-| `Data`            |   |Extract and save data, dashboards definitions, and alert definitions if you cannot afford for it to be lost in the event of an un-recoverable event. | 
+| `Data`            |   |Extract and save data, dashboards definitions, and alert definitions if you cannot afford for it to be lost in the event of an un-recoverable event. |
 | `monitoring agent`    |   |  Recovery of the monitoring agents running in your environment should they be impacted by a disaster. |
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
-
