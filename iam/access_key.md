@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-03-15"
+lastupdated: "2023-01-06"
 
 keywords: IBM Cloud, monitoring, access key
 
@@ -30,7 +30,7 @@ To get the access key for an {{site.data.keyword.mon_full_notm}} instance throug
 
 3. Select **Monitoring**. The {{site.data.keyword.mon_full_notm}} dashboard opens. You can see the list of monitoring instances that are available on {{site.data.keyword.cloud_notm}}.
 
-4. Identify the instance for which you want to get the access key. Click the *Actions* icon ![Actions icon](../../icons/action-menu-icon.svg "Actions") next to the instance and then click **View key**.
+4. Identify the instance for which you want to get the access key. Click the *Actions* icon ![Actions icon](../../icons/action-menu-icon.svg "Actions") next to the instance and then click **Manage key**.
 
 5. A window opens where you can click **Show key** to view the access key.
 
