@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-10-07"
+lastupdated: "2023-01-13"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -382,6 +382,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
 | {{site.data.keyword.messagehub}}             | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)|
+| {{site.data.keyword.mq_full}}             | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)|
 {: caption="Integration services integration in Europe locations" caption-side="top"}
 {: #cs-integration-table-1}
 {: tab-title="Europe"}
@@ -392,6 +393,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
 | {{site.data.keyword.messagehub}}               | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg)    |
+| {{site.data.keyword.mq_full}}               | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg)    |
 {: caption="Integration services integration in America's locations" caption-side="top"}
 {: #cs-integration-table-2}
 {: tab-title="America"}
@@ -402,6 +404,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
 |------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
 | {{site.data.keyword.messagehub}}               | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  `Metrics are available through the platform metrics monitoring instance in Tokyo` | `Metrics are available through the platform metrics monitoring instance in Tokyo` |
+| {{site.data.keyword.mq_full}}               |  | ![Checkmark icon](../images/checkmark-icon.svg) |   |  |
 {: caption="Integration services integration in AP locations" caption-side="top"}
 {: #cs-integration-table-3}
 {: tab-title="Asia Pacific"}
