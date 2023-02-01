@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-01-13"
+  lastupdated: "2023-02-01"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
@@ -130,7 +130,6 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 ### Classic
 {: #cloud_services_locations_compute_classic}
 
-
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
 | {{site.data.keyword.BluVirtServers}}                          |                  | ![Checkmark icon](../images/checkmark-icon.svg)  |
@@ -203,10 +202,10 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
-|------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
-| {{site.data.keyword.contdelivery_full}}        |![Checkmark icon](../images/checkmark-icon.svg) |     |  |  |
-| {{site.data.keyword.appconfig_full}}           |                                               | ![Checkmark icon](../images/checkmark-icon.svg) |    |  |
+| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |  `Chennai 01 (che01)` |
+|------------------------------------------------|------------------|----------------------------|----------------------|
+| {{site.data.keyword.contdelivery_full}}        |![Checkmark icon](../images/checkmark-icon.svg) |     |  |
+| {{site.data.keyword.appconfig_full}}           |           | ![Checkmark icon](../images/checkmark-icon.svg) |  |
 | {{site.data.keyword.en_full}}           |                                               | ![Checkmark icon](../images/checkmark-icon.svg) |    |  |
 {: caption="Developer tools and DevOps services in AP locations" caption-side="top"}
 {: #cs-devops-table-3}
@@ -401,10 +400,10 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Seoul 01 (seo01)` | `Chennai 01 (che01)` |
-|------------------------------------------------|------------------|----------------------------|--------------------|----------------------|
-| {{site.data.keyword.messagehub}}               | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  `Metrics are available through the platform metrics monitoring instance in Tokyo` | `Metrics are available through the platform metrics monitoring instance in Tokyo` |
-| {{site.data.keyword.mq_full}}               |  | ![Checkmark icon](../images/checkmark-icon.svg) |   |  |
+| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Chennai 01 (che01)` |
+|------------------------------------------------|------------------|----------------------------|----------------------|
+| {{site.data.keyword.messagehub}}               | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |   `Metrics are available through the platform metrics monitoring instance in Tokyo` |
+| {{site.data.keyword.mq_full}}               |  | ![Checkmark icon](../images/checkmark-icon.svg) |  |
 {: caption="Integration services integration in AP locations" caption-side="top"}
 {: #cs-integration-table-3}
 {: tab-title="Asia Pacific"}
