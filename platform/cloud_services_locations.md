@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-  lastupdated: "2023-02-01"
+lastupdated: "2023-02-01"
 
 keywords: IBM Cloud, monitoring, platform metrics
 
