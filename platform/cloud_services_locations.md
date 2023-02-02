@@ -22,6 +22,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 ## Cloud Foundry
 {: #cloud_services_locations_cf}
 
+
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
 | Cloud Foundry                                                 | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |
