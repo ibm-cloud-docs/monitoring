@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-03-28"
+lastupdated: "2023-02-16"
 
-keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
+keywords:
 
 subcollection: monitoring
 
@@ -110,7 +110,7 @@ Complete the following steps from the command line to install a monitoring agent
 3. Deploy the monitoring agent. Run the following command:
 
     ```text
-    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure false --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
+    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key ACCESS_KEY --collector COLLECTOR_ENDPOINT --collector_port 6443 --secure true --tags TAG_DATA --additional_conf 'sysdig_capture_enabled: false'
     ```
     {: pre}
 
@@ -122,6 +122,8 @@ Complete the following steps from the command line to install a monitoring agent
 
     * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example, *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
 
+    * The SECURE flag must be set to *true* to use a secure SSL/TLS connection to send metrics to the collector.
+
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
     If `cURL` is not available, you must install it. For example, for an Ubuntu bare metal, run the following command: `sudo apt-get update`. Then, run the install command: `sudo apt-get install curl`.
@@ -129,7 +131,7 @@ Complete the following steps from the command line to install a monitoring agent
     For example, see the following sample command to install a monitoring agent that forwards metrics to a monitoring instance in US South (Dallas):
 
     ```text
-    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a xxxxxxxxxxxxx -c ingest.us-south.monitoring.cloud.ibm.com --collector_port 6443 --secure false -ac "sysdig_capture_enabled: false" --tags sourceType:baremetal,location:dallas
+    curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- -a xxxxxxxxxxxxx -c ingest.us-south.monitoring.cloud.ibm.com --collector_port 6443 --secure true -ac "sysdig_capture_enabled: false" --tags sourceType:baremetal,location:dallas
     ```
     {: screen}
 

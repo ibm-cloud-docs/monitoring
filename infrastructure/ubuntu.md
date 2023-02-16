@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-02-09"
+lastupdated: "2023-02-16"
 
-keywords: IBM Cloud, monitoring, ubuntu, analyze metrics
+keywords:
 
 subcollection: monitoring
 
@@ -132,7 +132,7 @@ Complete the following steps from a command line:
 5. Deploy the monitoring agent. Run the following command:
 
    ```text
-   curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key <ACCESS_KEY> --collector <COLLECTOR_ENDPOINT> --collector_port 6443 --secure false --check_certificate false --tags <TAG_DATA> --additional_conf 'sysdig_capture_enabled: false'
+   curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key <ACCESS_KEY> --collector <COLLECTOR_ENDPOINT> --collector_port 6443 --secure true --check_certificate false --tags <TAG_DATA> --additional_conf 'sysdig_capture_enabled: false'
    ```
    {: pre}
 
@@ -146,7 +146,7 @@ Complete the following steps from a command line:
 
    * The `sysdig_capture_enabled` is set to *false* to disable the capture feature. By default this is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
-   * The `secure` flag must be set to *true* when running a "Graduated Monitor+Secure" plan.  If you are running a "Monitor only" plan, you can set the `secure` flag to *false* if desired.
+   * The `secure` flag must be set to *true* to use a secure SSL/TLS connection to send metrics to the collector.
 
    If the monitoring agent fails to install correctly, install the kernel headers manually. Choose a distribution and run the command for that distribution. Then, retry the deployment of the monitoring agent.
 
