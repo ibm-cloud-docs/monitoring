@@ -15,7 +15,7 @@ subcollection: monitoring
 # Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the Monitoring API
 {: #metrics_api}
 
-You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance by using the {site.data.keyword.mon_short}} API.
+You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} API.
 {: shortdesc}
 
 
