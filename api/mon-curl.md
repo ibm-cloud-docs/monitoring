@@ -49,7 +49,7 @@ Use IAM tokens to authenticate with the {{site.data.keyword.mon_full_notm}} serv
 In a cURL command, add the following options to authenticate with the {{site.data.keyword.mon_full_notm}} service by using an IAM token:
 
 ```text
--H "Authorization: $AUTH_TOKEN"
+-H "Authorization: Bearer $AUTH_TOKEN"
 -H "IBMInstanceID: $GUID"
 -H "SysdigTeamID: $TEAM_ID"
 ```
@@ -110,7 +110,7 @@ To run a cURL API query and authrnticat by using the IAM token, complete the fol
 3. Run the cURL API query.
 
     ```text
-    curl -X <METHOD> <MONITORING_ENDPOINT>/<API_URL> -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "content-type: application/json"
+    curl -X <METHOD> <MONITORING_ENDPOINT>/<API_URL> -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "content-type: application/json"
     ```
     {: codeblock}
 
