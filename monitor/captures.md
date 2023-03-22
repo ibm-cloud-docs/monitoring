@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-03-12"
+lastupdated: "2023-03-22"
 
-keywords: IBM Cloud, monitoring, captures
+keywords:
 
 subcollection: monitoring
 
@@ -23,8 +23,6 @@ The capture file size limit is 100 MB.
 
 Captures contain system calls, and other OS events such as system-level latencies, batch jobs duration, deployments interruption times, autoscaling latencies, container startup times, or application transaction time. Captures include detailed information from every container on a node.
 
-Depending on your organization’s guidelines, consider disabling captures. By default, captures are enabled when you configure a monitoring agent in a node.
-{: tip}
 
 You can create, explore, download, and delete *captures* for individual nodes. A node can be a host, a container, a virtual machine, a bare metal, or any metrics source where you install a monitoring agent.
 
