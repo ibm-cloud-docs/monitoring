@@ -14,7 +14,7 @@ subcollection: monitoring
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Getting started tutorial
+# Getting started with {{site.data.keyword.mon_full_notm}}
 {: #getting-started}
 
 {{site.data.keyword.mon_full}} is a cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. In architectures that are focused on container and microservices, you can use Secure to protect, monitor, and enhance forensic analysis of your pipeline and runtime components.
