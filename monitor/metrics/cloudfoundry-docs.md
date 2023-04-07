@@ -180,10 +180,10 @@ Indicates the total memory of the Cloud Foundry application.
 
 
 ## Attributes for segmentation
-{: attributes}
+{: #attributes}
 
 ### Global attributes
-{: global-attributes}
+{: #global-attributes}
 
 The following attributes are available for segmenting all of the metrics:
 
@@ -201,7 +201,7 @@ The following attributes are available for segmenting all of the metrics:
 
 
 ### Additional attributes
-{: additional-attributes}
+{: #additional-attributes}
 
 The following attributes are available for segmenting one or more attributes. Check each metric definition to find out the segmentation options that are allowed with a metric type.
 

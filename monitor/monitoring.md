@@ -40,7 +40,7 @@ You can configure a dashboard as the default entry point for a team, unifying a 
 
 In the *Advisor* tab, you can monitor and troubleshoot the health, risk, and capacity of hosts and Kubernetes clusters.
 
-![Advisor tab](../images/advisor-tab.png "Advisor tab")
+![Advisor tab](../images/advisor-tab.png "Advisor tab"){: caption="Advisor tab" caption-side="bottom"}
 
 - Data is refreshed every 10 minutes.
 - Metrics are prioritized by event count and severity.
@@ -61,7 +61,7 @@ When you choose to monitor your Kubernetes clusters by cluster, you can select m
 - CPU Allocation Optimization
 - Memory Allocation Optimization
 
-![Advisor predefined dashboards by cluster](../images/overview-tab-clusters.png "Advisor prefedined dashboards by cluster")
+![Advisor predefined dashboards by cluster](../images/overview-tab-clusters.png "Advisor prefedined dashboards by cluster"){: caption="Advisor predefined dashboards by cluster" caption-side="bottom"}
 
 For more information on how to interpret this view, see [About Clusters Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/overview/clusters-data/){: external}.
 

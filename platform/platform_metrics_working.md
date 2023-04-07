@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-03-28"
+lastupdated: "2023-03-27"
 
-keywords: IBM Cloud, monitoring, platform metrics
+keywords:
 
 subcollection: monitoring
 
@@ -35,7 +35,7 @@ Platform metrics are metrics that are exposed by enabled-monitoring services and
 
 
 ## Controlling what data is visible
-{: global-attributes}
+{: #global-attributes}
 
 You can use attributes to segment metrics so that you can define what data is visible to users.
 
@@ -58,7 +58,7 @@ Other attributes are available per {{site.data.keyword.cloud_notm}} service. In 
 You can control the data that is visible for analysis per team, per dashboard, and per panel in a dashboard.
 
 ### Dashboards
-{: global-attributes-1}
+{: #global-attributes-1}
 
 You can use global attributes to set the scope of dashboards:
 - The scope defines the data that is valid for aggregation.
@@ -67,14 +67,14 @@ You can use global attributes to set the scope of dashboards:
 - You can override the main dashboard scope and specify a specific scope for a panel.
 
 ### Panels
-{: global-attributes-2}
+{: #global-attributes-2}
 
 You can use global attributes to set the scope of a panel:
 - The scope defines the data that is valid for aggregation.
 - Only the data that is in scope is displayed.
 
 ### Teams
-{: global-attributes-3}
+{: #global-attributes-3}
 
 You can use global attributes to define the data that is visible and available for analysis in a team.
 
@@ -87,7 +87,7 @@ Each {{site.data.keyword.cloud_notm}} provides 1 or more dashboard templates tha
 
 - Dashboard templates are available in the **Dashboards** section of the monitoring UI.
 
-    ![{{site.data.keyword.cloud_notm}} services default dashboards](images/sysdig-platform-1.png "Services default dashboards")
+    ![{{site.data.keyword.cloud_notm}} services default dashboards](images/sysdig-platform-1.png "Services default dashboards"){: caption="Default dashboard" caption-side="bottom"}
 
 - Dashboard templates are only visible in the monitoring UI if you have an instance of the service running in that region.
 - Dashboard templates cannot be customized.
@@ -120,19 +120,19 @@ Complete the following steps to define the scope of the data that is displayed t
 3. Select a custom dashboard in the **My Dashboards** section.
 4. To modify the scope, click the pencil icon to  **Edit Dashboard Scope**.
 
-    ![Dashboard scope section](images/sysdig-platform-2.png "Dashboard scope section")
+    ![Dashboard scope section](images/sysdig-platform-2.png "Dashboard scope section"){: caption="Dashboard scope section" caption-side="bottom"}
 
 5. In the drop-down box, enter **ibm** and select an attribute.
 
-    ![Dashboard scope page](images/sysdig-platform-3.png "Dashboard scope page")
+    ![Dashboard scope page](images/sysdig-platform-3.png "Dashboard scope page"){: caption="Dashboard scope page" caption-side="bottom"}
 
 6. Select an operator.
 
-    ![Dashboard scope page operators](images/sysdig-platform-4.png "Dashboard scope page operators")
+    ![Dashboard scope page operators](images/sysdig-platform-4.png "Dashboard scope page operators"){: caption="Dashboard scope operators" caption-side="bottom"}
 
 7. Select 1 or more values.
 
-    ![Dashboard scope page values](images/sysdig-platform-5.png "Dashboard scope page values")
+    ![Dashboard scope page values](images/sysdig-platform-5.png "Dashboard scope page values"){: caption="Dashboard scope values" caption-side="bottom"}
 
     You can also leave the value empty, and select **var** to define a variable so that users can choose 1 or more values when they analyze data through the dashboard.
     {: note}
@@ -151,7 +151,7 @@ Complete the following steps to define the scope of the data that is displayed t
 4. Select a panel where you want to change the scope of the data.
 5. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). Then, in the *Scope* section, click **Dashboard scope**.
 
-    ![Panel scope](images/sysdig-platform-6.png "Panel scope")
+    ![Panel scope](images/sysdig-platform-6.png "Panel scope"){: caption="Panel scope" caption-side="bottom"}
 
 6. By default, *Inherit Dashboard Scope* is selected. To specify a custom scope, you must de-select this option.
 
@@ -189,7 +189,7 @@ Complete the following steps to define an alert on a metric:
 
 6. Click the *Actions* icon ![Three dots icon](../images/actions.png) and select **Create Alert**.
 
-    ![Panel options](images/sysdig-platform-15.png "Panel options")
+    ![Panel options](images/sysdig-platform-15.png "Panel options"){: caption="Panel options" caption-side="bottom"}
 
     If you have multiple queries defined in a panel, you are prompted to select the metric for which you want to create an alert.
     {: note}
@@ -230,11 +230,11 @@ Complete the following steps to define an alert on a metric:
 
 4. Select **Add Alert**.
 
-    ![Add alert](images/sysdig-platform-7.png "Add alert")
+    ![Add alert](images/sysdig-platform-7.png "Add alert"){: caption="Add alert" caption-side="bottom"}
 
 5. Select your desired alert type.
 
-    ![Choose alert type](images/sysdig-platform-16.png "Choose alert type")
+    ![Choose alert type](images/sysdig-platform-16.png "Choose alert type"){: caption="Choose alert type" caption-side="bottom"}
 
 6. Configure the alert. Set the following fields:
 
@@ -262,17 +262,17 @@ You can control the data that is visible to all the users that are members of a 
 
 First navigate to the **Settings** section.
 
-![Settings section](images/sysdig-platform-12.png "Settings section")
+![Settings section](images/sysdig-platform-12.png "Settings section"){: caption="Settings" caption-side="bottom"}
 
 As an administrator of the service, you can create, modify, and delete teams. When you configure a team, you can define the scope of the data in the **Visibility** section.
 
 To allow a team to view platform metrics, you must select **Platform metrics**.
 
-![Team platform metrics option](images/sysdig-platform-10.png "Team platform metrics option")
+![Team platform metrics option](images/sysdig-platform-10.png "Team platform metrics option"){: caption="Team platform metrics" caption-side="bottom"}
 
 Enabling platform metrics, grants access to all platform metrics. However, you can reduce the scope by configuring 1 or more segments. Notice that the order of the segments is applied from the beginning of the list to the end.
 
-![Team platform metrics segments](images/sysdig-platform-11.png "Team platform metrics segments")
+![Team platform metrics segments](images/sysdig-platform-11.png "Team platform metrics segments"){: caption="Team platform metrics segments" caption-side="bottom"}
 
 
 
@@ -285,7 +285,7 @@ Complete the following steps to limit the data to metrics collected for services
 
 2. Navigate to the **Settings** section.
 
-    ![Settings section](images/sysdig-platform-12.png "Settings section")
+    ![Settings section](images/sysdig-platform-12.png "Settings section"){: caption="Settings" caption-side="bottom"}
 
 3. Select **Teams**. Then, select a team where you want to restrict access to the platform metrics.
 
@@ -293,7 +293,7 @@ Complete the following steps to limit the data to metrics collected for services
 
 5. Select the attribute **ibm_resource_group_id** to segment data by resource group.
 
-    ![Resource group segmentation](images/sysdig-platform-14.png "Resource group segmentation")
+    ![Resource group segmentation](images/sysdig-platform-14.png "Resource group segmentation"){: caption="Resource group segment" caption-side="bottom"}
 
 6. Select 1 or more resource groups for which you want the data to be visible to users that are members of this team.
 
@@ -313,7 +313,7 @@ Complete the following steps:
 
 2. Navigate to the **Settings** section.
 
-    ![Settings section](images/sysdig-platform-12.png "Settings section")
+    ![Settings section](images/sysdig-platform-12.png "Settings section"){: caption="Settings" caption-side="bottom"}
 
 3. Select **Teams**. Then, select a team where you want to restrict access to the platform metrics.
 

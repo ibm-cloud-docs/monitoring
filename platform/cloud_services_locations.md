@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2023
 lastupdated: "2023-02-01"
 
-keywords: IBM Cloud, monitoring, platform metrics
+keywords:
 
 subcollection: monitoring
 
@@ -21,7 +21,6 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 ## Cloud Foundry
 {: #cloud_services_locations_cf}
-
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
 |---------------------------------------------------------------|---------------------|------------------|
@@ -158,6 +157,39 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 {: #cs-infra-table-3}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_infra"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+### {{site.data.keyword.vmware-service_full}}
+{: #cloud_services_locations_compute_vmware-service}
+
+| Service              | `Frankfurt (eu-de)` | `London (eu-gb)` |
+|----------------------|---------------------|------------------|
+| {{site.data.keyword.vmware-service_short}} | ![Checkmark icon](../images/checkmark-icon.svg) |   |
+{: caption="{{site.data.keyword.vmware-service_short}} services integration in Europe locations" caption-side="top"}
+{: #cs-vmware-service-table-1}
+{: tab-title="Europe"}
+{: tab-group="cs_vmware-service"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
+|------------------------------------------------|---------------------|------------------------------------|
+| {{site.data.keyword.vmware-service_short}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+{: caption="{{site.data.keyword.vmware-service_short}} services integration in America's locations" caption-side="top"}
+{: #cs-vmware-service-table-2}
+{: tab-title="America"}
+{: tab-group="cs_vmware-service"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
+|------------------------------------------------|------------------|----------------------------|
+| {{site.data.keyword.vmware-service_short}}     |   |   |
+{: caption="{{site.data.keyword.vmware-service_short}} services integration in AP locations" caption-side="top"}
+{: #cs-vmware-service-table-3}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_vmware-service"}
 {: class="simple-tab-table"}
 {: row-headers}
 
@@ -323,7 +355,6 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.dv_full_notm}}                        |    | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.Db2_on_Cloud_long_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
-
 {: caption="Database services integration in Europe locations" caption-side="top"}
 {: #cs-db-table-1}
 {: tab-title="Europe"}
@@ -345,7 +376,6 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.dv_full_notm}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.Db2_on_Cloud_long_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
-
 {: caption="Database services integration in America's locations" caption-side="top"}
 {: #cs-db-table-2}
 {: tab-title="America"}
@@ -366,7 +396,6 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 | {{site.data.keyword.ihsdbaas_mongodb_full}}|    | ![Checkmark icon](../images/checkmark-icon.svg)  |
 | {{site.data.keyword.ihsdbaas_postgresql_full}}|    | ![Checkmark icon](../images/checkmark-icon.svg)  |
 | {{site.data.keyword.Db2_on_Cloud_long_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
-
 {: caption="Database services integration in AP locations" caption-side="top"}
 {: #cs-db-table-3}
 {: tab-title="Asia Pacific"}

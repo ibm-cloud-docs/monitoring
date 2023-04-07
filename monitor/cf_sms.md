@@ -117,7 +117,7 @@ This example shows how to use [Twilio Programmable SMS Messaging support](https:
 12. [Configure an {{site.data.keyword.mon_full_notm}} alert to send to the configured notification channel.](/docs/monitoring?topic=monitoring-alerts)
 
 ## Customizing the alert message
-{: cf_sms_custom}
+{: #cf_sms_custom}
 
 {{site.data.keyword.mon_full_notm}} sends alert data as a [JSON payload](https://docs.sysdig.com/en/configure-a-webhook-channel.html){: external}.  The information provided by the `JSON` file can be used to customize your SMS message.
 
