@@ -52,7 +52,7 @@ Add a severity level. Valid severity values are `info`, `low`, `medium`, and `hi
 
     Option 2: Choose **Create multi-condition alerts**. Enter the condition, for example, `min(min(cpu.used.percent)) < = 50 OR max(max(cpu.used.percent)) >= 80`.
 
-    ![Multi-condition alert](images/multi-condition-alerts.png "Multi-condition alert")
+    ![Multi-condition alert](images/multi-condition-alerts.png "Multi-condition alert"){: caption="Multi-condition alert" caption-side="bottom"}
 
 ## Step 5. Define the scope
 {: #alert-config-step5}

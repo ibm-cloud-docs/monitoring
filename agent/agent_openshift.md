@@ -38,7 +38,7 @@ In order to use this script, you must have a minimum of `Viewer` and `Manager` I
 {: tip}
 
 
-```
+```sh
 curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer  --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --collector_port 6443 --API_ENDPOINT <API-ENDPOINT> --openshift [-as] [-af]
 ```
 {: codeblock}
@@ -66,14 +66,14 @@ Where
 
 To deploy the agent by using a public endpoint, run the following command:
 
-```
+```sh
 curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a ACCESS_KEY -c ingest.<REGION>.monitoring.cloud.ibm.com -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer --analysismanager https://ingest.<REGION>.monitoring.cloud.ibm.com/internal/scanning/scanning-analysis-collector --collector_port 6443 --API_ENDPOINT <REGION>.monitoring.cloud.ibm.com --openshift [-as] [-af]
 ```
 {: codeblock}
 
 To deploy the agent by using a private endpoint, run the following command:
 
-```
+```sh
 curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a ACCESS_KEY -c ingest.private.<REGION>.monitoring.cloud.ibm.com -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer --analysismanager https://ingest.private.<REGION>.monitoring.cloud.ibm.com/internal/scanning/scanning-analysis-collector --collector_port 6443 --API_ENDPOINT private.<REGION>.monitoring.cloud.ibm.com --openshift [-as] [-af]
 ```
 {: codeblock}
@@ -82,7 +82,7 @@ curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a ACCESS_KEY -c 
 
 For example, you can run in the US-South region the following command to deploy the agent:
 
-```
+```sh
 curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a APIKEY -c ingest.us-south.monitoring.cloud.ibm.com -ac 'sysdig_capture_enabled: false' --nodeanalyzer  --analysismanager https://ingest.us-south.monitoring.cloud.ibm.com/internal/scanning/scanning-analysis-collector  --collector_port 6443 --api_endpoint us-south.monitoring.cloud.ibm.com --openshift
 ```
 {: screen}
@@ -95,7 +95,7 @@ curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a APIKEY -c inge
 
 Run the following command to remove an agent:
 
-```
+```sh
 curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a ACCESS_KEY -c COLLECTOR_ENDPOINT --openshift --remove
 ```
 {: codeblock}

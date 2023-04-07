@@ -24,9 +24,9 @@ IAM can map a combination of teams and roles so that a user only has access to a
 
 Teams provide additional security by only allowing users to see metrics that are related to the infrastructure where their apps are deployed, as opposed to the entire infrastructure of the account. For example, in a Kubernetes cluster, you could grant a group of developers access to only see reports from scanned images from 1 `kubernestes.namespace` where their application is deployed.
 
-In a {{site.data.keyword.mon_short}} Secure instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics with a defined scope.
+In a {{site.data.keyword.mon_full_notm}} instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics with a defined scope.
 
-A {{site.data.keyword.mon_short}} Secure instance includes the **Secure operations** teams.
+A {{site.data.keyword.mon_full_notm}} instance includes the **Secure operations** teams.
 
 By default, users are granted access to the `Secure operations` team or to the team that is configured as the default team by the instance administrator.
 
@@ -111,8 +111,6 @@ You can assign the policy by using the UI or through the command line.
 
 When you define the policy, you need to select a platform role. Platform management roles cover a range of actions, including the ability to create and delete instances, manage aliases, bindings, and credentials, and manage access. Valid platform roles are administrator, editor, operator, viewer.
 
-Platform access and team access cannot be defined in the same access policy.
-{: important}
 
 ### Add permissions through the CLI
 {: #iam_grant_team_step2_1}

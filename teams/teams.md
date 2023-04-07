@@ -91,7 +91,7 @@ Complete the following steps to create a team:
 
 7. Click **Save**.
 
-![Team Configuration](images/team-configuration.png "Team Configuration")
+    ![Team Configuration](images/team-configuration.png "Team Configuration"){: caption="Team configuration" caption-side="bottom"}
 
 ## Changing the scope of a team
 {: #teams_scope}

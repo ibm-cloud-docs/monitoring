@@ -147,7 +147,6 @@ You can use Python to create dashboards.
 
 The following code shows the structure of a Python script to create a new dashboard for the default team.
 
-```python
 The following code shows the structure of a Python script:
 
 ```python

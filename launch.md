@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-03-28"
+lastupdated: "2022-05-05"
 
 
 keywords: IBM Cloud, monitoring, launch web UI
@@ -23,7 +23,7 @@ After you provision an instance of the {{site.data.keyword.mon_full_notm}} servi
 ## Grant IAM policies to a user to view data
 {: #launch_step1}
 
-**Note:** You must be an administrator of the {{site.data.keyword.mon_full_notm}} service, an administrator of the {{site.data.keyword.mon_full_notm}} instance, or have account IAM permissions to grant other users policies.
+**Note:** You must be an administrator of the {{site.data.keyword.mon_short}} service, an administrator of the {{site.data.keyword.mon_short}} instance, or have account IAM permissions to grant other users policies.
 
 The following table lists the minimum policies that a user must have to be able to launch the {{site.data.keyword.mon_full_notm}} web UI, and view data:
 
@@ -36,10 +36,10 @@ The following table lists the minimum policies that a user must have to be able 
 For more information on how to configure these policies for a user, see [Granting permissions to launch the monitoring UI or to make REST API calls](/docs/monitoring?topic=monitoring-iam_grant).
 
 
-## Launch the Monitor web UI through the {{site.data.keyword.cloud_notm}} UI
+## Launch the {{site.data.keyword.mon_short}} UI
 {: #launch_step2}
 
-You launch the Web UI within the context of an {{site.data.keyword.mon_full_notm}} instance, from the {{site.data.keyword.cloud_notm}} UI.
+You launch the {{site.data.keyword.mon_short}} UI within the context of an {{site.data.keyword.mon_full_notm}} instance, from the {{site.data.keyword.cloud_notm}} UI.
 
 Complete the following steps to launch the web UI:
 
@@ -57,15 +57,16 @@ Complete the following steps to launch the web UI:
 
 4. Select one instance. Then, click **Open dashboard**.
 
-    The Web UI opens.
+    The {{site.data.keyword.mon_short}} UI opens.
 
 
-## Launch the Secure web UI
+## Launch the Secure UI
 {: #launch_step3}
 
-By default, the *Monitor* view opens when you launch the monitoring UI.
+The Secure UI is only available for instances that have a plan that includes Secure.
+{: note}
 
-To access the *Secure* web UI, complete the following steps:
+To access the *Secure* UI, complete the following steps:
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
@@ -81,19 +82,14 @@ To access the *Secure* web UI, complete the following steps:
 
 4. Select one instance. Then, click **Open dashboard**.
 
-    The Web UI opens.
+    The {{site.data.keyword.mon_short}} UI opens by default.
 
 5. Click the **Monitor** icon.
 
-    ![Monitor icon](images/monitor.png)
+    ![Monitor icon](images/monitor.png){: caption="Monitor icon" caption-side="bottom"}
 
-    The *Platform* selection box opens.
+    The *Switch Products* selection box opens.
 
-    ![Platform icon](images/platform.png)
+    ![Platform icon](images/platform.png){: caption="Platform icon" caption-side="bottom"}
 
-    The selection box is only available for instances with the secure option.
-    {: note}
-
-6. Select the **Secure** icon.
-
-    ![Secure icon](images/secure.png)
+6. Select **Secure** to launch the Secure UI.

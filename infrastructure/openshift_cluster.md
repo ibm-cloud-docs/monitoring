@@ -23,7 +23,7 @@ To configure a cluster to forward metrics, you must install a monitoring agent o
 
 You view metrics using the web-based user interface.
 
-![Components overview on the {{site.data.keyword.cloud_notm}}](images/openshift.png "Components overview on the {{site.data.keyword.cloud_notm}}")
+![Components overview on the {{site.data.keyword.cloud_notm}}](images/openshift.png "Components overview on the {{site.data.keyword.cloud_notm}}"){: caption="Components overview" caption-side="bottom"}
 
 ## Objectives
 {: #openshift_cluster_objectives}
@@ -156,6 +156,7 @@ Complete the following steps:
 5. Log in to the cluster. Choose a method to login to an OpenShift cluster. [Learn more about the methods to login](/docs/openshift?topic=openshift-access_cluster).
 
 ### Install the {{site.data.keyword.mon_full_notm}} agent in your cluster
+{: #install_os_agent}
 
 1. Run the following command for your public or private endpoint.
 
@@ -258,7 +259,7 @@ For example, to configure color-coding for a column, complete the following step
 
 To view more details about a particular worker node, click on the infrastructure entry and the *Overview by Host* dashboard opens in the table. You can explore different dashboards and metrics by clicking on the ![switch dashboard](../images/switch_dashboards_1.png) icon. Notice that you can only select metrics and dashboards that are relevant to the selected worker node.
 
-To return to the full _Explore table_, click the **X (Back to Explore Table)** button.
+To return to the full *Explore table*, click the **X (Back to Explore Table)** button.
 
 
 ## Next steps
