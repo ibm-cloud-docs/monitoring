@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-08-22"
+lastupdated: "2023-04-14"
 
 keywords: Monitoring release notes, Monitoring updates
 
@@ -20,15 +20,35 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
+## 14 April 2023
+{: #monitoring-apr1423}
+{: release-note}
+
+{{site.data.keyword.mon_full}} `Secure` is now {{site.data.keyword.mon_full}} {{site.data.keyword.sysdigsecure_short}}
+:   The UI now displays {{site.data.keyword.mon_full}} `Secure` functions under the new name {{site.data.keyword.sysdigsecure_short}}.
+
+    * The `Secure` icon has changed and now includes the text {{site.data.keyword.sysdigsecure_short}}.
+
+    * [To access the `Secure` UI, select `Workload Protection` instead of `Secure`.](/docs/monitoring?topic=monitoring-launch#launch_step3)
+
+    * All instructions in the [{{site.data.keyword.mon_full}} documentation](/docs/monitoring) referring to `Secure` apply to {{site.data.keyword.sysdigsecure_short}}.
+
+## 07 October 2022
+{: #monitoring-oct070522}
+{: release-note}
+
+{{site.data.keyword.mon_full}} has improved Explorer support for customers with only platform metrics.
+:   For customers monitoring only platform metrics, the Explorer view will now show the metrics organized by metric namespace.  The ability to query metrics using PromQL is also supported.
+
 ## 05 August 2022
-{: #monitoring-august0522}
+{: #monitoring-aug0522}
 {: release-note}
 
 {{site.data.keyword.mon_full}} has released support for trusted profiles.
 :   For more information, see [Trusted Profiles](/docs/monitoring?topic=monitoring-trusted_profiles).
 
 ## 06 July 2022
-{: #monitoring-july0622}
+{: #monitoring-jul0622}
 {: release-note}
 
 {{site.data.keyword.mon_full}} has released a new *Alert Editor* interface.
