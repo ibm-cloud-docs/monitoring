@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-03-28"
+lastupdated: "2023-04-26"
 
-keywords: IBM Cloud, monitoring, iam
+keywords:
 
 subcollection: monitoring
 
@@ -94,21 +94,66 @@ A user with an **administrator** role automatically has the service **manager** 
 
 The following table identifies the service role that you can grant a user in the {{site.data.keyword.cloud_notm}} to run the specified actions:
 
-| Actions                                       | Manager                                           | Writer                         | Reader |
-|-----------------------------------------------|---------------------------------------------------|--------------------------------|--------|
-| `Reset the access key`                    | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
-| `Create, configure, and delete teams`            | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
-| `Configure and remove notifications channels`    | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
-| `Configure and remove monitoring agents`             | ![Checkmark icon](../images/checkmark-icon.svg) |   |   |
-| `Create, delete, and edit content in the monitoring UI`| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
-| `Create and delete dashboards`                   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
-| `Create and delete alerts`                       | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | |
-| `Create and delete events`                   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
-| `Create and delete captures`                     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
-| `Modify the scope of dashboards/panels`        | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | |
-| `View metrics, dashboards, alerts, events, and captures`  | ![Checkmark icon](../images/checkmark-icon.svg)      | ![Checkmark icon](../images/checkmark-icon.svg)                    | ![Checkmark icon](../images/checkmark-icon.svg)    |
+| Action | Description | Manager | Writer | Reader | Administrator |
+|--------|-------------|---------|--------|--------|---------------|
+| `sysdig-monitor.secure.manager` | Manage `Secure` functions. | | | | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.secure.user` | User access to `Secure` functions. | | | | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.secure.viewer` | Viewer access to `Secure` functions. | | | | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.agent-installation.read` | Agent installation access. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.agent.cli.agent-network-calls-to-remote-pods` | Access to network calls for the CLI. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.agent.cli.agent-status` | Access to agent status from the CLI. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.agent.cli.view` | Access to view the CLI. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.agent.cli.view-configuration` | Access to view the configuration from the CLI. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.alert-events.edit` | Edit alert events. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.alert-events.read` | View alert events. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.alert.edit` | Edit alerts. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.alerts.read` | View alerts. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.api-token.edit` | Edit API tokens. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.api-token.read` | View API tokens. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.captures.edit` | Edit captures. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.captures.read` | View captures. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.custom-events.edit` | Edit custom events. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.custom-events.read` | View custom events. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.dashboard-metrics-data.read` | Read dashboard metrics. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.dashboard.edit` | Edit dashboards. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.dashboards.read` | View dashboards. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.datastream.read` | View datastreams. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.downtimes.read` | View downtimes. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.events-forwarder.read` | View events forwarding. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.explore.edit` | Modify the Explore view. | ![Checkmark icon](../images/checkmark-icon.svg) |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.explore.read` | Use the Explore view. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.file-storage-config.read` | View file storage configuration. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.global.notification-channels.read` | View global notification channels. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.groupings.edit` | Edit groups | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.groupings.read` | View groups | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.helmsrenderer.read` | Access the helm renderer. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.infrastructure.read` | Access infrastructure. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.integrations.read` | Access integrations. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.manual-integrations.edit` | Edit manual integrations. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.memberships.edit` | Edit memberships. |  |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.metrics-data.read` | View metrics data. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.metrics-descriptors.read` | View metrics descriptors. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.notification-channels.edit` | Edit notification channels. | ![Checkmark icon](../images/checkmark-icon.svg) |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.notification-channels.view` | View notification channels. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.overviews.read` | View overviews. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.promcat.integration.edit`| Edit PromCat integrations. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.promcat.integrations.read` | View PromCat integrations. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.promcat.integrations.validates` | Test to see if PromCat integrations are properly configured. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.promql-metadata.read` | View PromQL metadata. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.providers.read` | View providers. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.spotlight.read` | View Spotlight. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.sysdig-storage.read` | View service storage use. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.team.sharing.groupings.toggle` | Configure team sharing. | ![Checkmark icon](../images/checkmark-icon.svg) |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.teams.manage` | Configure teams. | ![Checkmark icon](../images/checkmark-icon.svg) |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.teams.read` | View team configurations. |  |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.token.view` | View tokens. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.user.read` | View users. |  |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.system-role.admin` | Configure system roles. |  |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.platform-metric.publish` `[*]` | | | | |
 {: caption="Table 2. Service roles and actions" caption-side="top"}
 
+`[*]` - This service role is for internal use only and will not be used in your environment.
+{: note}
 
 ## IAM actions
 {: #iam_actions}
@@ -117,13 +162,16 @@ The following table identifies the IAM actions that are assigned to the platform
 
 | Role type         | Role              | IAM actions |
 |-------------------|-------------------|--------------|
-| Platform          | `administrator`   | `sysdig-monitor.launch.admin` </br>`sysdig-monitor.launch.user` </br>`sysdig-monitor.launch.viewer` |
-| Service           | `manager`         | `sysdig-monitor.launch.admin` </br>`sysdig-monitor.launch.user` </br>`sysdig-monitor.launch.viewer` |
-| Service           | `writer`          | `sysdig-monitor.launch.user` </br>`sysdig-monitor.launch.viewer` |
+| Platform          | `administrator`   | `sysdig-monitor.launch.admin`  /n `sysdig-monitor.launch.user`  /n `sysdig-monitor.launch.viewer` |
+| Service           | `manager`         | `sysdig-monitor.launch.admin`  /n `sysdig-monitor.launch.user`  /n `sysdig-monitor.launch.viewer` |
+| Service           | `writer`          | `sysdig-monitor.launch.user`  /n `sysdig-monitor.launch.viewer` |
 | Service           | `reader`          | `sysdig-monitor.launch.viewer` |
 {: caption="Table 3. IAM actions assigned to platform and service roles" caption-side="top"}
 
+The `sysdig-monitor.launch.viewer` action must be assigned at a minimum to access the instance. If not assigned, an error will be returned.
 
+An additional role of `Supertenant Metrics Publisher` is a role that you will see in IAM. This role is for internal use only and will not be used in your environment.
+{: important}
 
 ## How do I know which access policies are set for me?
 {: #iam_accesspolicy}
