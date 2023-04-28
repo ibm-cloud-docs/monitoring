@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-04-28"
 
 keywords:
 
@@ -32,7 +32,40 @@ These instructions are for Ubuntu systems but can be used for other Linux system
 
 To configure an Ubuntu server to forward metrics, you must install a monitoring agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics.
 
-You then view the metrics using the web-based user interface.
+
+By default, this agent collects core infrastructure and network time series that you can use to monitor the host. For a list of collected metrics, see [Metrics Available for non-orchestrated environments](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-configuration/configure-agent-modes/metrics-available-in-monitor-light/).
+
+The {{site.data.keyword.mon_short}} agent automatically collects the following types of system metrics per host:
+
+- `System hosts metrics` provide information about CPU, memory, and storage usage metrics, that you can use to analyze the performance and resource utilization of all your processes.
+
+- `File and File System metrics` provide information about files and file system that you can use to analyze file interactions that occur in your system. For example, you can find information about your open files, bytes going in and out, or the percentage of usage of a given file system.
+
+- `Process metrics` provide information about the processes that run in your servers. For example, you can use these metrics to  explore the number of processes, or get client or server information.
+
+- `Network metrics` provide information about the network. They offer insight to the connections that are established between your applications, containers, and servers. For example, you can find information about the bytes that are being sent or received, or the number of HTTP requests, connections, and latency. In addition, for SQL or MongoDB, the agent collects additional information when it is configured in troubleshooting mode.
+
+Through the {{site.data.keyword.mon_short}} UI, you can analyze data in the *Advisor* tab, the *Explore* tab, and in the *Dashboard* tab. You monitor the data through metric views and dashboards.
+{: shortdesc}
+
+Consider the following information when monitoring your data:
+* In the *Explorer* tab, you can monitor individual metrics.
+* In the *Advisor* tab, you can monitor Openshift or host level metrics.
+
+    This tab is only available for users that belong to a team that has access to monitor Openshift or host level metrics.
+    {: note}
+
+* In the *Dashboard* tab, you can monitor through panels predefined dashboards or custom ones and get a specialized insight into network data, application data, topology, services, hosts, and containers. A panel displays a metric or group of metrics in a dashboard.
+
+
+For each metric view and dashboard, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. For more information, see [Managing panels](/docs/monitoring?topic=monitoring-panels).
+
+
+You can configure a dashboard as the default entry point for a team, unifying a team's experience, and allowing users to focus their immediate attention on the most relevant information for them.
+{: tip}
+
+For more information, see [Viewing metrics](/docs/monitoring?topic=monitoring-monitoring).
+
 
 
 ## Before you begin
@@ -165,6 +198,25 @@ Complete the following steps from a command line:
       ```
       {: pre}
 
+6. Configure the agent for non-orchestrated environments.
+
+    Open the `dragent.yaml` file that is located in `/opt/draios/etc/`.
+
+    Add the following configuration parameter:
+
+    ```
+    feature:
+      mode: monitor_light
+    ```
+    {: codeblock}
+
+    Restart the agent. Run the following command:
+
+    ```sh
+    service dragent restart
+    ```
+    {: pre}
+
 
 ## Launch the monitoring UI
 {: #ubuntu_step4}
@@ -184,12 +236,12 @@ Complete the following steps to launch the web UI:
 
 4. Select your instance. Then, click **Open dashboard**.
 
-If the monitoring agent is configured successfully, the **Explore** view opens.
+IIt may take some time before you see the server entry while the information is initally collected and processed by the monitoring agent.
+{: note}
 
-However, if the monitoring agent is not installed successfully, points to the wrong ingestion endpoint, or the access key is incorrect, the page that opens informs you about what to do next.
-
-You only can have one web UI session open per instance per browser.
+You only can monitor one instance per browser. You could have multiple tabs for the same instance.
 {: tip}
+
 
 ## Monitor your Ubuntu server
 {: #ubuntu_step5}
@@ -210,6 +262,10 @@ To configure color-coding for a column, complete the following steps:
 ## Next steps
 {: #ubuntu_next_steps}
 
-* Create a custom dashboard. For more information, see [Working with dashboards](/docs/monitoring?topic=monitoring-dashboards#dashboards).
+- Create a custom dashboard. For more information, see [Working with dashboards](/docs/monitoring?topic=monitoring-dashboards#dashboards).
 
-* Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).
+- Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).
+
+- Learn how to manage logs. See [Logging with Linux VPC server instances](/docs/log-analysis?topic=log-analysis-ubuntu).
+
+- Learn about {{site.data.keyword.sysdigsecure_full}} and how you can use it to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).

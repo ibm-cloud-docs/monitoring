@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-07-01"
+lastupdated: "2023-04-28"
 
-keywords: IBM Cloud, monitoring, windows
+keywords:
 
 subcollection: monitoring
 
@@ -26,9 +26,6 @@ completion-time: 1h
 
 The standard monitoring agent cannot be installed on a Windows platform. In order to monitor a Windows system with {{site.data.keyword.mon_full_notm}}, you can leverage the [Prometheus Windows Exporter](https://promcat.io/apps/windows){: external} to perform the collection of the metrics on the system.
 {: shortdesc}
-
-If you need information on the legacy Prometheus WMI Exporter, see [Monitoring a Windows environment using the legacy WMI Exporter](/docs/monitoring?topic=monitoring-windows_wmi).
-{: note}
 
 Once the metrics are collected you have two options for publishing the metrics, remotely scraping the metrics with a Linux monitoring agent,or pushing from a local instance of Prometheus using remote write. Step 3 will cover these two options, but step 1 and 2 are the same regardless of how the metrics are sent.
 
@@ -397,3 +394,15 @@ For example, complete the following instructions when the container approach is 
     service dragent restart
     ```
     {: pre}
+
+
+## Next steps
+{: #windows_step6}
+{: step}
+
+
+- Create a custom dashboard. For more information, see [Working with dashboards](/docs/monitoring?topic=monitoring-dashboards#dashboards).
+
+- Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).
+
+- Learn how to manage logs. See [Logging with Windows VPC server instances](/docs/log-analysis?topic=log-analysis-windows_vpc_tutorial).

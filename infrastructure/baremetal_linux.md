@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-04-28"
 
 keywords:
 
@@ -23,8 +23,41 @@ completion-time: 1h
 {: toc-services="monitoring"}
 {: toc-completion-time="1h"}
 
-You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by configuring a monitoring agent in your server. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics. You view metrics via the web-based user interface.
+You can monitor a Bare Metal server with {{site.data.keyword.mon_full_notm}} by configuring a monitoring agent in your server. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics. You view metrics via the web-based user interface. You can monitor Bare metals in {{site.data.keyword.cloud_notm}}, on-prem, and in other clouds.
 {: shortdesc}
+
+By default, this agent collects core infrastructure and network time series that you can use to monitor the host. For a list of collected metrics, see [Metrics Available for non-orchestrated environments](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-configuration/configure-agent-modes/metrics-available-in-monitor-light/).
+
+The {{site.data.keyword.mon_short}} agent automatically collects the following types of system metrics per host:
+
+- `System hosts metrics` provide information about CPU, memory, and storage usage metrics, that you can use to analyze the performance and resource utilization of all your processes.
+
+- `File and File System metrics` provide information about files and file system that you can use to analyze file interactions that occur in your system. For example, you can find information about your open files, bytes going in and out, or the percentage of usage of a given file system.
+
+- `Process metrics` provide information about the processes that run in your servers. For example, you can use these metrics to  explore the number of processes, or get client or server information.
+
+- `Network metrics` provide information about the network. They offer insight to the connections that are established between your applications, containers, and servers. For example, you can find information about the bytes that are being sent or received, or the number of HTTP requests, connections, and latency. In addition, for SQL or MongoDB, the agent collects additional information when it is configured in troubleshooting mode.
+
+Through the {{site.data.keyword.mon_short}} UI, you can analyze data in the *Advisor* tab, the *Explore* tab, and in the *Dashboard* tab. You monitor the data through metric views and dashboards.
+{: shortdesc}
+
+Consider the following information when monitoring your data:
+* In the *Explorer* tab, you can monitor individual metrics.
+* In the *Advisor* tab, you can monitor Openshift or host level metrics.
+
+    This tab is only available for users that belong to a team that has access to monitor Openshift or host level metrics.
+    {: note}
+
+* In the *Dashboard* tab, you can monitor through panels predefined dashboards or custom ones and get a specialized insight into network data, application data, topology, services, hosts, and containers. A panel displays a metric or group of metrics in a dashboard.
+
+
+For each metric view and dashboard, you can define the scope of the data, how to aggregate data, and what time and group filters to apply to the data. For more information, see [Managing panels](/docs/monitoring?topic=monitoring-panels).
+
+
+You can configure a dashboard as the default entry point for a team, unifying a team's experience, and allowing users to focus their immediate attention on the most relevant information for them.
+{: tip}
+
+For more information, see [Viewing metrics](/docs/monitoring?topic=monitoring-monitoring).
 
 
 
@@ -135,6 +168,24 @@ Complete the following steps from the command line to install a monitoring agent
     ```
     {: screen}
 
+4. Configure the agent for non-orchestrated environments.
+
+    Open the `dragent.yaml` file that is located in `/opt/draios/etc/`.
+
+    Add the following configuration parameter:
+
+    ```text
+    feature:
+      mode: monitor_light
+    ```
+    {: codeblock}
+
+    Restart the agent. Run the following command:
+
+    ```sh
+    service dragent restart
+    ```
+    {: pre}
 
 ## Launch the monitoring UI to verify that you are getting data to monitor the bare metal server
 {: #baremetal_linux_step2}
@@ -154,22 +205,37 @@ Complete the following steps to launch the web UI:
 
 4. Select your instance. Then, click **Open dashboard**.
 
-The first time that you launch the monitoring UI, you might get a set of screens. Click **Next**, and **Complete Onboarding**.
-
-If the monitoring agent is configured successfully, in the **Explore** view you can see your bare metal server in the **Hosts and Containers** section.
-
-![Explore view](images/monitor-baremetal-img1.png "Explore view"){: caption="Explore view" caption-side="bottom"}
-
 It may take some time before you see the bare metal entry while the information is initally collected and processed by the monitoring agent.
 {: note}
 
 You only can monitor one instance per browser. You could have multiple tabs for the same instance.
 {: tip}
 
+## Monitor your bare metal
+{: #baremetal_linux_step3}
+{: step}
+
+In the *Advisor* tab, you can monitor and troubleshoot the health, risk, and capacity of hosts and Kubernetes clusters.
+
+![Advisor tab](../images/advisor-tab.png "Advisor tab"){: caption="Advisor tab" caption-side="bottom"}
+
+- Data is refreshed every 10 minutes.
+- Metrics are prioritized by event count and severity.
+- For more information, see [Advisor](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/){: external}.
+
+In the *Advisor* section, choose to monitor by host. Check out the predefined dashboards that you can use to monitor the health of your resources.
+
+When you choose to monitor by host, you can choose any of the following dashboards:
+- Host Resource Usage
+- File System Usage & Performance
+- Memory Usage
+- Network
+- Sysdig Agent Health & Status
+
 
 
 ## [Optional] Configure the Prometheus IPMI Exporter to monitor sensor metrics
-{: #baremetal_linux_step3}
+{: #baremetal_linux_step4}
 {: step}
 
 In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics. You can use the `Prometheus IPMI Exporter` to perform the collection of Intelligent Platform Management Interface (IPMI) device sensor metrics from the bare metal server.
@@ -220,7 +286,7 @@ For more information, see [Prometheus IPMI Exporter](https://github.com/soundclo
 Complete the following steps to configure the Prometheus IPMI Exporter:
 
 ### Install the Prometheus IPMI exporter
-{: #baremetal_linux_step3_1}
+{: #baremetal_linux_step4_1}
 
 Complete the following steps:
 
@@ -323,7 +389,7 @@ Complete the following steps:
 
 
 ### Install the Prometheus exporter
-{: #baremetal_linux_step3_2}
+{: #baremetal_linux_step4_2}
 
 The monitoring agent automatically collects metrics from Prometheus exporters. Therefore, to collect metrics from your IPMI exporter, you must also configure the Prometheus exporter.
 
@@ -418,7 +484,7 @@ Complete the following steps to run the Prometheus exporter:
 
 
 ### Configure network settings
-{: #baremetal_linux_step3_3}
+{: #baremetal_linux_step4_3}
 
 If you want to collect metrics from remote servers, complete the following steps:
 
@@ -431,7 +497,7 @@ If you want to collect metrics from remote servers, complete the following steps
 
 
 ### Update the monitoring agent that is running in the bare metal server
-{: #baremetal_linux_step3_4}
+{: #baremetal_linux_step4_4}
 
 Complete the following steps:
 
@@ -481,7 +547,7 @@ Complete the following steps:
 
 
 ## Verify that you can see the prometheus ipmi metrics
-{: #baremetal_linux_step4}
+{: #baremetal_linux_step5}
 {: step}
 
 Complete the following steps:
@@ -526,3 +592,16 @@ To create a dashboard to monitor the IPMI metrics, complete the following steps:
 4. Add more IPMI metrics to the **[Bare Metal] IPMI monitoring** custom dashboard. Repeat the steps for each of the IPMI metrics that you want to monitor.
 
 5. Drag and drop, and resize panels to get the dashboard layout that you want. Save the layout.
+
+
+
+## Next steps
+{: #baremetal_linux_next_steps}
+
+- Create a custom dashboard. For more information, see [Working with dashboards](/docs/monitoring?topic=monitoring-dashboards#dashboards).
+
+- Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).
+
+- Learn how to manage logs. See [Logging with bare metal servers](/docs/log-analysis?topic=log-analysis-ubuntu_baremetal).
+
+- Learn about {{site.data.keyword.sysdigsecure_full}} and how you can use it to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).

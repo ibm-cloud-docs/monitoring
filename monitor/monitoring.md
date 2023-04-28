@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-03-12"
+lastupdated: "2023-04-28"
 
-keywords: IBM Cloud, monitoring
+keywords:
 
 subcollection: monitoring
 
@@ -183,8 +183,5 @@ In the Explore section, you can view and troubleshoot key metrics and entities o
 
 - *PromQL Query*: Use the PromQL Metric Explorer to build PromQL queries.
 - *PromQL library*: Try predefined PromQL queries. Then, create an alert based on a query that you try or create a dashboard panel from a predefined query.
-
-
-
 
 For more information, see [Explore](https://docs.sysdig.com/en/docs/sysdig-monitor/explore/){: external}.

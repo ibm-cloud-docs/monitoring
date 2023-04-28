@@ -11,78 +11,112 @@ toc:
     path: monitoring
     label: Monitoring
 
-  entries: 
-  - navgroup: 
+  entries:
+  - navgroup:
       id: learn
       topics:
       - getting-started.md
-      - topic: releasenotes.md
-        navtitle: Release notes
-      - releasenotes_notifications.md
 
-      - topicgroup: 
+      - topicgroup:
           label: About
           topics:
           - topic: about-monitor.md
             navtitle: Monitoring in IBM Cloud
           - topic: about-collect-metrics.md
             navtitle: Collecting metrics
+          - topic: about-timeseries.md
+            navtitle: Metrics and time-series
           - topic: monitor/monitoring.md
             navtitle: Viewing metrics
           - topic: monitor/alerts.md
             navtitle: Working with alerts and events
           - topic: features.md
             navtitle: Features
-          - monitor/getting-started-monitor.md
 
-      - topicgroup: 
-          label: Collecting metrics
+      - topicgroup:
+          label: Monitoring IBM Cloud services
           topics:
-          - topicgroup: 
-              label: Custom metrics
-              topics:
-              - topic: prometheus/prometheus_remote_write.md
-                navtitle: Metrics via Prometheus remote-write
-              - topic: exporters/prometheus-exporters.md
-                navtitle: Metrics via Prometheus exporters
-              links: 
-              - link: 
-                  label: Prometheus native metrics
-                  href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/collect-prometheus-metrics/
-              - link: 
-                  label: StatsD metrics
-                  href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-statsd-metrics/
-              - link: 
-                  label: JMX metrics
-                  href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-jmx-metrics-from-java-virtual-machines/
-              - link: 
-                  label: Node.js application metrics
-                  href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-node.js-application-metrics/ 
-          - topicgroup: 
-              label: IBM Cloud service metrics
-              topics:
-              - platform/platform_metrics_enabling.md
-              - platform/platform_metrics_working.md
-              - platform/cloud_services.md
-              - platform/cloud_services_locations.md  
-          - monitor/data_streaming.md
-        
-      - topicgroup: 
-          label: Secure
-          topics:
-          - secure/getting-started-secure.md
-          links: 
-          - link: 
-              label: Sysdig Secure Product Page
-              href: https://sysdig.com/products/monitor/
-          - link: 
-              label: Sysdig Secure Documentation
-              href: https://docs.sysdig.com/en/sysdig-secure.html
+          - topic: platform/platform_metrics_enabling.md
+            navtitle: Enabling platform metrics
+          - topic: platform/platform_metrics_working.md
+            navtitle: Monitoring platform metrics
+          - topic: platform/cloud_services.md
+            navtitle: Services generating metrics
+          - topic: platform/cloud_services_locations.md
+            navtitle: Services generating metrics by location
 
-  - navgroup: 
+      - topicgroup:
+          label: Monitoring infrastructure
+          topics:
+          - topic: infrastructure/kubernetes_cluster.md
+            navtitle: Monitoring a Kubernetes cluster
+          - topic: infrastructure/openshift_cluster.md
+            navtitle: Monitoring an Openshift cluster
+          - topic: infrastructure/windows.md
+            navtitle: Monitoring a Windows environment
+          - topic: infrastructure/ubuntu.md
+            navtitle: Monitoring a Linux VPC instance
+          - topic: infrastructure/baremetal_linux.md
+            navtitle: Monitoring a Linux baremetal server
+
+      - topicgroup:
+          label: Collecting Prometheus metrics
+          topics:
+          - topic: prometheus/prometheus_remote_write.md
+            navtitle: Metrics via Prometheus remote-write
+          - topic: exporters/prometheus-exporters.md
+            navtitle: Metrics via Prometheus exporters
+          - topic: exporters/blackbox.md
+            navtitle: Collecting availability metrics
+          - topic: exporters/ipmi.md
+            navtitle: Collecting IPMI device sensor metrics
+          - topic: prometheus/prometheus_remote_write_kube.md
+            navtitle: Collecting Kube metrics by using remote write
+          - topic: prometheus/prometheus_remote_write_linux.md
+            navtitle: Collecting Linux metrics by using remote write
+          - topic: prometheus/prometheus_remote_write_was.md
+            navtitle: Collecting WAS metrics by using remote write
+          links:
+          - link:
+              label: Prometheus native metrics
+              href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/collect-prometheus-metrics/
+          - link:
+              label: StatsD metrics
+              href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-statsd-metrics/
+          - link:
+              label: JMX metrics
+              href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-jmx-metrics-from-java-virtual-machines/
+          - link:
+              label: Node.js application metrics
+              href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-node.js-application-metrics/
+
+      - topic: monitor/data_streaming.md
+        navtitle: Streaming metrics to Kafka
+
+      - topicgroup:
+          label: Sending notifications
+          topics:
+          - notifications/eventnotif_tutorial.md
+          - notifications/eventnotif_sms_tutorial.md
+
+      - topicgroup:
+          label: Workload Protection
+          links:
+          - link:
+              label: IBM Cloud Security and Compliance Center Workload Protection
+              href: https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-getting-started
+
+      - topicgroup:
+          label: Release notes
+          topics:
+          - topic: releasenotes.md
+            navtitle: Release notes
+          - releasenotes_notifications.md
+
+  - navgroup:
       id: howto
       topics:
-      - topicgroup: 
+      - topicgroup:
           label: Managing instances
           topics:
              - provision.md
@@ -90,88 +124,116 @@ toc:
              - iam/iam_instance_auth.md
              - remove.md
              - upgrade.md
-      - topicgroup: 
+      - topicgroup:
           label: Managing keys
           topics:
              - iam/access_key.md
              - iam/api_token.md
              - iam/api_monitor_token.md
 
-      - topicgroup: 
+      - topicgroup:
           label: Controlling access
           topics:
           - iam/iam.md
           - iam/iam_grant.md
           - iam/iam_grant_team.md
-          - iam/iam_grant_team_secure.md 
+          - iam/iam_grant_team_secure.md
           - iam/trusted_profiles.md
           - teams/teams.md
           - teams/team_id.md
-      
-      - topicgroup: 
+
+      - topicgroup:
           label: Logging and monitoring
           topics:
           - core/at_events.md
-      
-      - topicgroup: 
+
+      - topicgroup:
           label: Enhancing security
           topics:
           - core/data-security.md
           - core/service-connection.md
           - core/architecture-workload-isolation.md
           - core/ha-dr.md
-      
-      - topicgroup: 
+
+      - topicgroup:
           label: Monitoring UI
           topics:
           - launch.md
           - get_sysdig_web_url.md
-      
-      - topicgroup: 
+
+      - topicgroup:
           label: Monitoring agent
           topics:
-          - agent/agent_version.md
-          - agent/agent_image.md
-          - agent/resource_requirements.md
-          - agent/agent_kube.md
-          - agent/agent_openshift.md
-          - agent/agent_linux.md
-          - agent/agent_docker.md
-          - agent/change_kube_agent.md
-          - agent/change_linux_agent.md
-          - agent/change_container_agent.md
-          - agent/upgrade_agent.md
-          - agent/agent_log_level.md
-          links: 
-            - link: 
+          - topic: agent/agent_version.md
+            navtitle: Listing agent versions
+          - topic: agent/agent_version_host.md
+            navtitle: Finding the agent version of a host
+          - topic: agent/agent_ts_limits.md
+            navtitle: Checking custom time series collected by a host
+          - topicgroup:
+              label: Orchestrated environments
+              topics:
+              - topic: agent/agent_image.md
+                navtitle: Listing agent image versions
+              - topic: agent/resource_requirements.md
+                navtitle: Kubernetes resource requirements
+              - topic: agent/agent-deploy-kube-helm.md
+                navtitle: Managing the Kube agent by using Helm
+              - topic: agent/agent-deploy-openshift-helm.md
+                navtitle: Managing the Openshift agent by using Helm
+              - topic: agent/agent_kube.md
+                navtitle: Deploying the Kube agent by using a script
+              - topic: agent/deploy-secure-features.md
+                navtitle: Deploying Secure features on a host
+              - topic: agent/agent_openshift.md
+                navtitle: Deploying the Openshift agent by using a script
+              - topic: agent/change_kube_agent.md
+                navtitle: Customizing Kube agents
+          - topicgroup:
+              label: Non-orchestrated environments
+              topics:
+              - topic: agent/agent_linux.md
+                navtitle: Managing the Linux agent
+              - topic: agent/agent_linux_1.md
+                navtitle: Deploying Linux agent with no public access
+              - topic: agent/change_linux_agent.md
+                navtitle: Customizing linux agents
+              - topic: agent/agent_docker.md
+                navtitle: Managing the agent by using Docker containers
+              - topic: agent/change_container_agent.md
+                navtitle: Customize a Docker containerized agent
+          - topic: agent/agent_log_level.md
+            navtitle: Configuring the log level
+          links:
+            - link:
                 label: Monitoring agent Release Notes
                 href: https://docs.sysdig.com/en/sysdig-agent-release-notes.html
-      
-      - topicgroup: 
+
+      - topicgroup:
           label: Working with metrics
-          links: 
-            - link: 
+          links:
+            - link:
                 label: Metrics dictionary
                 href: https://docs.sysdig.com/en/metrics-dictionary.html
-            - link: 
+            - link:
                 label: Working with metrics
                 href: https://docs.sysdig.com/en/metrics.html
-            - link: 
-                label: Grouping, Scoping, and Segmenting Metrics 
+            - link:
+                label: Grouping, Scoping, and Segmenting Metrics
                 href: https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html
-            - link: 
+            - link:
                 label: Understanding Default, Custom, and Missing Metrics
                 href: https://docs.sysdig.com/en/understanding-default,-custom,-and-missing-metrics.html
-            - link: 
+            - link:
                 label: Managing the Metric Scale
                 href: https://docs.sysdig.com/en/manage-metric-scale.html
-            - link: 
+            - link:
                 label: Data Aggregation
                 href: https://docs.sysdig.com/en/data-aggregation.html
-            - link: 
+            - link:
                 label: Metric Limits
                 href: https://docs.sysdig.com/en/metric-limits.html
-            - link: 
+            - link:
                 label: Prometheus metrics / OpenMetrics code instrumentation
                 href: https://sysdig.com/blog/prometheus-metrics/
           topics:
@@ -181,42 +243,35 @@ toc:
           - exporters/promql.md
           - monitor/metrics_store.md
 
-      - topicgroup: 
+      - topicgroup:
           label: Integrations
-          links: 
-            - link: 
+          links:
+            - link:
                 label: Monitoring integrations
                 href: https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/
-            - link: 
+            - link:
                 label: Configure a Prometheus data source with Grafana
                 href: https://docs.sysdig.com/en/configure-sysdig-with-grafana.html
 
-      - topicgroup: 
+      - topicgroup:
           label: Dashboards
           topics:
           - monitor/dashboards.md
           - monitor/panels.md
           - api/dashboard_api.md
           - api/dashboard_python.md
-          links: 
-            - link: 
+          links:
+            - link:
                 label: Dashboard templates
                 href: https://docs.sysdig.com/en/dashboard-templates-209032.html
 
-      - topicgroup: 
-          label: Explore views
-          links: 
-            - link: 
-                label: Monitoring the infrastructure through the Explore section
-                href: https://docs.sysdig.com/en/explore.html
-
-      - topicgroup: 
+      - topicgroup:
           label: Working with alerts
-          links: 
-            - link: 
+          links:
+            - link:
                 label: Configuring alerts
                 href: https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/configure-alerts/
-            - link: 
+            - link:
                 label: PromQL Alerts
                 href: https://docs.sysdig.com/en/promql-alerts.html
           topics:
@@ -231,188 +286,133 @@ toc:
           - monitor/eventnotif.md
           - monitor/eventnotif_sms.md
 
-      - topicgroup: 
+      - topicgroup:
           label: Events
-          links: 
-            - link: 
+          links:
+            - link:
                 label: Working with custom events
                 href: https://docs.sysdig.com/en/custom-events.html
 
-      - topicgroup: 
+      - topicgroup:
           label: Captures
-          links: 
-            - link: 
+          links:
+            - link:
                 label: Working with captures
                 href: https://docs.sysdig.com/en/captures.html
-          topics: 
+          topics:
           - monitor/captures.md
 
-          - topicgroup: 
-              label: Teams
-              topics: 
-              - teams/teams.md
-              - teams/team_id.md
-          - topicgroup: 
-              label: Prometheus
-              topics: 
-              - exporters/ipmi.md
-              - exporters/blackbox.md
-              - exporters/promql.md
-              links: 
-                - link: 
-                    label: Collecting Prometheus Metrics from Remote Hosts
-                    href: https://docs.sysdig.com/en/docs/installation/prometheus-remote-write/
-                - link: 
-                    label: Prometheus metrics / OpenMetrics code instrumentation
-                    href: https://sysdig.com/blog/prometheus-metrics/
-                - link: 
-                    label: PromQL Alerts
-                    href: https://docs.sysdig.com/en/promql-alerts.html
-                - link: 
-                    label: Configure a Prometheus data source with Grafana
-                    href: https://docs.sysdig.com/en/configure-sysdig-with-grafana.html
-
-      - topicgroup: 
+      - topicgroup:
           label: Secure
-          topics: 
-          - topicgroup: 
+          topics:
+          - topicgroup:
               label: Image scanning
-              links: 
-              - link: 
+              links:
+              - link:
                   label: Working with image scanning
                   href: https://docs.sysdig.com/en/scanning.html
-              - link: 
+              - link:
                   label: Managing scanning alerts
                   href: https://docs.sysdig.com/en/manage-scanning-alerts.html
-              - link: 
+              - link:
                   label: Reviewing scan results
                   href: https://docs.sysdig.com/en/review-scan-results.html
-              - link: 
+              - link:
                   label: Working with the Admission Controller
                   href: https://docs.sysdig.com/en/docs/sysdig-secure/scanning/admission-controller/
-              - link: 
+              - link:
                   label: Integrating with CI/CD Tools
                   href: https://docs.sysdig.com/en/docs/sysdig-secure/scanning/integrate-with-cicd-tools/
-              - link: 
+              - link:
                   label: Scheduled Reports
                   href: https://docs.sysdig.com/en/docs/sysdig-secure/scanning/scheduled-reports/
-          - topicgroup: 
+          - topicgroup:
               label: Compliance
-              links: 
-              - link: 
+              links:
+              - link:
                   label: Working with benchmarks
                   href: https://docs.sysdig.com/en/benchmarks.html
-              - link: 
+              - link:
                   label: Configuring a benchmark task
                   href: https://docs.sysdig.com/en/configure-benchmark-tasks.html
-              - link: 
+              - link:
                   label: Reviewing benchmark test results
                   href: https://docs.sysdig.com/en/review-benchmark-test-results.html
-          - topicgroup: 
+          - topicgroup:
               label: Policies
-              links: 
-              - link: 
+              links:
+              - link:
                   label: Working with rules
                   href: https://docs.sysdig.com/en/manage-rules.html
-              - link: 
+              - link:
                   label: Working with Polices
                   href: https://docs.sysdig.com/en/policies.html
-          - topicgroup: 
+          - topicgroup:
               label: Events
-              links: 
-              - link: 
+              links:
+              - link:
                   label: Managing events
                   href: https://docs.sysdig.com/en/secure-events.html
-              - link: 
+              - link:
                   label: Kubernetes Audit Logging with Admission Controller
                   href: https://docs.sysdig.com/en/docs/sysdig-secure/secure-events/kubernetes-audit-logging/
-          - topicgroup: 
+          - topicgroup:
               label: Investigate
-              links: 
-              - link: 
+              links:
+              - link:
                   label: Activity Audit
-                  href: https://docs.sysdig.com/en/docs/sysdig-secure/investigate/activity-audit/ 
-              - link: 
+                  href: https://docs.sysdig.com/en/docs/sysdig-secure/investigate/activity-audit/
+              - link:
                   label: Captures
                   href: https://docs.sysdig.com/en/docs/sysdig-secure/investigate/captures/
-              - link: 
+              - link:
                   label: Rapid Response
                   href: https://docs.sysdig.com/en/docs/sysdig-secure/investigate/rapid-response/
-          - topicgroup: 
+          - topicgroup:
               label: Integrations
-              links: 
-              - link: 
+              links:
+              - link:
                   label: Integrations
                   href: https://docs.sysdig.com/en/integrations-for-sysdig-secure.html
 
-  - navgroup: 
-      id: tutorial
-      topics:
-      - topicgroup: 
-          label: Monitoring infrastructure
-          topics: 
-          - infrastructure/kubernetes_cluster.md
-          - infrastructure/windows.md
-          - infrastructure/ubuntu.md
-          - infrastructure/baremetal_linux.md
-      - topicgroup: 
-          label: Collecting custom metrics
-          topics:
-          - exporters/blackbox.md
-          - exporters/ipmi.md
-          - prometheus/prometheus_remote_write_kube.md
-          - prometheus/prometheus_remote_write_linux.md
-      - topicgroup: 
-          label: Sending notifications
-          topics:
-          - tutorials/eventnotif_tutorial.md
-          - tutorials/eventnotif_sms_tutorial.md
-
-
-  - navgroup: 
+  - navgroup:
       id: reference
-      topics: 
+      topics:
       - regions.md
       - endpoints.md
+      - service_plans.md
       - pricing.md
       - core/shared-responsibilities.md
-      
-      - topicgroup: 
+
+      - topicgroup:
           label: Monitoring CLI
           topics:
           - /monitor-cli-plugin/monitor-cli-plugin-monitor-cli
 
-      - topicgroup: 
+      - topicgroup:
           label: Monitoring API
-          links: 
-              - link: 
+          links:
+              - link:
                   label: Monitoring API
                   href: https://{DomainName}/apidocs/monitor
-          topics: 
-          - api/rest_apis.md
+          topics:
           - api/mon-curl.md
-          - api/python-client.md         
+          - api/python-client.md
 
-      - infrastructure/windows_wmi.md
-
-      - topicgroup: 
+      - topicgroup:
           label: Metrics
           links:
-              - link: 
+              - link:
                   label: Metrics dictionary
                   href: https://docs.sysdig.com/en/metrics-dictionary.html
-          topics:     
+          topics:
           - monitor/metrics/cloudfoundry-docs.md
 
       - deprecated.md
-  
-  - navgroup: 
-        id: help
-        topics: 
-        - gettinghelp.md
-        - topicgroup: 
-            label: Monitor
-            topics:  
-            - monitor/troubleshoot.md
-            - monitor/faq.md
 
+  - navgroup:
+        id: help
+        topics:
+        - gettinghelp.md
+        - monitor/troubleshoot.md
+        - monitor/faq.md

@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-05-05"
+lastupdated: "2023-04-27"
 
-keywords: IBM Cloud, monitoring, metrics, collection, ingestion
+keywords:
 
 subcollection: monitoring
 
@@ -39,27 +39,17 @@ You can use labels to identify and differentiate characteristics of a metric, fo
 * You can split aggregated data into segments.
 
 
+
+
 ## Collecting default metrics by using the {{site.data.keyword.mon_short}} agent
 {: #about-collect-metrics-2}
 
-When you configure a {{site.data.keyword.mon_short}} agent, data for default metrics is automatically collected. These metrics include metadata that you can use to label, segment, and display metrics when you monitor them.
+When you configure a {{site.data.keyword.mon_short}} agent, data for default metrics is automatically collected. These metrics include metadata that you can use to label, segment, and display metrics when you monitor them. You do not need additional instrumentation or configuration in your hosts to obtain metrics that are collected automatically by the agent to gain insight into what is happening in them.
 
-To start collecting default metrics, you must configure a {{site.data.keyword.mon_short}} agent per environment that you want to monitor. For more information, see [{{site.data.keyword.mon_short}} agent](/docs/monitoring?topic=monitoring-agent_ov).
+To monitor your infrastructure, network, and applications with the {{site.data.keyword.mon_full}} service, you can deploy {{site.data.keyword.mon_short}} agents on supported hosts. The host determines the agent type that you can deploy. The agent type determines the metrics that are collected automatically for that host.
 
-- The agent is supported on different hosts and orchestration platforms such as a Kubernetes.
 
-   For more information about supported hosts, see [Tuning Sysdig Agent](https://docs.sysdig.com/en/docs/installation/sysdig-agent/troubleshooting-agent-installation/tuning-sysdig-agent/){: external}
-
-- The agent automatically collects pre-defined metrics,and auto-labels them.
-
-   For more information about the metrics that are collected, see [Metrics Dictionary](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics-dictionary/){: external}.
-
-- You do not need additional instrumentation or configuration in your hosts to obtain metrics that are collected automatically by the agent to gain insight into what is happening in them.
-
-- You can configure an agent to manage which metrics to collect and monitor.
-
-### Default system metrics per host
-{: #about-default-metrics}
+To start collecting default metrics, you must configure a {{site.data.keyword.mon_short}} agent per environment that you want to monitor.
 
 The {{site.data.keyword.mon_short}} agent automatically collects the following types of system metrics per host:
 
@@ -71,15 +61,27 @@ The {{site.data.keyword.mon_short}} agent automatically collects the following t
 
 - `Network metrics` provide information about the network. They offer insight to the connections that are established between your applications, containers, and servers. For example, you can find information about the bytes that are being sent or received, or the number of HTTP requests, connections, and latency. In addition, for SQL or MongoDB, the agent collects additional information when it is configured in troubleshooting mode.
 
+In addition, the {{site.data.keyword.mon_short}} agent automatically collects the following types of metrics per Kubernetes or Openshift cluster:
 
-### Default metrics per Kubernetes cluster
-{: #about-default-metrics-kube}
-
-The {{site.data.keyword.mon_short}} agent automatically collects the following types of metrics per Kubernetes cluster:
-
-- `State metrics`: Kube state metrics report on the health and state of the various objects that run inside Kubernetes components, such as deployments, nodes and pods. To see the list of metrics that are collected by default, see [Kubernetes State](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics/metrics-library/sysdig-legacy-format/kubernetes/kubernetes-state/){: external}.
+- `State metrics`: Kube state metrics report on the health and state of the various objects that run inside Kubernetes components, such as deployments, nodes and pods. To see the list of metrics that are collected by default, see [Kubernetes State](hhttps://docs.sysdig.com/en/docs/sysdig-monitor/metrics/metrics-library/sysdig-legacy-format/kubernetes/kubernetes-state/){: external}.
 
 - `Resource usage metrics`: Resource usage metrics reports on the health and state of CPU and memory for workers (nodes) and pods that are running in the cluster. The data can be analyzed by namespace, by worker, by pod, by workload object such as deployments, daemonSets, and more.
+
+
+### Agent for non-orchestrated environments
+{: #agent-modes-ov-light}
+
+By default, this agent collects core infrastructure and network time series that you can use to monitor the host.
+
+For a list of collected metrics, see [Metrics Available for non-orchestrated environments](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-configuration/configure-agent-modes/metrics-available-in-monitor-light/).
+
+### Agent for orchestrated environments
+{: #agent-modes-ov-full}
+
+By default, this agent collects the same metrics as the agent for non-orchestrated environments and also Kubernetes state and resource usage metrics.
+
+For a list of collected metrics, see [Metrics Available for orchestrated environments](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/prometheus-format/).
+
 
 
 ## Collecting custom metrics by using the {{site.data.keyword.mon_short}} agent

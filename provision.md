@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-03-28"
+lastupdated: "2023-03-28"
 
-keywords: IBM Cloud, monitoring, provision instance
+keywords:
 
 subcollection: monitoring
 
