@@ -158,7 +158,7 @@ Complete one of the following tutorials to learn how to deploy a monitoring agen
 | [Monitoring a Linux bare metal server](/docs/monitoring?topic=monitoring-baremetal_linux) |
 | [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows) |
 | [Monitoring a Kubernetes cluster](/docs/monitoring?topic=monitoring-kubernetes_cluster) |
-| [Monitoring an {{site.data.keyword.redhat_openshift_notm}} cluster](/docs/monitoring?topic=monitoring-openshift_cluster) |
+| [Monitoring a {{site.data.keyword.redhat_openshift_notm}} cluster](/docs/monitoring?topic=monitoring-openshift_cluster) |
 {: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 After the monitoring agent is deployed, the monitoring agent automatically collects and reports on pre-defined and custom metrics.  These metrics are forwarded to the {{site.data.keyword.mon_full_notm}} instance.  You can configure which metrics are monitored in an environment.
