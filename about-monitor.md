@@ -44,7 +44,7 @@ You can monitor hosts in {{site.data.keyword.cloud_notm}}, on-prem, and in other
 |--------|------|
 | {{site.data.keyword.cloud_notm}} services | [Enabling platform metrics](docs/monitoring?topic=monitoring-platform_metrics_enabling) \n [Working with platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_working) \n [Services generating metrics](/docs/monitoring?topic=monitoring-cloud_services) |
 | Kubernetes clusters | [Monitoring a Kubernetes cluster](/docs/monitoring?topic=monitoring-kubernetes_cluster) |
-| Openshift clusters | [Monitoring an openshift cluster](/docs/monitoring?topic=monitoring-openshift_cluster) |
+| {{site.data.keyword.redhat_openshift_notm}} clusters | [Monitoring an {{site.data.keyword.redhat_openshift_notm}} cluster](/docs/monitoring?topic=monitoring-openshift_cluster) |
 | VPC/VSI | [Monitoring a Linux VPC server instance](/docs/monitoring?topic=monitoring-ubuntu#ubuntu) |
 | Bare metal | [Monitoring a Linux bare metal server](/docs/monitoring?topic=monitoring-baremetal_linux) |
 | Windows environments | [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows) |

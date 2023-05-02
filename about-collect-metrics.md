@@ -61,7 +61,7 @@ The {{site.data.keyword.mon_short}} agent automatically collects the following t
 
 - `Network metrics` provide information about the network. They offer insight to the connections that are established between your applications, containers, and servers. For example, you can find information about the bytes that are being sent or received, or the number of HTTP requests, connections, and latency. In addition, for SQL or MongoDB, the agent collects additional information when it is configured in troubleshooting mode.
 
-In addition, the {{site.data.keyword.mon_short}} agent automatically collects the following types of metrics per Kubernetes or Openshift cluster:
+In addition, the {{site.data.keyword.mon_short}} agent automatically collects the following types of metrics per Kubernetes or {{site.data.keyword.redhat_openshift_notm}} cluster:
 
 - `State metrics`: Kube state metrics report on the health and state of the various objects that run inside Kubernetes components, such as deployments, nodes and pods. To see the list of metrics that are collected by default, see [Kubernetes State](hhttps://docs.sysdig.com/en/docs/sysdig-monitor/metrics/metrics-library/sysdig-legacy-format/kubernetes/kubernetes-state/){: external}.
 

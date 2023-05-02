@@ -65,7 +65,7 @@ Complete one of the following tutorials to learn how to deploy a monitoring agen
 
 For more information, see:
 - [Working with the Kubernetes agent](/docs/monitoring?topic=monitoring-agent_Kube)
-- [Working with the Openshift agent](/docs/monitoring?topic=monitoring-agent_openshift)
+- [Working with the {{site.data.keyword.redhat_openshift_notm}} agent](/docs/monitoring?topic=monitoring-agent_openshift)
 - [Working with the Linux agent](/docs/monitoring?topic=monitoring-agent_linux)
 - [Working with the Docker agent](/docs/monitoring?topic=monitoring-agent_docker)
 

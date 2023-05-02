@@ -51,7 +51,7 @@ toc:
           - topic: infrastructure/kubernetes_cluster.md
             navtitle: Monitoring a Kubernetes cluster
           - topic: infrastructure/openshift_cluster.md
-            navtitle: Monitoring an Openshift cluster
+            navtitle: Monitoring an Red Hat OpenShift cluster
           - topic: infrastructure/windows.md
             navtitle: Monitoring a Windows environment
           - topic: infrastructure/ubuntu.md
@@ -178,15 +178,15 @@ toc:
               - topic: agent/resource_requirements.md
                 navtitle: Kubernetes resource requirements
               - topic: agent/agent-deploy-kube-helm.md
-                navtitle: Managing the Kube agent by using Helm
+                navtitle: Managing the Kubernetes agent by using Helm
               - topic: agent/agent-deploy-openshift-helm.md
-                navtitle: Managing the Openshift agent by using Helm
+                navtitle: Managing the Red Hat OpenShift agent by using Helm
               - topic: agent/agent_kube.md
-                navtitle: Deploying the Kube agent by using a script
+                navtitle: Deploying the Kubernetes agent by using a script
               - topic: agent/deploy-secure-features.md
                 navtitle: Deploying Secure features on a host
               - topic: agent/agent_openshift.md
-                navtitle: Deploying the Openshift agent by using a script
+                navtitle: Deploying the Red Hat OpenShift agent by using a script
               - topic: agent/change_kube_agent.md
                 navtitle: Customizing Kube agents
           - topicgroup:
