@@ -51,7 +51,7 @@ toc:
           - topic: infrastructure/kubernetes_cluster.md
             navtitle: Monitoring a Kubernetes cluster
           - topic: infrastructure/openshift_cluster.md
-            navtitle: Monitoring an Red Hat OpenShift cluster
+            navtitle: Monitoring a Red Hat OpenShift cluster
           - topic: infrastructure/windows.md
             navtitle: Monitoring a Windows environment
           - topic: infrastructure/ubuntu.md
