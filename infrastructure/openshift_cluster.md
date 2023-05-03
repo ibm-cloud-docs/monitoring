@@ -16,7 +16,7 @@ subcollection: monitoring
 # Monitoring an OpenShift cluster
 {: #openshift_cluster}
 
-Use this tutorial to learn how to configure an {{site.data.keyword.openshiftshort}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.  You can monitor clusters in {{site.data.keyword.cloud_notm}}, on-prem, and in other clouds.
+Use this tutorial to learn how to configure a {{site.data.keyword.openshiftshort}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.  You can monitor clusters in {{site.data.keyword.cloud_notm}}, on-prem, and in other clouds.
 {: shortdesc}
 
 To configure a cluster to forward metrics, you must install a monitoring agent onto each worker node in your {{site.data.keyword.redhat_openshift_notm}} cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade.
