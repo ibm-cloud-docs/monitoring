@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-03-28"
+lastupdated: "2023-05-30"
 
-keywords: IBM Cloud, monitoring, pricing
+keywords:
 
 subcollection: monitoring
 
@@ -16,43 +16,98 @@ subcollection: monitoring
 # Pricing
 {: #pricing_plans}
 
-This topic includes information about pricing for the {{site.data.keyword.mon_full_notm}}. You can also review the sample scenarios to learn more about the costs of a monitoring instance
+This topic includes information about pricing for the {{site.data.keyword.mon_full_notm}}. You can also review the sample scenarios to learn more about the costs of a  {{site.data.keyword.mon_short}} instance.
 {: shortdesc}
 
-The following service plans are available:
+{{site.data.keyword.mon_full_notm}} pricing is based on hourly consumption. You are billed monthly based on the number of connected agents and the agent deployment mode, the number of custom metric time series, extra number of containers per agent and additional API calls above 1M. There are two agent modes: agent for orchestrated environments, and agent for non-orchestrated environments.
 
-| Plans                                      | Plan ID                                | Plan Name                   |
-|--------------------------------------------|----------------------------------------|-----------------------------|
-| `Lite`                                     | `367a3918-9efc-43c5-bef9-20553051b7af` | `lite`                      |
-| `Graduated tier`                           | `231bb072-1b2f-4d7e-ae9e-9574d382be32` | `graduated-tier`            |
-| `Graduated Tier - Sysdig Secure + Monitor` | `35784193-e918-42d9-9598-4e842ed75192` | `graduated-tier-sysdig-secure-plus-monitor` |
-{: caption="Table 1. Service plans" caption-side="top"}
+All other {{site.data.keyword.mon_full_notm}} functionality, including dashboards, panels, and alerts, are included in the base service price and pricing does not vary.
 
-A `Lite` monitoring instance expires after 30 days.
-{: note}
-
-The costs that are provided in this topic are guidelines and do not represent actual costs. They represent a starting point for estimates of costs that would be incurred in environments with a similar configuration. Actual costs can vary by geography. The prices that are used are based on actual prices as of March 1, 2020 and it is possible they can change.
+The costs that are provided in this topic are guidelines and do not represent actual costs. They represent a starting point for estimates of costs that would be incurred in environments with a similar configuration. Actual costs can vary by geography. The prices that are used are based on actual prices as of April 1, 2023 and it is possible they can change.
 {: important}
 
 
-| Plans            | Base tier | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
-|------------------|--------------------------------------|--------|--------|--------|--------|
-| `Lite`           | ![Checkmark icon](../../icons/checkmark-icon.svg) | | | | |
-| `Graduated tier` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| `Graduated Tier - Sysdig Secure + Monitor` | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-{: caption="Table 2. Time-series tiers per service plans" caption-side="top"}
 
 
-The *graduated tier* plan is billed based on the following measurements and pricing:
+## Before you begin
+{: #pricing_prereqs}
 
-* **Base tier**: The price per host per month is 35 USD which includes host, Kubernetes and container metrics as well as up to 1K additional time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
-* **Additional time series**: If you exceed your base tier allotment for Prometheus, JMX, appchecks, and Statsd metrics, then the additional time series are priced according to the following tiers.
-    * **Tier 1**: The price per time-series is 0.08 USD for up to 100K time-series per month, or 0.00011 USD time-series per hour.
-    * **Tier 2**: The price per time-series is 0.05 USD for 100K to 1M time-series per month or 0.000069 USD time-series per hour.
-    * **Tier 3**: The price per time-series is 0.03 USD for 1M to 10M time-series per month or 0.000042 USD time-series per hour.
-    * **Tier 4**: The price per time-series is 0.02 USD for more than 10M time-series per month or 0.000028 USD time-series per hour.
-* **Additional containers**: The price is 5 USD per 10 containers per month.
-* **Additional API calls**: Your instance comes with an allotment of 1M API calls regardless of the number of agents.  The price for API calls in excess of this allotment is 0.01 USD per 1000 API calls per month.
+Read this section to understand concepts and costs that are associated with the {{site.data.keyword.mon_short}} service.
+
+- [Service plans](/docs/monitoring?topic=monitoring-service_plans).
+
+- [Time-series](/docs/monitoring?topic=monitoring-about-timeseries).
+
+- [Sources of custom metrics](/docs/monitoring?topic=monitoring-about-collect-metrics-1).
+
+- [Collecting metrics by infrastructure](/docs/monitoring?topic=monitoring-collect-metrics-by-host).
+
+
+## Consumption charges
+{: #billing_usage_metrics}
+
+In your monthly usage charges, consumption is measured hourly and your bill breaks down into the following concepts:
+​
+| Metric              | Description |
+| ------------------- | -------------- |
+| `NODE_HOURS`        | Tracks the number of agents that are running in an agent for orchestrated environments.  \n \n This does not include the agents tracked by `LITE_NODE_HOURS`  \n  \n For example, if you have 1 agent connected continuously, that agent will be billed 720 `NODE_HOURS` at the end of the month.|
+| `TIME_SERIES_HOURS` | Reflects the total number of custom metrics time series you are sending to {{site.data.keyword.mon_full_notm}} during a 1 hour time window. This is an aggregation of all time series from agents and other metrics sources. Platform metrics, Prometheus remote write, metric streaming and custom metrics collected with the agent (Prometheus, JMX or StatsD) contribute to `TIME_SERIES_HOURS`.  \n  \n Only custom metrics are counted for `TIME_SERIES_HOURS`. Default infrastructure metrics (such as host, container, program, or Kubernetes state) and CPU, memory, disk, and network are included in the agent price and do not contribute to `TIME_SERIES_HOURS`.   |
+| `LITE_NODE_HOURS` | Tracks the number of agents that are monitoring non-containerized infrastructures such as VMs or bare metal servers, and are using the agent for non-orchestrated environments.  |
+| `API_CALL_HOURS` | Represents how many calls are being made to the API per month. All instances include 1M API calls. |
+| `CONTAINER_HOURS` | Represents how many containers are monitored across all hosts that are being monitored by agents.  |
+{: caption="Table 2. Billing usage metrics" caption-side="bottom"}
+
+To monitor how the {{site.data.keyword.mon_full_notm}} service is used and the costs associated to its usage, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
+
+
+All metrics that start with `sysdig_*` and `kube_*` are collected automatically by an agent and are included in the agent price.
+{: note}
+
+
+
+## Service plans
+{: #pricing__service_plans}
+
+The following service plans are available when you provision an instance of the {{site.data.keyword.mon_full_notm}} service:
+
+### Lite plan
+{: #lite_plan}
+
+You can provision a {{site.data.keyword.mon_short}} instance with the `Lite` service plan to try out the {{site.data.keyword.mon_short}} service for free for 30 days.
+
+After 30 days you must upgrade the instance to a graduated tier plan to continue working with the {{site.data.keyword.mon_short}} service or delete it.
+{: note}
+
+
+### Graduated tier plan
+{: #graduated_tier}
+
+
+The *graduated tier* service plan is billed based on the number of hosts that you monitor, the agent mode that is configured per host, the number of containers, the number of API calls, and the number of time series collected.
+
+The following table outlines the cost per host by agent mode and what is included in the price:
+
+| Agent mode          | Cost per host | Default infrastructure metrics (CPU, memory, disk, and network) | Includes up to 1K time-series (Prometheus, JMX, appchecks, StatsD) | Monitoring of 50 containers | 1M API calls |
+|-------|------|-------|-------|-------|-------|
+| Agent for non-orchestrated environments  | $9.36   | ![Checkmark icon](/images/checkmark-icon.svg) | | | |
+| Agent for orchestrated environments   | $36   | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |
+{: caption="Table 4. Cost per host and agent mode" caption-side="top"}
+
+For hosts running an agent for non-orchestrated environments or for hosts running an agent for orchestrated environments that exceed the base tier allotment for Prometheus, JMX, appchecks, and Statsd metrics, additional prices apply:
+
+- Time series are priced according to the following tiers:
+
+    - **Tier 1**: The price per time-series is 0.08 USD for up to 100K time-series per month.
+
+    - **Tier 2**: The price per time-series is 0.05 USD for 100K to 1M time-series per month.
+
+    - **Tier 3**: The price per time-series is 0.03 USD for 1M to 10M time-series per month.
+
+    - **Tier 4**: The price per time-series is 0.02 USD for more than 10M time-series per month.
+
+- Containers are priced as follows: 5.23 USD per 10 containers per month.
+
+- API calls are priced as follows: The price for API calls is 0.01 USD per 1000 API calls per month.
 
 Each measure is priced independently when there is an overage.
 {: note}
@@ -65,49 +120,121 @@ A host can be a container, a virtual machine, a bare metal, or any metrics sourc
 
 Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/monitoring?topic=monitoring-mng-data#data-collection) and [data retention](/docs/monitoring?topic=monitoring-mng-data#data_storage_retention).
 
+Prometheus remote write cost is based on metric ingestion, thus the price is calculated the same as for metrics collected using the agent with {{site.data.keyword.mon_full_notm}}.
 
-## Checking the metrics that are collected per agent
+
+
+### Graduated Tier - Sysdig Secure + Monitor
+{: #graduated_secure}
+
+The *Graduated Tier - Sysdig Secure + Monitor* service plan is billed based on the number of hosts that you monitor, the number of containers, the number of API calls, and the number of time series collected.
+
+The following table outlines the cost per host by agent mode and what is included in the price:
+
+| Agent mode | Cost per host | Default infrastructure metrics (CPU, memory, disk, and network) | Includes up to 1K time-series (Prometheus, JMX, appchecks, StatsD) | Monitoring of 50 containers | 1M API calls | Secure features |
+|-------|------|-------|-------|-------|-------|-------|
+| Agent for orchestrated environments  | $94  | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) | ![Checkmark icon](/images/checkmark-icon.svg) |
+{: caption="Table 5. Cost per host for Graduated Tier - Sysdig Secure and Monitor service plan" caption-side="top"}
+
+For hosts running an agent for orchestrated environments that exceed the base tier allotment for Prometheus, JMX, appchecks, and Statsd metrics, additional prices apply:
+
+- Time series are priced according to the following tiers:
+
+    - **Tier 1**: The price per time-series is 0.08 USD for up to 100K time-series per month.
+
+    - **Tier 2**: The price per time-series is 0.05 USD for 100K to 1M time-series per month.
+
+    - **Tier 3**: The price per time-series is 0.03 USD for 1M to 10M time-series per month.
+
+    - **Tier 4**: The price per time-series is 0.02 USD for more than 10M time-series per month.
+
+- Containers are priced as follows: 5.23 USD per 10 containers per month.
+
+- API calls are priced as follows: The price for API calls is 0.01 USD per 1000 API calls per month.
+
+Each measure is priced independently when there is an overage.
+{: note}
+
+Platform metrics are an additional source of time-series. They are priced based on the tiers.
+{: important}
+
+A host can be a container, a virtual machine, a bare metal, or any metrics source where you install a monitoring agent.
+
+Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/monitoring?topic=monitoring-mng-data#data-collection) and [data retention](/docs/monitoring?topic=monitoring-mng-data#data_storage_retention).
+
+Prometheus remote write cost is based on metric ingestion, thus the price is calculated the same as for metrics collected using the agent with {{site.data.keyword.mon_full_notm}}.
+
+
+
+### Calculating time series pricing units
+{: #pricing_unit_definitions}
+
+Pricing units are comprised of *time-series*.
+
+A *time-series* is a series of data-points ordered by time. It is a unique combination of a metric name and label key-value pairs. For example: `website_failedRequest |region='Asia', customer_ID='abc'`.
+
+The same metric name can produce multiple *time-series* when the metric and label values differ.
+
+For example, the following are 4 unique time series:
+
+```text
+metric_name{datacenter=”dc-1”, zone=”zone1”} 23
+metric_name{datacenter=”dc-2”, zone=”zone1”} 34
+metric_name{datacenter=”dc-3”, zone=”zone2”} 43
+metric_name{datacenter=”dc-4”, zone=”zone2”} 23
+```
+{: screen}
+
+A *data-point* is the value generated for a *time-series* at a given point in time.  For example: `[timestamp]|website_failedRequests:20|region='Asia', customer_ID='abc'`.
+
+The number of *time-series* you are ingesting from the different sources are measured hourly and contribute to `TIME_SERIES_HOURS` pricing concept.
+
+### Checking the metrics that are collected per agent
 {: #pricing_agent_metrics}
 
-In {{site.data.keyword.mon_full_notm}}, you can monitor your monitoring agent by using the dashboard template **monitoring agent Health & Status** that is available in **Host Infrastructure**. In this dashboard, you can see the number of monitoring agents that are deployed and connected to the instance, check the version of the monitoring agents, and find out how many metrics per host the agent is collecting.
+In {{site.data.keyword.mon_full_notm}}, you can monitor your monitoring agent by using the dashboard template **monitoring agent Health & Status** that is available in the dashboard templates available out-of-the-box. In this dashboard, you can see the number of monitoring agents that are deployed and connected to the instance, check the version of the monitoring agents, and find out how many metrics per host the agent is collecting.
+
+In this dashboard, the panel **TimeSeries Usage** provides the number of time-series that are collected from each category (Prometheus, JMX, StatsD, Prometheus Remote Write and Platform Metrics). This panel uses the query `sum(sysdig_ts_usage)by(metric_category)` that you can also run in PromQL Explorer, in your dashboards or for alerts.
+
+In case you need to investigate which applications or services are contributing more to the Prometheus time-series, you can use the metric `scrape_series_added`. This metric represents the number of time series scraped and ingested from the monitoring agent via Prometheus and includes several labels to facilitate the analysis such as `kube_cluster_name`, `kube_namespace_name`, `kube_workload_name` or `container_name`.
+
+The following query represents the number of time series ingested from the monitoring agent via Prometheus grouped by cluster, namespace, workloads and container so you can identify those applications that are contributing more time series:
+
+```
+sum(scrape_series_added)by(kube_cluster_name, kube_namespace_name, kube_workload_name, container_name)
+```
 
 
 
-## Checking your usage
-{: #pricing_usage}
+## Billing samples
+{: #billing_example}
 
-To monitor how the {{site.data.keyword.mon_full_notm}} service is used and the costs associated to its usage, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
-
-
-
-## Billing sample 1: Basic usage
+### Billing sample 1: Basic usage
 {: #pricing_example1}
 
 
 Consider the following example where you have the following configuration:
-* 3 hosts
-    * Host-1 generates 1200 time-series
-    * Host-2 generates 1000 time-series
-    * Host-3 generates 1500 time-series
-* 170 containers
-* 1.2M API calls
+* 1 Kubernetes cluster with 3 worker nodes running agents for orchestrated environments
+    * Host-1 generates 1200 custom metrics time-series
+    * Host-2 generates 1000 custom metrics time-series
+    * Host-3 generates 1500 custom metrics time-series
 
 The billing calculation for the month is calculated as follows:
 
 * `Base cost per host`
 
-    The base price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
+    The base price per host per month is 36 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) .
 
-    For 3 hosts, the total base cost adds to **105 USD**.
+    For 3 hosts, the total monthly base cost adds to **108 USD**.
 
     ```text
-    3 * 35 USD = 105 USD
+    3 * 36 USD = 108 USD
     ```
     {: screen}
 
 * `Additional time-series cost`
 
-    Each host has a 1000 time-series allotment that are included in the base cost per host of 35 USD. If you have 3 hosts, you have included 3000 time-series. The remaining time-series are priced based on the tiers.
+    Each host has a 1000 time-series allotment that are included in the base cost per host of 36 USD. If you have 3 hosts, you have 3000 time-series included. The remaining time-series are priced based on the tiers.
 
     ```text
     1200 + 1000 + 1500 - ( 3*1000 ) = 700 additional time-series
@@ -125,63 +252,35 @@ The billing calculation for the month is calculated as follows:
 
     The total cost for additional time-series adds to **56 USD**.
 
-* `Additional containers cost`
-
-    Each host has a 50 containers allotment. The remaining containers are priced 5 USD per 10 containers per month.
-
-    ```text
-    170 - (3x50) = 20
-    (20 additional containers/10) * 5 USD = 10 USD
-    ```
-    {: screen}
-
-    The total cost for additional containers adds to **10 USD**.
-
-* `Additional API calls`
-
-    1M API calls are included with the instance each month.
-
-    The price for additional API calls is 0.01 USD per 1000 API calls.
-
-    ```text
-    1.2M - 1M = 200k
-    200k * 0.01 USD/1k = 2 USD
-    ```
-    {: screen}
-
-    The total cost for additional API calls adds to **2 USD**.
-
-The total monitoring cost per month adds to **173 USD**.
+The total monitoring cost per month adds to **164 USD**.
 
 ```text
-105 USD + 56 USD + 10 USD + 2 USD = 173 USD
+108 USD + 56 USD = 164 USD
 ```
 {: screen}
 
-## Billing sample 2: Unused time-series allotment
+### Billing sample 2: Unused time-series allotment
 {: #pricing_example2}
 
 
 Consider the following example where you have the following configuration:
-* 5 hosts
-    * Host-1 generates 2000 time-series
-    * Host-2 generates 100 time-series
-    * Host-3 generates 500 time-series
-    * Host-4 generates 100 time-series
-    * Host-5 generates 200 time-series
-* 100 containers
-* 700k API calls
+* 2 Kubernetes or OpenShift clusters with a total of 5 worker nodes running agents for orchestrated environments
+    * Host-1 generates 2000 custom metrics time-series
+    * Host-2 generates 100 custom metrics time-series
+    * Host-3 generates 500 custom metrics time-series
+    * Host-4 generates 100 custom metrics time-series
+    * Host-5 generates 200 custom metrics time-series
 
 The billing calculation for the month is calculated as follows:
 
 * `Base cost per host`
 
-    The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
+    The price per host per month is 36 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
-    For 5 hosts, the total base cost adds to **175 USD**.
+    For 5 hosts, the total base cost adds to **180 USD**.
 
     ```text
-    5 * 35 USD = 175 USD
+    5 * 36 USD = 180 USD
     ```
     {: screen}
 
@@ -200,46 +299,15 @@ The billing calculation for the month is calculated as follows:
 
     The total cost for additional time-series adds to **0 USD**.
 
-* `Additional containers cost`
-
-    Each host has a 50 containers allotment. The remaining containers are priced 5 USD per 10 containers per month.
-
-    ```text
-    100 - 5x50 = -150
-    ```
-    {: screen}
-
-    You have 150 more containers available per your configuration.
-
-    The total additional cost for containers adds to **0 USD**.
-
-* `Additional API calls`
-
-    1M API calls are included with the instance each month.
-
-    The price for additional API calls is 0.01 USD per 1000 API calls.
-
-    ```text
-    700k - 1M = -300k
-    ```
-    {: screen}
-
-    You have 300k more API calls available per your configuration.
-
-    The total cost for additional API calls adds to **0 USD**.
-
-
-The total monitoring cost per month adds to **175 USD**.
+The total monitoring cost per month adds to **180 USD**.
 
 ```text
-175 USD + 0 USD + 0 USD + 0 USD = 175 USD
+180 USD + 0 USD + 0 USD + 0 USD = 180 USD
 ```
 {: screen}
 
 
-
-
-## Billing sample 3: Platform metrics only
+### Billing sample 3: Platform metrics only
 {: #pricing_example3}
 
 Consider the following example where you have the following configuration for platform metrics:
@@ -289,16 +357,16 @@ The total monitoring cost per month adds to **8.80 USD**.
 Since there were no agents running in this example, the base price and additional containers costs were not applicable to this example.
 {: note}
 
-## Billing sample 4: Host allotment and platform metrics combined
+### Billing sample 4: Host allotment and platform metrics combined
 {: #pricing_example4}
 
 The following configuration demonstrates billing for a combination of host time-series allotment as well as platform metrics.
 
 Consider the following example where you have the following configuration:
-* 3 hosts
-    * Host-1 generates 1000 time-series
-    * Host-2 generates 850 time-series
-    * Host-3 generates 800 time-series
+* 3 hosts running agents for orchestrated environments
+    * Host-1 generates 1000 custom metrics time-series
+    * Host-2 generates 850 custom metrics time-series
+    * Host-3 generates 800 custom metrics time-series
 * Cloud Foundry generates 200 time-series per month
 * Event Streams generates 200 time-series per month
 * IBM Cloud Databases generates 100 time-series per month
@@ -311,12 +379,12 @@ The billing calculation for the month would look like:
 
 * `Base cost per host`
 
-    The price per host per month is 35 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
+    The price per host per month is 36 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
-    For 3 hosts, the total cost adds to **105 USD**.
+    For 3 hosts, the total cost adds to **108 USD**.
 
     ```text
-    3 * 35 USD = 105 USD
+    3 * 36 USD = 108 USD
     ```
     {: screen}
 
@@ -340,38 +408,61 @@ The billing calculation for the month would look like:
 
     The total cost for time-series adds to **12 USD**.
 
-* `Additional containers cost`
-
-    Each host has a 50 containers allotment. The remaining containers are priced 5 USD per 10 containers per month.
-
-    ```text
-    100 - 3x50 = -50 containers
-    ```
-    {: screen}
-
-    You have 50 more containers available per your configuration.
-
-    The total cost for containers adds to **0 USD**.
-
-* `Additional API calls`
-
-    1M API calls are included with the instance each month.
-
-    The price for additional API calls is 0.01 USD per 1000 API calls.
-
-    ```text
-    300k - 1M = -700k
-    ```
-    {: screen}
-
-    You have 700k more API calls available per your configuration.
-
-    The total cost for additional API calls adds to **0 USD**.
-
 
 The total monitoring cost per month adds to **117 USD**.
 
 ```text
-105 USD + 12 USD + 0 USD + 0 USD = 117 USD
+108 USD + 12 USD = 120 USD
+```
+{: screen}
+
+
+### Billing sample 5: Basic usage for Virtual Machine or Bare Metal servers running an agent for non-orchestrated environments
+{: #pricing_example5}
+
+
+Consider the following example where you have the following configuration:
+* 3 hosts running an agent for non-orchestrated environments
+    * Host-1 generates 50 custom metrics time-series
+    * Host-2 generates 100 custom metrics time-series
+    * Host-3 generates 100 custom metrics time-series
+
+The billing calculation for the month is calculated as follows:
+
+* `Base cost per host`
+
+    The base price per host per month is 9.36 USD.
+
+    For 3 hosts, the total base cost adds to **27 USD**.
+
+    ```text
+    3 * 9.36 USD = 28.08 USD
+    ```
+    {: screen}
+
+* `Time-series cost`
+
+    Time-series are priced based on the tiers.
+
+    ```text
+    50 + 100 + 100  = 250 additional time-series
+    ```
+    {: screen}
+
+    The result from adding the time series per host defines the tier that is applied for pricing.
+
+    250 time-series corresponds to tier 1. The price per host is 0.08 USD for up to 100K time-series per month.
+
+    ```text
+    250 time-series * 0.08 USD (Tier-1) = 20 USD
+    ```
+    {: screen}
+
+    The total cost for additional time-series adds to **20 USD**.
+
+The total monitoring cost per month adds to **47 USD**.
+
+```text
+28.08 USD + 20 USD = 48.08 USD
 ```
 {: screen}
