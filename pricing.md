@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-05-30"
+lastupdated: "2023-05-31"
 
 keywords:
 
@@ -120,7 +120,7 @@ A host can be a container, a virtual machine, a bare metal, or any metrics sourc
 
 Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/monitoring?topic=monitoring-mng-data#data-collection) and [data retention](/docs/monitoring?topic=monitoring-mng-data#data_storage_retention).
 
-Prometheus remote write cost is based on metric ingestion, thus the price is calculated the same as for metrics collected using the agent with {{site.data.keyword.mon_full_notm}}.
+Prometheus remote write cost is based on metric ingestion. The price is calculated the same as for metrics collected using the agent with {{site.data.keyword.mon_full_notm}}.
 
 
 
@@ -162,7 +162,7 @@ A host can be a container, a virtual machine, a bare metal, or any metrics sourc
 
 Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/monitoring?topic=monitoring-mng-data#data-collection) and [data retention](/docs/monitoring?topic=monitoring-mng-data#data_storage_retention).
 
-Prometheus remote write cost is based on metric ingestion, thus the price is calculated the same as for metrics collected using the agent with {{site.data.keyword.mon_full_notm}}.
+Prometheus remote write cost is based on metric ingestion. The price is calculated the same as for metrics collected using the agent with {{site.data.keyword.mon_full_notm}}.
 
 
 
@@ -200,9 +200,10 @@ In case you need to investigate which applications or services are contributing 
 
 The following query represents the number of time series ingested from the monitoring agent via Prometheus grouped by cluster, namespace, workloads and container so you can identify those applications that are contributing more time series:
 
-```
+```text
 sum(scrape_series_added)by(kube_cluster_name, kube_namespace_name, kube_workload_name, container_name)
 ```
+{: codeblock}
 
 
 
@@ -221,23 +222,23 @@ Consider the following example where you have the following configuration:
 
 The billing calculation for the month is calculated as follows:
 
-* `Base cost per host`
+* *Base cost per host*
 
-    The base price per host per month is 36 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) .
+    The base price per host per month is 36 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics).
 
-    For 3 hosts, the total monthly base cost adds to **108 USD**.
+    For 3 hosts, the total monthly base cost is **108 USD**.
 
     ```text
     3 * 36 USD = 108 USD
     ```
     {: screen}
 
-* `Additional time-series cost`
+* *Additional time-series cost*
 
-    Each host has a 1000 time-series allotment that are included in the base cost per host of 36 USD. If you have 3 hosts, you have 3000 time-series included. The remaining time-series are priced based on the tiers.
+    Each host has a 1000 time-series allotment that are included in the base cost per host of 36 USD. If you have 3 hosts, you have 3000 time-series included. The remaining time-series are priced based on the tiers. The following shows the calculation of the 700 additional time-series.
 
     ```text
-    1200 + 1000 + 1500 - ( 3*1000 ) = 700 additional time-series
+    1200 + 1000 + 1500 - ( 3*1000 ) = 700
     ```
     {: screen}
 
@@ -246,13 +247,13 @@ The billing calculation for the month is calculated as follows:
     700 additional time-series corresponds to tier 1. The price per host is 0.08 USD for up to 100K time-series per month.
 
     ```text
-    700 additional time-series * 0.08 USD (Tier-1) = 56 USD
+    700 * 0.08 USD = 56 USD
     ```
     {: screen}
 
-    The total cost for additional time-series adds to **56 USD**.
+    The total cost for additional time-series is **56 USD**.
 
-The total monitoring cost per month adds to **164 USD**.
+The total monitoring cost per month is **164 USD**.
 
 ```text
 108 USD + 56 USD = 164 USD
@@ -273,18 +274,18 @@ Consider the following example where you have the following configuration:
 
 The billing calculation for the month is calculated as follows:
 
-* `Base cost per host`
+* *Base cost per host*
 
     The price per host per month is 36 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
-    For 5 hosts, the total base cost adds to **180 USD**.
+    For 5 hosts, the total base cost is **180 USD**.
 
     ```text
     5 * 36 USD = 180 USD
     ```
     {: screen}
 
-* `Additional time-series cost`
+* *Additional time-series cost*
 
     Each host has a 1000 time-series allotment. The remaining time-series are priced based on the tiers.
 
@@ -297,9 +298,9 @@ The billing calculation for the month is calculated as follows:
 
     You have 1100 more time-series available per your configuration.
 
-    The total cost for additional time-series adds to **0 USD**.
+    The total cost for additional time-series is **0 USD**.
 
-The total monitoring cost per month adds to **180 USD**.
+The total monitoring cost per month is **180 USD**.
 
 ```text
 180 USD + 0 USD + 0 USD + 0 USD = 180 USD
@@ -317,23 +318,23 @@ Consider the following example where you have the following configuration for pl
 
 The billing calculation for the month is calculated as follows:
 
-* `Additional time-series cost`
+* *Additional time-series cost*
 
-    Since there are no agents running in this instance, there is no time-series allotment.  All platform metrics time-series are priced based on the tiers.
+    Since there are no agents running in this instance, there is no time-series allotment.  All platform metrics time-series are priced based on the tiers. The following shows the total time-series for the configuration.
 
     ```text
-    50 + 60 = 110 time-series
+    50 + 60 = 110
     ```
     {: screen}
 
-    For tier 1, the price per time-series is 0.08 USD for up to 100K time-series per month.
+    For tier 1, the price per time-series is 0.08 USD (Tier 1) for up to 100K time-series per month.
 
     ```text
-    110 * 0.08 USD (Tier-1) = 8.80 USD
+    110 * 0.08 USD = 8.80 USD
     ```
     {: screen}
 
-* `Additional API calls`
+* *Additional API calls*
 
     1M API calls are included with the instance each month.
 
@@ -345,9 +346,9 @@ The billing calculation for the month is calculated as follows:
     ```
     {: screen}
 
-    The total cost for additional API calls adds to **0 USD**.
+    The total cost for additional API calls is **0 USD**.
 
-The total monitoring cost per month adds to **8.80 USD**.
+The total monitoring cost per month is **8.80 USD**.
 
 ```text
 8.80 USD + 0 USD = 8.80 USD
@@ -377,39 +378,39 @@ Consider the following example where you have the following configuration:
 The billing calculation for the month would look like:
 
 
-* `Base cost per host`
+* *Base cost per host*
 
     The price per host per month is 36 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
-    For 3 hosts, the total cost adds to **108 USD**.
+    For 3 hosts, the total cost is **108 USD**.
 
     ```text
     3 * 36 USD = 108 USD
     ```
     {: screen}
 
-* `Additional time-series cost`
+* *Additional time-series cost*
 
-    Each host has a 1000 time-series allotment. The remaining time-series are priced based on the tiers.
+    Each host has a 1000 time-series allotment. The remaining time-series are priced based on the tiers. In this case, 150 time-series.
 
     ```text
-    1000 + 850 + 800 + 200 + 200 + 100 - ( 3*1000 ) = 150 time-series
+    1000 + 850 + 800 + 200 + 200 + 100 - ( 3*1000 ) = 150
     ```
     {: screen}
 
     The result from adding the time series per host, plus the platform metrics minus the allotment defines the tier that is applied for pricing.
 
-    Notice that since the `Base cost per host` time-series allotment was not completely used by the agents, 350 of the 500 platform metrics time-series were covered by the base tier.
+    Notice that since the *Base cost per host* time-series allotment was not completely used by the agents, 350 of the 500 platform metrics time-series were covered by the base tier. Only the additional 150 platform metrics time-series (`500 - 350 = 150`)have an additional cost.
 
     ```text
-    150 additional time-series * 0.08 USD (Tier-1) = 12 USD
+    150 * 0.08 USD (Tier-1) = 12 USD
     ```
     {: screen}
 
-    The total cost for time-series adds to **12 USD**.
+    The total cost for time-series is **12 USD**.
 
 
-The total monitoring cost per month adds to **117 USD**.
+The total monitoring cost per month is **117 USD**.
 
 ```text
 108 USD + 12 USD = 120 USD
@@ -429,23 +430,23 @@ Consider the following example where you have the following configuration:
 
 The billing calculation for the month is calculated as follows:
 
-* `Base cost per host`
+* *Base cost per host*
 
     The base price per host per month is 9.36 USD.
 
-    For 3 hosts, the total base cost adds to **27 USD**.
+    For 3 hosts, the total base cost is **27 USD**.
 
     ```text
     3 * 9.36 USD = 28.08 USD
     ```
     {: screen}
 
-* `Time-series cost`
+* *Time-series cost*
 
-    Time-series are priced based on the tiers.
+    Time-series are priced based on the tiers. In this scenario you require 250 additional time-series.
 
     ```text
-    50 + 100 + 100  = 250 additional time-series
+    50 + 100 + 100  = 250
     ```
     {: screen}
 
@@ -454,13 +455,13 @@ The billing calculation for the month is calculated as follows:
     250 time-series corresponds to tier 1. The price per host is 0.08 USD for up to 100K time-series per month.
 
     ```text
-    250 time-series * 0.08 USD (Tier-1) = 20 USD
+    250 * 0.08 USD = 20 USD
     ```
     {: screen}
 
-    The total cost for additional time-series adds to **20 USD**.
+    The total cost for additional time-series is **20 USD**.
 
-The total monitoring cost per month adds to **47 USD**.
+The total monitoring cost per month is **48 USD**.
 
 ```text
 28.08 USD + 20 USD = 48.08 USD
