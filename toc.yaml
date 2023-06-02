@@ -405,8 +405,6 @@ toc:
               - link:
                   label: Metrics dictionary
                   href: https://docs.sysdig.com/en/metrics-dictionary.html
-          topics:
-          - monitor/metrics/cloudfoundry-docs.md
 
       - deprecated.md
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-06-02"
 
 keywords:
 
@@ -29,16 +29,6 @@ There are 2 ways that services send metrics:
 - By configuring a {{site.data.keyword.mon_short}} agent
 
     You configure the agent to send metrics to the {{site.data.keyword.mon_short}} instance that you choose. You monitor these metrics through that instance.
-
-## Cloud Foundry
-{: #platform_cfapps}
-
-The following table lists Cloud Foundry resources that are enabled for {{site.data.keyword.mon_full_notm}}:
-
-| Service     | Description | Metrics |
-|-------------|-------------|-------------------|
-| [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) | Cloud Foundry is the premier industry standard Platform-as-a-Service (PaaS), that ensures the fastest, easiest, and most reliable deployment of cloud-native applications.  | [Platform metrics](/docs/monitoring?topic=monitoring-monitor-cf-sysdig)|
-{: caption="List of Cloud Foundry resources" caption-side="top"}
 
 
 ## Compute services
