@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-10-19"
+lastupdated: "2023-05-17"
 
-keywords: IBM Cloud, monitoring, data streaming
+keywords:
 
 subcollection: monitoring
 
@@ -44,7 +44,7 @@ Check the following prereqs before managing streaming:
     * When you configure streaming, the {{site.data.keyword.mon_full_notm}} instance and the {{site.data.keyword.messagehub}} instance must be provisioned in the same account.
     * To connect the {{site.data.keyword.mon_full_notm}} instance to the {{site.data.keyword.messagehub}} instance, you need the following information:
 
-        * You must have the **manager** role to configure streaming in the {{site.data.keyword.mon_full_notm}} instance. This role includes the **logdna.dashboard.manage** IAM action role that allows a user to perform admin tasks such as configure streaming.
+        * You must have the **manager** role to configure streaming in the {{site.data.keyword.mon_full_notm}} instance. This role includes the **sysdig-monitor.launch.admin** IAM action role that allows a user to perform admin tasks such as configure streaming.
         * When you configure streaming, the {{site.data.keyword.mon_short}} instance and the {{site.data.keyword.messagehub}} instance must be provisioned in the same account.
         * To connect the {{site.data.keyword.mon_short}} instance to the {{site.data.keyword.messagehub}} instance, you need the following information:
 
@@ -56,6 +56,7 @@ Check the following prereqs before managing streaming:
 
     * The credential that {{site.data.keyword.mon_short}} uses to publish data in {{site.data.keyword.messagehub}} must have the **writer** role. This role includes the **messagehub.topic.write** IAM action role that allows an app or service to write data to 1 or more topics.
 
+* If you configure the account to restrict access to configured IP addresses via IAM settings, or if the account limits the network locations that connections are accepted from via context based restrictions rules (CBR) for the {{site.data.keyword.messagehub}} service, you must allowlist the {{site.data.keyword.mon_short}} IPs in the account. For more information, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints) and [{{site.data.keyword.messagehub}} - Restricting network access](/docs/EventStreams?topic=EventStreams-restrict_access).
 
 The instructions on this topic are based on using an Enterprise plan.
 {: note}
