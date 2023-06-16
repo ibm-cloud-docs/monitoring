@@ -4,7 +4,7 @@ copyright:
   years:  2018, 2023
 lastupdated: "2022-08-08"
 
-keywords: IBM Cloud, Monitoring, agent, sysdig, Openshift
+keywords: IBM Cloud, Monitoring, agent, sysdig
 
 subcollection: monitoring
 
@@ -12,10 +12,10 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Working with the Openshift agent
+# Working with the {{site.data.keyword.redhat_openshift_notm}} agent
 {: #agent_openshift}
 
-After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.mon_short}} agent on your Openshift cluster to collect data and metrics automatically. You can configure which metrics to monitor in each environment.
+After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.mon_short}} agent on your {{site.data.keyword.redhat_openshift_notm}} cluster to collect data and metrics automatically. You can configure which metrics to monitor in each environment.
 {: shortdesc}
 
 

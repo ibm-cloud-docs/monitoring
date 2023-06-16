@@ -16,16 +16,16 @@ subcollection: monitoring
 # Monitoring an OpenShift cluster
 {: #openshift_cluster}
 
-Use this tutorial to learn how to configure an {{site.data.keyword.openshiftshort}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.  You can monitor clusters in {{site.data.keyword.cloud_notm}}, on-prem, and in other clouds.
+Use this tutorial to learn how to configure a {{site.data.keyword.openshiftshort}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.  You can monitor clusters in {{site.data.keyword.cloud_notm}}, on-prem, and in other clouds.
 {: shortdesc}
 
-To configure a cluster to forward metrics, you must install a monitoring agent onto each worker node in your Openshift cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade.
+To configure a cluster to forward metrics, you must install a monitoring agent onto each worker node in your {{site.data.keyword.redhat_openshift_notm}} cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade.
 
 
 ![Components overview on the {{site.data.keyword.cloud_notm}}](images/openshift.png "Components overview on the {{site.data.keyword.cloud_notm}}"){: caption="Components overview" caption-side="bottom"}
 
 
-For example, to configure your Openshift cluster to forward metrics to your {{site.data.keyword.mon_full_notm}} instance, you can deploy the agent by using Helm or a script:
+For example, to configure your {{site.data.keyword.redhat_openshift_notm}} cluster to forward metrics to your {{site.data.keyword.mon_full_notm}} instance, you can deploy the agent by using Helm or a script:
 - [Helm](/docs/monitoring?topic=monitoring-agent-deploy-openshift-helm)
 - [Script](/docs/monitoring?topic=monitoring-agent_openshift)
 
@@ -39,9 +39,9 @@ The {{site.data.keyword.mon_short}} agent automatically collects the following t
 
 - `Network metrics` provide information about the network. They offer insight to the connections that are established between your applications, containers, and servers. For example, you can find information about the bytes that are being sent or received, or the number of HTTP requests, connections, and latency. In addition, for SQL or MongoDB, the agent collects additional information when it is configured in troubleshooting mode.
 
-The {{site.data.keyword.mon_short}} agent automatically collects the following types of metrics per Openshift cluster:
+The {{site.data.keyword.mon_short}} agent automatically collects the following types of metrics per {{site.data.keyword.redhat_openshift_notm}} cluster:
 
-- `State metrics`: Kube state metrics report on the health and state of the various objects that run inside Openshift components, such as deployments, nodes and pods. To see the list of metrics that are collected by default, see [Openshift State](hhttps://docs.sysdig.com/en/docs/sysdig-monitor/metrics/metrics-library/sysdig-legacy-format/kubernetes/kubernetes-state/){: external}.
+- `State metrics`: Kube state metrics report on the health and state of the various objects that run inside {{site.data.keyword.redhat_openshift_notm}} components, such as deployments, nodes and pods. To see the list of metrics that are collected by default, see [{{site.data.keyword.redhat_openshift_notm}} State](hhttps://docs.sysdig.com/en/docs/sysdig-monitor/metrics/metrics-library/sysdig-legacy-format/kubernetes/kubernetes-state/){: external}.
 
 - `Resource usage metrics`: Resource usage metrics reports on the health and state of CPU and memory for workers (nodes) and pods that are running in the cluster. The data can be analyzed by namespace, by worker, by pod, by workload object such as deployments, daemonSets, and more.
 
@@ -52,9 +52,9 @@ Through the {{site.data.keyword.mon_short}} UI, you can analyze data in the *Adv
 
 Consider the following information when monitoring your data:
 * In the *Explorer* tab, you can monitor individual metrics.
-* In the *Advisor* tab, you can monitor Openshift or host level metrics.
+* In the *Advisor* tab, you can monitor {{site.data.keyword.redhat_openshift_notm}} or host level metrics.
 
-    This tab is only available for users that belong to a team that has access to monitor Openshift or host level metrics.
+    This tab is only available for users that belong to a team that has access to monitor {{site.data.keyword.redhat_openshift_notm}} or host level metrics.
     {: note}
 
 * In the *Dashboard* tab, you can monitor through panels predefined dashboards or custom ones and get a specialized insight into network data, application data, topology, services, hosts, and containers. A panel displays a metric or group of metrics in a dashboard.
@@ -108,7 +108,7 @@ In this tutorial, you configure metrics for your {{site.data.keyword.openshiftsh
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
 | Resource group **default**           |  Resource group            | Viewer  | us-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
 | {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | us-south  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the default resource group.   |
-| Openshift cluster instance          |  Resource                 | Editor  | us-south  | This policy is required to configure the secret and the monitoring agent in the {{site.data.keyword.openshiftshort}} cluster. |
+| {{site.data.keyword.redhat_openshift_notm}} cluster instance          |  Resource                 | Editor  | us-south  | This policy is required to configure the secret and the monitoring agent in the {{site.data.keyword.openshiftshort}} cluster. |
 {: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"}
 
 For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
@@ -274,7 +274,7 @@ You only can monitor one instance per browser. You could have multiple tabs for 
 {: step}
 
 
-In the *Advisor* tab, you can monitor and troubleshoot the health, risk, and capacity of hosts, and Kubernetes and Openshift clusters.
+In the *Advisor* tab, you can monitor and troubleshoot the health, risk, and capacity of hosts, and Kubernetes and {{site.data.keyword.redhat_openshift_notm}} clusters.
 
 ![Advisor tab](../images/advisor-tab.png "Advisor tab"){: caption="Advisor tab" caption-side="bottom"}
 
@@ -282,9 +282,9 @@ In the *Advisor* tab, you can monitor and troubleshoot the health, risk, and cap
 - Metrics are prioritized by event count and severity.
 - For more information, see [Advisor](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/){: external}.
 
-In the *Advisor* section, you can choose to monitor your Openshift clusters by cluster, by node, by namespace, or by workload. Each option offers a set of predefined dashboards that you can use to monitor the health of your resources. You can also select to monitor by host.
+In the *Advisor* section, you can choose to monitor your {{site.data.keyword.redhat_openshift_notm}} clusters by cluster, by node, by namespace, or by workload. Each option offers a set of predefined dashboards that you can use to monitor the health of your resources. You can also select to monitor by host.
 
-### Monitoring Openshift clusters by cluster
+### Monitoring {{site.data.keyword.redhat_openshift_notm}} clusters by cluster
 {: #monitoring_advisor_1}
 
 When you choose to monitor your clusters by cluster, you can select more filters to display data by node or by namespace, or you can choose any of the following dashboards:
@@ -354,6 +354,6 @@ For more information on how to interpret this view, see [About Workloads Overvie
 
 - Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).
 
-- Learn how to manage logs from your cluster. See [Logging with Openshift clusters](/docs/log-analysis?topic=log-analysis-kube).
+- Learn how to manage logs from your cluster. See [Logging with {{site.data.keyword.redhat_openshift_notm}} clusters](/docs/log-analysis?topic=log-analysis-kube).
 
 - Learn about {{site.data.keyword.sysdigsecure_full}} and how you can use it to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).

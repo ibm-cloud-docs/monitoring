@@ -13,7 +13,7 @@ subcollection: monitoring
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing the {{site.data.keyword.mon_short}} agent in Openshift by using a HELM chart
+# Managing the {{site.data.keyword.mon_short}} agent in {{site.data.keyword.redhat_openshift_notm}} by using a HELM chart
 {: #agent-deploy-openshift-helm}
 
 

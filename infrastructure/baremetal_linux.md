@@ -43,9 +43,9 @@ Through the {{site.data.keyword.mon_short}} UI, you can analyze data in the *Adv
 
 Consider the following information when monitoring your data:
 * In the *Explorer* tab, you can monitor individual metrics.
-* In the *Advisor* tab, you can monitor Openshift or host level metrics.
+* In the *Advisor* tab, you can monitor {{site.data.keyword.redhat_openshift_notm}} or host level metrics.
 
-    This tab is only available for users that belong to a team that has access to monitor Openshift or host level metrics.
+    This tab is only available for users that belong to a team that has access to monitor {{site.data.keyword.redhat_openshift_notm}} or host level metrics.
     {: note}
 
 * In the *Dashboard* tab, you can monitor through panels predefined dashboards or custom ones and get a specialized insight into network data, application data, topology, services, hosts, and containers. A panel displays a metric or group of metrics in a dashboard.
