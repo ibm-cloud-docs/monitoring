@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-06-20"
 
 keywords:
 
@@ -223,9 +223,9 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
-|------------------------------------------------|---------------------|------------------------------------|
-| {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| Service                                        | `Dallas (us-south)` | `Washington (us-east)`  |`Toronto (ca-tor)` | `Sao Paulo (br-sao)` |
+|------------------------------------------------|---------------------|-------------------------|-------------------|----------------------|
+| {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.appconfig_full}}    | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.en_full}}    | ![Checkmark icon](../images/checkmark-icon.svg) |                             |
 {: caption="Developer tools and DevOps services in America's locations" caption-side="top"}
@@ -235,9 +235,9 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |  `Chennai 01 (che01)` |
-|------------------------------------------------|------------------|----------------------------|----------------------|
-| {{site.data.keyword.contdelivery_full}}        |![Checkmark icon](../images/checkmark-icon.svg) |     |  |
+| Service                                        | `Tokyo (jp-tok)`    | `Sydney (au-syd)` | `Osaka (jp-osa)` | `Chennai (in-che)` |
+|------------------------------------------------|---------------------|-------------------|------------------|--------------------|
+| {{site.data.keyword.contdelivery_full}}        |![Checkmark icon](../images/checkmark-icon.svg) |![Checkmark icon](../images/checkmark-icon.svg)|![Checkmark icon](../images/checkmark-icon.svg)|   |
 | {{site.data.keyword.appconfig_full}}           |           | ![Checkmark icon](../images/checkmark-icon.svg) |  |
 | {{site.data.keyword.en_full}}           |                                               | ![Checkmark icon](../images/checkmark-icon.svg) |    |  |
 {: caption="Developer tools and DevOps services in AP locations" caption-side="top"}
