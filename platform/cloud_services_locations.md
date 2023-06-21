@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-06-20"
+lastupdated: "2023-06-21"
 
 keywords:
 
@@ -18,40 +18,6 @@ subcollection: monitoring
 
 List of locations where {{site.data.keyword.cloud_notm}} services are enabled to send metrics to {{site.data.keyword.mon_full_notm}}. You monitor these metrics through the monitoring instance that is configured to receive platform metrics. [Learn more about enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 {: shortdesc}
-
-## Cloud Foundry
-{: #cloud_services_locations_cf}
-
-| Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` |
-|---------------------------------------------------------------|---------------------|------------------|
-| Cloud Foundry                                                 | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |
-{: caption="CF integration in Europe locations" caption-side="top"}
-{: #cs-cf-table-1}
-{: tab-title="Europe"}
-{: tab-group="cs_cf"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
-|------------------------------------------------|---------------------|------------------------------------|
-| Cloud Foundry                                  | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg)    |
-{: caption="CF integration in America's locations" caption-side="top"}
-{: #cs-cf-table-2}
-{: tab-title="America"}
-{: tab-group="cs_cf"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
-|------------------------------------------------|------------------|----------------------------|
-| Cloud Foundry                                  |                  | ![Checkmark icon](../images/checkmark-icon.svg) |
-{: caption="CF integration in AP locations" caption-side="top"}
-{: #cs-cf-table-3}
-{: tab-title="Asia Pacific"}
-{: tab-group="cs_cf"}
-{: class="simple-tab-table"}
-{: row-headers}
-
 
 ## Compute services
 {: #cloud_services_locations_compute}
