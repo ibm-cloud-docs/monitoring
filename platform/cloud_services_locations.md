@@ -56,8 +56,6 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 ## Compute services
 {: #cloud_services_locations_compute}
 
-For more information, see [Compute services](/docs/cloud-infrastructure?topic=cloud-infrastructure-compute).
-
 ### Serverless
 {: #cloud_services_locations_compute_serverless}
 
@@ -202,11 +200,15 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 {{site.data.keyword.containerlong_notm}}
 :   You can choose the monitoring instance where you want to collect {{site.data.keyword.containerlong}} service metrics.
 
+{{site.data.keyword.openshiftlong_notm}}
+:   You can choose the monitoring instance where you want to collect {{site.data.keyword.openshiftlong}} service metrics.
+
+## Satellite
+{: #cloud_services_locations_satellite}
+
 {{site.data.keyword.satellitelong_notm}}
 :   You can monitor {{site.data.keyword.satellitelong}} through the monitoring instance that is configured with **service platform metrics** in the same region that your {{site.data.keyword.satelliteshort}} location is managed from.
 
-{{site.data.keyword.openshiftlong_notm}}
-:   You can choose the monitoring instance where you want to collect {{site.data.keyword.openshiftlong}} service metrics.
 
 ## Developer tools
 {: #cloud_services_locations_devops}
@@ -223,9 +225,9 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
-|------------------------------------------------|---------------------|------------------------------------|
-| {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| Service                                        | `Dallas (us-south)` | `Washington (us-east)`  |`Toronto (ca-tor)` | `Sao Paulo (br-sao)` |
+|------------------------------------------------|---------------------|-------------------------|-------------------|----------------------|
+| {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.appconfig_full}}    | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.en_full}}    | ![Checkmark icon](../images/checkmark-icon.svg) |                             |
 {: caption="Developer tools and DevOps services in America's locations" caption-side="top"}
@@ -235,9 +237,9 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |  `Chennai 01 (che01)` |
-|------------------------------------------------|------------------|----------------------------|----------------------|
-| {{site.data.keyword.contdelivery_full}}        |![Checkmark icon](../images/checkmark-icon.svg) |     |  |
+| Service                                        | `Tokyo (jp-tok)`    | `Sydney (au-syd)` | `Osaka (jp-osa)` | `Chennai (in-che)` |
+|------------------------------------------------|---------------------|-------------------|------------------|--------------------|
+| {{site.data.keyword.contdelivery_full}}        |![Checkmark icon](../images/checkmark-icon.svg) |![Checkmark icon](../images/checkmark-icon.svg)|![Checkmark icon](../images/checkmark-icon.svg)|   |
 | {{site.data.keyword.appconfig_full}}           |           | ![Checkmark icon](../images/checkmark-icon.svg) |  |
 | {{site.data.keyword.en_full}}           |                                               | ![Checkmark icon](../images/checkmark-icon.svg) |    |  |
 {: caption="Developer tools and DevOps services in AP locations" caption-side="top"}
@@ -251,8 +253,6 @@ For more information, see [Compute services](/docs/cloud-infrastructure?topic=cl
 ## Networking services
 {: #cloud_services_locations_networking}
 
-For more information, see [Networking services](/docs/cloud-infrastructure?topic=cloud-infrastructure-network).
-
 ### VPC
 {: #cloud_services_locations_networking_vpc}
 
@@ -260,6 +260,7 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 |---------------------------------------------------------------|---------------------|------------------|
 | Load Balancer for VPC   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | VPN for VPC             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| Client VPN for VPC      | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="VPC events in Europe locations" caption-side="top"}
 {: #cs-vpc-loc-table-3}
 {: tab-title="Europe"}
@@ -267,10 +268,11 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                | `Dallas (us-south)`                                | `Washington (us-east)`               |
-|----------------------------------------|----------------------------------------------------|--------------------------------------|
-| Load Balancer for VPC                  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
-| VPN for VPC                            | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| Service                                | `Dallas (us-south)`                                | `Washington (us-east)`               | `São-Paulo (br-sao)`                 | `Toronto (ca-tor)`                   |
+|----------------------------------------|----------------------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|
+| Load Balancer for VPC                  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |                                                 |                                                 |
+| VPN for VPC                            | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| Client VPN for VPC                     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="VPC events in America's locations" caption-side="top"}
 {: #cs-vpc-loc-table-1}
 {: tab-title="America"}
@@ -278,10 +280,11 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
-|-----------------------------------------------------------------|------------------|----------------------------|
-| Load Balancer for VPC           | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
-| VPN for VPC                     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| Service                                                         | `Tokyo (jp-tok)` | `Sydney (au-syd)`          | `Osaka (jp-osa)`          |
+|-----------------------------------------------------------------|------------------|----------------------------|----------------------------|
+| Load Balancer for VPC           | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |                                                 |
+| VPN for VPC                     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| Client VPN for VPC              | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="VPC events in AP locations" caption-side="top"}
 {: #cs-vpc-loc-table-2}
 {: tab-title="Asia Pacific"}
@@ -300,7 +303,6 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 |---------------------------------------------------------------|-------------------|----------------|
 | {{site.data.keyword.loadbalancer_full}}                |                 |    |
 | Load Balancer for VPC              |    |    |
-| VPN for VPC                       |  ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Table 12. Security services  integration in Europe locations" caption-side="top"}
 {: #cs-csint-table-3}
 {: tab-title="Europe"}
@@ -312,7 +314,6 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 |-----------------------------------------------------------------|---------------------|--------------------------------------|
 | {{site.data.keyword.loadbalancer_full}}         | ![Checkmark icon](../images/checkmark-icon.svg)               |            |
 | Load Balancer for VPC                          | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
-| VPN for VPC                                    | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Table 10. Security services integration in America's locations" caption-side="top"}
 {: #cs-csint-table-1}
 {: tab-title="America"}
@@ -324,7 +325,6 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 |-----------------------------------------------------------------|----------------|---------------------------|
 | {{site.data.keyword.loadbalancer_full}}                   |      |    |
 | Load Balancer for VPC          |     |    |
-| VPN for VPC                    | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Table 11. Security services integration in AP locations" caption-side="top"}
 {: #cs-csint-table-2}
 {: tab-title="Asia Pacific"}
@@ -446,14 +446,10 @@ For more information, see [Networking services](/docs/cloud-infrastructure?topic
 ## Security services
 {: #cloud_services_locations_security}
 
-The following tables list the locations where automatic collection of security service logs is enabled. You can monitor logs through the instance that is available in the same location as your security resources, if you enable 1 instance in this location to host service platform logs. For locations where you can provision a service instance but the {{site.data.keyword.at_full_notm}} service is not available, specific detail about the location where you can monitor those logs is provided in each case.
-
-
 | Service                                                         | `Dallas (us-south)`                               | `Washington (us-east)`                |
 |-----------------------------------------------------------------|---------------------------------------------------|---------------------------------------|
 | {{site.data.keyword.keymanagementservicelong}}                  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
-| {{site.data.keyword.security-advisor_long}}                     | ![Checkmark icon](../images/checkmark-icon.svg) |    |
 {: caption="Security services integration in America's locations" caption-side="top"}
 {: #cs-sec-table-1}
 {: tab-title="America"}
@@ -465,7 +461,6 @@ The following tables list the locations where automatic collection of security s
 |-----------------------------------------------------------------|----------------------------------------------------|----------------------------|
 | {{site.data.keyword.keymanagementservicelong}}                  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} |      | ![Checkmark icon](../images/checkmark-icon.svg) |
-| {{site.data.keyword.security-advisor_long}}                     |      |     |
 {: caption="Security services integration in AP locations" caption-side="top"}
 {: #cs-sec-table-2}
 {: tab-title="Asia Pacific"}
@@ -477,7 +472,6 @@ The following tables list the locations where automatic collection of security s
 |---------------------------------------------------------------|----------------------------------------------------|------------------|
 | {{site.data.keyword.keymanagementservicelong}}                | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](../images/checkmark-icon.svg) |    |
-| {{site.data.keyword.security-advisor_long}}                     |   | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Security services integration in Europe locations" caption-side="top"}
 {: #cs-sec-table-3}
 {: tab-title="Europe"}
@@ -487,12 +481,6 @@ The following tables list the locations where automatic collection of security s
 
 ## Storage services
 {: #cloud_services_locations_storage}
-
-For more information, see [Storage services](/docs/cloud-infrastructure?topic=cloud-infrastructure-compute).
-
-
-### VPC
-{: #cloud_services_locations_storage_vpc}
 
 
 | Service                                                       |`Frankfurt (eu-de)`                                | `London (eu-gb)` |
