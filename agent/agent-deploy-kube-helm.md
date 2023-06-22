@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-03-16"
+lastupdated: "2023-06-22"
 
 keywords:
 
@@ -165,7 +165,6 @@ global:
     deploy: true
 agent:
   image:
-    tag: 12.12.1
     registry: icr.io
   slim:
     enabled: true
@@ -179,7 +178,7 @@ agent:
 {: screen}
 
 #### Sample of values yaml file to deploy the agent and the Node Analyzer
-{: #agent-deploy-kube-helm-install-step2-1}
+{: #agent-deploy-kube-helm-install-step2-2}
 
 For example, see the following sample of a values file that deploys the {{site.data.keyword.mon_short}} agent and the Node Analyzer component:
 
@@ -194,7 +193,6 @@ global:
     deploy: true
 agent:
   image:
-    tag: 12.12.1
     registry: icr.io
   slim:
     enabled: true
