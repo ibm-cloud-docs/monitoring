@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-06-22"
 
 keywords: Monitoring release notes, Monitoring updates
 
@@ -19,6 +19,22 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+
+## 22 June 2023
+{: #monitoring-jun2223}
+{: release-note}
+
+Change to alerts editor
+:   The [alerts editor](https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/){: external} has been changed. The [legacy alerts editor](https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/-legacy-alerts-editor/){: external} is still available, but requires the follow steps to access it:
+
+    1. [Launch {{site.data.keyword.mon_full_notm}}.](/docs/monitoring?topic=monitoring-getting-started#getting-started-step4)
+
+    2. Click the center of the UI and open the frame as a new tab. How to open the frame in a new tab will be determined by the browser you are using.
+
+    3. In the URL replace the value beginning with `#` with `#/alerts/legacy-editor/new`. The legacy editor will be displayed.
+
+    For example, change `https://us-east.monitoring.cloud.ibm.com/#/alerts/rules?direction=asc&sortBy=name` to `https://us-east.monitoring.cloud.ibm.com/#/alerts/legacy-editor/new`
 
 ## 14 April 2023
 {: #monitoring-apr1423}
