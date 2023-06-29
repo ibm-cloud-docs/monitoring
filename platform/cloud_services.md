@@ -2,7 +2,8 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-06-16"
+
+lastupdated: "2023-06-20"
 
 keywords:
 
@@ -176,16 +177,25 @@ The following table lists Cloud services that are enabled for {{site.data.keywor
 | [{{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)| You can use {{site.data.keyword.cos_full_notm}} to store unstructured data in the {{site.data.keyword.cloud_notm}}.  | [Platform metrics](/docs/cloud-object-storage?topic=cloud-object-storage-mm-cos-integration&programming_language=Console) |
 {: caption="Table 11. List of storage services" caption-side="top"}
 
-## VMware
+## VMware as a Service
 {: #vmware}
 
 The following table lists Cloud services that are enabled for {{site.data.keyword.mon_full_notm}}:
 
 | Service     | Description | Metrics           |
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.vmware-service_short}}](https://test.cloud.ibm.com/docs/vmware-service?topic=vmware-service-single-tenant-monitoring) | Deploys a comprehensive portfolio of automated and on-demand services for VMware workloads to the cloud. | [Platform metrics](/docs/vmware-service?topic=vmware-service-single-tenant-monitoring#single-tenant-monitoring-metrics)|
-{: caption="Table 12. VMware" caption-side="top"}
+| [{{site.data.keyword.vmware-service_short}}](/docs/vmware-service?topic=vmware-service-single-tenant-monitoring) | Deploys a comprehensive portfolio of automated and on-demand services for VMware workloads to the cloud. | [Platform metrics](/docs/vmware-service?topic=vmware-service-single-tenant-monitoring#single-tenant-monitoring-metrics)|
+{: caption="Table 12. VMware as a Service" caption-side="top"}
 
+## VMware Shared
+{: #vmware-shared}
+
+The following table lists Cloud services that are enabled for {{site.data.keyword.mon_full_notm}}:
+
+| Service     | Description | Metrics           |
+|-------------|-------------|-------------------|
+| [VMware Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared-monitor) | Provides standardized and customizable deployment choices of VMware® virtual data center environments. | [Platform metrics](/docs/vmwaresolutions?topic=vmwaresolutions-shared-monitor#shared-monitor-metrics)|
+{: caption="Table 13. VMware Shared" caption-side="top"}
 
 ## VPC
 {: #vpc}
@@ -204,6 +214,6 @@ The following table lists services that are enabled for {{site.data.keyword.mon_
 | [Load Balancer for VPC](/docs/vpc?topic=vpc-network-load-balancers)| Distributes traffic among multiple server instances within the same region of your VPC.  | [Application Load Balancer platform metrics](/docs/vpc?topic=vpc-monitoring-metrics-alb) \n [Network Load Balancer platform metrics](/docs/vpc?topic=vpc-nlb_monitoring-metrics) |
 | [VPN for VPC ( site-to-site VPN)](/docs/vpc?topic=vpc-using-vpn)| Securely connect your VPC to another private network. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premises private network or another VPC. | [Platform metrics](/docs/vpc?topic=vpc-vpn-monitoring-metrics) |
 | [Client VPN for VPC](/docs/vpc?topic=vpc-vpn-client-to-site-overview)| Client VPN for VPC provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client. | [Platform metrics](/docs/vpc?topic=vpc-vpn-client-to-site-monitoring) |
-{: caption="Table 13. List of VPC services (generation 2)" caption-side="top"}
+{: caption="Table 14. List of VPC services (generation 2)" caption-side="top"}
 
 In addition, some VPC resources have quotas associated with them that you can monitor through the VPC resource quota overview dashboard. For more information, see [VPC resource quota overview](/docs/vpc?topic=vpc-vpc-quota-metrics).
