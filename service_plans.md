@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-07-05"
 
 keywords:
 
@@ -32,4 +32,4 @@ You can provision a {{site.data.keyword.mon_short}} instance with the `Lite` ser
 
 The `Graduated tier` service plan includes features that you can use to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
 
-The `Graduated Tier - Sysdig Secure + Monitor` service plan includes the same features that are available through the `Graduated tier` service plan and features that you can use to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. Combining the monitoring features and the security features, DevOps teams can troubleshoot, analyze, and perform forensics on an incident quickly.
+The `Graduated Tier - Sysdig Secure + Monitor` service plan includes the same features that are available through the `Graduated tier` service plan and the [{{site.data.keyword.sysdigsecure_full_notm}}](/docs/workload-protection) service that you can use to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. Combining the monitoring features and the security features, DevOps teams can quickly troubleshoot, analyze, and perform forensics on an incident.

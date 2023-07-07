@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-05-05"
+lastupdated: "2023-07-06"
 
 
 keywords: IBM Cloud, monitoring, launch web UI
@@ -60,13 +60,13 @@ Complete the following steps to launch the web UI:
     The {{site.data.keyword.mon_short}} UI opens.
 
 
-## Launch the Secure UI
+## Launch the {{site.data.keyword.sysdigsecure_short}} UI
 {: #launch_step3}
 
-The Secure UI is only available for instances that have a plan that includes Secure.
+The {{site.data.keyword.sysdigsecure_short}} UI is only available for instances using the [*Graduated Tier - Sysdig Secure + Monitor* service plan](/docs/monitoring?topic=monitoring-service_plans).
 {: note}
 
-To access the *Secure* UI, complete the following steps:
+To access the *{{site.data.keyword.sysdigsecure_short}}* UI, complete the following steps:
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account.
 
@@ -80,7 +80,7 @@ To access the *Secure* UI, complete the following steps:
 
     The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
 
-4. Select one instance. Then, click **Open dashboard**.
+4. Select an instance with the *Graduated Tier - Sysdig Secure + Monitor* service plan. Then, click **Open dashboard**.
 
     The {{site.data.keyword.mon_short}} UI opens by default.
 
@@ -90,6 +90,8 @@ To access the *Secure* UI, complete the following steps:
 
     The *Switch Products* selection box opens.
 
-    ![Platform icon](images/platform.png){: caption="Platform icon" caption-side="bottom"}
+    ![Switch products](images/platform.png){: caption="Switch products" caption-side="bottom"}
 
-6. Select **Secure** to launch the Secure UI.
+6. Select **Workload Protection** to launch the {{site.data.keyword.sysdigsecure_short}} UI.
+
+For more information on using {{site.data.keyword.sysdigsecure_short}}, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)

@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-11-29"
+lastupdated: "2023-07-06"
 
-keywords: IBM Cloud, monitoring, config monitoring agent
+keywords:
 
 subcollection: monitoring
 
@@ -80,7 +80,7 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
     ```
     {: pre}
 
-    Option 2: Monitor and Secure
+    Option 2: Monitor and {{site.data.keyword.sysdigsecure_short}}
 
     ```text
     curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a MONITORING_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --api_endpoint <API-ENDPOINT>
@@ -102,9 +102,9 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
 
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
-    * Add `--imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the image analyzer **Secure** component only.
+    * Add `--imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the image analyzer **{{site.data.keyword.sysdigsecure_short}}** component only.
 
-    * Add `--nodeanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --API_ENDPOINT <API-ENDPOINT>`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the **Secure** components: image-analyzer, host-analyzer, and benchmark runner. The `API_ENDPOINT` is needed by the benchmark runner. The `COLLECTOR_ENDPOINT` is needed by the image analyzer.
+    * Add `--nodeanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --API_ENDPOINT <API-ENDPOINT>`, if you have the service plan that includes the **{{site.data.keyword.sysdigsecure_short}}** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the **{{site.data.keyword.sysdigsecure_short}}** components: image-analyzer, host-analyzer, and benchmark runner. The `API_ENDPOINT` is needed by the benchmark runner. The `COLLECTOR_ENDPOINT` is needed by the image analyzer.
 
     To get help about the different options, you can run `curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -h`.
     {: tip}
@@ -119,6 +119,92 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
 If you get the error `ERROR: default-icr-io or all-icr-io secret doesn't exist in the default namespace`, run the following command `ibmcloud ks cluster pull-secret apply --cluster CLUSTER_ID` before you try to deploy the agent again.
 
 
+
+## Updating a Kubernetes agent
+{: #manage_agent_kube_update}
+
+By default, the monitoring agent has a `RollingUpdate` update strategy.
+
+```yaml
+updateStrategy:
+    rollingUpdate:
+      maxUnavailable: 1
+    type: RollingUpdate
+```
+{: codeblock}
+
+When you update the agent's DaemonSet template, old DaemonSet pods are killed, and new DaemonSet pods are created automatically.
+
+The image that is used to create the new pods is the one that is specified in the DaemonSet template. By default, the monitoring agent's image pull policy is configured to always so that it pulls the latest image. The `imagePullPolicy` of the container is set to `Always`.
+
+```yaml
+containers:
+    - image: icr.io/ext/sysdig/agent
+      imagePullPolicy: Always
+      name: sysdig-agent
+```
+{: codeblock}
+
+Complete the following steps to update a monitoring agent with a `RollingUpdate` update strategy:
+
+1. Set up the cluster environment. Run the following command:
+
+    First, get the command to set the environment variable and download the Kubernetes configuration files.
+
+    ```text
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ```
+    {: codeblock}
+
+2. List the DaemonSets that are running in the `ibm-observe` namespace, and verify that the monitoring agent is running in this namespace:
+
+    ```text
+    kubectl get daemonsets -n ibm-observe
+    ```
+    {: pre}
+
+    Verify the monitoring agent is running.
+
+3. Check the DaemonSet update strategy:
+
+    ```text
+    kubectl get ds/sysdig-agent -o go-template='{{.spec.updateStrategy.type}}{{"\n"}}' -n ibm-observe
+    ```
+    {: pre}
+
+    Verify that is set to `RollingUpdate`.
+
+4. Check the image version that is deployed:
+
+    ```text
+    kubectl describe ds sysdig-agent -n ibm-observe | grep Image
+    ```
+    {: pre}
+
+5. Update the image that is configured in the DaemonSet template to the monitoring agent image that you want to use:
+
+    ```text
+    kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:IMAGE_VERSION -n ibm-observe
+    ```
+    {: pre}
+
+    Where `IMAGE_VERSION` is the version of the agent that you want to deploy. To see the the agent versions that are available, see [monitoring agent Release Notes](https://docs.sysdig.com/en/sysdig-agent-release-notes.html){: external}.
+
+    For example, to update the agent to version `10.5.1`, you can run the following command:
+
+    ```text
+    kubectl set image ds/sysdig-agent sysdig-agent=icr.io/ext/sysdig/agent:10.5.1 -n ibm-observe
+    ```
+    {: pre}
+
+    This step will initiate the update request.
+
+6. Check the update completes.
+
+    ```text
+    kubectl rollout status ds/sysdig-agent -n ibm-observe
+    ```
+    {: pre}
 
 
 ## Removing a monitoring agent

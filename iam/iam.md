@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-04-26"
+lastupdated: "2023-07-05"
 
 keywords:
 
@@ -96,9 +96,11 @@ The following table identifies the service role that you can grant a user in the
 
 | Action | Description | Manager | Writer | Reader | Administrator |
 |--------|-------------|---------|--------|--------|---------------|
-| `sysdig-monitor.secure.manager` | Manage `Secure` functions. | | | | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `sysdig-monitor.secure.user` | User access to `Secure` functions. | | | | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `sysdig-monitor.secure.viewer` | Viewer access to `Secure` functions. | | | | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.launch.admin` | Run priviledge tasks. | ![Checkmark icon](../images/checkmark-icon.svg) | | | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.launch.viewer` | Perform read-only actions within a service. | ![Checkmark icon](../images/checkmark-icon.svg) | | | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.secure.manager` `[*]` | Run priviledge tasks. | ![Checkmark icon](../images/checkmark-icon.svg) | | | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.secure.user` `[*]` | Perform read-only actions within a service. |![Checkmark icon](../images/checkmark-icon.svg)  | | | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.secure.viewer` `[*]` |  Perform read-only actions within a service. | | | | ![Checkmark icon](../images/checkmark-icon.svg) |
 | `sysdig-monitor.agent-installation.read` | Agent installation access. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 | `sysdig-monitor.agent.cli.agent-network-calls-to-remote-pods` | Access to network calls for the CLI. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 | `sysdig-monitor.agent.cli.agent-status` | Access to agent status from the CLI. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
@@ -148,25 +150,15 @@ The following table identifies the service role that you can grant a user in the
 | `sysdig-monitor.teams.read` | View team configurations. |  |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | `sysdig-monitor.token.view` | View tokens. | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 | `sysdig-monitor.user.read` | View users. |  |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `sysdig-monitor.system-role.admin` | Configure system roles. |  |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
-| `sysdig-monitor.platform-metric.publish` `[*]` | | | | |
+| `sysdig-monitor.system-role.admin` | Configure system roles. | ![Checkmark icon](../images/checkmark-icon.svg) |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| `sysdig-monitor.platform-metric.publish` `[**]` | | | | |
 {: caption="Table 2. Service roles and actions" caption-side="top"}
 
-`[*]` - This service role is for internal use only and will not be used in your environment.
+`[*]` - This service role is for the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} service. For more information on this service's functions, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
 {: note}
 
-## IAM actions
-{: #iam_actions}
-
-The following table identifies the IAM actions that are assigned to the platform and service roles for the {{site.data.keyword.mon_full_notm}} service:
-
-| Role type         | Role              | IAM actions |
-|-------------------|-------------------|--------------|
-| Platform          | `administrator`   | `sysdig-monitor.launch.admin`  /n `sysdig-monitor.launch.user`  /n `sysdig-monitor.launch.viewer` |
-| Service           | `manager`         | `sysdig-monitor.launch.admin`  /n `sysdig-monitor.launch.user`  /n `sysdig-monitor.launch.viewer` |
-| Service           | `writer`          | `sysdig-monitor.launch.user`  /n `sysdig-monitor.launch.viewer` |
-| Service           | `reader`          | `sysdig-monitor.launch.viewer` |
-{: caption="Table 3. IAM actions assigned to platform and service roles" caption-side="top"}
+`[**]` - This service role is for internal use only and will not be used in your environment.
+{: note}
 
 The `sysdig-monitor.launch.viewer` action must be assigned at a minimum to access the instance. If not assigned, an error will be returned.
 

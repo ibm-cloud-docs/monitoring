@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-08-08"
+lastupdated: "2023-07-06"
 
 keywords:
 
@@ -43,7 +43,7 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 
     Make sure that the `kubectl` version is compatible with your cluster version. If the `kubectl` version is not compatible, you can get an error such as `kubectl create clusterrolebinding failed!`. You can use `kubectl version --short` to check versions of your cluster and your `kubectl` client.
 
-- If you plan to run the {{site.data.keyword.mon_short}} service, Secure with the node analyzer, or both, check your cluster flavor. You need a minimum `b3c.4x16` flavor for node analyzer to run.
+- If you plan to run the {{site.data.keyword.mon_short}} service, {{site.data.keyword.sysdigsecure_short}} with the node analyzer, or both, check your cluster flavor. You need a minimum `b3c.4x16` flavor for node analyzer to run.
 
     If you have a cluster with a `free` plan, you do not have sufficient CPU to run the {{site.data.keyword.mon_short}} agent.
     {: note}
@@ -73,7 +73,7 @@ Where
 
 * ACCESS_KEY is the ingestion key for the instance.
 
-* COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the instance is available. To get an endpoint, see [Collector endpoints](/docs/sysdig-secure?topic=sysdig-secure-endpoints#endpoints_ingestion).
+* COLLECTOR_ENDPOINT is the public or private ingestion URL for the region where the instance is available. To get an endpoint, see [Collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
 * TAG_DATA are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your agent. For example: *role:serviceX,location:us-south*.
 

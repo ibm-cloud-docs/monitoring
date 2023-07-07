@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-05-31"
+lastupdated: "2023-07-05"
 
 keywords:
 
@@ -126,6 +126,8 @@ Prometheus remote write cost is based on metric ingestion. The price is calculat
 
 ### Graduated Tier - Sysdig Secure + Monitor
 {: #graduated_secure}
+
+The *Graduated Tier - Sysdig Secure + Monitor* service plan includes both {{site.data.keyword.mon_full_notm}} and [{{site.data.keyword.sysdigsecure_full_notm}} functionality.](/docs/workload-protection).
 
 The *Graduated Tier - Sysdig Secure + Monitor* service plan is billed based on the number of hosts that you monitor, the number of containers, the number of API calls, and the number of time series collected.
 

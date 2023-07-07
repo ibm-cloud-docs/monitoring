@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021, 2023
-lastupdated: "2023-04-28"
+lastupdated: "2023-07-05"
 
 keywords:
 
@@ -13,10 +13,10 @@ subcollection: monitoring
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Monitoring an OpenShift cluster
+# Monitoring a {{site.data.keyword.redhat_openshift_notm}} cluster
 {: #openshift_cluster}
 
-Use this tutorial to learn how to configure a {{site.data.keyword.openshiftshort}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.  You can monitor clusters in {{site.data.keyword.cloud_notm}}, on-prem, and in other clouds.
+Use this tutorial to learn how to configure a {{site.data.keyword.redhat_openshift_full}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.  You can monitor clusters in {{site.data.keyword.cloud_notm}}, on-prem, and in other clouds.
 {: shortdesc}
 
 To configure a cluster to forward metrics, you must install a monitoring agent onto each worker node in your {{site.data.keyword.redhat_openshift_notm}} cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade.
@@ -356,4 +356,4 @@ For more information on how to interpret this view, see [About Workloads Overvie
 
 - Learn how to manage logs from your cluster. See [Logging with {{site.data.keyword.redhat_openshift_notm}} clusters](/docs/log-analysis?topic=log-analysis-kube).
 
-- Learn about {{site.data.keyword.sysdigsecure_full}} and how you can use it to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).
+- Learn about the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} functionality to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).
