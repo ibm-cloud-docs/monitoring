@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-07-07"
 
 keywords:
 
@@ -38,7 +38,7 @@ Read this section to understand concepts and costs that are associated with the 
 
 - [Time-series](/docs/monitoring?topic=monitoring-about-timeseries).
 
-- [Sources of custom metrics](/docs/monitoring?topic=monitoring-about-collect-metrics-1).
+- [Sources of custom metrics](/docs/monitoring?topic=monitoring-about-collect-metrics).
 
 - [Collecting metrics by infrastructure](/docs/monitoring?topic=monitoring-collect-metrics-by-host).
 
