@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-04-28"
+lastupdated: "2023-07-05"
 
 keywords:
 
@@ -339,4 +339,4 @@ For more information on how to interpret this view, see [About Workloads Overvie
 
 - Learn how to manage logs from your cluster. See [Logging with Kubernetes clusters](/docs/log-analysis?topic=log-analysis-kube).
 
-- Learn about {{site.data.keyword.sysdigsecure_full}} and how you can use it to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).
+- Learn about the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} functionality to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).

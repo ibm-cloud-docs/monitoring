@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-06-22"
+lastupdated: "2023-07-05"
 
 keywords: Monitoring release notes, Monitoring updates
 
@@ -20,6 +20,14 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
+## 7 July 2023
+{: #monitoring-july0723}
+{: release-note}
+
+{{site.data.keyword.mon_full}} {{site.data.keyword.sysdigsecure_short}} documentation location has changed.
+:  The documentation for the [{{site.data.keyword.mon_full}} {{site.data.keyword.sysdigsecure_short}} service](#monitoring-apr1423) has moved from the {{site.data.keyword.mon_full}} documentation to the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
+
+    Links to the {{site.data.keyword.sysdigsecure_full_notm}} documentation are included in the {{site.data.keyword.mon_full}} documentation as appropriate.
 
 ## 22 June 2023
 {: #monitoring-jun2223}

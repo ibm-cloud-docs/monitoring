@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-03-28"
+lastupdated: "2023-07-06"
 
 keywords:
 
@@ -40,7 +40,9 @@ To provision an instance from the {{site.data.keyword.cloud_notm}} catalog, comp
 
     To provision an instance that only includes the *Monitor* component, select the plan **Graduated Tier**.
 
-    To provision an instance that include the *Monitor* and the *Secure* components, select the plan **Graduated Tier - Sysdig Secure + Monitor**.
+    To provision an instance that include the *Monitor* and the *Secure* ({{site.data.keyword.sysdigsecure_short}}) components, select the plan **Graduated Tier - Sysdig Secure + Monitor**.
+
+    For more information about {{site.data.keyword.sysdigsecure_short}}, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
 
     For more information about the service plans, see [Service plans](/docs/monitoring?topic=monitoring-pricing_plans#pricing_plans).
 

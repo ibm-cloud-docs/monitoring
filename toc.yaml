@@ -99,12 +99,7 @@ toc:
           - notifications/eventnotif_tutorial.md
           - notifications/eventnotif_sms_tutorial.md
 
-      - topicgroup:
-          label: Workload Protection
-          links:
-          - link:
-              label: IBM Cloud Security and Compliance Center Workload Protection
-              href: https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-getting-started
+      - about_wp.md
 
       - topicgroup:
           label: Release notes
@@ -183,12 +178,12 @@ toc:
                 navtitle: Managing the Red Hat OpenShift agent by using Helm
               - topic: agent/agent_kube.md
                 navtitle: Deploying the Kubernetes agent by using a script
-              - topic: agent/deploy-secure-features.md
-                navtitle: Deploying Secure features on a host
               - topic: agent/agent_openshift.md
                 navtitle: Deploying the Red Hat OpenShift agent by using a script
               - topic: agent/change_kube_agent.md
                 navtitle: Customizing Kube agents
+              - topic: agent/deploy-secure-features.md
+                navtitle: Deploying Workoad Protection on a host
           - topicgroup:
               label: Non-orchestrated environments
               topics:
@@ -301,79 +296,6 @@ toc:
                 href: https://docs.sysdig.com/en/captures.html
           topics:
           - monitor/captures.md
-
-      - topicgroup:
-          label: Secure
-          topics:
-          - topicgroup:
-              label: Image scanning
-              links:
-              - link:
-                  label: Working with image scanning
-                  href: https://docs.sysdig.com/en/scanning.html
-              - link:
-                  label: Managing scanning alerts
-                  href: https://docs.sysdig.com/en/manage-scanning-alerts.html
-              - link:
-                  label: Reviewing scan results
-                  href: https://docs.sysdig.com/en/review-scan-results.html
-              - link:
-                  label: Working with the Admission Controller
-                  href: https://docs.sysdig.com/en/docs/sysdig-secure/scanning/admission-controller/
-              - link:
-                  label: Integrating with CI/CD Tools
-                  href: https://docs.sysdig.com/en/docs/sysdig-secure/scanning/integrate-with-cicd-tools/
-              - link:
-                  label: Scheduled Reports
-                  href: https://docs.sysdig.com/en/docs/sysdig-secure/scanning/scheduled-reports/
-          - topicgroup:
-              label: Compliance
-              links:
-              - link:
-                  label: Working with benchmarks
-                  href: https://docs.sysdig.com/en/benchmarks.html
-              - link:
-                  label: Configuring a benchmark task
-                  href: https://docs.sysdig.com/en/configure-benchmark-tasks.html
-              - link:
-                  label: Reviewing benchmark test results
-                  href: https://docs.sysdig.com/en/review-benchmark-test-results.html
-          - topicgroup:
-              label: Policies
-              links:
-              - link:
-                  label: Working with rules
-                  href: https://docs.sysdig.com/en/manage-rules.html
-              - link:
-                  label: Working with Polices
-                  href: https://docs.sysdig.com/en/policies.html
-          - topicgroup:
-              label: Events
-              links:
-              - link:
-                  label: Managing events
-                  href: https://docs.sysdig.com/en/secure-events.html
-              - link:
-                  label: Kubernetes Audit Logging with Admission Controller
-                  href: https://docs.sysdig.com/en/docs/sysdig-secure/secure-events/kubernetes-audit-logging/
-          - topicgroup:
-              label: Investigate
-              links:
-              - link:
-                  label: Activity Audit
-                  href: https://docs.sysdig.com/en/docs/sysdig-secure/investigate/activity-audit/
-              - link:
-                  label: Captures
-                  href: https://docs.sysdig.com/en/docs/sysdig-secure/investigate/captures/
-              - link:
-                  label: Rapid Response
-                  href: https://docs.sysdig.com/en/docs/sysdig-secure/investigate/rapid-response/
-          - topicgroup:
-              label: Integrations
-              links:
-              - link:
-                  label: Integrations
-                  href: https://docs.sysdig.com/en/integrations-for-sysdig-secure.html
 
   - navgroup:
       id: reference

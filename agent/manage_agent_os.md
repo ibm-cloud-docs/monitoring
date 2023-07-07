@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-11-29"
+lastupdated: "2023-07-06"
 
 keywords: IBM Cloud, monitoring, config monitoring agent
 
@@ -42,7 +42,7 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 
     Make sure that the `kubectl` version is compatible with your cluster version. If the `kubectl` version is not compatible, you can get an error such as `kubectl create clusterrolebinding failed!`. You can use `kubectl version --short` to check versions of your cluster and your `kubectl` client.
 
-- If you plan to run the {{site.data.keyword.mon_short}} service, Secure with the node analyzer, or both, check your cluster flavor. You need a minimum `b3c.4x16` flavor for node analyzer to run.
+- If you plan to run the {{site.data.keyword.mon_short}} service, {{site.data.keyword.sysdigsecure_short}} with the node analyzer, or both, check your cluster flavor. You need a minimum `b3c.4x16` flavor for node analyzer to run.
 
     If you have a cluster with a `free` plan, you do not have sufficient CPU to run {{site.data.keyword.mon_short}}.
     {: note}
@@ -85,7 +85,7 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
     ```
     {: pre}
 
-    Option 2: Monitor and Secure
+    Option 2: Monitor and {{site.data.keyword.sysdigsecure_short}}
 
     ```text
     curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a MONITORING_ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false' --nodeanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --api_endpoint <API-ENDPOINT>
@@ -107,9 +107,9 @@ Complete the following steps to configure a monitoring agent on a Kubernetes clu
 
     * Set **sysdig_capture_enabled** to *false* to disable the capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
 
-    * Add `--imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the image analyzer **Secure** component only.
+    * Add `--imageanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector`, if you have the service plan that includes the **{{site.data.keyword.sysdigsecure_short}}** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the image analyzer **{{site.data.keyword.sysdigsecure_short}}** component only.
 
-    * Add `--nodeanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --API_ENDPOINT <API-ENDPOINT>`, if you have the service plan that includes the **Secure** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the **Secure** components: image-analyzer, host-analyzer, and benchmark runner. The `API_ENDPOINT` is needed by the benchmark runner. The `COLLECTOR_ENDPOINT` is needed by the image analyzer.
+    * Add `--nodeanalyzer --analysismanager https://<COLLECTOR ENDPOINT>/internal/scanning/scanning-analysis-collector --API_ENDPOINT <API-ENDPOINT>`, if you have the service plan that includes the **{{site.data.keyword.sysdigsecure_short}}** component, and images hosted in the {{site.data.keyword.registryshort_notm}}.  This will install the **{{site.data.keyword.sysdigsecure_short}}** components: image-analyzer, host-analyzer, and benchmark runner. The `API_ENDPOINT` is needed by the benchmark runner. The `COLLECTOR_ENDPOINT` is needed by the image analyzer.
 
     To get help about the different options, you can run `curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -h`.
     {: tip}

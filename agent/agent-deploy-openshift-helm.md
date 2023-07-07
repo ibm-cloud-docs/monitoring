@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-06-22"
+lastupdated: "2023-07-06"
 
 keywords:
 
@@ -97,9 +97,9 @@ rm $HOME/Library/Preferences/helm/repositories.lock
 ### Step 2. Create the values yaml file
 {: #agent-deploy-openshift-helm-install-step2}
 
-Define a yaml file and include the values to deploy the {{site.data.keyword.mon_short}} agent and the Secure components that you plan to deploy. For example, name the file `agent-values-monitor-secure.yaml`.
+Define a yaml file and include the values to deploy the {{site.data.keyword.mon_short}} agent and the {{site.data.keyword.sysdigsecure_short}} components that you plan to deploy. For example, name the file `agent-values-monitor-secure.yaml`.
 
-The following yaml is a template that you can use to configure the {{site.data.keyword.mon_short}} agent and the Secure components. You can customize the file by removing or commenting with `#` the sections that are not required for your agent deployment.
+The following yaml is a template that you can use to configure the {{site.data.keyword.mon_short}} agent and the {{site.data.keyword.sysdigsecure_short}} components. You can customize the file by removing or commenting with `#` the sections that are not required for your agent deployment.
 
 ```yaml
 global:
@@ -215,7 +215,7 @@ nodeAnalyzer:
 ### Step 3. Install the helm chart
 {: #agent-deploy-openshift-helm-install-step3}
 
-To deploy the agent, the Secure components, or both, you must install the `sysdig/sysdig-deploy` chart and use the variables yaml file that you configured in the previous step.
+To deploy the agent, the {{site.data.keyword.sysdigsecure_short}} components, or both, you must install the `sysdig/sysdig-deploy` chart and use the variables yaml file that you configured in the previous step.
 
 Run the following command to install the agent by using the helm chart:
 

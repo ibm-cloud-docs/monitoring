@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-04-27"
+lastupdated: "2023-07-05"
 
 keywords:
 
@@ -29,7 +29,7 @@ A metric is a quantitative measure that has one or more labels to define its cha
 Use metrics to analyze statistically data that has numerical values.
 {: note}
 
-A metric is represented by time series. A time-series is a unique combination of a metric name and label key-value pairs. For example: website_failedRequest |region='Asia', customer_ID='abc'. A data-point is the value generated for a time-series at a given point in time.
+A metric is represented by time series. A time-series is a unique combination of a metric name and label key-value pairs. For example: `website_failedRequest |region='Asia', customer_ID='abc'`. A data-point is the value generated for a time-series at a given point in time.
 
 Labels are classified as infrastructure labels and metric descriptor labels. Each metric has a set of pre-defined labels. For custom metrics, you can configure more labels.
 
