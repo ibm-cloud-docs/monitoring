@@ -304,6 +304,7 @@ toc:
       - endpoints.md
       - service_plans.md
       - pricing.md
+      - collect-metrics-by-host.md
       - core/shared-responsibilities.md
 
       - topicgroup:
