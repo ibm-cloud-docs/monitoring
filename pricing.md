@@ -63,8 +63,6 @@ To monitor how the {{site.data.keyword.mon_full_notm}} service is used and the c
 All metrics that start with `sysdig_*` and `kube_*` are collected automatically by an agent and are included in the agent price.
 {: note}
 
-
-
 ## Service plans
 {: #pricing__service_plans}
 
