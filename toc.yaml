@@ -310,7 +310,7 @@ toc:
       - topicgroup:
           label: Monitoring CLI
           topics:
-          - /monitor-cli-plugin/monitor-cli-plugin-monitor-cli
+          - include: ../monitor-cli-plugin/monitor-cli.md
 
       - topicgroup:
           label: Monitoring API
