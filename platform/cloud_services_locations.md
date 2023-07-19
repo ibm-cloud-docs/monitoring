@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-06-21"
+lastupdated: "2023-07-18"
 
 keywords:
 
@@ -321,6 +321,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.dv_full_notm}}                        |    | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.Db2_on_Cloud_long_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
+| {{site.data.keyword.lakehouse_full_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  |
 {: caption="Database services integration in Europe locations" caption-side="top"}
 {: #cs-db-table-1}
 {: tab-title="Europe"}
@@ -340,8 +341,9 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
-| {{site.data.keyword.dv_full_notm}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
+| {{site.data.keyword.dv_full_notm}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    | | |
 | {{site.data.keyword.Db2_on_Cloud_long_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
+| {{site.data.keyword.lakehouse_full_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | | ![Checkmark icon](../images/checkmark-icon.svg)  | |
 {: caption="Database services integration in America's locations" caption-side="top"}
 {: #cs-db-table-2}
 {: tab-title="America"}

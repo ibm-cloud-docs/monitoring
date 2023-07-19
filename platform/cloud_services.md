@@ -3,7 +3,7 @@
 copyright:
   years:  2018, 2023
 
-lastupdated: "2023-06-20"
+lastupdated: "2023-07-18"
 
 keywords:
 
@@ -79,6 +79,7 @@ The following table lists database services that are enabled for {{site.data.key
 | [{{site.data.keyword.ihsdbaas_postgresql_full}}](/docs/hyper-protect-dbaas-for-postgresql?topic=hyper-protect-dbaas-for-postgresql-gettingstarted) | {{site.data.keyword.ihsdbaas_postgresql_full}} is a highly secure PostgreSQL service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Platform metrics](/docs/hyper-protect-dbaas-for-postgresql?topic=hyper-protect-dbaas-for-postgresql-monitor) |
 | [{{site.data.keyword.dv_full}}](/docs/data-virtualization?topic=data-virtualization-getting-started) | {{site.data.keyword.dv_full}} is a fully managed service on {{site.data.keyword.cloud_notm}} that you can use to easily and securely access data across many data sources. | [Platform metrics](/docs/data-virtualization?topic=data-virtualization-monitor) |
 | [{{site.data.keyword.Db2_on_Cloud_long}}](/docs/Db2onCloud?topic=Db2onCloud-about) | {{site.data.keyword.Db2_on_Cloud_long_notm}} is a fully managed public cloud service on IBM Cloud. As a relational database, it delivers fast query processing with enterprise-level performance and capabilities for online transactional processing (OLTP). | [Platform metrics](/docs/Db2onCloud?topic=Db2onCloud-monitor) |
+| [{{site.data.keyword.lakehouse_full_notm}}](/docs/watsonxdata?topic=watsonxdata-getting-started) | {{site.data.keyword.lakehouse_full_notm}} is a unique solution that allows co-existence of open source technologies and proprietary products. It offers a single platform where you can store the data or attach data sources for managing and analyzing your enterprise data. | [Platform metrics](/docs/watsonxdata?topic=watsonxdata-monitor_wxd) |
 {: caption="Table 3. List of database services" caption-side="top"}
 
 
