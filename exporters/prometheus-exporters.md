@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-03-11"
+lastupdated: "2023-07-25"
 
 keywords: IBM Cloud, monitoring, prometheus, exporters, promcat
 
@@ -20,8 +20,11 @@ subcollection: monitoring
 You can use Prometheus exporters to collect metrics from hosts, services, or apps which do not natively expose Prometheus-formatted metrics. You can monitor these metrics through a {{site.data.keyword.mon_short}} instance.
 {: shortdesc}
 
+See the [{{site.data.keyword.IBM_notm}} support statement](/docs/monitoring?topic=monitoring-agent_support) for the use of Prometheus exporters.
+{: important}
+
 There are different sources for Prometheus exporters:
-- Official exporters are available in [the official Prometheus GitHub organization](https://github.com/prometheus){: external} and are lable **official**.
+- Official exporters are available in [the official Prometheus GitHub organization](https://github.com/prometheus){: external} and are labelled **official**.
 - Sysdig curates and maintains [PromCat](https://promcat.io/){: external}. PromCat is an enterprise resource catalog where you can find supported {{site.data.keyword.mon_short}} integrations for Kubernetes platforms and cloud-native services.
 
 You can collect metrics from different sources such as:
@@ -35,10 +38,11 @@ The following table lists some Prometheus exporters that you can use to monitor 
 
 | Exporters                | Use case                               | Source |
 |--------------------------|----------------------------------------|---------|
-| `Blackbox exporter`       | Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics.  | [Prometheus Blackbox exporter](https://github.com/prometheus/blackbox_exporter){: external} |
-| `IPMI exporter`          | Collects Intelligent Platform Management Interface (IPMI) device sensor metrics.  | [Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}  |
-| `Windows WMI exporter`   | Collects Windows system metrics. | [PromCat: Windows Exporter](https://promcat.io/apps/windows){: external} |
-| `Node exporter`          | Collects hardware and kernel-related metrics that are exposed by *NIX kernels. | [Node exporter](https://github.com/prometheus/node_exporter){: external} |
+| `Blackbox Exporter`       | Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics.  | [Prometheus Blackbox exporter](https://github.com/prometheus/blackbox_exporter){: external} (official)|
+| `IPMI Exporter`          | Collects Intelligent Platform Management Interface (IPMI) device sensor metrics.  | [Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external} (opensource)  |
+| `Windows WMI Exporter`   | Collects Windows system metrics. | [PromCat: Windows Exporter](https://promcat.io/apps/windows){: external} (opensource) |
+| `Node Exporter`          | Collects hardware and kernel-related metrics that are exposed by *NIX kernels. | [Node exporter](https://github.com/prometheus/node_exporter){: external} (official) |
+| `VMware Exporter`        | Collects metrics from VMware vCenter deployments. | [VMWare exporter](https://github.com/pryorda/vmware_exporter){: external} (Opensource) |
 {: caption="Table 1. Exporters" caption-side="top"}
 
 
@@ -144,3 +148,8 @@ Configure the [Prometheus Node exporter](https://github.com/prometheus/node_expo
 {: note}
 
 For more information, see [Monitoring Linux host metrics with the Node Exporter](https://prometheus.io/docs/guides/node-exporter/){: external}.
+
+## VMWare exporter
+{: #prometheus-exporters-vmware}
+
+For information on configuring a VMWare exporter, see [Monitoring for VMware vCenter Server deployments](/docs/monitoring?topic=monitoring-vmware-vcenter)
