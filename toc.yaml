@@ -189,6 +189,7 @@ toc:
           - topicgroup:
               label: Non-orchestrated environments
               topics:
+              - agent/agent_windows.md
               - topic: agent/agent_linux.md
                 navtitle: Managing the Linux agent
               - topic: agent/agent_linux_1.md
