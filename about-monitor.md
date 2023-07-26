@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-07-26"
 
 keywords:
 
@@ -49,6 +49,9 @@ You can monitor hosts in {{site.data.keyword.cloud_notm}}, on-prem, and in other
 | Bare metal | [Monitoring a Linux bare metal server](/docs/monitoring?topic=monitoring-baremetal_linux) |
 | Windows environments | [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows) |
 | Linux environments | [Working with the Linux agent](/docs/monitoring?topic=monitoring-agent_linux) \n [Deploying the agent on a Linux host with no public access](/docs/monitoring?topic=monitoring-agent_linux_1)|
+| VMware Solutions | [Monitoring for VMware Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared-monitor) |
+| VMware as a service | [Monitoring for VMware as a service](/docs/vmware-service?topic=vmware-service-single-tenant-monitoring#single-tenant-monitoring-metrics) |
+| VMware self-managed solution - vCenter Server with NSX-T architecture | [Monitoring for VMware vCenter Server deployments](/docs/monitoring?topic=monitoring-vmware-vcenter) |
 {: caption="Table 1. Get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
