@@ -22,6 +22,9 @@ You can use {{site.data.keyword.mon_full}} to monitor the performance and overal
 
 You can collect metrics from a number of platforms, orchestrators, and a wide range of applications such as Prometheus, JMX, StatsD, Kubernetes, and other application stacks, that are available in the {{site.data.keyword.cloud_notm}}, outside the {{site.data.keyword.cloud_notm}}, or on-prem. You can also add more metrics by creating custom metrics and adding integrations.
 
+See the [{{site.data.keyword.IBM_notm}} support statement](/docs/monitoring?topic=monitoring-agent_support) for the use of agents and exporters.
+{: important}
+
 You can monitor metrics through the {{site.data.keyword.mon_short}} web UI, or through other platforms like Grafana.
 
 
