@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-07-26"
+lastupdated: "2023-07-27"
 
 keywords:
 
@@ -78,7 +78,7 @@ To begin monitoring your Windows systems, do the following:
 
    The most commonly used metrics can be selected. Additional [Windows Exporter](https://github.com/prometheus-community/windows_exporter){: external} metrics can be added as a comma separated list.
 
-8. If `Prometheus metrics from files` is selected, specify the directory where metrics files are located.
+8. Metrics in Promethus format can be written by other processes to a file on the system. These metrics can be exported and sent to {{site.data.keyword.mon_full_notm}} by selecting `Prometheus metrics from files` then indicating the directory where the metrics are located.
 
 9. Click **Install** then **Finish** to complete the installation.
 
