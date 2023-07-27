@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-07-10"
 
 keywords:
 
@@ -62,6 +62,8 @@ To monitor how the {{site.data.keyword.mon_full_notm}} service is used and the c
 
 All metrics that start with `sysdig_*` and `kube_*` are collected automatically by an agent and are included in the agent price.
 {: note}
+
+
 
 ## Service plans
 {: #pricing__service_plans}
@@ -205,7 +207,47 @@ sum(scrape_series_added)by(kube_cluster_name, kube_namespace_name, kube_workload
 ```
 {: codeblock}
 
+## Pricing considerations when monitoring Windows systems
+{: #win_price}
 
+Windows monitoring is charged by the number of *time-series* that are generated. The number of *time-series* depends on the number of collectors and resources your Windows system has.
+​
+The following table estimates the number of *time-series* generated when the default collectors are installed on a Windows system.
+​
+| Collector | Description | Estimate number of Time Series |
+|---|---|---|
+| `cpu` | CPU Usage |15 *time-series* per vCPU |
+| `cs` | "Computer System" metrics (system properties, number of CPUs/total memory) | 3 |
+| `logical_disk` | Logical disks, disk I/O | 14 *time-series* per disk partition |
+| `os` | OS metrics (memory, processes, users) | 13 |
+| `system` | System calls | 6 |
+| `net` | Network interface I/O | 12 *time-series* per network adapter |
+{: caption="Table 1. Time-series estimates for Windows systems based on default collector installation" caption-side="bottom"}
+
+For example, if you have one Windows server with 2 vCPUs, 2 logical disks and 1 network adapter you can anticipate 92 *time-series*.
+​
+```text
+15 * 2 + 3 + 14 * 2 + 13 + 6 + 12 * 1 = 92
+```
+{: screen}
+
+With the cost per *time-series* of 0.08 USD for each *time-series* you would expect your cost to be 7.36 USD per month.
+​
+```text
+92 * 0.08 USD = 7.36 USD
+```
+{: screen}
+
+Other collectors that generate *time-series* include:
+
+| Collector | Description | Estimate number of Time Series |
+|---|---|---|
+| `mssql` | SQL Server Performance Objects metrics | approximately 500 *time-series* per instance and approximately 100 *time-series* per database |
+| `memory` | Memory usage metrics | 32 |
+| `ad` | Active Directory Domain Services | 14 *time-series* per disk partition |
+| `process` | Per-process metrics | 21 *time-series* per process. (This metric has high cardinality. One process can have subprocesses with multiple `process_id` values.) You can filter [processes](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.process.md){: external} |
+| `service` | Service state metrics | 26 *time-series* per service. (This metric has high cardinality. Windows has a lot of services by default.) You can filter [services](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.service.md){: external} |
+{: caption="Table 2. Time-series estimates for Windows systems for additional collectors" caption-side="bottom"}
 
 ## Billing samples
 {: #billing_example}
