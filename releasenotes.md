@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-07-05"
+lastupdated: "2023-07-29"
 
 keywords: Monitoring release notes, Monitoring updates
 
@@ -19,6 +19,17 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 26 July 2023
+{: #monitoring-july2623}
+{: release-note}
+
+New support documentation is available for VMware and Windows.
+:  Documentation has been updated to include the following:
+
+   * Information on using {{site.data.keyword.mon_full}} to monitor [VMware vCenter Server deployments.](/docs/monitoring?topic=monitoring-vmware-vcenter)
+
+   * Information on a new method to monitor Windows environments using the [Windows Prometheus Bundle.](/docs/monitoring?topic=monitoring-agent_windows)
 
 ## 7 July 2023
 {: #monitoring-july0723}
@@ -145,6 +156,7 @@ Change to alerts editor
 
 Availability of Advisor
 :   {{site.data.keyword.mon_full}} has released Advisor to help and simplify how you monitor and troubleshoot the health, risk, and capacity of hosts and Kubernetes clusters.  [Learn more](/docs/monitoring?topic=monitoring-monitoring#monitoring_advisor).
+
 
 ## 14 December 2021
 {: #monitoring-dec1421}
