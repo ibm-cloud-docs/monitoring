@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-09-05"
 
 keywords:
 
@@ -121,6 +121,14 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     ```
     {: pre}
 
+    If DKMS is not installed, run the following commands to install DKMS.
+
+    ```text
+    yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    yum install dkms
+    ```
+    {: pre}
+
     To configure the EPEL repository, create a file named `/etc/yum.repos.d/epel.repo` with the following content:
 
     ```text
@@ -166,6 +174,16 @@ Complete the following steps to configure a monitoring agent on Linux to collect
     {: pre}
 
     ```text
+    echo feature: >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+   ```text
+    echo "  mode: monitor_light" >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+    ```text
     service dragent restart
     ```
     {: pre}
@@ -184,6 +202,16 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
     ```text
     echo tags: TAG_DATA >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+    ```text
+    echo feature: >> /opt/draios/etc/dragent.yaml
+    ```
+    {: pre}
+
+   ```text
+    echo "  mode: monitor_light" >> /opt/draios/etc/dragent.yaml
     ```
     {: pre}
 
