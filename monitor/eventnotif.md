@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021, 2023
-lastupdated: "2021-12-17"
+lastupdated: "2023-09-19"
 
 keywords: IBM Cloud, monitoring, alerts, event notification, email
 
@@ -20,6 +20,9 @@ In the {{site.data.keyword.mon_full_notm}} service, you can configure single ale
 
 [{{site.data.keyword.en_full_notm}} is available in a limited number of regions](/docs/event-notifications?topic=event-notifications-en-regions-endpoints). Your {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.en_full_notm}} instances must be in the same region to communicate with one another.  Because of this, support for integration with {{site.data.keyword.en_full_notm}} is limited to the regions where {{site.data.keyword.en_full_notm}} is supported and where {{site.data.keyword.mon_full_notm}} is also installed.
 {: important}
+
+{{site.data.keyword.en_full_notm}} supports a number of different destinations. This example describes sending to email. For information on additional possible destinations, see the [{{site.data.keyword.en_full_notm}} documentation](/docs/event-notifications?topic=event-notifications-en-destination).
+{: note}
 
 For a step-by-step tutorial, see [Sending email notifications to {{site.data.keyword.en_full_notm}}.](/docs/monitoring?topic=monitoring-tutorial-en)
 {: tip}

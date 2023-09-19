@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021, 2023
-lastupdated: "2021-12-17"
+lastupdated: "2023-09-19"
 
 keywords: IBM Cloud, monitoring, alerts, event notification
 
@@ -25,6 +25,9 @@ SMS messages can only be sent to phone numbers in the United States and Canada.
 {: important}
 
 {{site.data.keyword.en_full_notm}} supports message concatenation so SMS messages longer than 160 characters can be sent.  However, messages will be sent in blocks of at most 160 characters.  Multiple messages might result in additional charges to the recipient.
+{: note}
+
+{{site.data.keyword.en_full_notm}} supports a number of different destinations. This example describes sending an SMS message. For information on additional possible destinations, see the [{{site.data.keyword.en_full_notm}} documentation](/docs/event-notifications?topic=event-notifications-en-destination).
 {: note}
 
 For a step-by-step tutorial, see [Sending SMS notifications to {{site.data.keyword.en_full_notm}}](/docs/monitoring?topic=monitoring-tutorial-en-sms).
