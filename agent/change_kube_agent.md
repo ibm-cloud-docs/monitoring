@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2020-06-24"
+lastupdated: "2023-09-19"
 
 keywords: IBM Cloud, monitoring, customize, kubernetes agent
 
@@ -132,7 +132,10 @@ For the sample provided, you would get the tags **agent.tag.department** and **a
 
 {{site.data.keyword.mon_short}} supports event integrations with Kubernetes. {site.data.keyword.mon_short}} agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data.
 
-By default, only a limited set of events is collected. For more information about the events that are collected by default, see [Kubernetes events](https://docs.sysdig.com/en/event-types.html){: external}.
+By default, only a limited set of events is collected. For more information about the events that are collected by default, see [Event Types](https://docs.sysdig.com/en/docs/sysdig-monitor/events/event-types/){: external}.
+
+
+
 
 To add or remove events, you must customize the *sysdig-agent-configmap.yaml* file and specify what events to include and which ones to filter out. **Note:** An entry in a section in *sysdig-agent-configmap.yaml* overrides the entire section in the default configuration.
 {: tip}
@@ -199,7 +202,7 @@ Another example where you can see how to collect a subset of Kubernetes events: 
     ```
     {: codeblock}
 
-For more information on how to work with custom events, see [Working with custom events](https://docs.sysdig.com/en/event-types.html){: external}.
+For more information on how to work with custom events, see [Custom Events](https://docs.sysdig.com/en/docs/sysdig-monitor/events/event-types/custom-events/){: external}.
 
 
 ## Disabling collection of events

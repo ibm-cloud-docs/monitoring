@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-04-28"
+lastupdated: "2023-09-20"
 
 keywords:
 
@@ -145,17 +145,17 @@ For more information, see [Dashboards](https://docs.sysdig.com/en/docs/sysdig-mo
 A panel displays a metric or group of metrics in a dashboard.
 
 You can use any of the following panel types to visualize metrics:
-- `Histogram`: Use a histogram panel to monitor a metric, that is segmented by a dimension or label, and understand its value across multiple segments. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/configure-panels/types-of-panels/histogram/#histogram){: external}.
+- `Histogram`: Use a histogram panel to monitor a metric, that is segmented by a dimension or label, and understand its value across multiple segments. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/visualisation-types/histogram/){: external}.
 
-- `Timechart Panel`: Use timecharts to monitor how the value of a metric changes over time. A Timechart is a graph that is produced by applying statistical aggregation to a label over an interval. The X-axis of a timechart is always time. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/configure-panels/types-of-panels/timechart-panel/){: external}.
+- `Timechart Panel`: Use timecharts to monitor how the value of a metric changes over time. A Timechart is a graph that is produced by applying statistical aggregation to a label over an interval. The X-axis of a timechart is always time. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/visualisation-types/timechart/){: external}.
 
-- `Number Panel`: Use a number panel to monitor the value of a metric. You can also use it to see the average value over a time range. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/configure-panels/types-of-panels/number-panel/){: external}.
+- `Number Panel`: Use a number panel to monitor the value of a metric. You can also use it to see the average value over a time range. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/visualisation-types/number/){: external}.
 
-- `Table Panel`: Use a table panel to monitor actual values instead of visual representations. The Table panel displays metric data in tabular form. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/configure-panels/types-of-panels/table-panel/){: external}.
+- `Table Panel`: Use a table panel to monitor actual values instead of visual representations. The Table panel displays metric data in tabular form. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/visualisation-types/table/){: external}.
 
-- `Text`: Use a text panel to provide context or information in the dashboard. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/configure-panels/types-of-panels/text/){: external}.
+- `Text`: Use a text panel to provide context or information in the dashboard. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/visualisation-types/text/){: external}.
 
-- `Toplist`: Use a toplist panel to display metric values in order. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/configure-panels/types-of-panels/toplist/){: external}.
+- `Toplist`: Use a toplist panel to display metric values in order. [Learn more](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/visualisation-types/toplist/){: external}.
 
 
 You can copy, change the scope, duplicate, delete, export, and explore panels.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-07-06"
+lastupdated: "2023-09-19"
 
 keywords:
 
@@ -25,7 +25,7 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 ## Prereqs
 {: #agent_Kube_prereqs}
 
-- Check the topic [Tuning Sysdig Agent](https://docs.sysdig.com/en/docs/installation/sysdig-agent/troubleshooting-agent-installation/tuning-sysdig-agent/){: external}
+- Check the topic [Tune Agent](https://docs.sysdig.com/en/docs/installation/configuration/sysdig-agent/tune-agent/){: external}
 
 - [Get information about Kubernetes monitoring agent images](/docs/monitoring?topic=monitoring-monitoring_agent_image).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-07-29"
+lastupdated: "2023-09-19"
 
 keywords: Monitoring release notes, Monitoring updates
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 11 September 2023
+{: #monitoring-sep1123}
+{: release-note}
+
+Madrid region support
+:   Madrid is now a supported region for {{site.data.keyword.mon_full_notm}}.
 
 ## 26 July 2023
 {: #monitoring-july2623}
@@ -112,9 +119,9 @@ Change to alerts editor
 
     - Some metrics and labels have been deprecated. Deprecated metrics and labels will no longer be available 30 days after this release. See [Discontinued Metrics and Labels](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#discontinued-metrics-and-labels){: external}.
 
-    - Classic metrics have been replaced with context-explicit metrics. See [Mapping Classic Metrics with Context-Specific PromQL Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics-dictionary/metrics-and-label-mapping/mapping-classic-metrics-with-context-specific-promql-metrics/#mapping-classic-metrics-with-context-specific-promql-metrics){: external}.
+    - Classic metrics have been replaced with context-explicit metrics. See [Mapping Classic Metrics with PromQL Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/metrics-and-labels-mapping/mapping-classic-metrics-with-promql-metrics/){: external}.
 
-    - Troubleshooting metrics are collected at 10s intervals and stored for 4 days for program metrics, connection-level network metrics, and Kubernetes troubleshooting metrics. See [Troubleshooting Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/metrics/troubleshooting-metrics/#troubleshooting-metrics){: external}.
+    - Troubleshooting metrics are collected at 10s intervals and stored for 4 days for program metrics, connection-level network metrics, and Kubernetes troubleshooting metrics. See [Troubleshooting Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/troubleshooting-metrics/){: external}.
 
     - You can use PromQL to query the metrics in the time series database.
 

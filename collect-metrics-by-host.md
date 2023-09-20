@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-04-07"
+lastupdated: "2023-09-19"
 
 keywords:
 
@@ -32,7 +32,7 @@ You can collect metrics from a number of platforms, orchestrators, and a wide ra
 | Non-Orchestrated environment | Linux based Virtual Machines (VM) | [Metrics for non-orchestrated environments](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/prometheus-format/) |
 | Non-Orchestrated environment | Linux based Virtual Machines (VM) on VPC | [Metrics for non-orchestrated environments](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/prometheus-format/) |
 | Non-Orchestrated environment | Linux based Virtual Machines (VM) on VMware | [Metrics for non-orchestrated environments](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/prometheus-format/) |
-| Windows environment          | Windows-based servers | [Metrics for Windows environments](https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/application-integrations/windows/) |
+| Windows environment          | Windows-based servers | [Metrics for Windows environments]https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/integration-library/infrastructure-integrations/windows/) |
 {: caption="Table 1. Metrics by infrastructure" caption-side="top"}
 
 ## Colletion method
