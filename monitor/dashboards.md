@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-03-28"
+lastupdated: "2023-09-20"
 
 keywords: IBM Cloud, monitoring, dashboards
 
@@ -44,7 +44,7 @@ Pre-defined dashboards are designed around various supported applications, netwo
 
 Pre-defined dashboards include a series of panels that are already configured.
 
-For more information on pre-defined dashboards, see [Dashboard Templates](https://docs.sysdig.com/en/dashboard-templates-209032.html){: external}.
+For more information on pre-defined dashboards, see [Dashboard Library](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/dashboard-templates/){: external}.
 
 ## Creating custom dashboards in the Web UI
 {: #dashboards_create}

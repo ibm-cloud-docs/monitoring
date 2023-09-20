@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-09-05"
+lastupdated: "2023-09-19"
 
 keywords:
 
@@ -24,7 +24,7 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 ## Prereqs
 {: #agent_linux_1_prereqs}
 
-Check the topic [Tuning Sysdig Agent](https://docs.sysdig.com/en/docs/installation/sysdig-agent/troubleshooting-agent-installation/tuning-sysdig-agent/){: external}
+Check the topic [Tune Agent](https://docs.sysdig.com/en/docs/installation/configuration/sysdig-agent/tune-agent/){: external}
 
 ## Deploying the agent
 {: #agent_linux_1_deploy_1}
@@ -45,7 +45,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
 4. Install the kernel headers.
 
-    When you install a monitoring agent, the agent uses kernel header files. [Learn more](https://docs.sysdig.com/en/agent-install--non-orchestrated.html){: external}
+    When you install a monitoring agent, the agent uses kernel header files. [Learn more](https://docs.sysdig.com/en/docs/installation/troubleshooting/kernel-header-troubleshooting/){: external}
 
     Choose a distribution and run the following command for that distribution.
 

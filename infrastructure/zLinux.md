@@ -13,19 +13,15 @@ subcollection: monitoring
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Monitoring a {{site.data.keyword.redhat_openshift_notm}} cluster
-{: #openshift_cluster}
+# Monitoring an OpenShift on Z environment (WIP)
+{: #zlinux}
 
-Use this tutorial to learn how to configure a {{site.data.keyword.redhat_openshift_full}} cluster to forward metrics to the {{site.data.keyword.mon_full}} service.  You can monitor clusters in {{site.data.keyword.cloud_notm}}, on-prem, and in other clouds.
+Use this tutorial to learn how to configure an OpenShift on Z environment to forward metrics to the {{site.data.keyword.mon_full}} service.
 {: shortdesc}
 
-To configure a cluster to forward metrics, you must install a monitoring agent onto each worker node in your {{site.data.keyword.redhat_openshift_notm}} cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade.
+To configure a cluster to forward metrics, you must install a monitoring agent onto each worker node in your OpenShift on Z environment by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade.
 
-
-![Components overview on the {{site.data.keyword.cloud_notm}}](images/openshift.png "Components overview on the {{site.data.keyword.cloud_notm}}"){: caption="Components overview" caption-side="bottom"}
-
-
-For example, to configure your {{site.data.keyword.redhat_openshift_notm}} cluster to forward metrics to your {{site.data.keyword.mon_full_notm}} instance, you can deploy the agent by using Helm or a script:
+For example, to configure your OpenShift on Z environment to forward metrics to your {{site.data.keyword.mon_full_notm}} instance, you can deploy the agent by using Helm or a script:
 - [Helm](/docs/monitoring?topic=monitoring-agent-deploy-openshift-helm)
 - [Script](/docs/monitoring?topic=monitoring-agent_openshift)
 
@@ -39,7 +35,7 @@ The {{site.data.keyword.mon_short}} agent automatically collects the following t
 
 - `Network metrics` provide information about the network. They offer insight to the connections that are established between your applications, containers, and servers. For example, you can find information about the bytes that are being sent or received, or the number of HTTP requests, connections, and latency. In addition, for SQL or MongoDB, the agent collects additional information when it is configured in troubleshooting mode.
 
-The {{site.data.keyword.mon_short}} agent automatically collects the following types of metrics per {{site.data.keyword.redhat_openshift_notm}} cluster:
+The {{site.data.keyword.mon_short}} agent automatically collects the following types of metrics per OpenShift on Z environment:
 
 - `State metrics`: Kube state metrics report on the health and state of the various objects that run inside {{site.data.keyword.redhat_openshift_notm}} components, such as deployments, nodes and pods. To see the list of metrics that are collected by default, see [{{site.data.keyword.redhat_openshift_notm}} State](hhttps://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/sysdig-legacy-format/kubernetes/kubernetes-state/){: external}.
 
@@ -71,16 +67,16 @@ For more information, see [Viewing metrics](/docs/monitoring?topic=monitoring-mo
 
 
 ## Objectives
-{: #openshift_cluster_objectives}
+{: #zlinux_objectives}
 
 In this tutorial, you configure metrics for your {{site.data.keyword.openshiftshort}} cluster. In particular, you:
 *  Provision an {{site.data.keyword.mon_full_notm}} instance.
-*  Configure the monitoring agent in your cluster to send metrics.
-*  Use the monitoring UI to analyze your cluster metrics.
+*  Configure the monitoring agent in your OpenShift on Z environment to send metrics.
+*  Use the monitoring UI to analyze your OpenShift on Z environment metrics.
 
 
 ## Before you begin
-{: #openshift_cluster_prereqs}
+{: #zlinux_prereqs}
 
 - [Read about {{site.data.keyword.mon_short}}](/docs/monitoring?topic=monitoring-getting-started).
 
@@ -108,14 +104,14 @@ In this tutorial, you configure metrics for your {{site.data.keyword.openshiftsh
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
 | Resource group **default**           |  Resource group            | Viewer  | us-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
 | {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | us-south  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the default resource group.   |
-| {{site.data.keyword.redhat_openshift_notm}} cluster instance          |  Resource                 | Editor  | us-south  | This policy is required to configure the secret and the monitoring agent in the {{site.data.keyword.openshiftshort}} cluster. |
+| OpenShift on Z environment instance          |  Resource                 | Editor  | us-south  | This policy is required to configure the secret and the monitoring agent in the {{site.data.keyword.openshiftshort}} cluster. |
 {: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"}
 
 For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
 
 
 ## Step 1. Provision an {{site.data.keyword.mon_full_notm}} instance
-{: #openshift_provision}
+{: #zlinux_provision}
 {: step}
 
 
@@ -157,7 +153,7 @@ To provision an instance through the CLI, see [Provisioning an instance through 
 
 
 ## Step 2. Configure your {{site.data.keyword.openshiftshort}} cluster to send metrics to your instance
-{: #openshift_configure}
+{: #zlinux_configure}
 {: step}
 
 
@@ -209,10 +205,10 @@ Complete the following steps:
     ```
     {: pre}
 
-5. Log in to the cluster. Choose a method to login to an OpenShift cluster. [Learn more about the methods to login](/docs/openshift?topic=openshift-access_cluster).
+5. Log in to the cluster. Choose a method to login to an OpenShift on Z environment. [Learn more about the methods to login](/docs/openshift?topic=openshift-access_cluster).
 
 ### Install the {{site.data.keyword.mon_full_notm}} agent in your cluster
-{: #install_os_agent}
+{: #zlinux_install_agent}
 
 1. Run the following command for your public or private endpoint.
 
@@ -247,7 +243,7 @@ Complete the following steps:
 
 
 ## Step 3. Launch the monitoring UI
-{: #openshift_launch_ui}
+{: #zlinux_launch_ui}
 {: step}
 
 
@@ -270,11 +266,11 @@ You only can monitor one instance per browser. You could have multiple tabs for 
 {: tip}
 
 ## Step 4. Monitor your cluster
-{: #openshift_monitor_cluster}
+{: #zlinux_monitor_cluster}
 {: step}
 
 
-In the *Advisor* tab, you can monitor and troubleshoot the health, risk, and capacity of hosts, and Kubernetes and {{site.data.keyword.redhat_openshift_notm}} clusters.
+In the *Advisor* tab, you can monitor and troubleshoot the health, risk, and capacity of hosts, and Kubernetes and OpenShift on Z environments.
 
 ![Advisor tab](../images/advisor-tab.png "Advisor tab"){: caption="Advisor tab" caption-side="bottom"}
 
@@ -282,9 +278,9 @@ In the *Advisor* tab, you can monitor and troubleshoot the health, risk, and cap
 - Metrics are prioritized by event count and severity.
 - For more information, see [Advisor](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/){: external}.
 
-In the *Advisor* section, you can choose to monitor your {{site.data.keyword.redhat_openshift_notm}} clusters by cluster, by node, by namespace, or by workload. Each option offers a set of predefined dashboards that you can use to monitor the health of your resources. You can also select to monitor by host.
+In the *Advisor* section, you can choose to monitor your OpenShift on Z environments by cluster, by node, by namespace, or by workload. Each option offers a set of predefined dashboards that you can use to monitor the health of your resources. You can also select to monitor by host.
 
-### Monitoring {{site.data.keyword.redhat_openshift_notm}} clusters by cluster
+### Monitoring OpenShift on Z environments by cluster
 {: #monitoring_advisor_1}
 
 When you choose to monitor your clusters by cluster, you can select more filters to display data by node or by namespace, or you can choose any of the following dashboards:
@@ -346,14 +342,12 @@ For more information on how to interpret this view, see [About Workloads Overvie
 
 
 ## Next steps
-{: #openshift_cluster_next_steps}
+{: #zlinux_next_steps}
 {: step}
 
 
 - Create a custom dashboard. For more information, see [Working with dashboards](/docs/monitoring?topic=monitoring-dashboards#dashboards).
 
 - Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).
-
-- Learn how to manage logs from your cluster. See [Logging with {{site.data.keyword.redhat_openshift_notm}} clusters](/docs/log-analysis?topic=log-analysis-kube).
 
 - Learn about the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} functionality to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).
