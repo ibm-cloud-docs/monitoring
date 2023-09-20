@@ -260,8 +260,8 @@ toc:
           - api/dashboard_python.md
           links:
             - link:
-                label: Dashboard templates
-                href: https://docs.sysdig.com/en/dashboard-templates-209032.html
+                label: Dashboard library
+                href: https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/dashboard-templates/
 
       - topicgroup:
           label: Working with alerts
