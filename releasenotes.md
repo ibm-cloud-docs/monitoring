@@ -20,13 +20,6 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
-## 11 September 2023
-{: #monitoring-sep1123}
-{: release-note}
-
-Madrid region support
-:   Madrid is now a supported region for {{site.data.keyword.mon_full_notm}}.
-
 ## 26 July 2023
 {: #monitoring-july2623}
 {: release-note}
