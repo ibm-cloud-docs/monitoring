@@ -37,7 +37,7 @@ The {{site.data.keyword.mon_short}} agent automatically collects the following t
 
 The {{site.data.keyword.mon_short}} agent automatically collects the following types of metrics per OpenShift on Z environment:
 
-- `State metrics`: Kube state metrics report on the health and state of the various objects that run inside {{site.data.keyword.redhat_openshift_notm}} components, such as deployments, nodes and pods. To see the list of metrics that are collected by default, see [{{site.data.keyword.redhat_openshift_notm}} State](hhttps://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/sysdig-legacy-format/kubernetes/kubernetes-state/){: external}.
+- `State metrics`: Kube state metrics report on the health and state of the various objects that run inside {{site.data.keyword.redhat_openshift_notm}} components, such as deployments, nodes and pods. To see the list of metrics that are collected by default, see [{{site.data.keyword.redhat_openshift_notm}} State](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/sysdig-legacy-format/kubernetes/kubernetes-state/){: external}.
 
 - `Resource usage metrics`: Resource usage metrics reports on the health and state of CPU and memory for workers (nodes) and pods that are running in the cluster. The data can be analyzed by namespace, by worker, by pod, by workload object such as deployments, daemonSets, and more.
 
