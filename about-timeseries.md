@@ -43,7 +43,7 @@ You are billed based on the number of time series hours collected during a billi
 {: note}
 
 ## Sources of time-series
-{: #about-collect-metrics-1}
+{: #about-collect-timeseries-1}
 
 For `TIME_SERIES_HOURS`, there are 4 sources of custom metrics:
 

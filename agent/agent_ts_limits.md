@@ -36,7 +36,7 @@ The dashboard displays the limit of custom time series that are collected per ag
 
 
 ## Checking the metrics that are collected per agent
-{: #pricing_agent_metrics}
+{: #collected_pricing_agent_metrics}
 
 In {{site.data.keyword.mon_full_notm}}, you can monitor your monitoring agent by using the dashboard template **monitoring agent Health & Status** that is available in the dashboard templates available out-of-the-box. In this dashboard, you can see the number of monitoring agents that are deployed and connected to the instance, check the version of the monitoring agents, and find out how many metrics per host the agent is collecting.
 

@@ -101,7 +101,7 @@ You can send metrics via the public or the private endpoints by using the approp
 
 
 ## Viewing metrics
-{: #about-monitor-sources}
+{: #about-monitor-viewing}
 
 You can monitor and manage metrics through the {{site.data.keyword.mon_short}} Web UI. For more information, see [Viewing metrics](/docs/monitoring?topic=monitoring-monitoring).
 

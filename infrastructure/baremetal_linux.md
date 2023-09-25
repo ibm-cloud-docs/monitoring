@@ -568,7 +568,7 @@ Complete the following steps:
 
 
 ## Configure a dashboard to analyze the IPMI status of your Bare metal
-{: #baremetal_linux_step5}
+{: #baremetal_linux_step6}
 {: step}
 
 To create a dashboard to monitor the IPMI metrics, complete the following steps:

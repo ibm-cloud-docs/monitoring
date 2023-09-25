@@ -89,7 +89,7 @@ In this step you will configure who will receive an SMS message when a notificat
 {{site.data.content.en-mon-notification}}
 
 ## Next steps
-{: #en-next-steps}
+{: #en-sms-next-steps}
 
 You should start receiving SMS notifications at the phone numbers that you configured whenever the criteria defined in both {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.en_full_notm}} match.
 

@@ -72,13 +72,13 @@ Complete the following steps to grant a user or service ID permissions to work w
 
 
 ## Prerequisites
-{: #iam_grant_team_prereq}
+{: #iam_grant_team_secure_prereq}
 
 Your user ID needs **administrator platform permissions** to manage the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} service. The account owner can grant user access to the account for the purposes of managing user access and managing account resources. [Learn more](/docs/account?topic=account-userroles).
 
 
 ## Step 1. Create an access group
-{: #iam_grant_team_step1}
+{: #iam_grant_team_secure_step1}
 
 Do the following to create an access group:
 
@@ -100,7 +100,7 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 
 
 ## Step 2. Add permissions to view {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} instances in the Observability UI
-{: #iam_grant_team_step2}
+{: #iam_grant_team_secure_step2}
 
 After you set up your group, you can assign a common access policy to the group. You must add permissions to view {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} instances in the Observability UI.
 
@@ -113,7 +113,7 @@ When you define the policy, you need to select a platform role. Platform managem
 
 
 ### Add permissions through the CLI
-{: #iam_grant_team_step2_1}
+{: #iam_grant_team_secure_step2_1}
 
 To create an access group policy by using the CLI, you can use the [ibmcloud iam access-group-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create) command with the **viewer** role.
 
@@ -131,7 +131,7 @@ ibmcloud iam access-group-policy-create my-access-group --roles Viewer --service
 
 
 ### Add permissions through the UI
-{: #iam_grant_team_step2_2}
+{: #iam_grant_team_secure_step2_2}
 
 Complete the following steps to assign a new policy to an access group through the UI:
 
@@ -160,7 +160,7 @@ Complete the following steps to assign a new policy to an access group through t
 
 
 ## Step 3. Add permissions to work in a team
-{: #iam_grant_team_step3}
+{: #iam_grant_team_secure_step3}
 
 Next, you must add a policy that grants the user permissions to work with data in the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} service within the context of a team.
 
@@ -168,7 +168,7 @@ When you define the policy, you need to select a service role. Service access ro
 
 
 ### Add permissions through the CLI
-{: #iam_grant_team_step3_1}
+{: #iam_grant_team_secure_step3_1}
 
 To create an access group policy by using the CLI, you can use the [ibmcloud iam access-group-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create) command.
 
@@ -245,7 +245,7 @@ And use the following JSON file.
 
 
 ### Add permissions through the UI
-{: #iam_grant_team_step3_2}
+{: #iam_grant_team_secure_step3_2}
 
 Complete the following steps to assign a policy to an access group through the UI:
 
@@ -274,12 +274,12 @@ Complete the following steps to assign a policy to an access group through the U
 
 
 ## Step 4. Add a user or service ID to the access group
-{: #iam_grant_team_step4}
+{: #iam_grant_team_secure_step4}
 
 You can add users or service IDs to an existing access group.
 
 ### Add a user to the access group
-{: #iam_grant_team_step4_user}
+{: #iam_grant_team_secure_step4_user}
 
 Complete the following steps to add a user:
 
@@ -290,7 +290,7 @@ Complete the following steps to add a user:
 
 
 ### Add a service ID to the access group
-{: #iam_grant_team_step4_svcid}
+{: #iam_grant_team_secure_step4_svcid}
 
 Complete the following steps to add a service ID:
 

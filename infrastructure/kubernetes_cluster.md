@@ -269,7 +269,7 @@ In the *Advisor* tab, you can monitor and troubleshoot the health, risk, and cap
 In the *Advisor* section, you can choose to monitor your Kubernetes clusters by cluster, by node, by namespace, or by workload. Each option offers a set of predefined dashboards that you can use to monitor the health of your resources. You can also select to monitor by host.
 
 ### Monitoring Kubernetes clusters by cluster
-{: #monitoring_advisor_1}
+{: #monitoring_kube_advisor_1}
 
 When you choose to monitor your Kubernetes clusters by cluster, you can select more filters to display data by node or by namespace, or you can choose any of the following dashboards:
 - Workload Status & Performance
@@ -286,7 +286,7 @@ When you choose to monitor your Kubernetes clusters by cluster, you can select m
 For more information on how to interpret this view, see [About Clusters Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/overview/clusters-data/){: external}.
 
 ### Monitoring Kubernetes clusters by node
-{: #monitoring_advisor_2}
+{: #monitoring_kube_advisor_2}
 
 When you choose to monitor your Kubernetes clusters by node, you can choose any of the following dashboards:
 - Node Status & Performance
@@ -299,7 +299,7 @@ When you choose to monitor your Kubernetes clusters by node, you can choose any 
 For more information on how to interpret this view, see [About Nodes Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/overview/nodes-data/){: external}.
 
 ### Monitoring Kubernetes clusters by namespace
-{: #monitoring_advisor_3}
+{: #monitoring_kube_advisor_3}
 
 When you choose to monitor your Kubernetes clusters by namespace, you can select more filters to display data by workload, or you can choose any of the following dashboards:
 - Workload Status & Performance
@@ -312,7 +312,7 @@ When you choose to monitor your Kubernetes clusters by namespace, you can select
 For more information on how to interpret this view, see [About Namespaces Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/overview/namespaces-data/){: external}.
 
 ### Monitoring Kubernetes clusters by workloads
-{: #monitoring_advisor_4}
+{: #monitoring_kube_advisor_4}
 
 When you choose to monitor your Kubernetes clusters by workloads, you can choose any of the following dashboards:
 - Container Resource Usage & Troubleshooting
