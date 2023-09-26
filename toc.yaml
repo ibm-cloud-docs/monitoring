@@ -242,6 +242,14 @@ toc:
           - monitor/metrics_store.md
 
       - topicgroup:
+          label: Working with metrics in non-supported locations
+          topics:
+          - topic: manage-metrics-for-new-region.md
+            navtitle: Working with metrics before a region is available
+          - topic: manage-metrics-to-new-region.md
+            navtitle: Working with metrics after a region is open for business
+
+      - topicgroup:
           label: Integrations
           links:
             - link:

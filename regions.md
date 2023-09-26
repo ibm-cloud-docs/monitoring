@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-01-20"
+lastupdated: "2023-09-11"
 
 keywords: IBM Cloud, monitoring, regions
 
@@ -21,7 +21,7 @@ A list of supported regions for the {{site.data.keyword.mon_full_notm}} service.
 
 The {{site.data.keyword.mon_full_notm}} service is available in the following regions:
 
-![The image shows the locations where the {{site.data.keyword.mon_full_notm}} service is available.](images/world-map_min.png){: caption="Figure 1. Displays the regions where you can create and manage {{site.data.keyword.mon_full_notm}} resources." caption-side="bottom"}
+![The image shows the locations where the {{site.data.keyword.mon_full_notm}} service is available.](images/Cloud-Monitoring-02-Locations.svg){: caption="Figure 1. Displays the regions where you can create and manage {{site.data.keyword.mon_full_notm}} resources." caption-side="bottom"}
 
 This image is an artistic representation and does not reflect actual political or geographic boundaries.
 {: note}
@@ -38,9 +38,10 @@ The following table lists the locations where the service is available:
 | `Asia Pacific`        | `Tokyo (jp-tok)`         | `N/A`        | `MZR`     |
 | `Europe`              | `Frankfurt (eu-de) (*)`  | `YES`        | `MZR`     |
 | `Europe`              | `London (eu-gb)`         | `NO`         | `MZR`     |
+| `Europe`              | `Madrid (eu-es) (*) (**)`     | `YES`        | `MZR`     |
 | `North America`       | `Dallas (us-south)`      | `N/A`        | `MZR`     |
-| `North America`       | `Washington (us-east)`   | `N/A`        | `MZR`     |
 | `North America`       | `Toronto (ca-tor)`       | `N/A`        | `MZR`     |
+| `North America`       | `Washington (us-east)`   | `N/A`        | `MZR`     |
 | `South America`       | `Sao Paulo (br-sao)`     | `N/A`        | `MZR`     |
 {: caption="Table 1. List of locations where the service is available" caption-side="top"}
 
@@ -49,4 +50,6 @@ Where
 * A *region* is a defined geographic territory. A region could be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
 * `N/A` means feature that is not applicable to that geography.
 
-`(*)` For more information, see [Enabling the EU Supported setting](/docs/account?topic=account-eu-hipaa-supported#bill_eusupported).
+`(*)` For more information, see [Enabling EU support for your account](/docs/account?topic=account-eu-supported).
+
+`(**)` The [`Graduated Tier - Sysdig Secure + Monitor` plan](/docs/monitoring?topic=monitoring-service_plans) is not available in the Madrid (eu-es) region.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-09-19"
+lastupdated: "2023-09-26"
 
 keywords: Monitoring release notes, Monitoring updates
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 26 September 2023
+{: #monitoring-sep2623}
+{: release-note}
+
+Madrid region support
+:   Madrid is now an online region for {{site.data.keyword.mon_full_notm}}. Services can now be provisioned in Madrid and Madrid endpoints can be used. Platform metrics will continue flowing to the Frankfurt region.
 
 ## 26 July 2023
 {: #monitoring-july2623}
