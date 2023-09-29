@@ -70,7 +70,7 @@ For more information, see:
 - [Configuring VMware vCenter server deployments](/docs/monitoring?topic=monitoring-vmware-vcenter).
 
 
-## Step 5. Check the new instance is working
-{: #manage-metrics-to-new-region-5}
+## Step 4. Check the new instance is working
+{: #manage-metrics-to-new-region-4}
 
 To monitor metrics, [launch the web UI](/docs/monitoring?topic=monitoring-getting-started#getting-started-step4), and verify platform metrics are flowing to your instance. For more information, see [Working with platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_working).
