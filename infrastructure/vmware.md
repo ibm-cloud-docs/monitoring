@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-09-19"
+lastupdated: "2023-10-19"
 
 keywords:
 
@@ -348,69 +348,9 @@ To get the list of metrics that are collected, you can run the following cURL co
 {: tip}
 
 
-
-## Step 2. Define the dashboards
+## Step 2. Define your dashboards
 {: #vmware-vcenter-step2}
 
-You must create a dashboard to monitor your VMware deployment. You can use the following name `[VMware] vCenter Deployment Overview` for the dashboard.
+Create a dashboard to monitor your VMware deployment. You can use the **Applications** > **VMWare Overview** template in the **Dashboard Library** to [configure your dashboard.](/docs/monitoring?topic=monitoring-dashboards#dashboards_create)
 
 
-1. Define the scope.
-
-    Add `dc_name` and set the *var* value to **datacenter**.
-
-    Add `cluster_name` and set the *var* value to **cluster**.
-
-2. Add widgets for the following queries:
-
-    Title: `VMWare Hosts`, type `number`, query: `count(vmware_host_cpu_usage{$__scope})`, options `number`.
-
-    Title: `Cluster CPU Usage`, type `number`, query `sum(vmware_host_cpu_usage{$__scope}) / sum(vmware_host_cpu_max{$__scope})`, options `percent`.
-
-    Title: `Cluster Memory Usage`, type `number`, query `sum(vmware_host_memory_usage{$__scope}) / sum(vmware_host_memory_max{$__scope})`, options `percent`.
-
-    Title: `VMWare Datastores`, type `number`, query `count(vmware_datastore_hosts{$__scope})`, options `number`.
-
-    Title: `Total Snapshots`, type `number`, query `sum(vmware_vm_snapshots{$__scope}) or vector(0)`, options `number`.
-
-    Title: `Total Virtual Machines`, type `number`, query `count(vmware_vm_power_state{$__scope})`, options `number`.
-
-    Title: `Host CPU Usage`, type `timechart`, query `sum(vmware_host_cpu_usage{})by(dc_name, cluster_name, host_name) / sum(vmware_host_cpu_max{})by(dc_name, cluster_name, host_name)`, options `percent`.
-
-    Title: `History Memory Usage`, type `timechart`, query `sum(vmware_host_memory_usage{})by(dc_name, cluster_name, host_name) / sum(vmware_host_memory_max{})by(dc_name, cluster_name, host_name)`, options `percent`.
-
-    Title: `Host Disk Read rate`, type `timechart`, query `sum(vmware_host_disk_read_average{})by(dc_name, cluster_name, host_name)`, options `data rate`.
-
-    Title: `Host Disk Write rate`, type `timechart`, query `sum(vmware_host_disk_write_average{})by(dc_name, cluster_name, host_name)`, options `data rate`.
-
-    Title: `Number of Sensors in red or yellow state`, type `number`, query `count(vmware_host_sensor_state{}!= 2) or vector(0)`, options `number`.
-
-    Title: `Host Sensor State (0=red / 1=yellow / 2=green / 3=unknown)`, type `table`, query `avg(vmware_host_sensor_state{type!="n/a"})by(type, host_name, cluster_name, exported_type)`, options `number`.
-
-    Title: `Host Sensor Fan Speed (RPM)`, type `timechart`, query `vmware_host_sensor_fan{}`, options `number`.
-
-    Title: `Host sensor Temperature (degree C)`, type `timechart`, query `sum(vmware_host_sensor_temperature{})by(dc_name, cluster_name, host_name)`, options `number`.
-
-    Title: `Host Sensor Power Watt (watt)`, type `timechart`, query `vmware_host_sensor_power_watt{}`, options `number`.
-
-    Title: `Host Sensor Power Voltage (volt)`, type `timechart`, query `vmware_host_sensor_power_voltage{}`, options `number`.
-
-    Title: `Datastore Yellow Alarms`, type `number`, query `count(vmware_datastore_yellow_alarms{dc_name=~".*"} != 0) or vector(0)`, options `number`.
-
-    Title: `Datastore Yellow Alarms Details`, type `table`, query `count(vmware_datastore_yellow_alarms{dc_name=~".*"} != 0)by(dc_name, ds_name, alarms)`, options `number`.
-
-    Title: `Datastore Red Alarms`, type `number`, query `count(vmware_datastore_red_alarms{dc_name=~".*"} != 0) or vector(0)`, options `number`.
-
-    Title: `Datastore free space`, type `timechart`, query `sum(vmware_datastore_freespace_size{dc_name=~".*"})by(dc_name, ds_name)`, options `data`.
-
-    Title: `Datastopre uncommitted size`, type `timechart`, query `sum(vmware_datastore_uncommited_size{dc_name=~".*"})by(dc_name, ds_name)`, options `data`.
-
-    Title: `Datastore provisioned size`, type `timechart`, query `sum(vmware_datastore_provisoned_size{dc_name=~".*"})by(dc_name, ds_name)`, options `data`.
-
-    Title: `Datastore mode`, type `table`, query `sum(vmware_datastore_maintenance_mode{dc_name=~".*"})by(dc_name, mode, ds_name)`, options `number`.
-
-    Title: `Datastore type`, type `table`, query `sum(vmware_datastore_type{dc_name=~".*"})by(dc_name, ds_name, ds_type)`, options `number`.
-
-    Title: `Hosts per datastore`, type `table`, query `sum(vmware_datastore_hosts{dc_name=~".*"})by(dc_name, ds_name)`, options `number`.
-
-    Title: `Datastore Accesible (1=yes, 0=no)`, type `table`, query `sum(vmware_datastore_accessible{dc_name=~".*"})by(ds_name, dc_name)`, options `number`.

@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-09-20"
+lastupdated: "2023-10-19"
 
-keywords: IBM Cloud, monitoring, dashboards
+keywords: 
 
 subcollection: monitoring
 
@@ -22,9 +22,11 @@ Use dashboards to monitor your infrastructure, applications, and services. You c
 
 A **dashboard** shows groups of metrics that report on the health, performance, and state of your infrastructure, applications, and services for a single host or a group of hosts. Dashboards offer a specialized insight into network data, application data, topology, services, hosts, and containers.
 
-In the **Dashboards** section of the Web UI, dashboards are organized into three main groups:
+In the **Dashboards** section of the Web UI, dashboards are organized into groups:
+* *Recently Viewed* are dashboards that the user has recently used.
+* *My Favorites* are dashboards the user has flagged to be included in this view.
 * *My Dashboards* are dashboards that are created by the user who is currently logged in.  An icon indicates if the dashboard is shared with other team members.
-* *Dashboards Shared By My Team* are dashboards that are created by other users, and shared with the current user.
+* *Shared By My Team* are dashboards that are created by other users, and shared with the current user.
 
 You can copy and share dashboards through the Web UI.
 
@@ -49,7 +51,7 @@ For more information on pre-defined dashboards, see [Dashboard Library](https://
 ## Creating custom dashboards in the Web UI
 {: #dashboards_create}
 
-When you create a custom dashboard, you can start from a template such as a pre-defined dashboard, or choose a blank dashboard. A dashboard includes panels that are configured to display specific data in a number of different formats. You also set how data is aggregated. The **scope** defines what data is used for aggregation and displayed. You can set the scope at a dashboard level, or override for individual panels.
+When you create a custom dashboard, you can start from a template such as a pre-defined dashboard, or choose a blank dashboard. A dashboard includes panels that are configured to display specific data in different formats. You also set how data is aggregated. The **scope** defines what data is used for aggregation and displayed. You can set the scope at a dashboard level, or override for individual panels within the dashboard.
 
 Complete the following steps to create a custom dashboard:
 
@@ -59,17 +61,21 @@ Complete the following steps to create a custom dashboard:
 
     * To create a dashboard using a template:
 
-        1. Select a template from the **DASHBOARD TEMPLATES** list.
+        1. Click **Dashboard Manager**.
 
-        2. Click **Create Custom Dashboard**.
+        2. Click **Dashboard Library**.
 
-        3. Name your dashboard.
+        3. Click the template you want to use to create your dashboard.
 
-        4. Click **Create and Open**
+        4. Click **Copy to My Dashboards**.
+
+        5. Name your dashboard.
+
+        6. Click **Create and Open**
 
     * To create a dashboard without a template:
 
-        1. Click **Add Dashboard** ![Add dashboard icon](images/add.png "Add dashboard icon"). The *New Dashboard* page opens.
+        1. Click **+ New Dashboard**. The *New Dashboard* page opens.
 
         2. Modify your dashboard as desired.
 
@@ -81,15 +87,7 @@ Complete the following steps to create a custom dashboard:
 
     1. Select the scope.
 
-    2. Optionally, click **Override the custom panel scopes** to override the scope for all panels which currently have a custom scope defined.
-
-       This action cannot be undone.
-       {: note}
-
-       To reset the dashboard scope to the entire infrastructure, or to update an existing dashboard's scope to the entire infrastructure, select **Entire infrastructure**.
-       {: tip}
-
-    3. Click **Save**.
+    2. Click **Save**.
 
 4. Configure panels. Repeat this step for any of the panels in the dashboard that you want to modify.
 
@@ -105,7 +103,7 @@ Complete the following steps to create a custom dashboard:
 
     6. In the *Compare to* field set the time range for the comparison.
 
-    7. For **Number** and **Threshold** chart types you can set the panel color based on metric thresholds. Click **Override Color Coding**, then, **Enable**. Set values for the different thresholds.
+    7. For **Number** and **Threshold** chart types you can set the panel color based on metric thresholds. Click **Thresholds**. Set values for the different thresholds.
 
     8. Click **Save**.
 
@@ -140,20 +138,20 @@ Complete the following steps to change the scope of a dashboard:
 ## Copying a dashboard
 {: #dashboards_copy}
 
-When you copy a dashboard, you create a duplicate.
+When you copy a dashboard, you create a duplicate of an existing dashboard.
 
 The following table outlines the different actions and user permissions that are required for users to copy a dashboard:
 
 | Action     |	Who can copy     |	Dashboard instance	   | Who can view the dashboard     | Who can edit the dashboard  |
 |------------|-------------------|-------------------------|--------------------------------|-----------------------------|
 | Copy to current Team    |	Users in the team with editor permissions | New dashboard instance  | Team members with viewing permissions	 | Users in the team with editor permissions |
-| Copy to another Team    | Users in the team with editor permissions in both teams | New dashboard instance  | If the original dashboard is not shared, only the user who copies the dashboard has access. </br>If the original dashboard is shared, all team members of the team has access. | If the original dashboard is not shared, only the user who copies the dashboard. </br>If the original dashboard is shared, all team members of the team with editor permissions. |
+| Copy to another Team    | Users in the team with editor permissions in both teams | New dashboard instance  | If the original dashboard is not shared, only the user who copies the dashboard has access.  \n If the original dashboard is shared, all team members of the team has access. | If the original dashboard is not shared, only the user who copies the dashboard.  \n If the original dashboard is shared, all team members of the team with editor permissions. |
 {: caption="Table 2. Information about users and dashboards related to copying dashboards" caption-side="top"}
 
 Complete the following steps to copy a dashboard in the Web UI:
 
 1. Navigate to the *Dashboards* section in the Web UI.
-2. Select the dashboard in the panel.
+2. Select a dashboard in the panel.
 3. Click the **Action icon** ![three dots icon](/images/actions.png), and select **Duplicate Dashboard**.
 4. Enter a name for the dashboard.
 5. Click **Copy and Open**.
