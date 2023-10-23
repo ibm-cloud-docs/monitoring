@@ -49,6 +49,10 @@ Complete the following steps:
 
 1. [Configure platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 
+    - The Schematics service will continue to send metrics to the Frankfurt region.
+
+    - For Cloud Object Storage buckets, once the service makes the change to send metrics to Madrid, you will continue to receive metrics in Frankfurt. To move the metrics that are gerenared by a bucket to be managed through Madrid, you must use the [COS Resource Configuration API](https://cloud.ibm.com/apidocs/cos/cos-configuration){: external} to reconfigure the {{site.data.keyword.mon_short}} instance to the one located in Madrid. Otherwise, these metrics will continue to go to the instance that is configured for the bucket.
+
 2. Customize the UI for the new instance as needed. Add your custom dashboards.
 
     For example, you might need to update the location to `eu-es` for a configuration in the Madrid location.
