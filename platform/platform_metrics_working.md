@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-10-23"
 
 keywords:
 
@@ -23,13 +23,13 @@ Platform metrics are metrics that are exposed by enabled-monitoring services and
 
     You can monitor metrics from enabled-monitoring services on the {{site.data.keyword.cloud_notm}} in the region where the service is available.
 
-* You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location.
+* You can configure only 1 instance of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location.
 
     To configure a monitoring instance, you must set the *platform metrics* configuration setting.
 
-    To configure platform metrics, you must be assigned the IAM Editor role or higher for the IBM Cloud Monitoring with monitoring service.
+    To configure platform metrics, you must be assigned the IAM Editor role or higher for the {{site.data.keyword.mon_full_notm}} service.
 
-* If a monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services).
+* If a monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and are available for monitoring through this instance. For more information about enabled-monitoring services, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services).
 
 * To monitor platform metrics for a service instance, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the service instance that you want to monitor is provisioned.
 
@@ -43,17 +43,17 @@ The following global attributes are available for segmenting metrics:
 
 | Attribute               | Attribute Name              | Attribute Description |
 |-------------------------|-----------------------------|-----------------------|
-| `Cloud Type`            | `ibm_ctype`                 | Type. </br>Valid values: `public`, `dedicated`, or `local` |
-| `Location`              | `ibm_location`              | Location of the monitored resource. </br> This field can be set to a region, a data center, or global. |
-| `Scope`                 | `ibm_scope`                 | Scope of the metric. </br> This field can be set to the account GUID, an organization GUID, or a space GUID. |
+| `Cloud Type`            | `ibm_ctype`                 | Type.  \n Valid values: `public`, `dedicated`, or `local` |
+| `Location`              | `ibm_location`              | Location of the monitored resource.  \n This field can be set to a region, a data center, or global. |
+| `Scope`                 | `ibm_scope`                 | Scope of the metric.  \n This field can be set to the account GUID, an organization GUID, or a space GUID. |
 | `Service name`          | `ibm_service_name`          | Name of the service generating this metric. |
 | `Service instance`      | `ibm_service_instance`      | Service instance GUID that identifies the instance the metric is associated with. |
-| `Service instance name` | `ibm_service_instance_name` | Service instance name. </br>This field provides the user-provided name of the service instance which isn't necessarily a unique value depending on the name provided by the user. |
+| `Service instance name` | `ibm_service_instance_name` | Service instance name.  \n This field provides the user-provided name of the service instance which isn't necessarily a unique value depending on the name provided by the user. |
 | `Resource group name`   | `ibm_resource_group_name`   | The resource group name where the service instance is created. |
 | `Resource group ID`     | `ibm_resource_group_id`     | The resource group GUID where the service instance is created. |
 {: caption="Table 1. Global attributes" caption-side="top"}
 
-Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service.
+Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and go to the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service.
 
 You can control the data that is visible for analysis per team, per dashboard, and per panel in a dashboard.
 
@@ -76,38 +76,80 @@ You can use global attributes to set the scope of a panel:
 ### Teams
 {: #global-attributes-3}
 
-You can use global attributes to define the data that is visible and available for analysis in a team.
+You can use global attributes to define the data that is visible and available for analysis by a team.
 
 
 
 ## Monitoring platform metrics through dashboards
 {: #platform_metrics_working_dash}
 
-Each {{site.data.keyword.cloud_notm}} provides 1 or more dashboard templates that you can use to monitor that service.
+{{site.data.keyword.mon_full_notm}} provides 1 or more dashboard templates that you can use to monitor services.
 
-- Dashboard templates are available in the **Dashboards** section of the monitoring UI.
-
-    ![{{site.data.keyword.cloud_notm}} services default dashboards](images/sysdig-platform-1.png "Services default dashboards"){: caption="Default dashboard" caption-side="bottom"}
+- Dashboard templates are available in the **Dashboards** > **Dashboard Manager** section of the monitoring UI.
 
 - Dashboard templates are only visible in the monitoring UI if you have an instance of the service running in that region.
-- Dashboard templates cannot be customized.
 
-You can create a copy of a dashboard template. You can customize the copy of the dashboard.
+- Dashboard templates cannot be customized. You can create a copy of a dashboard template and then customize the copy to create your dashboard.
 
 ### Creating a custom dashboard
 {: #platform_metrics_working_dash_1}
 
 Complete the following steps to create a custom dashboard:
 
-1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
-2. Navigate to the **Dashboards** section (![dashboard section](../images/dashboards.png)) in the Web UI.
-3. In the **DASHBOARD TEMPLATES** section, expand the **IBM** section, and select a dashboard template for a service that you want to monitor.
-4. Select **Create Custom Dashboard**. The window *Create Dashboard from Template* opens.
-5. Enter a name for your dashboard, and click **Create and Open**. The dashboard opens.
+1. Navigate to the **Dashboards** section in the Web UI
 
-You can locate the dashboard that you have copied in the section **Dashboards** &gt; **My Dashboads**.
+2. You can create a dashboard using a template or by creating a dashboard manually.
 
-Next, customize the scope and panels in the dashboard.
+    * To create a dashboard using a template:
+
+        1. Click **Dashboard Manager**.
+
+        2. Click **Dashboard Library**.
+
+        3. Click the template you want to use to create your dashboard.
+
+        4. Click **Copy to My Dashboards**.
+
+        5. Name your dashboard.
+
+        6. Click **Create and Open**
+
+    * To create a dashboard without a template:
+
+        1. Click **+ New Dashboard**. The *New Dashboard* page opens.
+
+        2. Modify your dashboard as desired.
+
+        3. Click **Save**.
+
+        4. Click *New Dashboard* to rename your dashboard.  Click the check mark to save your name change.
+
+3. Set the dashboard scope. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). The select the desired scope. By default, **Entire infrastructure** is selected.
+
+    1. Select the scope.
+
+    2. Click **Save**.
+
+4. Configure panels. Repeat this step for any of the panels in the dashboard that you want to modify.
+
+    1. Identify the panel that you want to modify.
+
+    2. Select **Edit Panel**. This is the *Pencil* icon ![Pencil icon](../images/pencil.png).
+
+    3. Change the visualization if needed.
+
+    4. Change the query used to select the data.
+
+    5. For **Number** and **Gauge** chart types you can set the panel color based on metric thresholds. Click **Thresholds**. Set values for the different thresholds.  
+    
+       For **Timechart** set the axes and legend for the chart.
+
+    6. For **Panel** specify the name of the panel and an optional description.
+
+    7. Change the scope of the panel. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). Then, change the scope. If you need to restore the dashboard scope to the panel, delete the custom scope.  Click **Apply**.
+
+    8. Click **Save**.
+
 
 
 ### Defining the scope of a dashboard
@@ -116,26 +158,15 @@ Next, customize the scope and panels in the dashboard.
 Complete the following steps to define the scope of the data that is displayed through the dashboard:
 
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
-2. Navigate to the **Dashboards** section (![dashboard section](../images/dashboards.png)) in the Web UI.
-3. Select a custom dashboard in the **My Dashboards** section.
+2. Click **Dashboards**.
+3. Select a custom dashboard that monitors {{site.data.keyword.cloud_notm}} services in the **My Dashboards** section.
 4. To modify the scope, click the pencil icon to  **Edit Dashboard Scope**.
-
-    ![Dashboard scope section](images/sysdig-platform-2.png "Dashboard scope section"){: caption="Dashboard scope section" caption-side="bottom"}
-
 5. In the drop-down box, enter **ibm** and select an attribute.
-
-    ![Dashboard scope page](images/sysdig-platform-3.png "Dashboard scope page"){: caption="Dashboard scope page" caption-side="bottom"}
-
 6. Select an operator.
+7. Select 1 or more values
 
-    ![Dashboard scope page operators](images/sysdig-platform-4.png "Dashboard scope page operators"){: caption="Dashboard scope operators" caption-side="bottom"}
-
-7. Select 1 or more values.
-
-    ![Dashboard scope page values](images/sysdig-platform-5.png "Dashboard scope page values"){: caption="Dashboard scope values" caption-side="bottom"}
-
-    You can also leave the value empty, and select **var** to define a variable so that users can choose 1 or more values when they analyze data through the dashboard.
-    {: note}
+   You can also leave the value empty, and select **var** to define a variable so that users can choose 1 or more values when they analyze data through the dashboard.
+   {: tip}
 
 8. Continue adding more attributes. When you have the scope defined, click **Save**.
 
@@ -146,25 +177,22 @@ Complete the following steps to define the scope of the data that is displayed t
 Complete the following steps to define the scope of the data that is displayed through a panel in a dashboard:
 
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
-2. Navigate to the **Dashboards** section (![dashboard section](../images/dashboards.png)) in the Web UI.
-3. Select a custom dashboard in the **My Dashboards** section.
+2. Click **Dashboards**.
+3. Select a custom dashboard that monitors {{site.data.keyword.cloud_notm}} services in the **My Dashboards** section.
 4. Select a panel where you want to change the scope of the data.
-5. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). Then, in the *Scope* section, click **Dashboard scope**.
+5. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). 
+6. By default, the panel inherits the dashboard scope. To specify a custom scope, you must change the scope for the panel.
 
-    ![Panel scope](images/sysdig-platform-6.png "Panel scope"){: caption="Panel scope" caption-side="bottom"}
+    1. In the drop-down box, enter **ibm** and select an attribute.
+    2. Select an operator.
+    3. Select 1 or more values
 
-6. By default, *Inherit Dashboard Scope* is selected. To specify a custom scope, you must de-select this option.
+       You can also leave the value empty, and select **var** to define a variable so that users can choose 1 or more values when they analyze data through the dashboard.
+       {: tip}
 
-    In the drop-down box, enter **ibm** and select an attribute.
+    4. Continue adding more attribute if needed.
 
-    Select an operator.
-
-    Select 1 or more values.
-
-7. In a panel, you can configure 1 or more metrics. Select **Apply to All Queries** if you want the scope to apply to all the metrics that are configured for the panel.
-
-
-To save the scope, you must click **Save** at the panel level.
+7. To save the scope, click **Save** at the panel level.
 
 
 ## Configuring an alert on a platform metric
@@ -180,9 +208,9 @@ Complete the following steps to define an alert on a metric:
 
     You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
 
-3. Navigate to the **Dashboards** section (![dashboard section](../images/dashboards.png)) in the Web UI.
-4. Select a custom dashboard in the **My Dashboards** section.
-5. Select the panel for which you want to define the alert.
+3. Click **Dashboards**.
+4. Select a custom dashboard that monitors {{site.data.keyword.cloud_notm}} services in the **My Dashboards** section.
+5. Identify the panel for which you want to define the alert.
 
     Before you create the alert, check the scope of the metric that is configured in the panel. This scope is automatically included in the alert definition.
     {: note}
@@ -194,29 +222,59 @@ Complete the following steps to define an alert on a metric:
     If you have multiple queries defined in a panel, you are prompted to select the metric for which you want to create an alert.
     {: note}
 
-7. Configure the alert. Set the following fields:
+7. Select the alert type. Options are `Metric`, `Change`, `Downtime`, `Event`, or `PromQL`.
 
-    **Name**: Enter a name for the alert.
+8. Set the following fields:
 
-    **Description**: Add a description that other users can read to get more context. This field is optional.
+    **Alert Name**: Enter a name for the alert.
+
+    **Alert Description**: Add a description that other users can read to get more context. This field is optional.
 
     **Group**: The alert group this alert will be part of.  If not specified, the alert will be part of the default group.
 
     **Severity**: Set the level of criticality of the alert. Valid values are `High`, `Medium`, `Low`, and `Info`.
 
-    **Metric**: This field is set to the metric that you have selected from the panel. Check that the metric and aggregation are the ones that you need.
-
     **Scope**: This field is set to the scope that you have defined for the metric in the panel. Check that the scope is the one that you need.
 
-    **Trigger**: Define the condition and threshold value that must be evaluated. It also defines whether the alert sends a single alert or multiple alerts. Valid time scales are `minute`, `hour`, or `day`. A single alert fires an alert for the entire scope. Multiple Alerts are sent if 1 or more segments breach the threshold at once. An alert is sent for each segment that you specify.
+    **Notifications**: Enable 1 or more notification channels.
 
-    **Notification Channel**: Enable 1 or more notification channels.
+9. Depending on the alert type, you need to configure what will trigger the alert.
+
+    For `Metric` alerts:
+
+    **Metric**: This field is set to the metric that you have selected from the panel. Check that the metric and aggregation are the ones that you need.
+
+    **Threshold**: Define the condition and threshold value that must be evaluated. It also defines whether the alert sends a single alert or multiple alerts. Valid time scales are `minute`, `hour`, or `day`. A single alert fires an alert for the entire scope. Multiple Alerts are sent if 1 or more segments breach the threshold at once. An alert is sent for each segment that you specify.
+
+    For `Change` alerts:
+
+    **Metric**: This field is set to the metric that you have selected from the panel. Check that the metric and aggregation are the ones that you need.
+
+    **Threshold**: Define the condition and threshold value that must be evaluated. Indicates that an alert is to be sent when the configured value changes within a defined duration as compared to a previous time duration. The percent of change can also be configured into the alert evaluation. For example, if the change is greater than 50%.
+
+    For `Downtime` alerts:
+
+    **Metric**: This field is set to the metric that you have selected from the panel. Check that the metric and aggregation are the ones that you need.
+
+    **Threshold**: Define the condition and threshold value that must be evaluated. Indicates that an alert is to be sent when the configured value has a downtime of a configured time duration. Alerting can also be configured based on the percentage of time the resource is down over a given time perios.
+
+    For `Event` alerts:
+
+    **Threshold**: Define the condition and threshold value that must be evaluated. Indicates that an alert is to be sent when the number of events configured for the panel has reached, exceeded, or is less than a specific value. The threshold can also factor in the amount of time. For example, more than 50 events in a minute.
+
+
+    For `Prometheus/PromQL` alerts:
+
+    **Threshold**: Define the condition and threshold value that must be evaluated as a PromQL query. The query can factor in a duration of time and can also trigger alerts for a specified amount of time before automatically resolving the alert.
+
+10. Click **Save** to save your alert.
+
 
 
 ## Configuring an alert from the Alerts section
 {: #platform_metrics_working_alert_2}
 
-You can define a `metric` alert directly from the *Alerts* section.
+You can define an alert directly from the *Alerts* section.
 
 Complete the following steps to define an alert on a metric:
 
@@ -226,33 +284,59 @@ Complete the following steps to define an alert on a metric:
 
     You can enabled 1 or more notification channels when you configure an alert. If you need multiple notification channels, check they are available.
 
-3. Navigate to the **Alerts** section ![Alerts module](../images/alerts.png)) in the Web UI.
+3. Navigate to the **Alerts** section in the Web UI.
 
-4. Select **Add Alert**.
-
-    ![Add alert](images/sysdig-platform-7.png "Add alert"){: caption="Add alert" caption-side="bottom"}
+4. Click **New Alert**.
 
 5. Select your desired alert type.
 
-    ![Choose alert type](images/sysdig-platform-16.png "Choose alert type"){: caption="Choose alert type" caption-side="bottom"}
+7. Select the alert type. Options are `Metric`, `Change`, `Downtime`, `Event`, or `PromQL`.
 
-6. Configure the alert. Set the following fields:
+8. Set the following fields:
 
-    **Name**: Enter a name for the alert.
+    **Alert Name**: Enter a name for the alert.
 
-    **Description**: Add a description that other users can read to get more context. This field is optional.
+    **Alert Description**: Add a description that other users can read to get more context. This field is optional.
 
     **Group**: The alert group this alert will be part of.  If not specified, the alert will be part of the default group.
 
     **Severity**: Set the level of criticality of the alert. Valid values are `High`, `Medium`, `Low`, and `Info`.
 
-    **Metric**: Configure the metric.
+    **Scope**: This field is set to the scope that you have defined for the metric in the panel. Check that the scope is the one that you need.
 
-    **Scope**: Configure the scope
+    **Notifications**: Enable 1 or more notification channels.
 
-    **Trigger**: Define the condition and threshold value that must be evaluated. It also defines whether the alert sends a single alert or multiple alerts. Valid time scales are `minute`, `hour`, or `day`. A single alert fires an alert for the entire scope. Multiple Alerts are sent if 1 or more segments breach the threshold at once. An alert is sent for each segment that you specify.
+9. Depending on the alert type, you need to configure what will trigger the alert.
 
-    **Notification Channel**: Enable 1 or more notification channels.
+    For `Metric` alerts:
+
+    **Metric**: This field is set to the metric that you have selected from the panel. Check that the metric and aggregation are the ones that you need.
+
+    **Threshold**: Define the condition and threshold value that must be evaluated. It also defines whether the alert sends a single alert or multiple alerts. Valid time scales are `minute`, `hour`, or `day`. A single alert fires an alert for the entire scope. Multiple Alerts are sent if 1 or more segments breach the threshold at once. An alert is sent for each segment that you specify.
+
+    For `Change` alerts:
+
+    **Metric**: This field is set to the metric that you have selected from the panel. Check that the metric and aggregation are the ones that you need.
+
+    **Threshold**: Define the condition and threshold value that must be evaluated. Indicates that an alert is to be sent when the configured value changes within a defined duration as compared to a previous time duration. The percent of change can also be configured into the alert evaluation. For example, if the change is greater than 50%.
+
+    For `Downtime` alerts:
+
+    **Metric**: This field is set to the metric that you have selected from the panel. Check that the metric and aggregation are the ones that you need.
+
+    **Threshold**: Define the condition and threshold value that must be evaluated. Indicates that an alert is to be sent when the configured value has a downtime of a configured time duration. Alerting can also be configured based on the percentage of time the resource is down over a given time perios.
+
+    For `Event` alerts:
+
+    **Threshold**: Define the condition and threshold value that must be evaluated. Indicates that an alert is to be sent when the number of events configured for the panel has reached, exceeded, or is less than a specific value. The threshold can also factor in the amount of time. For example, more than 50 events in a minute.
+
+
+    For `Prometheus/PromQL` alerts:
+
+    **Threshold**: Define the condition and threshold value that must be evaluated as a PromQL query. The query can factor in a duration of time and can also trigger alerts for a specified amount of time before automatically resolving the alert.
+
+10. Click **Save** to save your alert.
+
 
 
 ## Controlling the access to platform metrics for a team
@@ -260,36 +344,33 @@ Complete the following steps to define an alert on a metric:
 
 You can control the data that is visible to all the users that are members of a team.
 
-First navigate to the **Settings** section.
+1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
-![Settings section](images/sysdig-platform-12.png "Settings section"){: caption="Settings" caption-side="bottom"}
+2. Click the user icon and then click **Settings**.
 
-As an administrator of the service, you can create, modify, and delete teams. When you configure a team, you can define the scope of the data in the **Visibility** section.
+3. Click **Teams**.
+
+
+As an administrator of the service, you can create, modify, and delete teams. When you configure a team, you can define the scope of the data in the **Team Scope** section.
 
 To allow a team to view platform metrics, you must select **Platform metrics**.
 
-![Team platform metrics option](images/sysdig-platform-10.png "Team platform metrics option"){: caption="Team platform metrics" caption-side="bottom"}
+Enabling platform metrics grants access to all platform metrics. However, you can reduce the scope by configuring 1 or more platform metrics labels. Notice that the order of the labels is applied from the beginning of the list to the end.
 
-Enabling platform metrics, grants access to all platform metrics. However, you can reduce the scope by configuring 1 or more segments. Notice that the order of the segments is applied from the beginning of the list to the end.
-
-![Team platform metrics segments](images/sysdig-platform-11.png "Team platform metrics segments"){: caption="Team platform metrics segments" caption-side="bottom"}
-
-
-
-### Limiting access to platform metrics by resource group
+<!--### Limiting access to platform metrics by resource group
 {: #platform_metrics_working_team_rg}
 
 Complete the following steps to limit the data to metrics collected for services that are created in that resource group:
 
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
-2. Navigate to the **Settings** section.
+2. Click the user icon and then click **Settings**.
 
-    ![Settings section](images/sysdig-platform-12.png "Settings section"){: caption="Settings" caption-side="bottom"}
+3. Click **Teams**.
 
-3. Select **Teams**. Then, select a team where you want to restrict access to the platform metrics.
+4. Select a team where you want to restrict access to the platform metrics.
 
-4. In the *Visibility* section, select **Platform metrics**.
+5. In the **Team Scope** section, select **Platform metrics**.
 
 5. Select the attribute **ibm_resource_group_id** to segment data by resource group.
 
@@ -301,7 +382,7 @@ Complete the following steps to limit the data to metrics collected for services
 
 8. Click **Save**.
 
-
+-->
 
 
 ### Limiting access to platform metrics by instance
@@ -311,18 +392,16 @@ Complete the following steps:
 
 1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
 
-2. Navigate to the **Settings** section.
+2. Click the user icon and then click **Settings**.
 
-    ![Settings section](images/sysdig-platform-12.png "Settings section"){: caption="Settings" caption-side="bottom"}
+3. Click **Teams**.
 
-3. Select **Teams**. Then, select a team where you want to restrict access to the platform metrics.
+4. In the **Team Scope** section, select **Platform metrics**.
 
-4. In the *Visibility* section, select **Platform metrics**.
-
-5. Select the attribute **ibm_service_instance** to segment data by instance ID.
+5. Select the attribute `ibm_service_instance`to segment data by instance ID.
 
 6. Select 1 or more instance IDs for which you want the data to be visible to users that are members of this team.
 
-7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service.
+7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and go to the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service.
 
 8. Click **Save**.

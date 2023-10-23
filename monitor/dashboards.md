@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-10-19"
+lastupdated: "2023-10-23"
 
 keywords: 
 
@@ -95,18 +95,19 @@ Complete the following steps to create a custom dashboard:
 
     2. Select **Edit Panel**. This is the *Pencil* icon ![Pencil icon](../images/pencil.png).
 
-    3. Change the a chart type.
+    3. Change the visualization if needed.
 
-    4. Change the metric, and rate. Rate defines the type of aggregation that is done to the data.
+    4. Change the query used to select the data.
 
-    5. Change the scope of the panel. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). Then, change the scope. If you need to restore the dashboard scope to the panel, delete the custom scope.  Click **Apply**.
+    5. For **Number** and **Gauge** chart types you can set the panel color based on metric thresholds. Click **Thresholds**. Set values for the different thresholds.  
 
-    6. In the *Compare to* field set the time range for the comparison.
+       For **Timechart** set the axes and legend for the chart.
 
-    7. For **Number** and **Threshold** chart types you can set the panel color based on metric thresholds. Click **Thresholds**. Set values for the different thresholds.
+    6. For **Panel** specify the name of the panel and an optional description.
+
+    7. Change the scope of the panel. Click the *Pencil* icon ![Pencil icon](../images/pencil.png). Then, change the scope. If you need to restore the dashboard scope to the panel, delete the custom scope.  Click **Apply**.
 
     8. Click **Save**.
-
 
 ## Changing the scope
 {: #dashboards_scope}
