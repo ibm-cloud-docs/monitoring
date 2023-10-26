@@ -38,7 +38,7 @@ The following table lists the endpoints that are available per region:
 | Madrid (`EU-ES`)     | `https://eu-es.monitoring.cloud.ibm.com`         |  13.120.68.187  \n  13.121.68.91  \n 13.122.68.140 | https (TLS) 443 |
 | Osaka (`JP-OSA`)    | `https://jp-osa.monitoring.cloud.ibm.com`        | 163.68.67.98  \n 163.69.66.170  \n 163.73.67.180 | https (TLS) 443 |
 | Sao Paulo (`BR-SAO`)    | `https://br-sao.monitoring.cloud.ibm.com`        | 163.107.66.98  \n 163.109.67.242  \n 169.57.141.43       | https (TLS) 443 |
-| Sydney (`AU-SYD`)    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100  \n 130.198.80.155  \n 168.1.213.78    
+| Sydney (`AU-SYD`)    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100  \n 130.198.80.155  \n 168.1.213.78
 | Tokyo (`JP-TOK`)    | `https://jp-tok.monitoring.cloud.ibm.com`        | 165.192.84.14  \n 128.168.75.14  \n 169.56.51.238       | https (TLS) 443 |
 | Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237       | https (TLS) 443 |
 | Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82        | https (TLS) 443 |
@@ -57,19 +57,25 @@ To make API calls, you might need to define a firewall rule in your host.
 ### Private REST API endpoints
 {: #endpoints_rest_api_private}
 
-| Region      | Private REST API endpoint                                     |
-|-------------|---------------------------------------------------------------|
-| Dallas (`US-South`)  | `https://private.us-south.monitoring.cloud.ibm.com/api`      |
-| Frankfurt (`EU-DE`)     | `https://private.eu-de.monitoring.cloud.ibm.com/api`         |
-| London (`EU-GB`)     | `https://private.eu-gb.monitoring.cloud.ibm.com/api`         |
-| Madrid (`EU-ES`)     | `https://private.eu-es.monitoring.cloud.ibm.com/api`         |
-| Osaka (`JP-OSA`)    | `https://private.jp-osa.monitoring.cloud.ibm.com/api`         |
-| Sao Paulo (`BR-SAO`)    | `https://private.br-sao.monitoring.cloud.ibm.com/api`        |
-| Sydney (`AU-SYD`)    | `https://private.au-syd.monitoring.cloud.ibm.com/api`        |
-| Tokyo (`JP-TOK`)    | `https://private.jp-tok.monitoring.cloud.ibm.com/api`        |
-| Toronto (`CA-TOR`)    | `https://private.ca-tor.monitoring.cloud.ibm.com/api`        |
-| Washington (`US-East`)   | `https://private.us-east.monitoring.cloud.ibm.com/api`       |
+The following table lists the *Private API endpoints* that are available per region:
+
+| Region      | Private REST API endpoint       | Private IP addresses       |
+|-------------|----------------------------------|----------------------------|
+| Dallas (`US-South`)  | `private.us-south.monitoring.cloud.ibm.com/api`   | 166.9.228.45 `(*)`  \n 166.9.229.45 `(*)`  \n 166.9.230.44 `(*)`   |
+| Frankfurt (`EU-DE`)     | `private.eu-de.monitoring.cloud.ibm.com/api`      | 166.9.248.88 `(*)`  \n 166.9.248.120 `(*)`  \n 166.9.248.152 `(*)`     |
+| London (`EU-GB`)     | `private.eu-gb.monitoring.cloud.ibm.com/api`      | 166.9.244.29 `(*)`  \n 166.9.244.59 `(*)`                       |
+| Madrid (`EU-ES`)     | `private.eu-es.monitoring.cloud.ibm.com/api`      | 166.9.226.17 `(*)`  \n 166.9.227.16 `(*)`   \n 166.9.225.16 `(*)`         |
+| Osaka (`JP-OSA`)    | `private.jp-osa.monitoring.cloud.ibm.com/api`     | 166.9.247.44 `(*)`  \n 166.9.247.77 `(*)`  \n 166.9.247.109 `(*)`  |
+| Sao Paulo (`BR-SAO`)  | `private.br-sao.monitoring.cloud.ibm.com/api`   | 166.9.246.77 `(*)`  \n 166.9.246.108 `(*)`  \n 166.9.246.133 `(*)`   |
+| Sydney (`AU-SYD`)    | `private.au-syd.monitoring.cloud.ibm.com/api`     | 166.9.244.114 `(*)`  \n 166.9.244.144 `(*)`  \n 166.9.244.177 `(*)`      |
+| Tokyo (`JP-TOK`)    | `private.jp-tok.monitoring.cloud.ibm.com/api`     | 166.9.249.112 `(*)`  \n 166.9.249.141 `(*)`  \n 166.9.249.177 `(*)`         |
+| Toronto (`CA-TOR`)  | `private.ca-tor.monitoring.cloud.ibm.com/api`   | 166.9.247.153 `(*)`  \n 166.9.247.185 `(*)`  \n 166.9.247.205 `(*)`    |
+| Washington (`US-East`)   | `private.us-east.monitoring.cloud.ibm.com/api`    | 166.9.231.240 `(*)`  \n 166.9.232.28 `(*)`  \n 166.9.233.17 `(*)`       |
 {: caption="Table 2. Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
+
+`(*)` Indicates IP addresses that are in plan to be supported. These IP addresses should be added to an allowlist in advance to avoid service interruptions. Current IP addresses will be deprecated. A notification will be sent before the current IP addresses are deprecated.
+{: note}
+
 
 
 ### Public REST API endpoints
@@ -109,20 +115,20 @@ The following table lists the *Private Collector endpoints* that are available p
 
 | Region      | Private ingestion endpoint       | Private IP addresses       | Monitoring  \n  agent ports   | Prometheus  \n  Remote Write  \n Ports|
 |-------------|----------------------------------|----------------------------|-----------|---------|
-| Dallas (`US-South`)  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170  \n 166.9.48.41  \n 166.9.17.11   \n  \n 166.9.228.45 `(*)`  \n 166.9.229.45 `(*)`  \n 166.9.230.44 `(*)`   | TCP 6443  | TCP 443  |
-| Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71   \n  \n  166.9.248.88 `(*)`  \n 166.9.248.120 `(*)`  \n 166.9.248.152 `(*)`     | TCP 6443  | TCP 443  |
-| London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56  \n 166.9.36.71   \n  \n  166.9.244.29 `(*)`  \n 166.9.244.59 `(*)`                       |  TCP 6443 | TCP 443  |
-| Madrid (`EU-ES`)     | `ingest.private.eu-es.monitoring.cloud.ibm.com`      | 166.9.96.31  \n 166.9.95.31  \n 166.9.94.31   \n  \n  166.9.226.17 `(*)`  \n 166.9.227.16 `(*)`   \n 166.9.225.16 `(*)`         |  TCP 6443 | TCP 443  |
-| Osaka (`JP-OSA`)    | `ingest.private.jp-osa.monitoring.cloud.ibm.com`     | 166.9.72.14  \n 166.9.71.15  \n 166.9.70.14   \n  \n  166.9.247.44 `(*)`  \n 166.9.247.77 `(*)`  \n 166.9.247.109 `(*)`  | TCP 6443 |  TCP 443  |
-| Sao Paulo (`BR-SAO`)  | `ingest.private.br-sao.monitoring.cloud.ibm.com`   | 166.9.84.19  \n 166.9.83.18  \n 166.9.82.19   \n  \n  166.9.246.77 `(*)`  \n 166.9.246.108 `(*)`  \n 166.9.246.133 `(*)`   | TCP 6443  |  TCP 443  |
-| Sydney (`AU-SYD`)    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32  \n 166.9.52.27   \n 166.9.54.27  \n  \n  166.9.244.114 `(*)`  \n 166.9.244.144 `(*)`  \n 166.9.244.177 `(*)`      |  TCP 6443 |  TCP 443  |
-| Tokyo (`JP-TOK`)    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38  \n 166.9.40.35  \n 166.9.42.48  \n  \n  166.9.249.112 `(*)`  \n 166.9.249.141 `(*)`  \n 166.9.249.177 `(*)`         | TCP 6443  |  TCP 443  |
-| Toronto (`CA-TOR`)  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | 166.9.77.20  \n 166.9.76.23  \n 166.9.78.21  \n  \n  166.9.247.153 `(*)`  \n 166.9.247.185 `(*)`  \n 166.9.247.205 `(*)`    | TCP 6443  |  TCP 443  |
-| Washington (`US-East`)   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53  \n  \n  166.9.231.240 `(*)`  \n 166.9.232.28 `(*)`  \n 166.9.233.17 `(*)`       | TCP 6443  |  TCP 443  |
+| Dallas (`US-South`)  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170  \n 166.9.48.41  \n 166.9.17.11    | TCP 6443  | TCP 443  |
+| Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71  | TCP 6443  | TCP 443  |
+| London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56  \n 166.9.36.71         |  TCP 6443 | TCP 443  |
+| Madrid (`EU-ES`)     | `ingest.private.eu-es.monitoring.cloud.ibm.com`      | 166.9.96.31  \n 166.9.95.31  \n 166.9.94.31  |  TCP 6443 | TCP 443  |
+| Osaka (`JP-OSA`)    | `ingest.private.jp-osa.monitoring.cloud.ibm.com`     | 166.9.72.14  \n 166.9.71.15  \n 166.9.70.14    | TCP 6443 |  TCP 443  |
+| Sao Paulo (`BR-SAO`)  | `ingest.private.br-sao.monitoring.cloud.ibm.com`   | 166.9.84.19  \n 166.9.83.18  \n 166.9.82.19   | TCP 6443  |  TCP 443  |
+| Sydney (`AU-SYD`)    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32  \n 166.9.52.27   \n 166.9.54.27    |  TCP 6443 |  TCP 443  |
+| Tokyo (`JP-TOK`)    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38  \n 166.9.40.35  \n 166.9.42.48      | TCP 6443  |  TCP 443  |
+| Toronto (`CA-TOR`)  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | 166.9.77.20  \n 166.9.76.23  \n 166.9.78.21    | TCP 6443  |  TCP 443  |
+| Washington (`US-East`)   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53       | TCP 6443  |  TCP 443  |
 {: caption="Table 4. List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
-`(*)` Indicates IP addresses that are in plan to be supported. These IP addresses should be added to an allowlist in advance to avoid service interruptions. Current IP addresses will be deprecated. A notification will be sent before the current IP addresses are deprecated.
-{: note}
+
+
 
 ### Public Collector endpoints
 {: #endpoints_ingestion_public}
@@ -200,4 +206,3 @@ To receive alert notifications by using webhooks from the {{site.data.keyword.mo
 | Toronto (`CA-TOR`)   | 158.85.78.224/27  \n 158.85.94.128/29  \n 163.74.67.192/28  \n 163.74.69.184/29  \n 163.74.71.96/27  \n 163.75.65.232/29  \n 163.75.72.192/27  \n 169.55.129.208/28  |
 | Washington (`US-EAST`)  | 169.47.20.160/27  \n 169.55.109.112/29  \n 169.55.122.192/28  \n 169.59.131.160/27  \n 169.59.146.192/26  \n 169.60.112.72/29  \n 169.60.82.240/28  \n 169.62.28.160/28  \n 169.62.3.80/29  \n 169.62.46.192/27  \n 52.116.95.64/26  \n 52.117.71.128/26  |
 {: caption="Table 8. Source Subnets for Webhook notifications from {{site.data.keyword.mon_full_notm}}" caption-side="top"}
-
