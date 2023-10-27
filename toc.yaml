@@ -318,6 +318,7 @@ toc:
       - collect-metrics-by-host.md
       - agent_support.md
       - core/shared-responsibilities.md
+      - wpp-migration.md
 
       - topicgroup:
           label: Monitoring CLI
