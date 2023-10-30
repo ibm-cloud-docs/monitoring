@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2021-03-28"
+lastupdated: "2023-10-11"
 
 keywords: IBM Cloud, monitoring, disaster recovery, ha, high availability, redundancy
 
@@ -40,9 +40,11 @@ The following table lists the high-availability (HA) status for the regions (loc
 | `Asia Pacific`        | `Osaka (jp-osa)`         | `MZR`     |
 | `Europe`              | `Frankfurt (eu-de)`      | `MZR`     |
 | `Europe`              | `London (eu-gb)`         | `MZR`     |
+| `Europe`              | `Madrid (eu-es)`         | `MZR`     |
 | `North America`       | `Dallas (us-south)`      | `MZR`     |
 | `North America`       | `Washington (us-east)`   | `MZR`     |
 | `North America`       | `Toronto (ca-tor)`       | `MZR`     |
+| `South America`       | `São-Paulo (br-sao)`     | `MZR`     |
 {: caption="Table 1. List of locations where the service is available" caption-side="top"}
 
 Where
@@ -87,7 +89,7 @@ If a regional disaster occurs, consider the following information:
 * You will have to update the endpoints of applications and monitoring agents to point to the ingestion endpoint in the new location.
 * You will have to restore the service instance's metadata, that is, dashboards and alerts definitions, from your backups.
 
-Historical data may be lost during a disaster. If you require historical metrics for auditing purposes, backup the metrics regularly by querying the metrics from the service and storing them at a remote backup site.
+Historical data may be lost during a disaster. If you require historical metrics for auditing purposes, backup the metrics regularly by querying the metrics from the service and storing them at a remote backup site. For more information, see [Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the API](/docs/monitoring?topic=monitoring-metrics_api).
 {: note}
 
 ### Manual recovery of the service
@@ -108,3 +110,16 @@ If you have deployed monitoring agents on your systems, and those systems are no
     {: tip}
 
 4. Launch the monitoring instance and import the alerts, notifications, teams, and dashboards to monitor your applications and systems.
+
+
+
+### DR recovery time
+{: #dr_recovery_time}
+
+The following table indicates the estimated recovery times in the event of a DR situation:
+
+| Recovery objective for DR | Estimated time |
+|---------------------------|----------------|
+| Maximum Tolerable Downtime (MTD) / Recovery Time Objective (RTO)  | Up to 24 hours |
+| Recovery Point Objective (RPO) | Up to 24 hours |
+{: caption="Table 2. Recovery objectives for DR" caption-side="top"}
