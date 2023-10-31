@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-08-01"
+lastupdated: "2023-10-31"
 
 keywords:
 
@@ -62,7 +62,7 @@ Complete the following steps:
 
     - You can target any resource group, but to make the instances easier to manage, you might target the group that contains your Monitoring instance.
 
-    - To create the new instance, run this command: `ibmcloud resource service-instance-create <new instance name here> "sysdig-secure" "graduated-tier" “,”<region here>” -p '{"cloud_monitoring_connected_instance":"<monitoring instanceId here>"}`
+    - To create the new instance, run this command: `ibmcloud resource service-instance-create <new instance name here> "sysdig-secure" "graduated-tier" "<region here>" -p '{"cloud_monitoring_connected_instance": "<monitoring instanceId here>"}`
 
     The new instance name can be anything you like.
 
