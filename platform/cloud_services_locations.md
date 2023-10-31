@@ -439,7 +439,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service                                                       |`Frankfurt (eu-de)`                                 | `London (eu-gb)` | `Madrid (eu-es)` |
 |---------------------------------------------------------------|----------------------------------------------------|------------------|----------------|
 | {{site.data.keyword.keymanagementservicelong}}                | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
-| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](../images/checkmark-icon.svg) |    |  |
+| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](../images/checkmark-icon.svg) |    | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Security services integration in Europe locations" caption-side="top"}
 {: #cs-sec-table-3}
 {: tab-title="Europe"}
