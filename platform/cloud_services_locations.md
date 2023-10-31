@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-09-11"
+lastupdated: "2023-10-31"
 
 keywords:
 
@@ -63,7 +63,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` | `Madrid (eu-es)` |
 |---------------------------------------------------------------|---------------------|------------------|----------|
-| VPC virtual server instances                          | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  | `Metrics are available through the Activity Tracker Frankfurt (eu-de) instance.` |
+| VPC virtual server instances                          | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Infrastructure services integration in Europe locations" caption-side="top"}
 {: #cs-vpcinfra-table-1}
 {: tab-title="Europe"}
@@ -224,9 +224,9 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` | `Madrid (eu-es)` |
 |---------------------------------------------------------------|---------------------|------------------|----------|
-| Load Balancer for VPC   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | `Metrics are available through the Activity Tracker Frankfurt (eu-de) instance.`  |
-| VPN for VPC             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | `Metrics are available through the Activity Tracker Frankfurt (eu-de) instance.` |
-| Client VPN for VPC      | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | `Metrics are available through the Activity Tracker Frankfurt (eu-de) instance.`  |
+| Load Balancer for VPC   | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |
+| VPN for VPC             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
+| Client VPN for VPC      | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |
 {: caption="VPC events in Europe locations" caption-side="top"}
 {: #cs-vpc-loc-table-3}
 {: tab-title="Europe"}
@@ -309,7 +309,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service        | `Frankfurt (eu-de)`           | `London (eu-gb)`                                   | `Madrid (eu-es)` |
 |----------------|-------------------------------|----------------------------------------------------|----------|
-| {{site.data.keyword.cloudant_short_notm}}                        |    | ![Checkmark icon](../images/checkmark-icon.svg) |  |
+| {{site.data.keyword.cloudant_short_notm}}                        |    | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
 | {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
 | {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
@@ -378,7 +378,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` | `Madrid (eu-es)` |
 |---------------------------------------------------------------|---------------------|------------------|---------|
-| {{site.data.keyword.messagehub}}             | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)| `Metrics are available through the Activity Tracker Frankfurt (eu-de) instance.` |
+| {{site.data.keyword.messagehub}}             | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)| ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.mq_full}}             | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)|  |
 {: caption="Integration services integration in Europe locations" caption-side="top"}
 {: #cs-integration-table-1}
@@ -438,7 +438,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       |`Frankfurt (eu-de)`                                 | `London (eu-gb)` | `Madrid (eu-es)` |
 |---------------------------------------------------------------|----------------------------------------------------|------------------|----------------|
-| {{site.data.keyword.keymanagementservicelong}}                | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |  |
+| {{site.data.keyword.keymanagementservicelong}}                | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](../images/checkmark-icon.svg) |    |  |
 {: caption="Security services integration in Europe locations" caption-side="top"}
 {: #cs-sec-table-3}
@@ -453,7 +453,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 
 | Service                                                       |`Frankfurt (eu-de)`                                | `London (eu-gb)` | `Madrid (eu-es)` |
 |---------------------------------------------------------------|---------------------------------------------------|------------------|--------------|
-| {{site.data.keyword.cos_full_notm}}                    | ![Checkmark icon](../images/checkmark-icon.svg) |  ![Checkmark icon](../images/checkmark-icon.svg)  | `Metrics are available through the Activity Tracker Frankfurt (eu-de) instance.` |
+| {{site.data.keyword.cos_full_notm}}                    | ![Checkmark icon](../images/checkmark-icon.svg) |  ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Storage services integration in Europe locations" caption-side="top"}
 {: #cs-storage-table-3}
 {: tab-title="Europe"}

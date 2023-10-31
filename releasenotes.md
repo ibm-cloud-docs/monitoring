@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-09-26"
+lastupdated: "2023-10-31"
 
 keywords: Monitoring release notes, Monitoring updates
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 31 October 2023
+{: #monitoring-oct3123}
+{: release-note}
+ 
+Services now sending metrics to Madrid
+:   Some services are now sending metrics to Madrid. See [services generating metrics by location](/docs/monitoring?topic=monitoring-cloud_services_locations) for the services sending metrics to Madrid.
+
 
 ## 26 September 2023
 {: #monitoring-sep2623}
