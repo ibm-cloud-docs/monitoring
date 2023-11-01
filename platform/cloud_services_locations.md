@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-10-31"
+lastupdated: "2023-11-01"
 
 keywords:
 
@@ -183,7 +183,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 |---------------------------------------------------------------|---------------------|------------------|--------|
 | {{site.data.keyword.contdelivery_full}} | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |   |
 | {{site.data.keyword.appconfig_full}}    |                                                 |![Checkmark icon](../images/checkmark-icon.svg) |  |
-| {{site.data.keyword.en_full}}    |                                                 |![Checkmark icon](../images/checkmark-icon.svg) |  |
+| {{site.data.keyword.en_full}}    |                                                 |![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Developer tools and DevOps services in Europe locations" caption-side="top"}
 {: #cs-devops-table-1}
 {: tab-title="Europe"}
@@ -310,12 +310,12 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service        | `Frankfurt (eu-de)`           | `London (eu-gb)`                                   | `Madrid (eu-es)` |
 |----------------|-------------------------------|----------------------------------------------------|----------|
 | {{site.data.keyword.cloudant_short_notm}}                        |    | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
-| {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
-| {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
-| {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
-| {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
-| {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
-| {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
+| {{site.data.keyword.databases-for-elasticsearch_full_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.databases-for-etcd_full_notm}}              | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.databases-for-mongodb_full_notm}}           | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.databases-for-postgresql_full_notm}}        | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.messages-for-rabbitmq_full_notm}}           | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |  |
 | {{site.data.keyword.ihsdbaas_mongodb_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  |    |  |
 | {{site.data.keyword.ihsdbaas_postgresql_full}}| ![Checkmark icon](../images/checkmark-icon.svg)  |    |  |
@@ -439,7 +439,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service                                                       |`Frankfurt (eu-de)`                                 | `London (eu-gb)` | `Madrid (eu-es)` |
 |---------------------------------------------------------------|----------------------------------------------------|------------------|----------------|
 | {{site.data.keyword.keymanagementservicelong}}                | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg) |
-| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](../images/checkmark-icon.svg) |    | ![Checkmark icon](../images/checkmark-icon.svg) |
+| {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} | ![Checkmark icon](../images/checkmark-icon.svg) |    | ![Checkmark icon](../images/checkmark-icon.svg)  |
 {: caption="Security services integration in Europe locations" caption-side="top"}
 {: #cs-sec-table-3}
 {: tab-title="Europe"}
