@@ -3,7 +3,7 @@
 copyright:
   years:  2018, 2023
 
-lastupdated: "2023-08-04"
+lastupdated: "2023-11-03"
 
 keywords:
 
@@ -165,7 +165,6 @@ The following table lists container services that are enabled for {{site.data.ke
 | Service     | Description | Metrics |
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.codeenginefull_notm}}](/docs/codeengine?topic=codeengine-getting-started) | {{site.data.keyword.codeengineshort}} is a fully managed, serverless platform that runs your containerized workloads. | [Platform metrics](/docs/codeengine?topic=codeengine-monitor)|
-| [{{site.data.keyword.openwhisk}}](/docs/openwhisk?topic=openwhisk-getting-started) | A Functions-as-a-Service (FaaS) programming platform based on Apache OpenWhisk. | [Platform metrics](/docs/openwhisk?topic=openwhisk-monitor-functions)|
 {: caption="Table 10. List of serverless services" caption-side="top"}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-11-01"
+lastupdated: "2023-11-03"
 
 keywords:
 
@@ -28,7 +28,6 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service                                                       | `Frankfurt (eu-de)` | `London (eu-gb)` | `Madrid (eu-es)` |
 |---------------------------------------------------------------|---------------------|------------------|---------|
 | {{site.data.keyword.codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |  |
-| {{site.data.keyword.openwhisk}}          | ![Checkmark icon](../images/checkmark-icon.svg) | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
 {: caption="Serverless integration in Europe locations" caption-side="top"}
 {: #cs-sv-table-1}
 {: tab-title="Europe"}
@@ -39,7 +38,6 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service                                        | `Dallas (us-south)` | `Washington (us-east)`             |
 |------------------------------------------------|---------------------|------------------------------------|
 | {{site.data.keyword.codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |
-| {{site.data.keyword.openwhisk}}        | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg) `[*]` |
 {: caption="Serverless integration in America's locations" caption-side="top"}
 {: #cs-sv-table-2}
 {: tab-title="America"}
@@ -50,7 +48,6 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | Service                                        | `Tokyo (jp-tok)` | `Sydney (au-syd)`          |
 |------------------------------------------------|------------------|----------------------------|
 | {{site.data.keyword.codeenginefull_notm}}                | ![Checkmark icon](../images/checkmark-icon.svg) |    |
-| {{site.data.keyword.openwhisk}}        | ![Checkmark icon](../images/checkmark-icon.svg)   | ![Checkmark icon](../images/checkmark-icon.svg) |
 {: caption="Serverless integration in AP locations" caption-side="top"}
 {: #cs-sv-table-3}
 {: tab-title="Asia Pacific"}
