@@ -147,6 +147,7 @@ toc:
       - topicgroup:
           label: Enhancing security
           topics:
+          - core/cbr.md
           - core/data-security.md
           - core/service-connection.md
           - core/architecture-workload-isolation.md
