@@ -18,8 +18,10 @@ subcollection: monitoring
 In the {{site.data.keyword.mon_full_notm}} service, you can configure single alerts and multi-condition alerts to notify about problems that may require attention. When an alert is triggered, you can be notified through 1 or more notification channels. An alert definition can generate multi-channel notifications.
 {: shortdesc}
 
+<!--
 The legacy alert editor is deprecated. See [Configuring an alert](/docs/monitoring?topic=monitoring-alert-config) for information about the current alert editor.
 {: deprecated}
+-->
 
 An alert is a notification event that you can use to warn about situations that require attention. Each alert has a severity status. This status informs you about the criticality of the information it reports on. [Learn more](/docs/monitoring?topic=monitoring-alerts).
 
