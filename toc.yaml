@@ -274,15 +274,25 @@ toc:
 
       - topicgroup:
           label: Working with alerts
-          links:
-            - link:
-                label: Configuring alerts
-                href: https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/configure-alerts/
-            - link:
-                label: PromQL Alerts
-                href: https://docs.sysdig.com/en/promql-alerts.html
           topics:
-          - monitor/alert-config.md
+          - topicgroup:
+              label: Alert types
+              topics:
+              - monitor/alert-metric.md
+              - monitor/alert-change.md
+              - monitor/alert-downtime.md
+              - monitor/alert-event.md
+              - monitor/alert-promql.md
+
+          - topicgroup:
+              label: Configuring and managing alerts
+              topics:
+              - monitor/alert-config-legacy.md
+              - monitor/alert-config.md
+              - monitor/alert-manage.md
+              - monitor/alert-library.md
+              - monitor/alert-silence.md
+
           - api/alert_api.md
           - api/alert_python.md
           - api/metrics_sent_eventstreams.md
