@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-07-05"
+  years:  2018, 2024
+lastupdated: "2024-01-09"
 
 keywords:
 
@@ -28,6 +28,8 @@ For more information about {{site.data.keyword.sysdigsecure_short}}, see the [{{
 If you have the {{site.data.keyword.mon_short}} service deployed in your account with the `Graduated tier` service plan, you must upgrade to the `Graduated Tier - Sysdig Secure + Monitor` plan.
 
 If you provision a {{site.data.keyword.mon_short}} instance, choose the `Graduated Tier - Sysdig Secure + Monitor` plan.
+
+{{site.data.content.combined-plan-deprecated}}
 
 ## Step 2. Deploy the agent for orchestrated environments by using Helm
 {: #deploy_with_helm}

@@ -1,10 +1,11 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-10-31"
+  years:  2018, 2024
+lastupdated: "2024-01-16"
 
-keywords: Monitoring release notes, Monitoring updates
+
+keywords:
 
 subcollection: monitoring
 
@@ -20,10 +21,56 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
+
+## 18 January 2024
+{: #monitoring-jan1824}
+{: release-note}
+ 
+Deprecation of `Graduated Tier - Sysdig Secure + Monitor` plan
+:   {{site.data.keyword.mon_full_notm}} has deprecated the `Graduated Tier - Sysdig Secure + Monitor` pricing plan. Users can maintain the same functionality by configuring an {{site.data.keyword.mon_full_notm}} instance connected to an {{site.data.keyword.sysdigsecure_full_notm}} instance by 18 August 2024.
+
+    For more information, see [Can {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_full_notm}} be used together?](/docs/monitoring?topic=monitoring-faq#faq_4) and [The Graduated Tier - Sysdig Secure + Monitoring plan is deprecated. How do I keep using {{site.data.keyword.sysdigsecure_short}} functionality?](/docs/monitoring?topic=monitoring-faq#faq_5)
+
+Deprecation of Python sdc-client library
+:   The Python library for {{site.data.keyword.mon_full_notm}} is deprecated.
+
+    Users using the library will need to migrate to [Terraform](https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs){: external} or the [REST API](/apidocs/monitor) before the library is removed on 18 January 2025.
+
+Deprecation of legacy Metrics Explorer
+:   The {{site.data.keyword.mon_full_notm}} legacy Metrics Explorer is deprecated and will be removed on 18 January 2025.
+
+    Users should use the [new Metrics Explorer](/docs/monitoring?topic=monitoring-monitoring#monitoring_explore).
+
+Deprecation of legacy Alerts Editor
+:   The {{site.data.keyword.mon_full_notm}} legacy Alerts Editor is deprecated and will be removed on 18 April 2024.
+
+    Users should use the [new Alerts Editor](/docs/monitoring?topic=monitoring-alert-config).
+
+Deprecation of {{site.data.keyword.sysdigsecure_short}} Scanning Engine V1
+:   {{site.data.keyword.sysdigsecure_full_notm}} can be used in conjunction with {{site.data.keyword.mon_full_notm}}. The {{site.data.keyword.sysdigsecure_short}} Scanning Engine V1 is deprecated and replaced with a new scanning engine wih better performace and capabilities.
+
+    New instances will automatically have the new scanning engine deployed. Existing instances will need to be migrated to the new scanning engine by 18 January 2025. [Learn more](https://docs.sysdig.com/en/docs/sysdig-secure/scanning/new-scanning-engine/){: external}
+
+    When migrating, customers need to migrate from the legacy node-analyzer to the new node-analyzer. In some cases uninstalling and reinstalling using Helm is the simplest approach. Customers using Pipeline or Registry Scanning need to start using the new scanning components.
+
+## 30 November 2023
+{: #monitoring-nov3023}
+{: release-note}
+
+Changes to private API endpoints:
+:   Private REST API endpoint IP addresses are enabled. If your service is configured to use specific IP addresses or firewall to a specific IP address, then modification to the new IP addresses might be required. For more information, see [Private REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api_private).
+
+## 15 November 2023
+{: #monitoring-nov1523}
+{: release-note}
+
+Context-based restrictions support
+:   {{site.data.keyword.mon_full_notm}} now supports [context-based restrictions.](/docs/monitoring?topic=monitoring-cbr)
+
 ## 31 October 2023
 {: #monitoring-oct3123}
 {: release-note}
- 
+
 Services now sending metrics to Madrid
 :   Some services are now sending metrics to Madrid. See [services generating metrics by location](/docs/monitoring?topic=monitoring-cloud_services_locations) for the services sending metrics to Madrid.
 
