@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-07-26"
+  years:  2018, 2024
+lastupdated: "2024-01-10"
 
 
 keywords:
@@ -70,40 +70,9 @@ To add monitoring features with {{site.data.keyword.mon_full_notm}} in the {{sit
 
 Instances are provisioned in the context of a resource group. A resource group organizes your services for access control and billing purposes. You can provision the {{site.data.keyword.mon_full_notm}} instance in the *default* resource group or in a custom resource group.
 
-To provision an instance through the {{site.data.keyword.cloud_notm}} UI, complete the following steps:
+<!-- Segment with steps to provision an instance -->
 
-1. Log in to your {{site.data.keyword.cloud_notm}} account.
-
-   Open the [{{site.data.keyword.cloud_notm}} dashboard](https://cloud.ibm.com/login){: external}.
-
-   After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} UI opens.
-
-2. Click **Catalog**. The list of the services that are available in {{site.data.keyword.cloud_notm}} opens.
-
-3. To filter the list of services that is displayed, select the **Logging and Monitoring** category.
-
-4. Click the **{{site.data.keyword.mon_full_notm}}** tile.
-
-5. Select the location.
-
-6. Select a service plan. By default, the **Lite** plan is selected.
-
-   To provision an instance that only includes the *Monitor* component, select the plan **Graduated Tier**.
-
-   To provision an instance that include the *Monitor* and the *Secure* ({{site.data.keyword.sysdigsecure_short}}) components, select the plan **Graduated Tier - Sysdig Secure + Monitor**.
-
-   For more information about {{site.data.keyword.sysdigsecure_short}}, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
-
-
-   For more information about the service plans, see [Service plans](/docs/monitoring?topic=monitoring-pricing_plans#pricing_plans).
-
-7. Enter a service name.
-
-8. Select a resource group. By default, the **Default** resource group is set.
-
-9. Click **Create** to provision an instance.
-
-The service UI opens.
+{{_include-segments/provision_ui.md}}
 
 To provision an instance through the CLI, see [Provisioning a Monitoring instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/monitoring?topic=monitoring-provision#provision_cli).
 {: tip}
@@ -166,6 +135,9 @@ Complete one of the following tutorials to learn how to deploy a monitoring agen
 {: caption="Table 1. Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 After the monitoring agent is deployed, the monitoring agent automatically collects and reports on pre-defined and custom metrics.  These metrics are forwarded to the {{site.data.keyword.mon_full_notm}} instance.  You can configure which metrics are monitored in an environment.
+
+If you have connected an instance of {{site.data.keyword.sysdigsecure_full_notm}} to your {{site.data.keyword.mon_full_notm}} instance, the agent will provide data to both services without having to configure two separate agents. 
+{: note}
 
 ## Step 4. Launch the web UI
 {: #getting-started-step4}

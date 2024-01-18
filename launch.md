@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-07-06"
+  years:  2018, 2024
+lastupdated: "2024-01-09"
 
 
 keywords: IBM Cloud, monitoring, launch web UI
@@ -63,8 +63,10 @@ Complete the following steps to launch the web UI:
 ## Launch the {{site.data.keyword.sysdigsecure_short}} UI
 {: #launch_step3}
 
-The {{site.data.keyword.sysdigsecure_short}} UI is only available for instances using the [*Graduated Tier - Sysdig Secure + Monitor* service plan](/docs/monitoring?topic=monitoring-service_plans).
+The {{site.data.keyword.sysdigsecure_short}} UI is only available for {{site.data.keyword.mon_short}} instances using the [*Graduated Tier - Sysdig Secure + Monitor* service plan](/docs/monitoring?topic=monitoring-service_plans).
 {: note}
+
+{{site.data.content.combined-plan-deprecated}}
 
 To access the *{{site.data.keyword.sysdigsecure_short}}* UI, complete the following steps:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-07-06"
+  years:  2018, 2024
+lastupdated: "2024-01-10"
 
 keywords:
 
@@ -22,42 +22,9 @@ Before you can monitor and manage metrics, you must provision an instance of the
 ## Provisioning an instance from the catalog
 {: #provision_ui}
 
-To provision an instance from the {{site.data.keyword.cloud_notm}} catalog, complete the following steps:
+<!-- Segment with steps to provision an instance -->
 
-1. [Log in to the {{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
-
-2. Click **Catalog**. The list of the services that are available on {{site.data.keyword.cloud_notm}} opens.
-
-3. To filter the list of services that is displayed, select the **Logging and Monitoring** category.
-
-4. Click the **{{site.data.keyword.mon_full_notm}}** tile.
-
-5. Select **Create**.
-
-6. Select the location.
-
-7. Select a service plan. By default, the **Lite** plan is set.
-
-    To provision an instance that only includes the *Monitor* component, select the plan **Graduated Tier**.
-
-    To provision an instance that include the *Monitor* and the *Secure* ({{site.data.keyword.sysdigsecure_short}}) components, select the plan **Graduated Tier - Sysdig Secure + Monitor**.
-
-    For more information about {{site.data.keyword.sysdigsecure_short}}, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
-
-    For more information about the service plans, see [Service plans](/docs/monitoring?topic=monitoring-pricing_plans#pricing_plans).
-
-8. Enter a service name.
-
-9. Select a resource group. By default, the **Default** resource group is set.
-
-10. Set on automatic collection of platform metrics by clicking **Enable**.
-
-11. Click **Create**.
-
-After you provision an instance,
-
-* The *Observability* dashboard opens.
-* A service ID is automatically created. You can use this service ID to get the access key for your instance. The name of the service ID has the following format: `{InstanceName}-key-admin`.
+{{_include-segments/provision_ui.md}}
 
 Next, configure a metric source by adding an agent. This agent is responsible for collecting and forwarding metrics to the monitoring instance.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-09-11"
+  years:  2018, 2024
+lastupdated: "2024-01-09"
 
 keywords: IBM Cloud, monitoring, regions
 
@@ -53,3 +53,5 @@ Where
 `(*)` For more information, see [Enabling EU support for your account](/docs/account?topic=account-eu-supported).
 
 `(**)` The [`Graduated Tier - Sysdig Secure + Monitor` plan](/docs/monitoring?topic=monitoring-service_plans) is not available in the Madrid (eu-es) region.
+
+{{site.data.content.combined-plan-deprecated}}

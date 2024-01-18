@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-08-01"
+  years:  2018, 2024
+lastupdated: "2024-01-10"
 
 keywords:
 
@@ -80,6 +80,8 @@ You can also monitor zLinux and Windows environments.
 ## Identify software vulnerabilities
 {: #features-8}
 
-Use the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} service to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run.
+Use the {{site.data.keyword.sysdigsecure_full_notm}} service to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run.
 
-For more information, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
+An {{site.data.keyword.sysdigsecure_full_notm}} instance can be connected to an {{site.data.keyword.mon_full_notm}} instance allowing data to be provided to both services by a single agent.
+
+For more information about {{site.data.keyword.sysdigsecure_full_notm}}, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
