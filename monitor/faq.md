@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-18"
+lastupdated: "2024-01-19"
 
 keywords: IBM Cloud, monitoring,  faq
 
@@ -59,6 +59,8 @@ The {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_ful
 You need to consider the following when connecting the two services:
 
 * You can connect only one {{site.data.keyword.mon_full_notm}} instance to one {{site.data.keyword.sysdigsecure_full_notm}} instance.
+
+* The connected {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_full_notm}} instances must be in the same account and region.
 
 * Once connected, a single monitoring agent will provide data to both {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_full_notm}} connected instances.
 
