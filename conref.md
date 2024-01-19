@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2023
+  years: 2015, 2024
 
-lastupdated: "2021-12-13"
+lastupdated: "2024-01-17"
 
 keywords:
 
@@ -26,15 +26,13 @@ The **Graduated Tier - Sysdig Secure + Monitor** plan is now [deprecated](/docs/
 
 <!------ The following is used in the event notification topics ----------->
 
-<!------ The following is used in the event notification topics ----------->
-
 ## Before you begin
 {: #en-prereqs}
 
-[{{site.data.keyword.en_full_notm}} is available in a limited number of regions](/docs/event-notifications?topic=event-notifications-en-regions-endpoints). Your {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.en_full_notm}} instances must be in the same region to communicate with one another.  Because of this, support for integration with {{site.data.keyword.en_full_notm}} is limited to the regions where {{site.data.keyword.en_full_notm}} is supported and where {{site.data.keyword.mon_full_notm}} is also installed.
+Your {{site.data.keyword.mon_full_notm}} instances can send events to {{site.data.keyword.en_full_notm}} instances in the same account and in other accounts. [{{site.data.keyword.en_full_notm}} is available in a limited number of regions](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
 {: important}
 
-Make sure you have an {{site.data.keyword.mon_full_notm}} instance configured and collecting logs in a region where {{site.data.keyword.en_full_notm}} is supported.  For this tutorial we will use `us-south`.
+ For this tutorial, make sure you have an {{site.data.keyword.mon_full_notm}} instance configured and collecting logs in a region where {{site.data.keyword.en_full_notm}} is supported such as  `us-south`.
 
 ## Log in to {{site.data.keyword.cloud_notm}}
 {: #en-login}
@@ -93,7 +91,7 @@ For more information on how to define authorizations, see [Using authorizations 
 
 To create a notification source in {{site.data.keyword.en_full_notm}} you will make the configuration change in {{site.data.keyword.mon_full_notm}}.  When you create the notification channel in {{site.data.keyword.mon_full_notm}} it will be available automatically in {{site.data.keyword.en_full_notm}}.
 
-1. Click the menu icon ![Menu icon](../../icons/icon_hamburger.svg)
+1. Click the menu icon ![Menu icon](../icons/icon_hamburger.svg)
 2. In the navigation menu, select **Observability**.
 3. Select **Monitoring**.
 
@@ -112,10 +110,10 @@ To create a notification source in {{site.data.keyword.en_full_notm}} you will m
 11. For **Channel Name** give your channge a unique name.  For example, `my_event_notification_channel`.
 12. For this tutorial leave all options enabled and the **Shared With** team as the default value.
 
-    ![New IBM Event Notification Channel](../images/new_en_channel.png){: caption="Figure 2. New IBM Event Notification Channel" caption-side="bottom"}
+    ![New IBM Event Notification Channel](/images/new_en_channel.png){: caption="Figure 2. New IBM Event Notification Channel" caption-side="bottom"}
 
 13. Click **Save**.
-14. Click the menu icon ![Menu icon](../../icons/icon_hamburger.svg) > **Resource list**.
+14. Click the menu icon ![Menu icon](../icons/icon_hamburger.svg) > **Resource list**.
 15. Open **Services and software**.
 16. Open the [{{site.data.keyword.en_full_notm}} instance you created.](#en-create-instance)  For example, `my_event_notifications`.
 17. Click **Sources**.
@@ -138,7 +136,7 @@ Next you will define an [{{site.data.keyword.en_full_notm}} topic](/docs/event-n
     * Select an **Event subtype**. For this tutorial select *Metric*.
     * Select a **Severity**.  For this tutorial select *Info Severity*.
 
-    ![Topic details](../images/topic_details.png){: caption="Figure 3. Topic details" caption-side="bottom"}
+    ![Topic details](/images/topic_details.png){: caption="Figure 3. Topic details" caption-side="bottom"}
 
 4. Click **Add a condition**.
 
@@ -147,7 +145,7 @@ Next you will define an [{{site.data.keyword.en_full_notm}} topic](/docs/event-n
 
 5. Click **Create**.  Your topic will be displayed in the **Topics** list.
 
-    ![Topics list](../images/topics_list.png){: caption="Figure 4. Topics list" caption-side="bottom"}
+    ![Topics list](/images/topics_list.png){: caption="Figure 4. Topics list" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.mon_full_notm}} alert notification
 {: #en-mon-notification}
@@ -155,7 +153,7 @@ Next you will define an [{{site.data.keyword.en_full_notm}} topic](/docs/event-n
 
 Now, create an [{{site.data.keyword.mon_full_notm}} alert](/docs/monitoring?topic=monitoring-alerts) that will trigger the {{site.data.keyword.en_full_notm}} notification.
 
-1. Click the menu icon ![Menu icon](../../icons/icon_hamburger.svg).
+1. Click the menu icon ![Menu icon](../icons/icon_hamburger.svg).
 2. In the navigation menu, select **Observability**.
 3. Select **Monitoring**.
 

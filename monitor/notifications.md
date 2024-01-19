@@ -69,7 +69,7 @@ Complete the following steps to add a notification channel:
 
             To configure the notification channel you need to specify the {{site.data.keyword.en_full_notm}} instance name and specify your choice of a channel name.  You will also indicate if the notification channel is enabled and when notifications should be sent, for example, when an alert is resolved. Notifications can be shared with one or all teams.
 
-            [{{site.data.keyword.en_full_notm}} is available in a limited number of regions](/docs/event-notifications?topic=event-notifications-en-regions-endpoints). Your {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.en_full_notm}} instances must be in the same region to communicate with one another.  Because of this, support for integration with {{site.data.keyword.en_full_notm}} is limited to the regions where {{site.data.keyword.en_full_notm}} is supported and where {{site.data.keyword.mon_full_notm}} is also installed.
+            Your {{site.data.keyword.mon_full_notm}} instances can send events to {{site.data.keyword.en_full_notm}} instances in the same accoount and in other accounts. [{{site.data.keyword.en_full_notm}} is available in a limited number of regions](/docs/event-notifications?topic=event-notifications-en-regions-endpoints).
             {: important}
 
 

@@ -2,9 +2,9 @@
 
 copyright:
    years: 2020, 2023
-lastupdated: "2021-12-17"
+lastupdated: "2024-01-17"
 
-keywords: IBM Cloud, monitoring, alerts, event notification
+keywords:
 
 subcollection: monitoring
 
