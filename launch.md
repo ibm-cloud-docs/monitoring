@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-24"
 
 
 keywords: IBM Cloud, monitoring, launch web UI
@@ -97,3 +97,5 @@ To access the *{{site.data.keyword.sysdigsecure_short}}* UI, complete the follow
 6. Select **Workload Protection** to launch the {{site.data.keyword.sysdigsecure_short}} UI.
 
 For more information on using {{site.data.keyword.sysdigsecure_short}}, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
+
+

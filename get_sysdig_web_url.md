@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2021-03-28"
+  years:  2018, 2024
+lastupdated: "2024-01-24"
 
 keywords: IBM Cloud, monitoring, web UI
 
@@ -17,6 +17,9 @@ subcollection: monitoring
 
 After you provision an instance of the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}, you can monitor metrics through the {{site.data.keyword.mon_full_notm}} web UI. You can launch the web UI from the {{site.data.keyword.cloud_notm}} UI.
 {: shortdesc}
+
+You can also get the monitoring web UI URL by [undocking the dashboard.](/docs/monitoring?topic=monitoring-undock)
+{: tip}
 
 To get the web UI URL, complete the following steps from a terminal:
 

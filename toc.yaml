@@ -157,6 +157,7 @@ toc:
           label: Monitoring UI
           topics:
           - launch.md
+          - undock.md
           - get_sysdig_web_url.md
 
       - topicgroup:
