@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-10"
+lastupdated: "2024-02-01"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: monitoring
 # Provisioning an instance
 {: #provision}
 
-Before you can monitor and manage metrics, you must provision an instance of the service in {{site.data.keyword.cloud_notm}}.
+Before you can monitor and manage metrics, you must provision an instance of the service in {{site.data.keyword.cloud_notm}}. You can optionally connect an {{site.data.keyword.sysdigsecure_full_notm}} instance to your {{site.data.keyword.mon_full_notm}} instance.
 {: shortdesc}
 
 
@@ -46,7 +46,7 @@ To provision an instance through the command line, complete the following steps:
 4. Create the instance. Run the [ibmcloud resource service-instance-create](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create) command:
 
     ```text
-    ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false,"external_api_auth": "API_AUTH"}'
+    ibmcloud resource service-instance-create NAME sysdig-monitor SERVICE_PLAN_NAME LOCATION  -p '{"default_receiver": false,"external_api_auth": "API_AUTH", "workload_protection_connected_instance": "WP_CRN"}'
     ```
     {: pre}
 
@@ -63,6 +63,10 @@ To provision an instance through the command line, complete the following steps:
     `default_receiver` is set to `false` by default. Set to `true` to collect platform metrics automatically through this instance in a region.
 
     `API_AUTH` is set to the authorization model that is enabled to authenticate with the {{site.data.keyword.mon_full_notm}} service when you use Python scripts or the REST API. Valid values are: `ANY`, and `IAM_ONLY`.
+
+    `workload_protection_connected_instance` (optional) connects an existing {{site.data.keyword.sysdigsecure_full_notm}} instance to the {{site.data.keyword.mon_full_notm}} instance being created. For more information on connecting instances, see [Can {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_full_notm}} be used together?](/docs/monitoring?topic=monitoring-faq#faq_4)
+
+    `WP_CRN`(required when specifying `workload_protection_connected_instance`) the CRN of the {{site.data.keyword.sysdigsecure_full_notm}} instance to be connected.
 
     For example, to provision an instance with the paid plan, run the following command:
 

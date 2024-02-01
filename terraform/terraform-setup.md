@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2021-09-30"
+  years:  2018, 2024
+lastupdated: "2024-02-01"
 
 keywords: IBM Cloud, monitoring, regions, terraform
 
@@ -17,7 +17,7 @@ subcollection: monitoring
 # Setting up Terraform for {{site.data.keyword.mon_full_notm}}
 {: #terraform-setup}
 
-Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitier cloud environments that follow Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.mon_full_notm}} instances by using HashiCorp Configuration Language (HCL).
+Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitier cloud environments that follow Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.mon_full_notm}} instances by using HashiCorp Configuration Language (HCL). You can optionally connect an {{site.data.keyword.sysdigsecure_full_notm}} instance to your {{site.data.keyword.mon_full_notm}} instance.
 {: shortdesc}
 
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't need to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can install from the {{site.data.keyword.cloud_notm}} catalog.
@@ -121,6 +121,7 @@ The following table lists input parameters that you can set in the `provider` bl
 |`ibmcloud_timeout`| Optional | The number of seconds that you want to wait until the {{site.data.keyword.cloud_notm}} API is considered unavailable. The default value is `60`. You can specify the timeout in the `provider` block or retrieve the value from the `IC_TIMEOUT` or `IBMCLOUD_TIMEOUT` environment variables. If both variables are specified, `IC_TIMEOUT` takes precedence. |
 |`region`| Optional | The {{site.data.keyword.cloud_notm}} region where you want to create your resources. If this value is not specified, `us-south` is used by default. You can specify the region in the `provider` block or retrieve the value from the `IBMCLOUD_REGION` or `IC_REGION` environment variables. If both environment variables are specified, `IC_REGION` takes precedence. |
 |`resource_group`| Optional | The ID of the resource group that you want to use for your {{site.data.keyword.cloud_notm}} resources. To retrieve the ID, run `ibmcloud resource groups`. You can specify the resource group in the `provider` block or retrieve the value from the `IC_RESOURCE_GROUP` or `IBMCLOUD_RESOURCE_GROUP` environment variables. If both environment variables are defined, `IC_RESOURCE_GROUP` takes precedence. |
+|`workload_protection_connected_instance`| Optional | Connects an existing {{site.data.keyword.sysdigsecure_full_notm}} instance to the {{site.data.keyword.mon_full_notm}} instance being created. Specify the CRN of the {{site.data.keyword.sysdigsecure_full_notm}} instance to be connected. For more information on connecting instances, see [Can {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_full_notm}} be used together?](/docs/monitoring?topic=monitoring-faq#faq_4) |
 {: caption="Table 1. List of input parameters that you can set in the provider block of your Terraform" caption-side="top"}
 
 For more information on how to use environment variables, see [Using environment variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
@@ -133,7 +134,7 @@ You can [add multiple provider configurations within the same Terraform on the {
 
 You can declare the input parameters in the `provider` block directly.
 
-Because the `provider` block includes sensitive information, do not commit this file into a public source repository. To add version control to your provider configuration, use a local [`terraform.tfvars` file](#tf-variables).
+Because the `provider` block includes sensitive information, do not commit this file into a public source repository. To add version control to your provider configuration, use a local [`terraform.tfvars` file](#terraform-vars-tf).
 {: important}
 
 Complete the following steps:
@@ -241,6 +242,12 @@ variable "key_name" {
   type = string
   default = "demo-monitoring-tf-instance-key"
 }
+
+variable "wp_crn" {
+  description = "CRN of rhe IBM Cloud Security and Compliance Center Workload Protection instance to be connected"
+  type = string
+  default = "crn:v1:bluemix:public:sysdig-secure:us-south:a/11111111111111111111111111111111:11111111-1111-1111-1111-111111111111"
+}
 ```
 {: codeblock}
 
@@ -254,7 +261,10 @@ To see the list of valid regions, see [Regions and endpoints](/docs/monitoring?t
 
 Next, create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.mon_short}} instance and to assign a user an access policy in Identity and Access Management (IAM) by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
 
-The following code shows a sample configuration file to provision an instance. To retrieve the ID of the default resource group, the `ibm_resource_group` data source is used. The region is retrieved from the `terraform.tfvars` file that you created in step 1. Then, the user `user@ibm.com` is assigned the Manager role in the IAM access policy for the namespace for a particular region.
+The following code shows a sample configuration file to provision an instance. To retrieve the ID of the default resource group, the `ibm_resource_group` data source is used. The region is retrieved from the `terraform.tfvars` file that you created in step 1. Then, the user `user@ibm.com` is assigned the Manager role in the IAM access policy for the namespace for a particular region. The {{site.data.keyword.mon_short}} instance is also connected to an existing {{site.data.keyword.sysdigsecure_short}} instance.
+
+Connecting your {{site.data.keyword.mon_short}} instance to an existing {{site.data.keyword.sysdigsecure_short}} instance is optional.
+{: note}
 
 ```terraform
 data "ibm_resource_group" "group" {
@@ -275,11 +285,12 @@ data "ibm_resource_group" "group" {
     resource_group_id = data.ibm_resource_group.group.id
     tags = ["monitoring", "public"]
     parameters = {
-      default_receiver= var.default_receiver
+      default_receiver= var.default_receiver,
+      workload_protection_connected_instance = var.wp_crn
     }
   }
 
-  // Create the resource key that is associated with the {{site.data.keyword.mon_short}} instance
+  // Create the resource key that is associated with the Monitoring instance
 
   resource "ibm_resource_key" "resourceKey" {
     name = var.key_name
@@ -294,7 +305,7 @@ data "ibm_resource_group" "group" {
     roles  = ["Manager", "Viewer"]
 
     resources {
-      service              = "sysdig-monitor"
+      service = "sysdig-monitor"
       resource_instance_id = element(split(":", ibm_resource_instance.instance.id), 7)
     }
   }
