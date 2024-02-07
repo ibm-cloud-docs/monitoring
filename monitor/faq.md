@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-19"
+lastupdated: "2024-02-07"
 
 keywords: IBM Cloud, monitoring,  faq
 
@@ -64,7 +64,7 @@ You need to consider the following when connecting the two services:
 
 * Once connected, a single monitoring agent will provide data to both {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_full_notm}} connected instances.
 
-* Once connected, the only way to disconnect the service instances is to delete the {{site.data.keyword.sysdigsecure_full_notm}} service instance.
+* Once connected, the only way to disconnect the service instances is to delete either the {{site.data.keyword.mon_full_notm}} or {{site.data.keyword.sysdigsecure_full_notm}} service instance.
 
 To provision connected services, see [Provisioning an instance](/docs/monitoring?topic=monitoring-provision#provision_ui).
 
