@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-07-05"
+  years:  2018, 2024
+lastupdated: "2024-02-08"
 
 keywords:
 
@@ -154,7 +154,7 @@ The following table identifies the service role that you can grant a user in the
 | `sysdig-monitor.platform-metric.publish` `[**]` | | | | |
 {: caption="Table 2. Service roles and actions" caption-side="top"}
 
-`[*]` - This service role is for the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} service. For more information on this service's functions, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
+`[*]` - This service role is used when {{site.data.keyword.mon_full_notm}} is connected to an {{site.data.keyword.sysdigsecure_full_notm}} instance. This role must also be defined for {{site.data.keyword.sysdigsecure_full_notm}}. For more information about {{site.data.keyword.sysdigsecure_full_notm}} functions, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
 {: note}
 
 `[**]` - This service role is for internal use only and will not be used in your environment.
