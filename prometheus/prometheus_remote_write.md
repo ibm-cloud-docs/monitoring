@@ -211,7 +211,6 @@ The following table lists the private {{site.data.keyword.mon_short}} ingestion 
 
 The {{site.data.keyword.mon_full_notm}} Prometheus Remote Write feature has the following limitations:
 - Metrics that are sent to an instance can be accessed in Explore, but they are not compatible with the scope tree.
-- This feature is not supported with teams.
 - Only labels that are collected at source can be used to filter metrics.
 - The metadata of a metric is not sent via remote write.
 - Metrics that have a name that ends with `_total`, `_sum`, or `_count` are stored as a counters, otherwise they are managed as gauge.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-02-12"
+lastupdated: "2024-02-29"
 
 
 keywords:
@@ -21,6 +21,12 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
+## 29 February 2024
+{: #monitoring-feb2924}
+{: release-note}
+ 
+Teams support
+:   The {{site.data.keyword.mon_full_notm}} Prometheus Remote Write feature now supports teams.
 
 ## 18 February 2024
 {: #monitoring-feb1824}
