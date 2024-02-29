@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-16"
+lastupdated: "2024-02-12"
 
 
 keywords:
@@ -21,6 +21,13 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
+
+## 18 February 2024
+{: #monitoring-feb1824}
+{: release-note}
+ 
+Deprecation of Prometheus ingestion endpoints
+:   {{site.data.keyword.mon_full_notm}} has deprecated the current Prometheus ingestion endpoints. New Prometheus ingestion endpoints are available. All customers must move to using the new [Prometheus ingestion endpoints.](/docs/monitoring?topic=monitoring-endpoints#prometheus_remote_write_endpoints)
 
 ## 18 January 2024
 {: #monitoring-jan1824}
