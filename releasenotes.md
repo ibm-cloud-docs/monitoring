@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-03-01"
 
 
 keywords:
@@ -33,7 +33,7 @@ Teams support
 {: release-note}
  
 Deprecation of Prometheus ingestion endpoints
-:   {{site.data.keyword.mon_full_notm}} has deprecated the current Prometheus ingestion endpoints. New Prometheus ingestion endpoints are available. All customers must move to using the new [Prometheus ingestion endpoints.](/docs/monitoring?topic=monitoring-endpoints#prometheus_remote_write_endpoints)
+:   {{site.data.keyword.mon_full_notm}} has deprecated the current Prometheus ingestion endpoints. New Prometheus ingestion endpoints are available. All customers using Prometheus Remote Write must move to using the new [Prometheus ingestion endpoints](/docs/monitoring?topic=monitoring-endpoints#prometheus_remote_write_endpoints) by 31 May 2024.
 
 ## 18 January 2024
 {: #monitoring-jan1824}
