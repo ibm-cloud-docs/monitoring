@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-03-01"
+lastupdated: "2024-03-12"
 
 keywords:
 
@@ -150,7 +150,7 @@ The following table lists the *Public Collector endpoints* that are available pe
 
 
 
-## Ingestion endpoints
+## Prometheus Remote Write ingestion endpoints
 {: #prometheus_remote_write_endpoints}
 
 {{site.data.keyword.mon_full_notm}} has deprecated Prometheus client support of endpoints in the form `https://ingest.<region>` and `https://ingest.private.<region>` and replaced them with new endpoints. Customers using Prometheus Write need to migrate to use the new endpoints by 31 May 2024.
