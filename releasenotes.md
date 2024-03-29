@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-03-01"
+lastupdated: "2024-03-29"
 
 
 keywords:
@@ -20,6 +20,21 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 29 March 2024
+{: #monitoring-mar2924}
+{: release-note}
+
+Unified search available in all regions.
+:   With unified search you can search across name, description, and scope values in a single, unified search bar.
+
+    For alert events you can search the condition, state, threshold, alert type, and the alert notification title.
+
+    Filtering by event titles lets you quickly filter events by title.
+
+    You can bookmark and keep a history of searches.
+
+    For more information, see [Filter and Search Events](https://docs.sysdig.com/en/docs/sysdig-monitor/events/filter-and-search-events/){: external}
 
 ## 29 February 2024
 {: #monitoring-feb2924}
