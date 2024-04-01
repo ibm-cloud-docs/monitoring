@@ -309,7 +309,7 @@ toc:
           links:
             - link:
                 label: Working with custom events
-                href: https://docs.sysdig.com/en/custom-events.html
+                href: https://docs.sysdig.com/en/docs/sysdig-monitor/events/event-types/custom-events/
 
       - topicgroup:
           label: Captures
