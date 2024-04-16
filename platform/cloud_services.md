@@ -3,7 +3,7 @@
 copyright:
   years:  2018, 2024
 
-lastupdated: "2024-01-03"
+lastupdated: "2024-04-16"
 
 keywords:
 
@@ -39,7 +39,7 @@ The following table lists infrastructure services that are enabled for {{site.da
 
 | Service     | Description | Metrics             |
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.BluVirtServers}}](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) | Scalable virtual servers that are purchased with cores and memory allocations. | [Platform metrics](/docs/virtual-servers?topic=cloud-infrastructure-monitoring-iaas)|
+| [{{site.data.keyword.BluVirtServers}}](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) | Scalable virtual servers that are purchased with cores and memory allocations. | [Platform metrics](/docs/virtual-servers?topic=virtual-servers-monitoring-iaas)|
 {: caption="Table 1. List of classic infrastructure services (generation 1)" caption-side="top"}
 
 
