@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-03-29"
+lastupdated: "2024-04-24"
 
 
 keywords:
@@ -20,6 +20,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 24 April 2024
+{: #monitoring-apr2424}
+{: release-note}
+
+Translate to PromQL available for all metric alerts
+:   The ability to translate a metric alert form definition to PromQL is now available for all new and existing metric alerts. The PromQL can be used for Terraform and other automation. For more information, see [Metric Alerts.](https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/alert-types/metric-alerts/){: external}
 
 ## 29 March 2024
 {: #monitoring-mar2924}
