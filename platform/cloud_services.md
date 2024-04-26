@@ -216,3 +216,14 @@ The following table lists services that are enabled for {{site.data.keyword.mon_
 {: caption="Table 14. List of VPC services (generation 2)" caption-side="top"}
 
 In addition, some VPC resources have quotas associated with them that you can monitor through the VPC resource quota overview dashboard. For more information, see [VPC resource quota overview](/docs/vpc?topic=vpc-vpc-quota-metrics).
+
+
+## Power IaaS services
+{: #power_iaas_services}
+
+The following table lists Power IaaS infrastructure services that are enabled for {{site.data.keyword.mon_full_notm}}:
+
+| Service     | Description | Metrics |
+|-------------|--------------|---------|
+| [{{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-getting-started) | Power Systems Virtual Server (PowerVS) projects deliver flexible compute capacity for Power Systems workloads. | [Platform metrics](/docs/power-iaas?topic=power-iaas-monitor-sysdig) |
+{: caption="Table 15. List of Power Systems Virtual Server infrastructure services" caption-side="top"}

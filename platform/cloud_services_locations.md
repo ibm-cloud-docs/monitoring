@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-03"
+lastupdated: "2024-03-04"
 
 keywords:
 
@@ -488,5 +488,39 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 {: #ai-table-1}
 {: tab-title="America"}
 {: tab-group="cs_ai"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+
+## Power IaaS services
+{: #cloud_services_locations_power-iaas}
+
+| Service                            | `Dallas (us-south)` | `Washington (us-east)`  |`Toronto (ca-tor)` | `Sao Paulo (br-sao)` |
+|------------------------------------|---------------------|-------------------------|-------------------|----------------------|
+| {{site.data.keyword.powerSys_notm}}                                 | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+{: caption="Power IaaS events in Americas locations" caption-side="top"}
+{: #cs-power-iaas-table-1}
+{: tab-title="Americas"}
+{: tab-group="cs_power-iaas"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                         | `Tokyo (jp-tok)` |`Sydney (au-syd)`           |
+|-----------------------------------------------------------------|------------------|----------------------------|
+| {{site.data.keyword.powerSys_notm}}                                 | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
+{: caption="Power IaaS events in AP locations" caption-side="top"}
+{: #cs-power-iaas-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="cs_power-iaas"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Service                                                       |`Frankfurt (eu-de)`  | `London (eu-gb)` | `Madrid (eu-es)` |
+|---------------------------------------------------------------|---------------------|------------------|-------------|
+| {{site.data.keyword.powerSys_notm}}                                 | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |    |
+{: caption="Power IaaS events in Europe locations" caption-side="top"}
+{: #cs-power-iaas-table-3}
+{: tab-title="Europe"}
+{: tab-group="cs_power-iaas"}
 {: class="simple-tab-table"}
 {: row-headers}
