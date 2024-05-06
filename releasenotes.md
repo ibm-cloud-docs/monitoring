@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-04-24"
+lastupdated: "2024-05-03"
 
 
 keywords:
@@ -20,6 +20,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 3 May 2024
+{: #monitoring-may0324}
+{: release-note}
+
+Support for virtual private endpoints for VPC
+:   Support for virtual private endpoints is available. For more information, see [Using virtual private endpoints for VPC to privately connect to {{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-vpe-connection).
 
 ## 24 April 2024
 {: #monitoring-apr2424}

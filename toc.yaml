@@ -149,7 +149,12 @@ toc:
           topics:
           - core/cbr.md
           - core/data-security.md
-          - core/service-connection.md
+          - topicgroup:
+              label: Privately connecting to Monitoring
+              topics:
+              - core/service-connection.md
+              - topic: core/vpe.md
+                navtitle: Using virtual private endpoints
           - core/architecture-workload-isolation.md
           - core/ha-dr.md
 
