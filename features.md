@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-10"
+lastupdated: "2024-05-17"
 
 keywords:
 
@@ -20,7 +20,17 @@ subcollection: monitoring
 You can use {{site.data.keyword.mon_full}} to monitor the performance and overall system health of your organization.
 {: shortdesc}
 
-By using the {{site.data.keyword.mon_short}} service, you can improve operational performance with out-of-the-box dashboards, alerts and prioritized insights into cloud-native applications and services. You can monitor hosts such as Kubernetes clusters, {{site.data.keyword.redhat_openshift_notm}} clusters, Virtual machines (VM) or VMware solutions. You can monitor hosts that run in {{site.data.keyword.cloud_notm}}, outside {{site.data.keyword.cloud_notm}}, or on-prem. You can also monitor your {{site.data.keyword.cloud_notm}} services and unify observability across {{site.data.keyword.cloud_notm}} and other hybrid or multi-cloud environments. In addition, you can simplify and scale your Prometheus monitoring as your infrastructure grows; the {{site.data.keyword.mon_short}} service includes a managed service for Prometheus.
+{{site.data.keyword.mon_full_notm}} enables monitoring of cloud, Kubernetes and VM infrastructure, applications and services, including managed service for Prometheus. Monitor multi-cloud environments in a single dashboard using agents running on other clouds.
+
+* For Kubernetes, monitor status, health and performance of cluster, workloads and pods, prioritize issues with actionable insights from live logs and resources manifests with built-in remediation steps, and optimize resource utilization by understanding cluster capacity and right-sizing workloads.
+
+* Centralize Prometheus monitoring with Remote Write for scale and long term retention, and extend monitoring to hundreds of applications and services using Prometheus exporters or custom metrics.
+
+* Monitor {{site.data.keyword.cloud_notm}} platform services with built-in metrics and dashboards.
+
+* Identify health and performance issues in bare metal hosts, {{site.data.keyword.cloud_notm}} VSIs or other VMs, such as VMware, along with support for zLinux and Windows environments.
+
+* {{site.data.keyword.mon_full_notm}} provides a single operational solution for workloads deployed in a multicloud environment by deploying agents to the resources deployed outside {{site.data.keyword.cloud_notm}} and sending metrics back to the managed service.
 
 
 ## Monitor and troubleshoot hosts running in {{site.data.keyword.cloud_notm}}, outside {{site.data.keyword.cloud_notm}}, or on-prem
