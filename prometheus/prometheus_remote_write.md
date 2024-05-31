@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-03-01"
+lastupdated: "2024-05-31"
 
 keywords: IBM Cloud, monitoring, prometheus, remote-write
 
@@ -168,7 +168,7 @@ The following table lists the default rate limits per instance:
 ## Ingestion endpoints for remote write
 {: #prometheus_remote_write_endpoints}
 
-{{site.data.keyword.mon_full_notm}} has deprecated Prometheus client support of endpoints in the form `https://ingest.<region>` and `https://ingest.private.<region>` and replaced them with new endpoints. Customers using Prometheus Write need to migrate to use the new endpoints by 31 May 2024.
+{{site.data.keyword.mon_full_notm}} deprecated Prometheus client support of endpoints in the form `https://ingest.<region>` and `https://ingest.private.<region>` and replaced them with new endpoints on 31 May 2024. Customers using Prometheus Write need to migrate to use the new endpoints as soon as possible. End of support for the old endpoints will be announced before support for the old endpoints is terminated.
 {: deprecated}
 
 The following table lists the public {{site.data.keyword.mon_short}} ingestion endpoints that you can configure to collect metrics via Prometheus Remote Write:
