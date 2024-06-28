@@ -22,7 +22,7 @@ Before you can monitor and manage metrics, you must provision an instance of the
 ## Provisioning an instance from the catalog
 {: #provision_ui}
 
-<!-- Segment with steps to provision an instance -->
+
 
 {{_include-segments/provision_ui.md}}
 

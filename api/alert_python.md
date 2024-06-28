@@ -15,7 +15,7 @@ subcollection: monitoring
 # Managing alerts by using the Python client
 {: #alert_python}
 
-You can manage alerts in a {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} Python client.
+You can manage alerts in an  {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} Python client.
 {: shortdesc}
 
 To learn how to use the Python client, see [Using the Python client](/docs/monitoring?topic=monitoring-python-client).

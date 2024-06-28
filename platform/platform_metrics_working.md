@@ -357,32 +357,7 @@ To allow a team to view platform metrics, you must select **Platform metrics**.
 
 Enabling platform metrics grants access to all platform metrics. However, you can reduce the scope by configuring 1 or more platform metrics labels. Notice that the order of the labels is applied from the beginning of the list to the end.
 
-<!--### Limiting access to platform metrics by resource group
-{: #platform_metrics_working_team_rg}
 
-Complete the following steps to limit the data to metrics collected for services that are created in that resource group:
-
-1. [Launch the monitoring UI](/docs/monitoring?topic=monitoring-launch).
-
-2. Click the user icon and then click **Settings**.
-
-3. Click **Teams**.
-
-4. Select a team where you want to restrict access to the platform metrics.
-
-5. In the **Team Scope** section, select **Platform metrics**.
-
-5. Select the attribute **ibm_resource_group_id** to segment data by resource group.
-
-    ![Resource group segmentation](images/sysdig-platform-14.png "Resource group segmentation"){: caption="Resource group segment" caption-side="bottom"}
-
-6. Select 1 or more resource groups for which you want the data to be visible to users that are members of this team.
-
-7. Add additional `global` attributes. Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and navigate the the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service.
-
-8. Click **Save**.
-
--->
 
 
 ### Limiting access to platform metrics by instance

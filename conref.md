@@ -18,13 +18,13 @@ content-type: conref
 # Content references for monitoring subcollection
 {: #conref-monitoring}
 
-<!------ Deprecation note for combined plan ----------->
+
 
 The **Graduated Tier - Sysdig Secure + Monitor** plan is now [deprecated](/docs/monitoring?topic=monitoring-faq#faq_5). All new {{site.data.keyword.mon_full_notm}} instances where {{site.data.keyword.sysdigsecure_full_notm}} functionality is also required should provision an {{site.data.keyword.mon_full_notm}} instance with a connected {{site.data.keyword.sysdigsecure_full_notm}} instance.
 {: deprecated}
 {: #combined-plan-deprecated}
 
-<!------ The following is used in the event notification topics ----------->
+
 
 ## Before you begin
 {: #en-prereqs}

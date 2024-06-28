@@ -84,7 +84,7 @@ In a cURL command, add the following command option to authenticate with the {{s
 ```
 {: codeblock}
 
-To get the {{site.data.keyword.mon_short}} token, see [Getting the {{site.data.keyword.mon_short}} API token](/docs/monitoring?topic=monitoring-api_token#api_token_get).
+To get the {{site.data.keyword.mon_short}} token, see [Getting the {{site.data.keyword.mon_short}} API token](/docs/monitoring?topic=monitoring-api_monitoring_token).
 
 
 

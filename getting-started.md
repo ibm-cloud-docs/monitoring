@@ -70,7 +70,7 @@ To add monitoring features with {{site.data.keyword.mon_full_notm}} in the {{sit
 
 Instances are provisioned in the context of a resource group. A resource group organizes your services for access control and billing purposes. You can provision the {{site.data.keyword.mon_full_notm}} instance in the *default* resource group or in a custom resource group.
 
-<!-- Segment with steps to provision an instance -->
+
 
 {{_include-segments/provision_ui.md}}
 
@@ -93,7 +93,7 @@ You can collect metrics from a number of platforms, orchestrators, and a wide ra
 ### Configure platform metrics
 {: #getting-started-step3-1}
 
-Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in {{site.data.keyword.cloud_notm}}. You must configure a {{site.data.keyword.mon_full_notm}} instance in a region to monitor these metrics. [Learn more](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
+Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in {{site.data.keyword.cloud_notm}}. You must configure an  {{site.data.keyword.mon_full_notm}} instance in a region to monitor these metrics. [Learn more](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 
 To see the list of enabled-monitoring services, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services).
 

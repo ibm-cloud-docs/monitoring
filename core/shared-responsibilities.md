@@ -64,7 +64,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 |--------------------------------|-------------------------------------------------|-----------------------|
 | `Manage platform permissions`  | Allow administrators to control access to manage resources in the {{site.data.keyword.cloud_notm}}. | Grant, revoke, and manage access to service instances by using IAM. |
 | `Manage service permissions`   | Allow administrators to control access to work with the {{site.data.keyword.mon_full_notm}}. | Grant, revoke, and manage access to monitoring features by using IAM. |
-| `Control monitoring data access` | Allow administrators to control access to metrics data and metadata through Sysdig teams. | Grant, revoke, and manage access to monitoring data by using IAM. |
+| `Control {{site.data.keyword.mon_short}} data access` | Allow administrators to control access to metrics data and metadata through Sysdig teams. | Grant, revoke, and manage access to monitoring data by using IAM. |
 {: caption="Table 3. Responsibilities for identity and access management" caption-side="top"}
 
 [Learn more about controlling access through IAM](/docs/monitoring?topic=monitoring-iam).
@@ -92,6 +92,6 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | Task                                                            | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-----------------------------------------------------------------|-------------------------------------------------|-----------------------|
 | `Service`         | Automatically recover and restart service components after any disaster event. |   |
-| `Data`            |   |Extract and save data, dashboards definitions, and alert definitions if you cannot afford for it to be lost in the event of an un-recoverable event. |
-| `monitoring agent`    |   |  Recovery of the monitoring agents running in your environment should they be impacted by a disaster. |
+| `Data`            |   |Extract and save data, dashboards definitions, and alert definitions if you cannot afford for it to be lost in the event of an un-recoverable event. For more information, see [Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the API](/docs/monitoring?topic=monitoring-metrics_api). |
+| `{{site.data.keyword.mon_short}} agent`    |   |  Recovery of the {{site.data.keyword.mon_short}} agents running in your environment should they be impacted by a disaster. |
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}

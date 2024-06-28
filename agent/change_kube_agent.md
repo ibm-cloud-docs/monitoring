@@ -130,7 +130,7 @@ For the sample provided, you would get the tags **agent.tag.department** and **a
 ## Collecting a set of Kubernetes events
 {: #change_kube_agent_collect_events}
 
-{{site.data.keyword.mon_short}} supports event integrations with Kubernetes. {site.data.keyword.mon_short}} agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data.
+{{site.data.keyword.mon_short}} supports event integrations with Kubernetes. {{site.data.keyword.mon_short}} agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data.
 
 By default, only a limited set of events is collected. For more information about the events that are collected by default, see [Event Types](https://docs.sysdig.com/en/docs/sysdig-monitor/events/event-types/){: external}.
 
