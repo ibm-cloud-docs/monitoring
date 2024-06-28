@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2021-03-28"
+  years:  2018, 2024
+lastupdated: "2024-06-28"
 
-keywords: activity tracker for IBM Cloud Monitoring, IBM Cloud, audit, activity tracker, events, audit logs
+keywords: 
 
 subcollection: monitoring
 

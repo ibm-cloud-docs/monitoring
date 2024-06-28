@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2022, 2023
-lastupdated: "2022-10-06"
+  years:  2018, 2024
+lastupdated: "2024-06-28"
 
-keywords: IBM Cloud, monitoring, monitoring agent, agent requirements
+keywords: 
 
 subcollection: monitoring
 

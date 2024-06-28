@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-02-07"
+lastupdated: "2024-06-28"
 
-keywords: IBM Cloud, monitoring,  faq
+keywords: 
 
 subcollection: monitoring
 

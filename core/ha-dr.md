@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-10-11"
+  years:  2018, 2024
+lastupdated: "2024-06-28"
 
-keywords: IBM Cloud, monitoring, disaster recovery, ha, high availability, redundancy
+keywords:
 
 subcollection: monitoring
 

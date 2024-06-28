@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-02-01"
+lastupdated: "2024-06-28"
 
-keywords: IBM Cloud, monitoring, regions, terraform
+keywords: 
 
 subcollection: monitoring
 

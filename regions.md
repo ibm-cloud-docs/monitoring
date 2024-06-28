@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-06-28"
 
-keywords: IBM Cloud, monitoring, regions
+keywords: 
 
 subcollection: monitoring
 
