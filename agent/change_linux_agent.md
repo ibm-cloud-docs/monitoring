@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2020-09-15"
+lastupdated: "2023-03-27"
 
-keywords: IBM Cloud, monitoring, customize, linux agent
+keywords:
 
 subcollection: monitoring
 

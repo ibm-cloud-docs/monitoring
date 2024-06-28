@@ -61,4 +61,4 @@ In {{site.data.keyword.mon_full_notm}}, you can monitor your monitoring agent by
 ## Finding out the agent version that runs on a host
 {: #collect-metrics-by-host-4}
 
-You can use the the *Sysdig Agent Health & Status* dashboard to determine the {{site.data.keyword.mon_short}} agent versions that are running in your hosts. For more information, see [Determining the version of an agent](/docs/monitoring?topic=monitoring-agent_versions).
+You can use the the *Sysdig Agent Health & Status* dashboard to determine the {{site.data.keyword.mon_short}} agent versions that are running in your hosts. For more information, see [Determining the version of an agent](/docs/monitoring?topic=monitoring-agent_version_host).

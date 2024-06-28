@@ -70,7 +70,7 @@ avg_over_time(host_cpu_used_percent{host_name=$hostname}[$__interval])
 When you run PromQL queries, the data is returned with a minimum set of labels. To add more labels, such as a cluster name, use a vector matching operation.
 {: shortdesc}
 
-<!-- Prometheus returns [information metrics](https://docs.sysdig.com/en/mapping-between-classic-metrics-and-promql-metrics.html){: external} that have a value of 1 with several labels. -->
+
 
 Prometheus returns information metrics that have a value of 1 with several labels.Joining the labels of an information metric with a non-information metric can provide useful insights, such as the value of a metric across an application. You can use a vector matching operation, which is similar to an SQL join, to add the information labels to your metric data.
 

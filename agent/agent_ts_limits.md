@@ -46,7 +46,7 @@ In case you need to investigate which applications or services are contributing 
 
 The following query represents the number of time series ingested from the monitoring agent via Prometheus grouped by cluster, namespace, workloads and container so you can identify those applications that are contributing more time series:
 
-```
+```text
 sum(scrape_series_added)by(kube_cluster_name, kube_namespace_name, kube_workload_name, container_name)
 ```
 {: codeblock}

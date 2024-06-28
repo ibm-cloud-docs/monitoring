@@ -15,7 +15,7 @@ subcollection: monitoring
 # Managing notification by using the {{site.data.keyword.mon_short}} API
 {: #notifications_api}
 
-You can manage notifications in a {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} API.
+You can manage notifications in an {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} API.
 {: shortdesc}
 
 To learn how to use cURL, see [cURL command](/docs/monitoring?topic=monitoring-mon-curl).
@@ -236,7 +236,7 @@ The following sample shows the request body parameters that you can set to updat
 - modifiedOn
 
 
-**Note:** Notification version can get through response body of [notificationChannels API](#fetch-specific-user-notification). User can also add [customHeaders & customData](https://docs.sysdig.com/en/configure-a-webhook-channel.html#al_UUID-a6715905-0530-a08a-a3ab-cb10b2c5d19b_UUID-f9896786-62e5-c4c3-d2ef-38d3a2f7dfab){: external} to notfications based on their requirements.
+**Note:** Notification version can get through response body of [notificationChannels API](#notifications_api_get_channel). User can also add [customHeaders & customData](https://docs.sysdig.com/en/configure-a-webhook-channel.html#al_UUID-a6715905-0530-a08a-a3ab-cb10b2c5d19b_UUID-f9896786-62e5-c4c3-d2ef-38d3a2f7dfab){: external} to notfications based on their requirements.
 
 
 

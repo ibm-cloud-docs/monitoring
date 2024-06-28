@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2022-08-08"
+lastupdated: "2023-03-27"
 
-keywords: IBM Cloud, monitoring, monitoring agent, versions
+keywords:
 
 subcollection: monitoring
 
@@ -44,21 +44,3 @@ When an agent version becomes unsupported, the agent version is maintained for v
 
 Unsupported versions of the {{site.data.keyword.mon_full_notm}} agent have a 3-year deprecation policy.
 {: note}
-
-
-## Determining installed {{site.data.keyword.mon_short}} agent versions
-{: #agent_version_ui}
-
-Use the **Sysdig Agent Health & Status** dashboard to determine the {{site.data.keyword.mon_full}} agent versions that you have configured in your hosts.
-
-Complete the following steps:
-
-1. [Access your {{site.data.keyword.mon_short}} instance](/docs/monitoring?topic=monitoring-launch).
-
-2. Click ![Dashboard](../images/dashboards.png "Dashboard").
-
-3. Click **Host Infrastructure** &gt; **Sysdig Agent Health & Status**.
-
-The dashboard displays the agent versions corresponding to each host in the instance.
-
-![Sysdig Agent Health & Status dashboard showing agent versions](../images/agent_version.png "Sysdig Agent Health & Status dashboard showing agent versions"){: caption="Figure 1. Sysdig Agent Health & Status dashboard showing agent versions" caption-side="bottom"}

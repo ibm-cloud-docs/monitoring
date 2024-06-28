@@ -24,9 +24,9 @@ IAM can map a combination of teams and roles so that a user only has access to a
 
 Teams provide additional security by only allowing users to see metrics that are related to the infrastructure where their apps are deployed, as opposed to the entire infrastructure of the account. For example, in a Kubernetes cluster, you could grant a group of developers access to only see reports from scanned images from 1 `kubernestes.namespace` where their application is deployed.
 
-In a {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics with a defined scope.
+In an {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} instance, you can define 1 or more teams. A team provides an isolated workspace for a user or group of users to have access to metrics with a defined scope.
 
-A {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} instance includes the **Secure operations** teams.
+An {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} instance includes the **Secure operations** teams.
 
 By default, users are granted access to the `Secure operations` team or to the team that is configured as the default team by the instance administrator.
 
@@ -50,7 +50,7 @@ The following table shows the user roles that you can grant a user to work with 
 {: caption="Table 1. List of user roles" caption-side="top"}
 
 
-The following table shows the team roles that you can grant users to work within the context of a team in a {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} instance:
+The following table shows the team roles that you can grant users to work within the context of a team in an {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} instance:
 
 | Team role            | IAM service role | Team   |
 |----------------------|------------------|--------|

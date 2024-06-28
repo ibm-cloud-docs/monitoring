@@ -139,7 +139,7 @@ The following table lists the tasks that you can run to change the scope in the 
 
 **Teams** group users and control the data and the permissions to work with {{site.data.keyword.mon_full_notm}} captures and infrastructure events for those users.
 
-A {{site.data.keyword.mon_full_notm}} administrator can define any number of teams. For each team, an admin can configure the following information:
+An {{site.data.keyword.mon_full_notm}} administrator can define any number of teams. For each team, an admin can configure the following information:
 * `The default team`: You can set this team to be the team that any user that logs in to the web UI for the first time.
 * `The default entrypoint`: You can specify the view in the web UI that opens every time that a user logs in. Valid entrypoints are *Explore* view, *Dashboards* view, *Events* view, *Alerts* view, and *Settings* view.
 * `The scope`: You can limit what data users can see. You can choose *Host* or *Container* to define the level of data that is visible. Then, you can add one or more conditions. If the scope is set to *Host*, users can see all host-level and container-level information. If the scope is set to *Container*, users can see only container-level information.

@@ -204,7 +204,7 @@ Complete the following steps from a command line:
 
     Add the following configuration parameter:
 
-    ```
+    ```yaml
     feature:
       mode: monitor_light
     ```
@@ -249,7 +249,7 @@ You only can monitor one instance per browser. You could have multiple tabs for 
 
 You can monitor your Ubuntu server in the **Overview** view that is available through the Web UI. This view is your starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI.
 
-In the section **Hosts & containers**, you can find the entry for your Ubuntu server. Click **Hosts & containers** ![Hosts & containers](../images/switch_hosts.png) to switch data sources. Then, select your Ubuntu server. The data that is displayed corresponds to the selected server.
+In the section **Hosts & containers**, you can find the entry for your Ubuntu server. Click **Hosts & containers** ![Hosts & containers](/images/switch_hosts.png) to switch data sources. Then, select your Ubuntu server. The data that is displayed corresponds to the selected server.
 
 To configure color-coding for a column, complete the following steps:
 

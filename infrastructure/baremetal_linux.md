@@ -395,7 +395,7 @@ The monitoring agent automatically collects metrics from Prometheus exporters. T
 
 Complete the following steps to run the Prometheus exporter:
 
-1. From a local terminal,[download the Prometheus exporter](https://github.com/martinlindhe/wmi_exporter/releases){: external}.
+1. From a local terminal,[download the Prometheus exporter](https://github.com/prometheus-community/ipmi_exporter){: external}.
 
 2. In the bare metal server, from the `shh` session, change to the directory `/usr/monitor/`. Run the following command:
 

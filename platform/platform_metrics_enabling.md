@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2021-03-28"
+lastupdated: "2023-03-27"
 
-keywords: IBM Cloud, monitoring, platform metrics
+keywords:
 
 subcollection: monitoring
 
@@ -16,7 +16,7 @@ subcollection: monitoring
 # Enabling platform metrics
 {: #platform_metrics_enabling}
 
- You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location.
+You can configure 1 instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect *platform metrics* in that location.
 {: shortdesc}
 
 - Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in {{site.data.keyword.cloud_notm}}.
@@ -52,7 +52,7 @@ For example, if you are monitoring an {{site.data.keyword.messagehub}} instance 
 
 The main *Observability* page opens.
 
-<!-- The instance that you choose to receive metrics shows the flag **Platform metrics**. -->
+
 
 
 ## Enabling a monitoring instance from the command line

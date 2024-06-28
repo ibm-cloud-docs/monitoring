@@ -10,13 +10,11 @@ toc:
     product-page: https://www.ibm.com/cloud/cloud-monitoring
     path: monitoring
     label: Monitoring
-
   entries:
   - navgroup:
       id: learn
       topics:
       - getting-started.md
-
       - topicgroup:
           label: About
           topics:
@@ -32,7 +30,6 @@ toc:
             navtitle: Working with alerts and events
           - topic: features.md
             navtitle: Features
-
       - topicgroup:
           label: Monitoring IBM Cloud services
           topics:
@@ -44,7 +41,6 @@ toc:
             navtitle: Services generating metrics
           - topic: platform/cloud_services_locations.md
             navtitle: Services generating metrics by location
-
       - topicgroup:
           label: Monitoring infrastructure
           topics:
@@ -59,8 +55,7 @@ toc:
           - topic: infrastructure/baremetal_linux.md
             navtitle: Monitoring a Linux baremetal server
           - topic: infrastructure/vmware.md
-            navtitle: Monitoring a VMware solution
-
+            navtitle: Monitoring a VMware deployment
       - topicgroup:
           label: Collecting Prometheus metrics
           topics:
@@ -72,12 +67,6 @@ toc:
             navtitle: Collecting availability metrics
           - topic: exporters/ipmi.md
             navtitle: Collecting IPMI device sensor metrics
-          - topic: prometheus/prometheus_remote_write_kube.md
-            navtitle: Collecting Kube metrics by using remote write
-          - topic: prometheus/prometheus_remote_write_linux.md
-            navtitle: Collecting Linux metrics by using remote write
-          - topic: prometheus/prometheus_remote_write_was.md
-            navtitle: Collecting WAS metrics by using remote write
           links:
           - link:
               label: Prometheus native metrics
@@ -91,25 +80,20 @@ toc:
           - link:
               label: Node.js application metrics
               href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-node.js-application-metrics/
-
       - topic: monitor/data_streaming.md
         navtitle: Streaming metrics to Kafka
-
       - topicgroup:
           label: Sending notifications
           topics:
           - notifications/eventnotif_tutorial.md
           - notifications/eventnotif_sms_tutorial.md
-
       - about_wp.md
-
       - topicgroup:
           label: Release notes
           topics:
           - topic: releasenotes.md
             navtitle: Release notes
           - releasenotes_notifications.md
-
   - navgroup:
       id: howto
       topics:
@@ -127,7 +111,6 @@ toc:
              - iam/access_key.md
              - iam/api_token.md
              - iam/api_monitor_token.md
-
       - topicgroup:
           label: Controlling access
           topics:
@@ -138,12 +121,6 @@ toc:
           - iam/trusted_profiles.md
           - teams/teams.md
           - teams/team_id.md
-
-      - topicgroup:
-          label: Logging and monitoring
-          topics:
-          - core/at_events.md
-
       - topicgroup:
           label: Enhancing security
           topics:
@@ -157,19 +134,27 @@ toc:
                 navtitle: Using virtual private endpoints
           - core/architecture-workload-isolation.md
           - core/ha-dr.md
-
       - topicgroup:
-          label: Monitoring UI
+          label: Observability
+          topics:
+          - core/at_events.md
+      - topicgroup:
+          label: Monitoring resources
           topics:
           - launch.md
           - undock.md
           - get_sysdig_web_url.md
-
+          links:
+            - link:
+                label: Using Explore
+                href: https://docs.sysdig.com/en/explore.html
       - topicgroup:
           label: Monitoring agent
           topics:
           - topic: agent/agent_version.md
             navtitle: Listing agent versions
+          - topic: agent/agent-types.md
+            navtitle: Choosing an agent type by host
           - topic: agent/agent_version_host.md
             navtitle: Finding the agent version of a host
           - topic: agent/agent_ts_limits.md
@@ -194,7 +179,7 @@ toc:
               - topic: agent/change_kube_agent.md
                 navtitle: Customizing Kube agents
               - topic: agent/deploy-secure-features.md
-                navtitle: Deploying Workoad Protection on a host
+                navtitle: Deploying Workload Protection on a host
           - topicgroup:
               label: Non-orchestrated environments
               topics:
@@ -215,7 +200,6 @@ toc:
             - link:
                 label: Monitoring agent Release Notes
                 href: https://docs.sysdig.com/en/sysdig-agent-release-notes.html
-
       - topicgroup:
           label: Working with metrics
           links:
@@ -248,8 +232,6 @@ toc:
           - api/metrics_api.md
           - api/metrics_python.md
           - exporters/promql.md
-          - monitor/metrics_store.md
-
       - topicgroup:
           label: Working with metrics in non-supported locations
           topics:
@@ -257,17 +239,12 @@ toc:
             navtitle: Working with metrics before a region is available
           - topic: manage-metrics-to-new-region.md
             navtitle: Working with metrics after a region is open for business
-
       - topicgroup:
           label: Integrations
           links:
             - link:
-                label: Monitoring integrations
-                href: https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/
-            - link:
                 label: Configure a Prometheus data source with Grafana
                 href: https://docs.sysdig.com/en/configure-sysdig-with-grafana.html
-
       - topicgroup:
           label: Dashboards
           topics:
@@ -279,7 +256,6 @@ toc:
             - link:
                 label: Dashboard library
                 href: https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/dashboard-templates/
-
       - topicgroup:
           label: Working with alerts
           topics:
@@ -291,7 +267,6 @@ toc:
               - monitor/alert-downtime.md
               - monitor/alert-event.md
               - monitor/alert-promql.md
-
           - topicgroup:
               label: Configuring and managing alerts
               topics:
@@ -300,7 +275,6 @@ toc:
               - monitor/alert-manage.md
               - monitor/alert-library.md
               - monitor/alert-silence.md
-
           - api/alert_api.md
           - api/alert_python.md
           - api/metrics_sent_eventstreams.md
@@ -310,14 +284,12 @@ toc:
           - monitor/cf_sms.md
           - monitor/eventnotif.md
           - monitor/eventnotif_sms.md
-
       - topicgroup:
           label: Events
           links:
             - link:
                 label: Working with custom events
                 href: https://docs.sysdig.com/en/docs/sysdig-monitor/events/event-types/custom-events/
-
       - topicgroup:
           label: Captures
           links:
@@ -326,7 +298,6 @@ toc:
                 href: https://docs.sysdig.com/en/captures.html
           topics:
           - monitor/captures.md
-
   - navgroup:
       id: reference
       topics:
@@ -338,12 +309,10 @@ toc:
       - agent_support.md
       - core/shared-responsibilities.md
       - wpp-migration.md
-
       - topicgroup:
           label: Monitoring CLI
           topics:
           - include: ../monitor-cli-plugin/monitor-cli.md
-
       - topicgroup:
           label: Monitoring API
           links:
@@ -353,14 +322,24 @@ toc:
           topics:
           - api/mon-curl.md
           - api/python-client.md
-
+      - topicgroup:
+          label: Terraform
+          links:
+              - link:
+                  label: Terraform information
+                  href: https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs
+      - topicgroup:
+          label: Prometheus
+          links:
+              - link:
+                  label: Prometheus metrics / OpenMetrics code instrumentation
+                  href: https://sysdig.com/blog/prometheus-metrics/
       - topicgroup:
           label: Metrics
           links:
               - link:
                   label: Metrics dictionary
                   href: https://docs.sysdig.com/en/metrics-dictionary.html
-
       - deprecated.md
 
   - navgroup:
