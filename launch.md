@@ -2,10 +2,10 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-24"
+lastupdated: "2024-06-28"
 
 
-keywords: IBM Cloud, monitoring, launch web UI
+keywords: 
 
 subcollection: monitoring
 

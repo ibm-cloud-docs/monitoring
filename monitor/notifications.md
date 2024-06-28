@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2022-11-01"
+  years:  2018, 2024
+lastupdated: "2024-06-28"
 
-keywords: IBM Cloud, monitoring, notification channel
+keywords: 
 
 subcollection: monitoring
 

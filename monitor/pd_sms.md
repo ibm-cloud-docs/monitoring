@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2021, 2023
-lastupdated: "2021-05-11"
+  years:  2018, 2024
+lastupdated: "2024-06-28"
 
-keywords: IBM Cloud, monitoring, alerts, sms, SMS
+keywords: 
 
 subcollection: monitoring
 

@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-09-20"
+  years:  2018, 2024
+lastupdated: "2024-06-28"
 
-keywords: IBM Cloud, monitoring, getting started
+keywords: 
 
 subcollection: monitoring
 

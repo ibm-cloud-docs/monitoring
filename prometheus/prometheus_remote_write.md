@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-06-28"
 
-keywords: IBM Cloud, monitoring, prometheus, remote-write
+keywords: 
 
 subcollection: monitoring
 

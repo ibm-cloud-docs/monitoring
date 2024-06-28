@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2021-04-14"
+  years:  2018, 2024
+lastupdated: "2024-06-28"
 
-keywords: IBM Cloud, monitoring, panels
+keywords: 
 
 subcollection: monitoring
 
