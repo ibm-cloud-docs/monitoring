@@ -15,7 +15,7 @@ subcollection: monitoring
 # Managing notification by using the {{site.data.keyword.mon_short}} API
 {: #notifications_api}
 
-You can manage notifications in an  {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} API.
+You can manage notifications in an {{site.data.keyword.mon_full_notm}} instance by using the {{site.data.keyword.mon_short}} API.
 {: shortdesc}
 
 To learn how to use cURL, see [cURL command](/docs/monitoring?topic=monitoring-mon-curl).

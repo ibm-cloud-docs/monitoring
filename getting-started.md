@@ -93,7 +93,7 @@ You can collect metrics from a number of platforms, orchestrators, and a wide ra
 ### Configure platform metrics
 {: #getting-started-step3-1}
 
-Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in {{site.data.keyword.cloud_notm}}. You must configure an  {{site.data.keyword.mon_full_notm}} instance in a region to monitor these metrics. [Learn more](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
+Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in {{site.data.keyword.cloud_notm}}. You must configure an {{site.data.keyword.mon_full_notm}} instance in a region to monitor these metrics. [Learn more](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 
 To see the list of enabled-monitoring services, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services).
 

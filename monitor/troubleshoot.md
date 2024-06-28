@@ -74,7 +74,7 @@ If you are experiencing connectivity issues, complete the following steps:
 ## Are you getting access denied when running API calls?
 {: #troubleshoot-entry-4}
 
-When the authorization method that is allowed in an  {{site.data.keyword.mon_full_notm}} instance is set to `IAM_ONLY`, you can get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}`.
+When the authorization method that is allowed in an {{site.data.keyword.mon_full_notm}} instance is set to `IAM_ONLY`, you can get the following response `{"errors":[{"reason":"Not enough privileges to complete the action","message":"Access is denied"}]}`.
 
 First, [check the instance authorization methods that are allowed](/docs/monitoring?topic=monitoring-iam_instance_auth#iam_instance_auth_step1).
 
