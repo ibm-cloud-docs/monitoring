@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-07-10"
 
 keywords: 
 
@@ -83,9 +83,9 @@ Then, review [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl
 ## Are your dashboards, alerts, and scripts no longer returning what you intended?
 {: #troubleshoot-entry-5}
 
-{{site.data.keyword.mon_full_notm}} has changed its metrics store. This change has deprecated and changed a number of metrics and labels and has changed metric behavior.  See [Enhanced metric store](/docs/monitoring?topic=monitoring-metrics_store) for details on the new metric store.
+{{site.data.keyword.mon_full_notm}} has changed its metrics store. This change has deprecated and changed a number of metrics and labels and has changed metric behavior.  See the [Metrics Store Release notes](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/){: external} for details about the new metric store.
 
 ## Where is the topology map?
 {: #troubleshoot-entry-6}
 
-With the {{site.data.keyword.mon_full_notm}} change the metrics store, the topology map has been deprecated. See [Enhanced metric store](/docs/monitoring?topic=monitoring-metrics_store) for details on the new metric store.
+With the {{site.data.keyword.mon_full_notm}} change to the metrics store, the topology map has been deprecated. See the [Metrics Store Release notes](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/){: external} for details about the new metric store.
