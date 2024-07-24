@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-07-24"
 
 keywords: 
 
@@ -13,7 +13,7 @@ subcollection: monitoring
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Regions
+# Regions for {{site.data.keyword.mon_full_notm}}
 {: #regions}
 
 A list of supported regions for the {{site.data.keyword.mon_full_notm}} service.
