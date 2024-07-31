@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-31"
 
 keywords: 
 
@@ -89,3 +89,4 @@ Then, review [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl
 {: #troubleshoot-entry-6}
 
 With the {{site.data.keyword.mon_full_notm}} change to the metrics store, the topology map has been deprecated. See the [Metrics Store Release notes](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/){: external} for details about the new metric store.
+Support for the old endpoints will be terminated on 31 August 2024.
