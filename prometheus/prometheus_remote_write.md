@@ -168,7 +168,7 @@ The following table lists the default rate limits per instance:
 ## Ingestion endpoints for remote write
 {: #prometheus_remote_write_endpoints}
 
-{{site.data.keyword.mon_full_notm}} deprecated Prometheus client support of endpoints in the form `https://ingest.<region>` and `https://ingest.private.<region>` and replaced them with new endpoints on 31 May 2024. Customers using Prometheus Write need to migrate to use the new endpoints as soon as possible. Support for the old endpoints will be terminated on 31 August 2024.
+{{site.data.keyword.mon_full_notm}} deprecated Prometheus client support of endpoints in the form `https://ingest.<region>` and `https://ingest.private.<region>` and replaced them with new endpoints on 31 May 2024. End of support for the old endpoints is 31 August 2024. After that date, the old endpoints will stop working. Customers using Prometheus Remote Write need to migrate to use the new endpoints by 31 August 2024 to continue using Prometheus Remote Write.
 {: deprecated}
 
 The following table lists the public {{site.data.keyword.mon_short}} ingestion endpoints that you can configure to collect metrics via Prometheus Remote Write:
