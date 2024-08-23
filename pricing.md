@@ -23,7 +23,7 @@ This topic includes information about pricing for the {{site.data.keyword.mon_fu
 
 All other {{site.data.keyword.mon_full_notm}} functionality, including dashboards, panels, and alerts, are included in the base service price and pricing does not vary.
 
-The costs that are provided in this topic are guidelines and do not represent actual costs. They represent a starting point for estimates of costs that would be incurred in environments with a similar configuration. Actual costs can vary by geography. The prices that are used are based on actual prices as of April 1, 2023 and it is possible they can change.
+The costs that are provided in this topic are guidelines and do not represent actual costs. They represent a starting point for estimates of costs that would be incurred in environments with a similar configuration. Actual costs can vary by geography. The prices that are used are based on actual prices as of January 2024 and it is possible they can change.
 {: important}
 
 
