@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-08-23"
 
 keywords:
 
@@ -90,14 +90,14 @@ The following table outlines the cost per host by agent mode and what is include
 | Agent mode          | Cost per host | Default infrastructure metrics (CPU, memory, disk, and network) | Includes up to 1K time-series (Prometheus, JMX, appchecks, StatsD) | Monitoring of 50 containers | 1M API calls |
 |-------|------|-------|-------|-------|-------|
 | Agent for non-orchestrated environments  | $9.36   | ![Checkmark icon](/images/checkmark-icon.svg) | | | |
-| Agent for orchestrated environments   | $36   | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |
+| Agent for orchestrated environments   | $37   | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |
 {: caption="Table 4. Cost per host and agent mode" caption-side="top"}
 
 For hosts running an agent for non-orchestrated environments or for hosts running an agent for orchestrated environments that exceed the base tier allotment for Prometheus, JMX, appchecks, and Statsd metrics, additional prices apply:
 
 - Time series are priced according to the following tiers:
 
-    - **Tier 1**: The price per time-series is 0.08 USD for up to 100K time-series per month.
+    - **Tier 1**: The price per time-series is 0.09 USD for up to 100K time-series per month.
 
     - **Tier 2**: The price per time-series is 0.05 USD for 100K to 1M time-series per month.
 
@@ -105,7 +105,7 @@ For hosts running an agent for non-orchestrated environments or for hosts runnin
 
     - **Tier 4**: The price per time-series is 0.02 USD for more than 10M time-series per month.
 
-- Containers are priced as follows: 5.23 USD per 10 containers per month.
+- Containers are priced as follows: 5.38 USD per 10 containers per month.
 
 - API calls are priced as follows: The price for API calls is 0.01 USD per 1000 API calls per month.
 
@@ -144,7 +144,7 @@ For hosts running an agent for orchestrated environments that exceed the base ti
 
 - Time series are priced according to the following tiers:
 
-    - **Tier 1**: The price per time-series is 0.08 USD for up to 100K time-series per month.
+    - **Tier 1**: The price per time-series is 0.09 USD for up to 100K time-series per month.
 
     - **Tier 2**: The price per time-series is 0.05 USD for 100K to 1M time-series per month.
 
@@ -152,7 +152,7 @@ For hosts running an agent for orchestrated environments that exceed the base ti
 
     - **Tier 4**: The price per time-series is 0.02 USD for more than 10M time-series per month.
 
-- Containers are priced as follows: 5.23 USD per 10 containers per month.
+- Containers are priced as follows: 5.38 USD per 10 containers per month.
 
 - API calls are priced as follows: The price for API calls is 0.01 USD per 1000 API calls per month.
 
@@ -233,10 +233,10 @@ For example, if you have one Windows server with 2 vCPUs, 2 logical disks and 1 
 ```
 {: screen}
 
-With the cost per *time-series* of 0.08 USD for each *time-series* you would expect your cost to be 7.36 USD per month.
+With the cost per *time-series* of 0.09 USD for each *time-series* you would expect your cost to be 8.28 USD per month.
 ​
 ```text
-92 * 0.08 USD = 7.36 USD
+92 * 0.09 USD = 8.28 USD
 ```
 {: screen}
 
@@ -268,18 +268,18 @@ The billing calculation for the month is calculated as follows:
 
 * *Base cost per host*
 
-    The base price per host per month is 36 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics).
+    The base price per host per month is 37 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics).
 
-    For 3 hosts, the total monthly base cost is **108 USD**.
+    For 3 hosts, the total monthly base cost is **111 USD**.
 
     ```text
-    3 * 36 USD = 108 USD
+    3 * 37 USD = 111 USD
     ```
     {: screen}
 
 * *Additional time-series cost*
 
-    Each host has a 1000 time-series allotment that are included in the base cost per host of 36 USD. If you have 3 hosts, you have 3000 time-series included. The remaining time-series are priced based on the tiers. The following shows the calculation of the 700 additional time-series.
+    Each host has a 1000 time-series allotment that are included in the base cost per host of 37 USD. If you have 3 hosts, you have 3000 time-series included. The remaining time-series are priced based on the tiers. The following shows the calculation of the 700 additional time-series.
 
     ```text
     1200 + 1000 + 1500 - ( 3*1000 ) = 700
@@ -288,19 +288,19 @@ The billing calculation for the month is calculated as follows:
 
     The result from adding the time series per host minus the allotment defines the tier that is applied for pricing.
 
-    700 additional time-series corresponds to tier 1. The price per host is 0.08 USD for up to 100K time-series per month.
+    700 additional time-series corresponds to tier 1. The price per host is 0.09 USD for up to 100K time-series per month.
 
     ```text
-    700 * 0.08 USD = 56 USD
+    700 * 0.09 USD = 63 USD
     ```
     {: screen}
 
-    The total cost for additional time-series is **56 USD**.
+    The total cost for additional time-series is **63 USD**.
 
-The total monitoring cost per month is **164 USD**.
+The total monitoring cost per month is **174 USD**.
 
 ```text
-108 USD + 56 USD = 164 USD
+111 USD + 63 USD = 174 USD
 ```
 {: screen}
 
@@ -320,12 +320,12 @@ The billing calculation for the month is calculated as follows:
 
 * *Base cost per host*
 
-    The price per host per month is 36 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
+    The price per host per month is 37 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
-    For 5 hosts, the total base cost is **180 USD**.
+    For 5 hosts, the total base cost is **185 USD**.
 
     ```text
-    5 * 36 USD = 180 USD
+    5 * 37 USD = 185 USD
     ```
     {: screen}
 
@@ -344,10 +344,10 @@ The billing calculation for the month is calculated as follows:
 
     The total cost for additional time-series is **0 USD**.
 
-The total monitoring cost per month is **180 USD**.
+The total monitoring cost per month is **187 USD**.
 
 ```text
-180 USD + 0 USD + 0 USD + 0 USD = 180 USD
+187 USD + 0 USD + 0 USD + 0 USD = 187 USD
 ```
 {: screen}
 
@@ -371,10 +371,10 @@ The billing calculation for the month is calculated as follows:
     ```
     {: screen}
 
-    For tier 1, the price per time-series is 0.08 USD (Tier 1) for up to 100K time-series per month.
+    For tier 1, the price per time-series is 0.09 USD (Tier 1) for up to 100K time-series per month.
 
     ```text
-    110 * 0.08 USD = 8.80 USD
+    110 * 0.09 USD = 9.90 USD
     ```
     {: screen}
 
@@ -392,10 +392,10 @@ The billing calculation for the month is calculated as follows:
 
     The total cost for additional API calls is **0 USD**.
 
-The total monitoring cost per month is **8.80 USD**.
+The total monitoring cost per month is **9.90 USD**.
 
 ```text
-8.80 USD + 0 USD = 8.80 USD
+9.90 USD + 0 USD = 9.90 USD
 ```
 {: screen}
 
@@ -424,12 +424,12 @@ The billing calculation for the month would look like:
 
 * *Base cost per host*
 
-    The price per host per month is 36 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
+    The price per host per month is 37 USD which includes up to 1K time-series (includes Prometheus, JMX, appchecks, and StatsD metrics) and 50 containers.
 
-    For 3 hosts, the total cost is **108 USD**.
+    For 3 hosts, the total cost is **111 USD**.
 
     ```text
-    3 * 36 USD = 108 USD
+    3 * 37 USD = 111 USD
     ```
     {: screen}
 
@@ -447,17 +447,17 @@ The billing calculation for the month would look like:
     Notice that since the *Base cost per host* time-series allotment was not completely used by the agents, 350 of the 500 platform metrics time-series were covered by the base tier. Only the additional 150 platform metrics time-series (`500 - 350 = 150`)have an additional cost.
 
     ```text
-    150 * 0.08 USD (Tier-1) = 12 USD
+    150 * 0.09 USD (Tier-1) = 13.50 USD
     ```
     {: screen}
 
-    The total cost for time-series is **12 USD**.
+    The total cost for time-series is **13.50 USD**.
 
 
-The total monitoring cost per month is **117 USD**.
+The total monitoring cost per month is **124.50 USD**.
 
 ```text
-108 USD + 12 USD = 120 USD
+111 USD + 13.50 USD = 124.50 USD
 ```
 {: screen}
 
@@ -499,15 +499,15 @@ The billing calculation for the month is calculated as follows:
     250 time-series corresponds to tier 1. The price per host is 0.08 USD for up to 100K time-series per month.
 
     ```text
-    250 * 0.08 USD = 20 USD
+    250 * 0.09 USD = 22.50 USD
     ```
     {: screen}
 
-    The total cost for additional time-series is **20 USD**.
+    The total cost for additional time-series is **22.50 USD**.
 
-The total monitoring cost per month is **48 USD**.
+The total monitoring cost per month is **50.58 USD**.
 
 ```text
-28.08 USD + 20 USD = 48.08 USD
+28.08 USD + 22.50 USD = 50.58 USD
 ```
 {: screen}
