@@ -496,7 +496,7 @@ The billing calculation for the month is calculated as follows:
 
     The result from adding the time series per host defines the tier that is applied for pricing.
 
-    250 time-series corresponds to tier 1. The price per host is 0.08 USD for up to 100K time-series per month.
+    250 time-series corresponds to tier 1. The price per host is 0.09 USD for up to 100K time-series per month.
 
     ```text
     250 * 0.09 USD = 22.50 USD
