@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-08-26"
 
 keywords:
 
@@ -89,8 +89,8 @@ The following table outlines the cost per host by agent mode and what is include
 
 | Agent mode          | Cost per host | Default infrastructure metrics (CPU, memory, disk, and network) | Includes up to 1K time-series (Prometheus, JMX, appchecks, StatsD) | Monitoring of 50 containers | 1M API calls |
 |-------|------|-------|-------|-------|-------|
-| Agent for non-orchestrated environments  | $9.36   | ![Checkmark icon](/images/checkmark-icon.svg) | | | |
-| Agent for orchestrated environments   | $37   | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |
+| Agent for non-orchestrated environments  | 10.07 USD   | ![Checkmark icon](/images/checkmark-icon.svg) | | | |
+| Agent for orchestrated environments   | 37 USD   | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |
 {: caption="Table 4. Cost per host and agent mode" caption-side="top"}
 
 For hosts running an agent for non-orchestrated environments or for hosts running an agent for orchestrated environments that exceed the base tier allotment for Prometheus, JMX, appchecks, and Statsd metrics, additional prices apply:
@@ -137,7 +137,7 @@ The following table outlines the cost per host by agent mode and what is include
 
 | Agent mode | Cost per host | Default infrastructure metrics (CPU, memory, disk, and network) | Includes up to 1K time-series (Prometheus, JMX, appchecks, StatsD) | Monitoring of 50 containers | 1M API calls | Secure features |
 |-------|------|-------|-------|-------|-------|-------|
-| Agent for orchestrated environments  | $94  | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) | ![Checkmark icon](/images/checkmark-icon.svg) |
+| Agent for orchestrated environments  | 96.87 USD  | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) | ![Checkmark icon](/images/checkmark-icon.svg) |
 {: caption="Table 5. Cost per host for Graduated Tier - Sysdig Secure and Monitor service plan" caption-side="top"}
 
 For hosts running an agent for orchestrated environments that exceed the base tier allotment for Prometheus, JMX, appchecks, and Statsd metrics, additional prices apply:
@@ -476,12 +476,12 @@ The billing calculation for the month is calculated as follows:
 
 * *Base cost per host*
 
-    The base price per host per month is 9.36 USD.
+    The base price per host per month is 10.07 USD.
 
-    For 3 hosts, the total base cost is **27 USD**.
+    For 3 hosts, the total base cost is **30.21 USD**.
 
     ```text
-    3 * 9.36 USD = 28.08 USD
+    3 * 10.07 USD = 30.21 USD
     ```
     {: screen}
 
@@ -505,9 +505,9 @@ The billing calculation for the month is calculated as follows:
 
     The total cost for additional time-series is **22.50 USD**.
 
-The total monitoring cost per month is **50.58 USD**.
+The total monitoring cost per month is **52.71 USD**.
 
 ```text
-28.08 USD + 22.50 USD = 50.58 USD
+30.21 USD + 22.50 USD = 52.71 USD
 ```
 {: screen}
