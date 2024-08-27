@@ -18,16 +18,16 @@ completion-time: 1h
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Monitoring Linux hosts on PowerVS
-{: #powervs}
+# Monitoring Linux hosts on a PowerVS workspace
+{: #powervs}a
 {: toc-content-type="tutorial"}
 {: toc-services="monitoring"}
 {: toc-completion-time="1h"}
 
-Use this tutorial to learn how to configure Linux hosts on PowerVS to forward metrics to the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}.
+Use this tutorial to learn how to configure Linux hosts on a PowerVS workspace to forward metrics to the {{site.data.keyword.mon_full_notm}} service in the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-To configure Linux hosts on PowerVS to forward metrics, you must install a monitoring agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics.
+To configure Linux hosts on a PowerVS workspace to forward metrics, you must install a monitoring agent. The agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics.
 
 By default, this agent collects core infrastructure and network time series that you can use to monitor the host. For a list of collected metrics, see [Metrics Available for non-orchestrated environments](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-configuration/configure-agent-modes/metrics-available-in-monitor-light/){: external}.
 
@@ -82,13 +82,13 @@ Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each o
 
 The {{site.data.keyword.cloud_notm}} CLI must be installed. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-## Provision a Linux host on PowerVS instance
+## Provision a Linux host on a PowerVS workspace
 {: #powervs_step1}
 {: step}
 
-If you have an existing Linux host on a PowerVS instance that you want to monitor, you can skip this step.
+If you have an existing Linux host on a PowerVS workspace that you want to monitor, you can skip this step.
 
-If you don't have a Linux host on a PowerVS instance, [create a PowerVS server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
+If you don't have a Linux host on a PowerVS workspace, [create a PowerVS server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
 ## Provision an {{site.data.keyword.mon_full_notm}} instance
 {: #powervs_step2}
@@ -132,11 +132,11 @@ After you provision an instance, the **Monitoring** dashboard opens.
 
 **Note:** To provision an instance through the CLI, see [Provisioning an instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/monitoring?topic=monitoring-provision#provision_cli).
 
-## Configure your Linux host on PowerVS to send metrics to your instance
+## Configure your Linux host on a PowerVS workspace to send metrics to your instance
 {: #powervs_step3}
 {: step}
 
-To configure your Linux host on PowerVS to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a monitoring agent.
+To configure your Linux host on a PowerVS workspace to send metrics to your {{site.data.keyword.mon_full_notm}} instance, you must install a monitoring agent.
 
 Complete the following steps from a command line:
 
@@ -149,7 +149,7 @@ Complete the following steps from a command line:
 
    Select the account and region where the {{site.data.keyword.mon_full_notm}} instance is available.
 
-2. [Access your Linux host on PowerVS](/docs/power-iaas?topic=power-iaas-linux-with-powervs).
+2. [Access your Linux host on a PowerVS workspace](/docs/power-iaas?topic=power-iaas-linux-with-powervs).
 
 3. Obtain the access key. For more information, see [Getting the access key through the {{site.data.keyword.cloud_notm}} UI](/docs/monitoring?topic=monitoring-access_key#access_key_ibm_cloud_ui).
 
@@ -236,11 +236,11 @@ You only can monitor one instance per browser. You could have multiple tabs for 
 {: tip}
 
 
-## Monitor your Linux host on PowerVS
+## Monitor your Linux host on a PowerVS workspace
 {: #powervs_step5}
 {: step}
 
-You can monitor your Linux host on PowerVS in the **Overview** view that is available through the Web UI. This view is your starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI.
+You can monitor your Linux host on a PowerVS workspace in the **Overview** view that is available through the Web UI. This view is your starting point to troubleshoot and monitor your infrastructure. It is the default homepage of the Web UI.
 
 In the section **Hosts & containers**, you can find the entry for your Ubuntu server. Click **Hosts & containers** ![Hosts & containers](/images/switch_hosts.png) to switch data sources. Then, select your server. The data that is displayed corresponds to the selected server.
 
