@@ -52,6 +52,8 @@ toc:
             navtitle: Monitoring a Windows environment
           - topic: infrastructure/ubuntu.md
             navtitle: Monitoring a Linux VPC instance
+          - topic: infrastructure/powervs.md
+            navtitle: Monitoring a Linux host on PowerVS
           - topic: infrastructure/baremetal_linux.md
             navtitle: Monitoring a Linux baremetal server
           - topic: infrastructure/vmware.md
@@ -186,6 +188,8 @@ toc:
               - agent/agent_windows.md
               - topic: agent/agent_linux.md
                 navtitle: Managing the Linux agent
+              - topic: agent/manage_agent_linux_powervs.md
+                navtitle: Managing the Linux agent on PowerVS
               - topic: agent/agent_linux_1.md
                 navtitle: Deploying Linux agent with no public access
               - topic: agent/change_linux_agent.md
