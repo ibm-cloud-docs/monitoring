@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-09-04"
 
 keywords:
 
@@ -65,7 +65,7 @@ For information on the available metrics, see [Metrics available in Monitor Ligh
    For RHEL or CentOS, run the following commands:
 
    ```sh
-   sudo rpm --import https://download.sysdig.com/DRAIOS-GPG-KEY.public &&
+   sudo rpm --import https://download.sysdig.com/DRAIOS-GPG-KEY.public 
    ```
    {: pre} 
    
@@ -108,7 +108,7 @@ For information on the available metrics, see [Metrics available in Monitor Ligh
       {: pre}
 
       ```sh
-      sudo systemctl enable dragent powervs-linux-monitoring.md2024-04-26
+      sudo systemctl enable dragent 
       ```
       {: pre}
 
