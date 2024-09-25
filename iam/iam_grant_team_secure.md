@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-09-25"
 
 keywords: 
 
@@ -39,6 +39,9 @@ By default, users are granted access to the `Secure operations` team or to the t
 [Learn more about teams](/docs/monitoring?topic=monitoring-teams).
 
 For a user to monitor data within the context of a team, you must grant the user a policy for the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} service. The policy specifies the team and the service permissions for the user so the user can work with the data in scope for that team.
+
+If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned. 
+{: important}
 
 The following table shows the user roles that you can grant a user to work with the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} service:
 
