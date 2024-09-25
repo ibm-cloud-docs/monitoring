@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-09-25"
 
 keywords: 
 
@@ -47,6 +47,8 @@ You can grant any of the following IAM service roles:
 - Reader: A reader role allows a user to monitor data through dashboards, alerts, and notifications that are in scope for the team.
 - Manager: The manager role is an instance level role that grants administrative permissions. If you grant this role in a policy for a team, you are granting admin permissions over the instance to the users that belong to that team.
 
+If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned. 
+{: important}
 
 The following table shows the user roles that you can grant a user to work with the {{site.data.keyword.mon_short}} service:
 
