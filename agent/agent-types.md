@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-10"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -44,7 +44,7 @@ The following table shows the options that you can choose to monitor a host by t
 | Non-Orchestrated environment | Linux based Virtual Machines (VM) | Supported | Supported |
 | Non-Orchestrated environment | Linux based Virtual Machines (VM) on VPC | Supported | Supported |
 | Non-Orchestrated environment | Linux based Virtual Machines (VM) on VMware | Supported | Supported |
-{: caption="Table 1. Mode by infrastructure" caption-side="top"}
+{: caption="Mode by infrastructure" caption-side="top"}
 
 You can configure an agent on hosts in the {{site.data.keyword.cloud_notm}}, on-prem, and in other clouds.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -205,8 +205,8 @@ Complete the following steps:
 | SSL Cert Expiry in Days | `probe_ssl_earliest_cert_expiry{instance=$instance}-time()` | `time (auto)` |
 | DNS Lookup | `probe_dns_lookup_time_seconds{instance=$instance}` | `time (auto)` |
 | Probe duration | `probe_duration_seconds{instance=$instance}` | `time (auto)` |
-{: caption="Table 1. Blackbox exporter sample queries" caption-side="top"}
+{: caption="Blackbox exporter sample queries" caption-side="top"}
 
 For example, you can create a dashboard that looks as follows:
 
-![Sample Blackbox dashboard](images/blackbox-ui-1.png "Sample Blackbox dashboard"){: caption="Figure 1. Sample Blackbox dashboard" caption-side="bottom"}
+![Sample Blackbox dashboard](images/blackbox-ui-1.png "Sample Blackbox dashboard"){: caption="Sample Blackbox dashboard" caption-side="bottom"}

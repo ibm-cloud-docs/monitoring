@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -427,7 +427,7 @@ The following JSON shows the schema model:
 | `account` |  | ![Checkmark icon](../images/checkmark-icon.svg) | |  |  |  |
 | `serviceKey` |  | ![Checkmark icon](../images/checkmark-icon.svg) | |  |  |  |
 | `serviceName` |  | ![Checkmark icon](../images/checkmark-icon.svg) | |  |  |  |
-{: caption="Table 3. Types of notification channels" caption-side="top"}
+{: caption="Types of notification channels" caption-side="top"}
 
 
 #### apiKey (string)
@@ -502,7 +502,7 @@ Defines the notification channel.
 | VictorOps                     | `VICTOROPS`        |
 | Webhook                       | `WEBHOOK`          |
 | OpsGenie                      | `OPSGENIE`         |
-{: caption="Table 3. Types of notification channels" caption-side="top"}
+{: caption="Types of notification channels" caption-side="top"}
 
 
 ### version (integer)

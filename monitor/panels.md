@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -29,7 +29,7 @@ You can use any of the following panel types:
 | `Number` | Use this panel to view a single number that represents the value of an aggregated metric over time for one or more entities.  |
 | `Table` | Use this panel to display numerical data for your infrastructure based on metrics and segments.  |
 | `Text` | Use this panel to add text. Use markdown to add your text.  |
-{: caption="Table 1. Panel types" caption-side="top"}
+{: caption="Panel types" caption-side="top"}
 
 
 

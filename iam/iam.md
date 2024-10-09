@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -84,7 +84,7 @@ The folling table identifies the platform role that you can grant a user in the 
 | `Create a service ID`                                                   | ![Checkmark icon](../images/checkmark-icon.svg) |![Checkmark icon](../images/checkmark-icon.svg)         |          |        |
 | `View details of a service instance`                                    | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)    | ![Checkmark icon](../images/checkmark-icon.svg)      | ![Checkmark icon](../images/checkmark-icon.svg)    |
 | `View service instances in the Observability Monitoring dashboard`      | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)    | ![Checkmark icon](../images/checkmark-icon.svg)      | ![Checkmark icon](../images/checkmark-icon.svg)    |
-{: caption="Table 1. IAM user roles and actions" caption-side="top"}
+{: caption="IAM user roles and actions" caption-side="top"}
 
 
 A user with an **administrator** role automatically has the service **manager** role permissions.
@@ -155,7 +155,7 @@ The following table identifies the service role that you can grant a user in the
 | `sysdig-monitor.user.read` | View users. |  |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | `sysdig-monitor.system-role.admin` | Configure system roles. | ![Checkmark icon](../images/checkmark-icon.svg) |  |  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | `sysdig-monitor.platform-metric.publish` `[**]` | | | | |
-{: caption="Table 2. Service roles and actions" caption-side="top"}
+{: caption="Service roles and actions" caption-side="top"}
 
 `[*]` - This service role is used when {{site.data.keyword.mon_full_notm}} is connected to an {{site.data.keyword.sysdigsecure_full_notm}} instance. This role must also be defined for {{site.data.keyword.sysdigsecure_full_notm}}. For more information about {{site.data.keyword.sysdigsecure_full_notm}} functions, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
 {: note}

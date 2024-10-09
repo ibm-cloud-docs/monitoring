@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-09-19"
+  years:  2018, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -33,7 +33,7 @@ You can collect metrics from a number of platforms, orchestrators, and a wide ra
 | Non-Orchestrated environment | Linux based Virtual Machines (VM) on VPC | [Metrics for non-orchestrated environments](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/prometheus-format/) |
 | Non-Orchestrated environment | Linux based Virtual Machines (VM) on VMware | [Metrics for non-orchestrated environments](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/prometheus-format/) |
 | Windows environment          | Windows-based servers | [Metrics for Windows environments]https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/integration-library/infrastructure-integrations/windows/) |
-{: caption="Table 1. Metrics by infrastructure" caption-side="top"}
+{: caption="Metrics by infrastructure" caption-side="top"}
 
 ## Colletion method
 {: #collect-metrics-by-host-2}
@@ -51,7 +51,7 @@ The following table shows the options that you can choose to monitor a host by t
 | Non-Orchestrated environment | Linux based Virtual Machines (VM) on VPC | Supported | Supported |
 | Non-Orchestrated environment | Linux based Virtual Machines (VM) on VMware | Supported | Supported |
 | Windows environment          | Windows-based servers |  |  | Supported by using the Windows exporter |
-{: caption="Table 2. Mode by infrastructure" caption-side="top"}
+{: caption="Mode by infrastructure" caption-side="top"}
 
 ## Checking the number of time series that are collected per agent
 {: #collect-metrics-by-host-3}

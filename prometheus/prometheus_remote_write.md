@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -27,7 +27,7 @@ You can collect metrics from:
 - Non-x86 based architectures, typically seen on IoT environments or Edge computing.
 - Non-containerized workloads, such as NGNIX, custom applications, RabbitMQ, and others.
 
-![Prometheus remote write option](../images/prometheus-rw.png "Prometheus remote write"){: caption="Figure 1. Prometheus remote write" caption-side="bottom"}
+![Prometheus remote write option](../images/prometheus-rw.png "Prometheus remote write"){: caption="Prometheus remote write" caption-side="bottom"}
 
 You can monitor the metrics that are collected by using Prometheus remote write through the {{site.data.keyword.mon_short}} web UI. You can also use PromQL to query the data by using the standard Prometheus query language.
 
@@ -162,7 +162,7 @@ The following table lists the default rate limits per instance:
 | Parallel writes | 100 concurrent requests |
 | Data points per minute (DPM) | 1 million | The number of data points that are sent depends on how often metrics are sent. For example, a scrape interval of 10s will submit more DPM than an interval of 60 seconds |
 | Number of writes per minute | 10,000 |
-{: caption="Table 1. Rate limits" caption-side="top"}
+{: caption="Rate limits" caption-side="top"}
 
 
 ## Ingestion endpoints for remote write
@@ -188,7 +188,7 @@ Remote write ingestion uses TCP 443 port.
 | Tokyo (`JP-TOK`)              | `https://ingest.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | Toronto (`CA-TOR`)              | `https://ingest.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | Washington (`US-EAST`)             | `https://ingest.us-east.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.us-east.monitoring.cloud.ibm.com/prometheus/remote/write`  |
-{: caption="Table 2. Prometheus remote write public endpoints" caption-side="top"}
+{: caption="Prometheus remote write public endpoints" caption-side="top"}
 
 The following table lists the private {{site.data.keyword.mon_short}} ingestion endpoints that you can configure to collect metrics via Prometheus Remote Write:
 
@@ -204,7 +204,7 @@ The following table lists the private {{site.data.keyword.mon_short}} ingestion 
 | Tokyo (`JP-TOK`)              | `https://ingest.private.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write` |
 | Toronto (`CA-TOR`)              | `https://ingest.private.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write`  |
 | Washington (`US-EAST`)             | `https://ingest.private.us-east.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.us-east.monitoring.cloud.ibm.com/prometheus/remote/write` |
-{: caption="Table 3. Prometheus remote write private endpoints" caption-side="top"}
+{: caption="Prometheus remote write private endpoints" caption-side="top"}
 
 ## Limitations
 {: #prometheus_remote_write_limitations}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -345,7 +345,7 @@ The following table show common error response codes:
 | `404` | The alert ID is not recognized. |
 | `409` | There is a version mismatch. |
 | `422` | The alert name is not valid. The name is already used. |
-{: caption="Table 1. RC" caption-side="top"}
+{: caption="RC" caption-side="top"}
 
 
 
@@ -507,7 +507,7 @@ The following table lists the values that you can set:
 | `5`      | `notice`    |
 | `6`      | `informational`|
 | `7`      | `debug` |
-{: caption="Table 2. Severity values" caption-side="top"}
+{: caption="Severity values" caption-side="top"}
 
 ### severityLabel (string)
 {: #alert-api-parm-sevlevel}
@@ -527,7 +527,7 @@ The following table shows the severity status that must be set depending on the 
 | `5`      | `LOW`            |
 | `6`      | `INFO`           |
 | `7`      | `INFO`           |
-{: caption="Table 3. Severity level values" caption-side="top"}
+{: caption="Severity level values" caption-side="top"}
 
 ### segmentBy (array of strings)
 {: #alert-api-parm-segmentedby}

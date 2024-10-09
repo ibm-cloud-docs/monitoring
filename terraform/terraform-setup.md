@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -122,7 +122,7 @@ The following table lists input parameters that you can set in the `provider` bl
 |`region`| Optional | The {{site.data.keyword.cloud_notm}} region where you want to create your resources. If this value is not specified, `us-south` is used by default. You can specify the region in the `provider` block or retrieve the value from the `IBMCLOUD_REGION` or `IC_REGION` environment variables. If both environment variables are specified, `IC_REGION` takes precedence. |
 |`resource_group`| Optional | The ID of the resource group that you want to use for your {{site.data.keyword.cloud_notm}} resources. To retrieve the ID, run `ibmcloud resource groups`. You can specify the resource group in the `provider` block or retrieve the value from the `IC_RESOURCE_GROUP` or `IBMCLOUD_RESOURCE_GROUP` environment variables. If both environment variables are defined, `IC_RESOURCE_GROUP` takes precedence. |
 |`workload_protection_connected_instance`| Optional | Connects an existing {{site.data.keyword.sysdigsecure_full_notm}} instance to the {{site.data.keyword.mon_full_notm}} instance being created. Specify the CRN of the {{site.data.keyword.sysdigsecure_full_notm}} instance to be connected. For more information on connecting instances, see [Can {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_full_notm}} be used together?](/docs/monitoring?topic=monitoring-faq#faq_4) |
-{: caption="Table 1. List of input parameters that you can set in the provider block of your Terraform" caption-side="top"}
+{: caption="List of input parameters that you can set in the provider block of your Terraform" caption-side="top"}
 
 For more information on how to use environment variables, see [Using environment variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
 

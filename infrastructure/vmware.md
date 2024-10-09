@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-10-19"
+  years:  2018, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -24,7 +24,7 @@ VMware vCenter Server® is a hosted private cloud that delivers the VMware vSphe
 
 The following graphic depicts the high-level architecture and components of a three node vCenter Server with NSX-T deployment.
 
-![Architecture of a vCenter Server NSX-T deployment](../images/Log-Analysis-05-VMware-vCenter-Architecture.svg "Architecture of a vCenter Server NSX-T deployment"){: caption="Figure 1. Architecture of a vCenter Server NSX-T deployment" caption-side="bottom"}
+![Architecture of a vCenter Server NSX-T deployment](../images/Log-Analysis-05-VMware-vCenter-Architecture.svg "Architecture of a vCenter Server NSX-T deployment"){: caption="Architecture of a vCenter Server NSX-T deployment" caption-side="bottom"}
 
 
 ## Metrics
@@ -352,5 +352,3 @@ To get the list of metrics that are collected, you can run the following cURL co
 {: #vmware-vcenter-step2}
 
 Create a dashboard to monitor your VMware deployment. You can use the **Applications** > **VMWare Overview** template in the **Dashboard Library** to [configure your dashboard.](/docs/monitoring?topic=monitoring-dashboards#dashboards_create)
-
-

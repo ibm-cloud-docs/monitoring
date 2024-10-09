@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -328,7 +328,7 @@ The following table outlines the parameters that you can define to set the filte
 | `kubernetes.object.annotation.*`  | Kubernetes object annotation                   |
 | `kubernetes.object.label.*`       | Kubernetes object label                        |
 | `all`                              | Default rule to specify all objects            |
-{: caption="Table 1. Parameters to define conditions on containers" caption-side="top"}
+{: caption="Parameters to define conditions on containers" caption-side="top"}
 
 Consider the following information on how the monitoring agent applies the rules that you define in the **container_filter** section:
 * You define conditions by configuring them with the **include** and **exclude** filtering parameters.
@@ -442,7 +442,7 @@ The following table lists some common scenarios and the value that you must set 
 | Reduce container console output               | `console_priority: warning` | `info`        |
 | Filtering events by severity                  | `event_priority: warning`   | `information` |
 | Verify what metrics are included or excluded  | `metrics_excess_log: true`  | `false`       |
-{: caption="Table 2. Log section entries" caption-side="top"}
+{: caption="Log section entries" caption-side="top"}
 
 ### Changing the log level
 {: #change_kube_agent_log_level}

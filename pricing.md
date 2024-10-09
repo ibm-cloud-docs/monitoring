@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-08-26"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -55,7 +55,7 @@ In your monthly usage charges, consumption is measured hourly and your bill brea
 | `LITE_NODE_HOURS` | Tracks the number of agents that are monitoring non-containerized infrastructures such as VMs or bare metal servers, and are using the agent for non-orchestrated environments.  |
 | `API_CALL_HOURS` | Represents how many calls are being made to the API per month. All instances include 1M API calls. |
 | `CONTAINER_HOURS` | Represents how many containers are monitored across all hosts that are being monitored by agents.  |
-{: caption="Table 2. Billing usage metrics" caption-side="bottom"}
+{: caption="Billing usage metrics" caption-side="bottom"}
 
 To monitor how the {{site.data.keyword.mon_full_notm}} service is used and the costs associated to its usage, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
 
@@ -91,7 +91,7 @@ The following table outlines the cost per host by agent mode and what is include
 |-------|------|-------|-------|-------|-------|
 | Agent for non-orchestrated environments  | 10.07 USD   | ![Checkmark icon](/images/checkmark-icon.svg) | | | |
 | Agent for orchestrated environments   | 37 USD   | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |
-{: caption="Table 4. Cost per host and agent mode" caption-side="top"}
+{: caption="Cost per host and agent mode" caption-side="top"}
 
 For hosts running an agent for non-orchestrated environments or for hosts running an agent for orchestrated environments that exceed the base tier allotment for Prometheus, JMX, appchecks, and Statsd metrics, additional prices apply:
 
@@ -138,7 +138,7 @@ The following table outlines the cost per host by agent mode and what is include
 | Agent mode | Cost per host | Default infrastructure metrics (CPU, memory, disk, and network) | Includes up to 1K time-series (Prometheus, JMX, appchecks, StatsD) | Monitoring of 50 containers | 1M API calls | Secure features |
 |-------|------|-------|-------|-------|-------|-------|
 | Agent for orchestrated environments  | 96.87 USD  | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) | ![Checkmark icon](/images/checkmark-icon.svg) |
-{: caption="Table 5. Cost per host for Graduated Tier - Sysdig Secure and Monitor service plan" caption-side="top"}
+{: caption="Cost per host for Graduated Tier - Sysdig Secure and Monitor service plan" caption-side="top"}
 
 For hosts running an agent for orchestrated environments that exceed the base tier allotment for Prometheus, JMX, appchecks, and Statsd metrics, additional prices apply:
 
@@ -224,7 +224,7 @@ The following table estimates the number of *time-series* generated when the def
 | `os` | OS metrics (memory, processes, users) | 13 |
 | `system` | System calls | 6 |
 | `net` | Network interface I/O | 12 *time-series* per network adapter |
-{: caption="Table 1. Time-series estimates for Windows systems based on default collector installation" caption-side="bottom"}
+{: caption="Time-series estimates for Windows systems based on default collector installation" caption-side="bottom"}
 
 For example, if you have one Windows server with 2 vCPUs, 2 logical disks and 1 network adapter you can anticipate 92 *time-series*.
 ​
@@ -249,7 +249,7 @@ Other collectors that generate *time-series* include:
 | `ad` | Active Directory Domain Services | 14 *time-series* per disk partition |
 | `process` | Per-process metrics | 21 *time-series* per process. (This metric has high cardinality. One process can have subprocesses with multiple `process_id` values.) You can filter [processes](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.process.md){: external} |
 | `service` | Service state metrics | 26 *time-series* per service. (This metric has high cardinality. Windows has a lot of services by default.) You can filter [services](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.service.md){: external} |
-{: caption="Table 2. Time-series estimates for Windows systems for additional collectors" caption-side="bottom"}
+{: caption="Time-series estimates for Windows systems for additional collectors" caption-side="bottom"}
 
 ## Billing samples
 {: #billing_example}

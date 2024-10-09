@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -34,7 +34,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for the set up and
 | `Provide high availability capabilities` | Provide capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions (MZR), to meet local access and low latency requirements for each supported region.  | Use the list of [available regions](/docs/monitoring?topic=monitoring-endpoints) to plan for and create new instances of the service. |
 | `Monitor monitoring agents`   | Provide images and instructions for how to install monitoring agents in environments that you want to monitor, such as Kubernetes, Linux, and {{site.data.keyword.redhat_openshift_notm}}. | Install and configure monitoring agents. </br>Monitor that the agents are running in your environment, for example, by using monitoring alerts. |
 | `Deliver platform metrics`  | Deliver platform metrics for Monitoring-enabled services to the monitoring instance that collects platform metrics and is located in the region where the platform metrics are generated.  | Configure 1 monitoring instance per region to collect platform metrics in that region. |
-{: caption="Table 1. Responsibilities for incident and operations" caption-side="top"}
+{: caption="Responsibilities for incident and operations" caption-side="top"}
 
 
 
@@ -51,7 +51,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | `Update default dashboards`                            | Update the default dashboards as requirements change. | Update custom dashboards and track changes by using your own change management process. |
 | `Update pre-defined alert definitions`                  | Update the default alert definitions as requirements change. | Update custom alert definitions and track changes by using your own change management process. |
 | `Track versions of custom dashboards, alerts, notifications, and teams`    |   | Use your own change management process to control versions of monitoring resources such as dashboards, alert definitions, teams, and notifications. |
-{: caption="Table 2. Responsibilities for change management" caption-side="top"}
+{: caption="Responsibilities for change management" caption-side="top"}
 
 
 ## Identity and access management
@@ -65,7 +65,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | `Manage platform permissions`  | Allow administrators to control access to manage resources in the {{site.data.keyword.cloud_notm}}. | Grant, revoke, and manage access to service instances by using IAM. |
 | `Manage service permissions`   | Allow administrators to control access to work with the {{site.data.keyword.mon_full_notm}}. | Grant, revoke, and manage access to monitoring features by using IAM. |
 | `Control {{site.data.keyword.mon_short}} data access` | Allow administrators to control access to metrics data and metadata through Sysdig teams. | Grant, revoke, and manage access to monitoring data by using IAM. |
-{: caption="Table 3. Responsibilities for identity and access management" caption-side="top"}
+{: caption="Responsibilities for identity and access management" caption-side="top"}
 
 [Learn more about controlling access through IAM](/docs/monitoring?topic=monitoring-iam).
 
@@ -79,7 +79,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | Task                                       | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |--------------------------------------------|-------------------------------------------------|-----------------------|
 | `Meet security and compliance objectives`  | Maintain controls that are commensurate to supported industry compliance standards, such as SOC. | Ensure that regulated data is not provided to the {{site.data.keyword.mon_full_notm}} service. |
-{: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="top"}
+{: caption="Responsibilities for security and regulation compliance" caption-side="top"}
 
 
 
@@ -94,4 +94,4 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for keeping {{site
 | `Service`         | Automatically recover and restart service components after any disaster event. |   |
 | `Data`            |   |Extract and save data, dashboards definitions, and alert definitions if you cannot afford for it to be lost in the event of an un-recoverable event. For more information, see [Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the API](/docs/monitoring?topic=monitoring-metrics_api). |
 | `{{site.data.keyword.mon_short}} agent`    |   |  Recovery of the {{site.data.keyword.mon_short}} agents running in your environment should they be impacted by a disaster. |
-{: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
+{: caption="Responsibilities for disaster recovery" caption-side="top"}

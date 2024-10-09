@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -70,7 +70,7 @@ PromQL alerts query the same metrics as metric alerts. The difference between th
 | Multithreshold Support |	Must create two alerts for multiple thresholds |
 | No Duration |	Duration creates an additional `Pending` alert state |
 | Queries return all the time series by default |	Queries only return time series that satisfy the alert query |
-{: caption="Table 1. Differences between PromQL and Metric alerts" caption-side="bottom"}
+{: caption="Differences between PromQL and Metric alerts" caption-side="bottom"}
 
 ## Handling No Data and multiple thresholds
 {: #alert-promql-nodata}
@@ -147,4 +147,3 @@ groups:
       description: Nginx p99 latency is higher than 3 seconds
 ```
 {: codeblock}
-

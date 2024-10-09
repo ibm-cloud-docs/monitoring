@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-07-26"
+  years:  2018, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -30,7 +30,7 @@ You can monitor metrics through the {{site.data.keyword.mon_short}} web UI, or t
 
 The following figure shows the components overview for the {{site.data.keyword.mon_full_notm}} service that is running on {{site.data.keyword.cloud_notm}}:
 
-![{{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}](images/overview.svg "{{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}"){: caption="Figure 1. {{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
+![{{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}](images/overview.svg "{{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}"){: caption="{{site.data.keyword.mon_full_notm}} component overview on the {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
 
 When you configure a {{site.data.keyword.mon_short}} agent, data for default metrics is automatically collected. These metrics include metadata that you can use to label, segment, and display metrics when you monitor them. You do not need additional instrumentation or configuration in your hosts to obtain metrics that are collected automatically by the agent to gain insight into what is happening in them.
@@ -55,7 +55,7 @@ You can monitor hosts in {{site.data.keyword.cloud_notm}}, on-prem, and in other
 | VMware Solutions | [Monitoring for VMware Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared-monitor) |
 | VMware as a service | [Monitoring for VMware as a service](/docs/vmware-service?topic=vmware-service-single-tenant-monitoring#single-tenant-monitoring-metrics) |
 | VMware self-managed solution - vCenter Server with NSX-T architecture | [Monitoring for VMware vCenter Server deployments](/docs/monitoring?topic=monitoring-vmware-vcenter) |
-{: caption="Table 1. Get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"}
+{: caption="Get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
 

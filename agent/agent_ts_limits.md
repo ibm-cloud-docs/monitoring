@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-03-27"
+  years:  2018, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -31,7 +31,7 @@ Complete the following steps:
 
 The dashboard displays the limit of custom time series that are collected per agent for each host.
 
-![Sysdig Agent Health & Status dashboard showing agent versions](../images/agent_version.png "Sysdig Agent Health & Status dashboard showing agent versions"){: caption="Figure 1. Sysdig Agent Health & Status dashboard showing agent versions" caption-side="bottom"}
+![Sysdig Agent Health & Status dashboard showing agent versions](../images/agent_version.png "Sysdig Agent Health & Status dashboard showing agent versions"){: caption="Sysdig Agent Health & Status dashboard showing agent versions" caption-side="bottom"}
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -50,7 +50,7 @@ The following table shows the user roles that you can grant a user to work with 
 | `ROLE_USER`          | `reader`         |
 | `ROLE_ADVANCED_USER` | `writer`         |
 | `ROLE_ADMIN`         | `manager`        |
-{: caption="Table 1. List of user roles" caption-side="top"}
+{: caption="List of user roles" caption-side="top"}
 
 
 The following table shows the team roles that you can grant users to work within the context of a team in an {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} instance:
@@ -61,7 +61,7 @@ The following table shows the team roles that you can grant users to work within
 | `ROLE_TEAM_EDIT`     | `writer`         | Custom team |
 | `ROLE_TEAM_ADMIN`    | `manager`        | Custom team |
 | `ROLE_TEAM_SECURE_MANAGER`  | `manager` | `Secure operations`  |
-{: caption="Table 2. List of team roles" caption-side="top"}
+{: caption="List of team roles" caption-side="top"}
 
 You can define in the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} UI more teams to define different levels of access to data per team and set of users.
 

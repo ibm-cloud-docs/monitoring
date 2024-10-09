@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -32,7 +32,7 @@ SMS messages can only be sent to phone numbers in the United States and Canada.
 {{site.data.keyword.en_full_notm}} supports message concatenation so SMS messages longer than 160 characters can be sent.  However, messages will be sent in blocks of at most 160 characters.  Multiple messages might result in additional charges to the recipient.
 {: note}
 
-![Data flow](../images/event_notification_sms.svg){: caption="Figure 1. Data flow for this tutorial" caption-side="bottom"}
+![Data flow](../images/event_notification_sms.svg){: caption="Data flow for this tutorial" caption-side="bottom"}
 
 In this tutorial you will configure the following flow:
 
@@ -80,11 +80,11 @@ In this step you will configure who will receive an SMS message when a notificat
     * For **Destination**, select `IBM Cloud SMS service`.
     * For **Recipients**, enter up to 100 phone numbers to receive SMS messages.  Phone numbers must be specified as a `+` followed by the country code and full number specified without dashes.  For example, `+19999999999`.  Only phone numbers in the United States and Canada can be specified.
 
-    ![Create subscription](../images/create_subscription_sms.png){: caption="Figure 5. Create subscription" caption-side="bottom"}
+    ![Create subscription](../images/create_subscription_sms.png){: caption="Create subscription" caption-side="bottom"}
 
 4. Click **Create**.  Your subscription will be added to the **Subscriptions** list.
 
-    ![Subscriptions list](../images/subscriptions_sms.png){: caption="Figure 5. Subscriptions list" caption-side="bottom"}
+    ![Subscriptions list](../images/subscriptions_sms.png){: caption="Subscriptions list" caption-side="bottom"}
 
 {{site.data.content.en-mon-notification}}
 
@@ -93,4 +93,4 @@ In this step you will configure who will receive an SMS message when a notificat
 
 You should start receiving SMS notifications at the phone numbers that you configured whenever the criteria defined in both {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.en_full_notm}} match.
 
-![SMS example](../images/sms_example.png){: caption="Figure 6. SMS example" caption-side="bottom"}
+![SMS example](../images/sms_example.png){: caption="SMS example" caption-side="bottom"}
