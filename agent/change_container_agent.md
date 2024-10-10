@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -185,4 +185,4 @@ The monitoring agent generates log entries in */opt/draios/logs/draios.log*.
 | Reduce container console output               | `console_priority: warning` |
 | Filtering events by severity                  | `event_priority: warning`   |
 | Verify what metrics are included or excluded  | `metrics_excess_log: true`  |
-{: caption="Table 2. Log section entries" caption-side="top"}
+{: caption="Log section entries" caption-side="top"}

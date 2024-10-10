@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -45,7 +45,7 @@ The following table lists the high-availability (HA) status for the regions (loc
 | `North America`       | `Washington (us-east)`   | `MZR`     |
 | `North America`       | `Toronto (ca-tor)`       | `MZR`     |
 | `South America`       | `São-Paulo (br-sao)`     | `MZR`     |
-{: caption="Table 1. List of locations where the service is available" caption-side="top"}
+{: caption="List of locations where the service is available" caption-side="top"}
 
 Where
 * A *geography* is a geographic area or larger political body that contains one or more regions.
@@ -122,4 +122,4 @@ The following table indicates the estimated recovery times in the event of a DR 
 |---------------------------|----------------|
 | Maximum Tolerable Downtime (MTD) / Recovery Time Objective (RTO)  | Up to 24 hours |
 | Recovery Point Objective (RPO) | Up to 24 hours |
-{: caption="Table 2. Recovery objectives for DR" caption-side="top"}
+{: caption="Recovery objectives for DR" caption-side="top"}

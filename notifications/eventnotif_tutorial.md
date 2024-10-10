@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -26,7 +26,7 @@ completion-time: 1h
 In this tutorial, you learn how to set up {{site.data.keyword.mon_full}} to send alert notifications to {{site.data.keyword.en_full_notm}}. For this tutorial {{site.data.keyword.en_full_notm}} is configured to send email notifications to subscribers.
 {: shortdesc}
 
-![Data flow](../images/event_notification.svg){: caption="Figure 1. Data flow for this tutorial" caption-side="bottom"}
+![Data flow](../images/event_notification.svg){: caption="Data flow for this tutorial" caption-side="bottom"}
 
 In this tutorial you will configure the following flow:
 
@@ -74,11 +74,11 @@ In this step you will configure who will receive an email when a notification is
     * For **Destination** select `IBM Cloud Email service`.
     * For **Recipients** enter a valid email address, for example, `MyEmail@MyCompany.com`
 
-    ![Create subscription](../images/create_subscription.png){: caption="Figure 5. Create subscription" caption-side="bottom"}
+    ![Create subscription](../images/create_subscription.png){: caption="Create subscription" caption-side="bottom"}
 
 4. Click **Create**.  Your subscription will be added to the **Subscriptions** list.
 
-    ![Subscriptions list](../images/subscriptions.png){: caption="Figure 5. Subscriptions list" caption-side="bottom"}
+    ![Subscriptions list](../images/subscriptions.png){: caption="Subscriptions list" caption-side="bottom"}
 
 {{site.data.content.en-mon-notification}}
 

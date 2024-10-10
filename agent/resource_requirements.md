@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -43,7 +43,7 @@ Consider the following environment definitions.
 | Small | 8 or less CPU cores  \n 10 or less Kubernetes nodes |
 | Medium | Between 9 and 32 CPU cores  \n Between 10 and 100 Kubernetes nodes |
 | Large | More than 32 CPU cores  \n More than 100 Kubernetes nodes |
-{: caption="Table 1. Example environment sizings" caption-side="bottom"}
+{: caption="Example environment sizings" caption-side="bottom"}
 
 The following recommendations can improve behavior instead of when you use default values. Your environment might require different resources depending on your requirements. The values should only be used for general information.
 {: important}
@@ -56,7 +56,7 @@ The following recommendations can improve behavior instead of when you use defau
 | Kubernetes Memory Limit | 1024 MB | 3072 MD | 6144 MB |
 | Dragent Memory Watchdog | 512 MB | 1024 MB | 2048 MB |
 | Cointerface Memory Watchdog | 512 MB | 2048 MB | 4096 MB |
-{: caption="Table 2. Configuration considerations based on environment sizes" caption-side="bottom"}
+{: caption="Configuration considerations based on environment sizes" caption-side="bottom"}
 
 The {{site.data.keyword.mon_short}} agent has its own memory watchdog to prevent runaway memory consumption on the host in case of memory leaks. The [agent configuration file](/docs/monitoring?topic=monitoring-change_kube_agent) can be modified to meet your environment needs.
 

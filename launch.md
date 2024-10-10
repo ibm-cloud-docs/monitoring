@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 
 keywords: 
@@ -31,7 +31,7 @@ The following table lists the minimum policies that a user must have to be able 
 |--------------------------------|---------------------------|------------------------|
 | `{{site.data.keyword.mon_full_notm}}` | Platform role: Viewer     | Allows the user to view the list of service instances in the Observability Monitoring dashboard. |
 | `{{site.data.keyword.mon_full_notm}}` | Service role: Writer      | Allows the user to launch the Web UI and view metrics in the Web UI.  |
-{: caption="Table 1. IAM policies" caption-side="top"}
+{: caption="IAM policies" caption-side="top"}
 
 For more information on how to configure these policies for a user, see [Granting permissions to launch the monitoring UI or to make REST API calls](/docs/monitoring?topic=monitoring-iam_grant).
 
@@ -97,5 +97,3 @@ To access the *{{site.data.keyword.sysdigsecure_short}}* UI, complete the follow
 6. Select **Workload Protection** to launch the {{site.data.keyword.sysdigsecure_short}} UI.
 
 For more information on using {{site.data.keyword.sysdigsecure_short}}, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
-
-

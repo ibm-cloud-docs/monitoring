@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-09-13"
+  years:  2018, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -26,7 +26,7 @@ You cannot control when an {{site.data.keyword.cloud_notm}} service makes the sw
 Data is not sent to both locations, complete the steps before that switch is done by a service to mitigate any loss of data.
 {: important}
 
-![Flow of metrics in a single region](images/Cloud-Monitoring-05-Madrid-MZR.svg "The {{site.data.keyword.mon_full_notm}} service"){: caption="Figure 1. Flow of metrics in a single region" caption-side="bottom"}
+![Flow of metrics in a single region](images/Cloud-Monitoring-05-Madrid-MZR.svg "The {{site.data.keyword.mon_full_notm}} service"){: caption="Flow of metrics in a single region" caption-side="bottom"}
 
 Complete the following steps to enable the service in the new region:
 

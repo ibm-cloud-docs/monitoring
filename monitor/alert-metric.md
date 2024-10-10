@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -54,7 +54,7 @@ Define the threshold and time range for assessing the alert condition.
 | sum | The sum of the metric across the evaluated time period. |
 | maximum | The maximum of the retrieved metric values across the time period. |
 | minimum | The minimum of the retrieved metric values across the time period. |
-{: caption="Table 1. Aggregation methods" caption-side="bottom"}
+{: caption="Aggregation methods" caption-side="bottom"}
 
 ## Images in metric alert notifications
 {: #alert-metric-image}
@@ -89,4 +89,3 @@ Thresholds are configured separately from the query, allowing the user to specif
 
 Metric alerts translated from form to PromQL do not support configuring a duration.
 {: note}
-

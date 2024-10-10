@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-10-23"
+  years:  2018, 2024
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -140,7 +140,7 @@ The following table outlines the different actions and user permissions that are
 |------------|-------------------|-------------------------|--------------------------------|-----------------------------|
 | Copy to current Team    |	Users in the team with editor permissions | New dashboard instance  | Team members with viewing permissions	 | Users in the team with editor permissions |
 | Copy to another Team    | Users in the team with editor permissions in both teams | New dashboard instance  | If the original dashboard is not shared, only the user who copies the dashboard has access.  \n If the original dashboard is shared, all team members of the team has access. | If the original dashboard is not shared, only the user who copies the dashboard.  \n If the original dashboard is shared, all team members of the team with editor permissions. |
-{: caption="Table 2. Information about users and dashboards related to copying dashboards" caption-side="top"}
+{: caption="Information about users and dashboards related to copying dashboards" caption-side="top"}
 
 Complete the following steps to copy a dashboard in the Web UI:
 
@@ -173,7 +173,7 @@ The following table outlines the different actions and user permissions that are
 |-------------|-------------------|-----------------------------|------------------------------------|-----------------------------|
 | Share with current Team |	Dashboard creator         |	Share same dashboard instance   | Team members with viewing permissions  | Team members with editing permissions   |
 | Share publicly as URL	  | Any Edit User of the team |	Share same dashboard instance   | Anyone     | No one                      |
-{: caption="Table 3. Information about users and dashboards related to sharing dashboards" caption-side="top"}
+{: caption="Information about users and dashboards related to sharing dashboards" caption-side="top"}
 
 
 Complete the following steps to share a dashboard in the Web UI:

@@ -5,7 +5,7 @@ toc:
     version: 2
     category: logging_monitoring
     audience: service
-    href: /docs/monitoring?topic=monitoring-getting-started#getting-started
+    href: /docs/monitoring
     console-page: /observe/monitoring
     product-page: https://www.ibm.com/cloud/cloud-monitoring
     path: monitoring

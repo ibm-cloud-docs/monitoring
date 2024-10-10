@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-10-23"
+  years:  2018, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -51,7 +51,7 @@ The following global attributes are available for segmenting metrics:
 | `Service instance name` | `ibm_service_instance_name` | Service instance name.  \n This field provides the user-provided name of the service instance which isn't necessarily a unique value depending on the name provided by the user. |
 | `Resource group name`   | `ibm_resource_group_name`   | The resource group name where the service instance is created. |
 | `Resource group ID`     | `ibm_resource_group_id`     | The resource group GUID where the service instance is created. |
-{: caption="Table 1. Global attributes" caption-side="top"}
+{: caption="Global attributes" caption-side="top"}
 
 Other attributes are available per {{site.data.keyword.cloud_notm}} service. In the [Cloud services](/docs/monitoring?topic=monitoring-cloud_services) topic, identify the service that you want to monitor and go to the *More info* section. Look for the section **Attributes for segmentation** to get the list of attributes that you can use to segment metrics for that service.
 

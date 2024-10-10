@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-09-20"
+  years:  2018, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -29,7 +29,7 @@ Use this tutorial to learn how to configure an {{site.data.keyword.containerlong
 
 To configure a cluster to forward metrics, you must install a monitoring agent onto each worker node in your Kubernetes cluster by using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/){: external}. The monitoring agent uses an access key (token) to authenticate with the {{site.data.keyword.mon_full_notm}} instance. The monitoring agent acts as a data collector. It automatically collects metrics such as *worker node CPU* and *worker node memory* usage, *HTTP traffic into and out of your containers*, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade.
 
-![Components overview on the {{site.data.keyword.cloud_notm}}](images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}"){: caption="Figure 1. Components overview on the {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
+![Components overview on the {{site.data.keyword.cloud_notm}}](images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}"){: caption="Components overview on the {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
 For example, to configure your Kubernetes cluster to forward metrics to your {{site.data.keyword.mon_full_notm}} instance, you can deploy the agent by using Helm or a script:
 - [Helm](/docs/monitoring?topic=monitoring-agent-deploy-kube-helm)
@@ -119,7 +119,7 @@ In this tutorial, you configure metrics for your {{site.data.keyword.containerlo
 | Resource group **default**           |  Resource group            | Viewer  | US-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
 | {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | Us-south  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the default resource group.   |
 | Kubernetes cluster instance          |  Resource                 | Editor  | Us-south  | This policy is required to configure the secret and the monitoring agent in the Kubernetes cluster. |
-{: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"}
+{: caption="List of IAM policies required to complete the tutorial" caption-side="top"}
 
 For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
 

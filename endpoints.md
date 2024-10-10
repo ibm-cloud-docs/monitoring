@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -43,7 +43,7 @@ The following table lists the endpoints that are available per region:
 | Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237       | https (TLS) 443 |
 | Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82        | https (TLS) 443 |
    | https (TLS) 443 |
-{: caption="Table 1. List of endpoints" caption-side="top"}
+{: caption="List of endpoints" caption-side="top"}
 
 
 
@@ -71,7 +71,7 @@ The following table lists the *Private API endpoints* that are available per reg
 | Tokyo (`JP-TOK`)    | `private.jp-tok.monitoring.cloud.ibm.com/api`     | 166.9.249.112    \n 166.9.249.141    \n 166.9.249.177           |
 | Toronto (`CA-TOR`)  | `private.ca-tor.monitoring.cloud.ibm.com/api`   | 166.9.247.153    \n 166.9.247.185    \n 166.9.247.205      |
 | Washington (`US-East`)   | `private.us-east.monitoring.cloud.ibm.com/api`    | 166.9.231.240    \n 166.9.232.28    \n 166.9.233.17         |
-{: caption="Table 2. Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
+{: caption="Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
 
 
@@ -93,7 +93,7 @@ The following table lists the *Private API endpoints* that are available per reg
 | Tokyo (`JP-TOK`)    | `https://jp-tok.monitoring.cloud.ibm.com/api`        |
 | Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com/api`        |
 | Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com/api`       |
-{: caption="Table 3. Public REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
+{: caption="Public REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
 
 
@@ -124,7 +124,7 @@ The following table lists the *Private Collector endpoints* that are available p
 | Tokyo (`JP-TOK`)    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38  \n 166.9.40.35  \n 166.9.42.48      | TCP 6443  |  TCP 443  |
 | Toronto (`CA-TOR`)  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | 166.9.77.20  \n 166.9.76.23  \n 166.9.78.21    | TCP 6443  |  TCP 443  |
 | Washington (`US-East`)   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53       | TCP 6443  |  TCP 443  |
-{: caption="Table 4. List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
+{: caption="List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
 
@@ -146,7 +146,7 @@ The following table lists the *Public Collector endpoints* that are available pe
 | Toronto (`CA-TOR`)    | `ingest.ca-tor.monitoring.cloud.ibm.com`            | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237     | TCP 6443 | TCP 443  |
 | Tokyo (`JP-TOK`)    | `ingest.jp-tok.monitoring.cloud.ibm.com`            | 165.192.84.14  \n 128.168.75.14  \n 169.56.51.238     | TCP 6443 | TCP 443  |
 | Washington (`US-East`)   | `ingest.us-east.monitoring.cloud.ibm.com`           | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82      | TCP 6443 | TCP 443  |
-{: caption="Table 5. List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
+{: caption="List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
 
@@ -170,7 +170,7 @@ The following table lists the public {{site.data.keyword.mon_short}} ingestion e
 | Tokyo (`JP-TOK`)              | `https://ingest.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | Toronto (`CA-TOR`)              | `https://ingest.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | Washington (`US-EAST`)             | `https://ingest.us-east.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.us-east.monitoring.cloud.ibm.com/prometheus/remote/write`  |
-{: caption="Table 6. Prometheus remote write public endpoints" caption-side="top"}
+{: caption="Prometheus remote write public endpoints" caption-side="top"}
 
 The following table lists the private {{site.data.keyword.mon_short}} ingestion endpoints that you can configure to collect metrics via Prometheus Remote Write:
 
@@ -186,7 +186,7 @@ The following table lists the private {{site.data.keyword.mon_short}} ingestion 
 | Tokyo (`JP-TOK`)              | `https://ingest.private.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write` |
 | Toronto (`CA-TOR`)              | `https://ingest.private.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write`  |
 | Washington (`US-EAST`)             | `https://ingest.private.us-east.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.us-east.monitoring.cloud.ibm.com/prometheus/remote/write` |
-{: caption="Table 7. Prometheus remote write private endpoints" caption-side="top"}
+{: caption="Prometheus remote write private endpoints" caption-side="top"}
 
 
 ## Subnets for webhook notifications from {{site.data.keyword.mon_full_notm}}
@@ -207,4 +207,4 @@ To receive alert notifications by using webhooks from the {{site.data.keyword.mo
 | Tokyo (`JP-TOK`)   | 128.168.75.32/28  \n 128.168.75.8/29  \n 128.168.98.0/27  \n 161.202.255.64/27  \n 165.192.84.8/29  \n 165.192.97.96/27  \n 169.56.11.208/28  \n 169.56.51.232/29  |
 | Toronto (`CA-TOR`)   | 158.85.78.224/27  \n 158.85.94.128/29  \n 163.74.67.192/28  \n 163.74.69.184/29  \n 163.74.71.96/27  \n 163.75.65.232/29  \n 163.75.72.192/27  \n 169.55.129.208/28  |
 | Washington (`US-EAST`)  | 169.47.20.160/27  \n 169.55.109.112/29  \n 169.55.122.192/28  \n 169.59.131.160/27  \n 169.59.146.192/26  \n 169.60.112.72/29  \n 169.60.82.240/28  \n 169.62.28.160/28  \n 169.62.3.80/29  \n 169.62.46.192/27  \n 52.116.95.64/26  \n 52.117.71.128/26  |
-{: caption="Table 8. Source Subnets for Webhook notifications from {{site.data.keyword.mon_full_notm}}" caption-side="top"}
+{: caption="Source Subnets for Webhook notifications from {{site.data.keyword.mon_full_notm}}" caption-side="top"}

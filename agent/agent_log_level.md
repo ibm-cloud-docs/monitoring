@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -37,7 +37,7 @@ You can configure the level of detail that is written by a monitoring agent to i
 | `info`          | Reports an entry for each aggregated metrics transmission to the backend servers, once per second. </br>Reports entries for any warnings and errors. |
 | `error`         | Reports error logs only.             |
 | `trace`         | Reports all logs that are available. |
-{: caption="Table 1. Log levels" caption-side="top"}
+{: caption="Log levels" caption-side="top"}
 
 * To get the least number of log entries, set the log level to *error*.
 * To get the full set of available logs, set the log level to *trace*.
@@ -54,7 +54,7 @@ For example, consider the following use cases and the log section that you can c
 | Reduce container console output               | `console_priority: warning` |
 | Filtering events by severity                  | `event_priority: warning`   |
 | Verify what metrics are included or excluded  | `metrics_excess_log: true`  |
-{: caption="Table 2. Log section entries" caption-side="top"}
+{: caption="Log section entries" caption-side="top"}
 
 
 ## Checking the log level of an agent

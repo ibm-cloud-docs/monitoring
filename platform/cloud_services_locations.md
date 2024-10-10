@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-03-04"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -266,7 +266,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 |---------------------------------------------------------------|-------------------|----------------|----------|
 | {{site.data.keyword.loadbalancer_full}}                |                 |    |  |
 | Load Balancer for VPC              |    |    |  |
-{: caption="Table 12. Security services integration in Europe locations" caption-side="top"}
+{: caption="Security services integration in Europe locations" caption-side="top"}
 {: #cs-csint-table-3}
 {: tab-title="Europe"}
 {: tab-group="cs_csint"}
@@ -277,7 +277,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 |-----------------------------------------------------------------|---------------------|--------------------------------------|
 | {{site.data.keyword.loadbalancer_full}}         | ![Checkmark icon](../images/checkmark-icon.svg)               |            |
 | Load Balancer for VPC                          | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
-{: caption="Table 10. Security services integration in America's locations" caption-side="top"}
+{: caption="Security services integration in America's locations" caption-side="top"}
 {: #cs-csint-table-1}
 {: tab-title="America"}
 {: tab-group="cs_csint"}
@@ -288,7 +288,7 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 |-----------------------------------------------------------------|----------------|---------------------------|
 | {{site.data.keyword.loadbalancer_full}}                   |      |    |
 | Load Balancer for VPC          |     |    |
-{: caption="Table 11. Security services integration in AP locations" caption-side="top"}
+{: caption="Security services integration in AP locations" caption-side="top"}
 {: #cs-csint-table-2}
 {: tab-title="Asia Pacific"}
 {: tab-group="cs_csint"}

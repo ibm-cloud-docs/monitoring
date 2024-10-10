@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -32,7 +32,7 @@ You can collect metrics from different sources such as:
 - Hosts for which a {{site.data.keyword.mon_short}} agent is available, but you need to collect other types of metrics such as IPMI sensor metrics or hardware and kernel-relaed metrics.
 - Services like MySQL database
 
-![Prometheus integration with {{site.data.keyword.mon_short}}](images/prometheus.svg "Prometheus integration with {{site.data.keyword.mon_short}}"){: caption="Figure 1. Prometheus integration with {{site.data.keyword.mon_short}}" caption-side="bottom"}
+![Prometheus integration with {{site.data.keyword.mon_short}}](images/prometheus.svg "Prometheus integration with {{site.data.keyword.mon_short}}"){: caption="Prometheus integration with {{site.data.keyword.mon_short}}" caption-side="bottom"}
 
 The following table lists some Prometheus exporters that you can use to monitor your infrastructure:
 
@@ -43,7 +43,7 @@ The following table lists some Prometheus exporters that you can use to monitor 
 | `Windows WMI Exporter`   | Collects Windows system metrics. | [PromCat: Windows Exporter](https://promcat.io/apps/windows){: external} (opensource) |
 | `Node Exporter`          | Collects hardware and kernel-related metrics that are exposed by *NIX kernels. | [Node exporter](https://github.com/prometheus/node_exporter){: external} (official) |
 | `VMware Exporter`        | Collects metrics from VMware vCenter deployments. | [VMWare exporter](https://github.com/pryorda/vmware_exporter){: external} (Opensource) |
-{: caption="Table 1. Exporters" caption-side="top"}
+{: caption="Exporters" caption-side="top"}
 
 
 ## Windows exporter
@@ -65,7 +65,7 @@ The following collectors are supported:
 | `system`       | [System metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.system.md){: external} |
 | `net`          | [Network interface metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.net.md){: external} |
 | `memory`       | [Memory metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.memory.md){: external} |
-{: caption="Table 1. Collectors" caption-side="top"}
+{: caption="Collectors" caption-side="top"}
 
 
 To learn how to configure the Windows exporter, see [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows).

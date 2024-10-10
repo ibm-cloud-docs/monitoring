@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -26,7 +26,7 @@ When you provision an instance of the {{site.data.keyword.mon_short}} service, y
 | `Lite`                                     | `367a3918-9efc-43c5-bef9-20553051b7af` | `lite`                      |
 | `Graduated tier`                           | `231bb072-1b2f-4d7e-ae9e-9574d382be32` | `graduated-tier`            |
 | `Graduated Tier - Sysdig Secure + Monitor (*)` | `35784193-e918-42d9-9598-4e842ed75192` | `graduated-tier-sysdig-secure-plus-monitor` |
-{: caption="Table 1. Service plans" caption-side="top"}
+{: caption="Service plans" caption-side="top"}
 
 `(*)` Not available in the Madrid (eu-es) region.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -38,7 +38,7 @@ The following table lists some of the Python functions that you can use to manag
 | Add dashboard panel | `sdclient.add_dashboard_panel(dashboard_name, panel_name, panel_type, metrics, sort_direction=sort_direction, limit=limit, layout=layout)` |
 | Remove a panel | `sdclient.remove_dashboard_panel(dashboard_name, 'CPU Over Time')` |
 | Save a dashboard to a file | `sdclient.save_dashboard_to_file('dashboard_name', 'dashboard_name.json')` |
-{: caption="Table 1. Dashboard Python functions" caption-side="top"}
+{: caption="Dashboard Python functions" caption-side="top"}
 
 
 ## List dashboards per team

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -32,7 +32,7 @@ In addition to the set of metrics that are automatically collected by the monito
 
 The following figures shows different configurations that you can use to monitor sensor metrics from hosts that can be available in IBM Cloud or outside the IBM Cloud:
 
-![IPMI components](images/ipmi-kube1.svg "IPMI components: IPMI exporter and Kubernetes agent in different hosts"){: caption="Figure 1. IPMI components: IPMI exporter and Kubernetes agent in different hosts" caption-side="bottom"}
+![IPMI components](images/ipmi-kube1.svg "IPMI components: IPMI exporter and Kubernetes agent in different hosts"){: caption="IPMI components: IPMI exporter and Kubernetes agent in different hosts" caption-side="bottom"}
 
 You can collect the following metrics when you configure the IPMI exporter in a server:
 
@@ -362,9 +362,9 @@ Complete the following steps to update the monitoring agent to collect IPMI metr
 | Voltage | `ipmi_voltage_volts` | `number (auto)` |
 | Temperature Celsius | `ipmi_temperature_celsius` | `number (auto)` |
 | Fan speed RPM | `ipmi_fan_speed_rpm` | `number (auto)` |
-{: caption="Table 1. IPMI exporter sample queries" caption-side="top"}
+{: caption="IPMI exporter sample queries" caption-side="top"}
 
 
 For example, you can create a dashboard that looks as follows:
 
-![Sample IPMI dashboard](images/ipmi-ui-1.png "Sample IPMI dashboard"){: caption="Figure 2. Sample IPMI dashboard" caption-side="bottom"}
+![Sample IPMI dashboard](images/ipmi-ui-1.png "Sample IPMI dashboard"){: caption="Sample IPMI dashboard" caption-side="bottom"}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2021, 2023
-lastupdated: "2023-09-20"
+  years:  2018, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -109,7 +109,7 @@ In this tutorial, you configure metrics for your {{site.data.keyword.openshiftsh
 | Resource group **default**           |  Resource group            | Viewer  | us-south  | This policy is required to allow the user to see service instances in the Default resource group.    |
 | {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | us-south  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the default resource group.   |
 | {{site.data.keyword.redhat_openshift_notm}} cluster instance          |  Resource                 | Editor  | us-south  | This policy is required to configure the secret and the monitoring agent in the {{site.data.keyword.openshiftshort}} cluster. |
-{: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"}
+{: caption="List of IAM policies required to complete the tutorial" caption-side="top"}
 
 For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
 

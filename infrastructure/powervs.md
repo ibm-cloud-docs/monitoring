@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -78,7 +78,7 @@ Your {{site.data.keyword.IBM_notm}}ID must have assigned IAM policies for each o
 |--------------------------------------|----------------------------|---------|-----------|------------------------------|
 | Resource group **default**           |  Resource group            | Viewer  | `US South`  | This policy is required to allow the user to see service instances in the **default** resource group.    |
 | {{site.data.keyword.mon_full_notm}} service |  Resource group            | Editor  | `US South`  | This policy is required to allow the user to provision and administer the {{site.data.keyword.mon_full_notm}} service in the **default** resource group.   |
-{: caption="Table 1. List of IAM policies required to complete the tutorial" caption-side="top"}
+{: caption="List of IAM policies required to complete the tutorial" caption-side="top"}
 
 The {{site.data.keyword.cloud_notm}} CLI must be installed. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 

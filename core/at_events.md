@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-10-09"
 
 keywords: 
 
@@ -34,7 +34,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.alert.update`         | An event is created when you update an alert definition |
 | `sysdig-monitor.alert.delete`         | An event is created when you delete an alert definition |
 | `sysdig-monitor.alert.list`           | An event is created when you view the alerts in the monitoring instance  |
-{: caption="Table 1. Alerts: List of activity tracker actions" caption-side="top"}
+{: caption="Alerts: List of activity tracker actions" caption-side="top"}
 
 ## Captures: List of management events
 {: #at_events_captures}
@@ -46,7 +46,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.capture.read`         | An event is created when you load a Monitoring capture in the dashboard |
 | `sysdig-monitor.capture.update`       | An event is created when you update a Monitoring capture |
 | `sysdig-monitor.capture.delete`       | An event is created when you delete a Monitoring capture |
-{: caption="Table 2. Captures: List of activity tracker actions" caption-side="top"}
+{: caption="Captures: List of activity tracker actions" caption-side="top"}
 
 
 ## Dashboards: List of management events
@@ -60,7 +60,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.dashboard.update`     | An event is created when you update a dashboard |
 | `sysdig-monitor.dashboard.delete`     | An event is created when you delete a dashboard |
 | `sysdig-monitor.dashboard.list`       | An event is created when you view the dashboards in the monitoring instance |
-{: caption="Table 3. Dashboards: List of activity tracker actions" caption-side="top"}
+{: caption="Dashboards: List of activity tracker actions" caption-side="top"}
 
 
 
@@ -75,7 +75,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.team.update`          | An event is created when you update a Monitoring team definition |
 | `sysdig-monitor.team.delete`          | An event is created when you delete a Monitoring team |
 | `sysdig-monitor.team.list`            | An event is created when you view the Monitoring teams |
-{: caption="Table 4. Captures: List of activity tracker actions" caption-side="top"}
+{: caption="Captures: List of activity tracker actions" caption-side="top"}
 
 
 

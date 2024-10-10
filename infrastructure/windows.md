@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-07-27"
+  years:  2018, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -50,7 +50,7 @@ If you accept the defaults when installing using the wizard, the following colle
 | `os` | Operating System metrics |
 | `system` | System metrics |
 | `net` |  Network interface metrics |
-{: caption="Table 1. Default collectors" caption-side="bottom"}
+{: caption="Default collectors" caption-side="bottom"}
 
 All collectors that can be configured can be found in the [Prometheus exporter documentation](https://github.com/prometheus-community/windows_exporter/tree/v0.20.0#collectors){: external}.
 
@@ -71,7 +71,7 @@ Complete the following steps to configure the Windows Prometheus Bundle in your 
 
 7. Select the collectors that you want to enable to generate metrics.
 
-   ![Windows Exporter selections](../images/windows_exporters.png "Windows Exporter selections"){: caption="Figure 1. Windows Exporter selections" caption-side="bottom"}
+   ![Windows Exporter selections](../images/windows_exporters.png "Windows Exporter selections"){: caption="Windows Exporter selections" caption-side="bottom"}
 
    The most commonly used metrics can be selected. Additional [Windows Exporter](https://github.com/prometheus-community/windows_exporter){: external} metrics can be added as a comma separated list.
 
@@ -85,4 +85,4 @@ Complete the following steps to configure the Windows Prometheus Bundle in your 
 
 You can use the default dashboard `Windows Host Overview` to view the Windows metrics. This default dashboard is located in the **Dashboards** > **Applications** section. The `Windows Process Overview` dashboard is available when you have `process` metrics enabled. The `Windows Services Overview` dashboard is available when you have `service` metrics enabled. You can also search the **Alerts** > **Library** for `Windows` for available default alerts.
 
-![Example of a Windows metrics dashboard](images/windows_dashboard.png "Example of a Windows metrics dashboard"){: caption="Figure 1. Example of a Windows metrics dashboard" caption-side="bottom"}
+![Example of a Windows metrics dashboard](images/windows_dashboard.png "Example of a Windows metrics dashboard"){: caption="Example of a Windows metrics dashboard" caption-side="bottom"}

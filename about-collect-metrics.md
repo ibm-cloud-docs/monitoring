@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-09-20"
+  years:  2018, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -110,7 +110,7 @@ You can collect metrics from:
 - Non-x86 based architectures, typically seen on IoT environments or Edge computing.
 - Non-containerized workloads, such as NGNIX, custom applications, RabbitMQ, and others.
 
-![Prometheus remote write option](/images/prometheus_rw.svg "Prometheus remote write"){: caption="Figure 1. Prometheus remote write" caption-side="bottom"}
+![Prometheus remote write option](/images/prometheus_rw.svg "Prometheus remote write"){: caption="Prometheus remote write" caption-side="bottom"}
 
 You can monitor the metrics that are collected by using Prometheus remote write through the {{site.data.keyword.mon_short}} web UI. You can also use PromQL to query the data by using the standard Prometheus query language.
 
@@ -131,7 +131,7 @@ You can collect metrics from different sources such as:
 - Hosts for which a {{site.data.keyword.mon_short}} agent is available, but you need to collect other types of metrics such as IPMI sensor metrics or hardware and kernel-relaed metrics.
 - Services like MySQL database
 
-![Prometheus integration with {{site.data.keyword.mon_short}}](/exporters/images/prometheus.svg "Prometheus integration with {{site.data.keyword.mon_short}}"){: caption="Figure 1. Prometheus integration with {{site.data.keyword.mon_short}}" caption-side="bottom"}
+![Prometheus integration with {{site.data.keyword.mon_short}}](/exporters/images/prometheus.svg "Prometheus integration with {{site.data.keyword.mon_short}}"){: caption="Prometheus integration with {{site.data.keyword.mon_short}}" caption-side="bottom"}
 
 For more information, see [Collecting metrics by using Prometheus exporters](/docs/monitoring?topic=monitoring-prometheus-exporters).
 
