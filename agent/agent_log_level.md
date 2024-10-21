@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-21"
 
 keywords: 
 
@@ -34,7 +34,7 @@ You can configure the level of detail that is written by a monitoring agent to i
 | Log level       | Detail                               |
 |-----------------|--------------------------------------|
 | `none`          | No errors are reported.              |
-| `info`          | Reports an entry for each aggregated metrics transmission to the backend servers, once per second. </br>Reports entries for any warnings and errors. |
+| `info`          | Reports an entry for each aggregated metrics transmission to the backend servers, once per second.   \n Reports entries for any warnings and errors. |
 | `error`         | Reports error logs only.             |
 | `trace`         | Reports all logs that are available. |
 {: caption="Log levels" caption-side="top"}
