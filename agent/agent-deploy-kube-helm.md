@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-06-22"
+  years:  2018, 2024
+lastupdated: "2024-11-06"
 
 keywords:
 
@@ -38,7 +38,7 @@ You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.m
 
 Complete the following steps to deploy an agent by using Helm:
 
-### Step 1. Setup de Sysdig Helm repository
+### Step 1. Setup the Sysdig Helm repository
 {: #agent-deploy-kube-helm-install-step1}
 
 Add the {{site.data.keyword.mon_short}} Helm repository to your Helm instance.
