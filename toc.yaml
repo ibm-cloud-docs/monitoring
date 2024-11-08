@@ -312,6 +312,8 @@ toc:
       - collect-metrics-by-host.md
       - agent_support.md
       - core/shared-responsibilities.md
+      - topic: core/data-portability.md
+        navtitle: Data portability
       - wpp-migration.md
       - topicgroup:
           label: Monitoring CLI
