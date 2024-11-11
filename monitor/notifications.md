@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-11-11"
 
 keywords: 
 
@@ -48,8 +48,6 @@ Complete the following steps to add a notification channel:
         * For an **Email** notification channel, add the list of recipients, separated by commas.
 
         * For a **Slack** notification channel, add the URL of the *Slack channel*.
-
-        * For **{{site.data.keyword.openwhisk_short}}** notification channel, specify the channel URL when you set up a IBM Cloud Function Channel. For more information, see [Configure IBM Cloud Function Channel](https://docs.sysdig.com/en/configure-ibm-cloud-functions-channel.html){: external}.
 
         * For a **Webhook** notification channel, add the *Webhook URL*. **Note:** When an alert is triggered, the notification is sent as a POST in JSON format to your webhook endpoint. For more information, see [Configuring a Webhook channel](https://docs.sysdig.com/en/configure-a-webhook-channel.html){: external}. For example, {{site.data.keyword.mon_full_notm}}can be integrated with ServiceNow using a custom webhook. To learn about configuring {{site.data.keyword.mon_full_notm}} with ServiceNow, see [Configure ServiceNow](https://docs.sysdig.com/en/configure-servicenow.html){: external}.
 
