@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-11-11"
 
 keywords: 
 
@@ -78,7 +78,6 @@ By default, when an alert is triggered, you get a notification in the *Events* s
 
 You can configure any of the following notification channels:
 - Email
-- IBM Cloud Functions
 - IBM Event Notifications
 - Microsoft Teams
 - OpsGenie
