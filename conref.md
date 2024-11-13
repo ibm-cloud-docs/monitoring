@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -18,10 +18,6 @@ content-type: conref
 {: #conref-monitoring}
 
 
-
-The **Graduated Tier - Sysdig Secure + Monitor** plan is now [deprecated](/docs/monitoring?topic=monitoring-faq#faq_5). All new {{site.data.keyword.mon_full_notm}} instances where {{site.data.keyword.sysdigsecure_full_notm}} functionality is also required should provision an {{site.data.keyword.mon_full_notm}} instance with a connected {{site.data.keyword.sysdigsecure_full_notm}} instance.
-{: deprecated}
-{: #combined-plan-deprecated}
 
 
 

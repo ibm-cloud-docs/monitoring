@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -19,7 +19,7 @@ completion-time: 1h
 
 
 # Monitoring Linux hosts on a PowerVS workspace
-{: #powervs}a
+{: #powervs}
 {: toc-content-type="tutorial"}
 {: toc-services="monitoring"}
 {: toc-completion-time="1h"}

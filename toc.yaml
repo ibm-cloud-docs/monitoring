@@ -119,7 +119,6 @@ toc:
           - iam/iam.md
           - iam/iam_grant.md
           - iam/iam_grant_team.md
-          - iam/iam_grant_team_secure.md
           - iam/trusted_profiles.md
           - teams/teams.md
           - teams/team_id.md
@@ -180,8 +179,6 @@ toc:
                 navtitle: Deploying the Red Hat OpenShift agent by using a script
               - topic: agent/change_kube_agent.md
                 navtitle: Customizing Kube agents
-              - topic: agent/deploy-secure-features.md
-                navtitle: Deploying Workload Protection on a host
           - topicgroup:
               label: Non-orchestrated environments
               topics:
@@ -193,7 +190,7 @@ toc:
               - topic: agent/agent_linux_1.md
                 navtitle: Deploying Linux agent with no public access
               - topic: agent/change_linux_agent.md
-                navtitle: Customizing linux agents
+                navtitle: Customizing Linux agents
               - topic: agent/agent_docker.md
                 navtitle: Managing the agent by using Docker containers
               - topic: agent/change_container_agent.md
@@ -313,7 +310,6 @@ toc:
       - core/shared-responsibilities.md
       - topic: core/data-portability.md
         navtitle: Data portability
-      - wpp-migration.md
       - topicgroup:
           label: Monitoring CLI
           topics:

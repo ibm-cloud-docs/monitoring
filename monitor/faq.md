@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-06-28"
+lastupdated: "2024-11-13"
 
 keywords: 
 
@@ -67,14 +67,3 @@ You need to consider the following when connecting the two services:
 * Once connected, the only way to disconnect the service instances is to delete either the {{site.data.keyword.mon_full_notm}} or {{site.data.keyword.sysdigsecure_full_notm}} service instance.
 
 To provision connected services, see [Provisioning an instance](/docs/monitoring?topic=monitoring-provision#provision_ui).
-
-## The Graduated Tier - Sysdig Secure + Monitoring plan is deprecated. How do I keep using {{site.data.keyword.sysdigsecure_short}} functionality?
-{: #faq_5}
-{: faq}
-
-On 18 January 2024 the {{site.data.keyword.mon_full_notm}} *Graduated Tier - Sysdig Secure + Monitoring* [service plan](/docs/monitoring?topic=monitoring-service_plans) is deprecated. If you have {{site.data.keyword.mon_full_notm}} instances currently using the *Graduated Tier - Sysdig Secure + Monitoring* plan, you can continue creating instances using the *Graduated Tier - Sysdig Secure + Monitoring* plan until 18 August 2024. New {{site.data.keyword.mon_full_notm}} users will be unable to create instances using the *Graduated Tier - Sysdig Secure + Monitoring* plan after 18 February 2024.
-
-Existing users of the *Graduated Tier - Sysdig Secure + Monitoring* plan will need to [migrate](/docs/monitoring?topic=monitoring-wpp-migration) to an independent instance of {{site.data.keyword.sysdigsecure_full_notm}} by 18 August 2024. On 18 August 2024, any remaining {{site.data.keyword.mon_full_notm}} instances will be downgraded to the *Graduated Tier* plan. Users can continue to connect these instances to new {{site.data.keyword.sysdigsecure_full_notm}} instances until the end-of-service of the *Graduated Tier – Sysdig Secure + Monitoring* plan on 18 January 2025.
-
-New users can [provision](/docs/monitoring?topic=monitoring-provision#provision_ui) connected instances of {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_full_notm}} so operational performance monitoring and security vulnerability monitoring data can be obtained from a single monitoring agent running in your orchestrated and non-orchestrated environment.
-
