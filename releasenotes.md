@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-05-03"
+lastupdated: "2024-11-14"
 
 
 keywords:
@@ -20,6 +20,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 14 November 2024
+{: #monitoring-nov1424}
+{: release-note}
+
+Removal of `Graduated Tier - Sysdig Secure + Monitor` service plan
+:   The [`Graduated Tier - Sysdig Secure + Monitor` service plan](#monitoring-jan1824) is no longer supported and all references to this plan have been removed from the service and the service documentation.
 
 ## 3 May 2024
 {: #monitoring-may0324}
