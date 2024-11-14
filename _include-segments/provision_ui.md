@@ -14,13 +14,7 @@ Provision an {{site.data.keyword.mon_full_notm}} instance from the {{site.data.k
 
 7. Select a service plan. By default, the **Lite** plan is set.
 
-    To provision an instance with the full monitoring funnctionality of the *Monitor* component, select the **Graduated Tier** plan.
-
-    To provision an instance that include the *Monitor* and the *Workload Protection* ({{site.data.keyword.sysdigsecure_full_notm}}) components, select the plan **Graduated Tier - Sysdig Secure + Monitor**.
-
-    {{site.data.content.combined-plan-deprecated}}
-
-    For more information about {{site.data.keyword.sysdigsecure_short}}, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)
+    To provision an instance with the full monitoring funnctionality, select the **Graduated Tier** plan.
 
     For more information about the service plans, see [Service plans](/docs/monitoring?topic=monitoring-pricing_plans#pricing_plans).
 

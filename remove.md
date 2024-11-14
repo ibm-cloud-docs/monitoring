@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2021-03-28"
+  years:  2018, 2024
+lastupdated: "2024-11-13"
 
 
 keywords: IBM Cloud, monitoring, delete instance
@@ -53,7 +53,7 @@ To remove an instance of {{site.data.keyword.mon_full_notm}} by using the {{site
 
 To remove an instance of {{site.data.keyword.mon_full_notm}} through the command line, complete the following steps:
 
-1. [Pre-requisite] [Installion of the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli). If the CLI is installed, continue with the next step.
+1. [Pre-requisite] [Installation of the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli). If the CLI is installed, continue with the next step.
 
 2. Log in to the region in the {{site.data.keyword.cloud_notm}} where you want to provision the instance. Run the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-13"
 
 
 keywords: 
@@ -23,7 +23,8 @@ After you provision an instance of the {{site.data.keyword.mon_full_notm}} servi
 ## Grant IAM policies to a user to view data
 {: #launch_step1}
 
-**Note:** You must be an administrator of the {{site.data.keyword.mon_short}} service, an administrator of the {{site.data.keyword.mon_short}} instance, or have account IAM permissions to grant other users policies.
+You must be an administrator of the {{site.data.keyword.mon_short}} service, an administrator of the {{site.data.keyword.mon_short}} instance, or have account IAM permissions to grant other users policies.
+{: note}
 
 The following table lists the minimum policies that a user must have to be able to launch the {{site.data.keyword.mon_full_notm}} web UI, and view data:
 
@@ -58,42 +59,3 @@ Complete the following steps to launch the web UI:
 4. Select one instance. Then, click **Open dashboard**.
 
     The {{site.data.keyword.mon_short}} UI opens.
-
-
-## Launch the {{site.data.keyword.sysdigsecure_short}} UI
-{: #launch_step3}
-
-The {{site.data.keyword.sysdigsecure_short}} UI is only available for {{site.data.keyword.mon_short}} instances using the [*Graduated Tier - Sysdig Secure + Monitor* service plan](/docs/monitoring?topic=monitoring-service_plans).
-{: note}
-
-{{site.data.content.combined-plan-deprecated}}
-
-To access the *{{site.data.keyword.sysdigsecure_short}}* UI, complete the following steps:
-
-1. Log in to your {{site.data.keyword.cloud_notm}} account.
-
-    Click [{{site.data.keyword.cloud_notm}} dashboard](https://cloud.ibm.com/login){: external} to launch the {{site.data.keyword.cloud_notm}} dashboard.
-
-	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} Dashboard opens.
-
-2. In the navigation menu, select **Observability**.
-
-3. Select **Monitoring**.
-
-    The list of instances that are available on {{site.data.keyword.cloud_notm}} is displayed.
-
-4. Select an instance with the *Graduated Tier - Sysdig Secure + Monitor* service plan. Then, click **Open dashboard**.
-
-    The {{site.data.keyword.mon_short}} UI opens by default.
-
-5. Click the **Monitor** icon.
-
-    ![Monitor icon](images/monitor.png){: caption="Monitor icon" caption-side="bottom"}
-
-    The *Switch Products* selection box opens.
-
-    ![Switch products](images/platform.png){: caption="Switch products" caption-side="bottom"}
-
-6. Select **Workload Protection** to launch the {{site.data.keyword.sysdigsecure_short}} UI.
-
-For more information on using {{site.data.keyword.sysdigsecure_short}}, see the [{{site.data.keyword.sysdigsecure_full_notm}} documentation.](/docs/workload-protection)

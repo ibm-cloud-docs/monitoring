@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2021-03-28"
+  years:  2018, 2024
+lastupdated: "2024-11-14"
 
 
 keywords: IBM Cloud, monitoring, upgrade
@@ -19,6 +19,9 @@ subcollection: monitoring
 
 When you provision an instance of the {{site.data.keyword.mon_full_notm}} service, you must choose a service plan. Different plans offer different features. You can change the service plan at any time.
 {: shortdesc}
+
+You can only upgrade from the `Lite` plan to the `Graduated Tier`. You cannot downgrade from the `Graduated Tier` plan to the `Lite` plan.
+{: restriction}
 
 [Learn more about service plans](/docs/monitoring?topic=monitoring-pricing_plans).
 

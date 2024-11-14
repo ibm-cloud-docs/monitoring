@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-13"
 
 keywords: 
 
@@ -38,7 +38,7 @@ The following table lists the locations where the service is available:
 | `Asia Pacific`        | `Tokyo (jp-tok)`         | `N/A`        | `MZR`     |
 | `Europe`              | `Frankfurt (eu-de) (*)`  | `YES`        | `MZR`     |
 | `Europe`              | `London (eu-gb)`         | `NO`         | `MZR`     |
-| `Europe`              | `Madrid (eu-es) (*) (**)`     | `YES`        | `MZR`     |
+| `Europe`              | `Madrid (eu-es) (*)`     | `YES`        | `MZR`     |
 | `North America`       | `Dallas (us-south)`      | `N/A`        | `MZR`     |
 | `North America`       | `Toronto (ca-tor)`       | `N/A`        | `MZR`     |
 | `North America`       | `Washington (us-east)`   | `N/A`        | `MZR`     |
@@ -51,7 +51,3 @@ Where
 * `N/A` means feature that is not applicable to that geography.
 
 `(*)` For more information, see [Enabling EU support for your account](/docs/account?topic=account-eu-supported).
-
-`(**)` The [`Graduated Tier - Sysdig Secure + Monitor` plan](/docs/monitoring?topic=monitoring-service_plans) is not available in the Madrid (eu-es) region.
-
-{{site.data.content.combined-plan-deprecated}}

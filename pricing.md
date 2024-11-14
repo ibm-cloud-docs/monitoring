@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -47,7 +47,8 @@ Read this section to understand concepts and costs that are associated with the 
 {: #billing_usage_metrics}
 
 In your monthly usage charges, consumption is measured hourly and your bill breaks down into the following concepts:
-​
+
+
 | Metric              | Description |
 | ------------------- | -------------- |
 | `NODE_HOURS`        | Tracks the number of agents that are running in an agent for orchestrated environments.  \n \n This does not include the agents tracked by `LITE_NODE_HOURS`  \n  \n For example, if you have 1 agent connected continuously, that agent will be billed 720 `NODE_HOURS` at the end of the month.|
@@ -123,53 +124,6 @@ Data is collected and retained per the standard guidelines across all plans. For
 Prometheus remote write cost is based on metric ingestion. The price is calculated the same as for metrics collected using the agent with {{site.data.keyword.mon_full_notm}}.
 
 
-
-### Graduated Tier - Sysdig Secure + Monitor
-{: #graduated_secure}
-
-{{site.data.content.combined-plan-deprecated}}
-
-The *Graduated Tier - Sysdig Secure + Monitor* service plan includes both {{site.data.keyword.mon_full_notm}} and [{{site.data.keyword.sysdigsecure_full_notm}} functionality.](/docs/workload-protection).
-
-The *Graduated Tier - Sysdig Secure + Monitor* service plan is billed based on the number of hosts that you monitor, the number of containers, the number of API calls, and the number of time series collected.
-
-The following table outlines the cost per host by agent mode and what is included in the price:
-
-| Agent mode | Cost per host | Default infrastructure metrics (CPU, memory, disk, and network) | Includes up to 1K time-series (Prometheus, JMX, appchecks, StatsD) | Monitoring of 50 containers | 1M API calls | Secure features |
-|-------|------|-------|-------|-------|-------|-------|
-| Agent for orchestrated environments  | 96.87 USD  | ![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) |![Checkmark icon](/images/checkmark-icon.svg) | ![Checkmark icon](/images/checkmark-icon.svg) |
-{: caption="Cost per host for Graduated Tier - Sysdig Secure and Monitor service plan" caption-side="top"}
-
-For hosts running an agent for orchestrated environments that exceed the base tier allotment for Prometheus, JMX, appchecks, and Statsd metrics, additional prices apply:
-
-- Time series are priced according to the following tiers:
-
-    - **Tier 1**: The price per time-series is 0.09 USD for up to 100K time-series per month.
-
-    - **Tier 2**: The price per time-series is 0.05 USD for 100K to 1M time-series per month.
-
-    - **Tier 3**: The price per time-series is 0.03 USD for 1M to 10M time-series per month.
-
-    - **Tier 4**: The price per time-series is 0.02 USD for more than 10M time-series per month.
-
-- Containers are priced as follows: 5.38 USD per 10 containers per month.
-
-- API calls are priced as follows: The price for API calls is 0.01 USD per 1000 API calls per month.
-
-Each measure is priced independently when there is an overage.
-{: note}
-
-Platform metrics are an additional source of time-series. They are priced based on the tiers.
-{: important}
-
-A host can be a container, a virtual machine, a bare metal, or any metrics source where you install a monitoring agent.
-
-Data is collected and retained per the standard guidelines across all plans. For more information see [data collection](/docs/monitoring?topic=monitoring-mng-data#data-collection) and [data retention](/docs/monitoring?topic=monitoring-mng-data#data_storage_retention).
-
-Prometheus remote write cost is based on metric ingestion. The price is calculated the same as for metrics collected using the agent with {{site.data.keyword.mon_full_notm}}.
-
-
-
 ### Calculating time series pricing units
 {: #pricing_unit_definitions}
 
@@ -216,6 +170,7 @@ Windows monitoring is charged by the number of *time-series* that are generated.
 ​
 The following table estimates the number of *time-series* generated when the default collectors are installed on a Windows system.
 ​
+
 | Collector | Description | Estimate number of Time Series |
 |---|---|---|
 | `cpu` | CPU Usage |15 *time-series* per vCPU |
