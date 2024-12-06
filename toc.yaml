@@ -307,7 +307,7 @@ toc:
       - pricing.md
       - collect-metrics-by-host.md
       - agent_support.md
-      - core/shared-responsibilities.md
+      - core/shared-responsibilities.md  
       - topic: core/data-portability.md
         navtitle: Data portability
       - topicgroup:
