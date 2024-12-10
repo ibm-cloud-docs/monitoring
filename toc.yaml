@@ -134,7 +134,6 @@ toc:
               - topic: core/vpe.md
                 navtitle: Using virtual private endpoints
           - core/architecture-workload-isolation.md
-          - core/ha-dr.md
       - topicgroup:
           label: Observability
           topics:
@@ -308,6 +307,8 @@ toc:
       - collect-metrics-by-host.md
       - agent_support.md
       - core/shared-responsibilities.md
+      - topic: core/ha-dr.md
+        navtitle: Understanding high availability and disaster recovery  
       - topic: core/data-portability.md
         navtitle: Data portability
       - topicgroup:
@@ -341,6 +342,7 @@ toc:
               - link:
                   label: Metrics dictionary
                   href: https://docs.sysdig.com/en/metrics-dictionary.html
+
       - deprecated.md
 
   - navgroup:
