@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-12-10"
 
 keywords:
 
@@ -12,13 +12,14 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
-# High availability and disaster recovery
-{: #ha-dr}
+# Understanding high availability and disaster recovery for {{site.data.keyword.mon_full_notm}}
+{: #monitoring-ha-dr}
 
-{{site.data.keyword.mon_full_notm}} is a highly available, multi-tenant, regional service for monitoring your applications, platform resources and infrastructure. In this topic, you can learn more about {{site.data.keyword.mon_full_notm}}'s availability and disaster recovery strategies.
+
+[High availability](#x2284708){: term} (HA) is the ability for a service to remain operational and accessible in the presence of unexpected failures. [Disaster recovery](#x2113280){: term} is the process of recovering the service instance to a working state.
 {: shortdesc}
 
-
+{{site.data.keyword.mon_full}} is a highly available, multi-tenant, regional service for monitoring your applications, platform resources and infrastructure. In this topic, you can learn more about {{site.data.keyword.mon_full_notm}}'s availability and disaster recovery strategies.
 
 ## Availability zones
 {: #ha-dr-locations}
