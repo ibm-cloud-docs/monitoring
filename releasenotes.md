@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-11-14"
+lastupdated: "2024-12-11"
 
 
 keywords:
@@ -20,6 +20,20 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+## 27 November 2024
+{: #monitoring-nov2724}
+{: release-note}
+
+Updates to alert terminology
+:   Terminology related to alerts has been updated:
+
+    * Metric Alerts are now called Threshold Alerts.
+    * Threshold Alerts now include a Duration setting, specifying how long an alert condition must be continuously satisfied before triggering the alert rule.
+    * PromQL Alerts are now called Prometheus Alerts.
+    * Standarized terminology:
+       * Range refers to the time period over which a metric is aggregated. The Alert Editor still refers to this field with “over the last”.
+       * Duration refers to how long an alert condition must be continuously met to trigger an alert rule.
 
 ## 14 November 2024
 {: #monitoring-nov1424}

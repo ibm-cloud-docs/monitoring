@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-12-11"
 
 keywords:
 
@@ -12,16 +12,16 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Metric alerts
+# Threshold alerts
 {: #alert-metric}
 
-You can define {{site.data.keyword.mon_full_notm}} metric alerts in the alert editor by using a form or PromQL.
+You can define {{site.data.keyword.mon_full_notm}} Threshold alerts (previously named Metric Alerts) in the alert editor by using a form or PromQL.
 {: shortdesc}
 
 For more information on configuring alerts, see [Configuring an alert by using the alert editor](/docs/monitoring?topic=monitoring-alert-config).
 {: tip}
 
-## Specifying the conditions when a metrics alert is triggered
+## Specifying the conditions when a Threshold alert is triggered
 {: #alert_metrics_trigger}
 
 In the alert editor, specify the following in the **Metric & Conditions** section.
@@ -38,10 +38,18 @@ Group By Segment
 
 :   By grouping metrics by labels such as `container_name`, a unique segment is generated for each container. This allows you to quickly detect if a particular container is responsible for performance degredation.
 
-## Range and Duration
+Time Aggregation
+
+:   Also known as the Range, the **Time Aggregation** of an alert rule determines the time window over which the selected metric is aggregated. For example, if you select the `avg` aggregation for the `cassandra_read_latency` metric with a specified range, it calculates the average value of the `cassandra_read_latency` metric over that time window. This range defines how far back in time the metric values are considered for time aggregation.
+
+Duration
+
+:   Duration defines the time an alert condition must continuously be satisfied before triggering an alert. For instance, a duration of 10m means the condition must be met for a continuous 10 minutes. If the alert condition is not satisfied at any time within this period, the 10-minute timer resets and must be satisfied for a full, uninterrupted 10 minutes again. Setting a longer duration reduces false positives by preventing alerts from being triggered by short-lived threshold violations.
+
+## Time Aggregation and Duration
 {: #alert-metrics-range}
 
-The range of an alert defines the time period over which the relevant metric data is evaluated. It should not be confused with the duration of an alert, which can only be configured for PromQL Alerts and refers to the length of time an alert condition must persist before triggering an alert. Metric Alerts, even when defined and translated to PromQL will trigger as soon as the alert condition is satisfied.
+The Time Aggregation of an alert query defines the time period over which the relevant metric data is evaluated. It should not be confused with the Duration of an alert rule, which refers to the length of time an alert condition must be met before it triggers an alert.
 
 ## Thresholds
 {: #alert-metrics-thresholds}
@@ -56,10 +64,10 @@ Define the threshold and time range for assessing the alert condition.
 | minimum | The minimum of the retrieved metric values across the time period. |
 {: caption="Aggregation methods" caption-side="bottom"}
 
-## Images in metric alert notifications
+## Images in Threshold alert notifications
 {: #alert-metric-image}
 
-Metric Alert notifications forwarded to Slack or email include a snapshot of the triggering time series data. For Slack notification channels, the snapshot can be enabled or disabled within the notification channel settings. When the channel is configured to *Notify when Resolved*, a snapshot of the time series data that resolves the alert is also provided in the notification.
+Threshold Alert notifications forwarded to Slack or email include a snapshot of the triggering time series data. For Slack notification channels, the snapshot can be enabled or disabled within the notification channel settings. When the channel is configured to *Notify when Resolved*, a snapshot of the time series data that resolves the alert is also provided in the notification.
 
 ## Configuring multiple thresholds
 {: #alert-metric-mult-thresholds}
@@ -87,5 +95,4 @@ sysdig_host_memory_available_bytes / sysdig_host_memory_total_bytes * 100
 
 Thresholds are configured separately from the query, allowing the user to specify both an alert threshold and a warning threshold.
 
-Metric alerts translated from form to PromQL do not support configuring a duration.
 {: note}
