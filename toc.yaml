@@ -57,7 +57,7 @@ toc:
           - topic: infrastructure/baremetal_linux.md
             navtitle: Monitoring a Linux baremetal server
           - topic: infrastructure/vmware.md
-            navtitle: Monitoring a VMware deployment
+            navtitle: Monitoring a VMware deployment 
       - topicgroup:
           label: Collecting Prometheus metrics
           topics:
@@ -308,7 +308,7 @@ toc:
       - agent_support.md
       - core/shared-responsibilities.md
       - topic: core/ha-dr.md
-        navtitle: Understanding high availability and disaster recovery  
+        navtitle: Understanding high availability and disaster recovery
       - topic: core/data-portability.md
         navtitle: Data portability
       - topicgroup:
