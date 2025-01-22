@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-01-22"
 
 keywords:
 
@@ -315,7 +315,6 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.databases-for-enterprisedb_full_notm}}             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
 | {{site.data.keyword.databases-for-mysql_fullnotm}}             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg) |
-| {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |  |
 | {{site.data.keyword.dv_full_notm}}                        |    | ![Checkmark icon](../images/checkmark-icon.svg) |  |
 | {{site.data.keyword.Db2_on_Cloud_long_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
 | {{site.data.keyword.lakehouse_full_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  |  |
@@ -337,7 +336,6 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-enterprisedb_full_notm}}             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-mysql_fullnotm}}             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
-| {{site.data.keyword.sqlquery_full}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    |
 | {{site.data.keyword.dv_full_notm}}                             | ![Checkmark icon](../images/checkmark-icon.svg)  |    | | |
 | {{site.data.keyword.Db2_on_Cloud_long_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
 | {{site.data.keyword.lakehouse_full_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | | ![Checkmark icon](../images/checkmark-icon.svg)  | |
@@ -359,7 +357,6 @@ List of locations where {{site.data.keyword.cloud_notm}} services are enabled to
 | {{site.data.keyword.databases-for-redis_full_notm}}             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-enterprisedb_full_notm}}             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
 | {{site.data.keyword.databases-for-mysql_fullnotm}}             | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
-| {{site.data.keyword.sqlquery_full}}                             |    |    |
 | {{site.data.keyword.Db2_on_Cloud_long_notm}}     | ![Checkmark icon](../images/checkmark-icon.svg)  | ![Checkmark icon](../images/checkmark-icon.svg)  |
 {: caption="Database services integration in AP locations" caption-side="top"}
 {: #cs-db-table-3}
