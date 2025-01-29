@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-11-13"
+  years:  2018, 2025
+lastupdated: "2025-01-29"
 
 keywords:
 
@@ -109,7 +109,7 @@ To create a notification source in {{site.data.keyword.en_full_notm}} you will m
 
 13. Click **Save**.
 14. Click the menu icon ![Menu icon](../../icons/icon_hamburger.svg) > **Resource list**.
-15. Open **Services and software**.
+15. Open **Developer tools**.
 16. Open the [{{site.data.keyword.en_full_notm}} instance you created.](#en-create-instance)  For example, `my_event_notifications`.
 17. Click **Sources**.
 
