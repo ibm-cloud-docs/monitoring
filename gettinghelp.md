@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-29"
+  years:  2018, 2025
+lastupdated: "2025-02-04"
 
 
 keywords: 
@@ -17,7 +17,7 @@ subcollection: monitoring
 # Getting help and support
 {: #gettinghelp}
 
-If you have problems or questions when using the {{site.data.keyword.mon_full_notm}} service, you have several options to get help with determining the cause of the problem and finding a solution. If you're logged in, you can go directly to the [Support center](https://{DomainName}/unifiedsupport/supportcenter) to review common FAQs, open a support case, or search community content.
+If you have problems or questions when using the {{site.data.keyword.mon_full_notm}} service, you have several options to get help with determining the cause of the problem and finding a solution. If you're logged in, you can go directly to the [Support center](https://{DomainName}/unifiedsupport/supportcenter) to review common FAQ, open a support case, or search community content.
 {: shortdesc}
 
 
