@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-11-13"
+  years:  2018, 2025
+lastupdated: "2025-02-05"
 
 
 keywords:
@@ -173,6 +173,6 @@ An administrator can restrict access to data by managing users in teams and cont
 ## Step 5. Next steps
 {: #getting-started-step5}
 
-- To monitor the usage and costs of your service, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
+- To monitor the usage and costs of your service, see [Viewing your usage](/docs/account?topic=account-viewingusage&interface=ui#viewingusage).
 
 - Check [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started) and see how you can use it to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run.

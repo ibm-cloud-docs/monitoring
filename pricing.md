@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-11-13"
+  years:  2018, 2025
+lastupdated: "2025-02-05"
 
 keywords:
 
@@ -58,7 +58,7 @@ In your monthly usage charges, consumption is measured hourly and your bill brea
 | `CONTAINER_HOURS` | Represents how many containers are monitored across all hosts that are being monitored by agents.  |
 {: caption="Billing usage metrics" caption-side="bottom"}
 
-To monitor how the {{site.data.keyword.mon_full_notm}} service is used and the costs associated to its usage, see [Viewing your usage](/docs/billing-usage?topic=billing-usage-viewingusage#viewingusage).
+To monitor how the {{site.data.keyword.mon_full_notm}} service is used and the costs associated to its usage, see [Viewing your usage](/docs/account?topic=account-viewingusage&interface=ui#viewingusage).
 
 
 All metrics that start with `sysdig_*` and `kube_*` are collected automatically by an agent and are included in the agent price.
