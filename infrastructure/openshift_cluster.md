@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-02-18"
 
 keywords:
 
@@ -219,18 +219,18 @@ Complete the following steps:
    Private endpoints
 
    ```text
-   curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a <MONITORING_ACCESS_KEY> -c ingest.private.us-south.monitoring.cloud.ibm.com -ac 'sysdig_capture_enabled: false' --openshift
+   curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a <MONITORING_ACCESS_KEY> -c ingest.private.<REGION>.monitoring.cloud.ibm.com -ac 'sysdig_capture_enabled: false' --openshift
    ```
    {: pre}
 
    Public endpoints
 
    ```text
-   curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a <MONITORING_ACCESS_KEY> -c ingest.us-south.monitoring.cloud.ibm.com -ac 'sysdig_capture_enabled: false' --openshift
+   curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a <MONITORING_ACCESS_KEY> -c ingest.<REGION>.monitoring.cloud.ibm.com -ac 'sysdig_capture_enabled: false' --openshift
    ```
    {: pre}
 
-   Where MONITORING_ACCESS_KEY is the ingestion key for the instance.
+   Where <MONITORING_ACCESS_KEY> is the ingestion key for the instance and <REGION> is the region of the {{site.data.keyword.mon_full_notm}} instance.
 
    By default the slim agent is installed.  The slim agent reduces the possible are of attack for potential vulnerabilities and, as a result, is more secure.  If installing the full agent is desired, add the `-af` option to the `curl` command.
    {: note}
