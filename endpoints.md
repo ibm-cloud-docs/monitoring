@@ -41,7 +41,6 @@ The following table lists the endpoints that are available per region:
 | Tokyo (`JP-TOK`)    | `https://jp-tok.monitoring.cloud.ibm.com`        | 165.192.84.14  \n 128.168.75.14  \n 169.56.51.238         | https (TLS) 443 |
 | Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237         | https (TLS) 443 |
 | Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82          | https (TLS) 443 |
-   | https (TLS) 443 |
 {: caption="List of endpoints" caption-side="top"}
 
 
