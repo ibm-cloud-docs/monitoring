@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-03-27"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -161,7 +161,7 @@ Complete the following steps to remove the monitoring agent that is deployed as 
     ```
     {: pre}
 
-4. Install the agent. [Learn more](/docs/monitoring?topic=monitoring-config_agent#config_agent_docker).
+4. Install the agent. [Learn more](/docs/monitoring?topic=monitoring-agent_docker#agent_docker_deploy).
 
 
 

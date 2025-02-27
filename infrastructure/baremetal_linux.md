@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-07-05"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -280,7 +280,7 @@ You can collect the following metrics when you configure the IPMI exporter in a 
 
     The metric ipmi_bmc_info includes information about the firmware revision and manufacturer in labels and has a value of `1`.
 
-For more information, see [Prometheus IPMI Exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
+For more information, see [Prometheus IPMI Exporter](https://github.com/prometheus-community/ipmi_exporter){: external}.
 
 
 Complete the following steps to configure the Prometheus IPMI Exporter:
@@ -290,7 +290,7 @@ Complete the following steps to configure the Prometheus IPMI Exporter:
 
 Complete the following steps:
 
-1. From a local terminal, [download the Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
+1. From a local terminal, [download the Prometheus IPMI exporter](https://github.com/prometheus-community/ipmi_exporter){: external}.
 
 2. In the bare metal server, from the `shh` session, create the directory `/usr/monitor`. Run the following commands:
 

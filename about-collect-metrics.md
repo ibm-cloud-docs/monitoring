@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -124,7 +124,7 @@ You can use Prometheus exporters to collect metrics from hosts, services, or app
 
 There are different sources for Prometheus exporters:
 - Official exporters are available in [the official Prometheus GitHub organization](https://github.com/prometheus){: external} and are lable **official**.
-- Sysdig curates and maintains [PromCat](https://promcat.io/){: external}. PromCat is an enterprise resource catalog where you can find supported {{site.data.keyword.mon_short}} integrations for Kubernetes platforms and cloud-native services.
+- Sysdig curates and maintains [an integrations library](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/integration-library/){: external}. The integrations library is an enterprise resource catalog where you can find supported {{site.data.keyword.mon_short}} integrations for Kubernetes platforms and cloud-native services.
 
 You can collect metrics from different sources such as:
 - Hosts for which a {{site.data.keyword.mon_short}} agent is not available such as Windows systems or VMware ESXi-Host systems.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -70,7 +70,7 @@ You can collect the following metrics when you configure the IPMI exporter in a 
 
     The metric ipmi_bmc_info includes information about the firmware revision and manufacturer in labels and has a value of `1`.
 
-For more information, see [Prometheus IPMI Exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
+For more information, see [Prometheus IPMI Exporter](https://github.com/prometheus-community/ipmi_exporter){: external}.
 
 
 Complete the following steps to configure a monitoring agent to collect IPMI metrics from 1 or more hosts:
@@ -94,7 +94,7 @@ You can install the IPMI exporer in 1 or more hosts to collect IPMI metrics.
 
 For each host that you want to collect IPMI metrics, complete the following steps to install the IPMI exporter. For example, complete the following steps for a Linux-based host:
 
-1. From a local terminal,[download the Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
+1. From a local terminal,[download the Prometheus IPMI exporter](https://github.com/prometheus-community/ipmi_exporter){: external}.
 
 2. In the server, from the `ssh` session, create the directory `/usr/sysdig`. Run the following commands:
 
@@ -176,7 +176,7 @@ For each host that you want to collect IPMI metrics, complete the following step
     ```
     {: codeblock}
 
-7. If the IPMI exporter is installed in a host from which you plan to collect sensor metrics from multiple hosts, configure the `ipmi_remote.yml` file. See[IPMI remote sample file](https://github.com/soundcloud/ipmi_exporter/blob/master/ipmi_remote.yml){: external}.
+7. If the IPMI exporter is installed in a host from which you plan to collect sensor metrics from multiple hosts, configure the `ipmi_remote.yml` file. See[IPMI remote sample file](https://github.com/prometheus-community/ipmi_exporter/blob/master/ipmi_remote.yml){: external}.
 
 8. Run the IPMI exporter.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-11-11"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords: 
 
@@ -63,7 +63,7 @@ Complete the following steps to add a notification channel:
 
         * For a **Teams Email** notification channel, select the name of the team to receive notifications.
 
-        * For an **IBM Event Notifications** channel you must first have an [{{site.data.keyword.en_full_notm}} instance configured.](/docs/event-notifications?topic=event-notifications-en-create-en-instance)
+        * For an **IBM Event Notifications** channel you must first have an [{{site.data.keyword.en_full_notm}} instance configured.](/docs/event-notifications?topic=event-notifications-getting-started)
 
             To configure the notification channel you need to specify the {{site.data.keyword.en_full_notm}} instance name and specify your choice of a channel name.  You will also indicate if the notification channel is enabled and when notifications should be sent, for example, when an alert is resolved. Notifications can be shared with one or all teams.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-06-28"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords: 
 
@@ -77,7 +77,7 @@ ibmcloud resource service-instance-update <my-service-instance> --service-endpoi
 ```
 {: pre}
 
-Or you can use the [Resource Controller API](https://cloud.ibm.com/apidocs/resource-controller), with a `PATCH` request to the [/resource_instances/{id}](https://cloud.ibm.com/apidocs/resource-controller#update-a-resource-instance) endpoint.
+Or you can use the [Resource Controller API](https://cloud.ibm.com/apidocs/resource-controller), with a `PATCH` request to the [/resource_instances/{id}](https://cloud.ibm.com/apidocs/resource-controller/resource-controller#update-resource-instance) endpoint.
 
 After you enable private endpoints, the API calls that are made through a public endpoint are rejected.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2021, 2023
-lastupdated: "2024-01-17"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -38,7 +38,7 @@ To configure 1 instance of the {{site.data.keyword.mon_full_notm}} service to se
 ## Step 1. Provision an {{site.data.keyword.en_full_notm}} instance
 {: #eventnotif_sms_step1}
 
-Provision an [{{site.data.keyword.en_full_notm}} instance.](/docs/event-notifications?topic=event-notifications-en-create-en-instance)
+Provision an [{{site.data.keyword.en_full_notm}} instance.](/docs/event-notifications?topic=event-notifications-getting-started)
 
 The {{site.data.keyword.en_full_notm}} instance must be provisioned in the same account or ina different account as the {{site.data.keyword.mon_short}} instance.
 
@@ -84,7 +84,7 @@ For more information on how to define authorizations, see [Using authorizations 
 ## Step 3. Configure the {{site.data.keyword.en_full_notm}} instance
 {: #eventnotif_sms_step3}
 
-1. [Configure a notification channel of type {{site.data.keyword.en_full_notm}}](/docs/event-notifications?topic=event-notifications-en-create-en-source).
+1. [Configure a notification channel of type {{site.data.keyword.en_full_notm}}](/docs/event-notifications?topic=event-notifications-en-destination).
 
     When you configure the channel, a source, with the same name as your {{site.data.keyword.mon_short}} instance instance name, is automatically added to your {{site.data.keyword.en_full_notm}} instance. You can view it in the {{site.data.keyword.en_full_notm}} UI, in the *Sources* section.
 

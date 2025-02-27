@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -96,7 +96,7 @@ In this tutorial, you configure metrics for your {{site.data.keyword.containerlo
 
 - [Check the Kubernetes resource requirements](/docs/monitoring?topic=monitoring-resource_requirements).
 
-- [Install the {{site.data.keyword.cloud_notm}} CLI and plug-ins](/docs/containers?topic=containers-cs_cli_install#cs_cli_install_steps):
+- [Install the {{site.data.keyword.cloud_notm}} CLI and plug-ins](/docs/containers?topic=containers-cli-install):
 
     * {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`)
 
@@ -106,7 +106,7 @@ In this tutorial, you configure metrics for your {{site.data.keyword.containerlo
 
     * {{site.data.keyword.containerlong_notm}} observability plug-in (`ibmcloud ob`)
 
-- [Install the Kubernetes CLI (kubectl)](/docs/containers?topic=containers-cs_cli_install#kubectl)
+- [Install the Kubernetes CLI (kubectl)](/docs/containers?topic=containers-cli-install#install-kubectl-cli)
 
     Make sure that the `kubectl` version is compatible with your cluster version. If the `kubectl` version is not compatible, you can get an error such as `kubectl create clusterrolebinding failed!`. You can use `kubectl version --short` to check versions of your cluster and your `kubectl` client.
 
@@ -121,7 +121,7 @@ In this tutorial, you configure metrics for your {{site.data.keyword.containerlo
 | Kubernetes cluster instance          |  Resource                 | Editor  | Us-south  | This policy is required to configure the secret and the monitoring agent in the Kubernetes cluster. |
 {: caption="List of IAM policies required to complete the tutorial" caption-side="top"}
 
-For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
+For more information about the {{site.data.keyword.containerlong}} IAM roles, see [IAM roles and actions](/docs/containers?topic=containers-iam-platform-access-roles).
 
 
 

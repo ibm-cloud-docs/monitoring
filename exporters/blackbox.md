@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords: 
 
@@ -158,10 +158,7 @@ scrape_configs:
   static_configs:
   - targets:
     - https://prometheus.io/
-    - https://promcat.io/
-    - https://api.promcat.io/apps
     - https://www.google.com/search?q=promcat
-    - https://promcat.io/apps/harbor
     - https://www.ibm.com/software/passportadvantage
   relabel_configs:
   - source_labels: [__address__]

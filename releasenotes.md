@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-12-11"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 
 keywords:
@@ -333,7 +333,7 @@ Secure support for Inline Scanner
 {: release-note}
 
 Monitoring integrations
-:   You can monitor integrations using PromCat.
+:   You can monitor integrations using the integrations library.
 
 Alert enhancements
 :   The following alert enhancements are available:
