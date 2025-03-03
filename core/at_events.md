@@ -165,3 +165,16 @@ For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [L
 | `sysdig-monitor.dashboard.delete`     | An event is created when you delete a dashboard |
 | `sysdig-monitor.dashboard.list`       | An event is created when you view the dashboards in the monitoring instance |
 {: caption="Dashboards: List of activity tracking actions" caption-side="top"}
+
+## Teams: List of management events
+{: #at_events_teams}
+
+
+| Action                                | Description                                       |
+|---------------------------------------|---------------------------------------------------|
+| `sysdig-monitor.team.create`          | An event is created when you create a Monitoring team |
+| `sysdig-monitor.team.read`            | An event is created when you view a Monitoring team definition |
+| `sysdig-monitor.team.update`          | An event is created when you update a Monitoring team definition |
+| `sysdig-monitor.team.delete`          | An event is created when you delete a Monitoring team |
+| `sysdig-monitor.team.list`            | An event is created when you view the Monitoring teams |
+{: caption="Teams: List of activity tracking actions" caption-side="top"}
