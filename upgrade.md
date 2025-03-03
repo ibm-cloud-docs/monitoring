@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-11-14"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 
 keywords: IBM Cloud, monitoring, upgrade
@@ -58,7 +58,7 @@ Complete the following steps to change the service plan:
 
 2. Log in to the location in the {{site.data.keyword.cloud_notm}} where the instance is provisioned. Run the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login)
 
-    To get the latest list of locations that are available for the {{site.data.keyword.mon_full_notm}} service, see [Locations](/docs/monitoring?topic=monitoring-endpoints#endpoints_regions).
+    To get the latest list of locations that are available for the {{site.data.keyword.mon_full_notm}} service, see [Locations](/docs/monitoring?topic=monitoring-regions).
 
 3. Set the resource group where the instance is available. Run the following command: [ibmcloud target](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target)
 

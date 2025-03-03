@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -101,7 +101,7 @@ The following table lists integration services that are enabled for {{site.data.
 
 | Service     | Description | Metrics |
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.messagehub}}](/docs/EventStreams?topic=EventStreams-getting_started)| {{site.data.keyword.messagehub}} is a high-throughput message bus that is built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.IBM_notm}} and event stream distribution between your services and applications. | [Platform metrics](/docs/EventStreams?topic=EventStreams-metrics) |
+| [{{site.data.keyword.messagehub}}](/docs/EventStreams?topic=EventStreams-getting-started)| {{site.data.keyword.messagehub}} is a high-throughput message bus that is built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.IBM_notm}} and event stream distribution between your services and applications. | [Platform metrics](/docs/EventStreams?topic=EventStreams-metrics) |
 | [{{site.data.keyword.mq_full}}](/docs/mqcloud?topic=mqcloud-getting_started)| {{site.data.keyword.mq_full}} is an enterprise grade messaging middleware service that provides secure messaging capabilities, such as point-to-point and publish and subscribe models. | [Platform metrics](/docs/mqcloud?topic=mqcloud-monitor_sysdig) |
 {: caption="List of integration services" caption-side="top"}
 

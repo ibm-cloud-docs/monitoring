@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -21,10 +21,6 @@ After you provision an instance of the {{site.data.keyword.mon_full_notm}} servi
 You can associate one or more tags to each monitoring agent. Tags are comma-separated values that are formatted as **TAG_NAME:TAG_VALUE**. When you monitor your environment, you can use these tags to identify metrics that are available from an agent. For example, you can include information about the service name and location with all of the metrics that are collected by this agent.
 {: tip}
 
-## Prereqs
-{: #agent_docker_prereqs}
-
-Review [Tune Agent](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-configuration/tune-agent/){: external}
 
 
 ## Deploying a monitoring agent as two Docker containers
@@ -161,7 +157,7 @@ Complete the following steps to remove the monitoring agent that is deployed as 
     ```
     {: pre}
 
-4. Install the agent. [Learn more](/docs/monitoring?topic=monitoring-agent_docker#agent_docker_deploy).
+4. Install the agent. [Learn more](/docs/monitoring?topic=monitoring-agent_docker).
 
 
 

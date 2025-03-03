@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-21"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords: 
 
@@ -18,7 +18,7 @@ subcollection: monitoring
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.mon_full_notm}}. For a high-level view of the service types in {{site.data.keyword.cloud_notm}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
 {: shortdesc}
 
-Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.mon_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms).
+Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.mon_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
 
 
 ## Incident and operations management
@@ -29,8 +29,8 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for the set up and
 
 | Task              | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-------------------|-------------------------------------------------|-----------------------|
-| Monitor incidents  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | Set preferences to [receive emails about platform notifications](/docs/overview?topic=overview-ui#email-prefsl).   \n Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
-| Maintain {{site.data.keyword.cloud_notm}} high availability SLA  | Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview/terms-of-use?topic=overview-slas). |   |
+| Monitor incidents  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | Set preferences to [stay up to date with notifications](/docs/overview?topic=overview-ui&q=notifications&tags=overview#consoleoptions).   \n Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
+| Maintain {{site.data.keyword.cloud_notm}} high availability SLA  | Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview?topic=overview-slas). |   |
 | Provide high availability capabilities | Provide capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions (MZR), to meet local access and low latency requirements for each supported region.  | Use the list of [available regions](/docs/monitoring?topic=monitoring-endpoints) to plan for and create new instances of the service. |
 | Monitor monitoring agents   | Provide images and instructions for how to install monitoring agents in environments that you want to monitor, such as Kubernetes, Linux, and {{site.data.keyword.redhat_openshift_notm}}. | Install and configure monitoring agents.   \n Monitor that the agents are running in your environment, for example, by using monitoring alerts. |
 | Deliver platform metrics  | Deliver platform metrics for Monitoring-enabled services to the monitoring instance that collects platform metrics and is located in the region where the platform metrics are generated.  | Configure 1 monitoring instance per region to collect platform metrics in that region. |

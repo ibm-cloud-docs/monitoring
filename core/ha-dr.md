@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-12-10"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -57,7 +57,7 @@ Where
     A region contains [multiple availability zones](https://www.ibm.com/cloud/data-centers/) to meet local access, low latency, and security requirements for the region.
 
 * `N/A` means feature that is not applicable to that geography.
-* `MZR` means multi-zone region. [Learn more](/docs/overview?topic=overview-locations#mzr-table).
+* `MZR` means multi-zone region. [Learn more](/docs/overview?topic=overview-locations).
 
 
 
@@ -83,7 +83,7 @@ The MZR architecture offers automatic failover between 2 zones, and high availab
 
 Disaster recovery is about surviving a catastrophic failure or loss of availability in a single location.
 
-{{site.data.keyword.mon_full_notm}} follows {{site.data.keyword.cloud_notm}} requirements for [planning and recovering from disaster events](/docs/overview?topic=overview-zero-downtime#disaster-recovery).
+{{site.data.keyword.mon_full_notm}} follows {{site.data.keyword.cloud_notm}} requirements for [how IBM Cloud ensures high availability and redundancy](/docs/resiliency?topic=resiliency-ha-redundancy).
 
 If a regional disaster occurs, consider the following information:
 * The estimated recovery time for rebuilding the regional site and restoring the service at another location is 24 hours.
@@ -104,7 +104,7 @@ If the applications and services that you are monitoring through a monitoring in
 
 If you have deployed monitoring agents on your systems, and those systems are not impacted by the regional failure, you may choose to redirect metrics to other instances of monitoring in a different region. To redirect metric data, complete the following steps:
 1. [Provision a monitoring instance](/docs/monitoring?topic=monitoring-provision)
-2. Reconfigure the monitoring agent of each system: Change the access key and ingestion endpoints in the agent configuration. [Learn more](/docs/monitoring?topic=monitoring-config_agent).
+2. Reconfigure the monitoring agent of each system: Change the access key and ingestion endpoints in the agent configuration. 
 3. Define IAM permissions to work with the new monitoring instance.
 
     Using access groups to manage permissions to work with a monitoring instance, reduces the amount of work that you might have to do to set the correct policies and users to work with a new instance. Information about access groups is global and not region based.

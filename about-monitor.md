@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -118,8 +118,8 @@ An alert is a notification event that you can use to warn about situations that 
 
 For example, you can set up {{site.data.keyword.mon_short}} to send alert notifications to IBM Cloud Event Notifications.
 
-- [Sending email notifications to IBM Cloud Event Notifications](/docs/monitoring?topic=monitoring-tutorial)
-- [Sending SMS notifications to IBM Cloud Event Notifications](/docs/monitoring?topic=monitoring-tutorial-en-sms)
+- [Sending email alerts to IBM Cloud Event Notifications](/docs/monitoring?topic=monitoring-eventnotif)
+- [Sending SMS alerts to IBM Cloud Event Notifications](/docs/monitoring?topic=monitoring-eventnotif_sms)
 
 For more information, see [Working with alerts and events](/docs/monitoring?topic=monitoring-alerts).
 

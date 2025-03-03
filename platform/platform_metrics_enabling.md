@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-03-27"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -44,7 +44,7 @@ For example, if you are monitoring an {{site.data.keyword.messagehub}} instance 
 
 2. Select **Monitoring** &gt; **Options** &gt; **Edit platform**.
 
-3. Select a [region](/docs/monitoring?topic=monitoring-endpoints#endpoints_regions).
+3. Select a [region](/docs/monitoring?topic=monitoring-regions).
 
 4. Choose the monitoring instance that will collect metrics from enabled services on that location.
 

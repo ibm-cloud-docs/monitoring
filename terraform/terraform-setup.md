@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-03"
 
 keywords: 
 
@@ -126,7 +126,7 @@ The following table lists input parameters that you can set in the `provider` bl
 
 For more information on how to use environment variables, see [Using environment variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
 
-You can [add multiple provider configurations within the same Terraform on the {{site.data.keyword.cloud_notm}} configuration file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#multiple-providers) to create your {{site.data.keyword.cloud_notm}} resources with different provider parameters. For example, you can multiple providers so that you can use different input parameters, such as different regions, zones, infrastructure generations, or accounts to create the {{site.data.keyword.cloud_notm}} resources in your Terraform on {{site.data.keyword.cloud_notm}} configuration file. For more information, see [Multiple Provider Instances](https://www.terraform.io/docs/language/providers/configuration.html){: external}.
+You can [add multiple provider configurations within the same Terraform on the {{site.data.keyword.cloud_notm}} configuration file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#multiple-providers) to create your {{site.data.keyword.cloud_notm}} resources with different provider parameters. For example, you can multiple providers so that you can use different input parameters, such as different regions, zones, infrastructure generations, or accounts to create the {{site.data.keyword.cloud_notm}} resources in your Terraform on {{site.data.keyword.cloud_notm}} configuration file. For more information, see [Multiple Provider Instances](https://developer.hashicorp.com/terraform/language/providers/configuration){: external}.
 
 
 ### Option 1. Creating a static `provider.tf` file
@@ -259,7 +259,7 @@ To see the list of valid regions, see [Regions and endpoints](/docs/monitoring?t
 ## Step 6. Create a Terraform configuration file
 {: #terraform-main-tf}
 
-Next, create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.mon_short}} instance and to assign a user an access policy in Identity and Access Management (IAM) by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+Next, create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.mon_short}} instance and to assign a user an access policy in Identity and Access Management (IAM) by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
 The following code shows a sample configuration file to provision an instance. To retrieve the ID of the default resource group, the `ibm_resource_group` data source is used. The region is retrieved from the `terraform.tfvars` file that you created in step 1. Then, the user `user@ibm.com` is assigned the Manager role in the IAM access policy for the namespace for a particular region. The {{site.data.keyword.mon_short}} instance is also connected to an existing {{site.data.keyword.sysdigsecure_short}} instance.
 

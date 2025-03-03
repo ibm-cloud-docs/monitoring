@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-02-05"
+lastupdated: "2025-03-03"
 
 
 keywords:
@@ -26,7 +26,7 @@ subcollection: monitoring
 
 You must have a user ID that is a member or an owner of an {{site.data.keyword.cloud_notm}} account. To get an {{site.data.keyword.cloud_notm}} user ID, go to: [Registration](https://cloud.ibm.com/login){: external}.
 
-Check the regions where the service is available. [Learn more](/docs/monitoring?topic=monitoring-endpoints#endpoints_regions).
+Check the regions where the service is available. [Learn more](/docs/monitoring?topic=monitoring-regions).
 
 Read the *About* section:
 - [{{site.data.keyword.mon_short}} topic](/docs/monitoring?topic=monitoring-about-monitor) to understand more about the {{site.data.keyword.mon_short}} service.
@@ -102,7 +102,7 @@ For example, to configure platform metrics in a region, complete the following s
 
 2. Select **Monitoring** &gt; **Options** &gt; **Edit platform**.
 
-3. Select a [region](/docs/monitoring?topic=monitoring-endpoints#endpoints_regions).
+3. Select a [region](/docs/monitoring?topic=monitoring-regions).
 
 4. Choose the {{site.data.keyword.mon_short}} instance that will collect metrics from the enabled services on that location.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-06-28"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords: 
 
@@ -33,8 +33,8 @@ curl -X <METHOD> <MONITORING_ENDPOINT>/<API_URL> <-H HEADERS,> [-d DATA]
 Where
 
 * `<METHOD>` indicates the type of REST API call that you want to make.
-* `<MONITORING-ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more inforamtion, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
-* `<API_URL>` For more information about API URLs, see [{{site.data.keyword.mon_short}} REST APIs](/docs/monitoring?topic=monitoring-rest_apis).
+* `<MONITORING-ENDPOINT>` indicates the endpoint where the monitoring instance is available. For more inforamtion, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints). For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
+* `<API_URL>` For more information about API URLs, see [REST API endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_rest_api).
 * `HEADERS` add additional information such as information to authenticate with the {{site.data.keyword.mon_full_notm}} service.
 * `DATA` allows you to pass additional information that might be required.
 

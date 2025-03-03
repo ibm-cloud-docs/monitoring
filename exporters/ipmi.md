@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -82,7 +82,7 @@ Complete the following steps to configure a monitoring agent to collect IPMI met
 
 To monitor 1 or more hosts, you must configure a monitoring agent. The agent collects automatically a set of metrics that you can monitor through the monitoring UI.
 
-See [Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/monitoring?topic=monitoring-config_agent) and choose the monitoring agent that you want to configure to monitor a host.
+See [Choosing an agent type by infrastructure](/docs/monitoring?topic=monitoring-agent-types) and choose the monitoring agent that you want to configure to monitor a host.
 
 
 ## Configuring the Prometheus IPMI Exporter

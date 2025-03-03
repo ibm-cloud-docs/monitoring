@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-06-28"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords: 
 
@@ -80,7 +80,7 @@ Complete the following steps:
 2. Clone the repository.
 
     ```text
-    git clone https://github.com/draios/python-sdc-client.git
+    git clone https://github.com/sysdiglabs/sysdig-sdk-python.git
     ```
     {: pre}
 
@@ -155,7 +155,7 @@ Complete the following steps from a terminal:
 
 3. Get the endpoint for the region where the monitoring instance is available.
 
-    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig).
+    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints).
 
     For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
 
@@ -206,7 +206,7 @@ Complete the following steps from a terminal:
 
 2. Get the endpoint for the region where the monitoring instance is available.
 
-    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig).
+    To see the list of endpoints that are available, see [{{site.data.keyword.mon_short}} endpoints](/docs/monitoring?topic=monitoring-endpoints).
 
     For example, the endpoint for an instance that is available in us-south is the following: `https://us-south.monitoring.cloud.ibm.com`
 
@@ -306,5 +306,5 @@ sdclient = SdMonitorClient(token=MONITOR_TOKEN,sdc_url=URL)
 * [Extracting metrics from a {{site.data.keyword.mon_short}} instance by using the {{site.data.keyword.mon_short}} Python client](/docs/monitoring?topic=monitoring-metrics_python)
 * [Managing dashboards by using the {{site.data.keyword.mon_short}} Python client](/docs/monitoring?topic=monitoring-dashboard_python)
 * [Managing alerts by using the Python client](/docs/monitoring?topic=monitoring-alert_python)
-* [Python Client](https://github.com/draios/python-sdc-client){: external}
-* [{{site.data.keyword.mon_short}} Python samples](https://github.com/draios/python-sdc-client/tree/master/examples){: external}
+* [Python Client](https://github.com/sysdiglabs/sysdig-sdk-python){: external}
+* [{{site.data.keyword.mon_short}} Python samples](https://github.com/sysdiglabs/sysdig-sdk-python/tree/master/examples){: external}

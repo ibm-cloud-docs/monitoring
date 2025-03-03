@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-03"
 
 keywords: 
 
@@ -70,8 +70,7 @@ The following collectors are supported:
 
 To learn how to configure the Windows exporter, see [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows).
 
-The legacy Prometheus WMI Exporter is still supported, see [Monitoring a Windows environment using the legacy WMI Exporter](/docs/monitoring?topic=monitoring-windows_wmi) for information on the WMI Exporter.
-{: note}
+
 
 
 

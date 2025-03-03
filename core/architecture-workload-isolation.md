@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-06-28"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords: 
 
@@ -58,5 +58,5 @@ You can use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM
 * To grant access to manage the monitoring instance and its resources, you can assign service roles that define users levels of access for viewing data and managing features such as dashboards, teams, and alerts.
 
 Within a monitoring instance, you can define teams to group users and control what data and resources are available for members of a team.
-* Adding users to a team is managed through IAM policies. [Learn more](/docs/monitoring?topic=monitoring-iam#iam_policies_team).
+* Adding users to a team is managed through IAM policies. [Learn more](/docs/monitoring?topic=monitoring-iam_grant_team).
 * User access to view, manage, and monitor data is granted through IAM policies.
