@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
-keywords: 
+keywords:
 
 subcollection: monitoring
 
@@ -12,16 +12,120 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-# Auditing events
+# Activity tracking events for {{site.data.keyword.mon_full_notm}}
 {: #at_events}
 
-As a security officer, auditor, or manager, you can use the Activity Tracker service to track how users and applications interact with the {{site.data.keyword.mon_full_notm}} service in {{site.data.keyword.cloud}}.
+
+{{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.mon_full_notm}}, generate activity tracking events.
 {: shortdesc}
 
-{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
+Activity tracking events report on activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
 
-{{site.data.keyword.mon_full_notm}} automatically generates events so that you can track activity on your service instance.
+You can use {{site.data.keyword.atracker_full_notm}}, a platform service, to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
+
+You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
+
+
+
+As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025. Customers will need to migrate to {{site.data.keyword.logs_full_notm}} before 30 March 2025. During the migration period, customers can use {{site.data.keyword.at_full_notm}} along with {{site.data.keyword.logs_full_notm}}. Activity tracking events are the same for both services. For information about migrating from {{site.data.keyword.at_full_notm}} to {{site.data.keyword.logs_full_notm}} and running the services in parallel, see [migration planning](/docs/cloud-logs?topic=cloud-logs-migration-intro).
+{: important}
+
+## Locations where activity tracking events are generated
+{: #at-locations}
+
+
+
+### Locations where activity tracking events are sent to {{site.data.keyword.at_full_notm}} hosted event search
+{: #at-legacy-locations}
+
+
+
+{{site.data.keyword.mon_full_notm}} sends activity tracking events to {{site.data.keyword.at_full_notm}} hosted event search in the regions that are indicated in the following table.
+
+| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
+|---------------------|-------------------------|-------------------|----------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+{: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
+{: #at-table-1}
+{: tab-title="Americas"}
+{: tab-group="at"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
+|---------------------|------------------|------------------|--------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
+{: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
+{: #at-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="at"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
+|---------------------------------------------------------------|---------------------|------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+{: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
+{: #at-table-3}
+{: tab-title="Europe"}
+{: tab-group="at"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+### Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}
+{: #atracker-locations}
+
+
+
+{{site.data.keyword.mon_full_notm}} sends activity tracking events by {{site.data.keyword.atracker_full_notm}} in the regions that are indicated in the following table.
+
+| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
+|---------------------|-------------------------|-------------------|----------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+{: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
+{: #atracker-table-1}
+{: tab-title="Americas"}
+{: tab-group="atracker"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
+|---------------------|------------------|------------------|--------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
+{: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
+{: #atracker-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="atracker"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
+|---------------------------------------------------------------|---------------------|------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+{: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
+{: #atracker-table-3}
+{: tab-title="Europe"}
+{: tab-group="atracker"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+
+
+## Viewing activity tracking events for {{site.data.keyword.mon_full_notm}}
+{: #at-viewing}
+
+
+
+You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
+
+
+
+### Launching {{site.data.keyword.logs_full_notm}} from the Observability page
+{: #log-launch-standalone}
+
+
+
+For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.logs_full_notm}} documentation.](/docs/cloud-logs?topic=cloud-logs-instance-launch)
 
 
 ## Alerts: List of management events
@@ -34,7 +138,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.alert.update`         | An event is created when you update an alert definition |
 | `sysdig-monitor.alert.delete`         | An event is created when you delete an alert definition |
 | `sysdig-monitor.alert.list`           | An event is created when you view the alerts in the monitoring instance  |
-{: caption="Alerts: List of activity tracker actions" caption-side="top"}
+{: caption="Alerts: List of activity tracking actions" caption-side="top"}
 
 ## Captures: List of management events
 {: #at_events_captures}
@@ -46,7 +150,7 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.capture.read`         | An event is created when you load a Monitoring capture in the dashboard |
 | `sysdig-monitor.capture.update`       | An event is created when you update a Monitoring capture |
 | `sysdig-monitor.capture.delete`       | An event is created when you delete a Monitoring capture |
-{: caption="Captures: List of activity tracker actions" caption-side="top"}
+{: caption="Captures: List of activity tracking actions" caption-side="top"}
 
 
 ## Dashboards: List of management events
@@ -60,44 +164,4 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 | `sysdig-monitor.dashboard.update`     | An event is created when you update a dashboard |
 | `sysdig-monitor.dashboard.delete`     | An event is created when you delete a dashboard |
 | `sysdig-monitor.dashboard.list`       | An event is created when you view the dashboards in the monitoring instance |
-{: caption="Dashboards: List of activity tracker actions" caption-side="top"}
-
-
-
-## Teams: List of management events
-{: #at_events_teams}
-
-
-| Action                                | Description                                       |
-|---------------------------------------|---------------------------------------------------|
-| `sysdig-monitor.team.create`          | An event is created when you create a Monitoring team |
-| `sysdig-monitor.team.read`            | An event is created when you view a Monitoring team definition |
-| `sysdig-monitor.team.update`          | An event is created when you update a Monitoring team definition |
-| `sysdig-monitor.team.delete`          | An event is created when you delete a Monitoring team |
-| `sysdig-monitor.team.list`            | An event is created when you view the Monitoring teams |
-{: caption="Captures: List of activity tracker actions" caption-side="top"}
-
-
-
-
-## Where to view the events
-{: #ui}
-
-Events that are generated by an instance of the {{site.data.keyword.mon_full_notm}} service are automatically forwarded to the {{site.data.keyword.at_full_notm}} service instance that is available in the same location.
-
-{{site.data.keyword.at_full_notm}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_full_notm}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-launch).
-
-The following table lists the {{site.data.keyword.cloud}} locations and the {{site.data.keyword.at_full_notm}} instance location where you can find these events:
-
-| Monitoring instance location         | Location of events  |
-|-----------------------------|---------------------|
-| `Dallas (us-south)`         | `Dallas (us-south)` |
-| `Washington (us-east)`      | `Washington (us-east)` |
-| `Tokyo (jp-tok)`            | `Tokyo (jp-tok)` |
-| `Sydney (au-syd)`           | `Sydney (au-syd)` |
-| `Frankfurt (eu-de)`         | `Frankfurt (eu-de)` |
-| `London (eu-gb)`            | `London (eu-gb)` |
-| `Osaka (jp-osa)`            | `Osaka (jp-osa)` |
-| `Toronto (ca-tor)`          | `Toronto (ca-tor)` |
-| `Sao Paulo (br-sao)`        | `Sao Paulo (br-sao)` |
-{: caption="Corresponding {{site.data.keyword.at_short}} instance and {{site.data.keyword.mon_full_notm}} location." caption-side="top"}
+{: caption="Dashboards: List of activity tracking actions" caption-side="top"}
