@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords: 
 
@@ -45,13 +45,8 @@ You can configure your Prometheus server to remote write to a {{site.data.keywor
 
     - Configure a Prometheus server through a Kubernetes ConfigMap
 
-    For more information, see [Collecting metrics from a Kubernetes cluster by using Prometheus remote write](/docs/monitoring?topic=monitoring-prometheus_remote_write_kube1).
+    For more information, see [Collecting metrics by using Prometheus remote write](/docs/monitoring?topic=monitoring-prometheus_remote_write).
 
-- You can configure Prometheus remote write on a Linux host. For more information, see [Collecting metrics on Linux based infrastructures by using Prometheus remote write](/docs/monitoring?topic=monitoring-prometheus_remote_write_linux).
-
-- You can monitor the health, behavior, and performance of a WebSphere Application Server 9.0.5.9 or later by using {{site.data.keyword.mon_full_notm}}. The WebSphere Application Server can run in the {{site.data.keyword.cloud_notm}}, outside the {{site.data.keyword.cloud_notm}}, or on-prem.
-
-    For more information, see [Collecting metrics from WebSphere Application Server by using Prometheus remote write](/docs/monitoring?topic=monitoring-prometheus_remote_write_was).
 
 
 ### Prometheus v2.25 and previous versions

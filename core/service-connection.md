@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-06-28"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords: 
 
@@ -77,7 +77,7 @@ ibmcloud resource service-instance-update <my-service-instance> --service-endpoi
 ```
 {: pre}
 
-Or you can use the [Resource Controller API](https://cloud.ibm.com/apidocs/resource-controller), with a `PATCH` request to the [/resource_instances/{id}](https://cloud.ibm.com/apidocs/resource-controller#update-a-resource-instance) endpoint.
+Or you can use the [Resource Controller API](https://cloud.ibm.com/apidocs/resource-controller), with a `PATCH` request to the [/resource_instances/{id}](https://cloud.ibm.com/apidocs/resource-controller/resource-controller#update-resource-instance) endpoint.
 
 After you enable private endpoints, the API calls that are made through a public endpoint are rejected.
 
@@ -88,7 +88,7 @@ After you enable private endpoints, the API calls that are made through a public
 After your account is enabled for VRF and service endpoints, you can configure a {{site.data.keyword.mon_short}} agent to connect to an {{site.data.keyword.mon_full_notm}} instance through the private network.
 
 
-You can [configure the {{site.data.keyword.mon_short}} agent](/docs/monitoring?topic=monitoring-config_agent) to use the private network by using a private endpoint as the ingestion URL. To get information about private endpoints, see [Private endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion_private).
+You can configure the {{site.data.keyword.mon_short}} to use the private network by using a private endpoint as the ingestion URL. To get information about private endpoints, see [Private endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion_private).
 
 What happens when you configure the {{site.data.keyword.mon_short}} agent to use a private endpoint?
 * Private endpoints are not accessible from the public internet.
@@ -112,7 +112,7 @@ You can choose to send data to the {{site.data.keyword.mon_short}} service throu
 ### Access to the web UI through a public endpoint
 {: #network_ui}
 
-To access the {{site.data.keyword.mon_full_notm}} web UI, you may need to define a firewall rule in your host. To get information about the web UI endpoints, see [Web UI endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_sysdig).
+To access the {{site.data.keyword.mon_full_notm}} web UI, you may need to define a firewall rule in your host. To get information about the web UI endpoints, see [Web UI endpoints](/docs/monitoring?topic=monitoring-endpoints).
 
 
 

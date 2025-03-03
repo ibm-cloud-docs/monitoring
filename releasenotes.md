@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-12-11"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 
 keywords:
@@ -92,7 +92,7 @@ Deprecation of Prometheus ingestion endpoints
 Deprecation of `Graduated Tier - Sysdig Secure + Monitor` plan
 :   {{site.data.keyword.mon_full_notm}} has deprecated the `Graduated Tier - Sysdig Secure + Monitor` pricing plan. Users can maintain the same functionality by configuring an {{site.data.keyword.mon_full_notm}} instance connected to an {{site.data.keyword.sysdigsecure_full_notm}} instance by 18 August 2024.
 
-    For more information, see [Can {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_full_notm}} be used together?](/docs/monitoring?topic=monitoring-faq#faq_4) and [The Graduated Tier - Sysdig Secure + Monitoring plan is deprecated. How do I keep using {{site.data.keyword.sysdigsecure_short}} functionality?](/docs/monitoring?topic=monitoring-faq#faq_5)
+    For more information, see [Can {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_full_notm}} be used together?](/docs/monitoring?topic=monitoring-faq#faq_4).
 
 Deprecation of Python sdc-client library
 :   The Python library for {{site.data.keyword.mon_full_notm}} is deprecated.
@@ -189,7 +189,7 @@ Change to alerts editor
 
     * The `Secure` icon has changed and now includes the text {{site.data.keyword.sysdigsecure_short}}.
 
-    * [To access the `Secure` UI, select `Workload Protection` instead of `Secure`.](/docs/monitoring?topic=monitoring-launch#launch_step3)
+    * To access the `Secure` UI, select `Workload Protection` instead of `Secure`.
 
     * All instructions in the [{{site.data.keyword.mon_full}} documentation](/docs/monitoring) referring to `Secure` apply to {{site.data.keyword.sysdigsecure_short}}.
 
@@ -273,7 +273,6 @@ Change to alerts editor
     - Notifications that are sent by alerts (webhooks, PagerDuty, and so on) will use the new metric and label convention.  If you are doing further processing to parse metrics or labels, you will need to update your scripts accordingly.
     - Terraform or configuration scripts that are used for dashboards, alerts and notifications might need updating.
 
-    For more information, see [Enhanced metric store](/docs/monitoring?topic=monitoring-metrics_store).
 
 ## 18 May 2022
 {: #monitoring-may1822}
@@ -333,7 +332,7 @@ Secure support for Inline Scanner
 {: release-note}
 
 Monitoring integrations
-:   You can monitor integrations using PromCat.
+:   You can monitor integrations using the integrations library.
 
 Alert enhancements
 :   The following alert enhancements are available:
@@ -524,7 +523,7 @@ Secure support for Inline Scanner
 {: release-note}
 
 CLI support
-:   New CLI added that you can use to access information in {{site.data.keyword.mon_full_notm}}. [Learn more about the CLI](/docs/monitoring?topic=sysdig-monitor-cli-plugin-sysdig-monitor-cli).
+:   New CLI added that you can use to access information in {{site.data.keyword.mon_full_notm}}. [Learn more about the CLI](/docs/monitoring?topic=monitoring-monitor-cli).
 
 API support
 :   New API added that can be used to manage the {{site.data.keyword.mon_full_notm}} service. [Learn more about the API](/apidocs/monitor).
@@ -745,7 +744,7 @@ Secure support for inline scanner
 {: release-note}
 
 Secure support
-:   In architectures that are focused on container and microservices, you can use Secure to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. [Learn more](/docs/monitoring?topic=monitoring-getting-started-secure)
+:   In architectures that are focused on container and microservices, you can use Secure to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. 
 
 ## 19 November 2020
 {: #monitoring-nov1920}

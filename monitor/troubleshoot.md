@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-07-31"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords: 
 
@@ -68,7 +68,7 @@ If you are experiencing connectivity issues, complete the following steps:
 
     You can view the dashboard template **monitoring agent Health & Status** that is available in **Host Infrastructure** to check the version of your monitoring agents.
 
-2. [Upgrade your monitoring agent](/docs/monitoring?topic=monitoring-upgrade_agent) to version 10.5 as soon as possible to ensure a reliable flow of metrics and data into our systems.
+2. Upgrade your monitoring agent as soon as possible to ensure a reliable flow of metrics and data into our systems.
 
 
 ## Are you getting access denied when running API calls?
@@ -78,7 +78,7 @@ When the authorization method that is allowed in an {{site.data.keyword.mon_full
 
 First, [check the instance authorization methods that are allowed](/docs/monitoring?topic=monitoring-iam_instance_auth#iam_instance_auth_step1).
 
-Then, review [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam) and [Token headers](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-sysdig) before you retry the request.
+Then, review [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam) and [Token headers](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-monitoring) before you retry the request.
 
 ## Are your dashboards, alerts, and scripts no longer returning what you intended?
 {: #troubleshoot-entry-5}

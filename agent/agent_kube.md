@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-09-19"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -29,7 +29,7 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 
 - [Get information about Kubernetes monitoring agent images](/docs/monitoring?topic=monitoring-monitoring_agent_image).
 
-- [Install the {{site.data.keyword.cloud_notm}} CLI and plug-ins](/docs/containers?topic=containers-cs_cli_install#cs_cli_install_steps):
+- [Install the {{site.data.keyword.cloud_notm}} CLI and plug-ins](/docs/containers?topic=containers-cli-install):
 
     * {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`)
 
@@ -39,7 +39,7 @@ You can associate one or more tags to each monitoring agent. Tags are comma-sepa
 
     * {{site.data.keyword.containerlong_notm}} observability plug-in (`ibmcloud ob`)
 
-- [Install the Kubernetes CLI (kubectl)](/docs/containers?topic=containers-cs_cli_install#kubectl)
+- [Install the Kubernetes CLI (kubectl)](/docs/containers?topic=containers-cli-install#install-kubectl-cli)
 
     Make sure that the `kubectl` version is compatible with your cluster version. If the `kubectl` version is not compatible, you can get an error such as `kubectl create clusterrolebinding failed!`. You can use `kubectl version --short` to check versions of your cluster and your `kubectl` client.
 

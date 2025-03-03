@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-11-13"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -257,6 +257,6 @@ To configure color-coding for a column, complete the following steps:
 
 - Create a custom dashboard. For more information, see [Working with dashboards](/docs/monitoring?topic=monitoring-dashboards#dashboards).
 
-- Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).
+- Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-alerts).
 
 - Learn about the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} functionality to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).

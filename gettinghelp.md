@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-03-03"
 
 
 keywords: 
@@ -36,19 +36,18 @@ The Support Center is the preferred method for getting support, but if you can't
 ## Searching forums
 {: #asking-a-question}
 
-You can search forums to find answers to your questions. The Stack Overflow forum, for technical questions, and the IBM Developer Answers forum, for general questions, both provide a wide variety of searchable answers to your {{site.data.keyword.cloud_notm}} questions.
+You can search forums to find answers to your questions. The Stack Overflow forum provides a wide variety of searchable answers to your {{site.data.keyword.cloud_notm}} questions.
 
 If you don't find an existing answer to a question, ask a new one.
 
-You can access Stack Overflow and IBM Developer Answers from the Support Center, or use the following links:
+You can access Stack Overflow from the Support Center, or use the following link:
 
 * Go to [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to ask technical questions about the {{site.data.keyword.mon_full_notm}} service.
-* Go to [IBM Developer Answers](https://developer.ibm.com/answers/topics/ibm-cloud/){: external} to ask general questions about the {{site.data.keyword.mon_full_notm}} service and about getting started instructions.
 
 Tag your questions with **ibm-cloud** and **monitoring**.
 {: important}
 
-{{site.data.keyword.cloud_notm}} development and support teams actively monitor Stack Overflow and IBM Developer Answers, and follow the questions that are tagged with **ibm-cloud**. When you create a question in either forum, add the **ibm-cloud** tag to your question to ensure that it's seen by the {{site.data.keyword.cloud_notm}} development and support teams.
+{{site.data.keyword.cloud_notm}} development and support teams actively monitor Stack Overflow and follow the questions that are tagged with **ibm-cloud**. When you create a question in either forum, add the **ibm-cloud** tag to your question to ensure that it's seen by the {{site.data.keyword.cloud_notm}} development and support teams.
 
 ## Opening a support case
 {: #support_case}

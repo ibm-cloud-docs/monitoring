@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -90,7 +90,7 @@ In this tutorial, you configure metrics for your {{site.data.keyword.openshiftsh
 
 - [Check resource requirements](/docs/monitoring?topic=monitoring-resource_requirements).
 
-- [Install the {{site.data.keyword.cloud_notm}} CLI and plug-ins](/docs/containers?topic=containers-cs_cli_install#cs_cli_install_steps):
+- [Install the {{site.data.keyword.cloud_notm}} CLI and plug-ins](/docs/containers?topic=containers-cli-install):
 
     * {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`)
 
@@ -111,7 +111,7 @@ In this tutorial, you configure metrics for your {{site.data.keyword.openshiftsh
 | {{site.data.keyword.redhat_openshift_notm}} cluster instance          |  Resource                 | Editor  | us-south  | This policy is required to configure the secret and the monitoring agent in the {{site.data.keyword.openshiftshort}} cluster. |
 {: caption="List of IAM policies required to complete the tutorial" caption-side="top"}
 
-For more information about the {{site.data.keyword.containerlong}} IAM roles, see [User access permissions](/docs/containers?topic=containers-access_reference#access_reference).
+For more information about the {{site.data.keyword.containerlong}} IAM roles, see [IAM roles and actions](/docs/containers?topic=containers-iam-platform-access-roles).
 
 
 ## Step 1. Provision an {{site.data.keyword.mon_full_notm}} instance
@@ -230,7 +230,7 @@ Complete the following steps:
    ```
    {: pre}
 
-   Where <MONITORING_ACCESS_KEY> is the ingestion key for the instance and <REGION> is the region of the {{site.data.keyword.mon_full_notm}} instance.
+   Where `<MONITORING_ACCESS_KEY>` is the ingestion key for the instance and `<REGION>` is the region of the {{site.data.keyword.mon_full_notm}} instance.
 
    By default the slim agent is installed.  The slim agent reduces the possible are of attack for potential vulnerabilities and, as a result, is more secure.  If installing the full agent is desired, add the `-af` option to the `curl` command.
    {: note}
@@ -352,8 +352,8 @@ For more information on how to interpret this view, see [About Workloads Overvie
 
 - Create a custom dashboard. For more information, see [Working with dashboards](/docs/monitoring?topic=monitoring-dashboards#dashboards).
 
-- Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).
+- Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-alerts).
 
-- Learn how to manage logs from your cluster. See [Logging with {{site.data.keyword.redhat_openshift_notm}} clusters](/docs/log-analysis?topic=log-analysis-kube).
+- Learn how to manage logs from your cluster. See [Getting started with {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-getting-started).
 
 - Learn about the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} functionality to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).

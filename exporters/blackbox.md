@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords: 
 
@@ -36,7 +36,7 @@ Complete the following steps to configure the Prometheus Blackbox Exporter:
 
 To monitor 1 or more hosts, you must configure a monitoring agent. The agent collects automatically a set of metrics that you can monitor through the monitoring UI.
 
-See [Install a monitoring agent to collect and forward metrics from a server to an {{site.data.keyword.mon_full_notm}} instance](/docs/monitoring?topic=monitoring-config_agent) and choose the monitoring agent that you want to configure to monitor a host.
+See [Choosing an agent type by infrastructure](/docs/monitoring?topic=monitoring-agent-types) and choose the monitoring agent that you want to configure to monitor a host.
 
 
 ## Install the Prometheus Blackbox exporter
@@ -158,10 +158,7 @@ scrape_configs:
   static_configs:
   - targets:
     - https://prometheus.io/
-    - https://promcat.io/
-    - https://api.promcat.io/apps
     - https://www.google.com/search?q=promcat
-    - https://promcat.io/apps/harbor
     - https://www.ibm.com/software/passportadvantage
   relabel_configs:
   - source_labels: [__address__]

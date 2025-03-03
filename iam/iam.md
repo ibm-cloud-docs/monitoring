@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -53,8 +53,8 @@ To manage access groups, you must be the account owner, administrator or editor 
 
 Use the following actions to manage IAM access groups in the {{site.data.keyword.cloud_notm}}:
 
-* [Creating an access group](/docs/account?topic=account-groups#create_ag).
-* [Assigning access to a group](/docs/account?topic=account-groups#access_ag).
+* [Creating an access group](/docs/account?topic=account-groups&interface=ui#create_ag).
+* [Assigning access to a group](/docs/account?topic=account-groups&interface=ui#access_ag).
 
 
 ## Managing access by assigning policies directly to users
@@ -64,9 +64,9 @@ To manage access or assign new access to users by using IAM policies, you must b
 
 Use the following actions to manage IAM policies in the {{site.data.keyword.cloud_notm}}:
 
-* To grant permissions to a user, see [Assigning access](/docs/account?topic=account-assign-access-resources#assign_new_access).
-* To revoke permissions, see [Removing access](/docs/account?topic=account-assign-access-resources#removing_access).
-* To review a user's permissions, see [Reviewing your assigned access](/docs/account?topic=account-assign-access-resources#review_your_access).
+* To grant permissions to a user, see [Assigning access](/docs/account?topic=account-assign-access-resources&interface=ui#assign-new-access).
+* To revoke permissions, see [Removing access](/docs/account?topic=account-assign-access-resources&interface=ui#removing-access-console).
+* To review a user's permissions, see [Reviewing your assigned access](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
 
 
 ## {{site.data.keyword.cloud_notm}} platform roles

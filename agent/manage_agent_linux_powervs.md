@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-09-04"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -19,7 +19,7 @@ subcollection: monitoring
 After you provision an instance of the {{site.data.keyword.mon_full}} service in the {{site.data.keyword.cloud_notm}}, you can deploy the {{site.data.keyword.mon_short}} agent on your Linux hosts on a PowerVS workspace to automatically collect data and metrics. You can configure which metrics to monitor in each environment.
 {: shortdesc}
 
-For information on the available metrics, see [Metrics available in Monitor Light](https://docs.sysdig.com/en/docs/installation/configuration/sysdig-agent/configure-agent-modes/metrics-available-in-monitor-light/){: external}
+For information on the available metrics, see [Metrics](https://docs.sysdig.com/en/sysdig-monitor/metrics/){: external}
 {: tip}
 
 {{site.data.keyword.mon_full_notm}} provides the following features to protect your standalone Linux hosts on a PowerVS workspace:

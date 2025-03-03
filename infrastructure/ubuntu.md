@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -264,7 +264,7 @@ To configure color-coding for a column, complete the following steps:
 
 - Create a custom dashboard. For more information, see [Working with dashboards](/docs/monitoring?topic=monitoring-dashboards#dashboards).
 
-- Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-monitoring#monitoring_alerts).
+- Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-alerts).
 
 - Learn how to manage logs. See [Logging with Linux VPC server instances](/docs/log-analysis?topic=log-analysis-ubuntu).
 

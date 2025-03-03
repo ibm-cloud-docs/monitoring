@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-05-17"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -36,7 +36,7 @@ You will need to configure:
 {: #data_streaming_prereqs}
 
 Check the following prereqs before managing streaming:
-* [Create an {{site.data.keyword.messagehub}} instance.](/docs/EventStreams?topic=EventStreams-connecting#provision_instance).
+* [Create an {{site.data.keyword.messagehub}} instance.](/docs/EventStreams?topic=EventStreams-getting-started).
 * Check the limitations of the service plans. For more information, see [Limits and quotas](https://cloud.ibm.com/docs/EventStreams?topic=EventStreams-kafka_quotas).
 * Make sure you have the appropriate permissions.
 
@@ -143,7 +143,7 @@ To restrict access to 1 topic, complete the following steps:
 
     ![Modify policy](../images/streaming-credentials-3.png "Modify policy"){: caption="Modify policy" caption-side="bottom"}
 
-5. [Get credentials using the IBM Cloud CLI](/docs/EventStreams?topic=EventStreams-connecting#connect_enterprise_external_cli) and make note of the api key and broker URL values.
+5. [Get credentials using the IBM Cloud CLI](/docs/EventStreams?topic=EventStreams-connecting) and make note of the api key and broker URL values.
 
 
 #### Step 3. Configure the connection in {{site.data.keyword.mon_short}} to {{site.data.keyword.messagehub}}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-09-19"
+  years:  2018, 2025
+lastupdated: "2025-02-27"
 
 keywords:
 
@@ -37,7 +37,7 @@ Complete the following steps to configure a monitoring agent on Linux to collect
 
 3. Install the kernel headers.
 
-    When you install a monitoring agent, the agent uses kernel header files. [Learn more](https://docs.sysdig.com/en/docs/installation/troubleshooting/kernel-header-troubleshooting/){: external}
+    When you install a monitoring agent, the agent uses kernel header files. [Learn more](https://docs.sysdig.com/en/sysdig-secure/install-agent-components/troubleshooting/kernel-header-troubleshooting/){: external}
 
     Choose a distribution and run the following command for that distribution.
 

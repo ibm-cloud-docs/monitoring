@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-01-22"
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -74,7 +74,7 @@ The following table lists database services that are enabled for {{site.data.key
 | [{{site.data.keyword.databases-for-mongodb_full_notm}}](/docs/databases-for-mongodb) | {{site.data.keyword.databases-for-mongodb_full_notm}} is a managed MongoDB service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Platform metrics](/docs/databases-for-mongodb?topic=databases-for-mongodb-monitoring) |
 | [{{site.data.keyword.messages-for-rabbitmq_full_notm}}](/docs/messages-for-rabbitmq)  | {{site.data.keyword.messages-for-rabbitmq_full_notm}} is a managed RabbitMQ service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.   | [Platform metrics](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-monitoring) |
 | [{{site.data.keyword.databases-for-enterprisedb_full_notm}}](/docs/databases-for-enterprisedb)  | {{site.data.keyword.databases-for-enterprisedb_full_notm}} is a managed service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.   | [Platform metrics](/docs/databases-for-enterprisedb?topic=databases-for-enterprisedb-monitoring) |
-| [{{site.data.keyword.dv_full}}](/docs/data-virtualization?topic=data-virtualization-getting-started) | {{site.data.keyword.dv_full}} is a fully managed service on {{site.data.keyword.cloud_notm}} that you can use to easily and securely access data across many data sources. | [Platform metrics](/docs/data-virtualization?topic=data-virtualization-monitor) |
+| [{{site.data.keyword.dv_full}}](/docs/data-virtualization?topic=data-virtualization-getting-started) | {{site.data.keyword.dv_full}} is a fully managed service on {{site.data.keyword.cloud_notm}} that you can use to easily and securely access data across many data sources. | [Platform metrics](https://dataplatform.cloud.ibm.com/docs/content/dvaas/wq_monitor.html?context=cpdaas&locale=en&audience=wdp){: external} |
 | [{{site.data.keyword.Db2_on_Cloud_long}}](/docs/Db2onCloud?topic=Db2onCloud-about) | {{site.data.keyword.Db2_on_Cloud_long_notm}} is a fully managed public cloud service on IBM Cloud. As a relational database, it delivers fast query processing with enterprise-level performance and capabilities for online transactional processing (OLTP). | [Platform metrics](/docs/Db2onCloud?topic=Db2onCloud-monitor) |
 | [{{site.data.keyword.lakehouse_full_notm}}](/docs/watsonxdata?topic=watsonxdata-getting-started) | {{site.data.keyword.lakehouse_full_notm}} is a unique solution that allows co-existence of open source technologies and proprietary products. It offers a single platform where you can store the data or attach data sources for managing and analyzing your enterprise data. | [Platform metrics](/docs/watsonxdata?topic=watsonxdata-monitor_wxd) |
 {: caption="List of database services" caption-side="top"}
@@ -90,7 +90,7 @@ The following table lists developer tools and DevOps services that are enabled f
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.contdelivery_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started)| With {{site.data.keyword.contdelivery_short}}, you can build, test, and deliver applications by using DevOps practices and industry-leading tools. | [Platform metrics](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-monitor-sysdig) |
 | [{{site.data.keyword.appconfig_full}}](/docs/app-configuration?topic=app-configuration-getting-started)| Instrument your applications with {{site.data.keyword.appconfig_short}} SDKs, and use the {{site.data.keyword.appconfig_short}} dashboard or {{site.data.keyword.appconfig_short}} administrator API to define features flags or properties. | [Platform metrics](/docs/app-configuration?topic=app-configuration-ac-monitoring) |
-| [{{site.data.keyword.en_full}}](/docs/event-notifications?topic=event-notifications-getting-started)|  A centralized alerts management service that notifies and alerts you to events occurring in your {{site.data.keyword.Bluemix_notm}} account.| [Platform metrics](/docs/event-notifications?topic=event-notifications-en-monitoring) |
+| [{{site.data.keyword.en_full}}](/docs/event-notifications?topic=event-notifications-getting-started)|  A centralized alerts management service that notifies and alerts you to events occurring in your {{site.data.keyword.Bluemix_notm}} account.| [Platform metrics](/docs/event-notifications?topic=event-notifications-monitoring) |
 {: caption="List of developer tools and DevOps services" caption-side="top"}
 
 
@@ -101,7 +101,7 @@ The following table lists integration services that are enabled for {{site.data.
 
 | Service     | Description | Metrics |
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.messagehub}}](/docs/EventStreams?topic=EventStreams-getting_started)| {{site.data.keyword.messagehub}} is a high-throughput message bus that is built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.IBM_notm}} and event stream distribution between your services and applications. | [Platform metrics](/docs/EventStreams?topic=EventStreams-metrics) |
+| [{{site.data.keyword.messagehub}}](/docs/EventStreams?topic=EventStreams-getting-started)| {{site.data.keyword.messagehub}} is a high-throughput message bus that is built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.IBM_notm}} and event stream distribution between your services and applications. | [Platform metrics](/docs/EventStreams?topic=EventStreams-metrics) |
 | [{{site.data.keyword.mq_full}}](/docs/mqcloud?topic=mqcloud-getting_started)| {{site.data.keyword.mq_full}} is an enterprise grade messaging middleware service that provides secure messaging capabilities, such as point-to-point and publish and subscribe models. | [Platform metrics](/docs/mqcloud?topic=mqcloud-monitor_sysdig) |
 {: caption="List of integration services" caption-side="top"}
 
@@ -124,7 +124,7 @@ The following table lists integration services that are enabled for {{site.data.
 
 | Service     | Description | Metrics |
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started) | {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC).  | [Platform metrics](/docs/schematics?topic=schematics-monitoring-instances) |
+| [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started) | {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC).  | [Platform metrics](/docs/schematics?topic=schematics-monitoring) |
 | [{{site.data.keyword.atracker_full_notm}}](/docs/atracker) | You can use {{site.data.keyword.atracker_full_notm}} to configure how to route auditing events, both global and location-based event data, in your {{site.data.keyword.cloud_notm}}. | [Platform metrics](/docs/atracker?topic=atracker-monitoring_metrics) |
 | [{{site.data.keyword.metrics_router_full_notm}}](/docs/metrics-router) | Use {{site.data.keyword.metrics_router_full_notm}} to configure the routing of platform metrics generated in your {{site.data.keyword.cloud_notm}} account. | [Platform metrics](/docs/metrics-router?topic=metrics-router-platform-metrics) |
 {: caption="List of platform services" caption-side="top"}

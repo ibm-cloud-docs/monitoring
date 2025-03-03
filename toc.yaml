@@ -7,7 +7,7 @@ toc:
     audience: service
     href: /docs/monitoring
     console-page: /observe/monitoring
-    product-page: https://www.ibm.com/cloud/cloud-monitoring
+    product-page: https://www.ibm.com/products/cloud-monitoring
     path: monitoring
     label: Monitoring
   entries:
@@ -250,7 +250,6 @@ toc:
           topics:
           - monitor/dashboards.md
           - monitor/panels.md
-          - api/dashboard_api.md
           - api/dashboard_python.md
           links:
             - link:
@@ -336,14 +335,13 @@ toc:
               - link:
                   label: Prometheus metrics / OpenMetrics code instrumentation
                   href: https://sysdig.com/blog/prometheus-metrics/
+
       - topicgroup:
           label: Metrics
           links:
               - link:
                   label: Metrics dictionary
                   href: https://docs.sysdig.com/en/metrics-dictionary.html
-
-      - deprecated.md
 
   - navgroup:
         id: help

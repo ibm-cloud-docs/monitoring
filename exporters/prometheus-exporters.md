@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-03-03"
 
 keywords: 
 
@@ -25,7 +25,7 @@ See the [{{site.data.keyword.IBM_notm}} support statement](/docs/monitoring?topi
 
 There are different sources for Prometheus exporters:
 - Official exporters are available in [the official Prometheus GitHub organization](https://github.com/prometheus){: external} and are labelled **official**.
-- Sysdig curates and maintains [PromCat](https://promcat.io/){: external}. PromCat is an enterprise resource catalog where you can find supported {{site.data.keyword.mon_short}} integrations for Kubernetes platforms and cloud-native services.
+- Sysdig curates and maintains [an integrations library](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/integration-library/){: external}. The integrations library is an enterprise resource catalog where you can find supported {{site.data.keyword.mon_short}} integrations for Kubernetes platforms and cloud-native services.
 
 You can collect metrics from different sources such as:
 - Hosts for which a {{site.data.keyword.mon_short}} agent is not available such as Windows systems or VMware ESXi-Host systems.
@@ -39,8 +39,8 @@ The following table lists some Prometheus exporters that you can use to monitor 
 | Exporters                | Use case                               | Source |
 |--------------------------|----------------------------------------|---------|
 | `Blackbox Exporter`       | Allows blackbox probing of endpoints over HTTP, HTTPS, DNS, TCP and ICMP. The monitoring agent can be used in conjunction with the Blackbox exporter to collect availability metrics.  | [Prometheus Blackbox exporter](https://github.com/prometheus/blackbox_exporter){: external} (official)|
-| `IPMI Exporter`          | Collects Intelligent Platform Management Interface (IPMI) device sensor metrics.  | [Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external} (opensource)  |
-| `Windows WMI Exporter`   | Collects Windows system metrics. | [PromCat: Windows Exporter](https://promcat.io/apps/windows){: external} (opensource) |
+| `IPMI Exporter`          | Collects Intelligent Platform Management Interface (IPMI) device sensor metrics.  | [Prometheus IPMI exporter](https://github.com/prometheus-community/ipmi_exporter){: external} (opensource)  |
+| `Windows Exporter`   | Collects Windows system metrics. | [Windows Exporter](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/integration-library/windows/){: external}  |
 | `Node Exporter`          | Collects hardware and kernel-related metrics that are exposed by *NIX kernels. | [Node exporter](https://github.com/prometheus/node_exporter){: external} (official) |
 | `VMware Exporter`        | Collects metrics from VMware vCenter deployments. | [VMWare exporter](https://github.com/pryorda/vmware_exporter){: external} (Opensource) |
 {: caption="Exporters" caption-side="top"}
@@ -70,8 +70,7 @@ The following collectors are supported:
 
 To learn how to configure the Windows exporter, see [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows).
 
-The legacy Prometheus WMI Exporter is still supported, see [Monitoring a Windows environment using the legacy WMI Exporter](/docs/monitoring?topic=monitoring-windows_wmi) for information on the WMI Exporter.
-{: note}
+
 
 
 
@@ -81,7 +80,7 @@ The legacy Prometheus WMI Exporter is still supported, see [Monitoring a Windows
 
 In addition to the set of metrics that are automatically collected by the monitoring agent, you might want to collect other metrics such as sensor metrics.
 
-Configure the [Prometheus IPMI exporter](https://github.com/soundcloud/ipmi_exporter){: external} to collect Intelligent Platform Management Interface (IPMI) device sensor metrics.
+Configure the [Prometheus IPMI exporter](https://github.com/prometheus-community/ipmi_exporter){: external} to collect Intelligent Platform Management Interface (IPMI) device sensor metrics.
 {: note}
 
 * The Prometheus IPMI Exporter exporter supports local IPMI devices and remote devices that can be accessed by using Remote Management Control Protocol (RMCP).
@@ -124,7 +123,7 @@ You can collect the following metrics when you configure the IPMI exporter:
 
     The metric ipmi_bmc_info includes information about the firmware revision and manufacturer in labels and has a value of `1`.
 
-For more information, see [Prometheus IPMI Exporter](https://github.com/soundcloud/ipmi_exporter){: external}.
+For more information, see [Prometheus IPMI Exporter](https://github.com/prometheus-community/ipmi_exporter){: external}.
 
 To learn how to configure the IPMI exporter, see [Configuring the Prometheus IPMI Exporter to monitor sensor metrics](/docs/monitoring?topic=monitoring-ipmi).
 
