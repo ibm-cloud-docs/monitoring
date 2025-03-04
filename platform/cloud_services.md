@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-04"
 
 keywords:
 
@@ -93,6 +93,16 @@ The following table lists developer tools and DevOps services that are enabled f
 | [{{site.data.keyword.en_full}}](/docs/event-notifications?topic=event-notifications-getting-started)|  A centralized alerts management service that notifies and alerts you to events occurring in your {{site.data.keyword.Bluemix_notm}} account.| [Platform metrics](/docs/event-notifications?topic=event-notifications-monitoring) |
 {: caption="List of developer tools and DevOps services" caption-side="top"}
 
+## Infrastructure services
+{: #infrastructure}
+
+The following table lists infrastructure services that are enabled for {{site.data.keyword.mon_full_notm}}:
+
+| Service     | Description | Metrics |
+|-------------|-------------|-------------------|
+| [{{site.data.keyword.dl_full_notm}}](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl)| Use {{site.data.keyword.dl_full_notm}} to seamlessly connect your on-premises resources to your cloud resources. The speed and reliability of Direct Link extends your organization’s data center network and offers more consistent, higher-throughput connectivity, keeping traffic within the IBM Cloud network. | [Platform metrics](/docs/dl?topic=dl-monitoring) |
+| [{{site.data.keyword.tg_full_notm}}](/docs/transit-gateway?topic=transit-gateway-getting-started) | Use {{site.data.keyword.tg_full_notm}} to interconnect IBM Cloud classic and Virtual Private Cloud (VPC) infrastructures worldwide, keeping traffic within the IBM Cloud network. | [Platform metrics](/docs/transit-gateway?topic=transit-gateway-monitoring) |
+{: caption="List of infrastructure services" caption-side="top"}
 
 ## Integration services
 {: #integration}
