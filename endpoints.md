@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-02-24"
+lastupdated: "2025-03-05"
 
 keywords:
 
@@ -49,12 +49,8 @@ The following table lists the endpoints that are available per region:
 ## REST API endpoints
 {: #endpoints_rest_api}
 
-To make API calls, you might need to define a firewall rule in your host.
-{: note}
-
 To make API calls, you might need to define a firewall rule in your host. 
 {: note}
-
 ### Private REST API endpoints
 {: #endpoints_rest_api_private}
 
@@ -64,17 +60,15 @@ The following table lists the *Private API endpoints* that are available per reg
 |-------------|----------------------------------|----------------------------|
 | Dallas (`US-South`)  | `private.us-south.monitoring.cloud.ibm.com/api`   | 166.9.228.45    \n 166.9.229.45    \n 166.9.230.44       |
 | Frankfurt (`EU-DE`)     | `private.eu-de.monitoring.cloud.ibm.com/api`      | 166.9.248.88    \n 166.9.248.120    \n 166.9.248.152         |
-| London (`EU-GB`)     | `private.eu-gb.monitoring.cloud.ibm.com/api`      | 166.9.244.29    \n 166.9.244.59                           |
+| London (`EU-GB`)     | `private.eu-gb.monitoring.cloud.ibm.com/api`      | 166.9.244.29    \n 166.9.244.59      |
 | Madrid (`EU-ES`)     | `private.eu-es.monitoring.cloud.ibm.com/api`      | 166.9.226.17    \n 166.9.227.16     \n 166.9.225.16             |
 | Osaka (`JP-OSA`)    | `private.jp-osa.monitoring.cloud.ibm.com/api`     | 166.9.247.44    \n 166.9.247.77    \n 166.9.247.109      |
 | Sao Paulo (`BR-SAO`)  | `private.br-sao.monitoring.cloud.ibm.com/api`   | 166.9.246.77    \n 166.9.246.108    \n 166.9.246.133       |
 | Sydney (`AU-SYD`)    | `private.au-syd.monitoring.cloud.ibm.com/api`     | 166.9.244.114    \n 166.9.244.144    \n 166.9.244.177          |
-| Tokyo (`JP-TOK`)    | `private.jp-tok.monitoring.cloud.ibm.com/api`     | 166.9.249.112    \n 166.9.249.141    \n 166.9.249.177             |
+| Tokyo (`JP-TOK`)    | `private.jp-tok.monitoring.cloud.ibm.com/api`     | 166.9.249.112    \n 166.9.249.141    \n 166.9.249.177        |
 | Toronto (`CA-TOR`)  | `private.ca-tor.monitoring.cloud.ibm.com/api`   | 166.9.247.153    \n 166.9.247.185    \n 166.9.247.205        |
-| Washington (`US-East`)   | `private.us-east.monitoring.cloud.ibm.com/api`    | 166.9.231.240    \n 166.9.232.28    \n 166.9.233.17          |
+| Washington (`US-East`)   | `private.us-east.monitoring.cloud.ibm.com/api`    | 166.9.231.240    \n 166.9.232.28    \n 166.9.233.17       |
 {: caption="Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
-
-
 
 
 
@@ -119,15 +113,16 @@ The following table lists the *Private Collector endpoints* that are available p
 |-------------|----------------------------------|----------------------------|-----------|---------|
 | Dallas (`US-South`)  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170  \n 166.9.48.41  \n 166.9.17.11      | TCP 6443  | TCP 443  |
 | Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71    | TCP 6443  | TCP 443  |
-| London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56  \n 166.9.36.71           |  TCP 6443 | TCP 443  |
+| London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56  \n 166.9.36.71       |  TCP 6443 | TCP 443  |
 | Madrid (`EU-ES`)     | `ingest.private.eu-es.monitoring.cloud.ibm.com`      | 166.9.96.31  \n 166.9.95.31  \n 166.9.94.31    |  TCP 6443 | TCP 443  |
 | Osaka (`JP-OSA`)    | `ingest.private.jp-osa.monitoring.cloud.ibm.com`     | 166.9.72.14  \n 166.9.71.15  \n 166.9.70.14      | TCP 6443 |  TCP 443  |
 | Sao Paulo (`BR-SAO`)  | `ingest.private.br-sao.monitoring.cloud.ibm.com`   | 166.9.84.19  \n 166.9.83.18  \n 166.9.82.19     | TCP 6443  |  TCP 443  |
 | Sydney (`AU-SYD`)    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32  \n 166.9.52.27   \n 166.9.54.27      |  TCP 6443 |  TCP 443  |
-| Tokyo (`JP-TOK`)    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38  \n 166.9.40.35  \n 166.9.42.48        | TCP 6443  |  TCP 443  |
+| Tokyo (`JP-TOK`)    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38  \n 166.9.40.35  \n 166.9.42.48      | TCP 6443  |  TCP 443  |
 | Toronto (`CA-TOR`)  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | 166.9.77.20  \n 166.9.76.23  \n 166.9.78.21      | TCP 6443  |  TCP 443  |
-| Washington (`US-East`)   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53        | TCP 6443  |  TCP 443  |
+| Washington (`US-East`)   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53       | TCP 6443  |  TCP 443  |
 {: caption="List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
+
 
 
 
@@ -203,14 +198,14 @@ To receive alert notifications by using webhooks from the {{site.data.keyword.mo
 
 | Region     | Alert Notification Source Subnets                                                                          |
 |------------|------------------------------------------------------------------------------------------------------------|
-| Dallas (`US-SOUTH`) | 150.239.180.0/25  \n 169.46.0.64/29  \n 169.46.39.48/28  \n 169.46.58.24/29  \n 169.47.115.192/28  \n 169.47.71.24/29  \n 169.48.214.64/29  \n 169.48.235.16/28  \n 169.60.151.168/29  \n 169.62.221.32/28  \n 174.36.68.96/27  \n 50.22.148.64/26  \n 52.116.222.192/27  \n 52.117.187.192/27  \n 52.118.158.0/25  \n 52.118.7.64/26  \n 67.228.207.64/26  \n 67.228.219.0/25 |
-| Frankfurt (`EU-DE`)    | 149.81.151.128/27  \n 149.81.201.192/26  \n 149.81.77.72/29  \n 149.81.99.192/28  \n 158.177.44.192/26  \n 159.122.102.32/29  \n 161.156.1.224/27  \n 161.156.102.200/29  \n 161.156.69.144/28  \n 161.156.77.64/26  \n 169.50.36.64/27  \n 169.50.9.0/28    |
-| London (`EU-GB`)    | 141.125.136.32/27  \n 141.125.73.112/29  \n 141.125.73.80/28  \n 158.175.124.224/27  \n 158.175.98.200/29  \n 159.122.210.168/29  \n 159.8.144.168/29  \n 159.8.149.208/28  \n 159.8.162.0/26  \n 161.156.209.192/26  \n 5.10.120.32/27  |
-| Madrid (`EU-ES`) | 13.120.68.192/28  \n 13.120.68.224/27  \n 13.121.68.96/28  \n 13.122.68.160/28  |
-| Osaka (`JP-OSA`)   | 163.68.67.128/28  \n 163.68.67.96/29  \n 163.68.79.32/27  \n 163.69.66.168/29  \n 163.69.67.112/28  \n 163.69.70.64/27  \n 163.73.67.176/29  \n 163.73.67.192/28  \n 163.73.69.96/27  |
-| Sao Paulo (`BR-SAO`) | 163.107.66.96/29  \n 163.107.68.128/28  \n 163.107.71.32/27  \n 163.109.67.240/29  \n 163.109.73.128/27  \n 169.57.141.40/29  \n 169.57.186.0/27  \n 169.57.195.0/28 |
-| Sydney (`AU-SYD`)   | 130.198.66.144/28  \n 130.198.80.152/29  \n 135.90.73.96/29  \n 135.90.78.192/28  \n 135.90.94.96/27  \n 168.1.115.192/27  \n 168.1.213.32/27  \n 168.1.213.72/29  \n 168.1.41.96/28  |
-| Tokyo (`JP-TOK`)   | 128.168.75.32/28  \n 128.168.75.8/29  \n 128.168.98.0/27  \n 161.202.255.64/27  \n 165.192.84.8/29  \n 165.192.97.96/27  \n 169.56.11.208/28  \n 169.56.51.232/29  |
-| Toronto (`CA-TOR`)   | 158.85.78.224/27  \n 158.85.94.128/29  \n 163.74.67.192/28  \n 163.74.69.184/29  \n 163.74.71.96/27  \n 163.75.65.232/29  \n 163.75.72.192/27  \n 169.55.129.208/28  |
-| Washington (`US-EAST`)  | 169.47.20.160/27  \n 169.55.109.112/29  \n 169.55.122.192/28  \n 169.59.131.160/27  \n 169.59.146.192/26  \n 169.60.112.72/29  \n 169.60.82.240/28  \n 169.62.28.160/28  \n 169.62.3.80/29  \n 169.62.46.192/27  \n 52.116.95.64/26  \n 52.117.71.128/26  |
+| Dallas (`US-SOUTH`) | 150.239.180.0/25  \n 169.46.0.64/29  \n 169.46.39.48/28  \n 169.46.58.24/29  \n 169.47.115.192/28  \n 169.47.71.24/29  \n 169.48.214.64/29  \n 169.48.235.16/28  \n 169.60.151.168/29  \n 169.62.221.32/28  \n 174.36.68.96/27  \n 50.22.148.64/26  \n 52.116.222.192/27  \n 52.117.187.192/27  \n 52.118.158.0/25  \n 52.118.7.64/26  \n 67.228.207.64/26  \n 67.228.219.0/25  |
+| Frankfurt (`EU-DE`)    | 149.81.151.128/27  \n 149.81.201.192/26  \n 149.81.77.72/29  \n 149.81.99.192/28  \n 158.177.44.192/26  \n 159.122.102.32/29  \n 161.156.1.224/27  \n 161.156.102.200/29  \n 161.156.69.144/28  \n 161.156.77.64/26  \n 169.50.36.64/27  \n 169.50.9.0/28     |
+| London (`EU-GB`)    | 141.125.136.32/27  \n 141.125.73.112/29  \n 141.125.73.80/28  \n 158.175.124.224/27  \n 158.175.98.200/29  \n 159.122.210.168/29  \n 159.8.144.168/29  \n 159.8.149.208/28  \n 159.8.162.0/26  \n 161.156.209.192/26  \n 5.10.120.32/27   |
+| Madrid (`EU-ES`) | 13.120.68.192/28  \n 13.120.68.224/27  \n 13.121.68.96/28  \n 13.122.68.160/28   |
+| Osaka (`JP-OSA`)   | 163.68.67.128/28  \n 163.68.67.96/29  \n 163.68.79.32/27  \n 163.69.66.168/29  \n 163.69.67.112/28  \n 163.69.70.64/27  \n 163.73.67.176/29  \n 163.73.67.192/28  \n 163.73.69.96/27   |
+| Sao Paulo (`BR-SAO`) | 163.107.66.96/29  \n 163.107.68.128/28  \n 163.107.71.32/27  \n 163.109.67.240/29  \n 163.109.73.128/27  \n 169.57.141.40/29  \n 169.57.186.0/27  \n 169.57.195.0/28  |
+| Sydney (`AU-SYD`)   | 130.198.66.144/28  \n 130.198.80.152/29  \n 135.90.73.96/29  \n 135.90.78.192/28  \n 135.90.94.96/27  \n 168.1.115.192/27  \n 168.1.213.32/27  \n 168.1.213.72/29  \n 168.1.41.96/28   |
+| Tokyo (`JP-TOK`)   | 128.168.75.32/28  \n 128.168.75.8/29  \n 128.168.98.0/27  \n 161.202.255.64/27  \n 165.192.84.8/29  \n 165.192.97.96/27  \n 169.56.11.208/28  \n 169.56.51.232/29   |
+| Toronto (`CA-TOR`)   | 158.85.78.224/27  \n 158.85.94.128/29  \n 163.74.67.192/28  \n 163.74.69.184/29  \n 163.74.71.96/27  \n 163.75.65.232/29  \n 163.75.72.192/27  \n 169.55.129.208/28   |
+| Washington (`US-EAST`)  | 169.47.20.160/27  \n 169.55.109.112/29  \n 169.55.122.192/28  \n 169.59.131.160/27  \n 169.59.146.192/26  \n 169.60.112.72/29  \n 169.60.82.240/28  \n 169.62.28.160/28  \n 169.62.3.80/29  \n 169.62.46.192/27  \n 52.116.95.64/26  \n 52.117.71.128/26   |
 {: caption="Source Subnets for Webhook notifications from {{site.data.keyword.mon_full_notm}}" caption-side="top"}
