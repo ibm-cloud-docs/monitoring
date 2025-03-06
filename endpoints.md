@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-05"
+lastupdated: "2025-03-06"
 
 keywords:
 
@@ -148,6 +148,7 @@ The following table lists the *Public Collector endpoints* that are available pe
 | Tokyo (`JP-TOK`)    | `ingest.jp-tok.monitoring.cloud.ibm.com`            | 165.192.84.14  \n 128.168.75.14  \n 169.56.51.238       | TCP 6443 | TCP 443  |
 | Washington (`US-East`)   | `ingest.us-east.monitoring.cloud.ibm.com`           | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82        | TCP 6443 | TCP 443  |
 {: caption="List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
+
 
 
 
