@@ -60,7 +60,7 @@ The following table lists the *Private API endpoints* that are available per reg
 | Region      | Private REST API endpoint       | Private IP addresses       |
 |-------------|----------------------------------|----------------------------|
 | Dallas (`US-South`)  | `private.us-south.monitoring.cloud.ibm.com/api`   | 166.9.228.45    \n 166.9.229.45    \n 166.9.230.44  \n 166.9.228.231 `(*)`  \n 166.9.229.216 `(*)`  \n 166.9.230.216 `(*)`  \n 166.9.224.218 `(*)`     |
-| Frankfurt (`EU-DE`)     | `private.eu-de.monitoring.cloud.ibm.com/api`      | 166.9.248.88    \n 166.9.248.120    \n 166.9.248.152  \n 166.9.209.205 `(*)`  \n 166.9.209.227 `(*)`  \n 166.9.210.13Z `(*)`       |
+| Frankfurt (`EU-DE`)     | `private.eu-de.monitoring.cloud.ibm.com/api`      | 166.9.248.88    \n 166.9.248.120    \n 166.9.248.152  \n 166.9.209.205 `(*)`  \n 166.9.209.227 `(*)`  \n 166.9.210.13 `(*)`       |
 | London (`EU-GB`)     | `private.eu-gb.monitoring.cloud.ibm.com/api`      | 166.9.244.29    \n 166.9.244.59  \n 166.9.245.189 `(*)`  \n 166.9.245.221 `(*)`  \n 166.9.245.253 `(*)`    |
 | Madrid (`EU-ES`)     | `private.eu-es.monitoring.cloud.ibm.com/api`      | 166.9.226.17    \n 166.9.227.16     \n 166.9.225.16  \n 166.9.226.56 `(*)`  \n 166.9.227.143 `(*)`  \n 166.9.225.35 `(*)`           |
 | Osaka (`JP-OSA`)    | `private.jp-osa.monitoring.cloud.ibm.com/api`     | 166.9.247.44    \n 166.9.247.77    \n 166.9.247.109  \n 166.9.247.59 `(*)`  \n 166.9.247.89 `(*)`  \n 166.9.247.123 `(*)`    |
@@ -106,9 +106,8 @@ Collector endpoints are ingestion endpoints that you can use to send data.
 To send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. To access the {{site.data.keyword.mon_short}} private collect endpoints, you might need to define a firewall rule in your host. `(*)` Indicates IP addresses that are in plan to be supported. These IP addresses need be added to an allowlist, if you use an allowlist, before 1 May 2025, to avoid service interruptions. Be sure to keep the current IP addresses in the allowlist as well. A notification will be sent before the current IP addresses no longer pass traffic to {{site.data.keyword.mon_full_notm}}.
 {: note}
 
+The following table lists the *Private Collector endpoints* that are available per region.
 
-
-The following table lists the *Private Collector endpoints* that are available per region:
 Ports for every MZR:
 - Monitoring agent ports: TCP 6443
 - Prometheus Remote Write Ports: TCP 443
@@ -116,7 +115,7 @@ Ports for every MZR:
 | Region      | Private ingestion endpoint       | Private IP addresses       |
 |-------------|----------------------------------|----------------------------|
 | Dallas (`US-South`)  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170  \n 166.9.48.41  \n 166.9.17.11  \n 166.9.228.231 `(*)`  \n 166.9.229.216 `(*)`  \n 166.9.230.216 `(*)`  \n 166.9.224.218 `(*)`    |
-| Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71  \n 166.9.209.205 `(*)`  \n 166.9.209.227 `(*)`  \n 166.9.210.13Z `(*)`  |
+| Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71  \n 166.9.209.205 `(*)`  \n 166.9.209.227 `(*)`  \n 166.9.210.13 `(*)`  |
 | London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56  \n 166.9.36.71  \n 166.9.245.189 `(*)`  \n 166.9.245.221 `(*)`  \n 166.9.245.253 `(*)`     |
 | Madrid (`EU-ES`)     | `ingest.private.eu-es.monitoring.cloud.ibm.com`      | 166.9.96.31  \n 166.9.95.31  \n 166.9.94.31  \n 166.9.226.56 `(*)`  \n 166.9.227.143 `(*)`  \n 166.9.225.35 `(*)`  |
 | Osaka (`JP-OSA`)    | `ingest.private.jp-osa.monitoring.cloud.ibm.com`     | 166.9.72.14  \n 166.9.71.15  \n 166.9.70.14  \n 166.9.247.59 `(*)`  \n 166.9.247.89 `(*)`  \n 166.9.247.123 `(*)`    |
@@ -137,7 +136,8 @@ Ports for every MZR:
 To access the {{site.data.keyword.mon_short}} public collector endpoints, you might need to define a firewall rule in your host. `(*)` Indicates IP addresses that are in plan to be supported. These IP addresses need be added to an allowlist, if you use an allowlist, before 1 May 2025, to avoid service interruptions. Be sure to keep the current IP addresses in the allowlist as well. A notification will be sent before the current IP addresses no longer pass traffic to {{site.data.keyword.mon_full_notm}}.
 {: note}
 
-The following table lists the *Public Collector endpoints* that are available per region:
+The following table lists the *Public Collector endpoints* that are available per region.
+
 Ports for every MZR:
 - Monitoring agent ports: TCP 6443
 - Prometheus Remote Write Ports: TCP 443
