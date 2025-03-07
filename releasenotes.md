@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-04"
+lastupdated: "2025-03-07"
 
 
 keywords:
@@ -20,6 +20,20 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+  
+## 7 March 2025
+{: #monitoring-mar0725}
+{: release-note}
+
+Updates to the {{site.data.keyword.mon_full_notm}} infrastructure
+:   {{site.data.keyword.mon_full_notm}} is upgrading its network load balancers and service endpoints infrastructure. With this change the regional endpoints (public and private) use new virtual IP addresses. Action might be required when accessing {{site.data.keyword.mon_full_notm}}:
+
+    * If you use an IP address other than the URL domain name
+    * If you have IP-based allowlists or firewall rules running in your environment
+    * If you have IP address-specific routing
+
+    For details on the changes and the new IP addresses, see [Endpoints](/docs/monitoring?topic=monitoring-endpoints).
 
 
 
