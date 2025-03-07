@@ -114,7 +114,7 @@ Ports for every MZR:
 - Prometheus Remote Write Ports: TCP 443
 
 | Region      | Private ingestion endpoint       | Private IP addresses       |
-|-------------|----------------------------------|----------------------------|-----------|
+|-------------|----------------------------------|----------------------------|
 | Dallas (`US-South`)  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170  \n 166.9.48.41  \n 166.9.17.11  \n 166.9.228.231 `(*)`  \n 166.9.229.216 `(*)`  \n 166.9.230.216 `(*)`  \n 166.9.224.218 `(*)`    |
 | Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71  \n 166.9.209.205 `(*)`  \n 166.9.209.227 `(*)`  \n 166.9.210.13Z `(*)`  |
 | London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56  \n 166.9.36.71  \n 166.9.245.189 `(*)`  \n 166.9.245.221 `(*)`  \n 166.9.245.253 `(*)`     |
