@@ -51,6 +51,7 @@ The following table lists the endpoints that are available per region:
 
 To make API calls, you might need to define a firewall rule in your host. `(*)` Indicates IP addresses that are in plan to be supported. These IP addresses need be added to an allowlist, if you use an allowlist, before 1 May 2025, to avoid service interruptions. Be sure to keep the current IP addresses in the allowlist as well. A notification will be sent before the current IP addresses no longer pass traffic to {{site.data.keyword.mon_full_notm}}.
 {: note}
+
 ### Private REST API endpoints
 {: #endpoints_rest_api_private}
 
@@ -112,8 +113,8 @@ Ports for every MZR:
 - Monitoring agent ports: TCP 6443
 - Prometheus Remote Write Ports: TCP 443
 
-| Region      | Private ingestion endpoint       | Private IP addresses       | Monitoring  \n  agent ports   |
-|-------------|----------------------------------|----------------------------|-----------|---------|
+| Region      | Private ingestion endpoint       | Private IP addresses       |
+|-------------|----------------------------------|----------------------------|-----------|
 | Dallas (`US-South`)  | `ingest.private.us-south.monitoring.cloud.ibm.com`   | 166.9.14.170  \n 166.9.48.41  \n 166.9.17.11  \n 166.9.228.231 `(*)`  \n 166.9.229.216 `(*)`  \n 166.9.230.216 `(*)`  \n 166.9.224.218 `(*)`    |
 | Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71  \n 166.9.209.205 `(*)`  \n 166.9.209.227 `(*)`  \n 166.9.210.13Z `(*)`  |
 | London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56  \n 166.9.36.71  \n 166.9.245.189 `(*)`  \n 166.9.245.221 `(*)`  \n 166.9.245.253 `(*)`     |
@@ -142,7 +143,7 @@ Ports for every MZR:
 - Prometheus Remote Write Ports: TCP 443
 
 | Region      | Public ingestion endpoint      | Public IP addresses    |
-|-------------|-------------------------------|-------------------------|----------|--------|
+|-------------|-------------------------------|-------------------------|
 | Dallas (`US-South`)  | `ingest.us-south.monitoring.cloud.ibm.com`          | 169.60.151.174  \n 169.46.0.70  \n 169.48.214.70  \n 52.118.209.119 `(*)`  \n 67.18.94.56 `(*)`  \n 52.116.135.250     `(*)`      |
 | Frankfurt (`EU-DE`)     | `ingest.eu-de.monitoring.cloud.ibm.com`             | 149.81.77.78  \n 161.156.102.206  \n 159.122.102.38  \n 158.177.2.4 `(*)`  \n 161.156.87.239 `(*)`  \n 149.81.238.82  `(*)`   |
 | London (`EU-GB`)     | `ingest.eu-gb.monitoring.cloud.ibm.com`             | 158.175.98.206  \n 141.125.73.118  \n 159.122.210.174  \n 141.125.105.98 `(*)`  \n 161.156.203.133 `(*)`  \n 158.176.179.72  `(*)` |
