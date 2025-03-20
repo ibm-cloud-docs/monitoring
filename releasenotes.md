@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-20"
 
 
 keywords:
@@ -21,6 +21,12 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
+## 20 March 2025
+{: #monitoring-mar2025}
+{: release-note}
+
+IBM Platform Metrics groupings
+:    {{site.data.keyword.mon_full_notm}} supports a new grouping within the **Metrics Explore** Scope Tree. With this new grouping you can navigate metrics from specific regions through service names and instances. This streamlined view enhances your ability to efficiently monitor and manage your IBM Cloud services.
   
 ## 7 March 2025
 {: #monitoring-mar0725}
