@@ -232,6 +232,8 @@ toc:
           - api/metrics_api.md
           - api/metrics_python.md
           - exporters/promql.md
+          - topic: metrics-usage.md
+            navtitle: Analyzing collected metrics
       - topicgroup:
           label: Working with metrics in non-supported locations
           topics:
