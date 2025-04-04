@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2025
+lastupdated: "2025-04-04"
 
 keywords: 
 
@@ -47,6 +47,9 @@ Pre-defined dashboards are designed around various supported applications, netwo
 Pre-defined dashboards include a series of panels that are already configured.
 
 For more information on pre-defined dashboards, see [Dashboard Library](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/dashboard-templates/){: external}.
+
+Pre-defined dashboards appear automatically when the required metrics are available in the {{site.data.keyword.mon_short}} instance.
+{: note}
 
 ## Creating custom dashboards in the Web UI
 {: #dashboards_create}
