@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-06-28"
+  years:  2018, 2025
+lastupdated: "2025-04-16"
 
 keywords:
 
@@ -23,7 +23,7 @@ These restrictions work with traditional IAM policies, which are based on identi
 A user must have the Administrator role on the {{site.data.keyword.mon_full_notm}} service to create, update, or delete rules. A user must also have either the Editor or Administrator role on the Context-based restrictions service to create, update, or delete network zones. A user with the Viewer role on the Context-based restrictions service can only add network zones to a rule.
 {: note}
 
-Any {{site.data.keyword.cloudaccesstraillong_notm}} or audit log events generated come from the context-based restrictions service, not {{site.data.keyword.mon_full_notm}}. For more information, see [Monitoring context-based restrictions](/docs/account?topic=account-cbr-monitor).
+Any activity tracking or audit log events generated come from the context-based restrictions service, not {{site.data.keyword.mon_full_notm}}. For more information, see [Monitoring context-based restrictions](/docs/account?topic=account-cbr-monitor).
 
 To get started protecting your {{site.data.keyword.mon_full_notm}} resources with context-based restrictions, see the tutorial for [Leveraging context-based restrictions to secure your resources](/docs/account?topic=account-context-restrictions-tutorial).
 
@@ -35,4 +35,3 @@ Consider the following when configuring context-based restrictions:
 * Context-based restrictions do not affect connectivity of {{site.data.keyword.mon_full_notm}} agents since they do not use {{site.data.keyword.iamlong}}.
 
 * Private connections between agents and {{site.data.keyword.mon_full_notm}} can be configured using [private service endpoints](/docs/monitoring?topic=monitoring-service-connection).
-
