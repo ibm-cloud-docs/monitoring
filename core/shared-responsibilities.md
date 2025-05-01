@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-05-01"
 
 keywords: 
 
@@ -29,7 +29,7 @@ You and {{site.data.keyword.IBM_notm}} share responsibilities for the set up and
 
 | Task              | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |-------------------|-------------------------------------------------|-----------------------|
-| Monitor incidents  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | Set preferences to [stay up to date with notifications](/docs/overview?topic=overview-ui&q=notifications&tags=overview#consoleoptions).   \n Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
+| Monitor incidents  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | Set preferences to [stay up to date with notifications](/docs/overview?topic=overview-ui#consoleoptions).   \n Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
 | Maintain {{site.data.keyword.cloud_notm}} high availability SLA  | Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview?topic=overview-slas). |   |
 | Provide high availability capabilities | Provide capabilities, such as {{site.data.keyword.IBM_notm}}-owned infrastructure in multizone regions (MZR), to meet local access and low latency requirements for each supported region.  | Use the list of [available regions](/docs/monitoring?topic=monitoring-endpoints) to plan for and create new instances of the service. |
 | Monitor monitoring agents   | Provide images and instructions for how to install monitoring agents in environments that you want to monitor, such as Kubernetes, Linux, and {{site.data.keyword.redhat_openshift_notm}}. | Install and configure monitoring agents.   \n Monitor that the agents are running in your environment, for example, by using monitoring alerts. |
