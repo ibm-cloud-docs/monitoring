@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-04-03"
+lastupdated: "2025-05-01"
 
 keywords:
 
@@ -150,7 +150,7 @@ The number of *time-series* you are ingesting from the different sources are mea
 ### Checking the metrics that are collected per agent
 {: #pricing_agent_metrics}
 
-You can use [Metrics Usage](/docs/monitoring?topic=metrics_usage) for getting the total number of time series that your {{site.data.keyword.mon_full_notm}} instance is ingesting. If you want to know the cardinality for a metric or group of metrics, you can filter by metric name, metric source (Platform Metrics, Agent, or Prometheus Remote Write), or job name.
+You can use [Metrics Usage](/docs/monitoring?topic=monitoring-metrics_usage) for getting the total number of time series that your {{site.data.keyword.mon_full_notm}} instance is ingesting. If you want to know the cardinality for a metric or group of metrics, you can filter by metric name, metric source (Platform Metrics, Agent, or Prometheus Remote Write), or job name.
 
 In {{site.data.keyword.mon_full_notm}}, you can monitor your monitoring agent by using the dashboard template **monitoring agent Health & Status** that is available in the dashboard templates available out-of-the-box. In this dashboard, you can see the number of monitoring agents that are deployed and connected to the instance, check the version of the monitoring agents, and find out how many metrics per host the agent is collecting.
 
