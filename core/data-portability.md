@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-05-01"
 
 keywords:
 
@@ -64,9 +64,9 @@ For more information about your responsibilities for {{site.data.keyword.mon_ful
 
 | Configuration data | Export using |
 |--------------------|--------------|
-| Custom dashboards | [List API](/apidocs/monitor#listlightusingget-2)  \n [Get API](/apidocs/monitor#getusingget-4) |
-| Alerts | [List API](/apidocs/monitor#getactiveprometheusalertusingget)  \n [Get API](/apidocs/monitor#getprometheusrulebyalertidsusingget) |
-| Teams configurations | [List API](/apidocs/monitor#getprometheusrulebyalertidsusingget)  \n [Get API](/apidocs/monitor#getusingget-12) |
+| Custom dashboards | [List API](/apidocs/monitor#listalldashboardsv3)  \n [Get API](/apidocs/monitor#get) |
+| Alerts | [List API](/apidocs/monitor#listalerts-1)  \n [Get API](/apidocs/monitor#getalertv2) |
+| Teams configurations | [List API](/apidocs/monitor#getteamsv1)  \n [Get API](/apidocs/monitor#getteambyidv1) |
 {: caption="Configuration export methods" caption-side="bottom"}
 
 ## Exported data formats
