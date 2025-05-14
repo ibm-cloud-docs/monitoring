@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-06-28"
+  years:  2018, 2025
+lastupdated: "2025-05-14"
 
 keywords: 
 
@@ -57,13 +57,13 @@ You can use the Token API to get the Monitor API token .
 For example, you can use the following cURL command to get the Monitor API token :
 
 ```shell
-curl -X GET <MONITORING_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "TeamID: $TEAM_ID" -H "content-type: application/json"
+curl -X GET <MONITORING_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
 
 ```text
-GET <MONITORING_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "TeamID: $TEAM_ID" -H "content-type: application/json"
+GET <MONITORING_REST_API_ENDPOINT>/api/token -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -75,7 +75,7 @@ Where
 
     `Authorization` and `IBMInstanceID` are headers that are required for authentication.
 
-    `TeamID` defines the team for which you want to get the Monitor API token .
+    `SysdigTeamID` defines the team for which you want to get the Monitor API token .
 
     To get an `AUTH_TOKEN` and the `GUID` see, [Headers for IAM Tokens](/docs/monitoring?topic=monitoring-mon-curl#mon-curl-headers-iam).
 
