@@ -25,7 +25,7 @@ You can extract metrics from an {{site.data.keyword.mon_full_notm}} instance by 
 You can use the following [cURL command](/docs/monitoring?topic=monitoring-mon-curl) to get metrics:
 
 ```text
-curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d DATA
+curl -X POST <SYSDIG_REST_API_ENDPOINT>/data -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json" -d DATA
 ```
 {: codeblock}
 
@@ -231,7 +231,7 @@ To get the latest value of a metric, specify only the metric name. The most rece
 For instance, to get the latest value of `host_cpu_used_percent`:
 
 ```text
-curl <SYSDIG_REST_API_ENDPOINT>/prometheus/api/v1/query?query=sysdig_host_cpu_used_percent -H "Authorization: $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
+curl <SYSDIG_REST_API_ENDPOINT>/prometheus/api/v1/query?query=sysdig_host_cpu_used_percent -H "Authorization: Bearer $AUTH_TOKEN" -H "IBMInstanceID: $GUID" -H "SysdigTeamID: $TEAM_ID" -H "content-type: application/json"
 ```
 {: codeblock}
 
