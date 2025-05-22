@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-05-22"
 
 keywords:
 
@@ -602,6 +602,6 @@ To create a dashboard to monitor the IPMI metrics, complete the following steps:
 
 - Learn about alerts. For more information, see [Working with alerts](/docs/monitoring?topic=monitoring-alerts).
 
-- Learn how to manage logs. See [Logging with bare metal servers](/docs/log-analysis?topic=log-analysis-ubuntu_baremetal).
+- Learn how to manage logs. See [Getting started with {{site.data.keyword.logs_full_notm}}](/docs/cloud-logs?topic=cloud-logs-getting-started).
 
 - Learn about the {{site.data.keyword.mon_full_notm}} {{site.data.keyword.sysdigsecure_short}} functionality to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions and compliance from source to run. See [Getting started with {{site.data.keyword.sysdigsecure_full}}](/docs/workload-protection?topic=workload-protection-getting-started).

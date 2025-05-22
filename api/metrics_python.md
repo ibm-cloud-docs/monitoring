@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-05-22"
 
 keywords: 
 
@@ -75,11 +75,11 @@ You must include the following information: `<MONITORING-ENDPOINT>`, `<IAM_APIKE
 {: #metrics-python-samples}
 
 For Python examples, see any of the following examples:
-* [Example 1](https://github.com/sysdiglabs/sysdig-sdk-python/blob/master/examples/get_data_simple.py){: external}: This  sample script  shows how to get data by creating a request that has no filter and no segmentation.
+* [Example 1](https://github.com/sysdiglabs/sysdig-sdk-python/blob/master/examples/get_data_promql_simple.py){: external}: This  sample script  shows how to get data by creating a request that has no filter and no segmentation.
 
-* [Example 2](https://github.com/sysdiglabs/sysdig-sdk-python/blob/master/examples/get_data_advanced.py){: external}: This sample script shows how to get data by creating a request that has a filter and segmentation.
+* [Example 2](https://github.com/sysdiglabs/sysdig-sdk-python/blob/master/examples/get_data_promql_advanced.py){: external}: This sample script shows how to get data by creating a request that has a filter and segmentation.
 
-* [Example 3](https://github.com/sysdiglabs/sysdig-sdk-python/blob/master/examples/get_data_datasource.py){: external}: This sample script shows how to get data by creating a request where you specify the datasource.
+
 
 
 

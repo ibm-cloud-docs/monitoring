@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-05-22"
 
 
 keywords:
@@ -192,7 +192,7 @@ New support documentation is available for VMware and Windows.
 {: release-note}
 
 Change to alerts editor
-:   The [alerts editor](https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/){: external} has been changed. The [legacy alerts editor](https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/-legacy-alerts-editor/){: external} is still available, but requires the follow steps to access it:
+:   The [alerts editor](https://docs.sysdig.com/en/docs/sysdig-monitor/alerts/){: external} has been changed. The [legacy alerts editor](https://docs.sysdig.com/en/sysdig-monitor/-legacy-alerts-editor/){: external} is still available, but requires the follow steps to access it:
 
     1. [Launch {{site.data.keyword.mon_full_notm}}.](/docs/monitoring?topic=monitoring-getting-started#getting-started-step4)
 
@@ -252,14 +252,14 @@ Change to alerts editor
 {: #monitoring-jun1522}
 {: release-note}
 
-{{site.data.keyword.mon_full}} has made available a proprietary time series database that is designed for storing and serving metrics at scale. [Learn more](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/){: external}
+{{site.data.keyword.mon_full}} has made available a proprietary time series database that is designed for storing and serving metrics at scale. [Learn more](https://docs.sysdig.com/en/release-notes/enhanced-metric-store/){: external}
 :   The following changes have been made:
 
-    - [Metrics and labels are stored and displayed in a Prometheus compatible naming convention](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#prometheus-compatible-naming-conventions-for-metrics--labels){: external}.
+    - Metrics and labels are stored and displayed in a Prometheus compatible naming convention
 
-    - Some metrics and labels have been deprecated. Deprecated metrics and labels will no longer be available 30 days after this release. See [Discontinued Metrics and Labels](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#discontinued-metrics-and-labels){: external}.
+    - Some metrics and labels have been deprecated. Deprecated metrics and labels will no longer be available 30 days after this release.
 
-    - Classic metrics have been replaced with context-explicit metrics. See [Mapping Classic Metrics with PromQL Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/metrics-and-labels-mapping/mapping-classic-metrics-with-promql-metrics/){: external}.
+    - Classic metrics have been replaced with context-explicit metrics. 
 
     - Troubleshooting metrics are collected at 10s intervals and stored for 4 days for program metrics, connection-level network metrics, and Kubernetes troubleshooting metrics. See [Troubleshooting Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/troubleshooting-metrics/){: external}.
 
@@ -267,15 +267,15 @@ Change to alerts editor
 
        - You can run queries that handle larger volumes of data and perform faster.
 
-       - You can reference the scope of a dashboard in PromQL queries by using `$__scope`. See [Scope Variable in PromQL Dashboard](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#scope-variable-in-promql-dashboard){: external}.
+       - You can reference the scope of a dashboard in PromQL queries by using `$__scope`.
 
-    - You can view the latest value of an entity in number panels, tables, histograms, and toplist panels. See [Single Stat Panels Displays Latest Value](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#single-stat-panels-displays-latest-value){: external}
+    - You can view the latest value of an entity in number panels, tables, histograms, and toplist panels. 
 
     - In the *Overview* section, you can view the latest data as opposed to an aggregated value for widgets over the time window that is selected.
 
-    - You can display metrics that are scraped at different intervals on the same graph. See [Mixed-Metric Granularity](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#mixed-metric-granularity){: external} and [Improved Granularity for PromQL panels](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#improved-granularity-for-promql-panels){: external}.
+    - You can display metrics that are scraped at different intervals on the same graph.
 
-    - Realignment of time selections has been removed. See [Removed Re-Alignment](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#removed-re-alignment){: external}.
+    - Realignment of time selections has been removed.
 
     The following are known limitations in this release:
 
@@ -286,8 +286,6 @@ Change to alerts editor
 
     - Topology Maps are deprecated due to their incompatibility with the new data store.
     - Agent derived percentiles are deprecated.
-
-    For more information, see [Removed features](https://docs.sysdig.com/en/docs/release-notes/enhanced-metric-store/#removed-featurees){: external}.
 
     Impact to your environment:
 

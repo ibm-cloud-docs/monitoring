@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-09-20"
+  years:  2018, 2025
+lastupdated: "2025-05-22"
 
 keywords:
 
@@ -89,7 +89,7 @@ When you choose to monitor your Kubernetes clusters by namespace, you can select
 - Workloads CPU Usage and Allocation
 - Workloads Memory Usage and Allocation
 
-For more information on how to interpret this view, see [About Namespaces Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/overview/namespaces-data/){: external}.
+For more information on how to interpret this view, see [About Namespaces Overview](https://docs.sysdig.com/en/sysdig-monitor/namespaces-data/){: external}.
 
 ### Monitoring Kubernetes clusters by workloads
 {: #monitoring_advisor_4}

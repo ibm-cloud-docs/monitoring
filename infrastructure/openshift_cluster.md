@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-05-22"
 
 keywords:
 
@@ -325,7 +325,7 @@ When you choose to monitor your clusters by namespace, you can select more filte
 - Workloads CPU Usage and Allocation
 - Workloads Memory Usage and Allocation
 
-For more information on how to interpret this view, see [About Namespaces Overview](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/overview/namespaces-data/){: external}.
+For more information on how to interpret this view, see [About Namespaces Overview](https://docs.sysdig.com/en/sysdig-monitor/namespaces-data/){: external}.
 
 ### Monitoring clusters by workloads
 {: #monitoring_os_advisor_4}
