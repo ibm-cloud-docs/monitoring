@@ -2,10 +2,10 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-05-30"
 
 
-keywords:
+keywords: monitoring
 
 subcollection: monitoring
 
