@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-06-03"
+lastupdated: "2025-06-04"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: monitoring
 # Endpoints
 {: #endpoints}
 
-A list of supported public and private endpoints for the {{site.data.keyword.mon_full_notm}} service.
+A list of supported public and private endpoints for the {{site.data.keyword.mon_full_notm}} service. 
 {: shortdesc}
 
 
