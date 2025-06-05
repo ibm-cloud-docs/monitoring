@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-04-07"
+lastupdated: "2025-06-04"
 
 keywords:
 
@@ -16,16 +16,21 @@ subcollection: monitoring
 # Endpoints
 {: #endpoints}
 
-A list of supported public and private endpoints for the {{site.data.keyword.mon_full_notm}} service.
+A list of supported public and private endpoints for the {{site.data.keyword.mon_full_notm}} service. 
 {: shortdesc}
+
 
 
 
 ## Web UI endpoints
 {: #endpoints_monitoring}
 
+
 To access the {{site.data.keyword.mon_short}} web UI, you might need to define a firewall rule in your host. `(*)` Indicates IP addresses that are in plan to be supported. These IP addresses need be added to an allowlist, if you use an allowlist, before 1 May 2025, to avoid service interruptions. Be sure to keep the current IP addresses in the allowlist as well. A notification will be sent before the current IP addresses no longer pass traffic to {{site.data.keyword.mon_full_notm}}.
 {: note}
+
+
+
 
 The following table lists the endpoints that are available per region:
 

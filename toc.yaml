@@ -2,7 +2,6 @@ toc:
   properties:
     subcollection: monitoring
     service-name: sysdig-monitor
-    version: 2
     category: logging_monitoring
     audience: service
     href: /docs/monitoring
