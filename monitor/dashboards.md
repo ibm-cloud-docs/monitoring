@@ -126,7 +126,7 @@ Complete the following steps to change the scope of a dashboard:
 
 3. Select the scope.
 
-    
+
 
 4. Click **Save**.
 
