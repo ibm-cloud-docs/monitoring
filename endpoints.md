@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-06-06"
+lastupdated: "2025-06-10"
 
 keywords:
 
@@ -18,6 +18,12 @@ subcollection: monitoring
 
 A list of supported public and private endpoints for the {{site.data.keyword.mon_full_notm}} service. 
 {: shortdesc}
+
+
+## Firewall infrastructure filtering
+{: #endpoints_firewall_infra_filtering}
+
+To access the {{site.data.keyword.mon_short}} endpoints on this page, you might need to define a firewall rule in your infrastructure. Some users maintain a list of trusted IP addresses or domains that are permitted to access a network or service. IP allowlisting restricts access to specific IP addresses, while domain allowlisting restricts access to specific domains or subdomains. This helps improve security by only allowing traffic from known safe sources and blocking others. If your infrastructure layout uses this filtering, you will need to use the IP and domain address information provided to set up those filters properly.
 
 
 
