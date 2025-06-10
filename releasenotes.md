@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-05-22"
+lastupdated: "2025-06-06"
 
 
 keywords:
@@ -20,6 +20,9 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+
+
 
 ## 20 March 2025
 {: #monitoring-mar2025}

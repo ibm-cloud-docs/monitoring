@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-06-04"
+lastupdated: "2025-06-10"
 
 keywords:
 
@@ -20,17 +20,16 @@ A list of supported public and private endpoints for the {{site.data.keyword.mon
 {: shortdesc}
 
 
+## Firewall infrastructure filtering
+{: #endpoints_firewall_infra_filtering}
+
+To access the {{site.data.keyword.mon_short}} endpoints on this page, you might need to define a firewall rule in your infrastructure. Some users maintain a list of trusted IP addresses or domains that are permitted to access a network or service. IP allowlisting restricts access to specific IP addresses, while domain allowlisting restricts access to specific domains or subdomains. This helps improve security by only allowing traffic from known safe sources and blocking others. If your infrastructure layout uses this filtering, you will need to use the IP and domain address information provided to set up those filters properly.
+
+
 
 
 ## Web UI endpoints
 {: #endpoints_monitoring}
-
-
-To access the {{site.data.keyword.mon_short}} web UI, you might need to define a firewall rule in your host. `(*)` Indicates IP addresses that are in plan to be supported. These IP addresses need be added to an allowlist, if you use an allowlist, before 1 May 2025, to avoid service interruptions. Be sure to keep the current IP addresses in the allowlist as well. A notification will be sent before the current IP addresses no longer pass traffic to {{site.data.keyword.mon_full_notm}}.
-{: note}
-
-
-
 
 The following table lists the endpoints that are available per region:
 
@@ -53,9 +52,6 @@ The following table lists the endpoints that are available per region:
 
 ## REST API endpoints
 {: #endpoints_rest_api}
-
-To make API calls, you might need to define a firewall rule in your host. `(*)` Indicates IP addresses that are in plan to be supported. These IP addresses need be added to an allowlist, if you use an allowlist, before 1 May 2025, to avoid service interruptions. Be sure to keep the current IP addresses in the allowlist as well. A notification will be sent before the current IP addresses no longer pass traffic to {{site.data.keyword.mon_full_notm}}.
-{: note}
 
 ### Private REST API endpoints
 {: #endpoints_rest_api_private}
@@ -108,7 +104,7 @@ Collector endpoints are ingestion endpoints that you can use to send data.
 ### Private Collector endpoints
 {: #endpoints_ingestion_private}
 
-To send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account. To access the {{site.data.keyword.mon_short}} private collect endpoints, you might need to define a firewall rule in your host. `(*)` Indicates IP addresses that are in plan to be supported. These IP addresses need be added to an allowlist, if you use an allowlist, before 1 May 2025, to avoid service interruptions. Be sure to keep the current IP addresses in the allowlist as well. A notification will be sent before the current IP addresses no longer pass traffic to {{site.data.keyword.mon_full_notm}}.
+To send metrics by using a private endpoint, you must [enable virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) for your account.
 {: note}
 
 The following table lists the *Private Collector endpoints* that are available per region.
@@ -137,9 +133,6 @@ Ports for every MZR:
 
 ### Public Collector endpoints
 {: #endpoints_ingestion_public}
-
-To access the {{site.data.keyword.mon_short}} public collector endpoints, you might need to define a firewall rule in your host. `(*)` Indicates IP addresses that are in plan to be supported. These IP addresses need be added to an allowlist, if you use an allowlist, before 1 May 2025, to avoid service interruptions. Be sure to keep the current IP addresses in the allowlist as well. A notification will be sent before the current IP addresses no longer pass traffic to {{site.data.keyword.mon_full_notm}}.
-{: note}
 
 The following table lists the *Public Collector endpoints* that are available per region.
 
@@ -206,8 +199,6 @@ The following table lists the private {{site.data.keyword.mon_short}} ingestion 
 ## Subnets for webhook notifications from {{site.data.keyword.mon_full_notm}}
 {: #endpoints_network_alert_subnets}
 
-To receive alert notifications by using webhooks from the {{site.data.keyword.mon_full_notm}} service, you might need to define a firewall rule in your host. 
-{: note}
 
 | Region     | Alert Notification Source Subnets                                                                          |
 |------------|------------------------------------------------------------------------------------------------------------|

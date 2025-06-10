@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-04-04"
+lastupdated: "2025-06-10"
 
 keywords: 
 
@@ -126,7 +126,7 @@ Complete the following steps to change the scope of a dashboard:
 
 3. Select the scope.
 
-    
+
 
 4. Click **Save**.
 
@@ -194,6 +194,14 @@ Complete the following steps to share a dashboard in the Web UI:
     * Toggle the **Public Dashboard** slider to reveal the custom public URL.
 
 5. Click **Save**.
+
+Share a dashboard externally to allow external users to view the dashboard metrics, while restricting access to changing panels and configurations.
+{: tip}
+
+## Transferring dashboard ownership
+{: #dashboards_transfer}
+
+Each dashboard has one designated owner. In {{site.data.keyword.mon_full_notm}}, users with administrative rights or dashboard ownership can reassign dashboard ownership directly through the user interface. Follow the Steps in [Transfer Dashboard Ownership](https://docs.sysdig.com/en/sysdig-monitor/dashboards/#transfer-dashboard-ownership){: external} for further details.
 
 Share a dashboard externally to allow external users to view the dashboard metrics, while restricting access to changing panels and configurations.
 {: tip}
