@@ -198,7 +198,7 @@ Complete the following steps to share a dashboard in the Web UI:
 Share a dashboard externally to allow external users to view the dashboard metrics, while restricting access to changing panels and configurations.
 {: tip}
 
-## Transfering dashboard ownership
+## Transferring dashboard ownership
 {: #dashboards_transfer}
 
 Each dashboard has one designated owner. In {{site.data.keyword.mon_full_notm}}, users with administrative rights or dashboard ownership can reassign dashboard ownership directly through the user interface. Follow the Steps in [Transfer Dashboard Ownership](https://docs.sysdig.com/en/sysdig-monitor/dashboards/#transfer-dashboard-ownership){: external} for further details.
