@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-06-17"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: monitoring
 # Endpoints
 {: #endpoints}
 
-A list of supported public and private endpoints for the {{site.data.keyword.mon_full_notm}} service. 
+A list of supported public and private endpoints for the {{site.data.keyword.mon_full_notm}} service. Each endpoint section describes a different kind of endpoint connection, and the IP addresses associated with that endpoint by [IBM Cloud multizone regions](/docs/overview?topic=overview-locations).
 {: shortdesc}
 
 
@@ -25,6 +25,13 @@ A list of supported public and private endpoints for the {{site.data.keyword.mon
 
 To access the {{site.data.keyword.mon_short}} endpoints on this page, you might need to define a firewall rule in your infrastructure. Some users maintain a list of trusted IP addresses or domains that are permitted to access a network or service. IP allowlisting restricts access to specific IP addresses, while domain allowlisting restricts access to specific domains or subdomains. This helps improve security by only allowing traffic from known safe sources and blocking others. If your infrastructure layout uses this filtering, you will need to use the IP and domain address information provided to set up those filters properly.
 
+
+## Endpoint IP address changes
+{: #endpoints_ipaddress_changes}
+
+These IP addresses are static, but do change occasionally as infrastructure service hosting adjustments are made. IP address changes are taking place in 2025. These changes need to be added to infrastructure allowlists that users have in place to avoid service disruptions. `(*)` in the endpoint section tables indicate new IP addresses for endpoint connections. These new IP addresses are already available and they can all be added to any allowlists you have for all the MZRs in your infrastructure. The existing IP addresses listed for each MZR will be removed on the dates in the schedule table. Be sure to keep the current IP addresses in the allowlist, until the noted date, after which they can be removed.
+
+See the [Endpoint IP address change schedule](#endpoints_ipaddress_change_schedule) for the roll out plan.
 
 
 
@@ -213,3 +220,31 @@ The following table lists the private {{site.data.keyword.mon_short}} ingestion 
 | Toronto (`CA-TOR`)   | 158.85.78.224/27  \n 158.85.94.128/29  \n 163.74.67.192/28  \n 163.74.69.184/29  \n 163.74.71.96/27  \n 163.75.65.232/29  \n 163.75.72.192/27  \n 169.55.129.208/28 \n 163.66.81.182 `(*)`  \n 163.74.95.147 `(*)`  \n 163.75.86.200 `(*)`  |
 | Washington (`US-EAST`)  | 169.47.20.160/27  \n 169.55.109.112/29  \n 169.55.122.192/28  \n 169.59.131.160/27  \n 169.59.146.192/26  \n 169.60.112.72/29  \n 169.60.82.240/28  \n 169.62.28.160/28  \n 169.62.3.80/29  \n 169.62.46.192/27  \n 52.116.95.64/26  \n 52.117.71.128/26 \n 150.239.82.158 `(*)`  \n 169.63.176.251 `(*)`  \n 169.62.18.195 `(*)`  |
 {: caption="Source Subnets for Webhook notifications from {{site.data.keyword.mon_full_notm}}" caption-side="top"}
+
+
+
+
+
+## Endpoint IP address change schedule
+{: #endpoints_ipaddress_change_schedule}
+
+This is the planned roll out for the IP address changes in 2025. All new IP addresses in the endpoint section tables marked by `(*)` are already available for each MZR, and can be added to any allowlists in your infrastructure.
+
+This table lists the "Target Date" for cutover to using only the new IP addresses for any allowlist changes that are required. When the status has changed to "Completed", you can remove old IP addresses from any allowlists.
+
+Any date listed that is "to be determined" (TBD) has not been finalized. However, the new IP addresses can and should be added to your allowlists now, or any time before the "Target Date", to avoid disruptions.
+
+
+| Region | Target Date | Status |
+|-------|-------|-------|
+| Sydney (`AU-SYD`)   | 5 May 2025 | Completed |
+| Sao Paulo (`BR-SAO`) | 19 August 2025 | Not started |
+| Toronto (`CA-TOR`)   | 26 August 2025 | Not started |
+| Madrid (`EU-ES`)     | TBD | Not planned yet |
+| Washington (`US-East`) | TBD | Not planned yet |
+| Dallas (`US-South`)  | TBD | Not planned yet |
+| Frankfurt (`EU-DE`)  | TBD | Not planned yet |
+| London (`EU-GB`)     | TBD | Not planned yet | 
+| Osaka (`JP-OSA`)     | TBD | Not planned yet | 
+| Tokyo (`JP-TOK`)     | TBD | Not planned yet | 
+{: caption="MZR change over dates" caption-side="top"}
