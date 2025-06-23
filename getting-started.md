@@ -2,10 +2,10 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-05-30"
+lastupdated: "2025-06-19"
 
 
-keywords: monitoring
+keywords: monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, IBM Cloud Monitoring
 
 subcollection: monitoring
 
