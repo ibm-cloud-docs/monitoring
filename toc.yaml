@@ -171,10 +171,6 @@ toc:
                 navtitle: Managing the Red Hat OpenShift agent by using Helm
               - topic: agent/agent_nonibm.md
                 navtitle: Managing non-IBM Cloud Kubernetes and Openshift clusters
-              - topic: agent/agent_kube.md
-                navtitle: Deploying the Kubernetes agent by using a script
-              - topic: agent/agent_openshift.md
-                navtitle: Deploying the Red Hat OpenShift agent by using a script
               - topic: agent/change_kube_agent.md
                 navtitle: Customizing Kube agents
           - topicgroup:

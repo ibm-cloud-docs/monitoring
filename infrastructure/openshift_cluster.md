@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-05-22"
+lastupdated: "2025-06-25"
 
 keywords:
 
@@ -25,9 +25,8 @@ To configure a cluster to forward metrics, you must install a monitoring agent o
 ![Components overview on the {{site.data.keyword.cloud_notm}}](images/openshift.png "Components overview on the {{site.data.keyword.cloud_notm}}"){: caption="Components overview" caption-side="bottom"}
 
 
-For example, to configure your {{site.data.keyword.redhat_openshift_notm}} cluster to forward metrics to your {{site.data.keyword.mon_full_notm}} instance, you can deploy the agent by using Helm or a script:
+For example, to configure your {{site.data.keyword.redhat_openshift_notm}} cluster to forward metrics to your {{site.data.keyword.mon_full_notm}} instance, you can deploy the agent by using Helm:
 - [Helm](/docs/monitoring?topic=monitoring-agent-deploy-openshift-helm)
-- [Script](/docs/monitoring?topic=monitoring-agent_openshift)
 
 The {{site.data.keyword.mon_short}} agent automatically collects the following types of system metrics per host:
 
@@ -214,27 +213,7 @@ Complete the following steps:
 ### Install the {{site.data.keyword.mon_full_notm}} agent in your cluster
 {: #install_os_agent}
 
-1. Run the following command for your public or private endpoint.
-
-   Private endpoints
-
-   ```text
-   curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a <MONITORING_ACCESS_KEY> -c ingest.private.<REGION>.monitoring.cloud.ibm.com -ac 'sysdig_capture_enabled: false' --openshift
-   ```
-   {: pre}
-
-   Public endpoints
-
-   ```text
-   curl -sL https://ibm.biz/install-sysdig-k8s-agent | bash -s -- -a <MONITORING_ACCESS_KEY> -c ingest.<REGION>.monitoring.cloud.ibm.com -ac 'sysdig_capture_enabled: false' --openshift
-   ```
-   {: pre}
-
-   Where `<MONITORING_ACCESS_KEY>` is the ingestion key for the instance and `<REGION>` is the region of the {{site.data.keyword.mon_full_notm}} instance.
-
-   By default the slim agent is installed.  The slim agent reduces the possible are of attack for potential vulnerabilities and, as a result, is more secure.  If installing the full agent is desired, add the `-af` option to the `curl` command.
-   {: note}
-
+1. Deploy the monitoring agent. For all steps, see [Managing the {{site.data.keyword.mon_short}} agent in a OpenShift cluster by using a HELM chart](/docs/monitoring?topic=monitoring-agent-deploy-openshift-helm)
 
 2. Verify that the monitoring agent is created successfully and its status. Run the following command:
 
