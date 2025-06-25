@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-05-22"
+lastupdated: "2025-06-25"
 
 keywords:
 
@@ -31,9 +31,8 @@ To configure a cluster to forward metrics, you must install a monitoring agent o
 
 ![Components overview on the {{site.data.keyword.cloud_notm}}](images/kube.png "Components overview on the {{site.data.keyword.cloud_notm}}"){: caption="Components overview on the {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
-For example, to configure your Kubernetes cluster to forward metrics to your {{site.data.keyword.mon_full_notm}} instance, you can deploy the agent by using Helm or a script:
+For example, to configure your Kubernetes cluster to forward metrics to your {{site.data.keyword.mon_full_notm}} instance, you can deploy the agent by using Helm:
 - [Helm](/docs/monitoring?topic=monitoring-agent-deploy-kube-helm)
-- [Script](/docs/monitoring?topic=monitoring-agent_Kube)
 
 The {{site.data.keyword.mon_short}} agent automatically collects the following types of system metrics per host:
 
@@ -176,7 +175,7 @@ In order to provide the full suite of system metrics, the monitoring agent needs
 {: note}
 
 
-Complete the following steps from the command-line to deploy the agent by using a script:
+Complete the following steps from the command-line to deploy the agent by using helm:
 
 1. Open a terminal. Then, log in to the {{site.data.keyword.cloud_notm}}. Run the following command and follow the prompts:
 
@@ -205,22 +204,7 @@ Complete the following steps from the command-line to deploy the agent by using 
 
 4. Obtain the ingestion URL from the [collector endpoints](/docs/monitoring?topic=monitoring-endpoints#endpoints_ingestion).
 
-5. Deploy the monitoring agent. Run the following command:
-
-    ```text
-    curl -sL https://raw.githubusercontent.com/draios/sysdig-cloud-scripts/master/agent_deploy/IBMCloud-Kubernetes-Service/install-agent-k8s.sh | bash -s -- -a ACCESS_KEY -c COLLECTOR_ENDPOINT -t TAG_DATA -ac 'sysdig_capture_enabled: false'
-    ```
-    {: pre}
-
-    Where
-
-    * **ACCESS_KEY** is the ingestion key for the instance that you previously retrieved.
-
-    * **COLLECTOR_ENDPOINT** is the ingestion URL for the region where the monitoring instance is available that you previously retrieved.
-
-    * **TAG_DATA** are comma-separated tags that are formatted as *TAG_NAME:TAG_VALUE*. You can associate one or more tags to your monitoring agent. For example: *role:serviceX,location:us-south*. Later on, you can use these tags to identify metrics from the environment where the agent is running.
-
-    * Set **sysdig_capture_enabled** to *false* to disable the  capture feature. By default is set to *true*. For more information, see [Working with captures](/docs/monitoring?topic=monitoring-captures#captures).
+5. Deploy the monitoring agent. For all steps, see [Managing the {{site.data.keyword.mon_short}} agent in a Kubernetes cluster by using a HELM chart](/docs/monitoring?topic=monitoring-agent-deploy-kube-helm)
 
 6. Verify that the monitoring agent is created successfully and its status. Run the following command:
 
