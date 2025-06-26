@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-06-17"
+lastupdated: "2025-06-26"
 
 keywords:
 
@@ -40,18 +40,22 @@ See the [Endpoint IP address change schedule](#endpoints_ipaddress_change_schedu
 
 The following table lists the endpoints that are available per region:
 
-| Region      | Web UI endpoint                                  | Public IP addresses                                       |  Ports           |
-|-------------|--------------------------------------------------|-----------------------------------------------------------|-----------------|
-| Dallas (`US-South`)  | `https://us-south.monitoring.cloud.ibm.com`      | 169.60.151.174  \n 169.46.0.70  \n 169.48.214.70  \n 67.18.89.114 `(*)`  \n 52.116.136.3 `(*)`        | https (TLS) 443 |
-| Frankfurt (`EU-DE`)     | `https://eu-de.monitoring.cloud.ibm.com`         | 149.81.77.78  \n 161.156.102.206  \n 159.122.102.38  \n 149.81.37.2 `(*)`  \n 161.156.163.158 `(*)`     | https (TLS) 443 |
-| London (`EU-GB`)     | `https://eu-gb.monitoring.cloud.ibm.com`         | 158.175.98.206  \n 141.125.73.118  \n 159.122.210.174  \n 141.125.160.111 `(*)`  \n 158.176.193.118 `(*)`   | https (TLS) 443 |
-| Madrid (`EU-ES`)     | `https://eu-es.monitoring.cloud.ibm.com`         |  13.120.68.187  \n  13.121.68.91  \n 13.122.68.140  \n 13.120.91.150 `(*)`  \n 13.122.87.103 `(*)` | https (TLS) 443 |
-| Osaka (`JP-OSA`)    | `https://jp-osa.monitoring.cloud.ibm.com`        | 163.68.67.98  \n 163.69.66.170  \n 163.73.67.180  \n 163.69.80.155 `(*)`  \n 163.73.94.97 `(*)` | https (TLS) 443 |
-| Sao Paulo (`BR-SAO`)    | `https://br-sao.monitoring.cloud.ibm.com`        | 163.107.66.98  \n 163.109.67.242  \n 169.57.141.43  \n 163.107.86.152 `(*)`  \n 13.116.91.147 `(*)`       | https (TLS) 443 |
-| Sydney (`AU-SYD`)    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100  \n 130.198.80.155  \n 168.1.213.78  \n 130.198.13.211 `(*)`  \n 135.90.142.144 `(*)`  | https (TLS) 443 |
-| Tokyo (`JP-TOK`)    | `https://jp-tok.monitoring.cloud.ibm.com`        | 165.192.84.14  \n 128.168.75.14  \n 169.56.51.238  \n 128.168.129.91 `(*)`  \n 162.133.138.52 `(*)`       | https (TLS) 443 |
-| Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237  \n 163.74.85.210 `(*)`  \n 163.75.89.127 `(*)`       | https (TLS) 443 |
-| Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82  \n 169.63.183.79 `(*)`  \n 52.117.125.244 `(*)`        | https (TLS) 443 |
+Ports for every MZR:
+- https (TLS): 443
+
+| Region      | Web UI endpoint                                  | Public IP addresses                                       | 
+|-------------|--------------------------------------------------|-----------------------------------------------------------|
+| Dallas (`US-South`)  | `https://us-south.monitoring.cloud.ibm.com`      | 169.60.151.174  \n 169.46.0.70  \n 169.48.214.70  		\n 52.118.209.119 `(*)`  \n 67.18.94.56 `(*)`  		\n 52.116.135.250     `(*)`      |
+| Frankfurt (`EU-DE`)     | `https://eu-de.monitoring.cloud.ibm.com`         | 149.81.77.78  \n 161.156.102.206  \n 159.122.102.38  \n 158.177.2.4 `(*)`  \n 161.156.87.239 `(*)`  		\n 149.81.238.82  `(*)`   |
+| London (`EU-GB`)     | `https://eu-gb.monitoring.cloud.ibm.com`         | 158.175.98.206  \n 141.125.73.118  \n 159.122.210.174    \n 141.125.105.98 `(*)`  \n 161.156.203.133 `(*)`  	\n 158.176.179.72  `(*)` |
+| Madrid (`EU-ES`)     | `https://eu-es.monitoring.cloud.ibm.com`         |  13.120.68.187  \n  13.121.68.91  \n 13.122.68.140  	 \n 13.121.91.87 `(*)`  \n 13.122.87.104 `(*)`  		\n 13.120.91.152   `(*)` |
+| Osaka (`JP-OSA`)    | `https://jp-osa.monitoring.cloud.ibm.com`        | 163.68.67.98  \n 163.69.66.170  \n 163.73.67.180  		 \n 163.68.83.196 `(*)`  \n 163.73.82.218 `(*)`  		\n 163.69.86.15   `(*)` |
+| Sao Paulo (`BR-SAO`)    | `https://br-sao.monitoring.cloud.ibm.com`        | 163.107.66.98  \n 163.109.67.242  \n 169.57.141.43    \n 13.116.92.185 `(*)`  \n 163.107.92.212 `(*)`  	\n 163.109.84.195  `(*)`     |
+| Sydney (`AU-SYD`)    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100  \n 130.198.80.155  \n 168.1.213.78  		 \n 130.198.10.95 `(*)`  \n 135.90.130.246 `(*)`  	\n 159.23.97.190   `(*)`     |
+| Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237  	 \n 163.66.86.89 `(*)`  \n 163.75.81.213 `(*)`  		\n 163.74.95.149  `(*)`     |
+| Tokyo (`JP-TOK`)    | `https://jp-tok.monitoring.cloud.ibm.com`        | 165.192.84.14  \n 128.168.75.14  \n 169.56.51.238  		 \n 162.133.138.54 `(*)`  \n 128.168.143.56 `(*)`  	\n 165.192.128.220   `(*)`     |
+| Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82  	 \n 169.62.20.11 `(*)`  \n 169.63.183.86 `(*)`  		\n 150.239.110.137  `(*)`      |
+
 {: caption="List of endpoints" caption-side="top"}
 
 
@@ -228,18 +232,18 @@ The following table lists the private {{site.data.keyword.mon_short}} ingestion 
 ## Endpoint IP address change schedule
 {: #endpoints_ipaddress_change_schedule}
 
-This is the planned roll out for the IP address changes in 2025. All new IP addresses in the endpoint section tables marked by `(*)` are already available for each MZR, and can be added to any allowlists in your infrastructure.
+This is the planned roll out for the IP address changes in 2025. All new IP addresses in the endpoint section tables marked by `(*)` are already available for each MZR, and can be added to any firewall allowlists in your infrastructure.
 
-This table lists the "Target Date" for cutover to using only the new IP addresses for any allowlist changes that are required. When the status has changed to "Completed", you can remove old IP addresses from any allowlists.
+This table lists the “Target Date” for cutover to adding the new IP addresses for any firewall allowlists. After a short period, when final testing is complete, and the status has changed to “Completed”, you can remove old IP addresses from any allowlists.
 
-Any date listed that is "to be determined" (TBD) has not been finalized. However, the new IP addresses can and should be added to your allowlists now, or any time before the "Target Date", to avoid disruptions.
+Any date listed that is “to be determined” (TBD) has not been finalized. However, the new IP addresses can and should be added to your allowlists now, or any time before the “Target Date”, to avoid disruptions.
 
 
 | Region | Target Date | Status |
 |-------|-------|-------|
 | Sydney (`AU-SYD`)   | 5 May 2025 | Completed |
-| Sao Paulo (`BR-SAO`) | 19 August 2025 | Not started |
-| Toronto (`CA-TOR`)   | 26 August 2025 | Not started |
+| Sao Paulo (`BR-SAO`) | 5 August 2025 | Not started |
+| Toronto (`CA-TOR`)   | 12 August 2025 | Not started |
 | Madrid (`EU-ES`)     | TBD | Not planned yet |
 | Washington (`US-East`) | TBD | Not planned yet |
 | Dallas (`US-South`)  | TBD | Not planned yet |
