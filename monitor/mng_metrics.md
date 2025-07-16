@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-06-28"
+  years:  2018, 2025
+lastupdated: "2025-07-16"
 
 keywords: 
 
@@ -18,7 +18,7 @@ subcollection: monitoring
 You can customize a {{site.data.keyword.mon_short}} agent and specify which metrics to include and which ones to filter out.
 {: shortdesc}
 
-# Filtering custom metrics in a {{site.data.keyword.mon_short}} agent
+## Filtering custom metrics in a {{site.data.keyword.mon_short}} agent
 {: #mng_metrics_filter}
 
 To filter custom metrics, you must customize the metrics_filter section in the agent configuration file. You can specify which metrics to include and which ones to filter out by configuring the include and exclude filtering parameters.
