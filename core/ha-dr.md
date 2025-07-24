@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-06-25"
+lastupdated: "2025-07-24"
 
 keywords: HA for IBM Cloud Monitoring, DR for IBM Cloud Monitoring, IBM Cloud Monitoring recovery time objective, IBM Cloud Monitoring recovery point objective
 
@@ -64,10 +64,10 @@ Where
 
     A region could be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
 
-    A region contains [multiple availability zones](https://www.ibm.com/cloud/data-centers/) to meet local access, low latency, and security requirements for the region.
+    A region contains [multiple availability zones](https://www.ibm.com/solutions/cloud-data-centers){: external} to meet local access, low latency, and security requirements for the region.
 
 * `N/A` means feature that is not applicable to that geography.
-* `MZR` means multi-zone region. [Learn more](/docs/overview?topic=overview-locations#mzr-table).
+* `MZR` means multi-zone region. [Learn more](/docs/overview?topic=overview-locations#table-mzr).
 
 
 ## Availability of a {{site.data.keyword.mon_short}} instance
@@ -146,7 +146,7 @@ The DR steps must be practiced regularly. As you build your plan, consider the f
 
 Disaster recovery is about surviving a catastrophic failure or loss of availability in a single location.
 
-{{site.data.keyword.mon_full_notm}} follows {{site.data.keyword.cloud_notm}} requirements for [planning and recovering from disaster events](/docs/overview?topic=overview-zero-downtime#disaster-recovery).
+{{site.data.keyword.mon_full_notm}} follows {{site.data.keyword.cloud_notm}} requirements for [planning and recovering from disaster events](/docs/resiliency?topic=resiliency-PlanningforDR).
 
 If a regional disaster occurs, consider the following information:
 * The estimated recovery time for rebuilding the regional site and restoring the service at another location is 24 hours.

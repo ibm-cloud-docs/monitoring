@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-04"
+lastupdated: "2025-07-24"
 
 keywords:
 
@@ -52,7 +52,7 @@ The following table lists container services that are enabled for {{site.data.ke
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-getting-started) | {{site.data.keyword.registrylong}} provides a multi-tenant, highly available, scalable, and encrypted private image registry that is hosted and managed by {{site.data.keyword.IBM}}. | [Platform metrics](/docs/Registry?topic=Registry-registry_monitor)|
 | [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-getting-started) | You can use the {{site.data.keyword.containerlong_notm}} service to deploy highly available apps in Docker containers that run in Kubernetes clusters. | [Metrics sent by agent](/docs/containers?topic=containers-health-monitor) |
-| [{{site.data.keyword.openshiftlong}}](/docs/openshift?topic=openshift-getting-started) | With {{site.data.keyword.openshiftlong_notm}}, you can deploy apps on highly available clusters that come installed with the Red Hat OpenShift on IBM Cloud Container Platform software installed on Red Hat Enterprise Linux. | [Metrics sent by agent](/docs/openshift?topic=openshift-health-monitor#openshift_monitoring) |
+| [{{site.data.keyword.openshiftlong}}](/docs/openshift?topic=openshift-getting-started) | With {{site.data.keyword.openshiftlong_notm}}, you can deploy apps on highly available clusters that come installed with the Red Hat OpenShift on IBM Cloud Container Platform software installed on Red Hat Enterprise Linux. | [Metrics sent by agent](/docs/openshift?topic=openshift-monitoring) |
 {: caption="List of {{site.data.keyword.cloud_notm}} container services" caption-side="top"}
 
 
@@ -201,7 +201,7 @@ The following table lists Cloud services that are enabled for {{site.data.keywor
 
 | Service     | Description | Metrics           |
 |-------------|-------------|-------------------|
-| [VMware Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared-monitor) | Provides standardized and customizable deployment choices of VMware® virtual data center environments. | [Platform metrics](/docs/vmwaresolutions?topic=vmwaresolutions-shared-monitor#shared-monitor-metrics)|
+| [VMware Shared](/docs/vmwaresolutions?topic=vmwaresolutions-single-tenant-monitoring) | Provides standardized and customizable deployment choices of VMware® virtual data center environments. | [Platform metrics](/docs/vmwaresolutions?topic=vmwaresolutions-single-tenant-monitoring)|
 {: caption="VMware Shared" caption-side="top"}
 
 ## VPC
