@@ -46,16 +46,16 @@ The following table lists the high-availability (HA) status for the regions (loc
 
 | Geography             | Region                   | HA Status |
 |-----------------------|--------------------------|-----------|
-| `Asia Pacific`        | `Sydney (au-syd)`        | `MZR`     |
-| `Asia Pacific`        | `Tokyo (jp-tok)`         | `MZR`     |
-| `Asia Pacific`        | `Osaka (jp-osa)`         | `MZR`     |
-| `Europe`              | `Frankfurt (eu-de)`      | `MZR`     |
-| `Europe`              | `London (eu-gb)`         | `MZR`     |
-| `Europe`              | `Madrid (eu-es)`         | `MZR`     |
-| `North America`       | `Dallas (us-south)`      | `MZR`     |
-| `North America`       | `Washington (us-east)`   | `MZR`     |
-| `North America`       | `Toronto (ca-tor)`       | `MZR`     |
-| `South America`       | `São-Paulo (br-sao)`     | `MZR`     |
+| `Asia Pacific`        | Sydney (`au-syd`)        | `MZR`     |
+| `Asia Pacific`        | Tokyo (`jp-tok`)         | `MZR`     |
+| `Asia Pacific`        | Osaka (`jp-osa`)         | `MZR`     |
+| `Europe`              | Frankfurt (`eu-de`)      | `MZR`     |
+| `Europe`              | London (`eu-gb`)         | `MZR`     |
+| `Europe`              | Madrid (`eu-es`)         | `MZR`     |
+| `North America`       | Dallas (`us-south`)      | `MZR`     |
+| `North America`       | Washington (`us-east`)   | `MZR`     |
+| `North America`       | Toronto (`ca-tor`)       | `MZR`     |
+| `South America`       | São-Paulo (`br-sao`)     | `MZR`     |
 {: caption="List of locations where the service is available" caption-side="top"}
 
 Where
@@ -210,7 +210,7 @@ You should backup your alerts, notifications, dashboards and team definitions on
 
 {{site.data.keyword.IBM}} takes specific recovery actions in the case of a disaster.
 
-* IBM® conducts annual tests of various disaster scenarios and continuously refines our recovery documentation based on findings that are found during these tests. 
+* IBM conducts annual tests of various disaster scenarios and continuously refines our recovery documentation based on findings that are found during these tests. 
 
 * 24 × 7 global support is available to customers with IBM® Subject Matter Experts who are on call to help in the case of a disaster.
 

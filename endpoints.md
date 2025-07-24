@@ -53,10 +53,8 @@ Ports for every MZR:
 | Sao Paulo (`BR-SAO`)    | `https://br-sao.monitoring.cloud.ibm.com`        | 163.107.66.98  \n 163.109.67.242  \n 169.57.141.43    \n 13.116.92.185 `(*)`  \n 163.107.92.212 `(*)`  	\n 163.109.84.195  `(*)`     |
 | Sydney (`AU-SYD`)    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100  \n 130.198.80.155  \n 168.1.213.78  		 \n 130.198.10.95 `(*)`  \n 135.90.130.246 `(*)`  	\n 159.23.97.190   `(*)`     |
 | Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237  	 \n 163.66.86.89 `(*)`  \n 163.75.81.213 `(*)`  		\n 163.74.95.149  `(*)`     |
-| Montreal (`CA-MON`)    | `https://ca-mon.monitoring.cloud.ibm.com`        | 64.5.49.125 \n 64.5.42.185 \n 64.5.47.9 \n   |
 | Tokyo (`JP-TOK`)    | `https://jp-tok.monitoring.cloud.ibm.com`        | 165.192.84.14  \n 128.168.75.14  \n 169.56.51.238  		 \n 162.133.138.54 `(*)`  \n 128.168.143.56 `(*)`  	\n 165.192.128.220   `(*)`     |
 | Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82  	 \n 169.62.20.11 `(*)`  \n 169.63.183.86 `(*)`  		\n 150.239.110.137  `(*)`      |
-
 {: caption="List of endpoints" caption-side="top"}
 
 
@@ -81,7 +79,6 @@ The following table lists the *Private API endpoints* that are available per reg
 | Sydney (`AU-SYD`)    | `private.au-syd.monitoring.cloud.ibm.com/api`     | 166.9.244.114    \n 166.9.244.144    \n 166.9.244.177  \n 166.9.244.121 `(*)`  \n 166.9.244.153 `(*)`  \n 166.9.244.185 `(*)`        |
 | Tokyo (`JP-TOK`)    | `private.jp-tok.monitoring.cloud.ibm.com/api`     | 166.9.249.112    \n 166.9.249.141    \n 166.9.249.177  \n 166.9.212.4 `(*)`  \n 166.9.214.5 `(*)`  \n 166.9.216.14 `(*)`      |
 | Toronto (`CA-TOR`)  | `private.ca-tor.monitoring.cloud.ibm.com/api`   | 166.9.247.153    \n 166.9.247.185    \n 166.9.247.205  \n 166.9.209.13 `(*)`  \n 166.9.209.42 `(*)`  \n 166.9.209.72 `(*)`      |
-| Montreal (`CA-MON`)  | `private.ca-mon.monitoring.cloud.ibm.com/api`   | 166.9.232.56 \n 166.9.233.54 \n 166.9.231.34 \n  |
 | Washington (`US-East`)   | `private.us-east.monitoring.cloud.ibm.com/api`    | 166.9.231.240    \n 166.9.232.28    \n 166.9.233.17 \n 166.9.231.19 `(*)`  \n 166.9.232.40 `(*)`  \n 166.9.233.36 `(*)`      |
 {: caption="Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
@@ -102,7 +99,6 @@ The following table lists the *Private API endpoints* that are available per reg
 | Sydney (`AU-SYD`)    | `https://au-syd.monitoring.cloud.ibm.com/api`        |
 | Tokyo (`JP-TOK`)    | `https://jp-tok.monitoring.cloud.ibm.com/api`        |
 | Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com/api`        |
-| Montreal (`CA-MON`)    | `https://ca-mon.monitoring.cloud.ibm.com/api`        |
 | Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com/api`       |
 {: caption="Public REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
@@ -138,7 +134,6 @@ Ports for every MZR:
 | Sydney (`AU-SYD`)    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32  \n 166.9.52.27   \n 166.9.54.27  \n 166.9.244.121 `(*)`  \n 166.9.244.153 `(*)`  \n 166.9.244.185 `(*)`    |
 | Tokyo (`JP-TOK`)    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | 166.9.44.38  \n 166.9.40.35  \n 166.9.42.48  \n 166.9.212.4 `(*)`  \n 166.9.214.5 `(*)`  \n 166.9.216.14 `(*)`    |
 | Toronto (`CA-TOR`)  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | 166.9.77.20  \n 166.9.76.23  \n 166.9.78.21  \n 166.9.209.13 `(*)`  \n 166.9.209.42 `(*)`  \n 166.9.209.72 `(*)`    |
-| Montreal (`CA-MON`)  | `ingest.private.ca-mon.monitoring.cloud.ibm.com`   | 166.9.232.56 \n 166.9.233.54 \n 166.9.231.34 \n   |
 | Washington (`US-East`)   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | 166.9.22.50  \n 166.9.24.43  \n 166.9.20.53  \n 166.9.231.19 `(*)`  \n 166.9.232.40 `(*)`  \n 166.9.233.36 `(*)`     |
 {: caption="List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
@@ -165,7 +160,6 @@ Ports for every MZR:
 | Sydney (`AU-SYD`)    | `ingest.au-syd.monitoring.cloud.ibm.com`            | 135.90.73.100  \n 130.198.80.155  \n 168.1.213.78  \n 130.198.10.95 `(*)`  \n 135.90.130.246 `(*)`  \n 159.23.97.190   `(*)`     |
 | Osaka (`JP-OSA`)    | `ingest.jp-osa.monitoring.cloud.ibm.com`            | 163.68.67.98  \n 163.69.66.170  \n 163.73.67.180  \n 163.68.83.196 `(*)`  \n 163.73.82.218 `(*)`  \n 163.69.86.15   `(*)` |
 | Toronto (`CA-TOR`)    | `ingest.ca-tor.monitoring.cloud.ibm.com`            | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237  \n 163.66.86.89 `(*)`  \n 163.75.81.213 `(*)`  \n 163.74.95.149  `(*)`     |
-| Montreal (`CA-MON`)    | `ingest.ca-mon.monitoring.cloud.ibm.com`            | 64.5.49.125 \n 64.5.42.185 \n 64.5.47.9 \n   |
 | Tokyo (`JP-TOK`)    | `ingest.jp-tok.monitoring.cloud.ibm.com`            | 165.192.84.14  \n 128.168.75.14  \n 169.56.51.238  \n 162.133.138.54 `(*)`  \n 128.168.143.56 `(*)`  \n 165.192.128.220   `(*)`     |
 | Washington (`US-East`)   | `ingest.us-east.monitoring.cloud.ibm.com`           | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82  \n 169.62.20.11 `(*)`  \n 169.63.183.86 `(*)`  \n 150.239.110.137  `(*)`      |
 {: caption="List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
@@ -192,7 +186,6 @@ The following table lists the public {{site.data.keyword.mon_short}} ingestion e
 | Sydney (`AU-SYD`)              | `https://ingest.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | Tokyo (`JP-TOK`)              | `https://ingest.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | Toronto (`CA-TOR`)              | `https://ingest.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write`   |
-| Montreal (`CA-MON`)              | `https://ingest.ca-mon.monitoring.cloud.ibm.com/prometheus/remote/write`  |
 | Washington (`US-EAST`)             | `https://ingest.us-east.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.us-east.monitoring.cloud.ibm.com/prometheus/remote/write`  |
 {: caption="Prometheus remote write public endpoints" caption-side="top"}
 
@@ -209,7 +202,6 @@ The following table lists the private {{site.data.keyword.mon_short}} ingestion 
 | Sydney (`AU-SYD`)              | `https://ingest.private.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write` |
 | Tokyo (`JP-TOK`)              | `https://ingest.private.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.jp-tok.monitoring.cloud.ibm.com/prometheus/remote/write` |
 | Toronto (`CA-TOR`)              | `https://ingest.private.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.ca-tor.monitoring.cloud.ibm.com/prometheus/remote/write`  |
-| Montreal (`CA-MON`)              | `https://ingest.private.ca-mon.monitoring.cloud.ibm.com/prometheus/remote/write` |
 | Washington (`US-EAST`)             | `https://ingest.private.us-east.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.us-east.monitoring.cloud.ibm.com/prometheus/remote/write` |
 {: caption="Prometheus remote write private endpoints" caption-side="top"}
 
@@ -229,7 +221,6 @@ The following table lists the private {{site.data.keyword.mon_short}} ingestion 
 | Sydney (`AU-SYD`)   | 130.198.66.144/28  \n 130.198.80.152/29  \n 135.90.73.96/29  \n 135.90.78.192/28  \n 135.90.94.96/27  \n 168.1.115.192/27  \n 168.1.213.32/27  \n 168.1.213.72/29  \n 168.1.41.96/28 \n 159.23.99.159 `(*)`  \n 130.198.18.13 `(*)`  \n 135.90.142.230 `(*)`  |
 | Tokyo (`JP-TOK`)   | 128.168.75.32/28  \n 128.168.75.8/29  \n 128.168.98.0/27  \n 161.202.255.64/27  \n 165.192.84.8/29  \n 165.192.97.96/27  \n 169.56.11.208/28  \n 169.56.51.232/29 \n 162.133.130.143 `(*)`  \n 128.168.137.83 `(*)`  \n 165.192.128.217 `(*)`  |
 | Toronto (`CA-TOR`)   | 158.85.78.224/27  \n 158.85.94.128/29  \n 163.74.67.192/28  \n 163.74.69.184/29  \n 163.74.71.96/27  \n 163.75.65.232/29  \n 163.75.72.192/27  \n 169.55.129.208/28 \n 163.66.81.182 `(*)`  \n 163.74.95.147 `(*)`  \n 163.75.86.200 `(*)`  |
-| Montreal (`CA-MON`)   | 64.5.42.67 \n 64.5.49.47 \n 64.5.46.173 \n |
 | Washington (`US-EAST`)  | 169.47.20.160/27  \n 169.55.109.112/29  \n 169.55.122.192/28  \n 169.59.131.160/27  \n 169.59.146.192/26  \n 169.60.112.72/29  \n 169.60.82.240/28  \n 169.62.28.160/28  \n 169.62.3.80/29  \n 169.62.46.192/27  \n 52.116.95.64/26  \n 52.117.71.128/26 \n 150.239.82.158 `(*)`  \n 169.63.176.251 `(*)`  \n 169.62.18.195 `(*)`  |
 {: caption="Source Subnets for Webhook notifications from {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
@@ -247,12 +238,13 @@ This table lists the “Target Date” for cutover to adding the new IP addresse
 Any date listed that is “to be determined” (TBD) has not been finalized. However, the new IP addresses can and should be added to your allowlists now, or any time before the “Target Date”, to avoid disruptions.
 
 
+
+
 | Region | Target Date | Status |
 |-------|-------|-------|
 | Sydney (`AU-SYD`)   | 5 May 2025 | Completed |
 | Sao Paulo (`BR-SAO`) | 5 August 2025 | Not started |
 | Toronto (`CA-TOR`)   | 12 August 2025 | Not started |
-| Montreal (`CA-MON`)   | Not needed | Not needed |
 | Madrid (`EU-ES`)     | TBD | Not planned yet |
 | Washington (`US-East`) | TBD | Not planned yet |
 | Dallas (`US-South`)  | TBD | Not planned yet |

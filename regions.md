@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-11-13"
+  years:  2018, 2025
+lastupdated: "2025-07-24"
 
 keywords: 
 
@@ -21,7 +21,11 @@ A list of supported regions for the {{site.data.keyword.mon_full_notm}} service.
 
 The {{site.data.keyword.mon_full_notm}} service is available in the following regions:
 
+
 ![The image shows the locations where the {{site.data.keyword.mon_full_notm}} service is available.](images/Cloud-Monitoring-02-Locations.svg){: caption="Displays the regions where you can create and manage {{site.data.keyword.mon_full_notm}} resources." caption-side="bottom"}
+
+
+
 
 This image is an artistic representation and does not reflect actual political or geographic boundaries.
 {: note}
