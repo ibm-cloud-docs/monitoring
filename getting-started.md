@@ -126,12 +126,15 @@ Complete one of the following tutorials to learn how to deploy a monitoring agen
 
 |	Tutorial                        |
 |---------------------------------|
-| [Monitoring a Linux VPC server instance](/docs/monitoring?topic=monitoring-ubuntu#ubuntu) |
-| [Monitoring a Linux bare metal server](/docs/monitoring?topic=monitoring-baremetal_linux) |
-| [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows) |
 | [Monitoring a Kubernetes cluster](/docs/monitoring?topic=monitoring-kubernetes_cluster) |
 | [Monitoring a {{site.data.keyword.redhat_openshift_notm}} cluster](/docs/monitoring?topic=monitoring-openshift_cluster) |
-| [Monitoring VMware vCenter server deployments](/docs/monitoring?topic=monitoring-vmware-vcenter) |
+| [Monitoring an Ubuntu Linux VPC server instance](/docs/monitoring?topic=monitoring-ubuntu) |
+| [Monitoring a Linux bare metal server](/docs/monitoring?topic=monitoring-baremetal_linux) |
+| [Monitoring a Windows environment](/docs/monitoring?topic=monitoring-windows) |
+| [Deploying the agent on a Linux host with no public access](/docs/monitoring?topic=monitoring-agent_linux_1) |
+| [Monitoring for VMware Shared](/docs/vmwaresolutions?topic=vmwaresolutions-single-tenant-monitoring) |
+| [Monitoring for VMware as a service](/docs/vmware-service?topic=vmware-service-single-tenant-monitoring) |
+| [Monitoring for VMware vCenter Server deployments](/docs/monitoring?topic=monitoring-vmware-vcenter) |
 {: caption="Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 After the monitoring agent is deployed, the monitoring agent automatically collects and reports on pre-defined and custom metrics.  These metrics are forwarded to the {{site.data.keyword.mon_full_notm}} instance.  You can configure which metrics are monitored in an environment.
