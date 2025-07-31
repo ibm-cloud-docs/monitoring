@@ -297,9 +297,6 @@ toc:
       id: reference
       topics:
       - regions.md
-      - link:
-          label: Considerations for Montreal
-          href: /cloud-logs/cloud-logs-montreal-temp
       - endpoints.md
       - service_plans.md
       - pricing.md
