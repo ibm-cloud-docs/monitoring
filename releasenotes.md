@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-07-24"
+lastupdated: "2025-07-31"
 
 
 keywords:
@@ -21,6 +21,12 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
+
+## 1 August 2025
+{: #monitoring-aug0125}
+
+Montreal support
+:   The {{site.data.keyword.mon_full_notm}} service is fully supported in the Montreal (`ca-mon`) region.
 
 
 ## 9 July 2025

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-07-24"
+lastupdated: "2025-07-31"
 
 keywords: HA for IBM Cloud Monitoring, DR for IBM Cloud Monitoring, IBM Cloud Monitoring recovery time objective, IBM Cloud Monitoring recovery point objective
 
@@ -54,6 +54,7 @@ The following table lists the high-availability (HA) status for the regions (loc
 | `Europe`              | Madrid (`eu-es`)         | `MZR`     |
 | `North America`       | Dallas (`us-south`)      | `MZR`     |
 | `North America`       | Washington (`us-east`)   | `MZR`     |
+| `North America`       | Montreal (`ca-mon`)   | `MZR`     |
 | `North America`       | Toronto (`ca-tor`)       | `MZR`     |
 | `South America`       | São-Paulo (`br-sao`)     | `MZR`     |
 {: caption="List of locations where the service is available" caption-side="top"}

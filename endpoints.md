@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-07-24"
+lastupdated: "2025-07-31"
 
 keywords:
 
@@ -49,6 +49,7 @@ Ports for every MZR:
 | Frankfurt (`EU-DE`)     | `https://eu-de.monitoring.cloud.ibm.com`         | 149.81.77.78  \n 161.156.102.206  \n 159.122.102.38  \n 158.177.2.4 `(*)`  \n 161.156.87.239 `(*)`  		\n 149.81.238.82  `(*)`   |
 | London (`EU-GB`)     | `https://eu-gb.monitoring.cloud.ibm.com`         | 158.175.98.206  \n 141.125.73.118  \n 159.122.210.174    \n 141.125.105.98 `(*)`  \n 161.156.203.133 `(*)`  	\n 158.176.179.72  `(*)` |
 | Madrid (`EU-ES`)     | `https://eu-es.monitoring.cloud.ibm.com`         |  13.120.68.187  \n  13.121.68.91  \n 13.122.68.140  	 \n 13.121.91.87 `(*)`  \n 13.122.87.104 `(*)`  		\n 13.120.91.152   `(*)` |
+| Montreal (`CA-MON`)    | `https://ca-mon.monitoring.cloud.ibm.com`        | 64.5.49.125  \n 64.5.42.185  \n 64.5.47.9 |
 | Osaka (`JP-OSA`)    | `https://jp-osa.monitoring.cloud.ibm.com`        | 163.68.67.98  \n 163.69.66.170  \n 163.73.67.180  		 \n 163.68.83.196 `(*)`  \n 163.73.82.218 `(*)`  		\n 163.69.86.15   `(*)` |
 | Sao Paulo (`BR-SAO`)    | `https://br-sao.monitoring.cloud.ibm.com`        | 163.107.66.98  \n 163.109.67.242  \n 169.57.141.43    \n 13.116.92.185 `(*)`  \n 163.107.92.212 `(*)`  	\n 163.109.84.195  `(*)`     |
 | Sydney (`AU-SYD`)    | `https://au-syd.monitoring.cloud.ibm.com`        | 135.90.73.100  \n 130.198.80.155  \n 168.1.213.78  		 \n 130.198.10.95 `(*)`  \n 135.90.130.246 `(*)`  	\n 159.23.97.190   `(*)`     |
@@ -74,6 +75,7 @@ The following table lists the *Private API endpoints* that are available per reg
 | Frankfurt (`EU-DE`)     | `private.eu-de.monitoring.cloud.ibm.com/api`      | 166.9.248.88    \n 166.9.248.120    \n 166.9.248.152  \n 166.9.209.205 `(*)`  \n 166.9.209.227 `(*)`  \n 166.9.210.13 `(*)`       |
 | London (`EU-GB`)     | `private.eu-gb.monitoring.cloud.ibm.com/api`      | 166.9.244.29    \n 166.9.244.59  \n 166.9.245.189 `(*)`  \n 166.9.245.221 `(*)`  \n 166.9.245.253 `(*)`    |
 | Madrid (`EU-ES`)     | `private.eu-es.monitoring.cloud.ibm.com/api`      | 166.9.226.17    \n 166.9.227.16     \n 166.9.225.16  \n 166.9.226.56 `(*)`  \n 166.9.227.143 `(*)`  \n 166.9.225.35 `(*)`           |
+| Montreal (`CA-MON`)  | `private.ca-mon.monitoring.cloud.ibm.com/api`   | 166.9.232.56  \n 166.9.233.54  \n 166.9.231.34 |
 | Osaka (`JP-OSA`)    | `private.jp-osa.monitoring.cloud.ibm.com/api`     | 166.9.247.44    \n 166.9.247.77    \n 166.9.247.109  \n 166.9.247.59 `(*)`  \n 166.9.247.89 `(*)`  \n 166.9.247.123 `(*)`    |
 | Sao Paulo (`BR-SAO`)  | `private.br-sao.monitoring.cloud.ibm.com/api`   | 166.9.246.77    \n 166.9.246.108    \n 166.9.246.133  \n 166.9.246.87 `(*)`  \n 166.9.246.120 `(*)`  \n 166.9.246.144 `(*)`     |
 | Sydney (`AU-SYD`)    | `private.au-syd.monitoring.cloud.ibm.com/api`     | 166.9.244.114    \n 166.9.244.144    \n 166.9.244.177  \n 166.9.244.121 `(*)`  \n 166.9.244.153 `(*)`  \n 166.9.244.185 `(*)`        |
@@ -94,6 +96,7 @@ The following table lists the *Private API endpoints* that are available per reg
 | Frankfurt (`EU-DE`)     | `https://eu-de.monitoring.cloud.ibm.com/api`         |
 | London (`EU-GB`)     | `https://eu-gb.monitoring.cloud.ibm.com/api`         |
 | Madrid (`EU-ES`)     | `https://eu-es.monitoring.cloud.ibm.com/api`         |
+| Montreal (`CA-MON`)    | `https://ca-mon.monitoring.cloud.ibm.com/api`        |
 | Osaka (`JP-OSA`)    | `https://jp-osa.monitoring.cloud.ibm.com/api`        |
 | Sao Paulo (`BR-SAO`)    | `https://br-sao.monitoring.cloud.ibm.com/api`        |
 | Sydney (`AU-SYD`)    | `https://au-syd.monitoring.cloud.ibm.com/api`        |
@@ -129,6 +132,7 @@ Ports for every MZR:
 | Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | 166.9.32.51  \n 166.9.30.53  \n 166.9.28.71  \n 166.9.209.205 `(*)`  \n 166.9.209.227 `(*)`  \n 166.9.210.13 `(*)`  |
 | London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | 166.9.34.56  \n 166.9.36.71  \n 166.9.245.189 `(*)`  \n 166.9.245.221 `(*)`  \n 166.9.245.253 `(*)`     |
 | Madrid (`EU-ES`)     | `ingest.private.eu-es.monitoring.cloud.ibm.com`      | 166.9.96.31  \n 166.9.95.31  \n 166.9.94.31  \n 166.9.226.56 `(*)`  \n 166.9.227.143 `(*)`  \n 166.9.225.35 `(*)`  |
+| Montreal (`CA-MON`)  | `ingest.private.ca-mon.monitoring.cloud.ibm.com`   | 166.9.232.56  \n 166.9.233.54  \n 166.9.231.34 |
 | Osaka (`JP-OSA`)    | `ingest.private.jp-osa.monitoring.cloud.ibm.com`     | 166.9.72.14  \n 166.9.71.15  \n 166.9.70.14  \n 166.9.247.59 `(*)`  \n 166.9.247.89 `(*)`  \n 166.9.247.123 `(*)`    |
 | Sao Paulo (`BR-SAO`)  | `ingest.private.br-sao.monitoring.cloud.ibm.com`   | 166.9.84.19  \n 166.9.83.18  \n 166.9.82.19  \n 166.9.246.87 `(*)`  \n 166.9.246.120 `(*)`  \n 166.9.246.144 `(*)`   |
 | Sydney (`AU-SYD`)    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | 166.9.56.32  \n 166.9.52.27   \n 166.9.54.27  \n 166.9.244.121 `(*)`  \n 166.9.244.153 `(*)`  \n 166.9.244.185 `(*)`    |
@@ -156,6 +160,7 @@ Ports for every MZR:
 | Frankfurt (`EU-DE`)     | `ingest.eu-de.monitoring.cloud.ibm.com`             | 149.81.77.78  \n 161.156.102.206  \n 159.122.102.38  \n 158.177.2.4 `(*)`  \n 161.156.87.239 `(*)`  \n 149.81.238.82  `(*)`   |
 | London (`EU-GB`)     | `ingest.eu-gb.monitoring.cloud.ibm.com`             | 158.175.98.206  \n 141.125.73.118  \n 159.122.210.174  \n 141.125.105.98 `(*)`  \n 161.156.203.133 `(*)`  \n 158.176.179.72  `(*)` |
 | Madrid (`EU-ES`)     | `ingest.eu-es.monitoring.cloud.ibm.com`             | 13.122.68.140  \n 13.120.68.187  \n  13.121.68.91  \n 13.121.91.87 `(*)`  \n 13.122.87.104 `(*)`  \n 13.120.91.152   `(*)` |
+| Montreal (`CA-MON`)    | `ingest.ca-mon.monitoring.cloud.ibm.com`            | 64.5.49.125  \n 64.5.42.185  \n 64.5.47.9 |
 | Sao Paulo (`BR-SAO`)    | `ingest.br-sao.monitoring.cloud.ibm.com`            | 163.107.66.98  \n 163.109.67.242  \n 169.57.141.43  \n 13.116.92.185 `(*)`  \n 163.107.92.212 `(*)`  \n 163.109.84.195  `(*)`     |
 | Sydney (`AU-SYD`)    | `ingest.au-syd.monitoring.cloud.ibm.com`            | 135.90.73.100  \n 130.198.80.155  \n 168.1.213.78  \n 130.198.10.95 `(*)`  \n 135.90.130.246 `(*)`  \n 159.23.97.190   `(*)`     |
 | Osaka (`JP-OSA`)    | `ingest.jp-osa.monitoring.cloud.ibm.com`            | 163.68.67.98  \n 163.69.66.170  \n 163.73.67.180  \n 163.68.83.196 `(*)`  \n 163.73.82.218 `(*)`  \n 163.69.86.15   `(*)` |
@@ -181,6 +186,7 @@ The following table lists the public {{site.data.keyword.mon_short}} ingestion e
 | Frankfurt (`EU-DE`)               | `https://ingest.eu-de.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.eu-de.monitoring.cloud.ibm.com/prometheus/remote/write`    |
 | London (`EU-GB`)               | `https://ingest.eu-gb.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.eu-gb.monitoring.cloud.ibm.com/prometheus/remote/write`    |
 | Madrid (`EU-ES`)               | `https://ingest.eu-es.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.eu-es.monitoring.cloud.ibm.com/prometheus/remote/write`    |
+| Montreal (`CA-MON`)              | `https://ingest.ca-mon.monitoring.cloud.ibm.com/prometheus/remote/write`  |
 | Osaka (`JP-OSA`)              | `https://ingest.jp-osa.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.jp-osa.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | Sao Paulo (`BR-SAO`)              | `https://ingest.br-sao.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.br-sao.monitoring.cloud.ibm.com/prometheus/remote/write`   |
 | Sydney (`AU-SYD`)              | `https://ingest.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write`   |
@@ -197,6 +203,7 @@ The following table lists the private {{site.data.keyword.mon_short}} ingestion 
 | Frankfurt (`EU-DE`)               | `https://ingest.private.eu-de.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.eu-de.monitoring.cloud.ibm.com/prometheus/remote/write`  |
 | London (`EU-GB`)               | `https://ingest.private.eu-gb.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.eu-gb.monitoring.cloud.ibm.com/prometheus/remote/write`  |
 | Madrid (`EU-ES`)               | `https://ingest.private.eu-es.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.eu-es.monitoring.cloud.ibm.com/prometheus/remote/write`  |
+| Montreal (`CA-MON`)              | `https://ingest.private.ca-mon.monitoring.cloud.ibm.com/prometheus/remote/write` |
 | Osaka (`JP-OSA`)              | `https://ingest.private.jp-osa.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.jp-osa.monitoring.cloud.ibm.com/prometheus/remote/write`  |
 | Sao Paulo (`BR-SAO`)              |`https://ingest.private.br-sao.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.br-sao.monitoring.cloud.ibm.com/prometheus/remote/write`  |
 | Sydney (`AU-SYD`)              | `https://ingest.private.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write` [Deprecated]{: tag-deprecated}  \n `https://ingest.prws.private.au-syd.monitoring.cloud.ibm.com/prometheus/remote/write` |
@@ -216,6 +223,7 @@ The following table lists the private {{site.data.keyword.mon_short}} ingestion 
 | Frankfurt (`EU-DE`)    | 149.81.151.128/27  \n 149.81.201.192/26  \n 149.81.77.72/29  \n 149.81.99.192/28  \n 158.177.44.192/26  \n 159.122.102.32/29  \n 161.156.1.224/27  \n 161.156.102.200/29  \n 161.156.69.144/28  \n 161.156.77.64/26  \n 169.50.36.64/27  \n 169.50.9.0/28 \n 149.81.10.225 `(*)`  \n 161.156.83.162 `(*)`  \n 149.81.238.81 `(*)`    |
 | London (`EU-GB`)    | 141.125.136.32/27  \n 141.125.73.112/29  \n 141.125.73.80/28  \n 158.175.124.224/27  \n 158.175.98.200/29  \n 159.122.210.168/29  \n 159.8.144.168/29  \n 159.8.149.208/28  \n 159.8.162.0/26  \n 161.156.209.192/26  \n 5.10.120.32/27 \n 161.156.201.6 `(*)`  \n 141.125.157.52 `(*)`  \n 158.176.191.3 `(*)`  |
 | Madrid (`EU-ES`) | 13.120.68.192/28  \n 13.120.68.224/27  \n 13.121.68.96/28  \n 13.122.68.160/28 \n 13.120.91.148 `(*)`  \n 13.121.80.147 `(*)`  \n 13.122.87.98 `(*)`  |
+| Montreal (`CA-MON`)   | 64.5.42.67  \n 64.5.49.47  \n 64.5.46.173 |
 | Osaka (`JP-OSA`)   | 163.68.67.128/28  \n 163.68.67.96/29  \n 163.68.79.32/27  \n 163.69.66.168/29  \n 163.69.67.112/28  \n 163.69.70.64/27  \n 163.73.67.176/29  \n 163.73.67.192/28  \n 163.73.69.96/27 \n 163.68.91.237 `(*)`  \n 163.69.80.154 `(*)`  \n 163.73.86.222 `(*)`  |
 | Sao Paulo (`BR-SAO`) | 163.107.66.96/29  \n 163.107.68.128/28  \n 163.107.71.32/27  \n 163.109.67.240/29  \n 163.109.73.128/27  \n 169.57.141.40/29  \n 169.57.186.0/27  \n 169.57.195.0/28 \n 13.116.91.143 `(*)`  \n 163.107.86.146 `(*)`  \n 163.109.84.191 `(*)` |
 | Sydney (`AU-SYD`)   | 130.198.66.144/28  \n 130.198.80.152/29  \n 135.90.73.96/29  \n 135.90.78.192/28  \n 135.90.94.96/27  \n 168.1.115.192/27  \n 168.1.213.32/27  \n 168.1.213.72/29  \n 168.1.41.96/28 \n 159.23.99.159 `(*)`  \n 130.198.18.13 `(*)`  \n 135.90.142.230 `(*)`  |
@@ -238,6 +246,9 @@ This table lists the “Target Date” for cutover to adding the new IP addresse
 Any date listed that is “to be determined” (TBD) has not been finalized. However, the new IP addresses can and should be added to your allowlists now, or any time before the “Target Date”, to avoid disruptions.
 
 
+As a newly supported region, Montreal (`CA-MON`) does not require IP address changes.
+{: note}
+
 
 
 | Region | Target Date | Status |
@@ -245,6 +256,7 @@ Any date listed that is “to be determined” (TBD) has not been finalized. How
 | Sydney (`AU-SYD`)   | 5 May 2025 | Completed |
 | Sao Paulo (`BR-SAO`) | 5 August 2025 | Not started |
 | Toronto (`CA-TOR`)   | 12 August 2025 | Not started |
+| Montreal (`CA-MON`)   | Not needed | Not needed |
 | Madrid (`EU-ES`)     | TBD | Not planned yet |
 | Washington (`US-East`) | TBD | Not planned yet |
 | Dallas (`US-South`)  | TBD | Not planned yet |
