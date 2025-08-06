@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-08-05"
+lastupdated: "2025-08-06"
 
 keywords:
 
@@ -254,7 +254,7 @@ As a newly supported region, Montreal (`CA-MON`) does not require IP address cha
 | Region | Target Date | Status |
 |-------|-------|-------|
 | Sydney (`AU-SYD`)   | 5 May 2025 | Completed |
-| Sao Paulo (`BR-SAO`) | 5 August 2025 | Target: 6 August 2025 |
+| Sao Paulo (`BR-SAO`) | 5 August 2025 | In progress: Begun 6 August 2025 |
 | Toronto (`CA-TOR`)   | 12 August 2025 | Not started |
 | Montreal (`CA-MON`)   | Not needed | Not needed |
 | Madrid (`EU-ES`)     | TBD | Not planned yet |
