@@ -305,6 +305,8 @@ toc:
       - core/shared-responsibilities.md
       - topic: core/ha-dr.md
         navtitle: Understanding high availability and disaster recovery
+      - topic: service-dependency.md
+        navtitle: Service dependencies
       - topic: core/data-portability.md
         navtitle: Data portability
       - topicgroup:
