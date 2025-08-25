@@ -98,7 +98,7 @@ Platform metrics are metrics that are exposed by enabled-monitoring services and
 To see the list of enabled-monitoring services, see [Cloud services](/docs/monitoring?topic=monitoring-cloud_services).
 
 For example, to configure platform metrics in a region, complete the following steps:
-1. From the{{site.data.keyword.cloud_notm}} dashboard, go to the menu icon ![menu icon](../../icons/icon_hamburger.svg) &gt; **Observability** to access the *Observability* dashboard.
+1. From the {{site.data.keyword.cloud_notm}} dashboard, go to the menu icon ![menu icon](../../icons/icon_hamburger.svg) &gt; **Observability** to access the *Observability* dashboard.
 
 2. Select **Monitoring** &gt; **Options** &gt; **Edit platform**.
 
