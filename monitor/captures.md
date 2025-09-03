@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2023
-lastupdated: "2023-03-22"
+  years:  2018, 2025
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -127,5 +127,5 @@ For more information, see [Chisels User Guide](https://github.com/draios/sysdig/
 Csysdig is an open source tool for Linux that is designed for monitoring and debugging. You can use it to analyze capture files.
 
 For more information, see the following resources:
-* [Csysdig blog](https://sysdig.com/blog/csysdig-explained-visually/){: external}
+* [Csysdig blog](https://www.sysdig.com/blog/csysdig-explained-visually){: external}
 * [Csysdig video](https://www.youtube.com/watch?v=UJ4wVrbP-Q8){: external}

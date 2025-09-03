@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-05-22"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -95,7 +95,7 @@ If you have an existing Ubuntu Linux virtual server instance you want to monitor
 
 1. If you don't have a virtual private cloud, [use the {{site.data.keyword.cloud_notm}} console to create VPC resources](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
 
-2. If you don't have an Ubuntu Linux virtual server instance, [create an Umbuntu Linux virtual server instance by using the UI and selecting **Ubuntu Linux** as the **Operating System**](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-virtual-servers).
+2. If you don't have an Ubuntu Linux virtual server instance, [create an Umbuntu Linux virtual server instance by using the UI and selecting **Ubuntu Linux** as the **Operating System**](/docs/vpc?topic=vpc-creating-virtual-servers).
 
 ## Provision an {{site.data.keyword.mon_full_notm}} instance
 {: #ubuntu_step2}

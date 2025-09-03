@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -37,7 +37,7 @@ You will need to configure:
 
 Check the following prereqs before managing streaming:
 * [Create an {{site.data.keyword.messagehub}} instance.](/docs/EventStreams?topic=EventStreams-getting-started).
-* Check the limitations of the service plans. For more information, see [Limits and quotas](https://cloud.ibm.com/docs/EventStreams?topic=EventStreams-kafka_quotas).
+* Check the limitations of the service plans. For more information, see [Limits and quotas](/docs/EventStreams?topic=EventStreams-kafka_quotas).
 * Make sure you have the appropriate permissions.
 
     * You must have the **manager** role to configure streaming.
