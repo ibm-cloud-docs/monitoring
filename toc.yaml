@@ -246,6 +246,8 @@ toc:
           label: Dashboards
           topics:
           - monitor/dashboards.md
+          - topic: monitor/advisor.md
+            navtitle: Advisor
           - monitor/panels.md
           - api/dashboard_python.md
           links:
