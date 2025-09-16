@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-08-20"
+lastupdated: "2025-09-16"
 
 keywords:
 
@@ -257,11 +257,11 @@ As a newly supported region, Montreal (`CA-MON`) does not require IP address cha
 | Sao Paulo (`BR-SAO`) | 5 August 2025 | Completed |
 | Toronto (`CA-TOR`)   | 12 August 2025 | Completed |
 | Montreal (`CA-MON`)   | Not needed | Not needed |
+| London (`EU-GB`)     | 01 October 2025 | Pending | 
+| Frankfurt (`EU-DE`)  | 08 October 2025 | Pending |
 | Madrid (`EU-ES`)     | TBD | Not planned yet |
 | Washington (`US-East`) | TBD | Not planned yet |
 | Dallas (`US-South`)  | TBD | Not planned yet |
-| Frankfurt (`EU-DE`)  | TBD | Not planned yet |
-| London (`EU-GB`)     | TBD | Not planned yet | 
 | Osaka (`JP-OSA`)     | TBD | Not planned yet | 
 | Tokyo (`JP-TOK`)     | TBD | Not planned yet | 
 {: caption="MZR change over dates" caption-side="top"}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-05-01"
+lastupdated: "2025-09-11"
 
 keywords:
 
@@ -207,6 +207,7 @@ Other collectors that generate *time-series* include:
 | `process` | Per-process metrics | 21 *time-series* per process. (This metric has high cardinality. One process can have subprocesses with multiple `process_id` values.) You can filter [processes](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.process.md){: external} |
 | `service` | Service state metrics | 26 *time-series* per service. (This metric has high cardinality. Windows has a lot of services by default.) You can filter [services](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.service.md){: external} |
 {: caption="Time-series estimates for Windows systems for additional collectors" caption-side="bottom"}
+
 
 ## Billing samples
 {: #billing_example}
