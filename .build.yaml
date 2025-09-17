@@ -1,5 +1,5 @@
 includes:
-  - https://github.ibm.com/cloud-docs/monitor-cli-plugin
+
 translation:
   exclude:
     byFilePath:
