@@ -1,39 +1,39 @@
 {
-    "version": 2,
-    "title": "IBM Cloud Monitoring",
-    "introduction": "IBM Cloud Monitoring is a cloud-native, and container-intelligence management system that you can include as part of your IBM Cloud architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms.",
-    "product_page": "https://www.ibm.com/products/cloud-monitoring",
-    "console_page": "/observability/monitoring",
-    "section_topics": {
-      "links": [
-        {
-          "title": "Getting started with IBM Cloud Monitoring",
-          "href": "/docs/monitoring?topic=monitoring-getting-started#getting-started"
-        },
-        {
-          "title": "Monitoring in IBM Cloud",
-          "href": "/docs/monitoring?topic=monitoring-about-monitor"
-        },
-        {
-          "title": "Controlling access through IAM",
-          "href": "/docs/monitoring?topic=monitoring-iam"
-        },
-        {
-          "title": "Auditing events",
-          "href": "/docs/monitoring?topic=monitoring-at_events"
-        },
-        {
-          "title": "Frequently asked questions (FAQ)",
-          "href": "/docs/monitoring?topic=monitoring-faq"
-        }
-      ]
-    },
-      "section_devtools": {
-      "api": "/apidocs/monitor",
-      "cli": "/docs/monitoring?topic=monitoring-monitor-cli",
-      "terraform": "https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs"
-    },
-    "section_updates": {
-      "view_more": "/docs/monitoring?topic=monitoring-monitoring-release-notes"
-    }
+  "version": 2,
+  "title": "IBM Cloud Monitoring",
+  "introduction": "IBM Cloud Monitoring is a cloud-native, and container-intelligence management system that you can include as part of your IBM Cloud architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms.",
+  "product_page": "https://www.ibm.com/products/cloud-monitoring",
+  "console_page": "/observability/monitoring",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Getting started with IBM Cloud Monitoring",
+        "href": "/docs/monitoring?topic=monitoring-getting-started#getting-started"
+      },
+      {
+        "title": "Monitoring in IBM Cloud",
+        "href": "/docs/monitoring?topic=monitoring-about-monitor"
+      },
+      {
+        "title": "Controlling access through IAM",
+        "href": "/docs/monitoring?topic=monitoring-iam"
+      },
+      {
+        "title": "Auditing events",
+        "href": "/docs/monitoring?topic=monitoring-at_events"
+      },
+      {
+        "title": "Frequently asked questions (FAQ)",
+        "href": "/docs/monitoring?topic=monitoring-faq"
+      }
+    ]
+  },
+  "section_devtools": {
+    "api": "/apidocs/monitor",
+    "cli": "/docs/monitoring?topic=monitoring-monitor-cli",
+    "terraform": "https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs"
+  },
+  "section_updates": {
+    "view_more": "/docs/monitoring?topic=monitoring-monitoring-release-notes"
   }
+}

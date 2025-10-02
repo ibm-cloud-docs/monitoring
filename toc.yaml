@@ -56,7 +56,7 @@ toc:
           - topic: infrastructure/baremetal_linux.md
             navtitle: Monitoring a Linux baremetal server
           - topic: infrastructure/vmware.md
-            navtitle: Monitoring a VMware deployment 
+            navtitle: Monitoring a VMware deployment
       - topicgroup:
           label: Collecting Prometheus metrics
           topics:
@@ -101,17 +101,17 @@ toc:
       - topicgroup:
           label: Managing instances
           topics:
-             - provision.md
-             - terraform/terraform-setup.md
-             - iam/iam_instance_auth.md
-             - remove.md
-             - upgrade.md
+          - provision.md
+          - terraform/terraform-setup.md
+          - iam/iam_instance_auth.md
+          - remove.md
+          - upgrade.md
       - topicgroup:
           label: Managing keys
           topics:
-             - iam/access_key.md
-             - iam/api_token.md
-             - iam/api_monitor_token.md
+          - iam/access_key.md
+          - iam/api_token.md
+          - iam/api_monitor_token.md
       - topicgroup:
           label: Controlling access
           topics:
@@ -144,9 +144,9 @@ toc:
           - undock.md
           - get_sysdig_web_url.md
           links:
-            - link:
-                label: Using Explore
-                href: https://docs.sysdig.com/en/explore.html
+          - link:
+              label: Using Explore
+              href: https://docs.sysdig.com/en/explore.html
       - topicgroup:
           label: Monitoring agent
           topics:
@@ -192,36 +192,36 @@ toc:
           - topic: agent/agent_log_level.md
             navtitle: Configuring the log level
           links:
-            - link:
-                label: Monitoring agent Release Notes
-                href: https://docs.sysdig.com/en/sysdig-agent-release-notes.html
+          - link:
+              label: Monitoring agent Release Notes
+              href: https://docs.sysdig.com/en/sysdig-agent-release-notes.html
       - topicgroup:
           label: Working with metrics
           links:
-            - link:
-                label: Metrics dictionary
-                href: https://docs.sysdig.com/en/metrics-dictionary.html
-            - link:
-                label: Working with metrics
-                href: https://docs.sysdig.com/en/metrics.html
-            - link:
-                label: Grouping, Scoping, and Segmenting Metrics
-                href: https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html
-            - link:
-                label: Understanding Default, Custom, and Missing Metrics
-                href: https://docs.sysdig.com/en/understanding-default,-custom,-and-missing-metrics.html
-            - link:
-                label: Managing the Metric Scale
-                href: https://docs.sysdig.com/en/manage-metric-scale.html
-            - link:
-                label: Data Aggregation
-                href: https://docs.sysdig.com/en/data-aggregation.html
-            - link:
-                label: Metric Limits
-                href: https://docs.sysdig.com/en/metric-limits.html
-            - link:
-                label: Prometheus metrics / OpenMetrics code instrumentation
-                href: https://sysdig.com/blog/prometheus-metrics/
+          - link:
+              label: Metrics dictionary
+              href: https://docs.sysdig.com/en/metrics-dictionary.html
+          - link:
+              label: Working with metrics
+              href: https://docs.sysdig.com/en/metrics.html
+          - link:
+              label: Grouping, Scoping, and Segmenting Metrics
+              href: https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html
+          - link:
+              label: Understanding Default, Custom, and Missing Metrics
+              href: https://docs.sysdig.com/en/understanding-default,-custom,-and-missing-metrics.html
+          - link:
+              label: Managing the Metric Scale
+              href: https://docs.sysdig.com/en/manage-metric-scale.html
+          - link:
+              label: Data Aggregation
+              href: https://docs.sysdig.com/en/data-aggregation.html
+          - link:
+              label: Metric Limits
+              href: https://docs.sysdig.com/en/metric-limits.html
+          - link:
+              label: Prometheus metrics / OpenMetrics code instrumentation
+              href: https://sysdig.com/blog/prometheus-metrics/
           topics:
           - monitor/mng_metrics.md
           - api/metrics_api.md
@@ -239,9 +239,9 @@ toc:
       - topicgroup:
           label: Integrations
           links:
-            - link:
-                label: Configure a Prometheus data source with Grafana
-                href: https://docs.sysdig.com/en/configure-sysdig-with-grafana.html
+          - link:
+              label: Configure a Prometheus data source with Grafana
+              href: https://docs.sysdig.com/en/configure-sysdig-with-grafana.html
       - topicgroup:
           label: Dashboards
           topics:
@@ -251,9 +251,9 @@ toc:
           - monitor/panels.md
           - api/dashboard_python.md
           links:
-            - link:
-                label: Dashboard library
-                href: https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/dashboard-templates/
+          - link:
+              label: Dashboard library
+              href: https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/dashboard-templates/
       - topicgroup:
           label: Working with alerts
           topics:
@@ -284,15 +284,15 @@ toc:
       - topicgroup:
           label: Events
           links:
-            - link:
-                label: Working with custom events
-                href: https://docs.sysdig.com/en/docs/sysdig-monitor/events/event-types/custom-events/
+          - link:
+              label: Working with custom events
+              href: https://docs.sysdig.com/en/docs/sysdig-monitor/events/event-types/custom-events/
       - topicgroup:
           label: Captures
           links:
-            - link:
-                label: Working with captures
-                href: https://docs.sysdig.com/en/captures.html
+          - link:
+              label: Working with captures
+              href: https://docs.sysdig.com/en/captures.html
           topics:
           - monitor/captures.md
   - navgroup:
@@ -307,6 +307,8 @@ toc:
       - core/shared-responsibilities.md
       - topic: core/ha-dr.md
         navtitle: Understanding high availability and disaster recovery
+      - topic: service-dependency.md
+        navtitle: Service dependencies
       - topic: core/data-portability.md
         navtitle: Data portability
       - topicgroup:
@@ -316,35 +318,33 @@ toc:
       - topicgroup:
           label: Monitoring API
           links:
-              - link:
-                  label: Monitoring API
-                  href: https://{DomainName}/apidocs/monitor
+          - link:
+              label: Monitoring API
+              href: https://{DomainName}/apidocs/monitor
           topics:
           - api/mon-curl.md
           - api/python-client.md
       - topicgroup:
           label: Terraform
           links:
-              - link:
-                  label: Terraform information
-                  href: https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs
+          - link:
+              label: Terraform information
+              href: https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs
       - topicgroup:
           label: Prometheus
           links:
-              - link:
-                  label: Prometheus metrics / OpenMetrics code instrumentation
-                  href: https://sysdig.com/blog/prometheus-metrics/
-
+          - link:
+              label: Prometheus metrics / OpenMetrics code instrumentation
+              href: https://sysdig.com/blog/prometheus-metrics/
       - topicgroup:
           label: Metrics
           links:
-              - link:
-                  label: Metrics dictionary
-                  href: https://docs.sysdig.com/en/metrics-dictionary.html
-
+          - link:
+              label: Metrics dictionary
+              href: https://docs.sysdig.com/en/metrics-dictionary.html
   - navgroup:
-        id: help
-        topics:
-        - gettinghelp.md
-        - monitor/troubleshoot.md
-        - monitor/faq.md
+      id: help
+      topics:
+      - gettinghelp.md
+      - monitor/troubleshoot.md
+      - monitor/faq.md
