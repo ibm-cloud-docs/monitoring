@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-09-11"
+lastupdated: "2025-10-14"
 
 keywords:
 
@@ -102,9 +102,9 @@ For hosts running an agent for non-orchestrated environments or for hosts runnin
 
     - **Tier 2**: The price per time-series is 0.05 USD for 100K to 1M time-series per month.
 
-    - **Tier 3**: The price per time-series is 0.03 USD for 1M to 10M time-series per month.
+    - **Tier 3**: The price per time-series is 0.025 USD for 1M to 10M time-series per month.
 
-    - **Tier 4**: The price per time-series is 0.02 USD for more than 10M time-series per month.
+    - **Tier 4**: The price per time-series is 0.017 USD for more than 10M time-series per month.
 
 - Containers are priced as follows: 5.38 USD per 10 containers per month.
 
