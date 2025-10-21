@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-07-31"
+lastupdated: "2025-10-21"
 
 keywords: 
 
@@ -53,5 +53,6 @@ Where
 * A *geography* is a geographic area or larger political body that contains one or more regions.
 * A *region* is a defined geographic territory. A region could be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
 * `N/A` means feature that is not applicable to that geography.
+* For information about region types, see [IBM Cloud region and data center locations for resource deployment](/docs/overview?topic=overview-locations).
 
 `(*)` For more information, see [Enabling EU support for your account](/docs/account?topic=account-eu-supported).
