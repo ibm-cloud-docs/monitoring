@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-10-23"
+lastupdated: "2025-11-17"
 
 keywords:
 
@@ -69,7 +69,6 @@ The following table lists database services that are enabled for {{site.data.key
 | [{{site.data.keyword.databases-for-postgresql_full_notm}}](/docs/databases-for-postgresql) | {{site.data.keyword.databases-for-postgresql_full_notm}} is a managed PostgreSQL service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.  | [Platform metrics](/docs/databases-for-postgresql?topic=databases-for-postgresql-monitoring) |
 | [{{site.data.keyword.databases-for-mysql_fullnotm}}](/docs/databases-for-mysql) | {{site.data.keyword.databases-for-mysql_fullnotm}} is a managed MySQL service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.  | [Platform metrics](/docs/databases-for-mysql?topic=databases-for-mysql-monitoring) |
 | [{{site.data.keyword.databases-for-redis_full_notm}}](/docs/databases-for-redis) | {{site.data.keyword.databases-for-redis_full_notm}} is a managed service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.  | [Platform metrics](/docs/databases-for-redis?topic=databases-for-redis-monitoring) |
-| [{{site.data.keyword.databases-for-etcd_full_notm}}](/docs/databases-for-etcd) | {{site.data.keyword.databases-for-etcd_full_notm}} is a managed etcd service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Platform metrics](/docs/databases-for-etcd?topic=databases-for-etcd-monitoring) |
 | [{{site.data.keyword.databases-for-elasticsearch_full_notm}}](/docs/databases-for-elasticsearch) | {{site.data.keyword.databases-for-elasticsearch_full_notm}} is a managed Elasticsearch service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Platform metrics](/docs/databases-for-elasticsearch?topic=databases-for-elasticsearch-monitoring) |
 | [{{site.data.keyword.databases-for-mongodb_full_notm}}](/docs/databases-for-mongodb) | {{site.data.keyword.databases-for-mongodb_full_notm}} is a managed MongoDB service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [Platform metrics](/docs/databases-for-mongodb?topic=databases-for-mongodb-monitoring) |
 | [{{site.data.keyword.messages-for-rabbitmq_full_notm}}](/docs/messages-for-rabbitmq)  | {{site.data.keyword.messages-for-rabbitmq_full_notm}} is a managed RabbitMQ service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.   | [Platform metrics](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-monitoring) |
