@@ -21,11 +21,7 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
-## 26 November 2025
-{: #monitoring-nov262025}
 
-Centralizing metrics across {{site.data.keyword.mon_short}} instances
-:   {{site.data.keyword.mon_short}} now allows you to centralize any type of metric natively between different instances. This feature extends {{site.data.keyword.metrics_router_full_notm}} which allows you to route platform metrics generated in your {{site.data.keyword.cloud_notm}} account. For more information, see the [Centralizing metrics to another {{site.data.keyword.mon_full_notm}} instance](/docs/monitoring?topic=monitoring-data-streaming-central-dashboarding).
 
 ## 4 September 2025
 {: #monitoring-sep042025}
