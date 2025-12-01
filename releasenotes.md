@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2025
-lastupdated: "2025-09-04"
+lastupdated: "2025-12-01"
 
 
 keywords:
@@ -22,14 +22,12 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
+
 ## 4 September 2025
 {: #monitoring-sep042025}
 
 VSI for VPC Advisor is now available
 :   {{site.data.keyword.mon_full}} now features the VSI for VPC Advisor, a tool designed to help you oversee your Virtual Server Instances (VSIs) across your entire infrastructure. This new capability allows you to not only monitor the status of your instances but also identify potential issues (such as CPU throttling or out-of-memory errors) and get guidance on troubleshooting and resolution. Start today by accessing your {{site.data.keyword.mon_short}} UI and navigating to **Advisor** / **VSI for VPC**. For more information, see the [Advisor](/docs/monitoring?topic=monitoring-advisors).
-
-Centralizing metrics across {{site.data.keyword.mon_short}} instances
-:   {{site.data.keyword.mon_short}} now allows you to centralize any type of metric natively between different instances. Contact {{site.data.keyword.mon_short}} support using the [{{site.data.keyword.cloud_notm}} support center](https://cloud.ibm.com/unifiedsupport/supportcenter){: external} and we will guide you on how to configure and consume this new feature. This feature extends {{site.data.keyword.metrics_router_full_notm}} which allows you to route platform metrics generated in your {{site.data.keyword.cloud_notm}} account.
 
 
 
