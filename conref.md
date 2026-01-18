@@ -102,7 +102,7 @@ To create a notification source in {{site.data.keyword.en_full_notm}} you will m
 8. Click **Add Notification Channel**.
 9. Select *IBM Event Notifications*.
 10. For **Event Notifications Instance** select the [{{site.data.keyword.en_full_notm}} you created.](#en-create-instance)
-11. For **Channel Name** give your channge a unique name.  For example, `my_event_notification_channel`.
+11. For **Channel Name** give your channel a unique name.  For example, `my_event_notification_channel`.
 12. For this tutorial leave all options enabled and the **Shared With** team as the default value.
 
     ![New IBM Event Notification Channel](../images/new_en_channel.png){: caption="New IBM Event Notification Channel" caption-side="bottom"}
