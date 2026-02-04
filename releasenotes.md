@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-12-01"
+  years:  2018, 2026
+lastupdated: "2026-02-04"
 
 
 keywords:
@@ -20,6 +20,12 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+
+
+
+
+
 
 
 
