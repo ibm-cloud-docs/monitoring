@@ -25,6 +25,13 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
+## 26 January 2026
+{: #monitoring-jan262026}
+
+Monitoring for Enterprise Application Service is now available
+:   {{site.data.keyword.mon_full}} now integrates with [Enterprise Application Service](https://www.ibm.com/docs/en/ease?topic=overview). This integrations helps you monitoring the status, performance and business metrics of your applications. For more information, see [Monitoring metrics for EASeJ with IBM Cloud Monitoring
+](https://www.ibm.com/docs/en/ease?topic=observability-monitoring-metrics-cloud-monitoring).
+
 
 
 
