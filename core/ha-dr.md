@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-07-31"
+  years:  2018, 2026
+lastupdated: "2026-02-05"
 
 keywords: HA for IBM Cloud Monitoring, DR for IBM Cloud Monitoring, IBM Cloud Monitoring recovery time objective, IBM Cloud Monitoring recovery point objective
 
@@ -46,6 +46,7 @@ The following table lists the high-availability (HA) status for the regions (loc
 
 | Geography             | Region                   | HA Status |
 |-----------------------|--------------------------|-----------|
+| `Asia Pacific`        | Chennai (`in-che`)        | `MZR`     |
 | `Asia Pacific`        | Sydney (`au-syd`)        | `MZR`     |
 | `Asia Pacific`        | Tokyo (`jp-tok`)         | `MZR`     |
 | `Asia Pacific`        | Osaka (`jp-osa`)         | `MZR`     |
