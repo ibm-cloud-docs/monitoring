@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-02-04"
+lastupdated: "2026-02-10"
 
 
 keywords:
@@ -78,7 +78,7 @@ Updates to the {{site.data.keyword.mon_full_notm}} infrastructure & IP address b
 
 IBM Platform Metrics groupings
 :    {{site.data.keyword.mon_full_notm}} supports a new grouping within the **Metrics Explore** Scope Tree. With this new grouping you can navigate metrics from specific regions through service names and instances. This streamlined view enhances your ability to efficiently monitor and manage your IBM Cloud services.
-  
+
 ## 7 March 2025
 {: #monitoring-mar0725}
 {: release-note}
@@ -147,21 +147,21 @@ Unified search available in all regions.
 ## 29 February 2024
 {: #monitoring-feb2924}
 {: release-note}
- 
+
 Teams support
 :   The {{site.data.keyword.mon_full_notm}} Prometheus Remote Write feature now supports teams.
 
 ## 18 February 2024
 {: #monitoring-feb1824}
 {: release-note}
- 
+
 Deprecation of Prometheus ingestion endpoints
 :   {{site.data.keyword.mon_full_notm}} has deprecated the current Prometheus ingestion endpoints. New Prometheus ingestion endpoints are available. All customers using Prometheus Remote Write must move to using the new [Prometheus ingestion endpoints](/docs/monitoring?topic=monitoring-endpoints#prometheus_remote_write_endpoints) by 31 May 2024.
 
 ## 18 January 2024
 {: #monitoring-jan1824}
 {: release-note}
- 
+
 Deprecation of `Graduated Tier - Sysdig Secure + Monitor` plan
 :   {{site.data.keyword.mon_full_notm}} has deprecated the `Graduated Tier - Sysdig Secure + Monitor` pricing plan. Users can maintain the same functionality by configuring an {{site.data.keyword.mon_full_notm}} instance connected to an {{site.data.keyword.sysdigsecure_full_notm}} instance by 18 August 2024.
 
@@ -310,7 +310,7 @@ Change to alerts editor
 
     - Some metrics and labels have been deprecated. Deprecated metrics and labels will no longer be available 30 days after this release.
 
-    - Classic metrics have been replaced with context-explicit metrics. 
+    - Classic metrics have been replaced with context-explicit metrics.
 
     - Troubleshooting metrics are collected at 10s intervals and stored for 4 days for program metrics, connection-level network metrics, and Kubernetes troubleshooting metrics. See [Troubleshooting Metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/metrics/metrics-library/troubleshooting-metrics/){: external}.
 
@@ -320,7 +320,7 @@ Change to alerts editor
 
        - You can reference the scope of a dashboard in PromQL queries by using `$__scope`.
 
-    - You can view the latest value of an entity in number panels, tables, histograms, and toplist panels. 
+    - You can view the latest value of an entity in number panels, tables, histograms, and toplist panels.
 
     - In the *Overview* section, you can view the latest data as opposed to an aggregated value for widgets over the time window that is selected.
 
@@ -815,7 +815,7 @@ Secure support for inline scanner
 {: release-note}
 
 Secure support
-:   In architectures that are focused on container and microservices, you can use Secure to protect, monitor, and enhance forensic analysis of your pipeline and runtime components. 
+:   In architectures that are focused on container and microservices, you can use Secure to protect, monitor, and enhance forensic analysis of your pipeline and runtime components.
 
 ## 19 November 2020
 {: #monitoring-nov1920}
