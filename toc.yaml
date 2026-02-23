@@ -301,7 +301,6 @@ toc:
       - regions.md
       - endpoints.md
       - service_plans.md
-      - pricing.md
       - collect-metrics-by-host.md
       - agent_support.md
       - core/shared-responsibilities.md
