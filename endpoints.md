@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-01-22"
+lastupdated: "2026-02-23"
 
 keywords:
 
@@ -261,7 +261,7 @@ As a newly supported region, Montreal (`CA-MON`) does not require IP address cha
 | Frankfurt (`EU-DE`)  | 08 October 2025 | Completed |
 | Madrid (`EU-ES`)     | 03 November, 2025 | Completed |
 | Washington (`US-East`) | 03 November, 2025 | Completed |
-| Osaka (`JP-OSA`)     | TBD | 01 February, 2026 |
-| Dallas (`US-South`)  | TBD | Not planned yet |
-| Tokyo (`JP-TOK`)     | TBD | Not planned yet | 
+| Osaka (`JP-OSA`)     | 01 February, 2026 | Completed |
+| Dallas (`US-South`)  | 25 March, 2026 | Pending |
+| Tokyo (`JP-TOK`)     | 15 April, 2026 | Pending | 
 {: caption="MZR change over dates" caption-side="top"}
