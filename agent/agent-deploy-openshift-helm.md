@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-11-06"
+  years:  2018, 2026
+lastupdated: "2026-02-24"
 
 keywords:
 
@@ -281,8 +281,8 @@ Complete the following steps:
     ```
     {: pre}
 
-    In terms of Helm, `sysdig-agent` is the name of teh release.
+    In terms of Helm, `sysdig-agent` is the name of the release.
     {: tip}
 
 
-    If you forget to include the namespace in the command, you get the folloqing error: `Error: uninstall: Release not loaded: sysdig-agent: release: not found`.
+    If you forget to include the namespace in the command, you get the following error: `Error: uninstall: Release not loaded: sysdig-agent: release: not found`.
