@@ -305,6 +305,7 @@ toc:
           label: Pricing
           topics:
           - pricing.md
+          - billing_samples.md
       - collect-metrics-by-host.md
       - agent_support.md
       - core/shared-responsibilities.md
