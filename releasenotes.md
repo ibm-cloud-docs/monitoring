@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-02-10"
+lastupdated: "2026-02-24"
 
 
 keywords:
@@ -22,6 +22,22 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
+
+## February 20 2026
+{: #pricing-change-2026}
+
+Reduction in {{site.data.keyword.mon_full_notm}} Pricing
+
+:   We are announcing a price reduction for components of {{site.data.keyword.mon_full_notm}}.
+
+    As part of our commitment to delivering maximum value, we regularly evaluate our cost structures and operational efficiency, to ensure we are delivering the maximum possible value to our users.
+
+    Summary of Changes:
+    * Metric Time Series: Charges reduced by 20%.
+    * Orchestrated Agents: Charges reduced by approximately 20%.
+    * Other Components: All other pricing remains unchanged.
+
+    The updated rates will be updated the {{site.data.keyword.mon_full_notm}} [Pricing Details](/docs/monitoring?topic=monitoring-pricing_plans) page and on the {{site.data.keyword.mon_full_notm}} [Instance creation](https://cloud.ibm.com/observability/catalog/ibm-cloud-monitoring) page. The changes will be effective in the February 2026 billing cycle.
 
 
 
