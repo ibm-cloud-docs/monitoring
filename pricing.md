@@ -27,8 +27,6 @@ The costs that are provided in this topic are guidelines and do not represent ac
 {: important}
 
 
-
-
 ## Before you begin
 {: #pricing_prereqs}
 
@@ -469,5 +467,3 @@ The total monitoring cost per month is **52.71 USD**.
 30.21 USD + 22.50 USD = 52.71 USD
 ```
 {: screen}
-
-
