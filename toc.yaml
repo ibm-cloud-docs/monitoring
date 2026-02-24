@@ -301,6 +301,10 @@ toc:
       - regions.md
       - endpoints.md
       - service_plans.md
+      - topicgroup:
+          label: Pricing
+          topics:
+          - pricing.md
       - collect-metrics-by-host.md
       - agent_support.md
       - core/shared-responsibilities.md
