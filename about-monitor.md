@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, [{CURRENT_YEAR}]
-lastupdated: "[{LAST_UPDATED_DATE}]"
+  years:  2018, 2026
+lastupdated: "2026-03-02"
 
 keywords:
 
@@ -12,7 +12,6 @@ subcollection: monitoring
 
 {{site.data.keyword.attribute-definition-list}}
 
----
 
 # {{site.data.keyword.mon_short}} in {{site.data.keyword.cloud_notm}}
 {: #about-monitor}
