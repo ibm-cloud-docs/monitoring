@@ -1,12 +1,13 @@
 ---
 
 copyright:
-  years: 2024, 2025
-lastupdated: "2025-10-28"
+  years: 2024, 2026
+lastupdated: "2026-03-18"
 
 keywords:
 
 subcollection: monitoring
+
 
 ---
 
@@ -50,12 +51,14 @@ The following dependencies apply to the following deployment locations: Dallas (
 {: tab-title="Significant dependencies"}
 {: tab-group="service-dependency-data-for-sysdig-monitor-Data-and-Control-plane-deployment"}
 {: class="comparison-tab-table"}
-{: #significant-deps}
+{: #significant-deps-data-and-control-plane-deployment}
 {: summary="Use the buttons for the dependency level to change the context of the table. This table has row and column headers. The row headers detail the specific dependent service. The column headers identify the details about the dependency and its impact. To understand the details about each dependency, navigate to the row to find the dependency that you need more information about interested in."}
 
 
 ## Understanding service dependency data
 {: #understand-dependency-data}
+
+
 
 If you have any questions about the service dependency data as you review the service dependency information in the tables, you can refer to the following FAQ:
 

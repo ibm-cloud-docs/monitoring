@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-02-23"
+lastupdated: "2026-04-10"
 
 keywords:
 
@@ -43,7 +43,7 @@ The following table lists the endpoints that are available per region:
 Ports for every MZR:
 - https (TLS): 443
 
-| Region      | Web UI endpoint                                  | Public IP addresses                                       | 
+| Region      | Web UI endpoint                                  | Public IP addresses                                       |
 |-------------|--------------------------------------------------|-----------------------------------------------------------|
 | Dallas (`US-South`)  | `https://us-south.monitoring.cloud.ibm.com`      | 169.60.151.174  \n 169.46.0.70  \n 169.48.214.70  		\n 52.118.209.119 `(*)`  \n 67.18.94.56 `(*)`  		\n 52.116.135.250     `(*)`      |
 | Frankfurt (`EU-DE`)     | `https://eu-de.monitoring.cloud.ibm.com`         | 149.81.77.78  \n 161.156.102.206  \n 159.122.102.38  \n 158.177.2.4 `(*)`  \n 161.156.87.239 `(*)`  		\n 149.81.238.82  `(*)`   |
@@ -257,11 +257,11 @@ As a newly supported region, Montreal (`CA-MON`) does not require IP address cha
 | Sao Paulo (`BR-SAO`) | 5 August 2025 | Completed |
 | Toronto (`CA-TOR`)   | 12 August 2025 | Completed |
 | Montreal (`CA-MON`)   | Not needed | Not needed |
-| London (`EU-GB`)     | 01 October 2025 | Completed | 
+| London (`EU-GB`)     | 01 October 2025 | Completed |
 | Frankfurt (`EU-DE`)  | 08 October 2025 | Completed |
 | Madrid (`EU-ES`)     | 03 November, 2025 | Completed |
 | Washington (`US-East`) | 03 November, 2025 | Completed |
 | Osaka (`JP-OSA`)     | 01 February, 2026 | Completed |
-| Dallas (`US-South`)  | 25 March, 2026 | Pending |
-| Tokyo (`JP-TOK`)     | 15 April, 2026 | Pending | 
+| Dallas (`US-South`)  | 25 March, 2026 | Completed |
+| Tokyo (`JP-TOK`)     | 15 April, 2026 | Pending |
 {: caption="MZR change over dates" caption-side="top"}
