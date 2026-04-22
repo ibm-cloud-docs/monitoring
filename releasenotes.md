@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-02-24"
+lastupdated: "2026-04-22"
 
 
 keywords:
@@ -21,7 +21,11 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
+## March 19 2026
+{: #monitoring-mar192026}
 
+Send notifications to Event Notifications with private network
+:   {{site.data.keyword.mon_full_notm}} now supports integrating with Event Notifications when configured with private network only. 
 
 ## February 20 2026
 {: #pricing-change-2026}
