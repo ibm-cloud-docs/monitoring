@@ -55,6 +55,8 @@ toc:
             navtitle: Monitoring a Linux host on PowerVS
           - topic: infrastructure/baremetal_linux.md
             navtitle: Monitoring a Linux baremetal server
+          - topic: infrastructure/nvidia.md
+            navtitle: Monitoring Nvidia GPUs
           - topic: infrastructure/vmware.md
             navtitle: Monitoring a VMware deployment
       - topicgroup:
