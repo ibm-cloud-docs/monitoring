@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-24"
 
 keywords:
 
@@ -56,6 +56,7 @@ Ports for every MZR:
 | Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com`        | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237  	 \n 163.66.86.89 `(*)`  \n 163.75.81.213 `(*)`  		\n 163.74.95.149  `(*)`     |
 | Tokyo (`JP-TOK`)    | `https://jp-tok.monitoring.cloud.ibm.com`        | 165.192.84.14  \n 128.168.75.14  \n 169.56.51.238  		 \n 162.133.138.54 `(*)`  \n 128.168.143.56 `(*)`  	\n 165.192.128.220   `(*)`     |
 | Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com`       | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82  	 \n 169.62.20.11 `(*)`  \n 169.63.183.86 `(*)`  		\n 150.239.110.137  `(*)`      |
+| Chennai (`IN-CHE`)   | `https://in-che.monitoring.cloud.ibm.com`       | 169.38.15.157  \n 169.38.18.107  \n 169.38.8.209  `(*)`      |
 {: caption="List of endpoints" caption-side="top"}
 
 
@@ -82,6 +83,7 @@ The following table lists the *Private API endpoints* that are available per reg
 | Tokyo (`JP-TOK`)    | `private.jp-tok.monitoring.cloud.ibm.com/api`     | 166.9.249.112    \n 166.9.249.141    \n 166.9.249.177  \n 166.9.212.4 `(*)`  \n 166.9.214.5 `(*)`  \n 166.9.216.14 `(*)`      |
 | Toronto (`CA-TOR`)  | `private.ca-tor.monitoring.cloud.ibm.com/api`   | 166.9.247.153    \n 166.9.247.185    \n 166.9.247.205  \n 166.9.209.13 `(*)`  \n 166.9.209.42 `(*)`  \n 166.9.209.72 `(*)`      |
 | Washington (`US-East`)   | `private.us-east.monitoring.cloud.ibm.com/api`    | 166.9.231.240    \n 166.9.232.28    \n 166.9.233.17 \n 166.9.231.19 `(*)`  \n 166.9.232.40 `(*)`  \n 166.9.233.36 `(*)`      |
+| Chennai (`IN-CHE`)   | `private.ca-mon.monitoring.cloud.ibm.com/api`       | 169.9.236.8  `(*)`      |
 {: caption="Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
 
@@ -103,6 +105,7 @@ The following table lists the *Private API endpoints* that are available per reg
 | Tokyo (`JP-TOK`)    | `https://jp-tok.monitoring.cloud.ibm.com/api`        |
 | Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com/api`        |
 | Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com/api`       |
+| Chennai (`IN-CHE`)   | `https://in-che.monitoring.cloud.ibm.com/api`       |
 {: caption="Public REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
 
@@ -112,6 +115,12 @@ The following table lists the *Private API endpoints* that are available per reg
 {: #endpoints_ingestion}
 
 Collector endpoints are ingestion endpoints that you can use to send data.
+
+
+| Region      | Private ingestion endpoint       | Private IP addresses       |
+|-------------|----------------------------------|----------------------------|
+| Chennai (`IN-CHE`)  | `ingest.private.in-che.monitoring.cloud.ibm.com`   | 166.9.236.8   `(*)`    |
+
 
 
 ### Private Collector endpoints
@@ -167,6 +176,7 @@ Ports for every MZR:
 | Toronto (`CA-TOR`)    | `ingest.ca-tor.monitoring.cloud.ibm.com`            | 163.74.69.186  \n 158.85.94.130  \n 163.75.65.237  \n 163.66.86.89 `(*)`  \n 163.75.81.213 `(*)`  \n 163.74.95.149  `(*)`     |
 | Tokyo (`JP-TOK`)    | `ingest.jp-tok.monitoring.cloud.ibm.com`            | 165.192.84.14  \n 128.168.75.14  \n 169.56.51.238  \n 162.133.138.54 `(*)`  \n 128.168.143.56 `(*)`  \n 165.192.128.220   `(*)`     |
 | Washington (`US-East`)   | `ingest.us-east.monitoring.cloud.ibm.com`           | 169.60.112.74  \n 169.55.109.114  \n 169.62.3.82  \n 169.62.20.11 `(*)`  \n 169.63.183.86 `(*)`  \n 150.239.110.137  `(*)`      |
+| Chennai (`IN-CHE`)   | `ingest.in-che.monitoring.cloud.ibm.com`           | 169.38.18.107  \n 169.38.8.209  \n 169.38.15.157  `(*)`      |
 {: caption="List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-02-24"
+lastupdated: "2026-04-22"
 
 
 keywords:
@@ -21,6 +21,21 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
 
+
+## April 20 2026
+{: #monitoring-apr202026}
+
+Monitoring for NVIDIA GPUs is now available
+:   {{site.data.keyword.mon_full_notm}} now supports NVIDIA GPUs for {{site.data.keyword.cloud_notm}} Kubernetes services (IKS and ROKS) and VSIs for VPC. The new out-of-the-box dashboard and alerts allow you to proactively monitor your GPUs. For more information, see the [Monitoring NVIDIA GPUs](/docs/monitoring?topic=monitoring-nvidia-gpu-monitoring).
+
+OpenShift Virtualization Monitoring with {{site.data.keyword.mon_full_notm}}
+:   The {{site.data.keyword.mon_full_notm}} agent deployed in the cluster automatically collects performance and status metrics for the OpenShift Virtualization platform and virtual machines. Get instant visibility with pre-built dashboards and configure proactive alerting through the Alerts Library. 
+
+## March 19 2026
+{: #monitoring-mar192026}
+
+Send notifications to Event Notifications with private network
+:   {{site.data.keyword.mon_full_notm}} now supports integrating with Event Notifications when configured with private network only. 
 
 
 ## February 20 2026
