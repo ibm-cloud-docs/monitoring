@@ -1,12 +1,14 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-09-17"
+  years:  2018, 2026
+lastupdated: "2026-05-01"
 
 subcollection: monitoring
 
 keywords:
+
+content-type: cli-docs
 
 ---
 
