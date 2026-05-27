@@ -31,7 +31,7 @@
   "section_devtools": {
     "api": "/apidocs/monitor",
     "cli": "/docs/monitoring?topic=monitoring-monitor-cli",
-    "terraform": "https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs"
+    "terraform": "https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest"
   },
   "section_updates": {
     "view_more": "/docs/monitoring?topic=monitoring-monitoring-release-notes"

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-11-06"
+  years:  2018, 2026
+lastupdated: "2026-05-27"
 
 keywords:
 
@@ -19,6 +19,9 @@ subcollection: monitoring
 
 You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.mon_short}} agent on a Kubernetes cluster.
 {: shortdesc}
+
+You can also use Terraform IBM Modules (TIM) for [{{site.data.keyword.mon_short}} agent](https://registry.terraform.io/modules/terraform-ibm-modules/monitoring-agent/ibm/latest){: external} to deploy and configure the {{site.data.keyword.mon_short}} agent on supported Kubernetes clusters. This module automates the Helm-based deployment and key configuration settings by using Infrastructure as Code (IaC) automation.
+{: tip}
 
 
 

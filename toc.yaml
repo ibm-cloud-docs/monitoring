@@ -336,6 +336,12 @@ toc:
           - link:
               label: Terraform information
               href: https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs
+          - link:
+              label: Terraform IBM Modules (TIM) for Cloud Monitoring
+              href: https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest
+          - link:
+              label: Terraform IBM Modules (TIM) for Monitoring Agent
+              href: https://registry.terraform.io/modules/terraform-ibm-modules/monitoring-agent/ibm/latest
       - topicgroup:
           label: Prometheus
           links:

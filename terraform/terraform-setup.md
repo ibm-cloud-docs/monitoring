@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-09-24"
+  years:  2018, 2026
+lastupdated: "2026-05-27"
 
 keywords: 
 
@@ -19,6 +19,8 @@ subcollection: monitoring
 
 Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitier cloud environments that follow Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.mon_full_notm}} instances by using HashiCorp Configuration Language (HCL). You can optionally connect an {{site.data.keyword.sysdigsecure_full_notm}} instance to your {{site.data.keyword.mon_full_notm}} instance.
 {: shortdesc}
+
+Alternatively, you can use pre-built, open-source and enterprise-ready Terraform IBM Modules (TIM) for [{{site.data.keyword.mon_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest){: external} to automate the provisioning, update, and deletion of your {{site.data.keyword.mon_full_notm}} instances with production-ready configurations.
 
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't need to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can install from the {{site.data.keyword.cloud_notm}} catalog.
 {: tip}
@@ -346,6 +348,34 @@ Complete the following steps:
     To delete resources, run `./terraform destroy`.
     {: tip}
 
+## Provisioning {{site.data.keyword.mon_full_notm}} using Terraform IBM Modules (TIM)
+{: #terraform-using-tim}
+
+[Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim){: external} provide production-ready, reusable configurations that follow {{site.data.keyword.cloud_notm}} best practices. Instead of writing configuration from scratch, you can use pre-built modules. The [{{site.data.keyword.mon_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest){: external} module simplifies instance provisioning with built-in best practices.
+
+1. Create a `main.tf` file:
+
+    ```terraform
+    module "cloud_monitoring" {
+      source  = "terraform-ibm-modules/cloud-monitoring/ibm"
+      version = "~> 1.0.0"
+
+      resource_group_id = "resource-group-id"
+      region            = "us-south"
+      instance_name     = "my-monitoring-instance"
+      plan              = "graduated-tier"
+      resource_tags     = ["env:production", "team:devops"]
+    }
+    ```
+    {: codeblock}
+
+2. Set up the {{site.data.keyword.cloud_notm}} Provider plug-in by creating a `provider.tf` file. For detailed instructions, see [Set up the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/monitoring?topic=monitoring-terraform-setup#terraform-setup-ibm-plugin).
+
+3. Follow the steps in [Provision resources](/docs/monitoring?topic=monitoring-terraform-setup#terraform-provision) to initialize and apply your Terraform configuration.
+
+For complete module documentation and advanced configurations, see the [{{site.data.keyword.mon_full_notm}}  GitHub Repository](https://github.com/terraform-ibm-modules/terraform-ibm-cloud-monitoring/tree/main){: external}.
+
+Explore all available modules in the [terraform-ibm-modules registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}.
 
 ## What's next?
 {: #terraform_setup_next}
@@ -355,3 +385,6 @@ Verify that the resources are created.
 - [Launch the *Observability* UI](/docs/monitoring?topic=monitoring-launch) and check the instance has been created.
 - [Launch *Access (IAM)*](https://cloud.ibm.com/iam/overview){: external}. Select **Service IDs** and look for the resource key.
 - [Review the user assigned access in the console](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
+- Explore [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim){: external} for production-ready configurations
+- Review the [Terraform IBM Modules (TIM) for {{site.data.keyword.mon_full}}](https://github.com/terraform-ibm-modules/terraform-ibm-cloud-monitoring){: external} for advanced provisioning options
+- Check the [Terraform IBM Modules (TIM) Registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external} for additional observability modules
