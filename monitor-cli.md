@@ -8,6 +8,8 @@ subcollection: monitoring
 
 keywords:
 
+content-type: cli-docs
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
