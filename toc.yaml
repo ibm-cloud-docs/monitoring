@@ -85,6 +85,8 @@ toc:
               href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-node.js-application-metrics/
       - topic: monitor/data_streaming.md
         navtitle: Streaming metrics to Kafka
+      - topic: monitor/data_streaming_central_dashboarding.md
+        navtitle: Centralizing metrics to another IBM Cloud Monitoring instance
       - topicgroup:
           label: Sending notifications
           topics:
