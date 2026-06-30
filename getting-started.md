@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-06-19"
+  years:  2018, 2026
+lastupdated: "2026-06-30"
 
 
 keywords: monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, IBM Cloud Monitoring
@@ -77,6 +77,8 @@ Instances are provisioned in the context of a resource group. A resource group o
 To provision an instance through the CLI, see [Provisioning a Monitoring instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/monitoring?topic=monitoring-provision#provision_cli).
 {: tip}
 
+
+
 ## Step 3. Collect metrics
 {: #getting-started-step3}
 
@@ -134,9 +136,11 @@ Complete one of the following tutorials to learn how to deploy a monitoring agen
 | [Monitoring VMware vCenter server deployments](/docs/monitoring?topic=monitoring-vmware-vcenter) |
 {: caption="Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
+
+
 After the monitoring agent is deployed, the monitoring agent automatically collects and reports on pre-defined and custom metrics.  These metrics are forwarded to the {{site.data.keyword.mon_full_notm}} instance.  You can configure which metrics are monitored in an environment.
 
-If you have connected an instance of {{site.data.keyword.sysdigsecure_full_notm}} to your {{site.data.keyword.mon_full_notm}} instance, the agent will provide data to both services without having to configure two separate agents. 
+If you have connected an instance of {{site.data.keyword.sysdigsecure_full_notm}} to your {{site.data.keyword.mon_full_notm}} instance, the agent will provide data to both services without having to configure two separate agents.
 {: note}
 
 ## Step 4. Launch the web UI

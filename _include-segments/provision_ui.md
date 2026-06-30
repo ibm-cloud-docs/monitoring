@@ -52,6 +52,8 @@ Provision an {{site.data.keyword.mon_full_notm}} instance from the {{site.data.k
 
 14. Click **Create**.
 
+
+
 After you provision an instance:
 
 * The details for the {{site.data.keyword.mon_full_notm}} instance are displayed along with whether or not an {{site.data.keyword.sysdigsecure_full_notm}} instance is connected.

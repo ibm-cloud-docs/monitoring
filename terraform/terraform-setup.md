@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-09-24"
+  years:  2018, 2026
+lastupdated: "2026-06-30"
 
-keywords: 
+keywords:
 
 subcollection: monitoring
 
@@ -19,6 +19,8 @@ subcollection: monitoring
 
 Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitier cloud environments that follow Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.mon_full_notm}} instances by using HashiCorp Configuration Language (HCL). You can optionally connect an {{site.data.keyword.sysdigsecure_full_notm}} instance to your {{site.data.keyword.mon_full_notm}} instance.
 {: shortdesc}
+
+
 
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't need to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can install from the {{site.data.keyword.cloud_notm}} catalog.
 {: tip}
@@ -345,6 +347,7 @@ Complete the following steps:
 
     To delete resources, run `./terraform destroy`.
     {: tip}
+
 
 
 ## What's next?

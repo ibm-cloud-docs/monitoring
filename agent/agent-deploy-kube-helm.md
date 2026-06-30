@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-11-06"
+  years:  2018, 2026
+lastupdated: "2026-06-30"
 
 keywords:
 
@@ -19,6 +19,8 @@ subcollection: monitoring
 
 You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.mon_short}} agent on a Kubernetes cluster.
 {: shortdesc}
+
+
 
 
 

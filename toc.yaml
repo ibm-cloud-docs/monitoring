@@ -85,6 +85,8 @@ toc:
               href: https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/integrate-node.js-application-metrics/
       - topic: monitor/data_streaming.md
         navtitle: Streaming metrics to Kafka
+      - topic: monitor/data_streaming_central_dashboarding.md
+        navtitle: Centralizing metrics to another IBM Cloud Monitoring instance
       - topicgroup:
           label: Sending notifications
           topics:
@@ -336,6 +338,12 @@ toc:
           - link:
               label: Terraform information
               href: https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs
+          - link:
+              label: Terraform IBM Modules (TIM) for Cloud Monitoring
+              href: https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest
+          - link:
+              label: Terraform IBM Modules (TIM) for Monitoring Agent
+              href: https://registry.terraform.io/modules/terraform-ibm-modules/monitoring-agent/ibm/latest
       - topicgroup:
           label: Prometheus
           links:
