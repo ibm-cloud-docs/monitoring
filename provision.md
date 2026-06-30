@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-30"
 
 keywords:
 
@@ -98,6 +98,3 @@ To provision an instance through the command line, complete the following steps:
     `SERVICE_INSTANCE_NAME` is the name of the instance you created
 
     This will gain you access to the instance's access key.
-
-Alternatively, you can use pre-built, open-source and enterprise-ready [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for {{[site.data.keyword.mon_full_notm](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest)}}{: external} for provisioning a production-ready infrastructure.
-{: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-30"
 
 
 keywords: monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, monitoring, IBM Cloud Monitoring
@@ -76,7 +76,8 @@ Instances are provisioned in the context of a resource group. A resource group o
 
 To provision an instance through the CLI, see [Provisioning a Monitoring instance through the {{site.data.keyword.cloud_notm}} CLI](/docs/monitoring?topic=monitoring-provision#provision_cli).
 {: tip}
-Alternatively, you can use pre-built, open-source and enterprise-ready [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) for [{{site.data.keyword.mon_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest){: external} for provisioning a production-ready infrastructure.
+
+
 
 ## Step 3. Collect metrics
 {: #getting-started-step3}
@@ -135,11 +136,11 @@ Complete one of the following tutorials to learn how to deploy a monitoring agen
 | [Monitoring VMware vCenter server deployments](/docs/monitoring?topic=monitoring-vmware-vcenter) |
 {: caption="Tutorials to get started working with {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
-Alternatively, you can use pre-built, open-source and enterprise-ready [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim){: external} for [{{site.data.keyword.mon_short}}-agent](https://registry.terraform.io/modules/terraform-ibm-modules/monitoring-agent/ibm/latest){: external} for deploying the agent with production-ready configurations.
+
 
 After the monitoring agent is deployed, the monitoring agent automatically collects and reports on pre-defined and custom metrics.  These metrics are forwarded to the {{site.data.keyword.mon_full_notm}} instance.  You can configure which metrics are monitored in an environment.
 
-If you have connected an instance of {{site.data.keyword.sysdigsecure_full_notm}} to your {{site.data.keyword.mon_full_notm}} instance, the agent will provide data to both services without having to configure two separate agents. 
+If you have connected an instance of {{site.data.keyword.sysdigsecure_full_notm}} to your {{site.data.keyword.mon_full_notm}} instance, the agent will provide data to both services without having to configure two separate agents.
 {: note}
 
 ## Step 4. Launch the web UI

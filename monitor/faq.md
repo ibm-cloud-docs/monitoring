@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-30"
 
-keywords: 
+keywords:
 
 subcollection: monitoring
 
@@ -67,12 +67,3 @@ You need to consider the following when connecting the two services:
 * Once connected, the only way to disconnect the service instances is to delete either the {{site.data.keyword.mon_full_notm}} or {{site.data.keyword.sysdigsecure_full_notm}} service instance.
 
 To provision connected services, see [Provisioning an instance](/docs/monitoring?topic=monitoring-provision#provision_ui).
-
-
-
-
-## Can I use Terraform IBM Modules to provision {{site.data.keyword.mon_full_notm}} instances?
-{: #faq_5}
-{: faq}
-
-Yes, you can use [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) to provision {{site.data.keyword.mon_full_notm}} instances. Terraform IBM Modules are pre-built, validated, and enterprise-ready modules that follow IBM Cloud best practices. See the [{{site.data.keyword.mon_full_notm}} module](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest){: external} for production-ready configurations and examples.
