@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-11-17"
+  years:  2018, 2026
+lastupdated: "2026-06-30"
 
 keywords:
 
@@ -123,6 +123,7 @@ The following table lists services that are enabled for {{site.data.keyword.mon_
 |-------------|-------------|-------------------|
 | [{{site.data.keyword.dns_full}}](/docs/dns-svcs?topic=dns-svcs-getting-started) | {{site.data.keyword.dns_full_notm}} provides private DNS to Virtual Private Cloud (VPC) users. | [Platform metrics](/docs/dns-svcs?topic=dns-svcs-monitor-ibm-cloud-pm) |
 {: caption="List of networking services" caption-side="top"}
+
 
 
 ## Platform

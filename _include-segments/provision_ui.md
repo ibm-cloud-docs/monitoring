@@ -52,7 +52,7 @@ Provision an {{site.data.keyword.mon_full_notm}} instance from the {{site.data.k
 
 14. Click **Create**.
 
-Alternatively, you can use pre-built, open-source and enterprise-ready Terraform IBM Modules (TIM) for [{{site.data.keyword.mon_full_notm}}](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest){: external} for provisioning a production-ready infrastructure.
+
 
 After you provision an instance:
 
