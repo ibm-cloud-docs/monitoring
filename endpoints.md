@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-07-28"
+lastupdated: "2026-07-31"
 
 keywords:
 
@@ -45,18 +45,18 @@ Ports for every MZR:
 
 | Region      | Web UI endpoint                                  | Public IP addresses                                       |
 |-------------|--------------------------------------------------|-----------------------------------------------------------|
-| Dallas (`US-South`)  | `https://us-south.monitoring.cloud.ibm.com`      |	\n 52.118.209.119 `(*)`  \n 67.18.94.56 `(*)`  		\n 52.116.135.250     `(*)`      |
-| Frankfurt (`EU-DE`)     | `https://eu-de.monitoring.cloud.ibm.com`       |  \n 158.177.2.4 `(*)`  \n 161.156.87.239 `(*)`  		\n 149.81.238.82  `(*)`   |
-| London (`EU-GB`)     | `https://eu-gb.monitoring.cloud.ibm.com`         | \n 141.125.105.98 `(*)`  \n 161.156.203.133 `(*)`  	\n 158.176.179.72  `(*)` |
-| Madrid (`EU-ES`)     | `https://eu-es.monitoring.cloud.ibm.com`         |  \n 13.121.91.87 `(*)`  \n 13.122.87.104 `(*)`  		\n 13.120.91.152   `(*)` |
-| Montreal (`CA-MON`)    | `https://ca-mon.monitoring.cloud.ibm.com`        | \n 64.5.49.125 `(*)` \n 64.5.42.185 `(*)` \n 64.5.47.9 `(*)` |
-| Osaka (`JP-OSA`)    | `https://jp-osa.monitoring.cloud.ibm.com`        |  \n 163.68.83.196 `(*)`  \n 163.73.82.218 `(*)`  		\n 163.69.86.15   `(*)` |
-| Sao Paulo (`BR-SAO`)    | `https://br-sao.monitoring.cloud.ibm.com`        |  \n 13.116.92.185 `(*)`  \n 163.107.92.212 `(*)`  	\n 163.109.84.195  `(*)`     |
-| Sydney (`AU-SYD`)    | `https://au-syd.monitoring.cloud.ibm.com`        | \n 130.198.10.95 `(*)`  \n 135.90.130.246 `(*)`  	\n 159.23.97.190   `(*)`     |
-| Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com`        | \n 163.66.86.89 `(*)`  \n 163.75.81.213 `(*)`  		\n 163.74.95.149  `(*)`     |
-| Tokyo (`JP-TOK`)    | `https://jp-tok.monitoring.cloud.ibm.com`        | \n 162.133.138.54 `(*)`  \n 128.168.143.56 `(*)`  	\n 165.192.128.220   `(*)`     |
-| Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com`       |  \n 169.62.20.11 `(*)`  \n 169.63.183.86 `(*)`  		\n 150.239.110.137  `(*)`      |
-| Chennai (`IN-CHE`)   | `https://in-che.monitoring.cloud.ibm.com`       | 169.38.15.157  `(*)`  \n 169.38.18.107 `(*)`  |
+| Dallas (`US-South`)  | `https://us-south.monitoring.cloud.ibm.com`    |	 \n 169.60.151.174  [Deprecated]{: tag-deprecated} \n 169.46.0.70  [Deprecated]{: tag-deprecated} \n 169.48.214.70 [Deprecated]{: tag-deprecated}  \n 52.118.209.119    \n 67.18.94.56   	 	\n 52.116.135.250        |
+| Frankfurt (`EU-DE`)     | `https://eu-de.monitoring.cloud.ibm.com`  |  \n 149.81.77.78 [Deprecated]{: tag-deprecated}  \n 161.156.102.206  [Deprecated]{: tag-deprecated} \n 159.122.102.38 [Deprecated]{: tag-deprecated}  \n 158.177.2.4  \n 161.156.87.239	 \n 149.81.238.82   |
+| London (`EU-GB`)     | `https://eu-gb.monitoring.cloud.ibm.com`         | \n 158.175.98.206  [Deprecated]{: tag-deprecated} \n 141.125.73.118  [Deprecated]{: tag-deprecated} \n 159.122.210.174 [Deprecated]{: tag-deprecated}  \n 141.125.105.98   \n 161.156.203.133   \n 158.176.179.72  |
+| Madrid (`EU-ES`)     | `https://eu-es.monitoring.cloud.ibm.com`         |  \n 13.120.68.187  [Deprecated]{: tag-deprecated} \n  13.121.68.91 [Deprecated]{: tag-deprecated}  \n 13.122.68.140 [Deprecated]{: tag-deprecated}  \n 13.121.91.87   \n 13.122.87.104   \n 13.120.91.152   |
+| Montreal (`CA-MON`)    | `https://ca-mon.monitoring.cloud.ibm.com`        |  \n 64.5.49.125   \n 64.5.42.185   \n 64.5.47.9  |
+| Osaka (`JP-OSA`)    | `https://jp-osa.monitoring.cloud.ibm.com`        |   \n 64.5.49.125  [Deprecated]{: tag-deprecated} \n 64.5.42.185 [Deprecated]{: tag-deprecated}  \n 64.5.47.9  [Deprecated]{: tag-deprecated}  \n 163.68.83.196   \n 163.73.82.218 		\n 163.69.86.15   |
+| Sao Paulo (`BR-SAO`)    | `https://br-sao.monitoring.cloud.ibm.com`        |  \n 163.107.66.98  [Deprecated]{: tag-deprecated}  \n 163.109.67.242  [Deprecated]{: tag-deprecated} \n 169.57.141.43 [Deprecated]{: tag-deprecated}  \n 13.116.92.185  \n 163.107.92.212   \n 163.109.84.195    |
+| Sydney (`AU-SYD`)    | `https://au-syd.monitoring.cloud.ibm.com`        | \n 135.90.73.100  [Deprecated]{: tag-deprecated} \n 130.198.80.155 [Deprecated]{: tag-deprecated}  \n 168.1.213.78 [Deprecated]{: tag-deprecated}   \n 130.198.10.95   \n 135.90.130.246  	\n 159.23.97.190    |
+| Toronto (`CA-TOR`)    | `https://ca-tor.monitoring.cloud.ibm.com`        | \n 163.74.69.186  [Deprecated]{: tag-deprecated}  \n 158.85.94.130  [Deprecated]{: tag-deprecated} \n 163.75.65.237 [Deprecated]{: tag-deprecated}  \n 163.66.86.89    \n 163.75.81.213  	\n 163.74.95.149    |
+| Tokyo (`JP-TOK`)    | `https://jp-tok.monitoring.cloud.ibm.com`        | \n 165.192.84.14  [Deprecated]{: tag-deprecated} \n 128.168.75.14  [Deprecated]{: tag-deprecated} \n 169.56.51.238 [Deprecated]{: tag-deprecated} \n 162.133.138.54    \n 128.168.143.56   	\n 165.192.128.220    |
+| Washington (`US-East`)   | `https://us-east.monitoring.cloud.ibm.com`       |  \n 169.60.112.74 [Deprecated]{: tag-deprecated}  \n 169.55.109.114  [Deprecated]{: tag-deprecated} \n 169.62.3.82  [Deprecated]{: tag-deprecated}  \n 169.62.20.11    \n 169.63.183.86  \n 150.239.110.137       |
+| Chennai (`IN-CHE`)   | `https://in-che.monitoring.cloud.ibm.com`       |  \n 169.38.15.157  [Deprecated]{: tag-deprecated}  \n 169.38.18.107  [Deprecated]{: tag-deprecated} \n 169.38.15.157    \n 169.38.18.107  |
 {: caption="List of endpoints" caption-side="top"}
 
 
@@ -72,18 +72,17 @@ The following table lists the *Private API endpoints* that are available per reg
 
 | Region      | Private REST API endpoint       | Private IP addresses       |
 |-------------|----------------------------------|----------------------------|
-| Dallas (`US-South`)  | `private.us-south.monitoring.cloud.ibm.com/api`   | \n 166.9.228.235  `(*)`  \n 166.9.229.31 `(*)`  \n 166.9.251.30  `(*)`    |
-| Frankfurt (`EU-DE`)     | `private.eu-de.monitoring.cloud.ibm.com/api`    |  \n 166.9.209.205 `(*)`  \n 166.9.209.227 `(*)`  \n 166.9.210.13 `(*)`       |
-| London (`EU-GB`)     | `private.eu-gb.monitoring.cloud.ibm.com/api`      |  \n 166.9.245.189 `(*)`  \n 166.9.245.221 `(*)`  \n 166.9.245.253 `(*)`    |
-| Madrid (`EU-ES`)     | `private.eu-es.monitoring.cloud.ibm.com/api`      | \n 166.9.226.56 `(*)`  \n 166.9.227.143 `(*)`  \n 166.9.225.35 `(*)`           |
-| Montreal (`CA-MON`)  | `private.ca-mon.monitoring.cloud.ibm.com/api`   | \n 166.9.232.56 `(*)` \n 166.9.233.54 `(*)` \n 166.9.231.34 `(*)` | | 
-| Osaka (`JP-OSA`)    | `private.jp-osa.monitoring.cloud.ibm.com/api`     |  \n 166.9.247.59 `(*)`  \n 166.9.247.89 `(*)` \n 166.9.247.123 `(*)`    |
-| Sao Paulo (`BR-SAO`)  | `private.br-sao.monitoring.cloud.ibm.com/api`   | \n 166.9.246.87 `(*)`  \n 166.9.246.120 `(*)`  \n 166.9.246.144 `(*)`     |
-| Sydney (`AU-SYD`)    | `private.au-syd.monitoring.cloud.ibm.com/api`     | \n 166.9.244.121 `(*)`  \n 166.9.244.153 `(*)`  \n 166.9.244.185 `(*)`        |
-| Tokyo (`JP-TOK`)    | `private.jp-tok.monitoring.cloud.ibm.com/api`     | \n 166.9.212.4 `(*)`  \n 166.9.214.5 `(*)`  \n 166.9.216.14 `(*)`      |
-| Toronto (`CA-TOR`)  | `private.ca-tor.monitoring.cloud.ibm.com/api`   | \n 166.9.209.13 `(*)`  \n 166.9.209.42 `(*)`  \n 166.9.209.72 `(*)`      |
-| Washington (`US-East`)   | `private.us-east.monitoring.cloud.ibm.com/api`    | \n 166.9.231.19 `(*)`  \n 166.9.232.40 `(*)`  \n 166.9.233.36 `(*)`      |
-| Chennai (`IN-CHE`)   | `private.in-che.monitoring.cloud.ibm.com/api`       | \n 169.9.236.8 `(*)` |
+| Dallas (`US-South`)  | `private.us-south.monitoring.cloud.ibm.com/api`   | \n 166.9.228.45   [Deprecated]{: tag-deprecated} \n 166.9.229.45  [Deprecated]{: tag-deprecated}  \n 166.9.230.44 [Deprecated]{: tag-deprecated}  \n 166.9.228.235    \n 166.9.229.31   \n 166.9.251.30     |
+| Frankfurt (`EU-DE`)     | `private.eu-de.monitoring.cloud.ibm.com/api`    |  \n 166.9.248.88   [Deprecated]{: tag-deprecated}  \n 166.9.248.120   [Deprecated]{: tag-deprecated} \n 166.9.248.152  [Deprecated]{: tag-deprecated} \n 166.9.209.205   \n 166.9.209.227   \n 166.9.210.13        |
+| London (`EU-GB`)     | `private.eu-gb.monitoring.cloud.ibm.com/api`      |  \n 166.9.244.29   [Deprecated]{: tag-deprecated}  \n 166.9.244.59  [Deprecated]{: tag-deprecated}  \n 166.9.245.189  \n 166.9.245.221   \n 166.9.245.253     |
+| Madrid (`EU-ES`)     | `private.eu-es.monitoring.cloud.ibm.com/api`      | \n 166.9.226.17   [Deprecated]{: tag-deprecated}  \n 166.9.227.16  [Deprecated]{: tag-deprecated}   \n 166.9.225.16  [Deprecated]{: tag-deprecated} \n 166.9.226.56 `  \n 166.9.227.143   \n 166.9.225.35            |
+| Montreal (`CA-MON`)  | `private.ca-mon.monitoring.cloud.ibm.com/api`   | \n 166.9.232.56  \n 166.9.233.54  \n 166.9.231.34   | | 
+| Osaka (`JP-OSA`)    | `private.jp-osa.monitoring.cloud.ibm.com/api`     |  \n 166.9.247.44   [Deprecated]{: tag-deprecated} \n 166.9.247.77  [Deprecated]{: tag-deprecated}  \n 166.9.247.109  [Deprecated]{: tag-deprecated} \n 166.9.247.59  \n 166.9.247.89   \n 166.9.247.123     |
+| Sao Paulo (`BR-SAO`)  | `private.br-sao.monitoring.cloud.ibm.com/api`   | \n 166.9.246.77  [Deprecated]{: tag-deprecated}  \n 166.9.246.108  [Deprecated]{: tag-deprecated}  \n 166.9.246.133 [Deprecated]{: tag-deprecated} \n 166.9.246.87   \n 166.9.246.120   \n 166.9.246.144     |
+| Tokyo (`JP-TOK`)    | `private.jp-tok.monitoring.cloud.ibm.com/api`     | \n 166.9.249.112   [Deprecated]{: tag-deprecated} \n 166.9.249.141  [Deprecated]{: tag-deprecated}  \n 166.9.249.177  [Deprecated]{: tag-deprecated} \n 166.9.212.4   \n 166.9.214.5   \n 166.9.216.14       |
+| Toronto (`CA-TOR`)  | `private.ca-tor.monitoring.cloud.ibm.com/api`   | \n 166.9.247.153  [Deprecated]{: tag-deprecated}  \n 166.9.247.185   [Deprecated]{: tag-deprecated} \n 166.9.247.205 [Deprecated]{: tag-deprecated} \n 166.9.209.13   \n 166.9.209.42   \n 166.9.209.72      |
+| Washington (`US-East`)   | `private.us-east.monitoring.cloud.ibm.com/api`    | \n 166.9.231.240   [Deprecated]{: tag-deprecated} \n 166.9.232.28  [Deprecated]{: tag-deprecated}  \n 166.9.233.17 [Deprecated]{: tag-deprecated}  \n 166.9.231.19   \n 166.9.232.40   \n 166.9.233.36    |
+| Chennai (`IN-CHE`)   | `private.in-che.monitoring.cloud.ibm.com/api`       | \n 169.9.236.8  |
 {: caption="Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
 
 
@@ -137,17 +136,17 @@ Ports for every MZR:
 
 | Region      | Private ingestion endpoint       | Private IP addresses       |
 |-------------|----------------------------------|----------------------------|
-| Dallas (`US-South`)  | `ingest.private.us-south.monitoring.cloud.ibm.com`   |  \n 166.9.228.235  `(*)`  \n 166.9.229.31 `(*)`  \n 166.9.251.30  `(*)`    |
-| Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`      | \n 166.9.209.205 `(*)`  \n 166.9.209.227 `(*)`  \n 166.9.210.13 `(*)`  |
-| London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | \n 166.9.245.189 `(*)`  \n 166.9.245.221 `(*)`  \n 166.9.245.253 `(*)`     |
-| Madrid (`EU-ES`)     | `ingest.private.eu-es.monitoring.cloud.ibm.com`      | \n 166.9.226.56 `(*)`  \n 166.9.227.143 `(*)`  \n 166.9.225.35 `(*)`  |
-| Montreal (`CA-MON`)  | `ingest.private.ca-mon.monitoring.cloud.ibm.com`   | \n 166.9.232.56  `(*)` \n 166.9.233.54 `(*)`  \n 166.9.231.34 `(*)` |
-| Osaka (`JP-OSA`)    | `ingest.private.jp-osa.monitoring.cloud.ibm.com`     |  \n 166.9.247.59 `(*)`  \n 166.9.247.89 `(*)`  \n 166.9.247.123 `(*)`    |
-| Sao Paulo (`BR-SAO`)  | `ingest.private.br-sao.monitoring.cloud.ibm.com`   | \n 166.9.246.87 `(*)`  \n 166.9.246.120 `(*)`  \n 166.9.246.144 `(*)`   |
-| Sydney (`AU-SYD`)    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | \n 166.9.244.121 `(*)`  \n 166.9.244.153 `(*)`  \n 166.9.244.185 `(*)`    |
-| Tokyo (`JP-TOK`)    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | \n 166.9.212.4 `(*)`  \n 166.9.214.5 `(*)`  \n 166.9.216.14 `(*)`    |
-| Toronto (`CA-TOR`)  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | \n 166.9.209.13 `(*)`  \n 166.9.209.42 `(*)`  \n 166.9.209.72 `(*)`    |
-| Washington (`US-East`)   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | \n 166.9.231.19 `(*)`  \n 166.9.232.40 `(*)`  \n 166.9.233.36 `(*)`     |
+| Dallas (`US-South`)  | `ingest.private.us-south.monitoring.cloud.ibm.com`   |  \n 166.9.14.170 [Deprecated]{: tag-deprecated}  \n 166.9.48.41  [Deprecated]{: tag-deprecated} \n 166.9.17.11 [Deprecated]{: tag-deprecated} \n 166.9.228.235   \n 166.9.229.31   \n 166.9.251.30    |
+| Frankfurt (`EU-DE`)     | `ingest.private.eu-de.monitoring.cloud.ibm.com`     | \n 166.9.32.51  [Deprecated]{: tag-deprecated} \n 166.9.30.53  \n 166.9.28.71 [Deprecated]{: tag-deprecated}  \n 166.9.209.205  [Deprecated]{: tag-deprecated} \n 166.9.209.227   \n 166.9.210.13   |
+| London (`EU-GB`)     | `ingest.private.eu-gb.monitoring.cloud.ibm.com`      | \n 166.9.34.56 [Deprecated]{: tag-deprecated} \n 166.9.36.71 [Deprecated]{: tag-deprecated}  \n 166.9.245.189  \n 166.9.245.221  \n 166.9.245.253    |
+| Madrid (`EU-ES`)     | `ingest.private.eu-es.monitoring.cloud.ibm.com`      | \n 166.9.96.31 [Deprecated]{: tag-deprecated}  \n 166.9.95.31 [Deprecated]{: tag-deprecated}  \n 166.9.94.31  [Deprecated]{: tag-deprecated} \n 166.9.226.56   \n 166.9.227.143   \n 166.9.225.35   |
+| Montreal (`CA-MON`)  | `ingest.private.ca-mon.monitoring.cloud.ibm.com`   |  \n 166.9.232.56   \n 166.9.233.54  \n 166.9.231.34  |
+| Osaka (`JP-OSA`)    | `ingest.private.jp-osa.monitoring.cloud.ibm.com`     |  \n 166.9.72.14 [Deprecated]{: tag-deprecated} \n 166.9.71.15  [Deprecated]{: tag-deprecated} \n 166.9.70.14  [Deprecated]{: tag-deprecated} \n 166.9.247.59  \n 166.9.247.89   \n 166.9.247.123    |
+| Sao Paulo (`BR-SAO`)  | `ingest.private.br-sao.monitoring.cloud.ibm.com`   | \n 166.9.84.19  [Deprecated]{: tag-deprecated} \n 166.9.83.18 [Deprecated]{: tag-deprecated}  \n 166.9.82.19  [Deprecated]{: tag-deprecated} \n 166.9.246.87   \n 166.9.246.120  \n 166.9.246.144  |
+| Sydney (`AU-SYD`)    | `ingest.private.au-syd.monitoring.cloud.ibm.com`     | \n 166.9.56.32 [Deprecated]{: tag-deprecated}  \n 166.9.52.27   [Deprecated]{: tag-deprecated} \n 166.9.54.27 [Deprecated]{: tag-deprecated} \n 166.9.244.121   \n 166.9.244.153   \n 166.9.244.185  |
+| Tokyo (`JP-TOK`)    | `ingest.private.jp-tok.monitoring.cloud.ibm.com`     | \n 166.9.44.38  [Deprecated]{: tag-deprecated} \n 166.9.40.35  [Deprecated]{: tag-deprecated} \n 166.9.42.48 [Deprecated]{: tag-deprecated} \n 166.9.212.4   \n 166.9.214.5  \n 166.9.216.14     |
+| Toronto (`CA-TOR`)  | `ingest.private.ca-tor.monitoring.cloud.ibm.com`   | \n 166.9.77.20 [Deprecated]{: tag-deprecated}  \n 166.9.76.23 [Deprecated]{: tag-deprecated}  \n 166.9.78.21 [Deprecated]{: tag-deprecated} \n 166.9.209.13   \n 166.9.209.42   \n 166.9.209.72     |
+| Washington (`US-East`)   | `ingest.private.us-east.monitoring.cloud.ibm.com`    | \n 166.9.22.50  [Deprecated]{: tag-deprecated} \n 166.9.24.43  [Deprecated]{: tag-deprecated} \n 166.9.20.53 [Deprecated]{: tag-deprecated} \n 166.9.231.19   \n 166.9.232.40   \n 166.9.233.36   |
 {: caption="List of ingestion endpoints and private IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
@@ -165,18 +164,18 @@ Ports for every MZR:
 
 | Region      | Public ingestion endpoint      | Public IP addresses    |
 |-------------|-------------------------------|-------------------------|
-| Dallas (`US-South`)  | `ingest.us-south.monitoring.cloud.ibm.com`          | \n 52.118.209.119 `(*)`  \n 67.18.94.56 `(*)`  \n 52.116.135.250     `(*)`      |
-| Frankfurt (`EU-DE`)     | `ingest.eu-de.monitoring.cloud.ibm.com`             |  \n 158.177.2.4 `(*)`  \n 161.156.87.239 `(*)`  \n 149.81.238.82  `(*)`   |
-| London (`EU-GB`)     | `ingest.eu-gb.monitoring.cloud.ibm.com`             |  \n 141.125.105.98 `(*)`  \n 161.156.203.133 `(*)`  \n 158.176.179.72  `(*)` |
-| Madrid (`EU-ES`)     | `ingest.eu-es.monitoring.cloud.ibm.com`             | \n 13.121.91.87 `(*)`  \n 13.122.87.104 `(*)`  \n 13.120.91.152   `(*)` |
-| Montreal (`CA-MON`)    | `ingest.ca-mon.monitoring.cloud.ibm.com`            | \n 64.5.49.125 `(*)`  \n 64.5.42.185 `(*)`  \n 64.5.47.9 `(*)` |
-| Sao Paulo (`BR-SAO`)    | `ingest.br-sao.monitoring.cloud.ibm.com`            |  \n 13.116.92.185 `(*)`  \n 163.107.92.212 `(*)`  \n 163.109.84.195  `(*)`     |
-| Sydney (`AU-SYD`)    | `ingest.au-syd.monitoring.cloud.ibm.com`            |  \n 130.198.10.95 `(*)`  \n 135.90.130.246 `(*)`  \n 159.23.97.190   `(*)`     |
-| Osaka (`JP-OSA`)    | `ingest.jp-osa.monitoring.cloud.ibm.com`            | \n 163.68.83.196 `(*)`  \n 163.73.82.218 `(*)`  \n 163.69.86.15   `(*)` |
-| Toronto (`CA-TOR`)    | `ingest.ca-tor.monitoring.cloud.ibm.com`            | \n 163.66.86.89 `(*)`  \n 163.75.81.213 `(*)`  \n 163.74.95.149  `(*)`     |
-| Tokyo (`JP-TOK`)    | `ingest.jp-tok.monitoring.cloud.ibm.com`            | \n 162.133.138.54 `(*)`  \n 128.168.143.56 `(*)`  \n 165.192.128.220   `(*)`     |
-| Washington (`US-East`)   | `ingest.us-east.monitoring.cloud.ibm.com`           | \n 169.62.20.11 `(*)`  \n 169.63.183.86 `(*)`  \n 150.239.110.137  `(*)`      |
-| Chennai (`IN-CHE`)   | `ingest.in-che.monitoring.cloud.ibm.com`           |  \n 169.38.18.107 `(*)`  \n 169.38.15.157  `(*)` |
+| Dallas (`US-South`)  | `ingest.us-south.monitoring.cloud.ibm.com`         | \n 169.60.151.174 [Deprecated]{: tag-deprecated}  \n 169.46.0.70  [Deprecated]{: tag-deprecated}  \n 169.48.214.70 [Deprecated]{: tag-deprecated}  \n 52.118.209.119  \n 67.18.94.56  \n 52.116.135.250     |
+| Frankfurt (`EU-DE`)     | `ingest.eu-de.monitoring.cloud.ibm.com`          |  \n 149.81.77.78  [Deprecated]{: tag-deprecated}  \n 161.156.102.206 [Deprecated]{: tag-deprecated}  \n 159.122.102.38 [Deprecated]{: tag-deprecated}  \n 158.177.2.4  \n 161.156.87.239  \n 149.81.238.82   |
+| London (`EU-GB`)     | `ingest.eu-gb.monitoring.cloud.ibm.com`             |  \n 158.175.98.206  [Deprecated]{: tag-deprecated}  \n 141.125.73.118  [Deprecated]{: tag-deprecated}  \n 159.122.210.174 [Deprecated]{: tag-deprecated} \n 141.125.105.98   \n 161.156.203.133   \n 158.176.179.72  |
+| Madrid (`EU-ES`)     | `ingest.eu-es.monitoring.cloud.ibm.com`             | \n 13.122.68.140  [Deprecated]{: tag-deprecated} \n 13.120.68.187 [Deprecated]{: tag-deprecated}  \n  13.121.68.91 [Deprecated]{: tag-deprecated}  \n 13.121.91.87   \n 13.122.87.104   \n 13.120.91.152    |
+| Montreal (`CA-MON`)    | `ingest.ca-mon.monitoring.cloud.ibm.com`            | \n 64.5.49.125   \n 64.5.42.185   \n 64.5.47.9  |
+| Sao Paulo (`BR-SAO`)    | `ingest.br-sao.monitoring.cloud.ibm.com`            |  \n 163.107.66.98  [Deprecated]{: tag-deprecated} \n 163.109.67.242  [Deprecated]{: tag-deprecated} \n 169.57.141.43 [Deprecated]{: tag-deprecated} \n 13.116.92.185  \n 163.107.92.212   \n 163.109.84.195     |
+| Sydney (`AU-SYD`)    | `ingest.au-syd.monitoring.cloud.ibm.com`            |  \n 135.90.73.100 [Deprecated]{: tag-deprecated}  \n 130.198.80.155 [Deprecated]{: tag-deprecated}  \n 168.1.213.78 [Deprecated]{: tag-deprecated}  \n 130.198.10.95   \n 135.90.130.246  \n 159.23.97.190    |
+| Osaka (`JP-OSA`)    | `ingest.jp-osa.monitoring.cloud.ibm.com`            | \n 163.68.67.98 [Deprecated]{: tag-deprecated}  \n 163.69.66.170  [Deprecated]{: tag-deprecated} \n 163.73.67.180 [Deprecated]{: tag-deprecated}  \n 163.68.83.196  \n 163.73.82.218  \n 163.69.86.15    |
+| Toronto (`CA-TOR`)    | `ingest.ca-tor.monitoring.cloud.ibm.com`            | \n 163.74.69.186  [Deprecated]{: tag-deprecated} \n 158.85.94.130 [Deprecated]{: tag-deprecated} \n 163.75.65.237 [Deprecated]{: tag-deprecated}  \n 163.66.86.89   \n 163.75.81.213  \n 163.74.95.149    |
+| Tokyo (`JP-TOK`)    | `ingest.jp-tok.monitoring.cloud.ibm.com`            | \n 165.192.84.14  [Deprecated]{: tag-deprecated} \n 128.168.75.14 [Deprecated]{: tag-deprecated}  \n 169.56.51.238 [Deprecated]{: tag-deprecated}  \n 162.133.138.54  \n 128.168.143.56  \n 165.192.128.220     |
+| Washington (`US-East`)   | `ingest.us-east.monitoring.cloud.ibm.com`      | \n 169.60.112.74 [Deprecated]{: tag-deprecated}  \n 169.55.109.114  [Deprecated]{: tag-deprecated}  \n 169.62.3.82 [Deprecated]{: tag-deprecated}  \n 169.62.20.11   \n 169.63.183.86   \n 150.239.110.137    |
+| Chennai (`IN-CHE`)   | `ingest.in-che.monitoring.cloud.ibm.com`           |  \n 169.38.18.107 [Deprecated]{: tag-deprecated}  \n 169.38.8.209 [Deprecated]{: tag-deprecated}  \n 169.38.18.107   \n 169.38.15.157   |
 {: caption="List of ingestion endpoints and public IP addresses to send data to the {{site.data.keyword.mon_full_notm}}" caption-side="top"}
 
 
