@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-04-22"
+lastupdated: "2026-08-05"
 
 
 keywords:
@@ -20,6 +20,21 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.mon_full}}.
 {: shortdesc}
+
+
+## July 30 2026
+{: #monitoring-July302026}
+
+Reusable notification templates for alerts now available
+:   {{site.data.keyword.mon_full_notm}} now supports reusable notification templates for alerts. You can create a template once and apply it across multiple alerts. When you update a template, the change is applied automatically to every alert that uses it. A new **Notification Templates** page under **Settings** lets you create, edit, and manage templates independently of individual alerts. You can also select or create a template directly from the alert editor.
+
+The reusable notification templates are available for **PagerDuty**. 
+
+This release also includes the following capabilities:
+
+   * Sectioned template editor: Customize notification content by adding, removing, and reordering sections built from alert variables such as severity, scope, threshold, and alert name
+   * Test notifications: Send a test notification to preview how a template renders before you use it in an alert.
+   * API support: Manage templates through a public API and reference a template by ID when configuring alerts. 
 
 
 ## April 20 2026
