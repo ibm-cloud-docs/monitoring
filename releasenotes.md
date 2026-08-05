@@ -30,11 +30,11 @@ Reusable notification templates for alerts now available
 
 The reusable notification templates are available for **PagerDuty**. 
 
-    This release also includes the following capabilities:
+This release also includes the following capabilities:
 
-    * **Sectioned template editor**: Customize notification content by adding, removing, and reordering sections built from alert variables such as severity, scope, threshold, and alert name.
-    * **Test notifications**: Send a test notification to preview how a template renders before you use it in an alert.
-    * **API support**: Manage templates through a public API and reference a template by ID when configuring alerts.
+   * Sectioned template editor: Customize notification content by adding, removing, and reordering sections built from alert variables such as severity, scope, threshold, and alert name
+   * Test notifications: Send a test notification to preview how a template renders before you use it in an alert.
+   * API support: Manage templates through a public API and reference a template by ID when configuring alerts. 
 
 
 ## April 20 2026
