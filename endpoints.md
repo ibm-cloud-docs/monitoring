@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-07-31"
+lastupdated: "2026-08-07"
 
 keywords:
 
@@ -84,7 +84,6 @@ The following table lists the *Private API endpoints* that are available per reg
 | Washington (`US-East`)   | `private.us-east.monitoring.cloud.ibm.com/api`    | \n 166.9.231.240   [Deprecated]{: tag-deprecated} \n 166.9.232.28  [Deprecated]{: tag-deprecated}  \n 166.9.233.17 [Deprecated]{: tag-deprecated}  \n 166.9.231.19   \n 166.9.232.40   \n 166.9.233.36    |
 | Chennai (`IN-CHE`)   | `private.in-che.monitoring.cloud.ibm.com/api`       | \n 169.9.236.8  |
 {: caption="Private REST API endpoints for the {{site.data.keyword.mon_full_notm}} service" caption-side="top"}
-
 
 
 ### Public REST API endpoints
