@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-08-12"
+lastupdated: "2026-08-13"
 
 keywords: 
 
@@ -38,7 +38,7 @@ In addition to its ability to run in {{site.data.keyword.cloud}}, the centralize
     You can run the following command to create the namespace: `kubectl create namespace ibm-observe`
     {: tip}
 
-    If you are connecting a Kubernetes or OpenShift cluster with {{site.data.keyword.mon_full_notm}} and [{{site.data.keyword.sysdigsecure_full_notm}}](/docs/workload-protection?topic=workload-protection-about) see [Deploying the agent in an outside Kubernetes or OpenShift cluster in the {{site.data.keyword.sysdigsecure_full_notm}} documentation](/docs/workload-protection?topic=workload-protection-deploy-wp-outside-cloud) and follow the instructions.
+    If you are connecting a Kubernetes or OpenShift cluster with {{site.data.keyword.mon_full_notm}} and [{{site.data.keyword.sysdigsecure_full_notm}}](/docs/workload-protection?topic=workload-protection-about), see [Deploying the agent in an outside Kubernetes or OpenShift cluster in the {{site.data.keyword.sysdigsecure_full_notm}} documentation](/docs/workload-protection?topic=workload-protection-deploy-wp-outside-cloud) and follow the instructions.
     {: tip}
 
 
