@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-08-18"
+lastupdated: "2026-08-20"
 
 keywords:
 
@@ -64,7 +64,7 @@ You need to consider the following when connecting the two services:
 
 * Once connected, a single monitoring agent will provide data to both {{site.data.keyword.mon_full_notm}} and {{site.data.keyword.sysdigsecure_full_notm}} connected instances.
 
-* You can use the same access key for both the services. The instances must be connected to protect and monitor the infrastructure correctly. 
+* You install only a single Sysdig agent on your nodes and configure it with the same access key for both services.
 
 * Once connected, the only way to disconnect the service instances is to delete either the {{site.data.keyword.mon_full_notm}} or {{site.data.keyword.sysdigsecure_full_notm}} service instance.
 
