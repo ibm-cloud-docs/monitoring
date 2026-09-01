@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-08-05"
+lastupdated: "2026-09-01"
 
 
 keywords:
@@ -24,6 +24,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 ## July 30 2026
 {: #monitoring-July302026}
+{: release-note}
 
 Reusable notification templates for alerts now available
 :   {{site.data.keyword.mon_full_notm}} now supports reusable notification templates for alerts. You can create a template once and apply it across multiple alerts. When you update a template, the change is applied automatically to every alert that uses it. A new **Notification Templates** page under **Settings** lets you create, edit, and manage templates independently of individual alerts. You can also select or create a template directly from the alert editor.
@@ -39,6 +40,7 @@ This release also includes the following capabilities:
 
 ## April 20 2026
 {: #monitoring-apr202026}
+{: release-note}
 
 Monitoring for NVIDIA GPUs is now available
 :   {{site.data.keyword.mon_full_notm}} now supports NVIDIA GPUs for {{site.data.keyword.cloud_notm}} Kubernetes services (IKS and ROKS) and VSIs for VPC. The new out-of-the-box dashboard and alerts allow you to proactively monitor your GPUs. For more information, see the [Monitoring NVIDIA GPUs](/docs/monitoring?topic=monitoring-nvidia-gpu-monitoring).
@@ -48,6 +50,7 @@ OpenShift Virtualization Monitoring with {{site.data.keyword.mon_full_notm}}
 
 ## March 19 2026
 {: #monitoring-mar192026}
+{: release-note}
 
 Send notifications to Event Notifications with private network
 :   {{site.data.keyword.mon_full_notm}} now supports integrating with Event Notifications when configured with private network only. 
@@ -55,6 +58,7 @@ Send notifications to Event Notifications with private network
 
 ## February 20 2026
 {: #pricing-change-2026}
+{: release-note}
 
 Reduction in {{site.data.keyword.mon_full_notm}} Pricing
 
@@ -73,6 +77,7 @@ Reduction in {{site.data.keyword.mon_full_notm}} Pricing
 
 ## 26 January 2026
 {: #monitoring-jan262026}
+{: release-note}
 
 Monitoring for Enterprise Application Service is now available
 :   {{site.data.keyword.mon_full}} now integrates with [Enterprise Application Service](https://www.ibm.com/docs/en/ease?topic=overview). This integrations helps you monitoring the status, performance and business metrics of your applications. For more information, see [Monitoring metrics for EASeJ with IBM Cloud Monitoring
@@ -84,6 +89,7 @@ Monitoring for Enterprise Application Service is now available
 
 ## 4 September 2025
 {: #monitoring-sep042025}
+{: release-note}
 
 VSI for VPC Advisor is now available
 :   {{site.data.keyword.mon_full}} now features the VSI for VPC Advisor, a tool designed to help you oversee your Virtual Server Instances (VSIs) across your entire infrastructure. This new capability allows you to not only monitor the status of your instances but also identify potential issues (such as CPU throttling or out-of-memory errors) and get guidance on troubleshooting and resolution. Start today by accessing your {{site.data.keyword.mon_short}} UI and navigating to **Advisor** / **VSI for VPC**. For more information, see the [Advisor](/docs/monitoring?topic=monitoring-advisors).
@@ -92,6 +98,7 @@ VSI for VPC Advisor is now available
 
 ## 31 July 2025
 {: #monitoring-jul31125}
+{: release-note}
 
 Montreal support
 :   The {{site.data.keyword.mon_full_notm}} service is fully supported in the Montreal (`ca-mon`) region.
@@ -99,6 +106,7 @@ Montreal support
 
 ## 9 July 2025
 {: #monitoring-jul0925}
+{: release-note}
 
 Updated Montreal considerations
 :   As {{site.data.keyword.cloud_notm}} provides support for the Montreal (`ca-mon`) region, you need to understand how {{site.data.keyword.cloud_notm}} Observability services are made available and the actions you need to take to operate in Montreal.
