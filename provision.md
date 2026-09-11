@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-09-11"
 
 keywords:
 
@@ -21,8 +21,6 @@ Before you can monitor and manage metrics, you must provision an instance of the
 
 ## Provisioning an instance from the catalog
 {: #provision_ui}
-
-
 
 {{_include-segments/provision_ui.md}}
 

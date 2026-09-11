@@ -94,6 +94,12 @@ toc:
           - notifications/eventnotif_sms_tutorial.md
       - about_wp.md
       - topicgroup:
+          label: Reference architectures
+          links:
+          - link:
+              label: Cloud foundation for security and observability
+              href: https://cloud.ibm.com/docs/security-hub?topic=security-hub-core-security-services-pattern
+      - topicgroup:
           label: Release notes
           topics:
           - topic: releasenotes.md
