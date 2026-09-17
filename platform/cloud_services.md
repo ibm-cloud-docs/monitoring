@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-08-12"
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -73,7 +73,7 @@ The following table lists database services that are enabled for {{site.data.key
 | * [{{site.data.keyword.databases-for-mongodb_full_notm}}](/docs/databases-for-postgresql?topic=databases-for-postgresql-monitoring#metrics-by-plan-mongodb)  (Gen 1) <br> * [{{site.data.keyword.databases-for-mongodb_full_notm}}](/docs/databases-for-postgresql-gen2?topic=databases-for-postgresql-gen2-monitoring#metrics-by-plan-mongodb)  (Gen 2) | {{site.data.keyword.databases-for-mongodb_full_notm}} is a managed MongoDB service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | * [Platform metrics](/docs/databases-for-postgresql?topic=databases-for-postgresql-monitoring#metrics-by-plan-mongodb) <br> * [Platform metrics](/docs/databases-for-postgresql-gen2?topic=databases-for-postgresql-gen2-monitoring#metrics-by-plan-mongodb) |
 | * [{{site.data.keyword.messages-for-rabbitmq_full_notm}}](/docs/databases-for-postgresql?topic=databases-for-postgresql-monitoring#metrics-by-plan-rabbitmq)  (Gen 1) <br> * [{{site.data.keyword.messages-for-rabbitmq_full_notm}}](/docs/databases-for-postgresql-gen2?topic=databases-for-postgresql-gen2-monitoring#metrics-by-plan-rabbitmq)  (Gen 2) * | {{site.data.keyword.messages-for-rabbitmq_full_notm}} is a managed RabbitMQ service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services.   | * [Platform metrics](/docs/databases-for-postgresql?topic=databases-for-postgresql-monitoring#metrics-by-plan-rabbitmq) <br> * [Platform metrics](/docs/databases-for-postgresql-gen2?topic=databases-for-postgresql-gen2-monitoring#metrics-by-plan-rabbitmq)  |
 | [{{site.data.keyword.dv_full}}](/docs/data-virtualization?topic=data-virtualization-getting-started) | {{site.data.keyword.dv_full}} is a fully managed service on {{site.data.keyword.cloud_notm}} that you can use to easily and securely access data across many data sources. | [Platform metrics](https://dataplatform.cloud.ibm.com/docs/content/dvaas/wq_monitor.html?context=cpdaas&locale=en&audience=wdp){: external} |
-| [{{site.data.keyword.Db2_on_Cloud_long}}](/docs/Db2onCloud?topic=Db2onCloud-about) | {{site.data.keyword.Db2_on_Cloud_long_notm}} is a fully managed public cloud service on IBM Cloud. As a relational database, it delivers fast query processing with enterprise-level performance and capabilities for online transactional processing (OLTP). | [Platform metrics](/docs/Db2onCloud?topic=Db2onCloud-monitor) |
+| [{{site.data.keyword.Db2_on_Cloud_long}}](/docs/db2-saas?topic=db2-saas-about) | {{site.data.keyword.Db2_on_Cloud_long_notm}} is a fully managed public cloud service on IBM Cloud. As a relational database, it delivers fast query processing with enterprise-level performance and capabilities for online transactional processing (OLTP). | [Platform metrics](/docs/db2-saas?topic=db2-saas-monitor) |
 | [{{site.data.keyword.lakehouse_full_notm}}](/docs/watsonxdata?topic=watsonxdata-getting-started) | {{site.data.keyword.lakehouse_full_notm}} is a unique solution that allows co-existence of open source technologies and proprietary products. It offers a single platform where you can store the data or attach data sources for managing and analyzing your enterprise data. | [Platform metrics](/docs/watsonxdata?topic=watsonxdata-monitor_wxd) |
 {: caption="List of database services" caption-side="top"}
 
@@ -109,7 +109,7 @@ The following table lists integration services that are enabled for {{site.data.
 
 | Service     | Description | Metrics |
 |-------------|-------------|-------------------|
-| [{{site.data.keyword.messagehub}}](/docs/EventStreams?topic=EventStreams-getting-started)| {{site.data.keyword.messagehub}} is a high-throughput message bus that is built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.IBM_notm}} and event stream distribution between your services and applications. | [Platform metrics](/docs/EventStreams?topic=EventStreams-metrics) |
+| [{{site.data.keyword.messagehub}}](/docs/EventStreams?topic=EventStreams-quick_setup_guide&interface=ui)| {{site.data.keyword.messagehub}} is a high-throughput message bus that is built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.IBM_notm}} and event stream distribution between your services and applications. | [Platform metrics](/docs/EventStreams?topic=EventStreams-metrics) |
 | [{{site.data.keyword.mq_full}}](/docs/mqcloud?topic=mqcloud-getting_started)| {{site.data.keyword.mq_full}} is an enterprise grade messaging middleware service that provides secure messaging capabilities, such as point-to-point and publish and subscribe models. | [Platform metrics](/docs/mqcloud?topic=mqcloud-monitor_sysdig) |
 {: caption="List of integration services" caption-side="top"}
 
