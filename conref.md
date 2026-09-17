@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-01-29"
+  years:  2018, 2026
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -78,7 +78,7 @@ To grant an instance of the {{site.data.keyword.mon_full_notm}} service access t
 8. For **Service access** make sure *Reader* and *Event Source Manager* are selected.
 9. Click **Authorize**.
 
-For more information on how to define authorizations, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth&interface=ui).
+For more information on how to define authorizations, see [Using authorizations to grant access between services](/docs/account).
 
 ## Configure a notification source in {{site.data.keyword.en_full_notm}}
 {: #en-notification}

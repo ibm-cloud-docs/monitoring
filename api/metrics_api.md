@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-03-03"
+  years:  2018, 2026
+lastupdated: "2026-09-17"
 
 keywords: 
 
@@ -302,7 +302,7 @@ return res
 ## Sample: Extract notifications from {{site.data.keyword.mon_short}} to {{site.data.keyword.messagehub}} with the {{site.data.keyword.messagehub}} REST API
 {: #sample-extract-notifications}
 
-1. [Create an {{site.data.keyword.messagehub}} instance](/docs/EventStreams?topic=EventStreams-getting-started).
+1. [Create an {{site.data.keyword.messagehub}} instance](/docs/EventStreams?topic=EventStreams-quick_setup_guide&interface=ui).
     * From the pricing plans, select an **Enterprise Plan**.
     * If necessary, set up an [Authorization in IAM](https://cloud.ibm.com/iam/authorizations){: external} for {{site.data.keyword.messagehub}} to target a KMS provider such as {{site.data.keyword.keymanagementserviceshort}}, and refresh the page.
     * For the **Service Endpoint**, select an option with a **Private** network.
