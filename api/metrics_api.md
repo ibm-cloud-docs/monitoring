@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-09-17"
+lastupdated: "2026-09-21"
 
 keywords: 
 
@@ -307,7 +307,7 @@ return res
     * If necessary, set up an [Authorization in IAM](https://cloud.ibm.com/iam/authorizations){: external} for {{site.data.keyword.messagehub}} to target a KMS provider such as {{site.data.keyword.keymanagementserviceshort}}, and refresh the page.
     * For the **Service Endpoint**, select an option with a **Private** network.
 2. Wait a few minutes for your {{site.data.keyword.messagehub}} instance to provision.
-3. In your {{site.data.keyword.messagehub}} instance, [create a topic](/docs/EventStreams?topic=EventStreams-getting-started#getting_started_steps), such as `kafka-java-console-sample-topic`.
+3. In your {{site.data.keyword.messagehub}} instance, [create a topic](/docs/EventStreams?topic=EventStreams-quick_setup_guide&interface=ui), such as `kafka-java-console-sample-topic`.
 4. Create a service key for credentials to your {{site.data.keyword.messagehub}} instance on the private cloud service endpoint.
 
     * `<name>`: Enter a name for the service key.

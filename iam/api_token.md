@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-09-17"
+lastupdated: "2026-09-21"
 
 keywords: 
 
@@ -33,7 +33,7 @@ You can use a user API key or an API key that is associated with a service ID th
     To create an API key, see [Creating an API key](/docs/iam?topic=iam-userapikey&interface=ui#create_user_key).
 
 * API keys, that are associated with service IDs that you create, are used to connect an application inside or outside of {{site.data.keyword.cloud_notm}}
- to an {{site.data.keyword.cloud_notm}} service. [Learn more](/docsiam?topic=iam-serviceidapikeys&interface=ui#serviceidapikeys).
+ to an {{site.data.keyword.cloud_notm}} service. [Learn more](/docs/iam?topic=iam-serviceidapikeys&interface=ui#serviceidapikeys).
 
     To view the API keys, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 
