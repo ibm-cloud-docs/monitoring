@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-06-28"
+  years:  2018, 2026
+lastupdated: "2026-09-17"
 
 keywords: 
 
@@ -22,4 +22,4 @@ subcollection: monitoring
 If you are using a trusted profile, the email address associated with the trusted profile cannot be used when configuring [notifications.](/docs/monitoring?topic=monitoring-notifications)
 {: note}
 
-See [Creating trusted profiles](/docs/account?topic=account-create-trusted-profile) for information on setting up trusted profiles that can be used with {{site.data.keyword.mon_full_notm}}.
+See [Creating trusted profiles](/docs/iam?topic=iam-create-trusted-profile&interface=ui) for information on setting up trusted profiles that can be used with {{site.data.keyword.mon_full_notm}}.

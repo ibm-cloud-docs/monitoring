@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-29"
+  years:  2018, 2026
+lastupdated: "2026-09-17"
 
 keywords: 
 
@@ -109,7 +109,7 @@ Metric data is deleted automatically after 15 months.
 
 User metadata, such as alerts, dashboards, teams, and users, is never deleted.
 
-You must open a case through support to request the metadata to be deleted. For more information, see [Creating support cases](/docs/account?topic=account-open-case&interface=ui).
+You must open a case through support to request the metadata to be deleted. For more information, see [Creating support cases](/docs/support?topic=support-open-case&interface=ui).
 
 
 ### Deleting a subset of data

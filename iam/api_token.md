@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-02-27"
+  years:  2018, 2026
+lastupdated: "2026-09-21"
 
 keywords: 
 
@@ -22,24 +22,24 @@ You can use IAM tokens to authenticate with the {{site.data.keyword.mon_full_not
 ## Getting an IAM API key through the {{site.data.keyword.cloud_notm}} UI
 {: #api_iam_apikey_get}
 
-An application programming interface key (API key) is a unique code that is passed in to an API to identify the calling application or user. [Learn more](/docs/account?topic=account-manapikey).
+An application programming interface key (API key) is a unique code that is passed in to an API to identify the calling application or user. [Learn more](/docs/iam?topic=iam-manapikey).
 
 You can use a user API key or an API key that is associated with a service ID that you create.
 
-* A user API key is associated with a user's identity, and each API key that is created by the user has the same access that the user is assigned. [Learn more](/docs/account?topic=account-userapikey).
+* A user API key is associated with a user's identity, and each API key that is created by the user has the same access that the user is assigned. [Learn more](/docs/iam?topic=iam-manapikey).
 
     To view your API keys, go to **Manage** &gt; **Access (IAM)** &gt; **API keys**.
 
-    To create an API key, see [Creating an API key](/docs/account?topic=account-userapikey&interface=ui#create_user_key).
+    To create an API key, see [Creating an API key](/docs/iam?topic=iam-userapikey&interface=ui#create_user_key).
 
 * API keys, that are associated with service IDs that you create, are used to connect an application inside or outside of {{site.data.keyword.cloud_notm}}
- to an {{site.data.keyword.cloud_notm}} service. [Learn more](/docs/account?topic=account-serviceidapikeys#serviceidapikeys).
+ to an {{site.data.keyword.cloud_notm}} service. [Learn more](/docs/iam?topic=iam-serviceidapikeys&interface=ui#serviceidapikeys).
 
     To view the API keys, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 
     Service ID API keys inherit all access that is assigned to the specific service ID.
 
-    To create an API key, see [Creating an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#create_service_key).
+    To create an API key, see [Creating an API key for a service ID](/docs/iam?topic=iam-serviceidapikeys&interface=ui#create_service_key).
 
 
 

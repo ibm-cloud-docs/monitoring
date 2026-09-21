@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-09-03"
+  years:  2018, 2026
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -36,7 +36,7 @@ You will need to configure:
 {: #data_streaming_prereqs}
 
 Check the following prereqs before managing streaming:
-* [Create an {{site.data.keyword.messagehub}} instance.](/docs/EventStreams?topic=EventStreams-getting-started).
+* [Create an {{site.data.keyword.messagehub}} instance.](/docs/EventStreams?topic=EventStreams-quick_setup_guide&interface=ui).
 * Check the limitations of the service plans. For more information, see [Limits and quotas](/docs/EventStreams?topic=EventStreams-kafka_quotas).
 * Make sure you have the appropriate permissions.
 

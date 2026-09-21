@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-06-28"
+  years:  2018, 2026
+lastupdated: "2026-09-17"
 
 keywords: 
 
@@ -135,3 +135,25 @@ The default team, **Monitor Operations**, cannot be deleted.
 
 When you delete a team, users that only belong to this team will be moved to the default team.
 {: important}
+
+
+## Changing the default entry point of a team
+{: #teams_change_default_entry_point}
+
+You must have **manager** role to change the default entry point for a team in a monitoring instance.
+
+Complete the following steps to change the default entry point:
+
+1. [Launch the web UI](/docs/monitoring?topic=monitoring-launch#launch).
+
+2. Click the **user icon**. This is the icon with the initials of the logged on user. Then click **Settings**. 
+
+3. Select **Teams**. The list of existing teams displays.
+
+4. Identify the team that you want to update and select it. The details of the team are displayed.
+
+5. In the **Default Entry Point** field, change from **Explorer** to **Advisor**    .
+
+6. Click **Save**.
+
+   The next time that a user who is a member of this team logs in to the web UI, the *Advisor* view opens by default.

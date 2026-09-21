@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-03-03"
+  years:  2018, 2026
+lastupdated: "2026-09-17"
 
 keywords: 
 
@@ -180,7 +180,7 @@ Complete the following steps from a terminal:
 
     `<MONITORING_ENDPOINT>` must be replaced with the endpoint where the monitoring instance is available.
 
-    `<IAM_APIKEY>` must be replaced with a valid IAM API key. [Learn more](/docs/account?topic=account-userapikey).
+    `<IAM_APIKEY>` must be replaced with a valid IAM API key. [Learn more](/docs/iam?topic=iam-userapikey&interface=ui).
 
     `<GUID>` must be replaced with the GUID of the monitoring instance that you obtain in the previous step.
 

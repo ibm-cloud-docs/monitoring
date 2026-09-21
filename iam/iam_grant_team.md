@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2026
+lastupdated: "2026-09-17"
 
 keywords: 
 
@@ -85,7 +85,7 @@ Complete the following steps to grant a user or service ID permissions to work w
 ## Prerequisites
 {: #iam_grant_team_prereq}
 
-Your user ID needs **administrator platform permissions** to manage the {{site.data.keyword.mon_full_notm}} service. The account owner can grant user access to the account for the purposes of managing user access and managing account resources. [Learn more](/docs/account?topic=account-userroles).
+Your user ID needs **administrator platform permissions** to manage the {{site.data.keyword.mon_full_notm}} service. The account owner can grant user access to the account for the purposes of managing user access and managing account resources. [Learn more](/docs/iam?topic=iam-userroles).
 
 
 ## Step 1. Create an access group
