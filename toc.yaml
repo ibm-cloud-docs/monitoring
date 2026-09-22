@@ -305,6 +305,8 @@ toc:
               href: https://docs.sysdig.com/en/captures.html
           topics:
           - monitor/captures.md
+      - topic: privacy_settings.md
+        navtitle: Controlling support access with privacy settings
   - navgroup:
       id: reference
       topics:
