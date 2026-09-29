@@ -41,26 +41,21 @@ Complete the following steps to launch the *Privacy settings* panel in an {{site
 The privacy settings panel opens.
 
 
-## Managing the Sysdiq support account setting
+## Managing the IBM Cloud support account setting
 {: #privacy_settings_1}
 
-**Sysdig Support Account** allow Sysdiq to access your data using a support account in your environment. The account will be called Sysdiq Support and will appear initially with **View Only** role in the default team. You can manage or remove it any time.
+**Allow IBM Cloud Support Account** allow IBM to access your data using a support account in your environment. The account will be called IBM Cloud Support and will appear initially with the **View Only** role in the default team. You can manage or remove it any time.
 
-When you toggle **Allow Sysdig Support Account**, Sysdig creates an account named **Sysdig Support** and adds it to your default team with View Only access. You can change the account’s role, remove it, or select *View User* to see its details at any time.
+When you toggle **Allow IBM Cloud Support Account**, IBM creates an account named **IBM Support** and adds it to your default team with the **View Only** access. You can change the account’s role, remove it, or select **View User** to see its details at any time.
 {: #note}
 
 
 ## Managing the Allow User Temporary Access Settings
 {: #privacy_settings_2}
 
-**Allow User Temporary Access** allows Sysdig support engineers to access your data for a fixed duration (max 30 days). The access ends automatically when the timer expires.
+**Allow User Temporary Access** allows IBM Cloud support engineers to access your data for a fixed duration (max 30 days). The access ends automatically when the timer expires.
 
 Select a duration from the list. The remaining time counts down untill the access expires. To extend access, select a duration and click **Save** again. You can extend access upto 30 days in total. 
 
 You can revoke the access
 {: #note}
-
-
-
-
-
