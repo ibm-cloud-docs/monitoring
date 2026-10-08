@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-02-27"
+  years:  2018, 2026
+lastupdated: "2026-09-30"
 
 keywords:
 
@@ -73,7 +73,7 @@ When both service instances are in the different accounts, define an authorizati
 If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account number. 
 {: note}
 
-For more information on how to define authorizations, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth&interface=ui).
+For more information on how to define authorizations, see [Using authorizations to grant access between services](/docs/account).
 
 
 ## Step 3. Configure the {{site.data.keyword.en_full_notm}} instance

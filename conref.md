@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-09-17"
+lastupdated: "2026-09-30"
 
 keywords:
 
@@ -105,7 +105,7 @@ To create a notification source in {{site.data.keyword.en_full_notm}} you will m
 11. For **Channel Name** give your channge a unique name.  For example, `my_event_notification_channel`.
 12. For this tutorial leave all options enabled and the **Shared With** team as the default value.
 
-    ![New IBM Event Notification Channel](../images/new_en_channel.png){: caption="New IBM Event Notification Channel" caption-side="bottom"}
+    ![New IBM Event Notification Channel](images/new_en_channel.png){: caption="New IBM Event Notification Channel" caption-side="bottom"}
 
 13. Click **Save**.
 14. Click the menu icon ![Menu icon](../../icons/icon_hamburger.svg) > **Resource list**.
@@ -131,7 +131,7 @@ Next you will define an [{{site.data.keyword.en_full_notm}} topic](/docs/event-n
     * Select an **Event subtype**. For this tutorial select *Metric*.
     * Select a **Severity**.  For this tutorial select *Info Severity*.
 
-    ![Topic details](../images/topic_details.png){: caption="Topic details" caption-side="bottom"}
+    ![Topic details](images/topic_details.png){: caption="Topic details" caption-side="bottom"}
 
 4. Click **Add a condition**.
 
@@ -140,7 +140,7 @@ Next you will define an [{{site.data.keyword.en_full_notm}} topic](/docs/event-n
 
 5. Click **Create**.  Your topic will be displayed in the **Topics** list.
 
-    ![Topics list](../images/topics_list.png){: caption="Topics list" caption-side="bottom"}
+    ![Topics list](images/topics_list.png){: caption="Topics list" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.mon_full_notm}} alert notification
 {: #en-mon-notification}

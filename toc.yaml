@@ -136,6 +136,7 @@ toc:
           topics:
           - core/cbr.md
           - core/data-security.md
+          - core/privacy_settings.md
           - topicgroup:
               label: Privately connecting to Monitoring
               topics:
