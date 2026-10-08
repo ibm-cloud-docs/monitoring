@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-05-01"
+lastupdated: "2026-10-08"
 
 subcollection: monitoring
 
@@ -561,7 +561,7 @@ ibmcloud monitoring dashboard list
 List all dashboards for the `IBM Cloud Monitoring abc` instance in the `us-south` region.
 
 ```sh
-ibmcloud monitoring dashboard list --region us-south
+ibmcloud monitoring dashboard list --region us-south 
 ```
 {: pre}
 

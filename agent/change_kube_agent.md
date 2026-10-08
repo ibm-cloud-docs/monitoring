@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2026
+lastupdated: "2026-10-08"
 
 keywords: 
 
@@ -34,7 +34,7 @@ Complete the following steps to edit a Kubernetes monitoring agent configuration
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```text
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster cluster_name_or_ID
     ```
     {: codeblock}
 
@@ -89,7 +89,7 @@ Complete the following steps to add more tags to a Kubernetes monitoring agent c
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```text
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster cluster_name_or_ID
     ```
     {: codeblock}
 
@@ -147,7 +147,7 @@ To filter events from Kubernetes pods, complete the following steps:
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```text
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster cluster_name_or_ID
     ```
     {: codeblock}
 
@@ -217,7 +217,7 @@ Complete the following steps:
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```text
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster cluster_name_or_ID
     ```
     {: codeblock}
 

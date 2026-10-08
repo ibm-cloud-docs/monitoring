@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-02-24"
+lastupdated: "2026-10-08"
 
 keywords:
 
@@ -202,8 +202,8 @@ Other collectors that generate *time-series* include:
 | `mssql` | SQL Server Performance Objects metrics | approximately 500 *time-series* per instance and approximately 100 *time-series* per database |
 | `memory` | Memory usage metrics | 32 |
 | `ad` | Active Directory Domain Services | 14 *time-series* per disk partition |
-| `process` | Per-process metrics | 21 *time-series* per process. (This metric has high cardinality. One process can have subprocesses with multiple `process_id` values.) You can filter [processes](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.process.md){: external} |
-| `service` | Service state metrics | 26 *time-series* per service. (This metric has high cardinality. Windows has a lot of services by default.) You can filter [services](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.service.md){: external} |
+| `process` | Per-process metrics | 21 *time-series* per process. (This metric has high cardinality. One process can have subprocesses with multiple `process_id` values.) You can filter [processes](https://github.com/prometheus-community/windows_exporter/blob/main/docs/collector.process.md){: external} |
+| `service` | Service state metrics | 26 *time-series* per service. (This metric has high cardinality. Windows has a lot of services by default.) You can filter [services](https://github.com/prometheus-community/windows_exporter/blob/main/docs/collector.service.md){: external} |
 {: caption="Time-series estimates for Windows systems for additional collectors" caption-side="bottom"}
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-07-24"
+  years:  2018, 2026
+lastupdated: "2026-10-08"
 
 keywords: 
 
@@ -58,12 +58,12 @@ The following collectors are supported:
 
 | Collector name | Information about metrics collected per collector |
 |----------------|---------------------------------------------------|
-| `cpu`          | [CPU metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.cpu.md){: external} |
-| `logical_disk` | [Disk metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.logical_disk.md){: external} |
-| `os`           | [Operating System metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.os.md){: external} |
-| `system`       | [System metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.system.md){: external} |
-| `net`          | [Network interface metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.net.md){: external} |
-| `memory`       | [Memory metrics](https://github.com/prometheus-community/windows_exporter/blob/master/docs/collector.memory.md){: external} |
+| `cpu`          | [CPU metrics](https://github.com/prometheus-community/windows_exporter/blob/main/docs/collector.cpu.md){: external} |
+| `logical_disk` | [Disk metrics](https://github.com/prometheus-community/windows_exporter/blob/main/docs/collector.logical_disk.md){: external} |
+| `os`           | [Operating System metrics](https://github.com/prometheus-community/windows_exporter/blob/main/docs/collector.os.md){: external} |
+| `system`       | [System metrics](https://github.com/prometheus-community/windows_exporter/blob/main/docs/collector.system.md){: external} |
+| `net`          | [Network interface metrics](https://github.com/prometheus-community/windows_exporter/blob/main/docs/collector.net.md){: external} |
+| `memory`       | [Memory metrics](https://github.com/prometheus-community/windows_exporter/blob/main/docs/collector.memory.md){: external} |
 {: caption="Collectors" caption-side="top"}
 
 
