@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-10-08"
+lastupdated: "2026-10-21"
 
 keywords:
 
@@ -204,7 +204,7 @@ Complete the following steps:
 4. Set the cluster context in your session.
 
     ```text
-    ibmcloud oc cluster config --cluster cluster_name_or_ID
+    ibmcloud oc cluster config --CLUSTER_NAME_OR_ID
     ```
     {: pre}
 

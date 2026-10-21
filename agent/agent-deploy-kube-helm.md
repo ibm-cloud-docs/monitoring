@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-10-08"
+lastupdated: "2026-10-21"
 
 keywords:
 
@@ -19,7 +19,6 @@ subcollection: monitoring
 
 You can use a Helm chart to install, upgrade, and delete a {{site.data.keyword.mon_short}} agent on a Kubernetes cluster.
 {: shortdesc}
-
 
 
 
@@ -50,8 +49,6 @@ Complete the following steps:
 1. Set the cluster context.
 
     ```sh
-    ibmcloud ks cluster config --cluster CLUSTER_NAME
-    ```
     {: pre}
 
 2.  Add the Helm repository.
