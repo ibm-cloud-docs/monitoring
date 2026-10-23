@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-10-21"
+lastupdated: "2026-10-23"
 
 keywords:
 
@@ -151,7 +151,7 @@ The following example shows an activity tracking event that is generated when IB
 ```json
 {
   "action": "sysdig-monitor.customer_agreement.read",
-  "correlationId": "eddcbb8b-d81c-4c30-85da-a3e2e355251b",
+  "correlationId": "00000000-0000-0000-0000-000000000000",
   "customerCRN": "crn:v1:bluemix:public:sysdig-monitor:au-syd:a/{account_id}:{instance_id}::",
   "dataEvent": false,
   "eventTime": "2026-10-20T13:08:17.80+0000",
@@ -199,8 +199,6 @@ The following example shows an activity tracking event that is generated when IB
 }
 ```
 {: codeblock}
-
-The `requestData` field contains impersonation context when IBM support accesses the instance on your behalf.
 
 `requestData` fields:
 
