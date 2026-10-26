@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-10-23"
+lastupdated: "2026-10-26"
 
 keywords:
 
@@ -154,7 +154,7 @@ The following example shows an activity tracking event that is generated when IB
   "correlationId": "00000000-0000-0000-0000-000000000000",
   "customerCRN": "crn:v1:bluemix:public:sysdig-monitor:au-syd:a/{account_id}:{instance_id}::",
   "dataEvent": false,
-  "eventTime": "2026-10-20T13:08:17.80+0000",
+  "eventTime": "2026-01-01T00:00:00.00+0000",
   "initiator": {
     "authnId": "{authn_id}",
     "authnName": "",
@@ -179,12 +179,12 @@ The following example shows an activity tracking event that is generated when IB
     "reasonType": "OK"
   },
   "requestData": {
-    "impersonatedBy": "ibm-support-user",
+    "impersonatedBy": "{support_user_id}",
     "isImpersonated": true,
     "payload": "",
     "queryParams": "",
     "requestURL": "/api/v1/customer/agreement",
-    "teamId": 57951,
+    "teamId": 1,
     "teamName": "Monitor Operations"
   },
   "saveServiceCopy": true,
