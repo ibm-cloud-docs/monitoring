@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-06-25"
+  years:  2018, 2026
+lastupdated: "2026-10-21"
 
 keywords:
 
@@ -191,7 +191,7 @@ Complete the following steps from the command-line to deploy the agent by using 
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```text
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster CLUSTERA_NAME_OR_ID
     ```
     {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-09-17"
+lastupdated: "2026-10-08"
 
 keywords: 
 
@@ -142,7 +142,7 @@ Complete the following steps from a terminal:
 1. Get the GUID of your {{site.data.keyword.mon_full_notm}} instance. Run the following command:
 
     ```text
-    ibmcloud resource service-instance <NAME> --output json | jq -r '.[].guid'
+    ibmcloud resource service-instance NAME --output json | jq -r '.[].guid'
     ```
     {: pre}
 

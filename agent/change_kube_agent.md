@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-10-09"
+  years:  2018, 2026
+lastupdated: "2026-10-21"
 
 keywords: 
 
@@ -34,7 +34,7 @@ Complete the following steps to edit a Kubernetes monitoring agent configuration
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```text
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster cluster_name_or_ID
     ```
     {: codeblock}
 
@@ -89,7 +89,7 @@ Complete the following steps to add more tags to a Kubernetes monitoring agent c
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```text
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster CLUSTER_NAME_OR_ID
     ```
     {: codeblock}
 
@@ -126,15 +126,12 @@ Changes are applied automatically.
 For the sample provided, you would get the tags **agent.tag.department** and **agent.tag.region**. You could use them to define alerts, customize scopes and more.
 
 
-
 ## Collecting a set of Kubernetes events
 {: #change_kube_agent_collect_events}
 
 {{site.data.keyword.mon_short}} supports event integrations with Kubernetes. {{site.data.keyword.mon_short}} agents automatically discover these services and collect event data from them. You can edit the agent config file to change its default behavior, and include or exclude event data.
 
 By default, only a limited set of events is collected. For more information about the events that are collected by default, see [Event Types](https://docs.sysdig.com/en/docs/sysdig-monitor/events/event-types/){: external}.
-
-
 
 
 To add or remove events, you must customize the *sysdig-agent-configmap.yaml* file and specify what events to include and which ones to filter out. **Note:** An entry in a section in *sysdig-agent-configmap.yaml* overrides the entire section in the default configuration.
@@ -147,7 +144,7 @@ To filter events from Kubernetes pods, complete the following steps:
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```text
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster CLUSTER_NAME_OR_ID
     ```
     {: codeblock}
 
@@ -217,7 +214,7 @@ Complete the following steps:
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```text
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster CLUSTER_NAME_OR_ID
     ```
     {: codeblock}
 
@@ -243,10 +240,6 @@ Complete the following steps:
 Changes are applied automatically.
 
 
-
-
-
-
 ## Including and excluding metrics
 {: #change_kube_agent_inc_exc_metrics}
 
@@ -262,7 +255,7 @@ Complete the following steps:
     First, get the command to set the environment variable and download the Kubernetes configuration files.
 
     ```text
-    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster CLUSTER_NAME_OR_ID
     ```
     {: codeblock}
 
@@ -299,8 +292,6 @@ Complete the following steps:
 4. Save the changes.
 
 Changes are applied automatically.
-
-
 
 
 ## Filtering kubernetes objects and containers from which data is collected

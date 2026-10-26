@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-08-13"
+lastupdated: "2026-10-08"
 
 keywords: 
 
@@ -57,7 +57,7 @@ Complete the following steps:
 1. Set the cluster context.
 
     ```sh
-    ibmcloud ks cluster config --cluster <CLUSTER_NAME>
+    ibmcloud ks cluster config --cluster CLUSTER_NAME
     ```
     {: pre}
 

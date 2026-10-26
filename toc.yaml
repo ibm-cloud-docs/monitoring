@@ -136,7 +136,6 @@ toc:
           topics:
           - core/cbr.md
           - core/data-security.md
-          - core/privacy_settings.md
           - topicgroup:
               label: Privately connecting to Monitoring
               topics:
@@ -367,5 +366,6 @@ toc:
       id: help
       topics:
       - gettinghelp.md
+      - core/privacy_settings.md
       - monitor/troubleshoot.md
       - monitor/faq.md

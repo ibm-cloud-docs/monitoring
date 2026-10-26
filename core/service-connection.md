@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2025
-lastupdated: "2025-03-03"
+  years:  2018, 2026
+lastupdated: "2026-10-21"
 
 keywords: 
 
@@ -73,7 +73,7 @@ After your account is enabled for VRF and service endpoints, you can configure a
 After you provision an instance of the {{site.data.keyword.mon_short}} service, you can use the following CLI command to update the instance configuration and enforce private endpoints for all API commands:
 
 ```shell
-ibmcloud resource service-instance-update <my-service-instance> --service-endpoints 'private'
+ibmcloud resource service-instance-update MY_SERVICE-INSTANCE --service-endpoints 'private'
 ```
 {: pre}
 
